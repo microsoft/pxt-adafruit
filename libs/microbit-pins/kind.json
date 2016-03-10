@@ -1,13 +1,13 @@
 {
-    "name": "microbit-serial",
-    "description": "The serial services",
+    "name": "microbit-pins",
+    "description": "The pins services",
     "files": [
         "README.md",
-        "serial.ts"
+        "pins.ts"
     ],
     "public": true,
     "dependencies": {
         "microbit": "file:../microbit"
     },
-    "installedVersion": "vykmvx"
+    "installedVersion": "ddslvj"
 }

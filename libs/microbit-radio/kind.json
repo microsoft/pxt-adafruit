@@ -1,13 +1,13 @@
 {
-    "name": "microbit-led",
-    "description": "The led services",
+    "name": "microbit-radio",
+    "description": "The radio services",
     "files": [
         "README.md",
-        "led.ts"
+        "radio.ts"
     ],
     "public": true,
     "dependencies": {
         "microbit": "file:../microbit"
     },
-    "installedVersion": "pjryly"
+    "installedVersion": "barvfb"
 }

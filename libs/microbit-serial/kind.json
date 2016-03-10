@@ -1,13 +1,13 @@
 {
-    "name": "microbit-pins",
-    "description": "The pins services",
+    "name": "microbit-serial",
+    "description": "The serial services",
     "files": [
         "README.md",
-        "pins.ts"
+        "serial.ts"
     ],
     "public": true,
     "dependencies": {
         "microbit": "file:../microbit"
     },
-    "installedVersion": "bornqs"
+    "installedVersion": "pokbut"
 }

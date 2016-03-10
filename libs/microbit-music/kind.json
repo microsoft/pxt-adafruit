@@ -1,13 +1,13 @@
 {
-    "name": "microbit-radio",
-    "description": "The radio services",
+    "name": "microbit-music",
+    "description": "The music library",
     "files": [
         "README.md",
-        "radio.ts"
+        "music.ts"
     ],
     "public": true,
     "dependencies": {
         "microbit": "file:../microbit"
     },
-    "installedVersion": "phykjp"
+    "installedVersion": "txubhm"
 }

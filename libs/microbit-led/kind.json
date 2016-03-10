@@ -1,13 +1,13 @@
 {
-    "name": "microbit-music",
-    "description": "The music library",
+    "name": "microbit-led",
+    "description": "The led services",
     "files": [
         "README.md",
-        "music.ts"
+        "led.ts"
     ],
     "public": true,
     "dependencies": {
         "microbit": "file:../microbit"
     },
-    "installedVersion": "vlwlid"
+    "installedVersion": "dnfzlf"
 }

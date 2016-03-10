@@ -1,7 +1,7 @@
 {
     "name": "microbit",
     "description": "The microbit core library",
-    "installedVersion": "fahhcl",
+    "installedVersion": "dnarsa",
     "files": [
         "README.md",
         "core.d.ts",

@@ -6,6 +6,7 @@
 Make sure `kindscript-microbit` is in a directory next to `kindscript`.
 
 ```
+npm install -g kindscript-cli
 cd ../kindscript
 jake
 cd ../kindscript-microbit

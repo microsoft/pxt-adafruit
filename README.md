@@ -1,2 +1,16 @@
-# yelm-microbit
-A yelm target for microbit
+# microbit target for KindScript
+
+
+## Local run
+
+Make sure `kindscript-microbit` is in a directory next to `kindscript`.
+
+```
+cd ../kindscript
+jake
+cd ../kindscript-microbit
+npm link ../kindscript
+kind serve
+```
+
+To re-build the `built/target.json` file, re-run `kind serve`.

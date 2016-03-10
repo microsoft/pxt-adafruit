@@ -1,7 +1,7 @@
 {
     "name": "microbit",
     "description": "The microbit core library",
-    "installedVersion": "xdvxev",
+    "installedVersion": "fahhcl",
     "files": [
         "README.md",
         "core.d.ts",

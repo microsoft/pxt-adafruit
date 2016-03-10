@@ -1,0 +1,24 @@
+{
+  "name": "kindscript-microbit",
+  "version": "0.0.0",
+  "private": true,
+  "description": "microbit target for KindScript",
+  "keywords": [
+    "JavaScript",
+    "education",
+    "microbit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Microsoft/kindscript-microbit.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/Microsoft/kindscript-microbit#readme",
+  "files": [
+    "README.md"
+  ],
+  "dependencies": {
+    "kindscript": "*"
+  }
+}

@@ -2,6 +2,8 @@
 
 This target allow to program a [BBC micro:bit](https://www.microbit.co.uk/) using [KindScript](https://github.com/Microsoft/kindscript).
 
+[![Build Status](https://travis-ci.org/Microsoft/kindscript-microbit.svg?branch=master)](https://travis-ci.org/Microsoft/kindscript-microbit)
+
 # Getting started
 
 > If you're making changes to kindscript repository itself, proceed to **Local installation** below.

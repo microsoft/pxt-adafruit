@@ -162,6 +162,8 @@ namespace ks.rt.micro_bit {
         heading = 90;
         
         temperature = 21;
+        
+        usesLightLevel = false;
         lightLevel = 128;
         
         animationQ: AnimationQueue;

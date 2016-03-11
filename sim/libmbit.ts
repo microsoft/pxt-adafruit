@@ -265,12 +265,12 @@ namespace ks.rt.micro_bit {
     }
 
     export function getAcceleration(dimension: number): number {
-        var b = board();
+        let b = board();
         if (!b.usesAcceleration) {
             b.usesAcceleration = true;
             runtime.queueDisplayUpdate();
         }
-        var acc = b.acceleration;
+        let acc = b.acceleration;
         switch (dimension) {
             case 0: return acc[0];
             case 1: return acc[1];
@@ -280,8 +280,12 @@ namespace ks.rt.micro_bit {
     }
 
     export function lightLevel(): number {
-        // TODO
-        return 0;
+        let b = board();
+        if (!b.usesLightLevel) {
+            b.usesLightLevel = true;
+            runtime.queueDisplayUpdate();
+        }
+        return b.lightLevel;
     }
 
     export function getMagneticForce(): number {

@@ -11,6 +11,8 @@ namespace ks.rt.micro_bit {
         buttonOuter?: string;
         buttonUp?: string;
         buttonDown?: string;
+        lightLevelOn?:string;
+        lightLevelOff?: string;
     }
 
     export var themes: IBoardTheme[] = ["#3ADCFE", "#FFD43A", "#3AFFB3", "#FF3A54"].map(accent => {
@@ -25,6 +27,8 @@ namespace ks.rt.micro_bit {
             buttonOuter: "#979797",
             buttonUp: "#000",
             buttonDown: "#FFA500",
+            lightLevelOn: "yellow",
+            lightLevelOff: "#555"
     }});
 
     export function randomTheme() : IBoardTheme {
@@ -117,6 +121,20 @@ namespace ks.rt.micro_bit {
             return gradient;
         }
         
+        static setGradientColors(lg : SVGLinearGradientElement, start:string, end:string) {
+            if (!lg) return;
+            
+            (<SVGStopElement>lg.childNodes[0]).style.stopColor = start;
+                (<SVGStopElement>lg.childNodes[1]).style.stopColor = start;
+                (<SVGStopElement>lg.childNodes[2]).style.stopColor = end;
+                (<SVGStopElement>lg.childNodes[3]).style.stopColor = end;
+        }
+        
+        static setGradientValue(lg : SVGLinearGradientElement, percent: string) {
+            (<SVGStopElement>lg.childNodes[1]).setAttribute("offset", percent);
+            (<SVGStopElement>lg.childNodes[2]).setAttribute("offset", percent);                            
+        }
+        
         static animate(el: SVGElement, cls: string) {
             el.classList.add(cls);
             let p = el.parentElement;
@@ -144,7 +162,9 @@ namespace ks.rt.micro_bit {
         private leds: SVGElement[];
         private systemLed: SVGCircleElement;
         private antenna: SVGPolylineElement;
-        public board: rt.micro_bit.Board;        
+        private lightLevelButton: SVGCircleElement;
+        private lightLevelGradient : SVGLinearGradientElement;
+        public board: rt.micro_bit.Board; 
         
         constructor(public props: IBoardProps) {
             this.board = this.props.runtime.board as rt.micro_bit.Board;
@@ -165,12 +185,8 @@ namespace ks.rt.micro_bit {
             Svg.fills(this.buttons, theme.buttonUp);
             Svg.fills(this.logos, theme.accent);
             
-            this.pinGradients.forEach(lg => {
-                (<SVGStopElement>lg.childNodes[0]).style.stopColor = theme.pin;
-                (<SVGStopElement>lg.childNodes[1]).style.stopColor = theme.pin;
-                (<SVGStopElement>lg.childNodes[2]).style.stopColor = theme.pinActive;
-                (<SVGStopElement>lg.childNodes[3]).style.stopColor = theme.pinActive;
-            })
+            this.pinGradients.forEach(lg => Svg.setGradientColors(lg, theme.pin, theme.pinActive));            
+            Svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
         }
         
         public updateState() {
@@ -190,7 +206,8 @@ namespace ks.rt.micro_bit {
             })
             this.updatePins();
             this.updateTilt();
-            this.updateHeading();     
+            this.updateHeading();  
+            this.updateLightLevel();   
             (<any>this.buttonsOuter[2]).style.visibility = state.usesButtonAB ? 'visible' : 'hidden';   
             (<any>this.buttons[2]).style.visibility = state.usesButtonAB ? 'visible' : 'hidden';   
         }
@@ -211,11 +228,7 @@ namespace ks.rt.micro_bit {
                 v = pin.touched ? '0%' : '100%';
                 if (text) text.textContent = "";
             }
-            if (v) {
-                let lg = this.pinGradients[index];
-                (<SVGStopElement>lg.childNodes[1]).setAttribute("offset", v);
-                (<SVGStopElement>lg.childNodes[2]).setAttribute("offset", v);                
-            }
+            if (v) Svg.setGradientValue(this.pinGradients[index], v);
         }
         
         private updateHeading() {
@@ -278,7 +291,39 @@ namespace ks.rt.micro_bit {
             if (!state) return;
             
             state.pins.forEach((pin,i) => this.updatePin(pin,i));            
-        }        
+        } 
+        
+        private updateLightLevel() {
+            let state = this.board;
+            if (!state || !state.usesLightLevel) return;
+            
+            if (!this.lightLevelButton) {
+                let gid= "gradient-light-level";
+                this.lightLevelGradient = Svg.linearGradient(this.defs, "gradient-light-level") 
+                let cy = 50;
+                let r = 30;
+                this.lightLevelButton = Svg.child(this.g, "circle", { 
+                    cx: `50px`, cy: `${cy}px`, r: `${r}px`, 
+                    class:'sim-light-level-button', 
+                    fill: `url(#${gid})` }) as SVGCircleElement;
+                let pt = this.element.createSVGPoint();
+                Svg.buttonEvents(this.lightLevelButton,
+                    (ev) => {
+                        let pos = Svg.cursorPoint(pt, this.element, ev);
+                        let rs = r*2/3;
+                        let level = Math.max(0, Math.min(255, Math.floor((pos.y - (cy-rs)) / (2*rs) * 255)));
+                        console.log(level)
+                        if (level != this.board.lightLevel) {
+                            this.board.lightLevel = level;
+                            
+                        }
+                    }, ev => {},
+                    ev => {})
+                this.updateTheme();
+            }            
+            
+            Svg.setGradientValue(this.lightLevelGradient, Math.min(100,  Math.max(0, Math.floor(state.lightLevel * 100 / 255))) + '%')
+        }       
         
         private updateTilt() {
             if (this.props.disableTilt) return;

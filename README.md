@@ -39,6 +39,10 @@ cd ../kindscript
 jake
 cd ../kindscript-microbit
 npm link ../kindscript
+```
+* run this command to build and launch a local editor
+
+```
 kind serve
 ```
 * open `localhost:3232` to try your editor!

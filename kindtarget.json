@@ -2,11 +2,6 @@
     "corepkg": "microbit",
     "bundleddirs": [
         "libs/microbit",
-        "libs/microbit-led",
-        "libs/microbit-music",
-        "libs/microbit-radio",
-        "libs/microbit-game",
-        "libs/microbit-pins",
-        "libs/microbit-serial"
+        "libs/microbit-radio"
     ]
 }

@@ -9,7 +9,12 @@
         "images.ts",
         "basic.ts",
         "input.ts",
-        "control.ts"
+        "control.ts",
+        "game.ts",
+        "led.ts",
+        "music.ts",
+        "pins.ts",
+        "serial.ts"
     ],
     "public": true,
     "dependencies": {},
@@ -23,12 +28,7 @@
                 "name": "{0} block",
                 "dependencies": {
                     "microbit": "*",
-                    "microbit-led": "*",
-                    "microbit-music": "*",
-                    "microbit-radio": "*",
-                    "microbit-game": "*",
-                    "microbit-pins": "*",
-                    "microbit-serial": "*"
+                    "microbit-radio": "*"
                 },
                 "description": "",
                 "files": [
@@ -49,12 +49,7 @@
                 "name": "{0} bit",
                 "dependencies": {
                     "microbit": "*",
-                    "microbit-led": "*",
-                    "microbit-music": "*",
-                    "microbit-radio": "*",
-                    "microbit-game": "*",
-                    "microbit-pins": "*",
-                    "microbit-serial": "*"
+                    "microbit-radio": "*"
                 },
                 "description": "",
                 "files": [

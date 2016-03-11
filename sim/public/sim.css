@@ -48,12 +48,14 @@ svg.sim {
   font-family:monospace;
   font-size:25px;
   fill:#fff;
+  pointer-events: none;
 }
 
 .sim-text-pin {
   font-family:monospace;
   font-size:20px;
   fill:#fff;
+  pointer-events: none;
 }
 
 /* animations */

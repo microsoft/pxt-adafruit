@@ -164,6 +164,7 @@ namespace ks.rt.micro_bit {
         private antenna: SVGPolylineElement;
         private lightLevelButton: SVGCircleElement;
         private lightLevelGradient : SVGLinearGradientElement;
+        private lightLevelText: SVGTextElement;
         public board: rt.micro_bit.Board; 
         
         constructor(public props: IBoardProps) {
@@ -301,7 +302,7 @@ namespace ks.rt.micro_bit {
                 let gid= "gradient-light-level";
                 this.lightLevelGradient = Svg.linearGradient(this.defs, "gradient-light-level") 
                 let cy = 50;
-                let r = 30;
+                let r = 35;
                 this.lightLevelButton = Svg.child(this.g, "circle", { 
                     cx: `50px`, cy: `${cy}px`, r: `${r}px`, 
                     class:'sim-light-level-button', 
@@ -310,20 +311,27 @@ namespace ks.rt.micro_bit {
                 Svg.buttonEvents(this.lightLevelButton,
                     (ev) => {
                         let pos = Svg.cursorPoint(pt, this.element, ev);
-                        let rs = r*2/3;
+                        let rs = r/2;
                         let level = Math.max(0, Math.min(255, Math.floor((pos.y - (cy-rs)) / (2*rs) * 255)));
-                        console.log(level)
                         if (level != this.board.lightLevel) {
                             this.board.lightLevel = level;
-                            
+                            this.applyLightLevel();
                         }
                     }, ev => {},
                     ev => {})
+                this.lightLevelText = Svg.child(this.g, "text", { x:85, y:cy+r-5, text:'', class:'sim-text'}) as SVGTextElement;
                 this.updateTheme();
             }            
             
             Svg.setGradientValue(this.lightLevelGradient, Math.min(100,  Math.max(0, Math.floor(state.lightLevel * 100 / 255))) + '%')
+            this.lightLevelText.textContent = state.lightLevel.toString();
         }       
+        
+        private applyLightLevel() {
+            let lv = this.board.lightLevel;
+            Svg.setGradientValue(this.lightLevelGradient, Math.min(100,  Math.max(0, Math.floor(lv * 100 / 255))) + '%')
+            this.lightLevelText.textContent = lv.toString();            
+        }
         
         private updateTilt() {
             if (this.props.disableTilt) return;

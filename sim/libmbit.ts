@@ -3,15 +3,11 @@
 
 namespace ks.rt.micro_bit {
     export function initCurrentRuntime() {
-        initBoard();
-    }
-
-    ks.rt.initCurrentRuntime = initCurrentRuntime;
-
-    function initBoard() {
         U.assert(!runtime.board)
         runtime.board = new Board()
     }
+
+    ks.rt.initCurrentRuntime = initCurrentRuntime;
 
     export function board() {
         return runtime.board as Board

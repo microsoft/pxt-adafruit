@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "5.7.0"
+before_script:
+  - "npm install"
+  - "node node_modules/kindscript/built/kind.js buildtarget"
+  - "node node_modules/kindscript/built/kind.js uploadtrg microbit-latest"
+sudo: false
+notifications:
+  email:
+    - touchdevelop-build@microsoft.com
+cache:
+  directories:
+    - node_modules
+

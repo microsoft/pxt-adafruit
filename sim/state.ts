@@ -9,6 +9,7 @@ namespace ks.rt.micro_bit {
     }
     
     export enum PinMode {
+        Unused  = 0,
         Digital = 0x0001,
         Analog  = 0x0002,
         Input   = 0x0004,
@@ -20,7 +21,7 @@ namespace ks.rt.micro_bit {
         constructor(public id: number) {}
         touched = false;
         value = 0;
-        mode = PinMode.Digital | PinMode.Output;
+        mode = PinMode.Unused;
           
         isTouched() : boolean {
             this.mode = PinMode.Touch;

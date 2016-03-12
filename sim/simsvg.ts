@@ -420,7 +420,7 @@ namespace ks.rt.micro_bit {
                 return lg;
             })
             
-            this.pinTexts = [67,165,275].map(x => <SVGTextElement>Svg.child(this.g, "text", { class:'sim-text-pin', x:x, y:345 }));
+            this.pinTexts = [67,165,275].map(x => <SVGTextElement>Svg.child(this.g, "text", { class:'sim-text-pin', x:x, y:345}));
 
             this.buttonsOuter = []; this.buttons = [];
             this.buttonsOuter.push(Svg.path(this.g, "sim-button-outer", "M82.1,232.6H25.9c-0.5,0-1-0.4-1-1v-56.2c0-0.5,0.4-1,1-1h56.2c0.5,0,1,0.4,1,1v56.2C83,232.2,82.6,232.6,82.1,232.6"));

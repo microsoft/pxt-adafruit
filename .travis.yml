@@ -2,6 +2,7 @@ language: node_js
 node_js:
   - "5.7.0"
 script:
+  - "npm update"
   - "node node_modules/kindscript/built/kind.js buildtarget"
   - "node node_modules/kindscript/built/kind.js uploadtrg microbit-latest"  
 sudo: false

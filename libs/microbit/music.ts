@@ -98,15 +98,15 @@ enum Notes {
 }
 
 enum BeatFraction {
-    //% enumVal=1 blockId=1
+    //% enumval=1 blockId=1
     Whole = 1,
-    //% enumVal=2 blockId="1/2"
+    //% enumval=2 blockId="1/2"
     Half = 2,
-    //% enumVal=4 blockId="1/4"
+    //% enumval=4 blockId="1/4"
     Quater = 4,
-    //% enumVal=8 blockId="1/8"
-    Heighth = 8,
-    //% enumVal=16 blockId="1/16"
+    //% enumval=8 blockId="1/8"
+    Eighth = 8,
+    //% enumval=16 blockId="1/16"
     Sixteenth = 16
 }
 
@@ -164,8 +164,12 @@ namespace music {
     //% help=/functions/beat weight=49
     //% blockId=device_beat block="%fraction|beat"
     export function beat(fraction : BeatFraction = BeatFraction.Whole): number {
-        let ms: number;
-        return 60000 / fraction / beatsPerMinute;
+        let beat = 60000 / beatsPerMinute;
+        if (fraction == BeatFraction.Whole) return beat;
+        else if (fraction == BeatFraction.Half) return beat / 2;
+        else if (fraction == BeatFraction.Quater) return beat / 4
+        else if (fraction == BeatFraction.Eighth) return beat / 8;
+        else return beat / 16;
     }
 
     /**

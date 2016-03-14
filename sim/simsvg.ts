@@ -260,7 +260,7 @@ namespace ks.rt.micro_bit {
                     rx:5, ry:5,
                     fill:`url(#${gid})`
                 });
-                this.thermometerText = Svg.child(this.g, "text", { class:'sim-text', x:75, y:130}) as SVGTextElement;
+                this.thermometerText = Svg.child(this.g, "text", { class:'sim-text', x:60, y:130}) as SVGTextElement;
                 this.updateTheme();
                 
                 let pt = this.element.createSVGPoint();
@@ -276,7 +276,7 @@ namespace ks.rt.micro_bit {
             let t = Math.max(tmin, Math.min(tmax, state.temperature))
             let per = Math.floor((state.temperature - tmin) / (tmax-tmin)*100)
             Svg.setGradientValue(this.thermometerGradient, 100 - per + '%');
-            this.thermometerText.textContent = t + '°';
+            this.thermometerText.textContent = t + '°C';
         }
         
         private updateHeading() {

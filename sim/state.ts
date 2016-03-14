@@ -2,141 +2,141 @@ namespace ks.rt.micro_bit {
     export interface RuntimeOptions {
         theme: string;
     }
-    
+
     export enum DisplayMode {
         bw,
         greyscale
     }
-    
+
     export enum PinMode {
-        Unused  = 0,
+        Unused = 0,
         Digital = 0x0001,
-        Analog  = 0x0002,
-        Input   = 0x0004,
-        Output  = 0x0008,
-        Touch   = 0x0010
+        Analog = 0x0002,
+        Input = 0x0004,
+        Output = 0x0008,
+        Touch = 0x0010
     }
-    
+
     export class Pin {
-        constructor(public id: number) {}
+        constructor(public id: number) { }
         touched = false;
         value = 0;
         mode = PinMode.Unused;
-          
-        isTouched() : boolean {
+
+        isTouched(): boolean {
             this.mode = PinMode.Touch;
             return this.touched;
         }
     }
-    
+
     export class Button {
-        constructor(public id : number) {}
+        constructor(public id: number) { }
         pressed: boolean;
     }
-    
+
     export class EventBus {
-        private queues : Map<EventQueue<number>> = {};
-        
-        constructor(private runtime : Runtime) { }
-        
-        listen(id:number, evid:number, handler: RefAction) {
-            let k = id + ':' + evid;           
+        private queues: Map<EventQueue<number>> = {};
+
+        constructor(private runtime: Runtime) { }
+
+        listen(id: number, evid: number, handler: RefAction) {
+            let k = id + ':' + evid;
             let queue = this.queues[k];
             if (!queue) queue = this.queues[k] = new EventQueue<number>(this.runtime);
             queue.handler = handler;
         }
-        
+
         queue(id: number, evid: number, value: number = 0) {
-            let k = id + ':' + evid;           
+            let k = id + ':' + evid;
             let queue = this.queues[k];
             if (queue) queue.push(value);
         }
     }
-    
+
     export interface PacketBuffer {
-        data:number[];
-        rssi?:number;
+        data: number[];
+        rssi?: number;
     }
-    
+
     export class RadioDatagram {
         datagram: PacketBuffer[] = [];
-        lastReceived: PacketBuffer = { 
-            data:[0,0,0,0], 
-            rssi: -1 
+        lastReceived: PacketBuffer = {
+            data: [0, 0, 0, 0],
+            rssi: -1
         };
-        
-        constructor(private runtime : Runtime) { 
+
+        constructor(private runtime: Runtime) {
         }
-        
-        queue(packet : PacketBuffer) {
+
+        queue(packet: PacketBuffer) {
             if (this.datagram.length < 5) {
                 this.datagram.push(packet);
                 let ens = enums();
                 (<Board>runtime.board).bus.queue(ens.MICROBIT_ID_RADIO, ens.MICROBIT_RADIO_EVT_DATAGRAM);
             }
         }
-        
-        send(buffer : number[]) {
+
+        send(buffer: number[]) {
             Runtime.postMessage(<SimulatorRadioPacketMessage>{
-                type:'radiopacket',
+                type: 'radiopacket',
                 data: buffer.slice(0, 8)
             })
         }
-        
-        recv() : PacketBuffer {
+
+        recv(): PacketBuffer {
             var r = this.datagram.shift();
-            if (!r) r = { 
-                data:[0,0,0,0], 
-                rssi: -1 
+            if (!r) r = {
+                data: [0, 0, 0, 0],
+                rssi: -1
             };
             return this.lastReceived = r;
         }
     }
-    
+
     export class RadioBus {
         // uint8_t radioDefaultGroup = MICROBIT_RADIO_DEFAULT_GROUP;
         groupId = 0; // todo
-        datagram : RadioDatagram;
-            
-        constructor(private runtime : Runtime) { 
+        datagram: RadioDatagram;
+
+        constructor(private runtime: Runtime) {
             this.datagram = new RadioDatagram(runtime);
         }
-        
+
         setGroup(id: number) {
             this.groupId = id & 0xff; // byte only
         }
-        
+
         broadcast(msg: number) {
             let ens = enums();
             Runtime.postMessage(<SimulatorEventBusMessage>{
-                type:'eventbus',
+                type: 'eventbus',
                 id: ens.MES_BROADCAST_GENERAL_ID,
                 eventid: msg
             })
         }
     }
-    
+
     export interface SimulatorEventBusMessage extends SimulatorMessage {
         id: number;
         eventid: number;
         value?: number;
     }
-    
+
     export interface SimulatorSerialMessage extends SimulatorMessage {
-        id:string;
+        id: string;
         data: string;
     }
-    
+
     export interface SimulatorRadioPacketMessage extends SimulatorMessage {
         data: number[];
         rssi?: number;
     }
-    
+
     export class Board extends BaseBoard {
         id: string;
-        
+
         // the bus
-        bus : EventBus;
+        bus: EventBus;
         radio: RadioBus;
 
         // display
@@ -147,28 +147,28 @@ namespace ks.rt.micro_bit {
 
         // buttons    
         usesButtonAB: boolean = false;
-        buttons : Button[];
+        buttons: Button[];
 
         // pins
-        pins : Pin[];
-        
+        pins: Pin[];
+
         // serial
         serialIn: string[] = [];
 
         // sensors    
         usesAcceleration = false;
         acceleration = [0, 0, -1023];
-        
-        usesHeading = false;        
+
+        usesHeading = false;
         heading = 90;
-        
+
         temperature = 21;
-        
+
         usesLightLevel = false;
         lightLevel = 128;
-        
+
         animationQ: AnimationQueue;
-        
+
         constructor() {
             super()
             this.id = "b" + Math.random();
@@ -199,25 +199,25 @@ namespace ks.rt.micro_bit {
                 new Pin(ens.MICROBIT_ID_IO_P14),
                 new Pin(ens.MICROBIT_ID_IO_P15),
                 new Pin(ens.MICROBIT_ID_IO_P16),
-                null, 
-                null,                
+                null,
+                null,
                 new Pin(ens.MICROBIT_ID_IO_P19),
                 new Pin(ens.MICROBIT_ID_IO_P20)
             ];
         }
-        
-        
-        initAsync(msg : SimulatorRunMessage) : Promise<void> {
+
+
+        initAsync(msg: SimulatorRunMessage): Promise<void> {
             let options = (msg.options || {}) as RuntimeOptions;
-            let theme : micro_bit.IBoardTheme;
-            switch(options.theme) {
+            let theme: micro_bit.IBoardTheme;
+            switch (options.theme) {
                 case 'blue': theme = micro_bit.themes[0]; break;
                 case 'yellow': theme = micro_bit.themes[1]; break;
                 case 'green': theme = micro_bit.themes[2]; break;
                 case 'red': theme = micro_bit.themes[3]; break;
-                default: theme  = ks.rt.micro_bit.randomTheme();
+                default: theme = ks.rt.micro_bit.randomTheme();
             }
-            
+
             console.log('setting up microbit simulator')
             let view = new ks.rt.micro_bit.MicrobitBoardSvg({
                 theme: theme,
@@ -225,56 +225,56 @@ namespace ks.rt.micro_bit {
             })
             document.body.innerHTML = ''; // clear children
             document.body.appendChild(view.element);
-            
-            return Promise.resolve();          
+
+            return Promise.resolve();
         }
-                
+
         receiveMessage(msg: SimulatorMessage) {
             if (!runtime || runtime.dead) return;
-            
-            switch(msg.type || "") {
-                case 'eventbus': 
+
+            switch (msg.type || "") {
+                case 'eventbus':
                     let ev = <SimulatorEventBusMessage>msg;
                     this.bus.queue(ev.id, ev.eventid, ev.value);
                     break;
-            case 'serial':
+                case 'serial':
                     this.serialIn.push((<SimulatorSerialMessage>msg).data || '');
                     break;
                 case 'radiopacket':
                     let packet = <SimulatorRadioPacketMessage>msg;
-                    this.radio.datagram.queue({ data: packet.data || [], rssi: packet.rssi || 0})
+                    this.radio.datagram.queue({ data: packet.data || [], rssi: packet.rssi || 0 })
                     break;
             }
         }
-        
+
         readSerial() {
             let v = this.serialIn.shift() || '';
             return v;
         }
-        
+
         serialOutBuffer: string = '';
-        writeSerial(s : string) {
-            for(let i = 0; i < s.length;++i) {
+        writeSerial(s: string) {
+            for (let i = 0; i < s.length; ++i) {
                 let c = s[i];
-                switch(c) {
-                    case '\n': 
+                switch (c) {
+                    case '\n':
                         Runtime.postMessage(<SimulatorSerialMessage>{
                             type: 'serial',
                             data: this.serialOutBuffer,
                             id: runtime.id
-                        })   
+                        })
                         this.serialOutBuffer = ''
                         break;
                     case '\r': continue;
                     default: this.serialOutBuffer += c;
-                }                
+                }
             }
         }
     }
 
     export class Image {
         public width: number;
-    public data: number[];
+        public data: number[];
         constructor(width: number, data: number[]) {
             this.width = width;
             this.data = data;
@@ -295,8 +295,8 @@ namespace ks.rt.micro_bit {
                 }
             }
         }
-        public clear() : void {
-            for(var i = 0;i < this.data.length; ++i)
+        public clear(): void {
+            for (var i = 0; i < this.data.length; ++i)
                 this.data[i] = 0;
         }
     }

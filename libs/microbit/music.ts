@@ -157,6 +157,10 @@ namespace music {
     export function noteFrequency(name: Notes): number {
         return name;
     }
+    
+    function init() {
+        if (beatsPerMinute <= 0) beatsPerMinute = 120;        
+    }
 
     /**
      * Returns the duration of a beat in milli-seconds
@@ -164,6 +168,7 @@ namespace music {
     //% help=/functions/beat weight=49
     //% blockId=device_beat block="%fraction|beat"
     export function beat(fraction : BeatFraction = BeatFraction.Whole): number {
+        init();
         let beat = 60000 / beatsPerMinute;
         if (fraction == BeatFraction.Whole) return beat;
         else if (fraction == BeatFraction.Half) return beat / 2;
@@ -178,6 +183,7 @@ namespace music {
     //% help=/functions/tempo weight=40
     //% blockId=device_tempo block="tempo (bpm)" blockGap=8
     export function tempo(): number {
+        init();
         return beatsPerMinute;
     }
 
@@ -188,7 +194,7 @@ namespace music {
     //% help=/functions/tempo weight=39
     //% blockId=device_change_tempo block="change tempo by (bpm)|%value" blockGap=8
     export function changeTempoBy(bpm: number): void {
-        setTempo(beatsPerMinute + bpm);
+        setTempo(beat(BeatFraction.Whole) + bpm);
     }
 
     /**
@@ -198,6 +204,7 @@ namespace music {
     //% help=/functions/tempo weight=38
     //% blockId=device_set_tempo block="set tempo to (bpm)|%value"
     export function setTempo(bpm: number): void {
+        init();
         if (bpm > 0) {
             beatsPerMinute = Math.max(1, bpm);
         }

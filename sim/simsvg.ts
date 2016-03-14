@@ -219,7 +219,7 @@ namespace ks.rt.micro_bit {
             let v = '';
             if (pin.mode & PinMode.Analog) {
                 v = Math.floor(100 - (pin.value || 0) / 1023 * 100) + '%';
-                if(text) text.textContent = (pin.value || 0) + "";
+                if(text) text.textContent = (pin.period ? "~" : "") + (pin.value || 0) + "";
             }
             else if (pin.mode & PinMode.Digital) {
                 v = pin.value > 0 ? '0%' : '100%';

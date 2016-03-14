@@ -14,13 +14,15 @@ namespace ks.rt.micro_bit {
         Analog = 0x0002,
         Input = 0x0004,
         Output = 0x0008,
-        Touch = 0x0010
+        Touch = 0x0010,
+        Pitch = 0x0020
     }
 
     export class Pin {
         constructor(public id: number) { }
         touched = false;
         value = 0;
+        period = 0;
         mode = PinMode.Unused;
 
         isTouched(): boolean {

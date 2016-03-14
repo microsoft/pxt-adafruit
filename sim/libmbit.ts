@@ -322,6 +322,8 @@ namespace ks.rt.micro_bit {
     
     export function setAnalogPeriodUs(pin: Pin, micros:number) {
         pin.mode = PinMode.Analog | PinMode.Output;
+        pin.period = micros;
+        board().updateView();
     }
     
     export function servoWritePin(pin: Pin, value: number) {
@@ -385,16 +387,33 @@ namespace ks.rt.micro_bit {
     }
     
     export function enablePitch(pin: Pin) {
-        pin.mode = PinMode.Analog | PinMode.Output;
+        pin.mode = PinMode.Analog | PinMode.Output | PinMode.Pitch;
     }
     
     export function pitch(frequency: number, ms: number) {
+        // update analog output
+        let pin = board().pins.filter(pin => !!pin && (pin.mode & PinMode.Pitch) != 0)[0] || board().pins[0];
+        if (frequency <= 0) {
+            pin.value = 0;     
+            pin.period = 0;       
+        } else {
+            pin.value = 512;
+            pin.period = 1000000/frequency;        
+        }
+        board().updateView();
+        
         let cb = getResume();
         AudioContextManager.tone(frequency, 1);
-        setTimeout(() => {
-            if (ms > 0) AudioContextManager.stop();            
-            cb() 
-        }, ms);
+        if (ms <= 0) cb();
+        else {
+            setTimeout(() => {
+                AudioContextManager.stop();            
+                pin.value = 0;   
+                pin.period = 0;     
+                board().updateView();
+                cb() 
+            }, ms);
+        }
     }
     
     

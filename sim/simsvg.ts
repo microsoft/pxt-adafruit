@@ -165,6 +165,9 @@ namespace ks.rt.micro_bit {
         private lightLevelButton: SVGCircleElement;
         private lightLevelGradient : SVGLinearGradientElement;
         private lightLevelText: SVGTextElement;
+        private thermometerGradient : SVGLinearGradientElement;
+        private thermometer: SVGRectElement;
+        private thermometerText: SVGTextElement;
         public board: rt.micro_bit.Board; 
         
         constructor(public props: IBoardProps) {
@@ -188,6 +191,8 @@ namespace ks.rt.micro_bit {
             
             this.pinGradients.forEach(lg => Svg.setGradientColors(lg, theme.pin, theme.pinActive));            
             Svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
+            
+            Svg.setGradientColors(this.thermometerGradient, theme.ledOff, theme.ledOn);
         }
         
         public updateState() {
@@ -208,7 +213,9 @@ namespace ks.rt.micro_bit {
             this.updatePins();
             this.updateTilt();
             this.updateHeading();  
-            this.updateLightLevel();   
+            this.updateLightLevel();
+            this.updateTemperature();
+               
             (<any>this.buttonsOuter[2]).style.visibility = state.usesButtonAB ? 'visible' : 'hidden';   
             (<any>this.buttons[2]).style.visibility = state.usesButtonAB ? 'visible' : 'hidden';   
         }
@@ -233,6 +240,43 @@ namespace ks.rt.micro_bit {
                 if(text) text.textContent = '';
             }
             if (v) Svg.setGradientValue(this.pinGradients[index], v);
+        }
+        
+        private updateTemperature() {
+            let state = this.board;
+            if (!state || !state.usesTemperature) return;
+            
+            let tmin = -5;
+            let tmax = 50;
+            if (!this.thermometer) {                
+                let gid = "gradient-thermometer";
+                this.thermometerGradient = Svg.linearGradient(this.defs, gid);
+                this.thermometer = <SVGRectElement> Svg.child(this.g, "rect", {
+                    class: "sim-thermometer", 
+                    x:120,
+                    y:110,
+                    width:20,
+                    height:160,
+                    rx:5, ry:5,
+                    fill:`url(#${gid})`
+                });
+                this.thermometerText = Svg.child(this.g, "text", { class:'sim-text', x:75, y:130}) as SVGTextElement;
+                this.updateTheme();
+                
+                let pt = this.element.createSVGPoint();
+                Svg.buttonEvents(this.thermometer,
+                    (ev) => {
+                        let cur = Svg.cursorPoint(pt, this.element, ev);
+                        let t = Math.max(0, Math.min(1, (260 - cur.y) / 140))
+                        state.temperature = Math.floor(tmin + t * (tmax-tmin));
+                        this.updateTemperature();
+                    }, ev => {}, ev => {})
+            }
+            
+            let t = Math.max(tmin, Math.min(tmax, state.temperature))
+            let per = Math.floor((state.temperature - tmin) / (tmax-tmin)*100)
+            Svg.setGradientValue(this.thermometerGradient, 100 - per + '%');
+            this.thermometerText.textContent = t + '°';
         }
         
         private updateHeading() {
@@ -303,7 +347,7 @@ namespace ks.rt.micro_bit {
             
             if (!this.lightLevelButton) {
                 let gid= "gradient-light-level";
-                this.lightLevelGradient = Svg.linearGradient(this.defs, "gradient-light-level") 
+                this.lightLevelGradient = Svg.linearGradient(this.defs, gid) 
                 let cy = 50;
                 let r = 35;
                 this.lightLevelButton = Svg.child(this.g, "circle", { 

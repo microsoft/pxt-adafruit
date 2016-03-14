@@ -164,6 +164,7 @@ namespace ks.rt.micro_bit {
         usesHeading = false;
         heading = 90;
 
+        usesTemperature = false;
         temperature = 21;
 
         usesLightLevel = false;

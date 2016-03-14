@@ -58,6 +58,11 @@ svg.sim {
   pointer-events: none;
 }
 
+.sim-thermometer {
+    stroke:#aaa;
+    stroke-width: 3px;
+}
+
 /* animations */
 .sim-flash {
     animation-name: sim-flash-animation;

@@ -108,7 +108,7 @@ namespace input {
      * Gets the temperature in Celsius degrees (°C).
      */
     //% weight=55 icon="\uf06d"
-    //% help=functions/temperature shim=uBit.thermometer.getTemperature
+    //% help=functions/temperature shim=micro_bit::temperature
     //% blockId=device_temperature block="temperature (°C)" blockGap=8
     export function temperature(): number {
         return 0;

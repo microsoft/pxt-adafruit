@@ -259,16 +259,25 @@ namespace ks.rt.micro_bit {
         var b = board();
         if (!b.usesHeading) {
             b.usesHeading = true;
-            runtime.queueDisplayUpdate();
+            b.updateView();
         }
         return b.heading;
     }
-
+    
+    export function temperature(): number {
+        var b = board();
+        if (!b.usesTemperature) {
+            b.usesTemperature = true;
+            b.updateView();
+        }
+        return b.temperature;
+    }
+       
     export function getAcceleration(dimension: number): number {
         let b = board();
         if (!b.usesAcceleration) {
             b.usesAcceleration = true;
-            runtime.queueDisplayUpdate();
+            b.updateView();
         }
         let acc = b.acceleration;
         switch (dimension) {
@@ -283,7 +292,7 @@ namespace ks.rt.micro_bit {
         let b = board();
         if (!b.usesLightLevel) {
             b.usesLightLevel = true;
-            runtime.queueDisplayUpdate();
+            b.updateView();
         }
         return b.lightLevel;
     }

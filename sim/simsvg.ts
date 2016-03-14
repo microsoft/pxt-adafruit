@@ -228,6 +228,9 @@ namespace ks.rt.micro_bit {
             else if (pin.mode & PinMode.Touch) {
                 v = pin.touched ? '0%' : '100%';
                 if (text) text.textContent = "";
+            } else {
+                v = '100%';
+                if(text) text.textContent = '';
             }
             if (v) Svg.setGradientValue(this.pinGradients[index], v);
         }

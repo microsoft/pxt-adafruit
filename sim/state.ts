@@ -14,8 +14,7 @@ namespace ks.rt.micro_bit {
         Analog = 0x0002,
         Input = 0x0004,
         Output = 0x0008,
-        Touch = 0x0010,
-        Pitch = 0x0020
+        Touch = 0x0010
     }
 
     export class Pin {
@@ -24,6 +23,7 @@ namespace ks.rt.micro_bit {
         value = 0;
         period = 0;
         mode = PinMode.Unused;
+        pitch = false;
 
         isTouched(): boolean {
             this.mode = PinMode.Touch;

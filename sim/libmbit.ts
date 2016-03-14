@@ -387,12 +387,14 @@ namespace ks.rt.micro_bit {
     }
     
     export function enablePitch(pin: Pin) {
-        pin.mode = PinMode.Analog | PinMode.Output | PinMode.Pitch;
+        board().pins.filter(p => !!p).forEach(p => p.pitch = false);
+        pin.pitch = true;
     }
     
     export function pitch(frequency: number, ms: number) {
         // update analog output
-        let pin = board().pins.filter(pin => !!pin && (pin.mode & PinMode.Pitch) != 0)[0] || board().pins[0];
+        let pin = board().pins.filter(pin => !!pin && pin.pitch)[0] || board().pins[0];
+        pin.mode = PinMode.Analog | PinMode.Output;
         if (frequency <= 0) {
             pin.value = 0;     
             pin.period = 0;       
@@ -410,6 +412,7 @@ namespace ks.rt.micro_bit {
                 AudioContextManager.stop();            
                 pin.value = 0;   
                 pin.period = 0;     
+                pin.mode = PinMode.Unused;
                 board().updateView();
                 cb() 
             }, ms);

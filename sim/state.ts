@@ -98,6 +98,7 @@ namespace ks.rt.micro_bit {
     export class RadioBus {
         // uint8_t radioDefaultGroup = MICROBIT_RADIO_DEFAULT_GROUP;
         groupId = 0; // todo
+        power = 0;
         datagram: RadioDatagram;
 
         constructor(private runtime: Runtime) {
@@ -107,13 +108,19 @@ namespace ks.rt.micro_bit {
         setGroup(id: number) {
             this.groupId = id & 0xff; // byte only
         }
+        
+        setTransmitPower(power: number) {
+            this.power = Math.max(0, Math.min(7, power));
+        }
 
         broadcast(msg: number) {
             let ens = enums();
             Runtime.postMessage(<SimulatorEventBusMessage>{
                 type: 'eventbus',
                 id: ens.MES_BROADCAST_GENERAL_ID,
-                eventid: msg
+                eventid: msg,
+                power: this.power,
+                group: this.groupId
             })
         }
     }

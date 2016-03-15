@@ -82,4 +82,16 @@ namespace radio {
     //% blockId=radio_set_group block="set group %ID"
     export function setGroup(id: number) : void {
     }
+    
+    /**
+     * Change the output power level of the transmitter to the given value.
+    * @param power a value in the range 0..7, where 0 is the lowest power and 7 is the highest, eg: 7
+    */
+    //% help=/functions/set-transmit-power
+    //% shim=micro_bit::setTransmitPower
+    //% weight=9
+    //% blockId=radio_set_transmit_power block="set transmit power %power"
+    export function setTransmitPower(power:number) {
+        
+    }
 }

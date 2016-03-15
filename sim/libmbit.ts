@@ -92,6 +92,7 @@ namespace ks.rt.micro_bit {
     export function showDigit(v: number) {
         if (!quiet)
             console.log("DIGIT:", v)
+        plotLeds(createImageFromString(v.toString()[0]));
     }
 
     export function clearScreen() {
@@ -106,14 +107,15 @@ namespace ks.rt.micro_bit {
     function scrollImage(leds: micro_bit.Image, interval: number, stride: number): void {
         let cb = getResume()
         let off = stride > 0 ? 0 : leds.width - 1;
+        let display = board().image;
 
         board().animationQ.enqueue({
             interval: interval,
             frame: () => {
-                if (off >= leds.width || off < 0)
-                    return false;
-                let c = Math.min(5, leds.width - off);
-                leds.copyTo(off, 5, board().image, 0)
+                if (off >= leds.width || off < 0) return false;
+                stride > 0 ? display.shiftLeft(stride) : display.shiftRight(-stride);
+                let c = Math.min(stride, leds.width - off);
+                leds.copyTo(off, c, display, 5 - stride)
                 off += stride;
                 return true;
             },
@@ -129,7 +131,7 @@ namespace ks.rt.micro_bit {
         if (interval < 0) return;
 
         let leds = createImageFromString(x.toString());
-        if (x < 0 || x >= 10) scrollImage(leds, interval, 5);
+        if (x < 0 || x >= 10) scrollImage(leds, interval, 1);
         else showLeds(leds, interval * 5);
     }
 

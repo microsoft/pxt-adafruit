@@ -298,6 +298,18 @@ namespace ks.rt.micro_bit {
                 }
             }
         }
+        public shiftLeft(cols: number) {
+            for(let x = 0; x < this.width;++x)
+                for(let y = 0; y < 5;++y)
+                    this.set(x, y, x < this.width - cols ? this.get(x + cols,y) : 0);
+        }
+
+        public shiftRight(cols: number) {
+            for(let x = this.width -1; x <=0;--x)
+                for(let y = 0; y < 5;++y)
+                    this.set(x, y, x > cols ? this.get(x - cols,y) : 0);
+        }
+        
         public clear(): void {
             for (var i = 0; i < this.data.length; ++i)
                 this.data[i] = 0;

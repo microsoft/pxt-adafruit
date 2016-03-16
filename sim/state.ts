@@ -167,6 +167,7 @@ namespace ks.rt.micro_bit {
         // sensors    
         usesAcceleration = false;
         acceleration = [0, 0, -1023];
+        accelerometerRange = 2;
 
         usesHeading = false;
         heading = 90;

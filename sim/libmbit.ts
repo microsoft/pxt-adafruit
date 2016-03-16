@@ -289,6 +289,12 @@ namespace ks.rt.micro_bit {
             default: return Math.sqrt(acc[0] * acc[0] + acc[1] * acc[1] + acc[2] * acc[2]);
         }
     }
+    
+    export function setAccelerometerRange(range : number) {
+        let b = board();
+        b.accelerometerRange = Math.max(1, Math.min(8, range));
+        b.updateView();
+    }
 
     export function lightLevel(): number {
         let b = board();

@@ -35,6 +35,29 @@ enum TouchPins {
     P2,
 }
 
+enum AcceleratorRange {
+    /**
+     * The accelerator measures forces up to 1 gravity
+     */
+    //%  blockId="1g" enumval=1
+    OneG,
+    /**
+     * The accelerator measures forces up to 2 gravity
+     */
+    //%  blockId="2g" enumval=2
+    TwoG,
+    /**
+     * The accelerator measures forces up to 4 gravity
+     */
+    //% blockId="4g" enumval=4
+    FourG,
+    /**
+     * The accelerator measures forces up to 8 gravity
+     */
+    //% blockId="8g" enumval=8
+    EightG
+}
+
 /*
 enum BasicGesture
 {
@@ -207,7 +230,7 @@ namespace input {
      * Gets the number of milliseconds elapsed since power on.
      */
     //% help=functions/running-time shim=micro_bit::getCurrentTime weight=50
-    //% blockId=device_get_running_time block="running time (ms)" blockGap=8 icon="\uf017"
+    //% blockId=device_get_running_time block="running time (ms)" icon="\uf017"
     export function runningTime(): number {
         return 0;
     }
@@ -270,5 +293,17 @@ namespace input {
     //% help=functions/on-logo-down
     export function onLogoDown(body: Action): void {
         onGesture(Gestures.LogoDown, body);
+    }
+    
+    /**
+     * Sets the accelerometer sample range in gravities.
+     * @param range a value describe the maximum strengh of acceleration measured
+     */
+    //% help=functions/set-accelerator-range
+    //% blockId=device_set_accelerometer_range block="set accelerometer|range %range" icon="\uf135"
+    //% weight=5
+    //% shim=micro_bit::setAccelerometerRange
+    export function setAccelerometerRange(range : AcceleratorRange) : void {
+        
     }
 }

@@ -69,9 +69,7 @@ namespace led {
     //% blockId=device_plot_bar_graph block="plot bar graph of %value |up to %high" icon="\uf080" blockExternalInputs=true
     export function plotBarGraph(value: number, high: number = 1023): void {
         
-        writeString("v: ");
-        writeString(value.toString());
-        writeString("\n");
+        writeString(value.toString() + "\r\n");
         
         let v = Math.abs((value * 15) / high);
         let k = 0;

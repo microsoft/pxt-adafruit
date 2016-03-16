@@ -35,17 +35,65 @@ enum TouchPins {
     P2,
 }
 
+/*
+enum BasicGesture
+{
+    GESTURE_NONE,
+    GESTURE_UP,
+    GESTURE_DOWN,
+    GESTURE_LEFT,
+    GESTURE_RIGHT,
+    GESTURE_FACE_UP,
+    GESTURE_FACE_DOWN,
+    GESTURE_FREEFALL,
+    GESTURE_3G,
+    GESTURE_6G,
+    GESTURE_8G,
+    GESTURE_SHAKE
+};
+*/
+
 enum Gestures {
-    //% blockId=shake enumval=MICROBIT_ACCELEROMETER_EVT_SHAKE
+    /**
+     * Raised when shaken
+     */
+    //% blockId=shake enumval=11
     Shake,
-    //% blockId="logo up" enumval=MICROBIT_ACCELEROMETER_EVT_TILT_UP
+    /**
+     * Raised when the logo is upward and the screen is vertical
+     */
+    //% blockId="logo up" enumval=1
     LogoUp,
-    //% blockId="logo down" enumval=MICROBIT_ACCELEROMETER_EVT_TILT_DOWN
+    /**
+     * Raised when the logo is downward and the screen is vertical
+     */
+    //% blockId="logo down" enumval=2
     LogoDown,
-    //% blockId="screen up" enumval=MICROBIT_ACCELEROMETER_EVT_FACE_UP
+    /**
+     * Raised when the screen is pointing down and the board is horizontal
+     */
+    //% blockId="screen up" enumval=5
     ScreenUp,
-    //% blockId="screen down" enumval=MICROBIT_ACCELEROMETER_EVT_FACE_DOWN
-    ScreenDown
+    /**
+     * Raised when the screen is pointing up and the board is horizontal
+     */
+    //% blockId="screen down" enumval=6
+    ScreenDown,
+    /**
+     * Raised when the screen is pointing left
+     */
+    //% blockId="tilt left" enumval=3
+    TiltLeft,
+    /**
+     * Raised when the screen is pointing right
+     */
+    //% blockId="tilt right" enumval=4
+    TiltRight,    
+    /**
+     * Raised when the board is falling!
+     */
+    //% blockId="free fall" enumval=7
+    FreeFall
 }
 
 //% color=300 weight=99
@@ -66,7 +114,7 @@ namespace input {
      * Attaches code to run when the screen is facing up.
      * @param body TODO
      */
-    //% help=functions/on-gesture shim=micro_bit::on_event weight=84
+    //% help=functions/on-gesture shim=micro_bit::onGesture weight=84
     //% blockId=device_gesture_event block="on |%NAME" icon="\uf135"
     export function onGesture(gesture: Gestures, body: Action): void { }
 

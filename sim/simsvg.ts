@@ -62,7 +62,13 @@ namespace ks.rt.micro_bit {
         }
         
         static hydrate(el : SVGElement, props: any) {
-            Object.keys(props).forEach(k => el.setAttributeNS(null, k, props[k]));        
+            Object.keys(props).forEach(k => {
+                if (k == "title") {
+                    let title = Svg.child(el, "title", {});
+                    title.textContent = props[k];
+                }
+                el.setAttributeNS(null, k, props[k])
+            });        
         }
         
         static child(parent : Element, name: string, props: any) : SVGElement {
@@ -72,8 +78,10 @@ namespace ks.rt.micro_bit {
             return el;
         }
 
-        static path(parent: Element, cls: string, data:string) : SVGElement {
-            return Svg.child(parent, "path", {class:cls, d:data});
+        static path(parent: Element, cls: string, data:string, title?: string) : SVGElement {
+            let p : any = {class:cls, d:data};
+            if (title) p["title"] = title;
+            return Svg.child(parent, "path", p);
         }           
 
         static fill(el: SVGElement, c : string) {
@@ -430,7 +438,7 @@ namespace ks.rt.micro_bit {
                     var ledleft = j * ledoffw + left;
                     var k = i * 5 + j;
                     this.ledsOuter.push(Svg.child(this.g, "rect", { class:"sim-led-back", x:ledleft, y:ledtop, width:10, height:20, rx:2, ry:2 }));
-                    this.leds.push(Svg.child(this.g, "rect", { class:"sim-led", x:ledleft-2, y:ledtop-2, width:14, height:24, rx:2, ry:2})); 
+                    this.leds.push(Svg.child(this.g, "rect", { class:"sim-led", x:ledleft-2, y:ledtop-2, width:14, height:24, rx:2, ry:2, title:`(${j},${i})`})); 
                 }
             }
                         
@@ -459,6 +467,8 @@ namespace ks.rt.micro_bit {
             
             this.pins.push(Svg.path(this.g, "sim-pin", "M359.9,317.3c-12.8,0-22.1,10.3-23.1,23.1V406H383v-65.6C383,327.7,372.7,317.3,359.9,317.3z M360,360.1c-10.7,0-19.3-8.6-19.3-19.3c0-10.7,8.6-19.3,19.3-19.3c10.7,0,19.3,8.7,19.3,19.3C379.3,351.5,370.7,360.1,360,360.1z"));
             this.pins.push(Svg.path(this.g, "sim-pin", "M458,317.6c-13,0-23.6,10.6-23.6,23.6c0,0,0,0.1,0,0.1h0V406H469c4.3,0,8.4-1,12.6-2.7v-60.7c0-0.4,0-0.9,0-1.3C481.6,328.1,471,317.6,458,317.6z M457.8,360.9c-10.7,0-19.3-8.6-19.3-19.3c0-10.7,8.6-19.3,19.3-19.3c10.7,0,19.3,8.7,19.3,19.3C477.1,352.2,468.4,360.9,457.8,360.9z"));
+            
+            this.pins.forEach((pin, i) => Svg.hydrate(pin, {title: "P" + i}));
             
             this.pinGradients = this.pins.map((pin,i) => {
                 let gid= "gradient-pin-" + i

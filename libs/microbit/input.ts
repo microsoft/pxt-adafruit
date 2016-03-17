@@ -4,12 +4,12 @@ enum Button {
     //% enumval=MICROBIT_ID_BUTTON_B
     B,
     //% enumval=MICROBIT_ID_BUTTON_AB
-    //% blockId="A+B"
+    //% blockId="A+B" block="A+B"
     AB,
 }
 
 enum Dimension {
-    //% enumval=0 blockId=x    
+    //% enumval=0 blockId=x
     X,
     //% enumval=1 blockId=y
     Y,

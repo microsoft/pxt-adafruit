@@ -77,5 +77,6 @@ namespace ks.rt.micro_bit {
         MES_BROADCAST_GENERAL_ID: number;
         MICROBIT_ID_RADIO: number;
         MICROBIT_RADIO_EVT_DATAGRAM: number;
+        MICROBIT_ID_GESTURE: number;
     }    
 }

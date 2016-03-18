@@ -216,22 +216,33 @@ namespace ks.rt.micro_bit {
         let b = board();
         if (button == ens.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
             b.usesButtonAB = true;
-            b.updateView();
+            runtime.queueDisplayUpdate();
         }
         b.bus.listen(button, ens.MICROBIT_BUTTON_EVT_CLICK, handler);
     }
     
     export function isButtonPressed(button: number): boolean {
-        var ens = enums();
+        let ens = enums();
         let b = board();
         if (button == ens.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
             b.usesButtonAB = true;
-            b.updateView();
+            runtime.queueDisplayUpdate();
         }
-        var bts = b.buttons;
+        let bts = b.buttons;
         if (button == ens.MICROBIT_ID_BUTTON_A) return bts[0].pressed;
         if (button == ens.MICROBIT_ID_BUTTON_B) return bts[1].pressed;
         return bts[2].pressed || (bts[0].pressed && bts[1].pressed);
+    }
+    
+    export function onGesture(gesture: number, handler: RefAction) {
+        let ens = enums();
+        let b = board();
+        
+        if (gesture == 11 && !b.useShake) { // SAKE
+            b.useShake = true;
+            runtime.queueDisplayUpdate();
+        }
+        b.bus.listen(ens.MICROBIT_ID_GESTURE, gesture, handler);
     }
     
     export function onPinPressed(pin: Pin, handler: RefAction) {
@@ -267,7 +278,7 @@ namespace ks.rt.micro_bit {
         var b = board();
         if (!b.usesHeading) {
             b.usesHeading = true;
-            b.updateView();
+            runtime.queueDisplayUpdate();
         }
         return b.heading;
     }
@@ -276,7 +287,7 @@ namespace ks.rt.micro_bit {
         var b = board();
         if (!b.usesTemperature) {
             b.usesTemperature = true;
-            b.updateView();
+            runtime.queueDisplayUpdate();
         }
         return b.temperature;
     }
@@ -285,7 +296,7 @@ namespace ks.rt.micro_bit {
         let b = board();
         if (!b.usesAcceleration) {
             b.usesAcceleration = true;
-            b.updateView();
+            runtime.queueDisplayUpdate();
         }
         let acc = b.acceleration;
         switch (dimension) {
@@ -299,14 +310,14 @@ namespace ks.rt.micro_bit {
     export function setAccelerometerRange(range : number) {
         let b = board();
         b.accelerometerRange = Math.max(1, Math.min(8, range));
-        b.updateView();
+        runtime.queueDisplayUpdate();
     }
 
     export function lightLevel(): number {
         let b = board();
         if (!b.usesLightLevel) {
             b.usesLightLevel = true;
-            b.updateView();
+            runtime.queueDisplayUpdate();
         }
         return b.lightLevel;
     }
@@ -329,7 +340,7 @@ namespace ks.rt.micro_bit {
     export function digitalWritePin(pin : Pin, value: number) {
         pin.mode = PinMode.Digital | PinMode.Output;
         pin.value = value > 0 ? 1023 : 0;
-        board().updateView();
+        runtime.queueDisplayUpdate();
     }
 
     export function analogReadPin(pin : Pin) : number {
@@ -340,13 +351,13 @@ namespace ks.rt.micro_bit {
     export function analogWritePin(pin : Pin, value: number) {
         pin.mode = PinMode.Analog | PinMode.Output;
         pin.value = value ? 1 : 0;
-        board().updateView();
+        runtime.queueDisplayUpdate();
     }
     
     export function setAnalogPeriodUs(pin: Pin, micros:number) {
         pin.mode = PinMode.Analog | PinMode.Output;
         pin.period = micros;
-        board().updateView();
+        runtime.queueDisplayUpdate();
     }
     
     export function servoWritePin(pin: Pin, value: number) {
@@ -425,7 +436,7 @@ namespace ks.rt.micro_bit {
             pin.value = 512;
             pin.period = 1000000/frequency;        
         }
-        board().updateView();
+        runtime.queueDisplayUpdate();
         
         let cb = getResume();
         AudioContextManager.tone(frequency, 1);
@@ -436,7 +447,7 @@ namespace ks.rt.micro_bit {
                 pin.value = 0;   
                 pin.period = 0;     
                 pin.mode = PinMode.Unused;
-                board().updateView();
+                runtime.queueDisplayUpdate();
                 cb() 
             }, ms);
         }

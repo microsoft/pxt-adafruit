@@ -182,6 +182,8 @@ namespace ks.rt.micro_bit {
         private thermometerGradient : SVGLinearGradientElement;
         private thermometer: SVGRectElement;
         private thermometerText: SVGTextElement;
+        private shakeButton: SVGCircleElement;
+        private shakeText: SVGTextElement;
         public board: rt.micro_bit.Board; 
         
         constructor(public props: IBoardProps) {
@@ -204,6 +206,7 @@ namespace ks.rt.micro_bit {
             Svg.fill(this.buttonsOuter[2], theme.virtualButtonOuter);
             Svg.fill(this.buttons[2], theme.virtualButtonUp);
             Svg.fills(this.logos, theme.accent);
+            if (this.shakeButton) Svg.fill(this.shakeButton, theme.virtualButtonUp);
             
             this.pinGradients.forEach(lg => Svg.setGradientColors(lg, theme.pin, theme.pinActive));            
             Svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
@@ -231,7 +234,32 @@ namespace ks.rt.micro_bit {
             this.updateHeading();  
             this.updateLightLevel();
             this.updateTemperature(); 
-            this.updateButtonAB();        
+            this.updateButtonAB();       
+            this.updateGestures(); 
+        }
+        
+        private updateGestures() {
+            let state = this.board;
+            if (state.useShake && !this.shakeButton) {
+                this.shakeButton = Svg.child(this.g, "circle", {cx:380, cy:100, r:16.5}) as SVGCircleElement;
+                Svg.fill(this.shakeButton, this.props.theme.virtualButtonUp)
+                this.shakeButton.addEventListener("mousedown", ev => {
+                    let state = this.board;
+                    Svg.fill(this.shakeButton, this.props.theme.buttonDown);          
+                })
+                this.shakeButton.addEventListener("mouseleave", ev => {
+                    let state = this.board;
+                    Svg.fill(this.shakeButton, this.props.theme.virtualButtonUp);          
+                })
+                this.shakeButton.addEventListener("mouseup", ev => {
+                    let state = this.board;
+                    Svg.fill(this.shakeButton, this.props.theme.virtualButtonUp);                              
+                    let ens = enums();
+                    this.board.bus.queue(ens.MICROBIT_ID_GESTURE, 11); // GESTURE_SHAKE
+                })     
+                this.shakeText = Svg.child(this.g, "text", {x:400, y:110, class:'sim-text'}) as SVGTextElement;
+                this.shakeText.textContent = "SHAKE"     
+            }            
         }
         
         private updateButtonAB() {

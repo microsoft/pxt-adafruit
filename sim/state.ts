@@ -168,6 +168,9 @@ namespace ks.rt.micro_bit {
         usesAcceleration = false;
         acceleration = [0, 0, -1023];
         accelerometerRange = 2;
+        
+        // gestures
+        useShake = false;
 
         usesHeading = false;
         heading = 90;

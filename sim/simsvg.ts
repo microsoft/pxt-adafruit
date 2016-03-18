@@ -11,6 +11,9 @@ namespace ks.rt.micro_bit {
         buttonOuter?: string;
         buttonUp?: string;
         buttonDown?: string;
+        virtualButtonOuter?: string;
+        virtualButtonUp?: string;
+        virtualButtonDown?: string;
         lightLevelOn?:string;
         lightLevelOff?: string;
     }
@@ -27,6 +30,8 @@ namespace ks.rt.micro_bit {
             buttonOuter: "#979797",
             buttonUp: "#000",
             buttonDown: "#FFA500",
+            virtualButtonOuter: "#333",
+            virtualButtonUp: "#fff",
             lightLevelOn: "yellow",
             lightLevelOff: "#555"
     }});
@@ -163,6 +168,7 @@ namespace ks.rt.micro_bit {
         private display: SVGElement;
         private buttons: SVGElement[];
         private buttonsOuter: SVGElement[];
+        private buttonABText:SVGTextElement;
         private pins: SVGElement[];
         private pinGradients: SVGLinearGradientElement[];
         private pinTexts: SVGTextElement[];
@@ -193,8 +199,10 @@ namespace ks.rt.micro_bit {
             Svg.fill(this.display, theme.display);
             Svg.fills(this.leds, theme.ledOn);
             Svg.fills(this.ledsOuter, theme.ledOff);
-            Svg.fills(this.buttonsOuter, theme.buttonOuter);
-            Svg.fills(this.buttons, theme.buttonUp);
+            Svg.fills(this.buttonsOuter.slice(0, 2), theme.buttonOuter);
+            Svg.fills(this.buttons.slice(0, 2), theme.buttonUp);
+            Svg.fill(this.buttonsOuter[2], theme.virtualButtonOuter);
+            Svg.fill(this.buttons[2], theme.virtualButtonUp);
             Svg.fills(this.logos, theme.accent);
             
             this.pinGradients.forEach(lg => Svg.setGradientColors(lg, theme.pin, theme.pinActive));            
@@ -222,10 +230,19 @@ namespace ks.rt.micro_bit {
             this.updateTilt();
             this.updateHeading();  
             this.updateLightLevel();
-            this.updateTemperature();
-               
-            (<any>this.buttonsOuter[2]).style.visibility = state.usesButtonAB ? 'visible' : 'hidden';   
-            (<any>this.buttons[2]).style.visibility = state.usesButtonAB ? 'visible' : 'hidden';   
+            this.updateTemperature(); 
+            this.updateButtonAB();        
+        }
+        
+        private updateButtonAB() {
+            let state = this.board;
+            if (state.usesButtonAB && !this.buttonABText) {
+                (<any>this.buttonsOuter[2]).style.visibility = 'visible';   
+                (<any>this.buttons[2]).style.visibility = 'visible';
+                this.buttonABText = Svg.child(this.g, "text", {class: 'sim-text', x:370, y:272 }) as SVGTextElement;
+                this.buttonABText.textContent = "A+B";
+                this.updateTheme();
+            }            
         }
         
         private updatePin(pin : Pin, index: number) {
@@ -584,6 +601,11 @@ namespace ks.rt.micro_bit {
                     state.buttons[index].pressed = true;
                     Svg.fill(this.buttons[index], this.props.theme.buttonDown);          
                 })
+                btn.addEventListener("mouseleave", ev => {
+                    let state = this.board;
+                    state.buttons[index].pressed = false;
+                    Svg.fill(this.buttons[index], this.props.theme.buttonUp);
+                })
                 btn.addEventListener("mouseup", ev => {
                     let state = this.board;
                     state.buttons[index].pressed = false;
@@ -602,6 +624,15 @@ namespace ks.rt.micro_bit {
                     Svg.fill(this.buttons[1], this.props.theme.buttonDown);                
                     Svg.fill(this.buttons[2], this.props.theme.buttonDown);                
                 })
+            this.buttonsOuter[2].addEventListener("mouseleave", ev => {
+                    let state = this.board;
+                    state.buttons[0].pressed = false;
+                    state.buttons[1].pressed = false;
+                    state.buttons[2].pressed = false;
+                    Svg.fill(this.buttons[0], this.props.theme.buttonUp);                
+                    Svg.fill(this.buttons[1], this.props.theme.buttonUp);                
+                    Svg.fill(this.buttons[2], this.props.theme.virtualButtonUp);                
+            })
             this.buttonsOuter[2].addEventListener("mouseup", ev => {
                     let state = this.board;
                     state.buttons[0].pressed = false;
@@ -609,7 +640,7 @@ namespace ks.rt.micro_bit {
                     state.buttons[2].pressed = false;
                     Svg.fill(this.buttons[0], this.props.theme.buttonUp);                
                     Svg.fill(this.buttons[1], this.props.theme.buttonUp);                
-                    Svg.fill(this.buttons[2], this.props.theme.buttonUp);                
+                    Svg.fill(this.buttons[2], this.props.theme.virtualButtonUp);                
                     
                     let ens = enums();
                     this.board.bus.queue(state.buttons[2].id, ens.MICROBIT_BUTTON_EVT_CLICK);

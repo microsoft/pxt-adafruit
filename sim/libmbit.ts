@@ -213,16 +213,22 @@ namespace ks.rt.micro_bit {
     /* input */
     export function onButtonPressed(button : number, handler: RefAction) : void {
         let ens = enums();
-        board().bus.listen(button, ens.MICROBIT_BUTTON_EVT_CLICK, handler);
+        let b = board();
+        if (button == ens.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
+            b.usesButtonAB = true;
+            b.updateView();
+        }
+        b.bus.listen(button, ens.MICROBIT_BUTTON_EVT_CLICK, handler);
     }
     
     export function isButtonPressed(button: number): boolean {
         var ens = enums();
+        let b = board();
         if (button == ens.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
-            board().usesButtonAB = true;
-            runtime.queueDisplayUpdate();
+            b.usesButtonAB = true;
+            b.updateView();
         }
-        var bts = board().buttons;
+        var bts = b.buttons;
         if (button == ens.MICROBIT_ID_BUTTON_A) return bts[0].pressed;
         if (button == ens.MICROBIT_ID_BUTTON_B) return bts[1].pressed;
         return bts[2].pressed || (bts[0].pressed && bts[1].pressed);

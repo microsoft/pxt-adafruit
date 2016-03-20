@@ -459,7 +459,13 @@ namespace ks.rt.micro_bit {
             this.defs = <SVGDefsElement>Svg.child(this.element, "defs", {});
             this.g = Svg.elt("g");
             this.element.appendChild(this.g);
-    
+            
+            // filters
+            let glow = Svg.child(this.defs, "filter", {id:"filterglow", x:"-20%", y:"-20%", width:"140%", height:"140%"});
+            Svg.child(glow, "feGaussianBlur", {stdDeviation:"2 2", result: "glow" });
+            let merge = Svg.child(glow, "feMerge", {});
+            for(let i=0;i<3;++i) Svg.child(merge, "feMergeNode", {in:"glow"})
+            
             // outline
             Svg.path(this.g, "sim-board", "M498,31.9C498,14.3,483.7,0,466.1,0H31.9C14.3,0,0,14.3,0,31.9v342.2C0,391.7,14.3,406,31.9,406h434.2c17.6,0,31.9-14.3,31.9-31.9V31.9z M14.3,206.7c-2.7,0-4.8-2.2-4.8-4.8c0-2.7,2.2-4.8,4.8-4.8c2.7,0,4.8,2.2,4.8,4.8C19.2,204.6,17,206.7,14.3,206.7z M486.2,206.7c-2.7,0-4.8-2.2-4.8-4.8c0-2.72.2-4.8,4.8-4.8c2.7,0,4.8,2.2,4.8,4.8C491,204.6,488.8,206.7,486.2,206.7z");       
 
@@ -483,7 +489,7 @@ namespace ks.rt.micro_bit {
                     var ledleft = j * ledoffw + left;
                     var k = i * 5 + j;
                     this.ledsOuter.push(Svg.child(this.g, "rect", { class:"sim-led-back", x:ledleft, y:ledtop, width:10, height:20, rx:2, ry:2 }));
-                    this.leds.push(Svg.child(this.g, "rect", { class:"sim-led", x:ledleft-2, y:ledtop-2, width:14, height:24, rx:2, ry:2, title:`(${j},${i})`})); 
+                    this.leds.push(Svg.child(this.g, "rect", { class:"sim-led", x:ledleft-2, y:ledtop-2, width:14, height:24, rx:2, ry:2, style:"filter:url(#filterglow);", title:`(${j},${i})`})); 
                 }
             }
                         

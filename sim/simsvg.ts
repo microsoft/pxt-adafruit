@@ -436,15 +436,15 @@ namespace ks.rt.micro_bit {
         private updateTilt() {
             if (this.props.disableTilt) return;
             let state = this.board;
-            if (!state || !state.usesAcceleration) return;
+            if (!state || !state.accelerometer.isActive) return;
 
-            var acc = state.acceleration;        
-            var af = 8 / 1023;
-            if(acc && !isNaN(acc[0]) && !isNaN(acc[1])) {
-                this.element.style.transform = "perspective(30em) rotateX(" + -acc[1]*af + "deg) rotateY(" + acc[0]*af +"deg)"
-                this.element.style.perspectiveOrigin = "50% 50% 50%";
-                this.element.style.perspective = "30em";            
-            }        
+            let x = state.accelerometer.getX();
+            let y = state.accelerometer.getY();
+            let af = 8 / 1023;
+
+            this.element.style.transform = "perspective(30em) rotateX(" + y*af + "deg) rotateY(" + x*af +"deg)"
+            this.element.style.perspectiveOrigin = "50% 50% 50%";
+            this.element.style.perspective = "30em";            
         }
         
         private buildDom() {
@@ -557,23 +557,24 @@ namespace ks.rt.micro_bit {
             }
             this.element.addEventListener("mousemove", (ev: MouseEvent) => {
                 let state = this.board;
-                if (!state.acceleration) return;            
+                if (!state.accelerometer.isActive) return;           
+
                 let ax = (ev.clientX - this.element.clientWidth / 2) / (this.element.clientWidth / 3);
                 let ay = (ev.clientY - this.element.clientHeight / 2) / (this.element.clientHeight / 3);
-                state.acceleration[0] = Math.max(-1023, Math.min(1023, Math.floor(ax * 1023)));
-                state.acceleration[1] = Math.max(-1023, Math.min(1023, Math.floor(ay * 1023)));
-                state.acceleration[2] = Math.floor(Math.sqrt(1023*1023
-                    - state.acceleration[0] *state.acceleration[0] 
-                    - state.acceleration[1] *state.acceleration[1]));
+                
+                let x = - Math.max(- 1023, Math.min(1023, Math.floor(ax * 1023)));
+                let y = Math.max(- 1023, Math.min(1023, Math.floor(ay * 1023)));
+                let z2 = 1023*1023 - x * x  - y * y;
+                let z = Math.floor((z2 > 0 ? -1 : 1)* Math.sqrt(Math.abs(z2)));
+                
+                state.accelerometer.update(x,y,z);
                 this.updateTilt();
             }, false);
             this.element.addEventListener("mouseleave", (ev: MouseEvent) => {
                 let state = this.board;
-                if (!state.acceleration) return;
+                if (!state.accelerometer.isActive) return;
                 
-                state.acceleration[0] = 0;
-                state.acceleration[1] = 0;
-                state.acceleration[2] = -1023;
+                state.accelerometer.update(0,0,-1023);
                 this.updateTilt();
             }, false);
             

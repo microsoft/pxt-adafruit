@@ -237,6 +237,7 @@ namespace ks.rt.micro_bit {
     export function onGesture(gesture: number, handler: RefAction) {
         let ens = enums();
         let b = board();
+        b.accelerometer.activate();
         
         if (gesture == 11 && !b.useShake) { // SAKE
             b.useShake = true;
@@ -294,23 +295,19 @@ namespace ks.rt.micro_bit {
        
     export function getAcceleration(dimension: number): number {
         let b = board();
-        if (!b.usesAcceleration) {
-            b.usesAcceleration = true;
-            runtime.queueDisplayUpdate();
-        }
-        let acc = b.acceleration;
+        let acc = b.accelerometer;
+        acc.activate();
         switch (dimension) {
-            case 0: return acc[0];
-            case 1: return acc[1];
-            case 2: return acc[2];
-            default: return Math.sqrt(acc[0] * acc[0] + acc[1] * acc[1] + acc[2] * acc[2]);
+            case 0: return acc.getX();
+            case 1: return acc.getY();
+            case 2: return acc.getZ();
+            default: return Math.floor(Math.sqrt(acc.instantaneousAccelerationSquared()));
         }
     }
     
     export function setAccelerometerRange(range : number) {
         let b = board();
-        b.accelerometerRange = Math.max(1, Math.min(8, range));
-        runtime.queueDisplayUpdate();
+        b.accelerometer.setSampleRange(range);
     }
 
     export function lightLevel(): number {

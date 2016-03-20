@@ -108,7 +108,7 @@ namespace ks.rt.micro_bit {
         setGroup(id: number) {
             this.groupId = id & 0xff; // byte only
         }
-        
+
         setTransmitPower(power: number) {
             this.power = Math.max(0, Math.min(7, power));
         }
@@ -123,6 +123,351 @@ namespace ks.rt.micro_bit {
                 group: this.groupId
             })
         }
+    }
+
+    export enum BasicGesture {
+        GESTURE_NONE,
+        GESTURE_UP,
+        GESTURE_DOWN,
+        GESTURE_LEFT,
+        GESTURE_RIGHT,
+        GESTURE_FACE_UP,
+        GESTURE_FACE_DOWN,
+        GESTURE_FREEFALL,
+        GESTURE_3G,
+        GESTURE_6G,
+        GESTURE_8G,
+        GESTURE_SHAKE
+    };
+
+    interface AccelerometerSample {
+        x: number;
+        y: number;
+        z: number;
+    }
+
+    interface ShakeHistory {
+        x: boolean;
+        y: boolean;
+        z: boolean;
+        count: number;
+        shaken: number;
+        timer: number;
+    }
+
+    /**
+      * Co-ordinate systems that can be used.
+      * RAW: Unaltered data. Data will be returned directly from the accelerometer.
+      * 
+      * SIMPLE_CARTESIAN: Data will be returned based on an easy to understand alignment, consistent with the cartesian system taught in schools.
+      * When held upright, facing the user:
+      * 
+      *                            /
+      *    +--------------------+ z
+      *    |                    |
+      *    |       .....        |
+      *    | *     .....      * |
+      * ^  |       .....        |
+      * |  |                    |
+      * y  +--------------------+  x-->
+      *
+      *
+      * NORTH_EAST_DOWN: Data will be returned based on the industry convention of the North East Down (NED) system.
+      * When held upright, facing the user:
+      * 
+      *                            z
+      *    +--------------------+ /
+      *    |                    |
+      *    |       .....        |
+      *    | *     .....      * |
+      * ^  |       .....        |
+      * |  |                    |
+      * x  +--------------------+  y-->
+      *
+      */
+    export enum MicroBitCoordinateSystem {
+        RAW,
+        SIMPLE_CARTESIAN,
+        NORTH_EAST_DOWN
+    }
+
+    export class Accelerometer {
+        private sigma: number = 0;              // the number of ticks that the instantaneous gesture has been stable.
+        private lastGesture: BasicGesture = BasicGesture.GESTURE_NONE;        // the last, stable gesture recorded.
+        private currentGesture: BasicGesture = BasicGesture.GESTURE_NONE;     // the instantaneous, unfiltered gesture detected.
+        private sample: AccelerometerSample = { x: 0, y: 0, z: -1023 }
+        private shake: ShakeHistory = { x: false, y: false, z: false, count: 0, shaken: 0, timer: 0 }; // State information needed to detect shake events.
+        private pitch:number;
+        private roll:number;
+        private id: number;
+        public isActive = false;
+        public sampleRange = 2;
+
+        constructor(public runtime: Runtime) {
+            this.id = (<Enums><any>runtime.enums).MICROBIT_ID_ACCELEROMETER;
+        }
+        
+        public setSampleRange(range : number) {
+            this.activate();
+            this.sampleRange = Math.max(1, Math.min(8, range));
+        }
+        
+        public activate() {
+            if (!this.isActive) {
+                this.isActive = true;
+                this.runtime.queueDisplayUpdate();
+            }
+        }
+
+        /**
+         * Reads the acceleration data from the accelerometer, and stores it in our buffer.
+         * This is called by the tick() member function, if the interrupt is set!
+         */
+        public update(x : number, y : number, z : number) {            
+            // read MSB values...
+            this.sample.x = Math.floor(x);
+            this.sample.y = Math.floor(y);
+            this.sample.z = Math.floor(z);
+
+            // Update gesture tracking
+            this.updateGesture();
+
+            // Indicate that a new sample is available
+            board().bus.queue(this.id, enums().MICROBIT_ACCELEROMETER_EVT_DATA_UPDATE)
+        }
+
+        public instantaneousAccelerationSquared() {
+            // Use pythagoras theorem to determine the combined force acting on the device.
+            return this.sample.x * this.sample.x + this.sample.y * this.sample.y + this.sample.z * this.sample.z;
+        }
+
+        /**
+         * Service function. Determines the best guess posture of the device based on instantaneous data.
+         * This makes no use of historic data (except for shake), and forms this input to the filter implemented in updateGesture().
+         *
+         * @return A best guess of the current posture of the device, based on instantaneous data.
+         */
+        private instantaneousPosture(): BasicGesture {
+            let ens = enums()
+            let force = this.instantaneousAccelerationSquared();
+            let shakeDetected = false;
+
+            // Test for shake events.
+            // We detect a shake by measuring zero crossings in each axis. In other words, if we see a strong acceleration to the left followed by
+            // a string acceleration to the right, then we can infer a shake. Similarly, we can do this for each acxis (left/right, up/down, in/out).
+            //
+            // If we see enough zero crossings in succession (MICROBIT_ACCELEROMETER_SHAKE_COUNT_THRESHOLD), then we decide that the device
+            // has been shaken.
+            if ((this.getX() < -ens.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && this.shake.x) || (this.getX() > ens.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && !this.shake.x)) {
+                shakeDetected = true;
+                this.shake.x = !this.shake.x;
+            }
+
+            if ((this.getY() < -ens.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && this.shake.y) || (this.getY() > ens.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && !this.shake.y)) {
+                shakeDetected = true;
+                this.shake.y = !this.shake.y;
+            }
+
+            if ((this.getZ() < -ens.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && this.shake.z) || (this.getZ() > ens.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && !this.shake.z)) {
+                shakeDetected = true;
+                this.shake.z = !this.shake.z;
+            }
+
+            if (shakeDetected && this.shake.count < ens.MICROBIT_ACCELEROMETER_SHAKE_COUNT_THRESHOLD && ++this.shake.count == ens.MICROBIT_ACCELEROMETER_SHAKE_COUNT_THRESHOLD)
+                this.shake.shaken = 1;
+
+            if (++this.shake.timer >= ens.MICROBIT_ACCELEROMETER_SHAKE_DAMPING) {
+                this.shake.timer = 0;
+                if (this.shake.count > 0) {
+                    if (--this.shake.count == 0)
+                        this.shake.shaken = 0;
+                }
+            }
+
+            if (this.shake.shaken)
+                return BasicGesture.GESTURE_SHAKE;
+
+            if (force < ens.MICROBIT_ACCELEROMETER_FREEFALL_THRESHOLD)
+                return BasicGesture.GESTURE_FREEFALL;
+
+            if (force > ens.MICROBIT_ACCELEROMETER_3G_THRESHOLD)
+                return BasicGesture.GESTURE_3G;
+
+            if (force > ens.MICROBIT_ACCELEROMETER_6G_THRESHOLD)
+                return BasicGesture.GESTURE_6G;
+
+            if (force > ens.MICROBIT_ACCELEROMETER_8G_THRESHOLD)
+                return BasicGesture.GESTURE_8G;
+
+            // Determine our posture.
+            if (this.getX() < (-1000 + ens.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
+                return BasicGesture.GESTURE_LEFT;
+
+            if (this.getX() > (1000 - ens.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
+                return BasicGesture.GESTURE_RIGHT;
+
+            if (this.getY() < (-1000 + ens.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
+                return BasicGesture.GESTURE_DOWN;
+
+            if (this.getY() > (1000 - ens.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
+                return BasicGesture.GESTURE_UP;
+
+            if (this.getZ() < (-1000 + ens.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
+                return BasicGesture.GESTURE_FACE_UP;
+
+            if (this.getZ() > (1000 - ens.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
+                return BasicGesture.GESTURE_FACE_DOWN;
+
+            return BasicGesture.GESTURE_NONE;
+        }
+
+        updateGesture() {
+            let ens = enums()
+            // Determine what it looks like we're doing based on the latest sample...
+            let g = this.instantaneousPosture();
+
+            // Perform some low pass filtering to reduce jitter from any detected effects
+            if (g == this.currentGesture) {
+                if (this.sigma < ens.MICROBIT_ACCELEROMETER_GESTURE_DAMPING)
+                    this.sigma++;
+            }
+            else {
+                this.currentGesture = g;
+                this.sigma = 0;
+            }
+
+            // If we've reached threshold, update our record and raise the relevant event...
+            if (this.currentGesture != this.lastGesture && this.sigma >= ens.MICROBIT_ACCELEROMETER_GESTURE_DAMPING) {
+                this.lastGesture = this.currentGesture;
+                board().bus.queue(ens.MICROBIT_ID_GESTURE, this.lastGesture);
+            }
+        }
+
+        /**
+          * Reads the X axis value of the latest update from the accelerometer.
+          * @param system The coordinate system to use. By default, a simple cartesian system is provided.
+          * @return The force measured in the X axis, in milli-g.
+          *
+          * Example:
+          * @code
+          * uBit.accelerometer.getX();
+          * uBit.accelerometer.getX(RAW);
+          * @endcode
+          */
+        public getX(system : MicroBitCoordinateSystem = MicroBitCoordinateSystem.SIMPLE_CARTESIAN): number {
+            this.activate();
+            switch (system) {
+                case MicroBitCoordinateSystem.SIMPLE_CARTESIAN:
+                    return -this.sample.x;
+
+                case MicroBitCoordinateSystem.NORTH_EAST_DOWN:
+                    return this.sample.y;
+                //case MicroBitCoordinateSystem.SIMPLE_CARTESIAN.RAW:
+                default:
+                    return this.sample.x;
+            }
+        }
+
+        /**
+          * Reads the Y axis value of the latest update from the accelerometer.
+          * @param system The coordinate system to use. By default, a simple cartesian system is provided.
+          * @return The force measured in the Y axis, in milli-g.
+          *
+          * Example:
+          * @code
+          * uBit.accelerometer.getY();
+          * uBit.accelerometer.getY(RAW);
+          * @endcode
+          */
+        public getY(system : MicroBitCoordinateSystem = MicroBitCoordinateSystem.SIMPLE_CARTESIAN): number {
+            this.activate();
+            switch (system) {
+                case MicroBitCoordinateSystem.SIMPLE_CARTESIAN:
+                    return -this.sample.y;
+
+                case MicroBitCoordinateSystem.NORTH_EAST_DOWN:
+                    return -this.sample.x;
+                //case RAW:
+                default:
+                    return this.sample.y;
+            }
+        }
+
+        /**
+          * Reads the Z axis value of the latest update from the accelerometer.
+          * @param system The coordinate system to use. By default, a simple cartesian system is provided.
+          * @return The force measured in the Z axis, in milli-g.
+          *
+          * Example:
+          * @code
+          * uBit.accelerometer.getZ();
+          * uBit.accelerometer.getZ(RAW);
+          * @endcode
+          */
+        public getZ(system : MicroBitCoordinateSystem = MicroBitCoordinateSystem.SIMPLE_CARTESIAN): number {
+            this.activate();
+            switch (system) {
+                case MicroBitCoordinateSystem.NORTH_EAST_DOWN:
+                    return -this.sample.z;
+                //case MicroBitCoordinateSystem.SIMPLE_CARTESIAN:
+                //case MicroBitCoordinateSystem.RAW:
+                default:
+                    return this.sample.z;
+            }
+        }
+
+        /**
+          * Provides a rotation compensated pitch of the device, based on the latest update from the accelerometer.
+          * @return The pitch of the device, in degrees.
+          *
+          * Example:
+          * @code
+          * uBit.accelerometer.getPitch();
+          * @endcode
+          */
+        public getPitch(): number {
+            this.activate();
+            return Math.floor((360 * this.getPitchRadians()) / (2 * Math.PI));
+        }
+
+        getPitchRadians() : number {
+            this.recalculatePitchRoll();
+            return this.pitch;
+        }
+
+        /**
+          * Provides a rotation compensated roll of the device, based on the latest update from the accelerometer.
+          * @return The roll of the device, in degrees.
+          *
+          * Example:
+          * @code
+          * uBit.accelerometer.getRoll();
+          * @endcode
+          */
+        public getRoll(): number {
+            this.activate();
+            return Math.floor((360 * this.getRollRadians()) / (2 * Math.PI));
+        }
+
+        getRollRadians(): number {
+            this.recalculatePitchRoll();
+            return this.roll;
+        }
+
+        /**
+         * Recalculate roll and pitch values for the current sample.
+         * We only do this at most once per sample, as the necessary trigonemteric functions are rather
+         * heavyweight for a CPU without a floating point unit...
+         */
+        recalculatePitchRoll() {
+            let x = this.getX(MicroBitCoordinateSystem.NORTH_EAST_DOWN);
+            let y = this.getY(MicroBitCoordinateSystem.NORTH_EAST_DOWN);
+            let z = this.getZ(MicroBitCoordinateSystem.NORTH_EAST_DOWN);
+
+            this.roll = Math.atan2(y, z);
+            this.pitch = Math.atan(-x / (y * Math.sin(this.roll) + z * Math.cos(this.roll)));
+        }
+
     }
 
     export interface SimulatorEventBusMessage extends SimulatorMessage {
@@ -164,11 +509,9 @@ namespace ks.rt.micro_bit {
         // serial
         serialIn: string[] = [];
 
-        // sensors    
-        usesAcceleration = false;
-        acceleration = [0, 0, -1023];
-        accelerometerRange = 2;
-        
+        // sensors
+        accelerometer : Accelerometer;
+
         // gestures
         useShake = false;
 
@@ -189,6 +532,7 @@ namespace ks.rt.micro_bit {
             this.animationQ = new AnimationQueue(runtime);
             this.bus = new EventBus(runtime);
             this.radio = new RadioBus(runtime);
+            this.accelerometer = new Accelerometer(runtime);
             let ens = enums();
             this.buttons = [
                 new Button(ens.MICROBIT_ID_BUTTON_A),
@@ -310,17 +654,17 @@ namespace ks.rt.micro_bit {
             }
         }
         public shiftLeft(cols: number) {
-            for(let x = 0; x < this.width;++x)
-                for(let y = 0; y < 5;++y)
-                    this.set(x, y, x < this.width - cols ? this.get(x + cols,y) : 0);
+            for (let x = 0; x < this.width; ++x)
+                for (let y = 0; y < 5; ++y)
+                    this.set(x, y, x < this.width - cols ? this.get(x + cols, y) : 0);
         }
 
         public shiftRight(cols: number) {
-            for(let x = this.width -1; x <=0;--x)
-                for(let y = 0; y < 5;++y)
-                    this.set(x, y, x > cols ? this.get(x - cols,y) : 0);
+            for (let x = this.width - 1; x <= 0; --x)
+                for (let y = 0; y < 5; ++y)
+                    this.set(x, y, x > cols ? this.get(x - cols, y) : 0);
         }
-        
+
         public clear(): void {
             for (var i = 0; i < this.data.length; ++i)
                 this.data[i] = 0;

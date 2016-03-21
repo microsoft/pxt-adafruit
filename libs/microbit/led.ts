@@ -67,7 +67,7 @@ namespace led {
      */
     //% help=/functions/plot-bar-graph weight=20
     //% blockId=device_plot_bar_graph block="plot bar graph of %value |up to %high" icon="\uf080" blockExternalInputs=true
-    export function plotBarGraph(value: number, high: number = 1023): void {
+    export function plotBarGraph(value: number, high: number): void {
         
         writeString(value.toString() + "\r\n");
         

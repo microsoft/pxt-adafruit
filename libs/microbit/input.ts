@@ -126,7 +126,7 @@ namespace input {
      * @param button TODO
      * @param body TODO
      */
-    //% help=functions/on-button-pressed weight=85
+    //% help=input/on-button-pressed weight=85
     //% shim=micro_bit::onButtonPressed
     //% blockId=device_button_event 
     //% block="on button|%NAME|pressed" 
@@ -137,7 +137,7 @@ namespace input {
      * Attaches code to run when the screen is facing up.
      * @param body TODO
      */
-    //% help=functions/on-gesture shim=micro_bit::onGesture weight=84
+    //% help=input/on-gesture shim=micro_bit::onGesture weight=84
     //% blockId=device_gesture_event block="on |%NAME" icon="\uf135"
     export function onGesture(gesture: Gestures, body: Action): void { }
 
@@ -146,14 +146,14 @@ namespace input {
      * @param name TODO
      * @param body TODO
      */
-    //% help=functions/on-pin-pressed weight=83 shim=micro_bit::onPinPressed
+    //% help=input/on-pin-pressed weight=83 shim=micro_bit::onPinPressed
     //% blockId=device_pin_event block="on pin|%NAME|pressed" icon="\uf094"
     export function onPinPressed(name: TouchPins, body: Action): void { }
 
     /**
      * Get the button state (pressed or not) for ``A`` and ``B``.
      */
-    //% help=functions/button-is-pressed weight=57
+    //% help=input/button-is-pressed weight=57
     //% shim=micro_bit::isButtonPressed 
     //% block="button|%NAME|is pressed"
     //% blockId=device_get_button2
@@ -166,7 +166,7 @@ namespace input {
     /**
      * Get the current compass compass heading in degrees.
      */
-    //% help=functions/compass-heading 
+    //% help=input/compass-heading 
     //% weight=56 icon="\uf14e"
     //% shim=micro_bit::compassHeading
     //% blockId=device_heading block="compass heading (°)" blockGap=8
@@ -179,7 +179,7 @@ namespace input {
      * Gets the temperature in Celsius degrees (°C).
      */
     //% weight=55 icon="\uf06d"
-    //% help=functions/temperature shim=micro_bit::temperature
+    //% help=input/temperature shim=micro_bit::temperature
     //% blockId=device_temperature block="temperature (°C)" blockGap=8
     export function temperature(): number {
         return 0;
@@ -189,7 +189,7 @@ namespace input {
      * Get the acceleration value in milli-gravitys (when the board is laying flat with the screen up, x=0, y=0 and z=-1024)
      * @param dimension TODO
      */
-    //% help=functions/acceleration weight=54 icon="\uf135"
+    //% help=input/acceleration weight=54 icon="\uf135"
     //% shim=micro_bit::getAcceleration
     //% blockId=device_acceleration block="acceleration (mg)|%NAME" blockGap=8
     export function acceleration(dimension: Dimension): number {
@@ -200,7 +200,7 @@ namespace input {
     /**
      * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` bright. In the simulator, the ``acceleration y`` is used to emulate this value.
      */
-    //% help=functions/light-level weight=53 shim=micro_bit::lightLevel
+    //% help=input/light-level weight=53 shim=micro_bit::lightLevel
     //% blockId=device_get_light_level block="light level" blockGap=8 icon="\uf185"
     export function lightLevel(): number {
         return 0;
@@ -210,7 +210,7 @@ namespace input {
      * The pitch of the device, rotation along the ``x-axis``, in degrees.
      * @param kind TODO
      */
-    //% help=/functions/rotation weight=52 shim=micro_bit::getRotation
+    //% help=/input/rotation weight=52 shim=micro_bit::getRotation
     //% blockId=device_get_rotation block="rotation (°)|%NAME" blockGap=8 icon="\uf197"
     export function rotation(kind: Rotation): number {
         return 0;
@@ -220,7 +220,7 @@ namespace input {
      * Get the magnetic force value in ``micro-Teslas`` (``µT``). This function is not supported in the simulator.
      * @param dimension TODO
      */
-    //% help=functions/magnetic-force weight=51 shim=micro_bit::getMagneticForce
+    //% help=input/magnetic-force weight=51 shim=micro_bit::getMagneticForce
     //% blockId=device_get_magnetic_force block="magnetic force (µT)|%NAME" blockGap=8 icon="\uf076"
     export function magneticForce(dimension: Dimension): number {
         return 0;
@@ -229,7 +229,7 @@ namespace input {
     /**
      * Gets the number of milliseconds elapsed since power on.
      */
-    //% help=functions/running-time shim=micro_bit::getCurrentTime weight=50
+    //% help=input/running-time shim=micro_bit::getCurrentTime weight=50
     //% blockId=device_get_running_time block="running time (ms)" icon="\uf017"
     export function runningTime(): number {
         return 0;
@@ -238,14 +238,14 @@ namespace input {
     /**
      * Obsolete, compass calibration is automatic.
      */
-    //% help=functions/calibrate weight=0 shim=TD_NOOP
+    //% help=input/calibrate weight=0 shim=TD_NOOP
     export function calibrate(): void { }
 
     /**
      * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
      * @param name TODO
      */
-    //% help=functions/pin-is-pressed weight=58 shim=micro_bit::isPinTouched block="pin|%NAME|is pressed" icon="\uf094"
+    //% help=input/pin-is-pressed weight=58 shim=micro_bit::isPinTouched block="pin|%NAME|is pressed" icon="\uf094"
     export function pinIsPressed(name: TouchPins): boolean {
         return false;
     }
@@ -254,7 +254,7 @@ namespace input {
      * Attaches code to run when the screen is facing up.
      * @param body TODO
      */
-    //% help=functions/on-screen-up
+    //% help=input/on-screen-up
     export function onScreenUp(body: Action): void {
         onGesture(Gestures.ScreenUp, body);
     }
@@ -263,7 +263,7 @@ namespace input {
      * Attaches code to run when the screen is facing down.
      * @param body TODO
      */
-    //% help=functions/on-screen-down
+    //% help=input/on-screen-down
     export function onScreenDown(body: Action): void {
         onGesture(Gestures.ScreenDown, body);
     }
@@ -272,7 +272,7 @@ namespace input {
      * Attaches code to run when the device is shaken.
      * @param body TODO
      */
-    //% help=functions/on-shake
+    //% help=input/on-shake
     export function onShake(body: Action): void {
         onGesture(Gestures.Shake, body);
     }
@@ -281,7 +281,7 @@ namespace input {
      * Attaches code to run when the logo is oriented upwards and the board is vertical.
      * @param body TODO
      */
-    //% help=functions/on-logo-up
+    //% help=input/on-logo-up
     export function onLogoUp(body: Action): void {
         onGesture(Gestures.LogoUp, body);
     }
@@ -290,7 +290,7 @@ namespace input {
      * Attaches code to run when the logo is oriented downwards and the board is vertical.
      * @param body TODO
      */
-    //% help=functions/on-logo-down
+    //% help=input/on-logo-down
     export function onLogoDown(body: Action): void {
         onGesture(Gestures.LogoDown, body);
     }
@@ -299,7 +299,7 @@ namespace input {
      * Sets the accelerometer sample range in gravities.
      * @param range a value describe the maximum strengh of acceleration measured
      */
-    //% help=functions/set-accelerator-range
+    //% help=input/set-accelerator-range
     //% blockId=device_set_accelerometer_range block="set accelerometer|range %range" icon="\uf135"
     //% weight=5
     //% shim=micro_bit::setAccelerometerRange

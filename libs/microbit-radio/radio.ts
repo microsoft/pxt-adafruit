@@ -3,7 +3,7 @@ namespace radio {
     /**
      * Broadcasts a number over radio to any connected micro:bit in the group.
      */    
-    //% help=/functions/send-number
+    //% help=radio/send-number
     //% weight=60
     //% blockId=radio_datagram_send block="send number %MESSAGE" blockGap=8
     export function sendNumber(value: number) : void { 
@@ -13,7 +13,7 @@ namespace radio {
     /**
      * Broadcasts 4 numbers over radio to any connected micro:bit in the group.
      */
-    //% help=/functions/send-numbers
+    //% help=radio/send-numbers
     //% shim=micro_bit::datagramSendNumbers
     //% weight=59
     //% blockId=radio_datagram_send_numbers block="send numbers|0: %VALUE0|1: %VALUE1|2: %VALUE2|3: %VALUE3"
@@ -24,7 +24,7 @@ namespace radio {
     /**
      * Registers code to run when a packet is received over radio.
      */
-    //% help=/functions/on-data-received
+    //% help=radio/on-data-received
     //% shim=micro_bit::onDatagramReceived
     //% weight=50
     //% blockId=radio_datagram_received_event block="on data received" blockGap=8
@@ -35,7 +35,7 @@ namespace radio {
     /**
      * Reads the next packet as a number from the radio queue.
      */
-    //% help=/functions/receive-number
+    //% help=radio/receive-number
     //% shim=micro_bit::datagramReceiveNumber
     //% weight=46
     //% blockId=radio_datagram_receive block="receive number" blockGap=8
@@ -49,7 +49,7 @@ namespace radio {
      * Reads a number at a given index, between ``0`` and ``3``, from the packet received by ``receive number``. Not supported in simulator.
      * @param index index of the number to read from 0 to 3. eg: 1
      */
-    //% help=/functions/received-number-at
+    //% help=radio/received-number-at
     //% shim=micro_bit::datagramGetNumber
     //% weight=45
     //% blockId=radio_datagram_received_number_at block="receive number|at %VALUE" blockGap=8
@@ -64,7 +64,7 @@ namespace radio {
      * Gets the received signal strength indicator (RSSI) from the packet received by ``receive number``. Not supported in simulator.
      * namespace=radio
      */
-    //% help=/functions/received-signal-strength
+    //% help=radio/received-signal-strength
     //% shim=micro_bit::datagramGetRSSI
     //% weight=40
     //% blockId=radio_datagram_rssi block="received signal strength"
@@ -76,7 +76,7 @@ namespace radio {
      * Sets the group id for radio communications. A micro:bit can only listen to one group ID at any time.
      * @ param id the group id between ``0`` and ``255``, eg: 1
      */
-    //% help=/functions/set-group
+    //% help=radio/set-group
     //% shim=micro_bit::setGroup
     //% weight=10
     //% blockId=radio_set_group block="set group %ID"
@@ -87,7 +87,7 @@ namespace radio {
      * Change the output power level of the transmitter to the given value.
     * @param power a value in the range 0..7, where 0 is the lowest power and 7 is the highest, eg: 7
     */
-    //% help=/functions/set-transmit-power
+    //% help=radio/set-transmit-power
     //% shim=micro_bit::setTransmitPower
     //% weight=9
     //% blockId=radio_set_transmit_power block="set transmit power %power"

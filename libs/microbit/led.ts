@@ -12,7 +12,7 @@ namespace led {
      * @param x TODO
      * @param y TODO
      */
-    //% help=functions/plot weight=78 shim=micro_bit::plot
+    //% help=led/plot weight=78 shim=micro_bit::plot
     //% blockId=device_plot block="plot|x %x|y %y" icon="\uf205" blockGap=8
     export function plot(x: number, y: number): void { }
 
@@ -21,7 +21,7 @@ namespace led {
      * @param x TODO
      * @param y TODO
      */
-    //% help=functions/unplot weight=77 shim=micro_bit::unPlot
+    //% help=led/unplot weight=77 shim=micro_bit::unPlot
     //% blockId=device_unplot block="unplot|x %x|y %y" icon="\uf204" blockGap=8
     export function unplot(x: number, y: number): void { }
 
@@ -30,7 +30,7 @@ namespace led {
      * @param x TODO
      * @param y TODO
      */
-    //% help=functions/point weight=76 shim=micro_bit::point
+    //% help=led/point weight=76 shim=micro_bit::point
     //% blockId=device_point block="point|x %x|y %y" icon="\uf10c"
     export function point(x: number, y: number): boolean {
         return false;
@@ -39,7 +39,7 @@ namespace led {
     /**
      * Get the screen brightness from 0 (off) to 255 (full bright).
      */
-    //% help=functions/brightness weight=60 shim=micro_bit::getBrightness
+    //% help=led/brightness weight=60 shim=micro_bit::getBrightness
     //% blockId=device_get_brightness block="brightness" icon="\uf042" blockGap=8
     export function brightness(): number {
         return 0;
@@ -49,14 +49,14 @@ namespace led {
      * Set the screen brightness from 0 (off) to 255 (full bright).
      * @param value the brightness value, eg:255, 127, 0
      */
-    //% help=functions/set-brightness weight=59 shim=micro_bit::setBrightness
+    //% help=led/set-brightness weight=59 shim=micro_bit::setBrightness
     //% blockId=device_set_brightness block="set brightness %value" icon="\uf042"
     export function setBrightness(value: number): void { }
 
     /**
      * Cancels the current animation and clears other pending animations.
      */
-    //% weight=50 shim=uBit.display.stopAnimation help=functions/stop-animation
+    //% weight=50 shim=uBit.display.stopAnimation help=led/stop-animation
     //% blockId=device_stop_animation block="stop animation" icon="\uf04d"
     export function stopAnimation(): void { }
 
@@ -65,7 +65,7 @@ namespace led {
      * @param value current value to plot
      * @param high maximum value, eg: 1023, 255
      */
-    //% help=/functions/plot-bar-graph weight=20
+    //% help=/led/plot-bar-graph weight=20
     //% blockId=device_plot_bar_graph block="plot bar graph of %value |up to %high" icon="\uf080" blockExternalInputs=true
     export function plotBarGraph(value: number, high: number): void {
         
@@ -97,7 +97,7 @@ namespace led {
      * Sets the display mode between black and white and greyscale for rendering LEDs.
      * @param mode TODO
      */
-    //% shim=micro_bit::setDisplayMode weight=1 help=/functions/set-display-mode
+    //% shim=micro_bit::setDisplayMode weight=1 help=/led/set-display-mode
     export function setDisplayMode(mode: DisplayMode): void { }
 
     /**
@@ -105,7 +105,7 @@ namespace led {
      * @param x TODO
      * @param y TODO
      */
-    //% help=functions/toggle
+    //% help=led/toggle
     export function toggle(x: number, y: number): void {
         if (led.point(x, y)) {
             led.unplot(x, y);
@@ -117,7 +117,7 @@ namespace led {
     /**
      * Turns all LEDS on
      */
-    //% help=functions/plot-all
+    //% help=led/plot-all
     export function plotAll(): void {
         for (let i = 0; i < 5; i++) {
             for (let j = 0; j < 5; j++) {
@@ -129,7 +129,7 @@ namespace led {
     /**
      * Inverts the current LED display
      */
-    //% help=functions/toggle-all
+    //% help=led/toggle-all
     export function toggleAll(): void {
         for (let i = 0; i < 5; i++) {
             for (let j = 0; j < 5; j++) {
@@ -142,7 +142,7 @@ namespace led {
      * Fades in the screen display.
      * @param ms TODO
      */
-    //% help=functions/fade-in
+    //% help=led/fade-in
     export function fadeIn(ms: number = 700): void {
         if (ms < 20) {
             led.setBrightness(255);
@@ -164,7 +164,7 @@ namespace led {
      * Fades out the screen brightness.
      * @param ms TODO
      */
-    //% help=functions/fade-out
+    //% help=led/fade-out
     export function fadeOut(ms: number = 700): void {
         if (ms < 20) {
             led.setBrightness(0);
@@ -185,7 +185,7 @@ namespace led {
     /**
      * Takes a screenshot of the LED screen and returns an image.
      */
-    //% shim=uBit.display.screenShot help=functions/screenshot
+    //% shim=uBit.display.screenShot help=led/screenshot
     export function screenshot(): images.Image {
         /*
         let img: Image;

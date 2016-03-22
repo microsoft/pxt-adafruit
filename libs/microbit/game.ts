@@ -49,7 +49,7 @@ namespace game {
     /**
      * Gets the current score
      */
-    //% weight=9 help=td/game-library
+    //% weight=9 help=game/score
     //% blockId=game_score block="score" blockGap=8
     export function score(): number {
         return _score;
@@ -59,7 +59,7 @@ namespace game {
      * Adds points to the current score
      * @param points amount of points to change, eg: 1
      */
-    //% weight=10 help=td/game-library
+    //% weight=10 help=game/add-score
     //% blockId=game_add_score block="change score by|%points" blockGap=8
     export function addScore(points: number): void {
         setScore(_score + points);
@@ -77,7 +77,7 @@ namespace game {
      * Starts a game countdown timer
      * @param ms countdown duration in milliseconds, eg: 10000
      */
-    //% weight=9 help=td/game-library
+    //% weight=9 help=game/start-countdown
     //% blockId=game_start_countdown block="start countdown|(ms) %duration" blockGap=8
     export function startCountdown(ms: number): void {
         if (checkStart()) {
@@ -99,7 +99,7 @@ namespace game {
     /**
      * Displays a game over animation.
      */
-    //% weight=8 help=td/game-library
+    //% weight=8 help=game/game-over
     //% blockId=game_game_over block="game over"
     export function gameOver(): void {
         if (!_isGameOver) {
@@ -140,7 +140,7 @@ namespace game {
      * Sets the current score value
      * @param value TODO
      */
-    //% weight=10 help=td/game-library
+    //% weight=10 help=game/set-score
     export function setScore(value: number): void {
         _score = Math.max(0, value);
     }
@@ -148,7 +148,7 @@ namespace game {
     /**
      * Gets the current life
      */
-    //% weight=10 help=td/game-library
+    //% weight=10
     export function life(): number {
         return _life;
     }
@@ -157,7 +157,7 @@ namespace game {
      * Sets the current life value
      * @param value TODO
      */
-    //% weight=10 help=td/game-library
+    //% weight=10
     export function setLife(value: number): void {
         _life = Math.max(0, value);
         if (_life <= 0) {
@@ -169,7 +169,7 @@ namespace game {
      * Adds life points to the current life
      * @param lives TODO
      */
-    //% weight=10 help=td/game-library
+    //% weight=10
     export function addLife(lives: number): void {
         setLife(_life + lives);
     }
@@ -177,7 +177,7 @@ namespace game {
     /**
      * Gets the remaining time (since `start countdown`) or current time (since the device started or `start stopwatch`) in milliseconds.
      */
-    //% weight=10 help=td/game-library
+    //% weight=10
     export function currentTime(): number {
         if (_endTime > 0) {
             return Math.max(0, _endTime - input.runningTime());
@@ -190,7 +190,7 @@ namespace game {
      * Removes some life
      * @param life TODO
      */
-    //% weight=10 help=td/game-library
+    //% weight=10
     export function removeLife(life: number): void {
         setLife(_life - life);
         control.inBackground(() => {
@@ -206,7 +206,7 @@ namespace game {
     /**
      * Increments the level and display a message.
      */
-    //% weight=10 help=td/game-library
+    //% weight=10
     export function levelUp(): void {
         _level = _level + 1;
         basic.showString("LEVEL:", 150);
@@ -216,7 +216,7 @@ namespace game {
     /**
      * Gets the current level
      */
-    //% weight=10 help=td/game-library
+    //% weight=10
     export function level(): number {
         return _level;
     }
@@ -224,7 +224,7 @@ namespace game {
     /**
      * Starts a stopwatch timer. `current time` will return the elapsed time.
      */
-    //% weight=10 help=td/game-library
+    //% weight=10
     export function startStopwatch(): void {
         _startTime = input.runningTime();
         _endTime = -1;
@@ -233,7 +233,7 @@ namespace game {
     /**
      * Gets a value indicating if the game is still running. Returns `false` if game over.
      */
-    //% weight=10 help=td/game-library
+    //% weight=10
     export function isRunning(): boolean {
         let running: boolean;
         return !_isGameOver;
@@ -242,7 +242,7 @@ namespace game {
     /**
      * Displays the score on the screen.
      */
-    //% help=td/game-library weight=60
+    //%  weight=60
     export function showScore(): void {
         basic.showString(" SCORE ", 100);
         basic.showNumber(_score, 150);
@@ -252,7 +252,6 @@ namespace game {
     /**
      * Indicates if the game is display the game over sequence.
      */
-    //% help=/functions/game-library
     export function isGameOver(): boolean {
         let over: boolean;
         return _isGameOver;

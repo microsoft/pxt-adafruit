@@ -10,7 +10,7 @@ svg.sim {
     stroke-width: 3px;
 }
 
-.sim-pin-touch:hover {
+.sim-pin:hover {
     stroke:#D4AF37;
     stroke-width:2px;
 }

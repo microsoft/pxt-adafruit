@@ -516,7 +516,7 @@ namespace ks.rt.micro_bit {
             this.pins.push(Svg.path(this.g, "sim-pin", "M0,357.7v19.2c0,10.8,6.2,20.2,14.4,25.2v-44.4H0z", "P3, ANALOG IN, LED Col 1"));
 
             [66.7,79.1,91.4,103.7,164.3,176.6,188.9,201.3,213.6,275.2,287.5,299.8,312.1,324.5,385.1,397.4,409.7,422].forEach(x => {
-                this.pins.push(Svg.child(this.g, "rect", {x:x, y:356.7, width:10, height:50}));
+                this.pins.push(Svg.child(this.g, "rect", {x:x, y:356.7, width:10, height:50, class:"sim-pin"}));
             })
             Svg.title(this.pins[4], "P4, ANALOG IN, LED Col 2")
             Svg.title(this.pins[5], "P5, BUTTON A")
@@ -627,9 +627,7 @@ namespace ks.rt.micro_bit {
                         let pin = state.pins[index];
                         let svgpin = this.pins[index];
                         svgpin.classList.add('touched');                            
-                        if (pin.mode & PinMode.Touch) {
-                            pin.touched = true;
-                        } else if (pin.mode & PinMode.Input) {
+                        if (pin.mode & PinMode.Input) {
                             let cursor = Svg.cursorPoint(pt, this.element, ev);
                             let v = (400 - cursor.y) / 40 * 1023
                             pin.value = Math.max(0, Math.min(1023, Math.floor(v)));
@@ -642,14 +640,28 @@ namespace ks.rt.micro_bit {
                         let pin = state.pins[index];
                         let svgpin = this.pins[index];
                         svgpin.classList.remove('touched');
-                        if (pin.mode & PinMode.Touch) {                        
-                            pin.touched = false;
-                            let ens = enums();
-                            this.board.bus.queue(pin.id, ens.MICROBIT_BUTTON_EVT_CLICK);
-                        }
                         this.updatePin(pin, index);
                         return false;
                 });
+            })
+            this.pins.slice(0,3).forEach((btn, index) => {
+                btn.addEventListener("mousedown", ev => {
+                    let state = this.board;
+                    state.pins[index].touched = true;
+                    this.updatePin(state.pins[index], index);
+                })
+                btn.addEventListener("mouseleave", ev => {
+                    let state = this.board;
+                    state.pins[index].touched = false;
+                    this.updatePin(state.pins[index], index);
+                })
+                btn.addEventListener("mouseup", ev => {
+                    let state = this.board;
+                    state.pins[index].touched = false;
+                    this.updatePin(state.pins[index], index);
+                    let ens = enums();
+                    this.board.bus.queue(state.pins[index].id, ens.MICROBIT_BUTTON_EVT_CLICK);
+                })                
             })
             this.buttonsOuter.slice(0,2).forEach((btn, index) => {
                 btn.addEventListener("mousedown", ev => {

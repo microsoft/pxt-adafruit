@@ -243,7 +243,7 @@ namespace input {
 
     /**
      * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
-     * @param name TODO
+     * @param name pin used to detect the touch
      */
     //% help=input/pin-is-pressed weight=58 shim=micro_bit::isPinTouched block="pin|%NAME|is pressed" icon="\uf094"
     export function pinIsPressed(name: TouchPins): boolean {

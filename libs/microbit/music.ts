@@ -1,4 +1,4 @@
-enum Notes {
+enum Note {
     //% enumval=262
     C,
     //% enumval=277 blockId=C#
@@ -122,7 +122,7 @@ namespace music {
     //% help=music/play-tone weight=90
     //% blockId=device_play_note block="play|tone (Hz) %note=device_note|for (ms) %duration=device_beat" icon="\uf025" blockGap=8
     export function playTone(frequency: number, ms: number): void {
-        pins.analogSetPitchPin(AnalogPins.P0);
+        pins.analogSetPitchPin(AnalogPin.P0);
         pins.analogPitch(frequency, ms);
     }
 
@@ -133,7 +133,7 @@ namespace music {
     //% help=music/ring-tone weight=80
     //% blockId=device_ring block="ring tone (Hz)|%note=device_note" icon="\uf025" blockGap=8
     export function ringTone(frequency: number): void {
-        pins.analogSetPitchPin(AnalogPins.P0);
+        pins.analogSetPitchPin(AnalogPin.P0);
         pins.analogPitch(frequency, 0);
     }
 
@@ -154,7 +154,7 @@ namespace music {
      */
     //% shim=TD_ID weight=50 help=music/note-frequency
     //% blockId=device_note block="%note"
-    export function noteFrequency(name: Notes): number {
+    export function noteFrequency(name: Note): number {
         return name;
     }
     

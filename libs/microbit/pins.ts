@@ -1,4 +1,4 @@
-enum DigitalPins {
+enum DigitalPin {
     //% enumval=uBit.io.P0
     P0,
     //% enumval=uBit.io.P1
@@ -39,7 +39,7 @@ enum DigitalPins {
     P20,
 }
 
-enum AnalogPins {
+enum AnalogPin {
     //% enumval=uBit.io.P0
     P0,
     //% enumval=uBit.io.P1
@@ -63,7 +63,7 @@ namespace pins {
      */
     //% help=pins/digital-read-pin weight=30 shim=micro_bit::digitalReadPin
     //% blockId=device_get_digital_pin block="digital read|pin %name" blockGap=8
-    export function digitalReadPin(name: DigitalPins): number {
+    export function digitalReadPin(name: DigitalPin): number {
         
         return 0;
     }
@@ -75,7 +75,7 @@ namespace pins {
       */
     //% help=pins/digital-write-pin weight=29 shim=micro_bit::digitalWritePin
     //% blockId=device_set_digital_pin block="digital write|pin %name|to %value"
-    export function digitalWritePin(name: DigitalPins, value: number): void { }
+    export function digitalWritePin(name: DigitalPin, value: number): void { }
 
     /**
      * Read the connector value as analog, that is, as a value comprised between 0 and 1023.
@@ -83,7 +83,7 @@ namespace pins {
      */
     //% help=pins/analog-read-pin weight=25 shim=micro_bit::analogReadPin
     //% blockId=device_get_analog_pin block="analog read|pin %name" blockGap="8" 
-    export function analogReadPin(name: AnalogPins): number {
+    export function analogReadPin(name: AnalogPin): number {
         return 0;
     }
 
@@ -94,7 +94,7 @@ namespace pins {
      */
     //% help=pins/analog-write-pin weight=24 shim=micro_bit::analogWritePin
     //% blockId=device_set_analog_pin block="analog write|pin %name|to %value" blockGap=8
-    export function analogWritePin(name: AnalogPins, value: number): void { }
+    export function analogWritePin(name: AnalogPin, value: number): void { }
 
     /**
      * Configures the Pulse-width modulation (PWM) of the analog output to the given value in **microseconds** or `1/1000` milliseconds.
@@ -104,7 +104,7 @@ namespace pins {
      */
     //% shim=micro_bit::setAnalogPeriodUs help=pins/analog-set-period weight=23
     //% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros" 
-    export function analogSetPeriod(pin: AnalogPins, micros: number): void { }
+    export function analogSetPeriod(pin: AnalogPin, micros: number): void { }
 
     /**
      * Writes a value to the servo, controlling the shaft accordingly. On a standard servo, this will set the angle of the shaft (in degrees), moving the shaft to that orientation. On a continuous rotation servo, this will set the speed of the servo (with ``0`` being full-speed in one direction, ``180`` being full speed in the other, and a value near ``90`` being no movement).
@@ -113,7 +113,7 @@ namespace pins {
      */
     //% help=pins/servo-write-pin weight=20 shim=micro_bit::servoWritePin
     //% blockId=device_set_servo_pin block="servo write|pin %name|to %value" blockGap=8
-    export function servoWritePin(name: AnalogPins, value: number): void { }
+    export function servoWritePin(name: AnalogPin, value: number): void { }
 
     /**
      * Configures this IO pin as an analog/pwm output, configures the period to be 20 ms, and sets the pulse width, based on the value it is given **microseconds** or `1/1000` milliseconds.
@@ -122,7 +122,7 @@ namespace pins {
      */
     //% shim=micro_bit::setServoPulseUs help=pins/serial-set-pulse weight=19
     //% blockId=device_set_servo_pulse block="servo set pulse|pin %value|to (µs) %micros"
-    export function servoSetPulse(pin: AnalogPins, micros: number): void { }
+    export function servoSetPulse(pin: AnalogPin, micros: number): void { }
 
     /**
      * Re-maps a number from one range to another. That is, a value of ``from low`` would get mapped to ``to low``, a value of ``from high`` to ``to high``, values in-between to values in-between, etc.
@@ -143,7 +143,7 @@ namespace pins {
      * @param name TODO
      */
     //% shim=micro_bit::enablePitch help=pins/analog-set-pitch weight=12
-    export function analogSetPitchPin(name: AnalogPins): void { }
+    export function analogSetPitchPin(name: AnalogPin): void { }
 
     /**
      * Emits a Pulse-width modulation (PWM) signal to the current pitch pin. Use `analog set pitch pin` to define the pitch pin.

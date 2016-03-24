@@ -26,7 +26,7 @@ enum Rotation {
     Roll,
 }
 
-enum TouchPins {
+enum TouchPin {
     //% enumval=uBit.io.P0
     P0,
     //% enumval=uBit.io.P1
@@ -76,7 +76,7 @@ enum BasicGesture
 };
 */
 
-enum Gestures {
+enum Gesture {
     /**
      * Raised when shaken
      */
@@ -139,7 +139,7 @@ namespace input {
      */
     //% help=input/on-gesture shim=micro_bit::onGesture weight=84
     //% blockId=device_gesture_event block="on |%NAME" icon="\uf135"
-    export function onGesture(gesture: Gestures, body: Action): void { }
+    export function onGesture(gesture: Gesture, body: Action): void { }
 
     /**
      * Do something when a pin(``P0``, ``P1`` or both ``P2``) is pressed.
@@ -148,7 +148,7 @@ namespace input {
      */
     //% help=input/on-pin-pressed weight=83 shim=micro_bit::onPinPressed
     //% blockId=device_pin_event block="on pin|%NAME|pressed" icon="\uf094"
-    export function onPinPressed(name: TouchPins, body: Action): void { }
+    export function onPinPressed(name: TouchPin, body: Action): void { }
 
     /**
      * Get the button state (pressed or not) for ``A`` and ``B``.
@@ -246,7 +246,7 @@ namespace input {
      * @param name pin used to detect the touch
      */
     //% help=input/pin-is-pressed weight=58 shim=micro_bit::isPinTouched block="pin|%NAME|is pressed" icon="\uf094"
-    export function pinIsPressed(name: TouchPins): boolean {
+    export function pinIsPressed(name: TouchPin): boolean {
         return false;
     }
 
@@ -256,7 +256,7 @@ namespace input {
      */
     //% help=input/on-screen-up
     export function onScreenUp(body: Action): void {
-        onGesture(Gestures.ScreenUp, body);
+        onGesture(Gesture.ScreenUp, body);
     }
 
     /**
@@ -265,7 +265,7 @@ namespace input {
      */
     //% help=input/on-screen-down
     export function onScreenDown(body: Action): void {
-        onGesture(Gestures.ScreenDown, body);
+        onGesture(Gesture.ScreenDown, body);
     }
 
     /**
@@ -274,7 +274,7 @@ namespace input {
      */
     //% help=input/on-shake
     export function onShake(body: Action): void {
-        onGesture(Gestures.Shake, body);
+        onGesture(Gesture.Shake, body);
     }
 
     /**
@@ -283,7 +283,7 @@ namespace input {
      */
     //% help=input/on-logo-up
     export function onLogoUp(body: Action): void {
-        onGesture(Gestures.LogoUp, body);
+        onGesture(Gesture.LogoUp, body);
     }
 
     /**
@@ -292,7 +292,7 @@ namespace input {
      */
     //% help=input/on-logo-down
     export function onLogoDown(body: Action): void {
-        onGesture(Gestures.LogoDown, body);
+        onGesture(Gesture.LogoDown, body);
     }
     
     /**

@@ -162,6 +162,7 @@ namespace ks.rt.micro_bit {
     export class MicrobitBoardSvg
     {
         public element : SVGSVGElement;
+        private style: SVGStyleElement;
         private defs : SVGDefsElement;
         private g: SVGElement;
         
@@ -459,6 +460,99 @@ namespace ks.rt.micro_bit {
                 "class":"sim",
                 "x": "0px",
                 "y": "0px"});
+            this.style = <SVGStyleElement>Svg.child(this.element, "style", {});
+            this.style.textContent = `
+
+svg.sim {
+    margin-bottom:1em;
+}
+.sim-button {
+    pointer-events: none;    
+}
+
+.sim-button-outer:hover {
+    stroke:grey;
+    stroke-width: 3px;
+}
+
+.sim-pin:hover {
+    stroke:#D4AF37;
+    stroke-width:2px;
+}
+
+.sim-pin-touch.touched:hover {
+    stroke:darkorange;
+}
+
+.sim-led-back:hover {
+    stroke:#a0a0a0;
+    stroke-width:3px;
+}
+.sim-led:hover {
+    stroke:#ff7f7f;
+    stroke-width:3px;
+}
+
+.sim-systemled {
+    fill:#333;
+    stroke:#555;
+    stroke-width: 1px;
+}
+
+.sim-light-level-button {
+    stroke:#fff;
+    stroke-width: 3px;
+}
+
+.sim-antenna {
+    stroke:#555;
+    stroke-width: 2px;
+}
+
+.sim-text {
+  font-family:monospace;
+  font-size:25px;
+  fill:#fff;
+  pointer-events: none;
+}
+
+.sim-text-pin {
+  font-family:monospace;
+  font-size:20px;
+  fill:#fff;
+  pointer-events: none;
+}
+
+.sim-thermometer {
+    stroke:#aaa;
+    stroke-width: 3px;
+}
+
+/* animations */
+.sim-flash {
+    animation-name: sim-flash-animation;
+    animation-duration: 0.1s;
+}
+
+@keyframes sim-flash-animation {  
+    from { fill: yellow; }
+    to   { fill: default; }
+}
+
+.sim-flash-stroke {
+    animation-name: sim-flash-stroke-animation;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+}
+
+@keyframes sim-flash-stroke-animation {  
+    from { stroke: yellow; }
+    to   { stroke: default; }
+}
+
+            `;
+                
+                
             this.defs = <SVGDefsElement>Svg.child(this.element, "defs", {});
             this.g = Svg.elt("g");
             this.element.appendChild(this.g);

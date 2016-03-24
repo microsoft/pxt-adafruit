@@ -240,6 +240,9 @@ namespace ks.rt.micro_bit {
             this.updateTemperature(); 
             this.updateButtonAB();       
             this.updateGestures(); 
+            
+            if (!runtime || runtime.dead) this.element.classList.add("grayscale");
+            else this.element.classList.remove("grayscale");
         }
         
         private updateGestures() {
@@ -462,9 +465,13 @@ namespace ks.rt.micro_bit {
                 "y": "0px"});
             this.style = <SVGStyleElement>Svg.child(this.element, "style", {});
             this.style.textContent = `
-
 svg.sim {
     margin-bottom:1em;
+}
+svg.sim.grayscale {    
+    -moz-filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
 }
 .sim-button {
     pointer-events: none;    

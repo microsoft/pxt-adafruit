@@ -25,7 +25,7 @@ namespace images {
          */
         //% help=images/show-image weight=80 shim=micro_bit::showImage
         //% blockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8
-        public showImage(xOffset: number): void {}
+        public showImage(xOffset: number = 0): void {}
         
         /**
          * Scrolls an image .
@@ -34,15 +34,28 @@ namespace images {
          */
         //% help=images/show-image weight=79 shim=micro_bit::scrollImage async
         //% blockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8
-        public scrollImage(frameOffset: number, interval : number = 200) {            
+        public scrollImage(frameOffset: number = 0, interval : number = 200) {            
         }
 
-        public plotImage(xOffset: number): void {}
 
+        /**
+         * Plots the image at a given column to the screen
+         */            
+        public plotImage(xOffset: number = 0): void {}
+
+        /**
+         * Sets all pixels off.
+         */
         public clear(): void {}
 
+        /**
+         * Sets a specific pixel brightness at a given position
+         */
         public setPixelBrightness(x: number, y: number, v: number): void {}
 
+        /**
+         * Gets the pixel brightness ([0..255]) at a given position
+         */
         public pixelBrightness(x: number, y: number): number {
             return 0;
         }

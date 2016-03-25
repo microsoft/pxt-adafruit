@@ -1,0 +1,16 @@
+# Showcase Scripts
+
+#docs
+
+## Get Started with These Hex Files!
+
+If you have a BBC micro:bit and would like to explore a few scripts, we've created the following hex files for you to copy to your BBC micro:bit
+
+### Flashing Heart
+
+This script introduces you to the LED display:
+
+* {hex:xzlzgl:hex file}
+MACRO: hex* [Block Editor script](/microbit/jxislh)
+* [Touch Develop script](/microbit/xzlzgl)
+

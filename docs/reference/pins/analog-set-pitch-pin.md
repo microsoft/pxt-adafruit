@@ -1,0 +1,30 @@
+# Analog Set Pitch Pin
+
+Specify which [pin](/microbit/device/pins) (P0, P1, P2) is used to generate tones.
+
+```sig
+pins.analogSetPitchPin(AnalogPin.P0)
+```
+
+### Parameters
+
+* `name` - [String](/microbit/reference/types/string); the  pin name ("P0", "P1", or "P2")
+
+### Example
+
+```
+pins.analogSetPitchPin(AnalogPin.P0)
+let frequency = 440
+let duration = 1000
+pins.analogPitch(frequency, duration)
+```
+
+### Some common notes
+
+* 440 = A4 on piano
+* see [piano key frequencies ](https://en.wikipedia.org/wiki/Piano_key_frequencies) for more information
+
+### See also
+
+[micro:bit pins](/microbit/device/pins), [analog set period](/microbit/reference/pins/analog-set-period), [analog pitch](/microbit/reference/pins/analog-pitch)
+

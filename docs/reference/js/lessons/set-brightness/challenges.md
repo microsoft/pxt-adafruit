@@ -1,0 +1,54 @@
+# set brightness challenges
+
+These challenges will allow you to change the brightness of the micro:bit. #docs
+
+**Challenge 0**
+
+### @video vimeo/133782335
+
+[This tutorial](/microbit/lessons/set-brightness/tutorial) will show you how to set the brightness on the micro:bit.
+
+```
+led.setBrightness(255)
+led.plotAll()
+input.onButtonPressed("A", () => {
+    led.setBrightness(64)
+})
+```
+
+**Challenge 1**
+
+### @video vimeo/133782335
+
+What if we want to turn off all the LEDs? Let's do this by setting the brightness to `0` when button `B` is pressed. Add a condition for `input->on button pressed("B")`.
+
+```
+led.setBrightness(255)
+led.plotAll()
+input.onButtonPressed("A", () => {
+    led.setBrightness(64)
+})
+input.onButtonPressed("B", () => {
+}) // ***
+```
+
+**Challenge 2**
+
+Inside of the condition `input->on button pressed("B")`, add `led->set brightness(0)` to turn off the LEDs.
+
+```
+led.setBrightness(255)
+led.plotAll()
+input.onButtonPressed("A", () => {
+    led.setBrightness(64)
+})
+input.onButtonPressed("B", () => {
+    led.setBrightness(0) // ***
+})
+```
+
+**Challenge 3**
+
+Now, in the condition `input->on button pressed("B")`, add `basic->pause(1000)` and then set the brightness to a new value!
+
+* `Run` your script to see the LEDs change brightness.

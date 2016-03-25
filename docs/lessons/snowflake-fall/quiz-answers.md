@@ -1,0 +1,30 @@
+# snowflake fall blocks quiz answers
+
+Create a snowflake fall animation.  
+
+This is the answer key for the [snowflake fall quiz](/microbit/lessons/snowflake-fall/quiz).
+
+## 1. What is a forever loop?
+
+Run code in the background forever (answers may vary).
+
+## 2. Draw the picture that will be produced with this code
+
+![](/static/mb/blocks/lessons/snowflake-fall-4.png)
+
+![](/static/mb/lessons/flashing-heart-0.png)
+
+## 3.Write the code for a forever loop and show LEDS for these images!
+
+![](/static/mb/lessons/snowflake-fall-0.png)
+
+![](/static/mb/blocks/lessons/snowflake-fall-5.png)
+
+## 4. Write the code for a forever loop and show LEDS for these images!
+
+![](/static/mb/lessons/snowflake-fall-1.png)
+
+![](/static/mb/lessons/snowflake-fall-2.png)
+
+![](/static/mb/blocks/lessons/snowflake-fall-6.png)
+

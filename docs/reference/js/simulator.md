@@ -1,0 +1,45 @@
+# Run Code in your Browser
+
+Run scripts in a web browser. #docs #simulator #run
+
+While you're writing and testing your scripts, you'll mostly be running scripts in your browser by clicking the `run` button. Both the [Microsoft Block editor](/microbit/blocks/editor) and the [Touch Develop editor](/microbit/js/editor) have a `run` button above the coding area.
+
+*Note*: in the Touch Develop editor, the button actually is named `run main`, reflecting the fact that execution of a Touch Develop script always beings in the `main` function
+
+When you click `run main` in the Touch Develop editor, your code executes and the results are simulated on-screen, using an image of the BBC micro:bit device, like this:
+
+![](/static/mb/simulator-0.png)
+
+In the picture above, [plot image](/microbit/reference/led/plot-image) create a heart image that appears on the BBC micro:bit simulator.
+
+The BBC micro:bit simulator let's you...
+
+* write and test code, even if you don't have a BBC micro:bit device
+* test your code throughly before downloading and running your script on the BBC micro:bit
+
+### What does the simulator support?
+
+The BBC micro:bit simulator supports the Touch Develop [functions](/microbit/js/contents) and Microsoft [blocks](/microbit/blocks/contents), including those related to the LED screen, input buttons, the compass, accelerometer, and the digital I/O pins.
+
+* **LED screen**: the [LED screen](/microbit/device/screen) that appears on-screen shows you what you'll see on the BBC micro:bit device
+* **input buttons**: when running code with [button is pressed](/microbit/reference/input/button-is-pressed) or [on button pressed](/microbit/reference/input/on-button-pressed) functions, click the on-screen A or B button
+* **compass**: when running code that includes [compass heading](/microbit/reference/input/compass-heading), click and drag the on-screen compass needle to change the heading
+* **accelerometer**: move your mouse over the on-screen micro:bit device to simulate [acceleration](/microbit/reference/input/acceleration). The x and y axis values are shown on-screen.
+* **digital pins**: you can click the on-screen digital pins (0 , 1, or 2) to turn them on or off (see [digital write pin](/microbit/reference/pins/digital-write-pin) and [digital read pin](/microbit/reference/pins/digital-read-pin) for more info).
+
+**Can't see the red LEDs on the simulator?**
+
+If you click on the white THEME button in the top right corner of the simulator, it will switch to an accessible version of the simulator, where the LEDs are displayed in blue on a white background.
+
+### All done?
+
+Once you're done writing and testing your code on the simulator, compile and run your script on your BBC micro:bit device. To find out how to do this, see [run scripts on the micro:bit](/microbit/device/usb).
+
+### Simulator vs micro:bit
+
+Running your scripts in a web browser is a *simulation* of how your code will run on the BBC micro:bit device. When you run your script on your BBC micro:bit device, the results may differ slightly. For example, the timing may be subtly different when your script runs on the BBC micro:bit device (you may need to adjust your [pause](/microbit/reference/basic/pause) functions). For this reason, be sure to test your scripts on the BBC micro:bit device.
+
+### See also
+
+[run scripts on the micro:bit](/microbit/device/usb), [Microsoft Block editor](/microbit/blocks/editor), [Touch Develop editor](/microbit/js/editor)
+

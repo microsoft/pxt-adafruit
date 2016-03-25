@@ -1,0 +1,36 @@
+# light beatbox activity
+
+Control sound with the light level. 
+
+### ~avatar avatar
+
+Have you ever tried to making beat box sounds based on the light level? Let's try making a beatbox with code!
+
+### ~
+
+To create a new script, go to the [Create Code](/microbit/create-code) page and tap *New Project* under *Block Editor*.
+
+Let's start by adding a variable where you can store data. Then rename the variable to "light". Then set the value of the variable to the block `light level` from the Input drawer. This will gets the `light level` from 0 (dark) to 255 (bright). The light is measured by using various LEDs from the screen. Modify your code so that your code looks like this.
+
+![](/static/mb/blocks/lessons/light-beatbox-0.png)
+
+We want to play music on button pressed in order to register an event handler that will execute whenever when you run a script and click on button pressed on the simulator. We must start by opening the Input drawer and adding `on button pressed` A. Then add a block `rest` to plays nothing for a `1/16` beat. Modify your code so that your code looks like this.
+
+![](/static/mb/blocks/lessons/light-beatbox-1.png)
+
+We click on the Logic drawer then insert a `if do` that will conditionally run code depending on whether the Boolean condition is true or false. Click on the Logic drawer. Then we want to add additional conditional statements by clicking on the gear to the left of the `if`. Add 05  `else if` and 01 `else` inside the `if do` block structure. Modify your code so that your code looks like this
+
+![](/static/mb/blocks/lessons/light-beatbox-2.png)
+
+We click on the Logic drawer then insert a `less than` sign into the first `if` conditional that will conditionally run code depending on whether the Boolean condition is true or false. Then insert the variable `light` into the first part of the inequality. The variable "light" will appear in the Variables drawer. Finally, we insert 25. If the `light level` is `less than` 25, play `ring tone` ``C``. Continue this logic to continue with these conditional statements. If the `light level` is `less than` 50, play `ring tone` ``D``. If the `light level` is `less than` 100, play `ring tone` ``E``. If the `light level` is `less than` 150, play `ring tone` ``F`` If the `light level` is `less than` 180, play `ring tone` ``G``. If none of these conditions are true, `ring tone` ``A``.
+
+![](/static/mb/blocks/lessons/light-beatbox-3.png)
+
+* click *compile* and run your code on the micro:bit.
+
+### ~avatar avatar
+
+Excellent, you're ready to continue by connecting your headphones with these [challenges](/microbit/lessons/hack-your-headphones/activity)!
+
+### ~
+

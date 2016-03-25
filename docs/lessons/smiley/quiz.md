@@ -1,0 +1,36 @@
+# smiley blocks quiz
+
+Make a smiley face blink 
+
+## Name
+
+## Directions
+
+Use the hints in the [Smiley](/microbit/lessons/smiley/activity) activity to answer this quiz!
+
+## 1. Describe what `show LEDs` does
+
+<br/>
+
+<br/>
+
+## 2. Why is there an extra empty frame after the smiley face?
+
+![](/static/mb/lessons/smiley-0.png)
+
+<br/>
+
+## 3. Draw the image created with this code
+
+![](/static/mb/blocks/lessons/smiley-3.png)
+
+![](/static/mb/empty-microbit.png)
+
+<br/>
+
+## 4. Draw the images created with this code
+
+![](/static/mb/blocks/lessons/smiley-5.png)
+
+![](/static/mb/lessons/looper-3.png)
+

@@ -1,12 +1,12 @@
-# Touch Develop Documentation
+# micro:bit/JavaScript Documentation
 
-Touch Develop docs for the micro:bit #docs #contents #apis #functions #language #statements
+JavaScript docs for the micro:bit
 
 ### @section full
 
-### @parent editor-documentation
+### @parent reference
 
-### @short Touch Develop
+### @short JavaScript
 
 ### ~hint 
 

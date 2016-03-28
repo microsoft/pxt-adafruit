@@ -22,7 +22,7 @@
         "id": "microbit",
         "name": "BBC micro:bit",
         "title": "JavaScript for BBC micro:bit",
-        "cloud": true,
+        "cloud": false,
         "blocksprj": {
             "id": "blocksprj",
             "config": {

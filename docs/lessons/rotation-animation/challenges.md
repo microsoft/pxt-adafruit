@@ -49,13 +49,16 @@ while (rotating) {
 
 ### Challenge 1
 
-Now let's add to this by creating a condition for on button pressed `A` before the while loop.
+Now let's add to this by creating a condition for on button pressed `A` before the while loop. We will also introduce serial writeLine for the while loop and input OnButtonPressed 
 
 ```blocks
 
 let rotating = true;
+input.onButtonPressed(Button.A, () => {
+    serial.writeLine("hello")
+})
 while (rotating) {
-    basic.pause(20)
+    serial.writeLine("loop")
     basic.showLeds(`
         # . . . .
         . # . . .
@@ -85,9 +88,7 @@ while (rotating) {
         . . . . .
         `)
 }
-input.onButtonPressed(Button.A, () => {
-    
-})
+
 
 
 ```
@@ -100,8 +101,12 @@ Now that we have the on button pressed condition, let's make the animation stop 
 
 ```blocks
 let rotating = true;
+input.onButtonPressed(Button.A, () => {
+    serial.writeLine("hello")
+    rotating = false
+})
 while (rotating) {
-    basic.pause(20)
+    serial.writeLine("loop")
     basic.showLeds(`
         # . . . .
         . # . . .
@@ -131,9 +136,6 @@ while (rotating) {
         . . . . .
         `)
 }
-input.onButtonPressed(Button.A, () => {
-    let rotating = false; 
-})
 
 
 ```

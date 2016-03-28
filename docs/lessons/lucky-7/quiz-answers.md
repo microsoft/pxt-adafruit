@@ -10,15 +10,19 @@ Answers may vary. This will show a number on the LED screen, one digit at a time
 
 ## 2. Draw every LED that is ON after running this code
 
-![](/static/mb/blocks/lessons/lucky-7-3.png)
+```blocks
+basic.showNumber(7)
+```
 
-<br/>
 
 ![](/static/mb/lessons/lucky-7-0.png)
 
 ## 3. Draw every LED that is ON after running this code
 
-![](/static/mb/blocks/lessons/lucky-7-4.png)
+
+```blocks
+basic.showNumber(21)
+```
 
 ![](/static/mb/lessons/lucky-7-1.png)
 
@@ -26,7 +30,6 @@ Answers may vary. This will show a number on the LED screen, one digit at a time
 
 ![](/static/mb/lessons/lucky-7-2.png)
 
-![](/static/mb/blocks/lessons/lucky-7-5.png)
-
-<br/>
-
+```blocks
+basic.showNumber(3)
+```

@@ -12,17 +12,20 @@ Answer the questions while completing the activity. Pay attention to the dialogu
 
 ## 1. Define what `show string` does? 
 
-<br/>
 
-<br/>
 
 ## 2.  Draw which LED is ON after running this code
+
+
+```blocks
+basic.showString("Y")
+
+```
 
 ![](/static/mb/blocks/lessons/answering-machine-3.png)
 
 ![](/static/mb/empty-microbit.png)
 
-<br/>
 
 ## 3.  Draw which LED is ON after running this code
 
@@ -30,11 +33,8 @@ Answer the questions while completing the activity. Pay attention to the dialogu
 
 ![](/static/mb/lessons/answering-machine-4.png)
 
-<br/>
-
 ## 4. If the rectangle below represents the micro:bit, write the code to display the letter "Z".
 
 ![](/static/mb/lessons/answering-machine-5.png)
 
-<br/>
 

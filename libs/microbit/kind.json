@@ -73,6 +73,10 @@
         "compile": {
             "isNative": false,
             "hasHex": true
-        }
+        },
+        "serial" : {
+            "nameFilter": "mbed Serial Port",
+            "log": true   
+        }        
     }
 }

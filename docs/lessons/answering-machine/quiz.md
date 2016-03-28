@@ -22,19 +22,25 @@ basic.showString("Y")
 
 ```
 
-![](/static/mb/blocks/lessons/answering-machine-3.png)
-
 ![](/static/mb/empty-microbit.png)
 
 
 ## 3.  Draw which LED is ON after running this code
 
-![](/static/mb/blocks/lessons/answering-machine-4.png)
+
+```blocks
+basic.showString("Hi")
+
+```
+
 
 ![](/static/mb/lessons/answering-machine-4.png)
 
 ## 4. If the rectangle below represents the micro:bit, write the code to display the letter "Z".
 
-![](/static/mb/lessons/answering-machine-5.png)
+```blocks
+basic.showString("Z")
+
+```
 
 

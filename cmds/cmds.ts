@@ -26,7 +26,7 @@ export function deployCoreAsync(res: ts.ks.CompileResult) {
 
 function getBitDrivesAsync(): Promise<string[]> {
     if (process.platform == "win32") {
-        return execAsync("wmic PATH Win32_LogicalDisk get Device ID, VolumeName, FileSystem")
+        return execAsync("wmic PATH Win32_LogicalDisk get DeviceID, VolumeName, FileSystem")
             .then(buf => {
                 let res: string[] = []
                 buf.toString("utf8").split(/\n/).forEach(ln => {

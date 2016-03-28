@@ -12,29 +12,29 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 ## 1. Describe what "show number" does?
 
-<br/>
+
 
 ## 2. Draw every LED that is ON after running this code
 
-![](/static/mb/blocks/lessons/lucky-7-3.png)
+```blocks
+basic.showNumber(7)
+```
 
 ![](/static/mb/empty-microbit.png)
 
-<br/>
-
 ## 3. Draw every LED that is ON after running this code
 
-![](/static/mb/blocks/lessons/lucky-7-4.png)
+```blocks
+basic.showNumber(21)
+```
+
 
 ![](/static/mb/lessons/answering-machine-4.png)
 
-<br/>
+
 
 ## 4. Write the code that will be used to display the number 3 on the micro:bit.
 
 ![](/static/mb/lessons/lucky-7-3.png)
 
-<br/>
-
-<br/>
 

@@ -10,23 +10,50 @@ This tutorial will teach you how to create a hero game to capture food while dod
 
 First we need to create a function create sprite at the x, y coordinates and that set the variable called hero on the micro:bit the first time we play.
 
-![](/static/mb/blocks/lessons/hero-0.png)
+
+```blocks
+
+let hero = game.createSprite(2, 2)
+
+```
 
 Let's set up where we want our ghost will be. Create starting positions of the hero, ghost, and food in each individual quadrant. We will ensure that the ghost, food, and hero is set apart. Divide the micro:bit into 4 quadrants. We don't want hero to be too close to the ghost so let's make the ghost starting positions in the 3 other quadrants. Hero is in the one quadrant. To do this, we need to keep track of the middle point in each quadrant. Create sprite at the x, y coordinates for the hero, food, and ghost.
 
-![](/static/mb/blocks/lessons/hero-1.png)
+```blocks
+let hero = game.createSprite(2, 2)
+let food = game.createSprite(4, 4)
+let ghost = game.createSprite(0, 0)
+```
+
 
 Create a function called change blink that will plot a blinking point so the player can tell between a ghost and hero.
 
-![](/static/mb/blocks/lessons/hero-2.png)
+```blocks
+let hero = game.createSprite(2, 2);
+let food = game.createSprite(4, 4);
+let ghost = game.createSprite(0, 0);
+ghost.change(LedSpriteProperty.Blink, 100);
+
+```
+
 
 We want to identify the food so the player moves towards the food. We need to set the `brightness` of the `variable` food to 8. The brightness of the LED screen is expressed as a number between 0 and 255.
 
 ![](/static/mb/blocks/lessons/hero-3.png)
 
+
 We want to include a block from the Loops drawer called `While`. Then set the `While` loop to `true`. This code will be important for repeating code of the game logic of the game. The game will continue to run using `While` loop while the Boolean condition is true. Finally, include a `pause` of 400 milliseconds before the logic of the game begins.
 
-![](/static/mb/blocks/lessons/hero-4.png)
+
+```blocks
+let hero = game.createSprite(2, 2);
+let food = game.createSprite(4, 4);
+let ghost = game.createSprite(0, 0);
+ghost.change(LedSpriteProperty.Blink, 100);
+while (true) {
+    basic.pause(400)
+}
+```
 
 Let's create a function that will take care of keep the ghost pursuing the hero. We will need to a conditional statement that checks the position of the ghost and hero. The first condition will check if the horizontal coordinates of the ghost is less than the horizontal coordinates of the hero. We create a function from the Game drawer that will check the coordinates of the hero and the ghost. Finally, change the x-direction of the ghost by 1.
 

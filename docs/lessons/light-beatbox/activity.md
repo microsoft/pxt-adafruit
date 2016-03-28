@@ -56,7 +56,7 @@ We click on the Logic drawer then insert a `less than` sign into the first `if` 
 
 ```blocks
 
- let light = null;
+ let light = 0;
 input.onButtonPressed(Button.A, () => {
     music.rest(music.beat(BeatFraction.Sixteenth));
     light = input.lightLevel();
@@ -89,7 +89,7 @@ input.onButtonPressed(Button.A, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue by connecting your headphones with these [challenges](/microbit/lessons/hack-your-headphones/activity)!
+Excellent, you're ready to continue by connecting your headphones with these [challenges](/lessons/hack-your-headphones/activity)!
 
 ### ~
 

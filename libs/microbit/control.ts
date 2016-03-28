@@ -16,15 +16,19 @@ enum EventCreationMode {
     CreateAndFire
 }
 
-enum RuntimeContants {
+enum EventBusSource {
     //% enumVal=MICROBIT_ID_BUTTON_A
     MICROBIT_ID_BUTTON_A,
     //% enumVal=MICROBIT_ID_BUTTON_B
     MICROBIT_ID_BUTTON_B,
     //% enumVal=MICROBIT_ID_BUTTON_AB
     MICROBIT_ID_BUTTON_AB,
-    //% enumVal=MICROBIT_BUTTON_EVT_CLICK
-    MICROBIT_BUTTON_EVT_CLICK,
+    //% enumVal=MICROBIT_ID_RADIO
+    MICROBIT_ID_RADIO,
+    //% enumVal=MICROBIT_ID_GESTURE
+    MICROBIT_ID_GESTURE,
+    //% enumVal=MICROBIT_ID_ACCELEROMETER
+    MICROBIT_ID_ACCELEROMETER,    
     //% enumVal=MICROBIT_ID_IO_P0
     MICROBIT_ID_IO_P0,
     //% enumVal=MICROBIT_ID_IO_P1
@@ -63,18 +67,25 @@ enum RuntimeContants {
     MICROBIT_ID_IO_P19,
     //% enumVal=MICROBIT_ID_IO_P20
     MICROBIT_ID_IO_P20,
+    //% enumVal=MES_DEVICE_INFO_ID
+    MES_DEVICE_INFO_ID,
+    //% enumVal=MES_SIGNAL_STRENGTH_ID
+    MES_SIGNAL_STRENGTH_ID,
+    //% enumVal=MES_DPAD_CONTROLLER_ID
+    MES_DPAD_CONTROLLER_ID,
     //% enumVal=MES_BROADCAST_GENERAL_ID
     MES_BROADCAST_GENERAL_ID,
-    //% enumVal=MICROBIT_ID_RADIO
-    MICROBIT_ID_RADIO,
+}
+
+enum EventBusValue {
+    //% enumVal=MICROBIT_EVT_ANY
+    MICROBIT_EVT_ANY,
+    //% enumVal=MICROBIT_BUTTON_EVT_CLICK
+    MICROBIT_BUTTON_EVT_CLICK,
     //% enumVal=MICROBIT_RADIO_EVT_DATAGRAM
     MICROBIT_RADIO_EVT_DATAGRAM,
-    //% enumVal=MICROBIT_ID_GESTURE
-    MICROBIT_ID_GESTURE,
     //% enumVal=MICROBIT_ACCELEROMETER_EVT_DATA_UPDATE
     MICROBIT_ACCELEROMETER_EVT_DATA_UPDATE,
-    //% enumVal=MICROBIT_ID_ACCELEROMETER
-    MICROBIT_ID_ACCELEROMETER,    
     //% enumVal=MES_ALERT_EVT_ALARM1
     MES_ALERT_EVT_ALARM1,
     //% enumVal=MES_ALERT_EVT_ALARM2
@@ -185,8 +196,15 @@ namespace control {
      * Schedules code that run in the background.
      */
     //% help=control/in-background shim=micro_bit::runInBackground
-    //% blockId="control_in_background" block="run in background"
+    //% blockId="control_in_background" block="run in background" blockGap=8
     export function inBackground(body: Action): void { }
+
+    /**
+     * Resets the BBC micro:bit.
+     */
+    //% weight=30 shim=uBit.reset async help=control/reset
+    //% blockId="control_reset" block="reset"
+    export function reset(): void { }
 
     /**
      * Raises an event in the event bus.
@@ -195,28 +213,28 @@ namespace control {
      @param mode optional definition of how the event should be processed after construction (default is CREATE_AND_QUEUE).
     */
     // shim=micro_bit::busRaiseEvent
-    //% weight=21 blockGap=8 blockId="control_raise_event" block="raise event|from source %src=control_constant|with value %value=control_constant" blockExternalInputs=1
+    //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source|with value %value=control_event_value" blockExternalInputs=1
     export function raiseEvent(src: number, value: number, mode: EventCreationMode = EventCreationMode.CreateAndQueue): void { }
 
     /**
      * Raises an event in the event bus.
      */
     // shim=micro_bit::onBusEvent
-    //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_constant|value %value=control_constant"
+    //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_event_source|with value %value=control_event_value" blockExternalInputs=1
     export function onEvent(src: number, value: number, handler: Action): void { }
 
     /**
      * Returns the value of a C++ runtime constant
      */
-    //% weight=19 shimw=TD_ID weight=19 blockId="control_constant" block="%id"
-    export function constant(id: RuntimeContants) : number {
+    //% weight=19 shimw=TD_ID weight=19 blockId="control_event_source" block="%id"
+    export function eventSource(id: EventBusSource) : number {
         return 0;
     }
-
     /**
-     * Resets the BBC micro:bit.
+     * Returns the value of a C++ runtime constant
      */
-    //% weight=1 shim=uBit.reset async help=control/reset
-    //% blockId="control_reset" block="reset"
-    export function reset(): void { }
+    //% weight=19 shimw=TD_ID weight=19 blockId="control_event_value" block="%id"
+    export function eventValue(id: EventBusValue) : number {
+        return 0;
+    }
 }

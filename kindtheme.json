@@ -8,19 +8,10 @@
     "koduUrl": "https://www.kodugamelab.com/bbc-microbit/",
     "visualStudioCode": true,
     "docMenu": [
-      { "name": "About Us", "path": "/about" },
-      { "name": "Docs", "subitems": [ 
-        { "name": "Basic", "path": "/reference/basic" },
-        { "name": "Control", "path": "/reference/control" },
-        { "name": "LEDs", "path": "/reference/control" },
-        { "name": "Advanced", "subitems": [
-          { "name": "Serial", "path": "/reference/serial" },
-          { "name": "Debugging", "path": "/reference/debugging" }
-        ] },
-        { "name": "---" },
-        { "name": "Blocks", "path": "/reference/blocks" },
-        { "name": "JavaScript", "path": "/reference/js" }
-      ] },
-      { "name": "Lessons", "path": "/lessons" }
+      { "name": "About", "path": "/about" },
+      { "name": "Docs", "path": "/docs" },
+      { "name": "Lessons", "path": "/lessons" },
+      { "name": "Reference", "path": "/reference" },
+      { "name": "Device", "path": "/device" }
     ]
 }

@@ -1,8 +1,8 @@
 {
   "name": "kindscript-microbit",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
-  "description": "microbit target for KindScript",
+  "description": "BBC micro:bit target for KindScript",
   "keywords": [
     "JavaScript",
     "education",
@@ -16,7 +16,13 @@
   "license": "MIT",
   "homepage": "https://github.com/Microsoft/kindscript-microbit#readme",
   "files": [
-    "README.md"
+    "README.md",
+    "kindtarget.json",
+    "kindtheme.json",
+    "built/*.js",
+    "built/*.json",
+    "built/*.d.ts",
+    "sim/public"        
   ],
   "dependencies": {
     "kindscript": "*",

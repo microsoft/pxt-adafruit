@@ -1,14 +1,14 @@
 # About
 
-The [BBC micro:bit](https://www.microbit.co.uk) is a [pocket-size computer](/device) with 25 LEDs, Bluetooth and sensors that can be programmed by anyone.
-The BBC micro:bit was made possible by [a number of partners!](https://www.microbit.co.uk/partners)
+The [BBC micro:bit](https://www.microbit.co.uk) is a [pocket-size computer](/device) with a 5x5 display of 25 LEDs, Bluetooth and sensors that can be programmed by anyone.
+The BBC micro:bit was made possible by many [partners](https://www.microbit.co.uk/partners).
 
 The micro:bit provides a fun introduction to programming and making – switch on, program it to do something fun – wear it, customize it.
 Just like Arduino, the micro:bit can be connected to and interact with sensors, displays, and other devices. 
 
-## Block Editor or JavaScript
+## Blocks or JavaScript
 
-The student can program the BBC micro:bit using a Block Editor or JavaScript.
+The student can program the BBC micro:bit using [visual blocks](http://www.github.com/Google/blockly) or JavaScript.
 
 ```blocks
 basic.showString("BBC micro:bit!");
@@ -46,16 +46,9 @@ input.onGesture(Gesture.Shake, () => {
 });
 ``` 
 
-To run a student's project in the web browser, KindScript compiles it into JavaScript, the scripting language built into all web browsers.
-
-C++ and Touch Develop Libraries
-The C++ micro:bit library, created at Lancaster University, provides access to the hardware functions of the micro:bit, as well as a set of helper functions (such as displaying a number/image/string on the LED screen). The Touch Develop micro:bit library mirrors the functions of the C++ library. When a Touch Develop script is compiled to C++, the calls to Touch Develop micro:bit functions are replaced with calls to the corresponding C++ functions.
-
-Above, see the mapping from the Touch Develop "show number" function to its corresponding the C++ function.
-
 ## C++ Runtime
 
 The C++ BBC micro:bit library, created at [Lancaster University](http://www.lancaster.ac.uk/), provides access to the hardware functions of the micro:bit, 
 as well as a set of helper functions (such as displaying a number/image/string on the LED screen). 
 The JavaScript micro:bit library mirrors the functions of the C++ library. 
-When code is compiled to C++, the calls to JavaScript micro:bit functions are replaced with calls to the corresponding C++ functions.
+When code is compiled to ARM machine code, the calls to JavaScript micro:bit functions are replaced with calls to the corresponding C++ functions.

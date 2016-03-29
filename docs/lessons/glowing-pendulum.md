@@ -21,12 +21,30 @@ Learn how to get the acceleration **acceleration**, `acceleration` value (g-forc
 
 ## Documentation
 
-* **forever** : [read more...](/microbit/reference/basic/forever)
-* **local variable** : [read more...](/microbit/reference/variables/var)
-* **acceleration** : [read more...](/microbit/reference/input/acceleration)
-* **absolute value** : [read more...](/microbit/js/math)
-* **set brightness** : [read more...](/microbit/reference/led/set-brightness)
-* **show LEDs** : [read more...](/microbit/reference/basic/show-leds)
+```docs
+
+basic.forever(() => {
+
+
+})
+
+let x = 0
+
+input.acceleration(Dimension.X)
+
+Math.abs(0)
+
+led.setBrightness(255)
+
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # . .
+    . . . . .
+    . . . . .
+    `)
+
+```
 
 ## Objectives
 
@@ -36,50 +54,4 @@ Learn how to get the acceleration **acceleration**, `acceleration` value (g-forc
 * learn how to return the absolute value
 * learn how to sets the brightness of the LED screen
 * learn how to turn on all the LED lights on the LED screen
-
-## Progression Pathways / Computational Thinking Framework
-
-#### Algorithms
-
-* Uses diagrams to express solutions.(AB)
-*  Uses logical reasoning to predict  outputs, showing an awareness of inputs (AL)
-* Represents solutions using a structured notation (AL) (AB)
-
-#### Programming & Development
-
-* Creates programs that implement algorithms to achieve given goals (AL)
-*  Declares and assigns variables(AB)
-* Uses a variable and relational operators within a loop to govern termination (AL) (GE)
-* Selects the appropriate data types(AL) (AB
-
-#### Data & Data Representation
-
-* Understands the difference between data and information(AB)
-* Uses filters or can perform single criteria searches for information.(AL)
-
-#### Hardware & Processing
-
-* Knows that computers collect data from various input devices, including sensors and application software (AB)
-
-#### Information Technology
-
-* Collects, organizes, and presents data and information in digital content (AB)
-* Makes appropriate improvements to solutions based on feedback received, and can comment on the success of the solution (EV)
-* Recognises ethical issues surrounding the application of information technology beyond school.
-
-Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algorithmic Thinking; EV = Evaluation; GE = Generalisation
-
-## Activity
-
-* time: 20 min.
-* [activity](/microbit/lessons/glowing-pendulum/activity)
-
-## Extended Activity
-
-* time: 20 min.
-* [challenges](/microbit/lessons/glowing-pendulum/challenges)
-
-## Homework
-
-* Extended Activity: [challenges](/microbit/lessons/glowing-pendulum/challenges)
 

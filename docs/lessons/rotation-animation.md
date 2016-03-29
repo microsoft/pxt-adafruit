@@ -21,13 +21,27 @@ Learn how to create images that look like a rotating animation by using a while 
 
 ## Documentation
 
-* **variable**: [read more...](/microbit/reference/variables/var)
-* **assignment operator**: [read more...](/microbit/reference/variables/assign)
-* **while**: [read more...](/microbit/js/while)
-* **Boolean condition (for the while loop)** : [read more...](/microbit/reference/types/boolean)
-* **on button pressed**: [read more...](/microbit/reference/input/on-button-pressed)
-* **show LEDs**: [read more...](/microbit/reference/basic/show-leds)
-* **pause**: [read more...](/microbit/reference/basic/pause)
+```docs
+let x = 0
+input.onButtonPressed(Button.A, () => {
+
+})
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . # . .
+    . . . . .
+    . . . . .
+    `)
+basic.pause(100)
+while (true) {
+
+    basic.pause(20)
+}
+
+
+
+```
 
 ## Objectives
 
@@ -38,42 +52,4 @@ Learn how to create images that look like a rotating animation by using a while 
 * learn how to run code when an input button is pressed
 * learn how to show a series of image frames on the LED screen
 * learn how to pause your code for the specified number of milliseconds
-
-## Progression Pathways / Computational Thinking Framework
-
-#### Algorithms
-
-* Understands that iteration is the repetition of a process such as a loop. (AL)
-* Represents solutions using a structured notation. (AL) (AB)
-
-#### Programming & Development
-
-* Creates programs that implement algorithms to achieve given goals. (AL)
-* Declares and assigns variables.(AB)
-
-#### Data & Data Representation
-
-* Understands the difference between data and information. (AB)
-* Defines data types: real numbers and Boolean. (AB)
-
-#### Information Technology
-
-*  Collects, organises and presents data and information in digital content. (AB)
-* Makes appropriate improvements to solutions based on feedback received, and can comment on the success of the solution. (EV)
-
-Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algorithmic Thinking; EV = Evaluation; GE = Generalisation
-
-## Activity
-
-* time: 20 min.
-* [activity](/microbit/lessons/rotation-animation/activity)
-
-## Extended Activity
-
-* time: 20 min.
-* [challenges](/microbit/lessons/rotation-animation/challenges)
-
-## Homework
-
-* Extended Activity: [challenges](/microbit/lessons/rotation-animation/challenges)
 

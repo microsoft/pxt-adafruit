@@ -12,9 +12,7 @@ The Watch
 
 * [activity](/microbit/lessons/the-watch/activity)
 
-## Class
 
-Year 7
 
 ## Prior learning/place of lesson in scheme of work
 
@@ -23,9 +21,3 @@ Learn how to design the BBC micro:bit watch with household supplies.
 ## Objectives
 
 * learn how to design and make the watch with the BBC micro:bit
-
-## Activity
-
-* time: 20 min.
-* [activity](/microbit/lessons/the-watch/activity)
-

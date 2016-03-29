@@ -18,14 +18,14 @@ Gets the compass heading of the micro:bit in degrees
 ## 2. Write the code that stores the compass heading into a local variable called 'degrees'. 
 
 
-```
+```blocks
 let degrees = input.compassHeading()
 ```
 
 ## 3. Write the 'If statement' that will check if the device is mostly pointing North. Display 'N' on the micro:bit 
 
 
-```
+```blocks
 if (degrees < 45) {
     basic.showString("N", 150)
 }
@@ -34,7 +34,7 @@ if (degrees < 45) {
 ## 4. Write the 'If statement' that will check if the device is mostly pointing East. Display 'E' on the micro:bit 
 
 
-```
+```blocks
 if (degrees < 135) {
     basic.showString("E", 150)
 }
@@ -43,7 +43,7 @@ if (degrees < 135) {
 ## 5. Write the 'If statement' that will check if the device is mostly pointing South. Display 'S' on the micro:bit 
 
 
-```
+```blocks
 if (degrees < 225) {
     basic.showString("S", 150)
 }

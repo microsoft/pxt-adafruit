@@ -17,15 +17,17 @@ Learn how to creating **conditionals**, `if condition do` to conditionally run c
 
 ## Documentation
 
-* **show string** : [read more...](/microbit/reference/basic/show-string)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
-* **on shake** : [read more...](/microbit/reference/input/on-gesture)
-* **clear screen** : [read more...](/microbit/reference/basic/clear-screen)
-* **variable** : [read more...](/microbit/reference/variables/var)
-* **pick number** : [read more...](/microbit/blocks/math)
-* **if** : [read more...](/microbit/reference/logic/if)
-
 ```docs
+if (true) {
+
+}
+Math.random(3)
+input.onGesture(Gesture.Shake, () => {
+
+})
+basic.showNumber(7)
+basic.clearScreen()
+basic.showString("Hello!")
 
 ```
 

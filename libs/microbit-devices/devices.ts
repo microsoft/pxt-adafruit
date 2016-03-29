@@ -1,117 +1,117 @@
 enum MesCameraEvent {
-    //% enumval=MES_CAMERA_EVT_TAKE_PHOTO blockId="take photo"
+    //% enumval=MES_CAMERA_EVT_TAKE_PHOTO block="take photo"
     TakePhoto,
-    //% enumval=MES_CAMERA_EVT_START_VIDEO_CAPTURE blockId="start video capture"
+    //% enumval=MES_CAMERA_EVT_START_VIDEO_CAPTURE block="start video capture"
     StartVideoCapture,
-    //% enumval=MES_CAMERA_EVT_STOP_VIDEO_CAPTURE blockId="stop video capture"
+    //% enumval=MES_CAMERA_EVT_STOP_VIDEO_CAPTURE block="stop video capture"
     StopVideoCapture,
-    //% enumval=MES_CAMERA_EVT_TOGGLE_FRONT_REAR blockId="toggle front-rear"
+    //% enumval=MES_CAMERA_EVT_TOGGLE_FRONT_REAR block="toggle front-rear"
     ToggleFrontRear,
-    //% enumval=MES_CAMERA_EVT_LAUNCH_PHOTO_MODE blockId="launch photo mode"
+    //% enumval=MES_CAMERA_EVT_LAUNCH_PHOTO_MODE block="launch photo mode"
     LaunchPhotoMode,
-    //% enumval=MES_CAMERA_EVT_LAUNCH_VIDEO_MODE blockId="launch video mode"
+    //% enumval=MES_CAMERA_EVT_LAUNCH_VIDEO_MODE block="launch video mode"
     LaunchVideoMode,
-    //% enumval=MES_CAMERA_EVT_STOP_PHOTO_MODE blockId="stop photo mode"
+    //% enumval=MES_CAMERA_EVT_STOP_PHOTO_MODE block="stop photo mode"
     StopPhotoMode,
-    //% enumval=MES_CAMERA_EVT_STOP_VIDEO_MODE blockId="stop video mode"
+    //% enumval=MES_CAMERA_EVT_STOP_VIDEO_MODE block="stop video mode"
     StopVideoMode,
 }
 
 enum MesAlertEvent {
-    //% enumval=MES_ALERT_EVT_DISPLAY_TOAST blockId="display toast"
+    //% enumval=MES_ALERT_EVT_DISPLAY_TOAST block="display toast"
     DisplayToast,
-    //% enumval=MES_ALERT_EVT_VIBRATE blockId="vibrate"
+    //% enumval=MES_ALERT_EVT_VIBRATE block="vibrate"
     Vibrate,
-    //% enumval=MES_ALERT_EVT_PLAY_SOUND blockId="play sound"
+    //% enumval=MES_ALERT_EVT_PLAY_SOUND block="play sound"
     PlaySound,
-    //% enumval=MES_ALERT_EVT_PLAY_RINGTONE blockId="play ring tone"
+    //% enumval=MES_ALERT_EVT_PLAY_RINGTONE block="play ring tone"
     PlayRingtone,
-    //% enumval=MES_ALERT_EVT_FIND_MY_PHONE blockId="find my phone"
+    //% enumval=MES_ALERT_EVT_FIND_MY_PHONE block="find my phone"
     FindMyPhone,
-    //% enumval=MES_ALERT_EVT_ALARM1 blockId="ring alarm"
+    //% enumval=MES_ALERT_EVT_ALARM1 block="ring alarm"
     RingAlarm,
-    //% enumval=MES_ALERT_EVT_ALARM2 blockId="ring alarm 2"
+    //% enumval=MES_ALERT_EVT_ALARM2 block="ring alarm 2"
     RingAlarm2,
-    //% enumval=MES_ALERT_EVT_ALARM3 blockId="ring alarm 3"
+    //% enumval=MES_ALERT_EVT_ALARM3 block="ring alarm 3"
     RingAlarm3,
-    //% enumval=MES_ALERT_EVT_ALARM4 blockId="ring alarm 4"
+    //% enumval=MES_ALERT_EVT_ALARM4 block="ring alarm 4"
     RingAlarm4,
-    //% enumval=MES_ALERT_EVT_ALARM5 blockId="ring alarm 5"
+    //% enumval=MES_ALERT_EVT_ALARM5 block="ring alarm 5"
     RingAlarm5,
-    //% enumval=MES_ALERT_EVT_ALARM6 blockId="ring alarm 6"
+    //% enumval=MES_ALERT_EVT_ALARM6 block="ring alarm 6"
     RingAlarm6,
 }
 
 enum MesDeviceInfo {
-    //% enumval=MES_DEVICE_INCOMING_CALL blockId="incoming call"
+    //% enumval=MES_DEVICE_INCOMING_CALL block="incoming call"
     IncomingCall,
-    //% enumval=MES_DEVICE_INCOMING_MESSAGE blockId="incoming message"
+    //% enumval=MES_DEVICE_INCOMING_MESSAGE block="incoming message"
     IncomingMessage,
-    //% enumval=MES_DEVICE_ORIENTATION_LANDSCAPE blockId="orientation landscape"
+    //% enumval=MES_DEVICE_ORIENTATION_LANDSCAPE block="orientation landscape"
     OrientationLandscape,
-    //% enumval=MES_DEVICE_ORIENTATION_PORTRAIT blockId="orientation portrait"
+    //% enumval=MES_DEVICE_ORIENTATION_PORTRAIT block="orientation portrait"
     OrientationPortrait,
-    //% enumval=MES_DEVICE_GESTURE_DEVICE_SHAKEN blockId="shaken"
+    //% enumval=MES_DEVICE_GESTURE_DEVICE_SHAKEN block="shaken"
     Shaken,
-    //% enumval=MES_DEVICE_DISPLAY_OFF blockId="display off"
+    //% enumval=MES_DEVICE_DISPLAY_OFF block="display off"
     DisplayOff,
-    //% enumval=MES_DEVICE_DISPLAY_ON blockId="display on"
+    //% enumval=MES_DEVICE_DISPLAY_ON block="display on"
     DisplayOn,
 }
 
 enum MesRemoteControlEvent {
-    //% enumval=MES_REMOTE_CONTROL_EVT_PLAY blockId="play"
+    //% enumval=MES_REMOTE_CONTROL_EVT_PLAY block="play"
     play,
-    //% enumval=MES_REMOTE_CONTROL_EVT_PAUSE blockId="pause"
+    //% enumval=MES_REMOTE_CONTROL_EVT_PAUSE block="pause"
     pause,
-    //% enumval=MES_REMOTE_CONTROL_EVT_STOP blockId="stop"
+    //% enumval=MES_REMOTE_CONTROL_EVT_STOP block="stop"
     stop,
-    //% enumval=MES_REMOTE_CONTROL_EVT_NEXTTRACK blockId="next track"
+    //% enumval=MES_REMOTE_CONTROL_EVT_NEXTTRACK block="next track"
     nextTrack,
-    //% enumval=MES_REMOTE_CONTROL_EVT_PREVTRACK blockId="previous track"
+    //% enumval=MES_REMOTE_CONTROL_EVT_PREVTRACK block="previous track"
     previousTrack,
-    //% enumval=MES_REMOTE_CONTROL_EVT_FORWARD blockId="forward"
+    //% enumval=MES_REMOTE_CONTROL_EVT_FORWARD block="forward"
     forward,
-    //% enumval=MES_REMOTE_CONTROL_EVT_REWIND blockId="rewind"
+    //% enumval=MES_REMOTE_CONTROL_EVT_REWIND block="rewind"
     rewind,
-    //% enumval=MES_REMOTE_CONTROL_EVT_VOLUMEUP blockId="volume up"
+    //% enumval=MES_REMOTE_CONTROL_EVT_VOLUMEUP block="volume up"
     volumeUp,
-    //% enumval=MES_REMOTE_CONTROL_EVT_VOLUMEDOWN blockId="volume down"
+    //% enumval=MES_REMOTE_CONTROL_EVT_VOLUMEDOWN block="volume down"
     volumeDown,
 }
 
 enum MesDpadButtonInfo {
-    //% enumval=MES_DPAD_BUTTON_A_DOWN blockId="A down"
+    //% enumval=MES_DPAD_BUTTON_A_DOWN block="A down"
     ADown,
-    //% enumval=MES_DPAD_BUTTON_A_UP blockId="A up"
+    //% enumval=MES_DPAD_BUTTON_A_UP block="A up"
     AUp,
-    //% enumval=MES_DPAD_BUTTON_B_DOWN blockId="B down"
+    //% enumval=MES_DPAD_BUTTON_B_DOWN block="B down"
     BDown,
-    //% enumval=MES_DPAD_BUTTON_B_UP blockId="B up"
+    //% enumval=MES_DPAD_BUTTON_B_UP block="B up"
     BUp,
-    //% enumval=MES_DPAD_BUTTON_C_DOWN blockId="C down"
+    //% enumval=MES_DPAD_BUTTON_C_DOWN block="C down"
     CDown,
-    //% enumval=MES_DPAD_BUTTON_C_UP blockId="C up"
+    //% enumval=MES_DPAD_BUTTON_C_UP block="C up"
     CUp,
-    //% enumval=MES_DPAD_BUTTON_D_DOWN blockId="D down"
+    //% enumval=MES_DPAD_BUTTON_D_DOWN block="D down"
     DDown,
-    //% enumval=MES_DPAD_BUTTON_D_UP blockId="D up"
+    //% enumval=MES_DPAD_BUTTON_D_UP block="D up"
     DUp,
-    //% enumval=MES_DPAD_BUTTON_1_UP blockId="1 down"
+    //% enumval=MES_DPAD_BUTTON_1_UP block="1 down"
     _1Down,
-    //% enumval=MES_DPAD_BUTTON_1_DOWN blockId="1 up"
+    //% enumval=MES_DPAD_BUTTON_1_DOWN block="1 up"
     _1Up,
-    //% enumval=MES_DPAD_BUTTON_2_DOWN blockId="2 down"
+    //% enumval=MES_DPAD_BUTTON_2_DOWN block="2 down"
     _2Down,
-    //% enumval=MES_DPAD_BUTTON_2_UP blockId="2 up"
+    //% enumval=MES_DPAD_BUTTON_2_UP block="2 up"
     _2Up,
-    //% enumval=MES_DPAD_BUTTON_3_DOWN blockId="3 down"
+    //% enumval=MES_DPAD_BUTTON_3_DOWN block="3 down"
     _3Down,
-    //% enumval=MES_DPAD_BUTTON_3_UP blockId="3 up"
+    //% enumval=MES_DPAD_BUTTON_3_UP block="3 up"
     _3Up,
-    //% enumval=MES_DPAD_BUTTON_4_DOWN blockId="4 down"
+    //% enumval=MES_DPAD_BUTTON_4_DOWN block="4 down"
     _4Down,
-    //% enumval=MES_DPAD_BUTTON_4_UP blockId="4 up"
+    //% enumval=MES_DPAD_BUTTON_4_UP block="4 up"
     _4Up,
 }
 

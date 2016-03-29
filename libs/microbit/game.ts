@@ -1,20 +1,20 @@
 enum Direction {
-    //% blockId=right    
+    //% block=right    
     Right,
-    //% blockId=left
+    //% block=left
     Left
 }
 
 enum LedSpriteProperty {
-    //% blockId=x
+    //% block=x
     X,
-    //% blockId=y
+    //% block=y
     Y,
-    //% blockId=direction
+    //% block=direction
     Direction,
-    //% blockId=brightness
+    //% block=brightness
     Brightness,
-    //% blockId=blink
+    //% block=blink
     Blink
 }
 

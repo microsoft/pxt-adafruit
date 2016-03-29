@@ -1,7 +1,7 @@
 enum Note {
     //% enumval=262
     C,
-    //% enumval=277 blockId=C#
+    //% enumval=277 block=C#
     CSharp,
     //% enumval=294
     D,
@@ -11,11 +11,11 @@ enum Note {
     E,
     //% enumval=349
     F,
-    //% enumval=370  blockId=F#
+    //% enumval=370  block=F#
     FSharp,
     //% enumval=392
     G,
-    //% enumval=415  blockId=G#
+    //% enumval=415  block=G#
     GSharp,
     //% enumval=440
     A,
@@ -25,7 +25,7 @@ enum Note {
     B,
     //% enumval=131
     C3,
-    //% enumval=139  blockId=C#3
+    //% enumval=139  block=C#3
     CSharp3,
     //% enumval=147
     D3,
@@ -35,11 +35,11 @@ enum Note {
     E3,
     //% enumval=175
     F3,
-    //% enumval=185 blockId=F#3
+    //% enumval=185 block=F#3
     FSharp3,
     //% enumval=196
     G3,
-    //% enumval=208 blockId=G#3
+    //% enumval=208 block=G#3
     GSharp3,
     //% enumval=220
     A3,
@@ -49,7 +49,7 @@ enum Note {
     B3,
     //% enumval=262
     C4,
-    //% enumval=277  blockId=C#4
+    //% enumval=277  block=C#4
     CSharp4,
     //% enumval=294
     D4,
@@ -59,11 +59,11 @@ enum Note {
     E4,
     //% enumval=349
     F4,
-    //% enumval=370 blockId=F#3
+    //% enumval=370 block=F#3
     FSharp4,
     //% enumval=392
     G4,
-    //% enumval=415  blockId=G#3
+    //% enumval=415  block=G#3
     GSharp4,
     //% enumval=440
     A4,
@@ -73,7 +73,7 @@ enum Note {
     B4,
     //% enumval=523
     C5,
-    //% enumval=555 blockId=C#5
+    //% enumval=555 block=C#5
     CSharp5,
     //% enumval=587
     D5,
@@ -83,11 +83,11 @@ enum Note {
     E5,
     //% enumval=698
     F5,
-    //% enumval=740  blockId=F#5
+    //% enumval=740  block=F#5
     FSharp5,
     //% enumval=784
     G5,
-    //% enumval=831 blockId=G#5
+    //% enumval=831 block=G#5
     GSharp5,
     //% enumval=880
     A5,
@@ -98,15 +98,15 @@ enum Note {
 }
 
 enum BeatFraction {
-    //% enumval=1 blockId=1
+    //% enumval=1 block=1
     Whole = 1,
-    //% enumval=2 blockId="1/2"
+    //% enumval=2 block="1/2"
     Half = 2,
-    //% enumval=4 blockId="1/4"
+    //% enumval=4 block="1/4"
     Quater = 4,
-    //% enumval=8 blockId="1/8"
+    //% enumval=8 block="1/8"
     Eighth = 8,
-    //% enumval=16 blockId="1/16"
+    //% enumval=16 block="1/16"
     Sixteenth = 16
 }
 

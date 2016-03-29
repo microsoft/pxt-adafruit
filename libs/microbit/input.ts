@@ -4,25 +4,25 @@ enum Button {
     //% enumval=MICROBIT_ID_BUTTON_B
     B,
     //% enumval=MICROBIT_ID_BUTTON_AB
-    //% blockId="A+B" block="A+B"
+    //% block="A+B"
     AB,
 }
 
 enum Dimension {
-    //% enumval=0 blockId=x
+    //% enumval=0 block=x
     X,
-    //% enumval=1 blockId=y
+    //% enumval=1 block=y
     Y,
-    //% enumval=2 blockId=z
+    //% enumval=2 block=z
     Z,
-    //% enumval=3 blockId=strength
+    //% enumval=3 block=strength
     Strength,
 }
 
 enum Rotation {
-    //% enumval=0 blockId=pitch
+    //% enumval=0 block=pitch
     Pitch,
-    //% enumval=1 blockId=roll
+    //% enumval=1 block=roll
     Roll,
 }
 
@@ -39,22 +39,22 @@ enum AcceleratorRange {
     /**
      * The accelerator measures forces up to 1 gravity
      */
-    //%  blockId="1g" enumval=1
+    //%  block="1g" enumval=1
     OneG,
     /**
      * The accelerator measures forces up to 2 gravity
      */
-    //%  blockId="2g" enumval=2
+    //%  block="2g" enumval=2
     TwoG,
     /**
      * The accelerator measures forces up to 4 gravity
      */
-    //% blockId="4g" enumval=4
+    //% block="4g" enumval=4
     FourG,
     /**
      * The accelerator measures forces up to 8 gravity
      */
-    //% blockId="8g" enumval=8
+    //% block="8g" enumval=8
     EightG
 }
 
@@ -80,42 +80,42 @@ enum Gesture {
     /**
      * Raised when shaken
      */
-    //% blockId=shake enumval=11
+    //% block=shake enumval=11
     Shake,
     /**
      * Raised when the logo is upward and the screen is vertical
      */
-    //% blockId="logo up" enumval=1
+    //% block="logo up" enumval=1
     LogoUp,
     /**
      * Raised when the logo is downward and the screen is vertical
      */
-    //% blockId="logo down" enumval=2
+    //% block="logo down" enumval=2
     LogoDown,
     /**
      * Raised when the screen is pointing down and the board is horizontal
      */
-    //% blockId="screen up" enumval=5
+    //% block="screen up" enumval=5
     ScreenUp,
     /**
      * Raised when the screen is pointing up and the board is horizontal
      */
-    //% blockId="screen down" enumval=6
+    //% block="screen down" enumval=6
     ScreenDown,
     /**
      * Raised when the screen is pointing left
      */
-    //% blockId="tilt left" enumval=3
+    //% block="tilt left" enumval=3
     TiltLeft,
     /**
      * Raised when the screen is pointing right
      */
-    //% blockId="tilt right" enumval=4
+    //% block="tilt right" enumval=4
     TiltRight,    
     /**
      * Raised when the board is falling!
      */
-    //% blockId="free fall" enumval=7
+    //% block="free fall" enumval=7
     FreeFall
 }
 

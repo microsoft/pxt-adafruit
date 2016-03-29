@@ -4,7 +4,7 @@ node_js:
 script:
   - "npm update"
   - "node node_modules/kindscript/built/kind.js buildtarget"
-  - "node node_modules/kindscript/built/kind.js uploadtrg microbit-latest"  
+  - "node node_modules/kindscript/built/kind.js travis"  
   - "node node_modules/kindscript/built/kind.js uploaddoc"
 sudo: false
 notifications:

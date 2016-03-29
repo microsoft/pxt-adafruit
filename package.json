@@ -1,35 +1,35 @@
 {
-    "name": "kindscript-microbit",
-    "version": "0.0.5",
-    "description": "BBC micro:bit target for KindScript",
-    "keywords": [
-        "JavaScript",
-        "education",
-        "microbit"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Microsoft/kindscript-microbit.git"
-    },
-    "author": "",
-    "license": "MIT",
-    "homepage": "https://github.com/Microsoft/kindscript-microbit#readme",
-    "files": [
-        "README.md",
-        "kindtarget.json",
-        "kindtheme.json",
-        "built/*.js",
-        "built/*.json",
-        "built/*.d.ts",
-        "sim/public",
-        "docs/*.md",
-        "docs/*/*.md",
-        "docs/*/*/*.md"
-    ],
-    "devDependencies": {
-        "typescript": "^1.8.7"
-    },
-    "dependencies": {
-        "kindscript": "0.1.111"
-    }
+  "name": "kindscript-microbit",
+  "version": "0.0.6",
+  "description": "BBC micro:bit target for KindScript",
+  "keywords": [
+    "JavaScript",
+    "education",
+    "microbit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Microsoft/kindscript-microbit.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/Microsoft/kindscript-microbit#readme",
+  "files": [
+    "README.md",
+    "kindtarget.json",
+    "kindtheme.json",
+    "built/*.js",
+    "built/*.json",
+    "built/*.d.ts",
+    "sim/public",
+    "docs/*.md",
+    "docs/*/*.md",
+    "docs/*/*/*.md"
+  ],
+  "devDependencies": {
+    "typescript": "^1.8.7"
+  },
+  "dependencies": {
+    "kindscript": "0.1.111"
+  }
 }

@@ -18,13 +18,20 @@ Answer the questions below while completing the activity. Pay attention to the d
 
 ## 3. Describe what this line of code does?
 
-![](/static/mb/blocks/lessons/love-meter-6.png)
+```blocks
+let x = Math.random(9)
+```
 
 
 
 ## 4. Describe what adding 1 to variable x does?
 
-![](/static/mb/blocks/lessons/love-meter-7.png)
+```blocks
+let item = 0;
+item = 0;
+basic.showNumber(item + 1);
+```
+
 
 
 ## 5. Describe why you must hold ground (GND) before pressing (P0) to run a program using `on pin pressed(P0)` on the micro:bit

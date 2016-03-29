@@ -1,6 +1,6 @@
-# Hardware
+# Device
 
-All the bits and pieces that make up your micro:bit
+All the bits and pieces that make up your BBC micro:bit
 
 ![](/static/mb/device-0.png)
 

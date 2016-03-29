@@ -10,7 +10,17 @@ Run code in the background forever (answers may vary).
 
 ## 2. Draw the picture that will be produced with this code
 
-![](/static/mb/blocks/lessons/snowflake-fall-4.png)
+```blocks
+basic.forever(() => {
+    basic.showLeds(`
+. # . # .
+# # # # #
+# # # # #
+. # # # .
+. . # . .`);
+});
+
+```
 
 ![](/static/mb/lessons/flashing-heart-0.png)
 

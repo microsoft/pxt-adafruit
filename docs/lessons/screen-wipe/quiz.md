@@ -12,19 +12,18 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 ## 1. Describe what "clear screen" does? 
 
-<br/>
+
 
 ## 2. Write the code that clears an image from the screen
 
 ![](/static/mb/blocks/lessons/screen-wipe-4.png)
 
-<br/>
 
 ## 3. Write the condition that will detect on button A pressed
 
-<br/>
+
 
 ## 4. Write the code that will clear show LEDS from the screen after pressing button A 
 
-<br/>
+
 

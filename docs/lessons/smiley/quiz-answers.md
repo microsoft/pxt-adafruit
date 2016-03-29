@@ -16,13 +16,36 @@ The extra empty image with show LED creates a blinking smiley, allowing the micr
 
 ## 3. Draw the image created with this code
 
-![](/static/mb/blocks/lessons/smiley-3.png)
+```blocks
+basic.showLeds(`
+    . # . # .
+    . # . # .
+    . . . . .
+    # . . . #
+    . # # # .
+    `)
+```
 
 ![](/static/mb/blocks/lessons/smiley-4.png)
 
 ## 4. Write the code to make this image
 
-![](/static/mb/blocks/lessons/smiley-5.png)
+```blocks
+basic.showLeds(`
+    . # . # .
+    . # . # .
+    . . . . .
+    # . . . #
+    . # # # .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+```
 
 ![](/static/mb/blocks/lessons/smiley-6.png)
 

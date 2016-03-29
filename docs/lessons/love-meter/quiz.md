@@ -12,25 +12,21 @@ Answer the questions below while completing the activity. Pay attention to the d
 
 ## 1. Describe what `on pin pressed` does?
 
-<br/>
 
 ## 2. Create a condition for on pin pressed (P0).
 
-<br/>
 
 ## 3. Describe what this line of code does?
 
 ![](/static/mb/blocks/lessons/love-meter-6.png)
 
-<br/>
+
 
 ## 4. Describe what adding 1 to variable x does?
 
 ![](/static/mb/blocks/lessons/love-meter-7.png)
 
-<br/>
 
 ## 5. Describe why you must hold ground (GND) before pressing (P0) to run a program using `on pin pressed(P0)` on the micro:bit
 
-<br/>
 

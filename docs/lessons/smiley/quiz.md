@@ -10,27 +10,45 @@ Use the hints in the [Smiley](/microbit/lessons/smiley/activity) activity to ans
 
 ## 1. Describe what `show LEDs` does
 
-<br/>
-
-<br/>
 
 ## 2. Why is there an extra empty frame after the smiley face?
 
 ![](/static/mb/lessons/smiley-0.png)
 
-<br/>
+
 
 ## 3. Draw the image created with this code
 
-![](/static/mb/blocks/lessons/smiley-3.png)
+```blocks
+basic.showLeds(`
+    . # . # .
+    . # . # .
+    . . . . .
+    # . . . #
+    . # # # .
+    `)
+```
 
 ![](/static/mb/empty-microbit.png)
 
-<br/>
-
 ## 4. Draw the images created with this code
 
-![](/static/mb/blocks/lessons/smiley-5.png)
+```blocks
+basic.showLeds(`
+    . # . # .
+    . # . # .
+    . . . . .
+    # . . . #
+    . # # # .
+    `)
+basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
+```
 
 ![](/static/mb/lessons/looper-3.png)
 

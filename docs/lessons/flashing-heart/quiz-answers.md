@@ -10,13 +10,15 @@ Pause program execution for the specified number of milliseconds.
 
 ## 2. Write the code that leaves an image on the screen for 1 second (1000 milliseconds) 
 
-<br/>
 
-![](/static/mb/blocks/lessons/flashing-heart-5.jpg)
+```blocks
+basic.pause(1000)
+```
 
 ## 3. Write the code that leaves an image on the screen for 1.5 seconds (1500 milliseconds) 
 
-![](/static/mb/blocks/lessons/flashing-heart-6.jpg)
+```blocks
+basic.pause(1500)
+```
 
-<br/>
 

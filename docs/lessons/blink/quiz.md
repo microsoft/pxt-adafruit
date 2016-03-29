@@ -12,23 +12,34 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 ## 1. Describe what `plot` does?
 
-<br/>
+
 
 ## 2. Draw which LED is ON after running this code
 
-![](/static/mb/blocks/lessons/blink-6.png)
+```blocks
+led.plot(2, 2)
+
+```
 
 ![](/static/mb/empty-microbit.png)
 
 ## 3. Draw which LED is ON after running this code
 
-![](/static/mb/blocks/lessons/blink-7.png)
+```blocks
+led.plot(0, 0)
+
+```
 
 ![](/static/mb/empty-microbit.png)
 
 ## 4. Draw which LED is ON after running this code
 
-![](/static/mb/blocks/lessons/blink-8.png)
+
+```blocks
+led.plot(4, 4)
+
+```
+
 
 ![](/static/mb/empty-microbit.png)
 

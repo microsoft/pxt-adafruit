@@ -14,7 +14,11 @@ It's a method that runs code when the user holds the GND pin with a finger of on
 
 Create a condition for `on pin pressed (P0)`.
 
-![](/static/mb/blocks/lessons/love-meter-0.jpg)
+```blocks
+input.onPinPressed(TouchPin.P0, () => {
+    
+})
+```
 
 ## 3. What does this line of code doing?
 

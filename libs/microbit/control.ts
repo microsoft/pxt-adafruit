@@ -220,7 +220,8 @@ namespace control {
      * Raises an event in the event bus.
      */
     // shim=micro_bit::onBusEvent
-    //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_event_source|with value %value=control_event_value" blockExternalInputs=1
+    //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_event_source|with value %value=control_event_value" 
+    //% blockExternalInputs=1 blockStatement=1
     export function onEvent(src: number, value: number, handler: Action): void { }
 
     /**

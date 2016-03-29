@@ -20,7 +20,7 @@ We are creating a forever loop to constantly display the appropriate brightness 
 
 <br/>
 
-```
+```blocks
 let acceleration = input.acceleration("y")
 ```
 
@@ -28,16 +28,16 @@ let acceleration = input.acceleration("y")
 
 <br/>
 
-```
-acceleration = math.abs(acceleration)
+```blocks
+let acceleration = math.abs(acceleration)
 ```
 
 ## 4. Write the code that uses the acceleration value from question #3 to set the brightness on the BBC micro:bit.
 
 <br/>
 
-```
-acceleration = acceleration / 4
+```blocks
+let acceleration = acceleration / 4
 led.setBrightness(acceleration)
 ```
 

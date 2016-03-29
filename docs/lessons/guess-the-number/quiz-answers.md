@@ -12,8 +12,9 @@ Answers may vary. Generally, on button pressed run code when an input button is 
 
 Write the line of code that creates a condition when the BBC micro:bit button A is pressed.
 
-```
-input.onButtonPressed("A", () => {
+```blocks
+input.onButtonPressed(Button.A, () => {
+    
 })
 ```
 
@@ -21,13 +22,13 @@ input.onButtonPressed("A", () => {
 
 Write the line of code that creates a **local variable** and a **random number**.
 
-```
+```blocks
 let randomNumber = Math.random(10)
 ```
 
 ## 4. Consider the following code
 
-```
+```blocks
 randomNumber = Math.random(10)
 ```
 

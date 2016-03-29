@@ -36,6 +36,14 @@ input.onButtonPressed(Button.A, () => {
 # . . . #
 . # # # .`);
 });
+input.onButtonPressed(Button.B, () => {
+    basic.showLeds(`
+. # . # .
+# . # . #
+# . . . #
+. # . # .
+. . # . .`);
+});
 input.onGesture(Gesture.Shake, () => {
     basic.showLeds(`
 . . . . .
@@ -44,6 +52,7 @@ input.onGesture(Gesture.Shake, () => {
 . # # # .
 # . . . #`);
 });
+basic.showString("BBC micro:bit");
 ``` 
 
 ## C++ Runtime

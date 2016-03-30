@@ -48,13 +48,35 @@ It is a **while** loop that will be executed only if the ** variable** called `r
 ## 4. If the rectangle below represents the BBC micro:bit, shade the areas that will be displayed. Explain why that particular area is shaded.
 
 ```blocks
-basic.showAnimation(`
-# . . . . . . # . . . . . . # . . . . .
-. # . . . . . # . . . . . # . . . . . .
-. . # . . . . # . . . . # . . # # # # #
-. . . # . . . # . . . # . . . . . . . .
-. . . . # . . # . . # . . . . . . . . .
-`, 400)
+basic.showLeds(`
+        . . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+basic.showLeds(`
+        . . . . .
+        . . . . .
+        # # # # #
+        . . . . .
+        . . . . .
+        `)
+basic.showLeds(`
+        . . . . #
+        . . . # .
+        . . # . .
+        . # . . .
+        # . . . .
+        `)
+basic.showLeds(`
+        . . . . #
+        . . . # .
+        . . # . .
+        . # . . .
+        # . . . .
+        `)
+   
 ```
 
 

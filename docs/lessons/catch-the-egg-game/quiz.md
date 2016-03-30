@@ -6,11 +6,11 @@ Programming a game of catch the egg using the accelerometer.
 
 ## Directions
 
-Use this activity document to guide your work in the [catch the egg tutorial](/microbit/lessons/catch-the-egg-game/tutorial)
+Use this activity document to guide your work in the [catch the egg challenges](/microbit/lessons/catch-the-egg-game/challenges)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 
-## 1. Write the data type for the global variables 'basket' and 'egg'.
+## 1. Write the data type for the variables 'basket' and 'egg'.
 
 <br/>
 

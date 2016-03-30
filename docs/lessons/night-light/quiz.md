@@ -6,7 +6,7 @@ change the brightness of the BBC micro:bit #LED #image #brightness #fade #docs
 
 ## Directions
 
-Use this activity document to guide your work in the [night light tutorial](/microbit/lessons/night-light/tutorial)
+Use this activity document to guide your work in the [night light tutorial](/microbit/lessons/night-light/activity)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

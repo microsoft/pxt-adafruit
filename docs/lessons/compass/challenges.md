@@ -7,7 +7,7 @@ Display the direction that the micro:bit is facing using the compass
 Complete the following [guided tutorial](/microbit/lessons/compass/activity), your code should look like this:
 
 ```blocks
- let degrees = null;
+ let degrees = 0;
 basic.forever(() => {
     degrees = input.compassHeading();
     if (degrees < 45) {
@@ -30,7 +30,7 @@ basic.forever(() => {
 Instead of displaying `N` when the BBC micro:bit is pointing North, display a star to indicate the north star.
 
 ```blocks
- let degrees = null;
+ let degrees = 0;
 basic.forever(() => {
     degrees = input.compassHeading();
     if (degrees < 45) {
@@ -61,7 +61,7 @@ basic.forever(() => {
 Instead of displaying just `N`, `W`, `S`, or `E`, display the full word.
 
 ```blocks
- let degrees = null;
+ let degrees = 0;
 basic.forever(() => {
     degrees = input.compassHeading();
     if (degrees < 45) {

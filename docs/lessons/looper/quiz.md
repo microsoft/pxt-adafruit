@@ -6,7 +6,7 @@ Learn how to create a series of numbers with a for loop. #LED #screen #plot #doc
 
 ## Directions
 
-Use this activity document to guide your work in the [looper tutorial](/microbit/lessons/looper/tutorial)
+Use this activity document to guide your work in the [looper tutorial](/microbit/lessons/looper/activity)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

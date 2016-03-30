@@ -6,7 +6,7 @@ Learn how to create a rotating image with a while loop. #image #loop  #while #do
 
 ## Directions
 
-Use this activity document to guide your work in the [rotation animation tutorial](/microbit/lessons/rotation-animation/tutorial).
+Use this activity document to guide your work in the [rotation animation tutorial](/microbit/lessons/rotation-animation/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 
@@ -46,13 +46,35 @@ while (rotating) {
 ## 4. Draw the areas on the micro:bits to illustrate the code below. Explain why you chose to draw in those areas.
 
 ```blocks
-basic.showAnimation(`
-# . . . . . . # . . . . . . # . . . . .
-. # . . . . . # . . . . . # . . . . . .
-. . # . . . . # . . . . # . . # # # # #
-. . . # . . . # . . . # . . . . . . . .
-. . . . # . . # . . # . . . . . . . . .
-`, 400)
+basic.showLeds(`
+        . . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+basic.showLeds(`
+        . . . . .
+        . . . . .
+        # # # # #
+        . . . . .
+        . . . . .
+        `)
+basic.showLeds(`
+        . . . . #
+        . . . # .
+        . . # . .
+        . # . . .
+        # . . . .
+        `)
+basic.showLeds(`
+        . . . . #
+        . . . # .
+        . . # . .
+        . # . . .
+        # . . . .
+        `)
+   
 ```
 
 ![](/static/mb/lessons/looper-2.png)

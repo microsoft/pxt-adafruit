@@ -12,6 +12,8 @@ If (Conditionals)
 
 * [activity](/microbit/lessons/truth-or-dare/activity)
 * [challenges](/microbit/lessons/truth-or-dare/challenges)
+* [quiz](/microbit/lessons/truth-or-dare/quiz)
+* [quiz answers](/microbit/lessons/truth-or-dare/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

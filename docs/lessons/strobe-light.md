@@ -12,6 +12,8 @@ For Loop
 
 * [activity](/microbit/lessons/strobe-light/activity)
 * [challenges](/microbit/lessons/strobe-light/challenges)
+* [quiz](/microbit/lessons/strobe-light/quiz)
+* [quiz answers](/microbit/lessons/strobe-light/quiz-answers)
 
 ## Documentation
 

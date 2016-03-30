@@ -12,6 +12,9 @@ For Loop
 
 * [activity](/microbit/lessons/looper/activity)
 * [challenges](/microbit/lessons/looper/challenges)
+* [quiz](/microbit/lessons/looper/quiz)
+* [quiz answers](/microbit/lessons/looper/quiz-answers)
+
 
 ## Class
 

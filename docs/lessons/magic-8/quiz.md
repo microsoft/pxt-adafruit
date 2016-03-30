@@ -22,7 +22,7 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 <br />
 
-## 3. Write the 'if statement' to check if ``x`` is equal to 1. Inside the 'if statement', display the string "No."
+## 4. Write the 'if statement' to check if ``x`` is equal to 1. Inside the 'if statement', display the string "No."
 
 <br />
 

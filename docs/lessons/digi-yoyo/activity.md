@@ -18,7 +18,6 @@ let count = 0
 
 Add a while loop that will loop over and over until the variable `count` equals 10.
 
-![](/static/mb/blocks/lessons/digi-yoyo-1.jpg)
 
 ```blocks
 let count = 0

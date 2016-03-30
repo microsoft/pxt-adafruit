@@ -25,12 +25,13 @@ let x = Math.random(3)
 ## 3. Write the 'if statement' to check if ``x`` is equal to 2. Inside the 'if statement', display the string "Yes".
 
 ```blocks
+let x = Math.random(3)
 if (x == 2) {
     basic.showString("Yes", 150)
 }
 ```
 
-## 3. Write the 'if statement' to check if ``x`` is equal to 1. Inside the 'if statement', display the string "No."
+## 4. Write the 'if statement' to check if ``x`` is equal to 1. Inside the 'if statement', display the string "No."
 
 ```blocks
 let x = Math.random(3)

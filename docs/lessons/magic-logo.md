@@ -12,6 +12,8 @@ On Logo Up
 
 * [activity](/microbit/lessons/magic-logo/activity)
 * [challenges](/microbit/lessons/magic-logo/challenges)
+* [quiz](/microbit/lessons/magic-logo/challenges)
+* [quiz answers](/microbit/lessons/magic-logo/challenges)
 
 ## Prior learning/place of lesson in scheme of work
 

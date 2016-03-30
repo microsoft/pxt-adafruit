@@ -12,6 +12,8 @@ Math - Pick Random
 
 * [activity](/microbit/lessons/guess-the-number/activity)
 * [challenges](/microbit/lessons/guess-the-number/challenges)
+* [quiz](/microbit/lessons/guess-the-number/quiz)
+* [quiz answers](/microbit/lessons/guess-the-number/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

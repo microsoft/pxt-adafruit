@@ -12,6 +12,8 @@ Variables
 
 * [activity](/microbit/lessons/counter/activity)
 * [challenges](/microbit/lessons/counter/challenges)
+* [quiz](/microbit/lessons/counter/quiz)
+* [quiz answers](/microbit/lessons/counter/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

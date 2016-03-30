@@ -31,7 +31,7 @@ let randomNumber = Math.random(10)
 If the rectangle below represents the BBC micro:bit, shade the areas that will be displayed. Explain why that particular area is shaded.
 
 ```blocks
-randomNumber = Math.random(10)
+let randomNumber = Math.random(10)
 ```
 
 

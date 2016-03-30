@@ -12,6 +12,8 @@ Set Brightness
 
 * [activity](/microbit/lessons/night-light/activity)
 * [challenges](/microbit/lessons/night-light/challenges)
+* [quiz](/microbit/lessons/night-light/quiz)
+* [quiz answers](/microbit/lessons/night-light/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

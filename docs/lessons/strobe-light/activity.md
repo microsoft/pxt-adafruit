@@ -45,7 +45,14 @@ for (let i = 0; i < 5; i++) {
 
 The pause will add a delay between lighting each LED.
 
-![](/static/mb/blocks/lessons/strobe-light-3.jpg)
+```blocks
+for (let i = 0; i < 5; i++) {
+    for (let j = 0; j < 5; j++) {
+        led.plot(i, j)
+        basic.pause(200)
+    }
+}
+```
 
 ### ~avatar avatar
 

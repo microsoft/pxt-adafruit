@@ -28,7 +28,24 @@ basic.forever(() => {
 
 ![](/static/mb/lessons/snowflake-fall-0.png)
 
-![](/static/mb/blocks/lessons/snowflake-fall-5.png)
+```blocks
+basic.forever(() => {
+    basic.showLeds(`
+        . . . . .
+        . . # . .
+        . # # # .
+        . . # . .
+        . . . . .
+        `);
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+});
+```
 
 ## 4. Write the code for a forever loop and show LEDS for these images!
 
@@ -36,5 +53,21 @@ basic.forever(() => {
 
 ![](/static/mb/lessons/snowflake-fall-2.png)
 
-![](/static/mb/blocks/lessons/snowflake-fall-6.png)
-
+```blocks
+basic.forever(() => {
+    basic.showLeds(`
+        . . . . .
+        . . # . .
+        . # # # .
+        . . # . .
+        . . . . .
+        `);
+    basic.showLeds(`
+        # # # # #
+        # # . # #
+        # . # . #
+        # # . # #
+        # # # # #
+        `)
+});
+```

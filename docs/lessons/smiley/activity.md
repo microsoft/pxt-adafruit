@@ -13,14 +13,14 @@ Welcome! This tutorial will help you make a smiley face blink. Let's get started
 Create an animation with an image displaying a smiley face and the next image with no LEDs lit up. This will make it look like the smiley face is blinking as the display switches between images.
 
 ```blocks
-basic.showAnimation(`
+basic.showLeds(`
     . # . # .
     . # . # .
     . . . . .
     # . . . #
     . # # # .
     `)
-basic.showAnimation(`
+basic.showLeds(`
     . . . . .
     . . . . .
     . . . . .

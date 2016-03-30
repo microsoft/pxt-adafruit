@@ -10,6 +10,8 @@ If (Conditionals)
 
 * [activity](/microbit/lessons/magic-8/activity)
 * [challenges](/microbit/lessons/magic-8/challenges)
+* [quiz](/microbit/lessons/magic-8/quiz)
+* [quiz answers](/microbit/lessons/magic-8/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 
@@ -28,7 +30,6 @@ input.onGesture(Gesture.Shake, () => {
 basic.showNumber(7)
 basic.clearScreen()
 basic.showString("Hello!")
-
 ```
 
 ## Objectives

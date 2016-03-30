@@ -12,7 +12,8 @@ If (Conditionals)
 
 * [activity](/microbit/lessons/compass/activity)
 * [challenges](/microbit/lessons/compass/challenges)
-
+* [quiz](/microbit/lessons/compass/quiz)
+* [quiz answers](/microbit/lessons/compass/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

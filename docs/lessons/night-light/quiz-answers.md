@@ -16,9 +16,15 @@ If the rectangle above represents the BBC micro:bit, write the code to set all t
 
 <br />
 
-```
+```blocks
 led.setBrightness(255)
-led.plotAll()
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
 ```
 
 ## 3. Consider the following image
@@ -29,9 +35,15 @@ If the rectangle above represents the BBC micro:bit, write the code to set the s
 
 <br/>
 
-```
+```blocks
 led.setBrightness(128)
-led.plotAll()
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
 ```
 
 ## 4. Consider the following image
@@ -40,7 +52,7 @@ led.plotAll()
 
 If the rectangle above represents the BBC micro:bit, write the code to turn off all the LEDs.
 
-```
+```blocks
 led.setBrightness(0)
 ```
 

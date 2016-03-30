@@ -6,7 +6,7 @@ a multi-player game that forces each player to reveal a secret or something funn
 
 ## Directions
 
-Use this activity document to guide your work in the [truth or dare tutorial](/microbit/lessons/truth-or-dare/tutorial).
+Use this activity document to guide your work in the [truth or dare tutorial](/microbit/lessons/truth-or-dare/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

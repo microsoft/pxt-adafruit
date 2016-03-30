@@ -12,19 +12,95 @@ Welcome! This guided tutorial will teach how to program a script that randomly p
 
 Let's begin by adding an `on shake` condition to know when the micro:bit is shaken.
 
-![](/static/mb/blocks/lessons/spinner-0.jpg)
+```blocks
+input.onGesture(Gesture.Shake, () => {
+    
+})
+```
 
 Now let's randomly generate a number from 0 to 3 so that we can randomly display an arrow in a given direction.
 
-![](/static/mb/blocks/lessons/spinner-1.jpg)
+```blocks
+input.onGesture(Gesture.Shake, () => {
+    let randomArrow = Math.random(4)
+    if (randomArrow = 3) {
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # # # # #
+            . . # . .
+            . . # . .
+            `)
+    }
+})
+```
+
+
 
 Now let's handle each of the cases by displaying the appropriate arrow. (Let's display an up arrow if `random arrow` is 0.
 
-![](/static/mb/blocks/lessons/spinner-2.jpg)
+```blocks
+input.onGesture(Gesture.Shake, () => {
+    let randomArrow = Math.random(4)
+    if (randomArrow = 3) {
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # # # # #
+            . . # . .
+            . . # . .
+            `)
+    }
+    if (randomArrow = 2) {
+        basic.showLeds(`
+            . . # . .
+            . . # . .
+            # # # # #
+            . # # # .
+            . . # . .
+            `)
+    }
+})
+```
+
 
 Now let's handle the rest of the cases for `random arrow`.
 
-![](/static/mb/blocks/lessons/spinner-3.jpg)
+
+```blocks
+input.onGesture(Gesture.Shake, () => {
+    let randomArrow = Math.random(4)
+    if (randomArrow = 3) {
+        basic.showLeds(`
+            . . # . .
+            . # # # .
+            # # # # #
+            . . # . .
+            . . # . .
+            `)
+    }
+    if (randomArrow = 2) {
+        basic.showLeds(`
+            . . # . .
+            . . # . .
+            # # # # #
+            . # # # .
+            . . # . .
+            `)
+    }
+    if (randomArrow = 1) {
+        basic.showLeds(`
+            . . # . .
+            . # # . .
+            # # # # #
+            . # # . .
+            . . # . .
+            `)
+
+    }
+})
+```
+
 
 ### ~avatar avatar
 

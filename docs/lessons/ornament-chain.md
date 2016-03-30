@@ -4,15 +4,11 @@ display beautiful images on the BBC micro:bit #var #pause #docs
 
 ## Topic
 
-Telegraph
+Network devices
 
 ## Quick Links
 
 * [activity](/microbit/lessons/ornament-chain/activity)
-
-## Class
-
-Year 7
 
 ## Prior learning/place of lesson in scheme of work
 

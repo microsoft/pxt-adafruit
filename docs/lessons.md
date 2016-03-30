@@ -57,12 +57,11 @@ Overview of lessons for the BBC micro:bit.
 * [Hack your Headphones](/microbit/lessons/hack-your-headphones), create music on the BBC micro:bit by hacking your headphones
 * [Banana Keyboard](/microbit/lessons/banana-keyboard), create music with fruits
 * [Telegraph](/microbit/lessons/telegraph), play the telegraph game between two BBC micro:bits
-* [Ornament Chain](/microbit/lessons/ornament-chain), play the ornament chain game between two BBC micro:bits
 
 ## Advanced
 
 * [Hero](/microbit/lessons/hero), reconstruct the classic arcade game pac man with the BBC micro:bit
-
+* [Catch the Egg](/microbit/lessons/catch-the-egg-game), reconstruct the classic game of Catch the Egg with the BBC micro:bit
 ### ~
 
 ### @section full

@@ -12,6 +12,8 @@ Acceleration
 
 * [activity](/microbit/lessons/zoomer/activity)
 * [challenges](/microbit/lessons/zoomer/challenges)
+* [quiz](/microbit/lessons/zoomer/quiz)
+* [quiz answers](/microbit/lessons/zoomer/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 
@@ -21,12 +23,10 @@ Learn how to get the **acceleration**, `acceleration` in one of three specified 
 
 ```docs
 basic.forever(() => {
-
 })
 let x = 0
 input.acceleration(Dimension.X)
 if (true) {
-
 }
 input.buttonIsPressed(Button.A)
 basic.showNumber(0)

@@ -6,7 +6,7 @@ Measure the acceleration on the micro:bit in the "z" direction #LED #number #mat
 
 ## Directions
 
-Use this activity document to guide your work in the [zoomer tutorial](/microbit/lessons/zoomer/tutorial)
+Use this activity document to guide your work in the [zoomer tutorial](/microbit/lessons/zoomer/activity)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

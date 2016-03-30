@@ -69,5 +69,7 @@ Now, we need `count` to decrease by one after the micro:bit has displayed the va
 We can do this by adding this line:
 
 ```blocks
-let count = count + (count - 1);
+let count = 0; 
+count = count + (count - 1);
+
 ```

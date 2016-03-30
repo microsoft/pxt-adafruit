@@ -51,7 +51,7 @@ basic.forever(() => {
         . . # . .
         `)
 })
-```blocks
+```
 
 Run your code in the simulator or download it to your BBC micro:bit to see what happens!
 

@@ -27,10 +27,10 @@ let count = 0
 ## 3. Draw which LEDs are ON after running this code and pressing button "A" once. Explain you chose to draw that number
 
 ```blocks
-let count_ = 0
+let counts = 0
 input.onButtonPressed(Button.A, () => {
-    count_ = count_ + 1
-    basic.showNumber(count_, 100)
+    counts = counts + 1
+    basic.showNumber(counts, 150)
 })
 ```
 
@@ -41,10 +41,10 @@ input.onButtonPressed(Button.A, () => {
 ## 4. Draw which LEDs are ON after running this code and pressing button "A" three times. Explain you chose to draw that number
 
 ```blocks
-count_ = 0
+let counting= 0
 input.onButtonPressed(Button.A, () => {
-    count_ = count_ + 1
-    basic.showNumber(count_, 100)
+    counting = counting + 1
+    basic.showNumber(counting, 100)
 })
 ```
 

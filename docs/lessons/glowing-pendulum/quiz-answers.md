@@ -29,16 +29,19 @@ let acceleration = input.acceleration("y")
 <br/>
 
 ```blocks
-let acceleration = math.abs(acceleration)
+let acceleration = input.acceleration(Dimension.X)
+let accelerationAbsolute = Math.abs(acceleration)
 ```
 
-## 4. Write the code that uses the acceleration value from question #3 to set the brightness on the BBC micro:bit.
+## 4. Write the code to use the acceleration value from question 3 to set the brightness on the BBC micro:bit.
 
 <br/>
 
 ```blocks
-let acceleration = acceleration / 4
-led.setBrightness(acceleration)
+let accelerationX = input.acceleration(Dimension.X)
+let accelerationAbsolute = Math.abs(accelerationX)
+let accelerationDivided = accelerationX / 4
+led.setBrightness(accelerationX)
 ```
 
 ## 5. Write the code that tuns all the LEDs on (as the image displays below)

@@ -8,14 +8,14 @@ Complete the [smiley activity](/microbit/lessons/smiley/activity) and your code 
 
 
 ```blocks
-basic.showAnimation(`
+basic.showLeds(`
     . # . # .
     . # . # .
     . . . . .
     # . . . #
     . # # # .
     `)
-basic.showAnimation(`
+basic.showLeds(`
     . . . . .
     . . . . .
     . . . . .
@@ -33,14 +33,14 @@ Let's make add code that will run when button A is pressed!
 
 
 ```blocks
-basic.showAnimation(`
+basic.showLeds(`
     . # . # .
     . # . # .
     . . . . .
     # . . . #
     . # # # .
     `)
-basic.showAnimation(`
+basic.showLeds(`
     . . . . .
     . . . . .
     . . . . .
@@ -59,14 +59,14 @@ input.onButtonPressed(Button.A, () => {
 Now, we want to show a frowny face when this button is pressed. Let's show the LEDs.
 
 ```blocks
-basic.showAnimation(`
+basic.showLeds(`
     . # . # .
     . # . # .
     . . . . .
     # . . . #
     . # # # .
     `)
-basic.showAnimation(`
+basic.showLeds(`
     . . . . .
     . . . . .
     . . . . .
@@ -74,7 +74,7 @@ basic.showAnimation(`
     . . . . .
     `)
 input.onButtonPressed(Button.A, () => {
-    basic.showAnimation(`
+    basic.showLeds(`
         . # . # .
         . # . # .
         . . . . .

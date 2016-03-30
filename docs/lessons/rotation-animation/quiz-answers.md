@@ -4,44 +4,82 @@ Learn how to create a rotating image with a while loop. #image #loop  #while #do
 
 This is the answer key for the [rotation animation quiz](/microbit/lessons/rotation-animation/quiz).
 
-## 1. What is a "global variable"?
+## 1. What is a " variable"?
 
-Answers may vary. A global variable is a place where you can store data so that you can use it later in your code.
+Answers may vary. A variable is a place where you can store data so that you can use it later in your code.
 
-## 2. Consider the following directions
+## 2. Write the code to create a ** variable** called `foo` that stores a boolean and initialize it to **false**.
 
-Write the code to create a **global variable** called `foo` that stores a boolean and initialize it to **false**.
 
+
+```blocks
+let rotating = true;
 ```
-rotating = true
-```
 
-## 3. Consider the following code
+## 3. Explain what this line of code does.
 
-```
+```blocks
+let rotating = true;
 while (rotating) {
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
 }
+
 ```
 
-Explain what this line of code does.
+
 
 <br/>
 
-It is a **while** loop that will be executed only if the **global variable** called `rotating` is **true**.
+It is a **while** loop that will be executed only if the ** variable** called `rotating` is **true**.
 
-## 4. Consider the following code
+## 4. If the rectangle below represents the BBC micro:bit, shade the areas that will be displayed. Explain why that particular area is shaded.
 
+```blocks
+basic.showLeds(`
+        . . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+basic.showLeds(`
+        . . . . .
+        . . . . .
+        # # # # #
+        . . . . .
+        . . . . .
+        `)
+basic.showLeds(`
+        . . . . #
+        . . . # .
+        . . # . .
+        . # . . .
+        # . . . .
+        `)
+basic.showLeds(`
+        . . . . #
+        . . . # .
+        . . # . .
+        . # . . .
+        # . . . .
+        `)
+   
 ```
-basic.showAnimation(`
-# . . . . . . # . . . . . . # . . . . .
-. # . . . . . # . . . . . # . . . . . .
-. . # . . . . # . . . . # . . # # # # #
-. . . # . . . # . . . # . . . . . . . .
-. . . . # . . # . . # . . . . . . . . .
-`, 400)
-```
 
-If the rectangle below represents the BBC micro:bit, shade the areas that will be displayed. Explain why that particular area is shaded.
+
 
 ![](/static/mb/lessons/rotation-animation-0.png)
 

@@ -12,6 +12,8 @@ If (Conditionals)
 
 * [activity](/microbit/lessons/spinner/activity)
 * [challenges](/microbit/lessons/spinner/challenges)
+* [quiz](/microbit/lessons/spinner/quiz)
+* [quiz answers](/microbit/lessons/spinner/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

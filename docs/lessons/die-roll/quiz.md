@@ -6,7 +6,7 @@ Create a die when the BBC micro:bit is shaken
 
 ## Directions
 
-Use this activity document to guide your work in the [die roll tutorial](/microbit/lessons/die-roll/tutorial).
+Use this activity document to guide your work in the [die roll tutorial](/microbit/lessons/die-roll/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

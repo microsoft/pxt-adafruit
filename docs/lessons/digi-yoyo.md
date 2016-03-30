@@ -12,6 +12,8 @@ While Loop
 
 * [activity](/microbit/lessons/digi-yoyo/activity)
 * [challenges](/microbit/lessons/digi-yoyo/challenges)
+* [quiz](/microbit/lessons/digi-yoyo/quiz)
+* [quiz answers](/microbit/lessons/digi-yoyo/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 
@@ -20,20 +22,12 @@ Learn how to creating a **while loop**, `while condition do` to repeat code whil
 ## Documentation
 
 ```docs
-
 let x = 0
-
 basic.showNumber(0)
-
-
 while (true) {
 
     basic.pause(20)
 }
-
-
-
-
 ```
 
 ## Objectives

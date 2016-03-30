@@ -12,7 +12,8 @@ If (Conditionals)
 
 * [activity](/microbit/lessons/die-roll/activity)
 * [challenges](/microbit/lessons/die-roll/challenges)
-
+* [quiz](/microbit/lessons/die-roll/quiz)
+* [quiz answers](/microbit/lessons/die-roll/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

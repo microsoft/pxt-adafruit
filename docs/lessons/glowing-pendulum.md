@@ -10,10 +10,8 @@ Acceleration
 
 * [activity](/microbit/lessons/glowing-pendulum/activity)
 * [challenges](/microbit/lessons/glowing-pendulum/challenges)
-
-## Class
-
-Year 7
+* [quiz](/microbit/lessons/glowing-pendulum/quiz)
+* [quiz answers](/microbit/lessons/glowing-pendulum/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

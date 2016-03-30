@@ -6,7 +6,7 @@ Learn how to generate a random number on the micro:bit. #math #random #docs
 
 ## Directions
 
-Use this activity document to guide your work in the [guess the number tutorial](/microbit/lessons/guess-the-number/tutorial).
+Use this activity document to guide your work in the [guess the number tutorial](/microbit/lessons/guess-the-number/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

@@ -8,7 +8,7 @@ Complete the [magic logo](/microbit/lessons/magic-logo/activity) activity and yo
 
 ```blocks
 input.onLogoUp(() => {
-    basic.showAnimation(`
+    basic.showLeds(`
         . . # . .
         . # # # .
         # # # # #
@@ -28,7 +28,7 @@ How about when the logo is down? We should display an arrow pointing downward!
 
 ```blocks
 input.onLogoUp(() => {
-    basic.showAnimation(`
+    basic.showLeds(`
         . . # . .
         . # # # .
         # # # # #
@@ -37,7 +37,7 @@ input.onLogoUp(() => {
         `)
 })
 input.onLogoDown(() => {
-    basic.showAnimation(`
+    basic.showLeds(`
         . . # . .
         . . # . .
         # # # # #

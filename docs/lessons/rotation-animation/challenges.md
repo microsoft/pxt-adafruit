@@ -54,9 +54,6 @@ Now let's add to this by creating a condition for on button pressed `A` before t
 ```blocks
 
 let rotating = true;
-input.onButtonPressed(Button.A, () => {
-    serial.writeLine("hello")
-})
 while (rotating) {
     serial.writeLine("loop")
     basic.showLeds(`
@@ -88,8 +85,9 @@ while (rotating) {
         . . . . .
         `)
 }
-
-
+input.onButtonPressed(Button.A, () => {
+    serial.writeLine("hello")
+})
 
 ```
 
@@ -101,10 +99,6 @@ Now that we have the on button pressed condition, let's make the animation stop 
 
 ```blocks
 let rotating = true;
-input.onButtonPressed(Button.A, () => {
-    serial.writeLine("hello")
-    rotating = false
-})
 while (rotating) {
     serial.writeLine("loop")
     basic.showLeds(`
@@ -136,7 +130,10 @@ while (rotating) {
         . . . . .
         `)
 }
-
+input.onButtonPressed(Button.A, () => {
+    serial.writeLine("hello")
+    rotating = false
+})
 
 ```
 

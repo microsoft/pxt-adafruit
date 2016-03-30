@@ -13,7 +13,7 @@ At the end of the tutorial, click `keep editing`. Your code should look like thi
 ```
 count = 0
 shouldBreak = false
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     shouldBreak = true
 })
 while (true) {
@@ -60,7 +60,7 @@ while (true) {
     basic.showNumber(count, 150)
     basic.pause(1000)
 }
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
 }) // ***
 ```
 
@@ -68,7 +68,7 @@ Next, set `should break` back to false to indicate we want to run the `while` lo
 
 ```
 // **. . .**
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     shouldBreak = false // ***
 })
 ```
@@ -77,7 +77,7 @@ And now copy the code from the previous while loop into the condition of `input-
 
 ```
 // **. . .**
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     shouldBreak = false
     while (true) {
         if (shouldBreak) {

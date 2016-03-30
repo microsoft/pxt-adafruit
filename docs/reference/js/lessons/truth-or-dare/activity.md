@@ -28,7 +28,7 @@ basic.showLeds(`
 . . # . .
 . . # . .
 `, 400)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
 })
 ```
 
@@ -42,7 +42,7 @@ basic.showLeds(`
 . . # . .
 . . # . .
 `, 400)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     let random = Math.random(2)
 })
 ```
@@ -57,7 +57,7 @@ basic.showLeds(`
 . . # . .
 . . # . .
 `, 400)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     let random1 = Math.random(2)
     if (random1 == 0) {
         basic.showString("TRUTH", 150)
@@ -79,7 +79,7 @@ basic.showLeds(`
 . . # . .
 . . # . .
 `, 400)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     let random2 = Math.random(2)
     if (random2 == 0) {
         basic.showString("TRUTH", 150)

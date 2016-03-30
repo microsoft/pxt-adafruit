@@ -22,7 +22,7 @@ shouldBreak = false
 Write the line of code to stop incrementing `count` when the button is pressed. (Hint: This will set `should break` to true).
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     shouldBreak = true
 })
 ```

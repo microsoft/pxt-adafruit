@@ -9,7 +9,7 @@ An event handler is code that is associated with a particular event, such as "bu
 Functions named "on <event>" create an association between an event and the event handler code.  For example, the following code registers the event handler (the code between the `do` and `end` keywords) with the event of a press of button A:
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.showString("hello", 150)
 })
 ```
@@ -21,7 +21,7 @@ After this code executes, then whenever button A is pressed in the future, the s
 Once you have registered an event handler for an event, like above, that event handler is active for the rest of the program execution. If you want to stop the string "hello" from printing each time button A is pressed then you need to arrange for the following code to execute:
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
 })
 ```
 
@@ -32,10 +32,10 @@ The above code associated an event handler that does nothing with the event of a
 The above example also illustrates that there is only one event handler for each event. What is the result of the following code?
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.showString("hello", 150)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.showString("goodbye", 150)
 })
 ```
@@ -43,7 +43,7 @@ input.onButtonPressed("A", () => {
 The answer is that whenever button A is pressed, the string "goodbye" will be printed. If you want both the strings "hello" and "goodbye" to be printed, you need to write the code like this:
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.showString("hello", 150)
     basic.showString("goodbye", 150)
 })

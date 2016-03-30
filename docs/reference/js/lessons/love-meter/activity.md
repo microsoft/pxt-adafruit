@@ -15,14 +15,14 @@ To create a new script, go to the [Create Code](/microbit/create-code) page and 
 Begin by registering an event with `input->on pin pressed(PO)` to know when someone is holding pin ``P0`` and pin ``Gnd``.
 
 ```
-input.onPinPressed("P0", () => {
+input.onPinPressed(TouchPin.P0, () => {
 })
 ```
 
 We are going to create a meter that displays a random number from 0 to 10. We use ``11`` as `math->random(n)` returns a number between ``0`` and ``n-1``.
 
 ```
-input.onPinPressed("P0", () => {
+input.onPinPressed(TouchPin.P0, () => {
     let x = Math.random(11)
 })
 ```
@@ -30,7 +30,7 @@ input.onPinPressed("P0", () => {
 Finally, let's show that number on the micro:bit.
 
 ```
-input.onPinPressed("P0", () => {
+input.onPinPressed(TouchPin.P0, () => {
     let x_ = Math.random(11)
     basic.showNumber(x_, 150)
 })

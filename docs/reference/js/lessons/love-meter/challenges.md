@@ -11,7 +11,7 @@ Complete the following guided tutorial:
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 
 ```
-input.onPinPressed("P0", () => {
+input.onPinPressed(TouchPin.P0, () => {
     let x = Math.random(11)
     basic.showNumber(x, 150)
 })
@@ -22,7 +22,7 @@ input.onPinPressed("P0", () => {
 Add a pause of 3000 milliseconds (3 seconds) after showing the number so that the number won't immediately disappear in the next challenge.
 
 ```
-input.onPinPressed("P0", () => {
+input.onPinPressed(TouchPin.P0, () => {
     let x1 = Math.random(11)
     basic.showNumber(x1, 150)
     basic.pause(3000) // ***
@@ -34,7 +34,7 @@ input.onPinPressed("P0", () => {
 If the rating **x** is between ``0`` and ``3`` (strictly less than ``4``), display the text "HORRIBLE!".
 
 ```
-input.onPinPressed("P0", () => {
+input.onPinPressed(TouchPin.P0, () => {
     let x2 = Math.random(11)
     basic.showNumber(x2, 150)
     basic.pause(3000)
@@ -51,7 +51,7 @@ input.onPinPressed("P0", () => {
 If the rating is between 4 and 7, display the text "MEDIOCRE!" **else** display the text "MATCHED!"
 
 ```
-input.onPinPressed("P0", () => {
+input.onPinPressed(TouchPin.P0, () => {
     let x3 = Math.random(11)
     basic.showNumber(x3, 150)
     basic.pause(3000)

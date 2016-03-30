@@ -8,7 +8,7 @@ Welcome! This [guided tutorial](/microbit/lessons/comparison/tutorial) will assi
 
 ```
 counter = 0
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter = counter + 1
     if (counter == 10) {
         counter = 1
@@ -23,7 +23,7 @@ Now let's do something special when the micro:bit reaches the number `5`. Instea
 
 ```
 counter = 0
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter = counter + 1
     if (counter == 10) {
         counter = 1
@@ -40,7 +40,7 @@ Let's continue our plan of displaying `HALF WAY!` when `counter = 5`. To do so, 
 
 ```
 counter = 0
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter = counter + 1
     if (counter == 10) {
         counter = 1
@@ -60,7 +60,7 @@ You may notice a problem right now. When `counter = 5`, the micro:bit will show 
 
 ```
 counter = 0
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter = counter + 1
     if (counter == 10) {
         counter = 1

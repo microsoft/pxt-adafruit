@@ -8,7 +8,7 @@ Complete the following [guided tutorial](/microbit/lessons/counter/activity) At 
 
 ```
 let count = 0
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     count = count + 1
     basic.showNumber(count, 150)
 })
@@ -22,11 +22,11 @@ Let's add the code to `count` when `B` is pressed. Add an event handler with `in
 
 ```
 let count1 = 0
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     count1 = count1 + 1
     basic.showNumber(count1, 150)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     count1 = count1 - 1 // ***
     basic.showNumber(count1, 150) // ***
 }) // ***

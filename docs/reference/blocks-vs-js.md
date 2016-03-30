@@ -101,13 +101,13 @@ for (let i3 = 0; i3 < 5; i3++) {
 Local scope allows you to use the same variable name in different parts of a program without concern about interference (as with variables with global scope). Here's the Touch Develop program that implements the "X" program without interference:
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     for (let i4 = 0; i4 < 5; i4++) {
         led.plot(i4, i4)
         basic.pause(1000)
     }
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     for (let i5 = 0; i5 < 5; i5++) {
         led.plot(4 - i5, i5)
         basic.pause(1000)

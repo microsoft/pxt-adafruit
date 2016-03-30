@@ -8,7 +8,7 @@ The code below shows a simple script that sends a line when the BBC micro:bit st
 
 ```
 serial.writeLine("started...")
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     serial.writeLine("A pressed")
 })
 ```

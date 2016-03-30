@@ -24,7 +24,7 @@ basic.forever(() => {
 . . # . .
 `).showImage(offset)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     offset = offset + 1
 })
 ```
@@ -47,10 +47,10 @@ basic.forever(() => {
 . . # . .
 `).showImage(offset)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     offset = offset + 1
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     offset = offset - 1 // ***
 }) // ***
 ```
@@ -82,10 +82,10 @@ basic.forever(() => {
 . . # . .
 `).showImage(offset)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     offset = offset + 1
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     offset = offset - 1
 })
 ```

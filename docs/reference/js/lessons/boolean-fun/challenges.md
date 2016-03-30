@@ -9,7 +9,7 @@ Welcome! This [guided tutorial](https://live.microbit.co.uk/td/lessons/speed-but
 ```
 counter = 0
 fastPress = false
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter = counter + 1
 })
 ```
@@ -21,7 +21,7 @@ We need to know when the user has hit button `A` 15 times. The user wins when he
 ```
 counter = 0
 fastPress = false
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter = counter + 1
     if (counter == 15 && input.runningTime() < 3500) {
     }
@@ -33,7 +33,7 @@ Next, if the user has won, let's set our boolean to true. This indicates that he
 ```
 counter = 0
 fastPress = false
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter = counter + 1
     if (counter == 15 && input.runningTime() < 3500) {
         fastPress = true // ***
@@ -48,7 +48,7 @@ We want to set `fastPress` to false if the user was too slow. To do so, we need 
 ```
 counter = 0
 fastPress = false
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter = counter + 1
     if (counter == 15 && input.runningTime() < 3500) {
         fastPress = true
@@ -66,7 +66,7 @@ Now let's display if the user won or lost. To do so, we need to check the status
 ```
 counter = 0
 fastPress = false
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter = counter + 1
     if (counter == 15 && input.runningTime() < 3500) {
         fastPress = true

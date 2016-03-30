@@ -8,7 +8,7 @@ Welcome! This [guided tutorial](/microbit/lessons/return/tutorial) will help you
 
 ```
 let original1 = 5
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     let doubled = doubleIt_(5)
     basic.showNumber(doubled, 150) // ***
 })
@@ -32,11 +32,11 @@ Add a condition to know when button `B` is pressed. We will use this condition i
 
 ```
 let original = 5
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     let one = doubleIt_(original)
     basic.showNumber(one, 150)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
 })
 ```
 

@@ -13,7 +13,7 @@ At the end of the tutorial, click `keep editing`. Your code should look like thi
 ```
 let counter = 0
 let fastPress = false
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter = counter + 1
 })
 ```
@@ -25,7 +25,7 @@ We need to know when the user has hit button `A` 15 times. The user wins when he
 ```
 let counter1 = 0
 let fastPress1 = false
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter1 = counter1 + 1
     if (counter1 == 15 && input.runningTime() < 5000) {
     }
@@ -37,7 +37,7 @@ Next, if the user has won, let's set our boolean to true. This indicates that he
 ```
 let counter2 = 0
 let fastPress2 = false
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter2 = counter2 + 1
     if (counter2 == 15 && input.runningTime() < 5000) {
         fastPress2 = true // ***
@@ -52,7 +52,7 @@ We want to set `fastPress` to false if the user was too slow. To do so, we need 
 ```
 let counter3 = 0
 let fastPress3 = false
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter3 = counter3 + 1
     if (counter3 == 15 && input.runningTime() < 5000) {
         fastPress3 = true
@@ -72,7 +72,7 @@ Now let's display if the user won or lost. To do so, we need to check the status
 ```
 let counter4 = 0
 let fastPress4 = false
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     counter4 = counter4 + 1
     if (counter4 == 15 && input.runningTime() < 5000) {
         fastPress4 = true

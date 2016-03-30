@@ -11,7 +11,7 @@ Complete the following guided tutorial:
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     let x = Math.random(10)
     basic.showNumber(x, 150)
 })
@@ -24,11 +24,11 @@ input.onButtonPressed("A", () => {
 When button `B` is pressed, we want to clear the screen. This will make it so users can play your game over and over again! Add an event handler to handle this case.
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     let x1 = Math.random(10)
     basic.showNumber(x1, 150)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     basic.clearScreen() // ***
 })
 ```

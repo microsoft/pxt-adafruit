@@ -9,14 +9,14 @@ Howdy! This [guided tutorial](/microbit/rxqgzy) will help you complete this acti
 In this guide, you will learn how to use buttons and show text on the screen. Let's start by adding to respond **when the left button is pressed**.
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
 })
 ```
 
 All the code inside `input->on button pressed` runs when the button is pressed. Let's add the code to show some text.
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.showString("hello", 150)
 })
 ```
@@ -26,10 +26,10 @@ input.onButtonPressed("A", () => {
 Let's add an event handler for Button `B`.
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.showString("hello", 150)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
 })
 ```
 
@@ -38,10 +38,10 @@ input.onButtonPressed("B", () => {
 Display `bye` when the `B` button is pressed.
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.showString("hello", 150)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     basic.showString("bye", 150)
 })
 ```

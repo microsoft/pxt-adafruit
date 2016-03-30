@@ -9,7 +9,7 @@ Welcome! This [guided tutorial](/microbit/lessons/break/tutorial) will assist yo
 ```
 count = 0
 shouldBreak = false
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     shouldBreak = true
 })
 while (true) {
@@ -49,7 +49,7 @@ while (true) {
     basic.showNumber(count, 150)
     basic.pause(1000)
 }
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
 }) // ***
 ```
 
@@ -57,7 +57,7 @@ Next, set `shouldBreak` back to false to indicate we want to run the `while` loo
 
 ```
 // **. . .**
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     shouldBreak = false // ***
 })
 ```
@@ -66,7 +66,7 @@ And now copy the code from the previous while loop into the condition of `input-
 
 ```
 // **. . .**
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     shouldBreak = false
     while (true) {
         if (shouldBreak) {

@@ -26,10 +26,10 @@ ball.setDirection(-45)
 The user will control the paddle by pressing ``A`` to go up and ``B`` to go down. Let's add ``on button pressed`` event handlers to do that.
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     paddle.changeYBy(-1)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     paddle.changeYBy(1)
 })
 ```

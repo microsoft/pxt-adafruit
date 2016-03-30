@@ -37,7 +37,7 @@ let num = 0
 basic.forever(() => {
     basic.showNumber(num, 150)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     num = num + 1
 })
 ```

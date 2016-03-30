@@ -1,6 +1,6 @@
 # set brightness challenges
 
-These challenges will allow you to change the brightness of the micro:bit. #docs
+These challenges will allow you to change the brightness of the micro:bit. docs
 
 **Challenge 0**
 
@@ -11,7 +11,7 @@ These challenges will allow you to change the brightness of the micro:bit. #docs
 ```
 led.setBrightness(255)
 led.plotAll()
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     led.setBrightness(64)
 })
 ```
@@ -25,10 +25,10 @@ What if we want to turn off all the LEDs? Let's do this by setting the brightnes
 ```
 led.setBrightness(255)
 led.plotAll()
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     led.setBrightness(64)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
 }) // ***
 ```
 
@@ -39,10 +39,10 @@ Inside of the condition `input->on button pressed("B")`, add `led->set brightnes
 ```
 led.setBrightness(255)
 led.plotAll()
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     led.setBrightness(64)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     led.setBrightness(0) // ***
 })
 ```

@@ -21,7 +21,7 @@ let x = 5
 <br/>
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
 })
 ```
 

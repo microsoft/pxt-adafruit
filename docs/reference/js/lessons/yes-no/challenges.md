@@ -18,7 +18,7 @@ Now we need to reply after someone asks Micro a  yes or no question. We want to 
 
 ```
 basic.showString("ASK ME A QUESTION", 150)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.showString("YES", 150) // ***
 }) // ***
 ```
@@ -33,10 +33,10 @@ What if Micro's answer to the question is no? Let's have `NO` be displayed when 
 
 ```
 basic.showString("ASK ME A QUESTION", 150)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.showString("YES", 150)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     basic.showString("NO", 150) // ***
 }) // ***
 ```

@@ -128,7 +128,7 @@ for (let j = 0; j < 10; j++) {
 <br/>
 
 ```
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     basic.showString("WINS", 150)
     basic.showNumber(wins, 150)
     basic.pause(500)

@@ -10,14 +10,14 @@ This [guided tutorial](/microbit/lessons/typing-game/tutorial) will teach you ho
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 index = 0
 name = ""
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     led.showString(alphabet.substr(index, 1), 0)
     index = index + 1
 })
 if (index > 25) {
     index = 0
 }
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     name = name.concat(alphabet.substr(index - 1, 1))
 })
 input.onGesture(Gesture.Shake, () => {
@@ -33,14 +33,14 @@ After you have shown the string in the condition `on shake`, make the name varia
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 index = 0
 name = ""
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     led.showString(alphabet.substr(index, 1), 0)
     index = index + 1
 })
 if (index > 25) {
     index = 0
 }
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     name = name.concat(alphabet.substr(index - 1, 1))
 })
 input.onGesture(Gesture.Shake, () => {
@@ -57,14 +57,14 @@ After you have cleared the name variable to hold nothing, make `index := 0` so t
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 index = 0
 name = ""
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     led.showString(alphabet.substr(index, 1), 0)
     index = index + 1
 })
 if (index > 25) {
     index = 0
 }
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     name = name.concat(alphabet.substr(index - 1, 1))
 })
 input.onGesture(Gesture.Shake, () => {

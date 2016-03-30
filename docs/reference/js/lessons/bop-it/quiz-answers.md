@@ -33,7 +33,7 @@ if (action == 0) {
 <br />
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     if (action == 0) {
         game.addScore(1)
     }

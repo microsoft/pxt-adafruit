@@ -30,7 +30,7 @@ basic.showAnimation(`
 # . . . # . . . . .
 . # # # . . . . . .
 `, 400)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
 }) // ***
 ```
 
@@ -48,7 +48,7 @@ basic.showAnimation(`
 # . . . # . . . . .
 . # # # . . . . . .
 `, 400)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.showLeds(`
 . # . # .
 . # . # .

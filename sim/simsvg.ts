@@ -683,9 +683,15 @@ svg.sim.grayscale {
                     case 'radiopacket': this.flashAntenna(); break;
                 }
             }
+            let tiltDecayer = 0;
             this.element.addEventListener("mousemove", (ev: MouseEvent) => {
                 let state = this.board;
                 if (!state.accelerometer.isActive) return;           
+                
+                if (tiltDecayer) {
+                    clearInterval(tiltDecayer);
+                    tiltDecayer = 0;
+                }
 
                 let ax = (ev.clientX - this.element.clientWidth / 2) / (this.element.clientWidth / 3);
                 let ay = (ev.clientY - this.element.clientHeight / 2) / (this.element.clientHeight / 3);
@@ -695,6 +701,7 @@ svg.sim.grayscale {
                 let z2 = 1023*1023 - x * x  - y * y;
                 let z = Math.floor((z2 > 0 ? -1 : 1)* Math.sqrt(Math.abs(z2)));
                 
+                console.log(`move: ${ax} ${y} ${z}`)    
                 state.accelerometer.update(x,y,z);
                 this.updateTilt();
             }, false);
@@ -702,8 +709,25 @@ svg.sim.grayscale {
                 let state = this.board;
                 if (!state.accelerometer.isActive) return;
                 
-                state.accelerometer.update(0,0,-1023);
-                this.updateTilt();
+                if (!tiltDecayer) {
+                    tiltDecayer = setInterval(() => {
+                        let accx = state.accelerometer.getX(MicroBitCoordinateSystem.RAW);
+                        accx = Math.floor(Math.abs(accx) * 0.85) * (accx > 0 ? 1 : -1);
+                        let accy = state.accelerometer.getY(MicroBitCoordinateSystem.RAW);
+                        accy = Math.floor(Math.abs(accy) * 0.85) * (accy > 0 ? 1 : -1);
+                        let accz = -Math.sqrt(Math.max(0, 1023*1023 - accx*accx - accy*accy));
+                        if (Math.abs(accx) <= 24 && Math.abs(accy) <= 24) {
+                            clearInterval(tiltDecayer);                
+                            tiltDecayer = 0;                        
+                            accx = 0;
+                            accy = 0;
+                            accz = -1023;                          
+                        }                    
+                        console.log(`leave: ${accx} ${accy} ${accz}`)    
+                        state.accelerometer.update(accx, accy, accz);
+                        this.updateTilt();                        
+                        }, 50)
+                }
             }, false);
             
             this.pins.forEach((pin, index) => {

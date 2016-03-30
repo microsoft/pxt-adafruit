@@ -46,7 +46,7 @@ Write the code that displays the next letter of the string in "cup select" when 
 <br/>
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     index = index + 1
     if (index > 2) {
         index = 0

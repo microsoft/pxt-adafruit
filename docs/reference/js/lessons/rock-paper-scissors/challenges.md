@@ -34,7 +34,7 @@ input.onGesture(Gesture.Shake, () => {
 `)
     img1.plotFrame(Math.random(3))
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     game.addScore(1) // ***
 }) // ***
 ```
@@ -54,7 +54,7 @@ input.onGesture(Gesture.Shake, () => {
 `)
     img2.plotFrame(Math.random(3))
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     game.addScore(1)
     basic.showString("WINS: ", 150) // ***
     basic.showNumber(game.score(), 150) // ***

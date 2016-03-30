@@ -1,8 +1,6 @@
 #include "BitVM.h"
 
 
-typedef uint32_t ImageLiteral;
-
 /**
  * Provides access to basic micro:bit functionality.
  */
@@ -40,7 +38,7 @@ namespace basic {
     //% blockId=device_show_leds
     //% block="show leds" icon="\uf00a"
     void showLeds(ImageLiteral leds, int interval = 400) {
-      uBit.display.print(MicroBitImage(getbytes(leds)), 0, 0, 0, delay);
+      uBit.display.print(MicroBitImage(getbytes(leds)), 0, 0, 0, interval);
     }
 
     /**
@@ -100,7 +98,7 @@ namespace basic {
     void forever_stub(void *a) {
       while (true) {
         action::run((Action)a);
-        micro_bit::pause(20);
+        uBit.sleep(20);
       }
     }
 

@@ -6,4 +6,5 @@ basic.plotLeds(`
 . # # # .
 `);
 basic.pause(300);
-foo.bar();
+basic.showString("Hello");
+// foo.bar();

@@ -70,6 +70,10 @@
         "serial" : {
             "manufacturerFilter": "^mbed$",
             "log": true   
+        },
+        "cloud" : {
+            "workspace": false,
+            "packages": true
         }        
     }
 }

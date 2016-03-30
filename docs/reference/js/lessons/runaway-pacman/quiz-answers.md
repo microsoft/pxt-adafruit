@@ -88,7 +88,7 @@ levelTime = 0
 <br/>
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     let temp = math.abs(person.dirX) * (-1)
     // {stcode}
     // MACRO: stcode
@@ -104,7 +104,7 @@ input.onButtonPressed("A", () => {
 <br/>
 
 ```
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     let temp1 = math.abs(person.dirX)
     // {stcode}
     // MACRO: stcode

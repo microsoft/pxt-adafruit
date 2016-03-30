@@ -18,7 +18,7 @@ basic.showAnimation(`
 . . . . . # # # # # # # # # # # # # # #
 . . . . . . . . . . . . . . . # # # # #
 `, 400)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.clearScreen()
 })
 ```
@@ -37,10 +37,10 @@ basic.showAnimation(`
 . . . . . # # # # # # # # # # # # # # #
 . . . . . . . . . . . . . . . # # # # #
 `, 400)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.clearScreen()
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
 })
 ```
 
@@ -56,10 +56,10 @@ basic.showAnimation(`
 . . . . . # # # # # # # # # # # # # # #
 . . . . . . . . . . . . . . . # # # # #
 `, 400)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.clearScreen()
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     basic.showAnimation(`
 # # # # # # # # # # . . . . . . . . . .
 # # # # # # # # # # . . . . . . . . . .

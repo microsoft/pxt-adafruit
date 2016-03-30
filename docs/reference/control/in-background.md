@@ -19,7 +19,7 @@ control.inBackground(() => {
         basic.pause(100)
     }
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     num++;
 })
 ```
@@ -31,7 +31,7 @@ let num = 0
 basic.forever(() => {
     basic.showNumber(num, 150)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     num++;
 })
 ```
@@ -44,7 +44,7 @@ If you have multiple processes that each show something on the LED screen, you m
 basic.forever(() => {
     basic.showNumber(6789, 150)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     basic.showNumber(2, 150)
 })
 ```

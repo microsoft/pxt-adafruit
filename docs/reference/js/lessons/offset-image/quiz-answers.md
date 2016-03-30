@@ -41,7 +41,7 @@ Write the two lines of code that cause the `variable` offset to increase by one 
 <br/>
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     offset = offset + 1
 })
 ```

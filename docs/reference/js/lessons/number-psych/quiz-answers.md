@@ -126,7 +126,7 @@ for (let i4 = 0; i4 < 4; i4++) {
 <br />
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     if (gameMode == 0 && playerNumber == 0) {
         micro_bitTransfer.transferByte(255)
     }
@@ -148,7 +148,7 @@ for (let k1 = 0; k1 < 3; k1++) {
 <br />
 
 ```
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     if (gameMode == 2) {
         gameMode = 1
         basic.plotImage(`

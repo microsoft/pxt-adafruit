@@ -12,7 +12,7 @@ At the end of the tutorial, click `keep editing`. Your code should look like thi
 
 ```
 newAction() // ***
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     if (action == 0) {
         game.addScore(1) // ***
         newAction() // ***
@@ -30,7 +30,7 @@ input.onGesture(Gesture.Shake, () => {
         newAction() // ***
     }
 }) // ***
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     basic.showNumber(game.score(), 150) // ***
     basic.pause(2000) // ***
     newAction() // ***
@@ -68,12 +68,12 @@ Now let's implement `PRESS PIN 0` in the main. Create a condition of `input->on 
 
 ```
 // **. . .**
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     basic.showNumber(game.score(), 150) // ***
     basic.pause(2000) // ***
     newAction() // ***
 }) // ***
-input.onPinPressed("P0", () => {
+input.onPinPressed(TouchPin.P0, () => {
     if (action == 3) {
         game.addScore(1) // ***
         newAction() // ***

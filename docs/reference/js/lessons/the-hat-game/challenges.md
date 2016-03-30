@@ -13,10 +13,10 @@ At the end of the tutorial, click `keep editing`. Your code should look like thi
 ```
 initializeGame()
 playLevel()
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     selectHat()
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     chooseHat()
 })
 ```

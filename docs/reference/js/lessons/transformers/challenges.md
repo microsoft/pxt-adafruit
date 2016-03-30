@@ -12,7 +12,7 @@ At the end of the tutorial, click `keep editing`. Your code should look like thi
 
 ```
 let inital = 5
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     let doubled1 = double(initial)
     basic.showNumber(doubled1, 150) // ***
 })
@@ -40,11 +40,11 @@ Add a condition for when button `B` is pressed. We will use this condition in th
 
 ```
 initial = 5
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     let doubled = double(initial)
     basic.showNumber(doubled, 150)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
 }) // ***
 ```
 

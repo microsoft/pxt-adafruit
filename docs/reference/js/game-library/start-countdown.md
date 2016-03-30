@@ -13,7 +13,7 @@ The game library supports simple single-player time-based games. The general goa
 The code below shows a simple game where the user gets to press the button ``A`` as much times as possible in 10 seconds.
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     game.addScore(1)
 })
 game.startCountdown(10000)

@@ -98,10 +98,10 @@ This program will record the current acceleration measured on `x` when you press
 
 ```
 let accelerations = (<number[]>[])
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     accelerations.push(input.acceleration("x"))
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     for (let i1 = 0; i1 < accelerations.length; i1++) {
         basic.showString(accelerations[i1].toString(), 150)
     }

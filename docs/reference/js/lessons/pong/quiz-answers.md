@@ -42,7 +42,7 @@ led.plot(ballX, ballY)
 <br/>
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     if (paddleNotUp()) {
         led.unplot(0, paddleY)
         paddleY = paddleY - 1
@@ -56,7 +56,7 @@ input.onButtonPressed("A", () => {
 <br/>
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     if (paddleNotDown()) {
         led.unplot(0, paddleY)
         paddleY = paddleY + 1

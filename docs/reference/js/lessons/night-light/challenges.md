@@ -13,7 +13,7 @@ At the end of the tutorial, click `keep editing`. Your code should look like thi
 ```
 led.setBrightness(255)
 led.plotAll()
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     led.setBrightness(64)
 })
 ```
@@ -27,10 +27,10 @@ What if we want to turn off all the LEDs? Let's do this by setting the brightnes
 ```
 led.setBrightness(255)
 led.plotAll()
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     led.setBrightness(64)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     led.setBrightness(0) // ***
 }) // ***
 ```

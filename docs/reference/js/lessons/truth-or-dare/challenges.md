@@ -18,7 +18,7 @@ basic.plotImage(`
 . . # . .
 . . # . .
 `)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     let random = Math.random(2)
     if (random == 0) {
         basic.showString("TRUTH", 150)
@@ -47,7 +47,7 @@ basic.plotImage(`
 . . # . .
 . . # . .
 `)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     let random1 = Math.random(3) // ***
     if (random1 == 0) {
         basic.showString("TRUTH", 150)
@@ -76,7 +76,7 @@ basic.plotImage(`
 . . # . .
 . . # . .
 `)
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     let random2 = Math.random(3)
     if (random2 == 0) {
         basic.showString("TRUTH", 150) // ***

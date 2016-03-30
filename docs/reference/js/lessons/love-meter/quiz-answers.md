@@ -13,7 +13,7 @@ It's a method that runs code when the user holds the GND pin with a finger of on
 ## 2. Create a condition for on pin pressed ("P1").
 
 ```
-input.onPinPressed("P1", () => {
+input.onPinPressed(TouchPin.P1, () => {
 })
 ```
 

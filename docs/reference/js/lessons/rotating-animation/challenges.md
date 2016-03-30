@@ -27,7 +27,7 @@ Now let's add to this by creating a condition for on button pressed `A` before t
 
 ```
 rotating = true
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
 }) // ***
 while (rotating) {
     basic.showAnimation(`
@@ -48,7 +48,7 @@ Now that we have the on button pressed condition, let's make the animation stop 
 
 ```
 rotating = true
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     rotating = false // ***
 }) // ***
 while (rotating) {

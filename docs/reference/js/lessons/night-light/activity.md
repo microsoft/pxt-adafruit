@@ -32,7 +32,7 @@ Add a new event handler for `input->on button pressed(A)` and add the code to se
 ```
 led.setBrightness(255)
 led.plotAll()
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     led.setBrightness(64) // ***
 }) // ***
 ```

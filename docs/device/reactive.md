@@ -52,7 +52,7 @@ The first job of the scheduler is to allow multiple *subprograms* to be queued u
 
 ```
 export function countButtonPresses() {
-    input.onButtonPressed("A", () => {
+    input.onButtonPressed(Button.A, () => {
         count = count + 1
     })
     basic.forever(() => {
@@ -65,7 +65,7 @@ export function countButtonPresses() {
 The program above contains three statements that execute in order from top to bottom. The first statement
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     count = count + 1
 })
 ```
@@ -132,14 +132,14 @@ As a result, you can easily add a new capability to the micro:bit by just adding
 
 ```
 export function countButtonPressesWithReset() {
-    input.onButtonPressed("A", () => {
+    input.onButtonPressed(Button.A, () => {
         count = count + 1
     })
     basic.forever(() => {
         basic.showNumber(count, 150)
     })
     count = 0
-    input.onButtonPressed("B", () => {
+    input.onButtonPressed(Button.B, () => {
         count = 0
     })
 }

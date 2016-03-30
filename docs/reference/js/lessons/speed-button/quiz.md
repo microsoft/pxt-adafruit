@@ -24,7 +24,7 @@ let count = 0
 
 ```
 let count_ = 0
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     count_ = count_ + 1
     basic.showNumber(count_, 100)
 })
@@ -38,7 +38,7 @@ input.onButtonPressed("A", () => {
 
 ```
 count_ = 0
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     count_ = count_ + 1
     basic.showNumber(count_, 100)
 })

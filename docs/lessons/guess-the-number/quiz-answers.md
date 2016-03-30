@@ -13,7 +13,7 @@ Answers may vary. Generally, on button pressed run code when an input button is 
 Write the line of code that creates a condition when the BBC micro:bit button A is pressed.
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
 })
 ```
 

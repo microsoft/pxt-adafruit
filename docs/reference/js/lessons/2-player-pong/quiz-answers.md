@@ -32,7 +32,7 @@ claimBall = true
 <br/>
 
 ```
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     if (claimBall) {
         pins.digitalWritePin("P0", 1)
     }

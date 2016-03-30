@@ -50,7 +50,7 @@ input.onGesture(Gesture.Shake, () => {
     let offset1 = 5 * Math.random(3)
     img1.showImage(offset1)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
 }) // ***
 ```
 
@@ -71,7 +71,7 @@ input.onGesture(Gesture.Shake, () => {
     let offset2 = 5 * Math.random(3)
     img2.showImage(offset2)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     wins = wins + 1 // ***
 })
 ```
@@ -93,7 +93,7 @@ input.onGesture(Gesture.Shake, () => {
     let offset3 = 5 * Math.random(3)
     img3.showImage(offset3)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     wins = wins + 1
     basic.showString("WINS:", 150) // ***
     basic.showNumber(wins, 150) // ***
@@ -129,12 +129,12 @@ input.onGesture(Gesture.Shake, () => {
     let offset4 = 5 * Math.random(3)
     img4.showImage(offset4)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     wins = wins + 1
     basic.showString("WINS:", 150)
     basic.showNumber(wins, 150)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
 }) // ***
 ```
 
@@ -155,12 +155,12 @@ input.onGesture(Gesture.Shake, () => {
     let offset5 = 5 * Math.random(3)
     img5.showImage(offset5)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     wins = wins + 1
     basic.showString("WINS:", 150)
     basic.showNumber(wins, 150)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     losses = losses + 1 // ***
 })
 ```
@@ -182,12 +182,12 @@ input.onGesture(Gesture.Shake, () => {
     let offset6 = 5 * Math.random(3)
     img6.showImage(offset6)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     wins = wins + 1
     basic.showString("WINS:", 150)
     basic.showNumber(wins, 150)
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     losses = losses + 1
     basic.showString("WINS", 150) // ***
     basic.showNumber(wins, 150) // ***
@@ -213,14 +213,14 @@ input.onGesture(Gesture.Shake, () => {
     let offset7 = 5 * Math.random(3)
     img7.showImage(offset7)
 })
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     wins = wins + 1
     basic.showString("WINS:", 150)
     basic.showNumber(wins, 150)
     basic.showString("LOSSES:", 150) // ***
     basic.showNumber(losses, 150) // ***
 })
-input.onButtonPressed("B", () => {
+input.onButtonPressed(Button.B, () => {
     losses = losses + 1
     basic.showString("WINS", 150)
     basic.showNumber(wins, 150)

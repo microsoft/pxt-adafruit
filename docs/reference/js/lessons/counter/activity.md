@@ -22,7 +22,7 @@ The code under ``on button pressed("A")`` will run each time the user presses A.
 
 ```
 let count_ = 0
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     count = count + 1
 })
 ```
@@ -31,7 +31,7 @@ Since the count has changed, it's time to refresh the screen display. Let's add 
 
 ```
 let count_1 = 0
-input.onButtonPressed("A", () => {
+input.onButtonPressed(Button.A, () => {
     count = count + 1
     basic.showNumber(count, 150)
 })

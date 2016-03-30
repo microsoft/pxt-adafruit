@@ -1,6 +1,10 @@
+#include "BitVM.h"
+#include "MicroBitTouchDevelop.h"
+
 namespace foo {
-  GLUE void bar()
+  //%
+  void bar()
   {
-    micro_bit::scrollNumber(108108, 50);
+    touch_develop::micro_bit::scrollNumber(108108, 50);
   }
 }

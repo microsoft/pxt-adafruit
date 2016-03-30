@@ -192,27 +192,29 @@ enum EventBusValue {
 
 //% weight=1 color="#333333"
 namespace control {
-    /**
-     * Schedules code that run in the background.
-     */
-    //% help=control/in-background shim=micro_bit::runInBackground
-    //% blockId="control_in_background" block="run in background" blockGap=8
-    export function inBackground(body: Action): void { }
 
     /**
-     * Resets the BBC micro:bit.
+     * Returns the value of a C++ runtime constant
      */
-    //% weight=30 shim=uBit.reset async help=control/reset
-    //% blockId="control_reset" block="reset"
-    export function reset(): void { }
+    //% weight=19 weight=19 blockId="control_event_source" block="%id"
+    export function eventSource(id: EventBusSource) : number {
+        return id;
+    }
+    /**
+     * Returns the value of a C++ runtime constant
+     */
+    //% weight=19 weight=19 blockId="control_event_value" block="%id"
+    export function eventValue(id: EventBusValue) : number {
+        return id;
+    }
 
     /**
      * Raises an event in the event bus.
-     @param src ID of the MicroBit Component that generated the event e.g. MICROBIT_ID_BUTTON_A.
-     @param value Component specific code indicating the cause of the event.
-     @param mode optional definition of how the event should be processed after construction (default is CREATE_AND_QUEUE).
-    */
-    // shim=micro_bit::busRaiseEvent
+     * @param src ID of the MicroBit Component that generated the event e.g. MICROBIT_ID_BUTTON_A.
+     * @param value Component specific code indicating the cause of the event.
+     * @param mode optional definition of how the event should be processed after construction (default is CREATE_AND_QUEUE).
+     */
+    //% shim=micro_bit::busRaiseEvent
     //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source|with value %value=control_event_value" blockExternalInputs=1
     export function raiseEvent(src: number, value: number, mode: EventCreationMode = EventCreationMode.CreateAndQueue): void { }
 
@@ -223,19 +225,4 @@ namespace control {
     //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_event_source|with value %value=control_event_value" 
     //% blockExternalInputs=1 blockStatement=1
     export function onEvent(src: number, value: number, handler: Action): void { }
-
-    /**
-     * Returns the value of a C++ runtime constant
-     */
-    //% weight=19 shimw=TD_ID weight=19 blockId="control_event_source" block="%id"
-    export function eventSource(id: EventBusSource) : number {
-        return 0;
-    }
-    /**
-     * Returns the value of a C++ runtime constant
-     */
-    //% weight=19 shimw=TD_ID weight=19 blockId="control_event_value" block="%id"
-    export function eventValue(id: EventBusValue) : number {
-        return 0;
-    }
 }

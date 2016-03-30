@@ -1,7 +1,3 @@
-//% shim=foo::bar
-function test() {
-}
-
 basic.plotLeds(`
 # # . # #
 . . # . .
@@ -10,4 +6,4 @@ basic.plotLeds(`
 . # # # .
 `);
 basic.pause(300);
-test();
+foo.bar();

@@ -26,6 +26,7 @@ let degrees = input.compassHeading()
 
 
 ```blocks
+let degrees = input.compassHeading()
 if (degrees < 45) {
     basic.showString("N", 150)
 }
@@ -35,6 +36,7 @@ if (degrees < 45) {
 
 
 ```blocks
+let degrees = input.compassHeading()
 if (degrees < 135) {
     basic.showString("E", 150)
 }
@@ -44,6 +46,7 @@ if (degrees < 135) {
 
 
 ```blocks
+let degrees = input.compassHeading()
 if (degrees < 225) {
     basic.showString("S", 150)
 }

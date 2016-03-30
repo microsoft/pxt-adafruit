@@ -4,13 +4,9 @@ Coding challenges for catch the egg game.
 
 ## Before we get started
 
-Complete the following guided tutorial:
+Your starting code should look like this:
 
-* [tutorial](/microbit/lessons/catch-the-egg-game/tutorial)
-
-At the end of the tutorial, click `keep editing`. Your code should look like this:
-
-```
+```blocks
 let basketX = 2
 let eggX = 2
 let eggY = 0
@@ -20,7 +16,7 @@ basic.forever(() => {
     eggY = eggY + 1
     led.plot(eggX, eggY)
     basic.pause(300)
-    let accX = input.acceleration("x")
+    let accX = input.acceleration(Dimension.X)
     basketX = 2 + Math.min(2, Math.max(-2, accX / 200))
     led.plot(basketX, 4)
     if (eggY > 4) {
@@ -49,7 +45,7 @@ Now that we know when an egg is caught, we can keep track of the score! We need 
 
 ### ~
 
-```
+```blocks
 let basketX1 = 2
 let eggX1 = 2
 let eggY1 = 0
@@ -59,8 +55,8 @@ basic.forever(() => {
     eggY1 = eggY1 + 1
     led.plot(eggX1, eggY1)
     basic.pause(300)
-    let accX1 = input.acceleration("x")
-    basketX1 = 2 + Math.min(2, Math.max(-2, accX1 / 200))
+    let accX = input.acceleration(Dimension.X)
+    basketX1 = 2 + Math.min(2, Math.max(-2, accX / 200))
     led.plot(basketX1, 4)
     if (eggY1 > 4) {
         eggY1 = -1
@@ -87,7 +83,7 @@ Catching eggs gets easier with practice so let's make the eggs fall faster every
 
 ### ~
 
-```
+```blocks
 let basketX2 = 2
 let eggX2 = 2
 let eggY2 = 0
@@ -98,7 +94,7 @@ basic.forever(() => {
     eggY2 = eggY2 + 1
     led.plot(eggX2, eggY2)
     basic.pause(300)
-    let accX2 = input.acceleration("x")
+    let accX2 = input.acceleration(Dimension.X)
     basketX2 = 2 + Math.min(2, Math.max(-2, accX2 / 200))
     led.plot(basketX2, 4)
     if (eggY2 > 4) {
@@ -108,7 +104,7 @@ basic.forever(() => {
     if (eggY2 == 4) {
         if (basketX2 == eggX2) {
             game.addScore(1)
-            if (math.mod(game.score(), 5) == 0) {
+            if (game.score() %5 == 0) {
             }
         } else {
             game.removeLife(1)
@@ -126,7 +122,7 @@ basic.forever(() => {
 
 Let's make the egg fall faster by decreasing the amount of time it pauses in each position by decreasing **falling pause** by `25` every 5 catches. Now, instead of pausing for 300 milliseconds we can pause for the value of **falling pause**.
 
-```
+```blocks
 let basketX3 = 2
 let eggX3 = 2
 let eggY3 = 0
@@ -137,7 +133,7 @@ basic.forever(() => {
     eggY3 = eggY3 + 1
     led.plot(eggX3, eggY3)
     basic.pause(300)
-    let accX3 = input.acceleration("x")
+    let accX3 = input.acceleration(Dimension.X)
     basketX3 = 2 + Math.min(2, Math.max(-2, accX3 / 200))
     led.plot(basketX3, 4)
     if (eggY3 > 4) {
@@ -147,7 +143,7 @@ basic.forever(() => {
     if (eggY3 == 4) {
         if (basketX3 == eggX3) {
             game.addScore(1)
-            if (math.mod(game.score(), 5) == 0) {
+            if (game.score()% 5 == 0) {
                 fallingPause1 = fallingPause1 - 25 // ***
             }
         } else {
@@ -156,6 +152,7 @@ basic.forever(() => {
     }
     basic.pause(fallingPause1) // ***
 })
+
 ```
 
 Fantastic! Your game is now ready to show off.

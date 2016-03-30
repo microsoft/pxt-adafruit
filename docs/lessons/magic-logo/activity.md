@@ -22,7 +22,7 @@ When the micro:bit goes logo up, the code nested under the `on logo up` function
 
 ```blocks
 input.onLogoUp(() => {
-    basic.showAnimation(`
+    basic.showLeds(`
         . . # . .
         . # # # .
         # # # # #
@@ -30,6 +30,7 @@ input.onLogoUp(() => {
         . . # . .
         `)
 })
+
 
 ```
 

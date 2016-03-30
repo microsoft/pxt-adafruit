@@ -24,11 +24,7 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 <br/>
 
-## 4. Write the code that calculates 'basket x' given the variable 'acc x'.
-
-<br/>
-
-## 5. Write the code that resets the egg after it has fallen past the bottom of the BBC micro:bit.
+## 4. Write the code that resets the egg after it has fallen past the bottom of the BBC micro:bit.
 
 <br/>
 

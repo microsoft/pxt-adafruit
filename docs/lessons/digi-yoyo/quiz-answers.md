@@ -16,7 +16,7 @@ A loop that repeats code while a condition is true.
 
 <br/>
 
-```
+```blocks
 let count = 0
 ```
 
@@ -26,7 +26,8 @@ let count = 0
 
 <br/>
 
-```
+```blocks
+let count = 0
 while (count < 5) {
     count = count + 1
 }

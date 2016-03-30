@@ -10,26 +10,42 @@ Use this activity document to guide your work in the [rotation animation tutoria
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 
-## 1. What is a "global variable"?
+## 1. What is a " variable"?
 
 <br />
 
-## 2. Write the code to create a global variable called foo that stores a boolean and initialize it to false.
+## 2. Write the code to create a variable called foo that stores a boolean and initialize it to false.
 
 <br/>
 
-## 3. Explain why you use a while loop with a global variable
+## 3. Explain why you use a while loop with a variable
 
-```
+```blocks
+let rotating = true;
 while (rotating) {
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . # . .
+        . . . . .
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
 }
+
 ```
 
 <br/>
 
 ## 4. Draw the areas on the micro:bits to illustrate the code below. Explain why you chose to draw in those areas.
 
-```
+```blocks
 basic.showAnimation(`
 # . . . . . . # . . . . . . # . . . . .
 . # . . . . . # . . . . . # . . . . . .

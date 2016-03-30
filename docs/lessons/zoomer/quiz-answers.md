@@ -14,7 +14,7 @@ Write the line of code to measure the acceleration and then store in it a variab
 
 <br/>
 
-```
+```blocks
 let accX_ = input.acceleration("x")
 ```
 
@@ -26,9 +26,9 @@ After storing the acceleration in a variable, write the code to show acceleratio
 
 <br/>
 
-```
+```blocks
 let accX = input.acceleration("x")
-basic.showNumber(accX_, 150)
+basic.showNumber(accX, 150)
 ```
 
 Note: make sure the same variable name ("acc x" in this case) is the same in both lines of code..

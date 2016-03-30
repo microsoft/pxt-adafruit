@@ -44,7 +44,7 @@ input.onLogoUp(() => {
 
 ```blocks
 input.onLogoDown(() => {
-    basic.plotImage(`
+    basic.showLeds(`
 . . # . .
 . . # . .
 # # # # #

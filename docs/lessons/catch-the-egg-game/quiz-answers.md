@@ -22,7 +22,10 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 <br/>
 
-```
+```blocks
+let basketX = 2
+let eggX = 2
+let eggY = 0
 led.plot(eggX, eggY)
 led.plot(basketX, 4)
 ```
@@ -31,28 +34,22 @@ led.plot(basketX, 4)
 
 <br/>
 
-```
+```blocks
+let basketX = 2
+let eggX = 2
+let eggY = 0
 led.unplot(eggX, eggY)
 eggY = eggY + 1
 led.plot(eggX, eggY)
 ```
 
-## 4. Write the code that calculates 'basket x' given the variable 'acc x'.
+## 4. . Write the code that resets the egg after it has fallen past the bottom of the BBC micro:bit.
 
 <br/>
 
-```
-let accX = input.acceleration("x")
-basketX = 2 + Math.min(2, Math.max(-2, accX / 200))
-```
-
-Note: the first line of code in this answer is optional.
-
-## 5. Write the code that resets the egg after it has fallen past the bottom of the BBC micro:bit.
-
-<br/>
-
-```
+```blocks
+let eggX = 2
+let eggY = 0
 if (eggY > 4) {
     eggY = -1
     eggX = Math.random(5)

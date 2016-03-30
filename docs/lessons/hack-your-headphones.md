@@ -10,10 +10,6 @@ Hack your headphone
 
 * [activity](/microbit/lessons/hack-your-headphones/activity)
 
-## Class
-
-Year 7
-
 ## Prior learning/place of lesson in scheme of work
 
 Learn how to convert your BBC micro:bit into a music player using pins P0 and GND, headphones (or speakers), as well as crocodile clips (or spring clips).

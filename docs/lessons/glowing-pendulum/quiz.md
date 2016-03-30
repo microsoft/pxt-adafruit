@@ -22,7 +22,7 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 <br/>
 
-## 4. Write the code that uses the acceleration value from question #3 to set the brightness on the BBC micro:bit.
+## 4. Write the code to include acceleration value question 3 to set the brightness on the BBC micro:bit.
 
 <br/>
 

@@ -6,3 +6,4 @@ tmp/
 *.ts.new
 *.tgz
 temp/
+*.db

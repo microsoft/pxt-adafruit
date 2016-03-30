@@ -1,4 +1,4 @@
-//% weight=2
+//% weight=2 color=30
 namespace serial {
     /**
      * Prints a line of text to the serial

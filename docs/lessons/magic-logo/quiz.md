@@ -12,15 +12,11 @@ Use the hints from the [magic logo activity](/microbit/lessons/magic-logo/activi
 
 <br/>
 
-## 2. The `logo up` event is raised when...
+## 2. Write the condition that detects when the BBC micro:bit logo is facing up and vertically orientated.
 
-* the screen is facing up and the board is horizontal
-* the screen is facing down and the board is horizontal
-* the board is vertical and the logo is facing up
-
-## 3. Consider the following animation
+## 3. Write the code to display a downward pointing arrow when the BBC micro:bit logo is down.
 
 ![](/static/mb/lessons/magic-logo-0.png)
 
-Write the code to display a downward pointing arrow when the BBC micro:bit logo is down.
+
 

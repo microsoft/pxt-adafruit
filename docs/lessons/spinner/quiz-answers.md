@@ -14,7 +14,7 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 <br/>
 
-```
+```blocks
 let randomArrow = Math.random(4)
 ```
 
@@ -24,7 +24,7 @@ let randomArrow = Math.random(4)
 
 <br/>
 
-```
+```blocks
 if (randomArrow == 1) {
     basic.plotImage(`
 . . # . .
@@ -42,7 +42,7 @@ if (randomArrow == 1) {
 
 <br />
 
-```
+```blocks
 if (randomArrow == 2) {
     basic.plotImage(`
 . . # . .

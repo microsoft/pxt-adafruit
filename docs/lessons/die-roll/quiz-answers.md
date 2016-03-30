@@ -8,7 +8,7 @@ These are the answers to the [die roll quiz](/microbit/lessons/die-roll/quiz).
 
 <br/>
 
-```
+```blocks
 let roll = Math.random(6)
 ```
 
@@ -18,9 +18,10 @@ let roll = Math.random(6)
 
 <br/>
 
-```
+```blocks
+let roll = Math.random(6)
 if (roll == 5) {
-    basic.plotImage(`
+    basic.showLeds(`
 . # . # .
 . . . . .
 . # . # .
@@ -36,9 +37,11 @@ if (roll == 5) {
 
 <br />
 
-```
+```blocks
+
+let roll = Math.random(6)
 if (roll == 5) {
-    basic.plotImage(`
+    basic.showLeds(`
 . # . # .
 . . . . .
 . # . # .
@@ -46,7 +49,7 @@ if (roll == 5) {
 . # . # .
 `)
 } else if (roll == 4) {
-    basic.plotImage(`
+    basic.showLeds(`
 . . . . .
 . # . # .
 . . # . .
@@ -64,9 +67,10 @@ Note: students are only required to write the bottom half of this answer, starti
 
 <br />
 
-```
+```blocks
+let roll = Math.random(6)
 if (roll == 4) {
-    basic.plotImage(`
+    basic.showLeds(`
 . . . . .
 . # . # .
 . . # . .
@@ -74,7 +78,7 @@ if (roll == 4) {
 . . . . .
 `)
 } else if (roll == 3) {
-    basic.plotImage(`
+    basic.showLeds(`
 . . . . .
 . # . # .
 . . . . .
@@ -92,9 +96,10 @@ Note: students are only required to write the bottom half of this answer, starti
 
 <br />
 
-```
+```blocks
+let roll = Math.random(6)
 if (roll == 3) {
-    basic.plotImage(`
+    basic.showLeds(`
 . . . . .
 . # . # .
 . . . . .
@@ -102,7 +107,7 @@ if (roll == 3) {
 . . . . .
 `)
 } else if (roll == 2) {
-    basic.plotImage(`
+    basic.showLeds(`
 # . . . .
 . . . . .
 . . # . .

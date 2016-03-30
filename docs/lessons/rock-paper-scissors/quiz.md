@@ -16,7 +16,7 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 ## 2. Draw which LEDs are ON after running this code and the random number returned is 0
 
-```
+```blocks
 let img = images.createImage(`
 . . . . . # # # # # . . . . #
 . # # # . # . . . # # # . # .
@@ -36,7 +36,7 @@ img.showImage(offset)
 
 ## 3. Draw which LEDs are ON after running this code with an offset of 5. This would occur if the random number returned is 1.
 
-```
+```blocks
 let img_ = images.createImage(`
 . . . . . # # # # # . . . . #
 . # # # . # . . . # # # . # .
@@ -56,7 +56,7 @@ img.showImage(offset)
 
 ## 4. Draw which LEDs are ON after running this code with an offset of 10. This would occur if the random number returned is 2.
 
-```
+```blocks
 let img_1 = images.createImage(`
 . . . . . # # # # # . . . . #
 . # # # . # . . . # # # . # .

@@ -16,7 +16,7 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 ## 2. Draw the areas where the LEDs will be lit based on the code below. Explain why you chose to draw those numbers.
 
-```
+```blocks
 for (let i = 0; i < 4; i++) {
     basic.showNumber(i, 150)
 }
@@ -28,7 +28,7 @@ for (let i = 0; i < 4; i++) {
 
 ## 3. Draw the areas where the LEDs will be lit based on the code below. Explain why you chose to draw those numbers.
 
-```
+```blocks
 for (let i1 = 0; i1 < 6; i1++) {
     basic.showNumber(i1, 150)
 }

@@ -10,7 +10,7 @@ Answers will vary. In general, for loop refers to the code that repeats for a fi
 
 ## 2. Consider the following code
 
-```
+```blocks
 for (let i = 0; i < 4; i++) {
     basic.showNumber(i, 150)
 }
@@ -24,7 +24,7 @@ Let's create a for loop where `0` is the loop's starting value, `i` is the index
 
 ## 3. Consider the following code
 
-```
+```blocks
 for (let i1 = 0; i1 < 6; i1++) {
     basic.showNumber(i1, 150)
 }

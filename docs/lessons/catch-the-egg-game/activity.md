@@ -31,14 +31,6 @@ basic.forever(() => {
 
 ### Challenge 1
 
-Let's start by adding the **game** library.
-
-### ~
-
-### ~avatar avatar improvised
-
-### Challenge 2
-
 Let's use an **IF** statement to detect if the egg and the basket are lined up.
 
 Now that we know when an egg is caught, we can keep track of the score! We need to use the `add score` function built into the game library to add `1` point for every egg that is caught. However, let's not forget to `remove life` if an egg falls off the display before it's caught!
@@ -77,7 +69,7 @@ basic.forever(() => {
 
 ### ~avatar avatar encourage
 
-### Challenge 3
+### Challenge 2
 
 Catching eggs gets easier with practice so let's make the eggs fall faster every 5 catches. We can do this by tracking how long the egg pauses in each position while falling with a global variable called **falling pause**. Let's create this variable and set it to `300` initially. Don't forget to also create a condition that will be true every 5 catches.
 
@@ -116,7 +108,7 @@ basic.forever(() => {
 
 ### ~avatar avatar surprised
 
-### Challenge 4
+### Challenge 3
 
 ### @video td/videos/catch-the-egg-game-4
 

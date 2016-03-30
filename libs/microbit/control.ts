@@ -214,7 +214,7 @@ namespace control {
      * @param value Component specific code indicating the cause of the event.
      * @param mode optional definition of how the event should be processed after construction (default is CREATE_AND_QUEUE).
      */
-    //% shim=micro_bit::busRaiseEvent
+    // shim=micro_bit::busRaiseEvent
     //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source|with value %value=control_event_value" blockExternalInputs=1
     export function raiseEvent(src: number, value: number, mode: EventCreationMode = EventCreationMode.CreateAndQueue): void { }
 

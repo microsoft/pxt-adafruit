@@ -88,78 +88,6 @@ namespace ks.rt.micro_bit {
         throw new Error("PANIC " + code)
     }
 
-    /* basic */
-    export function showDigit(v: number) {
-        if (!quiet)
-            console.log("DIGIT:", v)
-        plotLeds(createImageFromString(v.toString()[0]));
-    }
-
-    export function clearScreen() {
-        board().image.clear();
-        runtime.queueDisplayUpdate()
-    }
-
-    export function showLeds(leds: micro_bit.Image, delay: number): void {
-        showAnimation(leds, delay);
-    }
-
-    function scrollImage(leds: micro_bit.Image, interval: number, stride: number): void {
-        let cb = getResume()
-        let off = stride > 0 ? 0 : leds.width - 1;
-        let display = board().image;
-
-        board().animationQ.enqueue({
-            interval: interval,
-            frame: () => {
-                if (off >= leds.width || off < 0) return false;
-                stride > 0 ? display.shiftLeft(stride) : display.shiftRight(-stride);
-                let c = Math.min(stride, leds.width - off);
-                leds.copyTo(off, c, display, 5 - stride)
-                off += stride;
-                return true;
-            },
-            whenDone: cb
-        })
-    }
-
-    export function showAnimation(leds: micro_bit.Image, interval: number = 400): void {
-        scrollImage(leds, interval, 5);
-    }
-
-    export function scrollNumber(x: number, interval: number) {
-        if (interval < 0) return;
-
-        let leds = createImageFromString(x.toString());
-        if (x < 0 || x >= 10) scrollImage(leds, interval, 1);
-        else showLeds(leds, interval * 5);
-    }
-
-    export function scrollString(s: string, interval: number) {
-        if (interval < 0) return;
-        if (s.length == 0) {
-            clearScreen();
-            pause(interval * 5);
-        } else {
-            let leds = createImageFromString(s);
-            if (s.length == 1) showLeds(leds, interval * 5)
-            else scrollImage(leds, interval, 1);
-        }
-    }
-
-    export function forever(a: RefAction) {
-        function loop() {
-            runtime.runFiberAsync(a)
-                .then(() => Promise.delay(20))
-                .then(loop)
-                .done()
-        }
-        incr(a)
-        loop()
-    }
-
-    export var pause = thread.pause;
-
     /* leds */
     export function plot(x: number, y: number) {
         board().image.set(x, y, 255);
@@ -198,20 +126,17 @@ namespace ks.rt.micro_bit {
         runtime.queueDisplayUpdate()
     }
 
-    /* control */
-    export var runInBackground = thread.runInBackground;
-
     /* serial */
     export function serialSendString(s: string) {
         board().writeSerial(s);
     }
-    
-    export function serialReadString() : string {
+
+    export function serialReadString(): string {
         return board().readSerial();
     }
 
     /* input */
-    export function onButtonPressed(button : number, handler: RefAction) : void {
+    export function onButtonPressed(button: number, handler: RefAction): void {
         let ens = enums();
         let b = board();
         if (button == ens.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
@@ -220,7 +145,7 @@ namespace ks.rt.micro_bit {
         }
         b.bus.listen(button, ens.MICROBIT_BUTTON_EVT_CLICK, handler);
     }
-    
+
     export function isButtonPressed(button: number): boolean {
         let ens = enums();
         let b = board();
@@ -233,19 +158,19 @@ namespace ks.rt.micro_bit {
         if (button == ens.MICROBIT_ID_BUTTON_B) return bts[1].pressed;
         return bts[2].pressed || (bts[0].pressed && bts[1].pressed);
     }
-    
+
     export function onGesture(gesture: number, handler: RefAction) {
         let ens = enums();
         let b = board();
         b.accelerometer.activate();
-        
+
         if (gesture == 11 && !b.useShake) { // SAKE
             b.useShake = true;
             runtime.queueDisplayUpdate();
         }
         b.bus.listen(ens.MICROBIT_ID_GESTURE, gesture, handler);
     }
-    
+
     export function onPinPressed(pin: Pin, handler: RefAction) {
         pin.isTouched();
         onButtonPressed(pin.id, handler);
@@ -283,7 +208,7 @@ namespace ks.rt.micro_bit {
         }
         return b.heading;
     }
-    
+
     export function temperature(): number {
         var b = board();
         if (!b.usesTemperature) {
@@ -292,7 +217,7 @@ namespace ks.rt.micro_bit {
         }
         return b.temperature;
     }
-       
+
     export function getAcceleration(dimension: number): number {
         let b = board();
         let acc = b.accelerometer;
@@ -304,8 +229,8 @@ namespace ks.rt.micro_bit {
             default: return Math.floor(Math.sqrt(acc.instantaneousAccelerationSquared()));
         }
     }
-    
-    export function setAccelerometerRange(range : number) {
+
+    export function setAccelerometerRange(range: number) {
         let b = board();
         b.accelerometer.setSampleRange(range);
     }
@@ -327,76 +252,76 @@ namespace ks.rt.micro_bit {
     export function getCurrentTime(): number {
         return runtime.runningTime();
     }
-    
+
     /* pins */
-    export function digitalReadPin(pin : Pin) : number {
+    export function digitalReadPin(pin: Pin): number {
         pin.mode = PinMode.Digital | PinMode.Input;
         return pin.value > 100 ? 1 : 0;
     }
-    
-    export function digitalWritePin(pin : Pin, value: number) {
+
+    export function digitalWritePin(pin: Pin, value: number) {
         pin.mode = PinMode.Digital | PinMode.Output;
         pin.value = value > 0 ? 1023 : 0;
         runtime.queueDisplayUpdate();
     }
 
-    export function analogReadPin(pin : Pin) : number {
+    export function analogReadPin(pin: Pin): number {
         pin.mode = PinMode.Analog | PinMode.Input;
         return pin.value || 0;
     }
-    
-    export function analogWritePin(pin : Pin, value: number) {
+
+    export function analogWritePin(pin: Pin, value: number) {
         pin.mode = PinMode.Analog | PinMode.Output;
         pin.value = value ? 1 : 0;
         runtime.queueDisplayUpdate();
     }
-    
-    export function setAnalogPeriodUs(pin: Pin, micros:number) {
+
+    export function setAnalogPeriodUs(pin: Pin, micros: number) {
         pin.mode = PinMode.Analog | PinMode.Output;
         pin.period = micros;
         runtime.queueDisplayUpdate();
     }
-    
+
     export function servoWritePin(pin: Pin, value: number) {
         setAnalogPeriodUs(pin, 20000);
         // TODO
     }
-    
-    export function servoSetPulse(pin: Pin, micros:number) {        
+
+    export function servoSetPulse(pin: Pin, micros: number) {
     }
-        
+
     module AudioContextManager {
-        var _context : any; // AudioContext
-        var _vco : any; //OscillatorNode;
+        var _context: any; // AudioContext
+        var _vco: any; //OscillatorNode;
         var _vca: any; // GainNode;
-        
-        function context() : any {
+
+        function context(): any {
             if (!_context) _context = freshContext();
             return _context;
         }
-        
-        function freshContext() : any {
+
+        function freshContext(): any {
             (<any>window).AudioContext = (<any>window).AudioContext || (<any>window).webkitAudioContext;
             if ((<any>window).AudioContext) {
                 try {
                     // this call my crash.
                     // SyntaxError: audio resources unavailable for AudioContext construction
-                    return  new (<any>window).AudioContext();
-                } catch(e) {}
-             }
+                    return new (<any>window).AudioContext();
+                } catch (e) { }
+            }
             return undefined;
         }
-        
+
         export function stop() {
             if (_vca) _vca.gain.value = 0;
         }
-        
-        export function tone(frequency: number, gain: number) { 
-            if (frequency <= 0) return;            
+
+        export function tone(frequency: number, gain: number) {
+            if (frequency <= 0) return;
             var ctx = context();
             if (!ctx) return;
-            
-            gain = Math.max(0, Math.min(1, gain));            
+
+            gain = Math.max(0, Math.min(1, gain));
             if (!_vco) {
                 try {
                     _vco = ctx.createOscillator();
@@ -405,89 +330,165 @@ namespace ks.rt.micro_bit {
                     _vca.connect(ctx.destination);
                     _vca.gain.value = gain;
                     _vco.start(0);
-                } catch(e) {
+                } catch (e) {
                     _vco = undefined;
                     _vca = undefined;
                     return;
                 }
             }
-            
+
             _vco.frequency.value = frequency;
             _vca.gain.value = gain;
         }
     }
-    
+
     export function enablePitch(pin: Pin) {
         board().pins.filter(p => !!p).forEach(p => p.pitch = false);
         pin.pitch = true;
     }
-    
+
     export function pitch(frequency: number, ms: number) {
         // update analog output
         let pin = board().pins.filter(pin => !!pin && pin.pitch)[0] || board().pins[0];
         pin.mode = PinMode.Analog | PinMode.Output;
         if (frequency <= 0) {
-            pin.value = 0;     
-            pin.period = 0;       
+            pin.value = 0;
+            pin.period = 0;
         } else {
             pin.value = 512;
-            pin.period = 1000000/frequency;        
+            pin.period = 1000000 / frequency;
         }
         runtime.queueDisplayUpdate();
-        
+
         let cb = getResume();
         AudioContextManager.tone(frequency, 1);
         if (ms <= 0) cb();
         else {
             setTimeout(() => {
-                AudioContextManager.stop();            
-                pin.value = 0;   
-                pin.period = 0;     
+                AudioContextManager.stop();
+                pin.value = 0;
+                pin.period = 0;
                 pin.mode = PinMode.Unused;
                 runtime.queueDisplayUpdate();
-                cb() 
+                cb()
             }, ms);
         }
     }
-    
-    
+
+
     /* radio */
-    export function broadcastMessage(msg: number) : void {
+    export function broadcastMessage(msg: number): void {
         board().radio.broadcast(msg);
     }
-    
-    export function onBroadcastMessageReceived(msg: number, handler: RefAction) : void {
+
+    export function onBroadcastMessageReceived(msg: number, handler: RefAction): void {
         let ens = enums()
         board().bus.listen(ens.MES_BROADCAST_GENERAL_ID, msg, handler);
     }
-    
-    export function setGroup(id : number) : void {
+
+    export function setGroup(id: number): void {
         board().radio.setGroup(id);
     }
-    
-    export function setTransmitPower(power: number) : void {
-        board().radio.setTransmitPower(power);           
+
+    export function setTransmitPower(power: number): void {
+        board().radio.setTransmitPower(power);
     }
 
-    export function datagramSendNumbers(value0 : number, value1: number, value2: number, value3: number) : void {
+    export function datagramSendNumbers(value0: number, value1: number, value2: number, value3: number): void {
         board().radio.datagram.send([value0, value1, value2, value3]);
     }
-    
-    export function datagramReceiveNumber() : number {
+
+    export function datagramReceiveNumber(): number {
         return board().radio.datagram.recv().data[0];
     }
-    
-    export function datagramGetNumber(index : number) : number {
+
+    export function datagramGetNumber(index: number): number {
         return board().radio.datagram.lastReceived.data[index] || 0;
     }
-    
-    export function datagramGetRSSI() : number {
+
+    export function datagramGetRSSI(): number {
         return board().radio.datagram.lastReceived.rssi;
     }
-        
-    export function onDatagramReceived(handler: RefAction) : void {
+
+    export function onDatagramReceived(handler: RefAction): void {
         let ens = enums();
         board().bus.listen(ens.MICROBIT_ID_RADIO, ens.MICROBIT_RADIO_EVT_DATAGRAM, handler);
     }
 }
 
+namespace ks.rt.basic {
+    var board = micro_bit.board;
+
+    export var pause = thread.pause;
+
+    export function showNumber(x: number, interval: number) {
+        if (interval < 0) return;
+
+        let leds = micro_bit.createImageFromString(x.toString());
+        if (x < 0 || x >= 10) scrollImage(leds, interval, 1);
+        else showLeds(leds, interval * 5);
+    }
+
+    export function showString(s: string, interval: number) {
+        if (interval < 0) return;
+        if (s.length == 0) {
+            clearScreen();
+            pause(interval * 5);
+        } else {
+            let leds = micro_bit.createImageFromString(s);
+            if (s.length == 1) showLeds(leds, interval * 5)
+            else scrollImage(leds, interval, 1);
+        }
+    }
+
+    export function showLeds(leds: micro_bit.Image, delay: number): void {
+        showAnimation(leds, delay);
+    }
+
+    export function clearScreen() {
+        board().image.clear();
+        runtime.queueDisplayUpdate()
+    }
+
+    function scrollImage(leds: micro_bit.Image, interval: number, stride: number): void {
+        let cb = getResume()
+        let off = stride > 0 ? 0 : leds.width - 1;
+        let display = board().image;
+
+        board().animationQ.enqueue({
+            interval: interval,
+            frame: () => {
+                if (off >= leds.width || off < 0) return false;
+                stride > 0 ? display.shiftLeft(stride) : display.shiftRight(-stride);
+                let c = Math.min(stride, leds.width - off);
+                leds.copyTo(off, c, display, 5 - stride)
+                off += stride;
+                return true;
+            },
+            whenDone: cb
+        })
+    }
+
+    export function showAnimation(leds: micro_bit.Image, interval: number = 400): void {
+        scrollImage(leds, interval, 5);
+    }
+
+    export function forever(a: RefAction) {
+        function loop() {
+            runtime.runFiberAsync(a)
+                .then(() => Promise.delay(20))
+                .then(loop)
+                .done()
+        }
+        incr(a)
+        loop()
+    }
+}
+
+namespace ks.rt.control {
+    export var inBackground = thread.runInBackground;
+
+    export function reset() {
+        U.userError("reset not implemented in simulator yet")
+    }
+}

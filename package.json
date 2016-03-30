@@ -1,6 +1,6 @@
 {
   "name": "kindscript-microbit",
-  "version": "0.0.10",
+  "version": "0.0.14",
   "description": "BBC micro:bit target for KindScript",
   "keywords": [
     "JavaScript",
@@ -30,6 +30,6 @@
     "typescript": "^1.8.7"
   },
   "dependencies": {
-    "kindscript": "0.1.115"
+    "kindscript": "0.1.119"
   }
 }

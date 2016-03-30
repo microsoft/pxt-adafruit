@@ -14,27 +14,33 @@ It's a method that runs code when the user holds the GND pin with a finger of on
 
 Create a condition for `on pin pressed (P0)`.
 
-![](/static/mb/blocks/lessons/love-meter-0.jpg)
+```blocks
+input.onPinPressed(TouchPin.P0, () => {
+    
+})
+```
 
 ## 3. What does this line of code doing?
 
-![](/static/mb/blocks/lessons/love-meter-6.png)
+```blocks
+let x = Math.random(9)
+```
 
-<br/>
 
 It stores random number between 0 and 9 then stores that number in a variable.
 
 ## 4. Why do you have to add 1 to variable x?
 
-![](/static/mb/blocks/lessons/love-meter-7.png)
-
-<br/>
+```blocks
+let item = 0;
+item = 0;
+basic.showNumber(item + 1);
+```
 
 You have to add 1 if you want to generate a random number between 1 and 10 .
 
 ## 5. Why do you have to hold ground (GND) to make this work on the micro:bit?
 
-<br/>
 
 You have told GND to complete the circuit.
 

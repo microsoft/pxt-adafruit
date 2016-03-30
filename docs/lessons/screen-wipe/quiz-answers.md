@@ -12,13 +12,31 @@ This function turns off all the LED lights on the LED screen.
 
 ![](/static/mb/blocks/lessons/screen-wipe-4.png)
 
-![](/static/mb/blocks/lessons/screen-wipe-5.png)
+```blocks
+basic.showLeds(`
+    . # . # .
+    . # . # .
+    . . # . .
+    # . . . #
+    . # # # .
+    `)
+```
 
 ## 3. Write the condition that will detect on button A pressed
 
-![](/static/mb/blocks/lessons/screen-wipe-6.png)
+```blocks
+
+input.onButtonPressed(Button.A, () => {
+
+})
+
+```
 
 ## 4. Write the code that will clear show LEDS from the screen after pressing button A 
 
-![](/static/mb/blocks/lessons/screen-wipe-7.png)
+```blocks
+input.onButtonPressed(Button.A, () => {
+    basic.clearScreen()
+})
+```
 

@@ -12,21 +12,15 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 ## 1. What is the purpose of the 'compass heading' block?
 
-<br/>
-
 ## 2. Write the code that stores the compass heading into a local variable called 'degrees'. 
 
-<br/>
 
 ## 3. Write the 'If statement' that will check if the device is mostly pointing North. Display 'N' on the micro:bit 
 
-<br />
 
-## 3. Write the 'If statement' that will check if the device is mostly pointing East. Display 'E' on the micro:bit 
+## 4. Write the 'If statement' that will check if the device is mostly pointing East. Display 'E' on the micro:bit 
 
-<br />
 
-## 3. Write the 'If statement' that will check if the device is mostly pointing South. Display 'S' on the micro:bit 
+## 5. Write the 'If statement' that will check if the device is mostly pointing South. Display 'S' on the micro:bit 
 
-<br />
 

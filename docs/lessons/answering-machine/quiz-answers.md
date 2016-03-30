@@ -32,5 +32,10 @@ basic.showString("Hi")
 
 ![](/static/mb/lessons/answering-machine-2.png)
 
-![](/static/mb/blocks/lessons/answering-machine-5.png)
+
+```blocks
+basic.showString("Z")
+
+```
+
 

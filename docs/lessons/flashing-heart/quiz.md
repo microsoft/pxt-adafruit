@@ -12,19 +12,14 @@ Answer the questions while completing the activity. Pay attention to the dialogu
 
 ## 1. Describe what `pause` does?
 
-<br/>
 
-<br/>
 
 ## 2. Write the code that leaves an image on the screen for 1 second (1000 milliseconds) 
 
-<br/>
 
-<br/>
+
 
 ## 3. Write the code that leaves an image on the screen for 1.5 seconds (1500 milliseconds)
 
-<br/>
 
-<br/>
 

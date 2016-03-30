@@ -10,7 +10,10 @@ Answers will vary. In general, plot refers to the code that turns on a specific 
 
 ## 2. Draw which LED is ON after running this code
 
-![](/static/mb/blocks/lessons/blink-6.png)
+```blocks
+led.plot(2, 2)
+
+```
 
 ![](/static/mb/lessons/blink-0.png)
 
@@ -18,7 +21,10 @@ By default, the position of an LED on *Blink Tutorial* is set to the centre of t
 
 ## 3. Draw which LED is ON after running this code
 
-![](/static/mb/blocks/lessons/blink-7.png)
+```blocks
+led.plot(0, 0)
+
+```
 
 ![](/static/mb/lessons/blink-1.png)
 
@@ -29,7 +35,10 @@ This code turns on specific LED. Plot turns on the specified LED on the LED scre
 
 ## 4. Draw which LED is ON after running this code
 
-![](/static/mb/blocks/lessons/blink-8.png)
+```blocks
+led.plot(4, 4)
+
+```
 
 ![](/static/mb/lessons/blink-2.png)
 

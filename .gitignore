@@ -7,3 +7,4 @@ tmp/
 *.tgz
 temp/
 *.db
+projects/

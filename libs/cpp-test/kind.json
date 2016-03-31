@@ -12,6 +12,6 @@
         }
     },
     "dependencies": {
-        "core": "file:../microbit"
+        "microbit": "file:../microbit"
     }
 }

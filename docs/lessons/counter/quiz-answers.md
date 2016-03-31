@@ -23,10 +23,10 @@ We create a **variable**, `count` to keep track of the current count. The number
 ## 3. Draw which LEDs are ON after running this code and pressing button "A" once. Explain you chose to draw that number
 
 ```blocks
-let counts = 0
+let count = 0
 input.onButtonPressed(Button.A, () => {
-    counts = counts + 1
-    basic.showNumber(counts, 150)
+    count = count + 1
+    basic.showNumber(count)
 })
 ```
 
@@ -39,10 +39,10 @@ We are only pressing on button pressed once. So the number to display on the mic
 ## 4. Draw which LEDs are ON after running this code and pressing button "A" three times. Explain you chose to draw that number
 
 ```blocks
-let counting= 0
+let count = 0
 input.onButtonPressed(Button.A, () => {
-    counting = counting + 1
-    basic.showNumber(counting, 100)
+    count =  + 1
+    basic.showNumber(count)
 })
 ```
 

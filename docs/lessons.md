@@ -59,9 +59,9 @@ Overview of lessons for the BBC micro:bit.
 * [Telegraph](/microbit/lessons/telegraph), play the telegraph game between two BBC micro:bits
 
 ## Advanced
-
+* [Speed Button](/microbit/lessons/speed-button), code a speed game with running time
 * [Hero](/microbit/lessons/hero), reconstruct the classic arcade game pac man with the BBC micro:bit
-* [Catch the Egg](/microbit/lessons/catch-the-egg-game), reconstruct the classic game of Catch the Egg with the BBC micro:bit
+* [Catch the Egg](/microbit/lessons/catch-the-egg-game), catch falling eggs in a basket with an acceleration controller
 ### ~
 
 ### @section full

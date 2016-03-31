@@ -10,7 +10,7 @@ Running Time
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/speed-button/tutorial)
+* [activity](/microbit/lessons/speed-button/activity)
 * [quiz](/microbit/lessons/speed-button/quiz)
 * [quiz answers](/microbit/lessons/speed-button/quiz-answers)
 * [challenges](/microbit/lessons/speed-button/challenges)

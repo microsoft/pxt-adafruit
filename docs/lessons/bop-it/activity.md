@@ -4,13 +4,9 @@ a game similar to "Simon Says" with the BBC micro:bit. #docs
 
 ## Before we get started
 
-Complete the following guided tutorial:
+Complete the following guided tutorial. Your code should look like this:
 
-* [tutorial](/microbit/lessons/bop-it/tutorial)
-
-At the end of the tutorial, click `keep editing`. Your code should look like this:
-
-```
+```blocks
 newAction() // ***
 input.onButtonPressed(Button.A, () => {
     if (action == 0) {
@@ -21,27 +17,27 @@ input.onButtonPressed(Button.A, () => {
 input.onLogoDown(() => {
     if (action == 1) {
         game.addScore(1) // ***
-        newAction() // ***
+        newAction() 
     }
-}) // ***
+}) 
 input.onGesture(Gesture.Shake, () => {
     if (action == 2) {
-        game.addScore(1) // ***
-        newAction() // ***
+        game.addScore(1)
+        newAction()
     }
-}) // ***
+}) 
 input.onButtonPressed(Button.B, () => {
     basic.showNumber(game.score(), 150) // ***
     basic.pause(2000) // ***
     newAction() // ***
-}) // ***
+}) 
 ```
 
 ### Challenge 1
 
 Now let's add some more types of instructions for the player to follow. Let's add `PRESS PIN 0`. Change the global variable `action` to `math->random(4)` so that we can add a new **IF** statement that checks if `action=3`. If it does, display instructions to press pin 0.
 
-```
+```blocks
 /**
  * {highlight}
  */

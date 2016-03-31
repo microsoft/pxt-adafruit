@@ -59,6 +59,7 @@ Overview of lessons for the BBC micro:bit.
 * [Telegraph](/microbit/lessons/telegraph), play the telegraph game between two BBC micro:bits
 
 ## Advanced
+* [Prank WiFi](/microbit/lessons/prank-wifi), create fake WiFi to trick your friends
 * [Speed Button](/microbit/lessons/speed-button), code a speed game with running time
 * [Headbands](/microbit/lessons/headbands), create a charades game with a collection of strings that hold the words
 * [Hero](/microbit/lessons/hero), reconstruct the classic arcade game pac man with the BBC micro:bit

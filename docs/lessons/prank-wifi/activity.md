@@ -4,13 +4,9 @@ create a fake wifi app to trick your friends. #docs
 
 ## Before we get started
 
-Complete the following guided tutorial:
+Complete the following exercise. Your code should look like this:
 
-* [tutorial](/microbit/lessons/prank-wifi/tutorial)
-
-At the end of the tutorial, click `keep editing`. Your code should look like this:
-
-```
+```blocks
 basic.showString("Check Wifi", 150)
 basic.forever(() => {
     let xAccel = math.abs(input.acceleration("x"))
@@ -18,7 +14,7 @@ basic.forever(() => {
     let zAccel = math.abs(input.acceleration("z"))
     let sum = xAccel + yAccel + zAccel
     if (sum < 1400) {
-        basic.plotImage(`
+        basic.showleds(`
 . . . . .
 . . . . .
 . . # . .
@@ -26,7 +22,7 @@ basic.forever(() => {
 # # # . .
 `)
     } else if (sum >= 1400 && sum < 1680) {
-        basic.plotImage(`
+        basic.showleds(`
 . . . . .
 . . . # .
 . . # # .
@@ -35,7 +31,7 @@ basic.forever(() => {
 `)
     }
     else if (sum >= 1680) {
-        basic.plotImage(`
+        basic.showleds(`
 . . . . .
 . . . . .
 . . . . .
@@ -52,11 +48,9 @@ What if wanted to show the maximum connectivity of wifi instead of just 1, 3, or
 
 Let's start by changing the first **IF** statement to `if sum <1200`.
 
-Edit this line: **if** sum <1400 **then**
+Edit this line: if sum is greater than 1400 then just click on the `1400` and backspace until you can add your own number of `1200`.
 
-Just click on the `1400` and backspace until you can add your own number of `1200`.
-
-```
+```blocks
 basic.showString("Check Wifi", 150)
 basic.forever(() => {
     let xAccel1 = math.abs(input.acceleration("x"))
@@ -64,7 +58,7 @@ basic.forever(() => {
     let zAccel1 = math.abs(input.acceleration("z"))
     let sum1 = xAccel1 + yAccel1 + zAccel1
     if (sum1 < 1200) {
-        basic.plotImage(`
+        basic.showleds(`
 . . . . .
 . . . . .
 . . # . .
@@ -72,7 +66,7 @@ basic.forever(() => {
 # # # . .
 `)
     } else if (sum1 >= 1400 && sum1 < 1680) {
-        basic.plotImage(`
+        basic.showleds(`
 . . . . .
 . . . # .
 . . # # .
@@ -81,7 +75,7 @@ basic.forever(() => {
 `)
     }
     else if (sum1 >= 1680) {
-        basic.plotImage(`
+        basic.showleds(`
 . . . . .
 . . . . .
 . . . . .
@@ -96,7 +90,7 @@ basic.forever(() => {
 
 Let's add an **IF** at the bottom of your code that checks to see if `sum >= to 1200` **and** if `sum <1400`
 
-```
+```blocks
 basic.showString("Check Wifi", 150)
 basic.forever(() => {
     let xAccel2 = math.abs(input.acceleration("x"))
@@ -104,7 +98,7 @@ basic.forever(() => {
     let zAccel2 = math.abs(input.acceleration("z"))
     let sum2 = xAccel2 + yAccel2 + zAccel2
     if (sum2 < 1200) {
-        basic.plotImage(`
+        basic.showleds(`
 . . . . .
 . . . . .
 . . # . .
@@ -112,7 +106,7 @@ basic.forever(() => {
 # # # . .
 `)
     } else if (sum2 >= 1400 && sum2 < 1680) {
-        basic.plotImage(`
+        basic.showleds(`
 . . . . .
 . . . # .
 . . # # .
@@ -121,7 +115,7 @@ basic.forever(() => {
 `)
     }
     else if (sum2 >= 1680) {
-        basic.plotImage(`
+        basic.showleds(`
 . . . . .
 . . . . .
 . . . . .
@@ -130,7 +124,7 @@ basic.forever(() => {
 `)
     }
     if (sum2 >= 1200 && sum2 < 1400) {
-        basic.plotImage(`
+        basic.showleds(`
 . . . . #
 . . . # #
 . . # # #

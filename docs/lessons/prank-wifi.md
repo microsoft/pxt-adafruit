@@ -4,6 +4,6 @@ create a fake wifi app to trick your friends #abs #acceleration #if #math #plot 
 
 create a fake wifi app to trick your friends
 
-* [tutorial](/microbit/lessons/prank-wifi/tutorial)
+* [activity](/microbit/lessons/prank-wifi/activity)
 * [quiz](/microbit/lessons/prank-wifi/quiz)
-* [challenges](/microbit/lessons/prank-wifi/challenges)
+

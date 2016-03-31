@@ -4,13 +4,9 @@ Coding challenges for the offset image tutorial. #docs
 
 ## Before we get started
 
-Complete the following guided tutorial:
+Complete the following exercise. Your code should look like this:
 
-* [tutorial](/microbit/lessons/offset-image/tutorial)
-
-At the end of the tutorial, click `keep editing`. Your code should look like this:
-
-```
+```blocks
 offset = 0
 basic.forever(() => {
     if (offset == -4) {

@@ -14,7 +14,7 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 <br/>
 
-```
+```blocks
 let xAccel = math.abs(input.acceleration("x"))
 let yAccel = math.abs(input.acceleration("y"))
 let zAccel = math.abs(input.acceleration("z"))
@@ -28,7 +28,7 @@ let zAccel = math.abs(input.acceleration("z"))
 
 <br/>
 
-```
+```blocks
 let sum = xAccel + yAccel + zAccel
 ```
 
@@ -38,9 +38,9 @@ let sum = xAccel + yAccel + zAccel
 
 <br/>
 
-```
+```blocks
 if (sum < 1400) {
-    basic.plotImage(`
+    basic.showleds(`
 . . . . .
 . . . . .
 . . # . .
@@ -58,9 +58,9 @@ if (sum < 1400) {
 
 <br/>
 
-```
+```blocks
 if (sum >= 1400 && sum < 1680) {
-    basic.plotImage(`
+    basic.showleds(`
 . . . . .
 . . . # .
 . . # # .
@@ -80,7 +80,7 @@ if (sum >= 1400 && sum < 1680) {
 
 ```
 if (sum >= 1680) {
-    basic.plotImage(`
+    basic.showleds(`
 . . . . .
 . . . . .
 . . . . .

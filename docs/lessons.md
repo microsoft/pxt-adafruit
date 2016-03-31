@@ -60,6 +60,7 @@ Overview of lessons for the BBC micro:bit.
 
 ## Advanced
 * [Speed Button](/microbit/lessons/speed-button), code a speed game with running time
+* [Headbands](/microbit/lessons/headbands), create a charades game with a collection of strings that hold the words
 * [Hero](/microbit/lessons/hero), reconstruct the classic arcade game pac man with the BBC micro:bit
 * [Catch the Egg](/microbit/lessons/catch-the-egg-game), catch falling eggs in a basket with an acceleration controller
 ### ~

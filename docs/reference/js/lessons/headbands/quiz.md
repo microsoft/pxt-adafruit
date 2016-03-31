@@ -18,8 +18,8 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 ## 2. Write the line of code that will display the string "puppy" using "data->coll".
 
-```
-coll = (<string[]>[])
+```blocks
+let coll = (<string[]>[])
 coll.push("puppy")
 coll.push("clock")
 ```
@@ -28,8 +28,8 @@ coll.push("clock")
 
 ## 3. Write the line of code that will display the string "cat" using `"data->coll".
 
-```
-coll = (<string[]>[])
+```blocks
+let coll = (<string[]>[])
 coll.push("puppy")
 coll.push("clock")
 coll.push("cat")
@@ -40,7 +40,7 @@ coll.push("cat")
 ## 4. Write the five (5) lines of code that will add the following five words to `data->coll`: puppy, clock, night, cat, cow.
 
 ```
-coll = (<string[]>[])
+let coll = (<string[]>[])
 ```
 
 <br/>

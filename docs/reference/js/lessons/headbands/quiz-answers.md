@@ -18,8 +18,8 @@ A 'collection' is a group of variables of the same type stored together. A 'coll
 
 ## 2. Consider the following lines of code.
 
-```
-coll = (<string[]>[])
+```blocks
+let coll = (<string[]>[])
 coll.push("puppy")
 coll.push("clock")
 ```
@@ -28,14 +28,14 @@ Write the line of code that will display the string "puppy" using `data->coll`.
 
 <br/>
 
-```
+```blocks
 basic.showString(coll[0], 150)
 ```
 
 ## 3. Consider the following lines of code.
 
-```
-coll = (<string[]>[])
+```blocks
+let coll = (<string[]>[])
 coll.push("puppy")
 coll.push("clock")
 coll.push("cat")
@@ -45,22 +45,22 @@ Write the line of code that will display the string "cat" using `data->coll`.
 
 <br/>
 
-```
+```blocks
 basic.showString(coll[2], 150)
 ```
 
 ## 4. Consider the following line of code.
 
-```
-coll = (<string[]>[])
+```blocks
+let coll = (<string[]>[])
 ```
 
 Write the five (5) lines of code that will add the following five words to `data->coll`: puppy, clock, night, cat, cow.
 
 <br/>
 
-```
-coll.push("puppy")
+```blocks
+let coll.push("puppy")
 coll.push("clock")
 coll.push("night")
 coll.push("cat")
@@ -71,7 +71,7 @@ coll.push("cow")
 
 <br/>
 
-```
+```blocks
 let index = Math.random(coll.length)
 let word = coll[index]
 ```

@@ -93,9 +93,9 @@ Let's add an **IF** at the bottom of your code that checks to see if `sum >= to 
 ```blocks
 basic.showString("Check Wifi", 150)
 basic.forever(() => {
-    let xAccel2 = math.abs(input.acceleration("x"))
-    let yAccel2 = math.abs(input.acceleration("y"))
-    let zAccel2 = math.abs(input.acceleration("z"))
+    let xAccel2 = Math.abs(input.acceleration(Dimension.X))
+    let yAccel2 = Math.abs(input.acceleration(Dimension.Y))
+    let zAccel2 = Math.abs(input.acceleration(Dimension.Z))
     let sum2 = xAccel2 + yAccel2 + zAccel2
     if (sum2 < 1200) {
         basic.showleds(`
@@ -106,7 +106,7 @@ basic.forever(() => {
 # # # . .
 `)
     } else if (sum2 >= 1400 && sum2 < 1680) {
-        basic.showleds(`
+        basic.showLeds(`
 . . . . .
 . . . # .
 . . # # .
@@ -115,7 +115,7 @@ basic.forever(() => {
 `)
     }
     else if (sum2 >= 1680) {
-        basic.showleds(`
+        basic.showLeds(`
 . . . . .
 . . . . .
 . . . . .
@@ -124,7 +124,7 @@ basic.forever(() => {
 `)
     }
     if (sum2 >= 1200 && sum2 < 1400) {
-        basic.showleds(`
+        basic.showLeds(`
 . . . . #
 . . . # #
 . . # # #
@@ -137,5 +137,5 @@ basic.forever(() => {
 
 **Challenge 3**
 
-Now it's your turn! Be creative and change the Wifi meter images to your own wifi image you're sure will prank your friends by editing the lines that call `plot image()`.
+Now it's your turn! Be creative and change the Wifi meter images to your own wifi image you're sure will prank your friends by editing the lines that call `showLeds()`.
 

@@ -67,10 +67,9 @@ Using the 4th crocodile clip, connect the unattached end of the crocodile clip o
 
 ![](/static/mb/lessons/telegraph-0.png)
 
-Your telegraph is ready!
 
-### Step 10
+### ~avatar avatar
 
-* Connect the first micro:bit to your computer using your USB cable and run the [telegraph](/microbit/nnudbr) script on it.
-* Connect the second micro:bit to your computer using your USB cable and run the [telegraph](/microbit/nnudbr) script on it.
-* The first person and second person take turns pressing button A to play the telegraph game!
+Excellent, you're ready to continue with the [challenges](/microbit/lessons/telegraph/challenges)!
+
+### ~

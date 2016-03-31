@@ -9,6 +9,8 @@ Telegraph
 ## Quick Links
 
 * [activity](/microbit/lessons/telegraph/activity)
+* [challenges](/microbit/lessons/telegraph/challenges)
+
 
 ## Prior learning/place of lesson in scheme of work
 

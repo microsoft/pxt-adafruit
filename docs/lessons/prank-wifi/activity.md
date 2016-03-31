@@ -9,37 +9,37 @@ Complete the following exercise. Your code should look like this:
 ```blocks
 basic.showString("Check Wifi", 150)
 basic.forever(() => {
-    let xAccel = math.abs(input.acceleration("x"))
-    let yAccel = math.abs(input.acceleration("y"))
-    let zAccel = math.abs(input.acceleration("z"))
+    let xAccel = Math.abs(input.acceleration(Dimension.X))
+    let yAccel = Math.abs(input.acceleration(Dimension.Y))
+    let zAccel = Math.abs(input.acceleration(Dimension.Z))
     let sum = xAccel + yAccel + zAccel
     if (sum < 1400) {
-        basic.showleds(`
-. . . . .
-. . . . .
-. . # . .
-. # # . .
-# # # . .
-`)
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . # . .
+            . # # . .
+            # # # . .
+            `)
     } else if (sum >= 1400 && sum < 1680) {
-        basic.showleds(`
-. . . . .
-. . . # .
-. . # # .
-. # # # .
-# # # # .
-`)
-    }
-    else if (sum >= 1680) {
-        basic.showleds(`
-. . . . .
-. . . . .
-. . . . .
-. . . . .
-# . . . .
-`)
+        basic.showLeds(`
+            . . . . .
+            . . . # .
+            . . # # .
+            . # # # .
+            # # # # .
+            `)
+    } else if (sum >= 1680) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . . . .
+            . . . . .
+            # . . . .
+            `)
     }
 })
+
 ```
 
 **Challenge 1**
@@ -53,7 +53,7 @@ Edit this line: if sum is greater than 1400 then just click on the `1400` and ba
 ```blocks
 basic.showString("Check Wifi", 150)
 basic.forever(() => {
-    let xAccel1 = math.abs(input.acceleration("x"))
+    let xAccel1 = Math.abs(input.acceleration(Dimension.X))
     let yAccel1 = math.abs(input.acceleration("y"))
     let zAccel1 = math.abs(input.acceleration("z"))
     let sum1 = xAccel1 + yAccel1 + zAccel1

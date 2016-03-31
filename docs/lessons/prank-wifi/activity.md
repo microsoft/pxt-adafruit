@@ -54,11 +54,11 @@ Edit this line: if sum is greater than 1400 then just click on the `1400` and ba
 basic.showString("Check Wifi", 150)
 basic.forever(() => {
     let xAccel1 = Math.abs(input.acceleration(Dimension.X))
-    let yAccel1 = math.abs(input.acceleration("y"))
-    let zAccel1 = math.abs(input.acceleration("z"))
+    let yAccel1 = Math.abs(input.acceleration(Dimension.Y))
+    let zAccel1 = Math.abs(input.acceleration(Dimension.Z))
     let sum1 = xAccel1 + yAccel1 + zAccel1
     if (sum1 < 1200) {
-        basic.showleds(`
+        basic.showLeds(`
 . . . . .
 . . . . .
 . . # . .
@@ -66,7 +66,7 @@ basic.forever(() => {
 # # # . .
 `)
     } else if (sum1 >= 1400 && sum1 < 1680) {
-        basic.showleds(`
+        basic.showLeds(`
 . . . . .
 . . . # .
 . . # # .
@@ -75,7 +75,7 @@ basic.forever(() => {
 `)
     }
     else if (sum1 >= 1680) {
-        basic.showleds(`
+        basic.showLeds(`
 . . . . .
 . . . . .
 . . . . .
@@ -98,7 +98,7 @@ basic.forever(() => {
     let zAccel2 = Math.abs(input.acceleration(Dimension.Z))
     let sum2 = xAccel2 + yAccel2 + zAccel2
     if (sum2 < 1200) {
-        basic.showleds(`
+        basic.showLeds(`
 . . . . .
 . . . . .
 . . # . .

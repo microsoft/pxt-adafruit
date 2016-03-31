@@ -80,30 +80,8 @@ basic.forever(() => {
 
 ### Step 6
 
-We now need to digitally read to the specified pin (P1) as digital. Let's start by going to the pin drawer and adding digital read pin (0,1) and changing the pin to P1. 
 
-
-```blocks
-
-pins.digitalReadPin(DigitalPin.P1)
-
-basic.forever(() => {
-    if (input.buttonIsPressed(Button.A)) {
-        pins.digitalWritePin(DigitalPin.P0, 1)
-        led.plot(2, 2)
-    } else {
-        pins.digitalWritePin(DigitalPin.P0, 0)
-        basic.clearScreen()
-    }
-})
-
-
-```
-
-
-### Step 7
-
-We need to create a condition for digital read pin (0,1). So we go to the logic drawer and select the comparison operator. Then we want to set the comparison operator to 1 to turn on digital read on pin 1. We want to insert a condition that tells us if button A is pressed and we should turn on digital read on pin 1. So insert the if block under logic drawer. Then add a condition that occurs if digital read on P1 is on. Then we want to plot x, y at the x, y coordinates of 2,2. we also want to say that if digital read pin P1 is not on, we want to turn off all LED lights on the screen. Your code should appear as follows:
+We now need to digitally read to the specified pin (P1) as digital. Let's start by going to the pin drawer and adding digital read pin (0,1) and changing the pin to P1. Now we need to create a condition for digital read pin (0,1). So we go to the logic drawer and select the comparison operator. Then we want to set the comparison operator to 1 to turn on digital read on pin 1. We want to insert a condition that tells us if button A is pressed and we should turn on digital read on pin 1. So insert the if block under logic drawer. Then add a condition that occurs if digital read on P1 is on. Then we want to plot x, y at the x, y coordinates of 2,2. we also want to say that if digital read pin P1 is not on, we want to turn off all LED lights on the screen. Your code should appear as follows:
 
 ```blocks
 if (pins.digitalReadPin(DigitalPin.P1) == 1) {
@@ -129,7 +107,7 @@ basic.forever(() => {
 
 Your telegraph is ready!
 
-### Step 10
+### Step 7
 
 * Connect the first micro:bit to your computer using your USB cable and run the [telegraph](/microbit/nnudbr) script on it.
 * Connect the second micro:bit to your computer using your USB cable and run the [telegraph](/microbit/nnudbr) script on it.

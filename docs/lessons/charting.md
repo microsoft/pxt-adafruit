@@ -10,9 +10,6 @@ Acceleration
 
 * [activity](/microbit/lessons/charting/activity)
 
-## Class
-
-Year 7
 
 ## Prior learning/place of lesson in scheme of work
 

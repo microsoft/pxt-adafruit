@@ -47,7 +47,7 @@ let count = 0
 while (count < 10) {
     basic.pause(100)
      basic.showNumber(count)
-    count == count + 1
+    count = count + (count - 1)
 }
 ```
 

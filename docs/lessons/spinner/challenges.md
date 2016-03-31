@@ -9,7 +9,7 @@ Complete the following [guided tutorial](/microbit/lessons/spinner/activity), yo
 ```blocks
 input.onGesture(Gesture.Shake, () => {
     let randomArrow = Math.random(4)
-    if (randomArrow = 3) {
+    if (randomArrow == 3) {
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -18,7 +18,7 @@ input.onGesture(Gesture.Shake, () => {
             . . # . .
             `)
     }
-    if (randomArrow = 2) {
+    if (randomArrow == 2) {
         basic.showLeds(`
             . . # . .
             . . # . .
@@ -27,7 +27,7 @@ input.onGesture(Gesture.Shake, () => {
             . . # . .
             `)
     }
-    if (randomArrow = 1) {
+    if (randomArrow == 1) {
         basic.showLeds(`
             . . # . .
             . # # . .
@@ -47,7 +47,7 @@ Modify the random number generator so that it can include new arrows we will cre
 ```blocks
 input.onGesture(Gesture.Shake, () => {
     let randomArrow = Math.random(8)
-    if (randomArrow = 3) {
+    if (randomArrow == 3) {
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -56,7 +56,7 @@ input.onGesture(Gesture.Shake, () => {
             . . # . .
             `)
     }
-    if (randomArrow = 2) {
+    if (randomArrow == 2) {
         basic.showLeds(`
             . . # . .
             . . # . .
@@ -65,7 +65,7 @@ input.onGesture(Gesture.Shake, () => {
             . . # . .
             `)
     }
-    if (randomArrow = 1) {
+    if (randomArrow == 1) {
         basic.showLeds(`
             . . # . .
             . # # . .
@@ -90,7 +90,7 @@ Let's add more arrows that point diagonally.
 ```blocks
 input.onGesture(Gesture.Shake, () => {
     let randomArrow = Math.random(8)
-    if (randomArrow = 7) {
+    if (randomArrow == 7) {
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -99,7 +99,7 @@ input.onGesture(Gesture.Shake, () => {
             . . # . .
             `)
     }
-    if (randomArrow = 6) {
+    if (randomArrow == 6) {
         basic.showLeds(`
             . . # . .
             . . # . .
@@ -108,7 +108,7 @@ input.onGesture(Gesture.Shake, () => {
             . . # . .
             `)
     }
-    if (randomArrow = 5) {
+    if (randomArrow == 5) {
         basic.showLeds(`
             . . # . .
             . # # . .
@@ -118,7 +118,7 @@ input.onGesture(Gesture.Shake, () => {
             `)
 
     }
-    if (randomArrow = 4) {
+    if (randomArrow == 4) {
         basic.showLeds(`
             . . # . .
             . . . # .
@@ -129,7 +129,7 @@ input.onGesture(Gesture.Shake, () => {
 
     }
 
-    if (randomArrow = 3) {
+    if (randomArrow == 3) {
         basic.showLeds(`
             # # # # #
             # # # # .
@@ -139,7 +139,7 @@ input.onGesture(Gesture.Shake, () => {
             `)
 
     }
-    if (randomArrow = 2) {
+    if (randomArrow == 2) {
         basic.showLeds(`
             # # # # #
             # # # # #
@@ -149,7 +149,7 @@ input.onGesture(Gesture.Shake, () => {
             `)
 
     }
-        if (randomArrow = 1) {
+        if (randomArrow == 1) {
         basic.showLeds(`
             # . . . #
             # # . # .

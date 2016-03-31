@@ -23,7 +23,7 @@ Now let's randomly generate a number from 0 to 3 so that we can randomly display
 ```blocks
 input.onGesture(Gesture.Shake, () => {
     let randomArrow = Math.random(4)
-    if (randomArrow = 3) {
+    if (randomArrow == 3) {
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -42,7 +42,7 @@ Now let's handle each of the cases by displaying the appropriate arrow. (Let's d
 ```blocks
 input.onGesture(Gesture.Shake, () => {
     let randomArrow = Math.random(4)
-    if (randomArrow = 3) {
+    if (randomArrow == 3) {
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -51,7 +51,7 @@ input.onGesture(Gesture.Shake, () => {
             . . # . .
             `)
     }
-    if (randomArrow = 2) {
+    if (randomArrow == 2) {
         basic.showLeds(`
             . . # . .
             . . # . .
@@ -70,7 +70,7 @@ Now let's handle the rest of the cases for `random arrow`.
 ```blocks
 input.onGesture(Gesture.Shake, () => {
     let randomArrow = Math.random(4)
-    if (randomArrow = 3) {
+    if (randomArrow == 3) {
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -79,7 +79,7 @@ input.onGesture(Gesture.Shake, () => {
             . . # . .
             `)
     }
-    if (randomArrow = 2) {
+    if (randomArrow == 2) {
         basic.showLeds(`
             . . # . .
             . . # . .
@@ -88,7 +88,7 @@ input.onGesture(Gesture.Shake, () => {
             . . # . .
             `)
     }
-    if (randomArrow = 1) {
+    if (randomArrow == 1) {
         basic.showLeds(`
             . . # . .
             . # # . .

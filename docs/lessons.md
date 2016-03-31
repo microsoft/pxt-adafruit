@@ -1,7 +1,5 @@
 # Lessons 
 
-Overview of lessons for the BBC micro:bit.
-
 ### @short Lessons
 
 ### ~column 
@@ -52,13 +50,14 @@ Overview of lessons for the BBC micro:bit.
 ### ~column 
 
 ## Maker
-
 * [The Watch](/microbit/lessons/the-watch), design and create The Watch
 * [Hack your Headphones](/microbit/lessons/hack-your-headphones), create music on the BBC micro:bit by hacking your headphones
 * [Banana Keyboard](/microbit/lessons/banana-keyboard), create music with fruits
 * [Telegraph](/microbit/lessons/telegraph), play the telegraph game between two BBC micro:bits
+* [Pogo](/microbit/lessons/pogo), create a pogo game to test your jumping abilities
 
 ## Advanced
+* [Charting](/microbit/lessons/charting), create a charting app between 2 BBC micro:bits
 * [Prank WiFi](/microbit/lessons/prank-wifi), create fake WiFi to trick your friends
 * [Speed Button](/microbit/lessons/speed-button), code a speed game with running time
 * [Headbands](/microbit/lessons/headbands), create a charades game with a collection of strings that hold the words

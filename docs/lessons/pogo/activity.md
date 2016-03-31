@@ -8,29 +8,159 @@ Welcome! This activity will teach how to construct a pendulum that glows using a
 
 Create a **forever** loop that will constantly display the appropriate brightness on the LED display.  Now let's measure the acceleration on the `y` axis and store that value in a variable. The `acceleration(y)` function will provide the value.
 
-![](/static/mb/blocks/lessons/pogo-0.jpg)
+```blocks
+basic.forever(() => {
+    let acc = input.acceleration(Dimension.Y)
+})
+```
 
 Since the micro:bit will be swinging up and down, we need to store the variable called jumps. We will set the variable called jumps to 0 to store the number 0.
 
-![](/static/mb/blocks/lessons/pogo-1.jpg)
+```blocks
+let jumps = 0
+basic.forever(() => {
+    let acc = input.acceleration(Dimension.Y)
+})
+```
 
-The function `acceleration(y)` gets the acceleration value (milli g-force), in the `y` dimension. If the `acceleration(y)`is greater than 2000 milli g-force, we will change jumps by 1.
+The function `acceleration(y)` gets the acceleration value (milli g-force), in the `y` dimension. If the `acceleration(y)`is greater than 2000 milli g-force, we will change jumps by 1. If jumping is greater than 2000 milli-gravities, then change jumps by 1 and display a smiley on the BBC micro:bit. Finally, we will remove the smiley image from the screen
 
-If the `acceleration(y)`is greater than 2000 milli g-force, we will display the image with `show LEDs` to display a smiley face on the LEDs and `clear screen` to to turn off all the LED lights on the LED screen.
 
-![](/static/mb/blocks/lessons/pogo-2.jpg)
+```blocks
+let jumps = 0
+basic.forever(() => {
+    let acc = input.acceleration(Dimension.Y)
+    if (acc > 2000) {
+        jumps = jumps + 1;
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . # . .
+            # . . . #
+            . # # # .
+            `)
+        basic.clearScreen()
+    }
+})
+```
 
-Now let's register an event handler that will execute whenever an input button (A) is pressed during program execution.
+Now let's register an event handler that will execute whenever an input button (A) is pressed during program execution. If you press button A, then show the number of jumps greater than 2000 milli-gravities on the BBC micro:bit.
 
-![](/static/mb/blocks/lessons/pogo-3.jpg)
+```blocks
+let jumps = 0
+basic.forever(() => {
+    let acc = input.acceleration(Dimension.Y)
+    if (acc > 2000) {
+        jumps = jumps + 1;
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . # . .
+            # . . . #
+            . # # # .
+            `)
+        basic.clearScreen()
+    }
+})
+input.onButtonPressed(Button.A, () => {
+    basic.showNumber(jumps)
+})
+```
 
-Let's show what the brightness of the micro:bit is by turning all the LEDs on!
+If you press button A+B together, then reset the jump counter to 0 on the BBC micro:bit. Finally, we will show the show the jump counter on the micro:bit
 
-![](/static/mb/blocks/lessons/glowing-pendulum-5.png)
 
-### ~avatar avatar
+```blocks
+let jumps = 0
+basic.forever(() => {
+    let acc = input.acceleration(Dimension.Y)
+    if (acc > 2000) {
+        jumps = jumps + 1;
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . # . .
+            # . . . #
+            . # # # .
+            `)
+        basic.clearScreen()
+    }
+})
+input.onButtonPressed(Button.A, () => {
+    basic.showNumber(jumps)
+})
+input.onButtonPressed(Button.AB, () => {
+    let jumps = 0
+    basic.showNumber(jumps)
+})
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/glowing-pendulum/challenges)!
+```
 
-### ~
+We want to setup the radio communication between an additional micro:bit. We first must send number for jumps. The additional micro:bit will receive the number and show number on data received. We are now displaying the current jump count on the second micro:bit
 
+```blocks
+let jumps = 0
+basic.forever(() => {
+    let acc = input.acceleration(Dimension.Y)
+    if (acc > 2000) {
+        jumps = jumps + 1;
+        radio.sendNumber(jumps)
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . # . .
+            # . . . #
+            . # # # .
+            `)
+        basic.clearScreen()
+    }
+})
+input.onButtonPressed(Button.A, () => {
+    basic.showNumber(jumps)
+})
+input.onButtonPressed(Button.AB, () => {
+    let jumps = 0
+    basic.showNumber(jumps)
+})
+radio.onDataReceived(() => {
+    basic.showNumber(radio.receiveNumber())
+})
+
+```
+We want to stop animation so every time the number of jumps increase by 1 the second micro:bit will not also display smiley from show leds. So we add the code stop animation
+
+```blocks
+let jumps = 0
+basic.forever(() => {
+    let acc = input.acceleration(Dimension.Y)
+    if (acc > 2000) {
+        jumps = jumps + 1;
+        radio.sendNumber(jumps)
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . # . .
+            # . . . #
+            . # # # .
+            `)
+        basic.clearScreen()
+    }
+})
+input.onButtonPressed(Button.A, () => {
+    basic.showNumber(jumps)
+})
+input.onButtonPressed(Button.AB, () => {
+    let jumps = 0
+    basic.showNumber(jumps)
+})
+radio.onDataReceived(() => {
+    basic.showNumber(radio.receiveNumber())
+    led.stopAnimation()
+})
+
+```
+
+
+Connect the first micro:bit to your computer using your USB cable and run the pogo script on it.
+Connect the second micro:bit to your computer using your USB cable and run the pogo script on it.
+The first person and second person take turns jumping in the “y” direction while the other player uses the micro:bit to track the results on the micro:bit!

@@ -56,6 +56,6 @@ Connect your micro:bit to your computer using your USB cable and program  [light
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/happy-birthday/activity)!
+Excellent, you're ready to continue with the [challenges](/microbit/lessons/light-beatbox/activity)!
 
 ### ~

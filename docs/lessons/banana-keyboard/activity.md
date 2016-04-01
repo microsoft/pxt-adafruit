@@ -81,3 +81,9 @@ Your banana keyboard is ready!
 
 Connect your micro:bit to your computer using your USB cable and run the [banana keyboard](/microbit/lhpkbr) script on it. Tap your banana instrument to play sound against... the fruit!
 
+
+### ~avatar boothing
+
+Excellent, you're ready to continue with the [challenges](/microbit/lessons/banana-keyboard/challenges)!
+
+### ~

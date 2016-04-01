@@ -71,6 +71,9 @@
             "isNative": false,
             "hasHex": true
         },
+        "simulator": {
+            "runOnLoad": true
+        },
         "serial": {
             "manufacturerFilter": "^mbed$",
             "log": true

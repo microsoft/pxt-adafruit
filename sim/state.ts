@@ -73,8 +73,7 @@ namespace ks.rt.micro_bit {
         queue(packet: PacketBuffer) {
             if (this.datagram.length < 5) {
                 this.datagram.push(packet);
-                let ens = enums();
-                (<Board>runtime.board).bus.queue(ens.MICROBIT_ID_RADIO, ens.MICROBIT_RADIO_EVT_DATAGRAM);
+                (<Board>runtime.board).bus.queue(DAL.MICROBIT_ID_RADIO, DAL.MICROBIT_RADIO_EVT_DATAGRAM);
             }
         }
 
@@ -114,10 +113,9 @@ namespace ks.rt.micro_bit {
         }
 
         broadcast(msg: number) {
-            let ens = enums();
             Runtime.postMessage(<SimulatorEventBusMessage>{
                 type: 'eventbus',
-                id: ens.MES_BROADCAST_GENERAL_ID,
+                id: DAL.MES_BROADCAST_GENERAL_ID,
                 eventid: msg,
                 power: this.power,
                 group: this.groupId
@@ -197,21 +195,21 @@ namespace ks.rt.micro_bit {
         private currentGesture: BasicGesture = BasicGesture.GESTURE_NONE;     // the instantaneous, unfiltered gesture detected.
         private sample: AccelerometerSample = { x: 0, y: 0, z: -1023 }
         private shake: ShakeHistory = { x: false, y: false, z: false, count: 0, shaken: 0, timer: 0 }; // State information needed to detect shake events.
-        private pitch:number;
-        private roll:number;
+        private pitch: number;
+        private roll: number;
         private id: number;
         public isActive = false;
         public sampleRange = 2;
 
         constructor(public runtime: Runtime) {
-            this.id = (<Enums><any>runtime.enums).MICROBIT_ID_ACCELEROMETER;
+            this.id = DAL.MICROBIT_ID_ACCELEROMETER;
         }
-        
-        public setSampleRange(range : number) {
+
+        public setSampleRange(range: number) {
             this.activate();
             this.sampleRange = Math.max(1, Math.min(8, range));
         }
-        
+
         public activate() {
             if (!this.isActive) {
                 this.isActive = true;
@@ -223,7 +221,7 @@ namespace ks.rt.micro_bit {
          * Reads the acceleration data from the accelerometer, and stores it in our buffer.
          * This is called by the tick() member function, if the interrupt is set!
          */
-        public update(x : number, y : number, z : number) {            
+        public update(x: number, y: number, z: number) {
             // read MSB values...
             this.sample.x = Math.floor(x);
             this.sample.y = Math.floor(y);
@@ -233,7 +231,7 @@ namespace ks.rt.micro_bit {
             this.updateGesture();
 
             // Indicate that a new sample is available
-            board().bus.queue(this.id, enums().MICROBIT_ACCELEROMETER_EVT_DATA_UPDATE)
+            board().bus.queue(this.id, DAL.MICROBIT_ACCELEROMETER_EVT_DATA_UPDATE)
         }
 
         public instantaneousAccelerationSquared() {
@@ -248,7 +246,6 @@ namespace ks.rt.micro_bit {
          * @return A best guess of the current posture of the device, based on instantaneous data.
          */
         private instantaneousPosture(): BasicGesture {
-            let ens = enums()
             let force = this.instantaneousAccelerationSquared();
             let shakeDetected = false;
 
@@ -258,25 +255,25 @@ namespace ks.rt.micro_bit {
             //
             // If we see enough zero crossings in succession (MICROBIT_ACCELEROMETER_SHAKE_COUNT_THRESHOLD), then we decide that the device
             // has been shaken.
-            if ((this.getX() < -ens.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && this.shake.x) || (this.getX() > ens.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && !this.shake.x)) {
+            if ((this.getX() < -DAL.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && this.shake.x) || (this.getX() > DAL.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && !this.shake.x)) {
                 shakeDetected = true;
                 this.shake.x = !this.shake.x;
             }
 
-            if ((this.getY() < -ens.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && this.shake.y) || (this.getY() > ens.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && !this.shake.y)) {
+            if ((this.getY() < -DAL.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && this.shake.y) || (this.getY() > DAL.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && !this.shake.y)) {
                 shakeDetected = true;
                 this.shake.y = !this.shake.y;
             }
 
-            if ((this.getZ() < -ens.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && this.shake.z) || (this.getZ() > ens.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && !this.shake.z)) {
+            if ((this.getZ() < -DAL.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && this.shake.z) || (this.getZ() > DAL.MICROBIT_ACCELEROMETER_SHAKE_TOLERANCE && !this.shake.z)) {
                 shakeDetected = true;
                 this.shake.z = !this.shake.z;
             }
 
-            if (shakeDetected && this.shake.count < ens.MICROBIT_ACCELEROMETER_SHAKE_COUNT_THRESHOLD && ++this.shake.count == ens.MICROBIT_ACCELEROMETER_SHAKE_COUNT_THRESHOLD)
+            if (shakeDetected && this.shake.count < DAL.MICROBIT_ACCELEROMETER_SHAKE_COUNT_THRESHOLD && ++this.shake.count == DAL.MICROBIT_ACCELEROMETER_SHAKE_COUNT_THRESHOLD)
                 this.shake.shaken = 1;
 
-            if (++this.shake.timer >= ens.MICROBIT_ACCELEROMETER_SHAKE_DAMPING) {
+            if (++this.shake.timer >= DAL.MICROBIT_ACCELEROMETER_SHAKE_DAMPING) {
                 this.shake.timer = 0;
                 if (this.shake.count > 0) {
                     if (--this.shake.count == 0)
@@ -287,48 +284,49 @@ namespace ks.rt.micro_bit {
             if (this.shake.shaken)
                 return BasicGesture.GESTURE_SHAKE;
 
-            if (force < ens.MICROBIT_ACCELEROMETER_FREEFALL_THRESHOLD)
+            let sq = (n: number) => n * n
+
+            if (force < sq(DAL.MICROBIT_ACCELEROMETER_FREEFALL_TOLERANCE))
                 return BasicGesture.GESTURE_FREEFALL;
 
-            if (force > ens.MICROBIT_ACCELEROMETER_3G_THRESHOLD)
+            if (force > sq(DAL.MICROBIT_ACCELEROMETER_3G_TOLERANCE))
                 return BasicGesture.GESTURE_3G;
 
-            if (force > ens.MICROBIT_ACCELEROMETER_6G_THRESHOLD)
+            if (force > sq(DAL.MICROBIT_ACCELEROMETER_6G_TOLERANCE))
                 return BasicGesture.GESTURE_6G;
 
-            if (force > ens.MICROBIT_ACCELEROMETER_8G_THRESHOLD)
+            if (force > sq(DAL.MICROBIT_ACCELEROMETER_8G_TOLERANCE))
                 return BasicGesture.GESTURE_8G;
 
             // Determine our posture.
-            if (this.getX() < (-1000 + ens.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
+            if (this.getX() < (-1000 + DAL.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
                 return BasicGesture.GESTURE_LEFT;
 
-            if (this.getX() > (1000 - ens.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
+            if (this.getX() > (1000 - DAL.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
                 return BasicGesture.GESTURE_RIGHT;
 
-            if (this.getY() < (-1000 + ens.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
+            if (this.getY() < (-1000 + DAL.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
                 return BasicGesture.GESTURE_DOWN;
 
-            if (this.getY() > (1000 - ens.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
+            if (this.getY() > (1000 - DAL.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
                 return BasicGesture.GESTURE_UP;
 
-            if (this.getZ() < (-1000 + ens.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
+            if (this.getZ() < (-1000 + DAL.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
                 return BasicGesture.GESTURE_FACE_UP;
 
-            if (this.getZ() > (1000 - ens.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
+            if (this.getZ() > (1000 - DAL.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
                 return BasicGesture.GESTURE_FACE_DOWN;
 
             return BasicGesture.GESTURE_NONE;
         }
 
         updateGesture() {
-            let ens = enums()
             // Determine what it looks like we're doing based on the latest sample...
             let g = this.instantaneousPosture();
 
             // Perform some low pass filtering to reduce jitter from any detected effects
             if (g == this.currentGesture) {
-                if (this.sigma < ens.MICROBIT_ACCELEROMETER_GESTURE_DAMPING)
+                if (this.sigma < DAL.MICROBIT_ACCELEROMETER_GESTURE_DAMPING)
                     this.sigma++;
             }
             else {
@@ -337,9 +335,9 @@ namespace ks.rt.micro_bit {
             }
 
             // If we've reached threshold, update our record and raise the relevant event...
-            if (this.currentGesture != this.lastGesture && this.sigma >= ens.MICROBIT_ACCELEROMETER_GESTURE_DAMPING) {
+            if (this.currentGesture != this.lastGesture && this.sigma >= DAL.MICROBIT_ACCELEROMETER_GESTURE_DAMPING) {
                 this.lastGesture = this.currentGesture;
-                board().bus.queue(ens.MICROBIT_ID_GESTURE, this.lastGesture);
+                board().bus.queue(DAL.MICROBIT_ID_GESTURE, this.lastGesture);
             }
         }
 
@@ -354,7 +352,7 @@ namespace ks.rt.micro_bit {
           * uBit.accelerometer.getX(RAW);
           * @endcode
           */
-        public getX(system : MicroBitCoordinateSystem = MicroBitCoordinateSystem.SIMPLE_CARTESIAN): number {
+        public getX(system: MicroBitCoordinateSystem = MicroBitCoordinateSystem.SIMPLE_CARTESIAN): number {
             this.activate();
             switch (system) {
                 case MicroBitCoordinateSystem.SIMPLE_CARTESIAN:
@@ -379,7 +377,7 @@ namespace ks.rt.micro_bit {
           * uBit.accelerometer.getY(RAW);
           * @endcode
           */
-        public getY(system : MicroBitCoordinateSystem = MicroBitCoordinateSystem.SIMPLE_CARTESIAN): number {
+        public getY(system: MicroBitCoordinateSystem = MicroBitCoordinateSystem.SIMPLE_CARTESIAN): number {
             this.activate();
             switch (system) {
                 case MicroBitCoordinateSystem.SIMPLE_CARTESIAN:
@@ -404,7 +402,7 @@ namespace ks.rt.micro_bit {
           * uBit.accelerometer.getZ(RAW);
           * @endcode
           */
-        public getZ(system : MicroBitCoordinateSystem = MicroBitCoordinateSystem.SIMPLE_CARTESIAN): number {
+        public getZ(system: MicroBitCoordinateSystem = MicroBitCoordinateSystem.SIMPLE_CARTESIAN): number {
             this.activate();
             switch (system) {
                 case MicroBitCoordinateSystem.NORTH_EAST_DOWN:
@@ -430,7 +428,7 @@ namespace ks.rt.micro_bit {
             return Math.floor((360 * this.getPitchRadians()) / (2 * Math.PI));
         }
 
-        getPitchRadians() : number {
+        getPitchRadians(): number {
             this.recalculatePitchRoll();
             return this.pitch;
         }
@@ -510,7 +508,7 @@ namespace ks.rt.micro_bit {
         serialIn: string[] = [];
 
         // sensors
-        accelerometer : Accelerometer;
+        accelerometer: Accelerometer;
 
         // gestures
         useShake = false;
@@ -533,34 +531,33 @@ namespace ks.rt.micro_bit {
             this.bus = new EventBus(runtime);
             this.radio = new RadioBus(runtime);
             this.accelerometer = new Accelerometer(runtime);
-            let ens = enums();
             this.buttons = [
-                new Button(ens.MICROBIT_ID_BUTTON_A),
-                new Button(ens.MICROBIT_ID_BUTTON_B),
-                new Button(ens.MICROBIT_ID_BUTTON_AB)
+                new Button(DAL.MICROBIT_ID_BUTTON_A),
+                new Button(DAL.MICROBIT_ID_BUTTON_B),
+                new Button(DAL.MICROBIT_ID_BUTTON_AB)
             ];
             this.pins = [
-                new Pin(ens.MICROBIT_ID_IO_P0),
-                new Pin(ens.MICROBIT_ID_IO_P1),
-                new Pin(ens.MICROBIT_ID_IO_P2),
-                new Pin(ens.MICROBIT_ID_IO_P3),
-                new Pin(ens.MICROBIT_ID_IO_P4),
-                new Pin(ens.MICROBIT_ID_IO_P5),
-                new Pin(ens.MICROBIT_ID_IO_P6),
-                new Pin(ens.MICROBIT_ID_IO_P7),
-                new Pin(ens.MICROBIT_ID_IO_P8),
-                new Pin(ens.MICROBIT_ID_IO_P9),
-                new Pin(ens.MICROBIT_ID_IO_P10),
-                new Pin(ens.MICROBIT_ID_IO_P11),
-                new Pin(ens.MICROBIT_ID_IO_P12),
-                new Pin(ens.MICROBIT_ID_IO_P13),
-                new Pin(ens.MICROBIT_ID_IO_P14),
-                new Pin(ens.MICROBIT_ID_IO_P15),
-                new Pin(ens.MICROBIT_ID_IO_P16),
+                new Pin(DAL.MICROBIT_ID_IO_P0),
+                new Pin(DAL.MICROBIT_ID_IO_P1),
+                new Pin(DAL.MICROBIT_ID_IO_P2),
+                new Pin(DAL.MICROBIT_ID_IO_P3),
+                new Pin(DAL.MICROBIT_ID_IO_P4),
+                new Pin(DAL.MICROBIT_ID_IO_P5),
+                new Pin(DAL.MICROBIT_ID_IO_P6),
+                new Pin(DAL.MICROBIT_ID_IO_P7),
+                new Pin(DAL.MICROBIT_ID_IO_P8),
+                new Pin(DAL.MICROBIT_ID_IO_P9),
+                new Pin(DAL.MICROBIT_ID_IO_P10),
+                new Pin(DAL.MICROBIT_ID_IO_P11),
+                new Pin(DAL.MICROBIT_ID_IO_P12),
+                new Pin(DAL.MICROBIT_ID_IO_P13),
+                new Pin(DAL.MICROBIT_ID_IO_P14),
+                new Pin(DAL.MICROBIT_ID_IO_P15),
+                new Pin(DAL.MICROBIT_ID_IO_P16),
                 null,
                 null,
-                new Pin(ens.MICROBIT_ID_IO_P19),
-                new Pin(ens.MICROBIT_ID_IO_P20)
+                new Pin(DAL.MICROBIT_ID_IO_P19),
+                new Pin(DAL.MICROBIT_ID_IO_P20)
             ];
         }
 

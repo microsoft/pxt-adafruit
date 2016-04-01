@@ -261,8 +261,7 @@ namespace ks.rt.micro_bit {
                 this.shakeButton.addEventListener("mouseup", ev => {
                     let state = this.board;
                     Svg.fill(this.shakeButton, this.props.theme.virtualButtonUp);                              
-                    let ens = enums();
-                    this.board.bus.queue(ens.MICROBIT_ID_GESTURE, 11); // GESTURE_SHAKE
+                    this.board.bus.queue(DAL.MICROBIT_ID_GESTURE, 11); // GESTURE_SHAKE
                 })     
                 this.shakeText = Svg.child(this.g, "text", {x:400, y:110, class:'sim-text'}) as SVGTextElement;
                 this.shakeText.textContent = "SHAKE"     
@@ -784,8 +783,7 @@ svg.sim.grayscale {
                     let state = this.board;
                     state.pins[index].touched = false;
                     this.updatePin(state.pins[index], index);
-                    let ens = enums();
-                    this.board.bus.queue(state.pins[index].id, ens.MICROBIT_BUTTON_EVT_CLICK);
+                    this.board.bus.queue(state.pins[index].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
                 })                
             })
             this.buttonsOuter.slice(0,2).forEach((btn, index) => {
@@ -804,8 +802,7 @@ svg.sim.grayscale {
                     state.buttons[index].pressed = false;
                     Svg.fill(this.buttons[index], this.props.theme.buttonUp);
                     
-                    let ens = enums();
-                    this.board.bus.queue(state.buttons[index].id, ens.MICROBIT_BUTTON_EVT_CLICK);
+                    this.board.bus.queue(state.buttons[index].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
                 })
             })
             this.buttonsOuter[2].addEventListener("mousedown", ev => {
@@ -835,8 +832,7 @@ svg.sim.grayscale {
                     Svg.fill(this.buttons[1], this.props.theme.buttonUp);                
                     Svg.fill(this.buttons[2], this.props.theme.virtualButtonUp);                
                     
-                    let ens = enums();
-                    this.board.bus.queue(state.buttons[2].id, ens.MICROBIT_BUTTON_EVT_CLICK);
+                    this.board.bus.queue(state.buttons[2].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
             })        
         }
     }

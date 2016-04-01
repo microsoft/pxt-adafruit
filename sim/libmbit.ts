@@ -1,5 +1,6 @@
 /// <reference path="../node_modules/kindscript/typings/bluebird/bluebird.d.ts"/>
 /// <reference path="../node_modules/kindscript/built/kindsim.d.ts"/>
+/// <reference path="../libs/microbit/dal.d.ts"/>
 
 namespace ks.rt.micro_bit {
     export function initCurrentRuntime() {
@@ -11,10 +12,6 @@ namespace ks.rt.micro_bit {
 
     export function board() {
         return runtime.board as Board
-    }
-
-    export function enums() {
-        return runtime.enums as any as Enums
     }
 
     export interface AnimationOptions {
@@ -137,30 +134,27 @@ namespace ks.rt.micro_bit {
 
     /* input */
     export function onButtonPressed(button: number, handler: RefAction): void {
-        let ens = enums();
         let b = board();
-        if (button == ens.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
+        if (button == DAL.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
             b.usesButtonAB = true;
             runtime.queueDisplayUpdate();
         }
-        b.bus.listen(button, ens.MICROBIT_BUTTON_EVT_CLICK, handler);
+        b.bus.listen(button, DAL.MICROBIT_BUTTON_EVT_CLICK, handler);
     }
 
     export function isButtonPressed(button: number): boolean {
-        let ens = enums();
         let b = board();
-        if (button == ens.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
+        if (button == DAL.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
             b.usesButtonAB = true;
             runtime.queueDisplayUpdate();
         }
         let bts = b.buttons;
-        if (button == ens.MICROBIT_ID_BUTTON_A) return bts[0].pressed;
-        if (button == ens.MICROBIT_ID_BUTTON_B) return bts[1].pressed;
+        if (button == DAL.MICROBIT_ID_BUTTON_A) return bts[0].pressed;
+        if (button == DAL.MICROBIT_ID_BUTTON_B) return bts[1].pressed;
         return bts[2].pressed || (bts[0].pressed && bts[1].pressed);
     }
 
     export function onGesture(gesture: number, handler: RefAction) {
-        let ens = enums();
         let b = board();
         b.accelerometer.activate();
 
@@ -168,7 +162,7 @@ namespace ks.rt.micro_bit {
             b.useShake = true;
             runtime.queueDisplayUpdate();
         }
-        b.bus.listen(ens.MICROBIT_ID_GESTURE, gesture, handler);
+        b.bus.listen(DAL.MICROBIT_ID_GESTURE, gesture, handler);
     }
 
     export function onPinPressed(pin: Pin, handler: RefAction) {
@@ -382,8 +376,7 @@ namespace ks.rt.micro_bit {
     }
 
     export function onBroadcastMessageReceived(msg: number, handler: RefAction): void {
-        let ens = enums()
-        board().bus.listen(ens.MES_BROADCAST_GENERAL_ID, msg, handler);
+        board().bus.listen(DAL.MES_BROADCAST_GENERAL_ID, msg, handler);
     }
 
     export function setGroup(id: number): void {
@@ -411,8 +404,7 @@ namespace ks.rt.micro_bit {
     }
 
     export function onDatagramReceived(handler: RefAction): void {
-        let ens = enums();
-        board().bus.listen(ens.MICROBIT_ID_RADIO, ens.MICROBIT_RADIO_EVT_DATAGRAM, handler);
+        board().bus.listen(DAL.MICROBIT_ID_RADIO, DAL.MICROBIT_RADIO_EVT_DATAGRAM, handler);
     }
 }
 

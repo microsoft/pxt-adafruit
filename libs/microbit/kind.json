@@ -1,7 +1,7 @@
 {
     "name": "microbit",
     "description": "The microbit core library",
-    "installedVersion": "dnarsa",
+    "installedVersion": "tsmdvf",
     "files": [
         "README.md",
         "core.d.ts",
@@ -23,7 +23,10 @@
         "id": "microbit",
         "name": "BBC micro:bit",
         "title": "JavaScript for BBC micro:bit",
-        "cloud": false,
+        "cloud": {
+            "workspace": false,
+            "packages": true
+        },
         "blocksprj": {
             "id": "blocksprj",
             "config": {
@@ -68,13 +71,9 @@
             "isNative": false,
             "hasHex": true
         },
-        "serial" : {
+        "serial": {
             "manufacturerFilter": "^mbed$",
-            "log": true   
-        },
-        "cloud" : {
-            "workspace": false,
-            "packages": true
-        }        
+            "log": true
+        }
     }
 }

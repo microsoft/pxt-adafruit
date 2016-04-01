@@ -37,7 +37,7 @@ After two button presses, **count** will be equal to 2.
 ## 5. If the rectangle below represents the BBC micro:bit, shade the areas that will be displayed after five button presses on Button A. Explain why that particular area is shaded.
 
 ```blocks
-count_ = 0
+let count_ = 0
 input.onButtonPressed(Button.A, () => {
     count_ = count_ + 1
     basic.showNumber(count_, 100)

@@ -13,14 +13,14 @@ Welcome! This activity will teach how to use the 1st micro:bit to chart the seco
 Let's measure `acceleration (mg)` and then `send number`. `Acceleration` is measured in **milli-gravities**, so a value of -1000 is equivalent to -1g or -9.81m/s^2. We will be able to get the acceleration value (g-force), in the specified "x" dimension. `Send number` will broadcast a number data packet to other micro:bits connected via radio.
 
 ```blocks
-radio.sendNumber(input.acceleration(Dimension.X))
+radio.sendNumber(input.acceleration(Dimension.X));
 ```
 
 We want to display the acceleration forever. In order to do so, we need a `forever` loop. A forever loop will repeat code in the background forever.
 
 ```blocks
 basic.forever(() => {
-    radio.sendNumber(input.acceleration(Dimension.X))
+    radio.sendNumber(input.acceleration(Dimension.X));
 })
 ```
 

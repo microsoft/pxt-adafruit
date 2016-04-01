@@ -47,7 +47,7 @@ let yAccel = Math.abs(input.acceleration(Dimension.Y))
 let zAccel = Math.abs(input.acceleration(Dimension.Z))
 let sum = xAccel + yAccel + zAccel
 if (sum < 1400) {
-    basic.showleds(`
+    basic.showLeds(`
 . . . . .
 . . . . .
 . . # . .
@@ -71,7 +71,7 @@ let yAccel = Math.abs(input.acceleration(Dimension.Y))
 let zAccel = Math.abs(input.acceleration(Dimension.Z))
 let sum = xAccel + yAccel + zAccel
 if (sum >= 1400 && sum < 1680) {
-    basic.showleds(`
+    basic.showLeds(`
 . . . . .
 . . . # .
 . . # # .
@@ -95,7 +95,7 @@ let yAccel = Math.abs(input.acceleration(Dimension.Y))
 let zAccel = Math.abs(input.acceleration(Dimension.Z))
 let sum = xAccel + yAccel + zAccel
 if (sum >= 1680) {
-    basic.showleds(`
+    basic.showLeds(`
 . . . . .
 . . . . .
 . . . . .

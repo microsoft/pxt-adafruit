@@ -1,11 +1,8 @@
 enum Button {
-    //% enumval=MICROBIT_ID_BUTTON_A
-    A,
-    //% enumval=MICROBIT_ID_BUTTON_B
-    B,
-    //% enumval=MICROBIT_ID_BUTTON_AB
+    A = DAL.MICROBIT_ID_BUTTON_A as number,
+    B = DAL.MICROBIT_ID_BUTTON_B as number,
     //% block="A+B"
-    AB,
+    AB = DAL.MICROBIT_ID_BUTTON_AB as number,
 }
 
 enum Dimension {

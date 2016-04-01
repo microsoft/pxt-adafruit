@@ -4,6 +4,7 @@
     "installedVersion": "tsmdvf",
     "files": [
         "README.md",
+        "dal.d.ts",
         "core.d.ts",
         "mbit.ts",
         "images.ts",

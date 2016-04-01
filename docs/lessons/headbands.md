@@ -8,10 +8,10 @@ Collection
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/headbands/tutorial)
+* [activity](/microbit/lessons/headbands/activity)
 * [quiz](/microbit/lessons/headbands/quiz)
 * [quiz answers](/microbit/lessons/headbands/quiz-answers)
-* [challenges](/microbit/lessons/headbands/challenges)
+
 
 ## Class
 

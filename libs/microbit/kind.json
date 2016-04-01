@@ -72,7 +72,7 @@
             "hasHex": true
         },
         "simulator": {
-            "runOnLoad": true
+            "autoRun": true
         },
         "serial": {
             "manufacturerFilter": "^mbed$",

@@ -272,7 +272,7 @@ while (true) {
 
 ### ~avatar avatar
 
-You can review the final code for [hero](/microbit/numraj)
+Congratulations! You have a homemade hero game based on the classic version of PacMan
 
 ### ~
 

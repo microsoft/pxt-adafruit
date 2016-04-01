@@ -203,13 +203,11 @@ while (true) {
 ```
 
 
-**Do not disconnect the blocks from the conditional statements. We are focusing on this section of the code and are not showing the entire code**
 
 Let's setup the logic for the food and the ghost to be in different quadrants.
 
 ![](/static/mb/blocks/lessons/hero-9.jpg)
 
-**Do not disconnect the blocks for the conditional statements. We are focusing on this section of the code and are not showing the entire code**
 
 The game over component is now upon the game. If the hero is `touching` the ghost, let's display `game over`
 

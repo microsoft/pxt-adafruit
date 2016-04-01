@@ -204,20 +204,71 @@ while (true) {
 
 
 
-Let's setup the logic for the food and the ghost to be in different quadrants.
+Let's setup the logic for the food and the ghost to be in different quadrants. Finally, the game over component is now upon the game. If the hero is `touching` the ghost, let's display `game over`
 
-![](/static/mb/blocks/lessons/hero-9.jpg)
+```blocks
+
+let hero = game.createSprite(2, 2);
+let food = game.createSprite(4, 4);
+let ghost = game.createSprite(0, 0);
+let ghost.change(LedSpriteProperty.Blink, 100);
+food = led.brightness() == 8;
+while (true) {
+    basic.pause(400);
+    if (ghost.get(LedSpriteProperty.X) < hero.get(LedSpriteProperty.X)) {
+        ghost.change(LedSpriteProperty.X, 1);
+    }
+    else if (ghost.get(LedSpriteProperty.X) < hero.get(LedSpriteProperty.X)) {
+        ghost.change(LedSpriteProperty.X,  -1 );
+    }
+    else if (ghost.get(LedSpriteProperty.Y) < hero.get(LedSpriteProperty.Y)) {
+        ghost.change(LedSpriteProperty.Y, 1);
+    }
+    else if (ghost.get(LedSpriteProperty.Y) > hero.get(LedSpriteProperty.Y)) {
+        ghost.change(LedSpriteProperty.Y,  -1 );
+    }
+    if (input.acceleration(Dimension.X) > 200) {
+        hero.change(LedSpriteProperty.X, 1);
+    }
+    else if (input.acceleration(Dimension.X) <  -200 ) {
+        hero.change(LedSpriteProperty.X,  -1 );
+    }
+    if (input.acceleration(Dimension.Y) > 200) {
+        hero.change(LedSpriteProperty.Y, 1);
+    }
+    else if (input.acceleration(Dimension.Y) >  -200 ) {
+        hero.change(LedSpriteProperty.Y,  -1 );
+    }
+    if (hero.isTouching(food)) {
+        game.addScore(1);
+        food.set(LedSpriteProperty.X, Math.random(5));
+        food.set(LedSpriteProperty.Y, Math.random(5));
+        if (food.get(LedSpriteProperty.X) < 2 && food.get(LedSpriteProperty.Y) < 2) {
+            ghost.set(LedSpriteProperty.X, 4);
+            ghost.set(LedSpriteProperty.Y, 4);
+        }
+        else if (food.get(LedSpriteProperty.X) > 2 && food.get(LedSpriteProperty.Y) < 2) {
+            ghost.set(LedSpriteProperty.X, 0);
+            ghost.set(LedSpriteProperty.Y, 4);
+        }
+        else if (food.get(LedSpriteProperty.X) < 2 && food.get(LedSpriteProperty.Y) > 2) {
+            ghost.set(LedSpriteProperty.X, 4);
+            ghost.set(LedSpriteProperty.Y, 0);
+        }
+        else {
+            ghost.set(LedSpriteProperty.X, 0);
+            ghost.set(LedSpriteProperty.Y, 0);
+        }
+    }
+    if (hero.isTouching(ghost)) {
+        game.gameOver();
+    }
+
+}
+0.set(LedSpriteProperty.X, 4);
 
 
-The game over component is now upon the game. If the hero is `touching` the ghost, let's display `game over`
-
-![](/static/mb/blocks/lessons/hero-10.jpg)
-
-**Do not disconnect the conditional statements blocks from the remaining blocks. We are focusing on this section of the code and are not showing the entire code**
-
-The game can also use the buttons. Let's create a `while` loop for button A is pressed. If button A is pressed, the micro:bit will display the word Hero. Let's use a `while` loop for button B is pressed. If button B is pressed, the micro:bit will display image of the hero.
-
-![](/static/mb/blocks/lessons/hero-11.jpg)
+```
 
 ### ~avatar avatar
 

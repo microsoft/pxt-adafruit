@@ -86,7 +86,7 @@ while (true) {
     }
     else if (false) {
     }
-    basic.pause(20);
+   
 }
 
 
@@ -114,7 +114,7 @@ while (true) {
     else if (ghost.get(LedSpriteProperty.Y) > hero.get(LedSpriteProperty.Y)) {
         ghost.change(LedSpriteProperty.Y,  -1 );
     }
-    basic.pause(20);
+   
 }
 
 
@@ -122,14 +122,46 @@ while (true) {
 
 Let's enable pacman to move in the x-direction and move in the y-direction with acceleration using the micor:bit sensor
 
-![](/static/mb/blocks/lessons/hero-7.png)
-
-
-**Do not disconnect the blocks for the conditional statements. We are focusing on this section of the code and are not showing the entire code**
+```blocks
+let hero = game.createSprite(2, 2);
+let food = game.createSprite(4, 4);
+let ghost = game.createSprite(0, 0);
+ghost.change(LedSpriteProperty.Blink, 100);
+food = led.brightness() == 8;
+while (true) {
+    basic.pause(400);
+    if (ghost.get(LedSpriteProperty.X) < hero.get(LedSpriteProperty.X)) {
+        ghost.change(LedSpriteProperty.X, 1);
+    }
+    else if (ghost.get(LedSpriteProperty.X) < hero.get(LedSpriteProperty.X)) {
+        ghost.change(LedSpriteProperty.X,  -1 );
+    }
+    else if (ghost.get(LedSpriteProperty.Y) < hero.get(LedSpriteProperty.Y)) {
+        ghost.change(LedSpriteProperty.Y, 1);
+    }
+    else if (ghost.get(LedSpriteProperty.Y) > hero.get(LedSpriteProperty.Y)) {
+        ghost.change(LedSpriteProperty.Y,  -1 );
+    }
+    if (input.acceleration(Dimension.X) > 200) {
+        hero.change(LedSpriteProperty.X, 1);
+    }
+    else if (input.acceleration(Dimension.X) <  -200 ) {
+        hero.change(LedSpriteProperty.X,  -1 );
+    }
+    if (input.acceleration(Dimension.Y) > 200) {
+        hero.change(LedSpriteProperty.Y, 1);
+    }
+    else if (input.acceleration(Dimension.Y) >  -200 ) {
+        hero.change(LedSpriteProperty.Y,  -1 );
+    }
+}
+```
 
 Let's setup the logic for the food. If hero  is `touching` "food", increase the score of the game by 1 and `set` ``x`` -direction of food randomly randomly from 0 to 4 and `set` ``y``-direction of food randomly from 0 to 4.
 
 ![](/static/mb/blocks/lessons/hero-8.jpg)
+
+
 
 **Do not disconnect the blocks from the conditional statements. We are focusing on this section of the code and are not showing the entire code**
 

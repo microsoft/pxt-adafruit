@@ -52,12 +52,9 @@ We want to include a block from the Loops drawer called `While`. Then set the `W
 
 
 ```blocks
- let ghost = 0;
- let food = 0;
- let hero = 0;
-hero = game.createSprite(2, 2);
-food = game.createSprite(4, 4);
-ghost = game.createSprite(0, 0);
+let hero = game.createSprite(2, 2);
+let food = game.createSprite(4, 4);
+let ghost = game.createSprite(0, 0);
 ghost.change(LedSpriteProperty.Blink, 100);
 food = led.brightness() == 8;
 while (true) {

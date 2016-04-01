@@ -56,9 +56,9 @@ basic.forever(() => {
     }
     if (eggY1 == 4) {
         if (basketX1 == eggX1) {
-            game.addScore(1) // ***
+            game.addScore(1) 
         } else {
-            game.removeLife(1) // ***
+            game.removeLife(1)
         }
     }
     basic.pause(300)
@@ -142,7 +142,7 @@ basic.forever(() => {
             game.removeLife(1)
         }
     }
-    basic.pause(fallingPause1) // ***
+    basic.pause(fallingPause1) 
 })
 
 ```

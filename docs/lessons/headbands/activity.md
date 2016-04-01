@@ -1,6 +1,4 @@
-# headbands challenges
-
-These challenges will teach you how to create a fun charades game to play with your friends. #docs
+# headbands activity
 
 ## Before we get started
 

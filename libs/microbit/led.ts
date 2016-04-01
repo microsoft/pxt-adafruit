@@ -1,8 +1,8 @@
 enum DisplayMode {
-    //% enumval=0 block="black and white"
-    BackAndWhite,
-    //% enumval=1 block="greyscale"
-    Greyscale,
+    //% block="black and white"
+    BackAndWhite = 0,
+    //% block="greyscale"
+    Greyscale = 1,
 }
 
 //% color=3 weight=35

@@ -1,112 +1,76 @@
 enum Note {
-    //% enumval=262
-    C,
-    //% enumval=277 block=C#
-    CSharp,
-    //% enumval=294
-    D,
-    //% enumval=311
-    Eb,
-    //% enumval=330
-    E,
-    //% enumval=349
-    F,
-    //% enumval=370  block=F#
-    FSharp,
-    //% enumval=392
-    G,
-    //% enumval=415  block=G#
-    GSharp,
-    //% enumval=440
-    A,
-    //% enumval=466
-    Bb,
-    //% enumval=494
-    B,
-    //% enumval=131
-    C3,
-    //% enumval=139  block=C#3
-    CSharp3,
-    //% enumval=147
-    D3,
-    //% enumval=156
-    Eb3,
-    //% enumval=165
-    E3,
-    //% enumval=175
-    F3,
-    //% enumval=185 block=F#3
-    FSharp3,
-    //% enumval=196
-    G3,
-    //% enumval=208 block=G#3
-    GSharp3,
-    //% enumval=220
-    A3,
-    //% enumval=233
-    Bb3,
-    //% enumval=247
-    B3,
-    //% enumval=262
-    C4,
-    //% enumval=277  block=C#4
-    CSharp4,
-    //% enumval=294
-    D4,
-    //% enumval=311
-    Eb4,
-    //% enumval=330
-    E4,
-    //% enumval=349
-    F4,
-    //% enumval=370 block=F#3
-    FSharp4,
-    //% enumval=392
-    G4,
-    //% enumval=415  block=G#3
-    GSharp4,
-    //% enumval=440
-    A4,
-    //% enumval=466
-    Bb4,
-    //% enumval=494
-    B4,
-    //% enumval=523
-    C5,
-    //% enumval=555 block=C#5
-    CSharp5,
-    //% enumval=587
-    D5,
-    //% enumval=622
-    Eb5,
-    //% enumval=659
-    E5,
-    //% enumval=698
-    F5,
-    //% enumval=740  block=F#5
-    FSharp5,
-    //% enumval=784
-    G5,
-    //% enumval=831 block=G#5
-    GSharp5,
-    //% enumval=880
-    A5,
-    //% enumval=932
-    Bb5,
-    //% enumval=989
-    B5,
+    C = 262,
+    //% block=C#
+    CSharp = 277,
+    D = 294,
+    Eb = 311,
+    E = 330,
+    F = 349,
+    //% block=F#
+    FSharp = 370,
+    G = 392,
+    //% block=G#
+    GSharp = 415,
+    A = 440,
+    Bb = 466,
+    B = 494,
+    C3 = 131,
+    //% block=C#3
+    CSharp3 = 139,
+    D3 = 147,
+    Eb3 = 156,
+    E3 = 165,
+    F3 = 175,
+    //% block=F#3
+    FSharp3 = 185,
+    G3 = 196,
+    //% block=G#3
+    GSharp3 = 208,
+    A3 = 220,
+    Bb3 = 233,
+    B3 = 247,
+    C4 = 262,
+    //% block=C#4
+    CSharp4 = 277,
+    D4 = 294,
+    Eb4 = 311,
+    E4 = 330,
+    F4 = 349,
+    //% block=F#3
+    FSharp4 = 370,
+    G4 = 392,
+    //% block=G#3
+    GSharp4 = 415,
+    A4 = 440,
+    Bb4 = 466,
+    B4 = 494,
+    C5 = 523,
+    //% block=C#5
+    CSharp5 = 555,
+    D5 = 587,
+    Eb5 = 622,
+    E5 = 659,
+    F5 = 698,
+    //% block=F#5
+    FSharp5 = 740,
+    G5 = 784,
+    //% block=G#5
+    GSharp5 = 831,
+    A5 = 880,
+    Bb5 = 932,
+    B5 = 989,
 }
 
 enum BeatFraction {
-    //% enumval=1 block=1
+    //% block=1
     Whole = 1,
-    //% enumval=2 block="1/2"
+    //% block="1/2"
     Half = 2,
-    //% enumval=4 block="1/4"
+    //% block="1/4"
     Quater = 4,
-    //% enumval=8 block="1/8"
+    //% block="1/8"
     Eighth = 8,
-    //% enumval=16 block="1/16"
+    //% block="1/16"
     Sixteenth = 16
 }
 

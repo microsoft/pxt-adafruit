@@ -9,21 +9,21 @@ enum Button {
 }
 
 enum Dimension {
-    //% enumval=0 block=x
-    X,
-    //% enumval=1 block=y
-    Y,
-    //% enumval=2 block=z
-    Z,
-    //% enumval=3 block=strength
-    Strength,
+    //% block=x
+    X = 0,
+    //% block=y
+    Y = 1,
+    //% block=z
+    Z = 2,
+    //% block=strength
+    Strength = 3,
 }
 
 enum Rotation {
-    //% enumval=0 block=pitch
-    Pitch,
-    //% enumval=1 block=roll
-    Roll,
+    //% block=pitch
+    Pitch = 0,
+    //% block=roll
+    Roll = 1,
 }
 
 enum TouchPin {
@@ -39,23 +39,23 @@ enum AcceleratorRange {
     /**
      * The accelerator measures forces up to 1 gravity
      */
-    //%  block="1g" enumval=1
-    OneG,
+    //%  block="1g"
+    OneG = 1,
     /**
      * The accelerator measures forces up to 2 gravity
      */
-    //%  block="2g" enumval=2
-    TwoG,
+    //%  block="2g"
+    TwoG = 2,
     /**
      * The accelerator measures forces up to 4 gravity
      */
-    //% block="4g" enumval=4
-    FourG,
+    //% block="4g"
+    FourG = 4,
     /**
      * The accelerator measures forces up to 8 gravity
      */
-    //% block="8g" enumval=8
-    EightG
+    //% block="8g"
+    EightG = 8
 }
 
 /*
@@ -80,43 +80,43 @@ enum Gesture {
     /**
      * Raised when shaken
      */
-    //% block=shake enumval=11
-    Shake,
+    //% block=shake
+    Shake = 11,
     /**
      * Raised when the logo is upward and the screen is vertical
      */
-    //% block="logo up" enumval=1
-    LogoUp,
+    //% block="logo up"
+    LogoUp = 1,
     /**
      * Raised when the logo is downward and the screen is vertical
      */
-    //% block="logo down" enumval=2
-    LogoDown,
+    //% block="logo down"
+    LogoDown = 2,
     /**
      * Raised when the screen is pointing down and the board is horizontal
      */
-    //% block="screen up" enumval=5
-    ScreenUp,
+    //% block="screen up"
+    ScreenUp = 5,
     /**
      * Raised when the screen is pointing up and the board is horizontal
      */
-    //% block="screen down" enumval=6
-    ScreenDown,
+    //% block="screen down"
+    ScreenDown = 6,
     /**
      * Raised when the screen is pointing left
      */
-    //% block="tilt left" enumval=3
-    TiltLeft,
+    //% block="tilt left"
+    TiltLeft = 3,
     /**
      * Raised when the screen is pointing right
      */
-    //% block="tilt right" enumval=4
-    TiltRight,    
+    //% block="tilt right"
+    TiltRight = 4,    
     /**
      * Raised when the board is falling!
      */
-    //% block="free fall" enumval=7
-    FreeFall
+    //% block="free fall"
+    FreeFall = 7
 }
 
 //% color=300 weight=99

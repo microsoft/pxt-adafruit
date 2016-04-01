@@ -74,6 +74,10 @@
         "simulator": {
             "autoRun": true
         },
+        "compileService": {
+            "gittag": "v0",
+            "serviceId": "ws"
+        },
         "serial": {
             "manufacturerFilter": "^mbed$",
             "log": true

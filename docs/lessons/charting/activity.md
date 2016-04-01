@@ -21,7 +21,9 @@ We want to display the acceleration forever. In order to do so, we need a `forev
 ```blocks
 basic.forever(() => {
     radio.sendNumber(input.acceleration(Dimension.X));
-})
+});
+
+
 ```
 
 We want to register code to run when a packet is received over radio. We can implement this code by adding `on data received`.

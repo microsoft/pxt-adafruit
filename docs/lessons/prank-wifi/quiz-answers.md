@@ -15,9 +15,9 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 <br/>
 
 ```blocks
-let xAccel = math.abs(input.acceleration("x"))
-let yAccel = math.abs(input.acceleration("y"))
-let zAccel = math.abs(input.acceleration("z"))
+let xAccel = Math.abs(input.acceleration(Dimension.X))
+let yAccel = Math.abs(input.acceleration(Dimension.Y))
+let zAccel = Math.abs(input.acceleration(Dimension.Z))
 ```
 
 <br/>
@@ -29,6 +29,9 @@ let zAccel = math.abs(input.acceleration("z"))
 <br/>
 
 ```blocks
+let xAccel = Math.abs(input.acceleration(Dimension.X))
+let yAccel = Math.abs(input.acceleration(Dimension.Y))
+let zAccel = Math.abs(input.acceleration(Dimension.Z))
 let sum = xAccel + yAccel + zAccel
 ```
 
@@ -39,6 +42,10 @@ let sum = xAccel + yAccel + zAccel
 <br/>
 
 ```blocks
+let xAccel = Math.abs(input.acceleration(Dimension.X))
+let yAccel = Math.abs(input.acceleration(Dimension.Y))
+let zAccel = Math.abs(input.acceleration(Dimension.Z))
+let sum = xAccel + yAccel + zAccel
 if (sum < 1400) {
     basic.showleds(`
 . . . . .
@@ -59,6 +66,10 @@ if (sum < 1400) {
 <br/>
 
 ```blocks
+let xAccel = Math.abs(input.acceleration(Dimension.X))
+let yAccel = Math.abs(input.acceleration(Dimension.Y))
+let zAccel = Math.abs(input.acceleration(Dimension.Z))
+let sum = xAccel + yAccel + zAccel
 if (sum >= 1400 && sum < 1680) {
     basic.showleds(`
 . . . . .
@@ -70,7 +81,7 @@ if (sum >= 1400 && sum < 1680) {
 }
 ```
 
-## 5. Write the 'if statement' needed to display this specific plot image on the device
+## 5. Write the code to display this specific image on the device
 
 ![](/static/mb/lessons/prank-wifi-0.png)
 
@@ -78,7 +89,11 @@ if (sum >= 1400 && sum < 1680) {
 
 <br/>
 
-```
+```blocks
+let xAccel = Math.abs(input.acceleration(Dimension.X))
+let yAccel = Math.abs(input.acceleration(Dimension.Y))
+let zAccel = Math.abs(input.acceleration(Dimension.Z))
+let sum = xAccel + yAccel + zAccel
 if (sum >= 1680) {
     basic.showleds(`
 . . . . .

@@ -98,13 +98,9 @@ while (true) {
 Let's create the third function and forth function that continues the same logic in the y-direction of pacman and ghost. We create a function from the Game drawer that will check the y-direction of pacman and ghost. Finally, change the y-direction of the ghost to continue following pacman.
 
 ```blocks
-
- let ghost = 0;
- let food = 0;
- let hero = 0;
-hero = game.createSprite(2, 2);
-food = game.createSprite(4, 4);
-ghost = game.createSprite(0, 0);
+let hero = game.createSprite(2, 2);
+let food = game.createSprite(4, 4);
+let ghost = game.createSprite(0, 0);
 ghost.change(LedSpriteProperty.Blink, 100);
 food = led.brightness() == 8;
 while (true) {

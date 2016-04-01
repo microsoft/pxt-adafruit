@@ -150,9 +150,11 @@ Trim any leftover fabric, threads or tape.
 
 Your watch is ready!
 
-### Step 22
+### ~avatar avatar
 
-Connect your micro:bit to your computer using your USB cable and upload the [rock paper scissors](/microbit/rrwupw) script on it. Shake your watch to play against... the micro:bit!
+Excellent, you're ready to continue with the [challenges](/microbit/lessons/light-beatbox/activity)!
+
+### ~
 
 ### Acknowledgements
 

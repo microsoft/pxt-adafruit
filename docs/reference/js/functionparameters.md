@@ -1,6 +1,6 @@
 # Function Parameters
 
-How to use parameters to pass info in and out of an function. #docs #input #output #function #functionparameters
+How to use parameters to pass info in and out of an function.
 
 ### @parent js/function
  

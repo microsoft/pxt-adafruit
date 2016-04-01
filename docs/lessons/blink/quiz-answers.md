@@ -1,6 +1,6 @@
 # blink blocks quiz answers
 
-Learn how to create a blinking LED script. #LED #screen  #plot #docs
+Learn how to create a blinking LED script.
 
 This is the answer key for the [blink quiz](/microbit/lessons/blink/quiz).
 

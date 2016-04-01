@@ -1,6 +1,6 @@
 # smiley quiz
 
-make a smiley face blink #LED #screen #animation #docs
+make a smiley face blink.
 
 ## Name
 

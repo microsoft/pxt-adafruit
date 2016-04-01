@@ -1,6 +1,6 @@
 # rotating animation quiz
 
-Learn how to create a rotating image with a while loop. #image #loop  #while #docs
+Learn how to create a rotating image with a while loop.
 
 ## Name
 

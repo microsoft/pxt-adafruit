@@ -1,6 +1,6 @@
 # Markdown Syntax
 
-Syntax to create formatted text in Touch Develop. #docs #markdown
+Syntax to create formatted text in Touch Develop.
 
 ### @parent td/comment
  

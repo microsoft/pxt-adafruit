@@ -1,6 +1,6 @@
 # glowing sword quiz
 
-make a glowing sword. #LED #image #fade #docs
+make a glowing sword.
 
 ## Name
 

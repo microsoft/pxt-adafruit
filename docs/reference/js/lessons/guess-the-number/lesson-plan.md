@@ -1,6 +1,6 @@
 # guess the number lesson plan
 
-Learn how to create a random number with input from button A. #input #screen #math #docs
+Learn how to create a random number with input from button A.
 
 ### @video vimeo/134121077
 

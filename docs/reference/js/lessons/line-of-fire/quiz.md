@@ -1,6 +1,6 @@
 # line of fire quiz
 
-create a game that relies on precise instincts and timing reflexes #LED #number #math #acceleration #docs
+create a game that relies on precise instincts and timing reflexes.
 
 ## Name
 

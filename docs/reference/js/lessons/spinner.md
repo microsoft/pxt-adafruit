@@ -1,6 +1,6 @@
 # spinner lesson
 
-a spin the BBC micro:bit game with the input on shake #button #pressed #math #random #var #string #if #docs
+a spin the BBC micro:bit game with the input on shake.
 
 ## Topic
 

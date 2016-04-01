@@ -1,6 +1,6 @@
 #  lucky 7 quiz
 
-Show a number on the BBC micro:bit. #LED #screen #show #math #docs #input
+Show a number on the BBC micro:bit.
 
 ## Name
 

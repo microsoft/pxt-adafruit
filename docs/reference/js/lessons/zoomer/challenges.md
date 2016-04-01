@@ -1,6 +1,6 @@
 # zoomer challenges
 
-Coding challenges for the zoomer tutorial.#acceleration #docs #input
+Coding challenges for the zoomer tutorial.#acceleration.
 
 ## Before we get started
 

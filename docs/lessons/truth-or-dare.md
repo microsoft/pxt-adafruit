@@ -1,6 +1,6 @@
 # truth or dare lesson
 
-create a love meter with the BBC micro:bit #button #pressed #math #random #var #string #if #docs
+create a love meter with the BBC micro:bit.
 
 ### @video td/videos/truth-or-dare-0
 

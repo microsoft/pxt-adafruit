@@ -1,6 +1,6 @@
 # meteorite quiz
 
-create the game meteorite #LED #number #math #acceleration #docs
+create the game meteorite.
 
 ## Name
 

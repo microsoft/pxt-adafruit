@@ -1,6 +1,6 @@
 # night light lesson
 
-change the brightness of the BBC micro:bit #brightness #plot #docs
+change the brightness of the BBC micro:bit.
 
 ### @video td/videos/night-light-0
 

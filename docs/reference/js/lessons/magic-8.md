@@ -1,6 +1,6 @@
 # magic 8 lesson
 
-a fortune teller game with the BBC micro:bit #string #shake #clear-screen #if #string #number #var #docs
+a fortune teller game with the BBC micro:bit.
 
 ### @video td/videos/magic-8-1
 

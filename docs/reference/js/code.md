@@ -1,6 +1,6 @@
 # function
 
-A function with inputs and outputs. #docs #function #language
+A function with inputs and outputs.
 
 ### @parent js/language
  

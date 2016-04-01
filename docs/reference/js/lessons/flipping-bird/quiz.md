@@ -1,6 +1,6 @@
 # flipping bird quiz 
 
-use modulo with a conditional #mod #shake #variables #docs #input #mod
+use modulo with a conditional.
 
 ## Name
 

@@ -1,6 +1,6 @@
 # runaway pacman quiz
 
-create a game that is inspired by the classic arcade game Pac Man #LED #number #math #acceleration #docs
+create a game that is inspired by the classic arcade game Pac Man.
 
 ## Name
 

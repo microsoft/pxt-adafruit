@@ -1,6 +1,6 @@
 # Digital Read Pin
 
-The digital read pin function. #digitalreadpin #docs
+The digital read pin function.
 
 Digitally read the specified [pin](/microbit/device/pins) (``P0``, ``P1``, ``P2``, ...) as digital. **Some pins are also used by the display, read the [pin documentation ](/microbit/device/pins) carefully.**
 

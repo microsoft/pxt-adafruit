@@ -1,6 +1,6 @@
 # In-browser compiler
 
-The BBC micro:bit pins #docs #gnd #p1 #p2 #p3 #3V
+The BBC micro:bit pins.
 
 ## We listened to your feedback!
 

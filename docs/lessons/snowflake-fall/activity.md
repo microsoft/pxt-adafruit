@@ -1,6 +1,6 @@
 # snowflake fall blocks activity
 
-design a blinking rectangle animation. #docs #tutorials #stepByStep
+design a blinking rectangle animation.
 
 ### ~avatar avatar
 

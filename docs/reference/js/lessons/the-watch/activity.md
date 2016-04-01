@@ -1,6 +1,6 @@
 # The watch activity
 
-control images with variables. #microbit #docs
+control images with variables.
 
 # BBC micro:bit watch
 

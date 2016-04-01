@@ -1,6 +1,6 @@
 # Signal Strength
 
-The `signal strength` function. #docs #antenna #ble
+The `signal strength` function.
 
 Returns the signal strength reported by the paired device from ``0`` (no signal) to ``4`` (full strength).
 

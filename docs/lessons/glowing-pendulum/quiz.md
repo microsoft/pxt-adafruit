@@ -1,6 +1,6 @@
 # glowing pendulum quiz
 
-construct a pendulum that glows using acceleration #LED #number #math #acceleration #docs
+construct a pendulum that glows using acceleration.
 
 ## Name
 

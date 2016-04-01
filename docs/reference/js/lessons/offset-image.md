@@ -1,6 +1,6 @@
 # offset image lesson 
 
-shift an image horizontally across the display with offset #offset #image #docs
+shift an image horizontally across the display with offset.
 
 ### @video td/videos/offset-image-0
 

@@ -1,6 +1,6 @@
 # looper quiz
 
-Learn how to create a series of numbers with a for loop. #LED #screen #plot #docs
+Learn how to create a series of numbers with a for loop.
 
 ## Name
 

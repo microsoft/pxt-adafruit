@@ -1,6 +1,6 @@
 # Assignment Operator
 
-Set the value for local and global variables #docs #assignment #language #var #data
+Set the value for local and global variables.
 
 ### @parent js/operators
  

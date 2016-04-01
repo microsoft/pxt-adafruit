@@ -1,6 +1,6 @@
 # prank wifi quiz
 
-create a fake wifi app to trick your friends #string #forever #abs #var #plot #image #if #math #abs #acceleration #docs
+create a fake wifi app to trick your friends.
 
 ## Name
 

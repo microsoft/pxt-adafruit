@@ -1,6 +1,6 @@
 # love meter lesson
 
-create a love meter with the BBC micro:bit #pin #pressed #string #if #var #pause #show #docs
+create a love meter with the BBC micro:bit.
 
 ### @video td/videos/love-meter-0
 

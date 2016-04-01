@@ -1,6 +1,6 @@
 # Create and Use Libraries
 
-Libraries are scripts with functions that you can use in other scripts. #docs #libraries #language #library
+Libraries are scripts with functions that you can use in other scripts.
 
 ### @parent js/language
 

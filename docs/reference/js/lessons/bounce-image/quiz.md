@@ -1,6 +1,6 @@
 # bounce image quiz
 
-scroll an image on the BBC micro:bit #LED #screen #animation #docs
+scroll an image on the BBC micro:bit.
 
 ## Name
 

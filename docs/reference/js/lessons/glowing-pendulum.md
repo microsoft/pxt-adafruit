@@ -1,6 +1,6 @@
 # glowing pendulum lesson
 
-construct a pendulum that glows using acceleration #var #acceleration #abs #brightness #plot #docs
+construct a pendulum that glows using acceleration.
 
 ## Topic
 

@@ -1,6 +1,6 @@
 # flipping bird quiz answers
 
-use modulo with a conditional #mod #shake #variables #docs #input #mod
+use modulo with a conditional.
 
 This is the answer key for the [flipping bird quiz](/microbit/lessons/flipping-bird/quiz).
 

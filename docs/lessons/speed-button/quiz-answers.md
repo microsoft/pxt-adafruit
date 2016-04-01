@@ -1,6 +1,6 @@
 # speed button quiz answers
 
-counter that keeps track of how many times button "A" has been pressed #LED #screen #variables #docs #input
+counter that keeps track of how many times button "A" has been pressed.
 
 This is the answer key for the [speed button quiz](/microbit/lessons/speed-button/quiz).
 

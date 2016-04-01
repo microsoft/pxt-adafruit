@@ -1,6 +1,6 @@
 # rotating animation lesson plan
 
-Learn how to create images with a global variable and while loop. #LED #screen  #plot #docs
+Learn how to create images with a global variable and while loop.
 
 ### @video vimeo/134323475
 

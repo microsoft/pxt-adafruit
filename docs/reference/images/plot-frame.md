@@ -1,6 +1,6 @@
 # Plot Frame
 
-The plot frame function. #plotframe #docs #image #screen #LED
+The plot frame function.
 
 Display an [Image](/microbit/reference/image/image) on the BBC micro:bit's [LED screen](/microbit/device/screen)
 

@@ -1,6 +1,6 @@
 # For
 
-Repeat code a preset number of times. #docs #for #endfor #language
+Repeat code a preset number of times.
 
 ### @parent js/language
  

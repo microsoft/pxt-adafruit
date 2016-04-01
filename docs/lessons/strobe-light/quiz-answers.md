@@ -1,6 +1,6 @@
 # strobe light quiz answers
 
-Learn how to create a blinking images with a for loop. #LED #screen #plot #docs
+Learn how to create a blinking images with a for loop.
 
 This is the answer key for the [strobe light quiz](/microbit/lessons/strobe-light/quiz).
 

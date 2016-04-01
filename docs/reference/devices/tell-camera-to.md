@@ -1,6 +1,6 @@
 # tell camera to
 
-The tell camera to function. #docs #antenna #ble
+The tell camera to function.
 
 Access the photo/video-taking functionality of a remote device using the ``tell camera to`` function.
 

@@ -1,6 +1,6 @@
 # Run Code in your Browser
 
-Run scripts in a web browser. #docs #simulator #run
+Run scripts in a web browser.
 
 While you're writing and testing your scripts, you'll mostly be running scripts in your browser by clicking the `run` button. Both the [Microsoft Block editor](/microbit/blocks/editor) and the [Touch Develop editor](/microbit/js/editor) have a `run` button above the coding area.
 

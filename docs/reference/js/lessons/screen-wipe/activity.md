@@ -1,6 +1,6 @@
 # screen wipe activity
 
-Clear the screen by pressing buttons on the BBC micro:bit #docs #tutorials #stepByStep
+Clear the screen by pressing buttons on the BBC micro:bit.
 
 ### ~avatar avatar
 

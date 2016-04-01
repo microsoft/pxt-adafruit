@@ -1,6 +1,6 @@
 # screen up and down challenges
 
-The on screen up function. #onscreenup #docs
+The on screen up function.
 
 **Challenge 0**
 

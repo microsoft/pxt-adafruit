@@ -1,6 +1,6 @@
 # tell remote control to
 
-The tell remote control to function. #docs #antenna #ble
+The tell remote control to function.
 
 Control the presentation of media content available on a remote device using the `tell remote control` to function.
 

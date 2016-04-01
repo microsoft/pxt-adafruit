@@ -1,6 +1,6 @@
 # snowflake fall quiz answers
 
-create a snowflake fall animation #animation#forever #docs
+create a snowflake fall animation.
 
 This is the answer key for the [snowflake fall quiz](/microbit/lessons/snowflake-fall/quiz).
 

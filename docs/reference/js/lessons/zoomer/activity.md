@@ -1,6 +1,6 @@
 # zoomer activity
 
-measure the acceleration on the BBC micro:bit in the "z" direction. #microbit #docs
+measure the acceleration on the BBC micro:bit in the "z" direction.
 
 ### ~avatar avatar
 

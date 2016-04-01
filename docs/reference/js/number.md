@@ -1,6 +1,6 @@
 # Number
 
-An integer number. #docs #Number #var
+An integer number.
 
 ### @parent js/language
 

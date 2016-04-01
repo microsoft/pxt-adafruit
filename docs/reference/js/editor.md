@@ -1,6 +1,6 @@
 # Touch Develop Editor
 
-The Touch Develop editor. #docs #editor #scripts #compile #run #keyboard
+The Touch Develop editor.
 
 ### @parent js/contents
  

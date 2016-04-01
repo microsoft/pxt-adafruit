@@ -1,6 +1,6 @@
 # glowing sword quiz answers
 
-The answers for the glowing sword quiz. #LED #image #fade #docs
+The answers for the glowing sword quiz.
 
 This is the answer key for the [glowing sword quiz](/microbit/lessons/glowing-sword/quiz).
 

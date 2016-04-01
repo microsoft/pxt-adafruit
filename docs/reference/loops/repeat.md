@@ -1,6 +1,6 @@
 # Repeat
 
-Repeat code a preset number of times. #docs #repeat #language
+Repeat code a preset number of times.
 
 Repeat code a fixed number of times.
 

@@ -1,6 +1,6 @@
 # Return
 
-Exit a function. #docs #return #language #function
+Exit a function.
 
 ### @parent js/statement
  

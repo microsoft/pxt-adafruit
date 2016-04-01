@@ -1,6 +1,6 @@
 # hack your headphones activity 
 
-hack your headphones #microbit #docs
+hack your headphones.
 
 # BBC micro:bit music
 

@@ -1,6 +1,6 @@
 # Operators
 
-Built-in operators. #docs #operators #language
+Built-in operators.
 
 ### @parent js/language
  

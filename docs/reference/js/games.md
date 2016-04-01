@@ -1,6 +1,6 @@
 # Game Tutorials
 
-Overview of Games for the BBC micro:bit. #docs #contents
+Overview of Games for the BBC micro:bit.
 
 ### @short Games
 

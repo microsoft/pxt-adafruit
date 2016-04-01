@@ -1,6 +1,6 @@
 # Receive Number
 
-The broadcast function. #docs #ble #radio
+The broadcast function.
 
 Reads the next radio packet as a number data packet.
 

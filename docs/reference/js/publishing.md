@@ -1,6 +1,6 @@
 # Publish a Script
 
-How to publish scripts. #docs #publishing
+How to publish scripts.
 
 ### @parent js/contents
  

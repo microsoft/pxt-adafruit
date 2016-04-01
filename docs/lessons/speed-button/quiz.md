@@ -1,6 +1,6 @@
 # speed button quiz 
 
-counter that keeps track of how many times button "A" has been pressed #LED #screen #variables #docs #input
+counter that keeps track of how many times button "A" has been pressed.
 
 ## Name
 

@@ -1,6 +1,6 @@
 # love meter quiz answers
 
-The answers to the love meter quiz. #LED #screen  #variables #docs
+The answers to the love meter quiz.
 
 This is the answer key for the [love meter quiz](/microbit/lessons/love-meter/quiz).
 

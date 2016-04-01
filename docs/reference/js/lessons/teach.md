@@ -1,6 +1,6 @@
 # Teach
 
-Overview of Touch Develop lesson instructions for the BBC micro:bit. #docs #contents
+Overview of Touch Develop lesson instructions for the BBC micro:bit.
 
 ### @short Teach
 

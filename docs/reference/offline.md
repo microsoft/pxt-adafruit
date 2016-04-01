@@ -1,6 +1,6 @@
 # Off-line support
 
-The micro:bit pins #docs #gnd #p1 #p2 #p3 #3V
+The micro:bit pins.
 
 ## We listened to your feedback!
 

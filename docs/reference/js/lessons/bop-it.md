@@ -1,6 +1,6 @@
 # bop it lesson
 
-a game where you have to keep up with the commands #var #data #if #random #min #max #mod #plot #unplot #pause #accceleration #docs
+a game where you have to keep up with the commands.
 
 ## Topic
 

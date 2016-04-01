@@ -1,6 +1,6 @@
 # the watch lesson
 
-display beautiful images on the BBC micro:bit #var #pause #docs
+display beautiful images on the BBC micro:bit.
 
 ![](/static/mb/lessons/the-watch-0.png)
 

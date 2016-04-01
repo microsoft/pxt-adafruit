@@ -1,6 +1,6 @@
 # Width
 
-The width function. #width #image #docs
+The width function.
 
 Get the width of an [Image](/microbit/reference/image/image) in columns.
 

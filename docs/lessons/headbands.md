@@ -1,6 +1,6 @@
 # headbands lesson
 
-create a charades game that can be played with your friends #data #string #collection #at #Boolean #on-logo-down #on-logo-up #running-time #string #number #docs
+create a charades game that can be played with your friends.
 
 ## Topic
 

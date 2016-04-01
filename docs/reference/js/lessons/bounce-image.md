@@ -1,6 +1,6 @@
 # bounce image lesson
 
-scroll an image across the screen #animation #docs
+scroll an image across the screen.
 
 ### @video td/videos/bounce-image-0
 

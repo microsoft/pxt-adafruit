@@ -1,6 +1,6 @@
 # Create a Function
 
-How to define a function with input and output parameters. #docs #function #language
+How to define a function with input and output parameters.
 
 ### @parent js/language
  

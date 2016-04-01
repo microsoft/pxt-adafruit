@@ -1,6 +1,6 @@
 # pong quiz answers
 
-create the game Pong #LED #number #math #acceleration #docs
+create the game Pong.
 
 ## Name
 

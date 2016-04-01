@@ -1,6 +1,6 @@
 # zoomer challenges
 
-The acceleration function. #acceleration #docs #input
+The acceleration function.
 
 **Challenge 0**
 

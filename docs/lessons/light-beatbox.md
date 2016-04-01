@@ -1,6 +1,6 @@
 # light beatbox 
 
-display beautiful images on the BBC micro:bit #var #pause #docs
+display beautiful images on the BBC micro:bit.
 
 ## Topic
 

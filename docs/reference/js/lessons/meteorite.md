@@ -1,6 +1,6 @@
 # meteorite lesson
 
-a game in which you must dodge the meteorites with your ship.  #functions #data #forever #var #button #if #assignment #plot-all #pause #string  #number #docs
+a game in which you must dodge the meteorites with your ship.
 
 ## Topic
 

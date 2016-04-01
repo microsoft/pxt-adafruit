@@ -1,6 +1,6 @@
 # Bits Library
 
-Functions in the Bits library. #docs #bits #32bit #signed #unsigned
+Functions in the Bits library.
 
 ### @parent td/language
 

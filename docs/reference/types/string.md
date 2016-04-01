@@ -1,6 +1,6 @@
 # String
 
-a piece of text. #docs #String
+a piece of text.
 
 ### @parent blocks/language
 

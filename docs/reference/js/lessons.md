@@ -1,6 +1,6 @@
 # Touch Develop Lessons
 
-Overview of Touch Develop lessons for the BBC micro:bit. #docs #contents
+Overview of Touch Develop lessons for the BBC micro:bit.
 
 ### @short Lessons
 

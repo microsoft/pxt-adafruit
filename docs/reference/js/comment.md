@@ -1,6 +1,6 @@
 # Comment
 
-A note in code. #docs #comment #language
+A note in code.
 
 ### @parent js/statement
  

@@ -1,6 +1,6 @@
 # truth or dare quiz answers
 
-a multi-player game that forces each player to reveal a secret or something funny #math #random #docs #shake
+a multi-player game that forces each player to reveal a secret or something funny.
 
 This is the answer key for the [truth or dare quiz](/microbit/lessons/truth-or-dare/quiz).
 

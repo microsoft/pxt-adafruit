@@ -1,6 +1,6 @@
 # minesweeper quiz
 
-make a game to test your memory for placing a LED mine then finding the hidden LED mine #math #random #docs
+make a game to test your memory for placing a LED mine then finding the hidden LED mine.
 
 ## Name
 

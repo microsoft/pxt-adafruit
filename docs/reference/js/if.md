@@ -1,6 +1,6 @@
 # If
 
-Run code based on a condition. #docs #if #then #else #endif #language #elseif
+Run code based on a condition.
 
 ### @parent js/language
  

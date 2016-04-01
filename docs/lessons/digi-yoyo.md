@@ -1,6 +1,6 @@
 # digi yoyo lesson
 
-create a counter with a while loop #while #loop #counter #docs
+create a counter with a while loop.
 
 ### @video td/videos/digi-yoyo-0
 

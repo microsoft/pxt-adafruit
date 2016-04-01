@@ -1,6 +1,6 @@
 # While
 
-Repeat code in a loop while a condition is true. #docs #while #language
+Repeat code in a loop while a condition is true.
 
 ### @parent js/language
  

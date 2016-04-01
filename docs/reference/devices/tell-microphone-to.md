@@ -1,6 +1,6 @@
 # tell microphone to
 
-The tell microphone to function. #docs #antenna #ble
+The tell microphone to function.
 
 Access the audio recording capabilities of the device using the ``tell microphone to`` function.
 

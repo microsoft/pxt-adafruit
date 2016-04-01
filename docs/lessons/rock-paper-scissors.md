@@ -1,6 +1,6 @@
 # rock paper scissors lesson
 
-a game against the BBC micro:bit #var #image #button #string #number #docs
+a game against the BBC micro:bit.
 
 ### @video td/videos/rock-paper-scissors-0
 

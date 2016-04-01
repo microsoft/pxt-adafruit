@@ -1,6 +1,6 @@
 # love meter quiz 
 
-Learn how to make a love meter that you can try with someone. #LED #screen  #variables #docs
+Learn how to make a love meter that you can try with someone.
 
 ## Name
 

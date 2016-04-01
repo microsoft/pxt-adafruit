@@ -1,6 +1,6 @@
 # temperature blocks lesson
 
-measure the temperature on the BBC micro:bit #temp #var #docs
+measure the temperature on the BBC micro:bit.
 
 ## Topic
 

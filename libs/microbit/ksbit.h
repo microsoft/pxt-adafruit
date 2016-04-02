@@ -1,12 +1,6 @@
-#include "BitVM.h"
+#include "kindscript.h"
 
-namespace bitvm {
-  namespace bitvm_micro_bit {
-    void registerWithDal(int id, int event, Action a);
-  }
-}  
-
+using namespace ks;
 MicroBitPin *getPin(int id);
-using namespace bitvm::bitvm_micro_bit;
 typedef ImageData* Image;
 

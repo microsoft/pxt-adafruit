@@ -178,4 +178,25 @@ namespace pins {
           wait_ms(5);
       }
     }
+
+    // TODO:
+    void i2cReadBuffer(int address, RefBuffer *buf)
+    {
+      uBit.i2c.read(address << 1, buf->cptr(), buf->size());
+    }
+
+    void i2cWriteBuffer(int address, RefBuffer *buf)
+    {
+      uBit.i2c.write(address << 1, buf->cptr(), buf->size());
+    }
+
+    int i2cReadRaw(int address, char *data, int length, int repeated)
+    {
+      return uBit.i2c.read(address, data, length, repeated);
+    }
+
+    int i2cWriteRaw(int address, const char *data, int length, int repeated)
+    {
+      return uBit.i2c.write(address, data, length, repeated);
+    }
 }

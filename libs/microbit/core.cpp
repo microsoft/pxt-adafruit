@@ -92,13 +92,6 @@ namespace String {
     {
         return ManagedString::EmptyString.leakData();
     }
-
-    // The proper StringData* representation is already laid out in memory by the code generator.
-    //%
-    uint32_t mkLiteral(uint32_t lit)
-    {
-        return (uint32_t)getstr(lit);
-    }
 }
 
 namespace NumberMethods {
@@ -187,138 +180,50 @@ namespace ArrayImpl {
     //%
     RefCollection *mk(uint32_t flags)
     {
-      RefCollection *r = new RefCollection(flags);
-      return r;
+      return new RefCollection(flags);
     }
-
     //%
-    int length(RefCollection *c) { return c->data.size(); }
-
+    int length(RefCollection *c) { return c->length(); }
     //%
-    void push(RefCollection *c, uint32_t x) {
-      if (c->flags & 1) incr(x);
-      c->data.push_back(x);
-    }
-
-    inline bool in_range(RefCollection *c, int x) {
-      return (0 <= x && x < (int)c->data.size());
-    }
-
+    void push(RefCollection *c, uint32_t x) { c->push(x); }
     //%
-    uint32_t getAt(RefCollection *c, int x) {
-      if (in_range(c, x)) {
-        uint32_t tmp = c->data.at(x);
-        if (c->flags & 1) incr(tmp);
-        return tmp;
-      }
-      else {
-        error(ERR_OUT_OF_BOUNDS);
-        return 0;
-      }
-    }
-
+    uint32_t getAt(RefCollection *c, int x) { return c->getAt(x); }
     //%
-    void removeAt(RefCollection *c, int x) {
-      if (!in_range(c, x))
-        return;
-
-      if (c->flags & 1) decr(c->data.at(x));
-      c->data.erase(c->data.begin()+x);
-    }
-
+    void removeAt(RefCollection *c, int x) { c->removeAt(x); }
     //%
-    void setAt(RefCollection *c, int x, uint32_t y) {
-      if (!in_range(c, x))
-        return;
-
-      if (c->flags & 1) {
-        decr(c->data.at(x));
-        incr(y);
-      }
-      c->data.at(x) = y;
-    }
-
+    void setAt(RefCollection *c, int x, uint32_t y) { c->setAt(x, y); }
     //%
-    int indexOf(RefCollection *c, uint32_t x, int start) {
-      if (!in_range(c, start))
-        return -1;
-
-      if (c->flags & 2) {
-        StringData *xx = (StringData*)x;
-        for (uint32_t i = start; i < c->data.size(); ++i) {
-          StringData *ee = (StringData*)c->data.at(i);
-          if (xx->len == ee->len && memcmp(xx->data, ee->data, xx->len) == 0)
-            return (int)i;
-        }
-      } else {
-        for (uint32_t i = start; i < c->data.size(); ++i)
-          if (c->data.at(i) == x)
-            return (int)i;
-      }
-
-      return -1;
-    }
-
+    int indexOf(RefCollection *c, uint32_t x, int start) { return c->indexOf(x, start); }
     //%
-    int removeElement(RefCollection *c, uint32_t x) {
-      int idx = indexOf(c, x, 0);
-      if (idx >= 0) {
-        removeAt(c, idx);
-        return 1;
-      }
-
-      return 0;
-    }
+    int removeElement(RefCollection *c, uint32_t x) { return c->removeElement(x); }
 }
 
-namespace ActionImpl {
-    //%
-    Action mk(int reflen, int totallen, int startptr)
-    {
-      check(0 <= reflen && reflen <= totallen, ERR_SIZE, 1);
-      check(reflen <= totallen && totallen <= 255, ERR_SIZE, 2);
-      check(bytecode[startptr] == 0xffff, ERR_INVALID_BINARY_HEADER, 3);
-      check(bytecode[startptr + 1] == 0, ERR_INVALID_BINARY_HEADER, 4);
-
-
-      uint32_t tmp = (uint32_t)&bytecode[startptr];
-
-      if (totallen == 0) {
-        return tmp; // no closure needed
-      }
-
-      void *ptr = ::operator new(sizeof(RefAction) + totallen * sizeof(uint32_t));
-      RefAction *r = new (ptr) RefAction();
-      r->len = totallen;
-      r->reflen = reflen;
-      r->func = (ActionCB)((tmp + 4) | 1);
-      memset(r->fields, 0, r->len * sizeof(uint32_t));
-
-      return (Action)r;
-    }
-
-    //%
-    uint32_t mkLiteral(uint32_t lit)
-    {
-        return (uint32_t)getstr(lit);
-    }
-
-    //%
-    void run1(Action a, int arg)
-    {
-      if (hasVTable(a))
-        ((RefAction*)a)->run(arg);
-      else {
-        check(*(uint16_t*)a == 0xffff, ERR_INVALID_BINARY_HEADER, 4);
-        ((ActionCB)((a + 4) | 1))(NULL, NULL, arg);
-      }
-    }
-
-    //%
-    void run(Action a)
-    {
-      ActionImpl::run1(a, 0);
-    }
+// Import some stuff directly
+namespace ks {
+  //%
+  void registerWithDal(int id, int event, Action a);
+  //%
+  void runAction0(Action a);
+  //%
+  void runAction1(Action a, int arg);
+  //%
+  Action mkAction(int reflen, int totallen, int startptr);
+  //%
+  RefRecord* mkRecord(int reflen, int totallen);
+  //%
+  void debugMemLeaks();
+  //%
+  int incr(uint32_t e);
+  //%
+  void decr(uint32_t e);
+  //%
+  uint32_t *allocate(uint16_t sz);
+  //%
+  int templateHash();
+  //%
+  int programHash();
+  //%
+  void *ptrOfLiteral(int offset);
 }
 
 namespace RecordImpl {
@@ -440,13 +345,70 @@ namespace ksrt {
   }
 
   //%
-  uint32_t incr(uint32_t ptr) {
-    bitvm::incr(ptr);
-    return ptr;
-  }
-
-  //%
-  void decr(uint32_t ptr) {
-    bitvm::decr(ptr);
+  void panic(int code)
+  {
+    uBit.panic(code);
   }
 }
+
+
+
+  namespace buffer {
+
+    RefBuffer *mk(uint32_t size)
+    {
+      RefBuffer *r = new RefBuffer();
+      r->data.resize(size);
+      return r;
+    }
+
+    char *cptr(RefBuffer *c)
+    {
+      return (char*)&c->data[0];
+    }
+
+    int count(RefBuffer *c) { return c->data.size(); }
+
+    void fill(RefBuffer *c, int v)
+    {
+      memset(cptr(c), v, count(c));
+    }
+
+    void fill_random(RefBuffer *c)
+    {
+      int len = count(c);
+      for (int i = 0; i < len; ++i)
+        c->data[i] = uBit.random(0x100);
+    }
+
+    void add(RefBuffer *c, uint32_t x) {
+      c->data.push_back(x);
+    }
+
+    inline bool in_range(RefBuffer *c, int x) {
+      return (0 <= x && x < (int)c->data.size());
+    }
+
+    uint32_t at(RefBuffer *c, int x) {
+      if (in_range(c, x)) {
+        return c->data[x];
+      }
+      else {
+        error(ERR_OUT_OF_BOUNDS);
+        return 0;
+      }
+    }
+
+    void set(RefBuffer *c, int x, uint32_t y) {
+      if (!in_range(c, x))
+        return;
+      c->data[x] = y;
+    }
+  }
+
+  namespace bitvm_bits {
+    RefBuffer *create_buffer(int size)
+    {
+      return buffer::mk(size);
+    }
+  }

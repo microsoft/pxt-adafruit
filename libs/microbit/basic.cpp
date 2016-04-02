@@ -38,7 +38,7 @@ namespace basic {
     //% blockId=device_show_leds
     //% block="show leds" icon="\uf00a"
     void showLeds(ImageLiteral leds, int interval = 400) {
-      uBit.display.print(MicroBitImage(getbytes(leds)), 0, 0, 0, interval);
+      uBit.display.print(MicroBitImage(imageBytes(leds)), 0, 0, 0, interval);
     }
 
     /**
@@ -82,7 +82,7 @@ namespace basic {
      */
     //% help=basic/show-animation imageLiteral=1 async
     void showAnimation(ImageLiteral leds, int interval = 400) {
-      uBit.display.animate(MicroBitImage(getbytes(leds)), interval, 5, 0);
+      uBit.display.animate(MicroBitImage(imageBytes(leds)), interval, 5, 0);
     }
 
     /**
@@ -91,13 +91,13 @@ namespace basic {
      */
     //% help=basic/plot-leds weight=80
     void plotLeds(ImageLiteral leds) {
-      MicroBitImage i(getbytes(leds));
+      MicroBitImage i(imageBytes(leds));
       uBit.display.print(i, 0, 0, 0, 0);
     }
 
     void forever_stub(void *a) {
       while (true) {
-        action::run((Action)a);
+        runAction0((Action)a);
         uBit.sleep(20);
       }
     }

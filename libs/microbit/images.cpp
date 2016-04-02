@@ -8,7 +8,7 @@ namespace images {
     //% weight=75 help=images/create-image
     //% blockId=device_build_image block="create image"
     Image createImage(ImageLiteral leds) {
-        return MicroBitImage(getbytes(leds)).clone().leakData();
+        return MicroBitImage(imageBytes(leds)).clone().leakData();
     }
 
     /**

@@ -199,7 +199,7 @@ namespace ArrayImpl {
 }
 
 // Import some stuff directly
-namespace ks {
+namespace kindscript {
   //%
   void registerWithDal(int id, int event, Action a);
   //%

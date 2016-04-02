@@ -1,6 +1,6 @@
 #include "kindscript.h"
 
-using namespace ks;
+using namespace kindscript;
 MicroBitPin *getPin(int id);
 typedef ImageData* Image;
 

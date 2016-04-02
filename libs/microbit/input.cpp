@@ -26,11 +26,11 @@ enum class Rotation {
 };
 
 enum class TouchPin {
-    //% enumval=uBit.io.P0
+    //% enumval=micro_bit::ioP0
     P0,
-    //% enumval=uBit.io.P1
+    //% enumval=micro_bit::ioP1
     P1,
-    //% enumval=uBit.io.P2
+    //% enumval=micro_bit::ioP2
     P2,
 };
 

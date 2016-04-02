@@ -1,56 +1,56 @@
 enum DigitalPin {
-    //% enumval=uBit.io.P0
+    //% enumval=micro_bit::ioP0
     P0,
-    //% enumval=uBit.io.P1
+    //% enumval=micro_bit::ioP1
     P1,
-    //% enumval=uBit.io.P2
+    //% enumval=micro_bit::ioP2
     P2,
-    //% enumval=uBit.io.P3
+    //% enumval=micro_bit::ioP3
     P3,
-    //% enumval=uBit.io.P4
+    //% enumval=micro_bit::ioP4
     P4,
-    //% enumval=uBit.io.P5
+    //% enumval=micro_bit::ioP5
     P5,
-    //% enumval=uBit.io.P6
+    //% enumval=micro_bit::ioP6
     P6,
-    //% enumval=uBit.io.P7
+    //% enumval=micro_bit::ioP7
     P7,
-    //% enumval=uBit.io.P8
+    //% enumval=micro_bit::ioP8
     P8,
-    //% enumval=uBit.io.P9
+    //% enumval=micro_bit::ioP9
     P9,
-    //% enumval=uBit.io.P10
+    //% enumval=micro_bit::ioP10
     P10,
-    //% enumval=uBit.io.P11
+    //% enumval=micro_bit::ioP11
     P11,
-    //% enumval=uBit.io.P12
+    //% enumval=micro_bit::ioP12
     P12,
-    //% enumval=uBit.io.P13
+    //% enumval=micro_bit::ioP13
     P13,
-    //% enumval=uBit.io.P14
+    //% enumval=micro_bit::ioP14
     P14,
-    //% enumval=uBit.io.P15
+    //% enumval=micro_bit::ioP15
     P15,
-    //% enumval=uBit.io.P16
+    //% enumval=micro_bit::ioP16
     P16,
-    //% enumval=uBit.io.P19
+    //% enumval=micro_bit::ioP19
     P19,
-    //% enumval=uBit.io.P20
+    //% enumval=micro_bit::ioP20
     P20,
 }
 
 enum AnalogPin {
-    //% enumval=uBit.io.P0
+    //% enumval=micro_bit::ioP0
     P0,
-    //% enumval=uBit.io.P1
+    //% enumval=micro_bit::ioP1
     P1,
-    //% enumval=uBit.io.P2
+    //% enumval=micro_bit::ioP2
     P2,
-    //% enumval=uBit.io.P3
+    //% enumval=micro_bit::ioP3
     P3,
-    //% enumval=uBit.io.P4
+    //% enumval=micro_bit::ioP4
     P4,
-    //% enumval=uBit.io.P10
+    //% enumval=micro_bit::ioP10
     P10,
 }
 

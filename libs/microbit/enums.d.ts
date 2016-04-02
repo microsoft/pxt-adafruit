@@ -32,11 +32,11 @@ declare namespace basic {
 
 
     declare enum TouchPin {
-    //% enumval=uBit.io.P0
+    //% enumval=micro_bit::ioP0
     P0 = 0,
-    //% enumval=uBit.io.P1
+    //% enumval=micro_bit::ioP1
     P1 = 1,
-    //% enumval=uBit.io.P2
+    //% enumval=micro_bit::ioP2
     P2 = 2,
     }
 

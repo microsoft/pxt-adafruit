@@ -28,7 +28,7 @@ namespace game {
     var _countdownPause: number = 0;
     var _level: number = 1;
     var _gameId: number = 0;
-    var img: images.Image;
+    var img: Image;
     var sprites: LedSprite[];
     
     /**

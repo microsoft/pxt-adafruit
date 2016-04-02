@@ -9,7 +9,7 @@
         "shims.d.ts",
         "core.d.ts",
         "mbit.ts",
-        "images.ts",
+        "images.cpp",
         "basic.cpp",
         "input.cpp",
         "input.ts",

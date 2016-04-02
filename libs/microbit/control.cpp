@@ -150,7 +150,8 @@ namespace control {
      */
     //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source|with value %value=control_event_value" blockExternalInputs=1
     //% mode.defl=CREATE_AND_QUEUE
-    void raiseEvent(int src, int value, EventCreationMode mode) { }
+    void raiseEvent(int src, int value, EventCreationMode mode) { 
+    }
 
     /**
      * Raises an event in the event bus.

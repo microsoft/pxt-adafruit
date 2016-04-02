@@ -3,11 +3,18 @@
     "description": "The BLE specific services",
     "files": [
         "README.md",
+        "enums.d.ts",
+        "devices.cpp",
         "devices.ts"
     ],
     "public": true,
     "dependencies": {
         "microbit": "file:../microbit"
+    },
+    "microbit": {
+        "config": {
+            "MICROBIT_BLE_ENABLED": "1"
+        }
     },
     "installedVersion": "zakvul"
 }

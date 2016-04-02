@@ -9,5 +9,10 @@
     "dependencies": {
         "microbit": "file:../microbit"
     },
+    "microbit": {
+        "config": {
+            "MICROBIT_BLE_ENABLED": "0"
+        }
+    },
     "installedVersion": "rlfgis"
 }

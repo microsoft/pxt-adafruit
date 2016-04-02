@@ -5,10 +5,13 @@
     "files": [
         "README.md",
         "dal.d.ts",
+        "enums.d.ts",
+        "shims.d.ts",
         "core.d.ts",
         "mbit.ts",
         "images.ts",
         "basic.cpp",
+        "input.cpp",
         "input.ts",
         "control.ts",
         "control.cpp",

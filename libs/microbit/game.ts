@@ -284,8 +284,8 @@ namespace game {
         private _blink: number;
 
         constructor(x: number, y: number) {
-            this._x = math.clamp(0, 4, x);
-            this._y = math.clamp(0, 4, y);
+            this._x = Math.clamp(0, 4, x);
+            this._y = Math.clamp(0, 4, y);
             this._dir = 90;
             this._brightness = 255;
             init();
@@ -322,8 +322,8 @@ namespace game {
                 this._x = this._x - leds;
                 this._y = this._y + leds;
             }
-            this._x = math.clamp(0, 4, this._x);
-            this._y = math.clamp(0, 4, this._y);
+            this._x = Math.clamp(0, 4, this._x);
+            this._y = Math.clamp(0, 4, this._y);
             plot();
         }
 
@@ -336,8 +336,8 @@ namespace game {
         public goTo(x: number, y: number): void {
             this._x = x;
             this._y = y;
-            this._x = math.clamp(0, 4, this._x);
-            this._y = math.clamp(0, 4, this._y);
+            this._x = Math.clamp(0, 4, this._x);
+            this._y = Math.clamp(0, 4, this._y);
             plot();
         }
 
@@ -594,7 +594,7 @@ namespace game {
          * @param brightness TODO
          */
         public setBrightness(brightness: number): void {
-            this._brightness = math.clamp(0, 255, brightness);
+            this._brightness = Math.clamp(0, 255, brightness);
             plot();
         }
 
@@ -639,7 +639,7 @@ namespace game {
          * @param ms TODO
          */
         public setBlink(ms: number): void {
-            this._blink = math.clamp(0, 10000, ms);
+            this._blink = Math.clamp(0, 10000, ms);
         }
 
         /**

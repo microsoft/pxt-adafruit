@@ -9,6 +9,7 @@
         "shims.d.ts",
         "core.d.ts",
         "ksbit.h",
+        "core.cpp",
         "mbit.ts",
         "images.cpp",
         "basic.cpp",

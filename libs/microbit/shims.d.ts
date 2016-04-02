@@ -1,6 +1,90 @@
 // Auto-generated. Do not edit.
 
 
+declare interface String {
+    /**
+     * Returns the character at the specified index.
+     * @param pos The zero-based index of the desired character.
+     */
+    //% shim=StringMethods::charAt
+    charAt(pos: number): string;
+
+    /** 
+     * Returns the Unicode value of the character at the specified location.
+     * @param index The zero-based index of the desired character. If there is no character at the specified index, NaN is returned.
+     */
+    //% shim=StringMethods::charCodeAt
+    charCodeAt(index: number): number;
+
+    /**
+     * Returns a string that contains the concatenation of two or more strings.
+     * @param other The string to append to the end of the string.  
+     */
+    //% shim=StringMethods::concat
+    concat(other: string): string;
+
+    /**
+     * Determines whether relative order of two strings (in ASCII encoding).
+     * @param that String to compare to target string
+     */
+    //% shim=StringMethods::compare
+    compare(that: string): number;
+
+    /** Returns the length of a String object. */
+    //% property shim=StringMethods::length
+    length(): number;
+}
+
+
+declare interface Boolean {
+    /**
+     * Returns a string representation of an object.
+     */
+    //% shim=BooleanMethods::toString
+    toString(): string;
+}
+declare namespace String {
+
+    /**
+     * Make a string from the given ASCII character code. 
+     */
+    //% shim=String::fromCharCode
+    function fromCharCode(code: number): string;
+}
+
+
+declare interface Number {
+    /**
+     * Returns a string representation of a number.
+     */
+    //% shim=NumberMethods::toString
+    toString(): string;
+}
+declare namespace Math {
+
+    /**
+     * Returns the value of a base expression taken to a specified power. 
+     * @param x The base value of the expression.
+     * @param y The exponent value of the expression.
+     */
+    //% shim=Math::pow
+    function pow(x: number, y: number): number;
+
+    /** 
+     * Returns a pseudorandom number between 0 and `max`. 
+     */
+    //% shim=Math::random
+    function random(max: number): number;
+
+    /**
+     * Returns the square root of a number.
+     * @param x A numeric expression.
+     */
+    //% shim=Math::sqrt
+    function sqrt(x: number): number;
+}
+
+
 
     //% color=45 weight=31
 declare namespace images {

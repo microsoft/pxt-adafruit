@@ -21,6 +21,7 @@
         "led.ts",
         "music.ts",
         "pins.cpp",
+        "serial.cpp",
         "serial.ts"
     ],
     "public": true,

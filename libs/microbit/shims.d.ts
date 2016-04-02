@@ -452,4 +452,34 @@ declare namespace pins {
     function analogPitch(frequency: number, ms: number): void;
 }
 
+
+
+    //% weight=2 color=30
+declare namespace serial {
+
+    /**
+     * Reads a line of text from the serial port.
+     */
+    //% shim=serial::readString
+    function readString(): string;
+
+    /**
+     * Sends a piece of text through Serial connection.
+     */
+    //% shim=serial::writeString
+    function writeString(text: string): void;
+
+    /**
+     * Sends the current pixel values, byte-per-pixel, over serial.
+     */
+    //% shim=serial::writeScreen
+    function writeScreen(): void;
+
+    /**
+     * Reads the screen from serial.
+     */
+    //% shim=serial::readScreen
+    function readScreen(): void;
+}
+
 // Auto-generated. Do not edit. Really.

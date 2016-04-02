@@ -268,5 +268,7 @@ declare namespace led {
     }
 declare namespace pins {
 }
+declare namespace serial {
+}
 
 // Auto-generated. Do not edit. Really.

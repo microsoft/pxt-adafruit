@@ -116,7 +116,7 @@ namespace music {
      * Gets the frequency of a note.
      * @param name TODO
      */
-    //% shim=TD_ID weight=50 help=music/note-frequency
+    //% weight=50 help=music/note-frequency
     //% blockId=device_note block="%note"
     export function noteFrequency(name: Note): number {
         return name;

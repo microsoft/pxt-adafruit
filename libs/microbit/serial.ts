@@ -18,32 +18,6 @@ namespace serial {
     }
 
     /**
-     * Reads a line of text from the serial port.
-     */
-    //% shim=micro_bit::serialReadString
-    export function readString(): string {
-        return ""
-    }
-
-    /**
-     * Sends a piece of text through Serial connection.
-     */
-    //% shim=micro_bit::serialSendString
-    export function writeString(text: string): void { }
-
-    /**
-     * Sends the current pixel values, byte-per-pixel, over serial.
-     */
-    //% shim=micro_bit::serialSendDisplayState
-    export function writeScreen(): void { }
-
-    /**
-     * Reads the screen from serial.
-     */
-    //% shim=micro_bit::serialReadDisplayState
-    export function readScreen(): void { }
-
-    /**
      * Writes a ``name: value`` pair line to the serial.
      * @param name name of the value stream, eg: x
      * @param value to write

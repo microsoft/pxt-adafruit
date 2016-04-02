@@ -67,6 +67,9 @@ namespace BooleanMethods {
         return (StringData*)(void*)sFalse;
       }            
     }
+
+    //%
+    bool bang(bool v) { return !v; }
 }
 
 namespace String {
@@ -83,6 +86,19 @@ namespace String {
     int toNumber(StringData *s) {
       return atoi(s->data);
     }
+
+    //%
+    StringData *mkEmpty()
+    {
+        return ManagedString::EmptyString.leakData();
+    }
+
+    // The proper StringData* representation is already laid out in memory by the code generator.
+    //%
+    uint32_t mkLiteral(uint32_t lit)
+    {
+        return (uint32_t)getstr(lit);
+    }
 }
 
 namespace NumberMethods {
@@ -94,6 +110,30 @@ namespace NumberMethods {
     {
       return ManagedString(n).leakData();
     }
+}
+
+namespace NumberImpl {
+    // +, - and friends are handled directly by assembly instructions
+    // The comparisons are here as they are more code-size efficient
+    
+    //%
+    bool lt(int x, int y) { return x < y; }
+    //%
+    bool le(int x, int y) { return x <= y; }
+    //%
+    bool neq(int x, int y) { return x != y; }
+    //%
+    bool eq(int x, int y) { return x == y; }
+    //%
+    bool gt(int x, int y) { return x > y; }
+    //%
+    bool ge(int x, int y) { return x >= y; }
+
+    // These in fact call into C runtime on Cortex-M0 
+    //%
+    int div(int x, int y) { return x / y; }
+    //%
+    int mod(int x, int y) { return x % y; }
 }
 
 namespace Math {
@@ -231,3 +271,182 @@ namespace ArrayImpl {
     }
 }
 
+namespace ActionImpl {
+    //%
+    Action mk(int reflen, int totallen, int startptr)
+    {
+      check(0 <= reflen && reflen <= totallen, ERR_SIZE, 1);
+      check(reflen <= totallen && totallen <= 255, ERR_SIZE, 2);
+      check(bytecode[startptr] == 0xffff, ERR_INVALID_BINARY_HEADER, 3);
+      check(bytecode[startptr + 1] == 0, ERR_INVALID_BINARY_HEADER, 4);
+
+
+      uint32_t tmp = (uint32_t)&bytecode[startptr];
+
+      if (totallen == 0) {
+        return tmp; // no closure needed
+      }
+
+      void *ptr = ::operator new(sizeof(RefAction) + totallen * sizeof(uint32_t));
+      RefAction *r = new (ptr) RefAction();
+      r->len = totallen;
+      r->reflen = reflen;
+      r->func = (ActionCB)((tmp + 4) | 1);
+      memset(r->fields, 0, r->len * sizeof(uint32_t));
+
+      return (Action)r;
+    }
+
+    //%
+    uint32_t mkLiteral(uint32_t lit)
+    {
+        return (uint32_t)getstr(lit);
+    }
+
+    //%
+    void run1(Action a, int arg)
+    {
+      if (hasVTable(a))
+        ((RefAction*)a)->run(arg);
+      else {
+        check(*(uint16_t*)a == 0xffff, ERR_INVALID_BINARY_HEADER, 4);
+        ((ActionCB)((a + 4) | 1))(NULL, NULL, arg);
+      }
+    }
+
+    //%
+    void run(Action a)
+    {
+      ActionImpl::run1(a, 0);
+    }
+}
+
+namespace RecordImpl {
+    //%
+    RefRecord* mk(int reflen, int totallen)
+    {
+      check(0 <= reflen && reflen <= totallen, ERR_SIZE, 1);
+      check(reflen <= totallen && totallen <= 255, ERR_SIZE, 2);
+
+      void *ptr = ::operator new(sizeof(RefRecord) + totallen * sizeof(uint32_t));
+      RefRecord *r = new (ptr) RefRecord();
+      r->len = totallen;
+      r->reflen = reflen;
+      memset(r->fields, 0, r->len * sizeof(uint32_t));
+      return r;
+    }
+}
+
+namespace ksrt {
+  //%
+  uint32_t ldloc(RefLocal *r) {
+    return r->v;
+  }
+
+  //%
+  uint32_t ldlocRef(RefRefLocal *r) {
+    uint32_t tmp = r->v;
+    incr(tmp);
+    return tmp;
+  }
+
+  //%
+  void stloc(RefLocal *r, uint32_t v) {
+    r->v = v;
+  }
+
+  //%
+  void stlocRef(RefRefLocal *r, uint32_t v) {
+    decr(r->v);
+    r->v = v;
+  }
+
+  //%
+  RefLocal *mkloc() {
+    return new RefLocal();
+  }
+
+  //%
+  RefRefLocal *mklocRef() {
+    return new RefRefLocal();
+  }
+
+  // All of the functions below unref() self. This is for performance reasons -
+  // the code emitter will not emit the unrefs for them.
+ 
+  //%
+  uint32_t ldfld(RefRecord *r, int idx) {
+    auto tmp = r->ld(idx);
+    r->unref();
+    return tmp;
+  }
+
+  //%
+  uint32_t ldfldRef(RefRecord *r, int idx) {
+    auto tmp = r->ldref(idx);
+    r->unref();
+    return tmp;
+  }
+
+  //%
+  void stfld(RefRecord *r, int idx, uint32_t val) {
+    r->st(idx, val);
+    r->unref();
+  }
+
+  //%
+  void stfldRef(RefRecord *r, int idx, uint32_t val) {
+    r->stref(idx, val);
+    r->unref();
+  }
+
+  //%
+  uint32_t ldglb(int idx) {
+    check(0 <= idx && idx < numGlobals, ERR_OUT_OF_BOUNDS, 7);
+    return globals[idx];
+  }
+
+  //%
+  uint32_t ldglbRef(int idx) {
+    check(0 <= idx && idx < numGlobals, ERR_OUT_OF_BOUNDS, 7);
+    uint32_t tmp = globals[idx];
+    incr(tmp);
+    return tmp;
+  }
+
+  // note the idx comes last - it's more convenient that way in the emitter
+  //%
+  void stglb(uint32_t v, int idx)
+  {
+    check(0 <= idx && idx < numGlobals, ERR_OUT_OF_BOUNDS, 7);
+    globals[idx] = v;
+  }
+
+  //%
+  void stglbRef(uint32_t v, int idx)
+  {
+    check(0 <= idx && idx < numGlobals, ERR_OUT_OF_BOUNDS, 7);
+    decr(globals[idx]);
+    globals[idx] = v;
+  }
+
+  // Store a captured local in a closure. It returns the action, so it can be chained.
+  //%
+  RefAction *stclo(RefAction *a, int idx, uint32_t v)
+  {
+    //DBG("STCLO "); a->print(); DBG("@%d = %p\n", idx, (void*)v);
+    a->st(idx, v);
+    return a;
+  }
+
+  //%
+  uint32_t incr(uint32_t ptr) {
+    bitvm::incr(ptr);
+    return ptr;
+  }
+
+  //%
+  void decr(uint32_t ptr) {
+    bitvm::decr(ptr);
+  }
+}

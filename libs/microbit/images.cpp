@@ -1,7 +1,5 @@
 #include "ksbit.h"
 
-typedef ImageData* Image;
-
 //% color=45 weight=31
 namespace images {
     /**

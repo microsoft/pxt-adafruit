@@ -1,0 +1,104 @@
+#include "ksbit.h"
+
+enum class DisplayMode_ {
+    //% block="black and white"
+    BackAndWhite = DISPLAY_MODE_BLACK_AND_WHITE,
+    //% block="greyscale"
+    Greyscale = DISPLAY_MODE_GREYSCALE,
+    // TODO DISPLAY_MODE_BLACK_AND_WHITE_LIGHT_SENSE
+};
+
+//% color=3 weight=35
+namespace led {
+
+    /**
+     * Turn on the specified LED using x, y coordinates (x is horizontal, y is vertical). (0,0) is upper left.
+     * @param x TODO
+     * @param y TODO
+     */
+    //% help=led/plot weight=78 shim=micro_bit::plot
+    //% blockId=device_plot block="plot|x %x|y %y" icon="\uf205" blockGap=8
+    void plot(int x, int y) { 
+      uBit.display.image.setPixelValue(x, y, 1);
+    }
+
+    /**
+     * Turn off the specified LED using x, y coordinates (x is horizontal, y is vertical). (0,0) is upper left.
+     * @param x TODO
+     * @param y TODO
+     */
+    //% help=led/unplot weight=77 shim=micro_bit::unPlot
+    //% blockId=device_unplot block="unplot|x %x|y %y" icon="\uf204" blockGap=8
+    void unplot(int x, int y) { 
+      uBit.display.image.setPixelValue(x, y, 0);
+    }
+
+    /**
+     * Get the on/off state of the specified LED using x, y coordinates. (0,0) is upper left.
+     * @param x TODO
+     * @param y TODO
+     */
+    //% help=led/point weight=76 shim=micro_bit::point
+    //% blockId=device_point block="point|x %x|y %y" icon="\uf10c"
+    bool point(int x, int y) {
+      int pix = uBit.display.image.getPixelValue(x, y);
+      return pix > 0;
+    }
+
+    /**
+     * Get the screen brightness from 0 (off) to 255 (full bright).
+     */
+    //% help=led/brightness weight=60 shim=micro_bit::getBrightness
+    //% blockId=device_get_brightness block="brightness" icon="\uf042" blockGap=8
+    int brightness() {
+      return uBit.display.getBrightness();
+    }
+
+    /**
+     * Set the screen brightness from 0 (off) to 255 (full bright).
+     * @param value the brightness value, eg:255, 127, 0
+     */
+    //% help=led/set-brightness weight=59 shim=micro_bit::setBrightness
+    //% blockId=device_set_brightness block="set brightness %value" icon="\uf042"
+    void setBrightness(int value) { 
+       uBit.display.setBrightness(value);
+    }
+
+    /**
+     * Cancels the current animation and clears other pending animations.
+     */
+    //% weight=50 shim=uBit.display.stopAnimation help=led/stop-animation
+    //% blockId=device_stop_animation block="stop animation" icon="\uf04d"
+    void stopAnimation() { 
+       uBit.display.stopAnimation();
+    }
+
+    /**
+     * Sets the display mode between black and white and greyscale for rendering LEDs.
+     * @param mode TODO
+     */
+    //% shim=micro_bit::setDisplayMode weight=1 help=/led/set-display-mode
+    void setDisplayMode(DisplayMode_ mode) { 
+        uBit.display.setDisplayMode((DisplayMode)mode);
+    }
+
+    /**
+     * Takes a screenshot of the LED screen and returns an image.
+     */
+    //% shim=uBit.display.screenShot help=led/screenshot
+    Image screenshot() {
+      return uBit.display.screenShot().leakData();
+        /*
+        let Image img;
+        img = image.createImage("");
+        for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++) {
+                if (led.point(i, j)) {
+                    img.setPixel(i, j, true);
+                }
+            }
+        }
+        return img;
+        */
+    }
+}

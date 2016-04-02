@@ -8,3 +8,5 @@ namespace bitvm {
 
 MicroBitPin *getPin(int id);
 using namespace bitvm::bitvm_micro_bit;
+typedef ImageData* Image;
+

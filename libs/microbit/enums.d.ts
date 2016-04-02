@@ -224,6 +224,17 @@ declare namespace control {
 }
 
 
+    declare enum DisplayMode {
+    //% block="black and white"
+    BackAndWhite = 0,  // DISPLAY_MODE_BLACK_AND_WHITE
+    //% block="greyscale"
+    Greyscale = 1,  // DISPLAY_MODE_GREYSCALE
+    // TODO DISPLAY_MODE_BLACK_AND_WHITE_LIGHT_SENSE
+    }
+declare namespace led {
+}
+
+
     declare enum DigitalPin {
     P0 = 7,  // MICROBIT_ID_IO_P0
     P1 = 8,  // MICROBIT_ID_IO_P1

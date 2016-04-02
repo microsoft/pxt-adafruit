@@ -151,6 +151,7 @@ namespace control {
     //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source|with value %value=control_event_value" blockExternalInputs=1
     //% mode.defl=CREATE_AND_QUEUE
     void raiseEvent(int src, int value, EventCreationMode mode) { 
+        MicroBitEvent evt(src, value, (MicroBitEventLaunchMode)mode); 
     }
 
     /**
@@ -158,5 +159,8 @@ namespace control {
      */
     //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_event_source|with value %value=control_event_value" 
     //% blockExternalInputs=1 blockStatement=1
-    void onEvent(int src, int value, Action handler) { }
+    void onEvent(int src, int value, Action handler) { 
+        // not exposed yet
+        // bitvm::registerWithDal(src, value, handler);
+    }
 }

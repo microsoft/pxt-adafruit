@@ -1,4 +1,4 @@
-#include "BitVM.h"
+#include "ksbit.h"
 
 
 /**
@@ -80,7 +80,7 @@ namespace basic {
      * @param leds TODO
      * @param interval TODO
      */
-    //% help=basic/show-animation shim=micro_bit::showAnimation imageLiteral=1 async
+    //% help=basic/show-animation imageLiteral=1 async
     void showAnimation(ImageLiteral leds, int interval = 400) {
       uBit.display.animate(MicroBitImage(getbytes(leds)), interval, 5, 0);
     }
@@ -89,7 +89,7 @@ namespace basic {
      * Draws an image on the LED screen.
      * @param leds TODO
      */
-    //% help=basic/plot-leds weight=80 shim=micro_bit::plotLeds
+    //% help=basic/plot-leds weight=80
     void plotLeds(ImageLiteral leds) {
       MicroBitImage i(getbytes(leds));
       uBit.display.print(i, 0, 0, 0, 0);

@@ -34,12 +34,9 @@ declare namespace basic {
 
 
     declare enum TouchPin {
-    //% enumval=micro_bit::ioP0
-    P0 = 0,
-    //% enumval=micro_bit::ioP1
-    P1 = 1,
-    //% enumval=micro_bit::ioP2
-    P2 = 2,
+    P0 = 7,  // MICROBIT_ID_IO_P0
+    P1 = 8,  // MICROBIT_ID_IO_P1
+    P2 = 9,  // MICROBIT_ID_IO_P2
     }
 
 
@@ -109,6 +106,8 @@ declare namespace basic {
     //% block="free fall"
     FreeFall = 7,  // GESTURE_FREEFALL
     }
+declare namespace input {
+}
 
 
     /**
@@ -222,6 +221,41 @@ declare namespace basic {
     MES_REMOTE_CONTROL_EVT_VOLUMEUP = 8,  // MES_REMOTE_CONTROL_EVT_VOLUMEUP
     }
 declare namespace control {
+}
+
+
+    declare enum DigitalPin {
+    P0 = 7,  // MICROBIT_ID_IO_P0
+    P1 = 8,  // MICROBIT_ID_IO_P1
+    P2 = 9,  // MICROBIT_ID_IO_P2
+    P3 = 10,  // MICROBIT_ID_IO_P3
+    P4 = 11,  // MICROBIT_ID_IO_P4
+    P5 = 12,  // MICROBIT_ID_IO_P5
+    P6 = 13,  // MICROBIT_ID_IO_P6
+    P7 = 14,  // MICROBIT_ID_IO_P7
+    P8 = 15,  // MICROBIT_ID_IO_P8
+    P9 = 16,  // MICROBIT_ID_IO_P9
+    P10 = 17,  // MICROBIT_ID_IO_P10
+    P11 = 18,  // MICROBIT_ID_IO_P11
+    P12 = 19,  // MICROBIT_ID_IO_P12
+    P13 = 20,  // MICROBIT_ID_IO_P13
+    P14 = 21,  // MICROBIT_ID_IO_P14
+    P15 = 22,  // MICROBIT_ID_IO_P15
+    P16 = 23,  // MICROBIT_ID_IO_P16
+    P19 = 24,  // MICROBIT_ID_IO_P19
+    P20 = 25,  // MICROBIT_ID_IO_P20
+    }
+
+
+    declare enum AnalogPin {
+    P0 = 7,  // MICROBIT_ID_IO_P0
+    P1 = 8,  // MICROBIT_ID_IO_P1
+    P2 = 9,  // MICROBIT_ID_IO_P2
+    P3 = 10,  // MICROBIT_ID_IO_P3
+    P4 = 11,  // MICROBIT_ID_IO_P4
+    P10 = 17,  // MICROBIT_ID_IO_P10
+    }
+declare namespace pins {
 }
 
 // Auto-generated. Do not edit. Really.

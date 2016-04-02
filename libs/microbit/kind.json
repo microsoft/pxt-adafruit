@@ -8,6 +8,7 @@
         "enums.d.ts",
         "shims.d.ts",
         "core.d.ts",
+        "ksbit.h",
         "mbit.ts",
         "images.cpp",
         "basic.cpp",
@@ -18,7 +19,7 @@
         "game.ts",
         "led.ts",
         "music.ts",
-        "pins.ts",
+        "pins.cpp",
         "serial.ts"
     ],
     "public": true,

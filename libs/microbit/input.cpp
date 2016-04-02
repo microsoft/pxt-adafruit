@@ -1,4 +1,4 @@
-#include "BitVM.h"
+#include "ksbit.h"
 
 enum class Button {
     A = MICROBIT_ID_BUTTON_A,
@@ -26,12 +26,9 @@ enum class Rotation {
 };
 
 enum class TouchPin {
-    //% enumval=micro_bit::ioP0
-    P0,
-    //% enumval=micro_bit::ioP1
-    P1,
-    //% enumval=micro_bit::ioP2
-    P2,
+    P0 = MICROBIT_ID_IO_P0,
+    P1 = MICROBIT_ID_IO_P1,
+    P2 = MICROBIT_ID_IO_P2,
 };
 
 enum class AcceleratorRange {
@@ -99,3 +96,190 @@ enum class Gesture {
     //% block="free fall"
     FreeFall = GESTURE_FREEFALL
 };
+
+//% color=300 weight=99
+namespace input {
+    /**
+     * Do something when a button (``A``, ``B`` or both ``A+B``) is pressed
+     * @param button TODO
+     * @param body TODO
+     */
+    //% help=input/on-button-pressed weight=85
+    //% blockId=device_button_event 
+    //% block="on button|%NAME|pressed" 
+    //% icon="\uf192"
+    void onButtonPressed(Button button, Action body) {
+        registerWithDal((int)button, MICROBIT_BUTTON_EVT_CLICK, body);
+    }
+
+    /**
+     * Attaches code to run when the screen is facing up.
+     * @param body TODO
+     */
+    //% help=input/on-gesture weight=84
+    //% blockId=device_gesture_event block="on |%NAME" icon="\uf135"
+    void onGesture(Gesture gesture, Action body) {
+        registerWithDal(MICROBIT_ID_GESTURE, (int)gesture, body);
+    }
+
+    /**
+     * Do something when a pin(``P0``, ``P1`` or both ``P2``) is pressed.
+     * @param name TODO
+     * @param body TODO
+     */
+    //% help=input/on-pin-pressed weight=83 shim=micro_bit::onPinPressed
+    //% blockId=device_pin_event block="on pin|%NAME|pressed" icon="\uf094"
+    void onPinPressed(TouchPin name, Action body) {
+        auto pin = getPin((int)name);
+        if (!pin) return;
+
+        // Forces the PIN to switch to makey-makey style detection.
+        pin->isTouched();
+        registerWithDal((int)name, MICROBIT_BUTTON_EVT_CLICK, body);
+    }
+
+    /**
+     * Get the button state (pressed or not) for ``A`` and ``B``.
+     */
+    //% help=input/button-is-pressed weight=57
+    //% shim=micro_bit::isButtonPressed 
+    //% block="button|%NAME|is pressed"
+    //% blockId=device_get_button2
+    //% icon="\uf192" blockGap=8
+    bool buttonIsPressed(Button button) {
+      if (button == Button::A)
+        return uBit.buttonA.isPressed();
+      else if (button == Button::B)
+        return uBit.buttonB.isPressed();
+      else if (button == Button::AB)
+        return uBit.buttonAB.isPressed();
+      return false;
+    }
+
+
+    /**
+     * Get the current compass compass heading in degrees.
+     */
+    //% help=input/compass-heading 
+    //% weight=56 icon="\uf14e"
+    //% shim=micro_bit::compassHeading
+    //% blockId=device_heading block="compass heading (°)" blockGap=8
+    int compassHeading() {
+        return uBit.compass.heading();
+    }
+
+
+    /**
+     * Gets the temperature in Celsius degrees (°C).
+     */
+    //% weight=55 icon="\uf06d"
+    //% help=input/temperature shim=micro_bit::temperature
+    //% blockId=device_temperature block="temperature (°C)" blockGap=8
+    int temperature() {
+        return uBit.thermometer.getTemperature();
+    }
+
+    int getAccelerationStrength() {
+        double x = uBit.accelerometer.getX();
+        double y = uBit.accelerometer.getY();
+        double z = uBit.accelerometer.getZ();
+        return (int)sqrt(x*x+y*y+z*z);
+    }
+
+    /**
+     * Get the acceleration value in milli-gravitys (when the board is laying flat with the screen up, x=0, y=0 and z=-1024)
+     * @param dimension TODO
+     */
+    //% help=input/acceleration weight=54 icon="\uf135"
+    //% shim=micro_bit::getAcceleration
+    //% blockId=device_acceleration block="acceleration (mg)|%NAME" blockGap=8
+    int acceleration(Dimension dimension) {
+      switch (dimension) {
+      case Dimension::X: return uBit.accelerometer.getX();
+      case Dimension::Y: return uBit.accelerometer.getY();
+      case Dimension::Z: return uBit.accelerometer.getZ();
+      case Dimension::Strength: return getAccelerationStrength();
+      }
+      return 0;
+    }
+
+
+    /**
+     * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` bright. In the simulator, the ``acceleration y`` is used to emulate this value.
+     */
+    //% help=input/light-level weight=53 shim=micro_bit::lightLevel
+    //% blockId=device_get_light_level block="light level" blockGap=8 icon="\uf185"
+    int lightLevel() {
+        return uBit.display.readLightLevel();
+    }
+
+    /**
+     * The pitch of the device, rotation along the ``x-axis``, in degrees.
+     * @param kind TODO
+     */
+    //% help=/input/rotation weight=52 shim=micro_bit::getRotation
+    //% blockId=device_get_rotation block="rotation (°)|%NAME" blockGap=8 icon="\uf197"
+    int rotation(Rotation kind) {
+      switch (kind) {
+      case Rotation::Pitch: return uBit.accelerometer.getPitch();
+      case Rotation::Roll: return uBit.accelerometer.getRoll();
+      }
+      return 0;        
+    }
+
+    /**
+     * Get the magnetic force value in ``micro-Teslas`` (``µT``). This function is not supported in the simulator.
+     * @param dimension TODO
+     */
+    //% help=input/magnetic-force weight=51 shim=micro_bit::getMagneticForce
+    //% blockId=device_get_magnetic_force block="magnetic force (µT)|%NAME" blockGap=8 icon="\uf076"
+    int magneticForce(Dimension dimension) {
+      if (!uBit.compass.isCalibrated())
+        uBit.compass.calibrate();
+
+      switch (dimension) {
+      case Dimension::X: return uBit.compass.getX() / 1000;
+      case Dimension::Y: return uBit.compass.getY() / 1000;
+      case Dimension::Z: return uBit.compass.getZ() / 1000;
+      case Dimension::Strength: return uBit.compass.getFieldStrength() / 1000;
+      }
+      return 0;
+    }
+
+    /**
+     * Gets the number of milliseconds elapsed since power on.
+     */
+    //% help=input/running-time shim=micro_bit::getCurrentTime weight=50
+    //% blockId=device_get_running_time block="running time (ms)" icon="\uf017"
+    int runningTime() {
+        return uBit.systemTime();
+    }
+
+    /**
+     * Obsolete, compass calibration is automatic.
+     */
+    //% help=input/calibrate weight=0 shim=TD_NOOP
+    void calibrate() { }
+
+    /**
+     * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
+     * @param name pin used to detect the touch
+     */
+    //% help=input/pin-is-pressed weight=58 shim=micro_bit::isPinTouched block="pin|%NAME|is pressed" icon="\uf094"
+    bool pinIsPressed(TouchPin name) {
+        auto pin = getPin((int)name);
+        return pin && pin->isTouched();
+    }
+
+    /**
+     * Sets the accelerometer sample range in gravities.
+     * @param range a value describe the maximum strengh of acceleration measured
+     */
+    //% help=input/set-accelerator-range
+    //% blockId=device_set_accelerometer_range block="set accelerometer|range %range" icon="\uf135"
+    //% weight=5
+    //% shim=micro_bit::setAccelerometerRange
+    void setAccelerometerRange(AcceleratorRange range) {
+        uBit.accelerometer.setRange((int)range);
+    }
+}

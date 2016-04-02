@@ -1,4 +1,4 @@
-#include "BitVM.h"
+#include "ksbit.h"
 
 typedef ImageData* Image;
 

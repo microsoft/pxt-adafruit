@@ -1,6 +1,6 @@
 # String Functions
 
-string-related functions. #docs #String #equals #concat #at #substring #toCharactercode #count
+string-related functions.
 
 ### @parent js/language
 

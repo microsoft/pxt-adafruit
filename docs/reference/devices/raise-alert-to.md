@@ -1,6 +1,6 @@
 # raise alert to
 
-The raise alert to function. #docs #antenna #ble
+The raise alert to function.
 
 Raise an alert on a remote device.
 

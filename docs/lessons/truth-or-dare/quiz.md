@@ -1,6 +1,6 @@
 # truth or dare quiz
 
-a multi-player game that forces each player to reveal a secret or something funny #math #random #docs #shake
+a multi-player game that forces each player to reveal a secret or something funny.
 
 ## Name
 

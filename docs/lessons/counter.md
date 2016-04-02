@@ -1,6 +1,6 @@
 # counter lesson
 
-Learn how to create a counter with with on button pressed. #show #number #screen  #number #math #docs
+Learn how to create a counter with with on button pressed.
 
 ### @video td/videos/counter-0
 

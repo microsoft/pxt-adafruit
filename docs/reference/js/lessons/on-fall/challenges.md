@@ -1,6 +1,6 @@
 # landslide challenges
 
-The on fall function. #onfall #docs
+The on fall function.
 
 ### Challenge 0
 

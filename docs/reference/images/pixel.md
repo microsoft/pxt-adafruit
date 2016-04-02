@@ -1,6 +1,6 @@
 # Pixel
 
-The pixel function. #pixel #image #docs
+The pixel function.
 
 Get the state of a pixel in an [Image](/microbit/reference/image/image).
 

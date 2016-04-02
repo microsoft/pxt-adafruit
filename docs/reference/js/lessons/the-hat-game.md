@@ -1,6 +1,6 @@
 # the hat game lesson
 
-make a game to test your focus on the moving ball  #function #on-button-pressed #if #show-animation #mod #random #Boolean #docs
+make a game to test your focus on the moving ball.
 
 ## Topic
 

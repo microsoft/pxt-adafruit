@@ -1,6 +1,6 @@
 # flipping bird lesson
 
-count the number of times the BBC micro:bit has been shaken #var #shake #mod #math #plot #docs
+count the number of times the BBC micro:bit has been shaken.
 
 ### @video td/videos/flipping-bird-0
 

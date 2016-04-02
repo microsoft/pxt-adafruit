@@ -1,6 +1,6 @@
 # Show Image
 
-The show image function. #showimage #docs #image #screen #LED
+The show image function.
 
 Show an [Image](/microbit/reference/image/image) on the [LED screen](/microbit/device/screen), followed by a 400ms pause.
 

@@ -1,6 +1,6 @@
 # transformers lesson
 
-use functions to return values #var #button #number #function #docs
+use functions to return values.
 
 ### @video td/videos/transformers-0
 

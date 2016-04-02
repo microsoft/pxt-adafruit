@@ -1,6 +1,6 @@
 # night light activity
 
-change the brightness of the BBC micro:bit. #docs #tutorials #stepByStep
+change the brightness of the BBC micro:bit.
 
 ### ~avatar avatar
 

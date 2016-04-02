@@ -1,6 +1,6 @@
 #  lucky 7 quiz answers
 
-Show a number on the BBC micro:bit. #LED #screen #show #math #docs #input
+Show a number on the BBC micro:bit.
 
 This is the answer key for the [lucky 7 quiz](/microbit/lessons/lucky-7/quiz).
 

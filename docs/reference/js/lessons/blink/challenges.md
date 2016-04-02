@@ -1,6 +1,6 @@
 # blink challenges
 
-Coding challenges for the blink tutorial #docs #challenges
+Coding challenges for the blink tutorial.
 
 ## Before we get started
 

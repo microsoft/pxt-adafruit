@@ -1,6 +1,6 @@
 # prank wifi lesson
 
-create a fake wifi app to trick your friends #abs #acceleration #if #math #plot #image #functions #var #docs
+create a fake wifi app to trick your friends.
 
 create a fake wifi app to trick your friends
 

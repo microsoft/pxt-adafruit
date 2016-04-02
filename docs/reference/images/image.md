@@ -1,6 +1,6 @@
 # Image
 
-An image for the micro:bit screen. #docs #image #screen #LED
+An image for the micro:bit screen.
 
 ### @parent blocks/language
 

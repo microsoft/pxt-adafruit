@@ -1,6 +1,6 @@
 # headbands quiz answers
 
-create a charades game with a collection of strings #offset #screen  #variables #docs
+create a charades game with a collection of strings.
 
 ## Name
 

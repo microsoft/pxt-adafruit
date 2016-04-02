@@ -1,6 +1,6 @@
 # On Signal Strength Changed
 
-The `on signal strength changed` function. #docs #devices #ble
+The `on signal strength changed` function.
 
 Register code to run when the signal strength of the paired device changes.
 

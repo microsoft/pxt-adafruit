@@ -1,6 +1,6 @@
 # screen wipe quiz
 
-clear the screen by pressing the "A" button after an animation has been played #LED #screen  #variables #docs #button
+clear the screen by pressing the "A" button after an animation has been played.
 
 ## Name
 

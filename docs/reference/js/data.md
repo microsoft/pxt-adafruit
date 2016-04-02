@@ -1,6 +1,6 @@
 # Global Variables
 
-How to define and use global variables. #docs #data #language #variables
+How to define and use global variables.
 
 ### @parent js/language
 

@@ -1,6 +1,6 @@
 # looper quiz answers
 
-Learn how to create a series of numbers with a for loop. #LED #screen #plot #docs
+Learn how to create a series of numbers with a for loop.
 
 This is the answer key for the [looper quiz](/microbit/lessons/looper/quiz).
 

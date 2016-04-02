@@ -1,6 +1,6 @@
 # magic logo activity
 
-show an image that points up when the logo is up. #docs #microbit
+show an image that points up when the logo is up.
 
 ### ~avatar avatar
 

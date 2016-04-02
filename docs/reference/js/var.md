@@ -1,6 +1,6 @@
 # Local Variables
 
-How to define and use local variables. #docs #var #language #variables
+How to define and use local variables.
 
 ### @parent language
  

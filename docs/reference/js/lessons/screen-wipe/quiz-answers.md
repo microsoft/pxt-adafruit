@@ -1,6 +1,6 @@
 # screen wipe quiz answers
 
-clear the screen by pressing the "A" button after an animation has been played #LED #screen  #variables #docs
+clear the screen by pressing the "A" button after an animation has been played.
 
 This is the answer key for the [screen wipe quiz](/microbit/lessons/screen-wipe/quiz).
 

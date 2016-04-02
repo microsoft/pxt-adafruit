@@ -1,6 +1,6 @@
 # strobe light quiz
 
-Learn how to create a blinking LED script with a for loop. #LED #screen #plot #docs
+Learn how to create a blinking LED script with a for loop.
 
 ## Name
 

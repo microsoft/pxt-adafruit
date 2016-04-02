@@ -1,6 +1,6 @@
 # transformers quiz
 
-Use functions to return values #LED #number #math #functions #return #docs
+Use functions to return values.
 
 ## Name
 

@@ -1,6 +1,6 @@
 # Clear
 
-The clear function for images. #clear #docs
+The clear function for images.
 
 Turn off all the pixels in an [Image](/microbit/reference/image/image).
 

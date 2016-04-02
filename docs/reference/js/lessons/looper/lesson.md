@@ -1,6 +1,6 @@
 # looper lesson
 
-Learn to control blinking LEDs. #LED #screen  #for #docs
+Learn to control blinking LEDs.
 
 ### @video vimeo/134453504
 

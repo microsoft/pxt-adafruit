@@ -1,6 +1,6 @@
 # Boolean
 
-true or false. #docs #boolean #var
+true or false.
 
 ### @parent blocks/language
 

@@ -1,6 +1,6 @@
 # night light quiz answers
 
-Answers to the night light quiz. #LED #image #brightness #fade #docs
+Answers to the night light quiz.
 
 This is the answer key for the [night light quiz](/microbit/lessons/night-light/quiz).
 

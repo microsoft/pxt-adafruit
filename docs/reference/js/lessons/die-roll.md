@@ -1,6 +1,6 @@
 # die roll lesson
 
-create a die on the BBC micro:bit #button #pressed #math #random #var #string #if #docs
+create a die on the BBC micro:bit.
 
 ## Topic
 

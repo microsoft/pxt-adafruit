@@ -1,6 +1,6 @@
 # smiley activity
 
-Learn to design a blinking image. #docs #microbit
+Learn to design a blinking image.
 
 ### ~avatar avatar
 

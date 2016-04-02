@@ -1,6 +1,6 @@
 # rotating animation
 
-Create a rotating image with a while loop. #docs #for #LED
+Create a rotating image with a while loop.
 
 ### @video vimeo/134323475
 

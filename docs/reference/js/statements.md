@@ -1,6 +1,6 @@
 # statements, operators, and libaries
 
-Statements, operators, and libraries. #docs #statements #operators #library
+Statements, operators, and libraries.
 
 ### @parent js/language
  

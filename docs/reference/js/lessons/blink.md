@@ -1,6 +1,6 @@
 # blink lesson
 
-Learn how to create a blinking LED. #LED #screen  #plot #docs #lesson
+Learn how to create a blinking LED.
 
 ### @video td/videos/blink-0
 

@@ -1,6 +1,6 @@
 # blink blocks quiz
 
-Learn how to create a blinking LED script. #LED #screen  #plot #docs
+Learn how to create a blinking LED script.
 
 ## Name
 

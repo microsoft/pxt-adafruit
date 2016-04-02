@@ -1,6 +1,6 @@
 # guess the number quiz answers
 
-Learn how to generate a random number on the micro:bit. #math #random #docs
+Learn how to generate a random number on the micro:bit.
 
 This is the answer key for the [guess the number quiz](/microbit/lessons/guess-the-number/quiz).
 

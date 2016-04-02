@@ -1,6 +1,6 @@
 # speed button lesson
 
-code a speed game by declaring Booleans on the BBC micro:bit #if #string #var #data #docs
+code a speed game by declaring Booleans on the BBC micro:bit.
 
 ### @video td/videos/speed-button-3
 

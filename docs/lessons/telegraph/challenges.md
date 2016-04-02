@@ -1,6 +1,6 @@
 # telegraph activity 
 
-Build a telgraph #microbit #docs
+Build a telgraph.
 
 # micro:bit telegraph
 

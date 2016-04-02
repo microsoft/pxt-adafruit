@@ -1,6 +1,6 @@
 # Scroll Image
 
-The scroll image function. #scrollimage #image #docs
+The scroll image function.
 
 Scrolls the frames within an [Image](/microbit/reference/image/image) on the [LED screen](/microbit/device/screen).
 

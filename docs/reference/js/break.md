@@ -1,6 +1,6 @@
 # Break
 
-Break statement; exit a for or while loop. #docs #break #language #loop #for #while
+Break statement; exit a for or while loop.
 
 ### @parent js/language
  

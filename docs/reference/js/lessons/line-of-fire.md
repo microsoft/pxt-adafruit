@@ -1,6 +1,6 @@
 # line of fire lesson
 
-create a game that relies on precise instincts and timing reflexes #if #  #function #data #forever #var #button #if #assignment #pause #string  #number #docs
+create a game that relies on precise instincts and timing reflexes #if #.
 
 ### @video td/videos/timing-game-0
 

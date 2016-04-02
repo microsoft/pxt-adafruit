@@ -1,6 +1,6 @@
 # rotation animation quiz answers
 
-Learn how to create a rotating image with a while loop. #image #loop  #while #docs
+Learn how to create a rotating image with a while loop.
 
 This is the answer key for the [rotation animation quiz](/microbit/lessons/rotation-animation/quiz).
 

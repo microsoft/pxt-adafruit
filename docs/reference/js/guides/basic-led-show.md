@@ -1,6 +1,4 @@
-# basic LED show
-
-#tutorial #docs
+# basic LED show.
 
 ### Challenge 0
 

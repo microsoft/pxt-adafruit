@@ -1,6 +1,6 @@
 # lucky 7 activity 
 
-show a number on the LED screen. #docs #tutorials #stepByStep
+show a number on the LED screen.
 
 ### ~avatar avatar
 

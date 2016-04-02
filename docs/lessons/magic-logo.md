@@ -1,6 +1,6 @@
 # magic logo lesson
 
-show an image that points up when the logo is up #logo #point #docs
+show an image that points up when the logo is up.
 
 ### @video td/videos/magic-logo-0
 

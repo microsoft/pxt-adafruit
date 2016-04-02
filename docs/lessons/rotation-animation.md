@@ -1,6 +1,6 @@
 # rotation animation block lesson
 
-Learn how to create images with a global variable and while loop. #LED #screen  #plot #docs
+Learn how to create images with a global variable and while loop.
 
 ## Topic
 

@@ -1,6 +1,6 @@
 # rock paper scissors quiz
 
-shift an image horizontally across the display with offset #offset #screen  #variables #docs
+shift an image horizontally across the display with offset.
 
 ## Name
 

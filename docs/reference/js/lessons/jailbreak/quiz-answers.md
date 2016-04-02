@@ -1,6 +1,6 @@
 # jailbreak quiz answers
 
-break out of a counting loop by pressing button "A" #break #string #variables #docs
+break out of a counting loop by pressing button "A".
 
 This is the answer key for the [jailbreak quiz](/microbit/lessons/jailbreak/quiz).
 

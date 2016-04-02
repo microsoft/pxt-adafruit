@@ -1,6 +1,6 @@
 # pong activity
 
-Building a game of pong with sprites. #docs #lessons #pong
+Building a game of pong with sprites.
 
 ### ~avatar avatar
 

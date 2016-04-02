@@ -1,6 +1,6 @@
 # Math Library
 
-Functions in the math library. #docs #math #random #abs #mod #pow #max #min #clamp
+Functions in the math library.
 
 ### @parent blocks/language
 

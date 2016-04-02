@@ -1,6 +1,6 @@
 # types
 
-Touch Develop types #docs #variables #var #types #data
+Touch Develop types.
 
 ### @parent language
  

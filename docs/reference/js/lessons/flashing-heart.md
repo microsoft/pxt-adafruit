@@ -1,6 +1,6 @@
 # flashing heart lesson
 
-Learn how to create LED images with a global variable. #LED #screen  #plot #docs
+Learn how to create LED images with a global variable.
 
 ### @video td/videos/flashing-heart-0
 

@@ -1,6 +1,6 @@
 # glowing sword activity
 
-Make glowing sword. #docs #microbit
+Make glowing sword.
 
 ### ~avatar avatar
 

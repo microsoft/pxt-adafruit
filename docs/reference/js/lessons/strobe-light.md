@@ -1,6 +1,6 @@
 # strobe light lesson
 
-Learn how to create a blinking LED script. #LED #screen  #plot #docs
+Learn how to create a blinking LED script.
 
 ### @video td/videos/strobe-light-0
 

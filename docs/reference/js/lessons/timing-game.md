@@ -1,6 +1,6 @@
 # timing game
 
-make a game to test hand-eye coordination #docs #functions #var
+make a game to test hand-eye coordination.
 
 ### @video td/videos/timing-game-0
 

@@ -1,6 +1,6 @@
 # ornament chain activity 
 
-build a telgraph #microbit #docs
+build a telgraph.
 
 # Ornament Chain Activity
 

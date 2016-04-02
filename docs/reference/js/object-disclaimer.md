@@ -1,6 +1,6 @@
 # Objects disclaimer
 
-Touch Develop docs for the micro:bit #docs #contents #apis #functions #language #statements
+Touch Develop docs for the micro:bit.
 
 ### Memory management on the micro-bit
 

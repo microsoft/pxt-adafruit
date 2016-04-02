@@ -1,6 +1,6 @@
 # snowflake fall lesson
 
-design a blinking rectangle animation #animation #loop #forever #docs
+design a blinking rectangle animation.
 
 ### @video td/videos/snowflake-fall-0
 

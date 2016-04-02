@@ -1,6 +1,6 @@
 # beautiful image blocks activity
 
-Generate and show a beautiful image. #docs #microbit
+Generate and show a beautiful image.
 
 ### ~avatar avatar
 

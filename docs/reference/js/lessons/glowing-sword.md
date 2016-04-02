@@ -1,6 +1,6 @@
 # glowing sword lesson
 
-make a glowing sword #image #docs
+make a glowing sword.
 
 ### @video td/videos/glowing-sword-0
 

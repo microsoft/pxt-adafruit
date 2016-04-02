@@ -1,6 +1,6 @@
 # 2 player pong quiz
 
-a two-player game of Pong using TWO BBC micro:bits! #LED #number #math #acceleration #docs
+a two-player game of Pong using TWO BBC micro:bits!.
 
 ## Name
 

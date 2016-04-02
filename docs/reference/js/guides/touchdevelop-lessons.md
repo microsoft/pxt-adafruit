@@ -1,6 +1,6 @@
 # TouchDevelop Lessons
 
-Overview of TouchDevelop lessons for the micro:bit. #docs #contents
+Overview of TouchDevelop lessons for the micro:bit.
 
 ### @section full
 

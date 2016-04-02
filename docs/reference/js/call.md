@@ -1,6 +1,6 @@
 # Call a Function
 
-How to call a function in your code. #docs #function #call #language
+How to call a function in your code.
 
 ### @parent js/language
  

@@ -75,6 +75,9 @@
             "isNative": false,
             "hasHex": true
         },
+        "simulator": {
+            "autoRun": true
+        },
         "compileService": {
             "gittag": "v0",
             "serviceId": "ws"

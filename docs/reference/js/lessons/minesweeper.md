@@ -1,6 +1,6 @@
 # minesweeper lesson
 
-A game that tests your memory for placing a LED mine then finding the hidden LED mine #var #data #if #random #min #max #mod #plot #unplot #pause #accceleration #docs
+A game that tests your memory for placing a LED mine then finding the hidden LED mine.
 
 ### @video td/videos/minesweeper-0
 

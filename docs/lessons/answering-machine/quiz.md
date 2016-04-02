@@ -1,6 +1,6 @@
 # answering machine blocks quiz
 
-Create an answering machine on the micro:bit. #LED #screen #show #math #docs #input
+Create an answering machine on the micro:bit.
 
 ## Name
 

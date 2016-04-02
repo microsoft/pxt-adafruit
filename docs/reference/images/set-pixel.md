@@ -1,6 +1,6 @@
 # Set Pixel
 
-The set pixel function. #set pixel #image #docs
+The set pixel function. #set pixel.
 
 Set the on/off state of pixel in an [Image](/microbit/reference/image/image).
 

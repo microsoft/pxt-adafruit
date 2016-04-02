@@ -1,6 +1,6 @@
 # event handler
 
-Event handlers - how they work. #eventhandler #docs #input #button
+Event handlers - how they work.
 
 An event handler is code that is associated with a particular event, such as "button A pressed". You create (or register) the association between an event and an event handler by calling a function named "on <event>".  After registering an event handler with an event, then whenever that event occurs, the event handler code executes.
 

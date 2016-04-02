@@ -1,6 +1,6 @@
 # Show Frame
 
-The show frame function. #showframe #docs #image #screen #LED
+The show frame function.
 
 Display an [Image](/microbit/reference/image/image) on the BBC micro:bit's [LED screen](/microbit/device/screen)
 

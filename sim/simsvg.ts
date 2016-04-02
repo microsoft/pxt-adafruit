@@ -700,7 +700,6 @@ svg.sim.grayscale {
                 let z2 = 1023*1023 - x * x  - y * y;
                 let z = Math.floor((z2 > 0 ? -1 : 1)* Math.sqrt(Math.abs(z2)));
                 
-                console.log(`move: ${ax} ${y} ${z}`)    
                 state.accelerometer.update(x,y,z);
                 this.updateTilt();
             }, false);
@@ -722,7 +721,6 @@ svg.sim.grayscale {
                             accy = 0;
                             accz = -1023;                          
                         }                    
-                        console.log(`leave: ${accx} ${accy} ${accz}`)    
                         state.accelerometer.update(accx, accy, accz);
                         this.updateTilt();                        
                         }, 50)

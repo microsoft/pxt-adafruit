@@ -1,6 +1,6 @@
 # looper blocks lesson
 
-Learn to control blinking LEDs. #LED #screen  #for #docs
+Learn to control blinking LEDs.
 
 ### @video td/videos/looper-0
 

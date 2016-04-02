@@ -1,6 +1,6 @@
 # screen wipe lesson
 
-clear the screen by pressing button "A" #button #clear #docs
+clear the screen by pressing button "A".
 
 ### @video td/videos/screen-wipe-0
 

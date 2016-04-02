@@ -1,6 +1,6 @@
 # night light quiz
 
-change the brightness of the BBC micro:bit #LED #image #brightness #fade #docs
+change the brightness of the BBC micro:bit.
 
 ## Name
 

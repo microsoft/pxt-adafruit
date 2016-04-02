@@ -1,6 +1,6 @@
 # charting lesson
 
-measure the acceleration on the micro:bit in the "z" direction #acceleration #var #docs #if #show
+Measure the acceleration on the micro:bit in the "z" direction.
 
 ## Topic
 

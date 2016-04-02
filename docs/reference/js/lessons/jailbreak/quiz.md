@@ -1,6 +1,6 @@
 # jailbreak quiz 
 
-break out of a counting loop by pressing button "A" #break #string #variables #docs
+break out of a counting loop by pressing button "A".
 
 ## Name
 

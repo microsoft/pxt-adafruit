@@ -1,6 +1,6 @@
 # bounce image quiz answers
 
-scroll an image on the BBC micro:bit #LED #screen #animation #docs
+scroll an image on the BBC micro:bit.
 
 This is the answer key for the [bounce image quiz](/microbit/lessons/bounce-image/quiz).
 

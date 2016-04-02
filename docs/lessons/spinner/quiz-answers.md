@@ -1,6 +1,6 @@
 # spinner quiz answers
 
-a spin the BBC micro:bit game with the input on shake #math #random #docs #shake
+a spin the BBC micro:bit game with the input on shake.
 
 ## Name
 

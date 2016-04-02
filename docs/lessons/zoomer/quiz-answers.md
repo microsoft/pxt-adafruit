@@ -1,6 +1,6 @@
 # zoomer quiz answers
 
-Measure the acceleration on the micro:bit in the "z" direction #LED #number #math #acceleration #docs
+Measure the acceleration on the micro:bit in the "z" direction.
 
 This is the answer key for the [zoomer quiz](/microbit/lessons/zoomer/quiz).
 

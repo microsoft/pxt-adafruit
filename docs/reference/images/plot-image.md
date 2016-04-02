@@ -1,6 +1,6 @@
 # Plot Image
 
-The plot image function. #plotimage #docs #image #screen #LED
+The plot image function.
 
 Display an [Image](/microbit/reference/image/image) on the BBC micro:bit's [LED screen](/microbit/device/screen)
 

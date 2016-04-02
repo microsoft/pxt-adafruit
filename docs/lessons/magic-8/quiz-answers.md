@@ -1,6 +1,6 @@
 # magic 8 quiz answers
 
-create a magic 8 ball on the BBC micro:bit #math #random #docs
+create a magic 8 ball on the BBC micro:bit.
 
 ## Name
 

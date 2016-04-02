@@ -1,6 +1,6 @@
 # guess the number activity
 
-guess the number with math random. #microbit #docs
+guess the number with math random.
 
 ### ~avatar avatar
 

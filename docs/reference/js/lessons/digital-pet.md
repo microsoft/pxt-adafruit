@@ -1,6 +1,6 @@
 # digital pet lesson
 
-a display of pet images for the BBC micro:bit #functions #number #forever #button #string #pause #data #shake  #docs
+a display of pet images for the BBC micro:bit.
 
 ### @video td/videos/digital-pet-0
 

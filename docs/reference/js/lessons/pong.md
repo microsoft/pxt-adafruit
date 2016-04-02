@@ -1,6 +1,6 @@
 # pong lesson
 
-code your own game of Pong on the micro:bit #data #assignment #on-button-pressed #if #  #function #data #forever #var #button #if #assignment #pause #string  #number #docs
+code your own game of Pong on the micro:bit. #.
 
 ### @video td/videos/pong-0
 

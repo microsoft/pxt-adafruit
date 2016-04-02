@@ -1,6 +1,6 @@
 # bop it quiz 
 
-a game where you have to keep up with the commands #math #random #docs
+a game where you have to keep up with the commands.
 
 ## Name
 

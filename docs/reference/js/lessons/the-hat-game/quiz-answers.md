@@ -1,6 +1,6 @@
 # the hat game quiz answers
 
-The all famous Hat Game -- one of 3 hats has the ball, which is revealed at the beginning. The hats then swap with each other. You goal is to chose the hat with the ball after the hats have finished swapping. #LED #number #math #functions #return #docs
+The all famous Hat Game -- one of 3 hats has the ball, which is revealed at the beginning. The hats then swap with each other. You goal is to chose the hat with the ball after the hats have finished swapping.
 
 ## Name
 

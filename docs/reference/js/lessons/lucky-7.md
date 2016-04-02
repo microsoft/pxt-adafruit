@@ -1,6 +1,6 @@
 # lucky 7 lesson
 
-show a number on the LED screen #show #number #docs
+show a number on the LED screen.
 
 ### @video td/videos/lucky-7-0
 

@@ -1,6 +1,6 @@
 # answering machine blocks quiz answers
 
-Create an answering machine on the micro:bit. #LED #screen #show #math #docs #input
+Create an answering machine on the micro:bit.
 
 This is the answer key for the [answering machine quiz](/microbit/lessons/answering-machine/quiz).
 

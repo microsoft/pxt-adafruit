@@ -1,6 +1,6 @@
 # guess the number quiz 
 
-Learn how to generate a random number on the micro:bit. #math #random #docs
+Learn how to generate a random number on the micro:bit.
 
 ## Name
 

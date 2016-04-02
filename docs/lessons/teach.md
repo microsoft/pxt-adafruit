@@ -1,6 +1,6 @@
 # Teach Blocks
 
-Overview of lesson instructions for the BBC micro:bit. #docs #contents
+Overview of lesson instructions for the BBC micro:bit.
 
 ### @short Teach
 

@@ -1,6 +1,6 @@
 # landslide challenges
 
-Coding challenges for the landslide tutorial. #onfall #docs
+Coding challenges for the landslide tutorial.
 
 ### ~avatar avatar fail
 

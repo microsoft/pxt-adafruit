@@ -1,6 +1,6 @@
 # letter up lesson
 
-create a guessing game that can be played with your friends #at #string #at #on-logo-down #string-functions #on-logo-up #library #docs
+create a guessing game that can be played with your friends.
 
 ## Topic
 

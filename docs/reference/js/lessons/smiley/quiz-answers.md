@@ -1,6 +1,4 @@
-# smiley quiz answers
-
-#LED #screen #animation #docs
+# smiley quiz answers.
 
 This is the answer key for the [smiley quiz](/microbit/lessons/smiley/quiz).
 

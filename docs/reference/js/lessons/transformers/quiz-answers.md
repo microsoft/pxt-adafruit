@@ -1,6 +1,6 @@
 # transformers quiz answers
 
-Use functions to return values #LED #number #math #functions #return #docs
+Use functions to return values.
 
 This is the answer key for the [transformers quiz](/microbit/lessons/transformers/quiz).
 

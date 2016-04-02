@@ -1,6 +1,4 @@
-# blink symbols
-
-#tutorial #docs
+# blink symbols.
 
 ### Challenge 0
 

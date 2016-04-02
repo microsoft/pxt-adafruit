@@ -1,6 +1,6 @@
 # guess the number lesson
 
-Learn to create a random number with input from button A. #input #screen #math #docs
+Learn to create a random number with input from button A.
 
 ### @video td/videos/guess-the-number-0
 

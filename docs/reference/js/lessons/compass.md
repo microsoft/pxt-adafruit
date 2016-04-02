@@ -1,6 +1,6 @@
 # compass lesson
 
-build a compass app that applies the BBC micro:bit magnetic sensor (magnetometer) #functions #var #docs
+build a compass app that applies the BBC micro:bit magnetic sensor (magnetometer).
 
 build a compass app that applies the BBC micro:bit magnetic sensor (magnetometer)
 

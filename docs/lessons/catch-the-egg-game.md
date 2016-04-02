@@ -1,6 +1,6 @@
 # catch the egg game lesson
 
-a game to catch eggs in a basket #var #data #if #random #min #max #mod #plot #unplot #pause #accceleration #docs
+A game to catch eggs in a basket.
 
 ### @video td/videos/catch-the-egg-game-0
 

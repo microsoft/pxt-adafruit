@@ -1,6 +1,6 @@
 # number psych quiz answers
 
-a 4-player game in which each player must outwit his opponents.  #math #random #docs #shake
+a 4-player game in which each player must outwit his opponents.
 
 ## Name
 

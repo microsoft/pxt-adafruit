@@ -1,6 +1,6 @@
 # magic logo quiz
 
-show an image that points up when the logo is up #logo #show #create #docs
+show an image that points up when the logo is up.
 
 ## Name
 

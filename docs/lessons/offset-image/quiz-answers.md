@@ -1,6 +1,6 @@
 # offset image quiz answers
 
-shift an image horizontally across the display with offset #offset #screen  #variables #docs
+shift an image horizontally across the display with offset.
 
 This is the answer key for the [offset image quiz](/microbit/lessons/offset-image/quiz).
 

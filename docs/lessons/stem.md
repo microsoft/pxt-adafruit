@@ -1,6 +1,6 @@
 # Block Editor STEM Lessons
 
-Overview of Blocks lessons for the BBC micro:bit. #docs #contents
+Overview of Blocks lessons for the BBC micro:bit.
 
 ### @short Lessons
 

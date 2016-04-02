@@ -16,7 +16,7 @@ namespace led {
      * @param x TODO
      * @param y TODO
      */
-    //% help=led/plot weight=78 shim=micro_bit::plot
+    //% help=led/plot weight=78
     //% blockId=device_plot block="plot|x %x|y %y" icon="\uf205" blockGap=8
     void plot(int x, int y) { 
       uBit.display.image.setPixelValue(x, y, 1);
@@ -27,7 +27,7 @@ namespace led {
      * @param x TODO
      * @param y TODO
      */
-    //% help=led/unplot weight=77 shim=micro_bit::unPlot
+    //% help=led/unplot weight=77
     //% blockId=device_unplot block="unplot|x %x|y %y" icon="\uf204" blockGap=8
     void unplot(int x, int y) { 
       uBit.display.image.setPixelValue(x, y, 0);
@@ -38,7 +38,7 @@ namespace led {
      * @param x TODO
      * @param y TODO
      */
-    //% help=led/point weight=76 shim=micro_bit::point
+    //% help=led/point weight=76
     //% blockId=device_point block="point|x %x|y %y" icon="\uf10c"
     bool point(int x, int y) {
       int pix = uBit.display.image.getPixelValue(x, y);
@@ -48,7 +48,7 @@ namespace led {
     /**
      * Get the screen brightness from 0 (off) to 255 (full bright).
      */
-    //% help=led/brightness weight=60 shim=micro_bit::getBrightness
+    //% help=led/brightness weight=60
     //% blockId=device_get_brightness block="brightness" icon="\uf042" blockGap=8
     int brightness() {
       return uBit.display.getBrightness();
@@ -58,7 +58,7 @@ namespace led {
      * Set the screen brightness from 0 (off) to 255 (full bright).
      * @param value the brightness value, eg:255, 127, 0
      */
-    //% help=led/set-brightness weight=59 shim=micro_bit::setBrightness
+    //% help=led/set-brightness weight=59
     //% blockId=device_set_brightness block="set brightness %value" icon="\uf042"
     void setBrightness(int value) { 
        uBit.display.setBrightness(value);
@@ -67,7 +67,7 @@ namespace led {
     /**
      * Cancels the current animation and clears other pending animations.
      */
-    //% weight=50 shim=uBit.display.stopAnimation help=led/stop-animation
+    //% weight=50 help=led/stop-animation
     //% blockId=device_stop_animation block="stop animation" icon="\uf04d"
     void stopAnimation() { 
        uBit.display.stopAnimation();
@@ -77,7 +77,7 @@ namespace led {
      * Sets the display mode between black and white and greyscale for rendering LEDs.
      * @param mode TODO
      */
-    //% shim=micro_bit::setDisplayMode weight=1 help=/led/set-display-mode
+    //% weight=1 help=/led/set-display-mode
     void setDisplayMode(DisplayMode_ mode) { 
         uBit.display.setDisplayMode((DisplayMode)mode);
     }
@@ -85,7 +85,7 @@ namespace led {
     /**
      * Takes a screenshot of the LED screen and returns an image.
      */
-    //% shim=uBit.display.screenShot help=led/screenshot
+    //% help=led/screenshot
     Image screenshot() {
       return uBit.display.screenShot().leakData();
         /*

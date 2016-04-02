@@ -311,7 +311,7 @@ declare namespace led {
      * @param x TODO
      * @param y TODO
      */
-    //% help=led/plot weight=78 shim=micro_bit::plot
+    //% help=led/plot weight=78
     //% blockId=device_plot block="plot|x %x|y %y" icon="\uf205" blockGap=8 shim=led::plot
     function plot(x: number, y: number): void;
 
@@ -320,7 +320,7 @@ declare namespace led {
      * @param x TODO
      * @param y TODO
      */
-    //% help=led/unplot weight=77 shim=micro_bit::unPlot
+    //% help=led/unplot weight=77
     //% blockId=device_unplot block="unplot|x %x|y %y" icon="\uf204" blockGap=8 shim=led::unplot
     function unplot(x: number, y: number): void;
 
@@ -329,14 +329,14 @@ declare namespace led {
      * @param x TODO
      * @param y TODO
      */
-    //% help=led/point weight=76 shim=micro_bit::point
+    //% help=led/point weight=76
     //% blockId=device_point block="point|x %x|y %y" icon="\uf10c" shim=led::point
     function point(x: number, y: number): boolean;
 
     /**
      * Get the screen brightness from 0 (off) to 255 (full bright).
      */
-    //% help=led/brightness weight=60 shim=micro_bit::getBrightness
+    //% help=led/brightness weight=60
     //% blockId=device_get_brightness block="brightness" icon="\uf042" blockGap=8 shim=led::brightness
     function brightness(): number;
 
@@ -344,14 +344,14 @@ declare namespace led {
      * Set the screen brightness from 0 (off) to 255 (full bright).
      * @param value the brightness value, eg:255, 127, 0
      */
-    //% help=led/set-brightness weight=59 shim=micro_bit::setBrightness
+    //% help=led/set-brightness weight=59
     //% blockId=device_set_brightness block="set brightness %value" icon="\uf042" shim=led::setBrightness
     function setBrightness(value: number): void;
 
     /**
      * Cancels the current animation and clears other pending animations.
      */
-    //% weight=50 shim=uBit.display.stopAnimation help=led/stop-animation
+    //% weight=50 help=led/stop-animation
     //% blockId=device_stop_animation block="stop animation" icon="\uf04d" shim=led::stopAnimation
     function stopAnimation(): void;
 
@@ -359,13 +359,13 @@ declare namespace led {
      * Sets the display mode between black and white and greyscale for rendering LEDs.
      * @param mode TODO
      */
-    //% shim=micro_bit::setDisplayMode weight=1 help=/led/set-display-mode shim=led::setDisplayMode
+    //% weight=1 help=/led/set-display-mode shim=led::setDisplayMode
     function setDisplayMode(mode: DisplayMode): void;
 
     /**
      * Takes a screenshot of the LED screen and returns an image.
      */
-    //% shim=uBit.display.screenShot help=led/screenshot shim=led::screenshot
+    //% help=led/screenshot shim=led::screenshot
     function screenshot(): Image;
 }
 

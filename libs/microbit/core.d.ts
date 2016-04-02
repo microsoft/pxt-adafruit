@@ -4,14 +4,14 @@ interface Array<T> {
     /**
       * Gets or sets the length of the array. This is a number one higher than the highest element defined in an array.
       */
-    //% shim=collection::count
+    //% shim=ArrayImpl::length
     length: number;
 
     /**
       * Appends new elements to an array.
       * @param items New elements of the Array.
       */
-    //% shim=collection::add
+    //% shim=ArrayImpl::push
     push(item: T): void;
     
     /**
@@ -41,11 +41,11 @@ interface Array<T> {
     slice(start: number, end: number): T[];
 
     /** Removes the first occurence of an object. Returns true if removed. */
-    //% shim=collection::remove
+    //% shim=ArrayImpl::removeElement
     removeElement(element:T) : boolean;
     
     /** Removes the object at position index. */
-    //% shim=collection::remove_at
+    //% shim=ArrayImpl::removeAt
     removeAt(idx:number) : void;
     
     
@@ -69,7 +69,7 @@ interface Array<T> {
       * @param searchElement The value to locate in the array.
       * @param fromIndex The array index at which to begin the search. If fromIndex is omitted, the search starts at index 0.
       */
-    //% shim=collection::index_of
+    //% shim=ArrayImpl::indexOf
     indexOf(searchElement: T, fromIndex?: number): number;
 
 
@@ -86,35 +86,11 @@ interface String {
   * Converts A string to an integer.
   * @param s A string to convert into a number.
   */
-  //% shim=string::to_number
+  //% shim=String::toNumber
 declare function parseInt(s: string): number;
 
 interface Object {}
 interface Function {}
 interface IArguments {}
 interface RegExp {}
-
-interface Boolean {
-    /**
-      * Returns a string representation of an object.
-      */
-    //% shim=boolean::to_string
-    toString(): string;
-}
-
-declare namespace String {
-    /**
-      * Make a string from the given ASCII character code. 
-      */
-    //% shim=number::to_character
-    export function fromCharCode(code:number): string;
-}
-
-interface Number {
-    /**
-      * Returns a string representation of an object.
-      */
-    //% shim=number::to_string
-    toString(): string;
-}
 

@@ -78,6 +78,11 @@ namespace String {
     {
       return ManagedString((char)code).leakData();
     }
+
+    //%
+    int toNumber(StringData *s) {
+      return atoi(s->data);
+    }
 }
 
 namespace NumberMethods {
@@ -137,3 +142,92 @@ namespace Math {
       return ::sqrt(x);
     }
 }
+
+namespace ArrayImpl {
+    //%
+    RefCollection *mk(uint32_t flags)
+    {
+      RefCollection *r = new RefCollection(flags);
+      return r;
+    }
+
+    //%
+    int length(RefCollection *c) { return c->data.size(); }
+
+    //%
+    void push(RefCollection *c, uint32_t x) {
+      if (c->flags & 1) incr(x);
+      c->data.push_back(x);
+    }
+
+    inline bool in_range(RefCollection *c, int x) {
+      return (0 <= x && x < (int)c->data.size());
+    }
+
+    //%
+    uint32_t getAt(RefCollection *c, int x) {
+      if (in_range(c, x)) {
+        uint32_t tmp = c->data.at(x);
+        if (c->flags & 1) incr(tmp);
+        return tmp;
+      }
+      else {
+        error(ERR_OUT_OF_BOUNDS);
+        return 0;
+      }
+    }
+
+    //%
+    void removeAt(RefCollection *c, int x) {
+      if (!in_range(c, x))
+        return;
+
+      if (c->flags & 1) decr(c->data.at(x));
+      c->data.erase(c->data.begin()+x);
+    }
+
+    //%
+    void setAt(RefCollection *c, int x, uint32_t y) {
+      if (!in_range(c, x))
+        return;
+
+      if (c->flags & 1) {
+        decr(c->data.at(x));
+        incr(y);
+      }
+      c->data.at(x) = y;
+    }
+
+    //%
+    int indexOf(RefCollection *c, uint32_t x, int start) {
+      if (!in_range(c, start))
+        return -1;
+
+      if (c->flags & 2) {
+        StringData *xx = (StringData*)x;
+        for (uint32_t i = start; i < c->data.size(); ++i) {
+          StringData *ee = (StringData*)c->data.at(i);
+          if (xx->len == ee->len && memcmp(xx->data, ee->data, xx->len) == 0)
+            return (int)i;
+        }
+      } else {
+        for (uint32_t i = start; i < c->data.size(); ++i)
+          if (c->data.at(i) == x)
+            return (int)i;
+      }
+
+      return -1;
+    }
+
+    //%
+    int removeElement(RefCollection *c, uint32_t x) {
+      int idx = indexOf(c, x, 0);
+      if (idx >= 0) {
+        removeAt(c, idx);
+        return 1;
+      }
+
+      return 0;
+    }
+}
+

@@ -32,7 +32,7 @@ declare interface String {
 
     /** Returns the length of a String object. */
     //% property shim=StringMethods::length
-    length(): number;
+    length: number;
 }
 
 

@@ -73,7 +73,7 @@ namespace pins {
      * Read the specified pin or connector as either 0 or 1
      * @param name pin to read from
      */
-    //% help=pins/digital-read-pin weight=30 shim=micro_bit::digitalReadPin
+    //% help=pins/digital-read-pin weight=30
     //% blockId=device_get_digital_pin block="digital read|pin %name" blockGap=8
     int digitalReadPin(DigitalPin name) {
         PINREAD(getDigitalValue());
@@ -84,7 +84,7 @@ namespace pins {
       * @param name pin to write to
       * @param value value to set on the pin, 1 eg,0
       */
-    //% help=pins/digital-write-pin weight=29 shim=micro_bit::digitalWritePin
+    //% help=pins/digital-write-pin weight=29
     //% blockId=device_set_digital_pin block="digital write|pin %name|to %value"
     void digitalWritePin(DigitalPin name, int value) { 
         PINOP(setDigitalValue(value));
@@ -94,7 +94,7 @@ namespace pins {
      * Read the connector value as analog, that is, as a value comprised between 0 and 1023.
      * @param name pin to write to
      */
-    //% help=pins/analog-read-pin weight=25 shim=micro_bit::analogReadPin
+    //% help=pins/analog-read-pin weight=25
     //% blockId=device_get_analog_pin block="analog read|pin %name" blockGap="8" 
     int analogReadPin(AnalogPin name) {
         PINREAD(getAnalogValue());
@@ -105,7 +105,7 @@ namespace pins {
      * @param name pin name to write to
      * @param value value to write to the pin between ``0`` and ``1023``. eg:1023,0
      */
-    //% help=pins/analog-write-pin weight=24 shim=micro_bit::analogWritePin
+    //% help=pins/analog-write-pin weight=24
     //% blockId=device_set_analog_pin block="analog write|pin %name|to %value" blockGap=8
     void analogWritePin(AnalogPin name, int value) { 
         PINOP(setAnalogValue(value));
@@ -117,7 +117,7 @@ namespace pins {
      * @param name analog pin to set period to
      * @param micros period in micro seconds. eg:20000
      */
-    //% shim=micro_bit::setAnalogPeriodUs help=pins/analog-set-period weight=23
+    //% help=pins/analog-set-period weight=23
     //% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros" 
     void analogSetPeriod(AnalogPin name, int micros) { 
         PINOP(setAnalogPeriodUs(micros));
@@ -128,7 +128,7 @@ namespace pins {
      * @param name pin to write to
      * @param value angle or rotation speed, eg:180,90,0
      */
-    //% help=pins/servo-write-pin weight=20 shim=micro_bit::servoWritePin
+    //% help=pins/servo-write-pin weight=20
     //% blockId=device_set_servo_pin block="servo write|pin %name|to %value" blockGap=8
     void servoWritePin(AnalogPin name, int value) { 
         PINOP(setServoValue(value));
@@ -139,7 +139,7 @@ namespace pins {
      * @param name pin name
      * @param micros pulse duration in micro seconds, eg:1500
      */
-    //% shim=micro_bit::setServoPulseUs help=pins/serial-set-pulse weight=19
+    //% help=pins/serial-set-pulse weight=19
     //% blockId=device_set_servo_pulse block="servo set pulse|pin %value|to (µs) %micros"
     void servoSetPulse(AnalogPin name, int micros) { 
         PINOP(setServoPulseUs(micros));
@@ -152,7 +152,7 @@ namespace pins {
      * Sets the pin used when using `pins->analog pitch`.
      * @param name TODO
      */
-    //% shim=micro_bit::enablePitch help=pins/analog-set-pitch weight=12
+    //% help=pins/analog-set-pitch weight=12
     void analogSetPitchPin(AnalogPin name) { 
       pitchPin = getPin((int)name);
     }
@@ -162,7 +162,7 @@ namespace pins {
      * @param frequency TODO
      * @param ms TODO
      */
-    //% shim=micro_bit::pitch help=pins/analog-pitch weight=14 async
+    //% help=pins/analog-pitch weight=14 async
     void analogPitch(int frequency, int ms) { 
       if (pitchPin == NULL) return;
       if (frequency <= 0) {

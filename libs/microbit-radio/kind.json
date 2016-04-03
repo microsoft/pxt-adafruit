@@ -3,6 +3,9 @@
     "description": "The radio services",
     "files": [
         "README.md",
+        "shims.d.ts",
+        "enums.d.ts",
+        "radio.cpp",
         "radio.ts"
     ],
     "public": true,

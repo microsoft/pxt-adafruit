@@ -514,4 +514,17 @@ namespace ks.rt.pins {
 
 }
 
+namespace ks.rt.images {
+    export function createImage(img: Image) { return img }
+    export function createBigImage(img: Image) { return img }
+}
 
+namespace ks.rt.ImageMethods {
+    export function showImage(i: Image, offset: number) {
+        // TODO offset?
+        i.copyTo(0, 5, board().image, 0)
+        runtime.queueDisplayUpdate()
+    }
+    
+    // TODO ...
+}

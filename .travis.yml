@@ -3,7 +3,7 @@ node_js:
   - "5.7.0"
 script:
   - "node node_modules/kindscript/built/kind.js travis"  
-  - "cd libs/lang-test0; node ../../node_modules/kindscript/built/kind.js run"
+  - "(cd libs/lang-test0; node ../../node_modules/kindscript/built/kind.js run)"
   - "node node_modules/kindscript/built/kind.js uploaddoc"
 sudo: false
 notifications:

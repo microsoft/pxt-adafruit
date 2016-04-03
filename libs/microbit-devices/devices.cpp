@@ -173,7 +173,7 @@ namespace devices {
      * @param name TODO
      * @param body TODO
      */
-    //% help=devices/on-gamepad-button weight=40 shim=micro_bit::onGamepadButton
+    //% help=devices/on-gamepad-button weight=40
     //% weight=25
     //% blockId=devices_gamepad_event block="on gamepad button|%NAME" icon="\uf11b"
     void onGamepadButton(MesDpadButtonInfo name, Action body) {
@@ -206,7 +206,7 @@ namespace devices {
      * Registers code to run when the device notifies about a change of signal strength.
      * @param body TODO
      */
-    //% shim=micro_bit::onSignalStrengthChanged weight=23 help=devices/on-signal-strength-changed
+    //% weight=23 help=devices/on-signal-strength-changed
     //% blockId=devices_signal_strength_changed_event block="on signal strength changed" icon="\uf012"
     void onSignalStrengthChanged(Action body) {
         initSignalStrength();    

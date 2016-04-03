@@ -1,8 +1,13 @@
+//
+// Note that this is supposed to run from command line.
+// Do not use anything besides basic.pause, control.inBackground, console.log
+//
+
 //% shim=ksrt::panic
 function panic(code2: number): void { }
 
 function msg(s: string): void {
-    // console.log(s)
+    //console.log(s)
     //basic.pause(50);
 }
 
@@ -79,15 +84,11 @@ var unusedInit = incrXyz();
 
 assert(xyz == 13, "init2")
 
+
 testClass()
 
-basic.showLeds(`
-    # # . # #
-    # # . # #
-    . . # . .
-    # . . . #
-    . # # # .
-    `)
+basic.showNumber(1)
+
 
 console.log("ALL TESTS OK")
 

@@ -83,74 +83,12 @@ namespace ks.rt {
         throw new Error("PANIC " + code)
     }
 
-
-    export function onPinPressed(pin: Pin, handler: RefAction) {
-        pin.isTouched();
-        input.onButtonPressed(pin.id, handler);
+    export function getPin(id: number) {
+        return board().pins.filter(p => p && p.id == id)[0] || null
     }
 
-    export function ioP0() { return board().pins[0]; }
-    export function ioP1() { return board().pins[1]; }
-    export function ioP2() { return board().pins[2]; }
-    export function ioP3() { return board().pins[3]; }
-    export function ioP4() { return board().pins[4]; }
-    export function ioP5() { return board().pins[5]; }
-    export function ioP6() { return board().pins[6]; }
-    export function ioP7() { return board().pins[7]; }
-    export function ioP8() { return board().pins[8]; }
-    export function ioP9() { return board().pins[9]; }
-    export function ioP10() { return board().pins[10]; }
-    export function ioP11() { return board().pins[11]; }
-    export function ioP12() { return board().pins[12]; }
-    export function ioP13() { return board().pins[13]; }
-    export function ioP14() { return board().pins[14]; }
-    export function ioP15() { return board().pins[15]; }
-    export function ioP16() { return board().pins[16]; }
-    export function ioP19() { return board().pins[19]; }
-    export function ioP20() { return board().pins[20]; }
 
-    export function isPinTouched(pin: Pin): boolean {
-        return pin.isTouched();
-    }
-
-    /* pins */
-    export function digitalReadPin(pin: Pin): number {
-        pin.mode = PinMode.Digital | PinMode.Input;
-        return pin.value > 100 ? 1 : 0;
-    }
-
-    export function digitalWritePin(pin: Pin, value: number) {
-        pin.mode = PinMode.Digital | PinMode.Output;
-        pin.value = value > 0 ? 1023 : 0;
-        runtime.queueDisplayUpdate();
-    }
-
-    export function analogReadPin(pin: Pin): number {
-        pin.mode = PinMode.Analog | PinMode.Input;
-        return pin.value || 0;
-    }
-
-    export function analogWritePin(pin: Pin, value: number) {
-        pin.mode = PinMode.Analog | PinMode.Output;
-        pin.value = value ? 1 : 0;
-        runtime.queueDisplayUpdate();
-    }
-
-    export function setAnalogPeriodUs(pin: Pin, micros: number) {
-        pin.mode = PinMode.Analog | PinMode.Output;
-        pin.period = micros;
-        runtime.queueDisplayUpdate();
-    }
-
-    export function servoWritePin(pin: Pin, value: number) {
-        setAnalogPeriodUs(pin, 20000);
-        // TODO
-    }
-
-    export function servoSetPulse(pin: Pin, micros: number) {
-    }
-
-    module AudioContextManager {
+    export namespace AudioContextManager {
         var _context: any; // AudioContext
         var _vco: any; //OscillatorNode;
         var _vca: any; // GainNode;
@@ -199,39 +137,6 @@ namespace ks.rt {
 
             _vco.frequency.value = frequency;
             _vca.gain.value = gain;
-        }
-    }
-
-    export function enablePitch(pin: Pin) {
-        board().pins.filter(p => !!p).forEach(p => p.pitch = false);
-        pin.pitch = true;
-    }
-
-    export function pitch(frequency: number, ms: number) {
-        // update analog output
-        let pin = board().pins.filter(pin => !!pin && pin.pitch)[0] || board().pins[0];
-        pin.mode = PinMode.Analog | PinMode.Output;
-        if (frequency <= 0) {
-            pin.value = 0;
-            pin.period = 0;
-        } else {
-            pin.value = 512;
-            pin.period = 1000000 / frequency;
-        }
-        runtime.queueDisplayUpdate();
-
-        let cb = getResume();
-        AudioContextManager.tone(frequency, 1);
-        if (ms <= 0) cb();
-        else {
-            setTimeout(() => {
-                AudioContextManager.stop();
-                pin.value = 0;
-                pin.period = 0;
-                pin.mode = PinMode.Unused;
-                runtime.queueDisplayUpdate();
-                cb()
-            }, ms);
         }
     }
 
@@ -356,6 +261,21 @@ namespace ks.rt.input {
         }
         b.bus.listen(DAL.MICROBIT_ID_GESTURE, gesture, handler);
     }
+
+    export function onPinPressed(pinId: number, handler: RefAction) {
+        let pin = getPin(pinId);
+        if (!pin) return;
+        pin.isTouched();
+        input.onButtonPressed(pin.id, handler);
+    }
+
+    export function pinIsPressed(pinId: number): boolean {
+        let pin = getPin(pinId);
+        if (!pin) return false;
+        return pin.isTouched();
+    }
+
+
 
     export function compassHeading(): number {
         var b = board();
@@ -496,3 +416,93 @@ namespace ks.rt.radio {
         board().bus.listen(DAL.MICROBIT_ID_RADIO, DAL.MICROBIT_RADIO_EVT_DATAGRAM, handler);
     }
 }
+
+namespace ks.rt.pins {
+    export function digitalReadPin(pinId: number): number {
+        let pin = getPin(pinId);
+        if (!pin) return;
+        pin.mode = PinMode.Digital | PinMode.Input;
+        return pin.value > 100 ? 1 : 0;
+    }
+
+    export function digitalWritePin(pinId: number, value: number) {
+        let pin = getPin(pinId);
+        if (!pin) return;
+        pin.mode = PinMode.Digital | PinMode.Output;
+        pin.value = value > 0 ? 1023 : 0;
+        runtime.queueDisplayUpdate();
+    }
+
+    export function analogReadPin(pinId: number): number {
+        let pin = getPin(pinId);
+        if (!pin) return;
+        pin.mode = PinMode.Analog | PinMode.Input;
+        return pin.value || 0;
+    }
+
+    export function analogWritePin(pinId: number, value: number) {
+        let pin = getPin(pinId);
+        if (!pin) return;
+        pin.mode = PinMode.Analog | PinMode.Output;
+        pin.value = value ? 1 : 0;
+        runtime.queueDisplayUpdate();
+    }
+
+    export function analogSetPeriod(pinId: number, micros: number) {
+        let pin = getPin(pinId);
+        if (!pin) return;
+        pin.mode = PinMode.Analog | PinMode.Output;
+        pin.period = micros;
+        runtime.queueDisplayUpdate();
+    }
+
+    export function servoWritePin(pinId: number, value: number) {
+        analogSetPeriod(pinId, 20000);
+        // TODO
+    }
+
+    export function servoSetPulse(pinId: number, micros: number) {
+        let pin = getPin(pinId);
+        if (!pin) return;
+        // TODO
+    }
+
+    export function analogSetPitchPin(pinId: number) {
+        let pin = getPin(pinId);
+        if (!pin) return;        
+        board().pins.filter(p => !!p).forEach(p => p.pitch = false);
+        pin.pitch = true;
+    }
+
+    export function analogPitch(frequency: number, ms: number) {
+        // update analog output
+        let pin = board().pins.filter(pin => !!pin && pin.pitch)[0] || board().pins[0];
+        pin.mode = PinMode.Analog | PinMode.Output;
+        if (frequency <= 0) {
+            pin.value = 0;
+            pin.period = 0;
+        } else {
+            pin.value = 512;
+            pin.period = 1000000 / frequency;
+        }
+        runtime.queueDisplayUpdate();
+
+        let cb = getResume();
+        AudioContextManager.tone(frequency, 1);
+        if (ms <= 0) cb();
+        else {
+            setTimeout(() => {
+                AudioContextManager.stop();
+                pin.value = 0;
+                pin.period = 0;
+                pin.mode = PinMode.Unused;
+                runtime.queueDisplayUpdate();
+                cb()
+            }, ms);
+        }
+    }
+
+
+}
+
+

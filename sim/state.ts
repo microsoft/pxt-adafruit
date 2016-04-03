@@ -1,4 +1,4 @@
-namespace ks.rt.micro_bit {
+namespace ks.rt {
     export interface RuntimeOptions {
         theme: string;
     }
@@ -468,21 +468,6 @@ namespace ks.rt.micro_bit {
 
     }
 
-    export interface SimulatorEventBusMessage extends SimulatorMessage {
-        id: number;
-        eventid: number;
-        value?: number;
-    }
-
-    export interface SimulatorSerialMessage extends SimulatorMessage {
-        id: string;
-        data: string;
-    }
-
-    export interface SimulatorRadioPacketMessage extends SimulatorMessage {
-        data: number[];
-        rssi?: number;
-    }
 
     export class Board extends BaseBoard {
         id: string;

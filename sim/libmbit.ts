@@ -2,13 +2,11 @@
 /// <reference path="../node_modules/kindscript/built/kindsim.d.ts"/>
 /// <reference path="../libs/microbit/dal.d.ts"/>
 
-namespace ks.rt.micro_bit {
-    export function initCurrentRuntime() {
+namespace ks.rt {
+    ks.rt.initCurrentRuntime = () => {
         U.assert(!runtime.board)
         runtime.board = new Board()
     }
-
-    ks.rt.initCurrentRuntime = initCurrentRuntime;
 
     export function board() {
         return runtime.board as Board
@@ -85,89 +83,10 @@ namespace ks.rt.micro_bit {
         throw new Error("PANIC " + code)
     }
 
-    /* leds */
-    export function plot(x: number, y: number) {
-        board().image.set(x, y, 255);
-        runtime.queueDisplayUpdate()
-    }
-
-    export function unPlot(x: number, y: number) {
-        board().image.set(x, y, 0);
-        runtime.queueDisplayUpdate()
-    }
-
-    export function point(x: number, y: number): boolean {
-        return !!board().image.get(x, y);
-    }
-
-    export function brightness(): number {
-        return board().brigthness;
-    }
-
-    export function setBrightness(value: number): void {
-        board().brigthness = value;
-        runtime.queueDisplayUpdate()
-    }
-
-    export function stopAnimation(): void {
-        board().animationQ.cancelAll();
-    }
-
-    export function plotLeds(leds: micro_bit.Image): void {
-        leds.copyTo(0, 5, board().image, 0)
-        runtime.queueDisplayUpdate()
-    }
-
-    export function setDisplayMode(mode: DisplayMode): void {
-        board().displayMode = mode;
-        runtime.queueDisplayUpdate()
-    }
-
-    /* serial */
-    export function serialSendString(s: string) {
-        board().writeSerial(s);
-    }
-
-    export function serialReadString(): string {
-        return board().readSerial();
-    }
-
-    /* input */
-    export function onButtonPressed(button: number, handler: RefAction): void {
-        let b = board();
-        if (button == DAL.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
-            b.usesButtonAB = true;
-            runtime.queueDisplayUpdate();
-        }
-        b.bus.listen(button, DAL.MICROBIT_BUTTON_EVT_CLICK, handler);
-    }
-
-    export function isButtonPressed(button: number): boolean {
-        let b = board();
-        if (button == DAL.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
-            b.usesButtonAB = true;
-            runtime.queueDisplayUpdate();
-        }
-        let bts = b.buttons;
-        if (button == DAL.MICROBIT_ID_BUTTON_A) return bts[0].pressed;
-        if (button == DAL.MICROBIT_ID_BUTTON_B) return bts[1].pressed;
-        return bts[2].pressed || (bts[0].pressed && bts[1].pressed);
-    }
-
-    export function onGesture(gesture: number, handler: RefAction) {
-        let b = board();
-        b.accelerometer.activate();
-
-        if (gesture == 11 && !b.useShake) { // SAKE
-            b.useShake = true;
-            runtime.queueDisplayUpdate();
-        }
-        b.bus.listen(DAL.MICROBIT_ID_GESTURE, gesture, handler);
-    }
 
     export function onPinPressed(pin: Pin, handler: RefAction) {
         pin.isTouched();
-        onButtonPressed(pin.id, handler);
+        input.onButtonPressed(pin.id, handler);
     }
 
     export function ioP0() { return board().pins[0]; }
@@ -192,59 +111,6 @@ namespace ks.rt.micro_bit {
 
     export function isPinTouched(pin: Pin): boolean {
         return pin.isTouched();
-    }
-
-    export function compassHeading(): number {
-        var b = board();
-        if (!b.usesHeading) {
-            b.usesHeading = true;
-            runtime.queueDisplayUpdate();
-        }
-        return b.heading;
-    }
-
-    export function temperature(): number {
-        var b = board();
-        if (!b.usesTemperature) {
-            b.usesTemperature = true;
-            runtime.queueDisplayUpdate();
-        }
-        return b.temperature;
-    }
-
-    export function getAcceleration(dimension: number): number {
-        let b = board();
-        let acc = b.accelerometer;
-        acc.activate();
-        switch (dimension) {
-            case 0: return acc.getX();
-            case 1: return acc.getY();
-            case 2: return acc.getZ();
-            default: return Math.floor(Math.sqrt(acc.instantaneousAccelerationSquared()));
-        }
-    }
-
-    export function setAccelerometerRange(range: number) {
-        let b = board();
-        b.accelerometer.setSampleRange(range);
-    }
-
-    export function lightLevel(): number {
-        let b = board();
-        if (!b.usesLightLevel) {
-            b.usesLightLevel = true;
-            runtime.queueDisplayUpdate();
-        }
-        return b.lightLevel;
-    }
-
-    export function getMagneticForce(): number {
-        // TODO
-        return 0;
-    }
-
-    export function getCurrentTime(): number {
-        return runtime.runningTime();
     }
 
     /* pins */
@@ -370,53 +236,15 @@ namespace ks.rt.micro_bit {
     }
 
 
-    /* radio */
-    export function broadcastMessage(msg: number): void {
-        board().radio.broadcast(msg);
-    }
-
-    export function onBroadcastMessageReceived(msg: number, handler: RefAction): void {
-        board().bus.listen(DAL.MES_BROADCAST_GENERAL_ID, msg, handler);
-    }
-
-    export function setGroup(id: number): void {
-        board().radio.setGroup(id);
-    }
-
-    export function setTransmitPower(power: number): void {
-        board().radio.setTransmitPower(power);
-    }
-
-    export function datagramSendNumbers(value0: number, value1: number, value2: number, value3: number): void {
-        board().radio.datagram.send([value0, value1, value2, value3]);
-    }
-
-    export function datagramReceiveNumber(): number {
-        return board().radio.datagram.recv().data[0];
-    }
-
-    export function datagramGetNumber(index: number): number {
-        return board().radio.datagram.lastReceived.data[index] || 0;
-    }
-
-    export function datagramGetRSSI(): number {
-        return board().radio.datagram.lastReceived.rssi;
-    }
-
-    export function onDatagramReceived(handler: RefAction): void {
-        board().bus.listen(DAL.MICROBIT_ID_RADIO, DAL.MICROBIT_RADIO_EVT_DATAGRAM, handler);
-    }
 }
 
 namespace ks.rt.basic {
-    var board = micro_bit.board;
-
     export var pause = thread.pause;
 
     export function showNumber(x: number, interval: number) {
         if (interval < 0) return;
 
-        let leds = micro_bit.createImageFromString(x.toString());
+        let leds = createImageFromString(x.toString());
         if (x < 0 || x >= 10) scrollImage(leds, interval, 1);
         else showLeds(leds, interval * 5);
     }
@@ -427,13 +255,13 @@ namespace ks.rt.basic {
             clearScreen();
             pause(interval * 5);
         } else {
-            let leds = micro_bit.createImageFromString(s);
+            let leds = createImageFromString(s);
             if (s.length == 1) showLeds(leds, interval * 5)
             else scrollImage(leds, interval, 1);
         }
     }
 
-    export function showLeds(leds: micro_bit.Image, delay: number): void {
+    export function showLeds(leds: Image, delay: number): void {
         showAnimation(leds, delay);
     }
 
@@ -442,7 +270,7 @@ namespace ks.rt.basic {
         runtime.queueDisplayUpdate()
     }
 
-    function scrollImage(leds: micro_bit.Image, interval: number, stride: number): void {
+    function scrollImage(leds: Image, interval: number, stride: number): void {
         let cb = getResume()
         let off = stride > 0 ? 0 : leds.width - 1;
         let display = board().image;
@@ -461,7 +289,7 @@ namespace ks.rt.basic {
         })
     }
 
-    export function showAnimation(leds: micro_bit.Image, interval: number = 400): void {
+    export function showAnimation(leds: Image, interval: number = 400): void {
         scrollImage(leds, interval, 5);
     }
 
@@ -475,6 +303,11 @@ namespace ks.rt.basic {
         incr(a)
         loop()
     }
+
+    export function plotLeds(leds: Image): void {
+        leds.copyTo(0, 5, board().image, 0)
+        runtime.queueDisplayUpdate()
+    }
 }
 
 namespace ks.rt.control {
@@ -482,5 +315,184 @@ namespace ks.rt.control {
 
     export function reset() {
         U.userError("reset not implemented in simulator yet")
+    }
+}
+
+namespace ks.rt.kindscript {
+    export function registerWithDal(id: number, evid: number, handler: RefAction) {
+        board().bus.listen(id, evid, handler);
+    }
+}
+
+namespace ks.rt.input {
+    export function onButtonPressed(button: number, handler: RefAction): void {
+        let b = board();
+        if (button == DAL.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
+            b.usesButtonAB = true;
+            runtime.queueDisplayUpdate();
+        }
+        b.bus.listen(button, DAL.MICROBIT_BUTTON_EVT_CLICK, handler);
+    }
+
+    export function buttonIsPressed(button: number): boolean {
+        let b = board();
+        if (button == DAL.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
+            b.usesButtonAB = true;
+            runtime.queueDisplayUpdate();
+        }
+        let bts = b.buttons;
+        if (button == DAL.MICROBIT_ID_BUTTON_A) return bts[0].pressed;
+        if (button == DAL.MICROBIT_ID_BUTTON_B) return bts[1].pressed;
+        return bts[2].pressed || (bts[0].pressed && bts[1].pressed);
+    }
+
+    export function onGesture(gesture: number, handler: RefAction) {
+        let b = board();
+        b.accelerometer.activate();
+
+        if (gesture == 11 && !b.useShake) { // SAKE
+            b.useShake = true;
+            runtime.queueDisplayUpdate();
+        }
+        b.bus.listen(DAL.MICROBIT_ID_GESTURE, gesture, handler);
+    }
+
+    export function compassHeading(): number {
+        var b = board();
+        if (!b.usesHeading) {
+            b.usesHeading = true;
+            runtime.queueDisplayUpdate();
+        }
+        return b.heading;
+    }
+
+    export function temperature(): number {
+        var b = board();
+        if (!b.usesTemperature) {
+            b.usesTemperature = true;
+            runtime.queueDisplayUpdate();
+        }
+        return b.temperature;
+    }
+
+    export function acceleration(dimension: number): number {
+        let b = board();
+        let acc = b.accelerometer;
+        acc.activate();
+        switch (dimension) {
+            case 0: return acc.getX();
+            case 1: return acc.getY();
+            case 2: return acc.getZ();
+            default: return Math.floor(Math.sqrt(acc.instantaneousAccelerationSquared()));
+        }
+    }
+
+    export function setAccelerometerRange(range: number) {
+        let b = board();
+        b.accelerometer.setSampleRange(range);
+    }
+
+    export function lightLevel(): number {
+        let b = board();
+        if (!b.usesLightLevel) {
+            b.usesLightLevel = true;
+            runtime.queueDisplayUpdate();
+        }
+        return b.lightLevel;
+    }
+
+    export function magneticForce(): number {
+        // TODO
+        return 0;
+    }
+
+    export function runningTime(): number {
+        return runtime.runningTime();
+    }
+
+    export function calibrate() {
+    }
+}
+
+namespace ks.rt.led {
+    export function plot(x: number, y: number) {
+        board().image.set(x, y, 255);
+        runtime.queueDisplayUpdate()
+    }
+
+    export function unplot(x: number, y: number) {
+        board().image.set(x, y, 0);
+        runtime.queueDisplayUpdate()
+    }
+
+    export function point(x: number, y: number): boolean {
+        return !!board().image.get(x, y);
+    }
+
+    export function brightness(): number {
+        return board().brigthness;
+    }
+
+    export function setBrightness(value: number): void {
+        board().brigthness = value;
+        runtime.queueDisplayUpdate()
+    }
+
+    export function stopAnimation(): void {
+        board().animationQ.cancelAll();
+    }
+
+    export function setDisplayMode(mode: DisplayMode): void {
+        board().displayMode = mode;
+        runtime.queueDisplayUpdate()
+    }
+}
+
+namespace ks.rt.serial {
+    export function writeString(s: string) {
+        board().writeSerial(s);
+    }
+
+    export function readString(): string {
+        return board().readSerial();
+    }
+}
+
+
+namespace ks.rt.radio {
+    export function broadcastMessage(msg: number): void {
+        board().radio.broadcast(msg);
+    }
+
+    export function onBroadcastMessageReceived(msg: number, handler: RefAction): void {
+        board().bus.listen(DAL.MES_BROADCAST_GENERAL_ID, msg, handler);
+    }
+
+    export function setGroup(id: number): void {
+        board().radio.setGroup(id);
+    }
+
+    export function setTransmitPower(power: number): void {
+        board().radio.setTransmitPower(power);
+    }
+
+    export function sendNumbers(value0: number, value1: number, value2: number, value3: number): void {
+        board().radio.datagram.send([value0, value1, value2, value3]);
+    }
+
+    export function receiveNumber(): number {
+        return board().radio.datagram.recv().data[0];
+    }
+
+    export function receivedNumberAt(index: number): number {
+        return board().radio.datagram.lastReceived.data[index] || 0;
+    }
+
+    export function receivedSignalStrength(): number {
+        return board().radio.datagram.lastReceived.rssi;
+    }
+
+    export function onDataReceived(handler: RefAction): void {
+        board().bus.listen(DAL.MICROBIT_ID_RADIO, DAL.MICROBIT_RADIO_EVT_DATAGRAM, handler);
     }
 }

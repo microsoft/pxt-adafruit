@@ -188,10 +188,10 @@ namespace ks.rt.micro_bit {
         private thermometerText: SVGTextElement;
         private shakeButton: SVGCircleElement;
         private shakeText: SVGTextElement;
-        public board: rt.micro_bit.Board; 
+        public board: rt.Board; 
         
         constructor(public props: IBoardProps) {
-            this.board = this.props.runtime.board as rt.micro_bit.Board;
+            this.board = this.props.runtime.board as rt.Board;
             this.board.updateView = () => this.updateState();
             this.buildDom();              
             this.updateTheme();
@@ -227,7 +227,7 @@ namespace ks.rt.micro_bit {
                 Svg.fill(this.buttons[index], btn.pressed ? theme.buttonDown : theme.buttonUp);            
             });
             
-            var bw =  state.displayMode == rt.micro_bit.DisplayMode.bw         
+            var bw =  state.displayMode == rt.DisplayMode.bw         
             var img = state.image;
             this.leds.forEach((led,i) => {
                 var sel = (<SVGStylable><any>led)

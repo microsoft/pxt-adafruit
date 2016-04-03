@@ -111,7 +111,7 @@ declare interface Image {
      * @param xOffset TODO
      */
     //% help=images/show-image weight=80 async
-    //% blockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8 xOffset.defl=0 shim=ImageMethods::showImage
+    //% BUGblockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8 xOffset.defl=0 shim=ImageMethods::showImage
     showImage(xOffset?: number): void;
 
     /**
@@ -120,7 +120,7 @@ declare interface Image {
      * @param interval time between each animation step in milli seconds, eg: 200
      */
     //% help=images/show-image weight=79 async
-    //% blockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8 frameOffset.defl=0 interval.defl=200 shim=ImageMethods::scrollImage
+    //% BUGblockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8 frameOffset.defl=0 interval.defl=200 shim=ImageMethods::scrollImage
     scrollImage(frameOffset?: number, interval?: number): void;
 
     /**

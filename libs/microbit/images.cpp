@@ -27,7 +27,7 @@ namespace ImageMethods {
      * @param xOffset TODO
      */
     //% help=images/show-image weight=80 async
-    //% blockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8
+    //% BUGblockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8
     void showImage(Image i, int xOffset = 0) {
       uBit.display.print(MicroBitImage(i), -xOffset, 0, 0);
     }
@@ -38,7 +38,7 @@ namespace ImageMethods {
      * @param interval time between each animation step in milli seconds, eg: 200
      */
     //% help=images/show-image weight=79 async
-    //% blockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8
+    //% BUGblockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8
     void scrollImage(Image id, int frameOffset = 0, int interval = 200) {
       MicroBitImage i(id);
       if (i.getWidth() <= 5)

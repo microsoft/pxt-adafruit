@@ -157,7 +157,6 @@ namespace control {
     //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_event_source|with value %value=control_event_value" 
     //% blockExternalInputs=1 blockStatement=1
     void onEvent(int src, int value, Action handler) { 
-        // not exposed yet
-        // bitvm::registerWithDal(src, value, handler);
+        registerWithDal(src, value, handler);
     }
 }

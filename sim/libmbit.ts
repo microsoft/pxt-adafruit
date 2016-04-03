@@ -221,6 +221,15 @@ namespace ks.rt.control {
     export function reset() {
         U.userError("reset not implemented in simulator yet")
     }
+
+    export function onEvent(id: number, evid: number, handler: RefAction) {
+        kindscript.registerWithDal(id, evid, handler)
+    }
+
+    export function raiseEvent(id: number, evid: number, mode: number) {
+        // TODO mode?
+        board().bus.queue(id, evid)
+    }
 }
 
 namespace ks.rt.kindscript {
@@ -469,7 +478,7 @@ namespace ks.rt.pins {
 
     export function analogSetPitchPin(pinId: number) {
         let pin = getPin(pinId);
-        if (!pin) return;        
+        if (!pin) return;
         board().pins.filter(p => !!p).forEach(p => p.pitch = false);
         pin.pitch = true;
     }

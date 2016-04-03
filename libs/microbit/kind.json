@@ -23,7 +23,8 @@
         "music.ts",
         "pins.cpp",
         "serial.cpp",
-        "serial.ts"
+        "serial.ts",
+        "buffer.cpp"
     ],
     "public": true,
     "dependencies": {},
@@ -88,7 +89,7 @@
             "autoRun": true
         },
         "compileService": {
-            "gittag": "v0.1.2",
+            "gittag": "v0.1.5",
             "serviceId": "ws"
         },
         "serial": {

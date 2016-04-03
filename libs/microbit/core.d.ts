@@ -82,6 +82,10 @@ interface String {
 }
 
 
+interface Buffer {
+    [index: number]: number;
+}
+
 /**
   * Converts A string to an integer.
   * @param s A string to convert into a number.
@@ -93,4 +97,3 @@ interface Object {}
 interface Function {}
 interface IArguments {}
 interface RegExp {}
-

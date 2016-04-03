@@ -374,7 +374,7 @@ declare namespace control {
      * @param mode optional definition of how the event should be processed after construction (default is CREATE_AND_QUEUE).
      */
     //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source|with value %value=control_event_value" blockExternalInputs=1
-    //%  mode.defl=1 shim=control::raiseEvent
+    //% mode.defl=1 shim=control::raiseEvent
     function raiseEvent(src: number, value: number, mode: EventCreationMode): void;
 
     /**
@@ -534,6 +534,13 @@ declare namespace pins {
      */
     //% help=pins/analog-pitch weight=14 async shim=pins::analogPitch
     function analogPitch(frequency: number, ms: number): void;
+
+    /**
+     * Create a new zero-initialized buffer.
+     * @param size number of bytes in the buffer
+     */
+    //% shim=pins::createBuffer
+    function createBuffer(size: number): Buffer;
 }
 
 
@@ -564,6 +571,47 @@ declare namespace serial {
      */
     //% shim=serial::readScreen
     function readScreen(): void;
+}
+
+
+
+    //% indexerGet=BufferMethods::getByte indexerSet=BufferMethods::setByte
+declare interface Buffer {
+    /** Returns the length of a Buffer object. */
+    //% property shim=BufferMethods::length
+    length: number;
+
+    /**
+     * Fill (a fragment) of the buffer with given value.
+     */
+    //% offset.defl=0 length.defl=-1 shim=BufferMethods::fill
+    fill(value: number, offset?: number, length?: number): void;
+
+    /**
+     * Return a copy of a fragment of a buffer.
+     */
+    //% offset.defl=0 length.defl=-1 shim=BufferMethods::slice
+    slice(offset?: number, length?: number): Buffer;
+
+    /**
+     * Shift buffer left in place, with zero padding.
+     * @param offset number of bytes to shift; use negative value to shift right
+     */
+    //% shim=BufferMethods::shift
+    shift(offset: number): void;
+
+    /**
+     * Rotate buffer left in place.
+     * @param offset number of bytes to shift; use negative value to shift right
+     */
+    //% shim=BufferMethods::rotate
+    rotate(offset: number): void;
+
+    /**
+     * Write contents of `src` at `dstOffset` in current buffer.
+     */
+    //% shim=BufferMethods::write
+    write(dstOffset: number, src: Buffer): void;
 }
 
 // Auto-generated. Do not edit. Really.

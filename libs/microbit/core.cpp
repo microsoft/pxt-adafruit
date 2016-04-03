@@ -324,7 +324,7 @@ namespace ksrt {
   RefAction *stclo(RefAction *a, int idx, uint32_t v)
   {
     //DBG("STCLO "); a->print(); DBG("@%d = %p\n", idx, (void*)v);
-    a->st(idx, v);
+    a->stCore(idx, v);
     return a;
   }
 

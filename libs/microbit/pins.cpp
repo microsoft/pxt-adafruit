@@ -179,6 +179,16 @@ namespace pins {
       }
     }
 
+    /**
+     * Create a new zero-initialized buffer.
+     * @param size number of bytes in the buffer
+     */
+    //%
+    Buffer createBuffer(int size)
+    {
+        return ManagedBuffer(size).leakData();
+    }
+    
     // TODO:
     void i2cReadBuffer(int address, RefBuffer *buf)
     {

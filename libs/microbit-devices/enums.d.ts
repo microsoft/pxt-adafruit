@@ -121,5 +121,7 @@
     //% block="4 up"
     _4Up = 16,  // MES_DPAD_BUTTON_4_UP
     }
+declare namespace devices {
+}
 
 // Auto-generated. Do not edit. Really.

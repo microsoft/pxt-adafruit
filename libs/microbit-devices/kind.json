@@ -4,8 +4,8 @@
     "files": [
         "README.md",
         "enums.d.ts",
-        "devices.cpp",
-        "devices.ts"
+        "shims.d.ts",
+        "devices.cpp"
     ],
     "public": true,
     "dependencies": {

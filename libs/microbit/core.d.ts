@@ -86,7 +86,7 @@ interface String {
   * Converts A string to an integer.
   * @param s A string to convert into a number.
   */
-  //% shim=String::toNumber
+  //% shim=String_::toNumber
 declare function parseInt(s: string): number;
 
 interface Object {}

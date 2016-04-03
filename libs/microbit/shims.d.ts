@@ -48,7 +48,7 @@ declare namespace String {
     /**
      * Make a string from the given ASCII character code. 
      */
-    //% shim=String::fromCharCode
+    //% shim=String_::fromCharCode
     function fromCharCode(code: number): string;
 }
 
@@ -67,20 +67,20 @@ declare namespace Math {
      * @param x The base value of the expression.
      * @param y The exponent value of the expression.
      */
-    //% shim=Math::pow
+    //% shim=Math_::pow
     function pow(x: number, y: number): number;
 
     /** 
      * Returns a pseudorandom number between 0 and `max`. 
      */
-    //% shim=Math::random
+    //% shim=Math_::random
     function random(max: number): number;
 
     /**
      * Returns the square root of a number.
      * @param x A numeric expression.
      */
-    //% shim=Math::sqrt
+    //% shim=Math_::sqrt
     function sqrt(x: number): number;
 }
 

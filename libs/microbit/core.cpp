@@ -72,7 +72,7 @@ namespace BooleanMethods {
     bool bang(bool v) { return !v; }
 }
 
-namespace String {
+namespace String_ {
     /**
       * Make a string from the given ASCII character code. 
       */
@@ -129,7 +129,7 @@ namespace NumberImpl {
     int mod(int x, int y) { return x % y; }
 }
 
-namespace Math {
+namespace Math_ {
     /**
       * Returns the value of a base expression taken to a specified power. 
       * @param x The base value of the expression.
@@ -224,22 +224,6 @@ namespace kindscript {
   int programHash();
   //%
   void *ptrOfLiteral(int offset);
-}
-
-namespace RecordImpl {
-    //%
-    RefRecord* mk(int reflen, int totallen)
-    {
-      check(0 <= reflen && reflen <= totallen, ERR_SIZE, 1);
-      check(reflen <= totallen && totallen <= 255, ERR_SIZE, 2);
-
-      void *ptr = ::operator new(sizeof(RefRecord) + totallen * sizeof(uint32_t));
-      RefRecord *r = new (ptr) RefRecord();
-      r->len = totallen;
-      r->reflen = reflen;
-      memset(r->fields, 0, r->len * sizeof(uint32_t));
-      return r;
-    }
 }
 
 namespace ksrt {

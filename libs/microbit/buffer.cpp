@@ -12,6 +12,11 @@ namespace BufferMethods {
         ManagedBuffer(buf).setByte(off, v);
     }
 
+    //%
+    uint8_t *getBytes(Buffer buf) {
+        return buf->payload;
+    }
+
     /** Returns the length of a Buffer object. */
     //% property
     int length(Buffer s) {

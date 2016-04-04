@@ -1,23 +1,26 @@
+sendBufferAsm:
+
     push {r4,r5,r6,r7,lr}
     
     mov r4, r0 ; save buff
     mov r6, r1 ; save pin
     
     mov r0, r4
-    bl buffer::count
+    bl BufferMethods::length
     mov r5, r0
     
     mov r0, r4
-    bl buffer::cptr
+    bl BufferMethods::getBytes
     mov r4, r0
     
     ; setup pin as digital
     mov r0, r6
     movs r1, #0
-    bl micro_bit::digitalWritePin
+    bl pins::digitalWritePin
     
     ; load pin address
     mov r0, r6
+    bl pins::getPinAddress
 
     ldr r0, [r0, #8] ; get mbed DigitalOut from MicroBitPin
     ldr r1, [r0, #4] ; r1-mask for this pin
@@ -60,3 +63,5 @@
     cpsie i            ; enable irq
 
     pop {r4,r5,r6,r7,pc}
+
+

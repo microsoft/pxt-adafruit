@@ -8,7 +8,7 @@ basic.showLeds(`
 console.log("Start")
 
 // Create a NeoPixel driver - specify the number of LEDs:
-let strip = neopixel.create(24);
+let strip = neopixel.create(7);
 
 // If your strip is not at P0, specify the pin.
 strip.setPin(DigitalPin.P0)

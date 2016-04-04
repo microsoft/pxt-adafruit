@@ -69,6 +69,13 @@ namespace pins {
       if (!pin) return 0; \
       return pin->op
 
+
+    //%
+    MicroBitPin *getPinAddress(int id) {
+        return getPin(id);
+    }
+
+
     /**
      * Read the specified pin or connector as either 0 or 1
      * @param name pin to read from

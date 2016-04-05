@@ -17,5 +17,5 @@ led.plotAll();
 led.screenshot();
 led.toggle(0, 0);
 led.toggleAll();
-led.setDisplayMode(.DisplayMode);
+led.setDisplayMode(DisplayMode.BackAndWhite);
 ```

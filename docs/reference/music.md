@@ -7,7 +7,7 @@
 music.playTone(0, 0);
 music.ringTone(0);
 music.rest(0);
-music.noteFrequency(.Note);
+music.noteFrequency(Note.C);
 music.beat();
 music.tempo();
 music.changeTempoBy(20);

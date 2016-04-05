@@ -22,14 +22,10 @@ Learn how to use an if statement to run code run code depending on whether a con
 ## Documentation
 
 
-```docs
-if (true) {
-
-}
+```cards
+if (true) {}
 let x = 0
-input.onGesture(Gesture.Shake, () => {
-
-})
+input.onGesture(Gesture.Shake, () => {})
 Math.random(3)
 basic.showLeds(`
     . . . . .

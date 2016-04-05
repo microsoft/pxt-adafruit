@@ -17,23 +17,13 @@ Learn the functions of **on data received**, **send number** and **receive numbe
 
 ## Documentation
 
-```docs
-
+```cards
 basic.showNumber(0)
-
 input.acceleration(Dimension.X)
-
 led.plotBarGraph(0, 1023)
-
-radio.onDataReceived(() => {
-
-
-})
-
+radio.onDataReceived(() => {})
 radio.sendNumber(0)
-
 radio.receiveNumber()
-
 ```
 
 ## Objectives

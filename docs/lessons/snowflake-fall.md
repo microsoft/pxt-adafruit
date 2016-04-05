@@ -25,7 +25,7 @@ Learn how to show LEDs with a, `pause` to pause program execution for a specifie
 * **pause** : [read more...](/microbit/reference/basic/pause)
 * **forever** : [read more...](/microbit/reference/basic/forever)
 
-```docs
+```cards
 basic.showLeds(`
     . . . . .
     . . . . .
@@ -34,8 +34,5 @@ basic.showLeds(`
     . . . . .
     `)
 basic.pause(100)
-basic.forever(() => {
-    
-})
-
+basic.forever(() => {})
 ```

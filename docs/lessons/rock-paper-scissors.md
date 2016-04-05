@@ -23,10 +23,8 @@ Learn how to create a **local variable**, `var t :=time` where you can store dat
 
 ## Documentation
 
-```docs
-input.onGesture(Gesture.Shake, () => {
-
-})
+```cards
+input.onGesture(Gesture.Shake, () => {})
 Math.random(3)
 let x = 0
 basic.showLeds(`

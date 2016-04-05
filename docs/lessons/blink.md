@@ -23,18 +23,11 @@ Learn how to control a blinking LED. We will be learning how to create a blinkin
 
 ## Documentation
 
-```docs
+```cards
 led.plot(0, 0)
-
 led.unplot(0, 0)
-
 basic.pause(100)
-
-basic.forever(() => {
-    
-})
-
-
+basic.forever(() => {})
 ```
 
 

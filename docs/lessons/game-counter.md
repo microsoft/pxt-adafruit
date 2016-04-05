@@ -19,15 +19,10 @@ Learn how to create game blocks to keep track of the current score. We will be l
 
 ## Documentation
 
-```docs
+```cards
 game.addScore(1)
-
-input.onButtonPressed(Button.A, () => {
-
-})
-
+input.onButtonPressed(Button.A, () => {})
 basic.showNumber(0)
-
 ```
 
 ## Objectives

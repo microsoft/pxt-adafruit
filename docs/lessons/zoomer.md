@@ -21,7 +21,7 @@ Learn how to get the **acceleration**, `acceleration` in one of three specified 
 
 ## Documentation
 
-```docs
+```cards
 basic.forever(() => {
 })
 let x = 0

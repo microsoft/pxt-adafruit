@@ -21,21 +21,11 @@ Learn how to use an if statements to run code run code depending on whether a co
 
 ## Documentation
 
-```docs
-
-input.onGesture(Gesture.Shake, () => {
-
-})
-
-
-
+```cards
+input.onGesture(Gesture.Shake, () => {})
 let x = 0
-x = Math.random(3)
-
-if (true) {
-
-}
-
+Math.random(3)
+if (true) {}
 basic.showLeds(`
     . . . . .
     . . . . .
@@ -43,10 +33,6 @@ basic.showLeds(`
     . . . . .
     . . . . .
     `)
-
-
-
-
 ```
 
 ## Objectives

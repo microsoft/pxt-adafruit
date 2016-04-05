@@ -21,17 +21,12 @@ Learn how to use an if statements to run code run code depending on whether a co
 
 ## Documentation
 
-```docs
+```cards
 input.compassHeading()
-
 basic.forever(() => {})
-
 let x = 0
-
 if (true) {}
-
 basic.showString("Hello!")
-
 basic.showLeds(`
     . . . . .
     . . . . .

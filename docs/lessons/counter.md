@@ -21,22 +21,12 @@ Learn how to creating a **variable** to keep track of the current count. We will
 
 ## Documentation
 
-```docs
+```cards
 input.compassHeading()
-
-basic.forever(() => {
-
-
-})
-
+basic.forever(() => {})
 let x = 0
-
-if (true) {
-
-}
-
+if (true) {}
 basic.showString("Hello!")
-
 basic.showLeds(`
     . . . . .
     . . . . .
@@ -44,7 +34,6 @@ basic.showLeds(`
     . . . . .
     . . . . .
     `)
-
 ```
 
 * **variable**: [read more...](/microbit/reference/variables/var)

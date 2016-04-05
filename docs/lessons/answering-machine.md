@@ -22,12 +22,9 @@ Learn how to creating a message with a **string**, `show string` to write your m
 
 ## Documentation
 
-```docs
+```cards
 basic.showString('Hi!')
-
-input.onButtonPressed(Button.A, () => {
-    
-})
+input.onButtonPressed(Button.A, () => {})
 
 ```
 

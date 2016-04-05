@@ -26,10 +26,8 @@ Learn how to control a blinking LED. We will be learning how to create a blinkin
 
 ## Documentation
 
-```docs
-for (let i = 0; i < 5; i++) {
-
-}
+```cards
+for (let i = 0; i < 5; i++) {}
 basic.showNumber(0)
 basic.pause(100)
 

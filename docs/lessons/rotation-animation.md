@@ -19,11 +19,9 @@ Learn how to create images that look like a rotating animation by using a while 
 
 ## Documentation
 
-```docs
+```cards
 let x = 0
-input.onButtonPressed(Button.A, () => {
-
-})
+input.onButtonPressed(Button.A, () => {})
 basic.showLeds(`
     . . . . .
     . . . . .
@@ -32,10 +30,8 @@ basic.showLeds(`
     . . . . .
     `)
 basic.pause(100)
-while (true) {
-
-    basic.pause(20)
-}
+while (true) {}
+basic.pause(20)
 ```
 
 ## Objectives

@@ -23,7 +23,7 @@ Learn how to **clear screen**, `clear screen` to turn off all the LED lights on 
 
 ## Documentation
 
-```docs
+```cards
 basic.clearScreen()
 basic.showLeds(`
     . . . . .
@@ -32,10 +32,7 @@ basic.showLeds(`
     . . . . .
     . . . . .
     `)
-input.onButtonPressed(Button.A, () => {
-    
-})
-
+input.onButtonPressed(Button.A, () => {})
 ```
 
 ## Objectives

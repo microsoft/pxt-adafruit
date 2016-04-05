@@ -17,14 +17,11 @@ For Loop
 
 ## Documentation
 
-```docs
+```cards
 led.plot(0, 0)
 led.unplot(0, 0)
-for (let i = 0; i < 5; i++) {
-
-}
+for (let i = 0; i < 5; i++) {}
 basic.pause(100)
-
 ```
 
 ## Objectives

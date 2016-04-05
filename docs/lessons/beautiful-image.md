@@ -20,7 +20,7 @@ Learn how to **show LEDs**,  to show an image on the BBC micro:bit's LED screen.
 
 ## Documentation
 
-```docs
+```cards
 basic.showLeds(`
     . . . . .
     . . . . .
@@ -28,10 +28,7 @@ basic.showLeds(`
     . . . . .
     . . . . .
     `)
-
-
 basic.pause(100)
-
 ```
 
 ## Objectives

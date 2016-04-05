@@ -21,22 +21,12 @@ Learn how to create numbers randomly by using the input of the BBC micro:bit. We
 
 ## Documentation
 
-```docs
-
-input.onButtonPressed(Button.A, () => {
-
-
-})
-
+```cards
+input.onButtonPressed(Button.A, () => {})
 let x = 0
-
 basic.showNumber(0)
-
 Math.random(3)
-
 basic.clearScreen()
-
-
 ```
 
 ## Objectives

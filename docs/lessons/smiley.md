@@ -24,10 +24,8 @@ Learn how to **show LEDs** to turn on a LED light pattern on the LED screen. We 
 * **show LEDs** : [read more...](/microbit/reference/basic/show-leds)
 * **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
 
-```docs
-input.onButtonPressed(Button.A, () => {
-
-})
+```cards
+input.onButtonPressed(Button.A, () => {})
 basic.showLeds(`
     . . . . .
     . . . . .
@@ -35,7 +33,6 @@ basic.showLeds(`
     . . . . .
     . . . . .
     `)
-
 ```
 
 ## Objectives

@@ -19,14 +19,10 @@ Learn how to creating **conditionals**, `if condition do` to conditionally run c
 
 ## Documentation
 
-```docs
-if (true) {
-
-}
+```cards
+if (true) {}
 Math.random(3)
-input.onGesture(Gesture.Shake, () => {
-
-})
+input.onGesture(Gesture.Shake, () => {})
 basic.showNumber(7)
 basic.clearScreen()
 basic.showString("Hello!")

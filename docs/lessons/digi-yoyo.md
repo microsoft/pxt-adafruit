@@ -21,13 +21,11 @@ Learn how to creating a **while loop**, `while condition do` to repeat code whil
 
 ## Documentation
 
-```docs
+```cards
 let x = 0
 basic.showNumber(0)
-while (true) {
-
-    basic.pause(20)
-}
+while (true) {}
+basic.pause(20)
 ```
 
 ## Objectives

@@ -21,7 +21,7 @@ Learn how to use an if statement to run code run code depending on whether a con
 
 ## Documentation
 
-```docs
+```cards
 basic.showLeds(`
     . . . . .
     . . . . .
@@ -29,16 +29,11 @@ basic.showLeds(`
     . . . . .
     . . . . .
     `)
-input.onButtonPressed(Button.A, () => {
-
-})
+input.onButtonPressed(Button.A, () => {})
 let x = 0
 Math.random(3)
-if (true) {
-
-}
+if (true) {}
 basic.showString("Hello!")
-
 ```
 
 ## Objectives

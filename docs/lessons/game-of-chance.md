@@ -18,15 +18,10 @@ Learn how to creating a message with a **game over** to write your message. We w
 ## Documentation
 
 
-```docs
+```cards
 game.gameOver()
-
 basic.showString("Hello!")
-
-input.onButtonPressed(Button.A, () => {
-    
-})
-
+input.onButtonPressed(Button.A, () => {})
 ```
 
 ## Objectives

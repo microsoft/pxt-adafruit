@@ -20,13 +20,9 @@ On Logo Up
 Learn how to plot image **on logo up**, `on logo up` to run code when the micro:bit screen is facing up and vertically orientated. We will be learning how to plot an image with the logo up, basic show LEDs, and logo down.
 
 ## Documentation
-```docs
-input.onLogoUp(() => {
-
-})
-input.onLogoDown(() => {
-    
-})
+```cards
+input.onLogoUp(() => {})
+input.onLogoDown(() => {})
 basic.showLeds(`
     . . . . .
     . . . . .
@@ -34,8 +30,6 @@ basic.showLeds(`
     . . . . .
     . . . . .
     `)
-
-
 ```
 
 ## Objectives

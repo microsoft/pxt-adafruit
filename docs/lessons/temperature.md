@@ -17,15 +17,12 @@ Learn how to get the ambient temperature (degree Celsius °C). The temperature i
 
 ## Documentation
 
-```docs
+```cards
 input.temperature()
 let x = 0
 basic.showNumber(7)
 basic.showString("Hello!")
-input.onGesture(Gesture.Shake, () => {
-    
-})
-
+input.onGesture(Gesture.Shake, () => {})
 ```
 
 ## Objectives

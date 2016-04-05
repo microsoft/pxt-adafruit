@@ -21,11 +21,9 @@ Learn how to **set brightness** of an image `set brightness` to set the brightne
 
 ## Documentation
 
-```docs
+```cards
 led.setBrightness(255)
-input.onButtonPressed(Button.A, () => {
-
-})
+input.onButtonPressed(Button.A, () => {})
 basic.showLeds(`
     . . . . .
     . . . . .
@@ -33,7 +31,6 @@ basic.showLeds(`
     . . . . .
     . . . . .
     `)
-
 ```
 
 ## Objectives

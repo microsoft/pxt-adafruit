@@ -19,21 +19,12 @@ Learn how to get the acceleration **acceleration**, `acceleration` value (g-forc
 
 ## Documentation
 
-```docs
-
-basic.forever(() => {
-
-
-})
-
+```cards
+basic.forever(() => {})
 let x = 0
-
 input.acceleration(Dimension.X)
-
 Math.abs(0)
-
 led.setBrightness(255)
-
 basic.showLeds(`
     . . . . .
     . . . . .
@@ -41,7 +32,6 @@ basic.showLeds(`
     . . . . .
     . . . . .
     `)
-
 ```
 
 ## Objectives

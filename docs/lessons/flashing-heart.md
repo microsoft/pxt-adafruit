@@ -20,13 +20,8 @@ Learn how to `show LEDs` by showing an image on the LED screen. We will be learn
 
 ## Documentation
 
-```docs
-basic.forever(() => {
-
-
-})
-
-
+```cards
+basic.forever(() => {})
 basic.showLeds(`
     . . . . .
     . . . . .
@@ -34,11 +29,8 @@ basic.showLeds(`
     . . . . .
     . . . . .
     `)
-
 basic.pause(100)
-
 basic.clearScreen()
-
 ```
 
 ## Objectives

@@ -22,19 +22,11 @@ Learn how to use the **pin pressed**, `on pin pressed` to run code when the user
 
 ## Documentation
 
-```docs
-if (true) {
-
-}
-
-input.onPinPressed(TouchPin.P0, () => {
-
-})
+```cards
+if (true) {}
+input.onPinPressed(TouchPin.P0, () => {})
 let x = 0
 Math.random(3)
 basic.showNumber(0)
 basic.pause(100)
-
-
-
 ```

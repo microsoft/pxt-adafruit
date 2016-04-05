@@ -1,6 +1,6 @@
 {
   "name": "kindscript-microbit",
-  "version": "0.2.20",
+  "version": "0.2.21",
   "description": "BBC micro:bit target for KindScript",
   "keywords": [
     "JavaScript",

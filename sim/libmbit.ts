@@ -145,6 +145,7 @@ namespace ks.rt {
 
 namespace ks.rt.basic {
     export var pause = thread.pause;
+    export var forever = thread.forever;
 
     export function showNumber(x: number, interval: number) {
         if (interval < 0) return;
@@ -196,17 +197,6 @@ namespace ks.rt.basic {
 
     export function showAnimation(leds: Image, interval: number = 400): void {
         scrollImage(leds, interval, 5);
-    }
-
-    export function forever(a: RefAction) {
-        function loop() {
-            runtime.runFiberAsync(a)
-                .then(() => Promise.delay(20))
-                .then(loop)
-                .done()
-        }
-        incr(a)
-        loop()
     }
 
     export function plotLeds(leds: Image): void {

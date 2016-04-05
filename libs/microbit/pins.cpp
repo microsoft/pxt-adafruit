@@ -199,8 +199,8 @@ namespace pins {
     /**
      * Read `size` bytes from a 7-bit I2C `address`.
      */
-    //% repeat.defl=0
-    Buffer i2cReadBuffer(int address, int size, bool repeat)
+    //%
+    Buffer i2cReadBuffer(int address, int size, bool repeat = false)
     {
       Buffer buf = createBuffer(size);
       uBit.i2c.read(address << 1, (char*)buf->payload, size, repeat);
@@ -210,8 +210,8 @@ namespace pins {
     /**
      * Write bytes to a 7-bit I2C `address`.
      */
-    //% repeat.defl=0
-    void i2cWriteBuffer(int address, Buffer buf, bool repeat)
+    //%
+    void i2cWriteBuffer(int address, Buffer buf, bool repeat = false)
     {
       uBit.i2c.write(address << 1, (char*)buf->payload, buf->length, repeat);
     }

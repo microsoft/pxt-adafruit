@@ -18,7 +18,7 @@ namespace pins {
      * Read one number from 7-bit I2C address.
      */
     export function i2cReadNumber(address: number, format: NumberFormat): number {
-        let buf = pins.i2cReadBuffer(address, pins.sizeOf(format), false)
+        let buf = pins.i2cReadBuffer(address, pins.sizeOf(format))
         return buf.getNumber(format, 0)
     }
 
@@ -28,7 +28,7 @@ namespace pins {
     export function i2cWriteNumber(address: number, value: number, format: NumberFormat): void {
         let buf = createBuffer(pins.sizeOf(format))
         buf.setNumber(format, 0, value)
-        pins.i2cWriteBuffer(address, buf, false)
+        pins.i2cWriteBuffer(address, buf)
     }
 
     /**

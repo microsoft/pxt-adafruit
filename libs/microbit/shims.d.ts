@@ -375,7 +375,7 @@ declare namespace control {
      */
     //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source|with value %value=control_event_value" blockExternalInputs=1
     //% mode.defl=1 shim=control::raiseEvent
-    function raiseEvent(src: number, value: number, mode: EventCreationMode): void;
+    function raiseEvent(src: number, value: number, mode?: EventCreationMode): void;
 
     /**
      * Raises an event in the event bus.
@@ -546,13 +546,13 @@ declare namespace pins {
      * Read `size` bytes from a 7-bit I2C `address`.
      */
     //% repeat.defl=0 shim=pins::i2cReadBuffer
-    function i2cReadBuffer(address: number, size: number, repeat: boolean): Buffer;
+    function i2cReadBuffer(address: number, size: number, repeat?: boolean): Buffer;
 
     /**
      * Write bytes to a 7-bit I2C `address`.
      */
     //% repeat.defl=0 shim=pins::i2cWriteBuffer
-    function i2cWriteBuffer(address: number, buf: Buffer, repeat: boolean): void;
+    function i2cWriteBuffer(address: number, buf: Buffer, repeat?: boolean): void;
 }
 
 

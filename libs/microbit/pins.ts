@@ -53,3 +53,9 @@ namespace pins {
         return 0;
     }
 }
+
+
+interface Buffer {
+    [index: number]: number;
+    // rest defined in buffer.cpp
+}

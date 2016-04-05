@@ -1,3 +1,6 @@
+/**
+ * Reading and writing data over a serial connection.
+ */
 //% weight=2 color=30
 namespace serial {
     /**

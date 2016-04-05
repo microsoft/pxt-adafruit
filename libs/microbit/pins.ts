@@ -1,3 +1,6 @@
+/**
+ * Control currents in Pins for analog/digital signals, servos, i2c, ...
+ */
 //% color=351 weight=30
 namespace pins {
     /**

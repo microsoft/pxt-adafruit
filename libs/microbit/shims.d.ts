@@ -1,7 +1,9 @@
 // Auto-generated. Do not edit.
 
 
-
+    /**
+     * Creation, manipulation and display of LED images.
+     */
     //% color=45 weight=31
 declare namespace images {
 
@@ -265,7 +267,9 @@ declare namespace input {
 }
 
 
-
+    /**
+     * Runtime and event utilities.
+     */
     //% weight=1 color="#333333"
 declare namespace control {
 

@@ -1,3 +1,6 @@
+/**
+ * Events and data from sensors
+ */
 //% color=300 weight=99
 namespace input {
     /**

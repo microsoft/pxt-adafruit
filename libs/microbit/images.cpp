@@ -1,5 +1,8 @@
 #include "ksbit.h"
 
+/**
+* Creation, manipulation and display of LED images.
+*/
 //% color=45 weight=31
 namespace images {
     /**

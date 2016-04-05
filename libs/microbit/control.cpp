@@ -113,6 +113,9 @@ enum EventBusValue {
     MES_REMOTE_CONTROL_EVT_VOLUMEUP_ = MES_REMOTE_CONTROL_EVT_VOLUMEUP,
 };
 
+/**
+* Runtime and event utilities.
+*/
 //% weight=1 color="#333333"
 namespace control {
     void fiberDone(void *a)

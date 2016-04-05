@@ -8,9 +8,9 @@ input.onButtonPressed(Button.A, () => {});
 led.plot(0,0);
 radio.sendNumber(0);
 music.playTone(music.noteFrequency(Note.C), music.beat(BeatFraction.Whole));
-game.createSprite();
+game.createSprite(2,2);
 pins.digitalReadPin(DigitalPin.P0);
-serial.WriteLine("Hello!")
+serial.writeLine("Hello!");
 control.inBackground(() => {});
 ```
 

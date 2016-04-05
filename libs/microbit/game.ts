@@ -18,6 +18,9 @@ enum LedSpriteProperty {
     Blink
 }
 
+/**
+ * A single-LED sprite game engine
+ */
 //% color=176 weight=32
 namespace game {
     var _score: number = 0;

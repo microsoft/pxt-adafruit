@@ -1,3 +1,6 @@
+/**
+ * Control of the LED screen.
+ */
 //% color=3 weight=35
 namespace led {
 

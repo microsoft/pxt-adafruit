@@ -74,6 +74,9 @@ enum BeatFraction {
     Sixteenth = 16
 }
 
+/**
+ * Generation of music tones through pin ``P0``.
+ */
 //% color=52 weight=33
 namespace music {
     var beatsPerMinute: number = 120;

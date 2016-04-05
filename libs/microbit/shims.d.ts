@@ -267,9 +267,7 @@ declare namespace input {
 }
 
 
-    /**
-     * Runtime and event utilities.
-     */
+
     //% weight=1 color="#333333"
 declare namespace control {
 

@@ -1,3 +1,6 @@
+/**
+* Runtime and event utilities.
+*/
 //% weight=1 color="#333333"
 namespace control {
 

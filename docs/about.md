@@ -1,3 +1,8 @@
+```sim
+basic.forever(() => {
+  basic.showString("Hi!");
+})
+``` 
 # About
 
 The [BBC micro:bit](https://www.microbit.co.uk) is a [pocket-size computer](/device) with a 5x5 display of 25 LEDs, Bluetooth and sensors that can be programmed by anyone.

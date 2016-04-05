@@ -541,6 +541,18 @@ declare namespace pins {
      */
     //% shim=pins::createBuffer
     function createBuffer(size: number): Buffer;
+
+    /**
+     * Read `size` bytes from a 7-bit I2C `address`.
+     */
+    //% repeat.defl=0 shim=pins::i2cReadBuffer
+    function i2cReadBuffer(address: number, size: number, repeat: boolean): Buffer;
+
+    /**
+     * Write bytes to a 7-bit I2C `address`.
+     */
+    //% repeat.defl=0 shim=pins::i2cWriteBuffer
+    function i2cWriteBuffer(address: number, buf: Buffer, repeat: boolean): void;
 }
 
 
@@ -577,6 +589,18 @@ declare namespace serial {
 
     //% indexerGet=BufferMethods::getByte indexerSet=BufferMethods::setByte
 declare interface Buffer {
+    /**
+     * Write a number in specified format in the buffer.
+     */
+    //% shim=BufferMethods::setNumber
+    setNumber(format: NumberFormat, offset: number, value: number): void;
+
+    /**
+     * Read a number in specified format from the buffer.
+     */
+    //% shim=BufferMethods::getNumber
+    getNumber(format: NumberFormat, offset: number): number;
+
     /** Returns the length of a Buffer object. */
     //% property shim=BufferMethods::length
     length: number;

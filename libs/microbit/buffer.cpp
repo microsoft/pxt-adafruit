@@ -1,5 +1,19 @@
 #include "ksbit.h"
 
+enum class NumberFormat {
+    Int8LE = 1,
+    UInt8LE,
+    Int16LE,
+    UInt16LE,
+    Int32LE,
+    Int8BE,
+    UInt8BE,
+    Int16BE,
+    UInt16BE,
+    Int32BE,
+    // UInt32,
+};
+
 //% indexerGet=BufferMethods::getByte indexerSet=BufferMethods::setByte
 namespace BufferMethods {
     //%
@@ -15,6 +29,70 @@ namespace BufferMethods {
     //%
     uint8_t *getBytes(Buffer buf) {
         return buf->payload;
+    }
+
+    /**
+     * Write a number in specified format in the buffer.
+     */
+    //%
+    void setNumber(Buffer buf, NumberFormat format, int offset, int value)
+    {
+        int8_t i8;
+        uint8_t u8;
+        int16_t i16;
+        uint16_t u16;
+        int32_t i32;
+
+        ManagedBuffer b(buf);
+
+        // Assume little endian
+        #define WRITEBYTES(isz, swap) isz = value; b.writeBytes(offset, (uint8_t*)&isz, sizeof(isz), swap); break
+
+        switch (format) {
+        case NumberFormat::Int8LE: WRITEBYTES(i8, false);
+        case NumberFormat::UInt8LE: WRITEBYTES(u8, false);
+        case NumberFormat::Int16LE: WRITEBYTES(i16, false);
+        case NumberFormat::UInt16LE: WRITEBYTES(u16, false);
+        case NumberFormat::Int32LE: WRITEBYTES(i32, false);
+        case NumberFormat::Int8BE: WRITEBYTES(i8, true);
+        case NumberFormat::UInt8BE: WRITEBYTES(u8, true);
+        case NumberFormat::Int16BE: WRITEBYTES(i16, true);
+        case NumberFormat::UInt16BE: WRITEBYTES(u16, true);
+        case NumberFormat::Int32BE: WRITEBYTES(i32, true);
+        }
+    }
+
+    /**
+     * Read a number in specified format from the buffer.
+     */
+    //%
+    int getNumber(Buffer buf, NumberFormat format, int offset)
+    {
+        int8_t i8;
+        uint8_t u8;
+        int16_t i16;
+        uint16_t u16;
+        int32_t i32;
+
+        ManagedBuffer b(buf);
+
+        // Assume little endian
+        #define READBYTES(isz, swap) b.readBytes((uint8_t*)&isz, offset, sizeof(isz), swap); return isz
+
+        switch (format) {
+        case NumberFormat::Int8LE: READBYTES(i8, false);
+        case NumberFormat::UInt8LE: READBYTES(u8, false);
+        case NumberFormat::Int16LE: READBYTES(i16, false);
+        case NumberFormat::UInt16LE: READBYTES(u16, false);
+        case NumberFormat::Int32LE: READBYTES(i32, false);
+        case NumberFormat::Int8BE: READBYTES(i8, true);
+        case NumberFormat::UInt8BE: READBYTES(u8, true);
+        case NumberFormat::Int16BE: READBYTES(i16, true);
+        case NumberFormat::UInt16BE: READBYTES(u16, true);
+        case NumberFormat::Int32BE: READBYTES(i32, true);
+        }
+
+        return 0;
     }
 
     /** Returns the length of a Buffer object. */

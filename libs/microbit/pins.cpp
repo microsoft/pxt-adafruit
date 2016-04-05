@@ -195,25 +195,24 @@ namespace pins {
     {
         return ManagedBuffer(size).leakData();
     }
+
+    /**
+     * Read `size` bytes from a 7-bit I2C `address`.
+     */
+    //% repeat.defl=0
+    Buffer i2cReadBuffer(int address, int size, bool repeat)
+    {
+      Buffer buf = createBuffer(size);
+      uBit.i2c.read(address << 1, (char*)buf->payload, size, repeat);
+      return buf;
+    }
     
-    // TODO:
-    void i2cReadBuffer(int address, RefBuffer *buf)
+    /**
+     * Write bytes to a 7-bit I2C `address`.
+     */
+    //% repeat.defl=0
+    void i2cWriteBuffer(int address, Buffer buf, bool repeat)
     {
-      uBit.i2c.read(address << 1, buf->cptr(), buf->size());
-    }
-
-    void i2cWriteBuffer(int address, RefBuffer *buf)
-    {
-      uBit.i2c.write(address << 1, buf->cptr(), buf->size());
-    }
-
-    int i2cReadRaw(int address, char *data, int length, int repeated)
-    {
-      return uBit.i2c.read(address, data, length, repeated);
-    }
-
-    int i2cWriteRaw(int address, const char *data, int length, int repeated)
-    {
-      return uBit.i2c.write(address, data, length, repeated);
+      uBit.i2c.write(address << 1, (char*)buf->payload, buf->length, repeat);
     }
 }

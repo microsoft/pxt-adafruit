@@ -39,7 +39,7 @@ namespace neopixel {
         /**
          * Shift LEDs forward.
          */
-        shift(off: number): void {
+        shift(off: number = 1): void {
             this.buf.shift(-off * 3)
         }
 

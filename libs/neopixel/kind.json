@@ -1,5 +1,5 @@
 {
-    "name": "neppixel",
+    "name": "neopixel",
     "description": "AdaFruit NeoPixel driver for micro:bit",
     "files": [
         "neopixel.ts",

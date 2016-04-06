@@ -489,18 +489,6 @@ declare namespace serial {
      */
     //% shim=serial::writeString
     function writeString(text: string): void;
-
-    /**
-     * Sends the current pixel values, byte-per-pixel, over serial.
-     */
-    //% shim=serial::writeScreen
-    function writeScreen(): void;
-
-    /**
-     * Reads the screen from serial.
-     */
-    //% shim=serial::readScreen
-    function readScreen(): void;
 }
 
 

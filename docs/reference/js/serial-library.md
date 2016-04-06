@@ -126,15 +126,3 @@ This is useful if you have something connected at the other end. As explained ab
 let msg = serial.readString()
 ```
 
-* reads an image
-
-```
-img = serial.readImage()
-```
-
-* reads the state of the screen from serial
-
-```
-serial.readScreen()
-```
-

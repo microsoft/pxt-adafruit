@@ -28,7 +28,7 @@
         },
         "files": {
             "main.blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"device_print_message\"><value name=\"text\"><shadow type=\"text\"><field name=\"TEXT\">Hello!</field></shadow></value></block></xml>",
-            "main.blocks.ts": "\n",
+            "main.ts": "\n",
             "README.md": "Describe your project here!"
         }
     },

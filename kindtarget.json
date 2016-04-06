@@ -1,7 +1,7 @@
 {
     "id": "microbit",
-    "name": "BBC micro:bit",
-    "title": "JavaScript for BBC micro:bit",
+    "name": "code micro:bit",
+    "title": "codemicrobit.com",
     "corepkg": "microbit",
     "bundleddirs": [
         "libs/microbit",

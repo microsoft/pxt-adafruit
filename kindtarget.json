@@ -22,7 +22,7 @@
             "description": "",
             "files": [
                 "main.blocks",
-                "main.blocks.ts",
+                "main.ts",
                 "README.md"
             ]
         },

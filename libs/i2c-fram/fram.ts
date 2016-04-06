@@ -1,5 +1,6 @@
 namespace i2c_fram {
     const devaddr = 0x50;
+    const memend = 0x7fff;
 
     //% shim=ksrt::panic
     function panic(code: number) { }
@@ -7,7 +8,7 @@ namespace i2c_fram {
     function die() { panic(142) }
 
     export function readByte(addr: number) {
-        if (addr < 0 || addr > 0xffff)
+        if (addr < 0 || addr > memend)
             die();
 
         let buf = pins.createBuffer(2)
@@ -21,7 +22,7 @@ namespace i2c_fram {
     }
 
     export function writeByte(addr: number, val: number) {
-        if (addr < 0 || addr > 0xffff)
+        if (addr < 0 || addr > memend)
             die();
 
         if (val < 0 || val > 0xff)
@@ -37,7 +38,7 @@ namespace i2c_fram {
     }
     
     export function readBuffer(addr: number, length: number) {
-        if (addr < 0 || length < 0 || (addr + length) > 0xffff)
+        if (addr < 0 || length < 0 || (addr + length) > memend)
             die();
         let buf = pins.createBuffer(length)
         for (let i = 0; i < length; ++i)
@@ -46,7 +47,7 @@ namespace i2c_fram {
     }
     
     export function writeBuffer(addr:number, buf: Buffer) {        
-        if (addr < 0 || (addr + buf.length) > 0xffff)
+        if (addr < 0 || (addr + buf.length) > memend)
             die();
         for (let i = 0; i < buf.length; ++i)
             writeByte(addr + i, buf[i])

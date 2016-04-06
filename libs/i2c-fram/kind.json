@@ -2,6 +2,7 @@
     "name": "i2c-fram",
     "description": "AdaFruit I2C FRAM driver for micro:bit",
     "files": [
+        "README.md",
         "fram.ts"
     ],
     "testFiles": [

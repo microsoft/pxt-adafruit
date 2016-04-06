@@ -8,7 +8,9 @@ function toBuf(arr: number[]) {
     return buf
 }
 
-i2c_fram.writeBuffer(98, toBuf([1,2,3,4,5,6,7]))
+i2c_fram.writeBuffer(98, toBuf([1, 2, 3, 4, 5, 6, 7]))
 
 console.log("100:" + i2c_fram.readByte(100))
 console.log("101:" + i2c_fram.readByte(101))
+
+

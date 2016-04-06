@@ -2,6 +2,7 @@
     "name": "neopixel",
     "description": "AdaFruit NeoPixel driver for micro:bit",
     "files": [
+        "README.md",
         "neopixel.ts",
         "sendbuffer.asm"
     ],
@@ -16,5 +17,6 @@
     "public": true,
     "dependencies": {
         "microbit": "file:../microbit"
-    }
+    },
+    "installedVersion": "zbhlje"
 }

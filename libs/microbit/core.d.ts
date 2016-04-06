@@ -153,6 +153,9 @@ declare interface Number {
     toString(): string;
 }
 
+/**
+ * Numbers and arithmetic operators
+ */
 declare namespace Math {
 
     /**

@@ -1,7 +1,7 @@
 {
 	"version": "0.1.0",
 	// Task runner is jake
-	"command": "kind",
+	"command": "pxt",
 	// Need to be executed in shell / cmd
 	"isShellCommand": true,
 	"showOutput": "always",

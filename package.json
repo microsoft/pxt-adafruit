@@ -1,7 +1,7 @@
 {
-  "name": "kindscript-microbit",
+  "name": "pxt-microbit",
   "version": "0.2.41",
-  "description": "BBC micro:bit target for KindScript",
+  "description": "BBC micro:bit target for PXT",
   "keywords": [
     "JavaScript",
     "education",
@@ -9,14 +9,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Microsoft/kindscript-microbit.git"
+    "url": "git+https://github.com/Microsoft/pxt-microbit.git"
   },
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/Microsoft/kindscript-microbit#readme",
+  "homepage": "https://github.com/Microsoft/pxt-microbit#readme",
   "files": [
     "README.md",
-    "kindtarget.json",
+    "pxtarget.json",
     "built/*.js",
     "built/*.json",
     "built/*.d.ts",
@@ -29,6 +29,6 @@
     "typescript": "^1.8.7"
   },
   "dependencies": {
-    "kindscript": "0.2.42"
+    "pxt-core": "0.2.42"
   }
 }

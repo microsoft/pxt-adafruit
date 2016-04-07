@@ -1,5 +1,5 @@
-namespace ks.rt.micro_bit {
-    const Svg = ks.rt.Svg;
+namespace pxt.rt.micro_bit {
+    const Svg = pxt.rt.Svg;
 
     export interface IBoardTheme {
         accent?: string;
@@ -42,7 +42,7 @@ namespace ks.rt.micro_bit {
     }
 
     export interface IBoardProps {
-        runtime: ks.rt.Runtime;
+        runtime: pxt.rt.Runtime;
         theme?: IBoardTheme;
         disableTilt?:boolean;
     }

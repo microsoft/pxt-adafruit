@@ -1,9 +1,9 @@
-/// <reference path="../node_modules/kindscript/typings/bluebird/bluebird.d.ts"/>
-/// <reference path="../node_modules/kindscript/built/kindsim.d.ts"/>
+/// <reference path="../node_modules/pxt-core/typings/bluebird/bluebird.d.ts"/>
+/// <reference path="../node_modules/pxt-core/built/pxtsim.d.ts"/>
 /// <reference path="../libs/microbit/dal.d.ts"/>
 
-namespace ks.rt {
-    ks.rt.initCurrentRuntime = () => {
+namespace pxt.rt {
+    pxt.rt.initCurrentRuntime = () => {
         U.assert(!runtime.board)
         runtime.board = new Board()
     }
@@ -143,7 +143,7 @@ namespace ks.rt {
 
 }
 
-namespace ks.rt.basic {
+namespace pxt.rt.basic {
     export var pause = thread.pause;
     export var forever = thread.forever;
 
@@ -205,7 +205,7 @@ namespace ks.rt.basic {
     }
 }
 
-namespace ks.rt.control {
+namespace pxt.rt.control {
     export var inBackground = thread.runInBackground;
 
     export function reset() {
@@ -222,13 +222,13 @@ namespace ks.rt.control {
     }
 }
 
-namespace ks.rt.kindscript {
+namespace pxt.rt.kindscript {
     export function registerWithDal(id: number, evid: number, handler: RefAction) {
         board().bus.listen(id, evid, handler);
     }
 }
 
-namespace ks.rt.input {
+namespace pxt.rt.input {
     export function onButtonPressed(button: number, handler: RefAction): void {
         let b = board();
         if (button == DAL.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
@@ -333,7 +333,7 @@ namespace ks.rt.input {
     }
 }
 
-namespace ks.rt.led {
+namespace pxt.rt.led {
     export function plot(x: number, y: number) {
         board().image.set(x, y, 255);
         runtime.queueDisplayUpdate()
@@ -367,7 +367,7 @@ namespace ks.rt.led {
     }
 }
 
-namespace ks.rt.serial {
+namespace pxt.rt.serial {
     export function writeString(s: string) {
         board().writeSerial(s);
     }
@@ -378,7 +378,7 @@ namespace ks.rt.serial {
 }
 
 
-namespace ks.rt.radio {
+namespace pxt.rt.radio {
     export function broadcastMessage(msg: number): void {
         board().radio.broadcast(msg);
     }
@@ -416,7 +416,7 @@ namespace ks.rt.radio {
     }
 }
 
-namespace ks.rt.pins {
+namespace pxt.rt.pins {
     export function digitalReadPin(pinId: number): number {
         let pin = getPin(pinId);
         if (!pin) return;
@@ -504,12 +504,12 @@ namespace ks.rt.pins {
 
 }
 
-namespace ks.rt.images {
+namespace pxt.rt.images {
     export function createImage(img: Image) { return img }
     export function createBigImage(img: Image) { return img }
 }
 
-namespace ks.rt.ImageMethods {
+namespace pxt.rt.ImageMethods {
     export function showImage(i: Image, offset: number) {
         // TODO offset?
         i.copyTo(0, 5, board().image, 0)

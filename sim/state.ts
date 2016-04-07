@@ -1,4 +1,4 @@
-namespace ks.rt {
+namespace pxt.rt {
     export interface RuntimeOptions {
         theme: string;
     }
@@ -555,11 +555,11 @@ namespace ks.rt {
                 case 'yellow': theme = micro_bit.themes[1]; break;
                 case 'green': theme = micro_bit.themes[2]; break;
                 case 'red': theme = micro_bit.themes[3]; break;
-                default: theme = ks.rt.micro_bit.randomTheme();
+                default: theme = pxt.rt.micro_bit.randomTheme();
             }
 
             console.log('setting up microbit simulator')
-            let view = new ks.rt.micro_bit.MicrobitBoardSvg({
+            let view = new pxt.rt.micro_bit.MicrobitBoardSvg({
                 theme: theme,
                 runtime: runtime
             })

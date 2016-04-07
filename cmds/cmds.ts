@@ -1,4 +1,4 @@
-/// <reference path="../node_modules/kindscript/built/kind.d.ts"/>
+/// <reference path="../node_modules/pxt-core/built/pxt.d.ts"/>
 
 import * as fs from 'fs';
 import * as path from 'path';
@@ -7,7 +7,7 @@ import * as child_process from 'child_process';
 let writeFileAsync: any = Promise.promisify(fs.writeFile)
 let execAsync: (cmd: string, options?: { cwd?: string }) => Promise<Buffer> = Promise.promisify(child_process.exec)
 
-export function deployCoreAsync(res: ts.ks.CompileResult) {
+export function deployCoreAsync(res: ts.pxt.CompileResult) {
     return getBitDrivesAsync()
         .then(drives => {
             if (drives.length == 0) {

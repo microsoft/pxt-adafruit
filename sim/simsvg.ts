@@ -129,8 +129,8 @@ namespace pxsim.micro_bit {
             this.updateButtonAB();       
             this.updateGestures(); 
             
-            if (!runtime || runtime.dead) this.element.classList.add("grayscale");
-            else this.element.classList.remove("grayscale");
+            if (!runtime || runtime.dead) Svg.addClass(this.element, "grayscale");
+            else Svg.removeClass(this.element, "grayscale");
         }
         
         private updateGestures() {
@@ -636,7 +636,7 @@ svg.sim.grayscale {
                         let state = this.board;
                         let pin = state.pins[index];
                         let svgpin = this.pins[index];
-                        svgpin.classList.add('touched');                            
+                        Svg.addClass(svgpin, 'touched');                            
                         if (pin.mode & PinMode.Input) {
                             let cursor = Svg.cursorPoint(pt, this.element, ev);
                             let v = (400 - cursor.y) / 40 * 1023
@@ -649,7 +649,7 @@ svg.sim.grayscale {
                         let state = this.board;
                         let pin = state.pins[index];
                         let svgpin = this.pins[index];
-                        svgpin.classList.remove('touched');
+                        Svg.removeClass(svgpin, 'touched');
                         this.updatePin(pin, index);
                         return false;
                 });

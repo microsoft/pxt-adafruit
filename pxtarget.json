@@ -59,7 +59,7 @@
         "autoRun": true
     },
     "compileService": {
-        "gittag": "v0.1.5",
+        "gittag": "v0.1.6",
         "serviceId": "ws"
     },
     "serial": {

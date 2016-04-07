@@ -154,7 +154,7 @@ namespace Array_ {
 }
 
 // Import some stuff directly
-namespace kindscript {
+namespace pxt {
   //%
   void registerWithDal(int id, int event, Action a);
   //%
@@ -181,7 +181,7 @@ namespace kindscript {
   void *ptrOfLiteral(int offset);
 }
 
-namespace ksrt {
+namespace pxtrt {
   //%
   uint32_t ldloc(RefLocal *r) {
     return r->v;

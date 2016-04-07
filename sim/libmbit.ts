@@ -2,8 +2,8 @@
 /// <reference path="../node_modules/pxt-core/built/pxtsim.d.ts"/>
 /// <reference path="../libs/microbit/dal.d.ts"/>
 
-namespace pxt.rt {
-    pxt.rt.initCurrentRuntime = () => {
+namespace pxsim {
+    pxsim.initCurrentRuntime = () => {
         U.assert(!runtime.board)
         runtime.board = new Board()
     }
@@ -143,7 +143,7 @@ namespace pxt.rt {
 
 }
 
-namespace pxt.rt.basic {
+namespace pxsim.basic {
     export var pause = thread.pause;
     export var forever = thread.forever;
 
@@ -205,7 +205,7 @@ namespace pxt.rt.basic {
     }
 }
 
-namespace pxt.rt.control {
+namespace pxsim.control {
     export var inBackground = thread.runInBackground;
 
     export function reset() {
@@ -213,7 +213,7 @@ namespace pxt.rt.control {
     }
 
     export function onEvent(id: number, evid: number, handler: RefAction) {
-        kindscript.registerWithDal(id, evid, handler)
+        pxt.registerWithDal(id, evid, handler)
     }
 
     export function raiseEvent(id: number, evid: number, mode: number) {
@@ -222,13 +222,13 @@ namespace pxt.rt.control {
     }
 }
 
-namespace pxt.rt.kindscript {
+namespace pxsim.pxt {
     export function registerWithDal(id: number, evid: number, handler: RefAction) {
         board().bus.listen(id, evid, handler);
     }
 }
 
-namespace pxt.rt.input {
+namespace pxsim.input {
     export function onButtonPressed(button: number, handler: RefAction): void {
         let b = board();
         if (button == DAL.MICROBIT_ID_BUTTON_AB && !board().usesButtonAB) {
@@ -333,7 +333,7 @@ namespace pxt.rt.input {
     }
 }
 
-namespace pxt.rt.led {
+namespace pxsim.led {
     export function plot(x: number, y: number) {
         board().image.set(x, y, 255);
         runtime.queueDisplayUpdate()
@@ -367,7 +367,7 @@ namespace pxt.rt.led {
     }
 }
 
-namespace pxt.rt.serial {
+namespace pxsim.serial {
     export function writeString(s: string) {
         board().writeSerial(s);
     }
@@ -378,7 +378,7 @@ namespace pxt.rt.serial {
 }
 
 
-namespace pxt.rt.radio {
+namespace pxsim.radio {
     export function broadcastMessage(msg: number): void {
         board().radio.broadcast(msg);
     }
@@ -416,7 +416,7 @@ namespace pxt.rt.radio {
     }
 }
 
-namespace pxt.rt.pins {
+namespace pxsim.pins {
     export function digitalReadPin(pinId: number): number {
         let pin = getPin(pinId);
         if (!pin) return;
@@ -504,12 +504,12 @@ namespace pxt.rt.pins {
 
 }
 
-namespace pxt.rt.images {
+namespace pxsim.images {
     export function createImage(img: Image) { return img }
     export function createBigImage(img: Image) { return img }
 }
 
-namespace pxt.rt.ImageMethods {
+namespace pxsim.ImageMethods {
     export function showImage(i: Image, offset: number) {
         // TODO offset?
         i.copyTo(0, 5, board().image, 0)

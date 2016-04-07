@@ -1,5 +1,5 @@
-namespace pxt.rt.micro_bit {
-    const Svg = pxt.rt.Svg;
+namespace pxsim.micro_bit {
+    const Svg = pxsim.Svg;
 
     export interface IBoardTheme {
         accent?: string;
@@ -42,7 +42,7 @@ namespace pxt.rt.micro_bit {
     }
 
     export interface IBoardProps {
-        runtime: pxt.rt.Runtime;
+        runtime: pxsim.Runtime;
         theme?: IBoardTheme;
         disableTilt?:boolean;
     }
@@ -76,10 +76,10 @@ namespace pxt.rt.micro_bit {
         private thermometerText: SVGTextElement;
         private shakeButton: SVGCircleElement;
         private shakeText: SVGTextElement;
-        public board: rt.Board; 
+        public board: pxsim.Board; 
         
         constructor(public props: IBoardProps) {
-            this.board = this.props.runtime.board as rt.Board;
+            this.board = this.props.runtime.board as pxsim.Board;
             this.board.updateView = () => this.updateState();
             this.buildDom();              
             this.updateTheme();
@@ -115,7 +115,7 @@ namespace pxt.rt.micro_bit {
                 Svg.fill(this.buttons[index], btn.pressed ? theme.buttonDown : theme.buttonUp);            
             });
             
-            var bw =  state.displayMode == rt.DisplayMode.bw         
+            var bw =  state.displayMode == pxsim.DisplayMode.bw         
             var img = state.image;
             this.leds.forEach((led,i) => {
                 var sel = (<SVGStylable><any>led)

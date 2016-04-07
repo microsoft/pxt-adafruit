@@ -1,6 +1,6 @@
-#include "kindscript.h"
+#include "pxt.h"
 
-using namespace kindscript;
+using namespace pxt;
 
 //% color=270 weight=34
 namespace radio {
@@ -15,7 +15,7 @@ namespace radio {
         int r = uBit.radio.enable();
         if (r != MICROBIT_OK) return r;
         if (!radioEnabled) {
-            uBit.radio.setGroup(kindscript::programHash());
+            uBit.radio.setGroup(pxt::programHash());
             radioEnabled = true;
         }
         return r;

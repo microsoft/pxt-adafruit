@@ -2,7 +2,7 @@ namespace i2c_fram {
     const devaddr = 0x50;
     const memend = 0x7fff;
 
-    //% shim=ksrt::panic
+    //% shim=pxtrt::panic
     function panic(code: number) { }
 
     function die() { panic(142) }

@@ -1,7 +1,7 @@
-#include "kindscript.h"
+#include "pxt.h"
 #include "MESEvents.h"
 
-using namespace kindscript;
+using namespace pxt;
 
 enum class MesCameraEvent {
     //% block="take photo"

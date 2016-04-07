@@ -3,7 +3,7 @@
 // Do not use anything besides basic.pause, control.inBackground, console.log
 //
 
-//% shim=ksrt::panic
+//% shim=pxtrt::panic
 function panic(code2: number): void { }
 
 function msg(s: string): void {

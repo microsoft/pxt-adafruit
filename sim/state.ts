@@ -596,8 +596,8 @@ namespace ks.rt {
         writeSerial(s: string) {
             for (let i = 0; i < s.length; ++i) {
                 let c = s[i];
-                switch (c) {
-                    case '\n':
+                this.serialOutBuffer += c;
+                if (c == '\n') {
                         Runtime.postMessage(<SimulatorSerialMessage>{
                             type: 'serial',
                             data: this.serialOutBuffer,
@@ -605,8 +605,6 @@ namespace ks.rt {
                         })
                         this.serialOutBuffer = ''
                         break;
-                    case '\r': continue;
-                    default: this.serialOutBuffer += c;
                 }
             }
         }

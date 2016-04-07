@@ -1,4 +1,4 @@
-# micro:bit target for KindScript
+# micro:bit target for PXT
 
 This target allow to program a [BBC micro:bit](https://www.microbit.co.uk/) using 
 [Microsoft Programming Experience Toolkit](https://github.com/Microsoft/pxt).

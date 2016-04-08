@@ -1,9 +1,0 @@
-CACHE MANIFEST
-
-CACHE:
-/cdn/bluebird.min.js
-/cdn/pxtsim.js
-/sim/sim.js
-
-NETWORK:
-*

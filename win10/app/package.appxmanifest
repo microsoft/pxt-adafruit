@@ -17,13 +17,24 @@
     <Application Id="App" StartPage="https://codemicrobit.com/">
       <uap:ApplicationContentUriRules>
         <uap:Rule Match="https://codemicrobit.com/" Type="include" WindowsRuntimeAccess="all" />
-        <uap:Rule Match="http://localhost:3232/" Type="include" WindowsRuntimeAccess="all" />
       </uap:ApplicationContentUriRules>
       <uap:VisualElements DisplayName="code micro:bit" Description="Code editors for the BBC micro:bits" BackgroundColor="transparent" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
         <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png">
         </uap:DefaultTile>
         <uap:SplashScreen Image="images\splashscreen.png" />
       </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="microbithex">
+            <uap:DisplayName>BBC micro:bit binary file</uap:DisplayName>
+            <uap:InfoTip>.hex file created with codemicrobit.com or microbit.co.uk</uap:InfoTip>
+            <uap:EditFlags OpenIsSafe="true" />
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="application/x-microbit-hex">.hex</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+      </Extensions>
     </Application>
   </Applications>
   <Capabilities>

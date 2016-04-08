@@ -53,7 +53,8 @@
     },
     "compile": {
         "isNative": false,
-        "hasHex": true
+        "hasHex": true,
+        "deployDrives": "^MICROBIT"
     },
     "simulator": {
         "autoRun": true

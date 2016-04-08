@@ -11,4 +11,14 @@ Please follow instructions at https://github.com/Microsoft/pxt#running-a-target-
 
 ## Universal Windows App
 
-Open the ``win10/app.sln`` solution with Visual Studio 2015 Update 2 or higher to build it.
+The Windows 10 app is a [Universal Windows Hosted Web App](https://microsoftedge.github.io/WebAppsDocs/en-US/win10/CreateHWA.htm)
+that wraps codemicrobit.com and provides additional features.
+
+### Sideloading
+
+Find the latest build under ``win10/app/AppPackages/latest`` and run the ``Add-AppDevPackage.ps1`` PowerShell script.
+
+### Building
+
+* Install Visual Studio 2015 Update 2 or higher. Make sure the Windows 10 templates are installed.
+* open the ``win10/app.sln`` solution and launch the ``codemicrobit`` project.

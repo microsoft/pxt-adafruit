@@ -69,9 +69,9 @@
     },
     "appTheme": {
         "logoUrl": "https://www.microbit.co.uk/",
-        "logo": "./logo.svg",
-        "portraitLogo":"./portraitlogo.svg",
-        "footerLogo": "./footerlogo.svg",
+        "logo": "./static/logo.svg",
+        "portraitLogo":"./static/portraitlogo.svg",
+        "footerLogo": "./static/footerlogo.svg",
         "homeUrl": "https://codemicrobit.com/",
         "embedUrl": "https://codemicrobit.com/",
         "koduUrl": "https://www.kodugamelab.com/bbc-microbit/",

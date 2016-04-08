@@ -1,0 +1,1 @@
+MainPackage=C:\gh\pxt-microbit\win10\app\bin\Debug\codemicrobit_0.1.2.0_AnyCPU_Debug.appx

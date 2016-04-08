@@ -68,7 +68,7 @@
         "log": true
     },
     "appTheme": {
-        "logoUrl": "https://www.microbit.co.uk/",
+        "logoUrl": "https://codemicrobit.com/about",
         "logo": "./static/logo.svg",
         "portraitLogo":"./static/portraitlogo.svg",
         "footerLogo": "./static/footerlogo.svg",

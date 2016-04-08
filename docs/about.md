@@ -62,7 +62,7 @@ basic.showString("BBC micro:bit");
 
 ## C++ Runtime
 
-The C++ BBC micro:bit library, created at [Lancaster University](http://www.lancaster.ac.uk/), provides access to the hardware functions of the micro:bit, 
+The [C++ BBC micro:bit runtime](http://lancaster-university.github.io/microbit-docs/), created at [Lancaster University](http://www.lancaster.ac.uk/), provides access to the hardware functions of the micro:bit, 
 as well as a set of helper functions (such as displaying a number/image/string on the LED screen). 
 The JavaScript micro:bit library mirrors the functions of the C++ library. 
 When code is compiled to ARM machine code, the calls to JavaScript micro:bit functions are replaced with calls to the corresponding C++ functions.

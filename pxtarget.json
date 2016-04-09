@@ -65,6 +65,7 @@
     },
     "serial": {
         "manufacturerFilter": "^mbed$",
+        "nameFilter": "^mbed Serial Port",
         "log": true
     },
     "appTheme": {

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="39122940-ab16-4cd4-a0ce-79a3eb863ecf" Version="0.1.2.0" Publisher="CN=jhalleux" />
+  <Identity Name="39122940-ab16-4cd4-a0ce-79a3eb863ecf" Version="0.1.3.0" Publisher="CN=jhalleux" />
   <mp:PhoneIdentity PhoneProductId="39122940-ab16-4cd4-a0ce-79a3eb863ecf" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>codemicrobitapp</DisplayName>

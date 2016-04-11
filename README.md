@@ -16,7 +16,9 @@ that wraps codemicrobit.com and provides additional features.
 
 ### Sideloading
 
-Find the latest build under ``win10/app/AppPackages/latest`` and run the ``Add-AppDevPackage.ps1`` PowerShell script.
+* Open Windows **settings** and search for **Developer options**
+* Enable the developer mode.
+* Find the latest build under ``win10/app/AppPackages/latest`` and run the ``Add-AppDevPackage.ps1`` PowerShell script (mouse right-click, then `run with PowerShell`)
 
 ### Building
 

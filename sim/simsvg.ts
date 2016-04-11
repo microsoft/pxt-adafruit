@@ -46,6 +46,18 @@ namespace pxsim.micro_bit {
         theme?: IBoardTheme;
         disableTilt?:boolean;
     }
+    
+    const pointerEvents = !!(window as any).PointerEvent ? {
+        up: "pointerup",
+        down: "pointerdown",
+        move: "pointermove",
+        leave: "pointerleave"
+    } : {
+        up: "mouseup",
+        down: "mousedown",
+        move: "mousemove",
+        leave: "mouseleave"
+    };
 
     export class MicrobitBoardSvg
     {
@@ -138,15 +150,15 @@ namespace pxsim.micro_bit {
             if (state.useShake && !this.shakeButton) {
                 this.shakeButton = Svg.child(this.g, "circle", {cx:380, cy:100, r:16.5}) as SVGCircleElement;
                 Svg.fill(this.shakeButton, this.props.theme.virtualButtonUp)
-                this.shakeButton.addEventListener("mousedown", ev => {
+                this.shakeButton.addEventListener(pointerEvents.down, ev => {
                     let state = this.board;
                     Svg.fill(this.shakeButton, this.props.theme.buttonDown);          
                 })
-                this.shakeButton.addEventListener("mouseleave", ev => {
+                this.shakeButton.addEventListener(pointerEvents.leave, ev => {
                     let state = this.board;
                     Svg.fill(this.shakeButton, this.props.theme.virtualButtonUp);          
                 })
-                this.shakeButton.addEventListener("mouseup", ev => {
+                this.shakeButton.addEventListener(pointerEvents.up, ev => {
                     let state = this.board;
                     Svg.fill(this.shakeButton, this.props.theme.virtualButtonUp);                              
                     this.board.bus.queue(DAL.MICROBIT_ID_GESTURE, 11); // GESTURE_SHAKE
@@ -571,7 +583,7 @@ svg.sim.grayscale {
                 }
             }
             let tiltDecayer = 0;
-            this.element.addEventListener("mousemove", (ev: MouseEvent) => {
+            this.element.addEventListener(pointerEvents.move, (ev: MouseEvent) => {
                 let state = this.board;
                 if (!state.accelerometer.isActive) return;           
                 
@@ -591,7 +603,7 @@ svg.sim.grayscale {
                 state.accelerometer.update(x,y,z);
                 this.updateTilt();
             }, false);
-            this.element.addEventListener("mouseleave", (ev: MouseEvent) => {
+            this.element.addEventListener(pointerEvents.leave, (ev: MouseEvent) => {
                 let state = this.board;
                 if (!state.accelerometer.isActive) return;
                 
@@ -655,17 +667,17 @@ svg.sim.grayscale {
                 });
             })
             this.pins.slice(0,3).forEach((btn, index) => {
-                btn.addEventListener("mousedown", ev => {
+                btn.addEventListener(pointerEvents.down, ev => {
                     let state = this.board;
                     state.pins[index].touched = true;
                     this.updatePin(state.pins[index], index);
                 })
-                btn.addEventListener("mouseleave", ev => {
+                btn.addEventListener(pointerEvents.leave, ev => {
                     let state = this.board;
                     state.pins[index].touched = false;
                     this.updatePin(state.pins[index], index);
                 })
-                btn.addEventListener("mouseup", ev => {
+                btn.addEventListener(pointerEvents.up, ev => {
                     let state = this.board;
                     state.pins[index].touched = false;
                     this.updatePin(state.pins[index], index);
@@ -673,17 +685,17 @@ svg.sim.grayscale {
                 })                
             })
             this.buttonsOuter.slice(0,2).forEach((btn, index) => {
-                btn.addEventListener("mousedown", ev => {
+                btn.addEventListener(pointerEvents.down, ev => {
                     let state = this.board;
                     state.buttons[index].pressed = true;
                     Svg.fill(this.buttons[index], this.props.theme.buttonDown);          
                 })
-                btn.addEventListener("mouseleave", ev => {
+                btn.addEventListener(pointerEvents.leave, ev => {
                     let state = this.board;
                     state.buttons[index].pressed = false;
                     Svg.fill(this.buttons[index], this.props.theme.buttonUp);
                 })
-                btn.addEventListener("mouseup", ev => {
+                btn.addEventListener(pointerEvents.up, ev => {
                     let state = this.board;
                     state.buttons[index].pressed = false;
                     Svg.fill(this.buttons[index], this.props.theme.buttonUp);
@@ -691,7 +703,7 @@ svg.sim.grayscale {
                     this.board.bus.queue(state.buttons[index].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
                 })
             })
-            this.buttonsOuter[2].addEventListener("mousedown", ev => {
+            this.buttonsOuter[2].addEventListener(pointerEvents.down, ev => {
                     let state = this.board;
                     state.buttons[0].pressed = true;
                     state.buttons[1].pressed = true;
@@ -700,7 +712,7 @@ svg.sim.grayscale {
                     Svg.fill(this.buttons[1], this.props.theme.buttonDown);                
                     Svg.fill(this.buttons[2], this.props.theme.buttonDown);                
                 })
-            this.buttonsOuter[2].addEventListener("mouseleave", ev => {
+            this.buttonsOuter[2].addEventListener(pointerEvents.leave, ev => {
                     let state = this.board;
                     state.buttons[0].pressed = false;
                     state.buttons[1].pressed = false;
@@ -709,7 +721,7 @@ svg.sim.grayscale {
                     Svg.fill(this.buttons[1], this.props.theme.buttonUp);                
                     Svg.fill(this.buttons[2], this.props.theme.virtualButtonUp);                
             })
-            this.buttonsOuter[2].addEventListener("mouseup", ev => {
+            this.buttonsOuter[2].addEventListener(pointerEvents.up, ev => {
                     let state = this.board;
                     state.buttons[0].pressed = false;
                     state.buttons[1].pressed = false;

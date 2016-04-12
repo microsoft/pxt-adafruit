@@ -151,7 +151,7 @@ namespace pxsim.basic {
         if (interval < 0) return;
 
         let leds = createImageFromString(x.toString());
-        if (x < 0 || x >= 10) scrollImage(leds, interval, 1);
+        if (x < 0 || x >= 10) ImageMethods.scrollImage(leds, interval, 1);
         else showLeds(leds, interval * 5);
     }
 
@@ -163,7 +163,7 @@ namespace pxsim.basic {
         } else {
             let leds = createImageFromString(s);
             if (s.length == 1) showLeds(leds, interval * 5)
-            else scrollImage(leds, interval, 1);
+            else ImageMethods.scrollImage(leds, interval, 1);
         }
     }
 
@@ -176,32 +176,12 @@ namespace pxsim.basic {
         runtime.queueDisplayUpdate()
     }
 
-    function scrollImage(leds: Image, interval: number, stride: number): void {
-        let cb = getResume()
-        let off = stride > 0 ? 0 : leds.width - 1;
-        let display = board().image;
-
-        board().animationQ.enqueue({
-            interval: interval,
-            frame: () => {
-                if (off >= leds.width || off < 0) return false;
-                stride > 0 ? display.shiftLeft(stride) : display.shiftRight(-stride);
-                let c = Math.min(stride, leds.width - off);
-                leds.copyTo(off, c, display, 5 - stride)
-                off += stride;
-                return true;
-            },
-            whenDone: cb
-        })
-    }
-
     export function showAnimation(leds: Image, interval: number = 400): void {
-        scrollImage(leds, interval, 5);
+        ImageMethods.scrollImage(leds, interval, 5);
     }
 
     export function plotLeds(leds: Image): void {
-        leds.copyTo(0, 5, board().image, 0)
-        runtime.queueDisplayUpdate()
+        ImageMethods.plotImage(leds, 0);
     }
 }
 
@@ -384,6 +364,12 @@ namespace pxsim.led {
         board().displayMode = mode;
         runtime.queueDisplayUpdate()
     }
+    
+    export function screenshot() : Image {
+        let img = createImage(5)
+        board().image.copyTo(0, 5, img, 0);
+        return img;
+    }
 }
 
 namespace pxsim.serial {
@@ -535,5 +521,39 @@ namespace pxsim.ImageMethods {
         runtime.queueDisplayUpdate()
     }
     
-    // TODO ...
+    export function plotImage(leds: Image, offset:number): void {
+        leds.copyTo(offset, 5, board().image, 0)
+        runtime.queueDisplayUpdate()
+    }    
+    
+    export function clear(i: Image) {
+        i.clear();
+    }
+    
+    export function setPixelBrightness(i:Image, x:number, y:number, b:number) {
+        i.set(x,y,b);        
+    }
+
+    export function pixelBrightness(i:Image, x:number, y:number) : number {
+        return i.get(x,y);        
+    }
+    
+    export function scrollImage(leds: Image, interval: number, stride: number): void {
+        let cb = getResume()
+        let off = stride > 0 ? 0 : leds.width - 1;
+        let display = board().image;
+
+        board().animationQ.enqueue({
+            interval: interval,
+            frame: () => {
+                if (off >= leds.width || off < 0) return false;
+                stride > 0 ? display.shiftLeft(stride) : display.shiftRight(-stride);
+                let c = Math.min(stride, leds.width - off);
+                leds.copyTo(off, c, display, 5 - stride)
+                off += stride;
+                return true;
+            },
+            whenDone: cb
+        })
+    }    
 }

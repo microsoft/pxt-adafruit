@@ -618,12 +618,12 @@ namespace pxsim {
             this.data = data;
         }
         public get(x: number, y: number): number {
-            // TODO range checking
+            if (x < 0 || x >= this.width || y < 0 || y >= 5) return 0;
             return this.data[y * this.width + x];
         }
         public set(x: number, y: number, v: number) {
-            // TODO range checking
-            this.data[y * this.width + x] = v;
+            if (x < 0 || x >= this.width || y < 0 || y >= 5) return;
+            this.data[y * this.width + x] = Math.max(0, Math.min(255, v));
         }
         public copyTo(xSrcIndex: number, length: number, target: Image, xTargetIndex: number): void {
             for (let x = 0; x < length; x++) {

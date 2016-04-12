@@ -36,10 +36,10 @@ enum Note {
     Eb4 = 311,
     E4 = 330,
     F4 = 349,
-    //% block=F#3
+    //% block=F#4
     FSharp4 = 370,
     G4 = 392,
-    //% block=G#3
+    //% block=G#4
     GSharp4 = 415,
     A4 = 440,
     Bb4 = 466,

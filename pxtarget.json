@@ -1,7 +1,7 @@
 {
     "id": "microbit",
     "name": "code micro:bit",
-    "title": "micro:bit",
+    "title": "code micro:bit",
     "corepkg": "microbit",
     "bundleddirs": [
         "libs/microbit",

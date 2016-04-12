@@ -18,4 +18,25 @@ namespace control {
     export function eventValue(id: EventBusValue) : number {
         return id;
     }
+
+    /**
+     * Display specified error code and stop the program.
+     */
+    //% shim=pxrt::panic
+    export function panic(code:number)
+    {
+    }
+
+    /**
+     * If the condition is false, display msg on serial console, and panic with code 098.
+     */
+    export function assert(condition:boolean, msg?: string)
+    {
+        if (!condition) {
+            console.log("ASSERTION FAILED")
+            if (msg != null)
+                console.log(msg)
+            panic(98)
+        }
+    }
 }

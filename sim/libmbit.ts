@@ -305,6 +305,25 @@ namespace pxsim.input {
             default: return Math.floor(Math.sqrt(acc.instantaneousAccelerationSquared()));
         }
     }
+    
+    export function rotation(kind : number) : number {
+        let b = board();
+        let acc = b.accelerometer;
+        acc.activate();
+        let x = acc.getX(MicroBitCoordinateSystem.NORTH_EAST_DOWN);
+        let y = acc.getX(MicroBitCoordinateSystem.NORTH_EAST_DOWN);
+        let z = acc.getX(MicroBitCoordinateSystem.NORTH_EAST_DOWN);
+
+        let roll = Math.atan2(y,z);
+        let pitch = Math.atan(-x / (y*Math.sin(roll) + z*Math.cos(roll)));
+        
+        let r = 0;
+        switch(kind) {
+            case 0: r = pitch; break;
+            case 1: r = roll; break;
+        }
+        return Math.floor(r / Math.PI * 180);
+    }
 
     export function setAccelerometerRange(range: number) {
         let b = board();

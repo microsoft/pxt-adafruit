@@ -1,4 +1,4 @@
-let strip = neopixel.create(24);
+let strip = neopixel.create(DigitalPin.P0, 24);
 let br = 100;
 strip.setBrigthness(100);
 input.onButtonPressed(Button.B, () => {
@@ -39,9 +39,9 @@ while (true) {
     if (rotationMode) {
         strip.rotate();
     } else {
-        strip.setPix(0, x, y, -z);
+        strip.setPixelColor(0, x, y, -z);
         strip.shift(1);
     }
-    strip.display();
+    strip.show();
     basic.pause(100);
 }

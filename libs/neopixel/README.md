@@ -8,21 +8,19 @@ separately.
 
 ## Basic usage
 
-```
+```blocks
 // Create a NeoPixel driver - specify the number of LEDs:
-let strip = neopixel.create(24)
+let strip = neopixel.create(DigitalPin.P0, 24)
 
 // set pixel colors
-strip.setPix(0, 255, 255, 255) // white
-strip.setPix(1, 255, 0, 0)     // red
-strip.setPix(2, 0, 255, 0)     // green
-strip.setPix(3, 0, 0, 255)     // blue
+strip.setPixelColor(0, 255, 255, 255) // white
+strip.setPixelColor(1, 255, 0, 0)     // red
+strip.setPixelColor(2, 0, 255, 0)     // green
+strip.setPixelColor(3, 0, 0, 255)     // blue
 
 // send the data to the strip
-strip.display()
+strip.show()
 ```
-
-Use `strip.setPin()` if your strip is not at `P0`.
 
 Use `strip.setBrigthness()` to lower the brightness (it's maxed out by default).
 
@@ -33,15 +31,15 @@ Use `strip.shift()` or `strip.rotate()` to shift the lights around.
 This little program will let the position of the microbit control the color of the first LED.
 This first LED will then get shifted further away every 100ms.
 
-```
-let strip = neopixel.create(24)
+```blocks
+let strip = neopixel.create(DigitalPin.P0, 24)
 while (true) {
     let x = input.acceleration(Dimension.X) / 2
     let y = input.acceleration(Dimension.Y) / 2
     let z = input.acceleration(Dimension.Z) / 2
-    strip.setPix(0, x, y, -z);
+    strip.setPixelColor(0, x, y, -z);
     strip.shift(1);
-    strip.display();
+    strip.show();
     basic.pause(100);
 }
 ```

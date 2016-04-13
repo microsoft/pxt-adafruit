@@ -42,6 +42,18 @@ namespace String_ {
     {
         return ManagedString::EmptyString.leakData();
     }
+
+    //%
+    StringData *substr(StringData *s, int start, int length)
+    {
+        if (length <= 0)
+            return mkEmpty();
+        if (start < 0)
+            start = max(s->len + start, 0);
+        length = min(length, s->len - start);
+        ManagedString x(s);
+        return x.substring(start, length).leakData();
+    }
 }
 
 

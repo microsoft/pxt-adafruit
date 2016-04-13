@@ -26,9 +26,10 @@ Learn how to plot image **on logo up**, `input->on logo up` to run code when the
 
 ## Documentation
 
-* **on logo up** : [read more...](/functions/on-logo-up)
-* **show leds** : [read more...](/reference/basic/show-leds)
-* **on logo down** : [read more...](/functions/on-logo-down)
+```cards
+input.onGesture(Gesture.Shake, () => {});
+basic.showLeds(``);
+```
 
 ## Objectives
 

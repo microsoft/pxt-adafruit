@@ -71,6 +71,7 @@
     "appTheme": {
         "logoUrl": "https://codemicrobit.com/about",
         "logo": "./static/logo.svg",
+        "docsLogo": "./static/docslogo.svg",
         "portraitLogo":"./static/portraitlogo.svg",
         "footerLogo": "./static/footerlogo.svg",
         "homeUrl": "https://codemicrobit.com/",

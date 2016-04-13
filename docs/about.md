@@ -2,6 +2,24 @@
 basic.forever(() => {
   basic.showString("Hi!");
 })
+input.onButtonPressed(Button.A, () => {
+    led.stopAnimation();
+    basic.showLeds(`
+. . . . .
+. # . # .
+. . . . .
+# . . . #
+. # # # .`);
+});
+input.onButtonPressed(Button.B, () => {
+    led.stopAnimation();
+    basic.showLeds(`
+. # . # .
+# . # . #
+# . . . #
+. # . # .
+. . # . .`);
+});
 ``` 
 # About
 
@@ -31,34 +49,6 @@ which flashes the micro:bit device with the new program.
 ## Simulator: Test Your Code
 Before a student compiles her code for the micro:bit, she can run it using the micro:bit simulator, all within the confines of a web browser. 
 The simulator has support for the LED screen, buttons, as well as compass, accelerometer, and digital I/O pins.
-
-```sim
-input.onButtonPressed(Button.A, () => {
-    basic.showLeds(`
-. . . . .
-. # . # .
-. . . . .
-# . . . #
-. # # # .`);
-});
-input.onButtonPressed(Button.B, () => {
-    basic.showLeds(`
-. # . # .
-# . # . #
-# . . . #
-. # . # .
-. . # . .`);
-});
-input.onGesture(Gesture.Shake, () => {
-    basic.showLeds(`
-. . . . .
-. # . # .
-. . . . .
-. # # # .
-# . . . #`);
-});
-basic.showString("BBC micro:bit");
-``` 
 
 ## C++ Runtime
 

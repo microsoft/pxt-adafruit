@@ -134,8 +134,9 @@ namespace music {
      */
     //% help=music/beat weight=49
     //% blockId=device_beat block="%fraction|beat"
-    export function beat(fraction : BeatFraction = BeatFraction.Whole): number {
+    export function beat(fraction?: BeatFraction): number {
         init();
+        if (fraction == null) fraction = BeatFraction.Whole;
         let beat = 60000 / beatsPerMinute;
         if (fraction == BeatFraction.Whole) return beat;
         else if (fraction == BeatFraction.Half) return beat / 2;

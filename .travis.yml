@@ -5,6 +5,7 @@ script:
   - "node node_modules/pxt-core/built/pxt.js travis"  
   - "(cd libs/lang-test0; node ../../node_modules/pxt-core/built/pxt.js run)"
   - "node node_modules/pxt-core/built/pxt.js uploaddoc"
+  - "(cd libs/hello; node ../../node_modules/pxt-core/built/pxt.js testconv ../../testconv.json)"
 sudo: false
 notifications:
   email:

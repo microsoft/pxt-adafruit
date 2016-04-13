@@ -26,6 +26,14 @@ namespace images {
 
 namespace ImageMethods {
     /**
+     * Plots the image at a given column to the screen
+     */            
+    //% help=images/plot-image
+    void plotImage(Image i, int xOffset = 0) {
+      uBit.display.print(MicroBitImage(i), -xOffset, 0, 0, 0);
+    }
+
+    /**
      * Shows an frame from the image at offset ``x offset``.
      * @param xOffset TODO
      */
@@ -33,6 +41,16 @@ namespace ImageMethods {
     //% BUGblockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8
     void showImage(Image i, int xOffset = 0) {
       uBit.display.print(MicroBitImage(i), -xOffset, 0, 0);
+    }
+    
+    /**
+     * Draws the ``index``-th frame of the image on the screen.
+     * @param xOffset TODO
+     */
+    //% help=images/plot-frame weight=80
+    void plotFrame(Image i, int xOffset) {
+      // TODO showImage() used in original implementation
+      plotImage(i, xOffset * 5);
     }
     
     /**
@@ -50,14 +68,6 @@ namespace ImageMethods {
         uBit.display.animate(i, interval, frameOffset, 0);
     }
 
-
-    /**
-     * Plots the image at a given column to the screen
-     */            
-    //% help=images/plot-image
-    void plotImage(Image i, int xOffset = 0) {
-      uBit.display.print(MicroBitImage(i), -xOffset, 0, 0, 0);
-    }
 
     /**
      * Sets all pixels off.
@@ -84,5 +94,53 @@ namespace ImageMethods {
       int pix = MicroBitImage(i).getPixelValue(x, y);
       if (pix < 0) return 0;
       return pix;
+    }
+
+
+    /**
+     * Gets the width in columns
+     */
+    //% help=functions/width
+    int width(Image i) {
+        return i->width;
+    }
+
+    /**
+     * Gets the height in rows (always 5)
+     */
+    //% shim=
+    int height(Image i) {
+        return i->height;
+    }
+
+    /**
+     * Set a pixel state at position ``(x,y)``
+     * @param x TODO
+     * @param y TODO
+     * @param value TODO
+     */
+    //% help=functions/set-pixel
+    void setPixel(Image i, int x, int y, bool value) {
+        setPixelBrightness(i, x, y, value ? 255 : 0);
+    }
+
+    /**
+     * Get the pixel state at position ``(x,y)``
+     * @param x TODO
+     * @param y TODO
+     */
+    //% help=functions/pixel
+    bool pixel(Image i, int x, int y) {
+        return pixelBrightness(i, x, y) > 0;
+    }
+
+
+    /**
+     * Shows a particular frame of the image strip.
+     * @param frame TODO
+     */
+    //% weight=70 help=functions/show-frame
+    void showFrame(Image i, int frame) {
+        showImage(i, frame * 5);
     }
 }

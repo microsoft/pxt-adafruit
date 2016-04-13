@@ -25,12 +25,25 @@ declare namespace images {
 
 declare interface Image {
     /**
+     * Plots the image at a given column to the screen
+     */
+    //% help=images/plot-image xOffset.defl=0 shim=ImageMethods::plotImage
+    plotImage(xOffset?: number): void;
+
+    /**
      * Shows an frame from the image at offset ``x offset``.
      * @param xOffset TODO
      */
     //% help=images/show-image weight=80 async
     //% BUGblockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8 xOffset.defl=0 shim=ImageMethods::showImage
     showImage(xOffset?: number): void;
+
+    /**
+     * Draws the ``index``-th frame of the image on the screen.
+     * @param xOffset TODO
+     */
+    //% help=images/plot-frame weight=80 shim=ImageMethods::plotFrame
+    plotFrame(xOffset: number): void;
 
     /**
      * Scrolls an image .
@@ -40,12 +53,6 @@ declare interface Image {
     //% help=images/show-image weight=79 async
     //% BUGblockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8 frameOffset.defl=0 interval.defl=200 shim=ImageMethods::scrollImage
     scrollImage(frameOffset?: number, interval?: number): void;
-
-    /**
-     * Plots the image at a given column to the screen
-     */
-    //% help=images/plot-image xOffset.defl=0 shim=ImageMethods::plotImage
-    plotImage(xOffset?: number): void;
 
     /**
      * Sets all pixels off.
@@ -64,6 +71,42 @@ declare interface Image {
      */
     //% help= shim=ImageMethods::pixelBrightness
     pixelBrightness(x: number, y: number): number;
+
+    /**
+     * Gets the width in columns
+     */
+    //% help=functions/width shim=ImageMethods::width
+    width(): number;
+
+    /**
+     * Gets the height in rows (always 5)
+     */
+    //% shim= shim=ImageMethods::height
+    height(): number;
+
+    /**
+     * Set a pixel state at position ``(x,y)``
+     * @param x TODO
+     * @param y TODO
+     * @param value TODO
+     */
+    //% help=functions/set-pixel shim=ImageMethods::setPixel
+    setPixel(x: number, y: number, value: boolean): void;
+
+    /**
+     * Get the pixel state at position ``(x,y)``
+     * @param x TODO
+     * @param y TODO
+     */
+    //% help=functions/pixel shim=ImageMethods::pixel
+    pixel(x: number, y: number): boolean;
+
+    /**
+     * Shows a particular frame of the image strip.
+     * @param frame TODO
+     */
+    //% weight=70 help=functions/show-frame shim=ImageMethods::showFrame
+    showFrame(frame: number): void;
 }
 
 

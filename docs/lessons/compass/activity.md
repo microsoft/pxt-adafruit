@@ -28,9 +28,8 @@ basic.forever(() => {
 If `degrees` is less than `45`, then the compass heading is mostly pointing toward North. Display `N` on the micro:bit.
 
 ```blocks
- let degrees = 0;
 basic.forever(() => {
-    degrees = input.compassHeading();
+    let degrees = input.compassHeading();
     if (degrees < 45) {
         basic.showString("N");
     }
@@ -41,9 +40,8 @@ If `degrees` is less than 135, the micro:bit is mostly pointing East. Display `E
 
 
 ```blocks
- let degrees = 0;
 basic.forever(() => {
-    degrees = input.compassHeading();
+    let degrees = input.compassHeading();
     if (degrees < 45) {
         basic.showString("N");
     }
@@ -57,9 +55,8 @@ If `degrees` is less than 225, the micro:bit is mostly pointing South. Display `
 
 
 ```blocks
- let degrees = 0;
 basic.forever(() => {
-    degrees = input.compassHeading();
+    let degrees = input.compassHeading();
     if (degrees < 45) {
         basic.showString("N");
     }
@@ -76,9 +73,8 @@ basic.forever(() => {
 If none of these conditions returned true, then the micro:bit must be pointing West. Display `W` on the micro:bit.
 
 ```blocks
- let degrees = 0;
 basic.forever(() => {
-    degrees = input.compassHeading();
+    let degrees = input.compassHeading();
     if (degrees < 45) {
         basic.showString("N");
     }

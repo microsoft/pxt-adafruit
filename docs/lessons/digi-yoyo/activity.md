@@ -31,7 +31,7 @@ Let's add a pause. Then show the value of the the count.
 
 
 ```blocks
- let count = 0;
+let count = 0;
 while (count < 10) {
     basic.pause(100);
     basic.showNumber(count)

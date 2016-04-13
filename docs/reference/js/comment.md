@@ -38,15 +38,9 @@ This function has comments that describe the purpose of the function:
  * @param x TODO
  */
 export function square(x: number) : number {
-    let result: number
     return x * x
-    return result
 }
 ```
-
-### Formatting
-
-Use [markdown syntax](/js/markdown) to format your comments (for example, **bold** and *italic* formatting).
 
 ### Commenting out code
 

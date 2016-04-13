@@ -257,7 +257,7 @@ declare namespace input {
     function acceleration(dimension: Dimension): number;
 
     /**
-     * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` bright. In the simulator, the ``acceleration y`` is used to emulate this value.
+     * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` bright.
      */
     //% help=input/light-level weight=53
     //% blockId=device_get_light_level block="light level" blockGap=8 icon="\uf185" shim=input::lightLevel

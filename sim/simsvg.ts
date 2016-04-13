@@ -416,14 +416,14 @@ svg.sim.grayscale {
 }
 
 .sim-text {
-  font-family:monospace;
+  font-family:"Lucida Console", Monaco, monospace;
   font-size:25px;
   fill:#fff;
   pointer-events: none;
 }
 
 .sim-text-pin {
-  font-family:monospace;
+  font-family:"Lucida Console", Monaco, monospace;
   font-size:20px;
   fill:#fff;
   pointer-events: none;

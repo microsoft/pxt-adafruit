@@ -13,3 +13,4 @@ win10/app/bld
 *.tgz
 *.db
 *.suo
+*.log

@@ -150,10 +150,6 @@ Trim any leftover fabric, threads or tape.
 
 Your watch is ready!
 
-### Step 23
-
-Connect your BBC micro:bit to your computer using your USB cable and upload the [rock paper scissors](/microbit/bedihg) script on it. Shake your watch to play against... the BBC micro:bit!
-
 ### Acknowledgements
 
 Artistic design by Melinda Hoeneisen.

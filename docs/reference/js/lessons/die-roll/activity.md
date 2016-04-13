@@ -2,8 +2,6 @@
 
 Create a die on the BBC micro:bit 
 
-To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **KindScript**.
-
 Let's create a condition for when the BBC micro:bit is shaken.
 
 ```

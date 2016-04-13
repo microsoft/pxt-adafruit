@@ -10,18 +10,16 @@ Welcome! This tutorial will help you create a game of rock paper scissors with t
 
 ### ~
 
-To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
-
 We want the BBC micro:bit to choose rock, paper, or scissors when it is shaken. Let's begin by creating an `input->on shake` condition so the micro:bit will run code when it is shaken.
 
-```
+```blocks
 input.onGesture(Gesture.Shake, () => {
 })
 ```
 
 Next, create an image that contains 3 frames: rock, paper, and scissors. We will control which image is shown with `offset`.
 
-```
+```blocks
 input.onGesture(Gesture.Shake, () => {
     let img = images.createImage(`
 . . . . . # # # # # . . . . #
@@ -35,7 +33,7 @@ input.onGesture(Gesture.Shake, () => {
 
 The BBC micro:bit will look like it's showing 1 frame of the image by displaying the whole image with plot frame and math random. We can help the BBC micro:bit randomly decide which offset to using plot image by math random. The BBC micro:bit will randomly pick the image to display with plot image and the `math->random(3)` function.
 
-```
+```blocks
 input.onGesture(Gesture.Shake, () => {
     let img1 = images.createImage(`
 . . . . . # # # # # . . . . #

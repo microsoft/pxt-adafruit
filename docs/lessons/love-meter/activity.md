@@ -8,8 +8,6 @@ Create a love meter with the micro:bit
 
 Welcome! This activity will help you create a love meter with the micro:bit. Let's get started!
 
-To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under *Block Editor*.
-
 ### ~
 
 Begin by registering an event with `on pin pressed` *P0* to know when someone is holding pin *P0* and pin *Gnd*.

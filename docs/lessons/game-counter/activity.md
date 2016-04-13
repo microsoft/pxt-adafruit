@@ -6,8 +6,6 @@ Turn an LED on and off with forever loop
 
 ### @video td/videos/counter-0
 
-To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under *Block Editor*.
-
 ### ~
 
 Have you ever tried to create a game counter? The concept is fairly simply: increase the game `score` with `on button pressed` .

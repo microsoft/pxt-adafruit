@@ -10,8 +10,6 @@ Let's learn how to show an image on the LED screen.
 
 ### ~
 
-To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under the *Block Editor*.
-
 We will use *show LEDs* to draw an image on the LED screen. This function immediately writes on the screen.
 
 ```blocks

@@ -2,8 +2,6 @@
 
 Construct a counter that uses acceleration. 
 
-To create a new script, go to the [Create Code](/create-code) page and tap `New Project` under `Block Editor`.
-
 Welcome! This activity will teach how to construct a pendulum that glows using acceleration. Let's get started!
 
 Create a **forever** loop that will constantly display the appropriate brightness on the LED display.  Now let's measure the acceleration on the `y` axis and store that value in a variable. The `acceleration(y)` function will provide the value.

@@ -10,8 +10,6 @@ Welcome! This tutorial will teach how to measure the acceleration on the micro:b
 
 ### ~
 
-To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
-
 We want to display the acceleration forever. In order to do so, we need a `basic->forever` loop.
 
 ```

@@ -8,17 +8,15 @@ Welcome! This tutorial will help you create a magic 8 ball on the BBC micro:bit.
 
 ### ~
 
-To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
-
 Show a string to instruct the user how to play Magic 8! The magic 8 ball can only answer true or false questions.
 
-```
+```blocks
 basic.showString("Ask a question", 150)
 ```
 
 Display the number 8.
 
-```
+```blocks
 basic.showString("Ask a question", 150)
 basic.showNumber(8, 150)
 ```
@@ -27,7 +25,7 @@ basic.showNumber(8, 150)
 
 Register code to run when the BBC micro:bit is shaken.
 
-```
+```blocks
 basic.showString("Ask a question", 150)
 basic.showNumber(8, 150)
 input.onGesture(Gesture.Shake, () => {
@@ -40,7 +38,7 @@ Set **x** equal to a random number with a limit of 3.
 
 Remember the random function in the math library, picks a random number from 0 to the limit, but not including the limit unless it is 0.
 
-```
+```blocks
 basic.showString("Ask a question", 150)
 basic.showNumber(8, 150)
 input.onGesture(Gesture.Shake, () => {
@@ -52,7 +50,7 @@ Create an if statement for the condition `if x= 2`.
 
 If **x** is 2, display the string 'Yes'
 
-```
+```blocks
 basic.showString("Ask a question", 150)
 basic.showNumber(8, 150)
 input.onGesture(Gesture.Shake, () => {
@@ -67,7 +65,7 @@ Create an if statement for the condition `if x = 1`.
 
 If ``x`` is 1, display the string 'No'
 
-```
+```blocks
 basic.showString("Ask a question", 150)
 basic.showNumber(8, 150)
 input.onGesture(Gesture.Shake, () => {

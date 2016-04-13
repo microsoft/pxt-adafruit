@@ -4,8 +4,6 @@ Measure the acceleration on the micro:bit in the "z" direction.
 
 ### ~avatar avatar
 
-To create a new script, go to the [Create Code](/create-code) page and tap `New Project` under `Block Editor`.
-
 ### ~
 
 Welcome! This activity will teach how to use the 1st micro:bit to chart the second micro:bit's acceleration in the "x" direction. Let's get started!

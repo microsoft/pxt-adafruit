@@ -10,8 +10,6 @@ Welcome! This tutorial will teach you how to make a counter that increments when
 
 ### ~
 
-To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
-
 Let's start by creating a **local variable** `count` to keep track of the current count.
 
 ```

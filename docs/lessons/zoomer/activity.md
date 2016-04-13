@@ -8,8 +8,6 @@ Measure the acceleration on the micro:bit in the "z" direction.
 
 ### ~
 
-To create a new script, go to the [Create Code](/create-code) page and tap `New Project` under `Block Editor`.
-
 Welcome! This activity will teach how to measure the acceleration on the micro:bit in the "z" direction. Let's get started!
 
 We want to display the acceleration forever. In order to do so, we need a `forever` loop.

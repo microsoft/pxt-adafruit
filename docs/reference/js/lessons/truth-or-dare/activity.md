@@ -2,8 +2,6 @@
 
 a multi-player game that forces each player to reveal a secret or something funny. #docs
 
-To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
-
 Begin by plotting an "up-arrow" image, which will point to someone.
 
 ```

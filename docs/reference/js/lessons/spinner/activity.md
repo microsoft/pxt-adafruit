@@ -2,8 +2,6 @@
 
 create an arrow that randomly points to a player. #docs
 
-To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
-
 Let's begin by adding an `input->on shake` condition to know when the BBC micro:bit is shaken.
 
 ```

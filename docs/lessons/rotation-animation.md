@@ -31,7 +31,6 @@ basic.showLeds(`
     `)
 basic.pause(100)
 while (true) {}
-basic.pause(20)
 ```
 
 ## Objectives

@@ -2,8 +2,6 @@
 
 Play sounds with music blocks. 
 
-To create a new script, go to the [Create Code](/create-code) page and tap `New Project` under `Block Editor`.
-
 Have you ever tried to play a song on an instrument? Let's try coding the song "Happy Birthday" on the micro:bit !
 
 Let's start by adding the code in the music drawer that includes a single musical chord (or pitched sound) with the `play` block. Then insert the chord "C". Once you are done coding, don't forget to run your code in the simulator or the micro:bit.

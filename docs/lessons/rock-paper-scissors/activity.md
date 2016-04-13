@@ -10,8 +10,6 @@ Welcome! This tutorial will help you create a game of rock paper scissors with t
 
 ### ~
 
-To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
-
 We want the micro:bit to choose rock, paper, or scissors when it is shaken. Let's begin by creating an on shake condition so the micro:bit will run code when it is shaken.
 
 

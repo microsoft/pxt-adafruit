@@ -22,7 +22,7 @@ namespace control {
     /**
      * Display specified error code and stop the program.
      */
-    //% shim=pxrt::panic
+    //% shim=pxtrt::panic
     export function panic(code:number)
     {
     }

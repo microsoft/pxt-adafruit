@@ -6,7 +6,7 @@ My script. #docs
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/prank-wifi-app/tutorial)
+* [tutorial](/lessons/prank-wifi-app/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

@@ -10,10 +10,10 @@ For Loop
 
 ## Quick links
 
-* [activity](/microbit/lessons/looper/activity)
-* [challenges](/microbit/lessons/looper/challenges)
-* [quiz](/microbit/lessons/looper/quiz)
-* [quiz answers](/microbit/lessons/looper/quiz-answers)
+* [activity](/lessons/looper/activity)
+* [challenges](/lessons/looper/challenges)
+* [quiz](/lessons/looper/quiz)
+* [quiz answers](/lessons/looper/quiz-answers)
 
 
 ## Class

@@ -6,7 +6,7 @@ Coding challenges for the rotation animation.
 
 Complete the following guided activity:
 
-* [activity](/microbit/lessons/rotation-animation/activity)
+* [activity](/lessons/rotation-animation/activity)
 
 At the end of the activity, your code should look like this:
 

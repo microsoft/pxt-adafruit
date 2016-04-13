@@ -10,10 +10,10 @@ Forever
 
 ## Quick Links
 
-* [activity](/microbit/lessons/snowflake-fall/activity)
-* [quiz](/microbit/lessons/snowflake-fall/quiz)
-* [quiz answers](/microbit/lessons/snowflake-fall/quiz-answers)
-* [challenges](/microbit/lessons/snowflake-fall/challenges)
+* [activity](/lessons/snowflake-fall/activity)
+* [quiz](/lessons/snowflake-fall/quiz)
+* [quiz answers](/lessons/snowflake-fall/quiz-answers)
+* [challenges](/lessons/snowflake-fall/challenges)
 
 ## Prior learning/place of lesson in scheme of work
 
@@ -21,9 +21,9 @@ Learn how to show LEDs with a, `pause` to pause program execution for a specifie
 
 ## Documentation
 
-* **show LEDs** : [read more...](/microbit/reference/basic/show-leds)
-* **pause** : [read more...](/microbit/reference/basic/pause)
-* **forever** : [read more...](/microbit/reference/basic/forever)
+* **show LEDs** : [read more...](/reference/basic/show-leds)
+* **pause** : [read more...](/reference/basic/pause)
+* **forever** : [read more...](/reference/basic/forever)
 
 ```cards
 basic.showLeds(`

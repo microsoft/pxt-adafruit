@@ -10,10 +10,10 @@ For Loop
 
 ## Quick links
 
-* [tutorial](/microbit/lessons/looper/tutorial)
-* [quiz](/microbit/lessons/looper/quiz)
-* [quiz answers](/microbit/lessons/looper/quiz-answers)
-* [challenges](/microbit/lessons/looper/challenges)
+* [tutorial](/lessons/looper/tutorial)
+* [quiz](/lessons/looper/quiz)
+* [quiz answers](/lessons/looper/quiz-answers)
+* [challenges](/lessons/looper/challenges)
 
 ## Class
 
@@ -25,10 +25,10 @@ Learn how to control a blinking LED. We will be learning how to create a blinkin
 
 ## Documentation
 
-* **for**: [read more...](/microbit/reference/loops/for)
-* **show number**: [read more...](/microbit/reference/basic/show-number)
-* **pause**: [read more...](/microbit/reference/basic/pause)
-* **arithmetic operators**: [read more...](/microbit/reference/types/number)
+* **for**: [read more...](/reference/loops/for)
+* **show number**: [read more...](/reference/basic/show-number)
+* **pause**: [read more...](/reference/basic/pause)
+* **arithmetic operators**: [read more...](/reference/types/number)
 
 ## Objectives
 
@@ -66,15 +66,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 10 min.
-* [tutorial](/microbit/lessons/looper/tutorial)
-* [quiz](/microbit/lessons/looper/quiz)
+* [tutorial](/lessons/looper/tutorial)
+* [quiz](/lessons/looper/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/looper/challenges)
+* [challenges](/lessons/looper/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/looper/challenges)
+* Extended Activity: [challenges](/lessons/looper/challenges)
 

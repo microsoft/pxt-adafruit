@@ -10,11 +10,11 @@ Show Number
 
 ## Quick Links
 
-* [activity](/microbit/lessons/lucky-7/activity)
-* [quiz](/microbit/lessons/lucky-7/quiz)
-* [quiz answers](/microbit/lessons/lucky-7/quiz-answers)
-* [challenges](/microbit/lessons/lucky-7/challenges)
-* [tutorial](/microbit/lessons/lucky-7/tutorial)
+* [activity](/lessons/lucky-7/activity)
+* [quiz](/lessons/lucky-7/quiz)
+* [quiz answers](/lessons/lucky-7/quiz-answers)
+* [challenges](/lessons/lucky-7/challenges)
+* [tutorial](/lessons/lucky-7/tutorial)
 
 ## Class
 
@@ -26,8 +26,8 @@ Learn how to display a number, `basic-> show number` to generate numbers. We wil
 
 ## Documentation 
 
-* **show number** : [read more...](/microbit/reference/basic/show-number)
-* **pause** : [read more...](/microbit/reference/basic/pause)
+* **show number** : [read more...](/reference/basic/show-number)
+* **pause** : [read more...](/reference/basic/pause)
 
 ## Objectives
 
@@ -69,16 +69,16 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity 
 
 * time: 20 min.
-* [activity](/microbit/lessons/lucky-7/activity)
-* [tutorial](/microbit/lessons/lucky-7/tutorial)
-* [quiz](/microbit/lessons/lucky-7/quiz)
+* [activity](/lessons/lucky-7/activity)
+* [tutorial](/lessons/lucky-7/tutorial)
+* [quiz](/lessons/lucky-7/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/lucky-7/challenges)
+* [challenges](/lessons/lucky-7/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/lucky-7/challenges)
+* Extended Activity: [challenges](/lessons/lucky-7/challenges)
 

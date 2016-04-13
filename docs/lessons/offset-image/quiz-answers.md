@@ -2,7 +2,7 @@
 
 shift an image horizontally across the display with offset.
 
-This is the answer key for the [offset image quiz](/microbit/lessons/offset-image/quiz).
+This is the answer key for the [offset image quiz](/lessons/offset-image/quiz).
 
 ## 1. What is a 'if, then, else statement' ? 
 

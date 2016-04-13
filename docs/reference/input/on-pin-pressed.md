@@ -1,6 +1,6 @@
 # On Pin Pressed
 
-Register an [event handler](/microbit/reference/event-handler) that will execute whenever the user holds the `GND` pin with one hand, and presses pin `0`, `1`, or `2` with the other hand, thus completing a circuit; when you run a script with this function in a web browser, click pins 0 , 1, or 2 on the simulator.
+Register an [event handler](/reference/event-handler) that will execute whenever the user holds the `GND` pin with one hand, and presses pin `0`, `1`, or `2` with the other hand, thus completing a circuit; when you run a script with this function in a web browser, click pins 0 , 1, or 2 on the simulator.
 
 *Note* that this function works best when the BBC micro:bit is powered by AAA battery.
 
@@ -24,9 +24,9 @@ input.onPinPressed(TouchPin.P0, () => {
 
 ### Lessons
 
-[love meter](/microbit/lessons/love-meter)
+[love meter](/lessons/love-meter)
 
 ### See also
 
-[BBC micro:bit pins](/microbit/device/pins), [pin is pressed](/microbit/input/pin-is-pressed), [analog read pin](/microbit/pins/analog-read-pin), [analog write pin](/microbit/pins/analog-write-pin), [digital read pin](/microbit/pins/digital-read-pin), [digital write pin](/microbit/pins/digital-write-pin)
+[BBC micro:bit pins](/device/pins), [pin is pressed](/input/pin-is-pressed), [analog read pin](/pins/analog-read-pin), [analog write pin](/pins/analog-write-pin), [digital read pin](/pins/digital-read-pin), [digital write pin](/pins/digital-write-pin)
 

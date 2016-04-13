@@ -8,7 +8,7 @@ Create a love meter with the micro:bit
 
 Welcome! This activity will help you create a love meter with the micro:bit. Let's get started!
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap *New Project* under *Block Editor*.
+To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under *Block Editor*.
 
 ### ~
 
@@ -45,7 +45,7 @@ input.onPinPressed(TouchPin.P0, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/love-meter/challenges)
+Excellent, you're ready to continue with the [challenges](/lessons/love-meter/challenges)
 
 ### ~
 

@@ -4,7 +4,7 @@ Measure the acceleration on the micro:bit in the "z" direction.
 
 ### ~avatar avatar
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap `New Project` under `Block Editor`.
+To create a new script, go to the [Create Code](/create-code) page and tap `New Project` under `Block Editor`.
 
 ### ~
 

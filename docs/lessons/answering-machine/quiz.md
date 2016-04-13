@@ -6,7 +6,7 @@ Create an answering machine on the micro:bit.
 
 ## Directions
 
-Use this activity document to guide your work in the [answering machine activity](/microbit/lessons/answering-machine/activity).
+Use this activity document to guide your work in the [answering machine activity](/lessons/answering-machine/activity).
 
 Answer the questions while completing the activity. Pay attention to the dialogues!
 

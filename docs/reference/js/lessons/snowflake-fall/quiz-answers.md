@@ -2,7 +2,7 @@
 
 create a snowflake fall animation.
 
-This is the answer key for the [snowflake fall quiz](/microbit/lessons/snowflake-fall/quiz).
+This is the answer key for the [snowflake fall quiz](/lessons/snowflake-fall/quiz).
 
 ## 1. In reference to an animation, what is an "interval"?
 

@@ -6,7 +6,7 @@ Coding challenges for the looper.
 
 Complete the following guided activity:
 
-* [activity](/microbit/lessons/looper/activity)
+* [activity](/lessons/looper/activity)
 
 At the end of the activity, your code should look like this:
 

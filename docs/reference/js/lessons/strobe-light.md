@@ -10,10 +10,10 @@ For Loop
 
 ## Quick links
 
-* [tutorial](/microbit/lessons/strobe-light/tutorial)
-* [quiz](/microbit/lessons/strobe-light/quiz)
-* [quiz answers](/microbit/lessons/strobe-light/quiz-answers)
-* [challenges](/microbit/lessons/strobe-light/challenges)
+* [tutorial](/lessons/strobe-light/tutorial)
+* [quiz](/lessons/strobe-light/quiz)
+* [quiz answers](/lessons/strobe-light/quiz-answers)
+* [challenges](/lessons/strobe-light/challenges)
 
 ## Class
 
@@ -21,10 +21,10 @@ Year 7
 
 ## Documentation
 
-* **for loop**: [read more...](/microbit/reference/loops/for)
-* **plot**: [read more...](/microbit/reference/led/plot)
-* **unplot**: [read more...](/microbit/reference/led/unplot)
-* **pause**: [read more...](/microbit/reference/basic/pause)
+* **for loop**: [read more...](/reference/loops/for)
+* **plot**: [read more...](/reference/led/plot)
+* **unplot**: [read more...](/reference/led/unplot)
+* **pause**: [read more...](/reference/basic/pause)
 
 ## Objectives
 
@@ -62,15 +62,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 10 min.
-* [tutorial](/microbit/lessons/strobe-light/tutorial)
-* [quiz](/microbit/lessons/strobe-light/quiz)
+* [tutorial](/lessons/strobe-light/tutorial)
+* [quiz](/lessons/strobe-light/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/strobe-light/challenges)
+* [challenges](/lessons/strobe-light/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/strobe-light/challenges)
+* Extended Activity: [challenges](/lessons/strobe-light/challenges)
 

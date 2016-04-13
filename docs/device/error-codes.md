@@ -13,5 +13,5 @@ Below is a list of error numbers and what they mean:
 
 ### See also
 
-[Run scripts on your micro:bit](/microbit/device/usb)
+[Run scripts on your micro:bit](/device/usb)
 

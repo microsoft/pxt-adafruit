@@ -6,7 +6,7 @@ Coding challenges for the strobe light tutorial. #docs
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/strobe-light/tutorial)
+* [tutorial](/lessons/strobe-light/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

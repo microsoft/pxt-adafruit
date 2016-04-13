@@ -10,11 +10,11 @@ Variables
 
 ## Quick Links
 
-* [activity](/microbit/lessons/counter/activity)
-* [challenges](/microbit/lessons/counter/challenges)
-* [quiz](/microbit/lessons/counter/quiz)
-* [quiz answers](/microbit/lessons/counter/quiz-answers)
-* [tutorial](/microbit/lessons/counter/tutorial)
+* [activity](/lessons/counter/activity)
+* [challenges](/lessons/counter/challenges)
+* [quiz](/lessons/counter/quiz)
+* [quiz answers](/lessons/counter/quiz-answers)
+* [tutorial](/lessons/counter/tutorial)
 
 ## Class
 
@@ -26,10 +26,10 @@ Learn how to creating a **variable** to keep track of the current count. We will
 
 ## Documentation
 
-* **variable**: [read more...](/microbit/reference/variables/var)
-* **arithmetic operators**: [read more...](/microbit/reference/types/number)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
+* **variable**: [read more...](/reference/variables/var)
+* **arithmetic operators**: [read more...](/reference/types/number)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **show number** : [read more...](/reference/basic/show-number)
 
 ## Objectives
 
@@ -65,16 +65,16 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/counter/activity)
-* [tutorial](/microbit/lessons/counter/tutorial)
-* [quiz](/microbit/lessons/counter/quiz)
+* [activity](/lessons/counter/activity)
+* [tutorial](/lessons/counter/tutorial)
+* [quiz](/lessons/counter/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/counter/challenges)
+* [challenges](/lessons/counter/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/counter/challenges)
+* Extended Activity: [challenges](/lessons/counter/challenges)
 

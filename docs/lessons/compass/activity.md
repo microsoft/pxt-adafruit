@@ -96,7 +96,7 @@ basic.forever(() => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/compass/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/compass/challenges)!
 
 ### ~
 

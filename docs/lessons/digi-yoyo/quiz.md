@@ -6,7 +6,7 @@ Create a counter with a while loop
 
 ## Directions
 
-Use this activity document to guide your work in the [digi yoyo tutorial](/microbit/lessons/digi-yoyo/activity)
+Use this activity document to guide your work in the [digi yoyo tutorial](/lessons/digi-yoyo/activity)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

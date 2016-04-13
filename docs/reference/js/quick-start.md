@@ -14,17 +14,17 @@ The Quick Start Guide for Teachers is available in [PDF](https://microbit0.blob.
 
 The currently available on-line resources from the Quick Start Guide are the
 
-* [scroll text tutorial](/microbit/js/tutorials/scroll-text)
-* [flashing heart tutorial](/microbit/js/tutorials/flashing-heart)
-* [button light tutorial](/microbit/js/tutorials/button-light)
-* [digital key chain tutorial](/microbit/js/tutorials/digital-key-chain)
-* [rock paper scissors tutorial](/microbit/lessons/rock-paper-scissors/tutorial) and [rock paper scissors challenges](/microbit/lessons/rock-paper-scissors/challenges)
-* [digital pet tutorial](/microbit/lessons/digital-pet/tutorial) and [digital pet challenges](/microbit/lessons/digital-pet/challenges)
-* [catch the egg game tutorial](/microbit/lessons/catch-the-egg-game/tutorial) and [catch the egg game challenges](/microbit/lessons/catch-the-egg-game/challenges)
+* [scroll text tutorial](/js/tutorials/scroll-text)
+* [flashing heart tutorial](/js/tutorials/flashing-heart)
+* [button light tutorial](/js/tutorials/button-light)
+* [digital key chain tutorial](/js/tutorials/digital-key-chain)
+* [rock paper scissors tutorial](/lessons/rock-paper-scissors/tutorial) and [rock paper scissors challenges](/lessons/rock-paper-scissors/challenges)
+* [digital pet tutorial](/lessons/digital-pet/tutorial) and [digital pet challenges](/lessons/digital-pet/challenges)
+* [catch the egg game tutorial](/lessons/catch-the-egg-game/tutorial) and [catch the egg game challenges](/lessons/catch-the-egg-game/challenges)
 
 ### Errata
 
-* compilation to the BBC micro:bit now works [off line](/microbit/offline), based on a new compiler in the web browser. The text and picture below replaces the text and picture on page 10 of the Guide:
+* compilation to the BBC micro:bit now works [off line](/offline), based on a new compiler in the web browser. The text and picture below replaces the text and picture on page 10 of the Guide:
 
 ### How does my program get onto the BBC micro:bit?
 

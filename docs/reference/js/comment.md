@@ -23,7 +23,7 @@ To insert a comment in a Touch Develop script:
 
 ### ~hint 
 
-To find out how to insert comments using the Blocks editor, see [the Blocks editor](/microbit/blocks/editor).
+To find out how to insert comments using the Blocks editor, see [the Blocks editor](/blocks/editor).
 
 ### ~
 
@@ -46,7 +46,7 @@ export function square(x: number) : number {
 
 ### Formatting
 
-Use [markdown syntax](/microbit/js/markdown) to format your comments (for example, **bold** and *italic* formatting).
+Use [markdown syntax](/js/markdown) to format your comments (for example, **bold** and *italic* formatting).
 
 ### Commenting out code
 
@@ -58,7 +58,7 @@ To comment out a block of code:
 
 2. Press and hold the Shift key, and then press the Down arrow key to select a block of code.
 
-3. In the block editing window, scroll down to **surround with** and click `comment out`. This adds an [if](/microbit/reference/logic/if) statement around your code, like this:
+3. In the block editing window, scroll down to **surround with** and click `comment out`. This adds an [if](/reference/logic/if) statement around your code, like this:
 
 ```
 if (false) {
@@ -70,10 +70,10 @@ When you want to uncomment your code, click the `if false then` statement in you
 
 ### Library and function comments
 
-* Use [comments](/microbit/js/comment) at the beginning of a library to describe the  library
-* Use [comments](/microbit/js/comment) at the beginning of a [function](/microbit/js/function) to describe a function. The comment will appear in the help area of the Touch Develop editor when you insert the function
+* Use [comments](/js/comment) at the beginning of a library to describe the  library
+* Use [comments](/js/comment) at the beginning of a [function](/js/function) to describe a function. The comment will appear in the help area of the Touch Develop editor when you insert the function
 
 ### See also
 
-[markdown syntax](/microbit/js/markdown), [Touch Develop editor](/microbit/js/editor), [Block editor](/microbit/blocks/editor)
+[markdown syntax](/js/markdown), [Touch Develop editor](/js/editor), [Block editor](/blocks/editor)
 

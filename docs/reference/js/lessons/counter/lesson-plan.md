@@ -30,15 +30,15 @@ Learn how to creating a **variable** to keep track of the current count. We will
 
 ## Documentation
 
-* **variables**: [read more...](/microbit/reference/variables/var)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
+* **variables**: [read more...](/reference/variables/var)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **show number** : [read more...](/reference/basic/show-number)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/counter/tutorial)
-* Activity: [quiz](/microbit/lessons/counter/quiz)
-* Extended Activity: [challenges](/microbit/lessons/counter/challenges)
+* Activity: [tutorial](/lessons/counter/tutorial)
+* Activity: [quiz](/lessons/counter/quiz)
+* Extended Activity: [challenges](/lessons/counter/challenges)
 
 ## Objectives
 
@@ -71,19 +71,19 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/counter/tutorial)
-* [quiz](/microbit/lessons/counter/quiz)
+* [tutorial](/lessons/counter/tutorial)
+* [quiz](/lessons/counter/quiz)
 * assessment opportunities: forever, plot, pause, clear screen
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/counter/challenges)
+* [challenges](/lessons/counter/challenges)
 * assessment opportunities: loops, plot, pause, clear screen
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/counter/challenges)
+* Extended Activity: [challenges](/lessons/counter/challenges)
 
 ## Intended follow on
 

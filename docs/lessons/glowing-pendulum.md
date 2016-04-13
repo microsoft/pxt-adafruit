@@ -8,10 +8,10 @@ Acceleration
 
 ## Quick Links
 
-* [activity](/microbit/lessons/glowing-pendulum/activity)
-* [challenges](/microbit/lessons/glowing-pendulum/challenges)
-* [quiz](/microbit/lessons/glowing-pendulum/quiz)
-* [quiz answers](/microbit/lessons/glowing-pendulum/quiz-answers)
+* [activity](/lessons/glowing-pendulum/activity)
+* [challenges](/lessons/glowing-pendulum/challenges)
+* [quiz](/lessons/glowing-pendulum/quiz)
+* [quiz answers](/lessons/glowing-pendulum/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

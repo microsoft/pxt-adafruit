@@ -1,6 +1,6 @@
 # Analog Pitch
 
-Emits a Pulse With Modulation (PWM) signal to the current pitch [pin](/microbit/device/pins). Use [analog set pitch pin](/microbit/reference/pins/analog-set-pitch-pin) to set the pitch pin.
+Emits a Pulse With Modulation (PWM) signal to the current pitch [pin](/device/pins). Use [analog set pitch pin](/reference/pins/analog-set-pitch-pin) to set the pitch pin.
 
 ```sig
 pins.analogPitch(440, 300)
@@ -8,8 +8,8 @@ pins.analogPitch(440, 300)
 
 ### Parameters
 
-* `frequency` : [Number](/microbit/reference/types/number)
-* `ms`: [Number](/microbit/reference/types/number)
+* `frequency` : [Number](/reference/types/number)
+* `ms`: [Number](/reference/types/number)
 
 ### Example
 
@@ -27,5 +27,5 @@ pins.analogPitch(frequency1, duration)
 
 ### See also
 
-[micro:bit pins](/microbit/device/pins), [analog set period](/microbit/reference/pins/analog-set-period), [analog set pitch pin](/microbit/reference/pins/analog-set-pitch-pin)
+[micro:bit pins](/device/pins), [analog set period](/reference/pins/analog-set-period), [analog set pitch pin](/reference/pins/analog-set-pitch-pin)
 

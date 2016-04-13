@@ -4,7 +4,7 @@ true or false.
 
 ### @parent js/language
 
-A Boolean has one of two possible values: `true`; `false`.  Boolean (logical) operators (*and*, *or*, *not*) take Boolean inputs and yields a Boolean value. Comparison operators on other types ([numbers](/microbit/reference/types/number), [strings](/microbit/reference/types/string)) yields a Boolean value.
+A Boolean has one of two possible values: `true`; `false`.  Boolean (logical) operators (*and*, *or*, *not*) take Boolean inputs and yields a Boolean value. Comparison operators on other types ([numbers](/reference/types/number), [strings](/reference/types/string)) yields a Boolean value.
 
 ### Block Editor
 
@@ -16,7 +16,7 @@ The next three blocks represent the three Boolean (logic) operators:
 
 ![](/static/mb/boolean-1.png)
 
-The next six blocks represent comparison operators that yield a Boolean value. Most comparisons you will do involve [numbers](/microbit/reference/types/number):
+The next six blocks represent comparison operators that yield a Boolean value. Most comparisons you will do involve [numbers](/reference/types/number):
 
 ![](/static/mb/boolean-2.png)
 
@@ -31,7 +31,7 @@ let condition2 = true
 
 ### ~
 
-Boolean values and operators are often used with an [if](/microbit/reference/logic/if) or [while](/microbit/js/while) statement to determine which code will execute next. For example:
+Boolean values and operators are often used with an [if](/reference/logic/if) or [while](/js/while) statement to determine which code will execute next. For example:
 
 ```
 if (condition && condition2) {
@@ -110,13 +110,13 @@ if (x < 5) {
 }
 ```
 
-See the documentation on [Numbers](/microbit/reference/types/number) for more information on comparing two Numbers. You can also [compare strings](/microbit/reference/types/string-functions) using the `equals` function.
+See the documentation on [Numbers](/reference/types/number) for more information on comparing two Numbers. You can also [compare strings](/reference/types/string-functions) using the `equals` function.
 
 ### Lessons
 
-[rotation animation](/microbit/lessons/rotation-animation), [digi yoyo](/microbit/lessons/digi-yoyo), [love meter](/microbit/lessons/love-meter), [zoomer](/microbit/lessons/zoomer)
+[rotation animation](/lessons/rotation-animation), [digi yoyo](/lessons/digi-yoyo), [love meter](/lessons/love-meter), [zoomer](/lessons/zoomer)
 
 ### See also
 
-[if](/microbit/reference/logic/if), [while](/microbit/js/while), [number](/microbit/reference/types/number)
+[if](/reference/logic/if), [while](/js/while), [number](/reference/types/number)
 

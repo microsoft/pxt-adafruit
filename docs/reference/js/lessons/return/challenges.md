@@ -4,7 +4,7 @@ This script will teach you how to create a function and use an output parameter.
 
 ### Challenge 0
 
-Welcome! This [guided tutorial](/microbit/lessons/return/tutorial) will help you code the following script!
+Welcome! This [guided tutorial](/lessons/return/tutorial) will help you code the following script!
 
 ```
 let original1 = 5

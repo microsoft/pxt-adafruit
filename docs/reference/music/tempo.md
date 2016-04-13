@@ -8,9 +8,9 @@ music.tempo()
 
 ### Parameters
 
-* Returns : [Number](/microbit/reference/types/number) - returns the tempo in beats per minute
+* Returns : [Number](/reference/types/number) - returns the tempo in beats per minute
 
 ### See also
 
-[play tone](/microbit/reference/music/play-tone), [ring tone](/microbit/reference/music/ring-tone) , [rest](/microbit/reference/music/rest), [set tempo](/microbit/reference/music/set-tempo), [change tempo by](/microbit/reference/music/change-tempo-by)
+[play tone](/reference/music/play-tone), [ring tone](/reference/music/ring-tone) , [rest](/reference/music/rest), [set tempo](/reference/music/set-tempo), [change tempo by](/reference/music/change-tempo-by)
 

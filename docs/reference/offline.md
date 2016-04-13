@@ -24,7 +24,7 @@ The micro:bit automatically saves and synchronises scripts for signed-in users t
 
 ## The new in-browser compiler
 
-The compilation from a script to ARM machine code is now done entirely in the browser  (read the [in depth story](https://www.touchdevelop.com/docs/touch-develop-in-208-bits) about building the compiler). The new compiler is used by the Block Editor, Touch Develop and Code Kingdoms to create a .hex file solely within the confines of your web browser (no Internet connection is needed). The micro:bit compilation process (see page 10 in the [Quick Start Guide](/microbit/js/quick-start)) has been updated below to reflect the new compiler architecture, as shown below:
+The compilation from a script to ARM machine code is now done entirely in the browser  (read the [in depth story](https://www.touchdevelop.com/docs/touch-develop-in-208-bits) about building the compiler). The new compiler is used by the Block Editor, Touch Develop and Code Kingdoms to create a .hex file solely within the confines of your web browser (no Internet connection is needed). The micro:bit compilation process (see page 10 in the [Quick Start Guide](/js/quick-start)) has been updated below to reflect the new compiler architecture, as shown below:
 
 ![](/static/mb/offline-2.png)
 

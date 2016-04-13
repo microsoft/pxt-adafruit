@@ -2,7 +2,7 @@
 
 Learn how to create a blinking LED script.
 
-This is the answer key for the [blink quiz](/microbit/lessons/blink/quiz).
+This is the answer key for the [blink quiz](/lessons/blink/quiz).
 
 ## 1. Describe what `plot` does?
 

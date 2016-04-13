@@ -8,12 +8,12 @@ Overview of TouchDevelop lessons for the micro:bit.
 
 ### LED screen
 
-* [plot guided](/microbit/hcwxud) `guided tutorial ` `video available`
-* [plots an LED](/microbit/njuzbvocit) [guided tutorial]
-* [blink symbols](/microbit/rfchtfjmag) `docs`
-* [clear screen](/microbit/jwqywu)
-* [point](/microbit/reference/led/point)
-* [set brightness](/microbit/tfrmcgdtxk)
+* [plot guided](/hcwxud) `guided tutorial ` `video available`
+* [plots an LED](/njuzbvocit) [guided tutorial]
+* [blink symbols](/rfchtfjmag) `docs`
+* [clear screen](/jwqywu)
+* [point](/reference/led/point)
+* [set brightness](/tfrmcgdtxk)
 
 ## micro:bit
 
@@ -21,49 +21,49 @@ Overview of TouchDevelop lessons for the micro:bit.
 
 ### Basic
 
-* [show number](/microbit/doxhko)
-* [show string](/microbit/hgsfxg)
-* [forever - show image](/microbit/bniyze) `guided tutorial`
-* [forever - show animation - two frames 1a](/microbit/rwsjmubtaa)
-* [forever - show animation - two frames 1c](/microbit/fomtaxxdkk)
-* [forever - show animation - two frames 1 d](/microbit/huguhgjmmn)
-* [forever - show animation - multliple frames](/microbit/tweyhx)
+* [show number](/doxhko)
+* [show string](/hgsfxg)
+* [forever - show image](/bniyze) `guided tutorial`
+* [forever - show animation - two frames 1a](/rwsjmubtaa)
+* [forever - show animation - two frames 1c](/fomtaxxdkk)
+* [forever - show animation - two frames 1 d](/huguhgjmmn)
+* [forever - show animation - multliple frames](/tweyhx)
 
 ## Language {#pconst}
 
 ### Variables
 
-* [global variables ](/microbit/nkecii) `guided tutorial`
-* [local variable - create image, show image](/microbit/dcvnwv)
-* data types: [number](/microbit/reference/types/number), [boolean](/microbit/reference/types/boolean), [string](/microbit/reference/types/string), [image](/microbit/reference/image/image)
+* [global variables ](/nkecii) `guided tutorial`
+* [local variable - create image, show image](/dcvnwv)
+* data types: [number](/reference/types/number), [boolean](/reference/types/boolean), [string](/reference/types/string), [image](/reference/image/image)
 
 ### Statements and control structures
 
-* [if](/microbit/reference/logic/if)
-* [for](/microbit/reference/loops/for)
-* [for loop nested - plot](/microbit/vpvhdnaqfm) **script**
-* [while](/microbit/js/while)
-* [while - show string, show number, show animation](/microbit/bidtzqdips) `docs`
-* [while - create image ](/microbit/bnqbom)
-* [return](/microbit/js/return)
-* [break](/microbit/js/break)
-* [function](/microbit/js/function)
-* [assignment operation](/microbit/reference/variables/assign) `:=`
+* [if](/reference/logic/if)
+* [for](/reference/loops/for)
+* [for loop nested - plot](/vpvhdnaqfm) **script**
+* [while](/js/while)
+* [while - show string, show number, show animation](/bidtzqdips) `docs`
+* [while - create image ](/bnqbom)
+* [return](/js/return)
+* [break](/js/break)
+* [function](/js/function)
+* [assignment operation](/reference/variables/assign) `:=`
 
 ### Maths
 
-* arithmetic operators (`+`, `-`, `*`, `/`, mod)  on [numbers](/microbit/reference/types/number)
-* comparison operators (such as `>`, `=`) on [numbers](/microbit/reference/types/number)
-* the [math](/microbit/js/math) library
-* the [bits](/microbit/js/bits) library
+* arithmetic operators (`+`, `-`, `*`, `/`, mod)  on [numbers](/reference/types/number)
+* comparison operators (such as `>`, `=`) on [numbers](/reference/types/number)
+* the [math](/js/math) library
+* the [bits](/js/bits) library
 
 ### Logical
 
-* boolean operators (`not`, `or`, `and`) on [booleans](/microbit/reference/types/boolean)
+* boolean operators (`not`, `or`, `and`) on [booleans](/reference/types/boolean)
 
 ### Strings
 
-* concat operator combines [strings](/microbit/reference/types/string)
+* concat operator combines [strings](/reference/types/string)
 
 ### ~
 
@@ -71,17 +71,17 @@ Overview of TouchDevelop lessons for the micro:bit.
 
 ### Input
 
-* [button is pressed](/microbit/reference/input/button-is-pressed)
-* [on button pressed](/microbit/reference/input/on-button-pressed)
-* [acceleration](/microbit/reference/input/acceleration)
-* [compass heading](/microbit/reference/input/compass-heading)
-* [calibrate](/microbit/functions/calibrate)
-* [running time](/microbit/reference/input/running-time)
-* [on shake](/microbit/reference/input/on-gesture)
-* [on screen up](/microbit/functions/on-screen-up)
-* [on screen down](/microbit/functions/on-screen-down)
-* [on logo up](/microbit/functions/on-logo-up)
-* [on logo down](/microbit/functions/on-logo-down)
+* [button is pressed](/reference/input/button-is-pressed)
+* [on button pressed](/reference/input/on-button-pressed)
+* [acceleration](/reference/input/acceleration)
+* [compass heading](/reference/input/compass-heading)
+* [calibrate](/functions/calibrate)
+* [running time](/reference/input/running-time)
+* [on shake](/reference/input/on-gesture)
+* [on screen up](/functions/on-screen-up)
+* [on screen down](/functions/on-screen-down)
+* [on logo up](/functions/on-logo-up)
+* [on logo down](/functions/on-logo-down)
 
 ### ~
 
@@ -89,42 +89,42 @@ Overview of TouchDevelop lessons for the micro:bit.
 
 ### Authoring & Other Bits
 
-* [TouchDevelop editor](/microbit/js/editor)
-* [markdown](/microbit/js/markdown)
-* [creating interactive tutorials](/microbit/js/creatinginteractivetutorials)
-* [run scripts in a web browser](/microbit/js/simulator)
-* [run scripts on your micro:bit](/microbit/usb)
-* [libraries](/microbit/js/libraries)
+* [TouchDevelop editor](/js/editor)
+* [markdown](/js/markdown)
+* [creating interactive tutorials](/js/creatinginteractivetutorials)
+* [run scripts in a web browser](/js/simulator)
+* [run scripts on your micro:bit](/usb)
+* [libraries](/js/libraries)
 
 ### Functions and libraries
 
-* [creating functions](/microbit/js/function)
-* [function parameters](/microbit/js/functionparameters)
-* [calling functions](/microbit/js/call)
-* [libraries](/microbit/js/libraries)
+* [creating functions](/js/function)
+* [function parameters](/js/functionparameters)
+* [calling functions](/js/call)
+* [libraries](/js/libraries)
 
 ### Images
 
-* [create image](/microbit/reference/images/create-image)
-* [clear](/microbit/reference/basic/clear-screen)
-* [set pixel](/microbit/reference/images/set-pixel)
-* [pixel](/microbit/reference/images/pixel)
-* [show image](/microbit/reference/images/show-image)
-* [scroll image](/microbit/reference/images/scroll-image)
-* [width](/microbit/functions/width)
-* [show animation](/microbit/reference/basic/show-animation)
+* [create image](/reference/images/create-image)
+* [clear](/reference/basic/clear-screen)
+* [set pixel](/reference/images/set-pixel)
+* [pixel](/reference/images/pixel)
+* [show image](/reference/images/show-image)
+* [scroll image](/reference/images/scroll-image)
+* [width](/functions/width)
+* [show animation](/reference/basic/show-animation)
 
 ### Pins
 
-* [analog read pin](/microbit/reference/pins/analog-read-pin)
-* [analog write pin](/microbit/reference/pins/analog-write-pin)
-* [digital read pin](/microbit/reference/pins/digital-read-pin)
-* [digital write pin](/microbit/reference/pins/digital-write-pin)
+* [analog read pin](/reference/pins/analog-read-pin)
+* [analog write pin](/reference/pins/analog-write-pin)
+* [digital read pin](/reference/pins/digital-read-pin)
+* [digital write pin](/reference/pins/digital-write-pin)
 
 ### Accessories
 
-* [forever](/microbit/reference/basic/forever)
-* [in background](/microbit/reference/control/in-background)
+* [forever](/reference/basic/forever)
+* [in background](/reference/control/in-background)
 
 ## Tutorials
 

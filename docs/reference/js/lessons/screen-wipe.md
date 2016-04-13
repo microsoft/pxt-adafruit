@@ -10,11 +10,11 @@ Clear Screen
 
 ## Quick Links
 
-* [activity](/microbit/lessons/screen-wipe/activity)
-* [quiz](/microbit/lessons/screen-wipe/quiz)
-* [quiz answers](/microbit/lessons/screen-wipe/quiz-answers)
-* [challenges](/microbit/lessons/screen-wipe/challenges)
-* [tutorial](/microbit/lessons/screen-wipe/tutorial)
+* [activity](/lessons/screen-wipe/activity)
+* [quiz](/lessons/screen-wipe/quiz)
+* [quiz answers](/lessons/screen-wipe/quiz-answers)
+* [challenges](/lessons/screen-wipe/challenges)
+* [tutorial](/lessons/screen-wipe/tutorial)
 
 ## Class
 
@@ -37,15 +37,15 @@ Learn how to **clear screen**, `basic->clear screen` to turn off all the LED lig
 
 ## Documentation
 
-* **show animation** : [read more...](/microbit/reference/basic/show-animation)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **clear screen** : [read more...](/microbit/reference/basic/clear-screen)
+* **show animation** : [read more...](/reference/basic/show-animation)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **clear screen** : [read more...](/reference/basic/clear-screen)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/screen-wipe/tutorial)
-* Activity: [quiz](/microbit/lessons/screen-wipe/quiz)
-* Extended Activity: [challenges](/microbit/lessons/screen-wipe/challenges)
+* Activity: [tutorial](/lessons/screen-wipe/tutorial)
+* Activity: [quiz](/lessons/screen-wipe/quiz)
+* Extended Activity: [challenges](/lessons/screen-wipe/challenges)
 
 ## Objectives
 
@@ -91,17 +91,17 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/screen-wipe/tutorial)
-* [quiz](/microbit/lessons/screen-wipe/quiz)
+* [tutorial](/lessons/screen-wipe/tutorial)
+* [quiz](/lessons/screen-wipe/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/screen-wipe/challenges)
+* [challenges](/lessons/screen-wipe/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/screen-wipe/challenges)
+* Extended Activity: [challenges](/lessons/screen-wipe/challenges)
 
 ## Intended follow on
 

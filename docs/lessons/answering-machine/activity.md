@@ -18,7 +18,7 @@ basic.showString("ASK ME A QUESTION")
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/answering-machine/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/answering-machine/challenges)!
 
 ### ~
 

@@ -1,13 +1,13 @@
 # Logic
 
-[if](/microbit/reference/logic/if)
+[if](/reference/logic/if)
 
 ```blocks
 if(true) {
 }
 ```
 
-[Boolean](/microbit/reference/types/boolean) values: *true*; *false*
+[Boolean](/reference/types/boolean) values: *true*; *false*
 
 ```blocks
 true

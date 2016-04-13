@@ -1,6 +1,6 @@
 # Analog Set Pitch Pin
 
-Specify which [pin](/microbit/device/pins) (P0, P1, P2) is used to generate tones.
+Specify which [pin](/device/pins) (P0, P1, P2) is used to generate tones.
 
 ```sig
 pins.analogSetPitchPin(AnalogPin.P0)
@@ -8,7 +8,7 @@ pins.analogSetPitchPin(AnalogPin.P0)
 
 ### Parameters
 
-* `name` - [String](/microbit/reference/types/string); the  pin name ("P0", "P1", or "P2")
+* `name` - [String](/reference/types/string); the  pin name ("P0", "P1", or "P2")
 
 ### Example
 
@@ -26,5 +26,5 @@ pins.analogPitch(frequency, duration)
 
 ### See also
 
-[micro:bit pins](/microbit/device/pins), [analog set period](/microbit/reference/pins/analog-set-period), [analog pitch](/microbit/reference/pins/analog-pitch)
+[micro:bit pins](/device/pins), [analog set period](/reference/pins/analog-set-period), [analog pitch](/reference/pins/analog-pitch)
 

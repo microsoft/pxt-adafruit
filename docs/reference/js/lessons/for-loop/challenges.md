@@ -4,7 +4,7 @@ These challenges will allow you to create a counter from 0-5 and then from 5-0. 
 
 ### Challenge 0
 
-Welcome! This [guided tutorial](/microbit/bcvgkf) will assist you with the following activity:
+Welcome! This [guided tutorial](/bcvgkf) will assist you with the following activity:
 
 ```
 for (let i = 0; i < 6; i++) {

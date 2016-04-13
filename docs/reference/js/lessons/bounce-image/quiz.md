@@ -6,7 +6,7 @@ scroll an image on the BBC micro:bit.
 
 ## Directions
 
-Use this document to guide your work in the [bounce image tutorial](/microbit/lessons/bounce-image/tutorial) !
+Use this document to guide your work in the [bounce image tutorial](/lessons/bounce-image/tutorial) !
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

@@ -2,7 +2,7 @@
 
 Construct a counter that uses acceleration. 
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap `New Project` under `Block Editor`.
+To create a new script, go to the [Create Code](/create-code) page and tap `New Project` under `Block Editor`.
 
 Welcome! This activity will teach how to construct a pendulum that glows using acceleration. Let's get started!
 

@@ -4,7 +4,7 @@ Coding challenges for strobe light.
 
 ## Before we get started
 
-Complete the following [guided tutorial](/microbit/lessons/strobe-light/activity), your code should look like this:
+Complete the following [guided tutorial](/lessons/strobe-light/activity), your code should look like this:
 
 
 ```blocks

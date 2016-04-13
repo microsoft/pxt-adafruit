@@ -2,7 +2,7 @@
 
 Show a number on the micro:bit. 
 
-This is the answer key for the [lucky 7 quiz](/microbit/lessons/lucky-7/quiz).
+This is the answer key for the [lucky 7 quiz](/lessons/lucky-7/quiz).
 
 ## 1. Describe what `show number` does?
 

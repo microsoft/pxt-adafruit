@@ -4,7 +4,7 @@ A multi-player game that forces each player to reveal a secret or something funn
 
 ## Before we get started
 
-Complete the following [guided tutorial](/microbit/lessons/truth-or-dare/activity), and your code should look like this
+Complete the following [guided tutorial](/lessons/truth-or-dare/activity), and your code should look like this
 
 
 ```blocks

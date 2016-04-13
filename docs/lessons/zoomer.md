@@ -10,10 +10,10 @@ Acceleration
 
 ## Quick Links
 
-* [activity](/microbit/lessons/zoomer/activity)
-* [challenges](/microbit/lessons/zoomer/challenges)
-* [quiz](/microbit/lessons/zoomer/quiz)
-* [quiz answers](/microbit/lessons/zoomer/quiz-answers)
+* [activity](/lessons/zoomer/activity)
+* [challenges](/lessons/zoomer/challenges)
+* [quiz](/lessons/zoomer/quiz)
+* [quiz answers](/lessons/zoomer/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

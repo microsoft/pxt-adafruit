@@ -2,7 +2,7 @@
 
 The digital read pin function.
 
-Digitally read the specified [pin](/microbit/device/pins) (``P0``, ``P1``, ``P2``, ...) as digital. **Some pins are also used by the display, read the [pin documentation ](/microbit/device/pins) carefully.**
+Digitally read the specified [pin](/device/pins) (``P0``, ``P1``, ``P2``, ...) as digital. **Some pins are also used by the display, read the [pin documentation ](/device/pins) carefully.**
 
 ```sig
 pins.digitalReadPin(DigitalPin.P3)
@@ -14,7 +14,7 @@ pins.digitalReadPin(DigitalPin.P3)
 
 ### Returns
 
-* [Number](/microbit/reference/types/number) - 0 or 1
+* [Number](/reference/types/number) - 0 or 1
 
 ### Example: football score keeper
 
@@ -36,5 +36,5 @@ basic.forever(() => {
 
 ### See also
 
-[micro:bit pins](/microbit/device/pins), [digital write pin](/microbit/reference/pins/digital-write-pin), [analog read pin](/microbit/reference/pins/analog-read-pin), [analog write pin](/microbit/reference/pins/analog-write-pin), [on pin pressed](/microbit/reference/input/on-pin-pressed), [pin is pressed](/microbit/reference/input/pin-is-pressed)
+[micro:bit pins](/device/pins), [digital write pin](/reference/pins/digital-write-pin), [analog read pin](/reference/pins/analog-read-pin), [analog write pin](/reference/pins/analog-write-pin), [on pin pressed](/reference/input/on-pin-pressed), [pin is pressed](/reference/input/pin-is-pressed)
 

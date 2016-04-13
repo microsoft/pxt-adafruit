@@ -8,7 +8,7 @@ Functions
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/2-player-pong/tutorial)
+* [tutorial](/lessons/2-player-pong/tutorial)
 
 ## Class
 
@@ -36,15 +36,15 @@ Learn how to create **functions**, `function()` as a unit of code that performs 
 
 ## Documentation
 
-* **functions** : [read more...](/microbit/js/function)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **for** : [read more...](/microbit/reference/loops/for)
-* **if** : [read more...](/microbit/reference/logic/if)
-* **show animation** : [read more...](/microbit/reference/basic/show-animation)
+* **functions** : [read more...](/js/function)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **for** : [read more...](/reference/loops/for)
+* **if** : [read more...](/reference/logic/if)
+* **show animation** : [read more...](/reference/basic/show-animation)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/2-player-pong/tutorial)
+* Activity: [tutorial](/lessons/2-player-pong/tutorial)
 
 ## Objectives
 
@@ -95,7 +95,7 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/2-player-pong/tutorial)
+* [tutorial](/lessons/2-player-pong/tutorial)
 
 ## Intended follow on
 

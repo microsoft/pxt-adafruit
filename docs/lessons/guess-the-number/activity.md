@@ -42,7 +42,7 @@ input.onButtonPressed(Button.A, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/guess-the-number/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/guess-the-number/challenges)!
 
 ### ~
 

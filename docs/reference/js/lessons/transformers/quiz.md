@@ -6,7 +6,7 @@ Use functions to return values.
 
 ## Directions
 
-Use this activity document to guide your work in the [transformers tutorial](/microbit/lessons/transformers/tutorial)
+Use this activity document to guide your work in the [transformers tutorial](/lessons/transformers/tutorial)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

@@ -8,7 +8,7 @@ Welcome! This guided activity will teach how to construct a pendulum that glows 
 
 ### ~
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap *New Project* under **Touch Develop**.
+To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
 
 Create a **forever** loop that will constantly display the appropriate brightness on the LED display.
 
@@ -69,7 +69,7 @@ basic.forever(() => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/glowing-pendulum/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/glowing-pendulum/challenges)!
 
 ### ~
 

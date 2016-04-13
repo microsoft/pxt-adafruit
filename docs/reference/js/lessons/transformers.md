@@ -10,10 +10,10 @@ Return
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/transformers/tutorial)
-* [quiz](/microbit/lessons/transformers/quiz)
-* [quiz answers](/microbit/lessons/transformers/quiz-answers)
-* [challenges](/microbit/lessons/transformers/challenges)
+* [tutorial](/lessons/transformers/tutorial)
+* [quiz](/lessons/transformers/quiz)
+* [quiz answers](/lessons/transformers/quiz-answers)
+* [challenges](/lessons/transformers/challenges)
 
 ## Class
 
@@ -44,19 +44,19 @@ Learn how to create **functions**, ` function() ` to make your code easier to re
 
 ## Documentation
 
-* **function** : [read more...](/microbit/js/function)
-* **return** : [read more...](/microbit/js/return)
-* **call** : [read more...](/microbit/js/call)
-* **global variable** : [read more...](/microbit/js/data)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **local variable** : [read more...](/microbit/reference/variables/var)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
+* **function** : [read more...](/js/function)
+* **return** : [read more...](/js/return)
+* **call** : [read more...](/js/call)
+* **global variable** : [read more...](/js/data)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **local variable** : [read more...](/reference/variables/var)
+* **show number** : [read more...](/reference/basic/show-number)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/transformers/tutorial)
-* Activity: [quiz](/microbit/lessons/transformers/quiz)
-* Extended Activity: [challenges](/microbit/lessons/transformers/challenges)
+* Activity: [tutorial](/lessons/transformers/tutorial)
+* Activity: [quiz](/lessons/transformers/quiz)
+* Extended Activity: [challenges](/lessons/transformers/challenges)
 
 ## Objectives
 
@@ -107,17 +107,17 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/transformers/tutorial)
-* [quiz](/microbit/lessons/transformers/quiz)
+* [tutorial](/lessons/transformers/tutorial)
+* [quiz](/lessons/transformers/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/transformers/challenges)
+* [challenges](/lessons/transformers/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/transformers/challenges)
+* Extended Activity: [challenges](/lessons/transformers/challenges)
 
 ## Intended follow on
 

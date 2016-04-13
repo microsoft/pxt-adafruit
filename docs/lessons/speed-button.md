@@ -10,9 +10,9 @@ Running Time
 
 ## Quick Links
 
-* [activity](/microbit/lessons/speed-button/activity)
-* [quiz](/microbit/lessons/speed-button/quiz)
-* [quiz answers](/microbit/lessons/speed-button/quiz-answers)
+* [activity](/lessons/speed-button/activity)
+* [quiz](/lessons/speed-button/quiz)
+* [quiz answers](/lessons/speed-button/quiz-answers)
 
 
 ## Prior learning/place of lesson in scheme of work
@@ -21,12 +21,12 @@ Learn how to declare a **Boolean** variable, `var t:= true` `var f:=false` for o
 
 ## Documentation
 
-* **running time** : [read more...](/microbit/reference/input/running-time)
-* **global variable** : [read more...](/microbit/js/data)
-* **Boolean** : [read more...](/microbit/reference/types/boolean)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **if** : [read more...](/microbit/reference/logic/if)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
+* **running time** : [read more...](/reference/input/running-time)
+* **global variable** : [read more...](/js/data)
+* **Boolean** : [read more...](/reference/types/boolean)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **if** : [read more...](/reference/logic/if)
+* **show string** : [read more...](/reference/basic/show-string)
 
 ## Objectives
 

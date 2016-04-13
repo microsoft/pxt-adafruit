@@ -44,7 +44,7 @@ Try devising an algorithm for a diagonal line using the code above and the varia
 
 ![](/static/mb/blocks/lessons/graphics-3.png)
 
-We can create more complex algorithms for more complex shapes, too. See the [challenges](/microbit/lessons/challenges) section for additional graphical challenges and solutions.
+We can create more complex algorithms for more complex shapes, too. See the [challenges](/lessons/challenges) section for additional graphical challenges and solutions.
 
 ### Animations
 
@@ -52,7 +52,7 @@ Animations are changes happening at a certain rate. For example, we could add th
 
 We could create more complex animations, for example we could make our BBC micro:bit display an explosion or fireworks.
 
-See the [challenges](/microbit/lessons/challenges) section for some animation tasks.
+See the [challenges](/lessons/challenges) section for some animation tasks.
 
 ### Image variables
 

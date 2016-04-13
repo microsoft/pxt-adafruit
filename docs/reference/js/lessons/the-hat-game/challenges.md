@@ -6,7 +6,7 @@ The all famous Hat Game -- one of 3 hats has the ball, which is revealed at the 
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/the-hat-game/tutorial)
+* [tutorial](/lessons/the-hat-game/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

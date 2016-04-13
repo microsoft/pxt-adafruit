@@ -6,7 +6,7 @@ Create a die on the BBC micro:bit.
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/die-roll/tutorial)
+* [tutorial](/lessons/die-roll/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

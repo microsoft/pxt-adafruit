@@ -4,7 +4,7 @@ Coding challenges for screen wipe.
 
 ## Before we get started
 
-Complete the [screen wipe](/microbit/lessons/screen-wipe) activity and your code will look like this:
+Complete the [screen wipe](/lessons/screen-wipe) activity and your code will look like this:
 
 ```blocks
 basic.showLeds(`

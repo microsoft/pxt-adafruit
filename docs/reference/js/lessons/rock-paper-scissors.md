@@ -10,9 +10,9 @@ Local Variables
 
 ## Quick Links
 
-* [activity](/microbit/lessons/rock-paper-scissors/activity)
-* [challenges](/microbit/lessons/rock-paper-scissors/challenges)
-* [tutorial](/microbit/lessons/rock-paper-scissors/tutorial)
+* [activity](/lessons/rock-paper-scissors/activity)
+* [challenges](/lessons/rock-paper-scissors/challenges)
+* [tutorial](/lessons/rock-paper-scissors/tutorial)
 
 ## Class
 
@@ -24,14 +24,14 @@ Learn how to create a **local variable**, `var t :=time` where you can store dat
 
 ## Documentation
 
-* **on shake** : [read more...](/microbit/reference/input/on-gesture)
-* **local variable** : [read more...](/microbit/reference/variables/var)
-* **create image** : [read more...](/microbit/reference/images/create-image)
-* **math random** : [read more...](/microbit/js/math)
-* **show image** : [read more...](/microbit/reference/images/show-image)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
+* **on shake** : [read more...](/reference/input/on-gesture)
+* **local variable** : [read more...](/reference/variables/var)
+* **create image** : [read more...](/reference/images/create-image)
+* **math random** : [read more...](/js/math)
+* **show image** : [read more...](/reference/images/show-image)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **show string** : [read more...](/reference/basic/show-string)
+* **show number** : [read more...](/reference/basic/show-number)
 
 ## Objectives
 
@@ -81,15 +81,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/rock-paper-scissors/activity)
-* [tutorial](/microbit/lessons/rock-paper-scissors/tutorial)
+* [activity](/lessons/rock-paper-scissors/activity)
+* [tutorial](/lessons/rock-paper-scissors/tutorial)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/rock-paper-scissors/challenges)
+* [challenges](/lessons/rock-paper-scissors/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/rock-paper-scissors/challenges)
+* Extended Activity: [challenges](/lessons/rock-paper-scissors/challenges)
 

@@ -4,7 +4,7 @@ Coding challenges for magic logo.
 
 ## Before we get started
 
-Complete the [magic logo](/microbit/lessons/magic-logo/activity) activity and your code will look like this:
+Complete the [magic logo](/lessons/magic-logo/activity) activity and your code will look like this:
 
 ```blocks
 input.onLogoUp(() => {

@@ -4,7 +4,7 @@ This guide will show you how to use a break statement within a while loop. #docs
 
 ### Challenge 0
 
-Welcome! This [guided tutorial](/microbit/lessons/break/tutorial) will assist you with this activity.
+Welcome! This [guided tutorial](/lessons/break/tutorial) will assist you with this activity.
 
 ```
 count = 0

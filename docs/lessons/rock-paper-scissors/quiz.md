@@ -6,7 +6,7 @@ shift an image horizontally across the display with offset.
 
 ## Directions
 
-Use this activity document to guide your work in the [rock paper scissors tutorial](/microbit/lessons/rock-paper-scissors/activity).
+Use this activity document to guide your work in the [rock paper scissors tutorial](/lessons/rock-paper-scissors/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

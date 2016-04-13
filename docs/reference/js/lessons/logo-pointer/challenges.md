@@ -6,7 +6,7 @@ These challenges will help you show arrows that point which way the logo is poin
 
 ### @video vimeo/134638098
 
-This [guided tutorial](/microbit/zysycw) will help you display an arrow pointing the direction the logo is oriented!
+This [guided tutorial](/zysycw) will help you display an arrow pointing the direction the logo is oriented!
 
 Let's display and upward pointing arrow when the logo is up!
 

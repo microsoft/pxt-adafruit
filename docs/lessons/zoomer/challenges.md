@@ -4,7 +4,7 @@ Coding challenges for zoomer.
 
 ## Before we get started
 
-Complete the following [activity](/microbit/lessons/zoomer/activity) and your finished code should look like this:
+Complete the following [activity](/lessons/zoomer/activity) and your finished code should look like this:
 
 ```blocks
 basic.forever(() => {

@@ -4,7 +4,7 @@ Coding challenges for zoomer.
 
 ## Before we get started
 
-Complete the following guided [temperature activity](/microbit/lessons/temperature/activity). At the end of the activity, your code should look like this:
+Complete the following guided [temperature activity](/lessons/temperature/activity). At the end of the activity, your code should look like this:
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {

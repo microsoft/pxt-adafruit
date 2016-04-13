@@ -30,18 +30,18 @@ Learn how to control a blinking LED image. We will be learning how to create a b
 
 ## Documentation
 
-* **global variables**: [read more...](/microbit/js/data)
-* **create image** : [read more...](/microbit/reference/images/create-image)
-* **show image** : [read more...](/microbit/reference/images/show-image)
-* **pause**: [read more...](/microbit/reference/basic/pause)
-* **clear screen**: [read more...](/microbit/reference/basic/clear-screen)
-* **forever**: [read more...](/microbit/reference/basic/forever)
+* **global variables**: [read more...](/js/data)
+* **create image** : [read more...](/reference/images/create-image)
+* **show image** : [read more...](/reference/images/show-image)
+* **pause**: [read more...](/reference/basic/pause)
+* **clear screen**: [read more...](/reference/basic/clear-screen)
+* **forever**: [read more...](/reference/basic/forever)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/flashing-heart/tutorial)
-* Activity: [quiz](/microbit/lessons/flashing-heart/quiz)
-* Extended Activity: [challenges](/microbit/lessons/flashing-heart/challenges)
+* Activity: [tutorial](/lessons/flashing-heart/tutorial)
+* Activity: [quiz](/lessons/flashing-heart/quiz)
+* Extended Activity: [challenges](/lessons/flashing-heart/challenges)
 
 ## Objectives
 
@@ -82,19 +82,19 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/flashing-heart/tutorial)
-* [quiz](/microbit/lessons/flashing-heart/quiz)
+* [tutorial](/lessons/flashing-heart/tutorial)
+* [quiz](/lessons/flashing-heart/quiz)
 * assessment opportunities: forever, plot, pause, clear screen
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/flashing-heart/challenges)
+* [challenges](/lessons/flashing-heart/challenges)
 * assessment opportunities: loops, plot, pause, clear screen
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/flashing-heart/challenges)
+* Extended Activity: [challenges](/lessons/flashing-heart/challenges)
 
 ## Intended follow on
 

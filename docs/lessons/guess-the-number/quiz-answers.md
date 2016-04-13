@@ -2,7 +2,7 @@
 
 Learn how to generate a random number on the micro:bit.
 
-This is the answer key for the [guess the number quiz](/microbit/lessons/guess-the-number/quiz).
+This is the answer key for the [guess the number quiz](/lessons/guess-the-number/quiz).
 
 ## 1. What is on button pressed?
 

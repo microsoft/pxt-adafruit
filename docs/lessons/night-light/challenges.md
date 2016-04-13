@@ -4,7 +4,7 @@ Coding challenges for night light.
 
 ## Before we get started
 
-Complete the following [guided tutorial](/microbit/lessons/night-light/activity), your code should look like this:
+Complete the following [guided tutorial](/lessons/night-light/activity), your code should look like this:
 
 
 ```blocks

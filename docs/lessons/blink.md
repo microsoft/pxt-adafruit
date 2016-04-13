@@ -10,10 +10,10 @@ Plot
 
 ## Quick links
 
-* [activity](/microbit/lessons/blink/activity)
-* [quiz](/microbit/lessons/blink/quiz)
-* [quiz answers](/microbit/lessons/blink/quiz-answers)
-* [challenges](/microbit/lessons/blink/challenges)
+* [activity](/lessons/blink/activity)
+* [quiz](/lessons/blink/quiz)
+* [quiz answers](/lessons/blink/quiz-answers)
+* [challenges](/lessons/blink/challenges)
 
 
 ## Prior learning / place of lesson in scheme of work 

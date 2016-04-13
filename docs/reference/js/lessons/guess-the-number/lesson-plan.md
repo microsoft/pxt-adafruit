@@ -30,15 +30,15 @@ Learn how to create numbers randomly by using the input of the BBC micro:bit. We
 
 ## Documentation
 
-* **local variables**: [read more...](/microbit/reference/variables/var)
-* **math**: [read more...](/microbit/js/math)
-* **on button pressed**: [read more...](/microbit/reference/input/on-button-pressed)
+* **local variables**: [read more...](/reference/variables/var)
+* **math**: [read more...](/js/math)
+* **on button pressed**: [read more...](/reference/input/on-button-pressed)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/guess-the-number/tutorial)
-* Activity: [quiz](/microbit/lessons/guess-the-number/quiz)
-* Extended Activity: [challenges](/microbit/lessons/guess-the-number/challenges)
+* Activity: [tutorial](/lessons/guess-the-number/tutorial)
+* Activity: [quiz](/lessons/guess-the-number/quiz)
+* Extended Activity: [challenges](/lessons/guess-the-number/challenges)
 
 ## Objectives
 
@@ -79,19 +79,19 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/guess-the-number/tutorial)
-* [quiz](/microbit/lessons/guess-the-number/quiz)
+* [tutorial](/lessons/guess-the-number/tutorial)
+* [quiz](/lessons/guess-the-number/quiz)
 * assessment opportunities: forever, plot, pause, clear screen
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/guess-the-number/challenges)
+* [challenges](/lessons/guess-the-number/challenges)
 * assessment opportunities: loops, plot, pause, clear screen
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/guess-the-number/challenges)
+* Extended Activity: [challenges](/lessons/guess-the-number/challenges)
 
 ## Intended follow on
 

@@ -6,7 +6,7 @@ create the game meteorite.
 
 ## Directions
 
-Use this activity document to guide your work in the [meteorite tutorial](/microbit/lessons/meteorite/tutorial)
+Use this activity document to guide your work in the [meteorite tutorial](/lessons/meteorite/tutorial)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

@@ -6,7 +6,7 @@ Coding challenges for the looper tutorial. #docs
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/looper/tutorial)
+* [tutorial](/lessons/looper/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

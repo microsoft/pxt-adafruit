@@ -4,7 +4,7 @@ Coding challenges for the glowing pendulum tutorial.
 
 ## Before we get started
 
-Complete the following [glowing pendulum activity](/microbit/lessons/glowing-pendulum/activity) and your code should look like this:
+Complete the following [glowing pendulum activity](/lessons/glowing-pendulum/activity) and your code should look like this:
 
 ![](/static/mb/blocks/lessons/glowing-pendulum-5.png)
 

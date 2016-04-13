@@ -10,9 +10,9 @@ Functions
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/pong/tutorial)
-* [quiz](/microbit/lessons/pong/quiz)
-* [quiz answers](/microbit/lessons/pong/quiz-answers)
+* [tutorial](/lessons/pong/tutorial)
+* [quiz](/lessons/pong/quiz)
+* [quiz answers](/lessons/pong/quiz-answers)
 
 ## Class
 
@@ -42,25 +42,25 @@ Learn how to create **functions**, `function()` that perform a specific task and
 
 ## Documentation
 
-* **function** : [read more...](/microbit/js/function)
-* **return** : [read more...](/microbit/js/return)
-* **call** : [read more...](/microbit/js/call)
-* **global variable** : [read more...](/microbit/js/data)
-* **arithmetic operator** : [read more...](/microbit/reference/types/number)
+* **function** : [read more...](/js/function)
+* **return** : [read more...](/js/return)
+* **call** : [read more...](/js/call)
+* **global variable** : [read more...](/js/data)
+* **arithmetic operator** : [read more...](/reference/types/number)
 * **Boolean** : [/td/Boolean]()
-* **forever** : [read more...](/microbit/reference/basic/forever)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **if** : [read more...](/microbit/reference/logic/if)
-* **clear screen** : [read more...](/microbit/reference/basic/clear-screen)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
-* **plot** : [read more...](/microbit/reference/led/plot)
-* **unplot** : [read more...](/microbit/reference/led/unplot)
-* **pause** : [read more...](/microbit/reference/basic/pause)
+* **forever** : [read more...](/reference/basic/forever)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **if** : [read more...](/reference/logic/if)
+* **clear screen** : [read more...](/reference/basic/clear-screen)
+* **show string** : [read more...](/reference/basic/show-string)
+* **plot** : [read more...](/reference/led/plot)
+* **unplot** : [read more...](/reference/led/unplot)
+* **pause** : [read more...](/reference/basic/pause)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/pong/tutorial)
-* Activity: [quiz](/microbit/lessons/pong/quiz)
+* Activity: [tutorial](/lessons/pong/tutorial)
+* Activity: [quiz](/lessons/pong/quiz)
 
 ## Objectives
 
@@ -118,16 +118,16 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/pong/tutorial)
+* [tutorial](/lessons/pong/tutorial)
 
 ## Extended Activity
 
 * time: 20 min.
-* [quiz](/microbit/lessons/pong/quiz)
+* [quiz](/lessons/pong/quiz)
 
 ## Homework
 
-* Extended Activity: [quiz](/microbit/lessons/pong/quiz)
+* Extended Activity: [quiz](/lessons/pong/quiz)
 
 ## Intended follow on
 

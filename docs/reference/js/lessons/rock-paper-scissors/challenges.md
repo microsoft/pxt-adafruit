@@ -4,7 +4,7 @@ Coding challenges for the rock paper scissors tutorial. #docs
 
 ## Before we get started
 
-Complete the following [guided activity](/microbit/lessons/rock-paper-scissors/activity) , your code should look like this:
+Complete the following [guided activity](/lessons/rock-paper-scissors/activity) , your code should look like this:
 
 ```
 input.onGesture(Gesture.Shake, () => {

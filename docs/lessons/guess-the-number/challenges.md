@@ -4,7 +4,7 @@ Coding challenges for the guess the number tutorial.
 
 ## Before we get started
 
-Complete the following [guided tutorial](/microbit/lessons/guess-the-number/activity), and your code should look like this:
+Complete the following [guided tutorial](/lessons/guess-the-number/activity), and your code should look like this:
 
 ```blocks
 input.onButtonPressed(Button.A, () => {

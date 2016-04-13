@@ -6,7 +6,7 @@ Learn how to create a blinking LED script with a variable.
 
 ## Directions
 
-Use this activity document to guide your work in the [flashing heart activity](/microbit/lessons/flashing-heart/activity).
+Use this activity document to guide your work in the [flashing heart activity](/lessons/flashing-heart/activity).
 
 Answer the questions while completing the activity. Pay attention to the dialogues!
 

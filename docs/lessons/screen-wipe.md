@@ -10,10 +10,10 @@ Clear Screen
 
 ## Quick Links
 
-* [activity](/microbit/lessons/screen-wipe/activity)
-* [quiz](/microbit/lessons/screen-wipe/quiz)
-* [quiz answers](/microbit/lessons/screen-wipe/quiz-answers)
-* [challenges](/microbit/lessons/screen-wipe/challenges)
+* [activity](/lessons/screen-wipe/activity)
+* [quiz](/lessons/screen-wipe/quiz)
+* [quiz answers](/lessons/screen-wipe/quiz-answers)
+* [challenges](/lessons/screen-wipe/challenges)
 
 
 ## Prior learning/place of lesson in scheme of work

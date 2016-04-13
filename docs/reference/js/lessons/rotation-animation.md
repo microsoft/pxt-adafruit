@@ -8,10 +8,10 @@ While Loop
 
 ## Quick links
 
-* [tutorial](/microbit/lessons/rotation-animation/tutorial)
-* [quiz](/microbit/lessons/rotation-animation/quiz)
-* [quiz answers](/microbit/lessons/rotation-animation/quiz-answers)
-* [challenges](/microbit/lessons/rotation-animation/challenges)
+* [tutorial](/lessons/rotation-animation/tutorial)
+* [quiz](/lessons/rotation-animation/quiz)
+* [quiz answers](/lessons/rotation-animation/quiz-answers)
+* [challenges](/lessons/rotation-animation/challenges)
 
 ## Class
 
@@ -23,13 +23,13 @@ Learn how to create images that look like a rotating animation by using a while 
 
 ## Documentation
 
-* **global variable**: [read more...](/microbit/js/data)
-* **assignment operator**: [read more...](/microbit/reference/variables/assign)
-* **while**: [read more...](/microbit/js/while)
-* **Boolean condition (for the while loop)** : [read more...](/microbit/reference/types/boolean)
-* **on button pressed**: [read more...](/microbit/reference/input/on-button-pressed)
-* **show animation**: [read more...](/microbit/reference/basic/show-animation)
-* **pause**: [read more...](/microbit/reference/basic/pause)
+* **global variable**: [read more...](/js/data)
+* **assignment operator**: [read more...](/reference/variables/assign)
+* **while**: [read more...](/js/while)
+* **Boolean condition (for the while loop)** : [read more...](/reference/types/boolean)
+* **on button pressed**: [read more...](/reference/input/on-button-pressed)
+* **show animation**: [read more...](/reference/basic/show-animation)
+* **pause**: [read more...](/reference/basic/pause)
 
 ## Objectives
 
@@ -68,15 +68,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/rotation-animation/tutorial)
-* [quiz](/microbit/lessons/rotation-animation/quiz)
+* [tutorial](/lessons/rotation-animation/tutorial)
+* [quiz](/lessons/rotation-animation/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/rotation-animation/challenges)
+* [challenges](/lessons/rotation-animation/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/rotation-animation/challenges)
+* Extended Activity: [challenges](/lessons/rotation-animation/challenges)
 

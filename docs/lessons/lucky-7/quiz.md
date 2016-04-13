@@ -6,7 +6,7 @@ Show a number on the micro:bit
 
 ## Directions
 
-Use this activity document to guide your work in the [lucky 7 activity](/microbit/lessons/lucky-7/activity).
+Use this activity document to guide your work in the [lucky 7 activity](/lessons/lucky-7/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

@@ -6,7 +6,7 @@ The all famous Hat Game -- one of 3 hats has the ball, which is revealed at the 
 
 ## Directions
 
-Use this activity document to guide your work in the [the hat game tutorial](/microbit/lessons/the-hat-game/tutorial)
+Use this activity document to guide your work in the [the hat game tutorial](/lessons/the-hat-game/tutorial)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

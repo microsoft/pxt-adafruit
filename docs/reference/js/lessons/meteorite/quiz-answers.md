@@ -6,7 +6,7 @@ create the game meteorite.
 
 ## Directions
 
-This is the answer key for the [meteorite quiz](/microbit/lessons/meteorite/quiz)
+This is the answer key for the [meteorite quiz](/lessons/meteorite/quiz)
 
 ## 1. Write the code that sets up the position variables of meteorite 1. (Hint: look inside the function "initialize game".)
 

@@ -10,11 +10,11 @@ Fade Out
 
 ## Quick Links
 
-* [activity](/microbit/lessons/glowing-sword/activity)
-* [quiz](/microbit/lessons/glowing-sword/quiz)
-* [quiz answers](/microbit/lessons/glowing-sword/quiz-answers)
-* [challenges](/microbit/lessons/glowing-sword/challenges)
-* [tutorial](/microbit/lessons/glowing-sword/tutorial)
+* [activity](/lessons/glowing-sword/activity)
+* [quiz](/lessons/glowing-sword/quiz)
+* [quiz answers](/lessons/glowing-sword/quiz-answers)
+* [challenges](/lessons/glowing-sword/challenges)
+* [tutorial](/lessons/glowing-sword/tutorial)
 
 ## Class
 
@@ -36,16 +36,16 @@ Learn how to manipulate an image through **fade out**, `led->fade out` to gradua
 
 ## Documentation
 
-* **plot image** : [read more...](/microbit/reference/led/plot-image)
-* **fade out** : [read more...](/microbit/reference/led/fade-out)
-* **pause** : [read more...](/microbit/reference/basic/pause)
-* **fade in** : [read more...](/microbit/reference/led/fade-in)
+* **plot image** : [read more...](/reference/led/plot-image)
+* **fade out** : [read more...](/reference/led/fade-out)
+* **pause** : [read more...](/reference/basic/pause)
+* **fade in** : [read more...](/reference/led/fade-in)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/glowing-sword/tutorial)
-* Activity: [quiz](/microbit/lessons/glowing-sword/quiz)
-* Extended Activity: [challenges](/microbit/lessons/glowing-sword/challenges)
+* Activity: [tutorial](/lessons/glowing-sword/tutorial)
+* Activity: [quiz](/lessons/glowing-sword/quiz)
+* Extended Activity: [challenges](/lessons/glowing-sword/challenges)
 
 ## Objectives
 
@@ -79,17 +79,17 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/glowing-sword/tutorial)
-* [quiz](/microbit/lessons/lucky-7/quiz)
+* [tutorial](/lessons/glowing-sword/tutorial)
+* [quiz](/lessons/lucky-7/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/glowing-sword/challenges)
+* [challenges](/lessons/glowing-sword/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/glowing-sword/challenges)
+* Extended Activity: [challenges](/lessons/glowing-sword/challenges)
 
 ## Intended follow on
 

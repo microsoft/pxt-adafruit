@@ -10,11 +10,11 @@ On Pin Pressed
 
 ## Quick Links
 
-* [activity](/microbit/lessons/love-meter/activity)
-* [challenges](/microbit/lessons/love-meter/challenges)
-* [quiz](/microbit/lessons/love-meter/quiz)
-* [quiz answers](/microbit/lessons/love-meter/quiz-answers)
-* [tutorial](/microbit/lessons/love-meter/tutorial)
+* [activity](/lessons/love-meter/activity)
+* [challenges](/lessons/love-meter/challenges)
+* [quiz](/lessons/love-meter/quiz)
+* [quiz answers](/lessons/love-meter/quiz-answers)
+* [tutorial](/lessons/love-meter/tutorial)
 
 ## Class
 
@@ -26,14 +26,14 @@ Learn how to use the pins **pin pressed**, `input->on pin pressed` to run code w
 
 ## Documentation
 
-* **on pin pressed** : [read more...](/microbit/reference/input/on-pin-pressed)
-* **local variable** : [read more...](/microbit/reference/variables/var)
-* **Boolean** : [read more...](/microbit/reference/types/boolean)
-* **math random** : [read more...](/microbit/js/math)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
-* **pause** : [read more...](/microbit/reference/basic/pause)
-* **If** : [read more...](/microbit/reference/logic/if)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
+* **on pin pressed** : [read more...](/reference/input/on-pin-pressed)
+* **local variable** : [read more...](/reference/variables/var)
+* **Boolean** : [read more...](/reference/types/boolean)
+* **math random** : [read more...](/js/math)
+* **show number** : [read more...](/reference/basic/show-number)
+* **pause** : [read more...](/reference/basic/pause)
+* **If** : [read more...](/reference/logic/if)
+* **show string** : [read more...](/reference/basic/show-string)
 
 ## Objectives
 
@@ -89,16 +89,16 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/love-meter/activity)
-* [tutorial](/microbit/lessons/love-meter/tutorial)
-* [quiz](/microbit/lessons/love-meter/quiz)
+* [activity](/lessons/love-meter/activity)
+* [tutorial](/lessons/love-meter/tutorial)
+* [quiz](/lessons/love-meter/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/love-meter/challenges)
+* [challenges](/lessons/love-meter/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/love-meter/challenges)
+* Extended Activity: [challenges](/lessons/love-meter/challenges)
 

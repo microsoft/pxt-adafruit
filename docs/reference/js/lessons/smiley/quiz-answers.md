@@ -1,6 +1,6 @@
 # smiley quiz answers.
 
-This is the answer key for the [smiley quiz](/microbit/lessons/smiley/quiz).
+This is the answer key for the [smiley quiz](/lessons/smiley/quiz).
 
 ## 1. Define 'show animation' : 
 

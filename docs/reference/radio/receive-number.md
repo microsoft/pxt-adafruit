@@ -16,7 +16,7 @@ radio.receiveNumber()
 
 ### Return value
 
-* the first number [number](/microbit/reference/types/number) of the packet if any. `0` otherwise.
+* the first number [number](/reference/types/number) of the packet if any. `0` otherwise.
 
 ### Examples
 
@@ -30,5 +30,5 @@ radio.onDataReceived(() => {
 
 ### See also
 
-[receive number](/microbit/input/receive-number), [on data received](/microbit/reference/radio/on-data-received)
+[receive number](/input/receive-number), [on data received](/reference/radio/on-data-received)
 

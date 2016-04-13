@@ -6,7 +6,7 @@ Coding challenges for the guess the number tutorial. #docs
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/guess-the-number/tutorial)
+* [tutorial](/lessons/guess-the-number/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

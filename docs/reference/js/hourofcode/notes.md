@@ -20,7 +20,7 @@ Create a classroom in https://www.microbit.co.uk and pre-populate the classroom 
 
 4) Print the activity challenges (1 copy per participant):
 
-* [hour of code](/microbit/js/hourofcode/challenges)
+* [hour of code](/js/hourofcode/challenges)
 
 4) (optional) Raffle tickets and prizes
 
@@ -33,7 +33,7 @@ Bring more energy in the room by playing music.
 ## Timeline
 
 * ``00:00`` student sign in using **printed passwords** (see step 3)
-* ``10:00`` [hour of code tutorial](/microbit/js/hourofcode)
+* ``10:00`` [hour of code tutorial](/js/hourofcode)
 * ``40:00`` raffle and demoes
 * ``50:00`` that's it!
 
@@ -41,7 +41,7 @@ Bring more energy in the room by playing music.
 
 After your Hour Of Code™, you will want to provide plenty of material for students to continue learning about coding. Here are some good places to start:
 
-* [more challenges](/microbit/lessonss) are available for BBC micro:bit
+* [more challenges](/lessonss) are available for BBC micro:bit
 * [the Quick Start Guide for Teachers](http://www.slideshare.net/Microsofteduk/bbc-microbit-guide-from-hodder-education) are available within BBC micro:bit
 
 _The Hour of Code™ is a nationwide initiative by [Computer Science Education Week](http://csedweek.org) and [Code.org](http://code.org) to introduce millions of students to one hour of computer science and computer programming._

@@ -8,8 +8,8 @@ Ring
 
 ## Quick Links
 
-* [activity](/microbit/lessons/buzzer/activity)
-* [challenges](/microbit/lessons/buzzer/challenges)
+* [activity](/lessons/buzzer/activity)
+* [challenges](/lessons/buzzer/challenges)
 
 ## Class
 
@@ -21,9 +21,9 @@ Learn how to **ring** the buzzer to turn on the sound. We will be learning basic
 
 ## Documentation
 
-* **ring** : [read more...](/microbit/reference/music/ring)
-* **clear screen** : [read more...](/microbit/reference/basic/clear-screen)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
+* **ring** : [read more...](/reference/music/ring)
+* **clear screen** : [read more...](/reference/basic/clear-screen)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
 
 ## Objectives
 
@@ -68,14 +68,14 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/buzzer/activity)
+* [activity](/lessons/buzzer/activity)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/buzzer/challenges)
+* [challenges](/lessons/buzzer/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/buzzer/challenges)
+* Extended Activity: [challenges](/lessons/buzzer/challenges)
 

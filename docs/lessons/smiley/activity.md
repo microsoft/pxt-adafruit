@@ -31,7 +31,7 @@ basic.showLeds(`
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/smiley/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/smiley/challenges)!
 
 ### ~
 

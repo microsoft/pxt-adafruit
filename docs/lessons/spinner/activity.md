@@ -104,7 +104,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/spinner/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/spinner/challenges)!
 
 ### ~
 

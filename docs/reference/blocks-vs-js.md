@@ -12,7 +12,7 @@ In the interval notation, the brackets "[" and "]" represent inclusive endpoints
 
 ### Block Editor for loop uses a 0-based inclusive interval
 
-Numeric intervals arise in the context of for loops, both in the Block Editor and Touch Develop. Here's a Block Editor for loop to draw a diagonal line from the top-left corner of the [LED screen](/microbit/device/screen) to the bottom-right corner. The loop iteration variable *i* ranges "from 0 to 4":
+Numeric intervals arise in the context of for loops, both in the Block Editor and Touch Develop. Here's a Block Editor for loop to draw a diagonal line from the top-left corner of the [LED screen](/device/screen) to the bottom-right corner. The loop iteration variable *i* ranges "from 0 to 4":
 
 ![](/static/mb/blocks/to-td-0.png)
 

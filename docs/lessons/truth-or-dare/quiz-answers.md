@@ -2,7 +2,7 @@
 
 a multi-player game that forces each player to reveal a secret or something funny.
 
-This is the answer key for the [truth or dare quiz](/microbit/lessons/truth-or-dare/quiz).
+This is the answer key for the [truth or dare quiz](/lessons/truth-or-dare/quiz).
 
 ## 1. Write the code that will randomly return 0 through 3  and stores the value inside a local variable called 'random'.
 

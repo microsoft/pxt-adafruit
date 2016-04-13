@@ -55,7 +55,7 @@ for (let i = 0; i < 5; i++) {
 
 ### Example: draw a box
 
-The [LED screen](/microbit/device/screen) has a fixed number of rows and columns (5x5), which is ideal for a for loop. This example uses a for loop to turn on the LEDs along the edge of the screen, making a square.
+The [LED screen](/device/screen) has a fixed number of rows and columns (5x5), which is ideal for a for loop. This example uses a for loop to turn on the LEDs along the edge of the screen, making a square.
 
 ```
 for (let i1 = 0; i1 < 5; i1++) {
@@ -69,15 +69,15 @@ for (let i1 = 0; i1 < 5; i1++) {
 
 ### ~hint 
 
-Want to exit a loop early? The [break](/microbit/js/break) statement exits a loop before the end value is reached.
+Want to exit a loop early? The [break](/js/break) statement exits a loop before the end value is reached.
 
 ### ~
 
 ### Lessons
 
-[looper](/microbit/lessons/looper), [strobe light](/microbit/lessons/strobe-light)
+[looper](/lessons/looper), [strobe light](/lessons/strobe-light)
 
 ### See also
 
-[while](/microbit/js/while), [break](/microbit/js/break), [if](/microbit/reference/logic/if)
+[while](/js/while), [break](/js/break), [if](/reference/logic/if)
 

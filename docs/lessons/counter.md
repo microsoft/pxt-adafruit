@@ -10,10 +10,10 @@ Variables
 
 ## Quick Links
 
-* [activity](/microbit/lessons/counter/activity)
-* [challenges](/microbit/lessons/counter/challenges)
-* [quiz](/microbit/lessons/counter/quiz)
-* [quiz answers](/microbit/lessons/counter/quiz-answers)
+* [activity](/lessons/counter/activity)
+* [challenges](/lessons/counter/challenges)
+* [quiz](/lessons/counter/quiz)
+* [quiz answers](/lessons/counter/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 
@@ -36,10 +36,10 @@ basic.showLeds(`
     `)
 ```
 
-* **variable**: [read more...](/microbit/reference/variables/var)
-* **arithmetic operators**: [read more...](/microbit/reference/types/number)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
+* **variable**: [read more...](/reference/variables/var)
+* **arithmetic operators**: [read more...](/reference/types/number)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **show number** : [read more...](/reference/basic/show-number)
 
 ## Objectives
 

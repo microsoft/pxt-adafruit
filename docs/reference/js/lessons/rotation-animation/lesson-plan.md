@@ -30,15 +30,15 @@ Learn how to create images that look like a rotating animation by using a while 
 
 ## Documentation
 
-* **global variables**: [read more...](/microbit/js/data)
-* **pause**: [read more...](/microbit/reference/basic/pause)
-* **forever**: [read more...](/microbit/reference/basic/forever)
+* **global variables**: [read more...](/js/data)
+* **pause**: [read more...](/reference/basic/pause)
+* **forever**: [read more...](/reference/basic/forever)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/rotation-animation/tutorial)
-* Activity: [quiz](/microbit/lessons/rotation-animation/quiz)
-* Extended Activity: [challenges](/microbit/lessons/rotation-animation/challenges)
+* Activity: [tutorial](/lessons/rotation-animation/tutorial)
+* Activity: [quiz](/lessons/rotation-animation/quiz)
+* Extended Activity: [challenges](/lessons/rotation-animation/challenges)
 
 ## Objectives
 
@@ -79,19 +79,19 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/rotation-animation/tutorial)
-* [quiz](/microbit/lessons/rotation-animation/quiz)
+* [tutorial](/lessons/rotation-animation/tutorial)
+* [quiz](/lessons/rotation-animation/quiz)
 * assessment opportunities: forever, plot, pause, clear screen
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/rotation-animation/challenges)
+* [challenges](/lessons/rotation-animation/challenges)
 * assessment opportunities: loops, plot, pause, clear screen
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/rotation-animation/challenges)
+* Extended Activity: [challenges](/lessons/rotation-animation/challenges)
 
 ## Intended follow on
 

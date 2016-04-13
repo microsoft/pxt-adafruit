@@ -6,7 +6,7 @@ Make a smiley face blink
 
 ## Directions
 
-Use the hints in the [Smiley](/microbit/lessons/smiley/activity) activity to answer this quiz!
+Use the hints in the [Smiley](/lessons/smiley/activity) activity to answer this quiz!
 
 ## 1. Describe what `show LEDs` does
 

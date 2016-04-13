@@ -5,7 +5,7 @@ Repeat code in a loop while a condition is true.
 ### @parent js/language
  
 
-Repeat code while a [Boolean](/microbit/reference/types/boolean) `condition` is true.
+Repeat code while a [Boolean](/reference/types/boolean) `condition` is true.
 
 ### ~hide
 
@@ -27,9 +27,9 @@ while (condition) {
 }
 ```
 
-The while loop has a *condition* that evaluates to a [Boolean](/microbit/reference/types/boolean) value. After the `do` keyword, add the code that you want to run while the `condition` is `true`. The while loop concludes with `end while`.
+The while loop has a *condition* that evaluates to a [Boolean](/reference/types/boolean) value. After the `do` keyword, add the code that you want to run while the `condition` is `true`. The while loop concludes with `end while`.
 
-The condition is tested before any code runs. Which means that if the condition is false, the code inside the loop doesn't execute. Use the [break statement](/microbit/js/break) to exit a while loop before it's complete.
+The condition is tested before any code runs. Which means that if the condition is false, the code inside the loop doesn't execute. Use the [break statement](/js/break) to exit a while loop before it's complete.
 
 ### Example: diagonal line
 
@@ -66,9 +66,9 @@ while (true) {
 
 ### Lessons
 
-[rotation animation](/microbit/lessons/rotation-animation), [digi yoyo](/microbit/lessons/digi-yoyo)
+[rotation animation](/lessons/rotation-animation), [digi yoyo](/lessons/digi-yoyo)
 
 ### See also
 
-[on button pressed](/microbit/reference/input/on-button-pressed), [for](/microbit/reference/loops/for), [if](/microbit/reference/logic/if), [break](/microbit/js/break), [forever](/microbit/reference/basic/forever), [in background](/microbit/reference/control/in-background)
+[on button pressed](/reference/input/on-button-pressed), [for](/reference/loops/for), [if](/reference/logic/if), [break](/js/break), [forever](/reference/basic/forever), [in background](/reference/control/in-background)
 

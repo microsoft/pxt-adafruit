@@ -10,7 +10,7 @@ basic.showString("SELECT A BUTTON")
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/game-of-chance/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/game-of-chance/challenges)!
 
 ### ~
 

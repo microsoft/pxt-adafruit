@@ -19,7 +19,7 @@ input.onButtonPressed(Button.A, () => {
 game.startCountdown(10000)
 ```
 
-### [Create sprite](/microbit/functions/game-library/create-sprite)
+### [Create sprite](/functions/game-library/create-sprite)
 
 Create sprite with x, y coordinates and returns a LED Sprite. Create a new LED sprite.
 
@@ -29,7 +29,7 @@ Create sprite with x, y coordinates and returns a LED Sprite. Create a new LED s
 export function createSprite(x: number, y: number) : micro_bitSprites.LedSprite
 ```
 
-### [Move](/microbit/functions/game-library/move)
+### [Move](/functions/game-library/move)
 
 Sprite move by a certain number
 
@@ -39,7 +39,7 @@ Sprite move by a certain number
 export function move(_this: micro_bitSprites.LedSprite, leds: number)
 ```
 
-### [Turn](/microbit/functions/game-library/turn)
+### [Turn](/functions/game-library/turn)
 
 Rotates a sprite to the right by a certain number of degrees
 
@@ -55,7 +55,7 @@ Rotates a sprite to the left by a certain number of degrees
 export function turnLeft(_this: micro_bitSprites.LedSprite, degrees: number)
 ```
 
-### [Change](/microbit/functions/game-library/change)
+### [Change](/functions/game-library/change)
 
 Sprite will change the x position by this number
 
@@ -71,7 +71,7 @@ Sprite will change the y position by this number
 export function changeYBy(_this: micro_bitSprites.LedSprite, y: number)
 ```
 
-### [Set](/microbit/functions/game-library/set)
+### [Set](/functions/game-library/set)
 
 Sprite will change the x position by this number
 
@@ -87,7 +87,7 @@ Sprite will change the y position by this number
 export function changeYBy(_this: micro_bitSprites.LedSprite, y: number)
 ```
 
-### [If on edge, bounce](/microbit/functions/game-library/if-on-edge-bounce)
+### [If on edge, bounce](/functions/game-library/if-on-edge-bounce)
 
 Sprite - If the sprite is on the edge, the sprite will bounce
 
@@ -97,7 +97,7 @@ Sprite - If the sprite is on the edge, the sprite will bounce
 export function ifOnEdge_Bounce(_this: micro_bitSprites.LedSprite)
 ```
 
-### [Change score by](/microbit/functions/game-library/change-score-by)
+### [Change score by](/functions/game-library/change-score-by)
 
 When a player achieves a goal, you can increase the game score
 
@@ -109,7 +109,7 @@ When a player achieves a goal, you can increase the game score
 export function addScore(points: number)
 ```
 
-### [Score](/microbit/functions/game-library/score)
+### [Score](/functions/game-library/score)
 
 * set the current score to a particular value.
 
@@ -125,7 +125,7 @@ export function setScore(value: number)
 export function score() : number
 ```
 
-### [Countdown](/microbit/functions/game-library/start-countdown)
+### [Countdown](/functions/game-library/start-countdown)
 
 If your game has a time limit, you can start a countdown in which case `game->current time` returns the remaining time.
 
@@ -137,7 +137,7 @@ If your game has a time limit, you can start a countdown in which case `game->cu
 export function startCountdown(ms: number)
 ```
 
-### [Game over](/microbit/functions/game-library/game-over)
+### [Game over](/functions/game-library/game-over)
 
 If the `life` reaches zero or the time expires (see countdown), the game enters the **game over** mode. When the game is over, `game->is running` returns false
 
@@ -157,5 +157,5 @@ game.gameOver()
 
 ### Lessons
 
-[game of chance](/microbit/lessons/game-of-chance) | [game counter](/microbit/lessons/game-counter)
+[game of chance](/lessons/game-of-chance) | [game counter](/lessons/game-counter)
 

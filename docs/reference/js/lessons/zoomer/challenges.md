@@ -4,7 +4,7 @@ Coding challenges for the zoomer tutorial.#acceleration.
 
 ## Before we get started
 
-Complete the following [guided tutorial](/microbit/lessons/zoomer/tutorial) and your finished code should look like this:
+Complete the following [guided tutorial](/lessons/zoomer/tutorial) and your finished code should look like this:
 
 ```
 basic.forever(() => {

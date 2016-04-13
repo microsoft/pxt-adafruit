@@ -4,7 +4,7 @@ true or false.
 
 ### @parent blocks/language
 
-A Boolean has one of two possible values: `true`; `false`.  Boolean (logical) operators (*and*, *or*, *not*) take Boolean inputs and yields a Boolean value. Comparison operators on other types ([numbers](/microbit/reference/types/number), [strings](/microbit/reference/types/string) yields a Boolean value.
+A Boolean has one of two possible values: `true`; `false`.  Boolean (logical) operators (*and*, *or*, *not*) take Boolean inputs and yields a Boolean value. Comparison operators on other types ([numbers](/reference/types/number), [strings](/reference/types/string) yields a Boolean value.
 
 The following blocks represent the true and false Boolean values, which can be plugged in anywhere a Boolean value is expected:
 
@@ -21,7 +21,7 @@ true || false;
 !true;
 ```
 
-The next six blocks represent comparison operators that yield a Boolean value. Most comparisons you will do involve [numbers](/microbit/reference/types/number):
+The next six blocks represent comparison operators that yield a Boolean value. Most comparisons you will do involve [numbers](/reference/types/number):
 
 ```blocks
 42 == 0;
@@ -32,7 +32,7 @@ The next six blocks represent comparison operators that yield a Boolean value. M
 42 >= 0;
 ```
 
-Boolean values and operators are often used with an [if](/microbit/blocks/if) or [while](/microbit/reference/loops/while) statement to determine which code will execute next. For example:
+Boolean values and operators are often used with an [if](/blocks/if) or [while](/reference/loops/while) statement to determine which code will execute next. For example:
 
 ### Functions that return a Boolean
 
@@ -96,13 +96,13 @@ if(x < 5) {
 } 
 ```
 
-See the documentation on [Numbers](/microbit/reference/types/number) for more information on comparing two Numbers. You can also [compare strings](/microbit/reference/types/string-functions) using the `equals` function.
+See the documentation on [Numbers](/reference/types/number) for more information on comparing two Numbers. You can also [compare strings](/reference/types/string-functions) using the `equals` function.
 
 ### Lessons
 
-[rotation animation](/microbit/lessons/rotation-animation), [love meter](/microbit/lessons/love-meter), [zoomer](/microbit/lessons/zoomer)
+[rotation animation](/lessons/rotation-animation), [love meter](/lessons/love-meter), [zoomer](/lessons/zoomer)
 
 ### See also
 
-[if](/microbit/blocks/if), [while](/microbit/reference/loops/while), [number](/microbit/reference/types/number)
+[if](/blocks/if), [while](/reference/loops/while), [number](/reference/types/number)
 

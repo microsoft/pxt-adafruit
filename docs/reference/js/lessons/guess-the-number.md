@@ -10,11 +10,11 @@ Math - Random Numbers
 
 ## Quick links
 
-* [activity](/microbit/lessons/guess-the-number/activity)
-* [challenges](/microbit/lessons/guess-the-number/challenges)
-* [quiz](/microbit/lessons/guess-the-number/quiz)
-* [quiz answers](/microbit/lessons/guess-the-number/quiz-answers)
-* [tutorial](/microbit/lessons/guess-the-number/tutorial)
+* [activity](/lessons/guess-the-number/activity)
+* [challenges](/lessons/guess-the-number/challenges)
+* [quiz](/lessons/guess-the-number/quiz)
+* [quiz answers](/lessons/guess-the-number/quiz-answers)
+* [tutorial](/lessons/guess-the-number/tutorial)
 
 ## Class
 
@@ -26,12 +26,12 @@ Learn how to create numbers randomly by using the input of the BBC micro:bit. We
 
 ## Documentation
 
-* **on button pressed**: [read more...](/microbit/reference/input/on-button-pressed)
-* **local variable **: [read more...](/microbit/reference/variables/var)
-* **assignment operator**: [read more...](/microbit/reference/variables/assign)
-* **show number**: [read more...](/microbit/reference/basic/show-number)
-* **random numbers**: [read more...](/microbit/js/math)
-* **clear screen**: [read more...](/microbit/reference/basic/clear-screen)
+* **on button pressed**: [read more...](/reference/input/on-button-pressed)
+* **local variable **: [read more...](/reference/variables/var)
+* **assignment operator**: [read more...](/reference/variables/assign)
+* **show number**: [read more...](/reference/basic/show-number)
+* **random numbers**: [read more...](/js/math)
+* **clear screen**: [read more...](/reference/basic/clear-screen)
 
 ## Objectives
 
@@ -69,16 +69,16 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/guess-the-number/activity)
-* [tutorial](/microbit/lessons/guess-the-number/tutorial)
-* [quiz](/microbit/lessons/guess-the-number/quiz)
+* [activity](/lessons/guess-the-number/activity)
+* [tutorial](/lessons/guess-the-number/tutorial)
+* [quiz](/lessons/guess-the-number/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/guess-the-number/challenges)
+* [challenges](/lessons/guess-the-number/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/guess-the-number/challenges)
+* Extended Activity: [challenges](/lessons/guess-the-number/challenges)
 

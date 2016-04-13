@@ -4,7 +4,7 @@ These challenges allow you to set the value of a counter to 1 when button B is p
 
 ### Challenge 0
 
-Welcome! This [guided tutorial](/microbit/lessons/comparison/tutorial) will assist you with using the comparison operator.
+Welcome! This [guided tutorial](/lessons/comparison/tutorial) will assist you with using the comparison operator.
 
 ```
 counter = 0

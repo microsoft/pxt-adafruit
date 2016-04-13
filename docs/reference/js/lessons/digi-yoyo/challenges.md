@@ -6,7 +6,7 @@ Coding challenges for the digi yoyo.
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/digi-yoyo/tutorial)
+* [tutorial](/lessons/digi-yoyo/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

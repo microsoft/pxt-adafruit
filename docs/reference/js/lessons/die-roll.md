@@ -8,11 +8,11 @@ If (Conditionals)
 
 ## Quick Links
 
-* [activity](/microbit/lessons/die-roll/activity)
-* [challenges](/microbit/lessons/die-roll/challenges)
-* [quiz](/microbit/lessons/die-roll/quiz)
-* [quiz answers](/microbit/lessons/die-roll/quiz-answers)
-* [tutorial](/microbit/lessons/die-roll/tutorial)
+* [activity](/lessons/die-roll/activity)
+* [challenges](/lessons/die-roll/challenges)
+* [quiz](/lessons/die-roll/quiz)
+* [quiz answers](/lessons/die-roll/quiz-answers)
+* [tutorial](/lessons/die-roll/tutorial)
 
 ## Class
 
@@ -24,12 +24,12 @@ Learn how to use an if statements to run code run code depending on whether a co
 
 ## Documentation
 
-* **Variables** : [read more...](/microbit/reference/variables/var)
-* **If** : [read more...](/microbit/reference/logic/if)
-* **On Shake** : [read more...](/microbit/reference/input/on-gesture)
-* **Assignment Operator** : [read more...](/microbit/reference/variables/assign)
-* **Math Random** : [read more...](/microbit/js/math)
-* **Show LEDs** : [read more...](/microbit/reference/basic/show-leds)
+* **Variables** : [read more...](/reference/variables/var)
+* **If** : [read more...](/reference/logic/if)
+* **On Shake** : [read more...](/reference/input/on-gesture)
+* **Assignment Operator** : [read more...](/reference/variables/assign)
+* **Math Random** : [read more...](/js/math)
+* **Show LEDs** : [read more...](/reference/basic/show-leds)
 
 ## Objectives
 
@@ -76,16 +76,16 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/die-roll/activity)
-* [tutorial](/microbit/lessons/die-roll/tutorial)
-* [quiz](/microbit/lessons/die-roll/quiz)
+* [activity](/lessons/die-roll/activity)
+* [tutorial](/lessons/die-roll/tutorial)
+* [quiz](/lessons/die-roll/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/die-roll/challenges)
+* [challenges](/lessons/die-roll/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/die-roll/challenges)
+* Extended Activity: [challenges](/lessons/die-roll/challenges)
 

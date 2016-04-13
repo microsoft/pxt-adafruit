@@ -10,7 +10,7 @@ In this activity, you will learn how to blink an image on the LED screen.
 
 ### ~
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap *New Project* under *Block Editor*.
+To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under *Block Editor*.
 
 Let's start by adding code that plots a heart image on the screen using `show LEDs`. Once you are done coding, don't forget to run your code in the simulator or the micro:bit.
 
@@ -69,7 +69,7 @@ basic.forever(() => {
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/flashing-heart/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/flashing-heart/challenges)!
 
 ### ~
 

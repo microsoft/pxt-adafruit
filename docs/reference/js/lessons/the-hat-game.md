@@ -8,10 +8,10 @@ Functions
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/the-hat-game/tutorial)
-* [quiz](/microbit/lessons/the-hat-game/quiz)
-* [quiz answers](/microbit/lessons/the-hat-game/quiz-answers)
-* [challenges](/microbit/lessons/the-hat-game/challenges)
+* [tutorial](/lessons/the-hat-game/tutorial)
+* [quiz](/lessons/the-hat-game/quiz)
+* [quiz answers](/lessons/the-hat-game/quiz-answers)
+* [challenges](/lessons/the-hat-game/challenges)
 
 ## Class
 
@@ -23,12 +23,12 @@ Learn how to create **functions**, `function()` as a unit of code that performs 
 
 ## Documentation
 
-* **functions** : [read more...](/microbit/js/function)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **for** : [read more...](/microbit/reference/loops/for)
-* **if** : [read more...](/microbit/reference/logic/if)
-* **mod** : [read more...](/microbit/js/math)
-* **show animation** : [read more...](/microbit/reference/basic/show-animation)
+* **functions** : [read more...](/js/function)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **for** : [read more...](/reference/loops/for)
+* **if** : [read more...](/reference/logic/if)
+* **mod** : [read more...](/js/math)
+* **show animation** : [read more...](/reference/basic/show-animation)
 
 ## Objectives
 

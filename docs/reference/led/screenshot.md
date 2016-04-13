@@ -1,6 +1,6 @@
 # Screenshot
 
-Make an [Image](/microbit/reference/image/image) out of the current state of the [LED screen](/microbit/device/screen).
+Make an [Image](/reference/image/image) out of the current state of the [LED screen](/device/screen).
 
 ```sig
 led.screenshot();
@@ -12,9 +12,9 @@ led.screenshot();
 
 ### Returns
 
-* an [Image](/microbit/reference/image/image) of what is currently visible on the [LED screen](/microbit/device/screen)
+* an [Image](/reference/image/image) of what is currently visible on the [LED screen](/device/screen)
 
 ### See also
 
-[create image](/microbit/reference/images/create-image), [LED screen](/microbit/device/screen),
+[create image](/reference/images/create-image), [LED screen](/device/screen),
 

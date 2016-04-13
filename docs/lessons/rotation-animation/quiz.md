@@ -6,7 +6,7 @@ Learn how to create a rotating image with a while loop.
 
 ## Directions
 
-Use this activity document to guide your work in the [rotation animation tutorial](/microbit/lessons/rotation-animation/activity).
+Use this activity document to guide your work in the [rotation animation tutorial](/lessons/rotation-animation/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

@@ -8,8 +8,8 @@ Temperature
 
 ## Quick Links
 
-* [activity](/microbit/lessons/temperature/activity)
-* [challenges](/microbit/lessons/temperature/challenges)
+* [activity](/lessons/temperature/activity)
+* [challenges](/lessons/temperature/challenges)
 
 ## Prior learning/place of lesson in scheme of work
 

@@ -88,5 +88,5 @@ devices.tellRemoteControlTo("volume down")
 
 ### See also
 
-[tell camera to](/microbit/reference/devices/tell-camera-to), [raise alert to](/microbit/reference/devices/raise-alert-to), [on notified](/microbit/reference/devices/on-notified)
+[tell camera to](/reference/devices/tell-camera-to), [raise alert to](/reference/devices/raise-alert-to), [on notified](/reference/devices/on-notified)
 

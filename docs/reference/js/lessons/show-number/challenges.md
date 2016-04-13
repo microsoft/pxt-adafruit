@@ -4,7 +4,7 @@ My script. #docs
 
 ### Challenge 0
 
-Welcome! This [guided tutorial](/microbit/xvogbz) will help you show a number on the LED screen!
+Welcome! This [guided tutorial](/xvogbz) will help you show a number on the LED screen!
 
 Show a number on the LED screen! One digit will display at a time, scrolling from left to right.
 

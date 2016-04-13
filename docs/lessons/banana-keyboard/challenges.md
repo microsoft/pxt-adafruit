@@ -6,7 +6,7 @@ control images with variables.
 
 Control images with variables. 
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap *New Project* under *Block Editor*.
+To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under *Block Editor*.
 
 Have you ever tried to making beat box sounds? Let's try making a beatbox with code!
 

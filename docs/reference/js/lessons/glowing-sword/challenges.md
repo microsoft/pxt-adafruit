@@ -4,7 +4,7 @@ Coding challenges for the glowing sword tutorial. #docs
 
 ## Before we get started
 
-Complete the [glowing sword](/microbit/lessons/glowing-sword/activity) activity and your code will look like this:
+Complete the [glowing sword](/lessons/glowing-sword/activity) activity and your code will look like this:
 
 ```
 basic.plotImage(`

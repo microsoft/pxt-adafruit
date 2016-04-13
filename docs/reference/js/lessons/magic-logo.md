@@ -10,11 +10,11 @@ On Logo Up
 
 ## Quick Links
 
-* [activity](/microbit/lessons/magic-logo/activity)
-* [quiz](/microbit/lessons/magic-logo/quiz)
-* [quiz answers](/microbit/lessons/magic-logo/quiz-answers)
-* [challenges](/microbit/lessons/magic-logo/challenges)
-* [tutorial](/microbit/lessons/magic-logo/tutorial)
+* [activity](/lessons/magic-logo/activity)
+* [quiz](/lessons/magic-logo/quiz)
+* [quiz answers](/lessons/magic-logo/quiz-answers)
+* [challenges](/lessons/magic-logo/challenges)
+* [tutorial](/lessons/magic-logo/tutorial)
 
 ## Class
 
@@ -26,9 +26,9 @@ Learn how to plot image **on logo up**, `input->on logo up` to run code when the
 
 ## Documentation
 
-* **on logo up** : [read more...](/microbit/functions/on-logo-up)
-* **show leds** : [read more...](/microbit/reference/basic/show-leds)
-* **on logo down** : [read more...](/microbit/functions/on-logo-down)
+* **on logo up** : [read more...](/functions/on-logo-up)
+* **show leds** : [read more...](/reference/basic/show-leds)
+* **on logo down** : [read more...](/functions/on-logo-down)
 
 ## Objectives
 
@@ -69,15 +69,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/magic-logo/activity)
-* [quiz](/microbit/lessons/magic-logo/quiz)
+* [activity](/lessons/magic-logo/activity)
+* [quiz](/lessons/magic-logo/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/magic-logo/challenges)
+* [challenges](/lessons/magic-logo/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/magic-logo/challenges)
+* Extended Activity: [challenges](/lessons/magic-logo/challenges)
 

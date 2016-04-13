@@ -18,7 +18,7 @@ radio.setGroup(1)
 
 ### Parameters
 
-* ``id`` -- a [number](/microbit/number) between ``0`` and ``255``.
+* ``id`` -- a [number](/number) between ``0`` and ``255``.
 
 ### Example
 
@@ -30,5 +30,5 @@ radio.setGroup(128)
 
 ### See also
 
-[receive number](/microbit/radio/receive-number), [send number](/microbit/radio/send-number), [on data received](/microbit/radio/on-data-received)
+[receive number](/radio/receive-number), [send number](/radio/send-number), [on data received](/radio/on-data-received)
 

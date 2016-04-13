@@ -6,7 +6,7 @@ Learn how to make a love meter that you can try with someone.
 
 ## Directions
 
-Use this activity document to guide your work in the [love meter activity](/microbit/lessons/love-meter/activity).
+Use this activity document to guide your work in the [love meter activity](/lessons/love-meter/activity).
 
 Answer the questions below while completing the activity. Pay attention to the dialogues!
 

@@ -4,7 +4,7 @@ Display the direction that the micro:bit is facing using the compass
 
 ## Before we get started
 
-Complete the following [guided tutorial](/microbit/lessons/compass/activity), your code should look like this:
+Complete the following [guided tutorial](/lessons/compass/activity), your code should look like this:
 
 ```blocks
  let degrees = 0;

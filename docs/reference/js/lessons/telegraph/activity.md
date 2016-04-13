@@ -71,6 +71,6 @@ Your telegraph is ready!
 
 ### Step 10
 
-* Connect the first BBC micro:bit to your computer using your USB cable and run the [telegraph](/microbit/xvmxti) script on it.
-* Connect the second BBC micro:bit to your computer using your USB cable and run the [telegraph](/microbit/xvmxti) script on it.
+* Connect the first BBC micro:bit to your computer using your USB cable and run the [telegraph](/xvmxti) script on it.
+* Connect the second BBC micro:bit to your computer using your USB cable and run the [telegraph](/xvmxti) script on it.
 * The first person and second person take turns pressing button A to play the telegraph game!

@@ -1,6 +1,6 @@
 # Set Brightness
 
-Sets the brightness of the [LED screen](/microbit/device/screen).
+Sets the brightness of the [LED screen](/device/screen).
 
 ```sig
 led.setBrightness(121)
@@ -8,7 +8,7 @@ led.setBrightness(121)
 
 ### Parameters
 
-* value : [Number](/microbit/reference/types/number) - the brightness of the LED screen expressed as a number between 0 and 255
+* value : [Number](/reference/types/number) - the brightness of the LED screen expressed as a number between 0 and 255
 
 ### Example: change brightness
 
@@ -23,9 +23,9 @@ led.setBrightness(127)
 
 ### Lessons
 
-[night light](/microbit/lessons/night-light)
+[night light](/lessons/night-light)
 
 ### See also
 
-[brightness](/microbit/reference/led/brightness), [fade in](/microbit/reference/led/fade-in), [fade out](/microbit/reference/led/fade-out), [LED screen](/microbit/device/screen)
+[brightness](/reference/led/brightness), [fade in](/reference/led/fade-in), [fade out](/reference/led/fade-out), [LED screen](/device/screen)
 

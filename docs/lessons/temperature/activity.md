@@ -2,7 +2,7 @@
 
 Measure the temperature on the micro:bit
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap `New Project` under `Block Editor`.
+To create a new script, go to the [Create Code](/create-code) page and tap `New Project` under `Block Editor`.
 
 Welcome! This activity will teach how to measure the temperature on the micro:bit. Let's get started!
 
@@ -36,7 +36,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/temperature/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/temperature/challenges)!
 
 ### ~
 

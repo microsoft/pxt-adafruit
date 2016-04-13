@@ -92,7 +92,7 @@ input.onButtonPressed(Button.A, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/truth-or-dare/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/truth-or-dare/challenges)!
 
 ### ~
 

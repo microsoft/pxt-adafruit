@@ -1,6 +1,6 @@
 # Fade in
 
-Gradually increase the [LED screen](/microbit/device/screen) brightness until the LED lights are at full brightness.
+Gradually increase the [LED screen](/device/screen) brightness until the LED lights are at full brightness.
 
 ```sig
 led.fadeIn(700);
@@ -8,7 +8,7 @@ led.fadeIn(700);
 
 ### Parameters
 
-* ms - [Number](/microbit/reference/types/number); the speed by which the screen brightness is increased, expressed in milliseconds (1,000 milliseconds = 1 second). The smaller the number the faster the screen brightness increased.
+* ms - [Number](/reference/types/number); the speed by which the screen brightness is increased, expressed in milliseconds (1,000 milliseconds = 1 second). The smaller the number the faster the screen brightness increased.
 
 ### Example: fading dot
 
@@ -26,9 +26,9 @@ for (let i = 0; i < 5; i++) {
 
 ### Lessons
 
-[glowing sword](/microbit/lessons/glowing-sword)
+[glowing sword](/lessons/glowing-sword)
 
 ### See also
 
-[brightness](/microbit/reference/led/brightness), [fade out](/microbit/reference/led/fade-out), [set brightness](/microbit/reference/led/set-brightness)
+[brightness](/reference/led/brightness), [fade out](/reference/led/fade-out), [set brightness](/reference/led/set-brightness)
 

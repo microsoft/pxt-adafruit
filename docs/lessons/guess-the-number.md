@@ -10,10 +10,10 @@ Math - Pick Random
 
 ## Quick links
 
-* [activity](/microbit/lessons/guess-the-number/activity)
-* [challenges](/microbit/lessons/guess-the-number/challenges)
-* [quiz](/microbit/lessons/guess-the-number/quiz)
-* [quiz answers](/microbit/lessons/guess-the-number/quiz-answers)
+* [activity](/lessons/guess-the-number/activity)
+* [challenges](/lessons/guess-the-number/challenges)
+* [quiz](/lessons/guess-the-number/quiz)
+* [quiz answers](/lessons/guess-the-number/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

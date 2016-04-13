@@ -2,7 +2,7 @@
 
 clear the screen by pressing the "A" button after an animation has been played.
 
-This is the answer key for the [screen wipe quiz](/microbit/lessons/screen-wipe/quiz).
+This is the answer key for the [screen wipe quiz](/lessons/screen-wipe/quiz).
 
 ## 1. What does the function "clear screen" do on the BBC micro:bit? 
 

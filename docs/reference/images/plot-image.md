@@ -2,7 +2,7 @@
 
 The plot image function.
 
-Display an [Image](/microbit/reference/image/image) on the BBC micro:bit's [LED screen](/microbit/device/screen)
+Display an [Image](/reference/image/image) on the BBC micro:bit's [LED screen](/device/screen)
 
 ### KindScript
 
@@ -12,7 +12,7 @@ export function plotImage(_this: micro_bit.Image, xOffset: number)
 
 ### Parameters
 
-* x offset - [Number](/microbit/reference/types/number); the horizontal starting point of an image; use 0 for the first frame of the image, 5 for the second frame of the image, 10 for the third frame and so on.
+* x offset - [Number](/reference/types/number); the horizontal starting point of an image; use 0 for the first frame of the image, 5 for the second frame of the image, 10 for the third frame and so on.
 
 ### Difference from `show image`
 
@@ -33,9 +33,9 @@ img.plotImage(0)
 
 ### Lessons
 
-[smiley](/microbit/lessons/smiley), [flashing heart](/microbit/lessons/flashing-heart), [magic logo](/microbit/lessons/magic-logo)
+[smiley](/lessons/smiley), [flashing heart](/lessons/flashing-heart), [magic logo](/lessons/magic-logo)
 
 ### See also
 
-[create image](/microbit/reference/images/create-image), [show animation](/microbit/reference/basic/show-animation), [image](/microbit/reference/image/image), [show image](/microbit/reference/images/show-image), [scroll image](/microbit/reference/images/scroll-image)
+[create image](/reference/images/create-image), [show animation](/reference/basic/show-animation), [image](/reference/image/image), [show image](/reference/images/show-image), [scroll image](/reference/images/scroll-image)
 

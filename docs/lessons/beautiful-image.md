@@ -10,8 +10,8 @@ Show LEDs
 
 ## Quick Links
 
-* [activity](/microbit/lessons/beautiful-image/activity)
-* [challenges](/microbit/lessons/beautiful-image/challenges)
+* [activity](/lessons/beautiful-image/activity)
+* [challenges](/lessons/beautiful-image/challenges)
 
 
 ## Prior learning/place of lesson in scheme of work

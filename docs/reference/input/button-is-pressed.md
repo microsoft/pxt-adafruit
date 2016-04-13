@@ -8,15 +8,15 @@ input.buttonIsPressed(Button.A);
 
 ### Parameters
 
-* name - [String](/microbit/reference/types/string); input button "A", "B", or "A+B" (both input buttons)
+* name - [String](/reference/types/string); input button "A", "B", or "A+B" (both input buttons)
 
 ### Returns
 
-* [Boolean](/microbit/reference/types/boolean) - `true` if pressed, `false` if not pressed
+* [Boolean](/reference/types/boolean) - `true` if pressed, `false` if not pressed
 
 ### Example
 
-The following code uses an [if](/microbit/reference/logic/if) statement to run code, depending on whether or not the A button is pressed:
+The following code uses an [if](/reference/logic/if) statement to run code, depending on whether or not the A button is pressed:
 
 ```blocks
 basic.forever(() => {
@@ -33,9 +33,9 @@ basic.forever(() => {
 
 ### Lessons
 
-[zoomer](/microbit/lessons/zoomer)
+[zoomer](/lessons/zoomer)
 
 ### See also
 
-[on button pressed](/microbit/input/on-button-pressed), [if](/microbit/reference/logic/if), [forever](/microbit/basic/forever)
+[on button pressed](/input/on-button-pressed), [if](/reference/logic/if), [forever](/basic/forever)
 

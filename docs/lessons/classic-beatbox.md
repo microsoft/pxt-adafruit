@@ -8,8 +8,8 @@ Music
 
 ## Quick Links
 
-* [activity](/microbit/lessons/classic-beatbox/activity)
-* [challenges](/microbit/lessons/classic-beatbox/challenges)
+* [activity](/lessons/classic-beatbox/activity)
+* [challenges](/lessons/classic-beatbox/challenges)
 
 
 

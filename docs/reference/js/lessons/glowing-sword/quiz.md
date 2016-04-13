@@ -6,7 +6,7 @@ make a glowing sword.
 
 ## Directions
 
-Use this activity document to guide your work in the [glowing sword tutorial](/microbit/lessons/glowing-sword/tutorial)
+Use this activity document to guide your work in the [glowing sword tutorial](/lessons/glowing-sword/tutorial)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

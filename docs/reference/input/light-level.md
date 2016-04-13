@@ -10,7 +10,7 @@ input.lightLevel();
 
 ### Returns
 
-* [Number](/microbit/reference/types/number) -  light level from ``0`` (dark) to ``255`` (bright).
+* [Number](/reference/types/number) -  light level from ``0`` (dark) to ``255`` (bright).
 
 ### Example: chart light level
 
@@ -26,5 +26,5 @@ basic.forever(() => {
 
 ### See also
 
-[acceleration](/microbit/reference/input/acceleration), [compass-heading](/microbit/input/compass-heading)
+[acceleration](/reference/input/acceleration), [compass-heading](/input/compass-heading)
 

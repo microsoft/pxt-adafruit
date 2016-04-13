@@ -6,7 +6,7 @@ A display of pet images for the BBC micro:bit
 
 ## Directions
 
-Use this activity document to guide your work in the [digital pet tutorial](/microbit/lessons/digital-pet/tutorial)
+Use this activity document to guide your work in the [digital pet tutorial](/lessons/digital-pet/tutorial)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

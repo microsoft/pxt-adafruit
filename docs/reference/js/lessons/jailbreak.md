@@ -10,10 +10,10 @@ Break
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/jailbreak/tutorial)
-* [quiz](/microbit/lessons/jailbreak/quiz)
-* [quiz answers](/microbit/lessons/jailbreak/quiz-answers)
-* [challenges](/microbit/lessons/jailbreak/challenges)
+* [tutorial](/lessons/jailbreak/tutorial)
+* [quiz](/lessons/jailbreak/quiz)
+* [quiz answers](/lessons/jailbreak/quiz-answers)
+* [challenges](/lessons/jailbreak/challenges)
 
 ## Class
 
@@ -25,16 +25,16 @@ Learn how to create a **break**, `break` to exit a while or for loop before the 
 
 ## Documentation
 
-* **Global Variable** : [read more...](/microbit/js/data)
-* **Boolean** : [read more...](/microbit/reference/types/boolean)
-* **On Button Pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **While Loop** : [read more...](/microbit/js/while)
-* **Break** : [read more...](/microbit/js/break)
-* **If (Conditional)** : [read more...](/microbit/reference/logic/if)
-* **Show String** : [read more...](/microbit/reference/basic/show-string)
-* **Plot Image ** : [read more...](/microbit/reference/led/plot-image)
-* **Show Number** : [read more...](/microbit/reference/basic/show-number)
-* **Pause** : [read more...](/microbit/reference/basic/pause)
+* **Global Variable** : [read more...](/js/data)
+* **Boolean** : [read more...](/reference/types/boolean)
+* **On Button Pressed** : [read more...](/reference/input/on-button-pressed)
+* **While Loop** : [read more...](/js/while)
+* **Break** : [read more...](/js/break)
+* **If (Conditional)** : [read more...](/reference/logic/if)
+* **Show String** : [read more...](/reference/basic/show-string)
+* **Plot Image ** : [read more...](/reference/led/plot-image)
+* **Show Number** : [read more...](/reference/basic/show-number)
+* **Pause** : [read more...](/reference/basic/pause)
 
 ## Objectives
 
@@ -94,15 +94,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/jailbreak/tutorial)
-* [quiz](/microbit/lessons/jailbreak/quiz)
+* [tutorial](/lessons/jailbreak/tutorial)
+* [quiz](/lessons/jailbreak/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/jailbreak/challenges)
+* [challenges](/lessons/jailbreak/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/jailbreak/challenges)
+* Extended Activity: [challenges](/lessons/jailbreak/challenges)
 

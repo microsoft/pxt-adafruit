@@ -8,8 +8,8 @@ Game Library
 
 ## Quick Links
 
-* [activity](/microbit/lessons/game-of-chance/activity)
-* [challenges](/microbit/lessons/game-of-chance/challenges)
+* [activity](/lessons/game-of-chance/activity)
+* [challenges](/lessons/game-of-chance/challenges)
 
 ## Prior learning / place of lesson in scheme of work
 

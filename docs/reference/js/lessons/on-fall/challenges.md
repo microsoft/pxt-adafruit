@@ -65,5 +65,5 @@ Create a loop so that the micro:bit alternates between the exclamation point and
 
 ## See Also
 
-[on shake](/microbit/reference/input/on-gesture)
+[on shake](/reference/input/on-gesture)
 

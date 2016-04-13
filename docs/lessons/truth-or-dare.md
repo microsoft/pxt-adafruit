@@ -10,10 +10,10 @@ If (Conditionals)
 
 ## Quick Links
 
-* [activity](/microbit/lessons/truth-or-dare/activity)
-* [challenges](/microbit/lessons/truth-or-dare/challenges)
-* [quiz](/microbit/lessons/truth-or-dare/quiz)
-* [quiz answers](/microbit/lessons/truth-or-dare/quiz-answers)
+* [activity](/lessons/truth-or-dare/activity)
+* [challenges](/lessons/truth-or-dare/challenges)
+* [quiz](/lessons/truth-or-dare/quiz)
+* [quiz answers](/lessons/truth-or-dare/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

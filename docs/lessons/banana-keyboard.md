@@ -8,7 +8,7 @@ Music
 
 ## Quick Links
 
-* [activity](/microbit/lessons/banana-keyboard/activity)
+* [activity](/lessons/banana-keyboard/activity)
 
 ## Prior learning/place of lesson in scheme of work
 

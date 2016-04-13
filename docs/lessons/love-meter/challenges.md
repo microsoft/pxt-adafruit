@@ -4,7 +4,7 @@ Create a love meter with the micro:bit
 
 ## Before we get started
 
-You should work on these challenges after the following the [love meter activity](/microbit/lessons/love-meter/activity)
+You should work on these challenges after the following the [love meter activity](/lessons/love-meter/activity)
 
 ```blocks
 input.onPinPressed(TouchPin.P0, () => {

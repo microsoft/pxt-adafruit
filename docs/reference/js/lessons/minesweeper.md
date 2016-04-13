@@ -10,9 +10,9 @@ Global Variables
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/minesweeper/tutorial)
-* [quiz](/microbit/lessons/minesweeper/quiz)
-* [quiz answers](/microbit/lessons/minesweeper/quiz-answers)
+* [tutorial](/lessons/minesweeper/tutorial)
+* [quiz](/lessons/minesweeper/quiz)
+* [quiz answers](/lessons/minesweeper/quiz-answers)
 
 ## Class
 
@@ -41,19 +41,19 @@ Learn how to create a minesweeper game with **plot**, `led->plot` , **unplot**, 
 
 ## Documentation
 
-* **global variables** : [read more...](/microbit/js/data)
-* **math random number** : [read more...](/microbit/js/math)
-* **plot** : [read more...](/microbit/reference/led/plot)
-* **unplot** : [read more...](/microbit/reference/led/unplot)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **if** : [read more...](/microbit/reference/logic/if)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
-* **pause** : [read more...](/microbit/reference/basic/pause)
+* **global variables** : [read more...](/js/data)
+* **math random number** : [read more...](/js/math)
+* **plot** : [read more...](/reference/led/plot)
+* **unplot** : [read more...](/reference/led/unplot)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **if** : [read more...](/reference/logic/if)
+* **show string** : [read more...](/reference/basic/show-string)
+* **pause** : [read more...](/reference/basic/pause)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/minesweeper/tutorial)
-* Activity: [quiz](/microbit/lessons/minesweeper/quiz)
+* Activity: [tutorial](/lessons/minesweeper/tutorial)
+* Activity: [quiz](/lessons/minesweeper/quiz)
 
 ## Objectives
 
@@ -107,6 +107,6 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/minesweeper/tutorial)
-* [quiz](/microbit/lessons/minesweeper/quiz)
+* [tutorial](/lessons/minesweeper/tutorial)
+* [quiz](/lessons/minesweeper/quiz)
 

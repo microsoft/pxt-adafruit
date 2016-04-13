@@ -8,11 +8,11 @@ input.magneticForce(Dimension.X);
 
 ### Parameters
 
-* dimension : [String](/microbit/reference/types/string) - one of three values specifying the axis of the force: ``x`` (left/right); ``y`` (forward/backwards); ``z`` (up/down); ``strength`` (the length of the vector)
+* dimension : [String](/reference/types/string) - one of three values specifying the axis of the force: ``x`` (left/right); ``y`` (forward/backwards); ``z`` (up/down); ``strength`` (the length of the vector)
 
 ### Returns
 
-* [Number](/microbit/reference/types/number) - magnetic force, in micro-Teslas.
+* [Number](/reference/types/number) - magnetic force, in micro-Teslas.
 
 ### Example: metal detector
 
@@ -28,5 +28,5 @@ basic.forever(() => {
 
 ### See also
 
-[compass heading](/microbit/input/compass-heading)
+[compass heading](/input/compass-heading)
 

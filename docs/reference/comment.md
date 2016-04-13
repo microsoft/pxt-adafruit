@@ -12,7 +12,7 @@ Right click on any block and add a comment
 
 ### ~hint 
 
-To find out how to insert comments using the Blocks editor, see [the Blocks editor](/microbit/blocks/editor).
+To find out how to insert comments using the Blocks editor, see [the Blocks editor](/blocks/editor).
 
 ### ~
 
@@ -34,5 +34,5 @@ When you want to uncomment your code, right click the on the comment, and then c
 
 ### See also
 
-[Block editor](/microbit/blocks/editor)
+[Block editor](/blocks/editor)
 

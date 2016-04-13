@@ -10,7 +10,7 @@ Build a telgraph.
 Have you ever tried to communicate through a telegraph? Let's try coding a "Telegraph" on two BBC micro:bits !
 
 
-Complete the following [guided tutorial](/microbit/lessons/telegraph/activity), your hack should look like this:
+Complete the following [guided tutorial](/lessons/telegraph/activity), your hack should look like this:
 
 ![](/static/mb/lessons/telegraph-0.png)
 
@@ -109,6 +109,6 @@ Your telegraph is ready!
 
 ### Step 7
 
-* Connect the first micro:bit to your computer using your USB cable and run the [telegraph](/microbit/nnudbr) script on it.
-* Connect the second micro:bit to your computer using your USB cable and run the [telegraph](/microbit/nnudbr) script on it.
+* Connect the first micro:bit to your computer using your USB cable and run the [telegraph](/nnudbr) script on it.
+* Connect the second micro:bit to your computer using your USB cable and run the [telegraph](/nnudbr) script on it.
 * The first person and second person take turns pressing button A to play the telegraph game!

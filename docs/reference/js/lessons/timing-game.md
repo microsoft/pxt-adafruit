@@ -6,4 +6,4 @@ make a game to test hand-eye coordination.
 
 Make a game to test hand-eye coordination
 
-* [tutorial](/microbit/lessons/timing-game/tutorial)
+* [tutorial](/lessons/timing-game/tutorial)

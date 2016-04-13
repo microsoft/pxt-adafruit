@@ -6,7 +6,7 @@ Learn how to create a rotating image with a while loop.
 
 ## Directions
 
-Use this activity document to guide your work in the [rotating animation tutorial](/microbit/js/tutorials/rotating-animation).
+Use this activity document to guide your work in the [rotating animation tutorial](/js/tutorials/rotating-animation).
 
 Answer the questions below while working on or after you finish the tutorial. Pay attention to the dialogs!
 

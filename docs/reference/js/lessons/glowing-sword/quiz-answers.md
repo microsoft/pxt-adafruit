@@ -2,7 +2,7 @@
 
 The answers for the glowing sword quiz.
 
-This is the answer key for the [glowing sword quiz](/microbit/lessons/glowing-sword/quiz).
+This is the answer key for the [glowing sword quiz](/lessons/glowing-sword/quiz).
 
 ## 1. What is "fade out" ? 
 

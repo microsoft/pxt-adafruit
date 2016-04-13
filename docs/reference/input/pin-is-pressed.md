@@ -10,11 +10,11 @@ input.pinIsPressed(TouchPin.P0);
 
 ### Parameters
 
-* name - [String](/microbit/reference/types/string); the pin name ("P0", "P1", or "P2")
+* name - [String](/reference/types/string); the pin name ("P0", "P1", or "P2")
 
 ### returns
 
-* [Boolean](/microbit/reference/types/boolean) - `true` if pressed, `false` if not pressed
+* [Boolean](/reference/types/boolean) - `true` if pressed, `false` if not pressed
 
 ### Example
 
@@ -32,5 +32,5 @@ basic.forever(() => {
 
 ### See also
 
-[BBC micro:bit pins](/microbit/device/pins), [on pin pressed](/microbit/input/on-pin-pressed), [analog read pin](/microbit/reference/pins/analog-read-pin), [analog write pin](/microbit/reference/pins/analog-write-pin), [digital read pin](/microbit/reference/pins/digital-read-pin), [digital write pin](/microbit/reference/pins/digital-write-pin)
+[BBC micro:bit pins](/device/pins), [on pin pressed](/input/on-pin-pressed), [analog read pin](/reference/pins/analog-read-pin), [analog write pin](/reference/pins/analog-write-pin), [digital read pin](/reference/pins/digital-read-pin), [digital write pin](/reference/pins/digital-write-pin)
 

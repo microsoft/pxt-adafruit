@@ -8,7 +8,7 @@ Running Time
 
 ## Quick Links
 
-* [activity](/microbit/lessons/pogo/activity)
+* [activity](/lessons/pogo/activity)
 
 ## Prior learning/place of lesson in scheme of work
 

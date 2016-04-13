@@ -6,7 +6,7 @@ Coding challenges for the digital pet tutorial.
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/digital-pet/tutorial)
+* [tutorial](/lessons/digital-pet/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

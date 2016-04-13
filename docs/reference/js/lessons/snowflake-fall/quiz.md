@@ -6,7 +6,7 @@ create a snowflake fall animation.
 
 ## Directions
 
-Use the hints in the [snowflake fall activity](/microbit/lessons/snowflake-fall/activity) to answer this quiz!
+Use the hints in the [snowflake fall activity](/lessons/snowflake-fall/activity) to answer this quiz!
 
 ## 1. In reference to an animation, what is an "interval"?
 

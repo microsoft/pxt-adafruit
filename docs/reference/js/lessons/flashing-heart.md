@@ -10,11 +10,11 @@ Pause
 
 ## Quick links
 
-* [activity](/microbit/lessons/flashing-heart/activity)
-* [quiz](/microbit/lessons/flashing-heart/quiz)
-* [quiz answers](/microbit/lessons/flashing-heart/quiz-answers)
-* [challenges](/microbit/lessons/flashing-heart/challenges)
-* [tutorial](/microbit/lessons/flashing-heart/tutorial)
+* [activity](/lessons/flashing-heart/activity)
+* [quiz](/lessons/flashing-heart/quiz)
+* [quiz answers](/lessons/flashing-heart/quiz-answers)
+* [challenges](/lessons/flashing-heart/challenges)
+* [tutorial](/lessons/flashing-heart/tutorial)
 
 ## Class
 
@@ -36,10 +36,10 @@ Learn how to **plot image** by turning on a series of LED lights on the LED scre
 
 ## Documentation
 
-* **forever**: [read more...](/microbit/reference/basic/forever)
-* **plot image** : [read more...](/microbit/reference/led/plot-image)
-* **pause**: [read more...](/microbit/reference/basic/pause)
-* **clear screen**: [read more...](/microbit/reference/basic/clear-screen)
+* **forever**: [read more...](/reference/basic/forever)
+* **plot image** : [read more...](/reference/led/plot-image)
+* **pause**: [read more...](/reference/basic/pause)
+* **clear screen**: [read more...](/reference/basic/clear-screen)
 
 ## Objectives
 
@@ -75,17 +75,17 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Exercise
 
 * time: 20 min.
-* [activity](/microbit/lessons/flashing-heart/activity) or [tutorial](/microbit/lessons/flashing-heart/tutorial)
-* [quiz](/microbit/lessons/flashing-heart/quiz)
+* [activity](/lessons/flashing-heart/activity) or [tutorial](/lessons/flashing-heart/tutorial)
+* [quiz](/lessons/flashing-heart/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/flashing-heart/challenges)
+* [challenges](/lessons/flashing-heart/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/flashing-heart/challenges)
+* Extended Activity: [challenges](/lessons/flashing-heart/challenges)
 
 ## Intended follow on
 

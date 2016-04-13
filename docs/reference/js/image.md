@@ -4,11 +4,11 @@ An image for the micro:bit screen.
 
 ### @parent js/language
 
-An *Image* is a matrix of pixels to show on the [LED screen](/microbit/device/screen)
+An *Image* is a matrix of pixels to show on the [LED screen](/device/screen)
 
 ### Touch Develop editor: plot an image
 
-To display an image using the [Touch Develop editor](/microbit/js/editor):
+To display an image using the [Touch Develop editor](/js/editor):
 
 * click `image` , `plot image`, and then `edit`
 * click the rectangles to create an image
@@ -30,11 +30,11 @@ basic.plotImage(`
 
 ### Creating an image
 
-To create an image that you can later modify, see the [create image](/microbit/reference/images/create-image) function.
+To create an image that you can later modify, see the [create image](/reference/images/create-image) function.
 
 ### Block editor: create and show images
 
-To create images using the [Block editor](/microbit/blocks/editor):
+To create images using the [Block editor](/blocks/editor):
 
 1. Click the **Images** category on the left.
 
@@ -46,26 +46,26 @@ To create images using the [Block editor](/microbit/blocks/editor):
 
 ### Global image variables
 
-Images that you create in the [Touch Develop editor](/microbit/js/editor) are [local variables](/microbit/reference/variables/var). To promote a local image variable to a global variable, select the local image variable and click `promote to data`. The *var* keyword changes to the [data](/microbit/js/data) symbol `data->`.
+Images that you create in the [Touch Develop editor](/js/editor) are [local variables](/reference/variables/var). To promote a local image variable to a global variable, select the local image variable and click `promote to data`. The *var* keyword changes to the [data](/js/data) symbol `data->`.
 
 ### Image functions
 
-* [create image](/microbit/reference/images/create-image): create an image from a series of on/off LED states
-* [clear](/microbit/reference/basic/clear-screen): turn off all the pixels in an image
-* [set pixel](/microbit/reference/images/set-pixel): set the state of a pixel in an image
-* [pixel](/microbit/reference/images/pixel): get the state of a pixel in an image
-* [plot-image](/microbit/reference/led/plot-image): show a single-frame image on the LED screen
-* [show animation](/microbit/reference/basic/show-animation): show a series of image frames
-* [show image](/microbit/reference/images/show-image): show an image on the screen
-* [scroll image](/microbit/reference/images/scroll-image): scroll an image on the screen
-* [width](/microbit/functions/width): get the width of an image
+* [create image](/reference/images/create-image): create an image from a series of on/off LED states
+* [clear](/reference/basic/clear-screen): turn off all the pixels in an image
+* [set pixel](/reference/images/set-pixel): set the state of a pixel in an image
+* [pixel](/reference/images/pixel): get the state of a pixel in an image
+* [plot-image](/reference/led/plot-image): show a single-frame image on the LED screen
+* [show animation](/reference/basic/show-animation): show a series of image frames
+* [show image](/reference/images/show-image): show an image on the screen
+* [scroll image](/reference/images/scroll-image): scroll an image on the screen
+* [width](/functions/width): get the width of an image
 
 ### Lessons
 
-* [bounce image ](/microbit/lessons/bounce-image)
-* [offset image](/microbit/lessons/offset-image)
+* [bounce image ](/lessons/bounce-image)
+* [offset image](/lessons/offset-image)
 
 ### See also
 
-[plot image](/microbit/reference/led/plot-image), [create image](/microbit/reference/images/create-image), [show image](/microbit/reference/images/show-image), [LED screen](/microbit/device/screen)
+[plot image](/reference/led/plot-image), [create image](/reference/images/create-image), [show image](/reference/images/show-image), [LED screen](/device/screen)
 

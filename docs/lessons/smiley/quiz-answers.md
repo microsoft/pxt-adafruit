@@ -1,6 +1,6 @@
 # smiley blocks quiz answers
 
-This is the answer key for the [smiley quiz](/microbit/lessons/smiley/quiz).
+This is the answer key for the [smiley quiz](/lessons/smiley/quiz).
 
 ## 1. Describe what `show LEDs` does
 

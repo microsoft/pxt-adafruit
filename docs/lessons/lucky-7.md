@@ -10,10 +10,10 @@ Show Number
 
 ## Quick Links
 
-* [activity](/microbit/lessons/lucky-7/activity)
-* [quiz](/microbit/lessons/lucky-7/quiz)
-* [quiz answers](/microbit/lessons/lucky-7/quiz-answers)
-* [challenges](/microbit/lessons/lucky-7/challenges)
+* [activity](/lessons/lucky-7/activity)
+* [quiz](/lessons/lucky-7/quiz)
+* [quiz answers](/lessons/lucky-7/quiz-answers)
+* [challenges](/lessons/lucky-7/challenges)
 
 
 ## Prior learning / place of lesson in scheme of work

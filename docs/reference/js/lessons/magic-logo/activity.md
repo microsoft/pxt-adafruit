@@ -35,7 +35,7 @@ Run your code and try to turn around the BBC micro:bit to see the **logo up** ev
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/magic-logo/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/magic-logo/challenges)!
 
 ### ~
 

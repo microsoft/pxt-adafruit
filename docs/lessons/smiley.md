@@ -10,10 +10,10 @@ Show LEDs
 
 ## Quick Links
 
-* [activity](/microbit/lessons/smiley/activity)
-* [quiz](/microbit/lessons/smiley/quiz)
-* [quiz answers](/microbit/lessons/smiley/quiz-answers)
-* [challenges](/microbit/lessons/smiley/challenges)
+* [activity](/lessons/smiley/activity)
+* [quiz](/lessons/smiley/quiz)
+* [quiz answers](/lessons/smiley/quiz-answers)
+* [challenges](/lessons/smiley/challenges)
 
 ## Prior learning/place of lesson in scheme of work 
 
@@ -21,8 +21,8 @@ Learn how to **show LEDs** to turn on a LED light pattern on the LED screen. We 
 
 ## Documentation
 
-* **show LEDs** : [read more...](/microbit/reference/basic/show-leds)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
+* **show LEDs** : [read more...](/reference/basic/show-leds)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
 
 ```cards
 input.onButtonPressed(Button.A, () => {})

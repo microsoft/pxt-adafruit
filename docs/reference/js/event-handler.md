@@ -51,9 +51,9 @@ input.onButtonPressed(Button.A, () => {
 
 ### To learn more
 
-To learn more about how the BBC micro:bit queues up and schedules event handlers, see [the BBC micro:bit - a reactive system](/microbit/device/reactive)
+To learn more about how the BBC micro:bit queues up and schedules event handlers, see [the BBC micro:bit - a reactive system](/device/reactive)
 
 ### see also
 
-[on button pressed](/microbit/reference/input/on-button-pressed), [on logo up](/microbit/functions/on-logo-up), [on logo down](/microbit/functions/on-logo-down), [on screen up](/microbit/functions/on-screen-up), [on screen down](/microbit/functions/on-screen-down), [on shake](/microbit/reference/input/on-gesture), [on pin pressed](/microbit/reference/input/on-pin-pressed)
+[on button pressed](/reference/input/on-button-pressed), [on logo up](/functions/on-logo-up), [on logo down](/functions/on-logo-down), [on screen up](/functions/on-screen-up), [on screen down](/functions/on-screen-down), [on shake](/reference/input/on-gesture), [on pin pressed](/reference/input/on-pin-pressed)
 

@@ -12,9 +12,9 @@ music.changeTempoBy(20)
 
 ### Parameters
 
-* `bpm` : [Number](/microbit/reference/types/number) - change the tempo by beats per minute
+* `bpm` : [Number](/reference/types/number) - change the tempo by beats per minute
 
 ### See also
 
-[play tone](/microbit/reference/music/play-tone), [ring tone](/microbit/reference/music/ring-tone) 
+[play tone](/reference/music/play-tone), [ring tone](/reference/music/ring-tone) 
 

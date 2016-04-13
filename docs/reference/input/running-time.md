@@ -8,7 +8,7 @@ input.runningTime();
 
 ### Returns
 
-* [Number](/microbit/reference/types/number)
+* [Number](/reference/types/number)
 
 ### Example: elapsed time
 
@@ -21,9 +21,9 @@ basic.showNumber(now)
 
 ### Lessons
 
-[speed button](/microbit/lessons/speed-button)
+[speed button](/lessons/speed-button)
 
 ### See also
 
-[show number](/microbit/reference/basic/show-number), [pause](/microbit/reference/basic/pause)
+[show number](/reference/basic/show-number), [pause](/reference/basic/pause)
 

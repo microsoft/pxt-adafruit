@@ -8,7 +8,7 @@ A variable is a place where you can store data so that you can use it later in y
 
 ### Block Editor
 
-In the Block Editor, all variables are global. See [Block Editor](/microbit/blocks/editor) for info on creating global variables in a Block Editor script.  The following block is used to set (assign) global variable's value:
+In the Block Editor, all variables are global. See [Block Editor](/blocks/editor) for info on creating global variables in a Block Editor script.  The following block is used to set (assign) global variable's value:
 
 ![](/static/mb/antenna-0.png)
 
@@ -18,23 +18,23 @@ The block below retrieves (gets) the current value of a global variable:
 
 ### Touch Develop
 
-In Touch Develop variables are either [global](/microbit/js/data) or [local](/microbit/reference/variables/var). Variables have a name, a [type](/microbit/js/types), and value:
+In Touch Develop variables are either [global](/js/data) or [local](/reference/variables/var). Variables have a name, a [type](/js/types), and value:
 
 * the *name* is how you'll refer to the variable
 * the *type* refers to the kind of value a variable can store
 * the *value* refers to what's stored in the variable
 
-[Global variables](/microbit/js/data) are variables that are available throughout your script. Unlike [local variables](/microbit/reference/variables/var), global variables are accessible across functions and in nested code blocks.
+[Global variables](/js/data) are variables that are available throughout your script. Unlike [local variables](/reference/variables/var), global variables are accessible across functions and in nested code blocks.
 
 ### Create a global variable
 
 To create a new global variable:
 
-1. In the Touch Develop [editor](/microbit/js/editor), click `script` (to the right of the search box).
+1. In the Touch Develop [editor](/js/editor), click `script` (to the right of the search box).
 
 2. Click `+` **add new**.
 
-3. Click `data->` **data** and then choose a [type](/microbit/js/types).
+3. Click `data->` **data** and then choose a [type](/js/types).
 
 4. Enter a name for your global variable and click **OK**.
 
@@ -42,7 +42,7 @@ To create a new global variable:
 
 To use a global variable that you've declared (using steps above):
 
-1. In the Touch Develop [editor](/microbit/js/editor), click `data-> ` **data** or `data->` + *variable name*.
+1. In the Touch Develop [editor](/js/editor), click `data-> ` **data** or `data->` + *variable name*.
 
 2. Click `:=` (assignment).
 
@@ -68,7 +68,7 @@ name2 = "Mike"
 bool = true
 ```
 
-(for info on creating image variables, see [Image](/microbit/reference/image/image))
+(for info on creating image variables, see [Image](/reference/image/image))
 
 Once you've defined a variable and set it's initial value, use the variable's name whenever you need what's stored in the variable. For example, the following code gets the value stored in the global `counter` variable and shows it on the screen:
 
@@ -76,7 +76,7 @@ Once you've defined a variable and set it's initial value, use the variable's na
 basic.showNumber(counter, 100)
 ```
 
-To change the contents of a variable use the [assignment operator](/microbit/reference/variables/assign) `:=`. The following code increments `counter` by 10:
+To change the contents of a variable use the [assignment operator](/reference/variables/assign) `:=`. The following code increments `counter` by 10:
 
 ```
 counter = counter + 10
@@ -86,7 +86,7 @@ counter = counter + 10
 
 To **promote** a local variable to a global variable:
 
-* select the local variable name and click `promote to data`. The [var](/microbit/reference/variables/var) keyword changes to the data symbol `data->`.
+* select the local variable name and click `promote to data`. The [var](/reference/variables/var) keyword changes to the data symbol `data->`.
 
 To **demote** a global variable to a local variable:
 
@@ -104,9 +104,9 @@ To see a list of the global variables in your script:
 
 ### Lessons
 
-[counter](/microbit/lessons/counter), [rotation animation](/microbit/lessons/rotation-animation), [digital pet](/microbit/lessons/digital-pet), [offset image](/microbit/lessons/offset-image)
+[counter](/lessons/counter), [rotation animation](/lessons/rotation-animation), [digital pet](/lessons/digital-pet), [offset image](/lessons/offset-image)
 
 ### See also
 
-[local variables](/microbit/reference/variables/var), [types](/microbit/js/types), [assignment operator](/microbit/reference/variables/assign)
+[local variables](/reference/variables/var), [types](/js/types), [assignment operator](/reference/variables/assign)
 

@@ -6,7 +6,7 @@ create a charades game with a collection of strings.
 
 ## Directions
 
-Use this activity document to guide your work in the [headbands tutorial](/microbit/lessons/headbands/activity).
+Use this activity document to guide your work in the [headbands tutorial](/lessons/headbands/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

@@ -61,7 +61,7 @@ input.onButtonPressed(Button.A, () => {
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/night-light/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/night-light/challenges)!
 
 ### ~
 

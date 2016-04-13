@@ -6,7 +6,7 @@ Learn how to create a blinking LED script with a for loop.
 
 ## Directions
 
-Use this activity document to guide your work in the [strobe light tutorial](/microbit/lessons/strobe-light/activity)
+Use this activity document to guide your work in the [strobe light tutorial](/lessons/strobe-light/activity)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

@@ -4,7 +4,7 @@ Coding challenges for the blink tutorial
 
 ## Before we get started
 
-Complete the [blink](/microbit/lessons/blink/activity) activity and your code will look like this:
+Complete the [blink](/lessons/blink/activity) activity and your code will look like this:
 
 ```blocks
 basic.forever(() => {

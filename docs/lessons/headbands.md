@@ -8,9 +8,9 @@ Collection
 
 ## Quick Links
 
-* [activity](/microbit/lessons/headbands/activity)
-* [quiz](/microbit/lessons/headbands/quiz)
-* [quiz answers](/microbit/lessons/headbands/quiz-answers)
+* [activity](/lessons/headbands/activity)
+* [quiz](/lessons/headbands/quiz)
+* [quiz answers](/lessons/headbands/quiz-answers)
 
 
 ## Class
@@ -42,19 +42,19 @@ Learn how to create a charades game with **collections**, ` create -> Collection
 ## Documentation
 
 * **collection**
-* **global variables** : [read more...](/microbit/js/data)
-* **Boolean** : [read more...](/microbit/reference/types/boolean)
-* **on logo up** [read more...](/microbit/functions/on-logo-up)
-* **on screen down** [read more...](/microbit/functions/on-screen-down)
-* **on screen up** [read more...](/microbit/functions/on-screen-up)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
-* **game library** : [read more...](/microbit/js/game-library)
+* **global variables** : [read more...](/js/data)
+* **Boolean** : [read more...](/reference/types/boolean)
+* **on logo up** [read more...](/functions/on-logo-up)
+* **on screen down** [read more...](/functions/on-screen-down)
+* **on screen up** [read more...](/functions/on-screen-up)
+* **show string** : [read more...](/reference/basic/show-string)
+* **game library** : [read more...](/js/game-library)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/headbands/tutorial)
-* Activity: [quiz](/microbit/lessons/headbands/quiz)
-* Extended Activity: [challenges](/microbit/lessons/headbands/challenges)
+* Activity: [tutorial](/lessons/headbands/tutorial)
+* Activity: [quiz](/lessons/headbands/quiz)
+* Extended Activity: [challenges](/lessons/headbands/challenges)
 
 ## Objectives
 
@@ -112,17 +112,17 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/headbands/tutorial)
-* [quiz](/microbit/lessons/headbands/quiz)
+* [tutorial](/lessons/headbands/tutorial)
+* [quiz](/lessons/headbands/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/headbands/challenges)
+* [challenges](/lessons/headbands/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/headbands/challenges)
+* Extended Activity: [challenges](/lessons/headbands/challenges)
 
 ## Intended follow on
 

@@ -8,7 +8,7 @@ Music
 
 ## Quick Links
 
-* [activity](/microbit/lessons/light-beatbox/activity)
+* [activity](/lessons/light-beatbox/activity)
 
 ## Prior learning/place of lesson in scheme of work
 

@@ -6,7 +6,7 @@ Coding challenges for the rotation animation tutorial. #docs
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/rotation-animation/tutorial)
+* [tutorial](/lessons/rotation-animation/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

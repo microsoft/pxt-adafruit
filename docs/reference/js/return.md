@@ -5,7 +5,7 @@ Exit a function.
 ### @parent js/statement
  
 
-The return statement exits a [function](/microbit/js/function) and returns a value to the code that called the function.
+The return statement exits a [function](/js/function) and returns a value to the code that called the function.
 
 ### Touch Develop syntax
 
@@ -41,9 +41,9 @@ let result1 = square(42)
 
 ### Lessons
 
-[transformers](/microbit/lessons/transformers)
+[transformers](/lessons/transformers)
 
 ### See also
 
-[function](/microbit/js/function), [calling functions](/microbit/js/call), [function parameters](/microbit/js/functionparameters)
+[function](/js/function), [calling functions](/js/call), [function parameters](/js/functionparameters)
 

@@ -2,7 +2,7 @@
 
 Measure the acceleration on the micro:bit in the "z" direction.
 
-This is the answer key for the [zoomer quiz](/microbit/lessons/zoomer/quiz).
+This is the answer key for the [zoomer quiz](/lessons/zoomer/quiz).
 
 ## 1. What is 'acceleration'?
 

@@ -10,9 +10,9 @@ Variables
 
 ## Quick Links
 
-* [activity](/microbit/lessons/catch-the-egg-game/activity)
-* [quiz](/microbit/lessons/catch-the-egg-game/quiz)
-* [quiz answers](/microbit/lessons/catch-the-egg-game/quiz-answers)
+* [activity](/lessons/catch-the-egg-game/activity)
+* [quiz](/lessons/catch-the-egg-game/quiz)
+* [quiz answers](/lessons/catch-the-egg-game/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 
@@ -20,18 +20,18 @@ Learn how to create a catch the egg game game with **plot**, `led->plot` , **unp
 
 ## Documentation
 
-* **variables** : [read more...](/microbit/reference/variables/var)
-* **forever** : [read more...](/microbit/reference/basic/forever)
-* **unplot** : [read more...](/microbit/reference/led/unplot)
-* **plot** : [read more...](/microbit/reference/led/plot)
-* **if** : [read more...](/microbit/reference/logic/if)
-* **acceleration** : [read more...](/microbit/reference/input/acceleration)
-* **math minimum number** : [read more...](/microbit/js/math)
-* **math maximum number** : [read more...](/microbit/js/math)
-* **math random number** : [read more...](/microbit/js/math)
-* **math modulus** : [read more...](/microbit/js/math)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
-* **pause** : [read more...](/microbit/reference/basic/pause)
+* **variables** : [read more...](/reference/variables/var)
+* **forever** : [read more...](/reference/basic/forever)
+* **unplot** : [read more...](/reference/led/unplot)
+* **plot** : [read more...](/reference/led/plot)
+* **if** : [read more...](/reference/logic/if)
+* **acceleration** : [read more...](/reference/input/acceleration)
+* **math minimum number** : [read more...](/js/math)
+* **math maximum number** : [read more...](/js/math)
+* **math random number** : [read more...](/js/math)
+* **math modulus** : [read more...](/js/math)
+* **show number** : [read more...](/reference/basic/show-number)
+* **pause** : [read more...](/reference/basic/pause)
 
 ## Objectives
 

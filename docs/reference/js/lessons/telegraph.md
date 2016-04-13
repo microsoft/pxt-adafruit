@@ -8,7 +8,7 @@ Telegraph
 
 ## Quick Links
 
-* [activity](/microbit/lessons/telegraph/activity)
+* [activity](/lessons/telegraph/activity)
 
 ## Class
 

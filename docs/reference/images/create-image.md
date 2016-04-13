@@ -1,6 +1,6 @@
 # Create Image
 
-Create an [Image](/microbit/reference/image/image) to show on the [LED screen](/microbit/device/screen).
+Create an [Image](/reference/image/image) to show on the [LED screen](/device/screen).
 
 ```sig
 images.createImage(`
@@ -31,9 +31,9 @@ input.onGesture(Gesture.Shake, () => {
 
 ### Lessons
 
-[rock paper scissors](/microbit/lessons/rock-paper-scissors), [digital pet](/microbit/lessons/digital-pet), [offset-image](/microbit/lessons/offset-image)
+[rock paper scissors](/lessons/rock-paper-scissors), [digital pet](/lessons/digital-pet), [offset-image](/lessons/offset-image)
 
 ### See also
 
-[show animation](/microbit/reference/basic/show-animation), [image](/microbit/reference/image/image), [show image](/microbit/reference/image/show-image), [scroll image](/microbit/reference/image/scroll-image)
+[show animation](/reference/basic/show-animation), [image](/reference/image/image), [show image](/reference/image/show-image), [scroll image](/reference/image/scroll-image)
 

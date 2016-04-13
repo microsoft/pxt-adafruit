@@ -6,7 +6,7 @@ Turn an LED on and off with forever
 
 ### @video td/videos/blink-0
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap *New Project* under *Block Editor*.
+To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under *Block Editor*.
 
 ### ~
 
@@ -50,7 +50,7 @@ basic.forever(() => {
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/blink/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/blink/challenges)!
 
 ### ~
 

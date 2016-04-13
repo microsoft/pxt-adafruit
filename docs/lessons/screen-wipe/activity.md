@@ -84,7 +84,7 @@ input.onButtonPressed(Button.A, () => {
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/screen-wipe/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/screen-wipe/challenges)!
 
 ### ~
 

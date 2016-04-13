@@ -6,12 +6,12 @@ Touch Develop types.
 
 A *type* refers to a class of data and the operations permitted on that data. The following types are supported by Block Editor for the BBC micro:bit:
 
-* **[String](/microbit/reference/types/string)**: a sequence of characters
-* **[Number](/microbit/reference/types/number)**: an integer number (32-bit signed)
-* **[Boolean](/microbit/reference/types/boolean)**: true or false
-* **[Image](/microbit/blocks/image)**: a collection of [micro:bit LED states](/microbit/device/screen) (on/off)
+* **[String](/reference/types/string)**: a sequence of characters
+* **[Number](/reference/types/number)**: an integer number (32-bit signed)
+* **[Boolean](/reference/types/boolean)**: true or false
+* **[Image](/blocks/image)**: a collection of [micro:bit LED states](/device/screen) (on/off)
 
 ### see also
 
-[local variables](/microbit/reference/variables/var), [assignment operator](/microbit/reference/variables/assign)
+[local variables](/reference/variables/var), [assignment operator](/reference/variables/assign)
 

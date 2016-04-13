@@ -8,7 +8,7 @@ led.plotBarGraph(2, 20);
 
 ### Parameters
 
-* value: [Number](/microbit/reference/types/number) , high : [Number](/microbit/reference/types/number) displays a vertical bar graph based on the value and high value
+* value: [Number](/reference/types/number) , high : [Number](/reference/types/number) displays a vertical bar graph based on the value and high value
 
 ### Example: chart acceleration
 
@@ -21,5 +21,5 @@ basic.forever(() => {
 
 ### See also
 
-[brightness](/microbit/reference/led/brightness), [fade in](/microbit/reference/led/fade-in), [fade out](/microbit/reference/led/fade-out), [LED screen](/microbit/device/screen), [stop animation](/microbit/reference/led/stop-animation)
+[brightness](/reference/led/brightness), [fade in](/reference/led/fade-in), [fade out](/reference/led/fade-out), [LED screen](/device/screen), [stop animation](/reference/led/stop-animation)
 

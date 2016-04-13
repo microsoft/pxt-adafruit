@@ -10,10 +10,10 @@ For Loop
 
 ## Quick links
 
-* [activity](/microbit/lessons/strobe-light/activity)
-* [challenges](/microbit/lessons/strobe-light/challenges)
-* [quiz](/microbit/lessons/strobe-light/quiz)
-* [quiz answers](/microbit/lessons/strobe-light/quiz-answers)
+* [activity](/lessons/strobe-light/activity)
+* [challenges](/lessons/strobe-light/challenges)
+* [quiz](/lessons/strobe-light/quiz)
+* [quiz answers](/lessons/strobe-light/quiz-answers)
 
 ## Documentation
 

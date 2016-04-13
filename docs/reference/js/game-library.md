@@ -15,7 +15,7 @@ input.onButtonPressed(Button.A, () => {
 game.startCountdown(10000)
 ```
 
-### [Countdown](/microbit/js/game-library/start-countdown)
+### [Countdown](/js/game-library/start-countdown)
 
 If your game has a time limit, you can start a countdown in which case `game->current time` returns the remaining time.
 
@@ -25,7 +25,7 @@ If your game has a time limit, you can start a countdown in which case `game->cu
 export function startCountdown(ms: number)
 ```
 
-### [Game over](/microbit/js/game-library/game-over)
+### [Game over](/js/game-library/game-over)
 
 If the `life` reaches zero or the time expires (see countdown), the game enters the **game over** mode. When the game is over, `game->is running` returns false
 
@@ -51,7 +51,7 @@ export function gameOver()
 
 When a player achieves a goal, you can increase the game score
 
-[Add Point to Score](/microbit/js/game-library/add-point-to-score)
+[Add Point to Score](/js/game-library/add-point-to-score)
 
 * add score points to the current score
 
@@ -59,7 +59,7 @@ When a player achieves a goal, you can increase the game score
 export function addScore(points: number)
 ```
 
-[Score](/microbit/js/game-library/score)
+[Score](/js/game-library/score)
 
 * set the current score to a particular value.
 
@@ -151,5 +151,5 @@ export function setBlink(sprite: micro_bitSprites.LedSprite, ms: number)
 
 ### Lessons
 
-[bop it](/microbit/lessons/bop-it) | [game of chance](/microbit/lessons/game-of-chance) | [game counter](/microbit/lessons/game-counter)
+[bop it](/lessons/bop-it) | [game of chance](/lessons/game-of-chance) | [game counter](/lessons/game-counter)
 

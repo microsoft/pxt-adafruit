@@ -8,10 +8,10 @@ While Loop
 
 ## Quick links
 
-* [activity](/microbit/lessons/rotation-animation/activity)
-* [challenges](/microbit/lessons/rotation-animation/challenges)
-* [quiz](/microbit/lessons/rotation-animation/quiz)
-* [quiz answers](/microbit/lessons/rotation-animation/quiz-answers)
+* [activity](/lessons/rotation-animation/activity)
+* [challenges](/lessons/rotation-animation/challenges)
+* [quiz](/lessons/rotation-animation/quiz)
+* [quiz answers](/lessons/rotation-animation/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

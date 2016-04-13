@@ -8,7 +8,7 @@ Measure the acceleration on the micro:bit in the "z" direction.
 
 ### ~
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap `New Project` under `Block Editor`.
+To create a new script, go to the [Create Code](/create-code) page and tap `New Project` under `Block Editor`.
 
 Welcome! This activity will teach how to measure the acceleration on the micro:bit in the "z" direction. Let's get started!
 
@@ -39,7 +39,7 @@ basic.forever(() => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/zoomer/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/zoomer/challenges)!
 
 ### ~
 

@@ -30,15 +30,15 @@ Since the row and column numbers start at 0, an easy way to figure out the x, y 
 
 ### Turn a LED on/off
 
-Use [plot](/microbit/led/plot) and [unplot](/microbit/led/unplot) to turn a LED on or off
+Use [plot](/led/plot) and [unplot](/led/unplot) to turn a LED on or off
 
 ### Is a LED on/off?
 
-Use the [point](/microbit/led/point) function to find out if a LED is on or off.
+Use the [point](/led/point) function to find out if a LED is on or off.
 
 ### Display images, strings and numbers
 
-Instead of turning individual LEDs on or off, as above, you can display an [image](/microbit/reference/image/image) directly to the screen or show text/numbers on screen using the [show number](/microbit/reference/basic/show-number)/[show string](/microbit/reference/basic/show-string) function.
+Instead of turning individual LEDs on or off, as above, you can display an [image](/reference/image/image) directly to the screen or show text/numbers on screen using the [show number](/reference/basic/show-number)/[show string](/reference/basic/show-string) function.
 
 ### The display buffer
 

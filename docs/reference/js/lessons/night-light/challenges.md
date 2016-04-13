@@ -6,7 +6,7 @@ Coding challenges for the night light tutorial. #docs
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/night-light/tutorial)
+* [tutorial](/lessons/night-light/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

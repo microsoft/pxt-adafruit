@@ -2,7 +2,7 @@
 
 How to compile, transfer, and run a script on your micro:bit.
 
-While you're writing and testing your Block Editor or Touch Develop scripts, you'll mostly be running scripts in your browser by clicking the `Run` button (see [run code in your browser](/microbit/js/simulator) for info about this).
+While you're writing and testing your Block Editor or Touch Develop scripts, you'll mostly be running scripts in your browser by clicking the `Run` button (see [run code in your browser](/js/simulator) for info about this).
 
 Once your masterpiece is complete, you can compile your script and run it on your micro:bit.
 
@@ -33,7 +33,7 @@ WARN: unknown picture: bvabdbco:5x3
 
 ### ~hide
 
-If your computer doesn't recognise your micro:bit, please see [troubleshooting USB problems](/microbit/diagnosing-usb).
+If your computer doesn't recognise your micro:bit, please see [troubleshooting USB problems](/diagnosing-usb).
 
 ### ~
 
@@ -133,5 +133,5 @@ Or it may appear that there are two hex files on your micro:bit so the micro:bit
 
 ### See also
 
-[Run code in a browser](/microbit/js/simulator)
+[Run code in a browser](/js/simulator)
 

@@ -10,10 +10,10 @@ Functions
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/digital-pet/tutorial)
-* [quiz](/microbit/lessons/digital-pet/quiz)
-* [quiz answers](/microbit/lessons/digital-pet/quiz-answers)
-* [challenges](/microbit/lessons/digital-pet/challenges)
+* [tutorial](/lessons/digital-pet/tutorial)
+* [quiz](/lessons/digital-pet/quiz)
+* [quiz answers](/lessons/digital-pet/quiz-answers)
+* [challenges](/lessons/digital-pet/challenges)
 
 ## Class
 
@@ -43,23 +43,23 @@ Learn how to create **functions**, `function()` that perform a specific task and
 
 ## Documentation
 
-* **function** : [read more...](/microbit/js/function)
-* **call** : [read more...](/microbit/js/call)
-* **global variable** : [read more...](/microbit/js/data)
-* **assignment operator** : [read more...](/microbit/reference/variables/assign)
-* **forever** : [read more...](/microbit/reference/basic/forever)
-* **button is pressed** : [read more...](/microbit/reference/input/button-is-pressed)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
-* **create image** : [read more...](/microbit/reference/images/create-image)
-* **show image** : [read more...](/microbit/reference/images/show-image)
-* **pause** : [read more...](/microbit/reference/basic/pause)
+* **function** : [read more...](/js/function)
+* **call** : [read more...](/js/call)
+* **global variable** : [read more...](/js/data)
+* **assignment operator** : [read more...](/reference/variables/assign)
+* **forever** : [read more...](/reference/basic/forever)
+* **button is pressed** : [read more...](/reference/input/button-is-pressed)
+* **show string** : [read more...](/reference/basic/show-string)
+* **show number** : [read more...](/reference/basic/show-number)
+* **create image** : [read more...](/reference/images/create-image)
+* **show image** : [read more...](/reference/images/show-image)
+* **pause** : [read more...](/reference/basic/pause)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/digital-pet/tutorial)
-* Activity: [quiz](/microbit/lessons/digital-pet/quiz)
-* Extended Activity: [challenges](/microbit/lessons/digital-pet/challenges)
+* Activity: [tutorial](/lessons/digital-pet/tutorial)
+* Activity: [quiz](/lessons/digital-pet/quiz)
+* Extended Activity: [challenges](/lessons/digital-pet/challenges)
 
 ## Objectives
 
@@ -115,17 +115,17 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/digital-pet/tutorial)
-* [quiz](/microbit/lessons/digital-pet/quiz)
+* [tutorial](/lessons/digital-pet/tutorial)
+* [quiz](/lessons/digital-pet/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/digital-pet/challenges)
+* [challenges](/lessons/digital-pet/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/digital-pet/challenges)
+* Extended Activity: [challenges](/lessons/digital-pet/challenges)
 
 ## Intended follow on
 

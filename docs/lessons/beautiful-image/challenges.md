@@ -4,7 +4,7 @@ Coding challenges for the beautiful image tutorial.
 
 ## Before we get started
 
-Complete the [beautiful image](/microbit/lessons/beautiful-image/activity) activity and your code will look like this:
+Complete the [beautiful image](/lessons/beautiful-image/activity) activity and your code will look like this:
 
 ```blocks
 basic.showLeds(`

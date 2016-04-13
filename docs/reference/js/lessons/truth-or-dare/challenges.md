@@ -6,7 +6,7 @@ a multi-player game that forces each player to reveal a secret or something funn
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/truth-or-dare/tutorial)
+* [tutorial](/lessons/truth-or-dare/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

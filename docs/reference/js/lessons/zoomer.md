@@ -10,11 +10,11 @@ Acceleration
 
 ## Quick Links
 
-* [activity](/microbit/lessons/zoomer/activity)
-* [challenges](/microbit/lessons/zoomer/challenges)
-* [quiz](/microbit/lessons/zoomer/quiz)
-* [quiz answers](/microbit/lessons/zoomer/quiz-answers)
-* [tutorial](/microbit/lessons/zoomer/tutorial)
+* [activity](/lessons/zoomer/activity)
+* [challenges](/lessons/zoomer/challenges)
+* [quiz](/lessons/zoomer/quiz)
+* [quiz answers](/lessons/zoomer/quiz-answers)
+* [tutorial](/lessons/zoomer/tutorial)
 
 ## Class
 
@@ -26,12 +26,12 @@ Learn how to get the **acceleration**, `input->acceleration` in one of three spe
 
 ## Documentation
 
-* **forever** : [read more...](/microbit/reference/basic/forever)
-* **local variable** : [read more...](/microbit/reference/variables/var)
-* **acceleration** : [read more...](/microbit/reference/input/acceleration)
-* **if** : [read more...](/microbit/reference/logic/if)
-* **button is pressed** : [read more...](/microbit/reference/input/button-is-pressed)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
+* **forever** : [read more...](/reference/basic/forever)
+* **local variable** : [read more...](/reference/variables/var)
+* **acceleration** : [read more...](/reference/input/acceleration)
+* **if** : [read more...](/reference/logic/if)
+* **button is pressed** : [read more...](/reference/input/button-is-pressed)
+* **show number** : [read more...](/reference/basic/show-number)
 
 ## Objectives
 
@@ -80,16 +80,16 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/zoomer/activity)
-* [tutorial](/microbit/lessons/zoomer/tutorial)
-* [quiz](/microbit/lessons/zoomer/quiz)
+* [activity](/lessons/zoomer/activity)
+* [tutorial](/lessons/zoomer/tutorial)
+* [quiz](/lessons/zoomer/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/zoomer/challenges)
+* [challenges](/lessons/zoomer/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/zoomer/challenges)
+* Extended Activity: [challenges](/lessons/zoomer/challenges)
 

@@ -8,8 +8,8 @@ Music
 
 ## Quick Links
 
-* [activity](/microbit/lessons/happy-birthday/activity)
-* [challenges](/microbit/lessons/happy-birthday/challenges)
+* [activity](/lessons/happy-birthday/activity)
+* [challenges](/lessons/happy-birthday/challenges)
 
 ## Prior learning/place of lesson in scheme of work
 

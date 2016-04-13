@@ -52,5 +52,5 @@ You hacked your headphones!
 
 ### Step 6
 
-Connect your BBC micro:bit to your computer using your USB cable and run the [happy birthday](/microbit/dnnzgd) script on it. Press the reset button to restart your music player!
+Connect your BBC micro:bit to your computer using your USB cable and run the [happy birthday](/dnnzgd) script on it. Press the reset button to restart your music player!
 

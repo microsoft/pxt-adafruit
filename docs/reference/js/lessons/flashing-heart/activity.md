@@ -57,7 +57,7 @@ basic.forever(() => {
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/flashing-heart/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/flashing-heart/challenges)!
 
 ### ~
 

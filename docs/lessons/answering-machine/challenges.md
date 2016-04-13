@@ -4,7 +4,7 @@ Coding challenges for the answering machine tutorial.
 
 ## Before we get started
 
-Complete the [answering machine](/microbit/lessons/answering-machine/activity) activity and your code will look like this:
+Complete the [answering machine](/lessons/answering-machine/activity) activity and your code will look like this:
 
 ```blocks
 basic.showString("ASK ME A QUESTION")

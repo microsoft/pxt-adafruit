@@ -4,7 +4,7 @@ My script. #docs
 
 ### Challenge 0
 
-Howdy! This [guided tutorial](/microbit/rxqgzy) will help you complete this activity!
+Howdy! This [guided tutorial](/rxqgzy) will help you complete this activity!
 
 In this guide, you will learn how to use buttons and show text on the screen. Let's start by adding to respond **when the left button is pressed**.
 

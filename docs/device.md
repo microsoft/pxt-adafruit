@@ -6,7 +6,7 @@ All the bits and pieces that make up your BBC micro:bit
 
 ### LED Screen and Status LED
 
-The red lights are [LEDs](/microbit/device/screen) (light emitting diodes) and form a 5 x 5 LED Screen. 
+The red lights are [LEDs](/device/screen) (light emitting diodes) and form a 5 x 5 LED Screen. 
 They can be set to on/off and the brightness can be controlled.
 
 The yellow light on the back of the micro:bit is the status LED.
@@ -51,15 +51,15 @@ Output is in milli-g. The device will also detect a small number of standard act
 
 The pins can be a form of input or output. 
 There are labels for the input/output pins P0, P1, P2, which you can attach external sensors to such as thermometers or moisture detectors. 
-You can read more about large and small pins [here](/microbit/device/pins).
+You can read more about large and small pins [here](/device/pins).
 
 ### How do I connect the micro:bit to my computer?
 
 Your micro:bit can be connected to your computer via a micro USB cable. 
 Data can be sent and received between the micro:bit and the computer so programs 
 can be downloaded from Windows, Macs and Chromebooks onto the micro:bit via this USB data connection. 
-You can read more information on how to run scripts on your micro:bit [here](/microbit/device/usb), 
-and about the error messages you might get [here](/microbit/device/error-codes).
+You can read more information on how to run scripts on your micro:bit [here](/device/usb), 
+and about the error messages you might get [here](/device/error-codes).
 
 ### Powering your micro:bit
 

@@ -7,7 +7,7 @@ How to define a function with input and output parameters.
 
 A function is a unit of code that performs a specific task and returns a result.
 
-Functions are ideal when you need to perform an action multiple times. Instead of repeating a block of code in your script, you can put the code in a function and simply [call the function](/microbit/js/call) when needed.
+Functions are ideal when you need to perform an action multiple times. Instead of repeating a block of code in your script, you can put the code in a function and simply [call the function](/js/call) when needed.
 
 *Why use functions?* Functions makes your code easier to read, debug, and update.
 
@@ -40,10 +40,10 @@ Click the function name to edit the function properties (i.e. change the name or
 
 Functions have three parts:
 
-*  [input and output parameters](/microbit/js/functionparameters)
+*  [input and output parameters](/js/functionparameters)
 * the function *body* (the code that performs a task)
 
-- one or more [return](/microbit/js/return) statements (the output of the function)
+- one or more [return](/js/return) statements (the output of the function)
 
 #### Example function
 
@@ -61,8 +61,8 @@ export function square(x: number) : number {
 
 In the above code...
 
-* ``x `` is the [input parameter](/microbit/js/functionparameters) ([Number](/microbit/reference/types/number) type)
-* ``result`` is the [output parameter](/microbit/js/functionparameters) ([Number](/microbit/reference/types/number) type)
+* ``x `` is the [input parameter](/js/functionparameters) ([Number](/reference/types/number) type)
+* ``result`` is the [output parameter](/js/functionparameters) ([Number](/reference/types/number) type)
 * `return x * x` is the function body (which returns the value of the expression `x * x`)
 
 ### Add function parameters
@@ -75,7 +75,7 @@ In the above code...
 
 4. Click **add input parameter** or **add output parameter**. The parameter is added to your function.
 
-Click the parameter name to rename it and click the [type](/microbit/js/types) to change the variable type. For more info, see [function parameters](/microbit/js/functionparameters).
+Click the parameter name to rename it and click the [type](/js/types) to change the variable type. For more info, see [function parameters](/js/functionparameters).
 
 ### ~hide
 
@@ -93,7 +93,7 @@ If you've already written some code that you'd like to have in a function, you c
 
 ### Function documentation
 
-Use a [comment](/microbit/js/comment) at the beginning of your functions to describe the function. When you insert a function into your code, the comment text appears in the help area of the Code Keyboard.
+Use a [comment](/js/comment) at the beginning of your functions to describe the function. When you insert a function into your code, the comment text appears in the help area of the Code Keyboard.
 
 ### See all your functions
 
@@ -109,9 +109,9 @@ If you don't want people to see the code in your function, you can make the func
 
 ### Lessons
 
-[digital pet](/microbit/lessons/digital-pet)
+[digital pet](/lessons/digital-pet)
 
 ### See also
 
-[function parameters](/microbit/js/functionparameters), [call a function](/microbit/js/call), [return from a function](/microbit/js/return)
+[function parameters](/js/functionparameters), [call a function](/js/call), [return from a function](/js/return)
 

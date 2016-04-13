@@ -6,7 +6,7 @@ a game where you have to keep up with the commands.
 
 ## Directions
 
-Use this activity document to guide your work in the [bop it tutorial](/microbit/lessons/bop-it/tutorial).
+Use this activity document to guide your work in the [bop it tutorial](/lessons/bop-it/tutorial).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

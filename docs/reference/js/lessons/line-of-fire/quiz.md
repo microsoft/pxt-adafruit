@@ -6,7 +6,7 @@ create a game that relies on precise instincts and timing reflexes.
 
 ## Directions
 
-Use this activity document to guide your work in the [line of fire tutorial](/microbit/lessons/line-of-fire/tutorial)
+Use this activity document to guide your work in the [line of fire tutorial](/lessons/line-of-fire/tutorial)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

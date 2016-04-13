@@ -6,7 +6,7 @@ Create an actual compass to show your direction: North, South, East, or West
 
 ## Directions
 
-Use this activity document to guide your work in the [compass activity](/microbit/lessons/compass/activity).
+Use this activity document to guide your work in the [compass activity](/lessons/compass/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

@@ -14,10 +14,10 @@ Basic - Show Number
 
 ## Quick Links TODO: 
 
-* [tutorial](/microbit/lessons/lucky-7/tutorial)
-* [quiz](/microbit/lessons/lucky-7/quiz)
-* [quiz answers](/microbit/lessons/lucky-7/quiz-answers)
-* [challenges](/microbit/lessons/lucky-7/challenges)
+* [tutorial](/lessons/lucky-7/tutorial)
+* [quiz](/lessons/lucky-7/quiz)
+* [quiz answers](/lessons/lucky-7/quiz-answers)
+* [challenges](/lessons/lucky-7/challenges)
 
 ## Class
 
@@ -73,13 +73,13 @@ Learn how to creating a **global number variable**, `data->count` to keep track 
 
 ## Documentation TODO: 
 
-* **show number** : [read more...](/microbit/reference/basic/show-number)
+* **show number** : [read more...](/reference/basic/show-number)
 
 ## Resources TODO: 
 
-* Activity: [tutorial](/microbit/lessons/lucky-7/tutorial)
-* Activity: [quiz](/microbit/lessons/lucky-7/quiz)
-* Extended Activity: [challenges](/microbit/lessons/lucky-7/challenges)
+* Activity: [tutorial](/lessons/lucky-7/tutorial)
+* Activity: [quiz](/lessons/lucky-7/quiz)
+* Extended Activity: [challenges](/lessons/lucky-7/challenges)
 
 ## Objectives TODO: 
 
@@ -171,19 +171,19 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity TODO: 
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/lucky-7/tutorial)
-* [quiz](/microbit/lessons/lucky-7/quiz)
+* [tutorial](/lessons/lucky-7/tutorial)
+* [quiz](/lessons/lucky-7/quiz)
 * assessment opportunities: forever, plot, pause, clear screen
 
 ## Extended Activity TODO: 
 
 * time: 20 min.
-* [challenges](/microbit/lessons/lucky-7/challenges)
+* [challenges](/lessons/lucky-7/challenges)
 * assessment opportunities: loops, plot, pause, clear screen
 
 ## Homework TODO: 
 
-* Extended Activity: [challenges](/microbit/lessons/lucky-7/challenges)
+* Extended Activity: [challenges](/lessons/lucky-7/challenges)
 
 ## Intended follow on
 

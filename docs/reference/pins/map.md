@@ -10,11 +10,11 @@ pins.map(0, 0, 4, 0, 1023);
 
 ### Parameters
 
-* ``value``: [Number](/microbit/reference/types/number) - the value to map
-* ``from low``: [Number](/microbit/reference/types/number)  - lower bound of the origin interval
-* ``from high``: [Number](/microbit/reference/types/number)  - upper bound of the origin interval
-* ``to low``: [Number](/microbit/reference/types/number)  - lower bound of the target interval
-* ``to high``: [Number](/microbit/reference/types/number)  - upper bound of the target interval
+* ``value``: [Number](/reference/types/number) - the value to map
+* ``from low``: [Number](/reference/types/number)  - lower bound of the origin interval
+* ``from high``: [Number](/reference/types/number)  - upper bound of the origin interval
+* ``to low``: [Number](/reference/types/number)  - lower bound of the target interval
+* ``to high``: [Number](/reference/types/number)  - upper bound of the target interval
 
 ## Example
 
@@ -28,5 +28,5 @@ led.plot(0, index)
 
 ### See also
 
-[analog read pin](/microbit/reference/pins/analog-read-pin)
+[analog read pin](/reference/pins/analog-read-pin)
 

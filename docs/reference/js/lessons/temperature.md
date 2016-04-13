@@ -8,8 +8,8 @@ Temperature
 
 ## Quick Links
 
-* [activity](/microbit/lessons/temperature/activity)
-* [challenges](/microbit/lessons/temperature/challenges)
+* [activity](/lessons/temperature/activity)
+* [challenges](/lessons/temperature/challenges)
 
 ## Class
 
@@ -21,11 +21,11 @@ Learn how to get the ambient temperature (degree Celsius °C). The temperature i
 
 ## Documentation
 
-* **on shake** : [read more...](/microbit/reference/input/on-gesture)
-* **local variable** : [read more...](/microbit/reference/variables/var)
-* **temperature** : [read more...](/microbit/reference/input/temperature)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
+* **on shake** : [read more...](/reference/input/on-gesture)
+* **local variable** : [read more...](/reference/variables/var)
+* **temperature** : [read more...](/reference/input/temperature)
+* **show number** : [read more...](/reference/basic/show-number)
+* **show string** : [read more...](/reference/basic/show-string)
 
 ## Objectives
 
@@ -64,14 +64,14 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/temperature/activity)
+* [activity](/lessons/temperature/activity)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/temperature/challenges)
+* [challenges](/lessons/temperature/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/temperature/challenges)
+* Extended Activity: [challenges](/lessons/temperature/challenges)
 

@@ -37,5 +37,5 @@ Your circuit is complete!
 
 ### Step 10
 
-Connect your micro:bit to your computer using your USB cable and run the [guess the number](/microbit/lhpkbr) script on it.
+Connect your micro:bit to your computer using your USB cable and run the [guess the number](/lhpkbr) script on it.
 

@@ -1,6 +1,6 @@
 # Digital Write Pin
 
-Write the value ``0`` or ``1`` to the specified (digital) [pin](/microbit/device/pins). **Some pins are also used by the display, read the [pin documentation ](/microbit/device/pins) carefully.**
+Write the value ``0`` or ``1`` to the specified (digital) [pin](/device/pins). **Some pins are also used by the display, read the [pin documentation ](/device/pins) carefully.**
 
 ```sig
 pins.digitalWritePin(DigitalPin.P1, 1)
@@ -9,7 +9,7 @@ pins.digitalWritePin(DigitalPin.P1, 1)
 ### Parameters
 
 * name - the pin name (``P0``, ``P1``, ``P2``, ...)
-* value - [Number](/microbit/reference/types/number); 0 or 1
+* value - [Number](/reference/types/number); 0 or 1
 
 ### Example: football score keeper
 
@@ -31,5 +31,5 @@ basic.forever(() => {
 
 ### See also
 
-[micro:bit pins](/microbit/device/pins), [digital read pin](/microbit/reference/pins/digital-read-pin), [analog read pin](/microbit/reference/pins/analog-read-pin), [analog write pin](/microbit/reference/pins/analog-write-pin), [on pin pressed](/microbit/reference/input/on-pin-pressed), [pin is pressed](/microbit/reference/pins/pin-is-pressed)
+[micro:bit pins](/device/pins), [digital read pin](/reference/pins/digital-read-pin), [analog read pin](/reference/pins/analog-read-pin), [analog write pin](/reference/pins/analog-write-pin), [on pin pressed](/reference/input/on-pin-pressed), [pin is pressed](/reference/pins/pin-is-pressed)
 

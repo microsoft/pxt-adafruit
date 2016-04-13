@@ -6,7 +6,7 @@ a 4-player game in which each player must outwit his opponents.
 
 ## Directions
 
-Use this activity document to guide your work in the [number psych console tutorial](/microbit/lessons/number-psych-console/tutorial) and the [number psych controller tutorial](/microbit/lessons/number-psych-controller/tutorial).
+Use this activity document to guide your work in the [number psych console tutorial](/lessons/number-psych-console/tutorial) and the [number psych controller tutorial](/lessons/number-psych-controller/tutorial).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

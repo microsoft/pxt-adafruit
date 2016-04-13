@@ -5,7 +5,7 @@ Run code based on a condition.
 ### @parent blocks/language
  
 
-Conditionally run code depending on whether a [Boolean](/microbit/reference/types/boolean) condition is true or false.
+Conditionally run code depending on whether a [Boolean](/reference/types/boolean) condition is true or false.
 
 ### Block Editor
 
@@ -17,13 +17,13 @@ In the Block Editor, click on the dark blue gear icon (see above) to add an *els
 
 ![](/static/mb/blocks/game-library/pic0.png)
 
-If the screen [brightness](/microbit/reference/led/brightness) is `< 100`, this code sets the brightness to `255`:
+If the screen [brightness](/reference/led/brightness) is `< 100`, this code sets the brightness to `255`:
 
 ### Lessons
 
-[love meter](/microbit/lessons/love-meter), [zoomer](/microbit/lessons/zoomer)
+[love meter](/lessons/love-meter), [zoomer](/lessons/zoomer)
 
 ### See also
 
-[while loop](/microbit/reference/loops/while), [for](/microbit/reference/loops/for), [boolean](/microbit/reference/types/boolean)
+[while loop](/reference/loops/while), [for](/reference/loops/for), [boolean](/reference/types/boolean)
 

@@ -38,7 +38,7 @@ for (let i = 0; i < 6; i++) {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/looper/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/looper/challenges)!
 
 ### ~
 

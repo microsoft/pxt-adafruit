@@ -6,7 +6,7 @@ break out of a counting loop by pressing button "A".
 
 ## Directions
 
-Use this activity document to guide your work in the [jailbreak  tutorial](/microbit/lessons/jailbreak/tutorial)
+Use this activity document to guide your work in the [jailbreak  tutorial](/lessons/jailbreak/tutorial)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

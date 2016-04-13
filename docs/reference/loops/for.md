@@ -20,9 +20,9 @@ for (let k = 0; k < 4; k++) {
 
 ### Lessons
 
-[looper](/microbit/lessons/looper)
+[looper](/lessons/looper)
 
 ### See also
 
-[while](/microbit/reference/loops/while), [if](/microbit/blocks/if)
+[while](/reference/loops/while), [if](/blocks/if)
 

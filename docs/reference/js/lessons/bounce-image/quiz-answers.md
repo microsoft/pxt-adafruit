@@ -2,7 +2,7 @@
 
 scroll an image on the BBC micro:bit.
 
-This is the answer key for the [bounce image quiz](/microbit/lessons/bounce-image/quiz).
+This is the answer key for the [bounce image quiz](/lessons/bounce-image/quiz).
 
 ## 1. What does it mean to 'add frames' ? 
 

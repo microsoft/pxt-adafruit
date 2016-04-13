@@ -57,7 +57,7 @@ Run your code in the simulator or download it to your BBC micro:bit to see what 
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/snowflake-fall/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/snowflake-fall/challenges)!
 
 ### ~
 

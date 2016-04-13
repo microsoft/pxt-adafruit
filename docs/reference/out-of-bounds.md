@@ -4,7 +4,7 @@ The behavior of functions whose parameter values are out of bounds.
 
 Many of the BBC micro:bit functions have parameters. If a parameter is an unexpected value, the parameter is considered *out of bounds*.
 
-For example, the [plot](/microbit/reference/led/plot) function has two parameters:
+For example, the [plot](/reference/led/plot) function has two parameters:
 
 ### syntax
 
@@ -39,5 +39,5 @@ let on = led.point(5, -5)
 
 ### see also
 
-For more information on the out-of-bounds behavior of a function, see the documentation for that [function](/microbit/js/contents).
+For more information on the out-of-bounds behavior of a function, see the documentation for that [function](/js/contents).
 

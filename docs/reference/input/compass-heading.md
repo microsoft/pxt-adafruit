@@ -8,7 +8,7 @@ input.compassHeading();
 
 ### Returns
 
-* [Number](/microbit/reference/types/number) - the heading in degrees (0 to 360 degrees). If the compass is calibrating, it returns ``-1003``.
+* [Number](/reference/types/number) - the heading in degrees (0 to 360 degrees). If the compass is calibrating, it returns ``-1003``.
 
 ## Simulator
 
@@ -55,9 +55,9 @@ During calibration, ``compass heading`` returns ``-1003``.
 
 ### Lessons
 
-[compass](/microbit/lessons/compass)
+[compass](/lessons/compass)
 
 ### See also
 
-[acceleration](/microbit/reference/input/acceleration)
+[acceleration](/reference/input/acceleration)
 

@@ -10,8 +10,8 @@ Game Library
 
 ## Quick Links
 
-* [activity](/microbit/lessons/game-counter/activity)
-* [challenges](/microbit/lessons/game-counter/challenges)
+* [activity](/lessons/game-counter/activity)
+* [challenges](/lessons/game-counter/challenges)
 
 ## Prior learning/place of lesson in scheme of work
 

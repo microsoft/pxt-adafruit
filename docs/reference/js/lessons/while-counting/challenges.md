@@ -6,7 +6,7 @@ These challenges will teach you how to create a counter 10 to 1. #docs
 
 ### @video vimeo/134459911
 
-[This guided tutorial](/microbit/lessons/digi-yoyo/tutorial) will teach you how to make a counter from 0-9 using a while loop.
+[This guided tutorial](/lessons/digi-yoyo/tutorial) will teach you how to make a counter from 0-9 using a while loop.
 
 ```
 count = 1

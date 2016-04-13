@@ -6,7 +6,7 @@ Coding challenges for the bounce image tutorial. #docs
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/bounce-image/tutorial)
+* [tutorial](/lessons/bounce-image/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

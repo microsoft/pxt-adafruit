@@ -20,7 +20,7 @@ basic.showNumber(7, 150) // ***
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/lucky-7/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/lucky-7/challenges)!
 
 ### ~
 

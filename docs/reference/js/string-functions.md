@@ -14,7 +14,7 @@ The following string related functions are available in Touch Develop for the BB
 * **to character code** - converts a character into a character code
 * **to number** - converts a string into a number
 
-Select a string variable in the [Touch Develop editor](/microbit/js/editor) to see the following string functions:
+Select a string variable in the [Touch Develop editor](/js/editor) to see the following string functions:
 
 ```
 /* placeholder */
@@ -34,11 +34,11 @@ find out if two strings are the same
 
 #### Syntax
 
-[String](/microbit/reference/types/string) `->` **equals** (other : [String](/microbit/reference/types/string)) *returns* [Boolean](/microbit/reference/types/boolean)
+[String](/reference/types/string) `->` **equals** (other : [String](/reference/types/string)) *returns* [Boolean](/reference/types/boolean)
 
 #### Parameters
 
-* other - [String](/microbit/reference/types/string); a string
+* other - [String](/reference/types/string); a string
 
 #### Example
 
@@ -56,11 +56,11 @@ get a character within a string, using the specified index
 
 #### Syntax
 
-[String](/microbit/reference/types/string) `->` **at** (index: [Number](/microbit/reference/types/number)) *returns* [String](/microbit/reference/types/string)
+[String](/reference/types/string) `->` **at** (index: [Number](/reference/types/number)) *returns* [String](/reference/types/string)
 
 #### Parameters
 
-* index- [Number](/microbit/reference/types/number); the character number within a string (0 returns the first character)
+* index- [Number](/reference/types/number); the character number within a string (0 returns the first character)
 
 #### Example
 
@@ -87,11 +87,11 @@ combine two strings; like the concat operator (`||`)
 
 #### Syntax
 
-[String](/microbit/reference/types/string) `->` **concat** (other : [String](/microbit/reference/types/string)) *returns* [String](/microbit/reference/types/string)
+[String](/reference/types/string) `->` **concat** (other : [String](/reference/types/string)) *returns* [String](/reference/types/string)
 
 #### Parameters
 
-* other- [String](/microbit/reference/types/string); a string
+* other- [String](/reference/types/string); a string
 
 #### Example
 
@@ -109,7 +109,7 @@ get the number of characters in a string
 
 #### Syntax
 
-[String](/microbit/reference/types/string) `->` **count** *returns* [Number](/microbit/reference/types/number)
+[String](/reference/types/string) `->` **count** *returns* [Number](/reference/types/number)
 
 #### Example
 
@@ -125,12 +125,12 @@ get a portion of a string, using a starting point and length
 
 #### Syntax
 
-[String](/microbit/reference/types/string) `->` **substring** (start : [Number](/microbit/reference/types/number), length : [Number](/microbit/reference/types/number)) *returns* [String](/microbit/reference/types/string)
+[String](/reference/types/string) `->` **substring** (start : [Number](/reference/types/number), length : [Number](/reference/types/number)) *returns* [String](/reference/types/string)
 
 #### Parameters
 
-* start - [Number](/microbit/reference/types/number); the starting character number (0 is the first character number in a string)
-* length - [Number](/microbit/reference/types/number); the string length
+* start - [Number](/reference/types/number); the starting character number (0 is the first character number in a string)
+* length - [Number](/reference/types/number); the string length
 
 #### Example
 
@@ -146,7 +146,7 @@ converts the first character of a string into a character code number (unicode)
 
 #### Syntax
 
-[String](/microbit/reference/types/string) `->` **to character code** *returns* [Number](/microbit/reference/types/number)
+[String](/reference/types/string) `->` **to character code** *returns* [Number](/reference/types/number)
 
 #### Example
 
@@ -162,7 +162,7 @@ converts a string into a number
 
 #### Syntax
 
-[String](/microbit/reference/types/string) `->` **to number** *returns* [Number](/microbit/reference/types/number)
+[String](/reference/types/string) `->` **to number** *returns* [Number](/reference/types/number)
 
 #### Example
 
@@ -174,5 +174,5 @@ x = parseFloat(str)
 
 ### See also
 
-[string](/microbit/reference/types/string), [number](/microbit/reference/types/number), [show string](/microbit/reference/basic/show-string)
+[string](/reference/types/string), [number](/reference/types/number), [show string](/reference/basic/show-string)
 

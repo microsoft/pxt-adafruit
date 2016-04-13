@@ -2,7 +2,7 @@
 
 Use functions to return values.
 
-This is the answer key for the [transformers quiz](/microbit/lessons/transformers/quiz).
+This is the answer key for the [transformers quiz](/lessons/transformers/quiz).
 
 ## 1. What is a 'function'?
 

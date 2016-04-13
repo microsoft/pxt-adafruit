@@ -4,7 +4,7 @@ Coding challenges for the smiley tutorial. #docs
 
 ## Before we get started
 
-Complete the [smiley activity](/microbit/lessons/smiley/activity) and your code will look like this:
+Complete the [smiley activity](/lessons/smiley/activity) and your code will look like this:
 
 ```
 basic.showAnimation(`

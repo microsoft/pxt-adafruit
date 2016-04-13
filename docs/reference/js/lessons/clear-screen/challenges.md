@@ -4,7 +4,7 @@ My script. #docs
 
 ### Challenge 0
 
-Welcome! This [guided tutorial](/microbit/hzckbb) will help you create the script to clear the screen!
+Welcome! This [guided tutorial](/hzckbb) will help you create the script to clear the screen!
 
 Your goal is to clear the screen after displaying an animation. Begin by showing and displaying an animation. Remember that the `show animation` is in the `basic` namespace. We then need to detect when the "A" button is pressed. Finally, clear the screen by typing in `basic->clear screen`.
 

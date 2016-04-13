@@ -2,7 +2,7 @@
 
 My script. #docs
 
-This [guided tutorial](/microbit/lessons/boxer-mania/tutorial) will help you create an animation!
+This [guided tutorial](/lessons/boxer-mania/tutorial) will help you create an animation!
 
 **Challenge 0**
 

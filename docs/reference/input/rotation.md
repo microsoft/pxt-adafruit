@@ -8,11 +8,11 @@ input.rotation(Rotation.Roll);
 
 ### Parameters
 
-* kind: [String](/microbit/reference/types/string) - one of values specifying the kind of rotation: ``pitch`` (up/down around the ``x`` axis); ``roll`` (left/right around the ``y`` axis)
+* kind: [String](/reference/types/string) - one of values specifying the kind of rotation: ``pitch`` (up/down around the ``x`` axis); ``roll`` (left/right around the ``y`` axis)
 
 ### Returns
 
-* [Number](/microbit/reference/types/number) - angle, in degrees.
+* [Number](/reference/types/number) - angle, in degrees.
 
 ### Example: micro:bit leveller
 
@@ -44,5 +44,5 @@ basic.forever(() => {
 
 ### See also
 
-[acceleration](/microbit/reference/input/acceleration), [compass-heading](/microbit/reference/input/compass-heading)
+[acceleration](/reference/input/acceleration), [compass-heading](/reference/input/compass-heading)
 

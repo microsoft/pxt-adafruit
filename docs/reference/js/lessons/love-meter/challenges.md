@@ -6,7 +6,7 @@ create a love meter with the BBC micro:bit  #docs
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/love-meter/tutorial)
+* [tutorial](/lessons/love-meter/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

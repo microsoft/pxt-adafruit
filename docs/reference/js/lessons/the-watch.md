@@ -10,7 +10,7 @@ The Watch
 
 ## Quick Links
 
-* [activity](/microbit/lessons/the-watch/activity)
+* [activity](/lessons/the-watch/activity)
 
 ## Class
 

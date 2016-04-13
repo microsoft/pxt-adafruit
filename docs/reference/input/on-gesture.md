@@ -1,6 +1,6 @@
 # On Gesture
 
-Register an [event handler](/microbit/reference/event-handler) that will execute whenever the user executes a gesture withthe BBC micro:bit.
+Register an [event handler](/reference/event-handler) that will execute whenever the user executes a gesture withthe BBC micro:bit.
 
 ```sig
 input.onGesture(Gesture.Shake,() => {
@@ -41,5 +41,5 @@ input.onGesture(Gesture.Shake,() => {
 
 ### Lessons
 
-[bounce image](/microbit/lessons/bounce-image), [rock paper scissors](/microbit/lessons/rock-paper-scissors)
+[bounce image](/lessons/bounce-image), [rock paper scissors](/lessons/rock-paper-scissors)
 

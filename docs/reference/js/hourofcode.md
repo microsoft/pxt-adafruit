@@ -30,22 +30,22 @@ The BBC micro:bit can be used to run an Hour Of Code™ events for beginner of a
 
 Print the following **activities** (1 handout per student):
 
-* [answering machine](/microbit/lessons/answering-machine/activity)
-* [happy birthday](/microbit/lessons/happy-birthday/activity)
-* [love meter](/microbit/lessons/love-meter/activity)
+* [answering machine](/lessons/answering-machine/activity)
+* [happy birthday](/lessons/happy-birthday/activity)
+* [love meter](/lessons/love-meter/activity)
 
 Print the following **challenges** (1 handout per student):
 
-* [answering machine](/microbit/lessons/answering-machine/challenges)
-* [happy birthday](/microbit/lessons/happy-birthday/challenges)
-* [love meter](/microbit/lessons/love-meter/challenges)
+* [answering machine](/lessons/answering-machine/challenges)
+* [happy birthday](/lessons/happy-birthday/challenges)
+* [love meter](/lessons/love-meter/challenges)
 
 ## Timeline
 
 * ``00:00`` students enter the website address (see step 3)
-* ``10:00`` [answering machine](/microbit/lessons/answering-machine/activity)
-* ``25:00`` [happy birthday](/microbit/lessons/happy-birthday/activity)
-* ``35:00`` [love meter](/microbit/lessons/love-meter/activity)
+* ``10:00`` [answering machine](/lessons/answering-machine/activity)
+* ``25:00`` [happy birthday](/lessons/happy-birthday/activity)
+* ``35:00`` [love meter](/lessons/love-meter/activity)
 * ``55:00`` raffle
 * ``60:00`` that's it!
 
@@ -53,7 +53,7 @@ Print the following **challenges** (1 handout per student):
 
 After your Hour Of Code™, you will want to provide plenty of material for students to continue learning about coding. Here are some good places to start:
 
-* [more challenges](/microbit/js/games) are available with BBC micro:bit Tutorials
+* [more challenges](/js/games) are available with BBC micro:bit Tutorials
 * [the Quick Start Guide for Teachers](http://www.slideshare.net/Microsofteduk/bbc-microbit-guide-from-hodder-education) are available within BBC micro:bit
 
 The 'Hour of Code™' is a nationwide initiative by [Computer Science Education Week](http://csedweek.org) and [Code.org](http://code.org) to introduce millions of students to one hour of computer science and computer programming.

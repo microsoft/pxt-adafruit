@@ -2,7 +2,7 @@
 
 Create a die when the BBC micro:bit is shaken 
 
-These are the answers to the [die roll quiz](/microbit/lessons/die-roll/quiz).
+These are the answers to the [die roll quiz](/lessons/die-roll/quiz).
 
 ## 1. Create a variable named 'roll' that will be randomly assigned to a number between 0 and 5.
 

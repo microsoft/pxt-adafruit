@@ -1,6 +1,6 @@
 # Show Animation
 
-Show a series of image frames on the [LED screen](/microbit/device/screen), pausing the specified time after each frame.
+Show a series of image frames on the [LED screen](/device/screen), pausing the specified time after each frame.
 
 ```sig
 basic.showAnimation(`
@@ -14,8 +14,8 @@ basic.showAnimation(`
 
 ### Parameters
 
-* `leds` - [String](/microbit/reference/types/string); a series of LED on/off states
-* `interval` - [Number](/microbit/reference/types/number); the number of milliseconds to pause after each image frame
+* `leds` - [String](/reference/types/string); a series of LED on/off states
+* `interval` - [Number](/reference/types/number); the number of milliseconds to pause after each image frame
 
 ### Show a series of image frames
 
@@ -51,11 +51,11 @@ basic.showAnimation(`
 
 ### ~hint 
 
-Use [forever](/microbit/reference/basic/forever) to continually repeat an animation
+Use [forever](/reference/basic/forever) to continually repeat an animation
 
 ### ~
 
 ### Lessons
 
-[smiley](/microbit/lessons/smiley), [bounce image](/microbit/lessons/bounce-image), [snowflake fall](/microbit/lessons/snowflake-fall), [rotation animation](/microbit/lessons/rotation-animation)
+[smiley](/lessons/smiley), [bounce image](/lessons/bounce-image), [snowflake fall](/lessons/snowflake-fall), [rotation animation](/lessons/rotation-animation)
 

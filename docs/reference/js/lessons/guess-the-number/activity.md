@@ -10,7 +10,7 @@ Welcome! This tutorial will help you create a guess the number game! Let's get s
 
 ### ~
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap New Project under **Touch Develop**.
+To create a new script, go to the [Create Code](/create-code) page and tap New Project under **Touch Develop**.
 
 Add an event handler when button `A` is pressed.
 
@@ -38,7 +38,7 @@ input.onButtonPressed(Button.A, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/guess-the-number/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/guess-the-number/challenges)!
 
 ### ~
 

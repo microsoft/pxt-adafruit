@@ -2,7 +2,7 @@
 
 The scroll image function.
 
-Scrolls the frames within an [Image](/microbit/reference/image/image) on the [LED screen](/microbit/device/screen).
+Scrolls the frames within an [Image](/reference/image/image) on the [LED screen](/device/screen).
 
 ### Block Editor
 
@@ -16,8 +16,8 @@ export function scrollImage(_this: micro_bit.Image, xOffsetPerStep: number, inte
 
 ### Parameters
 
-* x offset per step : [Number](/microbit/reference/types/number) - the number of columns to scroll at a time (horizontal offset). Use a positive number to scroll an image to the right and a negative number to scroll left. To jump from one image frame to the next, use an offset of 5 or -5.
-* interval (ms) : [Number](/microbit/reference/types/number) - the time (in milliseconds) before scrolling by `x offset per step`; the larger the number, the slower the scroll.
+* x offset per step : [Number](/reference/types/number) - the number of columns to scroll at a time (horizontal offset). Use a positive number to scroll an image to the right and a negative number to scroll left. To jump from one image frame to the next, use an offset of 5 or -5.
+* interval (ms) : [Number](/reference/types/number) - the time (in milliseconds) before scrolling by `x offset per step`; the larger the number, the slower the scroll.
 
 ### ~hide
 
@@ -69,5 +69,5 @@ img.scrollImage(5, 1000)
 
 ### See also
 
-[show image](/microbit/reference/images/show-image), [image](/microbit/reference/image/image), [create image](/microbit/reference/images/create-image), [show animation](/microbit/reference/basic/show-animation)
+[show image](/reference/images/show-image), [image](/reference/image/image), [create image](/reference/images/create-image), [show animation](/reference/basic/show-animation)
 

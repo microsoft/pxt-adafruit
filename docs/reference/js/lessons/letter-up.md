@@ -8,7 +8,7 @@ String Functions
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/letter-up/tutorial)
+* [tutorial](/lessons/letter-up/tutorial)
 
 ## Class
 
@@ -38,20 +38,20 @@ Learn how to create a guessing game with **global variables** `var str: "this is
 
 ## Documentation
 
-* **string** : [read more...](/microbit/reference/types/string)
-* **string functions** : [read more...](/microbit/reference/types/string-functions)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
-* **local variables** : [read more...](/microbit/reference/variables/var)
-* **assignment operator** : [read more...](/microbit/reference/variables/assign)
-* **on logo up** [read more...](/microbit/functions/on-logo-up)
-* **on screen down** [read more...](/microbit/functions/on-screen-down)
-* **on screen up** [read more...](/microbit/functions/on-screen-up)
-* **math random** : [read more...](/microbit/js/math)
-* **game library** [read more...](/microbit/js/game-library)
+* **string** : [read more...](/reference/types/string)
+* **string functions** : [read more...](/reference/types/string-functions)
+* **show string** : [read more...](/reference/basic/show-string)
+* **local variables** : [read more...](/reference/variables/var)
+* **assignment operator** : [read more...](/reference/variables/assign)
+* **on logo up** [read more...](/functions/on-logo-up)
+* **on screen down** [read more...](/functions/on-screen-down)
+* **on screen up** [read more...](/functions/on-screen-up)
+* **math random** : [read more...](/js/math)
+* **game library** [read more...](/js/game-library)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/letter-up/tutorial)
+* Activity: [tutorial](/lessons/letter-up/tutorial)
 
 ## Objectives
 
@@ -108,7 +108,7 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/letter-up/tutorial)
+* [tutorial](/lessons/letter-up/tutorial)
 
 ## Intended follow on
 

@@ -2,7 +2,7 @@
 
 The answers to the love meter quiz.
 
-This is the answer key for the [love meter quiz](/microbit/lessons/love-meter/quiz).
+This is the answer key for the [love meter quiz](/lessons/love-meter/quiz).
 
 ## 1. What does on pin pressed ("P0") do?
 

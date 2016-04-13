@@ -2,7 +2,7 @@
 
 The clear function for images.
 
-Turn off all the pixels in an [Image](/microbit/reference/image/image).
+Turn off all the pixels in an [Image](/reference/image/image).
 
 ### KindScript
 
@@ -35,5 +35,5 @@ input.onButtonPressed(Button.A, () => {
 
 ### See also
 
-[Image](/microbit/reference/image/image), [show animation](/microbit/reference/basic/show-animation), [show image](/microbit/reference/images/show-image), [scroll image](/microbit/reference/images/scroll-image), [create image](/microbit/reference/images/create-image)
+[Image](/reference/image/image), [show animation](/reference/basic/show-animation), [show image](/reference/images/show-image), [scroll image](/reference/images/scroll-image), [create image](/reference/images/create-image)
 

@@ -4,7 +4,7 @@ The on screen up function.
 
 **Challenge 0**
 
-Congratulations! You have completed the  [Screen Up/Down tutorial](/microbit/hqjwkb) . You should have an image of a heart created and shown when the screen is moved up.
+Congratulations! You have completed the  [Screen Up/Down tutorial](/hqjwkb) . You should have an image of a heart created and shown when the screen is moved up.
 
 ```
 input.onScreenUp(() => {

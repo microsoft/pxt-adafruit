@@ -6,7 +6,7 @@ These challenges will allow you to change the brightness of the micro:bit. docs
 
 ### @video vimeo/133782335
 
-[This tutorial](/microbit/lessons/set-brightness/tutorial) will show you how to set the brightness on the micro:bit.
+[This tutorial](/lessons/set-brightness/tutorial) will show you how to set the brightness on the micro:bit.
 
 ```
 led.setBrightness(255)

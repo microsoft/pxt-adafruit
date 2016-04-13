@@ -2,7 +2,7 @@
 
 Create an answering machine on the micro:bit.
 
-This is the answer key for the [answering machine quiz](/microbit/lessons/answering-machine/quiz).
+This is the answer key for the [answering machine quiz](/lessons/answering-machine/quiz).
 
 ## 1. Define what `show string` does?
 

@@ -1,6 +1,6 @@
 # Analog Read Pin
 
-Read the specified [pin](/microbit/device/pins) (P0, P1, P2) as analog.
+Read the specified [pin](/device/pins) (P0, P1, P2) as analog.
 
 ```sig
 pins.analogReadPin(AnalogPin.P0)
@@ -12,7 +12,7 @@ pins.analogReadPin(AnalogPin.P0)
 
 ### Returns
 
-* [Number](/microbit/reference/types/number) - a number between 0 and 1023 (included)
+* [Number](/reference/types/number) - a number between 0 and 1023 (included)
 
 The following code reads `P1` and charts it on the screen:
 
@@ -25,5 +25,5 @@ basic.forever(() => {
 
 ### See also
 
-[micro:bit pins](/microbit/device/pins), [on pin pressed](/microbit/reference/input/on-pin-pressed), [analog write pin](/microbit/reference/pins/analog-write-pin), [digital read pin](/microbit/reference/pins/digital-read-pin), [digital write pin](/microbit/reference/pins/digital-write-pin)
+[micro:bit pins](/device/pins), [on pin pressed](/reference/input/on-pin-pressed), [analog write pin](/reference/pins/analog-write-pin), [digital read pin](/reference/pins/digital-read-pin), [digital write pin](/reference/pins/digital-write-pin)
 

@@ -5,7 +5,7 @@ Run code based on a condition.
 ### @parent js/language
  
 
-Conditionally run code depending on whether a [Boolean](/microbit/reference/types/boolean) condition is true or false.
+Conditionally run code depending on whether a [Boolean](/reference/types/boolean) condition is true or false.
 
 ### Block Editor
 
@@ -33,7 +33,7 @@ if (condition) {
 
 ### Example: adjusting screen brightness
 
-If the screen [brightness](/microbit/reference/led/brightness) is `< 100`, this code sets the brightness to `255`:
+If the screen [brightness](/reference/led/brightness) is `< 100`, this code sets the brightness to `255`:
 
 ```
 if (led.brightness() < 100) {
@@ -68,7 +68,7 @@ else {
 
 ### Example: compass heading
 
-The following example gets the [compass heading](/microbit/reference/input/compass-heading) and then uses ``if-then-else`` statements to display a letter on the screen (N for north, E for East, S for South, and W for West).
+The following example gets the [compass heading](/reference/input/compass-heading) and then uses ``if-then-else`` statements to display a letter on the screen (N for north, E for East, S for South, and W for West).
 
 ```
 while (true) {
@@ -93,9 +93,9 @@ You can move an entire ``if`` block by clicking the ``if`` keyword and dragging 
 
 ### Lessons
 
-[love meter](/microbit/lessons/love-meter), [zoomer](/microbit/lessons/zoomer), [offset image](/microbit/lessons/offset-image)
+[love meter](/lessons/love-meter), [zoomer](/lessons/zoomer), [offset image](/lessons/offset-image)
 
 ### See also
 
-[while loop](/microbit/js/while), [for](/microbit/reference/loops/for), [boolean](/microbit/reference/types/boolean)
+[while loop](/js/while), [for](/reference/loops/for), [boolean](/reference/types/boolean)
 

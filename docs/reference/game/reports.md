@@ -52,5 +52,5 @@ export function direction(_this: micro_bitSprites.LedSprite) : number
 
 ### Lessons
 
-[game of chance](/microbit/lessons/game-of-chance) | [game counter](/microbit/lessons/game-counter)
+[game of chance](/lessons/game-of-chance) | [game counter](/lessons/game-counter)
 

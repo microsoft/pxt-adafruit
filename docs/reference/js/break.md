@@ -5,7 +5,7 @@ Break statement; exit a for or while loop.
 ### @parent js/language
  
 
-Exit a [while](/microbit/js/while) or [for](/microbit/reference/loops/for) loop before the loop is complete.
+Exit a [while](/js/while) or [for](/reference/loops/for) loop before the loop is complete.
 
 ### Touch Develop syntax
 
@@ -29,9 +29,9 @@ for (let i = 0; i < 10; i++) {
 
 ### Lessons
 
-[jailbreak](/microbit/lessons/jailbreak)
+[jailbreak](/lessons/jailbreak)
 
 ### See also
 
-[for](/microbit/reference/loops/for), [while](/microbit/js/while)
+[for](/reference/loops/for), [while](/js/while)
 

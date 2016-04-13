@@ -5,9 +5,9 @@ How to use parameters to pass info in and out of an function.
 ### @parent js/function
  
 
-A [function](/microbit/js/function) can have multiple input parameters and/or a single output parameter.  The parameters must be one of the supported variable [types](/microbit/js/types).
+A [function](/js/function) can have multiple input parameters and/or a single output parameter.  The parameters must be one of the supported variable [types](/js/types).
 
-When you first [create a function](/microbit/js/function), it looks like this: 
+When you first [create a function](/js/function), it looks like this: 
 ```
 export function doStuff() {
 }
@@ -25,18 +25,18 @@ export function doStuff() {
 
 #### Input parameters
 
-The default type for an input parameter is [Number](/microbit/reference/types/number):
+The default type for an input parameter is [Number](/reference/types/number):
 
 ```
 export function oneInput(p: number) {
 }
 ```
 
-To change the default type, click the type ([Number](/microbit/reference/types/number) in this case) and change it to [String](/microbit/reference/types/string), [Boolean](/microbit/reference/types/boolean), or [Image](/microbit/reference/image/image). You can add multiple input parameters to a function.
+To change the default type, click the type ([Number](/reference/types/number) in this case) and change it to [String](/reference/types/string), [Boolean](/reference/types/boolean), or [Image](/reference/image/image). You can add multiple input parameters to a function.
 
 #### Output parameter
 
-the default type for an output parameter is [Number](/microbit/reference/types/number):
+the default type for an output parameter is [Number](/reference/types/number):
 
 ```
 export function output() : number {
@@ -46,7 +46,7 @@ export function output() : number {
 }
 ```
 
-To change the default type, click the type ([Number](/microbit/reference/types/number) in this case) and change it to [String](/microbit/reference/types/string), [Boolean](/microbit/reference/types/boolean), or [Image](/microbit/reference/image/image).
+To change the default type, click the type ([Number](/reference/types/number) in this case) and change it to [String](/reference/types/string), [Boolean](/reference/types/boolean), or [Image](/reference/image/image).
 
 ### Inputs and output function
 
@@ -62,5 +62,5 @@ export function inputsAndOutput(p: number, q: number) : number {
 
 ### See also
 
-[call a function](/microbit/js/call), [create a function](/microbit/js/function), [return](/microbit/js/return)
+[call a function](/js/call), [create a function](/js/function), [return](/js/return)
 

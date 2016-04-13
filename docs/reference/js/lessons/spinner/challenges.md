@@ -6,7 +6,7 @@ create an arrow that randomly points to a player. #docs
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/spinner/tutorial)
+* [tutorial](/lessons/spinner/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

@@ -64,5 +64,5 @@ devices.raiseAlertTo("ring alarm")
 
 ### See also
 
-[tell remote control to](/microbit/reference/devices/tell-remote-control-to), [tell camera to](/microbit/reference/devices/tell-camera-to), [on notified](/microbit/reference/devices/on-notified)
+[tell remote control to](/reference/devices/tell-remote-control-to), [tell camera to](/reference/devices/tell-camera-to), [on notified](/reference/devices/on-notified)
 

@@ -12,8 +12,8 @@ music.playTone(440, 120)
 
 ### Parameters
 
-* `frequency` : [Number](/microbit/reference/types/number) - the frequency of the note (in Herz)
-* `ms`: [Number](/microbit/reference/types/number) - the duration of the note (milliseconds)
+* `frequency` : [Number](/reference/types/number) - the frequency of the note (in Herz)
+* `ms`: [Number](/reference/types/number) - the duration of the note (milliseconds)
 
 ## Example
 
@@ -24,5 +24,5 @@ music.playTone(freq, 1000)
 
 ### See also
 
-[rest](/microbit/reference/music/rest), [ring tone](/microbit/reference/music/ring-tone) , [tempo](/microbit/reference/music/tempo), [set tempo](/microbit/reference/music/set-tempo), [change tempo by](/microbit/reference/music/change-tempo-by)
+[rest](/reference/music/rest), [ring tone](/reference/music/ring-tone) , [tempo](/reference/music/tempo), [set tempo](/reference/music/set-tempo), [change tempo by](/reference/music/change-tempo-by)
 

@@ -6,7 +6,7 @@ Learn how to create a blinking LED script.
 
 ## Directions
 
-Use this activity document to guide your work in the [blink activity](/microbit/lessons/blink/activity).
+Use this activity document to guide your work in the [blink activity](/lessons/blink/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

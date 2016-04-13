@@ -4,7 +4,7 @@ Coding challenges for the lucky 7 tutorial. #docs
 
 ## Before we get started
 
-Complete the [lucky 7](/microbit/lessons/lucky-7/activity) activity and your code will look like this:
+Complete the [lucky 7](/lessons/lucky-7/activity) activity and your code will look like this:
 
 ```
 basic.showNumber(7, 150)

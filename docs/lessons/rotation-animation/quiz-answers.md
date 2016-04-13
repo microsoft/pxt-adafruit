@@ -2,7 +2,7 @@
 
 Learn how to create a rotating image with a while loop.
 
-This is the answer key for the [rotation animation quiz](/microbit/lessons/rotation-animation/quiz).
+This is the answer key for the [rotation animation quiz](/lessons/rotation-animation/quiz).
 
 ## 1. What is a " variable"?
 

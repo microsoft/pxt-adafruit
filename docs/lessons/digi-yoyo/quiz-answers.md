@@ -2,7 +2,7 @@
 
 Answers for digi yoyo quiz. 
 
-This is the answer key for the [digi yoyo quiz](/microbit/lessons/digi-yoyo/quiz).
+This is the answer key for the [digi yoyo quiz](/lessons/digi-yoyo/quiz).
 
 ## 1. Describe what a "while loop" does?
 

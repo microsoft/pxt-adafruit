@@ -1,6 +1,6 @@
 # In Background
 
-Run code in the background as a separate process or thread; for more information on this advanced construct, see [the micro:bit - a reactive system](/microbit/device/reactive).
+Run code in the background as a separate process or thread; for more information on this advanced construct, see [the micro:bit - a reactive system](/device/reactive).
 
 ```sig
 control.inBackground(() => {
@@ -51,5 +51,5 @@ input.onButtonPressed(Button.A, () => {
 
 ### See also
 
-[while](/microbit/reference/loops/while), [forever](/microbit/reference/basic/forever), [on button pressed](/microbit/reference/input/on-button-pressed)
+[while](/reference/loops/while), [forever](/reference/basic/forever), [on button pressed](/reference/input/on-button-pressed)
 

@@ -53,5 +53,5 @@ export function startCountdown(ms: number)
 
 ### Lessons
 
-[bop it](/microbit/lessons/bop-it) | [game of chance](/microbit/lessons/game-of-chance) | [game counter](/microbit/lessons/game-counter)
+[bop it](/lessons/bop-it) | [game of chance](/lessons/game-of-chance) | [game counter](/lessons/game-counter)
 

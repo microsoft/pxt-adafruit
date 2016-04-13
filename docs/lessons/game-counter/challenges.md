@@ -4,7 +4,7 @@ Coding challenges for the game counter.
 
 ## Before we get started
 
-Complete the following [activity](/microbit/lessons/game-counter/activity) . Your code should look like this:
+Complete the following [activity](/lessons/game-counter/activity) . Your code should look like this:
 
 ```blocks
 input.onButtonPressed(Button.A, () => {

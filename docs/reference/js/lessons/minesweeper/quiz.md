@@ -6,7 +6,7 @@ make a game to test your memory for placing a LED mine then finding the hidden L
 
 ## Directions
 
-Use this activity document to guide your work in the [minesweeper  tutorial](/microbit/lessons/minesweeper/tutorial).
+Use this activity document to guide your work in the [minesweeper  tutorial](/lessons/minesweeper/tutorial).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

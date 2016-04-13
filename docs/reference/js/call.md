@@ -5,11 +5,11 @@ How to call a function in your code.
 ### @parent js/language
  
 
-Type a function name in your code to call an existing [function](/microbit/js/function) in your script.
+Type a function name in your code to call an existing [function](/js/function) in your script.
 
 ### Call a function
 
-1. In the Touch Develop editor, click a line of code to open the on-screen [Code Keyboard](/microbit/js/editor).
+1. In the Touch Develop editor, click a line of code to open the on-screen [Code Keyboard](/js/editor).
 
 2. Click `code` to see the functions in your script.
 
@@ -19,7 +19,7 @@ Type a function name in your code to call an existing [function](/microbit/js/fu
 
 ### Example: the square function
 
-Here's a function called `square`, with a [Number](/microbit/reference/types/number) input parameter:
+Here's a function called `square`, with a [Number](/reference/types/number) input parameter:
 
 ```
 /**
@@ -59,5 +59,5 @@ To see a list of the functions in a script, open the script and then click `scri
 
 ### See also
 
-[function parameters](/microbit/js/functionparameters), [create a function](/microbit/js/function), [return statement](/microbit/js/return)
+[function parameters](/js/functionparameters), [create a function](/js/function), [return statement](/js/return)
 

@@ -10,10 +10,10 @@ Basic- Show Animation
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/bounce-image/tutorial)
-* [quiz](/microbit/lessons/bounce-image/quiz)
-* [quiz answers](/microbit/lessons/bounce-image/quiz-answers)
-* [challenges](/microbit/lessons/bounce-image/challenges)
+* [tutorial](/lessons/bounce-image/tutorial)
+* [quiz](/lessons/bounce-image/quiz)
+* [quiz answers](/lessons/bounce-image/quiz-answers)
+* [challenges](/lessons/bounce-image/challenges)
 
 ## Class
 
@@ -39,15 +39,15 @@ Learn how to creating an **animation**, `basic->show animation` to display a ser
 
 ## Documentation
 
-* **forever** : [read more...](/microbit/reference/basic/forever)
-* **show animation** : [read more...](/microbit/reference/basic/show-animation)
-* **on shake** : [read more...](/microbit/reference/input/on-gesture)
+* **forever** : [read more...](/reference/basic/forever)
+* **show animation** : [read more...](/reference/basic/show-animation)
+* **on shake** : [read more...](/reference/input/on-gesture)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/bounce-image/tutorial)
-* Activity: [quiz](/microbit/lessons/bounce-image/quiz)
-* Extended Activity: [challenges](/microbit/lessons/bounce-image/challenges)
+* Activity: [tutorial](/lessons/bounce-image/tutorial)
+* Activity: [quiz](/lessons/bounce-image/quiz)
+* Extended Activity: [challenges](/lessons/bounce-image/challenges)
 
 ## Objectives
 
@@ -90,17 +90,17 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/bounce-image/tutorial)
-* [quiz](/microbit/lessons/bounce-image/quiz)
+* [tutorial](/lessons/bounce-image/tutorial)
+* [quiz](/lessons/bounce-image/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/bounce-image/challenges)
+* [challenges](/lessons/bounce-image/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/bounce-image/challenges)
+* Extended Activity: [challenges](/lessons/bounce-image/challenges)
 
 ## Intended follow on
 

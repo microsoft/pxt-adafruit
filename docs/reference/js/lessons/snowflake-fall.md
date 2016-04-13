@@ -10,11 +10,11 @@ Show Animation
 
 ## Quick Links
 
-* [activity](/microbit/lessons/snowflake-fall/activity)
-* [quiz](/microbit/lessons/snowflake-fall/quiz)
-* [quiz answers](/microbit/lessons/snowflake-fall/quiz-answers)
-* [challenges](/microbit/lessons/snowflake-fall/challenges)
-* [tutorial](/microbit/lessons/snowflake-fall/tutorial)
+* [activity](/lessons/snowflake-fall/activity)
+* [quiz](/lessons/snowflake-fall/quiz)
+* [quiz answers](/lessons/snowflake-fall/quiz-answers)
+* [challenges](/lessons/snowflake-fall/challenges)
+* [tutorial](/lessons/snowflake-fall/tutorial)
 
 ## Class
 
@@ -26,8 +26,8 @@ Learn how to create **animation**, `basic->show animation` to display an animate
 
 ## Documentation
 
-* **show animation** : [read more...](/microbit/reference/basic/show-animation)
-* **forever** : [read more...](/microbit/reference/basic/forever)
+* **show animation** : [read more...](/reference/basic/show-animation)
+* **forever** : [read more...](/reference/basic/forever)
 
 ## Objectives
 
@@ -60,15 +60,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/snowflake-fall/activity)
-* [quiz](/microbit/lessons/snowflake-fall/quiz)
+* [activity](/lessons/snowflake-fall/activity)
+* [quiz](/lessons/snowflake-fall/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/snowflake-fall/challenges)
+* [challenges](/lessons/snowflake-fall/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/snowflake-fall/challenges)
+* Extended Activity: [challenges](/lessons/snowflake-fall/challenges)
 

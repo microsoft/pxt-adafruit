@@ -2,7 +2,7 @@
 
 use modulo with a conditional.
 
-This is the answer key for the [flipping bird quiz](/microbit/lessons/flipping-bird/quiz).
+This is the answer key for the [flipping bird quiz](/lessons/flipping-bird/quiz).
 
 ## 1. What does "modulo" mean in math?
 

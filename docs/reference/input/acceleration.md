@@ -8,11 +8,11 @@ input.acceleration(Dimension.X);
 
 ### Parameters
 
-* dimension : [String](/microbit/reference/types/string) - one of three values specifying the axis of acceleration: ``x`` (left/right); ``y`` (forward/backwards); ``z`` (up/down)
+* dimension : [String](/reference/types/string) - one of three values specifying the axis of acceleration: ``x`` (left/right); ``y`` (forward/backwards); ``z`` (up/down)
 
 ### Returns
 
-* [Number](/microbit/reference/types/number) - acceleration, in milli-gravities. When the micro:bit is laying flat with the screen up, x=0, y=0 and z=-1023.
+* [Number](/reference/types/number) - acceleration, in milli-gravities. When the micro:bit is laying flat with the screen up, x=0, y=0 and z=-1023.
 
 ### Example: bar chart
 
@@ -41,9 +41,9 @@ basic.forever(() => {
 
 ### Lessons
 
-[zoomer](/microbit/lessons/zoomer)
+[zoomer](/lessons/zoomer)
 
 ### See also
 
-[compass-heading](/microbit/input/compass-heading), [lightlevel](/microbit/input/lightlevel)
+[compass-heading](/input/compass-heading), [lightlevel](/input/lightlevel)
 

@@ -6,7 +6,7 @@ Coding challenges for the jailbreak tutorial.#docs
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/jailbreak/tutorial)
+* [tutorial](/lessons/jailbreak/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

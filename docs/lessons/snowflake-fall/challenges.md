@@ -4,7 +4,7 @@ Coding challenges for snowflake fall.
 
 ## Before we get started
 
-Complete the [snowflake fall](/microbit/lessons/snowflake-fall/activity) activity and your code will look like this:
+Complete the [snowflake fall](/lessons/snowflake-fall/activity) activity and your code will look like this:
 
 ```blocks
 basic.forever(() => {

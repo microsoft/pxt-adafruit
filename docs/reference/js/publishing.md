@@ -24,7 +24,7 @@ To publish a script from `My Scripts`:
 
 **Share with people you choose**: click `publish as hidden` to publish your script in a way that it is not discoverable by search (users will need to know your script's id to access it).
 
-When you publish a script, a url with a unique script id is created so that you can  share your script with other people. To share a *publish as hidden* script, copy the url and give it to select people. There is also a `share` button in [script options](/microbit/js/editor).
+When you publish a script, a url with a unique script id is created so that you can  share your script with other people. To share a *publish as hidden* script, copy the url and give it to select people. There is also a `share` button in [script options](/js/editor).
 
 You can add a short publication note if you'd like. This note appears with the publishing history (on the script overview page).
 

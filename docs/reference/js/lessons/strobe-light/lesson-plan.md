@@ -28,15 +28,15 @@ Learn how to control a blinking LED. We will be learning how to create a blinkin
 
 ## Documentation
 
-* **plot**: [read more...](/microbit/reference/led/plot)
-* **pause**: [read more...](/microbit/reference/basic/pause)
-* **for loop**: [read more...](/microbit/reference/loops/for)
+* **plot**: [read more...](/reference/led/plot)
+* **pause**: [read more...](/reference/basic/pause)
+* **for loop**: [read more...](/reference/loops/for)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/strobe-light/tutorial)
-* Activity: [quiz](/microbit/lessons/strobe-light/quiz)
-* Extended Activity: [challenges](/microbit/lessons/strobe-light/challenges)
+* Activity: [tutorial](/lessons/strobe-light/tutorial)
+* Activity: [quiz](/lessons/strobe-light/quiz)
+* Extended Activity: [challenges](/lessons/strobe-light/challenges)
 
 ## Objectives
 
@@ -80,19 +80,19 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 10 min.
-* [tutorial](/microbit/lessons/strobe-light/tutorial)
-* [quiz](/microbit/lessons/strobe-light/quiz)
+* [tutorial](/lessons/strobe-light/tutorial)
+* [quiz](/lessons/strobe-light/quiz)
 * assessment opportunities: loops, plot, pause, clear screen
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/strobe-light/challenges)
+* [challenges](/lessons/strobe-light/challenges)
 * assessment opportunities: loops, plot, pause, clear screen
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/strobe-light/challenges)
+* Extended Activity: [challenges](/lessons/strobe-light/challenges)
 
 ## Intended follow on
 

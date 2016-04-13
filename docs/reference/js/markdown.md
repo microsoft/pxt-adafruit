@@ -5,7 +5,7 @@ Syntax to create formatted text in Touch Develop.
 ### @parent td/comment
  
 
-Markdown is a popular syntax used by developers to describe and annotate documents. Touch Develop supports a large subset of the markdown syntax, and adds a few new features. Markdown syntax applies to [comments](/microbit/js/comment) added using the [Touch Develop editor](/microbit/js/editor).
+Markdown is a popular syntax used by developers to describe and annotate documents. Touch Develop supports a large subset of the markdown syntax, and adds a few new features. Markdown syntax applies to [comments](/js/comment) added using the [Touch Develop editor](/js/editor).
 
 ## Basic markdown syntax
 
@@ -161,7 +161,7 @@ The following box types are supported:
 
 ### Special tutorial features
 
-You'll use markdown syntax when creating Touch Develop tutorials. See [create a tutorial](/microbit/js/create-tutorials) for more info.
+You'll use markdown syntax when creating Touch Develop tutorials. See [create a tutorial](/js/create-tutorials) for more info.
 
 ### ~hide
 

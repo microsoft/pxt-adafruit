@@ -122,7 +122,7 @@ input.onGesture(Gesture.Shake, () =>  {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/magic-8/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/magic-8/challenges)!
 
 ### ~
 

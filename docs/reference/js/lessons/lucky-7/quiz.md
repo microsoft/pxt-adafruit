@@ -6,7 +6,7 @@ Show a number on the BBC micro:bit.
 
 ## Directions
 
-Use this activity document to guide your work in the [lucky 7 tutorial](/microbit/lessons/lucky-7/tutorial).
+Use this activity document to guide your work in the [lucky 7 tutorial](/lessons/lucky-7/tutorial).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

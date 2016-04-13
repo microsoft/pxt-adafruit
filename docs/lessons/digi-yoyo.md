@@ -10,10 +10,10 @@ While Loop
 
 ## Quick Links
 
-* [activity](/microbit/lessons/digi-yoyo/activity)
-* [challenges](/microbit/lessons/digi-yoyo/challenges)
-* [quiz](/microbit/lessons/digi-yoyo/quiz)
-* [quiz answers](/microbit/lessons/digi-yoyo/quiz-answers)
+* [activity](/lessons/digi-yoyo/activity)
+* [challenges](/lessons/digi-yoyo/challenges)
+* [quiz](/lessons/digi-yoyo/quiz)
+* [quiz answers](/lessons/digi-yoyo/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

@@ -1,6 +1,6 @@
 # On Button Pressed
 
-Register an [event handler](/microbit/reference/event-handler) that will execute whenever an input button (A, B, or A and B together) is pressed during program execution. When [running code](/microbit/js/simulator) with this function in a web browser, click an on-screen input button - labelled A or B.
+Register an [event handler](/reference/event-handler) that will execute whenever an input button (A, B, or A and B together) is pressed during program execution. When [running code](/js/simulator) with this function in a web browser, click an on-screen input button - labelled A or B.
 
 ```sig
 input.onButtonPressed(Button.A, () => {})
@@ -32,9 +32,9 @@ input.onButtonPressed(Button.B, () => {
 
 ### Lessons
 
-[smiley](/microbit/lessons/smiley), [answering machine](/microbit/lessons/answering-machine), [screen wipe](/microbit/lessons/screen-wipe), [rotation animation](/microbit/lessons/rotation-animation)
+[smiley](/lessons/smiley), [answering machine](/lessons/answering-machine), [screen wipe](/lessons/screen-wipe), [rotation animation](/lessons/rotation-animation)
 
 ### See also
 
-[button is pressed](/microbit/reference/input/button-is-pressed), [forever](/microbit/reference/basic/forever)
+[button is pressed](/reference/input/button-is-pressed), [forever](/reference/basic/forever)
 

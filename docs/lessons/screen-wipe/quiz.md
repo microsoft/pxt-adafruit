@@ -6,7 +6,7 @@ Clear the screen by pressing the "A" button after an animation has been played
 
 ## Directions
 
-Use this activity document to guide your work in the [screen wipe activity](/microbit/lessons/screen-wipe/activity)
+Use this activity document to guide your work in the [screen wipe activity](/lessons/screen-wipe/activity)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

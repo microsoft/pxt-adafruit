@@ -12,7 +12,7 @@ Don't drop me on the ground without protection! I'm very fragile. Ouch!
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/landslide/tutorial)
+* [tutorial](/lessons/landslide/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

@@ -2,7 +2,7 @@
 
 Play sounds with music blocks. 
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap `New Project` under `Block Editor`.
+To create a new script, go to the [Create Code](/create-code) page and tap `New Project` under `Block Editor`.
 
 Have you ever tried to play a song on an instrument? Let's try coding the song "Happy Birthday" on the micro:bit !
 
@@ -52,7 +52,7 @@ basic.pause(100);
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/happy-birthday/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/happy-birthday/challenges)!
 
 ### ~
 

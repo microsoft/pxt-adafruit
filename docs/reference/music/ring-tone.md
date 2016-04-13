@@ -12,7 +12,7 @@ music.ringTone(440)
 
 ### Parameters
 
-* `frequency` : [Number](/microbit/reference/types/number) - Plays a tone in (Hz)
+* `frequency` : [Number](/reference/types/number) - Plays a tone in (Hz)
 
 ### Example
 
@@ -26,5 +26,5 @@ basic.forever(() => {
 
 ### See also
 
-[rest](/microbit/reference/music/rest), [play tone](/microbit/reference/music/play-tone) , [tempo](/microbit/reference/music/tempo), [set tempo](/microbit/reference/music/set-tempo), [change tempo by](/microbit/reference/music/change-tempo-by)
+[rest](/reference/music/rest), [play tone](/reference/music/play-tone) , [tempo](/reference/music/tempo), [set tempo](/reference/music/set-tempo), [change tempo by](/reference/music/change-tempo-by)
 

@@ -13,7 +13,7 @@ x += 1
 
 ### Declare a variable
 
-Use the assignment operator to set the value of a [variable](/microbit/reference/variables/var). Change the value of a variable from 0 to 1 using the change item block. Like this:
+Use the assignment operator to set the value of a [variable](/reference/variables/var). Change the value of a variable from 0 to 1 using the change item block. Like this:
 
 ```blocks
 let x = 0
@@ -22,7 +22,7 @@ x += 1
 
 ### Example
 
-Use the assignment operator to set the value of a [variable](/microbit/reference/variables/var). Change the value of a variable from 0 to 1 using the change item block. Then display the new value of the variable on the LED screen. Like this:
+Use the assignment operator to set the value of a [variable](/reference/variables/var). Change the value of a variable from 0 to 1 using the change item block. Then display the new value of the variable on the LED screen. Like this:
 
 ```blocks
 let x = 0;
@@ -32,9 +32,9 @@ basic.showNumber(x);
 
 ### Notes
 
-* You can use the assignment operator with variables of each of the supported [types](/microbit/blocks/types).
+* You can use the assignment operator with variables of each of the supported [types](/blocks/types).
 
 ### See also
 
-[variable](/microbit/reference/variables/var), [types](/microbit/blocks/types)
+[variable](/reference/variables/var), [types](/blocks/types)
 

@@ -22,7 +22,7 @@ Create a timer that runs out after a certain amount of time (using the *count* l
 
 ## Graphics Challenges [3]
 
-Using the knowledge you have learnt from the [rendering graphics](/microbit/lessons/graphics) section, try creating an algorithm to draw these shapes. Before you write the code try to figure out how the BBC micro:bit will be thinking to plot these points. For example, with our diagonal line – “count up from 0 to 4 by 1, and plot points x=i and y=i”.
+Using the knowledge you have learnt from the [rendering graphics](/lessons/graphics) section, try creating an algorithm to draw these shapes. Before you write the code try to figure out how the BBC micro:bit will be thinking to plot these points. For example, with our diagonal line – “count up from 0 to 4 by 1, and plot points x=i and y=i”.
 
 * Another diagonal line
 * A square going around the board

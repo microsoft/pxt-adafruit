@@ -10,7 +10,7 @@ Welcome! This tutorial will help you create a game of rock paper scissors with t
 
 ### ~
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap *New Project* under **Touch Develop**.
+To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
 
 We want the BBC micro:bit to choose rock, paper, or scissors when it is shaken. Let's begin by creating an `input->on shake` condition so the micro:bit will run code when it is shaken.
 
@@ -50,7 +50,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/rock-paper-scissors/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/rock-paper-scissors/challenges)!
 
 ### ~
 

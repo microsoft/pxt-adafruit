@@ -10,10 +10,10 @@ shift an image horizontally across the display with offset.
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/offset-image/tutorial)
-* [quiz](/microbit/lessons/offset-image/quiz)
-* [quiz answers](/microbit/lessons/offset-image/quiz-answers)
-* [challenges](/microbit/lessons/offset-image/challenges)
+* [tutorial](/lessons/offset-image/tutorial)
+* [quiz](/lessons/offset-image/quiz)
+* [quiz answers](/lessons/offset-image/quiz-answers)
+* [challenges](/lessons/offset-image/challenges)
 
 ## Class
 
@@ -45,20 +45,20 @@ Learn how to offset image with a conditional **If**, `if condition then` to run 
 
 ## Documentation
 
-* ** global variables ** : [read more...](/microbit/js/data)
-* ** assignment operator ** : [read more...](/microbit/reference/variables/assign)
-* ** forever ** : [read more...](/microbit/reference/basic/forever)
-* ** If ** : [read more...](/microbit/reference/logic/if)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
-* **create image** : [read more...](/microbit/reference/images/create-image)
-* **show image** : [read more...](/microbit/reference/images/show-image)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
+* ** global variables ** : [read more...](/js/data)
+* ** assignment operator ** : [read more...](/reference/variables/assign)
+* ** forever ** : [read more...](/reference/basic/forever)
+* ** If ** : [read more...](/reference/logic/if)
+* **show string** : [read more...](/reference/basic/show-string)
+* **create image** : [read more...](/reference/images/create-image)
+* **show image** : [read more...](/reference/images/show-image)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/offset-image/tutorial)
-* Activity: [quiz](/microbit/lessons/offset-image/quiz)
-* Extended Activity: [challenges](/microbit/lessons/offset-image/challenges)
+* Activity: [tutorial](/lessons/offset-image/tutorial)
+* Activity: [quiz](/lessons/offset-image/quiz)
+* Extended Activity: [challenges](/lessons/offset-image/challenges)
 
 ## Objectives
 
@@ -119,17 +119,17 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/offset-image/tutorial)
-* [quiz](/microbit/lessons/offset-image/quiz)
+* [tutorial](/lessons/offset-image/tutorial)
+* [quiz](/lessons/offset-image/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/offset-image/challenges)
+* [challenges](/lessons/offset-image/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/offset-image/challenges)
+* Extended Activity: [challenges](/lessons/offset-image/challenges)
 
 ## Intended follow on
 

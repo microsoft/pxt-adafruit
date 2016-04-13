@@ -1,6 +1,6 @@
 # Fade out
 
-Gradually decrease the [LED screen](/microbit/device/screen) brightness until the LED lights are turned off.
+Gradually decrease the [LED screen](/device/screen) brightness until the LED lights are turned off.
 
 ```sig
 led.fadeOut(700);
@@ -8,7 +8,7 @@ led.fadeOut(700);
 
 ### Parameters
 
-* ms - [Number](/microbit/reference/types/number); the speed that the screen brightness is decreased, expressed in milliseconds (1,000 milliseconds = 1 second). The smaller the number the faster the screen brightness decreased.
+* ms - [Number](/reference/types/number); the speed that the screen brightness is decreased, expressed in milliseconds (1,000 milliseconds = 1 second). The smaller the number the faster the screen brightness decreased.
 
 ### Example: fade away letter A
 
@@ -22,9 +22,9 @@ led.fadeOut(1000)
 
 ### Lessons
 
-[glowing sword](/microbit/lessons/glowing-sword)
+[glowing sword](/lessons/glowing-sword)
 
 ### See also
 
-[brightness](/microbit/reference/led/brightness), [fade in](/microbit/reference/led/fade-in), [set brightness](/microbit/reference/led/set-brightness)
+[brightness](/reference/led/brightness), [fade in](/reference/led/fade-in), [set brightness](/reference/led/set-brightness)
 

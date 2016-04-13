@@ -8,10 +8,10 @@ Game Library
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/bop-it/tutorial)
-* [quiz](/microbit/lessons/bop-it/quiz)
-* [quiz answers](/microbit/lessons/bop-it/quiz-answers)
-* [challenges](/microbit/lessons/bop-it/challenges)
+* [tutorial](/lessons/bop-it/tutorial)
+* [quiz](/lessons/bop-it/quiz)
+* [quiz answers](/lessons/bop-it/quiz-answers)
+* [challenges](/lessons/bop-it/challenges)
 
 ## Class
 
@@ -23,18 +23,18 @@ Learn how to create a minesweeper game with **if**, `if condition do` , **global
 
 ## Documentation
 
-* **game library** : [read more...](/microbit/js/game-library)
-* **global variables** : [read more...](/microbit/js/data)
-* **assignment operator** : [read more...](/microbit/reference/variables/assignment)
-* **functions** : [read more...](/microbit/js/function)
-* **call** : [read more...](/microbit/js/call)
-* **math random number** : [read more...](/microbit/js/math)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **on logo down** : [read more...](/microbit/functions/on-logo-down)
-* **on shake** : [read more...](/microbit/reference/input/on-gesture)
-* **if** : [read more...](/microbit/reference/logic/if)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
+* **game library** : [read more...](/js/game-library)
+* **global variables** : [read more...](/js/data)
+* **assignment operator** : [read more...](/reference/variables/assignment)
+* **functions** : [read more...](/js/function)
+* **call** : [read more...](/js/call)
+* **math random number** : [read more...](/js/math)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **on logo down** : [read more...](/functions/on-logo-down)
+* **on shake** : [read more...](/reference/input/on-gesture)
+* **if** : [read more...](/reference/logic/if)
+* **show number** : [read more...](/reference/basic/show-number)
+* **show string** : [read more...](/reference/basic/show-string)
 
 ## Objectives
 
@@ -83,15 +83,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/bop-it/tutorial)
-* [quiz](/microbit/lessons/bop-it/quiz)
+* [tutorial](/lessons/bop-it/tutorial)
+* [quiz](/lessons/bop-it/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/bop-it/challenges)
+* [challenges](/lessons/bop-it/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/bop-it/challenges)
+* Extended Activity: [challenges](/lessons/bop-it/challenges)
 

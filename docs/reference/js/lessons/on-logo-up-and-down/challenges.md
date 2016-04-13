@@ -4,7 +4,7 @@ My script. #docs
 
 **Challenge 0**
 
-This [guided tutorial](/microbit/zysycw) will help you display an arrow pointing the direction the logo is orientated!
+This [guided tutorial](/zysycw) will help you display an arrow pointing the direction the logo is orientated!
 
 Let's display and upward pointing arrow when the logo is up!
 

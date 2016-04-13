@@ -2,7 +2,7 @@
 
 Create a die on the BBC micro:bit 
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap *New Project* under **KindScript**.
+To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **KindScript**.
 
 Let's create a condition for when the BBC micro:bit is shaken.
 
@@ -124,7 +124,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/die-roll/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/die-roll/challenges)!
 
 ### ~
 

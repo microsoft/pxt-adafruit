@@ -23,9 +23,9 @@ for (let i = 0; i < 5; i++) {
 
 ### Lessons
 
-[blink](/microbit/lessons/blink), [lucky 7](/microbit/lessons/lucky-7), [smiley](/microbit/lessons/smiley), [flashing heart](/microbit/lessons/flashing-heart)
+[blink](/lessons/blink), [lucky 7](/lessons/lucky-7), [smiley](/lessons/smiley), [flashing heart](/lessons/flashing-heart)
 
 ### See also
 
-[while](/microbit/js/while), [running time](/microbit/reference/input/running-time), [for](/microbit/reference/loops/for)
+[while](/js/while), [running time](/reference/input/running-time), [for](/reference/loops/for)
 

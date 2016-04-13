@@ -4,7 +4,7 @@ Coding challenges for the answering machine tutorial.
 
 ## Before we get started
 
-Complete the [game of chance](/microbit/lessons/game-of-chance/activity) activity and your code will look like this:
+Complete the [game of chance](/lessons/game-of-chance/activity) activity and your code will look like this:
 
 ```blocks
 basic.showString("SELECT A BUTTON")

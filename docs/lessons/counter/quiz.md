@@ -6,7 +6,7 @@ Learn how to create a counter with the BBC micro:bit button.
 
 ## Directions
 
-Use this activity document to guide your work in the [counter tutorial](/microbit/lessons/counter/activity).
+Use this activity document to guide your work in the [counter tutorial](/lessons/counter/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

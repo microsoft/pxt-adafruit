@@ -4,7 +4,7 @@ Coding challenges for flashing heart.
 
 ## Before we get started
 
-Complete the [flashing heart](/microbit/lessons/flashing-heart/activity) activity and your code will look like this:
+Complete the [flashing heart](/lessons/flashing-heart/activity) activity and your code will look like this:
 
 ```
 basic.forever(() => {

@@ -6,7 +6,7 @@ show an image that points up when the logo is up.
 
 ## Directions
 
-This is the answer key for the [magic logo quiz](/microbit/lessons/magic-logo/quiz)
+This is the answer key for the [magic logo quiz](/lessons/magic-logo/quiz)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

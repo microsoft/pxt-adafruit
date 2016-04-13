@@ -4,7 +4,7 @@ Coding challenges for the counter.
 
 ## Before we get started
 
-Complete the following [guided tutorial](/microbit/lessons/counter/activity) At the end of the tutorial, click **keep editing**. Your code should look like this:
+Complete the following [guided tutorial](/lessons/counter/activity) At the end of the tutorial, click **keep editing**. Your code should look like this:
 
 ```blocks
 let count = 0

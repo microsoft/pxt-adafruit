@@ -10,10 +10,10 @@ While Loop
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/digi-yoyo/tutorial)
-* [quiz](/microbit/lessons/digi-yoyo/quiz)
-* [quiz answers](/microbit/lessons/digi-yoyo/quiz-answers)
-* [challenges](/microbit/lessons/digi-yoyo/challenges)
+* [tutorial](/lessons/digi-yoyo/tutorial)
+* [quiz](/lessons/digi-yoyo/quiz)
+* [quiz answers](/lessons/digi-yoyo/quiz-answers)
+* [challenges](/lessons/digi-yoyo/challenges)
 
 ## Class
 
@@ -25,12 +25,12 @@ Learn how to creating a **while loop**, `while condition do` to repeat code whil
 
 ## Documentation
 
-* **local variables** : [read more...](/microbit/reference/variables/var)
-* **assignment operator** : [read more...](/microbit/reference/variables/assign)
-* **while loop** : [read more...](/microbit/js/while)
-* **relational operator ** : [read more...](/microbit/reference/types/number)
-* **pause** : [read more...](/microbit/reference/basic/pause)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
+* **local variables** : [read more...](/reference/variables/var)
+* **assignment operator** : [read more...](/reference/variables/assign)
+* **while loop** : [read more...](/js/while)
+* **relational operator ** : [read more...](/reference/types/number)
+* **pause** : [read more...](/reference/basic/pause)
+* **show number** : [read more...](/reference/basic/show-number)
 
 ## Objectives
 
@@ -77,15 +77,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/digi-yoyo/tutorial)
-* [quiz](/microbit/lessons/digi-yoyo/quiz)
+* [tutorial](/lessons/digi-yoyo/tutorial)
+* [quiz](/lessons/digi-yoyo/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/digi-yoyo/challenges)
+* [challenges](/lessons/digi-yoyo/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/digi-yoyo/challenges)
+* Extended Activity: [challenges](/lessons/digi-yoyo/challenges)
 

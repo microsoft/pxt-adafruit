@@ -6,7 +6,7 @@ create the game Pong.
 
 ## Directions
 
-Use this activity document to guide your work in the [pong tutorial](/microbit/lessons/pong/tutorial)
+Use this activity document to guide your work in the [pong tutorial](/lessons/pong/tutorial)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

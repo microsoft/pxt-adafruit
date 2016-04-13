@@ -52,10 +52,10 @@ You hacked your headphones!
 
 ### Step 6
 
-Connect your micro:bit to your computer using your USB cable and program  [light beatbox](/microbit/lessons/light-beatbox/activity) music on it. Press the reset button to restart your music player!
+Connect your micro:bit to your computer using your USB cable and program  [light beatbox](/lessons/light-beatbox/activity) music on it. Press the reset button to restart your music player!
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/light-beatbox/activity)!
+Excellent, you're ready to continue with the [challenges](/lessons/light-beatbox/activity)!
 
 ### ~

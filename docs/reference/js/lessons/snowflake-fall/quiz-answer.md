@@ -6,7 +6,7 @@ create a snowflake fall animation.
 
 ## Directions
 
-Use this activity document to guide your work in the [snowflake fall tutorial](/microbit/lessons/snowflake-fall/tutorial).
+Use this activity document to guide your work in the [snowflake fall tutorial](/lessons/snowflake-fall/tutorial).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

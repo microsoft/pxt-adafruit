@@ -1,6 +1,6 @@
 # Plot All
 
-Turn on all the 25 LEDs on the [LED screen](/microbit/device/screen).
+Turn on all the 25 LEDs on the [LED screen](/device/screen).
 
 ```sig
 led.plotAll()
@@ -8,9 +8,9 @@ led.plotAll()
 
 ### Lessons
 
-[night light](/microbit/lessons/night-light)
+[night light](/lessons/night-light)
 
 ### See also
 
-[LED screen](/microbit/device/screen), [clear screen](/microbit/reference/basic/clear-screen)
+[LED screen](/device/screen), [clear screen](/reference/basic/clear-screen)
 

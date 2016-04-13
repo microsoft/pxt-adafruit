@@ -1,6 +1,6 @@
 # Forever
 
-Repeat code [in the background](/microbit/reference/control/in-background) forever.
+Repeat code [in the background](/reference/control/in-background) forever.
 
 ```sig
 basic.forever(() => {
@@ -9,7 +9,7 @@ basic.forever(() => {
 
 ### Example: compass
 
-The following example constantly checks the [compass heading](/microbit/reference/input/compass-heading) and updates the screen with the direction.
+The following example constantly checks the [compass heading](/reference/input/compass-heading) and updates the screen with the direction.
 
 ```blocks
 basic.forever(() => {
@@ -57,9 +57,9 @@ input.onButtonPressed(Button.A, () => {
 
 ### Lessons
 
-[blink](/microbit/lessons/blink), [bounce-image](/microbit/lessons/bounce-image),  [snowflake-fall](/microbit/lessons/snowflake-fall), [flashing-heart](/microbit/lessons/flashing-heart)
+[blink](/lessons/blink), [bounce-image](/lessons/bounce-image),  [snowflake-fall](/lessons/snowflake-fall), [flashing-heart](/lessons/flashing-heart)
 
 ### See also
 
-[while](/microbit/js/while), [on button pressed](/microbit/reference/input/on-button-pressed), [in background](/microbit/reference/control/in-background)
+[while](/js/while), [on button pressed](/reference/input/on-button-pressed), [in background](/reference/control/in-background)
 

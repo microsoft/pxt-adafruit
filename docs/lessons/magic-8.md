@@ -8,10 +8,10 @@ If (Conditionals)
 
 ## Quick Links
 
-* [activity](/microbit/lessons/magic-8/activity)
-* [challenges](/microbit/lessons/magic-8/challenges)
-* [quiz](/microbit/lessons/magic-8/quiz)
-* [quiz answers](/microbit/lessons/magic-8/quiz-answers)
+* [activity](/lessons/magic-8/activity)
+* [challenges](/lessons/magic-8/challenges)
+* [quiz](/lessons/magic-8/quiz)
+* [quiz answers](/lessons/magic-8/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

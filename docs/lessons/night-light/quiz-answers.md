@@ -2,7 +2,7 @@
 
 Answers to the night light quiz.
 
-This is the answer key for the [night light quiz](/microbit/lessons/night-light/quiz).
+This is the answer key for the [night light quiz](/lessons/night-light/quiz).
 
 ## 1. Define the function "set brightness" 
 

@@ -4,7 +4,7 @@ Coding challenges for the counter tutorial.
 
 ## Before we get started
 
-Complete the following [guided tutorial](/microbit/lessons/counter/activity) At the end of the tutorial, your code should look like this:
+Complete the following [guided tutorial](/lessons/counter/activity) At the end of the tutorial, your code should look like this:
 
 ```
 let count = 0

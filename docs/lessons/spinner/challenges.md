@@ -4,7 +4,7 @@ Create an arrow that randomly points to a player.
 
 ## Before we get started
 
-Complete the following [guided tutorial](/microbit/lessons/spinner/activity), your code should look like this:
+Complete the following [guided tutorial](/lessons/spinner/activity), your code should look like this:
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {

@@ -10,10 +10,10 @@ Math - Modulo
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/flipping-bird/tutorial)
-* [quiz](/microbit/lessons/flipping-bird/quiz)
-* [quiz answers](/microbit/lessons/flipping-bird/quiz-answers)
-* [challenges](/microbit/lessons/flipping-bird/challenges)
+* [tutorial](/lessons/flipping-bird/tutorial)
+* [quiz](/lessons/flipping-bird/quiz)
+* [quiz answers](/lessons/flipping-bird/quiz-answers)
+* [challenges](/lessons/flipping-bird/challenges)
 
 ## Class
 
@@ -36,17 +36,17 @@ Learn how to return the **modulus**, `math->mod` to determine if you will plot i
 
 ## Documentation
 
-* **global variables** : [read more...](/microbit/js/data)
-* **on shake** : [read more...](/microbit/reference/input/on-gesture)
-* **if** : [read more...](/microbit/reference/logic/if)
-* **math modulo** : [read more...](/microbit/js/math)
-* **plot image** : [read more...](/microbit/reference/led/plot-image)
+* **global variables** : [read more...](/js/data)
+* **on shake** : [read more...](/reference/input/on-gesture)
+* **if** : [read more...](/reference/logic/if)
+* **math modulo** : [read more...](/js/math)
+* **plot image** : [read more...](/reference/led/plot-image)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/flipping-bird/tutorial)
-* Activity: [quiz](/microbit/lessons/flipping-bird/quiz)
-* Extended Activity: [challenges](/microbit/lessons/flipping-bird/challenges)
+* Activity: [tutorial](/lessons/flipping-bird/tutorial)
+* Activity: [quiz](/lessons/flipping-bird/quiz)
+* Extended Activity: [challenges](/lessons/flipping-bird/challenges)
 
 ## Objectives
 
@@ -105,18 +105,18 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/flipping-bird/tutorial)
-* [quiz](/microbit/lessons/flipping-bird/quiz)
+* [tutorial](/lessons/flipping-bird/tutorial)
+* [quiz](/lessons/flipping-bird/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/flipping-bird/challenges)
+* [challenges](/lessons/flipping-bird/challenges)
 * assessment opportunities: loops, plot, pause, clear screen
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/flipping-bird/challenges)
+* Extended Activity: [challenges](/lessons/flipping-bird/challenges)
 
 ## Intended follow on
 

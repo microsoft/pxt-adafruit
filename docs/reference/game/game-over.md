@@ -20,5 +20,5 @@ game.gameOver()
 
 ### Lessons
 
-[game of chance](/microbit/lessons/game-of-chance)
+[game of chance](/lessons/game-of-chance)
 

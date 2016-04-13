@@ -1,6 +1,6 @@
 # Toggle All
 
-Toggle all the 25 LEDs on the [LED screen](/microbit/device/screen) - if an LED is on before the function is called, it will be off after; if an LED is off before the function is called, it will be on after.
+Toggle all the 25 LEDs on the [LED screen](/device/screen) - if an LED is on before the function is called, it will be off after; if an LED is off before the function is called, it will be on after.
 
 ```sig
 led.toggleAll()
@@ -24,5 +24,5 @@ led.toggleAll()
 
 ### See also
 
-[toggle](/microbit/reference/led/toggle), [LED screen](/microbit/device/screen), [clear screen](/microbit/reference/basic/clear-screen)
+[toggle](/reference/led/toggle), [LED screen](/device/screen), [clear screen](/reference/basic/clear-screen)
 

@@ -6,7 +6,7 @@ create a game that is inspired by the classic arcade game Pac Man.
 
 ## Directions
 
-Use this activity document to guide your work in the [runaway pacman tutorial](/microbit/lessons/runaway-pacman/tutorial)
+Use this activity document to guide your work in the [runaway pacman tutorial](/lessons/runaway-pacman/tutorial)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

@@ -10,8 +10,8 @@ Local Variables
 
 ## Quick Links
 
-* [activity](/microbit/lessons/rock-paper-scissors/activity)
-* [challenges](/microbit/lessons/rock-paper-scissors/challenges)
+* [activity](/lessons/rock-paper-scissors/activity)
+* [challenges](/lessons/rock-paper-scissors/challenges)
 
 ## Class
 

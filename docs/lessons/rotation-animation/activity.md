@@ -63,7 +63,7 @@ while (rotating) {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/rotation-animation/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/rotation-animation/challenges)!
 
 ### ~
 

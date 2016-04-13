@@ -6,7 +6,7 @@ a spin the BBC micro:bit game with the input on shake.
 
 ## Directions
 
-Use this activity document to guide your work in the [spinner tutorial](/microbit/lessons/spinner/tutorial).
+Use this activity document to guide your work in the [spinner tutorial](/lessons/spinner/tutorial).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

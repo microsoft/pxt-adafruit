@@ -57,7 +57,7 @@ led.fadeIn(700) // ***
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/glowing-sword/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/glowing-sword/challenges)!
 
 ### ~
 

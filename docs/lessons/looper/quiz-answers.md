@@ -2,7 +2,7 @@
 
 Learn how to create a series of numbers with a for loop.
 
-This is the answer key for the [looper quiz](/microbit/lessons/looper/quiz).
+This is the answer key for the [looper quiz](/lessons/looper/quiz).
 
 ## 1. What is a for loop?
 

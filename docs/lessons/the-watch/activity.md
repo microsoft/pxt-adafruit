@@ -152,7 +152,7 @@ Your watch is ready!
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/rock-paper-scissors/activity)!
+Excellent, you're ready to continue with the [challenges](/lessons/rock-paper-scissors/activity)!
 
 ### ~
 

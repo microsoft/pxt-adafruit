@@ -5,7 +5,7 @@ How to define and use local variables.
 ### @parent language
  
 
-A variable is a place where you can store and retrieve data. Variables have a name, a [type](/microbit/js/types), and value:
+A variable is a place where you can store and retrieve data. Variables have a name, a [type](/js/types), and value:
 
 * *name* is how you'll refer to the variable
 * *type* refers to the kind of data a variable can store
@@ -13,7 +13,7 @@ A variable is a place where you can store and retrieve data. Variables have a na
 
 ### `var` and `let` statement
 
-Use the Touch Develop *var* statement to create a local variable and the [assignment operator](/microbit/reference/variables/assign) `=` to store something in the variable.
+Use the Touch Develop *var* statement to create a local variable and the [assignment operator](/reference/variables/assign) `=` to store something in the variable.
 
 For example, this code stores the number `2` in the `num1` variable:
 
@@ -27,7 +27,7 @@ Here's how to define a variable in the Touch Develop editor:
 
 2. Change the default variable name if you like.
 
-3. Click on the right-side of the [assignment operator](/microbit/reference/variables/assign) `:=` and type or click what you want to store in the variable.
+3. Click on the right-side of the [assignment operator](/reference/variables/assign) `:=` and type or click what you want to store in the variable.
 
 The resulting code should look something like this:
 
@@ -61,13 +61,13 @@ let img = images.createImage(`
 `)
 ```
 
-See [Image](/microbit/reference/image/image) for info on creating and using image variables.
+See [Image](/reference/image/image) for info on creating and using image variables.
 
 ### Store in var button
 
 Another way to define a variable is to use the `store in var` button. Here's how:
 
-* in the [Touch Develop editor](/microbit/js/editor), click a function button that returns a value (i.e. `led` `->` `brightness`)
+* in the [Touch Develop editor](/js/editor), click a function button that returns a value (i.e. `led` `->` `brightness`)
 * click `store in var`
 * click `rename` to change the default variable name
 
@@ -77,7 +77,7 @@ The resulting code should look something like this:
 let brightness = led.brightness()
 ```
 
-A variable is created for the number returned by the [brightness](/microbit/reference/led/brightness) function.
+A variable is created for the number returned by the [brightness](/reference/led/brightness) function.
 
 ### Using variables
 
@@ -106,7 +106,7 @@ led.plot(3, 3)
 led.plot(4, 4)
 ```
 
-You can use a variable (`i`) and a [for loop](/microbit/reference/loops/for) to plot the same series of points (`i` is incremented by 1, each time the loop repeats):
+You can use a variable (`i`) and a [for loop](/reference/loops/for) to plot the same series of points (`i` is incremented by 1, each time the loop repeats):
 
 ```
 for (let i = 0; i < 5; i++) {
@@ -127,7 +127,7 @@ if (led.brightness() > 127) {
 }
 ```
 
-Use [global variables](/microbit/js/data) when you need to access a variable in nested code blocks or across multiple functions.
+Use [global variables](/js/data) when you need to access a variable in nested code blocks or across multiple functions.
 
 #### Notes
 
@@ -136,9 +136,9 @@ Use [global variables](/microbit/js/data) when you need to access a variable in 
 
 ### Lessons
 
-[guess the number](/microbit/lessons/guess-the-number), [digi yoyo](/microbit/lessons/digi-yoyo), [rock paper scissors](/microbit/lessons/rock-paper-scissors), [love meter](/microbit/lessons/love-meter)
+[guess the number](/lessons/guess-the-number), [digi yoyo](/lessons/digi-yoyo), [rock paper scissors](/lessons/rock-paper-scissors), [love meter](/lessons/love-meter)
 
 ### See also
 
-[global variables](/microbit/js/data), [types](/microbit/js/types), [assignment operator](/microbit/reference/variables/assign)
+[global variables](/js/data), [types](/js/types), [assignment operator](/reference/variables/assign)
 

@@ -12,7 +12,7 @@ music.rest(400)
 
 ### Parameters
 
-* `ms`: [Number](/microbit/reference/types/number) - the duration of the rest (milliseconds)
+* `ms`: [Number](/reference/types/number) - the duration of the rest (milliseconds)
 
 ## Example
 
@@ -24,5 +24,5 @@ music.rest(1000)
 
 ### See also
 
-[play tone](/microbit/reference/music/play-tone), [ring tone](/microbit/reference/music/ring-tone) , [tempo](/microbit/reference/music/tempo), [set tempo](/microbit/reference/music/set-tempo), [change tempo by](/microbit/reference/music/change-tempo-by)
+[play tone](/reference/music/play-tone), [ring tone](/reference/music/ring-tone) , [tempo](/reference/music/tempo), [set tempo](/reference/music/set-tempo), [change tempo by](/reference/music/change-tempo-by)
 

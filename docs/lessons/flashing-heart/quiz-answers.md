@@ -2,7 +2,7 @@
 
 Learn how to create an image with a variable. 
 
-This is the answer key for the [flashing heart quiz](/microbit/lessons/flashing-heart/quiz).
+This is the answer key for the [flashing heart quiz](/lessons/flashing-heart/quiz).
 
 ## 1. Describe what pause does 
 

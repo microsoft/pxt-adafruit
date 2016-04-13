@@ -11,6 +11,6 @@ If you have a BBC micro:bit and would like to explore a few scripts, we've creat
 This script introduces you to the LED display:
 
 * {hex:xzlzgl:hex file}
-MACRO: hex* [Block Editor script](/microbit/jxislh)
-* [Touch Develop script](/microbit/xzlzgl)
+MACRO: hex* [Block Editor script](/jxislh)
+* [Touch Develop script](/xzlzgl)
 

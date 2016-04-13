@@ -36,5 +36,5 @@ devices.onSignalStrengthChanged(() => {
 
 ### See Also
 
-[tell remote control to](/microbit/reference/devices/tell-remote-control-to), [raise alert to](/microbit/reference/devices/raise-alert-to), [on notified](/microbit/reference/devices/on-notified), [on signal strength changed](/microbit/reference/devices/on-signal-strength-changed)
+[tell remote control to](/reference/devices/tell-remote-control-to), [raise alert to](/reference/devices/raise-alert-to), [on notified](/reference/devices/on-notified), [on signal strength changed](/reference/devices/on-signal-strength-changed)
 

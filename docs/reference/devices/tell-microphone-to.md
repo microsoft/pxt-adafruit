@@ -48,11 +48,11 @@ antenna.tellMicrophoneTo("stop capture")
 
 ### Other show functions
 
-* use [tell remote control to](/microbit/reference/devices/tell-remote-control-to) to control presentation of media content
-* use [tell camera to](/microbit/reference/devices/tell-camera-to) to control the photo/video recording of connected devices
-* use [raise alert to](/microbit/reference/devices/raise-alert-to) to control the microphone of connected devices
+* use [tell remote control to](/reference/devices/tell-remote-control-to) to control presentation of media content
+* use [tell camera to](/reference/devices/tell-camera-to) to control the photo/video recording of connected devices
+* use [raise alert to](/reference/devices/raise-alert-to) to control the microphone of connected devices
 
 ### See also
 
-[Antenna](/microbit/js/antenna)
+[Antenna](/js/antenna)
 

@@ -2,7 +2,7 @@
 
 The set pixel function. #set pixel.
 
-Set the on/off state of pixel in an [Image](/microbit/reference/image/image).
+Set the on/off state of pixel in an [Image](/reference/image/image).
 
 ### KindScript
 
@@ -12,13 +12,13 @@ export function setPixel(_this: micro_bit.Image, x: number, y: number, value: bo
 
 ### Parameters
 
-* x - [Number](/microbit/reference/types/number); the *x coordinate* or horizontal position of a pixel in an [image](/microbit/reference/image/image)
-* x - [Number](/microbit/reference/types/number); the *y coordinate* or vertical position of a pixel in an [image](/microbit/reference/image/image)
-* value -[Boolean](/microbit/reference/types/boolean); the on/off state of a pixel; `true` for on, `false` for off
+* x - [Number](/reference/types/number); the *x coordinate* or horizontal position of a pixel in an [image](/reference/image/image)
+* x - [Number](/reference/types/number); the *y coordinate* or vertical position of a pixel in an [image](/reference/image/image)
+* value -[Boolean](/reference/types/boolean); the on/off state of a pixel; `true` for on, `false` for off
 
 ### x, y coordinates?
 
-To figure out the ``x``, ``y`` coordinates, see [LED screen](/microbit/device/screen).
+To figure out the ``x``, ``y`` coordinates, see [LED screen](/device/screen).
 
 ### Example
 
@@ -38,5 +38,5 @@ img.showImage(0)
 
 ### See also
 
-[pixel](/microbit/reference/images/pixel), [show image](/microbit/reference/images/show-image), [image](/microbit/reference/image/image), [create image](/microbit/reference/images/create-image), [scroll image](/microbit/reference/images/scroll-image)
+[pixel](/reference/images/pixel), [show image](/reference/images/show-image), [image](/reference/image/image), [create image](/reference/images/create-image), [scroll image](/reference/images/scroll-image)
 

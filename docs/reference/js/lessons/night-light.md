@@ -10,11 +10,11 @@ Set Brightness
 
 ## Quick Links
 
-* [activity](/microbit/lessons/night-light/activity)
-* [quiz](/microbit/lessons/night-light/quiz)
-* [quiz answers](/microbit/lessons/night-light/quiz-answers)
-* [challenges](/microbit/lessons/night-light/challenges)
-* [tutorial](/microbit/lessons/night-light/tutorial)
+* [activity](/lessons/night-light/activity)
+* [quiz](/lessons/night-light/quiz)
+* [quiz answers](/lessons/night-light/quiz-answers)
+* [challenges](/lessons/night-light/challenges)
+* [tutorial](/lessons/night-light/tutorial)
 
 ## Class
 
@@ -26,9 +26,9 @@ Learn how to **set brightness** of an image `led->set brightness` to set the bri
 
 ## Documentation
 
-* **set brightness** : [read more...](/microbit/reference/led/set-brightness)
-* **plot all** : [read more...](/microbit/reference/led/plot-all)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
+* **set brightness** : [read more...](/reference/led/set-brightness)
+* **plot all** : [read more...](/reference/led/plot-all)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
 
 ## Objectives
 
@@ -61,15 +61,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/night-light/activity)
-* [quiz](/microbit/lessons/night-light/quiz)
+* [activity](/lessons/night-light/activity)
+* [quiz](/lessons/night-light/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/night-light/challenges)
+* [challenges](/lessons/night-light/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/night-light/challenges)
+* Extended Activity: [challenges](/lessons/night-light/challenges)
 

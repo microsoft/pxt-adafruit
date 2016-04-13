@@ -8,7 +8,7 @@ Hack your headphone
 
 ## Quick Links
 
-* [activity](/microbit/lessons/hack-your-headphones/activity)
+* [activity](/lessons/hack-your-headphones/activity)
 
 ## Class
 

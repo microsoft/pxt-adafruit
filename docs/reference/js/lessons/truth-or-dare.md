@@ -8,11 +8,11 @@ If (Conditionals)
 
 ## Quick Links
 
-* [activity](/microbit/lessons/truth-or-dare/activity)
-* [challenges](/microbit/lessons/truth-or-dare/challenges)
-* [quiz](/microbit/lessons/truth-or-dare/quiz)
-* [quiz answers](/microbit/lessons/truth-or-dare/quiz-answers)
-* [tutorial](/microbit/lessons/truth-or-dare/tutorial)
+* [activity](/lessons/truth-or-dare/activity)
+* [challenges](/lessons/truth-or-dare/challenges)
+* [quiz](/lessons/truth-or-dare/quiz)
+* [quiz answers](/lessons/truth-or-dare/quiz-answers)
+* [tutorial](/lessons/truth-or-dare/tutorial)
 
 ## Class
 
@@ -24,13 +24,13 @@ Learn how to use an if statement to run code run code depending on whether a con
 
 ## Documentation
 
-* **show LEDs** : [read more...](/microbit/reference/basic/show-leds)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **local variable** : [read more...](/microbit/reference/variables/var)
-* **assignment operator** : [read more...](/microbit/reference/variables/assignment)
-* **math random** : [read more...](/microbit/js/math)
-* **If** : [read more...](/microbit/reference/logic/if)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
+* **show LEDs** : [read more...](/reference/basic/show-leds)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **local variable** : [read more...](/reference/variables/var)
+* **assignment operator** : [read more...](/reference/variables/assignment)
+* **math random** : [read more...](/js/math)
+* **If** : [read more...](/reference/logic/if)
+* **show string** : [read more...](/reference/basic/show-string)
 
 ## Objectives
 
@@ -69,15 +69,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/truth-or-dare/activity)
-* [tutorial](/microbit/lessons/truth-or-dare/tutorial)
+* [activity](/lessons/truth-or-dare/activity)
+* [tutorial](/lessons/truth-or-dare/tutorial)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/truth-or-dare/challenges)
+* [challenges](/lessons/truth-or-dare/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/truth-or-dare/challenges)
+* Extended Activity: [challenges](/lessons/truth-or-dare/challenges)
 

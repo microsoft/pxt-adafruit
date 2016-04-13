@@ -2,7 +2,7 @@
 
 a multi-player game that forces each player to reveal a secret or something funny. #docs
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap *New Project* under **Touch Develop**.
+To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
 
 Begin by plotting an "up-arrow" image, which will point to someone.
 
@@ -100,7 +100,7 @@ input.onButtonPressed(Button.A, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/truth-or-dare/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/truth-or-dare/challenges)!
 
 ### ~
 

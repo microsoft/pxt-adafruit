@@ -31,5 +31,5 @@ radio.onDataReceived(() => {
 
 ### See also
 
-[receive number](/microbit/radio/receive-number), [send number](/microbit/radio/send-number), [set group](/microbit/reference/radio/set-group)
+[receive number](/radio/receive-number), [send number](/radio/send-number), [set group](/reference/radio/set-group)
 

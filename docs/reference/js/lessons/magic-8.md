@@ -10,11 +10,11 @@ If (Conditionals)
 
 ## Quick Links
 
-* [activity](/microbit/lessons/magic-8/activity)
-* [quiz](/microbit/lessons/magic-8/quiz)
-* [quiz answers](/microbit/lessons/magic-8/quiz-answers)
-* [challenges](/microbit/lessons/magic-8/challenges)
-* [tutorial](/microbit/lessons/magic-8/tutorial)
+* [activity](/lessons/magic-8/activity)
+* [quiz](/lessons/magic-8/quiz)
+* [quiz answers](/lessons/magic-8/quiz-answers)
+* [challenges](/lessons/magic-8/challenges)
+* [tutorial](/lessons/magic-8/tutorial)
 
 ## Class
 
@@ -26,13 +26,13 @@ Learn how to creating **conditionals**, `if condition do` to conditionally run c
 
 ## Documentation
 
-* **show string** : [read more...](/microbit/reference/basic/show-string)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
-* **on shake** : [read more...](/microbit/reference/input/on-gesture)
-* **clear screen** : [read more...](/microbit/reference/basic/clear-screen)
-* **local variable** : [read more...](/microbit/reference/variables/var)
-* **random number** : [read more...](/microbit/js/math)
-* **if** : [read more...](/microbit/reference/logic/if)
+* **show string** : [read more...](/reference/basic/show-string)
+* **show number** : [read more...](/reference/basic/show-number)
+* **on shake** : [read more...](/reference/input/on-gesture)
+* **clear screen** : [read more...](/reference/basic/clear-screen)
+* **local variable** : [read more...](/reference/variables/var)
+* **random number** : [read more...](/js/math)
+* **if** : [read more...](/reference/logic/if)
 
 ## Objectives
 
@@ -87,16 +87,16 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/magic-8/activity)
-* [tutorial](/microbit/lessons/magic-8/tutorial)
-* [quiz](/microbit/lessons/magic-8/quiz)
+* [activity](/lessons/magic-8/activity)
+* [tutorial](/lessons/magic-8/tutorial)
+* [quiz](/lessons/magic-8/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/magic-8/challenges)
+* [challenges](/lessons/magic-8/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/magic-8/challenges)
+* Extended Activity: [challenges](/lessons/magic-8/challenges)
 

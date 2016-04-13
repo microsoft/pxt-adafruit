@@ -10,10 +10,10 @@ Plot - Blinking LED
 
 ## Quick links
 
-* [tutorial](/microbit/lessons/blink/tutorial)
-* [quiz](/microbit/js/blink/quiz)
-* [quiz answers](/microbit/lessons/blink/quiz-answers)
-* [challenges](/microbit/lessons/blink/challenges)
+* [tutorial](/lessons/blink/tutorial)
+* [quiz](/js/blink/quiz)
+* [quiz answers](/lessons/blink/quiz-answers)
+* [challenges](/lessons/blink/challenges)
 
 ## Class
 
@@ -37,16 +37,16 @@ Learn how to control a blinking LED. We will be learning how to create a blinkin
 
 ## Documentation
 
-* **plot**: [read more...](/microbit/reference/led/plot)
-* **pause**: [read more...](/microbit/reference/basic/pause)
-* **clear screen**: [read more...](/microbit/reference/basic/clear-screen)
-* **forever**: [read more...](/microbit/reference/basic/forever)
+* **plot**: [read more...](/reference/led/plot)
+* **pause**: [read more...](/reference/basic/pause)
+* **clear screen**: [read more...](/reference/basic/clear-screen)
+* **forever**: [read more...](/reference/basic/forever)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/blink/tutorial)
-* Activity: [quiz](/microbit/lessons/blink/quiz)
-* Extended Activity: [challenges](/microbit/lessons/blink/challenges)
+* Activity: [tutorial](/lessons/blink/tutorial)
+* Activity: [quiz](/lessons/blink/quiz)
+* Extended Activity: [challenges](/lessons/blink/challenges)
 
 ## Objectives
 
@@ -81,19 +81,19 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/blink/tutorial)
-* [quiz](/microbit/lessons/blink/quiz)
+* [tutorial](/lessons/blink/tutorial)
+* [quiz](/lessons/blink/quiz)
 * assessment opportunities: forever, plot, pause, clear screen
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/blink/challenges)
+* [challenges](/lessons/blink/challenges)
 * assessment opportunities: loops, plot, pause, clear screen
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/blink/challenges)
+* Extended Activity: [challenges](/lessons/blink/challenges)
 
 ## Intended follow on
 

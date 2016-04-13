@@ -1,6 +1,6 @@
 # Clear Screen
 
-Turn off all the LED lights on the [LED screen](/microbit/device/screen).
+Turn off all the LED lights on the [LED screen](/device/screen).
 
 ```sig
 basic.clearScreen()
@@ -23,9 +23,9 @@ basic.clearScreen()
 
 ### Lessons
 
-[blink](/microbit/lessons/blink), [flashing heart](/microbit/lessons/flashing-heart), [screen wipe](/microbit/lessons/screen-wipe)
+[blink](/lessons/blink), [flashing heart](/lessons/flashing-heart), [screen wipe](/lessons/screen-wipe)
 
 ### See also
 
-[set brightness](/microbit/reference/led/set-brightness), [unplot](/microbit/reference/led/unplot), [plot](/microbit/reference/led/plot), [Image](/microbit/reference/image/image), [clear](/microbit/reference/basic/clear-screen)
+[set brightness](/reference/led/set-brightness), [unplot](/reference/led/unplot), [plot](/reference/led/plot), [Image](/reference/image/image), [clear](/reference/basic/clear-screen)
 

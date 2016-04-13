@@ -1,6 +1,6 @@
 # Plot
 
-Turn on a LED light on the [LED screen](/microbit/device/screen). Specify which LED using x, y coordinates. Use [unplot](/microbit/reference/led/unplot) to turn a LED off.
+Turn on a LED light on the [LED screen](/device/screen). Specify which LED using x, y coordinates. Use [unplot](/reference/led/unplot) to turn a LED off.
 
 ```sig
 led.plot(0,0);
@@ -8,14 +8,14 @@ led.plot(0,0);
 
 ### Parameters
 
-* x - [Number](/microbit/reference/types/number); the *x coordinate* or horizontal position (0, 1, 2, 3, 4)
-* y - [Number](/microbit/reference/types/number); the *y coordinate* or vertical position (0, 1, 2, 3, 4)
+* x - [Number](/reference/types/number); the *x coordinate* or horizontal position (0, 1, 2, 3, 4)
+* y - [Number](/reference/types/number); the *y coordinate* or vertical position (0, 1, 2, 3, 4)
 
-If a parameter is [out of bounds](/microbit/reference/out-of-bounds) (a value other than 0-4), then this function will do nothing.
+If a parameter is [out of bounds](/reference/out-of-bounds) (a value other than 0-4), then this function will do nothing.
 
 ### x, y coordinates?
 
-The LED screen is made up of 25 LEDs arranged in a 5x5 grid. To figure out the ``x``, ``y`` coordinates, see [LED screen](/microbit/device/screen).
+The LED screen is made up of 25 LEDs arranged in a 5x5 grid. To figure out the ``x``, ``y`` coordinates, see [LED screen](/device/screen).
 
 This code turns on the centre LED:
 
@@ -25,11 +25,11 @@ led.plot(2, 2)
 
 ### Get the LED on/off state
 
-Use the [point](/microbit/reference/led/point) function to find out if a LED is on or off.
+Use the [point](/reference/led/point) function to find out if a LED is on or off.
 
 ### Example: a square
 
-The following example uses a [for loop](/microbit/reference/loops/for) and the `plot` function to turn on the LED lights along the edge of the screen, making a square:
+The following example uses a [for loop](/reference/loops/for) and the `plot` function to turn on the LED lights along the edge of the screen, making a square:
 
 ```blocks
 for (let i = 0; i < 5; i++) {
@@ -43,9 +43,9 @@ for (let i = 0; i < 5; i++) {
 
 ### Lessons
 
-[blink](/microbit/lessons/blink), [beautiful  image](/microbit/lessons/beautiful-image), [strobe light](/microbit/lessons/strobe-light)
+[blink](/lessons/blink), [beautiful  image](/lessons/beautiful-image), [strobe light](/lessons/strobe-light)
 
 ### See also
 
-[unplot](/microbit/reference/led/unplot), [point](/microbit/reference/led/point), [LED screen](/microbit/device/screen)
+[unplot](/reference/led/unplot), [point](/reference/led/point), [LED screen](/device/screen)
 

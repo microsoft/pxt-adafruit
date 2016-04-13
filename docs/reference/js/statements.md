@@ -11,31 +11,31 @@ TouchDevelop functions include statements and operators.
 
 TouchDevelop statements include:
 
-* [break](/microbit/js/break), to exit a loop before it has completed, usually used in conjunction with an [if](/microbit/reference/logic/if) statement
-* [if](/microbit/reference/logic/if) conditional statement
-* [for](/microbit/reference/loops/for) and [while](/microbit/js/while) loops
-* [function](/microbit/js/function)
-* [return](/microbit/js/return)
-* [var](/microbit/reference/variables/var) (local variable declaration)
+* [break](/js/break), to exit a loop before it has completed, usually used in conjunction with an [if](/reference/logic/if) statement
+* [if](/reference/logic/if) conditional statement
+* [for](/reference/loops/for) and [while](/js/while) loops
+* [function](/js/function)
+* [return](/js/return)
+* [var](/reference/variables/var) (local variable declaration)
 
 ### Operators
 
 TouchDevelop operators include:
 
-* [assignment operator](/microbit/reference/variables/assign) `:=` (to update variables)
-* arithmetic operators (`+`, `-`, `*`, `/`, mod) operate on [Numbers](/microbit/reference/types/number)
-* comparison operators (such as `>`, `=`) operate on [Numbers](/microbit/reference/types/number)
-* boolean operators (`not`, `or`, `and`) operate on [Booleans](/microbit/reference/types/boolean)
-* concat operator combines [Strings](/microbit/reference/types/string)
+* [assignment operator](/reference/variables/assign) `:=` (to update variables)
+* arithmetic operators (`+`, `-`, `*`, `/`, mod) operate on [Numbers](/reference/types/number)
+* comparison operators (such as `>`, `=`) operate on [Numbers](/reference/types/number)
+* boolean operators (`not`, `or`, `and`) operate on [Booleans](/reference/types/boolean)
+* concat operator combines [Strings](/reference/types/string)
 
 ### Libraries
 
 Libraries provide additional functions:
 
-* the [micro:bit library](/microbit/js/contents)
-* the [math](/microbit/js/math) and [bits](/microbit/js/bits) libraries
+* the [micro:bit library](/js/contents)
+* the [math](/js/math) and [bits](/js/bits) libraries
 
 ### see also
 
-[TouchDevelop Documentation](/microbit/js/contents), [comments](/microbit/js/comment)
+[TouchDevelop Documentation](/js/contents), [comments](/js/comment)
 

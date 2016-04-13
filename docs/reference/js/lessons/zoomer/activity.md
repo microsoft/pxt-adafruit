@@ -10,7 +10,7 @@ Welcome! This tutorial will teach how to measure the acceleration on the micro:b
 
 ### ~
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap *New Project* under **Touch Develop**.
+To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
 
 We want to display the acceleration forever. In order to do so, we need a `basic->forever` loop.
 
@@ -38,7 +38,7 @@ basic.forever(() => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/zoomer/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/zoomer/challenges)!
 
 ### ~
 

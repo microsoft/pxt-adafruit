@@ -6,7 +6,7 @@ Display the direction that the BBC micro:bit is facing using the compass
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/compass/tutorial)
+* [tutorial](/lessons/compass/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

@@ -10,11 +10,11 @@ Show Animation
 
 ## Quick Links
 
-* [activity](/microbit/lessons/smiley/activity)
-* [quiz](/microbit/lessons/smiley/quiz)
-* [quiz answers](/microbit/lessons/smiley/quiz-answers)
-* [challenges](/microbit/lessons/smiley/challenges)
-* [tutorial](/microbit/lessons/smiley/tutorial)
+* [activity](/lessons/smiley/activity)
+* [quiz](/lessons/smiley/quiz)
+* [quiz answers](/lessons/smiley/quiz-answers)
+* [challenges](/lessons/smiley/challenges)
+* [tutorial](/lessons/smiley/tutorial)
 
 ## Class
 
@@ -26,9 +26,9 @@ Learn how to **Show LEDs** on the screen. We will be learning show animation, sh
 
 ## Documentation
 
-* **show animation** : [read more...](/microbit/reference/basic/show-animation)
-* **show LEDs** : [read more...](/microbit/reference/basic/show-leds)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
+* **show animation** : [read more...](/reference/basic/show-animation)
+* **show LEDs** : [read more...](/reference/basic/show-leds)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
 
 ## Objectives
 
@@ -73,15 +73,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/smiley/tutorial)
-* [quiz](/microbit/lessons/smiley/quiz)
+* [tutorial](/lessons/smiley/tutorial)
+* [quiz](/lessons/smiley/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/smiley/challenges)
+* [challenges](/lessons/smiley/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/smiley/challenges)
+* Extended Activity: [challenges](/lessons/smiley/challenges)
 

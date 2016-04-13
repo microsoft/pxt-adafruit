@@ -8,7 +8,7 @@ Welcome! This tutorial will help you create a magic 8 ball on the BBC micro:bit.
 
 ### ~
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap *New Project* under **Touch Develop**.
+To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
 
 Show a string to instruct the user how to play Magic 8! The magic 8 ball can only answer true or false questions.
 
@@ -108,7 +108,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/magic-8/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/magic-8/challenges)!
 
 ### ~
 

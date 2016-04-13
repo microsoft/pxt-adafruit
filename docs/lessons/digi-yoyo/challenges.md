@@ -4,7 +4,7 @@ Coding challenges for the digi yoyo.
 
 ## Before we get started
 
-Complete the following [guided tutorial](/microbit/lessons/digi-yoyo/activity), your code should look like this:
+Complete the following [guided tutorial](/lessons/digi-yoyo/activity), your code should look like this:
 
 
 ```blocks

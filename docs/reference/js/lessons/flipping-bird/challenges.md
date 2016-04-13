@@ -6,7 +6,7 @@ Coding challenges for flipping bird. #docs
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/flipping-bird/tutorial)
+* [tutorial](/lessons/flipping-bird/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

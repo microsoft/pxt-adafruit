@@ -10,11 +10,11 @@ Show String
 
 ## Quick Links
 
-* [activity](/microbit/lessons/answering-machine/activity)
-* [quiz](/microbit/lessons/answering-machine/quiz)
-* [quiz answers](/microbit/lessons/answering-machine/quiz-answers)
-* [challenges](/microbit/lessons/answering-machine/challenges)
-* [tutorial](/microbit/lessons/answering-machine/tutorial)
+* [activity](/lessons/answering-machine/activity)
+* [quiz](/lessons/answering-machine/quiz)
+* [quiz answers](/lessons/answering-machine/quiz-answers)
+* [challenges](/lessons/answering-machine/challenges)
+* [tutorial](/lessons/answering-machine/tutorial)
 
 ## Class
 
@@ -26,8 +26,8 @@ Learn how to creating a message with a **string**, `basic->show string` to write
 
 ## Documentation
 
-* **show string** : [read more...](/microbit/reference/basic/show-string)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
+* **show string** : [read more...](/reference/basic/show-string)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
 
 ## Objectives
 
@@ -67,15 +67,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/answering-machine/activity)
-* [quiz](/microbit/lessons/answering-machine/quiz)
+* [activity](/lessons/answering-machine/activity)
+* [quiz](/lessons/answering-machine/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/answering-machine/challenges)
+* [challenges](/lessons/answering-machine/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/answering-machine/challenges)
+* Extended Activity: [challenges](/lessons/answering-machine/challenges)
 

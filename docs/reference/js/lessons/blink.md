@@ -10,11 +10,11 @@ Plot
 
 ## Quick links
 
-* [activity](/microbit/lessons/blink/activity)
-* [quiz](/microbit/lessons/blink/quiz)
-* [quiz answers](/microbit/lessons/blink/quiz-answers)
-* [challenges](/microbit/lessons/blink/challenges)
-* [tutorial](/microbit/lessons/blink/tutorial)
+* [activity](/lessons/blink/activity)
+* [quiz](/lessons/blink/quiz)
+* [quiz answers](/lessons/blink/quiz-answers)
+* [challenges](/lessons/blink/challenges)
+* [tutorial](/lessons/blink/tutorial)
 
 ## Class
 
@@ -36,16 +36,16 @@ Learn how to control a blinking LED. We will be learning how to create a blinkin
 
 ## Documentation
 
-* **plot**: [read more...](/microbit/reference/led/plot)
-* **unplot**: [read more...](/microbit/reference/led/unplot)
-* **pause**: [read more...](/microbit/reference/basic/pause)
-* **forever**: [read more...](/microbit/reference/basic/forever)
+* **plot**: [read more...](/reference/led/plot)
+* **unplot**: [read more...](/reference/led/unplot)
+* **pause**: [read more...](/reference/basic/pause)
+* **forever**: [read more...](/reference/basic/forever)
 
 ## Resources
 
-* Activity: [tutorial](/microbit/lessons/blink/tutorial)
-* Activity: [quiz](/microbit/lessons/blink/quiz)
-* Extended Activity: [challenges](/microbit/lessons/blink/challenges)
+* Activity: [tutorial](/lessons/blink/tutorial)
+* Activity: [quiz](/lessons/blink/quiz)
+* Extended Activity: [challenges](/lessons/blink/challenges)
 
 ## Objectives
 
@@ -78,18 +78,18 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/blink/tutorial)
-* [quiz](/microbit/lessons/blink/quiz)
-* [quiz answers](/microbit/lessons/blink/quiz-answers)
+* [tutorial](/lessons/blink/tutorial)
+* [quiz](/lessons/blink/quiz)
+* [quiz answers](/lessons/blink/quiz-answers)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/blink/challenges)
+* [challenges](/lessons/blink/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/blink/challenges)
+* Extended Activity: [challenges](/lessons/blink/challenges)
 
 ## Intended follow on
 

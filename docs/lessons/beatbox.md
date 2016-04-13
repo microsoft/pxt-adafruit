@@ -8,8 +8,8 @@ Music
 
 ## Quick Links
 
-* [activity](/microbit/lessons/beatbox/activity)
-* [challenges](/microbit/lessons/beatbox/challenges)
+* [activity](/lessons/beatbox/activity)
+* [challenges](/lessons/beatbox/challenges)
 
 
 ## Prior learning/place of lesson in scheme of work

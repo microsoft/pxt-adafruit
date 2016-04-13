@@ -6,7 +6,7 @@ create a fake wifi app to trick your friends.
 
 ## Directions
 
-Use this activity document to guide your work in the [prank WiFi tutorial](/microbit/lessons/prank-wifi/tutorial)
+Use this activity document to guide your work in the [prank WiFi tutorial](/lessons/prank-wifi/tutorial)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

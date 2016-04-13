@@ -10,10 +10,10 @@ Fade Out
 
 ## Quick Links
 
-* [activity](/microbit/lessons/glowing-sword/activity)
-* [quiz](/microbit/lessons/glowing-sword/quiz)
-* [quiz answers](/microbit/lessons/glowing-sword/quiz-answers)
-* [challenges](/microbit/lessons/glowing-sword/challenges)
+* [activity](/lessons/glowing-sword/activity)
+* [quiz](/lessons/glowing-sword/quiz)
+* [quiz answers](/lessons/glowing-sword/quiz-answers)
+* [challenges](/lessons/glowing-sword/challenges)
 
 ## Prior learning/place of lesson in scheme of work
 
@@ -21,10 +21,10 @@ Learn how to manipulate an image through **fade out**, `fade out` to gradually d
 
 ## Documentation
 
-* **create image** : [read more...](/microbit/reference/images/create-image)
-* **show image** : [read more...](/microbit/reference/images/show-image)
-* **fade out** : [read more...](/microbit/reference/led/fade-out)
-* **pause** : [read more...](/microbit/reference/basic/pause)
-* **fade in** : [read more...](/microbit/reference/led/fade-in)
+* **create image** : [read more...](/reference/images/create-image)
+* **show image** : [read more...](/reference/images/show-image)
+* **fade out** : [read more...](/reference/led/fade-out)
+* **pause** : [read more...](/reference/basic/pause)
+* **fade in** : [read more...](/reference/led/fade-in)
 
 

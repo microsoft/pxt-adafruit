@@ -4,7 +4,7 @@ Create a die on the micro:bit.
 
 ## Before we get started
 
-Complete the following [guided tutorial](/microbit/lessons/die-roll/activity), your code should look like this:
+Complete the following [guided tutorial](/lessons/die-roll/activity), your code should look like this:
 
 ```blocks 
 input.onGesture(Gesture.Shake, () => {

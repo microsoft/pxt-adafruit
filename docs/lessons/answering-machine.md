@@ -10,10 +10,10 @@ Show String
 
 ## Quick Links
 
-* [activity](/microbit/lessons/answering-machine/activity)
-* [quiz](/microbit/lessons/answering-machine/quiz)
-* [quiz answers](/microbit/lessons/answering-machine/quiz-answers)
-* [challenges](/microbit/lessons/answering-machine/challenges)
+* [activity](/lessons/answering-machine/activity)
+* [quiz](/lessons/answering-machine/quiz)
+* [quiz answers](/lessons/answering-machine/quiz-answers)
+* [challenges](/lessons/answering-machine/challenges)
 
 
 ## Prior learning / place of lesson in scheme of work
@@ -29,7 +29,7 @@ input.onButtonPressed(Button.A, () => {})
 ```
 
 
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
 
 ## Objectives
 

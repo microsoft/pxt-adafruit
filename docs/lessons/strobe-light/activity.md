@@ -56,7 +56,7 @@ for (let i = 0; i < 5; i++) {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/strobe-light/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/strobe-light/challenges)!
 
 ### ~
 

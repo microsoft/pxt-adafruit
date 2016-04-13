@@ -41,7 +41,7 @@ Run the script in the simulator or on the BBC micro:bit to see how this works!
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/screen-wipe/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/screen-wipe/challenges)!
 
 ### ~
 

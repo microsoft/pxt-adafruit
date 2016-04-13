@@ -54,7 +54,7 @@ while (count < 10) {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/digi-yoyo/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/digi-yoyo/challenges)!
 
 ### ~
 

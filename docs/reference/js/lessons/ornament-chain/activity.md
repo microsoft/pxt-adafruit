@@ -75,6 +75,6 @@ Your ornament chain is ready!
 
 ### Step 10
 
-* Connect the first BBC micro:bit to your computer using your USB cable and run the [ornament chain](/microbit/rnvpgo) script on it.
-* Connect the second BBC micro:bit to your computer using your USB cable and run the [ornament chain](/microbit/rnvpgo) script on it.
+* Connect the first BBC micro:bit to your computer using your USB cable and run the [ornament chain](/rnvpgo) script on it.
+* Connect the second BBC micro:bit to your computer using your USB cable and run the [ornament chain](/rnvpgo) script on it.
 * The first person and second person take turns pressing button A to start the ornament chain game!

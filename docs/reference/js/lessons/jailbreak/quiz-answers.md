@@ -2,7 +2,7 @@
 
 break out of a counting loop by pressing button "A".
 
-This is the answer key for the [jailbreak quiz](/microbit/lessons/jailbreak/quiz).
+This is the answer key for the [jailbreak quiz](/lessons/jailbreak/quiz).
 
 ## 1. What does a 'break' statement do to a 'loop' ?
 

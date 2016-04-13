@@ -10,10 +10,10 @@ On Pin Pressed
 
 ## Quick Links
 
-* [activity](/microbit/lessons/love-meter/activity)
-* [quiz](/microbit/lessons/love-meter/quiz)
-* [quiz answers](/microbit/lessons/love-meter/quiz-answers)
-* [challenges](/microbit/lessons/love-meter/challenges)
+* [activity](/lessons/love-meter/activity)
+* [quiz](/lessons/love-meter/quiz)
+* [quiz answers](/lessons/love-meter/quiz-answers)
+* [challenges](/lessons/love-meter/challenges)
 
 
 ## Prior learning/place of lesson in scheme of work

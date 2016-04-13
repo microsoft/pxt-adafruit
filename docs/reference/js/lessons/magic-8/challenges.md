@@ -6,7 +6,7 @@ Coding challenges for the magic 8 tutorial #docs
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/magic-8-ball/tutorial)
+* [tutorial](/lessons/magic-8-ball/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

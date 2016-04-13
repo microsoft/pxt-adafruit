@@ -10,10 +10,10 @@ If (Conditionals)
 
 ## Quick Links
 
-* [activity](/microbit/lessons/die-roll/activity)
-* [challenges](/microbit/lessons/die-roll/challenges)
-* [quiz](/microbit/lessons/die-roll/quiz)
-* [quiz answers](/microbit/lessons/die-roll/quiz-answers)
+* [activity](/lessons/die-roll/activity)
+* [challenges](/lessons/die-roll/challenges)
+* [quiz](/lessons/die-roll/quiz)
+* [quiz answers](/lessons/die-roll/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

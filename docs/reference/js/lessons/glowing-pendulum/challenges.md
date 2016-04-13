@@ -6,7 +6,7 @@ Coding challenges for the glowing pendulum tutorial. #docs
 
 Complete the following guided tutorial:
 
-* [tutorial](/microbit/lessons/glowing-pendulum/tutorial)
+* [tutorial](/lessons/glowing-pendulum/tutorial)
 
 At the end of the tutorial, click `keep editing`. Your code should look like this:
 

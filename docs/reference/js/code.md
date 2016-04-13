@@ -9,7 +9,7 @@ To add a **functions** to your script, click the `script` button, then click the
 
 ### functions
 
-A **function** takes [inputs](/microbit/actionparameters), runs code and (optionally) returns an output.
+A **function** takes [inputs](/actionparameters), runs code and (optionally) returns an output.
 
 TouchDevelop functions are similar to `mathematical functions`. Consider the function that computes the square of `x`: `square(x) = x*x`. In code, it would look like this:
 
@@ -27,5 +27,5 @@ An function can be marked as **private** in the properties. A private function i
 
 ### documentation
 
-The comment(s) at the beginning of a function used to provide a description of its purpose. This text will show in the help area when the function is called from the code editor. This is particularly useful for [libraries](/microbit/libraries).
+The comment(s) at the beginning of a function used to provide a description of its purpose. This text will show in the help area when the function is called from the code editor. This is particularly useful for [libraries](/libraries).
 

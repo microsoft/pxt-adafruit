@@ -8,9 +8,9 @@ Functions
 
 ## Quick Links
 
-* [tutorial](/microbit/lessons/meteorite/tutorial)
-* [quiz](/microbit/lessons/meteorite/quiz)
-* [quiz answers](/microbit/lessons/meteorite/quiz-answers)
+* [tutorial](/lessons/meteorite/tutorial)
+* [quiz](/lessons/meteorite/quiz)
+* [quiz answers](/lessons/meteorite/quiz-answers)
 
 ## Class
 
@@ -22,23 +22,23 @@ Learn how to create **functions**, `function()` that perform a specific task and
 
 ## Documentation
 
-* **function** : [read more...](/microbit/js/function)
-* **call** : [read more...](/microbit/js/call)
-* **global variable** : [read more...](/microbit/js/data)
-* **arithmetic operators** : [read more...](/microbit/reference/types/number)
-* **math random** : [read more...](/microbit/js/math)
-* **forever** : [read more...](/microbit/reference/basic/forever)
-* **for** : [read more...](/microbit/reference/loops/for)
-* **fade out** : [read more...](/microbit/reference/led/fade-out)
-* **fade in** : [read more...](/microbit/reference/led/fade-in)
-* **on button pressed** : [read more...](/microbit/reference/input/on-button-pressed)
-* **if** : [read more...](/microbit/reference/logic/if)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
-* **show number** : [read more...](/microbit/reference/basic/show-number)
-* **show string** : [read more...](/microbit/reference/basic/show-string)
-* **plot** : [read more...](/microbit/reference/led/plot)
-* **plot all** : [read more...](/microbit/reference/led/plot-all)
-* **pause** : [read more...](/microbit/reference/basic/pause)
+* **function** : [read more...](/js/function)
+* **call** : [read more...](/js/call)
+* **global variable** : [read more...](/js/data)
+* **arithmetic operators** : [read more...](/reference/types/number)
+* **math random** : [read more...](/js/math)
+* **forever** : [read more...](/reference/basic/forever)
+* **for** : [read more...](/reference/loops/for)
+* **fade out** : [read more...](/reference/led/fade-out)
+* **fade in** : [read more...](/reference/led/fade-in)
+* **on button pressed** : [read more...](/reference/input/on-button-pressed)
+* **if** : [read more...](/reference/logic/if)
+* **show string** : [read more...](/reference/basic/show-string)
+* **show number** : [read more...](/reference/basic/show-number)
+* **show string** : [read more...](/reference/basic/show-string)
+* **plot** : [read more...](/reference/led/plot)
+* **plot all** : [read more...](/reference/led/plot-all)
+* **pause** : [read more...](/reference/basic/pause)
 
 ## Objectives
 
@@ -86,14 +86,14 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/meteorite/tutorial)
+* [tutorial](/lessons/meteorite/tutorial)
 
 ## Extended Activity
 
 * time: 20 min.
-* [quiz](/microbit/lessons/meteorite/quiz)
+* [quiz](/lessons/meteorite/quiz)
 
 ## Homework
 
-* Extended Activity: [quiz](/microbit/lessons/meteorite/quiz)
+* Extended Activity: [quiz](/lessons/meteorite/quiz)
 

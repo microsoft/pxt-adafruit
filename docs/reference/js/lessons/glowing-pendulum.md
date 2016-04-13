@@ -8,11 +8,11 @@ Acceleration
 
 ## Quick Links
 
-* [activity](/microbit/lessons/glowing-pendulum/activity)
-* [challenges](/microbit/lessons/glowing-pendulum/challenges)
-* [quiz](/microbit/lessons/glowing-pendulum/quiz)
-* [quiz answers](/microbit/lessons/glowing-pendulum/quiz-answers)
-* [tutorial](/microbit/lessons/glowing-pendulum/tutorial)
+* [activity](/lessons/glowing-pendulum/activity)
+* [challenges](/lessons/glowing-pendulum/challenges)
+* [quiz](/lessons/glowing-pendulum/quiz)
+* [quiz answers](/lessons/glowing-pendulum/quiz-answers)
+* [tutorial](/lessons/glowing-pendulum/tutorial)
 
 ## Class
 
@@ -24,12 +24,12 @@ Learn how to get the acceleration **acceleration**, `input->acceleration` value 
 
 ## Documentation
 
-* **forever** : [read more...](/microbit/reference/basic/forever)
-* **local variable** : [read more...](/microbit/reference/variables/var)
-* **acceleration** : [read more...](/microbit/reference/input/acceleration)
-* **absolute value** : [read more...](/microbit/js/math)
-* **set brightness** : [read more...](/microbit/reference/led/set-brightness)
-* **plot** : [read more...](/microbit/reference/led/set-brightness)
+* **forever** : [read more...](/reference/basic/forever)
+* **local variable** : [read more...](/reference/variables/var)
+* **acceleration** : [read more...](/reference/input/acceleration)
+* **absolute value** : [read more...](/js/math)
+* **set brightness** : [read more...](/reference/led/set-brightness)
+* **plot** : [read more...](/reference/led/set-brightness)
 
 ## Objectives
 
@@ -75,16 +75,16 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/glowing-pendulum/activity)
-* [tutorial](/microbit/lessons/glowing-pendulum/tutorial)
-* [quiz](/microbit/lessons/glowing-pendulum/quiz)
+* [activity](/lessons/glowing-pendulum/activity)
+* [tutorial](/lessons/glowing-pendulum/tutorial)
+* [quiz](/lessons/glowing-pendulum/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/glowing-pendulum/challenges)
+* [challenges](/lessons/glowing-pendulum/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/glowing-pendulum/challenges)
+* Extended Activity: [challenges](/lessons/glowing-pendulum/challenges)
 

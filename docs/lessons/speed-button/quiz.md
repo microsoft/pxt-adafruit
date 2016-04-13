@@ -6,7 +6,7 @@ counter that keeps track of how many times button "A" has been pressed.
 
 ## Directions
 
-Use this activity document to guide your work in the [speed button tutorial](/microbit/lessons/speed-button/activity).
+Use this activity document to guide your work in the [speed button tutorial](/lessons/speed-button/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

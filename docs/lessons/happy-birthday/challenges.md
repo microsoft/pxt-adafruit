@@ -4,7 +4,7 @@ Coding challenges for finishing the song, happy birthday.
 
 ## Before we get started
 
-Complete the [happy birthday](/microbit/lessons/happy-birthday/activity) activity and your code will look like this:
+Complete the [happy birthday](/lessons/happy-birthday/activity) activity and your code will look like this:
 
 
 ```blocks

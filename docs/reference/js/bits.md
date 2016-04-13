@@ -6,18 +6,18 @@ Functions in the Bits library.
 
 The binary numeral system represents numeric values using values 0 and 1. This is how almost all modern computers store data. Each 0 or 1 digit is called a binary digit, or bit for short.
 
-The Bits library includes functions for bit-level manipulation of integers. In the [Touch Develop editor](/microbit/js/editor), click `bits` to see the following bit functions:
+The Bits library includes functions for bit-level manipulation of integers. In the [Touch Develop editor](/js/editor), click `bits` to see the following bit functions:
 
 ## Bitwise and, or, and xor functions
 
 #### Syntax
 
-bits `->` *and/or/xor* uint32 (x : [Number](/microbit/reference/types/number), y : [Number](/microbit/reference/types/number)) *returns* [Number](/microbit/reference/types/number)
+bits `->` *and/or/xor* uint32 (x : [Number](/reference/types/number), y : [Number](/reference/types/number)) *returns* [Number](/reference/types/number)
 
 #### Parameters
 
-* x - an unsigned 32 bit integer [Number](/microbit/reference/types/number)
-* y - another unsigned 32 bit integer [Number](/microbit/reference/types/number)
+* x - an unsigned 32 bit integer [Number](/reference/types/number)
+* y - another unsigned 32 bit integer [Number](/reference/types/number)
 
 ### and uint32
 
@@ -37,14 +37,14 @@ Rotate bits to the left or the right, by the specified number of positions.
 
 #### Syntax
 
-bits `->` rotate left unint32 (x : [Number](/microbit/reference/types/number), bits : [Number](/microbit/reference/types/number)) *returns* [Number](/microbit/reference/types/number)
+bits `->` rotate left unint32 (x : [Number](/reference/types/number), bits : [Number](/reference/types/number)) *returns* [Number](/reference/types/number)
 
-bits `->` rotate right unint32 (x : [Number](/microbit/reference/types/number), bits : [Number](/microbit/reference/types/number)) *returns* [Number](/microbit/reference/types/number)
+bits `->` rotate right unint32 (x : [Number](/reference/types/number), bits : [Number](/reference/types/number)) *returns* [Number](/reference/types/number)
 
 #### Parameters
 
-* x - [Number](/microbit/reference/types/number);
-* bits - [Number](/microbit/reference/types/number);
+* x - [Number](/reference/types/number);
+* bits - [Number](/reference/types/number);
 
 ## Shift left and shift  right
 
@@ -52,16 +52,16 @@ Shift bits to the left or the right, by the specified number of positions.
 
 #### Syntax
 
-bits `->` shift left unint32 (x : [Number](/microbit/reference/types/number), bits : [Number](/microbit/reference/types/number)) *returns* [Number](/microbit/reference/types/number)
+bits `->` shift left unint32 (x : [Number](/reference/types/number), bits : [Number](/reference/types/number)) *returns* [Number](/reference/types/number)
 
-bits `->` shift right unint32 (x : [Number](/microbit/reference/types/number), bits : [Number](/microbit/reference/types/number)) *returns* [Number](/microbit/reference/types/number)
+bits `->` shift right unint32 (x : [Number](/reference/types/number), bits : [Number](/reference/types/number)) *returns* [Number](/reference/types/number)
 
 #### Parameters
 
-* x - [Number](/microbit/reference/types/number);
-* bits - [Number](/microbit/reference/types/number);
+* x - [Number](/reference/types/number);
+* bits - [Number](/reference/types/number);
 
 ### See also
 
-[statements and operators](/microbit/js/statements), [math functions](/microbit/js/math), [Number](/microbit/reference/types/number)
+[statements and operators](/js/statements), [math functions](/js/math), [Number](/reference/types/number)
 

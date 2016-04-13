@@ -6,7 +6,7 @@ a two-player game of Pong using TWO BBC micro:bits!.
 
 ## Directions
 
-Use this activity document to guide your work in the [2 player pong tutorial](/microbit/lessons/2-player-pong/tutorial)
+Use this activity document to guide your work in the [2 player pong tutorial](/lessons/2-player-pong/tutorial)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

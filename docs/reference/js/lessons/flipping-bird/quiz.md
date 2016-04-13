@@ -6,7 +6,7 @@ use modulo with a conditional.
 
 ## Directions
 
-Use this activity document to guide your work in the [flipping bird tutorial](/microbit/lessons/flipping-bird/tutorial).
+Use this activity document to guide your work in the [flipping bird tutorial](/lessons/flipping-bird/tutorial).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

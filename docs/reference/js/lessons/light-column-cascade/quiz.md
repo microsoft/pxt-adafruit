@@ -6,7 +6,7 @@ Learn how to create a blinking LED script with a for loop.
 
 ## Directions
 
-Use this activity document to guide your work in the [light column cascade tutorial](/microbit/js/light-column-cascade/tutorial).
+Use this activity document to guide your work in the [light column cascade tutorial](/js/light-column-cascade/tutorial).
 
 Answer the questions below while working on or after you finish the tutorial. Pay attention to the dialogs!
 

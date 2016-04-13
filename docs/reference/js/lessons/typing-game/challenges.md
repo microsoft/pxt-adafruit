@@ -4,7 +4,7 @@ My script. #docs
 
 **Challenge 0**
 
-This [guided tutorial](/microbit/lessons/typing-game/tutorial) will teach you how to use the method concat to connect to pieces of text together.
+This [guided tutorial](/lessons/typing-game/tutorial) will teach you how to use the method concat to connect to pieces of text together.
 
 ```
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"

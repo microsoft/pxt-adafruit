@@ -2,7 +2,7 @@
 
 Learn how to create a counter with the BBC micro:bit button. 
 
-This is the answer key for the [counter quiz](/microbit/lessons/counter/quiz).
+This is the answer key for the [counter quiz](/lessons/counter/quiz).
 
 ## 1. What is a variable?
 

@@ -49,7 +49,7 @@ basic.forever(() => {
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/blink/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/blink/challenges)!
 
 ### ~
 

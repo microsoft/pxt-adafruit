@@ -2,7 +2,7 @@
 
 create an arrow that randomly points to a player. #docs
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap *New Project* under **Touch Develop**.
+To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
 
 Let's begin by adding an `input->on shake` condition to know when the BBC micro:bit is shaken.
 
@@ -81,7 +81,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/spinner/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/spinner/challenges)!
 
 ### ~
 

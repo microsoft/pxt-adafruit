@@ -8,7 +8,7 @@ Acceleration
 
 ## Quick Links
 
-* [activity](/microbit/lessons/charting/activity)
+* [activity](/lessons/charting/activity)
 
 
 ## Prior learning/place of lesson in scheme of work

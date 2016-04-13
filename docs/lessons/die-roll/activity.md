@@ -165,7 +165,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/die-roll/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/die-roll/challenges)!
 
 ### ~
 

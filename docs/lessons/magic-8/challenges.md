@@ -4,7 +4,7 @@ Coding challenges for the magic 8 tutorial
 
 ## Before we get started
 
-Complete the following [guided tutorial](/microbit/lessons/magic-8/activity), and your code should look like this:
+Complete the following [guided tutorial](/lessons/magic-8/activity), and your code should look like this:
 
 ```blocks
 basic.showString("ASK A QUESTION")

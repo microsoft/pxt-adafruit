@@ -10,7 +10,7 @@ Welcome! This tutorial will help you create a love meter with the BBC micro:bit.
 
 ### ~
 
-To create a new script, go to the [Create Code](/microbit/create-code) page and tap *New Project* under **Touch Develop**.
+To create a new script, go to the [Create Code](/create-code) page and tap *New Project* under **Touch Develop**.
 
 Begin by registering an event with `input->on pin pressed(PO)` to know when someone is holding pin ``P0`` and pin ``Gnd``.
 
@@ -38,7 +38,7 @@ input.onPinPressed(TouchPin.P0, () => {
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/microbit/lessons/love-meter/challenges)!
+Excellent, you're ready to continue with the [challenges](/lessons/love-meter/challenges)!
 
 ### ~
 

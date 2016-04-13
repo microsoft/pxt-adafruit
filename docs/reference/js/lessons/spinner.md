@@ -8,11 +8,11 @@ If (Conditionals)
 
 ## Quick Links
 
-* [activity](/microbit/lessons/spinner/activity)
-* [challenges](/microbit/lessons/spinner/challenges)
-* [quiz](/microbit/lessons/spinner/quiz)
-* [quiz answers](/microbit/lessons/spinner/quiz-answers)
-* [tutorial](/microbit/lessons/spinner/tutorial)
+* [activity](/lessons/spinner/activity)
+* [challenges](/lessons/spinner/challenges)
+* [quiz](/lessons/spinner/quiz)
+* [quiz answers](/lessons/spinner/quiz-answers)
+* [tutorial](/lessons/spinner/tutorial)
 
 ## Class
 
@@ -24,12 +24,12 @@ Learn how to use an if statement **if condition do** to run code run code depend
 
 ## Documentation
 
-* **on shake** : [read more...](/microbit/reference/input/on-gesture)
-* **variable** : [read more...](/microbit/reference/variables/var)
-* **assignment operator** : [read more...](/microbit/reference/variables/assignment)
-* **math random** : [read more...](/microbit/js/math)
-* **If** : [read more...](/microbit/reference/logic/if)
-* **show LEDs** : [read more...](/microbit/reference/basic/show-leds)
+* **on shake** : [read more...](/reference/input/on-gesture)
+* **variable** : [read more...](/reference/variables/var)
+* **assignment operator** : [read more...](/reference/variables/assignment)
+* **math random** : [read more...](/js/math)
+* **If** : [read more...](/reference/logic/if)
+* **show LEDs** : [read more...](/reference/basic/show-leds)
 
 ## Objectives
 
@@ -81,16 +81,16 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [activity](/microbit/lessons/spinner/activity)
-* [tutorial](/microbit/lessons/spinner/tutorial)
-* [quiz](/microbit/lessons/spinner/quiz)
+* [activity](/lessons/spinner/activity)
+* [tutorial](/lessons/spinner/tutorial)
+* [quiz](/lessons/spinner/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/spinner/challenges)
+* [challenges](/lessons/spinner/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/spinner/challenges)
+* Extended Activity: [challenges](/lessons/spinner/challenges)
 

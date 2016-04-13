@@ -10,11 +10,11 @@ Show LEDs
 
 ## Quick Links
 
-* [activity](/microbit/lessons/beautiful-image/activity)
-* [quiz](/microbit/lessons/beautiful-image/quiz)
-* [quiz answers](/microbit/lessons/beautiful-image/quiz-answers)
-* [challenges](/microbit/lessons/beautiful-image/challenges)
-* [tutorial](/microbit/lessons/beautiful-image/tutorial)
+* [activity](/lessons/beautiful-image/activity)
+* [quiz](/lessons/beautiful-image/quiz)
+* [quiz answers](/lessons/beautiful-image/quiz-answers)
+* [challenges](/lessons/beautiful-image/challenges)
+* [tutorial](/lessons/beautiful-image/tutorial)
 
 ## Class
 
@@ -26,8 +26,8 @@ Learn how to **show LEDs**,  to show an image on the BBC micro:bit's LED screen.
 
 ## Documentation
 
-* **show LEDs** : [read more...](/microbit/reference/basic/show-leds)
-* **pause** : [read more...](/microbit/reference/basic/pause)
+* **show LEDs** : [read more...](/reference/basic/show-leds)
+* **pause** : [read more...](/reference/basic/pause)
 
 ## Objectives
 
@@ -62,15 +62,15 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/microbit/lessons/beautiful-image/tutorial)
-* [quiz](/microbit/lessons/beautiful-image/quiz)
+* [tutorial](/lessons/beautiful-image/tutorial)
+* [quiz](/lessons/beautiful-image/quiz)
 
 ## Extended Activity
 
 * time: 20 min.
-* [challenges](/microbit/lessons/beautiful-image/challenges)
+* [challenges](/lessons/beautiful-image/challenges)
 
 ## Homework
 
-* Extended Activity: [challenges](/microbit/lessons/beautiful-image/challenges)
+* Extended Activity: [challenges](/lessons/beautiful-image/challenges)
 

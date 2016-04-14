@@ -77,9 +77,45 @@ namespace pxsim {
             })
         }
     }
+    
+    /**
+      * Error codes used in the micro:bit runtime.
+      */
+    export enum PanicCode {
+        // PANIC Codes. These are not return codes, but are terminal conditions.
+        // These induce a panic operation, where all code stops executing, and a panic state is
+        // entered where the panic code is diplayed.
+
+        // Out out memory error. Heap storage was requested, but is not available.
+        MICROBIT_OOM = 20,
+
+        // Corruption detected in the micro:bit heap space
+        MICROBIT_HEAP_ERROR = 30,
+
+        // Dereference of a NULL pointer through the ManagedType class,
+        MICROBIT_NULL_DEREFERENCE = 40,
+    };
 
     export function panic(code: number) {
         console.log("PANIC:", code)
+        led.setBrightness(255);
+        let img = board().image;
+        img.clear();
+        img.set(0, 4, 255);
+        img.set(1, 3, 255);
+        img.set(2, 3, 255);
+        img.set(3, 3, 255);
+        img.set(4, 4, 255);
+        img.set(0, 0, 255);
+        img.set(1, 0, 255);
+        img.set(0, 1, 255);
+        img.set(1, 1, 255);
+        img.set(3, 0, 255);
+        img.set(4, 0, 255);
+        img.set(3, 1, 255);
+        img.set(4, 1, 255);
+        runtime.updateDisplay();
+       
         throw new Error("PANIC " + code)
     }
 
@@ -285,8 +321,8 @@ namespace pxsim.input {
             default: return Math.floor(Math.sqrt(acc.instantaneousAccelerationSquared()));
         }
     }
-    
-    export function rotation(kind : number) : number {
+
+    export function rotation(kind: number): number {
         let b = board();
         let acc = b.accelerometer;
         acc.activate();
@@ -294,11 +330,11 @@ namespace pxsim.input {
         let y = acc.getX(MicroBitCoordinateSystem.NORTH_EAST_DOWN);
         let z = acc.getX(MicroBitCoordinateSystem.NORTH_EAST_DOWN);
 
-        let roll = Math.atan2(y,z);
-        let pitch = Math.atan(-x / (y*Math.sin(roll) + z*Math.cos(roll)));
-        
+        let roll = Math.atan2(y, z);
+        let pitch = Math.atan(-x / (y * Math.sin(roll) + z * Math.cos(roll)));
+
         let r = 0;
-        switch(kind) {
+        switch (kind) {
             case 0: r = pitch; break;
             case 1: r = roll; break;
         }
@@ -364,8 +400,8 @@ namespace pxsim.led {
         board().displayMode = mode;
         runtime.queueDisplayUpdate()
     }
-    
-    export function screenshot() : Image {
+
+    export function screenshot(): Image {
         let img = createImage(5)
         board().image.copyTo(0, 5, img, 0);
         return img;
@@ -515,30 +551,41 @@ namespace pxsim.images {
 }
 
 namespace pxsim.ImageMethods {
-    export function showImage(i: Image, offset: number) {
-        // TODO offset?
-        i.copyTo(0, 5, board().image, 0)
-        runtime.queueDisplayUpdate()
-    }
-    
-    export function plotImage(leds: Image, offset:number): void {
+    export function showImage(leds: Image, offset: number) {
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
+        
         leds.copyTo(offset, 5, board().image, 0)
         runtime.queueDisplayUpdate()
-    }    
-    
-    export function clear(i: Image) {
-        i.clear();
-    }
-    
-    export function setPixelBrightness(i:Image, x:number, y:number, b:number) {
-        i.set(x,y,b);        
     }
 
-    export function pixelBrightness(i:Image, x:number, y:number) : number {
-        return i.get(x,y);        
+    export function plotImage(leds: Image, offset: number): void {
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);
+        
+        leds.copyTo(offset, 5, board().image, 0)
+        runtime.queueDisplayUpdate()
     }
-    
+
+    export function clear(leds: Image) {
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
+        
+        leds.clear();
+    }
+
+    export function setPixelBrightness(i: Image, x: number, y: number, b: number) {
+        if (!i) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
+
+        i.set(x, y, b);
+    }
+
+    export function pixelBrightness(i: Image, x: number, y: number): number {
+        if (!i) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
+
+        return i.get(x, y);
+    }
+
     export function scrollImage(leds: Image, interval: number, stride: number): void {
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
+        
         let cb = getResume()
         let off = stride > 0 ? 0 : leds.width - 1;
         let display = board().image;
@@ -555,5 +602,5 @@ namespace pxsim.ImageMethods {
             },
             whenDone: cb
         })
-    }    
+    }
 }

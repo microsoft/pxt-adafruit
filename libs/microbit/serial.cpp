@@ -9,7 +9,7 @@ namespace serial {
      */
     //%
     StringData* readString() {
-      return uBit.serial.readString().leakData();
+      return uBit.serial.readUntil(ManagedString("\r\n")).leakData();
     }
 
     /**
@@ -17,6 +17,6 @@ namespace serial {
      */
     //%
     void writeString(StringData *text) { 
-      uBit.serial.sendString(ManagedString(text));
+      uBit.serial.send(ManagedString(text));
     }
 }

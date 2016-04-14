@@ -9,10 +9,6 @@ enum class EventCreationMode {
      */
     CreateOnly = CREATE_ONLY,
     /**
-     * MicroBitEvent is initialised, and queued on the MicroBitMessageBus.
-     */
-    CreateAndQueue = CREATE_AND_QUEUE,
-    /**
      * MicroBitEvent is initialised, and its event handlers are immediately fired (not suitable for use in interrupts!).
      */
     CreateAndFire = CREATE_AND_FIRE,
@@ -143,10 +139,10 @@ namespace control {
      * Raises an event in the event bus.
      * @param src ID of the MicroBit Component that generated the event e.g. MICROBIT_ID_BUTTON_A.
      * @param value Component specific code indicating the cause of the event.
-     * @param mode optional definition of how the event should be processed after construction (default is CREATE_AND_QUEUE).
+     * @param mode optional definition of how the event should be processed after construction (default is CREATE_AND_FIRE).
      */
     //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source|with value %value=control_event_value" blockExternalInputs=1
-    //% mode.defl=CREATE_AND_QUEUE
+    //% mode.defl=CREATE_AND_FIRE
     void raiseEvent(int src, int value, EventCreationMode mode) { 
         MicroBitEvent evt(src, value, (MicroBitEventLaunchMode)mode); 
     }

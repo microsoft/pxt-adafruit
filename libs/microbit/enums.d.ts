@@ -120,10 +120,6 @@ declare namespace input {
      */
     CreateOnly = 0,  // CREATE_ONLY
     /**
-     * MicroBitEvent is initialised, and queued on the MicroBitMessageBus.
-     */
-    CreateAndQueue = 1,  // CREATE_AND_QUEUE
-    /**
      * MicroBitEvent is initialised, and its event handlers are immediately fired (not suitable for use in interrupts!).
      */
     CreateAndFire = 2,  // CREATE_AND_FIRE

@@ -2,7 +2,9 @@
 
 The micro:bit LED screen 
 
-![](/static/mb/device/screen-0.png)
+```sim
+basic.showString(" ");
+```
 
 The micro:bit LED screen consists of 25 red LED lights arranged in a 5X5 grid (5 LEDs across by 5 LEDs down).
 
@@ -32,9 +34,19 @@ Since the row and column numbers start at 0, an easy way to figure out the x, y 
 
 Use [plot](/led/plot) and [unplot](/led/unplot) to turn a LED on or off
 
+```blocks
+led.plot(0,0)
+led.unplot(0,0)
+```
+
 ### Is a LED on/off?
 
 Use the [point](/led/point) function to find out if a LED is on or off.
+
+```blocks
+if(led.point(0,0)) {
+}
+```
 
 ### Display images, strings and numbers
 
@@ -44,14 +56,14 @@ Instead of turning individual LEDs on or off, as above, you can display an [imag
 
 The micro:bit runtime keeps an in-memory representation of the state of all 25 LEDS. This state is known as the "display buffer" and controls which LEDS are on and which are off. The plot/unplot/point functions access the display buffer directly. On the other hand, the functions that show an image, number or string overwrite the buffer completely. To illustrate, first try running this code sequence
 
-```
-basic.showString("d", 150)
+```blocks
+basic.showString("d")
 led.plot(0, 0)
 ```
 
 You will see the letter "d" displayed as well as the LED in position `0,0` lit up. Now try reversing the order of the two statements above:
 
-```
+```blocks
 led.plot(0, 0)
 basic.showString("d", 150)
 ```

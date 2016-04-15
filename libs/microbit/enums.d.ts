@@ -122,7 +122,7 @@ declare namespace input {
     /**
      * MicroBitEvent is initialised, and its event handlers are immediately fired (not suitable for use in interrupts!).
      */
-    CreateAndFire = 2,  // CREATE_AND_FIRE
+    CreateAndFire = 1,  // CREATE_AND_FIRE
     }
 
 

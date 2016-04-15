@@ -48,5 +48,5 @@ for (let i = 0; i < 5; i++) {
 
 ### See also
 
-[show string](/reference/basic/show-string), [show animation](/reference/basic/show-animation), [Number](/reference/types/number), [math library](/js/math)
+[show string](/reference/basic/show-string), [show animation](/reference/basic/show-animation), [Number](/reference/types/number), [math library](/reference/math)
 

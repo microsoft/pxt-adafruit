@@ -32,7 +32,7 @@ Since the row and column numbers start at 0, an easy way to figure out the x, y 
 
 ### Turn a LED on/off
 
-Use [plot](/led/plot) and [unplot](/led/unplot) to turn a LED on or off
+Use [plot](/reference/led/plot) and [unplot](/reference/led/unplot) to turn a LED on or off
 
 ```blocks
 led.plot(0,0)
@@ -41,7 +41,7 @@ led.unplot(0,0)
 
 ### Is a LED on/off?
 
-Use the [point](/led/point) function to find out if a LED is on or off.
+Use the [point](/reference/led/point) function to find out if a LED is on or off.
 
 ```blocks
 if(led.point(0,0)) {

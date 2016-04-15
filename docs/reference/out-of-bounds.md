@@ -8,8 +8,8 @@ For example, the [plot](/reference/led/plot) function has two parameters:
 
 ### syntax
 
-```
-export function plot(x: number, y: number)
+```sig
+led.plot(0,0)
 ```
 
 ### parameters
@@ -21,7 +21,7 @@ export function plot(x: number, y: number)
 
 here's an example of code with an out of bounds parameter (the *x* and *y* parameters are outside the expected range of 0-4):
 
-```
+```blocks
 led.plot(9, -21)
 ```
 
@@ -33,11 +33,8 @@ Typically, when a parameter supplied to a function is out of bounds that functio
 
 If you call the `point` function with an out of bounds parameter, the function returns `false`:
 
-```
+```blocks
 let on = led.point(5, -5)
 ```
 
-### see also
-
-For more information on the out-of-bounds behavior of a function, see the documentation for that [function](/js/contents).
 

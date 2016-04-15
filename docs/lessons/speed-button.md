@@ -22,7 +22,7 @@ Learn how to declare a **Boolean** variable, `var t:= true` `var f:=false` for o
 ## Documentation
 
 * **running time** : [read more...](/reference/input/running-time)
-* **global variable** : [read more...](/js/data)
+* **global variable** : [read more...](/reference/variables/globals)
 * **Boolean** : [read more...](/reference/types/boolean)
 * **on button pressed** : [read more...](/reference/input/on-button-pressed)
 * **if** : [read more...](/reference/logic/if)

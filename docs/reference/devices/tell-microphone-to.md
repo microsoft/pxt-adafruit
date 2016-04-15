@@ -37,13 +37,13 @@ export function tellMicrophoneTo(event: string)
 To tell the connected device to start recording audio
 
 ```
-antenna.tellMicrophoneTo("start capture")
+devices.tellMicrophoneTo("start capture")
 ```
 
 To tell the connected device to stop recording audio
 
 ```
-antenna.tellMicrophoneTo("stop capture")
+devices.tellMicrophoneTo("stop capture")
 ```
 
 ### Other show functions
@@ -54,5 +54,5 @@ antenna.tellMicrophoneTo("stop capture")
 
 ### See also
 
-[Antenna](/js/antenna)
+[Devices](/reference/devices)
 

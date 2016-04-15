@@ -31,12 +31,6 @@ Windows
 Mac (picture bvabdbco)
 WARN: unknown picture: bvabdbco:5x3
 
-### ~hide
-
-If your computer doesn't recognise your micro:bit, please see [troubleshooting USB problems](/diagnosing-usb).
-
-### ~
-
 ## Step 2: Compile your script
 
 Next, compile your script:
@@ -133,5 +127,5 @@ Or it may appear that there are two hex files on your micro:bit so the micro:bit
 
 ### See also
 
-[Run code in a browser](/js/simulator)
+[Run code in a browser](/device/simulator)
 

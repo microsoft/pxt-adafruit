@@ -27,5 +27,5 @@ for (let i = 0; i < 5; i++) {
 
 ### See also
 
-[while](/js/while), [running time](/reference/input/running-time), [for](/reference/loops/for)
+[while](/reference/loops/while), [running time](/reference/input/running-time), [for](/reference/loops/for)
 

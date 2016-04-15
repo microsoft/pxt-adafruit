@@ -2,17 +2,9 @@
 
 The micro:bit pins.
 
-## We listened to your feedback!
-
-Following the feedback from teachers, the following improvements were made:
-
-* compile without signing in
-* compile offline
-* save and load code using files
-
 ## How to work offline
 
-If you have loaded the web app at some time in the past (by clicking on "my scripts" from the home page), then if you later open the same browser (whether you are online or offline) and type in the URL KINDSCRIPTWEBSITE, you will be able to access all the features of the web app. Note that it is important to end the URL with "/".
+If you have loaded the web app at some time in the past (by clicking on "my scripts" from the home page), then if you later open the same browser (whether you are online or offline) and type in [https://codemicrobit.com/](https://codemicrobit.com/), you will be able to access all the features of the web app. Note that it is important to end the URL with "/".
 
 ## Save and load code using files
 
@@ -24,7 +16,7 @@ The micro:bit automatically saves and synchronises scripts for signed-in users t
 
 ## The new in-browser compiler
 
-The compilation from a script to ARM machine code is now done entirely in the browser  (read the [in depth story](https://www.touchdevelop.com/docs/touch-develop-in-208-bits) about building the compiler). The new compiler is used by the Block Editor, Touch Develop and Code Kingdoms to create a .hex file solely within the confines of your web browser (no Internet connection is needed). The micro:bit compilation process (see page 10 in the [Quick Start Guide](/js/quick-start)) has been updated below to reflect the new compiler architecture, as shown below:
+The compilation from a script to ARM machine code is now done entirely in the browser  (read the [in depth story](https://www.touchdevelop.com/docs/touch-develop-in-208-bits) about building the compiler). The new compiler is used by the Block Editor, Touch Develop and Code Kingdoms to create a .hex file solely within the confines of your web browser (no Internet connection is needed). The micro:bit compilation process is shown below:
 
 ![](/static/mb/offline-2.png)
 

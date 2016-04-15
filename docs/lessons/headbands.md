@@ -42,13 +42,13 @@ Learn how to create a charades game with **collections**, ` create -> Collection
 ## Documentation
 
 * **collection**
-* **global variables** : [read more...](/js/data)
+* **global variables** : [read more...](/reference/variables/globals.md)
 * **Boolean** : [read more...](/reference/types/boolean)
 * **on logo up** [read more...](/functions/on-logo-up)
 * **on screen down** [read more...](/functions/on-screen-down)
 * **on screen up** [read more...](/functions/on-screen-up)
 * **show string** : [read more...](/reference/basic/show-string)
-* **game library** : [read more...](/js/game-library)
+* **game library** : [read more...](/reference/game-library)
 
 ## Resources
 

@@ -1,6 +1,6 @@
 # On Button Pressed
 
-Register an [event handler](/reference/event-handler) that will execute whenever an input button (A, B, or A and B together) is pressed during program execution. When [running code](/js/simulator) with this function in a web browser, click an on-screen input button - labelled A or B.
+Register an [event handler](/reference/event-handler) that will execute whenever an input button (A, B, or A and B together) is pressed during program execution. When [running code](/device/simulator) with this function in a web browser, click an on-screen input button - labelled A or B.
 
 ```sig
 input.onButtonPressed(Button.A, () => {})

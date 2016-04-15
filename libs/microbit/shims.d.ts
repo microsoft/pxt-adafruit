@@ -201,9 +201,7 @@ declare namespace input {
      * @param body TODO
      */
     //% help=input/on-button-pressed weight=85
-    //% blockId=device_button_event 
-    //% block="on button|%NAME|pressed" 
-    //% icon="\uf192" shim=input::onButtonPressed
+    //% blockId=device_button_event block="on button|%NAME|pressed" icon="\uf192" shim=input::onButtonPressed
     function onButtonPressed(button: Button, body: () => void): void;
 
     /**

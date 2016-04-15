@@ -197,9 +197,8 @@ namespace pxsim.basic {
             clearScreen();
             pause(interval * 5);
         } else {
-            let leds = createImageFromString(s);
-            if (s.length == 1) showLeds(leds, interval * 5)
-            else ImageMethods.scrollImage(leds, interval, 1);
+            if (s.length == 1) showLeds(createImageFromString(s), interval * 5)
+            else ImageMethods.scrollImage(createImageFromString(s + ' '), interval, 1);
         }
     }
 

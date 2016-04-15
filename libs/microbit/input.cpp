@@ -105,9 +105,7 @@ namespace input {
      * @param body TODO
      */
     //% help=input/on-button-pressed weight=85
-    //% blockId=device_button_event 
-    //% block="on button|%NAME|pressed" 
-    //% icon="\uf192"
+    //% blockId=device_button_event block="on button|%NAME|pressed" icon="\uf192"
     void onButtonPressed(Button button, Action body) {
         registerWithDal((int)button, MICROBIT_BUTTON_EVT_CLICK, body);
     }

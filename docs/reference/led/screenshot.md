@@ -1,6 +1,6 @@
 # Screenshot
 
-Make an [Image](/reference/image/image) out of the current state of the [LED screen](/device/screen).
+Make an [Image](/reference/images/image) out of the current state of the [LED screen](/device/screen).
 
 ```sig
 led.screenshot();
@@ -12,7 +12,7 @@ led.screenshot();
 
 ### Returns
 
-* an [Image](/reference/image/image) of what is currently visible on the [LED screen](/device/screen)
+* an [Image](/reference/images/image) of what is currently visible on the [LED screen](/device/screen)
 
 ### See also
 

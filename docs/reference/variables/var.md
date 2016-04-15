@@ -4,7 +4,7 @@ How to define and use local variables.
 
 ### @parent language
 
-A variable is a place where you can store and retrieve data. Variables have a name, a [type](/blocks/types), and value:
+A variable is a place where you can store and retrieve data. Variables have a name, a [type](/reference/types), and value:
 
 * *name* is how you'll refer to the variable
 * *type* refers to the kind of data a variable can store
@@ -12,12 +12,15 @@ A variable is a place where you can store and retrieve data. Variables have a na
 
 ### Var statement
 
-Use the Block Editor variable statement to create a local variable and the [assignment operator](/reference/variables/assign) to store something in the variable.
+Use the Block Editor variable statement to create a variable 
+and the [assignment operator](/reference/variables/assign) 
+to store something in the variable.
 
-For example, this code stores the number `2` in the `num1` variable:
+For example, this code stores the number `2` in the `x` variable:
 
-![](/static/mb/blocks/var-0.png)
-
+```blocks
+let x = 2;
+```
 Here's how to define a variable in the Block Editor:
 
 1. Click `variables`.
@@ -26,57 +29,53 @@ Here's how to define a variable in the Block Editor:
 
 3. Drag a block type on the right-side of the [assignment operator](/reference/variables/assign) and click the down arrow to change the variable name.
 
-The resulting code should look something like this:
-
-// string variable
-
-![](/static/mb/blocks/var-1.png)
-
-// number variable
-
-![](/static/mb/blocks/var-2.png)
-
-// boolean variable
-
-![](/static/mb/blocks/var-3.png)
-
-// image variable
-
-![](/static/mb/blocks/var-4.png)
-
-See [Image](/blocks/image) for info on creating and using image variables.
-
-The resulting code should look something like this:
-
-![](/static/mb/blocks/var-5.png)
-
 A variable is created for the number returned by the [brightness](/reference/led/brightness) function.
+
+```blocks
+let b = led.brightness();
+```
 
 ### Using variables
 
 Once you've defined a variable, just use the variable's name whenever you need what's stored in the variable. For example, the following code shows the value stored in `counter` on the LED screen:
 
-![](/static/mb/blocks/var-6.png)
+```blocks
+let counter = 1;
+basic.showNumber(counter);
+```
 
 To change the contents of a variable use the assignment operator. The following code sets `counter` to 1 and then increments `counter` by 10:
 
-![](/static/mb/blocks/var-7.png)
+```blocks 
+let counter = 1;
+counter = counter + 10;
+basic.showNumber(counter);
+```
 
 ### Why use variables?
 
-Variables help simplify your code. For example, instead of turning on LEDs one by one like this:
+If you want to remember and modify data, you'll need a variable. 
+A counter is a great example:
 
-![](/static/mb/blocks/var-8.png)
-
-You can use a variable (`i`) and a [for loop](/reference/loops/for) to plot the same series of points (`i` is incremented by 1, each time the loop repeats):
-
-![](/static/mb/blocks/var-9.png)
+```blocks
+let counter = 0;
+input.onButtonPressed(Button.A, () => { 
+  counter = counter + 1;
+  basic.showNumber(counter);
+});
+```
 
 ### Local variables
 
 Local variables exist only within the function or block of code where they're defined. For example:
 
-![](/static/mb/blocks/comment-0.png)
+```blocks
+// x does NOT exist here.
+if (led.brightness() > 128) {
+  // x exists here
+  let x = 0;
+}
+```
 
 #### Notes
 
@@ -88,5 +87,5 @@ Local variables exist only within the function or block of code where they're de
 
 ### See also
 
-[types](/blocks/types), [assignment operator](/reference/variables/assign)
+[types](/reference/types), [assignment operator](/reference/variables/assign)
 

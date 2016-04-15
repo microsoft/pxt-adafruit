@@ -27,5 +27,5 @@ basic.clearScreen()
 
 ### See also
 
-[set brightness](/reference/led/set-brightness), [unplot](/reference/led/unplot), [plot](/reference/led/plot), [Image](/reference/image/image), [clear](/reference/basic/clear-screen)
+[set brightness](/reference/led/set-brightness), [unplot](/reference/led/unplot), [plot](/reference/led/plot), [Image](/reference/images/image), [clear](/reference/basic/clear-screen)
 

@@ -2,7 +2,7 @@
 
 The set pixel function. #set pixel.
 
-Set the on/off state of pixel in an [Image](/reference/image/image).
+Set the on/off state of pixel in an [Image](/reference/images/image).
 
 ### KindScript
 
@@ -12,8 +12,8 @@ export function setPixel(_this: micro_bit.Image, x: number, y: number, value: bo
 
 ### Parameters
 
-* x - [Number](/reference/types/number); the *x coordinate* or horizontal position of a pixel in an [image](/reference/image/image)
-* x - [Number](/reference/types/number); the *y coordinate* or vertical position of a pixel in an [image](/reference/image/image)
+* x - [Number](/reference/types/number); the *x coordinate* or horizontal position of a pixel in an [image](/reference/images/image)
+* x - [Number](/reference/types/number); the *y coordinate* or vertical position of a pixel in an [image](/reference/images/image)
 * value -[Boolean](/reference/types/boolean); the on/off state of a pixel; `true` for on, `false` for off
 
 ### x, y coordinates?
@@ -38,5 +38,5 @@ img.showImage(0)
 
 ### See also
 
-[pixel](/reference/images/pixel), [show image](/reference/images/show-image), [image](/reference/image/image), [create image](/reference/images/create-image), [scroll image](/reference/images/scroll-image)
+[pixel](/reference/images/pixel), [show image](/reference/images/show-image), [image](/reference/images/image), [create image](/reference/images/create-image), [scroll image](/reference/images/scroll-image)
 

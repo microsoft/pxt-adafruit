@@ -6,7 +6,7 @@ create a magic 8 ball on the BBC micro:bit.
 
 ## Directions
 
-Use this activity document to guide your work in the [magic 8 tutorial](/lessons/magic-8/tutorial).
+Use this activity document to guide your work in the [magic 8 activity](/lessons/magic-8/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

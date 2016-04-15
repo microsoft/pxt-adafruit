@@ -1,6 +1,6 @@
 # Create Image
 
-Create an [Image](/reference/image/image) to show on the [LED screen](/device/screen).
+Create an [Image](/reference/images/image) to show on the [LED screen](/device/screen).
 
 ```sig
 images.createImage(`
@@ -35,5 +35,5 @@ input.onGesture(Gesture.Shake, () => {
 
 ### See also
 
-[show animation](/reference/basic/show-animation), [image](/reference/image/image), [show image](/reference/image/show-image), [scroll image](/reference/image/scroll-image)
+[show animation](/reference/basic/show-animation), [image](/reference/images/image), [show image](/reference/image/show-image), [scroll image](/reference/image/scroll-image)
 

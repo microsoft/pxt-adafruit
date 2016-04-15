@@ -18,7 +18,7 @@ radio.setGroup(1)
 
 ### Parameters
 
-* ``id`` -- a [number](/number) between ``0`` and ``255``.
+* ``id`` -- a [number](/reference/types/number) between ``0`` and ``255``.
 
 ### Example
 
@@ -30,5 +30,5 @@ radio.setGroup(128)
 
 ### See also
 
-[receive number](/radio/receive-number), [send number](/radio/send-number), [on data received](/radio/on-data-received)
+[receive number](/reference/radio/receive-number), [send number](/reference/radio/send-number), [on data received](/reference/radio/on-data-received)
 

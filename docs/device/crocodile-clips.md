@@ -1,8 +1,7 @@
 # crocodile clips
 
-The on pin pressed accessories. 
-
-Register an [event handler](/reference/event-handler) that will execute whenever the user attaches one side of the crocodile clip to the `GND` pin, then connects and disconnects the unattached side of the crocodile clip to pin `0`, `1`, or `2`.
+The large holes at the bottom of the board are designed to attach alligator/crocodile clips.
+Register an event that will execute whenever the user attaches one side of the crocodile clip to the `GND` pin, then connects and disconnects the unattached side of the crocodile clip to pin `0`, `1`, or `2`.
 
 ### Example: on pin pressed with random numbers
 

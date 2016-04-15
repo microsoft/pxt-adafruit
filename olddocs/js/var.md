@@ -13,45 +13,29 @@ A variable is a place where you can store and retrieve data. Variables have a na
 
 ### `var` and `let` statement
 
-Use the Touch Develop *var* statement to create a local variable and the [assignment operator](/reference/variables/assign) `=` to store something in the variable.
+The ``var`` keyword declares a global variables that is defined within the entire scope of the function. 
+The ``let`` keyword defined a block-scoped variable, similarly to other languages like Java, C# or C.
 
 For example, this code stores the number `2` in the `num1` variable:
 
-```
+* number variable
+```blocks
 let num1 = 2
 ```
 
-Here's how to define a variable in the Touch Develop editor:
-
-1. Click `var`.
-
-2. Change the default variable name if you like.
-
-3. Click on the right-side of the [assignment operator](/reference/variables/assign) `:=` and type or click what you want to store in the variable.
-
-The resulting code should look something like this:
-
-// string variable
-
-```
+* string variable
+```blocks
 let name = "Mike"
 ```
 
-// number variable
+* boolean variable
 
-```
-let counter = 1
-```
-
-// boolean variable
-
-```
+```blocks
 let bool = true
 ```
 
-// image variable
-
-```
+* image variable
+```blocks
 let img = images.createImage(`
 . . # . .
 . # # # .
@@ -62,34 +46,19 @@ let img = images.createImage(`
 ```
 
 See [Image](/reference/image/image) for info on creating and using image variables.
-
-### Store in var button
-
-Another way to define a variable is to use the `store in var` button. Here's how:
-
-* in the [Touch Develop editor](/js/editor), click a function button that returns a value (i.e. `led` `->` `brightness`)
-* click `store in var`
-* click `rename` to change the default variable name
-
-The resulting code should look something like this:
-
-```
-let brightness = led.brightness()
-```
-
-A variable is created for the number returned by the [brightness](/reference/led/brightness) function.
-
 ### Using variables
 
 Once you've defined a variable, just use the variable's name whenever you need what's stored in the variable. For example, the following code shows the value stored in `counter` on the LED screen:
 
 ```
+let counter = 5;
 basic.showNumber(counter, 100)
 ```
 
 To change the contents of a variable use the assignment operator `:=`. The following code sets `counter` to 1 and then increments `counter` by 10:
 
 ```
+let counter = 0;
 counter = 1
 counter = counter + 10
 ```
@@ -127,12 +96,7 @@ if (led.brightness() > 127) {
 }
 ```
 
-Use [global variables](/js/data) when you need to access a variable in nested code blocks or across multiple functions.
-
-#### Notes
-
-* You can use the default variable names if you'd like, however, it's best to use descriptive variable names. To change a variable name in the editor, select the variable and then click `rename`.
-* Be careful not to confuse the assignment `:=` operator with the equals `=` operator.
+Use **global variables** when you need to access a variable in nested code blocks or across multiple functions.
 
 ### Lessons
 
@@ -140,5 +104,5 @@ Use [global variables](/js/data) when you need to access a variable in nested co
 
 ### See also
 
-[global variables](/js/data), [types](/js/types), [assignment operator](/reference/variables/assign)
+[types](/reference/types), [assignment operator](/reference/variables/assign)
 

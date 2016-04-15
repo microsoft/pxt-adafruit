@@ -52,7 +52,7 @@ Learn how to create a charades game with **collections**, ` create -> Collection
 
 ## Resources
 
-* Activity: [tutorial](/lessons/headbands/tutorial)
+* Activity: [tutorial](/lessons/headbands/activity)
 * Activity: [quiz](/lessons/headbands/quiz)
 * Extended Activity: [challenges](/lessons/headbands/challenges)
 
@@ -112,7 +112,7 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 ## Activity
 
 * time: 20 min.
-* [tutorial](/lessons/headbands/tutorial)
+* [tutorial](/lessons/headbands/activity)
 * [quiz](/lessons/headbands/quiz)
 
 ## Extended Activity

@@ -4,7 +4,7 @@ Create sounds with variables.
 
 ## Before we get started
 
-Complete the [beatbox](/lessons/beatbox/activity) activity and your code will look like this:
+Complete the [beatbox](/lessons/classic-beatbox/activity) activity and your code will look like this:
 
 
 ```blocks

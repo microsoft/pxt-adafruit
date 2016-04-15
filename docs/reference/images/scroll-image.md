@@ -2,7 +2,7 @@
 
 The scroll image function.
 
-Scrolls the frames within an [Image](/reference/image/image) on the [LED screen](/device/screen).
+Scrolls the frames within an [Image](/reference/images/image) on the [LED screen](/device/screen).
 
 ### Block Editor
 
@@ -69,5 +69,5 @@ img.scrollImage(5, 1000)
 
 ### See also
 
-[show image](/reference/images/show-image), [image](/reference/image/image), [create image](/reference/images/create-image), [show animation](/reference/basic/show-animation)
+[show image](/reference/images/show-image), [image](/reference/images/image), [create image](/reference/images/create-image), [show animation](/reference/basic/show-animation)
 

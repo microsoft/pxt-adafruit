@@ -6,7 +6,7 @@ Programming a game of catch the egg using the accelerometer
 
 ## Directions
 
-Use this activity document to guide your work in the [catch the egg tutorial](/lessons/catch-the-egg-game/tutorial)
+Use this activity document to guide your work in the [catch the egg activity](/lessons/catch-the-egg-game/activity)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

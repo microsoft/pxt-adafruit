@@ -38,7 +38,7 @@ Use the [point](/led/point) function to find out if a LED is on or off.
 
 ### Display images, strings and numbers
 
-Instead of turning individual LEDs on or off, as above, you can display an [image](/reference/image/image) directly to the screen or show text/numbers on screen using the [show number](/reference/basic/show-number)/[show string](/reference/basic/show-string) function.
+Instead of turning individual LEDs on or off, as above, you can display an [image](/reference/images/image) directly to the screen or show text/numbers on screen using the [show number](/reference/basic/show-number)/[show string](/reference/basic/show-string) function.
 
 ### The display buffer
 

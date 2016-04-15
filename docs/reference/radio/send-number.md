@@ -30,5 +30,5 @@ input.onButtonPressed(Button.A, () => {
 
 ### See also
 
-[receive number](/input/receive-number), [on data received](/reference/radio/on-data-received)
+[receive number](/reference/radio/receive-number), [on data received](/reference/radio/on-data-received)
 

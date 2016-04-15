@@ -2,7 +2,7 @@
 
 The show image function.
 
-Show an [Image](/reference/image/image) on the [LED screen](/device/screen), followed by a 400ms pause.
+Show an [Image](/reference/images/image) on the [LED screen](/device/screen), followed by a 400ms pause.
 
 ### Block Editor
 
@@ -20,7 +20,7 @@ export function showImage(_this: micro_bit.Image, xOffset: number)
 
 ### Create image and show image
 
-Use the [image editor](/reference/image/image) to create images using the [create image](/reference/image/create-image) function, and then use `show image` like this:
+Use the [image editor](/reference/images/image) to create images using the [create image](/reference/image/create-image) function, and then use `show image` like this:
 
 ```
 let img = images.createImage(`
@@ -57,5 +57,5 @@ for (let i = 0; i < 5; i++) {
 
 ### See also
 
-[show animation](/reference/basic/show-animation), [image](/reference/image/image), [create image](/reference/images/create-image), [scroll image](/reference/images/scroll-image)
+[show animation](/reference/basic/show-animation), [image](/reference/images/image), [create image](/reference/images/create-image), [scroll image](/reference/images/scroll-image)
 

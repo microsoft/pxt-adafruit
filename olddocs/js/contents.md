@@ -34,7 +34,7 @@ Welcome to the Touch Develop home page for the BBC micro:bit. Below you will fin
 * [Number](/reference/types/number)
 * [Boolean](/reference/types/boolean)
 * [String](/reference/types/string)
-* [Image](/reference/image/image)
+* [Image](/reference/images/image)
 
 ### Statements and control structures
 

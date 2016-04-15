@@ -2,7 +2,7 @@
 
 The clear function for images.
 
-Turn off all the pixels in an [Image](/reference/image/image).
+Turn off all the pixels in an [Image](/reference/images/image).
 
 ### KindScript
 
@@ -35,5 +35,5 @@ input.onButtonPressed(Button.A, () => {
 
 ### See also
 
-[Image](/reference/image/image), [show animation](/reference/basic/show-animation), [show image](/reference/images/show-image), [scroll image](/reference/images/scroll-image), [create image](/reference/images/create-image)
+[Image](/reference/images/image), [show animation](/reference/basic/show-animation), [show image](/reference/images/show-image), [scroll image](/reference/images/scroll-image), [create image](/reference/images/create-image)
 

@@ -6,7 +6,7 @@ shift an image horizontally across the display with offset.
 
 ## Directions
 
-Use this activity document to guide your work in the [offset image tutorial](/lessons/offset-image/tutorial).
+Use this activity document to guide your work in the [offset image activity](/lessons/offset-image/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

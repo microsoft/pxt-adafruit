@@ -2,7 +2,7 @@
 
 The width function.
 
-Get the width of an [Image](/reference/image/image) in columns.
+Get the width of an [Image](/reference/images/image) in columns.
 
 ### KindScript
 

@@ -31,5 +31,5 @@ radio.onDataReceived(() => {
 
 ### See also
 
-[receive number](/radio/receive-number), [send number](/radio/send-number), [set group](/reference/radio/set-group)
+[receive number](/reference/radio/receive-number), [send number](/radio/send-number), [set group](/reference/radio/set-group)
 

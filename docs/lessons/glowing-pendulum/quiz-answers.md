@@ -6,7 +6,7 @@ construct a pendulum that glows using acceleration.
 
 ## Directions
 
-Use this activity document to guide your work in the [glowing pendulum tutorial](/lessons/glowing-pendulum/tutorial)
+Use this activity document to guide your work in the [glowing pendulum activity](/lessons/glowing-pendulum/activity)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

@@ -15,16 +15,23 @@ namespace serial {
     }
 
     /**
+     * Prints a numeric value to the serial
+     */
+    export function writeNumber(value: number): void {
+        writeString(value.toString());
+    }
+
+    /**
      * Writes a ``name: value`` pair line to the serial.
      * @param name name of the value stream, eg: x
      * @param value to write
      */
-    //% help=/reference/serial/write-value
     //% weight=80
     //% blockId=serial_writevalue block="serial|write %name|= %value"
     export function writeValue(name: string, value: number): void {
         writeString(name);
-        writeString(":");
-        writeLine(value.toString());
+        writeString(": ");
+        writeNumber(value);
+        writeLine("");
     }
 }

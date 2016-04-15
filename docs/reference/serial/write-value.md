@@ -32,5 +32,5 @@ basic.forever(() => {
 
 ### See also
 
-[serial](/device/serial), [write value](/reference/serial/write-value)
+[serial](/device/serial), [write line](/reference/serial/write-line)
 

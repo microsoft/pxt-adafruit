@@ -57,7 +57,7 @@ input.onButtonPressed(Button.A, () => {
 
 ### Lessons
 
-[blink](/lessons/blink), [bounce-image](/lessons/bounce-image),  [snowflake-fall](/lessons/snowflake-fall), [flashing-heart](/lessons/flashing-heart)
+[blink](/lessons/blink), [snowflake-fall](/lessons/snowflake-fall), [flashing-heart](/lessons/flashing-heart)
 
 ### See also
 

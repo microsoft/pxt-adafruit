@@ -4,20 +4,14 @@ The `signal strength` function.
 
 Returns the signal strength reported by the paired device from ``0`` (no signal) to ``4`` (full strength).
 
-## Bluetooth required
+## Important Security Consideration
 
 The functions in the ``devices`` namespace allow the BBC micro:bit to communicate with a separate (remote) device, such as a smartphone, over Bluetooth (Smart).
 
 The set of supported events will depend on the remote device and the BBC micro:bit apps available for the remote device.
 
-### Block Editor
-
-![](/static/mb/signal-strength-0.png)
-
-### KindScript
-
 ```
-export function signalStrength() : number
+devices.signalStrength() : number
 ```
 
 ### Returns

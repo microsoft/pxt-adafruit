@@ -57,5 +57,5 @@ Use [forever](/reference/basic/forever) to continually repeat an animation
 
 ### Lessons
 
-[smiley](/lessons/smiley), [bounce image](/lessons/bounce-image), [snowflake fall](/lessons/snowflake-fall), [rotation animation](/lessons/rotation-animation)
+[smiley](/lessons/smiley), [snowflake fall](/lessons/snowflake-fall), [rotation animation](/lessons/rotation-animation)
 

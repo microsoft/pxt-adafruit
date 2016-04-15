@@ -37,5 +37,5 @@ basic.showString(s)
 
 ### See also
 
-[String](/reference/types/string), [string functions](/reference/types/string-functions), [show number](/reference/basic/show-number), [show animation](/reference/basic/show-animation)
+[String](/reference/types/string), [show number](/reference/basic/show-number), [show animation](/reference/basic/show-animation)
 

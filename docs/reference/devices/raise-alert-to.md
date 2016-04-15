@@ -4,19 +4,14 @@ The raise alert to function.
 
 Raise an alert on a remote device.
 
-## 
+## Bluetooth required
 
 The functions in the ``devices`` namespace allow the BBC micro:bit to communicate with a separate (remote) device, such as a smartphone, over Bluetooth (Smart).
 
 The set of supported events will depend on the remote device and the BBC micro:bit apps available for the remote device.
 
-### KindScript
 
-![](/static/mb/raise-alert-to-0.png)
-
-### KindScript
-
-```
+```sig
 export function raiseAlertTo(event: string)
 ```
 

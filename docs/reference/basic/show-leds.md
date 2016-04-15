@@ -41,5 +41,5 @@ In JavaScript, the led off is represented by a `.` and the led on by a `#` chara
 
 ### See also
 
-[plot leds](/reference/led/plot-leds), [show animation](/reference/led/show-animation)
+[plot leds](/reference/led/plot-leds), [show animation](/reference/basic/show-animation)
 

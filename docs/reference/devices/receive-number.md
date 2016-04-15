@@ -12,14 +12,8 @@ This API does not contain any form of encryption, authentication or authorizatio
 
 For serious applications, BLE should be considered a substantially more secure alternative.
 
-### Block Editor
-
-![](/static/mb/receive-number-0.png)
-
-### KindScript
-
-```
-export function receiveNumber() : number
+```sig
+radio.receiveNumber();
 ```
 
 ### Returns

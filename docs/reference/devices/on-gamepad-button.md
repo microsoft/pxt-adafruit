@@ -8,14 +8,9 @@ The functions in the ``devices`` namespace allow the BBC micro:bit to communicat
 
 The set of supported events will depend on the remote device and the BBC micro:bit apps available for the remote device.
 
-### Block Editor
 
-![](/static/mb/on-gamepad-button-0.png)
-
-### KindScript
-
-```
-export function onGamepadButton(name: string, body:td.Action)
+```sig
+devices.onGamepadButton(MesDpadButtonInfo.ADown, () => {})
 ```
 
 ### Parameters

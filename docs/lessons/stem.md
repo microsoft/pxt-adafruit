@@ -42,7 +42,7 @@ Overview of Blocks lessons for the BBC micro:bit.
 * [Truth or dare](/lessons/truth-or-dare), a game that forces each player to reveal a secret or do something funny with if statement
 * [Spinner](/lessons/spinner), spin the arrow with multiple if statements
 * [Die roll](/lessons/die-roll), spin with more if statements
-* [Beatbox](/lessons/beatbox), make a beatbox music player with variables
+* [Beatbox](/lessons/classic-beatbox), make a beatbox music player with variables
 * [Temperature](/lessons/temperature), get the ambient temperature (degree Celsius °C)
 
 ### ~

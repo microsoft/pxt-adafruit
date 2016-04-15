@@ -69,7 +69,11 @@ When your micro:bit isn’t connected to your computer, tablet or mobile, you wi
 The pins labelled 3V and GND are the power supply pins. 
 You can attach an external device such as a motor to these and power it using the battery or USB.
 
-### Bluetooth Low Energy Antenna
+### Serial Communication
+
+The BBC micro:bit can send an receive data via [serial communication](/device/serial). The serial data can be transfered via USB or BlE.
+
+### Bluetooth Low Energy (BLE) Antenna
 
 You will see the label BLE ANNTENA on the back of your micro:bit. It is for a messaging service, 
 so that devices can talk to each other. The micro:bit is a peripheral 

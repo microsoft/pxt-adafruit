@@ -79,7 +79,18 @@ Your banana keyboard is ready!
 
 ### Step 10
 
-Connect your micro:bit to your computer using your USB cable and run the [banana keyboard](/lhpkbr) script on it. Tap your banana instrument to play sound against... the fruit!
+Connect your micro:bit to your computer using your USB cable and run this script:
+```blocks
+let sound = music.noteFrequency(Note.C);
+input.onPinPressed(TouchPin.P1, () => {
+    for (let i = 0; i < 5; i++) {
+        sound = sound + 25;
+        music.playTone(sound, music.beat(BeatFraction.Sixteenth));
+    }
+});
+```
+
+Tap your banana instrument to play sound against... the fruit!
 
 
 ### ~avatar boothing

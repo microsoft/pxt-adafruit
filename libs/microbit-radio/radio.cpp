@@ -13,7 +13,10 @@ namespace radio {
     
     int radioEnable() {
         int r = uBit.radio.enable();
-        if (r != MICROBIT_OK) return r;
+        if (r != MICROBIT_OK) {
+            uBit.panic(43);
+            return r;
+        }
         if (!radioEnabled) {
             uBit.radio.setGroup(pxt::programHash());
             radioEnabled = true;

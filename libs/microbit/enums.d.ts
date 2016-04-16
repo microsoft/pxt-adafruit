@@ -281,5 +281,7 @@ declare namespace serial {
     Int32BE = 10,
     // UInt32,
     }
+declare namespace storage {
+}
 
 // Auto-generated. Do not edit. Really.

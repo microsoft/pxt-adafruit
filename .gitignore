@@ -6,6 +6,7 @@ temp
 projects
 win10/app/bin
 win10/app/bld
+win10/*.opendb
 
 *.user
 *.sw?

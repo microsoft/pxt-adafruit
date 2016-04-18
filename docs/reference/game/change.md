@@ -1,16 +1,12 @@
 # Change
 
-The game library
-
-### Change
-
 Sprite will change the x position by this number
 
-## Block Editor
+### Block Editor
 
 ![](/static/mb/change-0.png)
 
-## KindScript
+### JavaScript
 
 Sprite will change the x position by this number
 

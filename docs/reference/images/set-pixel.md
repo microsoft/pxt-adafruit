@@ -4,7 +4,7 @@ The set pixel function. #set pixel.
 
 Set the on/off state of pixel in an [Image](/reference/images/image).
 
-### KindScript
+### JavaScript
 
 ```
 export function setPixel(_this: micro_bit.Image, x: number, y: number, value: boolean)

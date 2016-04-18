@@ -4,10 +4,8 @@ The width function.
 
 Get the width of an [Image](/reference/images/image) in columns.
 
-### KindScript
-
-```
-export function width(_this: micro_bit.Image) : number
+```sig
+images.createImage().width();
 ```
 
 ### Parameters

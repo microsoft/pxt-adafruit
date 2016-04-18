@@ -4,7 +4,7 @@ The plot image function.
 
 Display an [Image](/reference/images/image) on the BBC micro:bit's [LED screen](/device/screen)
 
-### KindScript
+### JavaScript
 
 ```
 export function plotImage(_this: micro_bit.Image, xOffset: number)

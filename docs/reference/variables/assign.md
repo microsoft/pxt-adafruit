@@ -28,7 +28,7 @@ let num1 = 42
 ````
 ### Notes
 
-* You can use the assignment operator with variables of each of the supported [types](/blocks/types).
+* You can use the assignment operator with variables of each of the supported [types](/reference/types).
 
 ### Lessons
 
@@ -36,5 +36,5 @@ let num1 = 42
 
 ### See also
 
-[variable](/reference/variables/var), [types](/blocks/types)
+[variable](/reference/variables/var), [types](/reference/types)
 

@@ -37,5 +37,5 @@ basic.forever(() => {
 
 ### See also
 
-[on button pressed](/input/on-button-pressed), [if](/reference/logic/if), [forever](/basic/forever)
+[on button pressed](/reference/input/on-button-pressed), [if](/reference/logic/if), [forever](/reference/basic/forever)
 

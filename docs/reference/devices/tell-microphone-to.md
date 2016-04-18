@@ -10,7 +10,7 @@ The functions in the antenna namespace allow the BBC micro:bit to communicate wi
 
 ![](/static/mb/tell-microphone-to-0.png)
 
-### KindScript
+### JavaScript
 
 ```
 export function tellMicrophoneTo(event: string)

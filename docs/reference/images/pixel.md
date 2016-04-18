@@ -4,7 +4,7 @@ The pixel function.
 
 Get the state of a pixel in an [Image](/reference/images/image).
 
-### KindScript
+### JavaScript
 
 ```
 export function pixel(_this: micro_bit.Image, x: number, y: number) : boolean

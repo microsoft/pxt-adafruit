@@ -24,5 +24,5 @@ for (let k = 0; k < 4; k++) {
 
 ### See also
 
-[while](/reference/loops/while), [if](/blocks/if)
+[while](/reference/loops/while), [if](/reference/logic/if)
 

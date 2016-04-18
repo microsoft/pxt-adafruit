@@ -2,8 +2,6 @@
 
 Display an [Image](/reference/images/image) on the BBC micro:bit's [LED screen](/device/screen). NOTE: `basic -> plot image` has been replaced by `basic -> show leds`.
 
-### KindScript syntax
-
 ```sig
 basic.plotLeds(`
 . . . . .

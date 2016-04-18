@@ -4,12 +4,6 @@ The show image function.
 
 Show an [Image](/reference/images/image) on the [LED screen](/device/screen), followed by a 400ms pause.
 
-### Block Editor
-
-![](/static/mb/show-image-0.png)
-
-### KindScript
-
 ```
 export function showImage(_this: micro_bit.Image, xOffset: number)
 ```
@@ -20,7 +14,7 @@ export function showImage(_this: micro_bit.Image, xOffset: number)
 
 ### Create image and show image
 
-Use the [image editor](/reference/images/image) to create images using the [create image](/reference/image/create-image) function, and then use `show image` like this:
+Use the [image editor](/reference/images/image) to create images using the [create image](/reference/images/create-image) function, and then use `show image` like this:
 
 ```
 let img = images.createImage(`

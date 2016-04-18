@@ -14,7 +14,7 @@ The set of supported events will depend on the remote device and the BBC micro:b
 
 ![](/static/mb/tell-camera-to-0.png)
 
-### KindScript
+### JavaScript
 
 ```
 export function tellCameraTo(event: string)

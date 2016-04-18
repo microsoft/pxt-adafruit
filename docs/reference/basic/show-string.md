@@ -33,7 +33,7 @@ basic.showString(s)
 
 ### Lessons
 
-[answering machine](/lessons/answering-machine), [rock paper scissors](/lessons/rock-paper-scissors), [love meter](/lessons/love-meter), [digital pet](/lessons/digital-pet)
+[answering machine](/lessons/answering-machine), [rock paper scissors](/lessons/rock-paper-scissors), [love meter](/lessons/love-meter)
 
 ### See also
 

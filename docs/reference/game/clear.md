@@ -4,7 +4,7 @@ The clear function for images.
 
 Turn off all the pixels in an [Image](/reference/images/image).
 
-### KindScript
+### JavaScript
 
 ```
 export function clear(img: micro_bit.Image)

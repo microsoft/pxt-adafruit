@@ -39,5 +39,5 @@ The following example uses a while loop to make a diagonal line on the LED scree
 
 ### See also
 
-[on button pressed](/reference/input/on-button-pressed), [for](/reference/loops/for), [if](/blocks/if), [forever](/reference/basic/forever)
+[on button pressed](/reference/input/on-button-pressed), [for](/reference/loops/for), [if](/reference/logic/if), [forever](/reference/basic/forever)
 

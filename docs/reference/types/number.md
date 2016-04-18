@@ -20,7 +20,7 @@ The following arithmetic operators work on numbers and return a [Number](/refere
 * subtraction: `1 - 3 `
 * multiplication: `3 * 2`
 * integer division: `7 / 3`
-* modulo is available through the [math library](/blocks/math)
+* modulo is available through the [math library](/reference/math)
 
 ### Relational operators
 
@@ -47,7 +47,7 @@ Some functions return a number, which you can store in a variable. For example t
 
 ### Math functions
 
-The [math library](/blocks/math) includes math related functions. In the [Block Editor](/blocks/editor), click `math` on the Code Keyboard to see the math functions. For example, the `absolute` function returns the returns the absolute value of input parameter `x`:
+The [math library](/reference/math) includes math related functions. In the [Block Editor](/blocks/editor), click `math` on the Code Keyboard to see the math functions. For example, the `absolute` function returns the returns the absolute value of input parameter `x`:
 
 ![](/static/mb/blocks/number-3.png)
 
@@ -57,5 +57,5 @@ The [math library](/blocks/math) includes math related functions. In the [Block 
 
 ### See also
 
-[math library](/blocks/math), [var](/reference/variables/var), [Boolean](/reference/types/boolean), [show number](/reference/basic/show-number)
+[math library](/reference/math), [var](/reference/variables/var), [Boolean](/reference/types/boolean), [show number](/reference/basic/show-number)
 

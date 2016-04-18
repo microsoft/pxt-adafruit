@@ -8,7 +8,7 @@ Scrolls the frames within an [Image](/reference/images/image) on the [LED screen
 
 ![](/static/mb/scroll-image-0.png)
 
-### KindScript
+### JavaScript
 
 ```
 export function scrollImage(_this: micro_bit.Image, xOffsetPerStep: number, interval: number)

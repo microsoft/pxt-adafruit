@@ -45,5 +45,5 @@ basic.forever(() => {
 
 ### See also
 
-[compass-heading](/input/compass-heading), [lightlevel](/input/lightlevel)
+[compass-heading](/reference/input/compass-heading), [lightlevel](/reference/input/lightlevel)
 

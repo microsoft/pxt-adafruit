@@ -26,5 +26,5 @@ basic.forever(() => {
 
 ### See also
 
-[acceleration](/reference/input/acceleration), [compass-heading](/input/compass-heading)
+[acceleration](/reference/input/acceleration), [compass-heading](/reference/input/compass-heading)
 

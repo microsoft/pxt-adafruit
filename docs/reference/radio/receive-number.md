@@ -30,5 +30,5 @@ radio.onDataReceived(() => {
 
 ### See also
 
-[receive number](/input/receive-number), [on data received](/reference/radio/on-data-received)
+[receive number](/reference/input/receive-number), [on data received](/reference/radio/on-data-received)
 

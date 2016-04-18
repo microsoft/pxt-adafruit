@@ -28,5 +28,5 @@ basic.forever(() => {
 
 ### See also
 
-[compass heading](/input/compass-heading)
+[compass heading](/reference/input/compass-heading)
 

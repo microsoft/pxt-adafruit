@@ -587,33 +587,34 @@ declare interface Buffer {
 
 
     /**
-     * Allows to save and read values in the flash storage
+     * This allows reading and writing of small blocks of data to FLASH memory.
      */
     //% weight=10 color=#cc6600
 declare namespace storage {
 
     /**
-     * Writes the key and buffer pair into flash.
+     * Writes the key and buffer pair into FLASH. This operation is rather costly as all the key/value pairs
+     * have to be rewritten as well.
      */
-    //% blockId="storage_put_buffer" block="storage put buffer %key|with %buffer" weight=50 shim=storage::putBuffer
+    //% shim=storage::putBuffer
     function putBuffer(key: string, buffer: Buffer): void;
 
     /**
      * Gets the buffer at the given key if any. If no key is available, empty buffer is returned.
      */
-    //% blockId="storage_get_buffer" block="storage get buffer %key" weight=49 shim=storage::getBuffer
+    //% shim=storage::getBuffer
     function getBuffer(key: string): Buffer;
 
     /**
      * Removes an entry identified by the key.
      */
-    //% blockId="storage_remove" block="storage remove %key" weight=20 shim=storage::remove
+    //% shim=storage::remove
     function remove(key: string): void;
 
     /**
      * The number of entries in the key value store
      */
-    //% blockId="storage_size" block="storage size" weight=10 shim=storage::size
+    //% shim=storage::size
     function size(): number;
 }
 

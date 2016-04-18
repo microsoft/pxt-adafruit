@@ -250,7 +250,7 @@ namespace pxsim.input {
             b.usesButtonAB = true;
             runtime.queueDisplayUpdate();
         }
-        b.bus.listen(button, DAL.MICROBIT_BUTTON_EVT_CLICK, handler);
+        pxt.registerWithDal(button, DAL.MICROBIT_BUTTON_EVT_CLICK, handler);
     }
 
     export function buttonIsPressed(button: number): boolean {
@@ -273,7 +273,7 @@ namespace pxsim.input {
             b.useShake = true;
             runtime.queueDisplayUpdate();
         }
-        b.bus.listen(DAL.MICROBIT_ID_GESTURE, gesture, handler);
+        pxt.registerWithDal(DAL.MICROBIT_ID_GESTURE, gesture, handler);
     }
 
     export function onPinPressed(pinId: number, handler: RefAction) {
@@ -424,7 +424,7 @@ namespace pxsim.radio {
     }
 
     export function onBroadcastMessageReceived(msg: number, handler: RefAction): void {
-        board().bus.listen(DAL.MES_BROADCAST_GENERAL_ID, msg, handler);
+        pxt.registerWithDal(DAL.MES_BROADCAST_GENERAL_ID, msg, handler);
     }
 
     export function setGroup(id: number): void {
@@ -452,7 +452,7 @@ namespace pxsim.radio {
     }
 
     export function onDataReceived(handler: RefAction): void {
-        board().bus.listen(DAL.MICROBIT_ID_RADIO, DAL.MICROBIT_RADIO_EVT_DATAGRAM, handler);
+        pxt.registerWithDal(DAL.MICROBIT_ID_RADIO, DAL.MICROBIT_RADIO_EVT_DATAGRAM, handler);
     }
 }
 

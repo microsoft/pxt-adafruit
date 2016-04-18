@@ -611,6 +611,7 @@ namespace pxsim {
     }
 
     export class Image {
+        public static height: number = 5;
         public width: number;
         public data: number[];
         constructor(width: number, data: number[]) {

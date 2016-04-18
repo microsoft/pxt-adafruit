@@ -201,7 +201,7 @@ namespace pxsim.basic {
             else ImageMethods.scrollImage(createImageFromString(s + ' '), interval, 1);
         }
     }
-
+    
     export function showLeds(leds: Image, delay: number): void {
         showAnimation(leds, delay);
     }
@@ -562,6 +562,34 @@ namespace pxsim.ImageMethods {
         
         leds.copyTo(offset, 5, board().image, 0)
         runtime.queueDisplayUpdate()
+    }
+
+    export function height(leds: Image) : number {
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
+        return Image.height;
+    }
+
+    export function width(leds: Image) : number {
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
+        return leds.width;
+    }
+    
+    export function plotFrame(leds: Image, frame: number) {
+        ImageMethods.plotImage(leds, frame * Image.height);
+    }
+
+    export function showFrame(leds: Image, frame: number) {
+        ImageMethods.showImage(leds, frame * Image.height);
+    }
+    
+    export function pixel(leds: Image, x: number, y: number) : number {
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
+        return leds.get(x,y);
+    }
+    
+    export function setPixel(leds: Image, x: number, y: number, v:number) {
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
+        leds.set(x,y,v);        
     }
 
     export function clear(leds: Image) {

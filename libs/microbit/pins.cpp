@@ -180,8 +180,9 @@ namespace pins {
       }
       
       if (ms > 0) {
-          uBit.sleep(ms);
+          fiber_sleep(ms);
           pitchPin->setAnalogValue(0);
+          // TODO why do we use wait_ms() here? it's a busy wait I think
           wait_ms(5);
       }
     }

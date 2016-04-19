@@ -31,9 +31,13 @@
     ],
     "public": true,
     "dependencies": {},
-    "microbit": {
+    "yotta": {
         "config": {
-            "MESSAGE_BUS_LISTENER_DEFAULT_FLAGS": "MESSAGE_BUS_LISTENER_QUEUE_IF_BUSY"
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 0
+                }
+            }
         }
     }
 }

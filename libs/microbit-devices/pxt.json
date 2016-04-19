@@ -11,9 +11,13 @@
     "dependencies": {
         "microbit": "file:../microbit"
     },
-    "microbit": {
+    "yotta": {
         "config": {
-            "MICROBIT_BLE_ENABLED": "1"
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 1
+                }
+            }
         }
     },
     "installedVersion": "zakvul"

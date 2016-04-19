@@ -2,7 +2,9 @@
 declare const enum DAL {
     // built/yt/yotta_modules/microbit-dal/inc//bluetooth/ExternalEvents.h
     MICROBIT_ID_BLE = 1000,
-    MICROBIT_ID_BLE_UART = 1001,
+    MICROBIT_ID_BLE_UART = 1200,
+    MICROBIT_BLE_EVT_CONNECTED = 1,
+    MICROBIT_BLE_EVT_DISCONNECTED = 2,
     // built/yt/yotta_modules/microbit-dal/inc//bluetooth/MESEvents.h
     MES_REMOTE_CONTROL_ID = 1001,
     MES_REMOTE_CONTROL_EVT_PLAY = 1,
@@ -294,6 +296,7 @@ declare const enum DAL {
     // built/yt/yotta_modules/microbit-dal/inc//drivers/MicroBitDisplay.h
     MICROBIT_DISPLAY_EVT_ANIMATION_COMPLETE = 1,
     MICROBIT_DISPLAY_EVT_LIGHT_SENSE = 2,
+    MICROBIT_DISPLAY_DEFAULT_AUTOCLEAR = 1,
     MICROBIT_DISPLAY_SPACING = 1,
     MICROBIT_DISPLAY_GREYSCALE_BIT_DEPTH = 8,
     MICROBIT_DISPLAY_ANIMATE_DEFAULT_POS = -255,
@@ -303,7 +306,8 @@ declare const enum DAL {
     ANIMATION_MODE_PRINT_TEXT = 3,
     ANIMATION_MODE_SCROLL_IMAGE = 4,
     ANIMATION_MODE_ANIMATE_IMAGE = 5,
-    ANIMATION_MODE_PRINT_CHARACTER = 6,
+    ANIMATION_MODE_ANIMATE_IMAGE_WITH_CLEAR = 6,
+    ANIMATION_MODE_PRINT_CHARACTER = 7,
     DISPLAY_MODE_BLACK_AND_WHITE = 0,
     DISPLAY_MODE_GREYSCALE = 1,
     DISPLAY_MODE_BLACK_AND_WHITE_LIGHT_SENSE = 2,
@@ -384,6 +388,7 @@ declare const enum DAL {
     MICROBIT_THERMOMETER_PERIOD = 1000,
     MICROBIT_THERMOMETER_EVT_UPDATE = 1,
     MICROBIT_THERMOMETER_ADDED_TO_IDLE = 2,
+    // built/yt/yotta_modules/microbit-dal/inc//platform/yotta_cfg_mappings.h
     // built/yt/yotta_modules/microbit-dal/inc//types/ManagedString.h
     // built/yt/yotta_modules/microbit-dal/inc//types/ManagedType.h
     // built/yt/yotta_modules/microbit-dal/inc//types/Matrix4.h

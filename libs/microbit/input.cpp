@@ -247,7 +247,7 @@ namespace input {
     //% help=input/running-time weight=50
     //% blockId=device_get_running_time block="running time (ms)" icon="\uf017"
     int runningTime() {
-        return uBit.systemTime();
+        return system_timer_current_time();
     }
 
     /**

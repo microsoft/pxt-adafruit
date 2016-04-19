@@ -132,7 +132,7 @@ namespace control {
     //% weight=30 async help=control/reset
     //% blockId="control_reset" block="reset"
     void reset() { 
-      uBit.reset(); 
+      microbit_reset();
     }
 
     /**

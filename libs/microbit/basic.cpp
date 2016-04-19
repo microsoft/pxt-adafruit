@@ -58,7 +58,7 @@ namespace basic {
       int l = s.length();
       if (l == 0) {
         uBit.display.clear();
-        uBit.sleep(interval * 5);
+        fiber_sleep(interval * 5);
       } else if (l > 1) {
         uBit.display.scroll(s, interval);
       } else {
@@ -98,7 +98,7 @@ namespace basic {
     void forever_stub(void *a) {
       while (true) {
         runAction0((Action)a);
-        uBit.sleep(20);
+        fiber_sleep(20);
       }
     }
 
@@ -123,6 +123,6 @@ namespace basic {
     //% async block="pause (ms) %pause"
     //% blockId=device_pause icon="\uf110"
     void pause(int ms) {
-      uBit.sleep(ms);
+      fiber_sleep(ms);
     }
 }

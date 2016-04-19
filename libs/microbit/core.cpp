@@ -1,6 +1,7 @@
 #include "ksbit.h"
 #include <limits.h>
 
+
 namespace String_ {
     //%
     StringData *charAt(StringData *s, int pos) {
@@ -127,13 +128,13 @@ namespace Math_ {
     //%
     int random(int max) {
       if (max == INT_MIN)
-        return -uBit.random(INT_MAX);
+        return -microbit_random(INT_MAX);
       else if (max < 0)
-        return -uBit.random(-max);
+        return -microbit_random(-max);
       else if (max == 0)
         return 0;
       else
-        return uBit.random(max);
+        return microbit_random(max);
     }
     
     //%
@@ -298,6 +299,6 @@ namespace pxtrt {
   //%
   void panic(int code)
   {
-    uBit.panic(code);
+    microbit_panic(code);
   }
 }

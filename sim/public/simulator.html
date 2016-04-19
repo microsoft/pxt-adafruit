@@ -5,10 +5,20 @@
     <meta charset="utf-8">
     <title>microbit simulator</title>
     <style>
-        body {
-            background: transparent;
-            overflow: hidden;
-        }
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  overflow: auto;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
     </style>
     <script src="/cdn/bluebird.min.js"></script>
     <script src="/cdn/pxtsim.js"></script>

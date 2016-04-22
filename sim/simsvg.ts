@@ -219,7 +219,7 @@ namespace pxsim.micro_bit {
                     rx:5, ry:5,
                     fill:`url(#${gid})`
                 });
-                this.thermometerText = Svg.child(this.g, "text", { class:'sim-text', x:60, y:130}) as SVGTextElement;
+                this.thermometerText = Svg.child(this.g, "text", { class:'sim-text', x:58, y:130}) as SVGTextElement;
                 this.updateTheme();
                 
                 let pt = this.element.createSVGPoint();

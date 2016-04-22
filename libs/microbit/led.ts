@@ -4,18 +4,41 @@
 //% color=3 weight=35
 namespace led {
 
+    // what's the current high value
+    let barGraphHigh = 0;
+    // when was the current high value recorded
+    let barGraphHighLast = 0;
+    // last time serial was written
+    let barGraphLastSerialMessage = 0;
+    // last filtered value
+    let barGraphFilteredValue = 0;
+        
     /**
-     * Displays a vertical bar graph based on the ``value`` and ``high`` value.
+     * Displays a vertical bar graph based on the `value` and `high` value.
+     * If `high` is 0, the chart gets adjusted automatically.
      * @param value current value to plot
-     * @param high maximum value, eg: 1023, 255
+     * @param high maximum value. If 0, maximum value adjusted automatically, eg: 0.
      */
     //% help=/led/plot-bar-graph weight=20
     //% blockId=device_plot_bar_graph block="plot bar graph of %value |up to %high" icon="\uf080" blockExternalInputs=true
-    export function plotBarGraph(value: number, high: number): void {
+    export function plotBarGraph(value: number, high: number): void {        
+        value = Math.abs(value);
+        barGraphFilteredValue = (barGraphFilteredValue * 3 + value * 7) / 10;
+        let now = input.runningTime();
+        if (now - barGraphLastSerialMessage > 100) {
+            serial.writeString(barGraphFilteredValue.toString() + "\r\n");
+            barGraphLastSerialMessage = now;
+        }
         
-        serial.writeString(value.toString() + "\r\n");
+        if (high != 0) barGraphHigh = high;
+        else if (value > barGraphHigh || now - barGraphHighLast > 5000) {
+            barGraphHigh = value;
+            barGraphHighLast = now;
+        }
         
-        let v = Math.abs((value * 15) / high);
+        barGraphHigh = Math.max(barGraphHigh, 16);
+                    
+        let v = (value * 15) / barGraphHigh;
         let k = 0;
         for(let y = 4; y >= 0; --y) {
             for (let x = 0; x < 3; ++x) {

@@ -17,7 +17,7 @@ namespace led {
      * Displays a vertical bar graph based on the `value` and `high` value.
      * If `high` is 0, the chart gets adjusted automatically.
      * @param value current value to plot
-     * @param high maximum value. If 0, maximum value adjusted automatically, eg: 0.
+     * @param high maximum value. If 0, maximum value adjusted automatically, eg: 0
      */
     //% help=/led/plot-bar-graph weight=20
     //% blockId=device_plot_bar_graph block="plot bar graph of %value |up to %high" icon="\uf080" blockExternalInputs=true

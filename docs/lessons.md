@@ -6,7 +6,7 @@
 ### ~column 
 
 ## O365 Integration
-* [Data Experiments: Graphing & Charthing](/lessons/charting), create a charting app for simulating and measuring the actual temperature 
+* [Data Experiments: Graphing & Charting](/lessons/charting), create a charting app for simulating and measuring the sensor data of acceleration, temperature, light level, and rotation 
 * [Probability Experiments: Coin Toss App](/lessons/probability), create an charting app to demonstrate probability using any coin
 
 ## Beginner

@@ -7,7 +7,6 @@
 
 ## O365 Integration
 * [Science Experiments: Graphing & Charting](/lessons/charting), create an app for simulating and measuring sensor data of acceleration, temperature, light level, and rotation 
-* [Math Experiments: Coin Toss App](/lessons/probability), create an charting app to demonstrate probability using any coin
 
 ## Beginner
 

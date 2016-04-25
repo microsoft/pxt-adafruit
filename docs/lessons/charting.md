@@ -7,12 +7,7 @@ Create a charting app for simulating and measuring the acceleration applied to t
 Acceleration
 
 ## Quick Links
-
-* [Graphing Temperature](/lessons/chartingtemperature)
 * [Graphing Acceleration](/lessons/charting/acceleration) 
-* [Graphing Light Level](/lessons/charting/light-level)
-* [Graphing Rotation](/lessons/charting/rotation)
-* [Graphing Magnetic Force](/lessons/charting/magnetic-force)
 
 ## Prior learning/place of lesson in scheme of work
 

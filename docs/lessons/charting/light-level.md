@@ -8,7 +8,7 @@ Welcome! This activity will teach how to use the micro:bit to chart the light le
 
 
 ### ~
-Let's measure the light level in the "x" direction. Get the acceleration value (milli g-force), in one of three specified dimensions.
+Let's measure the light level from dark to light. Get the acceleration value (milli g-force), in one of three specified dimensions.
 
 
 ```blocks

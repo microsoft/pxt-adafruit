@@ -6,7 +6,23 @@ Coding challenges for the glowing pendulum tutorial.
 
 Complete the following [glowing pendulum activity](/lessons/glowing-pendulum/activity) and your code should look like this:
 
-![](/static/mb/blocks/lessons/glowing-pendulum-5.png)
+```blocks
+basic.forever(() => {
+    let acceleration = input.acceleration(Dimension.Y);
+    acceleration = Math.abs(acceleration);
+    acceleration = acceleration / 4;
+    led.setBrightness(acceleration)
+    basic.showLeds(`
+        # # # # #
+        # # # # #
+        # # # # #
+        # # # # #
+        # # # # #
+        `)
+});
+
+
+```
 
 **Challenge 1**
 

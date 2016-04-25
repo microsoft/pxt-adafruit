@@ -43,9 +43,10 @@ Finally, you must open the Excel CSV file by clicking on the data.xls file that 
 ![](/static/mb/data3.png)
 
 ### ~
-Have fun reviewing your simulation and analyze the acceleration by chart the Excel data using Excel.
 
-* Connect the first micro:bit to your computer using your USB cable and run the charting script on it.
+* Review and write down your observations from the Excel data.
+* Connect a micro:bit to your computer using your USB cable; compile; and move the micro:bit in the "x" direction. 
+* Review and analyze the actual micro:bit device acceleration data on Excel
 
 
 ### ~avatar avatar 

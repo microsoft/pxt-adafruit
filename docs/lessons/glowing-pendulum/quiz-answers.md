@@ -44,13 +44,3 @@ let accelerationDivided = accelerationX / 4
 led.setBrightness(accelerationX)
 ```
 
-## 5. Write the code that tuns all the LEDs on (as the image displays below)
-
-![](/static/mb/lessons/glowing-pendulum-1.png)
-
-<br/>
-
-```
-led.plotAll()
-```
-

@@ -8,8 +8,11 @@ Acceleration
 
 ## Quick Links
 
-* [activity](/lessons/charting/activity)
-
+* [Graphing Temperature](/lessons/graph-temperature)
+* [Graphing Acceleration](/lessons/charting) 
+* [Graphing Light Level](/lessons/light-level)
+* [Graphing Rotation](/lessons/rotation)
+* [Graphing Magnetic Force](/lessons/magnetic-force)
 
 ## Prior learning/place of lesson in scheme of work
 

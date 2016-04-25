@@ -6,12 +6,8 @@
 ### ~column 
 
 ## O365 Integration
-* [Graphing Temperature](/lessons/graph-temperature), create a charting app for simulating and measuring the actual temperature 
-* [Graphing Acceleration](/lessons/charting), create a charting app for simulating and measuring the acceleration applied to the micro:bit
-* [Graphing Light Level](/lessons/light-level), create a charting app for simulating and measuring the amount of light measured by the micro:bit
-* [Graphing Rotation](/lessons/rotation), create a charting app for simulating and measuring the amount of rotation by the micro:bit
-* [Graphing Magnetic Force](/lessons/magnetic-force), create a charting app for simulating and measuring the magnetic force of objects
-* [Probability App](/lessons/probability), create an charting app to demonstrate probability using any coin
+* [Data Experiments: Graphing & Charthing](/lessons/charting), create a charting app for simulating and measuring the actual temperature 
+* [Probability Experiments: Coin Toss App](/lessons/probability), create an charting app to demonstrate probability using any coin
 
 ## Beginner
 

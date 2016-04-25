@@ -51,7 +51,7 @@ Finally, you must open the Excel CSV file by clicking on the data.xls file that 
 
 ### ~avatar avatar 
 
-Welcome! The activity will teach you how to use the acceleration of the 1st micro:bit and return the acceleration value in a visual graphing display using the 2nd micro:bit. Let's get started!
+Welcome! The activity will teach you how to use the acceleration of the 1st micro:bit and to visualize the acceleration on the 2nd micro:bit. Let's get started!
 
 ### ~
 Let's measure `acceleration (mg)` and then `send number`. `Acceleration` is measured in **milli-gravities**, so a value of -1000 is equivalent to -1g or -9.81m/s^2. We will be able to get the acceleration value (g-force), in the specified "x" dimension. `Send number` will broadcast a number data packet to other micro:bits connected via radio.

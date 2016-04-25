@@ -34,10 +34,7 @@ Notice that moving the micro:bit in the simulator from left to right (x directio
 ### ~
 NOTE: The colors of the charts reflect the color of the micro:bit simulator. In this instance, the micro:bit is yellow. So the color of the data line reflects the color of the micro:bit
  
-### ~
-After running this simulatation several seconds by moving the micro:bit side to side in the x direction, you are ready to graph or chart the accceleration of the micro:bit.  We want a printout of our acceleration on Excel. We will graph the fluctuating acceleration of the simulation experiment. 
-
-![](/static/mb/acc2.png)
+After running this simulatation several seconds by moving the micro:bit side to side in the x direction, you are ready to graph or chart the accceleration of the micro:bit. We want a printout of our acceleration on Excel. We will graph the fluctuating acceleration of the simulation experiment. 
 
 ### ~
 Finally, you must open the Excel CSV file by clicking on the data.xls file that was downloaded to Downloads Folder. 

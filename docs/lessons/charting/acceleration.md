@@ -4,7 +4,7 @@ Measure the acceleration on the micro:bit in the "x" direction.
 
 ### ~avatar avatar
 
-Welcome! This activity will teach how to use the micro:bit to chart the second micro:bit's acceleration in the "x" direction. Let's get started!
+Welcome! This activity will teach how to use the micro:bit to chart the acceleration in the "x" direction. Let's get started!
 
 
 ### ~

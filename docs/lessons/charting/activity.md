@@ -61,7 +61,7 @@ After running this simulatation several seconds by moving the micro:bit side to 
 ### ~
 Finally, you must open the Excel CSV file by clicking on the data.xls file that was downloaded to Downloads Folder. 
 
-![](/static/mb/data2.png)
+![](/static/mb/data3.png)
 
 ### ~
 Have fun reviewing your simulation and analyze the acceleration by chart the Excel data using Excel.

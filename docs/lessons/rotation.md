@@ -1,6 +1,6 @@
 # charting lesson
 
-Create a charting app for simulating and measuring the acceleration applied to the micro:bit
+Measure the acceleration on the micro:bit in the "z" direction.
 
 ## Topic
 

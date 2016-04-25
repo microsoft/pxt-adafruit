@@ -1,6 +1,6 @@
-# charting lesson
+# light level lesson
 
-Create a charting app for simulating and measuring the acceleration applied to the micro:bit
+Create a charting app for simulating and measuring the amount of light measured by the micro:bit
 
 ## Topic
 

@@ -1,6 +1,6 @@
-# charting lesson
+# graph temperature lesson
 
-Create a charting app for simulating and measuring the acceleration applied to the micro:bit
+Create a charting app for simulating and measuring the actual temperature 
 
 ## Topic
 

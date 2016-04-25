@@ -21,9 +21,9 @@ Learn the functions of **on data received**, **send number** and **receive numbe
 ## Documentation
 
 ```cards
-basic.showNumber(0)
 input.acceleration(Dimension.X)
 led.plotBarGraph(0, 1023)
+basic.showNumber(0)
 radio.onDataReceived(() => {})
 radio.sendNumber(0)
 radio.receiveNumber()

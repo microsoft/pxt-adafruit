@@ -17,8 +17,7 @@ input.acceleration(Dimension.X)
 ```
 
 ### ~
-Use the plot bar chart to visual the acceleration on the LED screen. When the micro:bit is laying flat with the screen up, x=0, y=0 and z=-1023.
-
+Use the plot bar chart to visualize the acceleration on the LED screen of the micro:bit in the specified range. You implement plot Bar Graph to display a vertical bar graph based on the "value" and "high" value. Then you must insert acceleration in the X dimension to measure the acceleration. 
 
 ```blocks
 basic.forever(() => {
@@ -28,7 +27,7 @@ basic.forever(() => {
 ```
 
 ### ~
-Notice that moving the micro:bit in the simulator from left to right (x direction) will change the values beneath the micro:bit in a range from 1023 to -1023 as measured in milli-gravities. By hovering over the micro:bit from left to right, you can observe the values change beneath the micro:bit simulator. The second observation will be that the LEDs  brightness on the 2nd micro:bit. There is a single LED turned on with the 1st micro:bit. Additionally, the graphs will reflect 0 acceleation for the 1st micro:bit. In this scenario, if you are adjusting the acceleration in the simualator, you are also changing your chart that will be produced.  
+Notice that moving the micro:bit in the simulator from left to right (x direction) changes the values beneath the micro:bit in a range from 1023 to -1023 as measured in milli-gravities. By hovering over the micro:bit from left to right, you can observe changing values beneath the micro:bit simulator. Also, the LEDs shown on the Bar Graph fluctates based on the movement of the micro:bit simulator in the x direction. The line underneath the micro:bit simulator reflect the acceleration in the x direction. 
 
 ![](/static/mb/acc.png)
 

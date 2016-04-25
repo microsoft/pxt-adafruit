@@ -29,10 +29,11 @@ basic.forever(() => {
 ### ~
 Notice that moving the micro:bit in the simulator from left to right (x direction) changes the values beneath the micro:bit in a range from 1023 to -1023 as measured in milli-gravities. By hovering over the micro:bit from left to right, you can observe changing values beneath the micro:bit simulator. Also, the LEDs shown on the Bar Graph fluctates based on the movement of the micro:bit simulator in the x direction. The line underneath the micro:bit simulator reflect the acceleration in the x direction. 
 
+NOTE: The colors of the charts reflect the color of the micro:bit simulator. In this instance, the micro:bit is yellow. So the color of the data line reflects the color of the micro:bit
+
 ![](/static/mb/data4.png)
 
 ### ~
-NOTE: The colors of the charts reflect the color of the micro:bit simulator. In this instance, the micro:bit is yellow. So the color of the data line reflects the color of the micro:bit
  
 After running this simulatation several seconds by moving the micro:bit side to side in the x direction, you are ready to graph or chart the accceleration of the micro:bit. We want a printout of our acceleration on Excel. We will graph the fluctuating acceleration of the simulation experiment. 
 

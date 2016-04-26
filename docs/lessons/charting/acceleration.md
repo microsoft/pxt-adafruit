@@ -49,7 +49,7 @@ The final part of this experiment is opening and reviewing the data in the Excel
 
 First, click or tap on the first two columns (A, B) to  include the time of the data being collected; b) the results of acceleration data on the micro:bit  
 
-![](/static/mb/data7.jpg)
+![](/static/mb/data7.png)
 
 Then click or tap on Recommended Charts
 

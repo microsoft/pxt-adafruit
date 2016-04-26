@@ -155,4 +155,12 @@ namespace control {
     void onEvent(int src, int value, Action handler) { 
         registerWithDal(src, value, handler);
     }
+    
+    /**
+     * Gets a friendly name for the device derived from the its serial number
+     */
+    //% blockId="control_device_name" block="device name" weight=10
+    StringData* deviceName() {
+        return ManagedString(microbit_friendly_name()).leakData();        
+    }
 }

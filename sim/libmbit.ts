@@ -226,6 +226,13 @@ namespace pxsim.control {
     export function reset() {
         U.userError("reset not implemented in simulator yet")
     }
+    
+    export function deviceName() : string {
+        let b = board();
+        return b && b.id         
+            ? b.id.slice(0, 4) 
+            : 'abcd';
+    }
 
     export function onEvent(id: number, evid: number, handler: RefAction) {
         pxt.registerWithDal(id, evid, handler)

@@ -342,6 +342,12 @@ declare namespace control {
     //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_event_source|with value %value=control_event_value" 
     //% blockExternalInputs=1 shim=control::onEvent
     function onEvent(src: number, value: number, handler: () => void): void;
+
+    /**
+     * Gets a friendly name for the device derived from the its serial number
+     */
+    //% blockId="control_device_name" block="device name" weight=10 shim=control::deviceName
+    function deviceName(): string;
 }
 
 

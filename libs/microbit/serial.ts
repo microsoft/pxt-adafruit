@@ -8,7 +8,7 @@ namespace serial {
      * @param value to send over serial
      */
     //% help=serial/write-line
-    //% blockId=serial_writeline block="serial|write %text"
+    //% blockId=serial_writeline block="serial|write line %text"
     export function writeLine(text: string): void {
         writeString(text);
         writeString("\r\n");
@@ -17,6 +17,7 @@ namespace serial {
     /**
      * Prints a numeric value to the serial
      */
+    //% blockId=serial_writenumber block="serial|write number %value"
     export function writeNumber(value: number): void {
         writeString(value.toString());
     }

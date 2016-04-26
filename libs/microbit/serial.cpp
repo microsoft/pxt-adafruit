@@ -15,7 +15,7 @@ namespace serial {
     /**
      * Sends a piece of text through Serial connection.
      */
-    //%
+    //% blockId=serial_writestring block="serial write %text"
     void writeString(StringData *text) { 
       uBit.serial.send(ManagedString(text));
     }

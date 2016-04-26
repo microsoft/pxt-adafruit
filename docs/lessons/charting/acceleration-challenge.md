@@ -69,3 +69,9 @@ Have fun reviewing your simulation and analyze the acceleration by chart the Exc
 * The first person and second person take turns tilting the micro:bit in the "x" direction while the other player charts the data on the micro:bit!
 * Review and analyze the actual micro:bit device acceleration data on Excel
 
+
+### ~avatar avatar
+
+Excellent, you're ready to continue with the [challenges](/lessons/charting/acceleration)
+
+### ~

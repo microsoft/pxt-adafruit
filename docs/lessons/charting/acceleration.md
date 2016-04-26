@@ -44,8 +44,18 @@ The final part of this experiment is opening and reviewing the data in the Excel
 
 ### ~
 
-* Review and write down your observations from the Excel data.
+Review and write down your observations from the Excel data.
+
+
+
 * Chart the data collected by using a graph in Excel
 * Connect a micro:bit to your computer using your USB cable; compile; and move the micro:bit in the "x" direction. 
 * Review and analyze the actual micro:bit device data on Excel
+
+
+### ~avatar avatar
+
+Excellent, you're ready to continue with the [challenges](/lessons/charting/acceleration-challenge)
+
+### ~
 

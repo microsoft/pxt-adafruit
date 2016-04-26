@@ -7,8 +7,8 @@ Create a charting app for simulating and measuring the acceleration applied to t
 Acceleration
 
 ## Quick Links
-* [Graphing Acceleration](/lessons/charting/acceleration) 
-* [Graphing Acceleration](/lessons/charting/acceleration-challenge) 
+* [Chart Acceleration: Activity](/lessons/charting/acceleration) 
+* [Chart Acceleration: Challenge](/lessons/charting/acceleration-challenge) 
 
 ## Prior learning/place of lesson in scheme of work
 

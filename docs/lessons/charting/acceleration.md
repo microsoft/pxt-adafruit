@@ -76,6 +76,7 @@ Tip: If you don’t see a chart type that you want, click the All Charts tab to 
 
 * Connect a micro:bit to your computer using your USB cable; compile; and repeat this experiment by moving the micro:bit in the "x" direction. Then collect and chart the data on Excel. 
 * Review and analyze the actual micro:bit device data on Excel
+* Display acceleration with y or z using plot bar graph by changing acceleration from "x" to "y" or "z" 
 
 ### ~avatar avatar
 

@@ -90,6 +90,7 @@ Have fun reviewing your simulation and analyze the acceleration by chart the Exc
 * Connect the second micro:bit to your computer using your USB cable and run the charting script on it.
 * The first person and second person take turns tilting the micro:bit in the "x" direction while the other player charts the data on the micro:bit!
 * Review and analyze the actual micro:bit device acceleration data on Excel
+* Display acceleration with y or z using plot bar graph by changing acceleration from "x" to "y" or "z" 
 
 
 ### ~avatar avatar

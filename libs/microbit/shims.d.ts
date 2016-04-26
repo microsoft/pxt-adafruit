@@ -528,7 +528,7 @@ declare namespace serial {
     /**
      * Sends a piece of text through Serial connection.
      */
-    //% shim=serial::writeString
+    //% blockId=serial_writestring block="serial write %text" shim=serial::writeString
     function writeString(text: string): void;
 }
 

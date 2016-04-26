@@ -1,4 +1,4 @@
-# Charting Acceleration: Challenge 
+# Chart Acceleration: Challenge 
 
 ### ~avatar avatar 
 

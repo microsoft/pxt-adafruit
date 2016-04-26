@@ -51,13 +51,28 @@ First, click or tap on the first two columns (A, B) to  include the time of the 
 
 ![](/static/mb/data7.png)
 
-Then click or tap on Recommended Charts
+Use the Recommended Charts command on the Insert tab to quickly create a chart that’s just right for your data.
+
+* Select the data that you want to include in your chart.
+
+
+* Click Insert > Recommended Charts.
 
 ![](/static/mb/chart1.png)
 
-Finally, click or tap on the option called Line, then click OK. A line chart is used to display trends over time. We will use the line chart because there are many data points over time. 
+* On the Recommended Charts tab, scroll through the list of chart types that Excel recommends for your data.
+
+Click any chart type to see how your data will look in that format. 
+
+When you find the chart type that you want, click it, and then click OK. We want to select the chart called Line. A line chart is used to display trends over time. We will use the line chart because there are many data points over time. 
+
+Tip: If you don’t see a chart type that you want, click the All Charts tab to see all of the available chart types.
 
 ![](/static/mb/chart_title.png)
+
+* Use the Chart Elements, Chart Styles, and Chart Filters buttons next to the upper-right corner of the chart to add chart elements like axis titles or data labels, to customize the look of your chart
+
+![](/static/mb/elements_styles_filters.png)
 
 * Connect a micro:bit to your computer using your USB cable; compile; and repeat this experiment by moving the micro:bit in the "x" direction. Then collect and chart the data on Excel. 
 * Review and analyze the actual micro:bit device data on Excel

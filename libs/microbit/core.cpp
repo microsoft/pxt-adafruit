@@ -301,4 +301,18 @@ namespace pxtrt {
   {
     microbit_panic(code);
   }
+
+  //
+  // Debugger
+  //
+
+  //%
+  uint32_t getNumGlobals() {
+    return numGlobals;
+  }
+
+  //%
+  void* getGlobalsPtr() {
+    return globals;
+  }
 }

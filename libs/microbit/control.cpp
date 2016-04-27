@@ -163,4 +163,12 @@ namespace control {
     StringData* deviceName() {
         return ManagedString(microbit_friendly_name()).leakData();        
     }
+    
+    /**
+    * Derive a unique, consistent serial number of this device from internal data.
+    */
+    //%
+    int deviceSerialNumber() {
+        return microbit_serial_number();
+    }
 }

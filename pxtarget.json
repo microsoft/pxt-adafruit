@@ -57,7 +57,10 @@
         "deployDrives": "^MICROBIT"
     },
     "runtime": {
-      "mathBlocks": true
+      "mathBlocks": true,
+      "loopBlocks": true,
+      "logicBlocks": true,
+      "variablesBlocks": true
     },
     "simulator": {
         "autoRun": true

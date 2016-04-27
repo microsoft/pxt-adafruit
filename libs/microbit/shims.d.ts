@@ -348,6 +348,12 @@ declare namespace control {
      */
     //% blockId="control_device_name" block="device name" weight=10 shim=control::deviceName
     function deviceName(): string;
+
+    /**
+     * Derive a unique, consistent serial number of this device from internal data.
+     */
+    //% shim=control::deviceSerialNumber
+    function deviceSerialNumber(): number;
 }
 
 

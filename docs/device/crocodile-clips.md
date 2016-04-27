@@ -11,9 +11,7 @@ This example displays a random number every time the crocodile clip holds  `GND`
 
 ### Connecting Crocodile Clips
 
-![](/static/mb/crocodile-clips-1.jpg)
 
-![](/static/mb/crocodile-clips-2.jpg)
 
 ### Lessons
 

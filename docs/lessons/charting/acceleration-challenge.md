@@ -92,9 +92,3 @@ Have fun reviewing your simulation and analyze the acceleration by chart the Exc
 * Review and analyze the actual micro:bit device acceleration data on Excel
 * Display acceleration with y or z using plot bar graph by changing acceleration from "x" to "y" or "z" 
 
-
-### ~avatar avatar
-
-Excellent, you're ready to continue with the [challenges](/lessons/charting/acceleration)
-
-### ~

@@ -39,7 +39,7 @@ Vigorously move the micro:bit in the micro:bit simulatator by moving the micro:b
 
 ### ~
 
-Review and write down your observations from the Excel data. Then chart or graph the data collected by using a tool in Excel. 
+We want to chart the data collected by using a tool in Excel. 
 
 The final part of this experiment is opening and reviewing the data in the Excel CSV file. Simply click on the line beneath the simulator. A CSV file will be generated to display the data points collected by moving the micro:bit in the X direction. Then click or tap on the data Excel file that was downloaded to your local Downloads Folder. 
 
@@ -54,7 +54,6 @@ First, click or tap on the first two columns (A, B) to  include the time of the 
 Use the Recommended Charts command on the Insert tab to quickly create a chart that’s just right for your data.
 
 * Select the data that you want to include in your chart.
-
 
 * Click Insert > Recommended Charts.
 

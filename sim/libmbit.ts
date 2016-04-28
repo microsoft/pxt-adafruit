@@ -233,6 +233,13 @@ namespace pxsim.control {
             ? b.id.slice(0, 4) 
             : 'abcd';
     }
+    
+    export function deviceSerialNumber(): number {
+        let b = board();
+        return parseInt(b && b.id         
+            ? b.id.slice(1) 
+            : '42');
+    }
 
     export function onEvent(id: number, evid: number, handler: RefAction) {
         pxt.registerWithDal(id, evid, handler)

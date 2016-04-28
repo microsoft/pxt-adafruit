@@ -1,4 +1,4 @@
-# Chart Acceleration: Activity 
+# Activity 
 
 Measure the acceleration on the micro:bit in the "x" direction. 
 

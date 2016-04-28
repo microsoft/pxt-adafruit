@@ -511,7 +511,7 @@ namespace pxsim {
 
         constructor() {
             super()
-            this.id = "b" + Math.random().toString().slice(1);
+            this.id = "b" +Math_.random(2147483647);
             this.animationQ = new AnimationQueue(runtime);
             this.bus = new EventBus(runtime);
             this.radio = new RadioBus(runtime);

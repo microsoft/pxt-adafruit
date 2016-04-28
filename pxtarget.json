@@ -58,7 +58,7 @@
     },
     "runtime": {
       "mathBlocks": true,
-      "loopBlocks": true,
+      "loopsBlocks": true,
       "logicBlocks": true,
       "variablesBlocks": true
     },

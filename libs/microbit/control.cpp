@@ -159,7 +159,7 @@ namespace control {
     /**
      * Gets a friendly name for the device derived from the its serial number
      */
-    //% blockId="control_device_name" block="device name" weight=10
+    //% blockId="control_device_name" block="device name" weight=10 blockGap=8
     StringData* deviceName() {
         return ManagedString(microbit_friendly_name()).leakData();        
     }
@@ -167,7 +167,7 @@ namespace control {
     /**
     * Derive a unique, consistent serial number of this device from internal data.
     */
-    //%
+    //% blockId="control_device_serial_number" block="device serial number" weight=9
     int deviceSerialNumber() {
         return microbit_serial_number();
     }

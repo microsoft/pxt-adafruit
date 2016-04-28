@@ -346,13 +346,13 @@ declare namespace control {
     /**
      * Gets a friendly name for the device derived from the its serial number
      */
-    //% blockId="control_device_name" block="device name" weight=10 shim=control::deviceName
+    //% blockId="control_device_name" block="device name" weight=10 blockGap=8 shim=control::deviceName
     function deviceName(): string;
 
     /**
      * Derive a unique, consistent serial number of this device from internal data.
      */
-    //% shim=control::deviceSerialNumber
+    //% blockId="control_device_serial_number" block="device serial number" weight=9 shim=control::deviceSerialNumber
     function deviceSerialNumber(): number;
 }
 

@@ -9,6 +9,8 @@ Acceleration
 ## Quick Links
 * [Chart Acceleration: Activity](/lessons/charting/acceleration) 
 * [Chart Acceleration: Challenge](/lessons/charting/acceleration-challenge) 
+* [Chart Acceleration: Quiz](/lessons/charting/quiz) 
+* [Chart Acceleration: Answers](/lessons/charting/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

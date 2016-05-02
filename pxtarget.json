@@ -60,7 +60,8 @@
       "mathBlocks": true,
       "loopsBlocks": true,
       "logicBlocks": true,
-      "variablesBlocks": true
+      "variablesBlocks": true,
+      "listsBlocks": true
     },
     "simulator": {
         "autoRun": true

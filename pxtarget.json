@@ -22,14 +22,12 @@
             "description": "",
             "files": [
                 "main.blocks",
-                "main.ts",
-                "README.md"
+                "main.ts"
             ]
         },
         "files": {
             "main.blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"device_print_message\"><value name=\"text\"><shadow type=\"text\"><field name=\"TEXT\">Hello!</field></shadow></value></block></xml>",
-            "main.ts": "\n",
-            "README.md": "Describe your project here!"
+            "main.ts": "\n"
         }
     },
     "tsprj": {
@@ -42,13 +40,11 @@
             },
             "description": "",
             "files": [
-                "main.ts",
-                "README.md"
+                "main.ts"
             ]
         },
         "files": {
-            "main.ts": "basic.showString('Hello!')\n",
-            "README.md": "Describe your project here!"
+            "main.ts": "basic.showString('Hello!')\n"
         }
     },
     "compile": {

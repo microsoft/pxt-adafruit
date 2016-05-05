@@ -1,7 +1,6 @@
 # Pins
 
-
-
+Control currents in Pins for analog/digital signals, servos, i2c, ...
 
 ```cards
 pins.digitalReadPin(DigitalPin.P0);

@@ -1,7 +1,6 @@
 # Radio
 
-
-
+Communicate data using radio packets
 
 ```cards
 radio.sendNumber(0);

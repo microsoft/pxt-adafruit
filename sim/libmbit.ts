@@ -4,12 +4,12 @@
 
 namespace pxsim {
     pxsim.initCurrentRuntime = () => {
-        U.assert(!runtime.board)
-        runtime.board = new Board()
+        U.assert(!runtime.board);
+        runtime.board = new Board();
     }
 
     export function board() {
-        return runtime.board as Board
+        return runtime.board as Board;
     }
 
     export interface AnimationOptions {
@@ -77,7 +77,7 @@ namespace pxsim {
             })
         }
     }
-    
+
     /**
       * Error codes used in the micro:bit runtime.
       */
@@ -115,7 +115,7 @@ namespace pxsim {
         img.set(3, 1, 255);
         img.set(4, 1, 255);
         runtime.updateDisplay();
-       
+
         throw new Error("PANIC " + code)
     }
 
@@ -125,9 +125,9 @@ namespace pxsim {
 
 
     export namespace AudioContextManager {
-        var _context: any; // AudioContext
-        var _vco: any; //OscillatorNode;
-        var _vca: any; // GainNode;
+        let _context: any; // AudioContext
+        let _vco: any; // OscillatorNode;
+        let _vca: any; // GainNode;
 
         function context(): any {
             if (!_context) _context = freshContext();
@@ -152,7 +152,7 @@ namespace pxsim {
 
         export function tone(frequency: number, gain: number) {
             if (frequency <= 0) return;
-            var ctx = context();
+            let ctx = context();
             if (!ctx) return;
 
             gain = Math.max(0, Math.min(1, gain));
@@ -198,10 +198,10 @@ namespace pxsim.basic {
             pause(interval * 5);
         } else {
             if (s.length == 1) showLeds(createImageFromString(s), interval * 5)
-            else ImageMethods.scrollImage(createImageFromString(s + ' '), interval, 1);
+            else ImageMethods.scrollImage(createImageFromString(s + " "), interval, 1);
         }
     }
-    
+
     export function showLeds(leds: Image, delay: number): void {
         showAnimation(leds, delay);
     }
@@ -226,19 +226,19 @@ namespace pxsim.control {
     export function reset() {
         U.userError("reset not implemented in simulator yet")
     }
-    
-    export function deviceName() : string {
+
+    export function deviceName(): string {
         let b = board();
-        return b && b.id         
-            ? b.id.slice(0, 4) 
-            : 'abcd';
+        return b && b.id
+            ? b.id.slice(0, 4)
+            : "abcd";
     }
-    
+
     export function deviceSerialNumber(): number {
         let b = board();
-        return parseInt(b && b.id         
-            ? b.id.slice(1) 
-            : '42');
+        return parseInt(b && b.id
+            ? b.id.slice(1)
+            : "42");
     }
 
     export function onEvent(id: number, evid: number, handler: RefAction) {
@@ -306,7 +306,7 @@ namespace pxsim.input {
 
 
     export function compassHeading(): number {
-        var b = board();
+        let b = board();
         if (!b.usesHeading) {
             b.usesHeading = true;
             runtime.queueDisplayUpdate();
@@ -315,7 +315,7 @@ namespace pxsim.input {
     }
 
     export function temperature(): number {
-        var b = board();
+        let b = board();
         if (!b.usesTemperature) {
             b.usesTemperature = true;
             runtime.queueDisplayUpdate();
@@ -565,29 +565,29 @@ namespace pxsim.images {
 
 namespace pxsim.ImageMethods {
     export function showImage(leds: Image, offset: number) {
-        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
-        
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);
+
         leds.copyTo(offset, 5, board().image, 0)
         runtime.queueDisplayUpdate()
     }
 
     export function plotImage(leds: Image, offset: number): void {
         if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);
-        
+
         leds.copyTo(offset, 5, board().image, 0)
         runtime.queueDisplayUpdate()
     }
 
-    export function height(leds: Image) : number {
-        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
+    export function height(leds: Image): number {
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);
         return Image.height;
     }
 
-    export function width(leds: Image) : number {
-        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
+    export function width(leds: Image): number {
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);
         return leds.width;
     }
-    
+
     export function plotFrame(leds: Image, frame: number) {
         ImageMethods.plotImage(leds, frame * Image.height);
     }
@@ -595,38 +595,38 @@ namespace pxsim.ImageMethods {
     export function showFrame(leds: Image, frame: number) {
         ImageMethods.showImage(leds, frame * Image.height);
     }
-    
-    export function pixel(leds: Image, x: number, y: number) : number {
-        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
-        return leds.get(x,y);
+
+    export function pixel(leds: Image, x: number, y: number): number {
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);
+        return leds.get(x, y);
     }
-    
-    export function setPixel(leds: Image, x: number, y: number, v:number) {
-        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
-        leds.set(x,y,v);        
+
+    export function setPixel(leds: Image, x: number, y: number, v: number) {
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);
+        leds.set(x, y, v);
     }
 
     export function clear(leds: Image) {
-        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
-        
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);
+
         leds.clear();
     }
 
     export function setPixelBrightness(i: Image, x: number, y: number, b: number) {
-        if (!i) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
+        if (!i) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);
 
         i.set(x, y, b);
     }
 
     export function pixelBrightness(i: Image, x: number, y: number): number {
-        if (!i) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
+        if (!i) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);
 
         return i.get(x, y);
     }
 
     export function scrollImage(leds: Image, interval: number, stride: number): void {
-        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);        
-        
+        if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);
+
         let cb = getResume()
         let off = stride > 0 ? 0 : leds.width - 1;
         let display = board().image;

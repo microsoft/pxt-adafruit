@@ -9,7 +9,7 @@ In this project, you will build your own seismograph.
 * micro:bit 
 * USB cable
 * Scissors
-* Glue gun
+* *Glue* *gun* *(Optional)* 
 * String
 * Cup (Plastic or Paper)
 * Magnet
@@ -21,6 +21,8 @@ Welcome! This activity will teach how to use the micro:bit to chart the strength
 2. Fasten Magnet: Fasten end of the string to the magnet with glue
 
 3. Secure String: Fasten string to base of the cup and hang the remaining string outside the base of the cup. 
+
+4. Attach Plate: Tape the plate to the 
 
 ### ~avatar avatar
 

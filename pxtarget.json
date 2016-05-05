@@ -59,7 +59,8 @@
       "variablesBlocks": true
     },
     "simulator": {
-        "autoRun": true
+        "autoRun": true,
+        "aspectRatio": 1.22
     },
     "compileService": {
         "gittag": "v0.1.8",

@@ -88,7 +88,7 @@ input.onButtonPressed(Button.B, () => {
 
 * Run the code to see if it works as expected.
 
-**Challenge 3**
+### Challenge 3
 
 Now make sure the image does not go off the left side and if it does, prompt the user to push button `A`.
 

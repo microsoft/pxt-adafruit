@@ -11,6 +11,7 @@ If (Conditionals)
 ## Quick Links
 
 * [activity](/lessons/truth-or-dare/activity)
+* [tutorial](/lessons/truth-or-dare/tutorial)
 * [challenges](/lessons/truth-or-dare/challenges)
 * [quiz](/lessons/truth-or-dare/quiz)
 * [quiz answers](/lessons/truth-or-dare/quiz-answers)

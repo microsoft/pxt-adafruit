@@ -35,5 +35,5 @@ basic.showNumber(14)
 
 ### Challenge 3
 
-Keep displaying multiples of 7 such as 21 and 28, but don't forget to add pauses between the numbers!
+Keep displaying multiples of 7 such as 21 and 28...
 

@@ -39,9 +39,9 @@ basic.showLeds(`
     `)
 ```
 
-* *Run* your code to see if it works as expected.
+* Does your code work as expected?
 
 ### Challenge 2
 
-Nice job! Why don't we create a third image that will show after the other two? Remember to add a pause before you create and show the image.
+Nice job! Why don't we create a third image that will show after the other two?
 

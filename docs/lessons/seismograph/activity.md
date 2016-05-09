@@ -21,11 +21,9 @@ Step 1. Prepare Tape: Measure and cut approximately 10mm of tape. The tape will 
 
 ![](/static/mb/lessons/seismograph0.png)
 
-
 Step 2. Fasten Tape: Fasten tape to the micro USB cable and to the plate. Attach the micro:bit to the micro:bit USB. 
 
 ![](/static/mb/lessons/seismograph0.png)
-
 
 ### ~avatar avatar
 
@@ -38,7 +36,6 @@ Step 1. Go to Codemicrobit.com
     Click or tap New Project
     Click or tap Blocks
     
-
 Step 2. 
 
 We will measure `acceleration (mg)` in terms of strength or Magnitude. Get the acceleration value (milli g-force), as measured in strength or Magnitude.
@@ -47,10 +44,9 @@ We will measure `acceleration (mg)` in terms of strength or Magnitude. Get the a
 input.acceleration(Dimension.Strength);
 ```
 
-
 Step 3. 
 
-Use the plot bar chart to visualize the acceleration on the LED screen of the micro:bit in the specified range. You implement plot Bar Graph to display a vertical bar graph based on the "value" and "high" value. Then you must insert acceleration in based on strength. 
+Use the plot bar chart to visualize the acceleration on the LED screen of the micro:bit in the specified range. You implement forever and plot Bar Graph to constantly display a vertical bar graph, which will be based on the "value" and "high" value. Then measure the acceleration based on the strength or Magnitude. 
 
 ```blocks
 basic.forever(() => {

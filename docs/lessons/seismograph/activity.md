@@ -17,7 +17,8 @@ Welcome! This activity will teach how to use the micro:bit to chart the strength
 
 1. Prepare Tape: Measure and cut approximately 10mm of tape. The tape will be fastened to a micro USB cable.  
 
-![](/static/mb/lessons/seismograph1.png)
+![](/static/mb/lessons/seismograph0.png)
+
 
 2. Fasten Tape: Fasten tape to the micro USB cable and to the plate. Attach the micro:bit to the micro:bit USB. 
 

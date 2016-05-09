@@ -125,7 +125,6 @@ Use the Recommended Charts command on the Insert tab to quickly create a chart t
 
 Step 9. 
 
-
 ![](/static/mb/chart1.png)
 
 * On the Recommended Charts tab, scroll through the list of chart types that Excel recommends for your data.

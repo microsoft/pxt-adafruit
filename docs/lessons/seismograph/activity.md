@@ -89,9 +89,14 @@ Vigorously move the micro:bit in the micro:bit simulatator by moving the micro:b
 
 Step 7. 
 
-* Connect a micro:bit to your computer using your USB cable; compile the program onto the micro:bit. 
+* Connect a micro:bit to your computer using your USB cable
 
 ![](/static/mb/lessons/seismograph3.png)
+
+* Press compile button for the seismograph program to run on the micro:bit. 
+
+![](/static/mb/lessons/seismograph4.png)
+
 
 A black colored flat line appears to measure micro:bit acceleration beneath the colored micro:bit simulator line. 
 

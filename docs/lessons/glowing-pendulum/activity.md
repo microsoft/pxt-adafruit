@@ -4,10 +4,29 @@ Construct a pendulum that glows using acceleration.
 
 Welcome! This activity will teach how to construct a pendulum that glows using acceleration. Let's get started!
 
+Turn on all the LEDs.
+
+```blocks
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
+```
+
 Create a **forever** loop that will constantly display the appropriate brightness on the LED display.
 
 
 ```blocks
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
 basic.forever(() => {
     
 })
@@ -16,6 +35,13 @@ basic.forever(() => {
 Now let's measure the acceleration on the `y` axis and store that value in a variable. The `acceleration(y)` function will provide the value.
 
 ```blocks
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
 basic.forever(() => {
     let acceleration = input.acceleration(Dimension.Y);
 });
@@ -25,9 +51,15 @@ Since the micro:bit will be swinging back and forth, the acceleration will only 
 
 
 ```blocks
-let acceleration = 0;
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
 basic.forever(() => {
-    acceleration = input.acceleration(Dimension.Y);
+    let acceleration = input.acceleration(Dimension.Y);
     acceleration = Math.abs(acceleration)
 });
 ```
@@ -35,6 +67,13 @@ basic.forever(() => {
 The function `acceleration(y)` returns a number between 0 and 1024. We want to use this value for the brightness of the micro:bit, but the `set brightness()` only accepts a value between 0 and 256. Thus, we need to divide the acceleration by 4 to ensure we will be in the appropriate range.
 
 ```blocks
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
 basic.forever(() => {
     let acceleration = input.acceleration(Dimension.Y);
     acceleration = Math.abs(acceleration);
@@ -46,37 +85,19 @@ basic.forever(() => {
 Now let's use our acceleration value to set the brightness on the micro:bit.
 
 ```blocks
+basic.showLeds(`
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    # # # # #
+    `)
 basic.forever(() => {
     let acceleration = input.acceleration(Dimension.Y);
     acceleration = Math.abs(acceleration);
     acceleration = acceleration / 4;
     led.setBrightness(acceleration)
 });
-
-
-
-```
-
-
-Let's show what the brightness of the micro:bit is by turning all the LEDs on!
-
-```blocks
-
-basic.forever(() => {
-    let acceleration = input.acceleration(Dimension.Y);
-    acceleration = Math.abs(acceleration);
-    acceleration = acceleration / 4;
-    led.setBrightness(acceleration)
-    basic.showLeds(`
-        # # # # #
-        # # # # #
-        # # # # #
-        # # # # #
-        # # # # #
-        `)
-});
-
-
 ```
 
 ### ~avatar avatar

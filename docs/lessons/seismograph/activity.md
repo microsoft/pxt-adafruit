@@ -27,7 +27,7 @@ Step 2. Fasten Tape: Fasten tape to the micro USB cable and to the plate. Attach
 ![](/static/mb/lessons/seismograph0.png)
 
 
-### ~
+### ~avatar avatar
 
 Seismograph built, let's code! 
 

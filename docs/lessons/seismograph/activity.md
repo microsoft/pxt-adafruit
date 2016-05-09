@@ -35,8 +35,8 @@ Seismograph built, let's code!
 
 Step 1. Go to Codemicrobit.com
 
-    Click or tap Create Code
-    Click or tap Block Editor
+    Click or tap New Project
+    Click or tap Blocks
     
 
 Step 2. 
@@ -47,7 +47,6 @@ We will measure `acceleration (mg)` in terms of strength or Magnitude. Get the a
 input.acceleration(Dimension.Strength);
 ```
 
-### ~
 
 Step 3. 
 

@@ -21,7 +21,7 @@ Step 1. Prepare Tape: Measure and cut approximately 10mm of tape. The tape will 
 
 ![](/static/mb/lessons/seismograph1.png)
 
-Step 2. Fasten Tape: Fasten tape to the micro USB cable and to the plate. Attach the micro:bit to the micro:bit USB. 
+Step 2. Fasten Tape: Fasten tape to the micro USB cable and to the plate. Attach the micro:bit to the micro:bit USB cable. 
 
 ![](/static/mb/lessons/seismograph0.png)
 

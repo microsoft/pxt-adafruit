@@ -5,9 +5,6 @@
 
 ### ~column 
 
-## O365 Integration
-* [Science Experiments: Chart](/lessons/charting), create an app for simulating and measuring sensor data of acceleration, temperature, light level, and rotation 
-
 ## Beginner
 
 * [Beautiful Image](/lessons/beautiful-image), show a beautiful image with show LEDs

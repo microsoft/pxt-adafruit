@@ -9,6 +9,7 @@ If (Conditionals)
 ## Quick Links
 
 * [activity](/lessons/magic-8/activity)
+* [tutorial](/lessons/magic-8/tutorial)
 * [challenges](/lessons/magic-8/challenges)
 * [quiz](/lessons/magic-8/quiz)
 * [quiz answers](/lessons/magic-8/quiz-answers)

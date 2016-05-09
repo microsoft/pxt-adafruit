@@ -30,8 +30,6 @@ input.onGesture(Gesture.LogoUp, () => {
         . . # . .
         `)
 })
-
-
 ```
 
 Run your code and try to turn around the micro:bit to see the **logo up** event in action!

@@ -1,8 +1,6 @@
 # magic 8 activity
 
-A fortune teller game on the micro:bit 
-
-Welcome! This tutorial will help you create a magic 8 ball on the micro:bit. Let's get started!
+Welcome! This activity will help you create a magic 8 ball on the micro:bit. Let's get started!
 
 Show a string to instruct the user how to play Magic 8! The magic 8 ball can only answer true or false questions.
 
@@ -32,16 +30,13 @@ input.onGesture(Gesture.Shake, () => {
 Create a variable of type number called **randomNumber**. Set **randomNumber** to a random number with a limit of 2. Remember the random function in the math library, picks a random number from 0 to the limit, but not including the limit unless it is 0.
 
 ```blocks
-
 basic.showString("ASK A QUESTION")
 basic.showNumber(8)
 input.onGesture(Gesture.Shake, () => {
     basic.clearScreen()
-    let randomNumber = Math.random(2)
+    let randomNumber = Math.random(3)
 
 });
-
-
 ```
 
 Create an if statement for the condition `if randomNumber = 2`. If **randomNumber** is 2, display the string 'Yes'
@@ -52,7 +47,7 @@ basic.showString("ASK A QUESTION")
 basic.showNumber(8)
 input.onGesture(Gesture.Shake, () =>  {
     basic.clearScreen();
-    let randomNumber = Math.random(2);
+    let randomNumber = Math.random(3);
     if (randomNumber == 2) {
         basic.showString("YES");
     }
@@ -68,7 +63,7 @@ basic.showString("ASK A QUESTION")
 basic.showNumber(8)
 input.onGesture(Gesture.Shake, () => {
     basic.clearScreen()
-    let randomNumber = Math.random(2)
+    let randomNumber = Math.random(3)
     if (randomNumber == 2) {
         basic.showString("YES")
     } else if (randomNumber == 1) {
@@ -84,7 +79,7 @@ basic.showString("ASK A QUESTION")
 basic.showNumber(8)
 input.onGesture(Gesture.Shake, () =>  {
     basic.clearScreen()
-    let randomNumber = Math.random(2)
+    let randomNumber = Math.random(3)
     if (randomNumber == 2) {
         basic.showString("YES")
     } else if (randomNumber == 1) {
@@ -106,14 +101,13 @@ basic.showString("ASK A QUESTION")
 basic.showNumber(8)
 input.onGesture(Gesture.Shake, () =>  {
     basic.clearScreen()
-    let randomNumber = Math.random(2)
+    let randomNumber = Math.random(3)
     if (randomNumber == 2) {
         basic.showString("YES")
     } else if (randomNumber == 1) {
         basic.showString("NO")
     } else {
         basic.showString("I DON'T KNOW")
-
     }
     basic.showNumber(8)
 

@@ -9,24 +9,17 @@ In this project, you will build your own seismograph.
 * micro:bit 
 * USB cable
 * String
-* Magnet
-* Plastic Cup 
-* Paper Plate
-* Ruler and pen
+* Plate 
+* Tape 
 * Scissors
-* *Optional: Glue gun*  
 
 Welcome! This activity will teach how to use the micro:bit to chart the strength of the acceleration. Let's get started!
 
-1. Using the ruler and pen, identify and mark the center point on the lid. Don’t worry if you don’t get it quite right, we’ll tidy things up later on.
+1. Secure String: Measure and cut 10mm of string. The string will be fastened to a paper plate.  
 
-2. Setup Cup: Use scissors to create a large square shaped window of the cup. The square sized hole will be placed at the lid side of the cup. 
+2. Fasten String: Fasten string to outside border of the plate.  
 
-3. Fasten Magnet: Cut a string Fasten end of the string to the magnet with glue
-
-4. Secure String: Fasten string to base of the cup and hang the remaining string outside the base of the cup. 
-
-5. Attach Plate: Tape the plate to the 
+3. Attach Plate: Tape the plate to the 
 
 ### ~avatar avatar
 

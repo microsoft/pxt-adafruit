@@ -1,6 +1,8 @@
 # Seismograph Activity 
 
 
+### ~avatar avatar
+
 In this project, you will build your own seismograph. 
 
 ### ~
@@ -15,12 +17,12 @@ In this project, you will build your own seismograph.
 
 Welcome! This activity will teach how to use the micro:bit to chart the strength of the acceleration. Let's get started!
 
-1. Prepare Tape: Measure and cut approximately 10mm of tape. The tape will be fastened to a micro USB cable.  
+Step 1. Prepare Tape: Measure and cut approximately 10mm of tape. The tape will be fastened to a micro USB cable.  
 
 ![](/static/mb/lessons/seismograph0.png)
 
 
-2. Fasten Tape: Fasten tape to the micro USB cable and to the plate. Attach the micro:bit to the micro:bit USB. 
+Step 2. Fasten Tape: Fasten tape to the micro USB cable and to the plate. Attach the micro:bit to the micro:bit USB. 
 
 ![](/static/mb/lessons/seismograph0.png)
 
@@ -31,13 +33,13 @@ Seismograph built, let's code!
 
 ### ~
 
-1. Go to Codemicrobit.com
+Step 1. Go to Codemicrobit.com
 
     Click or tap Create Code
     Click or tap Block Editor
     
 
-2. 
+Step 2. 
 
 We will measure `acceleration (mg)` in terms of strength. Get the acceleration value (milli g-force), as measured in strength.
 
@@ -47,7 +49,7 @@ input.acceleration(Dimension.Strength);
 
 ### ~
 
-3. 
+Step 3. 
 
 Use the plot bar chart to visualize the acceleration on the LED screen of the micro:bit in the specified range. You implement plot Bar Graph to display a vertical bar graph based on the "value" and "high" value. Then you must insert acceleration in based on strength. 
 
@@ -60,7 +62,7 @@ basic.forever(() => {
 
 ### ~
 
-4. 
+Step 4. 
 
 Finally, we subtract the gravity from acceleration strength. 
 
@@ -73,7 +75,7 @@ basic.forever(() => {
 
 ### ~
 
-5. 
+Step 5. 
 
 Notice that making vibrating the object below the micro:bit changes the values and the line appears as a wave to display the value of the strength as measured in milli-gravities. By making the object below the micro:bit vibrate, you will observe changing values of the micro:bit. Also, the LEDs shown on the Bar Graph fluctates based on the movement of the micro:bit strength. 
 
@@ -84,14 +86,14 @@ NOTE: The black color reflects the micro:bit device.
 
 ### ~
 
-6. 
+Step 6. 
  
 Vigorously move the micro:bit in the micro:bit simulatator by moving the micro:bit image from side to side. Every time the micro:bit moves in the x direction in the simulator,  you are generating data points that can be reviewed in Excel. The more attempts to move the micro:bit from side to side, the more data being saved in Excel. After you have vigarously moved the micro:bit simulator from side to side for a sufficient amount of time, you are ready to graph or chart the accceleration of the micro:bit. We want a printout of our acceleration on Excel that can be graphed in Excel. 
 
 
 ### ~
 
-7. 
+Step 7. 
 
 We want to chart the data collected by using a tool in Excel. 
 
@@ -100,7 +102,7 @@ The final part of this experiment is opening and reviewing the data in the Excel
 
 ### ~
 
-8. 
+Step 8. 
 
 
 First, click or tap on the first two columns (A, B) to  include the time of the data being collected; b) the results of acceleration data on the micro:bit  
@@ -115,7 +117,7 @@ Use the Recommended Charts command on the Insert tab to quickly create a chart t
 
 ### ~
 
-9. 
+Step 9. 
 
 
 ![](/static/mb/chart1.png)
@@ -130,7 +132,7 @@ Tip: If you don’t see a chart type that you want, click the All Charts tab to 
 
 ### ~
 
-10. 
+Step 10. 
 
 ![](/static/mb/chart_title.png)
 
@@ -138,7 +140,7 @@ Tip: If you don’t see a chart type that you want, click the All Charts tab to 
 
 ### ~
 
-11. 
+Step 11. 
 
 ![](/static/mb/elements_styles_filters.png)
 

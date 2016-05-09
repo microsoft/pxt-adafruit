@@ -8,18 +8,17 @@ In this project, you will build your own seismograph.
 
 * micro:bit 
 * USB cable
-* String
 * Plate 
 * Tape 
 * Scissors
 
 Welcome! This activity will teach how to use the micro:bit to chart the strength of the acceleration. Let's get started!
 
-1. Secure String: Measure and cut 10mm of string. The string will be fastened to a paper plate.  
+1. Prepare Tape: Measure and cut approximately 10mm of tape. The tape will be fastened to a micro USB cable.  
 
-2. Fasten String: Fasten string to outside border of the plate.  
+2. Fasten Tape: Fasten tape to the micro USB cable and to the plate.  
 
-3. Attach Plate: Tape the plate to the 
+3. Attach micro:bit: Attach the micro:bit to the micro:bit USB. 
 
 ### ~avatar avatar
 

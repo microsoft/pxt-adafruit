@@ -19,7 +19,7 @@ Welcome! This activity will teach how to use the micro:bit to chart the strength
 
 Step 1. Prepare Tape: Measure and cut approximately 10mm of tape. The tape will be fastened to a micro USB cable.  
 
-![](/static/mb/lessons/seismograph0.png)
+![](/static/mb/lessons/seismograph1.png)
 
 Step 2. Fasten Tape: Fasten tape to the micro USB cable and to the plate. Attach the micro:bit to the micro:bit USB. 
 
@@ -89,11 +89,13 @@ Vigorously move the micro:bit in the micro:bit simulatator by moving the micro:b
 
 Step 7. 
 
-* Connect a micro:bit to your computer using your USB cable; compile; and run an acceleration experiment by moving the actual micro:bit. 
+* Connect a micro:bit to your computer using your USB cable; compile the program onto the micro:bit. 
 
-After moving the micro:bit in any direction for several seconds, you can chart acceleration on Excel. 
+![](/static/mb/lessons/seismograph3.png)
 
-NOTE: A black The black color reflects the micro:bit device. 
+A black colored flat line appears to measure micro:bit acceleration beneath the colored micro:bit simulator line. 
+
+Run the acceleration experiment by moving the actual micro:bit.  
 
 First, notice that by moving the actual micro:bit in any direction, you will change the values of the black, flat horizontal line. The black line will change from being flate to being a waving black line. The changing values of the micro:bit accelereration is being measured in milli-gravities. Next, notice that by moving the micro:bit  below, there is a changing acceleration value. Finally, notice that the LED display will fluctate based on the movement of the micro:bit. 
 

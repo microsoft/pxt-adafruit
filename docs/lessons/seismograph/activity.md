@@ -1,8 +1,9 @@
 # Seismograph Activity 
 
-### ~avatar avatar
 
 In this project, you will build your own seismograph. 
+
+### ~
 
 ## What you'll need: 
 
@@ -19,7 +20,7 @@ Welcome! This activity will teach how to use the micro:bit to chart the strength
 2. Fasten Tape: Fasten tape to the micro USB cable and to the plate. Attach the micro:bit to the micro:bit USB. 
 
 
-### ~avatar avatar
+### ~
 
 Seismograph built, let's code! 
 
@@ -30,7 +31,6 @@ Seismograph built, let's code!
     Click or tap Create Code
     Click or tap Block Editor
     
-### ~
 
 2. 
 

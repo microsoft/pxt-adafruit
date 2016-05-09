@@ -41,7 +41,7 @@ Step 1. Go to Codemicrobit.com
 
 Step 2. 
 
-We will measure `acceleration (mg)` in terms of strength. Get the acceleration value (milli g-force), as measured in strength.
+We will measure `acceleration (mg)` in terms of strength or Magnitude. Get the acceleration value (milli g-force), as measured in strength or Magnitude.
 
 ```blocks
 input.acceleration(Dimension.Strength);

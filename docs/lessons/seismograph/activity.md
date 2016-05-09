@@ -77,7 +77,7 @@ basic.forever(() => {
 
 Step 5. 
 
-Notice that making vibrating the object below the micro:bit changes the values and the line appears as a wave to display the value of the strength as measured in milli-gravities. By making the object below the micro:bit vibrate, you will observe changing values of the micro:bit. Also, the LEDs shown on the Bar Graph fluctates based on the movement of the micro:bit strength. 
+Notice that making moving the object below the micro:bit changes the values and the line appears as a wave to display the value of the strength as measured in milli-gravities. By making the object below the micro:bit vibrate, you will observe changing values of the micro:bit. Also, the LEDs shown on the Bar Graph fluctates based on the movement of the micro:bit strength. 
 
 NOTE: The black color reflects the micro:bit device. 
 

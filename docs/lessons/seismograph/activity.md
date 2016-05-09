@@ -99,6 +99,8 @@ Step 7.
 
 The flat, black colored line should appear that measures acceleration of the micro:bit. The black line should appear directly beneath the flat, colored line that measures acceleration of the micro:bit simulator. 
 
+![](/static/mb/lessons/seismograph5.png)
+
 Run the acceleration experiment by moving the actual micro:bit and observe the changes in the black line.  
 
 First, notice that by moving the actual micro:bit in any direction, you will change the values of the black, flat horizontal line. The black line will change from being flat to being a waving black line. The changing values of the micro:bit accelereration is being measured in milli-gravities. Next, notice that by moving the micro:bit  below, there is a changing acceleration value. Finally, notice that the LED display will fluctate based on the movement of the micro:bit. 

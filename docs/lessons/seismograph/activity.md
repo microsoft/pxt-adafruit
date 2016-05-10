@@ -97,7 +97,7 @@ Click or tap the compile button for the seismograph program to run the program o
 
 ## 3. 
 
-The flat, black colored line should appear directly beneath the colored line. The black line measures the micro:bit acceleration. 
+The flat, black colored line should appear directly beneath the colored line. The black line measures the micro:bit acceleration.  And the colored line measures micro:bit simulator acceleration. 
 
 Run the acceleration experiment by vigarously moving the plate in any direction or move the object below the micro:bit (such as a table).
 

@@ -148,48 +148,39 @@ A CSV file will be generated to display the data points collected by the micro:b
 
 ## 8.
 
-We want to convert the data from  number to time. First, click or tap on the first column (A) to highlight the column. Next, right click on the column and select Format Cells. Finally, select Type as measured with two place holders. It's the second option in the list. Click OK. 
+Select the data that you want to include in your chart. The chart should include the first two columns: time and acceleration. 
 
-Your selection should appears as follows:     
+Click or tap on the first two columns (A, B) to include time and acceleration data from the micro:bit  
 
-![](/static/mb/analyze5.png)
 
-## 9. 
 
-We want to chart the first two columns to analyze time and acceleration. Click or tap on the first two columns (A, B) to include time and acceleration data from the micro:bit  
+## 9.
 
-![](/static/mb/analyze2.png)
-
-## 10.
-
-Use the Recommended Charts command on the Insert tab to quickly create a chart that’s just right for your data.
+Click or tap on Insert then select Recommended Charts. We can select a chart that’s just right for the data.
 
 ![](/static/mb/analyze3.png)
 
-## 10. 
+On the Recommended Charts tab, scroll through the list of chart types that Excel recommends for your data. 
 
-* Select the data that you want to include in your chart.
+We want to select the chart called Line. A line chart is used to display trends over time. We will use the line chart because there are many data points over time. 
 
-* Click Insert > Recommended Charts.
+Click on the chart type to see how your data will look in that format. When you find the chart type that you want, click it, and then click OK. 
 
-* On the Recommended Charts tab, scroll through the list of chart types that Excel recommends for your data.
 
-Click any chart type to see how your data will look in that format. 
-
-When you find the chart type that you want, click it, and then click OK. We want to select the chart called Line. A line chart is used to display trends over time. We will use the line chart because there are many data points over time. 
-
-Tip: If you don’t see a chart type that you want, click the All Charts tab to see all of the available chart types.
-
-![](/static/mb/chart_title.png)
-
-## 9. 
-
-* Use the Chart Elements, Chart Styles, and Chart Filters buttons next to the upper-right corner of the chart to add chart elements like axis titles or data labels, to customize the look of your chart
-
+Tip: If you don’t see the line chart, click the All Charts tab to see the line chart.
 
 ## 10. 
 
-![](/static/mb/elements_styles_filters.png)
+Use the Chart Elements, Chart Styles, and Chart Filters buttons next to the upper-right corner of the chart to add chart elements like axis titles or data labels, to customize the look of your chart
+
+
+Alternatively, click or tap on the Design Ribbon. 
+
+Let's select Style 10 as an example. 
+
+ 
+
+## 11. 
 
 
 ### ~avatar avatar

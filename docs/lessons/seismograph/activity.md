@@ -87,17 +87,17 @@ First, notice that moving the micro:bit in the simulator in any direction, you w
 
 ## 2. 
  
-* Connect a micro:bit to your computer using your USB cable
+Connect a micro:bit to your computer using your USB cable
 
 ![](/static/mb/lessons/seismograph3.png)
 
-* Click or tap the compile button for the seismograph program to run the program on the micro:bit. 
+Click or tap the compile button for the seismograph program to run the program on the micro:bit. 
 
 ![](/static/mb/lessons/seismograph4.png)
 
 ## 3. 
 
-The flat, black colored line should appear directly beneath the colored line. The block line measures the micro:bit acceleration. 
+The flat, black colored line should appear directly beneath the colored line. The black line measures the micro:bit acceleration. 
 
 Run the acceleration experiment by vigarously moving the plate in any direction or move the object below the micro:bit (such as a table).
 

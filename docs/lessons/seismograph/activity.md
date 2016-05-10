@@ -95,7 +95,13 @@ First, notice that moving the micro:bit in the simulator in any direction, you w
 
 The flat, black colored line should appear. The block line will measure acceleration of the micro:bit. The black line appears directly beneath the colored line that measures acceleration of the micro:bit simulator. 
 
-First, notice that moving the micro:bit in any direction, you will change the acceleration value, which is being displayed as the same color as the micro:bit. And notice that by moving the micro:bit, there is a changing acceleration value. Second, the flat colored horizontal line will start a waving line to display the value of the strength as measured in milli-gravities. Finally, notice that the LED display will fluctate based on the movement of the micro:bit simulator. 
+![](/static/mb/lessons/seismograph6.png)
+
+First, notice that moving the micro:bit in any direction, you will change the acceleration value,   which is being displayed as the same color as the micro:bit. 
+
+![](/static/mb/lessons/seismograph7.png)
+
+Next, notice that by moving the micro:bit, there is a changing acceleration value. Second, the flat colored horizontal line will start a waving line to display the value of the strength as measured in milli-gravities. Finally, notice that the LED display will fluctate based on the movement of the micro:bit simulator. 
 
 ## 4. 
 

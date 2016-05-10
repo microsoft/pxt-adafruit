@@ -14,6 +14,25 @@ declare namespace radio {
     function sendNumbers(value_0: number, value_1: number, value_2: number, value_3: number): void;
 
     /**
+     * Broadcasts a name / value pair along with the device serial number
+     * and running time to any connected BBC micro:bit in the group.
+     * @param name the field name (max 12 characters), eg: "data"
+     * @param the numberic value
+     */
+    //% help=radio/stream-value
+    //% weight=15
+    //% blockId=radio_datagram_stream_value block="stream|value %name|= %value" shim=radio::streamValue
+    function streamValue(name: string, number: number): void;
+
+    /**
+     * Reads a value sent with `stream value` and writes it
+     * to the serial stream as JSON
+     */
+    //% help=radio/read-value-to-serial
+    //% weight=14 shim=radio::readValueToSerial
+    function readValueToSerial(): void;
+
+    /**
      * Registers code to run when a packet is received over radio.
      */
     //% help=radio/on-data-received

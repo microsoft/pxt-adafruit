@@ -2,6 +2,8 @@
 
 using namespace pxt;
 
+#define RADIO_VALUE_PACKET_TYPE 24641622
+
 //% color=270 weight=34
 namespace radio {
 
@@ -45,6 +47,60 @@ namespace radio {
         if (radioEnable() != MICROBIT_OK) return;
         int buf[] = { value_0, value_1, value_2, value_3 };
         uBit.radio.datagram.send((uint8_t*)buf, 4*sizeof(int));
+    }
+    
+    /**
+    * Broadcasts a name / value pair along with the device serial number
+    * and running time to any connected BBC micro:bit in the group.
+    * @param name the field name (max 12 characters), eg: "data"
+    * @param the numberic value
+    */
+    //% help=radio/stream-value
+    //% weight=15
+    //% blockId=radio_datagram_stream_value block="stream|value %name|= %value"
+    void streamValue(StringData* name, int number) {
+        if (radioEnable() != MICROBIT_OK) return;
+
+        ManagedString n(name);                
+        uint8_t buf[32];
+        uint32_t* buf32 = (uint32_t*)buf;
+        memset(buf, 32, 0);
+        buf32[0] = number;                      // 4 bytes: value
+        buf32[1] = microbit_serial_number();    // 4 bytes: serial number
+        buf32[2] = system_timer_current_time(); // 4 bytes: running time
+        memcpy(buf + 12, n.toCharArray(), min(12, n.length())); // 12-24: field name       
+        buf32[7] = RADIO_VALUE_PACKET_TYPE; // last 4 bytes: magic number of package type
+        uBit.radio.datagram.send(buf, 32);
+    }
+    
+    /**
+    * Reads a value sent with `stream value` and writes it
+    * to the serial stream as JSON
+    */
+    //% help=radio/read-value-to-serial
+    //% weight=14
+    void readValueToSerial() {
+        if (radioEnable() != MICROBIT_OK) return;
+        PacketBuffer p = uBit.radio.datagram.recv();
+        uint8_t* bytes = packet.getBytes();
+        int type;
+        memcpy(&type, bytes + 28, 4);
+        if (type != RADIO_VALUE_PACKET_TYPE) return;
+        
+        int value;
+        int serial;
+        int time;
+        char name[12];
+        memcpy(&value, bytes, 4);
+        memcpy(&serial, bytes + 4, 4);
+        memcpy(&time, bytes + 8, 4);
+        memcpy(&name, bytes + 12, 12);
+            
+        uBit.serial.send("{s:"); uBit.serial.send(serial);
+        uBit.serial.send(",t:"); uBit.serial.send(time);
+        uBit.serial.send(",v:"); uBit.serial.send(value);
+        uBit.serial.send(",n:\""); uBit.serial.send(name);
+        uBit.serial.send("}\r\n");
     }
 
     /**

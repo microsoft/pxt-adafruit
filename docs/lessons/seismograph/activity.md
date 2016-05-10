@@ -91,9 +91,15 @@ First, notice that moving the micro:bit in the simulator in any direction, you w
 
 ![](/static/mb/lessons/seismograph3.png)
 
+* Click or tap the compile button for the seismograph program to run the program on the micro:bit. 
+
+![](/static/mb/lessons/seismograph4.png)
+
 ## 3. 
 
 The flat, black colored line should appear directly beneath the colored line. The block line measures the micro:bit acceleration. 
+
+Run the acceleration experiment by moving the actual micro:bit and observe the changes in the black line. 
 
 ![](/static/mb/lessons/seismograph5.png)
 
@@ -101,21 +107,15 @@ First, notice that moving the micro:bit in any direction, you will change the ac
 
 ![](/static/mb/lessons/seismograph7.png)
 
-Second, the flat colored horizontal line will start moving to plot the value of the strength as measured in milli-gravities. The horizontal line's movement is based on the micro:bit. 
+Second, the flat colored horizontal line will start moving to plot the value of the strength as measured in milli-gravities. The horizontal line's movement is based on the micro:bit acceleration in Magnitude or Strength. 
 
 ![](/static/mb/lessons/seismograph6.png)
 
 ## 4. 
 
-* Click or tap the compile button for the seismograph program to run the program on the micro:bit. 
-
-![](/static/mb/lessons/seismograph4.png)
-
-![](/static/mb/lessons/seismograph6.png)
-
 ![](/static/mb/analyze1.png)
 
-Run the acceleration experiment by moving the actual micro:bit and observe the changes in the black line.  
+ 
 Vigorously move the micro:bit in the micro:bit simulatator by moving the micro:bit image from side to side. Every time the micro:bit moves in any direction in the simulator,  you are generating data points that can be reviewed in Excel. The more attempts to move the micro:bit from side to side, the more data being saved in Excel. After you have vigarously moved the micro:bit simulator from side to side for a sufficient amount of time, you are ready to graph or chart the accceleration of the micro:bit. We want a printout of our acceleration on Excel that can be graphed in Excel. 
 
 First, notice that by moving the actual micro:bit in any direction, you will change the values of the black, flat horizontal line. The black line will change from being flat to being a waving black line. The changing values of the micro:bit accelereration is being measured in milli-gravities. Next, notice that by moving the micro:bit  below, there is a changing acceleration value. Finally, notice that the LED display will fluctate based on the movement of the micro:bit. 

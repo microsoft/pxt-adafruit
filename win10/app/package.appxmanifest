@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="39122940-ab16-4cd4-a0ce-79a3eb863ecf" Version="0.1.3.0" Publisher="CN=jhalleux" />
+  <Identity Name="39122940-ab16-4cd4-a0ce-79a3eb863ecf" Version="0.1.4.0" Publisher="CN=jhalleux" />
   <mp:PhoneIdentity PhoneProductId="39122940-ab16-4cd4-a0ce-79a3eb863ecf" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>codemicrobitapp</DisplayName>
@@ -18,8 +18,8 @@
       <uap:ApplicationContentUriRules>
         <uap:Rule Match="https://m.pxt.io/" Type="include" WindowsRuntimeAccess="all" />
       </uap:ApplicationContentUriRules>
-      <uap:VisualElements DisplayName="code micro:bit" Description="Code editors for the BBC micro:bits" BackgroundColor="white" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
-        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png">
+      <uap:VisualElements DisplayName="m.pxt.io" Description="Code editors for the BBC micro:bit" BackgroundColor="white" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" ShortName="m.pxt.io">
         </uap:DefaultTile>
         <uap:SplashScreen Image="images\splashscreen.png" />
       </uap:VisualElements>

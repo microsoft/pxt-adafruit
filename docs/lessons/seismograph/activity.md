@@ -3,7 +3,7 @@
 
 ### ~avatar avatar
 
-In this project, you will build your own seismograph. 
+Welcome! In this project, you will build your own seismograph. This activity will teach how to use the micro:bit to chart the strength of the acceleration. Let's get started!
 
 ### ~
 
@@ -15,7 +15,6 @@ In this project, you will build your own seismograph.
 * Tape 
 * Scissors
 
-Welcome! This activity will teach how to use the micro:bit to chart the strength of the acceleration. Let's get started!
 
 Step 1. Prepare Tape: Measure and cut approximately 10mm of tape. The tape will be fastened to a micro USB cable.  
 
@@ -72,7 +71,7 @@ basic.forever(() => {
 
 ### ~avatar avatar
 
-The coding is done! Let's chart with the seismograph!
+We now need to use the micro:bit to chart the strength of the acceleration.
 
 ### ~
 

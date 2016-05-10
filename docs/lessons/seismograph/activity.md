@@ -144,7 +144,6 @@ Click or tap Download data
 
 A CSV file will be generated to display the data points collected by the micro:bit. Click or tap on the data Excel file that was downloaded to your local Downloads Folder. 
 
-
 ![](/static/mb/chart1.png)
 
 ## 8.
@@ -156,6 +155,10 @@ First, click or tap on the first two columns (A, B)to include time and accelerat
 ## 9.
 
 Use the Recommended Charts command on the Insert tab to quickly create a chart that’s just right for your data.
+
+![](/static/mb/analyze3.png)
+
+## 10. 
 
 * Select the data that you want to include in your chart.
 
@@ -169,9 +172,9 @@ When you find the chart type that you want, click it, and then click OK. We want
 
 Tip: If you don’t see a chart type that you want, click the All Charts tab to see all of the available chart types.
 
-## 9. 
-
 ![](/static/mb/chart_title.png)
+
+## 9. 
 
 * Use the Chart Elements, Chart Styles, and Chart Filters buttons next to the upper-right corner of the chart to add chart elements like axis titles or data labels, to customize the look of your chart
 

@@ -91,15 +91,21 @@ First, notice that moving the micro:bit in the simulator in any direction, you w
 
 ![](/static/mb/lessons/seismograph3.png)
 
+## 3. 
+
+The flat, black colored line should appear. The block line will measure acceleration of the micro:bit. The black line appears directly beneath the colored line that measures acceleration of the micro:bit simulator. 
+
+First, notice that moving the micro:bit in any direction, you will change the acceleration value, which is being displayed as the same color as the micro:bit. And notice that by moving the micro:bit, there is a changing acceleration value. Second, the flat colored horizontal line will start a waving line to display the value of the strength as measured in milli-gravities. Finally, notice that the LED display will fluctate based on the movement of the micro:bit simulator. 
+
+## 4. 
+
 * Click or tap the compile button for the seismograph program to run the program on the micro:bit. 
 
 ![](/static/mb/lessons/seismograph4.png)
 
-The flat, black colored line should appear. The block line will measure acceleration of the micro:bit. 
-
-NOTE: The black line should appear directly beneath the flat, colored line that measures acceleration of the micro:bit simulator. 
-
 ![](/static/mb/lessons/seismograph6.png)
+
+![](/static/mb/analyze1.png)
 
 Run the acceleration experiment by moving the actual micro:bit and observe the changes in the black line.  
 Vigorously move the micro:bit in the micro:bit simulatator by moving the micro:bit image from side to side. Every time the micro:bit moves in any direction in the simulator,  you are generating data points that can be reviewed in Excel. The more attempts to move the micro:bit from side to side, the more data being saved in Excel. After you have vigarously moved the micro:bit simulator from side to side for a sufficient amount of time, you are ready to graph or chart the accceleration of the micro:bit. We want a printout of our acceleration on Excel that can be graphed in Excel. 
@@ -110,15 +116,20 @@ First, notice that by moving the actual micro:bit in any direction, you will cha
 
 We want to chart the data collected by using a tool in Excel. 
 
-The final part of this experiment is opening and reviewing the data in the Excel CSV file. Simply click on the line charts area beneath the simulator. A CSV file will be generated to display the data points collected by the micro:bit. Click or tap on the data Excel file that was downloaded to your local Downloads Folder. 
+The final part of this experiment is opening and reviewing the data in the Excel CSV file. Simply click on the line charts area beneath the simulator. 
 
 First, click or tap on the first two columns (A, B) to  include the time of the data being collected; b) the results of acceleration data on the micro:bit  
 
-![](/static/mb/data7.png)
+![](/static/mb/analyze.png)
 
 ## 5. 
 
+A CSV file will be generated to display the data points collected by the micro:bit. Click or tap on the data Excel file that was downloaded to your local Downloads Folder. 
+
+
 ![](/static/mb/chart1.png)
+
+## 6
 
 Use the Recommended Charts command on the Insert tab to quickly create a chart that’s just right for your data.
 

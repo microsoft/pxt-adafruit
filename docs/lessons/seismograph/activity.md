@@ -80,9 +80,7 @@ Step 1.
 
 First, notice that making moving the micro:bit simulator in any direction will change the values from a flat horizontal line to a waving line to display the value of the strength as measured in milli-gravities. Next, notice that by moving the micro:bit simulator below, there is a changing acceleration value. Finally, notice that the LED display will fluctate based on the movement of the micro:bit simulator. 
 
-
 ![](/static/mb/data4.png)
-
 
 ### ~
 
@@ -123,17 +121,17 @@ First, click or tap on the first two columns (A, B) to  include the time of the 
 
 ![](/static/mb/data7.png)
 
-Use the Recommended Charts command on the Insert tab to quickly create a chart that’s just right for your data.
-
-* Select the data that you want to include in your chart.
-
-* Click Insert > Recommended Charts.
-
 ### ~
 
 Step 5. 
 
 ![](/static/mb/chart1.png)
+
+Use the Recommended Charts command on the Insert tab to quickly create a chart that’s just right for your data.
+
+* Select the data that you want to include in your chart.
+
+* Click Insert > Recommended Charts.
 
 * On the Recommended Charts tab, scroll through the list of chart types that Excel recommends for your data.
 

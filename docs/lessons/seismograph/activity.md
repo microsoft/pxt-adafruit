@@ -153,7 +153,6 @@ Select the data that you want to include in your chart. The chart should include
 Click or tap on the first two columns (A, B) to include time and acceleration data from the micro:bit  
 
 
-
 ## 9.
 
 Click or tap on Insert then select Recommended Charts. We can select a chart that’s just right for the data.

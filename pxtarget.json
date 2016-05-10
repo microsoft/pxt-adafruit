@@ -1,7 +1,7 @@
 {
     "id": "microbit",
-    "name": "code micro:bit",
-    "title": "code micro:bit",
+    "name": "m.pxt.io",
+    "title": "m.pxt.io",
     "corepkg": "microbit",
     "bundleddirs": [
         "libs/microbit",

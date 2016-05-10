@@ -123,13 +123,13 @@ Third, notice that the LED display fluctates based on the movement of the micro:
 
  Now we are ready to graph or chart the accceleration of the micro:bit. We want a printout of the micro:bit acceleration graphed in Excel.
 
-## 4. 
+## 5. 
 
 In order to receive the the data plotted by Excel, click or tap on the bar chart data.
 
 ![](/static/mb/analyze1.png)
   
-## 5. 
+## 6. 
 
 You have two options to Analyze Data: 
 
@@ -140,19 +140,16 @@ Click or tap Download data
 
 ![](/static/mb/seismograph9.png)
 
-## 6. 
-
-
+## 7. 
 
 First, click or tap on the first two columns (A, B) to  include the time of the data being collected; b) the results of acceleration data on the micro:bit  
-
 
 A CSV file will be generated to display the data points collected by the micro:bit. Click or tap on the data Excel file that was downloaded to your local Downloads Folder. 
 
 
 ![](/static/mb/chart1.png)
 
-## 7.
+## 8.
 
 Use the Recommended Charts command on the Insert tab to quickly create a chart that’s just right for your data.
 
@@ -168,14 +165,14 @@ When you find the chart type that you want, click it, and then click OK. We want
 
 Tip: If you don’t see a chart type that you want, click the All Charts tab to see all of the available chart types.
 
-## 8. 
+## 9. 
 
 ![](/static/mb/chart_title.png)
 
 * Use the Chart Elements, Chart Styles, and Chart Filters buttons next to the upper-right corner of the chart to add chart elements like axis titles or data labels, to customize the look of your chart
 
 
-## 9. 
+## 10. 
 
 ![](/static/mb/elements_styles_filters.png)
 

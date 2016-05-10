@@ -13,4 +13,5 @@ notifications:
 cache:
   directories:
     - node_modules
+    - built/cache
 

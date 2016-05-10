@@ -99,11 +99,17 @@ First, notice that moving the micro:bit in the simulator in any direction, you w
 
 The flat, black colored line should appear directly beneath the colored line. The block line measures the micro:bit acceleration. 
 
-Run the acceleration experiment by moving the actual micro:bit and observe the changes in the black line. 
+Run the acceleration experiment by vigarously moving the plate in any direction or move the object below the micro:bit (such as a table).
+
+Every time the micro:bit moves in any direction,  you generate data points that can be reviewed in Excel later. The more attempts to move the micro:bit, the more data to be reviewed in Excel.  
 
 ![](/static/mb/lessons/seismograph5.png)
 
-First, notice that moving the micro:bit in any direction, you will change the acceleration value,   which is being displayed as the same color as the micro:bit. By moving the micro:bit, there is a changing acceleration value. 
+## 4. 
+
+Please find seismogrph experiement obervations: 
+
+First, notice that moving the micro:bit in any direction, you will change the acceleration value, which is being displayed as the same color as the micro:bit. By moving the micro:bit, there is a changing acceleration value. 
 
 ![](/static/mb/lessons/seismograph7.png)
 
@@ -111,33 +117,42 @@ Second, the flat colored horizontal line will start moving to plot the value of 
 
 ![](/static/mb/lessons/seismograph6.png)
 
+Third, notice that the LED display fluctates based on the movement of the micro:bit. 
+
+![](/static/mb/lessons/seismograph8.png)
+
+ Now we are ready to graph or chart the accceleration of the micro:bit. We want a printout of the micro:bit acceleration graphed in Excel.
+
 ## 4. 
+
+In order to receive the the data plotted by Excel, click or tap on the bar chart data.
 
 ![](/static/mb/analyze1.png)
+  
+## 5. 
 
- 
-Vigorously move the micro:bit in the micro:bit simulatator by moving the micro:bit image from side to side. Every time the micro:bit moves in any direction in the simulator,  you are generating data points that can be reviewed in Excel. The more attempts to move the micro:bit from side to side, the more data being saved in Excel. After you have vigarously moved the micro:bit simulator from side to side for a sufficient amount of time, you are ready to graph or chart the accceleration of the micro:bit. We want a printout of our acceleration on Excel that can be graphed in Excel. 
+You have two options to Analyze Data: 
 
-First, notice that by moving the actual micro:bit in any direction, you will change the values of the black, flat horizontal line. The black line will change from being flat to being a waving black line. The changing values of the micro:bit accelereration is being measured in milli-gravities. Next, notice that by moving the micro:bit  below, there is a changing acceleration value. Finally, notice that the LED display will fluctate based on the movement of the micro:bit. 
+* Local File: Save the data to your local Downloads folder and open it in Excel. 
+* Stream to Cloud: Upload your data to Microsoft Azure to analyze it. 
 
-## 4. 
+Click or tap Download data
 
-We want to chart the data collected by using a tool in Excel. 
+![](/static/mb/seismograph9.png)
 
-The final part of this experiment is opening and reviewing the data in the Excel CSV file. Simply click on the line charts area beneath the simulator. 
+## 6. 
+
+
 
 First, click or tap on the first two columns (A, B) to  include the time of the data being collected; b) the results of acceleration data on the micro:bit  
 
-![](/static/mb/analyze.png)
-
-## 5. 
 
 A CSV file will be generated to display the data points collected by the micro:bit. Click or tap on the data Excel file that was downloaded to your local Downloads Folder. 
 
 
 ![](/static/mb/chart1.png)
 
-## 6
+## 7.
 
 Use the Recommended Charts command on the Insert tab to quickly create a chart that’s just right for your data.
 
@@ -153,14 +168,14 @@ When you find the chart type that you want, click it, and then click OK. We want
 
 Tip: If you don’t see a chart type that you want, click the All Charts tab to see all of the available chart types.
 
-## 6. 
+## 8. 
 
 ![](/static/mb/chart_title.png)
 
 * Use the Chart Elements, Chart Styles, and Chart Filters buttons next to the upper-right corner of the chart to add chart elements like axis titles or data labels, to customize the look of your chart
 
 
-## 7. 
+## 9. 
 
 ![](/static/mb/elements_styles_filters.png)
 

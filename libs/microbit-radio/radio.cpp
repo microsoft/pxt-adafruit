@@ -90,7 +90,7 @@ namespace radio {
         int value;
         int serial;
         int time;
-        char name[12];
+        char name[12+1]; name[12] = 0;
         memcpy(&value, bytes, 4);
         memcpy(&serial, bytes + 4, 4);
         memcpy(&time, bytes + 8, 4);
@@ -100,7 +100,7 @@ namespace radio {
         uBit.serial.send(",t:"); uBit.serial.send(time);
         uBit.serial.send(",v:"); uBit.serial.send(value);
         uBit.serial.send(",n:\""); uBit.serial.send(name);
-        uBit.serial.send("}\r\n");
+        uBit.serial.send("\"}\r\n");
     }
 
     /**

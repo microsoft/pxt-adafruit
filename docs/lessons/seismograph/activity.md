@@ -70,7 +70,14 @@ basic.forever(() => {
 
 ### ~
 
-Step 5. 
+### ~avatar avatar
+
+The coding is done! Let's chart with the seismograph!
+
+### ~
+
+
+Step 1. 
 
 First, notice that making moving the micro:bit simulator in any direction will change the values from a flat horizontal line to a waving line to display the value of the strength as measured in milli-gravities. Next, notice that by moving the micro:bit simulator below, there is a changing acceleration value. Finally, notice that the LED display will fluctate based on the movement of the micro:bit simulator. 
 
@@ -80,14 +87,14 @@ First, notice that making moving the micro:bit simulator in any direction will c
 
 ### ~
 
-Step 6. 
+Step 2. 
  
 Vigorously move the micro:bit in the micro:bit simulatator by moving the micro:bit image from side to side. Every time the micro:bit moves in any direction in the simulator,  you are generating data points that can be reviewed in Excel. The more attempts to move the micro:bit from side to side, the more data being saved in Excel. After you have vigarously moved the micro:bit simulator from side to side for a sufficient amount of time, you are ready to graph or chart the accceleration of the micro:bit. We want a printout of our acceleration on Excel that can be graphed in Excel. 
 
 
 ### ~
 
-Step 7. 
+Step 3. 
 
 * Connect a micro:bit to your computer using your USB cable
 
@@ -107,7 +114,7 @@ First, notice that by moving the actual micro:bit in any direction, you will cha
 
 ### ~
 
-Step 8. 
+Step 4. 
 
 We want to chart the data collected by using a tool in Excel. 
 
@@ -125,7 +132,7 @@ Use the Recommended Charts command on the Insert tab to quickly create a chart t
 
 ### ~
 
-Step 9. 
+Step 5. 
 
 ![](/static/mb/chart1.png)
 
@@ -139,7 +146,7 @@ Tip: If you don’t see a chart type that you want, click the All Charts tab to 
 
 ### ~
 
-Step 10. 
+Step 6. 
 
 ![](/static/mb/chart_title.png)
 
@@ -147,7 +154,7 @@ Step 10.
 
 ### ~
 
-Step 11. 
+Step 7. 
 
 ![](/static/mb/elements_styles_filters.png)
 

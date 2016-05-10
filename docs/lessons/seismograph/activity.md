@@ -142,13 +142,18 @@ Click or tap Download data
 
 ## 7. 
 
-First, click or tap on the first two columns (A, B) to  include the time of the data being collected; b) the results of acceleration data on the micro:bit  
-
 A CSV file will be generated to display the data points collected by the micro:bit. Click or tap on the data Excel file that was downloaded to your local Downloads Folder. 
+
 
 ![](/static/mb/chart1.png)
 
 ## 8.
+
+First, click or tap on the first two columns (A, B)to include time and acceleration data from the micro:bit  
+
+![](/static/mb/analyze2.png)
+
+## 9.
 
 Use the Recommended Charts command on the Insert tab to quickly create a chart that’s just right for your data.
 

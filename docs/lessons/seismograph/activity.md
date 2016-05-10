@@ -71,7 +71,7 @@ basic.forever(() => {
 
 ### ~avatar avatar
 
-We now need to use the micro:bit to chart the strength of the acceleration.
+Science: We now need to use the micro:bit to chart the strength of the acceleration.
 
 ### ~
 

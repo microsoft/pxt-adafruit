@@ -74,7 +74,7 @@
     "appTheme": {
         "logoUrl": "https://m.pxt.io/about",
         "logo": "./static/microbit.red.svg",
-        "docsLogo": "./static/microbit.red.svg",
+        "docsLogo": "./static/microbit.docs.svg",
         "portraitLogo":"./static/microbit.red.svg",
         "footerLogo": "./static/microbit.red.svg",
         "homeUrl": "https://m.pxt.io/",

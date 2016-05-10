@@ -14,9 +14,9 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="App" StartPage="https://codemicrobit.com/">
+    <Application Id="App" StartPage="https://m.pxt.io/">
       <uap:ApplicationContentUriRules>
-        <uap:Rule Match="https://codemicrobit.com/" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://m.pxt.io/" Type="include" WindowsRuntimeAccess="all" />
       </uap:ApplicationContentUriRules>
       <uap:VisualElements DisplayName="code micro:bit" Description="Code editors for the BBC micro:bits" BackgroundColor="white" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
         <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png">
@@ -27,7 +27,7 @@
         <uap:Extension Category="windows.fileTypeAssociation">
           <uap:FileTypeAssociation Name="microbithex">
             <uap:DisplayName>BBC micro:bit binary file</uap:DisplayName>
-            <uap:InfoTip>.hex file created with codemicrobit.com or microbit.co.uk</uap:InfoTip>
+            <uap:InfoTip>.hex file created with m.pxt.io or microbit.co.uk</uap:InfoTip>
             <uap:SupportedFileTypes>
               <uap:FileType ContentType="application/x-microbit-hex">.hex</uap:FileType>
             </uap:SupportedFileTypes>

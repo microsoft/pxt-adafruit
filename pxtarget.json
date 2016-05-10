@@ -72,13 +72,13 @@
         "log": true
     },
     "appTheme": {
-        "logoUrl": "https://codemicrobit.com/about",
+        "logoUrl": "https://m.pxt.io/about",
         "logo": "./static/logo.svg",
         "docsLogo": "./static/docslogo.svg",
         "portraitLogo":"./static/portraitlogo.svg",
         "footerLogo": "./static/footerlogo.svg",
-        "homeUrl": "https://codemicrobit.com/",
-        "embedUrl": "https://codemicrobit.com/",
+        "homeUrl": "https://m.pxt.io/",
+        "embedUrl": "https://m.pxt.io/",
         "koduUrl": "https://www.kodugamelab.com/bbc-microbit/",
         "visualStudioCode": true,
         "docMenu": [

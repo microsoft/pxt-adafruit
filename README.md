@@ -12,7 +12,7 @@ Please follow instructions at https://github.com/Microsoft/pxt#running-a-target-
 ## Universal Windows App
 
 The Windows 10 app is a [Universal Windows Hosted Web App](https://microsoftedge.github.io/WebAppsDocs/en-US/win10/CreateHWA.htm)
-that wraps codemicrobit.com and provides additional features.
+that wraps m.pxt.io and provides additional features.
 
 ### Sideloading
 

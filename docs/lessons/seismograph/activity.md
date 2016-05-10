@@ -26,7 +26,7 @@ Step 2. Fasten Tape: Fasten tape to the micro USB cable and to the plate. Attach
 
 ### ~avatar avatar
 
-Coding: The seismograph has been built. We are ready to program the micro:bit to be a seismograph! 
+Computer Science: The seismograph has been built. We are ready to program the micro:bit to be a seismograph! 
 
 ### ~
 

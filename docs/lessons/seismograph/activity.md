@@ -148,11 +148,19 @@ A CSV file will be generated to display the data points collected by the micro:b
 
 ## 8.
 
-First, click or tap on the first two columns (A, B)to include time and acceleration data from the micro:bit  
+We want to convert the data from  number to time. First, click or tap on the first column (A) to highlight the column. Next, right click on the column and select Format Cells. Finally, select Type as measured with two place holders. It's the second option in the list. Click OK. 
+
+Your selection should appears as follows:     
+
+![](/static/mb/analyze5.png)
+
+## 9. 
+
+We want to chart the first two columns to analyze time and acceleration. Click or tap on the first two columns (A, B) to include time and acceleration data from the micro:bit  
 
 ![](/static/mb/analyze2.png)
 
-## 9.
+## 10.
 
 Use the Recommended Charts command on the Insert tab to quickly create a chart that’s just right for your data.
 

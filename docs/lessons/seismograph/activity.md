@@ -1,9 +1,10 @@
 # Seismograph Activity 
 
+Welcome! In this project, you will build your own seismograph. This activity will teach how to use the micro:bit to chart the strength of the acceleration. Let's get started! Project duration: 25 minutes.
 
 ### ~avatar avatar
 
-Welcome! In this project, you will build your own seismograph. This activity will teach how to use the micro:bit to chart the strength of the acceleration. Let's get started!
+Engineering: In this project, you will build your own seismograph micro:bit from tape and a household plate. 
 
 ### ~
 
@@ -15,7 +16,6 @@ Welcome! In this project, you will build your own seismograph. This activity wil
 * Tape 
 * Scissors
 
-
 Step 1. Prepare Tape: Measure and cut approximately 10mm of tape. The tape will be fastened to a micro USB cable.  
 
 ![](/static/mb/lessons/seismograph1.png)
@@ -26,14 +26,14 @@ Step 2. Fasten Tape: Fasten tape to the micro USB cable and to the plate. Attach
 
 ### ~avatar avatar
 
-Seismograph built, let's code! 
+Coding: The seismograph has been built. We are ready to program the micro:bit to be a seismograph! 
 
 ### ~
 
 Step 1. Go to Codemicrobit.com
 
-    Click or tap New Project
-    Click or tap Blocks
+* Click or tap New Project
+* Click or tap Blocks
     
 Step 2. 
 

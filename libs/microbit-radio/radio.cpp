@@ -41,7 +41,7 @@ namespace radio {
      * Broadcasts 4 numbers over radio to any connected micro:bit in the group.
      */
     //% help=radio/send-numbers
-    //% weight=59
+    //% weight=59 debug=true
     //% blockId=radio_datagram_send_numbers block="send numbers|0: %VALUE0|1: %VALUE1|2: %VALUE2|3: %VALUE3"
     void sendNumbers(int value_0, int value_1, int value_2, int value_3) {
         if (radioEnable() != MICROBIT_OK) return;
@@ -55,10 +55,10 @@ namespace radio {
     * @param name the field name (max 12 characters), eg: "data"
     * @param the numberic value
     */
-    //% help=radio/stream-value
-    //% weight=4
-    //% blockId=radio_datagram_stream_value block="stream|value %name|= %value"
-    void streamValue(StringData* name, int number) {
+    //% help=radio/send-value
+    //% weight=4 debug=true
+    //% blockId=radio_datagram_send_value block="send|value %name|= %value"
+    void sendValue(StringData* name, int number) {
         if (radioEnable() != MICROBIT_OK) return;
 
         ManagedString n(name);                
@@ -78,7 +78,7 @@ namespace radio {
     * to the serial stream as JSON
     */
     //% help=radio/read-value-to-serial
-    //% weight=3
+    //% weight=3 debug=true
     void readValueToSerial() {
         if (radioEnable() != MICROBIT_OK) return;
         PacketBuffer p = uBit.radio.datagram.recv();
@@ -131,7 +131,7 @@ namespace radio {
      * @param index index of the number to read from 0 to 3. 1 eg
      */
     //% help=radio/received-number-at
-    //% weight=45
+    //% weight=45 debug=true
     //% blockId=radio_datagram_received_number_at block="receive number|at %VALUE" blockGap=8
     int receivedNumberAt(int index) {
         if (radioEnable() != MICROBIT_OK) return 0;

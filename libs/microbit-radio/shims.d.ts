@@ -9,7 +9,7 @@ declare namespace radio {
      * Broadcasts 4 numbers over radio to any connected micro:bit in the group.
      */
     //% help=radio/send-numbers
-    //% weight=59
+    //% weight=59 debug=true
     //% blockId=radio_datagram_send_numbers block="send numbers|0: %VALUE0|1: %VALUE1|2: %VALUE2|3: %VALUE3" shim=radio::sendNumbers
     function sendNumbers(value_0: number, value_1: number, value_2: number, value_3: number): void;
 
@@ -19,17 +19,17 @@ declare namespace radio {
      * @param name the field name (max 12 characters), eg: "data"
      * @param the numberic value
      */
-    //% help=radio/stream-value
-    //% weight=4
-    //% blockId=radio_datagram_stream_value block="stream|value %name|= %value" shim=radio::streamValue
-    function streamValue(name: string, number: number): void;
+    //% help=radio/send-value
+    //% weight=4 debug=true
+    //% blockId=radio_datagram_send_value block="send|value %name|= %value" shim=radio::sendValue
+    function sendValue(name: string, number: number): void;
 
     /**
      * Reads a value sent with `stream value` and writes it
      * to the serial stream as JSON
      */
     //% help=radio/read-value-to-serial
-    //% weight=3 shim=radio::readValueToSerial
+    //% weight=3 debug=true shim=radio::readValueToSerial
     function readValueToSerial(): void;
 
     /**
@@ -45,7 +45,7 @@ declare namespace radio {
      * @param index index of the number to read from 0 to 3. 1 eg
      */
     //% help=radio/received-number-at
-    //% weight=45
+    //% weight=45 debug=true
     //% blockId=radio_datagram_received_number_at block="receive number|at %VALUE" blockGap=8 shim=radio::receivedNumberAt
     function receivedNumberAt(index: number): number;
 

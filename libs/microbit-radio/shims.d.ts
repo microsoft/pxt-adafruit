@@ -20,7 +20,7 @@ declare namespace radio {
      * @param the numberic value
      */
     //% help=radio/stream-value
-    //% weight=15
+    //% weight=4
     //% blockId=radio_datagram_stream_value block="stream|value %name|= %value" shim=radio::streamValue
     function streamValue(name: string, number: number): void;
 
@@ -29,7 +29,7 @@ declare namespace radio {
      * to the serial stream as JSON
      */
     //% help=radio/read-value-to-serial
-    //% weight=14 shim=radio::readValueToSerial
+    //% weight=3 shim=radio::readValueToSerial
     function readValueToSerial(): void;
 
     /**

@@ -56,7 +56,7 @@ namespace radio {
     * @param the numberic value
     */
     //% help=radio/stream-value
-    //% weight=15
+    //% weight=4
     //% blockId=radio_datagram_stream_value block="stream|value %name|= %value"
     void streamValue(StringData* name, int number) {
         if (radioEnable() != MICROBIT_OK) return;
@@ -78,7 +78,7 @@ namespace radio {
     * to the serial stream as JSON
     */
     //% help=radio/read-value-to-serial
-    //% weight=14
+    //% weight=3
     void readValueToSerial() {
         if (radioEnable() != MICROBIT_OK) return;
         PacketBuffer p = uBit.radio.datagram.recv();

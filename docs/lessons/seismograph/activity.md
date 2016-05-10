@@ -99,11 +99,13 @@ Vigorously move the micro:bit in the micro:bit simulatator by moving the micro:b
 
 ![](/static/mb/lessons/seismograph3.png)
 
-* Press compile button for the seismograph program to run on the micro:bit. 
+* Click or tap the compile button for the seismograph program to run the program on the micro:bit. 
 
 ![](/static/mb/lessons/seismograph4.png)
 
-The flat, black colored line should appear that measures acceleration of the micro:bit. The black line should appear directly beneath the flat, colored line that measures acceleration of the micro:bit simulator. 
+The flat, black colored line should appear. The block line will measure acceleration of the micro:bit. 
+
+NOTE: The black line should appear directly beneath the flat, colored line that measures acceleration of the micro:bit simulator. 
 
 ![](/static/mb/lessons/seismograph6.png)
 

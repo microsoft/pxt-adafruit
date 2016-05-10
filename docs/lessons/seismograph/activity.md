@@ -107,7 +107,7 @@ Every time the micro:bit moves in any direction,  you generate data points that 
 
 ## 4. 
 
-Please find seismogrph experiement obervations: 
+Please find seismogrph experiment obervations: 
 
 First, notice that moving the micro:bit in any direction, you will change the acceleration value, which is being displayed as the same color as the micro:bit. By moving the micro:bit, there is a changing acceleration value. 
 
@@ -125,7 +125,7 @@ Third, notice that the LED display fluctates based on the movement of the micro:
 
 ## 5. 
 
-In order to receive the the data plotted by Excel, click or tap on the bar chart data.
+In order to receive the the data plotted by Excel, click or tap anywhere in the on the chart data.
 
 ![](/static/mb/analyze1.png)
   

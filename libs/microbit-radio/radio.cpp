@@ -82,15 +82,30 @@ namespace radio {
     void readValueToSerial() {
         if (radioEnable() != MICROBIT_OK) return;
         PacketBuffer p = uBit.radio.datagram.recv();
-        uint8_t* bytes = packet.getBytes();
-        int type;
-        memcpy(&type, bytes + 28, 4);
-        if (type != RADIO_VALUE_PACKET_TYPE) return;
+        int length = p.length();
+        uBit.serial.send("length:");
+        uBit.serial.send(length);
+        uBit.serial.send("\r\n");
+        if (length < 32) {
+            return;
+        }
+        
+        uint8_t* bytes = p.getBytes();
+        uint32_t* buf32 = (uint32_t*)bytes;        
+        //uint32_t type = buf32[7];
+        //if (type != RADIO_VALUE_PACKET_TYPE)
+        //{
+         //   uBit.serial.send("type: ");
+         //   uBit.serial.send(type);
+         //   uBit.serial.send("\r\n");
+          //  return;
+        //}
         
         int value;
         int serial;
         int time;
-        char name[12+1]; name[12] = 0;
+        char name[12+1]; name[12] = 0; // memset(name, 0, 13 * sizeof(char));
+        
         memcpy(&value, bytes, 4);
         memcpy(&serial, bytes + 4, 4);
         memcpy(&time, bytes + 8, 4);

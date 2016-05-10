@@ -452,8 +452,8 @@ namespace pxsim.radio {
     export function sendNumbers(value0: number, value1: number, value2: number, value3: number): void {
         board().radio.datagram.send([value0, value1, value2, value3]);
     }
-    
-    export function sendValue(name:string, value: number) {
+
+    export function streamValue(name: string, value: number) {
         board().radio.datagram.send([value]);
     }
 

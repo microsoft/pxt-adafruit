@@ -146,7 +146,6 @@ First, click or tap on the first two columns (A, B) to  include the time of the 
 
 A CSV file will be generated to display the data points collected by the micro:bit. Click or tap on the data Excel file that was downloaded to your local Downloads Folder. 
 
-
 ![](/static/mb/chart1.png)
 
 ## 8.

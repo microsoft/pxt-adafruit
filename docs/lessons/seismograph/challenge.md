@@ -32,12 +32,12 @@ basic.forever(() => {
 ## 2. 
 Let's measure `acceleration (mg)` and then `send number`. `Acceleration` is measured in **milli-gravities**, so a value of -1000 is equivalent to -1g or -9.81m/s^2. We will be able to get the acceleration value (g-force), in the specified "x" dimension. `Send number` will broadcast a number data packet to other micro:bits connected via radio.
 
-We need add send number block found in the Radio drawer. We will attach send number to acceleration. 
+We need add send number block found in the Radio drawer. We will attach send number to acceleration and subtract the gravity from acceleration strength.  
 
 Your finished code will look like this:
 
 ```blocks
-radio.sendNumber(input.acceleration(Dimension.X));
+radio.sendNumber(input.acceleration(Dimension.Strength) - 1023);
 ```
 
 ## 3. 

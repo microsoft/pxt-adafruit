@@ -173,7 +173,7 @@ We want to select the chart called Line. A line chart is used to display trends 
 
 Click on the chart type to see how your data will look in that format. When you find the chart type that you want, click it, and then click OK. 
 
-![](/static/mb/analyze16.png)
+![](/static/mb/lessons/analyze16.png)
 
 Tip: If you don’t see the line chart, click the All Charts tab to see the line chart.
 
@@ -185,7 +185,7 @@ Alternatively, click or tap on the Design Ribbon.
 
 Let's select Style 10 as an example. 
 
-![](/static/mb/analyze19.png)
+![](/static/mb/lessons/analyze19.png)
 
 ### ~avatar avatar
 

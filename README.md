@@ -25,4 +25,4 @@ that wraps m.pxt.io and provides additional features.
 ### Building
 
 * Install Visual Studio 2015 Update 2 or higher. Make sure the Windows 10 templates are installed.
-* open the ``win10/app.sln`` solution and launch the ``codemicrobit`` project.
+* open the ``win10/app.sln`` solution and launch the ``m.pxt.io`` project.

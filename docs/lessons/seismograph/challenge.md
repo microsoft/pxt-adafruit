@@ -1,6 +1,6 @@
-# Challenge 
+# Seismograph Challenge 
 
-Coding challenges for screen wipe. 
+Coding challenges for the seismograph. 
 
 ## Before we get started
 

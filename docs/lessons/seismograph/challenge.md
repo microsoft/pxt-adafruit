@@ -11,8 +11,8 @@ Engineering: In this project, you will build a remote control based on the seism
 
 ## What you'll need: 
 
-* micro:bit (2)
-* micro USB cable (2)
+* BBC micro:bits (2)
+* micro USB cables (2) 
 * Plate 
 * Tape 
 * Scissors

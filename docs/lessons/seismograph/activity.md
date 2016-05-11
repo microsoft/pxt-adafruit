@@ -91,13 +91,13 @@ Science: We now need to use the micro:bit to Analyze Data and chart for the stre
 
 First, notice that moving the micro:bit in the simulator in any direction, you will change the acceleration value, which is being displayed as the same color as the micro:bit simulator. And notice that by moving the micro:bit simulator, there is a changing acceleration value. Second, the flat colored horizontal line will start a waving line to display the value of the strength as measured in milli-gravities. Finally, notice that the LED display will fluctate based on the movement of the micro:bit simulator. 
 
-![](/static/mb/seismograph33.png)
+![](/static/mb/lessons/seismograph8.png)
 
 ## 2. 
  
 Connect a micro:bit to your computer using your USB cable
 
-![](/static/mb/lessons/seismograph12.png)
+![](/static/mb/lessons/seismograph33.png)
 
 Click or tap the compile button for the seismograph program to run the program on the micro:bit. 
 

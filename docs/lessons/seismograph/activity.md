@@ -40,14 +40,14 @@ Computer Science: The seismograph has been built. We are ready to program the mi
 
 # Computer Science Steps
 
-## 1. 
+## 3. 
 
 Go to Codemicrobit.com
 
 * Click or tap New Project
 * Click or tap Blocks
     
-## 2. 
+## 4. 
 
 We will measure `acceleration (mg)` in terms of strength or Magnitude. Get the acceleration value (milli g-force), as measured in strength or Magnitude.
 
@@ -55,7 +55,7 @@ We will measure `acceleration (mg)` in terms of strength or Magnitude. Get the a
 input.acceleration(Dimension.Strength);
 ```
 
-## 3. 
+## 5. 
 
 Use the plot bar chart to visualize the acceleration on the LED screen of the micro:bit in the specified range. You implement forever and plot Bar Graph to constantly display a vertical bar graph, which will be based on the "value" and "high" value. Then measure the acceleration based on the strength or Magnitude. 
 
@@ -66,7 +66,7 @@ basic.forever(() => {
 
 ```
 
-## 4. 
+## 6. 
 
 Finally, we subtract the gravity from acceleration strength. 
 
@@ -87,13 +87,13 @@ Science: We now need to use the micro:bit to Analyze Data and chart for the stre
 
 # Science Steps
 
-## 1. 
+## 7. 
 
 First, notice that moving the micro:bit in the simulator in any direction, you will change the acceleration value, which is being displayed as the same color as the micro:bit simulator. Also, notice that by moving the micro:bit simulator, there is a changing acceleration value. Second, the flat colored horizontal line will start a waving line to display the value of the strength as measured in milli-gravities. Finally, notice that the LED display will fluctate based on the movement of the micro:bit simulator. 
 
 ![](/static/mb/lessons/analyze20.png)
 
-## 2. 
+## 8. 
  
 Connect a micro:bit to your computer using your USB cable
 
@@ -103,7 +103,7 @@ Click or tap the compile button for the seismograph program to run the program o
 
 ![](/static/mb/lessons/seismograph22.png)
 
-## 3. 
+## 9. 
 
 The flat, black colored line should appear directly beneath the colored line. The black line measures the micro:bit acceleration.  And the colored line measures micro:bit simulator acceleration. 
 
@@ -113,7 +113,7 @@ Every time the micro:bit moves in any direction,  you generate data points that 
 
 ![](/static/mb/lessons/seismograph5.png)
 
-## 4. 
+## 10. 
 
 Please find seismogrph experiment obervations: 
 
@@ -131,13 +131,13 @@ Third, notice that the LED display fluctates based on the movement of the micro:
 
  Now we are ready to graph or chart the accceleration of the micro:bit. We want a printout of the micro:bit acceleration graphed in Excel.
 
-## 5. 
+## 11. 
 
 In order to receive the the data plotted by Excel, click or tap anywhere in the on the chart data.
 
 ![](/static/mb/analyze1.png)
   
-## 6. 
+## 12. 
 
 You have two options to Analyze Data: 
 
@@ -148,20 +148,20 @@ Click or tap Download data
 
 ![](/static/mb/seismograph9.png)
 
-## 7. 
+## 13. 
 
 A CSV file will be generated to display the data points collected by the micro:bit. Click or tap on the data Excel file that was downloaded to your local Downloads Folder. 
 
 ![](/static/mb/lessons/analyze9.png)
 
-## 8.
+## 14.
 
 Select the data that you want to include in your chart. The chart should include the first two columns: time and acceleration. 
 
 Click or tap on the first two columns (A, B) to include time and acceleration data from the micro:bit  
 
 
-## 9.
+## 15.
 
 Click or tap on Insert then select Recommended Charts. We can select a chart that’s just right for the data.
 
@@ -177,7 +177,7 @@ Click on the chart type to see how your data will look in that format. When you 
 
 Tip: If you don’t see the line chart, click the All Charts tab to see the line chart.
 
-## 10. 
+## 16. 
 
 Use the Chart Elements, Chart Styles, and Chart Filters buttons next to the upper-right corner of the chart to add chart elements like axis titles or data labels, to customize the look of your chart
 

@@ -449,11 +449,21 @@ namespace pxsim.radio {
         board().radio.setTransmitPower(power);
     }
 
-    export function sendNumbers(value0: number, value1: number, value2: number, value3: number): void {
-        board().radio.datagram.send([value0, value1, value2, value3]);
+    export function setTransmitSerialNumber(transmit: boolean): void {
+        board().radio.setTransmitSerialNumber(transmit);
     }
 
-    export function streamValue(name: string, value: number) {
+    export function sendNumber(value: number): void {
+        board().radio.datagram.send([value]);
+    }
+
+    export function writeValueToSerial(): void {
+        let b = board();
+        let v = b.radio.datagram.recv().data[0];
+        b.writeSerial(`{v:${v}}`);
+    }
+
+    export function sendValue(name: string, value: number) {
         board().radio.datagram.send([value]);
     }
 

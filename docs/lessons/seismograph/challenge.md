@@ -1,17 +1,51 @@
 # Challenge 
 
+Coding challenges for screen wipe. 
+
+## Before we get started
+
+Complete the [seismograph](/lessons/seismograph/activity) activity and your code will look like this:
+
+```blocks
+basic.forever(() => {
+    led.plotBarGraph(input.acceleration(Dimension.Strength) - 1023, 0);
+});
+
+```
+
 ### ~avatar avatar 
 
-Welcome! The activity will teach you how to use the acceleration of the 1st micro:bit and to visualize the acceleration on the 2nd micro:bit. Let's get started!
+Computer Science: Welcome! The activity will teach you how to code the acceleration of the 1st micro:bit and to visualize the acceleration on the 2nd micro:bit. Let's get started!
 
-### ~
+# Computer Science Steps
+
+## 1.
+
+We want to break apart the blocks from the activity. We will be using the blocks from the activity to create a brand new program to have micro:bit devices communicate through the BLE (Bluetooth low energy) radio. 
+
+```shuffle
+basic.forever(() => {
+    led.plotBarGraph(input.acceleration(Dimension.Strength) - 1023, 0);
+});
+
+```
+
+## 2. 
+
 Let's measure `acceleration (mg)` and then `send number`. `Acceleration` is measured in **milli-gravities**, so a value of -1000 is equivalent to -1g or -9.81m/s^2. We will be able to get the acceleration value (g-force), in the specified "x" dimension. `Send number` will broadcast a number data packet to other micro:bits connected via radio.
+
+We need attach send number found in the Radio drawer. We will attach send number to acceleration. 
+
+Your finished code will look like this:
 
 ```blocks
 radio.sendNumber(input.acceleration(Dimension.X));
 ```
-### ~
-We want to display the acceleration forever. In order to do so, we need a `forever` loop. A forever loop will repeat code in the background forever.
+
+## 3. 
+We want to display the acceleration forever. In order to do so, we need a `forever` loop. A forever loop will repeat code in the background forever. We need attach forever loop to send number. 
+
+Your finished code will look like this:
 
 ```blocks
 basic.forever(() => {
@@ -20,7 +54,7 @@ basic.forever(() => {
 
 
 ```
-### ~
+## 4. 
 We want to register code to run when a packet is received over radio. We can implement this code by adding `on data received`.
 
 ```blocks
@@ -31,7 +65,8 @@ radio.onDataReceived(() => {
     
 })
 ```
-### ~
+## 5. 
+
 Finally, we want to chart the acceleration. So we must first implement `plot bar graph`. `Plot Bar Graph` will display a vertical bar graph based on the value and high value. In order to transfer the receive the number from the 1st micro:bit, we must implement `receive number` to constantly display a vertical bar graph based on the value. Remember, the value will equal to the micro:bit's acceleration in the "x" direction.
 
 ```blocks
@@ -43,7 +78,8 @@ radio.onDataReceived(() => {
 })
 
 ```
-### ~
+
+## 6. 
 Notice that moving the micro:bit the farthest direction in the x direction will be -1023 on the charting beneath the simulator. The second observation will be that the LEDs will be full brightness on the 2nd micro:bit. There is a single LED turned on with the 1st micro:bit. Additionally, the graphs will reflect 0 acceleation for the 1st micro:bit. In this scenario, if you are adjusting the acceleration in the simualator, you are also changing your chart that will be produced.  
 
 ![](/static/mb/acc.png)

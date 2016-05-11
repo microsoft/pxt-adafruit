@@ -11,7 +11,7 @@ Engineering: In this project, you will build your own seismograph micro:bit from
 ## What you'll need: 
 
 * micro:bit 
-* USB cable
+* micro USB cable
 * Plate 
 * Tape 
 * Scissors

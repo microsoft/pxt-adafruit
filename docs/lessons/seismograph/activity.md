@@ -97,11 +97,11 @@ First, notice that moving the micro:bit in the simulator in any direction, you w
  
 Connect a micro:bit to your computer using your USB cable
 
-![](/static/mb/lessons/seismograph3.png)
+![](/static/mb/lessons/seismograph12.png)
 
 Click or tap the compile button for the seismograph program to run the program on the micro:bit. 
 
-![](/static/mb/lessons/seismograph4.png)
+![](/static/mb/lessons/seismograph22.png)
 
 ## 3. 
 

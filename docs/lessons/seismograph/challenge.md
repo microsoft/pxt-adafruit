@@ -47,8 +47,9 @@ Your finished code will look like this:
 
 ```blocks
 basic.forever(() => {
-    radio.sendNumber(input.acceleration(Dimension.X));
+    radio.sendNumber(input.acceleration(Dimension.Strength) - 1023);
 });
+
 ```
 
 ## 4. 
@@ -58,11 +59,11 @@ Your finished code will look like this:
 
 ```blocks
 basic.forever(() => {
-    radio.sendNumber(input.acceleration(Dimension.X))
-})
+    radio.sendNumber(input.acceleration(Dimension.Strength) - 1023);
+});
 radio.onDataReceived(() => {
-    
-})
+});
+
 ```
 
 ## 5. 
@@ -72,12 +73,11 @@ Your finished code will look like this:
 
 ```blocks
 basic.forever(() => {
-    radio.sendNumber(input.acceleration(Dimension.X))
-})
+    radio.sendNumber(input.acceleration(Dimension.Strength) - 1023);
+});
 radio.onDataReceived(() => {
-    led.plotBarGraph(radio.receiveNumber(), 1023)
-})
-
+    led.plotBarGraph(radio.receiveNumber(), 0);
+});
 ```
 
 ### ~avatar avatar 

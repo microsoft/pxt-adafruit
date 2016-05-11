@@ -2,6 +2,23 @@
 
 Coding challenges for the seismograph. 
 
+
+### ~avatar avatar
+
+Engineering: In this project, you will build your own seismograph micro:bit from tape and a household plate. 
+
+### ~
+
+## What you'll need: 
+
+* micro:bit(2)
+* micro USB cable (2)
+* Plate 
+* Tape 
+* Scissors
+
+![](/static/mb/lessons/seis_challenge01.png)
+
 ## Before we get started
 
 Complete the [seismograph](/lessons/seismograph/activity) activity and your code will look like this:

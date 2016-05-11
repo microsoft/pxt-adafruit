@@ -12,7 +12,6 @@ Answers may vary. This is a function that will show a string on the LED screen o
 
 ```blocks
 basic.showString("Y")
-
 ```
 
 ![](/static/mb/lessons/answering-machine-0.png)
@@ -22,7 +21,6 @@ basic.showString("Y")
 
 ```blocks
 basic.showString("Hi")
-
 ```
 
 ![](/static/mb/lessons/answering-machine-1.png)
@@ -35,7 +33,6 @@ basic.showString("Hi")
 
 ```blocks
 basic.showString("Z")
-
 ```
 
 

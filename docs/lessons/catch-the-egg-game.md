@@ -11,6 +11,7 @@ Variables
 ## Quick Links
 
 * [activity](/lessons/catch-the-egg-game/activity)
+* [tutorial](/lessons/catch-the-egg-game/tutorial)
 * [quiz](/lessons/catch-the-egg-game/quiz)
 * [quiz answers](/lessons/catch-the-egg-game/quiz-answers)
 
@@ -20,18 +21,21 @@ Learn how to create a catch the egg game game with **plot**, `led->plot` , **unp
 
 ## Documentation
 
-* **variables** : [read more...](/reference/variables/var)
-* **forever** : [read more...](/reference/basic/forever)
-* **unplot** : [read more...](/reference/led/unplot)
-* **plot** : [read more...](/reference/led/plot)
-* **if** : [read more...](/reference/logic/if)
-* **acceleration** : [read more...](/reference/input/acceleration)
-* **math minimum number** : [read more...](/reference/math)
-* **math maximum number** : [read more...](/reference/math)
-* **math random number** : [read more...](/reference/math)
-* **math modulus** : [read more...](/reference/math)
-* **show number** : [read more...](/reference/basic/show-number)
-* **pause** : [read more...](/reference/basic/pause)
+```cards
+let x = 2;
+led.unplot(0, 0);
+basic.forever(() => {});
+x += 1;
+led.plot(0, 0);
+basic.pause(300);
+input.acceleration(Dimension.X);
+Math.min(0,0);
+Math.max(0,1);
+Math.random(5);
+game.addScore(1);
+game.score();
+game.removeLife(1);
+```
 
 ## Objectives
 

@@ -21,7 +21,6 @@ basic.showString("ASK ME A QUESTION")
 input.onButtonPressed(Button.A, () => {
     basic.showString("Yes")
 })
-
 ```
 
 * `Run` the code to see if it works as expected.
@@ -45,7 +44,6 @@ input.onButtonPressed(Button.B, () => {
 
 * `Run` the code to see if it works as expected.
 
-**Challenge 3**
+### Challenge 3
 
 When you are asked a yes or no question, do you always say yes or no? Add a condition for `on shake` that displays `MAYBE`.
-

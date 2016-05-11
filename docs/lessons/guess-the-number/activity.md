@@ -19,12 +19,11 @@ input.onButtonPressed(Button.A, () => {
 
 ```
 
-Create a local variable of type number `x` and set it to a random number using `pick random`. `pick random` 9 generates a random number between `0` and `09`.
-
+Create a local variable of type number `x` and set it to a random number using `pick random`. `pick random` 9 generates a random number between `0` and `9`.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
-    let x = Math.random(9)
+    let x = Math.random(10)
 })
 
 ```
@@ -34,7 +33,7 @@ Show the random number on the screen.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
-    let x = Math.random(9)
+    let x = Math.random(10)
     basic.showNumber(x)
 })
 

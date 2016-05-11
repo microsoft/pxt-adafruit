@@ -2,6 +2,8 @@
 
 using namespace pxt;
 
+#define RADIO_VALUE_PACKET_TYPE 24641622
+
 //% color=270 weight=34
 namespace radio {
 
@@ -39,12 +41,78 @@ namespace radio {
      * Broadcasts 4 numbers over radio to any connected micro:bit in the group.
      */
     //% help=radio/send-numbers
-    //% weight=59
+    //% weight=59 debug=true
     //% blockId=radio_datagram_send_numbers block="send numbers|0: %VALUE0|1: %VALUE1|2: %VALUE2|3: %VALUE3"
     void sendNumbers(int value_0, int value_1, int value_2, int value_3) {
         if (radioEnable() != MICROBIT_OK) return;
         int buf[] = { value_0, value_1, value_2, value_3 };
         uBit.radio.datagram.send((uint8_t*)buf, 4*sizeof(int));
+    }
+    
+    /**
+    * Broadcasts a name / value pair along with the device serial number
+    * and running time to any connected BBC micro:bit in the group.
+    * @param name the field name (max 12 characters), eg: "data"
+    * @param the numberic value
+    */
+    //% help=radio/send-value
+    //% weight=4 debug=true
+    //% blockId=radio_datagram_send_value block="send|value %name|= %value"
+    void sendValue(StringData* name, int number) {
+        if (radioEnable() != MICROBIT_OK) return;
+
+        ManagedString n(name);                
+        uint8_t buf[32];
+        uint32_t* buf32 = (uint32_t*)buf;
+        memset(buf, 32, 0);
+        buf32[0] = number;                      // 4 bytes: value
+        buf32[1] = microbit_serial_number();    // 4 bytes: serial number
+        buf32[2] = system_timer_current_time(); // 4 bytes: running time
+        memcpy(buf + 12, n.toCharArray(), min(12, n.length())); // 12-24: field name       
+        buf32[7] = RADIO_VALUE_PACKET_TYPE; // last 4 bytes: magic number of package type
+        uBit.radio.datagram.send(buf, 32);
+    }
+    
+    /**
+    * Reads a value sent with `stream value` and writes it
+    * to the serial stream as JSON
+    */
+    //% help=radio/read-value-to-serial
+    //% weight=3 debug=true
+    void readValueToSerial() {
+        if (radioEnable() != MICROBIT_OK) return;
+        PacketBuffer p = uBit.radio.datagram.recv();
+        int length = p.length();
+        if (length < 32) {
+            return;
+        }
+        
+        uint8_t* bytes = p.getBytes();
+        //uint32_t* buf32 = (uint32_t*)bytes;        
+        //uint32_t type = buf32[7];
+        //if (type != RADIO_VALUE_PACKET_TYPE)
+        //{
+         //   uBit.serial.send("type: ");
+         //   uBit.serial.send(type);
+         //   uBit.serial.send("\r\n");
+          //  return;
+        //}
+        
+        int value;
+        int serial;
+        int time;
+        char name[12+1]; memset(name, 0, 13 * sizeof(char));
+        
+        memcpy(&value, bytes, 4);
+        memcpy(&serial, bytes + 4, 4);
+        memcpy(&time, bytes + 8, 4);
+        memcpy(&name, bytes + 12, 12);
+            
+        uBit.serial.send("{s:"); uBit.serial.send(serial);
+        uBit.serial.send(",t:"); uBit.serial.send(time);
+        uBit.serial.send(",v:"); uBit.serial.send(value);
+        uBit.serial.send(",n:\""); uBit.serial.send(name);
+        uBit.serial.send("\"}\r\n");
     }
 
     /**
@@ -63,7 +131,7 @@ namespace radio {
      * @param index index of the number to read from 0 to 3. 1 eg
      */
     //% help=radio/received-number-at
-    //% weight=45
+    //% weight=45 debug=true
     //% blockId=radio_datagram_received_number_at block="receive number|at %VALUE" blockGap=8
     int receivedNumberAt(int index) {
         if (radioEnable() != MICROBIT_OK) return 0;

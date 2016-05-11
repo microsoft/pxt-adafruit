@@ -1,7 +1,7 @@
 {
     "id": "microbit",
-    "name": "code micro:bit",
-    "title": "code micro:bit",
+    "name": "m.pxt.io",
+    "title": "m.pxt.io",
     "corepkg": "microbit",
     "bundleddirs": [
         "libs/microbit",
@@ -22,14 +22,12 @@
             "description": "",
             "files": [
                 "main.blocks",
-                "main.ts",
-                "README.md"
+                "main.ts"
             ]
         },
         "files": {
             "main.blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><block type=\"device_print_message\"><value name=\"text\"><shadow type=\"text\"><field name=\"TEXT\">Hello!</field></shadow></value></block></xml>",
-            "main.ts": "\n",
-            "README.md": "Describe your project here!"
+            "main.ts": "\n"
         }
     },
     "tsprj": {
@@ -42,13 +40,11 @@
             },
             "description": "",
             "files": [
-                "main.ts",
-                "README.md"
+                "main.ts"
             ]
         },
         "files": {
-            "main.ts": "basic.showString('Hello!')\n",
-            "README.md": "Describe your project here!"
+            "main.ts": "basic.showString('Hello!')\n"
         }
     },
     "compile": {
@@ -63,7 +59,8 @@
       "variablesBlocks": true
     },
     "simulator": {
-        "autoRun": true
+        "autoRun": true,
+        "aspectRatio": 1.22
     },
     "compileService": {
         "gittag": "v0.1.8",
@@ -75,13 +72,13 @@
         "log": true
     },
     "appTheme": {
-        "logoUrl": "https://codemicrobit.com/about",
-        "logo": "./static/logo.svg",
-        "docsLogo": "./static/docslogo.svg",
-        "portraitLogo":"./static/portraitlogo.svg",
-        "footerLogo": "./static/footerlogo.svg",
-        "homeUrl": "https://codemicrobit.com/",
-        "embedUrl": "https://codemicrobit.com/",
+        "logoUrl": "https://m.pxt.io/about",
+        "logo": "./static/microbit.red.svg",
+        "docsLogo": "./static/microbit.docs.svg",
+        "portraitLogo":"./static/microbit.red.svg",
+        "footerLogo": "./static/microbit.red.svg",
+        "homeUrl": "https://m.pxt.io/",
+        "embedUrl": "https://m.pxt.io/",
         "koduUrl": "https://www.kodugamelab.com/bbc-microbit/",
         "visualStudioCode": true,
         "docMenu": [

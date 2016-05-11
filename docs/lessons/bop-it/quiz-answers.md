@@ -12,17 +12,14 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 ## 1. Write the code that will store the global variable named 'action' and returns a random number between 0 and 2
 
-<br/>
-
-```
-action = Math.random(3)
+```blocks
+let action = Math.random(3)
 ```
 
 ## 2. Write the code that will display the string, "PUSH A" if the global variable called 'action' is equal to 0
 
-<br />
-
-```
+```blocks
+let action = Math.random(3)
 if (action == 0) {
     basic.showString("PUSH A", 150)
 }
@@ -30,10 +27,9 @@ if (action == 0) {
 
 ## 3. Write the code that increments the score if button A is pressed when the global variable called 'action' is equal to 1
 
-<br />
-
-```
+```blocks
 input.onButtonPressed(Button.A, () => {
+    let action = Math.random(3)
     if (action == 0) {
         game.addScore(1)
     }
@@ -42,9 +38,8 @@ input.onButtonPressed(Button.A, () => {
 
 ## 4. Write the code that will display the string "LOGO DOWN" if the global variable called 'action' is equal to 1
 
-<br />
-
-```
+```blocks
+let action = Math.random(3)
 if (action == 1) {
     basic.showString("LOGO DOWN", 150)
 }
@@ -52,10 +47,9 @@ if (action == 1) {
 
 ## 5. Write the code that increments the score if the BBC micro:bit logo is tilted down when the global variable called 'action' is equal to 1
 
-<br />
-
-```
+```blocks
 input.onLogoDown(() => {
+    let action = Math.random(3)
     if (action == 1) {
         game.addScore(1)
     }
@@ -64,9 +58,8 @@ input.onLogoDown(() => {
 
 ## 6. Write the code that will display the string "SHAKE" if the global variable called 'action' is equal to 2
 
-<br />
-
-```
+```blocks
+let action = Math.random(3)
 if (action == 2) {
     basic.showString("SHAKE", 150)
 }
@@ -74,13 +67,11 @@ if (action == 2) {
 
 ## 7. Write the code that increments the score if the BBC micro:bit is shaken when the global variable called 'action' is equal to 2
 
-<br/>
-
-```
+```blocks
 input.onLogoDown(() => {
+    let action = Math.random(3)
     if (action == 1) {
         game.addScore(1)
     }
 })
 ```
-

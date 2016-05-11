@@ -36,7 +36,7 @@ namespace i2c_fram {
 
         pins.i2cWriteBuffer(devaddr, buf)
     }
-    
+
     export function readBuffer(addr: number, length: number) {
         if (addr < 0 || length < 0 || (addr + length) > memend)
             die();
@@ -45,8 +45,8 @@ namespace i2c_fram {
             buf[i] = readByte(addr + i)
         return buf
     }
-    
-    export function writeBuffer(addr:number, buf: Buffer) {        
+
+    export function writeBuffer(addr: number, buf: Buffer) {
         if (addr < 0 || (addr + buf.length) > memend)
             die();
         for (let i = 0; i < buf.length; ++i)

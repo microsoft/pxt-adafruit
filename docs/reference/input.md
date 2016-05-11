@@ -1,7 +1,6 @@
 # Input
 
-
-
+Events and data from sensors
 
 ```cards
 input.onButtonPressed(Button.A, () => {

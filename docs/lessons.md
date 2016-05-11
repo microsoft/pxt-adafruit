@@ -57,6 +57,9 @@
 * [Telegraph](/lessons/telegraph), play the telegraph game between two BBC micro:bits
 * [Pogo](/lessons/pogo), create a pogo game to test your jumping abilities
 
+## Science
+* [Charting](/lessons/charting), measure and chart acceleration
+
 ## Advanced
 * [Prank WiFi](/lessons/prank-wifi), create fake WiFi to trick your friends
 * [Speed Button](/lessons/speed-button), code a speed game with running time
@@ -68,4 +71,3 @@
 ### @section full
 
 The lessons promote computational thinking and computer science literacy[ read more...](/lessons/teach)
-

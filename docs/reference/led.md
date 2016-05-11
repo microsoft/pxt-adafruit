@@ -1,7 +1,6 @@
 # Led
 
-
-
+Control of the LED screen.
 
 ```cards
 led.plot(0, 0);
@@ -10,7 +9,7 @@ led.point(0, 0);
 led.brightness();
 led.setBrightness(255);
 led.stopAnimation();
-led.plotBarGraph(0, 1023);
+led.plotBarGraph(0, 0);
 led.fadeIn();
 led.fadeOut();
 led.plotAll();

@@ -9,6 +9,7 @@ Acceleration
 ## Quick Links
 
 * [activity](/lessons/glowing-pendulum/activity)
+* [tutorial](/lessons/glowing-pendulum/tutorial)
 * [challenges](/lessons/glowing-pendulum/challenges)
 * [quiz](/lessons/glowing-pendulum/quiz)
 * [quiz answers](/lessons/glowing-pendulum/quiz-answers)

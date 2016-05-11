@@ -1,1 +1,1 @@
-MainPackage=C:\gh\pxt-microbit\win10\app\bin\Debug\codemicrobit_0.1.3.0_AnyCPU_Debug.appx
+MainPackage=C:\gh\pxt-microbit\win10\app\bin\Debug\m.pxt.io_0.1.4.0_AnyCPU_Debug.appx

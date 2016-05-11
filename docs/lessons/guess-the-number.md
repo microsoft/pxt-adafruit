@@ -11,6 +11,7 @@ Math - Pick Random
 ## Quick links
 
 * [activity](/lessons/guess-the-number/activity)
+* [tutorial](/lessons/guess-the-number/tutorial)
 * [challenges](/lessons/guess-the-number/challenges)
 * [quiz](/lessons/guess-the-number/quiz)
 * [quiz answers](/lessons/guess-the-number/quiz-answers)

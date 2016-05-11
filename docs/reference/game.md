@@ -1,7 +1,6 @@
 # Game
 
-
-
+A single-LED sprite game engine
 
 ```cards
 game.addScore(1);

@@ -2,7 +2,6 @@
 
 Provides access to basic micro:bit functionality.
 
-
 ```cards
 basic.showNumber(0);
 basic.showLeds(`

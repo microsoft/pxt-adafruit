@@ -1,7 +1,5 @@
 # catch the egg game challenges
 
-Coding challenges for catch the egg game.
-
 ## Before we get started
 
 Your starting code should look like this:

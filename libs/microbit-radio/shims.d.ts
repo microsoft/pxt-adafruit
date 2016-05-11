@@ -6,31 +6,32 @@
 declare namespace radio {
 
     /**
-     * Broadcasts 4 numbers over radio to any connected micro:bit in the group.
+     * Broadcasts a number over radio to any connected micro:bit in the group.
      */
-    //% help=radio/send-numbers
-    //% weight=59 debug=true
-    //% blockId=radio_datagram_send_numbers block="send numbers|0: %VALUE0|1: %VALUE1|2: %VALUE2|3: %VALUE3" shim=radio::sendNumbers
-    function sendNumbers(value_0: number, value_1: number, value_2: number, value_3: number): void;
+    //% help=radio/send-number
+    //% weight=60
+    //% blockId=radio_datagram_send block="send number %MESSAGE" blockGap=8 shim=radio::sendNumber
+    function sendNumber(value: number): void;
 
     /**
      * Broadcasts a name / value pair along with the device serial number
      * and running time to any connected BBC micro:bit in the group.
      * @param name the field name (max 12 characters), eg: "data"
-     * @param the numberic value
+     * @param value the numberic value
      */
     //% help=radio/send-value
-    //% weight=4 debug=true
+    //% weight=59
     //% blockId=radio_datagram_send_value block="send|value %name|= %value" shim=radio::sendValue
-    function sendValue(name: string, number: number): void;
+    function sendValue(name: string, value: number): void;
 
     /**
      * Reads a value sent with `stream value` and writes it
      * to the serial stream as JSON
      */
-    //% help=radio/read-value-to-serial
-    //% weight=3 debug=true shim=radio::readValueToSerial
-    function readValueToSerial(): void;
+    //% help=radio/write-value-to-serial
+    //% weight=3
+    //% blockId=radio_write_value_serial block="write value to serial" shim=radio::writeValueToSerial
+    function writeValueToSerial(): void;
 
     /**
      * Registers code to run when a packet is received over radio.
@@ -83,6 +84,14 @@ declare namespace radio {
     //% weight=9
     //% blockId=radio_set_transmit_power block="set transmit power %power" shim=radio::setTransmitPower
     function setTransmitPower(power: number): void;
+
+    /**
+     * Set the radio to transmit the serial number in each message.
+     */
+    //% help=radio/set-transmit-serial-number
+    //% weight=8
+    //% block=radio_set_transmit_serial_number block="set tranmist serial number %transmit" shim=radio::setTransmitSerialNumber
+    function setTransmitSerialNumber(transmit: boolean): void;
 }
 
 // Auto-generated. Do not edit. Really.

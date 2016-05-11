@@ -3,6 +3,8 @@
 This target allow to program a [BBC micro:bit](https://www.microbit.co.uk/) using 
 [Microsoft Programming Experience Toolkit](https://github.com/Microsoft/pxt).
 
+* [Try it live](https://m.pxt.io)
+
 [![Build Status](https://travis-ci.org/Microsoft/pxt-microbit.svg?branch=master)](https://travis-ci.org/Microsoft/pxt-microbit)
 
 # Getting started
@@ -23,4 +25,4 @@ that wraps m.pxt.io and provides additional features.
 ### Building
 
 * Install Visual Studio 2015 Update 2 or higher. Make sure the Windows 10 templates are installed.
-* open the ``win10/app.sln`` solution and launch the ``codemicrobit`` project.
+* open the ``win10/app.sln`` solution and launch the ``m.pxt.io`` project.

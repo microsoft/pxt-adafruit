@@ -2,7 +2,7 @@
 
 using namespace pxt;
 
-#define RADIO_VALUE_PACKET_TYPE 24641622
+#define MAX_FIELD_NAME_LENGTH 12
 
 //% color=270 weight=34
 namespace radio {
@@ -11,6 +11,8 @@ namespace radio {
     // Radio
     // -------------------------------------------------------------------------    
     bool radioEnabled = false;
+    bool transmitSerialNumber = false;
+    
     PacketBuffer packet;
     
     int radioEnable() {
@@ -36,83 +38,84 @@ namespace radio {
         registerWithDal(MES_BROADCAST_GENERAL_ID, message, f);
     }
 
-
     /**
-     * Broadcasts 4 numbers over radio to any connected micro:bit in the group.
-     */
-    //% help=radio/send-numbers
-    //% weight=59 debug=true
-    //% blockId=radio_datagram_send_numbers block="send numbers|0: %VALUE0|1: %VALUE1|2: %VALUE2|3: %VALUE3"
-    void sendNumbers(int value_0, int value_1, int value_2, int value_3) {
-        if (radioEnable() != MICROBIT_OK) return;
-        int buf[] = { value_0, value_1, value_2, value_3 };
-        uBit.radio.datagram.send((uint8_t*)buf, 4*sizeof(int));
+     * Broadcasts a number over radio to any connected micro:bit in the group.
+     */    
+    //% help=radio/send-number
+    //% weight=60
+    //% blockId=radio_datagram_send block="send number %MESSAGE" blockGap=8
+    void sendNumber(int value) { 
+        if (radioEnable() != MICROBIT_OK) return;        
+        uint32_t t = system_timer_current_time();
+        uint32_t sn = transmitSerialNumber ? microbit_serial_number() : 0;
+        uint32_t buf[] = { (uint32_t)value, t, sn };        
+        uBit.radio.datagram.send((uint8_t*)buf, 3*sizeof(uint32_t));
     }
     
     /**
     * Broadcasts a name / value pair along with the device serial number
     * and running time to any connected BBC micro:bit in the group.
     * @param name the field name (max 12 characters), eg: "data"
-    * @param the numberic value
+    * @param value the numberic value
     */
     //% help=radio/send-value
-    //% weight=4 debug=true
+    //% weight=59
     //% blockId=radio_datagram_send_value block="send|value %name|= %value"
-    void sendValue(StringData* name, int number) {
+    void sendValue(StringData* name, int value) {
         if (radioEnable() != MICROBIT_OK) return;
 
-        ManagedString n(name);                
+        ManagedString n(name);     
+        uint32_t t = system_timer_current_time();           
+        uint32_t sn = transmitSerialNumber ? microbit_serial_number() : 0;
         uint8_t buf[32];
         uint32_t* buf32 = (uint32_t*)buf;
         memset(buf, 32, 0);
-        buf32[0] = number;                      // 4 bytes: value
-        buf32[1] = microbit_serial_number();    // 4 bytes: serial number
-        buf32[2] = system_timer_current_time(); // 4 bytes: running time
-        memcpy(buf + 12, n.toCharArray(), min(12, n.length())); // 12-24: field name       
-        buf32[7] = RADIO_VALUE_PACKET_TYPE; // last 4 bytes: magic number of package type
-        uBit.radio.datagram.send(buf, 32);
+        buf32[0] = value;                      // 4 bytes: value
+        buf32[1] = t; // 4 bytes: running time
+        buf32[2] = sn; // 4 bytes: serial number
+        uint8_t len = min(MAX_FIELD_NAME_LENGTH, n.length());          // 1 byte: string length
+        if (len > 0) {
+            buf[12] = len;                          // 
+            memcpy(buf + 13, n.toCharArray(), len); // 13-25: field name            
+        }
+        uBit.radio.datagram.send(buf, 13 + len);
     }
     
     /**
     * Reads a value sent with `stream value` and writes it
     * to the serial stream as JSON
     */
-    //% help=radio/read-value-to-serial
-    //% weight=3 debug=true
-    void readValueToSerial() {
+    //% help=radio/write-value-to-serial
+    //% weight=3
+    //% blockId=radio_write_value_serial block="write value to serial"
+    void writeValueToSerial() {
         if (radioEnable() != MICROBIT_OK) return;
         PacketBuffer p = uBit.radio.datagram.recv();
         int length = p.length();
-        if (length < 32) {
-            return;
-        }
-        
         uint8_t* bytes = p.getBytes();
-        //uint32_t* buf32 = (uint32_t*)bytes;        
-        //uint32_t type = buf32[7];
-        //if (type != RADIO_VALUE_PACKET_TYPE)
-        //{
-         //   uBit.serial.send("type: ");
-         //   uBit.serial.send(type);
-         //   uBit.serial.send("\r\n");
-          //  return;
-        //}
-        
         int value;
-        int serial;
-        int time;
-        char name[12+1]; memset(name, 0, 13 * sizeof(char));
         
-        memcpy(&value, bytes, 4);
-        memcpy(&serial, bytes + 4, 4);
-        memcpy(&time, bytes + 8, 4);
-        memcpy(&name, bytes + 12, 12);
-            
-        uBit.serial.send("{s:"); uBit.serial.send(serial);
-        uBit.serial.send(",t:"); uBit.serial.send(time);
-        uBit.serial.send(",v:"); uBit.serial.send(value);
-        uBit.serial.send(",n:\""); uBit.serial.send(name);
-        uBit.serial.send("\"}\r\n");
+        uBit.serial.send("{");
+        if (length >= 4) {
+            memcpy(&value, bytes, 4);
+            uBit.serial.send("v:"); uBit.serial.send(value);
+            if(length >= 8) {
+                memcpy(&value, bytes + 4, 4);
+                uBit.serial.send(",t:"); uBit.serial.send(value);                
+                if (length >= 12) {
+                    memcpy(&value, bytes + 8, 4);
+                    uBit.serial.send(",s:"); uBit.serial.send(value);                                    
+                    if (length >= 13) {
+                        char name[MAX_FIELD_NAME_LENGTH+1];
+                        uint8_t len = min(MAX_FIELD_NAME_LENGTH, bytes[12]);
+                        memcpy(name, bytes + 13, len);
+                        name[len] = 0;
+                        uBit.serial.send(",n:\""); uBit.serial.send(name); uBit.serial.send("\"");                                    
+                    }
+                }
+            }
+        }
+        uBit.serial.send("}\r\n");
     }
 
     /**
@@ -191,5 +194,15 @@ namespace radio {
     void setTransmitPower(int power) {
         if (radioEnable() != MICROBIT_OK) return;
         uBit.radio.setTransmitPower(power);
+    }
+    
+    /**
+    * Set the radio to transmit the serial number in each message.
+    */
+    //% help=radio/set-transmit-serial-number
+    //% weight=8
+    //% block=radio_set_transmit_serial_number block="set tranmist serial number %transmit"
+    void setTransmitSerialNumber(bool transmit) {
+        transmitSerialNumber = transmit;
     }
 }

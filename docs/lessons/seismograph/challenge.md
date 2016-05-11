@@ -109,11 +109,13 @@ First, notice that moving the 1st micro:bit in the simulator in any direction, y
 
 ![](/static/mb//lessons/seis_challenge02.png)
 
-### ~
-NOTE: The colors of the charts reflect the color of the micro:bit simulator. In this instance, the micro:bits are blue and green. So the colors of the line graphs reflect the colors of the micro:bit
+## 8. 
  
-### ~
-After running this simulatation several seconds by moving the micro:bit side to side in the x direction, you are ready to graph or chart the accceleration of the micro:bit.  We want a printout of our acceleration on Excel. We will graph the fluctuating acceleration of the simulation experiment. 
+Connect the 2nd micro:bit to your computer using your USB cable. We should have two micro:bit devices attached to the computer. 
+
+![](/static/mb/lessons/seismograph33.png)
+
+Click or tap the compile button for the seismograph program to run the program on the micro:bit. 
 
 ![](/static/mb/acc2.png)
 

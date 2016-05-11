@@ -101,12 +101,12 @@ radio.onDataReceived(() => {
 Science: Welcome! The activity will teach you how to chart the acceleration of the 1st micro:bit and to visualize the acceleration on the 2nd micro:bit. Let's get started!
 ### ~
 
-# Science Steps: 
+# Science Steps
 
 ## 6. 
 Notice that moving the micro:bit the farthest direction in the x direction will be -1023 on the charting beneath the simulator. The second observation will be that the LEDs will be full brightness on the 2nd micro:bit. There is a single LED turned on with the 1st micro:bit. Additionally, the graphs will reflect 0 acceleation for the 1st micro:bit. In this scenario, if you are adjusting the acceleration in the simualator, you are also changing your chart that will be produced.  
 
-![](/static/mb/acc.png)
+![](/static/mb//lessons/seis_challenge02.png)
 
 ### ~
 NOTE: The colors of the charts reflect the color of the micro:bit simulator. In this instance, the micro:bits are blue and green. So the colors of the line graphs reflect the colors of the micro:bit

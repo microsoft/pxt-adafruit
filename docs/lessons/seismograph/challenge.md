@@ -5,7 +5,7 @@ Coding challenges for the seismograph.
 
 ### ~avatar avatar
 
-Engineering: In this project, you will build your own seismograph micro:bit from tape and a household plate. 
+Engineering: In this project, you will build a remote control based on the seismograph micro:bit activity using a second micro:bit and micro USB cable. 
 
 ### ~
 

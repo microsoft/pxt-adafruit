@@ -79,7 +79,7 @@ Tip: If you don’t see a chart type that you want, click the All Charts tab to 
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/lessons/charting/acceleration-challenge)
+Excellent, you're ready to continue with the [challenges](/lessons/charting/challenge)
 
 ### ~
 

@@ -3,6 +3,8 @@
 This target allow to program a [BBC micro:bit](https://www.microbit.co.uk/) using 
 [Microsoft Programming Experience Toolkit](https://github.com/Microsoft/pxt).
 
+* [Try it live](https://m.pxt.io)
+
 [![Build Status](https://travis-ci.org/Microsoft/pxt-microbit.svg?branch=master)](https://travis-ci.org/Microsoft/pxt-microbit)
 
 # Getting started

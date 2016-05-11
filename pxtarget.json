@@ -77,6 +77,7 @@
         "docsLogo": "./static/microbit.simplified.svg",
         "portraitLogo":"./static/microbit.simplified.svg",
         "footerLogo": "./static/microbit.simplified.svg",
+        "organizationLogo": "./static/Microsoft-logo_rgb_c-gray.png",
         "homeUrl": "https://m.pxt.io/",
         "embedUrl": "https://m.pxt.io/",
         "koduUrl": "https://www.kodugamelab.com/bbc-microbit/",

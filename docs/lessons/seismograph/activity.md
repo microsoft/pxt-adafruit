@@ -109,7 +109,7 @@ Every time the micro:bit moves in any direction,  you generate data points that 
 
 Please find seismogrph experiment obervations: 
 
-First, notice that moving the micro:bit in any direction, you will change the acceleration value, which is being displayed as the same color as the micro:bit. By moving the micro:bit, there is a changing acceleration value. 
+First, notice that moving the micro:bit in any direction, you will change the acceleration value, which is being displayed as a milli-gravities value. By moving the micro:bit, there will be a changing acceleration value. 
 
 ![](/static/mb/lessons/seismograph7.png)
 

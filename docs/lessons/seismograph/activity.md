@@ -16,6 +16,8 @@ Engineering: In this project, you will build your own seismograph micro:bit from
 * Tape 
 * Scissors
 
+![](/static/mb/lessons/seismograph11.png)
+
 ## 1. 
 
 Prepare Tape: Measure and cut approximately 10mm of tape. The tape will be fastened to a micro USB cable.  

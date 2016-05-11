@@ -38,6 +38,8 @@ Computer Science: The seismograph has been built. We are ready to program the mi
 
 ### ~
 
+# Steps
+
 ## 1. 
 
 Go to Codemicrobit.com
@@ -82,6 +84,8 @@ basic.forever(() => {
 Science: We now need to use the micro:bit to Analyze Data and chart for the strength of the acceleration.
 
 ### ~
+
+# Steps
 
 ## 1. 
 

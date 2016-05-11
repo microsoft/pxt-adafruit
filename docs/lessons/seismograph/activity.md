@@ -18,7 +18,7 @@ Engineering: In this project, you will build your own seismograph micro:bit from
 
 ![](/static/mb/lessons/seismograph11.png)
 
-# Steps
+# Engineering Steps
 
 ## 1. 
 
@@ -38,7 +38,7 @@ Computer Science: The seismograph has been built. We are ready to program the mi
 
 ### ~
 
-# Steps
+# Computer Science Steps
 
 ## 1. 
 
@@ -85,7 +85,7 @@ Science: We now need to use the micro:bit to Analyze Data and chart for the stre
 
 ### ~
 
-# Steps
+# Science Steps
 
 ## 1. 
 

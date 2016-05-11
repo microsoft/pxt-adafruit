@@ -181,15 +181,11 @@ Tip: If you don’t see the line chart, click the All Charts tab to see the line
 
 Use the Chart Elements, Chart Styles, and Chart Filters buttons next to the upper-right corner of the chart to add chart elements like axis titles or data labels, to customize the look of your chart
 
-
 Alternatively, click or tap on the Design Ribbon. 
 
 Let's select Style 10 as an example. 
 
- 
-
-## 11. 
-
+![](/static/mb/analyze19.png)
 
 ### ~avatar avatar
 

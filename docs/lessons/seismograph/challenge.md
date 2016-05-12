@@ -126,9 +126,19 @@ The black lines should appear directly beneath the colored lines. The black line
 
 Run the acceleration experiment by vigarously moving the plate in any direction or move the object below the micro:bit (such as a table).
 
-Every time the micro:bit moves in any direction, you generate data points that can be reviewed in Excel later. The more attempts to move the micro:bit, the more data to be reviewed in Excel.
+![](/static/mb/lessons/seis_challenge06.png)
+
+Every time the micro:bit moves in any direction, you generate data points that can be reviewed in Excel later. The more attempts to move the micro:bit, the more data to be reviewed in Excel. Notice that the LED on the 2nd micro:bit changes to communicate the movement of the 1st micro:bit.
 
 ![](/static/mb/lessons/seis_challenge04.png)
+
+Now we are ready to graph or chart the accceleration of the micro:bit. We want a printout of the micro:bit acceleration graphed in Excel.
+
+## 10. 
+
+In order to receive the the data plotted by Excel, click or tap anywhere in the on the chart data.
+
+![](/static/mb/lessons/seis_challenge07.png)
 
 ### ~
 * Have fun reviewing your seismograph data and analyzing the acceleration with Excel.

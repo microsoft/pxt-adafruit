@@ -59,6 +59,7 @@
 
 ## Science
 * [Charting](/lessons/charting), measure and chart acceleration
+* [Seismograph](/lessons/seismograph), create a seismograph with household items
 
 ## Advanced
 * [Prank WiFi](/lessons/prank-wifi), create fake WiFi to trick your friends

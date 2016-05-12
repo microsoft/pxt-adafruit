@@ -140,6 +140,57 @@ In order to receive the the data plotted by Excel, click or tap anywhere in the 
 
 ![](/static/mb/lessons/seis_challenge07.png)
 
+## 11. 
+
+You have two options to Analyze Data: 
+
+* Local File: Save the data to your local Downloads folder and open it in Excel. 
+* Stream to Cloud: Upload your data to Microsoft Azure to analyze it. 
+
+Click or tap Download data
+
+![](/static/mb/seismograph9.png)
+
+## 12. 
+
+A CSV file will be generated to display the data points collected by the micro:bit. Click or tap on the data Excel file that was downloaded to your local Downloads Folder. 
+
+![](/static/mb/lessons/analyze9.png)
+
+## 13.
+
+Select the data that you want to include in your chart. The chart should include the first two columns: time and acceleration. 
+
+Click or tap on the first two columns (A, B) to include time and acceleration data from the micro:bit  
+
+
+## 14.
+
+Click or tap on Insert then select Recommended Charts. We can select a chart that’s just right for the data.
+
+![](/static/mb/analyze3.png)
+
+On the Recommended Charts tab, scroll through the list of chart types that Excel recommends for your data. 
+
+We want to select the chart called Line. A line chart is used to display trends over time. We will use the line chart because there are many data points over time. 
+
+Click on the chart type to see how your data will look in that format. When you find the chart type that you want, click it, and then click OK. 
+
+![](/static/mb/lessons/analyze16.png)
+
+Tip: If you don’t see the line chart, click the All Charts tab to see the line chart.
+
+## 15. 
+
+Use the Chart Elements, Chart Styles, and Chart Filters buttons next to the upper-right corner of the chart to add chart elements like axis titles or data labels, to customize the look of your chart
+
+Alternatively, click or tap on the Design Ribbon. 
+
+Let's select Style 10 as an example. 
+
+![](/static/mb/lessons/analyze19.png)
+
+
 ### ~
 * Have fun reviewing your seismograph data and analyzing the acceleration with Excel.
 * The first person and second person take shaking or moving the micor:bit in any direction while the other player charts the data on the micro:bit!

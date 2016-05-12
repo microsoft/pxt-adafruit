@@ -115,11 +115,6 @@ Connect the 2nd micro:bit to your computer using your USB cable. We should have 
 
 ![](/static/mb/lessons/seismograph33.png)
 
-Click or tap the compile button for the seismograph program to run the program on the micro:bit. 
-
-![](/static/mb/acc2.png)
-
-### ~
 Finally, you must open the Excel CSV file by clicking on the data.xls file that was downloaded to Downloads Folder. 
 
 ![](/static/mb/data3.png)

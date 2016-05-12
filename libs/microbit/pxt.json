@@ -26,8 +26,7 @@
         "pins.ts",
         "serial.cpp",
         "serial.ts",
-        "buffer.cpp",
-        "storage.cpp"
+        "buffer.cpp"
     ],
     "public": true,
     "dependencies": {},

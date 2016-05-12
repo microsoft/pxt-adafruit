@@ -10,7 +10,7 @@ declare namespace radio {
      */
     //% help=radio/send-number
     //% weight=60
-    //% blockId=radio_datagram_send block="send number %MESSAGE" blockGap=8 shim=radio::sendNumber
+    //% blockId=radio_datagram_send block="send number %value" blockGap=8 shim=radio::sendNumber
     function sendNumber(value: number): void;
 
     /**
@@ -21,8 +21,16 @@ declare namespace radio {
      */
     //% help=radio/send-value
     //% weight=59
-    //% blockId=radio_datagram_send_value block="send|value %name|= %value" shim=radio::sendValue
+    //% blockId=radio_datagram_send_value block="send|value %name|= %value" blockGap=8 shim=radio::sendValue
     function sendValue(name: string, value: number): void;
+
+    /**
+     * Broadcasts a number over radio to any connected micro:bit in the group.
+     */
+    //% help=radio/send-string
+    //% weight=58
+    //% blockId=radio_datagram_send_string block="send string %msg" shim=radio::sendString
+    function sendString(msg: string): void;
 
     /**
      * Reads a value sent with `stream value` and writes it
@@ -57,6 +65,14 @@ declare namespace radio {
     //% weight=46
     //% blockId=radio_datagram_receive block="receive number" blockGap=8 shim=radio::receiveNumber
     function receiveNumber(): number;
+
+    /**
+     * Reads the next packet as a string and returns it.
+     */
+    //% blockId=radio_datagram_receive_string block="receive string" blockGap=8
+    //% weight=44
+    //% help=radio/receive-string shim=radio::receiveString
+    function receiveString(): string;
 
     /**
      * Gets the received signal strength indicator (RSSI) from the packet received by ``receive number``. Not supported in simulator.

@@ -457,6 +457,10 @@ namespace pxsim.radio {
         board().radio.datagram.send([value]);
     }
 
+    export function sendString(msg: string): void {
+        board().radio.datagram.send(msg);
+    }
+
     export function writeValueToSerial(): void {
         let b = board();
         let v = b.radio.datagram.recv().data[0];
@@ -468,11 +472,23 @@ namespace pxsim.radio {
     }
 
     export function receiveNumber(): number {
-        return board().radio.datagram.recv().data[0];
+        let buffer = board().radio.datagram.recv().data;
+        if (buffer instanceof Array) return buffer[0];
+
+        return 0;
+    }
+
+    export function receiveString(): string {
+        let buffer = board().radio.datagram.recv().data;
+        if (typeof buffer === "string") return <string>buffer;
+        return "";
     }
 
     export function receivedNumberAt(index: number): number {
-        return board().radio.datagram.lastReceived.data[index] || 0;
+        let buffer = board().radio.datagram.recv().data;
+        if (buffer instanceof Array) return buffer[index] || 0;
+
+        return 0;
     }
 
     export function receivedSignalStrength(): number {

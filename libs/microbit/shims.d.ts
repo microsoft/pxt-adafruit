@@ -597,37 +597,4 @@ declare interface Buffer {
     write(dstOffset: number, src: Buffer): void;
 }
 
-
-    /**
-     * This allows reading and writing of small blocks of data to FLASH memory.
-     */
-    //% weight=10 color=#cc6600
-declare namespace storage {
-
-    /**
-     * Writes the key and buffer pair into FLASH. This operation is rather costly as all the key/value pairs
-     * have to be rewritten as well.
-     */
-    //% shim=storage::putBuffer
-    function putBuffer(key: string, buffer: Buffer): void;
-
-    /**
-     * Gets the buffer at the given key if any. If no key is available, empty buffer is returned.
-     */
-    //% shim=storage::getBuffer
-    function getBuffer(key: string): Buffer;
-
-    /**
-     * Removes an entry identified by the key.
-     */
-    //% shim=storage::remove
-    function remove(key: string): void;
-
-    /**
-     * The number of entries in the key value store
-     */
-    //% shim=storage::size
-    function size(): number;
-}
-
 // Auto-generated. Do not edit. Really.

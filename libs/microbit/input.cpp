@@ -59,42 +59,42 @@ enum class Gesture {
      * Raised when shaken
      */
     //% block=shake
-    Shake = GESTURE_SHAKE,
+    Shake = MICROBIT_ACCELEROMETER_EVT_SHAKE,
     /**
      * Raised when the logo is upward and the screen is vertical
      */
     //% block="logo up"
-    LogoUp = GESTURE_UP,
+    LogoUp = MICROBIT_ACCELEROMETER_EVT_TILT_UP,
     /**
      * Raised when the logo is downward and the screen is vertical
      */
     //% block="logo down"
-    LogoDown = GESTURE_DOWN,
+    LogoDown = MICROBIT_ACCELEROMETER_EVT_TILT_DOWN,
     /**
      * Raised when the screen is pointing down and the board is horizontal
      */
     //% block="screen up"
-    ScreenUp = GESTURE_FACE_UP,
+    ScreenUp = MICROBIT_ACCELEROMETER_EVT_FACE_UP,
     /**
      * Raised when the screen is pointing up and the board is horizontal
      */
     //% block="screen down"
-    ScreenDown = GESTURE_FACE_DOWN,
+    ScreenDown = MICROBIT_ACCELEROMETER_EVT_FACE_DOWN,
     /**
      * Raised when the screen is pointing left
      */
     //% block="tilt left"
-    TiltLeft = GESTURE_LEFT,
+    TiltLeft = MICROBIT_ACCELEROMETER_EVT_TILT_LEFT,
     /**
      * Raised when the screen is pointing right
      */
     //% block="tilt right"
-    TiltRight = GESTURE_RIGHT,    
+    TiltRight = MICROBIT_ACCELEROMETER_EVT_TILT_RIGHT,    
     /**
      * Raised when the board is falling!
      */
     //% block="free fall"
-    FreeFall = GESTURE_FREEFALL
+    FreeFall = MICROBIT_ACCELEROMETER_EVT_FREEFALL
 };
 
 //% color=300 weight=99

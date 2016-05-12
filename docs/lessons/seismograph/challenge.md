@@ -106,7 +106,6 @@ Science: Welcome! The activity will teach you how to chart the acceleration of t
 ## 6. 
 First, notice that moving the 1st micro:bit in the simulator in any direction, you will change the acceleration value of the 2nd micro:bit. Also, notice that by moving the micro:bit simulator, there is a changing acceleration value of the second micro:bit. Second, the flat colored horizontal line will start a waving line on the 2nd micro:bit to display the value of the strength as measured in milli-gravities. Finally, notice that the LED display will fluctate based on the movement of the 2nd micro:bit simulator.
 
-
 ![](/static/mb//lessons/seis_challenge02.png)
 
 ## 8. 
@@ -125,7 +124,7 @@ Use the Recommended Charts command on the Insert tab to quickly create a chart t
 
 * Click Insert > Recommended Charts.
 
-![](/static/mb/chart1.png)
+![](/static/mb/lessons/chart1.png)
 
 * On the Recommended Charts tab, scroll through the list of chart types that Excel recommends for your data.
 

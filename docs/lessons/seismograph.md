@@ -9,7 +9,7 @@ Acceleration & Analog Read Pin
 ## Quick Links
 
 * [activity](/lessons/seismograph/activity)
-* [challenge](/lessons/seismograph/challenges)
+* [challenge](/lessons/seismograph/challenge)
 
 ## Prior learning/place of lesson in scheme of work 
 

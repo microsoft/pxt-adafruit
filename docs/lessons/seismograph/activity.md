@@ -105,7 +105,7 @@ Click or tap the compile button for the seismograph program to run the program o
 
 ## 9. 
 
-The flat, black colored line should appear directly beneath the colored line. The black line measures the micro:bit acceleration.  And the colored line measures micro:bit simulator acceleration. 
+A black line should appear directly beneath the colored line. The black line measures the micro:bit acceleration.  And the colored line measures micro:bit simulator acceleration. 
 
 Run the acceleration experiment by vigarously moving the plate in any direction or move the object below the micro:bit (such as a table).
 
@@ -121,7 +121,7 @@ First, notice that moving the micro:bit in any direction, you will change the ac
 
 ![](/static/mb/lessons/seismograph7.png)
 
-Second, the flat colored horizontal line will start moving to plot the value of the strength as measured in milli-gravities. The horizontal line's movement is based on the micro:bit acceleration in Magnitude or Strength. 
+Second, the horizontal line will move to plot the value of the strength as measured in milli-gravities. The horizontal line's movement is based on the micro:bit acceleration in Magnitude or Strength. 
 
 ![](/static/mb/lessons/seismograph6.png)
 
@@ -129,7 +129,7 @@ Third, notice that the LED display fluctates based on the movement of the micro:
 
 ![](/static/mb/lessons/seismograph8.png)
 
- Now we are ready to graph or chart the accceleration of the micro:bit. We want a printout of the micro:bit acceleration graphed in Excel.
+Now we are ready to graph or chart the accceleration of the micro:bit. We want a printout of the micro:bit acceleration graphed in Excel.
 
 ## 11. 
 

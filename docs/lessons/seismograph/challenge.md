@@ -108,44 +108,31 @@ First, notice that moving the 1st micro:bit in the simulator in any direction, y
 
 ![](/static/mb//lessons/seis_challenge02.png)
 
-## 8. 
+## 7. 
  
 Connect the 2nd micro:bit to your computer using your USB cable. We should have two micro:bit devices attached to the computer. 
 
 ![](/static/mb/lessons/seismograph33.png)
 
-Finally, you must open the Excel CSV file by clicking on the data.xls file that was downloaded to Downloads Folder. 
+## 8.
 
-![](/static/mb/data3.png)
+Click or tap the compile button for the seismograph program to run the program on the 1st micro:bit and 2nd micro:bit.
 
-Use the Recommended Charts command on the Insert tab to quickly create a chart that’s just right for your data.
+## 9. 
 
-* Select the data that you want to include in your chart.
+The black lines should appear directly beneath the colored lines. The black lines measure the micro:bit acceleration. And the colored lines measures micro:bit simulator acceleration.
 
-* Click Insert > Recommended Charts.
+![](/static/mb/lessons/seis_challenge05.png)
 
-![](/static/mb/lessons/chart1.png)
+Run the acceleration experiment by vigarously moving the plate in any direction or move the object below the micro:bit (such as a table).
 
-* On the Recommended Charts tab, scroll through the list of chart types that Excel recommends for your data.
+Every time the micro:bit moves in any direction, you generate data points that can be reviewed in Excel later. The more attempts to move the micro:bit, the more data to be reviewed in Excel.
 
-Click any chart type to see how your data will look in that format. 
-
-When you find the chart type that you want, click it, and then click OK. We want to select the chart called Line. A line chart is used to display trends over time. We will use the line chart because there are many data points over time. 
-
-Tip: If you don’t see a chart type that you want, click the All Charts tab to see all of the available chart types.
-
-![](/static/mb/chart_title.png)
-
-* Use the Chart Elements, Chart Styles, and Chart Filters buttons next to the upper-right corner of the chart to add chart elements like axis titles or data labels, to customize the look of your chart
-
-![](/static/mb/elements_styles_filters.png)
+![](/static/mb/lessons/seis_challenge04.png)
 
 ### ~
-Have fun reviewing your simulation and analyze the acceleration by chart the Excel data using Excel.
-
-* Connect the first micro:bit to your computer using your USB cable and run the charting script on it.
-* Connect the second micro:bit to your computer using your USB cable and run the charting script on it.
-* The first person and second person take turns tilting the micro:bit in the "x" direction while the other player charts the data on the micro:bit!
+* Have fun reviewing your seismograph data and analyzing the acceleration with Excel.
+* The first person and second person take shaking or moving the micor:bit in any direction while the other player charts the data on the micro:bit!
 * Review and analyze the actual micro:bit device acceleration data on Excel
-* Display acceleration with y or z using plot bar graph by changing acceleration from "x" to "y" or "z" 
+
 

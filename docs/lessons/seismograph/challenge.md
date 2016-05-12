@@ -161,8 +161,7 @@ A CSV file will be generated to display the data points collected by the micro:b
 
 Select the data that you want to include in your chart. The chart should include the first two columns: time and acceleration. 
 
-Click or tap on the first two columns (A, B) to include time and acceleration data from the micro:bit  
-
+Click or tap on the first two columns (A, B) to include time and acceleration data from the micro:bit. We only need the first two columns (A, B) because the 2nd micro:bit changes have been communicated by the 1st micro:bit. So the data points of the seismograph are being recorded on the 1st micro:bit. 
 
 ## 14.
 

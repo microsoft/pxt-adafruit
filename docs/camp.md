@@ -11,16 +11,6 @@ Reorder the blocks below to make the micro:bit show your name.
 basic.showString('Hello!')
 ```
 
-### Repeat Forever
-
-Instead of showing your name once, we will repeat it forever!
-
-Reorder the blocks to make the micro:bit show the name continuously.
-```shuffle
-basic.forever(() => {
-    basic.showString('Hello!')
-});
-```
 
 ### Show leds
 
@@ -36,9 +26,32 @@ basic.showLeds(`
     `)
 ```
 
-### Show an animation
 
-To create animation, you can draw multiple drawing using ``show led`` and repeat it. This is just like cartoons in movies.
+### Show animation Forever
+
+Show one image after the other to create an animation.,
+
+Reorder the blocks to make the micro:bit show a happy, then unhappy face.
+```shuffle
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        # . . . #
+        . # # # .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        . # # # .
+        # . . . #
+        `)
+```
+
+### Repeat forever
+
+Use the ``forever`` block to repeat your code and have a continuous animation.
 
 Unsuffle the blocks to create a happy, unhappy animation.... or changes the image to make it your own!
 ```shuffle

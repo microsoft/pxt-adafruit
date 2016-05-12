@@ -1,16 +1,10 @@
-# Camp
+# Getting started
 
 Are you ready to build cool BBC micro:bit programs? For each challenge, reorder the blocks to recreate the program.
 
+* If you haven't done so, open [https://m.pxt.io](/) and create a new **Blocks Editor** project
+
 ## Basic
-
-### Show your name
-
-Reorder the blocks below to make the micro:bit show your name.
-```shuffle
-basic.showString('Hello!')
-```
-
 
 ### Show leds
 
@@ -26,6 +20,11 @@ basic.showLeds(`
     `)
 ```
 
+To transfer your code to the BBC micro:bit, 
+* connect your micro:bit to the computer using the USB cable
+* click on **Download**
+* drag&drop the **.hex** file into the **MICROBIT** drive
+* wait till the yellow light is done blinking!
 
 ### Show animation Forever
 
@@ -75,7 +74,8 @@ basic.forever(() => {
 
 ### Your turn now!
 
-Use the blocks and create your own custom awesome animation!
+Use the blocks ``show leds`` and ``forever``
+to create your own custom awesome animation!
 
 ## Inputs
 

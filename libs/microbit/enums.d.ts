@@ -262,6 +262,12 @@ declare namespace led {
     P4 = 11,  // MICROBIT_ID_IO_P4
     P10 = 17,  // MICROBIT_ID_IO_P10
     }
+
+
+    declare enum PulseValue {
+    High = 4,  // MICROBIT_PIN_EVT_PULSE_HI
+    Low = 5,  // MICROBIT_PIN_EVT_PULSE_LO
+    }
 declare namespace pins {
 }
 declare namespace serial {

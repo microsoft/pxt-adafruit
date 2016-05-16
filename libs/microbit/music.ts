@@ -77,9 +77,9 @@ enum BeatFraction {
 /**
  * Generation of music tones through pin ``P0``.
  */
-//% color=52 weight=33
+//% color=52 weight=98
 namespace music {
-    var beatsPerMinute: number = 120;
+    let beatsPerMinute: number = 120;
 
     /**
      * Plays a tone through pin ``P0`` for the given duration.

@@ -31,6 +31,11 @@ enum class AnalogPin {
     P10 = MICROBIT_ID_IO_P10,
 };
 
+enum class PulseValue {
+    High = MICROBIT_PIN_EVT_PULSE_HI,
+    Low = MICROBIT_PIN_EVT_PULSE_LO
+};
+
 MicroBitPin *getPin(int id) {
     switch (id) {
         case MICROBIT_ID_IO_P0: return &uBit.io.P0;
@@ -74,7 +79,6 @@ namespace pins {
     MicroBitPin *getPinAddress(int id) {
         return getPin(id);
     }
-
 
     /**
      * Read the specified pin or connector as either 0 or 1
@@ -128,6 +132,29 @@ namespace pins {
     //% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros" 
     void analogSetPeriod(AnalogPin name, int micros) { 
         PINOP(setAnalogPeriodUs(micros));
+    }
+    
+    /**
+    * Configures this pin to a digital input, and generates events where the timestamp is the duration that this pin was either ``high`` or ``low``.
+    */
+    //% help=pins/on-pulsed weight=22 blockGap=8
+    //% blockId=pins_on_pulsed block="on|pin %pin|pulsed %pulse"
+    void onPulsed(DigitalPin name, PulseValue pulse, Action body) {
+        MicroBitPin* pin = getPin((int)name);
+        if (!pin) return;
+        
+        pin->eventOn(MICROBIT_PIN_EVENT_ON_PULSE);        
+        registerWithDal((int)name, (int)pulse, body);
+    }
+    
+    /**
+    * Gets the duration of the last pulse in micro-seconds. This function should be called from a ``onPulse`` handler.
+    */
+    //% help=pins/pulse-micros
+    //% blockId=pins_pulse_duration block="pulse duration (us)"
+    //% weight=21
+    int pulseDuration() {
+        return pxt::lastEvent.timestamp;
     }
 
     /**

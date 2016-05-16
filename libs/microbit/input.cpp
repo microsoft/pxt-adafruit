@@ -104,7 +104,7 @@ namespace input {
      * @param button TODO
      * @param body TODO
      */
-    //% help=input/on-button-pressed weight=85
+    //% help=input/on-button-pressed weight=85 blockGap=8
     //% blockId=device_button_event block="on button|%NAME|pressed" icon="\uf192"
     void onButtonPressed(Button button, Action body) {
         registerWithDal((int)button, MICROBIT_BUTTON_EVT_CLICK, body);
@@ -114,7 +114,7 @@ namespace input {
      * Attaches code to run when the screen is facing up.
      * @param body TODO
      */
-    //% help=input/on-gesture weight=84
+    //% help=input/on-gesture weight=84 blockGap=8
     //% blockId=device_gesture_event block="on |%NAME" icon="\uf135"
     void onGesture(Gesture gesture, Action body) {
         registerWithDal(MICROBIT_ID_GESTURE, (int)gesture, body);

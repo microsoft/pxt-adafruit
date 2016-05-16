@@ -200,7 +200,7 @@ declare namespace input {
      * @param button TODO
      * @param body TODO
      */
-    //% help=input/on-button-pressed weight=85
+    //% help=input/on-button-pressed weight=85 blockGap=8
     //% blockId=device_button_event block="on button|%NAME|pressed" icon="\uf192" shim=input::onButtonPressed
     function onButtonPressed(button: Button, body: () => void): void;
 
@@ -208,7 +208,7 @@ declare namespace input {
      * Attaches code to run when the screen is facing up.
      * @param body TODO
      */
-    //% help=input/on-gesture weight=84
+    //% help=input/on-gesture weight=84 blockGap=8
     //% blockId=device_gesture_event block="on |%NAME" icon="\uf135" shim=input::onGesture
     function onGesture(gesture: Gesture, body: () => void): void;
 
@@ -332,16 +332,30 @@ declare namespace control {
      * @param value Component specific code indicating the cause of the event.
      * @param mode optional definition of how the event should be processed after construction (default is CREATE_AND_FIRE).
      */
-    //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source|with value %value=control_event_value" blockExternalInputs=1
+    //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source_id|with value %value=control_event_value_id" blockExternalInputs=1
     //% mode.defl=1 shim=control::raiseEvent
     function raiseEvent(src: number, value: number, mode?: EventCreationMode): void;
 
     /**
      * Raises an event in the event bus.
      */
-    //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_event_source|with value %value=control_event_value" 
+    //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_event_source_id|with value %value=control_event_value_id" 
     //% blockExternalInputs=1 shim=control::onEvent
     function onEvent(src: number, value: number, handler: () => void): void;
+
+    /**
+     * Gets the value of the last event executed on the bus
+     */
+    //% blockId=control_event_value" block="event value"
+    //% weight=18 shim=control::eventValue
+    function eventValue(): number;
+
+    /**
+     * Gets the timestamp of the last event executed on the bus
+     */
+    //% blockId=control_event_timestamp" block="event timestamp"
+    //% weight=19 blockGap-8 shim=control::eventTimestamp
+    function eventTimestamp(): number;
 
     /**
      * Gets a friendly name for the device derived from the its serial number
@@ -472,6 +486,21 @@ declare namespace pins {
     //% help=pins/analog-set-period weight=23
     //% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros" shim=pins::analogSetPeriod
     function analogSetPeriod(name: AnalogPin, micros: number): void;
+
+    /**
+     * Configures this pin to a digital input, and generates events where the timestamp is the duration that this pin was either ``high`` or ``low``.
+     */
+    //% help=pins/on-pulsed weight=22 blockGap=8
+    //% blockId=pins_on_pulsed block="on|pin %pin|pulsed %pulse" shim=pins::onPulsed
+    function onPulsed(name: DigitalPin, pulse: PulseValue, body: () => void): void;
+
+    /**
+     * Gets the duration of the last pulse in micro-seconds. This function should be called from a ``onPulse`` handler.
+     */
+    //% help=pins/pulse-micros
+    //% blockId=pins_pulse_duration block="pulse duration (us)"
+    //% weight=21 shim=pins::pulseDuration
+    function pulseDuration(): number;
 
     /**
      * Writes a value to the servo, controlling the shaft accordingly. On a standard servo, this will set the angle of the shaft (in degrees), moving the shaft to that orientation. On a continuous rotation servo, this will set the speed of the servo (with ``0`` being full-speed in one direction, ``180`` being full speed in the other, and a value near ``90`` being no movement).

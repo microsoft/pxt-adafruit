@@ -8,7 +8,7 @@ namespace led {
     let barGraphHigh = 0;
     // when was the current high value recorded
     let barGraphHighLast = 0;
-        
+
     /**
      * Displays a vertical bar graph based on the `value` and `high` value.
      * If `high` is 0, the chart gets adjusted automatically.
@@ -17,35 +17,35 @@ namespace led {
      */
     //% help=/led/plot-bar-graph weight=20
     //% blockId=device_plot_bar_graph block="plot bar graph of %value |up to %high" icon="\uf080" blockExternalInputs=true
-    export function plotBarGraph(value: number, high: number): void {        
+    export function plotBarGraph(value: number, high: number): void {
         let now = input.runningTime();
         serial.writeString(value.toString() + "\r\n");
         value = Math.abs(value);
-        
+
         if (high != 0) barGraphHigh = high;
         else if (value > barGraphHigh || now - barGraphHighLast > 5000) {
             barGraphHigh = value;
             barGraphHighLast = now;
         }
-        
+
         barGraphHigh = Math.max(barGraphHigh, 16);
-                    
+
         let v = (value * 15) / barGraphHigh;
         let k = 0;
-        for(let y = 4; y >= 0; --y) {
+        for (let y = 4; y >= 0; --y) {
             for (let x = 0; x < 3; ++x) {
                 if (k > v) {
-                    unplot(2-x,y);
-                    unplot(2+x,y);
+                    unplot(2 - x, y);
+                    unplot(2 + x, y);
                 } else {
-                    plot(2-x, y);
-                    plot(2+x, y);
+                    plot(2 - x, y);
+                    plot(2 + x, y);
                 }
                 ++k;
             }
-        }        
+        }
     }
-    
+
     /**
      * Toggles a particular pixel
      * @param x TODO

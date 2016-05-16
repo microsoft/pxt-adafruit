@@ -63,7 +63,7 @@
         "aspectRatio": 1.22
     },
     "compileService": {
-        "gittag": "v0.1.9",
+        "gittag": "v0.1.10",
         "serviceId": "ws"
     },
     "serial": {

@@ -501,6 +501,13 @@ namespace pxsim.radio {
 }
 
 namespace pxsim.pins {
+    export function onPulse(name: number, pulse: number, body: RefAction) {
+    }
+
+    export function pulseDuration(): number {
+        return 0;
+    }
+
     export function digitalReadPin(pinId: number): number {
         let pin = getPin(pinId);
         if (!pin) return;

@@ -20,7 +20,7 @@ namespace pins {
     /**
      * Read one number from 7-bit I2C address.
      */
-    //% help=pins/i2c-read-number
+    //% help=pins/i2c-read-number blockGap=8
     //% blockId=pins_i2c_readnumber block="i2c read number|at address %address|of format %format=i2c_sizeof" weight=7
     export function i2cReadNumber(address: number, format: NumberFormat): number {
         let buf = pins.i2cReadBuffer(address, pins.sizeOf(format))

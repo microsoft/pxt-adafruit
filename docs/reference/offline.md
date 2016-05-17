@@ -4,7 +4,7 @@ The micro:bit pins.
 
 ## How to work offline
 
-If you have loaded the web app at some time in the past (by clicking on "my scripts" from the home page), then if you later open the same browser (whether you are online or offline) and type in [https://codemicrobit.com/](https://codemicrobit.com/), you will be able to access all the features of the web app. Note that it is important to end the URL with "/".
+If you have loaded the web app at some time in the past (by clicking on "my scripts" from the home page), then if you later open the same browser (whether you are online or offline) and type in [https://m.pxt.io/](https://m.pxt.io/), you will be able to access all the features of the web app. Note that it is important to end the URL with "/".
 
 ## Save and load code using files
 

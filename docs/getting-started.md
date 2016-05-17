@@ -2,7 +2,7 @@
 
 Are you ready to build cool BBC micro:bit programs? For each challenge, reorder the blocks to recreate the program.
 
-* If you haven't done so, open [https://m.pxt.io](/) and create a new **Blocks Editor** project
+## Open [https://m.pxt.io](/) and create a new **Blocks Editor** project
 
 ## Basic
 
@@ -28,10 +28,9 @@ To transfer your code to the BBC micro:bit,
 
 ### Show animation Forever
 
-Show one image after the other to create an animation.,
+Show one image after the other to create an animation by snapping them together.
 
-Reorder the blocks to make the micro:bit show a happy, then unhappy face.
-```shuffle
+```blocks
     basic.showLeds(`
         . . . . .
         . # . # .
@@ -47,6 +46,7 @@ Reorder the blocks to make the micro:bit show a happy, then unhappy face.
         # . . . #
         `)
 ```
+
 
 ### Repeat forever
 

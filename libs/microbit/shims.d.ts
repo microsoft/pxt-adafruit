@@ -354,7 +354,7 @@ declare namespace control {
      * Gets the timestamp of the last event executed on the bus
      */
     //% blockId=control_event_timestamp" block="event timestamp"
-    //% weight=19 blockGap-8 shim=control::eventTimestamp
+    //% weight=19 blockGap=8 shim=control::eventTimestamp
     function eventTimestamp(): number;
 
     /**
@@ -563,14 +563,26 @@ declare namespace serial {
     /**
      * Reads a line of text from the serial port.
      */
-    //% shim=serial::readString
-    function readString(): string;
+    //% help=serial/read-line
+    //% blockId=serial_read_line block="serial read line"
+    //% weight=20 shim=serial::readLine
+    function readLine(): string;
 
     /**
      * Sends a piece of text through Serial connection.
      */
-    //% blockId=serial_writestring block="serial write %text" shim=serial::writeString
+    //% help=serial/write-string
+    //% weight=87
+    //% blockId=serial_writestring block="serial write string %text" shim=serial::writeString
     function writeString(text: string): void;
+
+    /**
+     * Registers an event to be fired when one of the delimiter is matched
+     * @param delimiters the characters to match received characters against. eg:"\n"
+     */
+    //% help=serial/on-data-received
+    //% weight=19 shim=serial::onDataReceived
+    function onDataReceived(delimiters: string, body: () => void): void;
 }
 
 

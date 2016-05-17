@@ -7,7 +7,8 @@ namespace serial {
      * Prints a line of text to the serial
      * @param value to send over serial
      */
-    //% help=serial/write-line
+    //% weight=90
+    //% help=serial/write-line blockGap=8
     //% blockId=serial_writeline block="serial|write line %text"
     export function writeLine(text: string): void {
         writeString(text);
@@ -17,6 +18,8 @@ namespace serial {
     /**
      * Prints a numeric value to the serial
      */
+    //% help=serial/write-number
+    //% weight=89 blockGap=8
     //% blockId=serial_writenumber block="serial|write number %value"
     export function writeNumber(value: number): void {
         writeString(value.toString());
@@ -27,13 +30,23 @@ namespace serial {
      * @param name name of the value stream, eg: x
      * @param value to write
      */
-    //% weight=80
+    //% weight=88 blockGap=8
     //% help=serial/write-value
-    //% blockId=serial_writevalue block="serial|write line %name|= %value"
+    //% blockId=serial_writevalue block="serial|write value %name|= %value"
     export function writeValue(name: string, value: number): void {
         writeString(name);
-        writeString(": ");
+        writeString(":");
         writeNumber(value);
         writeLine("");
+    }
+
+    /**
+    * Registers an event to be fired when a line has been received
+    */
+    //% help=serial/on-line-received
+    //% blockId=serial_on_line_received block="serial on line received"
+    //% weight=21 blockGap=8
+    export function onLineReceived(body: Action): void {
+        serial.onDataReceived("\n", body);
     }
 }

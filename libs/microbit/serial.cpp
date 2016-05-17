@@ -7,16 +7,31 @@ namespace serial {
     /**
      * Reads a line of text from the serial port.
      */
-    //%
-    StringData* readString() {
-      return uBit.serial.readUntil(ManagedString("\r\n")).leakData();
+    //% help=serial/read-line
+    //% blockId=serial_read_line block="serial read line"
+    //% weight=20
+    StringData* readLine() {
+      return uBit.serial.readUntil(ManagedString("\n")).leakData();
     }
 
     /**
      * Sends a piece of text through Serial connection.
      */
-    //% blockId=serial_writestring block="serial write %text"
+    //% help=serial/write-string
+    //% weight=87
+    //% blockId=serial_writestring block="serial write string %text"
     void writeString(StringData *text) { 
       uBit.serial.send(ManagedString(text));
+    }
+    
+    /**
+    * Registers an event to be fired when one of the delimiter is matched
+    * @param delimiters the characters to match received characters against. eg:"\n"
+    */
+    //% help=serial/on-data-received
+    //% weight=19
+    void onDataReceived(StringData* delimiters, Action body) {
+      uBit.serial.eventOn(ManagedString(delimiters));
+      registerWithDal(MICROBIT_ID_SERIAL, MICROBIT_SERIAL_EVT_DELIM_MATCH, body);
     }
 }

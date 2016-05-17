@@ -169,7 +169,7 @@ namespace control {
     * Gets the timestamp of the last event executed on the bus
     */
     //% blockId=control_event_timestamp" block="event timestamp"
-    //% weight=19 blockGap-8
+    //% weight=19 blockGap=8
     int eventTimestamp() {
         return pxt::lastEvent.timestamp;
     }

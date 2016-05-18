@@ -26,7 +26,7 @@ input.onButtonPressed(Button.B, () => {
 The [BBC micro:bit](https://www.microbit.co.uk) is a [pocket-size computer](/device) with a 5x5 display of 25 LEDs, Bluetooth and sensors that can be programmed by anyone.
 The BBC micro:bit was made possible by many [partners](https://www.microbit.co.uk/partners).
 
-The micro:bit provides a fun introduction to programming and making – switch on, program it to do something fun – wear it, customize it.
+The micro:bit provides an easy and fun introduction to programming and making – switch on, program it to do something fun – wear it, customize it.
 Just like Arduino, the micro:bit can be connected to and interact with sensors, displays, and other devices. 
 
 ## Blocks or JavaScript

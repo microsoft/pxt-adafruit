@@ -11,8 +11,7 @@ namespace serial {
     //% help=serial/write-line blockGap=8
     //% blockId=serial_writeline block="serial|write line %text"
     export function writeLine(text: string): void {
-        writeString(text);
-        writeString("\r\n");
+        writeString(text + "\r\n");
     }
 
     /**
@@ -34,10 +33,7 @@ namespace serial {
     //% help=serial/write-value
     //% blockId=serial_writevalue block="serial|write value %name|= %value"
     export function writeValue(name: string, value: number): void {
-        writeString(name);
-        writeString(":");
-        writeNumber(value);
-        writeLine("");
+        writeString(name + ":" + value + "\r\n");
     }
 
     /**

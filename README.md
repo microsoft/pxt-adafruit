@@ -7,7 +7,9 @@ This target allow to program a [BBC micro:bit](https://www.microbit.co.uk/) usin
 
 [![Build Status](https://travis-ci.org/Microsoft/pxt-microbit.svg?branch=master)](https://travis-ci.org/Microsoft/pxt-microbit)
 
-# Getting started
+## Local server
+
+### Setup
 
 The following commands are a 1-time setup after synching the repo on your machine.
 
@@ -20,9 +22,15 @@ npm install -g pxt
 npm install
 ```
 
-After you're done, simple run this command to open a local web server:
+### Running
+
+Run this command to open a local web server:
 ```
 pxt serve
+```
+To make sure you're running the latest tools, run
+```
+npm update
 ```
 
 More instructions at https://github.com/Microsoft/pxt#running-a-target-from-localhost 

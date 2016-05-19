@@ -1,6 +1,6 @@
 /**
  * Communicate data using radio packets
  */
-//% color=270 weight=34
+//% color=#E3008C weight=34
 namespace radio {
 }

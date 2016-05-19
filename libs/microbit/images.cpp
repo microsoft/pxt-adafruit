@@ -3,7 +3,7 @@
 /**
 * Creation, manipulation and display of LED images.
 */
-//% color=45 weight=31
+//% color=#5C2D91 weight=31
 namespace images {
     /**
      * Creates an image that fits on the LED screen.

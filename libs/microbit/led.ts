@@ -1,8 +1,8 @@
 /**
  * Control of the LED screen.
  */
-//% color=3 weight=35
-namespace led {
+//% color=#5C2D91 weight=35
+    namespace led {
 
     // what's the current high value
     let barGraphHigh = 0;

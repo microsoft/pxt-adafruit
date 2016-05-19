@@ -72,7 +72,7 @@
         "log": true
     },
     "appTheme": {
-        "accentColor": "#5C2D91",
+        "accentColor": "#5C005C",
         "logoUrl": "https://m.pxt.io/about",
         "logo": "./static/microbit.simplified.svg",
         "docsLogo": "./static/microbit.simplified.svg",
@@ -103,19 +103,6 @@
                 "path": "/device"
             }
         ],
-        "sideDocMenu": [
-            {
-                "name": "Getting started",
-                "path": "/getting-started"
-            },
-            {
-                "name": "Lessons",
-                "path": "/lessons"
-            },
-            {
-                "name": "Reference",
-                "path": "/reference"
-            }
-        ]
+        "sideDoc": "getting-started"
     }
 }

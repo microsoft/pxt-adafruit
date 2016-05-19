@@ -21,19 +21,19 @@ enum LedSpriteProperty {
 /**
  * A single-LED sprite game engine
  */
-//% color=176 weight=32
+//% color=#008272 weight=32
 namespace game {
-    var _score: number = 0;
-    var _life: number = 3;
-    var _startTime: number = 0;
-    var _endTime: number = 0;
-    var _isGameOver: boolean = false;
-    var _countdownPause: number = 0;
-    var _level: number = 1;
-    var _gameId: number = 0;
-    var img: Image;
-    var sprites: LedSprite[];
-    
+    let _score: number = 0;
+    let _life: number = 3;
+    let _startTime: number = 0;
+    let _endTime: number = 0;
+    let _isGameOver: boolean = false;
+    let _countdownPause: number = 0;
+    let _level: number = 1;
+    let _gameId: number = 0;
+    let img: Image;
+    let sprites: LedSprite[];
+
     /**
      * Creates a new LED sprite pointing to the right.
      * @param x sprite horizontal coordinate, eg: 2
@@ -47,7 +47,7 @@ namespace game {
         sprites.push(p);
         plot();
         return p;
-    }    
+    }
 
     /**
      * Gets the current score
@@ -394,7 +394,7 @@ namespace game {
             }
             plot();
         }
-        
+
         /**
          * Turn the sprite
          * @param this TODO
@@ -403,7 +403,7 @@ namespace game {
          */
         //% weight=49
         //% blockId=game_turn_sprite block="%sprite|turn %direction|by (°) %degrees"
-        public turn(direction : Direction, degrees: number) {
+        public turn(direction: Direction, degrees: number) {
             if (direction == Direction.Right)
                 this.setDirection(this._dir + degrees);
             else
@@ -435,8 +435,8 @@ namespace game {
          */
         //% weight=29
         //% blockId=game_sprite_set_property block="%sprite|set %property|to %value" blockGap=8
-        public set(property : LedSpriteProperty, value:number) {
-            switch(property) {
+        public set(property: LedSpriteProperty, value: number) {
+            switch (property) {
                 case LedSpriteProperty.X: this.setX(value); break;
                 case LedSpriteProperty.Y: this.setY(value); break;
                 case LedSpriteProperty.Direction: this.setDirection(value); break;
@@ -452,8 +452,8 @@ namespace game {
          */
         //% weight=30
         //% blockId=game_sprite_change_xy block="%sprite|change %property|by %value" blockGap=8
-        public change(property : LedSpriteProperty, value:number) {
-            switch(property) {
+        public change(property: LedSpriteProperty, value: number) {
+            switch (property) {
                 case LedSpriteProperty.X: this.changeXBy(value); break;
                 case LedSpriteProperty.Y: this.changeYBy(value); break;
                 case LedSpriteProperty.Direction: this.changeDirectionBy(value); break;
@@ -461,15 +461,15 @@ namespace game {
                 case LedSpriteProperty.Blink: this.changeBlinkBy(value); break;
             }
         }
-                
+
         /**
          * Gets a property of the sprite
          * @param property the name of the property to change
          */
         //% weight=28
         //% blockId=game_sprite_property block="%sprite|%property"
-        public get(property : LedSpriteProperty) {
-            switch(property) {
+        public get(property: LedSpriteProperty) {
+            switch (property) {
                 case LedSpriteProperty.X: return this.x();
                 case LedSpriteProperty.Y: return this.y();
                 case LedSpriteProperty.Direction: return this.direction()
@@ -681,7 +681,7 @@ namespace game {
     function init(): void {
         if (img == null) {
             img = images.createImage(
-`0 0 0 0 0
+                `0 0 0 0 0
 0 0 0 0 0
 0 0 0 0 0
 0 0 0 0 0

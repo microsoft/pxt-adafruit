@@ -103,19 +103,6 @@
                 "path": "/device"
             }
         ],
-        "sideDocMenu": [
-            {
-                "name": "Getting started",
-                "path": "/getting-started"
-            },
-            {
-                "name": "Lessons",
-                "path": "/lessons"
-            },
-            {
-                "name": "Reference",
-                "path": "/reference"
-            }
-        ]
+        "sideDoc": "getting-started"
     }
 }

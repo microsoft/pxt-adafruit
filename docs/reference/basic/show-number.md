@@ -8,8 +8,8 @@ basic.showNumber(2, 150)
 
 ### Parameters
 
-* **value** is a [Number](/reference/types/number).
-* **interval (ms)** is an optional [Number](/reference/types/number). It means the number of milliseconds before sliding the **value** left by one LED each time. Bigger intervals make the sliding slower.
+* `value` is a [Number](/reference/types/number).
+* `interval` is an optional [Number](/reference/types/number). It means the number of milliseconds before sliding the `value` left by one LED each time. Bigger intervals make the sliding slower.
 
 ### Examples:
 
@@ -19,7 +19,7 @@ To show the number 10:
 basic.showNumber(10)
 ~~~~
 
-To show the number stored in the `x` variable:
+To show the number stored in a variable:
 
 ~~~~blocks
 let x = 1
@@ -39,8 +39,8 @@ for (let i = 0; i < 6; i++) {
 
 ### Other show functions
 
-* use [show string](/reference/basic/show-string) to show a [String](/reference/types/string) with letters on the screen
-* use [show animation](/reference/basic/show-animation) to show a group of pictures on the screen, one after another
+* Use [show string](/reference/basic/show-string) to show a [String](/reference/types/string) with letters on the screen.
+* Use [show animation](/reference/basic/show-animation) to show a group of pictures on the screen, one after another.
 
 ### Lessons
 

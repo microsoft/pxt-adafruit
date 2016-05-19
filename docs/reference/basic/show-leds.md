@@ -15,12 +15,13 @@ basic.showLeds(`
 
 ### Parameters
 
-* ``leds`` - a series of LED on/off states that form an image (see steps below)
-* (optional) ``ms`` - [Number](/reference/types/number) - time to wait after displaying image. In blocks, ``ms`` is 400 by default.
+* `leds` is a [String](/reference/types/string) that shows which LEDs are on and off.
+* `ms` is an optional [Number](/reference/types/number) that shows how many milliseconds to wait after showing a picture.
+If you are programming with blocks, `ms` starts out as 400 milliseconds.
 
-### Example - Block Editor
+### Example
 
-1. Open the `basic` category and select the `show leds` blocks.
+Open the `basic` card in the Block Editor and select the `show leds` blocks.
 
 ```blocks
 basic.showLeds(`
@@ -33,7 +34,7 @@ basic.showLeds(`
 )
 ```
 
-In JavaScript, the led off is represented by a `.` and the led on by a `#` character.
+If you are programming in JavaScript, `#` means an LED that is turned on and `.` means an LED that is turned off.
 
 ### Lessons
 

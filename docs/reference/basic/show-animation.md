@@ -1,6 +1,6 @@
 # Show Animation
 
-Show a series of image frames on the [LED screen](/device/screen), pausing the specified time after each frame.
+Show a group of image frames (pictures) one after another on the [LED screen](/device/screen). It pauses the amount of time you tell it after each frame.
 
 ```sig
 basic.showAnimation(`
@@ -14,10 +14,14 @@ basic.showAnimation(`
 
 ### Parameters
 
-* `leds` - [String](/reference/types/string); a series of LED on/off states
-* `interval` - [Number](/reference/types/number); the number of milliseconds to pause after each image frame
+* `leds` is a [String](/reference/types/string) that shows which LEDs are on and off, in groups one after another.
+* `interval` is an optional [Number](/reference/types/number). It means the number of milliseconds to pause after each image frame.
 
-### Show a series of image frames
+### Example: Animating a group of image frames
+
+In this animation, each row is 15 spaces wide because
+there are three frames in the animation, and each frame is
+five spaces wide, just like the screen on the BBC micro:bit.
 
 ```
 basic.showAnimation(`
@@ -31,13 +35,17 @@ basic.showAnimation(`
 
 ### ~hint 
 
-If the series of images appear too fast, increase the value of the *interval* parameter.
+If the animation is too fast, make `interval` bigger.
 
 ### ~
 
-### Example: animating frames
+### Example: animating frames with a pause
 
-The following example creates an image with six frames and then shows each frame o the screen, pausing 500 milliseconds after each frame:
+This example shows six frames on the screen, pausing 500 milliseconds after each frame.
+
+In this animation, each row is 30 spaces wide because
+there are six frames in the animation, and each frame is
+five spaces wide, just like the screen.
 
 ```
 basic.showAnimation(`
@@ -51,7 +59,7 @@ basic.showAnimation(`
 
 ### ~hint 
 
-Use [forever](/reference/basic/forever) to continually repeat an animation
+Use [forever](/reference/basic/forever) to show an animation over and over.
 
 ### ~
 

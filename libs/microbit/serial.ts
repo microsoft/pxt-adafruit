@@ -39,10 +39,10 @@ namespace serial {
     /**
     * Registers an event to be fired when a line has been received
     */
-    //% help=serial/on-line-received
-    //% blockId=serial_on_line_received block="serial on line received"
-    //% weight=21 blockGap=8
+    // help=serial/on-line-received
+    // blockId=serial_on_line_received block="serial on line received"
+    // weight=21 blockGap=8
     export function onLineReceived(body: Action): void {
-        serial.onDataReceived("\n", body);
+       // serial.onDataReceived("\n", body);
     }
 }

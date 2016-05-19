@@ -28,8 +28,8 @@ namespace serial {
     * Registers an event to be fired when one of the delimiter is matched
     * @param delimiters the characters to match received characters against. eg:"\n"
     */
-    //% help=serial/on-data-received
-    //% weight=19
+    // help=serial/on-data-received
+    // weight=19
     void onDataReceived(StringData* delimiters, Action body) {
       uBit.serial.eventOn(ManagedString(delimiters));
       registerWithDal(MICROBIT_ID_SERIAL, MICROBIT_SERIAL_EVT_DELIM_MATCH, body);

@@ -575,14 +575,6 @@ declare namespace serial {
     //% weight=87
     //% blockId=serial_writestring block="serial write string %text" shim=serial::writeString
     function writeString(text: string): void;
-
-    /**
-     * Registers an event to be fired when one of the delimiter is matched
-     * @param delimiters the characters to match received characters against. eg:"\n"
-     */
-    //% help=serial/on-data-received
-    //% weight=19 shim=serial::onDataReceived
-    function onDataReceived(delimiters: string, body: () => void): void;
 }
 
 

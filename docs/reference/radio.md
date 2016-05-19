@@ -16,5 +16,5 @@ radio.receivedSignalStrength();
 radio.setGroup(0);
 radio.setTransmitPower(0);
 radio.writeValueToSerial();
-radio.setTransmitSerialNumber(◊);
+radio.setTransmitSerialNumber(true);
 ```

@@ -2,8 +2,6 @@
 
 Repeat code a preset number of times.
 
-Repeat code a fixed number of times.
-
 ### Block Editor
 
 ![](/static/mb/blocks/contents-0.png)

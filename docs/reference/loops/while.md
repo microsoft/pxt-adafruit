@@ -1,23 +1,14 @@
 # While
 
-Repeat code in a loop while a condition is true.
-
 ### @parent blocks/language
  
 
 Repeat code while a [Boolean](/reference/types/boolean) `condition` is true.
 
-### ~hide
-
+```blocks
+while(true) {
+}
 ```
-let condition = false
-```
-
-### ~
-
-### Block Editor
-
-![](/static/mb/string-0.png)
 
 The while loop has a *condition* that evaluates to a [Boolean](/reference/types/boolean) value. After the `do` keyword, add the code that you want to run while the `condition` is `true`. The while loop concludes with `end while`.
 
@@ -27,11 +18,13 @@ The condition is tested before any code runs. Which means that if the condition 
 
 The following example uses a while loop to make a diagonal line on the LED screen (points `0, 0`, `1, 1`, `2, 2`, `3, 3`, `4, 4`).
 
-// index is set to 4
-
-![](/static/mb/blocks/var-10.png)
-
-// subtract 1 from `index` each time through loop
+```blocks
+let index = 4;
+while(index >= 0) {
+    led.plot(index, index);
+    index--;
+}
+```
 
 ### Lessons
 

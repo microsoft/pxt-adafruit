@@ -93,6 +93,9 @@
   "radio.setTransmitSerialNumber": "Set the radio to transmit the serial number in each message.",
   "radio.writeValueToSerial": "Reads a value sent with `stream value` and writes it\nto the serial stream as JSON",
   "serial": "Reading and writing data over a serial connection.",
+  "serial.readLine": "Reads a line of text from the serial port.",
   "serial.writeLine": "Prints a line of text to the serial",
+  "serial.writeNumber": "Prints a numeric value to the serial",
+  "serial.writeString": "Sends a piece of text through Serial connection.",
   "serial.writeValue": "Writes a ``name: value`` pair line to the serial."
 }

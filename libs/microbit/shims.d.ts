@@ -4,7 +4,7 @@
     /**
      * Creation, manipulation and display of LED images.
      */
-    //% color=45 weight=31
+    //% color=#5C2D91 weight=31
 declare namespace images {
 
     /**
@@ -113,7 +113,7 @@ declare interface Image {
     /**
      * Provides access to basic micro:bit functionality.
      */
-    //% color=190 weight=100
+    //% color=#0078D7 weight=100
 declare namespace basic {
 
     /**

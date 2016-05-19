@@ -10,7 +10,6 @@ namespace serial {
     //% help=serial/read-line
     //% blockId=serial_read_line block="serial read line"
     //% weight=20
-    //% async
     StringData* readLine() {
       return uBit.serial.readUntil(ManagedString("\n")).leakData();
     }
@@ -21,7 +20,6 @@ namespace serial {
     //% help=serial/write-string
     //% weight=87
     //% blockId=serial_writestring block="serial write string %text"
-    //% async
     void writeString(StringData *text) { 
       uBit.serial.send(ManagedString(text));
     }

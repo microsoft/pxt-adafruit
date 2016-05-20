@@ -1,6 +1,7 @@
 # Pause
 
-Pause program execution for the specified number of milliseconds. This function is helpful when you need to slow down your program's execution.
+Pause the program for the number of milliseconds you say. 
+You can use this function to slow your program down.
 
 ```sig
 basic.pause(400)
@@ -8,11 +9,13 @@ basic.pause(400)
 
 ### Parameters
 
-* ``ms`` - the number of milliseconds that you want to pause (100 = 1/10 second, 1000 milliseconds = 1 second)
+* ``ms`` is the number of milliseconds that you want to pause (100 milliseconds = 1/10 second, and 1000 milliseconds = 1 second).
 
 ### Example: diagonal line
 
-The following example code turns on LED `0, 0` thru `4, 4`, pausing 500 milliseconds after each LED. Without `pause`, the code would run so fast that you wouldn't see each individual LED turning on.
+This example draws a diagonal line by turning on LED `0, 0` (top left) through LED `4, 4` (bottom right). 
+The program pauses 500 milliseconds after turning on each LED. 
+Without `pause`, the program would run so fast that you would not have time to see each LED turning on.
 
 ```blocks
 for (let i = 0; i < 5; i++) {

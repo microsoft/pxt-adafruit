@@ -94,7 +94,17 @@ enum class Gesture {
      * Raised when the board is falling!
      */
     //% block="free fall"
-    FreeFall = MICROBIT_ACCELEROMETER_EVT_FREEFALL
+    FreeFall = MICROBIT_ACCELEROMETER_EVT_FREEFALL,
+    /**
+    * Raised when a 3G shock is detected
+    */
+    //% block="3g"
+    ThreeG = MICROBIT_ACCELEROMETER_EVT_3G,
+    /**
+    * Raised when a 6G shock is detected
+    */
+    //% block="6g"
+    SixG = MICROBIT_ACCELEROMETER_EVT_6G
 };
 
 //% color=300 weight=99
@@ -117,6 +127,10 @@ namespace input {
     //% help=input/on-gesture weight=84 blockGap=8
     //% blockId=device_gesture_event block="on |%NAME" icon="\uf135"
     void onGesture(Gesture gesture, Action body) {
+        if ((int)gesture == MICROBIT_ACCELEROMETER_EVT_3G && uBit.accelerometer.getRange() < 3)
+            uBit.accelerometer.setRange(4);
+        else if ((int)gesture == MICROBIT_ACCELEROMETER_EVT_6G && uBit.accelerometer.getRange() < 6)
+            uBit.accelerometer.setRange(8);            
         registerWithDal(MICROBIT_ID_GESTURE, (int)gesture, body);
     }
 

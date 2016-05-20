@@ -105,6 +105,16 @@ declare namespace basic {
      */
     //% block="free fall"
     FreeFall = 7,  // MICROBIT_ACCELEROMETER_EVT_FREEFALL
+    /**
+     * Raised when a 3G shock is detected
+     */
+    //% block="3g"
+    ThreeG = 8,  // MICROBIT_ACCELEROMETER_EVT_3G
+    /**
+     * Raised when a 6G shock is detected
+     */
+    //% block="6g"
+    SixG = 9,  // MICROBIT_ACCELEROMETER_EVT_6G
     }
 declare namespace input {
 }

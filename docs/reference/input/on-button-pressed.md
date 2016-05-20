@@ -25,7 +25,7 @@ input.onButtonPressed(Button.A, () => {
 
 ### Example: roll dice
 
-This example generates a number from 1 to 6 when you press the `B` button. Then it shows the number.
+This example shows a number from 1 to 6 when you press the `B` button.
 
 ```blocks
 input.onButtonPressed(Button.B, () => {

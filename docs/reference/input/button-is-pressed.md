@@ -1,6 +1,6 @@
 # Button Is Pressed
 
-Get the state of an input button. The micro:bit has two input buttons: A and B.
+Check whether a button is pressed right now. The micro:bit has two buttons: button `A` and button `B`.
 
 ```sig
 input.buttonIsPressed(Button.A);
@@ -8,24 +8,26 @@ input.buttonIsPressed(Button.A);
 
 ### Parameters
 
-* name - [String](/reference/types/string); input button "A", "B", or "A+B" (both input buttons)
+* ``name`` is a [String](/reference/types/string). You should store `A` in it to check the left button, `B` to check the right button, or `A+B` to check both at the same time.
 
 ### Returns
 
-* [Boolean](/reference/types/boolean) - `true` if pressed, `false` if not pressed
+* [Boolean](/reference/types/boolean) that is `true` if the button you are checking is pressed, `false` if it is not pressed.
 
 ### Example
 
-The following code uses an [if](/reference/logic/if) statement to run code, depending on whether or not the A button is pressed:
+This program uses an [if](/reference/logic/if) to run 
+one part of the program if the `A` button is pressed, and 
+another part if it is not pressed.
 
 ```blocks
 basic.forever(() => {
     let pressed = input.buttonIsPressed(Button.A)
     if (pressed) {
-        // this code runs if the A button is pressed
+        // this part runs if the A button is pressed
         basic.showNumber(1, 150)
     } else {
-        // this code runs if the A button is *not* pressed
+        // this part runs if the A button is *not* pressed
         basic.showNumber(0, 150)
     }
 })

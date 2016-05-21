@@ -1,6 +1,7 @@
 # Forever
 
-Repeat code [in the background](/reference/control/in-background) forever.
+Keep running part of a program 
+[in the background](/reference/control/in-background).
 
 ```sig
 basic.forever(() => {
@@ -9,7 +10,9 @@ basic.forever(() => {
 
 ### Example: compass
 
-The following example constantly checks the [compass heading](/reference/input/compass-heading) and updates the screen with the direction.
+The following example constantly checks the 
+[compass heading](/reference/input/compass-heading) 
+and updates the screen with the direction.
 
 ```blocks
 basic.forever(() => {
@@ -30,7 +33,9 @@ basic.forever(() => {
 
 ### Example: counter
 
-The following example continually shows the current value of a global variable:
+The following example keeps showing the [number](/reference/types/number) stored in a global variable.
+When you press button `A`, the number gets bigger.
+You can use a program like this to count things with your BBC micro:bit.
 
 ```blocks
 let num = 0
@@ -42,9 +47,12 @@ input.onButtonPressed(Button.A, () => {
 })
 ```
 
-### Contention for the LED display
+### Competing for the LED screen
 
-If you have multiple processes that each show something on the LED screen, you may get unexpected results. Try, for example:
+If different parts of a program are each trying 
+to show something on the LED screen at the same time, 
+you may get unexpected results.
+Try this on your micro:bit:
 
 ```blocks
 basic.forever(() => {

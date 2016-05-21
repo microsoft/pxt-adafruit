@@ -1,6 +1,9 @@
 # On Button Pressed
 
-Register an [event handler](/reference/event-handler) that will execute whenever an input button (A, B, or A and B together) is pressed during program execution. When [running code](/device/simulator) with this function in a web browser, click an on-screen input button - labelled A or B.
+Start an [event handler](/reference/event-handler) (part of the program that will run when something happens, like when a button is pressed). 
+This handler works when button `A` or `B` is pressed, or `A` and `B` together.
+When you are using this function in a web browser, click the buttons on the screen instead of the ones
+on the BBC micro:bit.
 
 ```sig
 input.onButtonPressed(Button.A, () => {})
@@ -8,7 +11,8 @@ input.onButtonPressed(Button.A, () => {})
 
 ### Example: count button clicks
 
-This example counts how many times the left or right input button is pressed. Each time a button is pressed, the global count variable is increased by 1 and displayed on the screen.
+This example counts how many times you press the `A` button. 
+Each time you press the button, the [LED screen](/device/screen) shows the `count` variable getting bigger.
 
 ```blocks
 let count = 0
@@ -19,16 +23,23 @@ input.onButtonPressed(Button.A, () => {
 })
 ```
 
-### Example: roll a dice
+### Example: roll dice
 
-This example generates a random number when you press the B input button, and then displays a random die image:
+This example shows a number from 1 to 6 when you press the `B` button.
 
 ```blocks
 input.onButtonPressed(Button.B, () => {
-    let dice = Math.random(6)
+    let dice = Math.random(6) + 1
     basic.showNumber(dice)
 })
 ```
+
+### ~hint
+
+This program adds a `1` to `random(6)` so the numbers on the dice will come out right.
+Otherwise, sometimes they would show a `0`.
+
+### ~
 
 ### Lessons
 
@@ -36,5 +47,5 @@ input.onButtonPressed(Button.B, () => {
 
 ### See also
 
-[button is pressed](/reference/input/button-is-pressed), [forever](/reference/basic/forever)
+[button is pressed](/reference/input/button-is-pressed), [forever](/reference/basic/forever), [random](/reference/math/math)
 

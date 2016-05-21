@@ -2,17 +2,15 @@
 
 ### @parent blocks/language
  
-Repeat code a fixed number of times.
+Run part of the program the number of times you say.
+
+### Example: Count to 4
+
+This program will show the numbers 0, 1, 2, 3, and 4 one after another on the LED screen.
 
 ```blocks
 for(let i = 0; i < 5; ++i) {
-}
-```
-
-The Block Editor *for* loop is different than the Touch Develop *for* loop in an important way. The above for loop will iterate *five* times, with the loop variable *i* taking on values 0, 1, 2, 3, and 4. The Touch Develop for loop shown below will iterate four times:
-
-```
-for (let k = 0; k < 4; k++) {
+basic.showNumber(i)
 }
 ```
 
@@ -22,5 +20,5 @@ for (let k = 0; k < 4; k++) {
 
 ### See also
 
-[while](/reference/loops/while), [if](/reference/logic/if)
+[while](/reference/loops/while), [if](/reference/logic/if), [show number](/reference/basic/show-number)
 

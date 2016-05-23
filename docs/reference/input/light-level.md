@@ -1,8 +1,14 @@
 # Light Level
 
-Gets the light level from ``0`` (dark) to ``255`` (bright). The light is measured by using various LEDs from the screen.
+Find the light level where you are.
+The light level ``0`` means darkness and ``255`` means bright light. 
+The BBC micro:bit measures the light around it by using some of the
+LEDs on the [LED screen](/device/screen).
 
-This function will return ``0`` on the first call to this method, a light reading will be available after the display has activated the light sensor for the first time.
+The first time you use it, this function will say ``0``.
+After that, it will say the real light level.
+This is because the light sensor (the part that can find the light level)
+has to be turned on first.
 
 ```sig
 input.lightLevel();
@@ -10,11 +16,26 @@ input.lightLevel();
 
 ### Returns
 
-* [Number](/reference/types/number) -  light level from ``0`` (dark) to ``255`` (bright).
+* a [Number](/reference/types/number) that means a light level from ``0`` (dark) to ``255`` (bright).
+
+### Example: show light level
+
+When you press button `B` on the microbit, this
+program shows the light level
+on the [LED screen](/device/screen).
+
+```blocks
+input.onButtonPressed(Button.B, () => {
+    let level = input.lightLevel()
+    basic.showNumber(level)
+})
+```
 
 ### Example: chart light level
 
-Use `plot bar chart` to visual the influence of various light source on the light level.
+This program shows the light level with a [bar chart](/reference/led/plot-bar-graph) on the micro:bit screen.
+If you carry the micro:bit around to different places with different light levels,
+the bar chart will change.
 
 ```blocks
 basic.forever(() => {

@@ -1,6 +1,7 @@
 # Plot Bar Graph
 
-Displays a vertical bar graph based on the value and high value.
+Displays a bar graph of the numbers you say.
+A bar graph is a kind of chart that shows numbers as lines with different lengths.
 
 ```sig
 led.plotBarGraph(2, 20);
@@ -8,9 +9,17 @@ led.plotBarGraph(2, 20);
 
 ### Parameters
 
-* value: [Number](/reference/types/number) , high : [Number](/reference/types/number) displays a vertical bar graph based on the value and high value
+* `value` is a [Number](/reference/types/number) that means what you are measuring or trying to show. For example, if you are measuring the temperature of ice with the BBC micro:bit, `value` might be 0 because the temperature might be 0 degrees centigrade.
+* `high` is a [Number](/reference/types/number) that means the highest possible number that the `value` parameter can be. This number is also the tallest that the lines in the bar chart can be.
 
 ### Example: chart acceleration
+
+This program shows a bar graph of the [acceleration](/reference/input/acceleration) 
+in the `x` direction of the micro:bit.
+The micro:bit's `x` direction is from left to right (or right to left).
+The more you speed up moving the micro:bit in this direction,
+the taller the lines in the bar graph will be, 
+until they are as tall as the parameter `high` says they can be.
 
 ```blocks
 basic.forever(() => {

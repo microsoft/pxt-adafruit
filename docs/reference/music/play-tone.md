@@ -1,10 +1,10 @@
 # Play Tone
 
-Plays a music tone through pin ``P0`` for the given duration.
+Play a musical tone through pin ``P0`` of the micro:bit for as long as you say.
 
 ## Simulator
 
-Simulation of this function is available in many, but not all browsers.
+This function only works on the micro:bit and in some browsers.
 
 ```sig
 music.playTone(440, 120)
@@ -12,10 +12,13 @@ music.playTone(440, 120)
 
 ### Parameters
 
-* `frequency` : [Number](/reference/types/number) - the frequency of the note (in Herz)
-* `ms`: [Number](/reference/types/number) - the duration of the note (milliseconds)
+* `Hz` is the [Number](/reference/types/number) of Hertz (the frequency, how high or low the tone is).
+* `ms` is the [Number](/reference/types/number) of milliseconds that the tone lasts.
 
 ## Example
+
+This example stores the musical note C in the variable `freq`.
+Next, it plays that note for 1000 milliseconds (one second).
 
 ```blocks
 let freq = music.noteFrequency(Note.C)

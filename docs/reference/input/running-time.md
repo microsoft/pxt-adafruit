@@ -1,6 +1,6 @@
 # Running Time
 
-Get the number of milliseconds elapsed since the script began. 1,000 milliseconds = 1 second.
+Find how long it has been since the program started.
 
 ```sig
 input.runningTime();
@@ -8,15 +8,20 @@ input.runningTime();
 
 ### Returns
 
-* [Number](/reference/types/number)
+* the [Number](/reference/types/number) of milliseconds since the program started.
+(One second is 1000 milliseconds.)
 
 ### Example: elapsed time
 
-This code gets the elapsed time since the start of the program execution and displays it on the screen.
+When you press button `B` on the microbit, this
+program finds the number of milliseconds since the program started
+and shows it on the [LED screen](/device/screen).
 
 ```blocks
-let now = input.runningTime()
-basic.showNumber(now)
+input.onButtonPressed(Button.B, () => {
+    let now = input.runningTime()
+    basic.showNumber(now)
+})
 ```
 
 ### Lessons

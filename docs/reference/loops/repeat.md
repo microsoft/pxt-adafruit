@@ -1,19 +1,16 @@
 # Repeat
 
-Repeat code a preset number of times.
+Run part of the program the number of times you say.
 
 ### Block Editor
 
 ![](/static/mb/blocks/contents-0.png)
 
-### Touch Develop
+### Lessons
 
-Touch Develop has no `repeat` loop. Instead you can used a for loop
+[looper](/lessons/looper)
 
-```
-for (let i = 0; i < 5; i++) {
-}
-```
+### See also
 
-The loop above will repeat five (5) times.
+[for](/reference/loops/for), [while](/reference/loops/while), [if](/reference/logic/if), [show number](/reference/basic/show-number)
 

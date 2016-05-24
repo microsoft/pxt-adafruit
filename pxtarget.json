@@ -63,6 +63,9 @@
         "aspectRatio": 1.22
     },
     "compileService": {
+        "yottaTarget": "bbc-microbit-classic-gcc",
+        "yottaCorePackage": "pxt-microbit-core",
+        "githubCorePackage": "microsoft/pxt-microbit-core",
         "gittag": "v0.1.10",
         "serviceId": "ws"
     },

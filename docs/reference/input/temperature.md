@@ -1,7 +1,5 @@
 # Temperature
 
-Get the ambient temperature (degree Celsius °C). The temperature is inferred from the the surface temperature of the various chips on the micro:bit.
-
 Find the temperature where you are. The temperature is measured in Celsius (metric).
 The micro:bit can find the temperature nearby by checking how hot its computer chips are.
 

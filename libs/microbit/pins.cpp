@@ -128,7 +128,7 @@ namespace pins {
      * @param name analog pin to set period to
      * @param micros period in micro seconds. eg:20000
      */
-    //% help=pins/analog-set-period weight=23
+    //% help=pins/analog-set-period weight=23 blockGap=8
     //% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros" 
     void analogSetPeriod(AnalogPin name, int micros) { 
         PINOP(setAnalogPeriodUs(micros));
@@ -148,10 +148,10 @@ namespace pins {
     }
     
     /**
-    * Gets the duration of the last pulse in micro-seconds. This function should be called from a ``onPulse`` handler.
+    * Gets the duration of the last pulse in micro-seconds. This function should be called from a ``onPulsed`` handler.
     */
     //% help=pins/pulse-micros
-    //% blockId=pins_pulse_duration block="pulse duration (us)"
+    //% blockId=pins_pulse_duration block="pulse duration (µs)"
     //% weight=21
     int pulseDuration() {
         return pxt::lastEvent.timestamp;

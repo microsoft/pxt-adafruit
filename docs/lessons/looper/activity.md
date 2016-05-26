@@ -1,13 +1,5 @@
 # looper blocks activity
 
-Display a series of numbers with a for loop. 
-
-### ~avatar avatar
-
-### @video td/videos/looper-0
-
-### ~
-
 Welcome! This activity will teach how to display a series of numbers for a for loop. Let's get started!
 
 Let's create a for loop where `0` is the loop's starting value, `i` is the index variable, and `5` is the ending value. The index variable `i` starts at 0 and increases by 1 each time through the loop. The loop ends when `i = 5`.

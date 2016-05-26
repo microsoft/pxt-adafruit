@@ -15,8 +15,6 @@ input.onButtonPressed(Button.A, () => {
 
 ### Challenge 1
 
-### @video td/videos/guess-the-number-2
-
 When button `B` is pressed, we want to clear the screen. This will make it so users can play your game over and over again! Add an event handler to handle this case.
 
 ```blocks

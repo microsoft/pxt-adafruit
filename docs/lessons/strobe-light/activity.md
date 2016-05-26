@@ -4,7 +4,7 @@ Develop shapes with a for loop.
 
 ### ~avatar avatar
 
-### @video td/videos/strobe-light-0
+
 
 Welcome! This guided tutorial will teach how to develop shapes with a for loop. Let's get started!
 

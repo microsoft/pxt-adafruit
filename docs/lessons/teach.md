@@ -22,7 +22,7 @@ The lesson plan maps to the Progressions Pathways, Computing Curriculum, and Qui
 
 Expand your knowledge of programming with lots of great step-by-step activities. All the lessons come with instructions that will drive the students to a complete, functional code. These activities are very directive to make sure that students keep progressing. When the activities are over, additional challenges are given to advance code through printed instructions. An activity contains supporting videos as shown with the [blink activity](/lessons/blink/activity).
 
-### @video td/videos/blink-0
+
 
 3) Quiz
 

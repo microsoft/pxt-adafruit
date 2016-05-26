@@ -2,8 +2,37 @@
 
 ### ~avatar avatar
 
-### @video td/videos/rock-paper-scissors-0
+```sim
+input.onGesture(Gesture.Shake, () => {
+    let img = Math.random(3)
+    if (img == 0) {
+        basic.showLeds(`
+            # # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # #
+            `)
 
+    } else if (img == 1) {
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            . . . . .
+            `)
+    } else {
+        basic.showLeds(`
+            # # . . #
+            # # . # .
+            . . # . .
+            # # . # .
+            # # . . #
+            `)
+    }
+})
+```
 In this project, you will build a Rock Paper Scissors game with the BBC micro:bit.
 You can play the game with a friend who has it on a micro:bit.
 You can also play it with friends who are just using their hands.
@@ -135,16 +164,14 @@ input.onGesture(Gesture.Shake, () => {
             `)
     } else {
         basic.showLeds(`
-            . . . # #
+            # # . . #
             # # . # .
             . . # . .
             # # . # .
-            . . . # #
+            # # . . #
             `)
     }
 })
-
-
 
 ```
 

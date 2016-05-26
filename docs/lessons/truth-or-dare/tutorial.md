@@ -2,7 +2,7 @@
 
 ### ~avatar avatar
 
-### @video td/videos/truth-or-dare-0
+
 
 The *Truth or dare!* game works as follows: a player spins the BBC micro:bit on the table. 
 When the micro:bit stops spinning, the player pointed by the arrow (displayed on screen) must press the button "A" 

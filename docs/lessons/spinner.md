@@ -2,7 +2,7 @@
 
 a spin the BBC micro:bit game with the input on shake.
 
-### @video td/videos/spinner-0
+
 
 ## Topic
 

@@ -4,7 +4,7 @@ A classic game against the micro:bit.
 
 ### ~avatar avatar
 
-### @video td/videos/rock-paper-scissors-0
+
 
 Welcome! This tutorial will help you create a game of rock paper scissors with the micro:bit. Let's get started!
 

@@ -4,8 +4,6 @@ Control images with a variable.
 
 ### ~avatar avatar
 
-### @video td/videos/flashing-heart-0
-
 In this activity, you will learn how to blink an image on the LED screen.
 
 ### ~

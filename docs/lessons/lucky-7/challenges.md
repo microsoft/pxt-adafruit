@@ -21,8 +21,6 @@ basic.pause(500)
 
 ### Challenge 2
 
-### @video td/videos/lucky-7-1-2
-
 What about other multiples of 7? Let's display the next multiple of 7 on the screen!
 
 ```blocks

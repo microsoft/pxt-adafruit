@@ -19,7 +19,7 @@ for (let i = 0; i < 5; i++) {
 
 ### Challenge 1
 
-### @video td/videos/strobe-light-1
+
 
 Make the LEDs light up faster by changing the **pause** from 200 to 100 milliseconds:
 
@@ -36,7 +36,7 @@ for (let i = 0; i < 5; i++) {
 
 ### Challenge 2
 
-### @video td/videos/strobe-light-2
+
 
 Make the board light up by rows instead of by columns by swapping the `i` and `j` variables in `plot(i, j)`.
 
@@ -53,7 +53,7 @@ for (let i = 0; i < 5; i++) {
 
 ### Challenge 3
 
-### @video td/videos/strobe-light-ultimate
+
 
 Now that all the LEDs are lit up, let's make them turn off by reversing the strobe light pattern! You can use `unplot` to turn off a single LED.
 

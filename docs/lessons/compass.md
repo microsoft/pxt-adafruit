@@ -2,8 +2,6 @@
 
 create a die on the BBC micro:bit.
 
-### @video td/videos/compass-0
-
 ## Topic
 
 If (Conditionals)

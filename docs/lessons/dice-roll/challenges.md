@@ -1,10 +1,10 @@
-# die roll challenges
+# dice roll challenges
 
-Create a die on the micro:bit. 
+Create a dice on the micro:bit. 
 
 ## Before we get started
 
-Complete the following [guided tutorial](/lessons/die-roll/activity), your code should look like this:
+Complete the following [guided tutorial](/lessons/dice-roll/activity), your code should look like this:
 
 ```blocks 
 input.onGesture(Gesture.Shake, () => {
@@ -62,7 +62,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### Challenge 1
 
-Modify the line of code with `pick random` so that only number 1-4 can appear on the die.
+Modify the line of code with `pick random` so that only number 1-4 can appear on the dice.
 
 
 ```blocks 
@@ -121,7 +121,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### Challenge 2
 
-Let's make a trick die! Modify the line of code with `pick random` so that only numbers 3-6 can appear on the die. Also note that we need to ensure `roll = 0` when only 1 dot is shown on the BBC micro:bit.
+Let's make a trick dice! Modify the line of code with `pick random` so that only numbers 3-6 can appear on the dice. Also note that we need to ensure `roll = 0` when only 1 dot is shown on the BBC micro:bit.
 
 ```blocks 
 input.onGesture(Gesture.Shake, () => {

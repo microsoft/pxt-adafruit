@@ -1,8 +1,6 @@
-# die roll lesson
+# dice roll lesson
 
-create a die on the BBC micro:bit.
-
-### @video td/videos/die-roll-0
+Create a  dice on the BBC micro:bit.
 
 ## Topic
 
@@ -10,10 +8,10 @@ If (Conditionals)
 
 ## Quick Links
 
-* [activity](/lessons/die-roll/activity)
-* [challenges](/lessons/die-roll/challenges)
-* [quiz](/lessons/die-roll/quiz)
-* [quiz answers](/lessons/die-roll/quiz-answers)
+* [activity](/lessons/dice-roll/activity)
+* [challenges](/lessons/dice-roll/challenges)
+* [quiz](/lessons/dice-roll/quiz)
+* [quiz answers](/lessons/dice-roll/quiz-answers)
 
 ## Prior learning/place of lesson in scheme of work
 

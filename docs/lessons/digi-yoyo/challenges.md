@@ -40,8 +40,6 @@ while (count > 0) {
 
 ### Challenge 2
 
-### @video td/videos/digi-yoyo-1-2
-
 Inside of the while loop, let's add `pause->(1000)` so that we have a pause between each number as it's counting down. Also, let's show `count`!
 
 

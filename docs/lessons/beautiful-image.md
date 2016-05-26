@@ -1,8 +1,6 @@
 # beautiful image lesson
 
-display beautiful images on the BBC micro:bit.
-
-### @video td/videos/beautiful-image-0
+Display beautiful images on the BBC micro:bit.
 
 ## Topic
 

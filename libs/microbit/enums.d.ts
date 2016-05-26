@@ -280,6 +280,27 @@ declare namespace led {
     }
 declare namespace pins {
 }
+
+
+    declare enum SerialPin {
+    P0 = 7,  // MICROBIT_ID_IO_P0
+    P1 = 8,  // MICROBIT_ID_IO_P1
+    P2 = 9,  // MICROBIT_ID_IO_P2
+    P8 = 15,  // MICROBIT_ID_IO_P8
+    P12 = 19,  // MICROBIT_ID_IO_P12
+    P13 = 20,  // MICROBIT_ID_IO_P13
+    P14 = 21,  // MICROBIT_ID_IO_P14
+    P15 = 22,  // MICROBIT_ID_IO_P15
+    P16 = 23,  // MICROBIT_ID_IO_P16
+    }
+
+
+    declare enum BaudRate {
+    //% block=115200
+    BaudRate115200 = 115200,
+    //% block=9600
+    BaudRate9600 = 9600,
+    }
 declare namespace serial {
 }
 

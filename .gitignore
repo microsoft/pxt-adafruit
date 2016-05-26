@@ -1,4 +1,6 @@
 node_modules
+yotta_modules
+yotta_targets
 built
 typings
 tmp

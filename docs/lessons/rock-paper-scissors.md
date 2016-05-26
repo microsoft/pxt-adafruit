@@ -2,7 +2,7 @@
 
 a game against the BBC micro:bit.
 
-### @video td/videos/rock-paper-scissors-0
+
 
 ## Topic
 

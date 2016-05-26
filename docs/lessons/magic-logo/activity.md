@@ -4,8 +4,6 @@ Show an image that points up when the logo is up.
 
 ### ~avatar avatar
 
-### @video td/videos/magic-logo-0
-
 Welcome! This tutorial will help you display an arrow pointing toward the logo! Let's get started.
 
 ### ~

@@ -4,8 +4,6 @@ Generate and show a beautiful image.
 
 ### ~avatar avatar
 
-### @video td/videos/beautiful-image-0
-
 Let's learn how to show an image on the LED screen.
 
 ### ~

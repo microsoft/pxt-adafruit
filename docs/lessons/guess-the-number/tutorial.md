@@ -2,8 +2,6 @@
 
 ### ~avatar avatar
 
-### @video td/videos/guess-the-number-0
-
 This tutorial will help you create a guess the number game! Let's get started!
 
 ### ~

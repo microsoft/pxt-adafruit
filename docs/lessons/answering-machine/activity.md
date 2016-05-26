@@ -4,7 +4,6 @@ Learn to create an answering machine on the micro:bit
 
 ### ~avatar avatar
 
-### @video td/videos/answering-machine-0
 
 Let's learn how to create an answering machine!
 

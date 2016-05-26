@@ -4,8 +4,6 @@ Guess the number with math random.
 
 ### ~avatar avatar
 
-### @video td/videos/guess-the-number-0
-
 Welcome! This tutorial will help you create a guess the number game! Let's get started!
 
 ### ~

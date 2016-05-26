@@ -27,7 +27,7 @@ basic.forever(() => {
 
 ### Challenge 1
 
-### @video td/videos/snowflake-fall-1
+
 
 To finalize our snowflake fall, let's add a different snowflake pattern.
 

@@ -14,7 +14,7 @@ basic.forever(() => {
 ```
 ### Challenge 1
 
-### @video td/videos/zoomer-2
+
 
 We'll modify the code to display the `x` acceleration if the `A` button is pressed. For that, we need to store `acceleration (x)` in a new variable `ax` and use a `button (A) is pressed` to detect if the button is pressed.
 

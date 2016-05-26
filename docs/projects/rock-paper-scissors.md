@@ -4,16 +4,20 @@
 
 ### @video td/videos/rock-paper-scissors-0
 
-In this project, you will build a rock-paper-scissor game with the BBC micro:bit
+In this project, you will build a Rock Paper Scissors game with the BBC micro:bit.
+You can play the game with a friend who has it on a micro:bit.
+You can also play it with friends who are just using their hands.
+
 ### ~
 
 ## Materials needed
 
-* your BBC micro:bit, that's it!
+* Your BBC micro:bit -- that's it!
 
-## 1
+## Step 1: Getting started
 
-We want the micro:bit to choose rock, paper, or scissors when it is shaken. Let's begin by creating an on shake condition so the micro:bit will run code when it is shaken.
+We want the micro:bit to choose rock, paper, or scissors when you shake it.
+Try creating an ``on shake`` block so when you shake the micro:bit, it will run part of a program.
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
@@ -21,50 +25,41 @@ input.onGesture(Gesture.Shake, () => {
 })
 ```
 
-Next, create a variable and store pick random number from 0 to 2.  On shake, a number will be randomly picked from 0-2. We will randomly display an image based on the random number returned.
+Next, when you shake the micro:bit, it should pick a random number from `0` to `2`
+and store it in the variable.
+
+Add a ``set`` block with a variable. Then add a ``pick random`` block,
+and store the random number in the variable,
+like this:
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
-    let img = Math.random(3)
+    let weapon = Math.random(3)
 })
 
 ```
 
-The micro:bit will look like it's showing 1 frame of the image by displaying the whole image when pick random is equal to 0. We can help the micro:bit randomly decide which image to use by pick random. 
-The micro:bit will randomly pick the image to display with show LEDs and the ``pick random`` block.
-
-```blocks
-input.onGesture(Gesture.Shake, () => {
-    let img = Math.random(3)
-    if (img == 2) {
-        basic.showLeds(`
-            # # # # #
-            # . . . #
-            # . . . #
-            # . . . #
-            # # # # #
-            `)
-
-    }
-})
-```
-
-## 2
-
-The micro:bit will look like it's showing 1 frame of the image by displaying the whole image when pick random is equal to 1. 
-We can help the micro:bit randomly decide which image to use by pick random. 
-The micro:bit will randomly pick the image to display with show LEDs and the pick random function.
-
-### ~avatar avatar
-
-Click on the blue gearwheel to open the ``if`` editor. Drag and drop the ``else if`` block in the ``if`` block to add it.
-
+### ~hint
+No one can predict random numbers. That's what makes them great for Rock Paper Scissors!
 ### ~
 
+Each possible number these blocks can make (`0`, `1`, or `2`) means a different picture.
+We will show the right picture for that number on the LED screen.
+
+
+## Step 2: Picking paper
+
+Put an ``if`` block after the ``let`` block that checks whether
+`weapon` is `0`. Make sure the ``if`` block has an ``else if`` part
+and an ``else`` part.
+
+Next, add a ``show leds`` block that shows a
+picture of a piece of paper:
+
 ```blocks
 input.onGesture(Gesture.Shake, () => {
-    let img = Math.random(3)
-    if (img == 0) {
+    let weapon = Math.random(3)
+    if (weapon == 0) {
         basic.showLeds(`
             # # # # #
             # . . . #
@@ -72,28 +67,26 @@ input.onGesture(Gesture.Shake, () => {
             # . . . #
             # # # # #
             `)
+    } else if (false) {
 
-    } else if (img == 1) {
-        basic.showLeds(`
-            . . . . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . . . .
-            `)
+    } else {
+
     }
 })
 ```
 
-## 3
+## Step 3: A random rock
 
-The micro:bit will look like it's showing 1 frame of the image by displaying the whole image when pick random is not equal to 0 and not equal to 1. 
-We can help the micro:bit randomly decide which image to use by pick random. The micro:bit will randomly pick the image to display with show LEDs and the pick random function.
+Now we are going to add a new picture for the micro:bit to show
+when another random number comes up.
+
+Make the ``else if`` part check if the variable `weapon` is `1`.
+Then add a ``show leds`` block with a picture of a rock.
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
-    let img = Math.random(3)
-    if (img == 0) {
+    let weapon = Math.random(3)
+    if (weapon == 0) {
         basic.showLeds(`
             # # # # #
             # . . . #
@@ -102,7 +95,37 @@ input.onGesture(Gesture.Shake, () => {
             # # # # #
             `)
 
-    } else if (img == 1) {
+    } else if (weapon == 1) {
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            . . . . .
+            `)
+    } else {
+
+    }
+})
+```
+
+## Step 4: Suddenly scissors
+
+Add a ``show leds`` block with a picture of scissors to the ``else`` part:
+
+```blocks
+input.onGesture(Gesture.Shake, () => {
+    let weapon = Math.random(3)
+    if (weapon == 0) {
+        basic.showLeds(`
+            # # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # #
+            `)
+
+    } else if (weapon == 1) {
         basic.showLeds(`
             . . . . .
             . # # # .
@@ -121,13 +144,27 @@ input.onGesture(Gesture.Shake, () => {
     }
 })
 
+
+
 ```
 
-Your game is ready!
+### ~hint
 
-## 4
+You don't need to check if `weapon` is `2` because `2` is the only number left out of `0`, `1`, and `2`.
+That's why you can use an ``else`` instead of an ``else if``.
 
-When the button ``A`` is pressed, increment the score by 1. You can select ``Game`` drawer then add ``change score by 1``.
+### ~
+
+Your game is ready! Have fun!
+
+## Step 5: Are you the greatest?
+
+Here is a way you can make your Rock Paper Scissors game better.
+When button ``A`` is pressed, 
+the micro:bit will add `1` to your score.
+
+Open the ``Game`` drawer, and then add the block ``change score by 1`` to your program,
+like this:
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
@@ -136,9 +173,9 @@ input.onButtonPressed(Button.A, () => {
 
 ```
 
-## 5
+## Step 6: Prove you're the greatest!
 
-After incrementing the score, display the total number of wins you have.
+After your micro:bit can add `1` to the score, show how many wins you have.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
@@ -147,10 +184,13 @@ input.onButtonPressed(Button.A, () => {
     basic.showNumber(game.score())
 })
 ```
-## 6
+## Step 7: Staying honest
 
-You have successfully tracked and displayed the number of wins on the micro:bit! However, what about losses? 
-Use the Game drawer to change score by -1 when button `B` is pressed. Here are all the blocks you will need:
+Success! Your micro:bit can track wins!
+But what about losses? 
+Use the ``Game`` drawer to subtract `1` from your score when you press button `B`. 
+
+Here are all the blocks you will need:
 
 ```shuffle
 input.onButtonPressed(Button.B, () => {
@@ -160,3 +200,7 @@ input.onButtonPressed(Button.B, () => {
 })
 ```
 
+## Step 8: Hacking Rock Paper Scissors
+
+How else can you make your game better?
+Ever hear of [Rock Paper Scissors Spock Lizard](https://en.wikipedia.org/wiki/Rock-paper-scissors#Additional_weapons)?

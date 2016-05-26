@@ -2,8 +2,37 @@
 
 ### ~avatar avatar
 
-### @video td/videos/rock-paper-scissors-0
+```sim
+input.onGesture(Gesture.Shake, () => {
+    let img = Math.random(3)
+    if (img == 0) {
+        basic.showLeds(`
+            # # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # #
+            `)
 
+    } else if (img == 1) {
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            . . . . .
+            `)
+    } else {
+        basic.showLeds(`
+            # # . . #
+            # # . # .
+            . . # . .
+            # # . # .
+            # # . . #
+            `)
+    }
+})
+```
 In this project, you will build a rock-paper-scissor game with the BBC micro:bit
 ### ~
 
@@ -112,11 +141,11 @@ input.onGesture(Gesture.Shake, () => {
             `)
     } else {
         basic.showLeds(`
-            . . . # #
+            # # . . #
             # # . # .
             . . # . .
             # # . # .
-            . . . # #
+            # # . . #
             `)
     }
 })

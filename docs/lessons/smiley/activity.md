@@ -4,7 +4,7 @@ Learn to design a blinking image.
 
 ### ~avatar avatar
 
-### @video td/videos/smiley-0
+
 
 Welcome! This tutorial will help you make a smiley face blink. Let's get started!
 

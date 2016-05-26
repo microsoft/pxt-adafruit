@@ -34,7 +34,7 @@
 * [Rock Paper Scissors](/lessons/rock-paper-scissors), create the classic game of rock paper scissors with if statement
 * [Truth or Dare](/lessons/truth-or-dare), a game that forces each player to reveal a secret or do something funny with if statement
 * [Spinner](/lessons/spinner), spin the arrow with multiple if statements
-* [Die Roll](/lessons/die-roll), spin with more if statements
+* [Dice Roll](/lessons/dice-roll), spin with more if statements
 * [Looper](/lessons/looper), display a series of numbers with a for loop index
 * [Strobe Light](/lessons/strobe-light), develop shapes with a nested for loops
 * [Temperature](/lessons/temperature), get the ambient temperature (degree Celsius °C)

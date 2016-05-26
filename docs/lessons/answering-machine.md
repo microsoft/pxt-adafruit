@@ -1,8 +1,6 @@
 # answering machine blocks lesson
 
-create an answering machine on the BBC micro:bit #docs
-
-### @video td/videos/answering-machine-0
+Create an answering machine on the BBC micro:bit
 
 ## Topic
 
@@ -25,11 +23,7 @@ Learn how to creating a message with a **string**, `show string` to write your m
 ```cards
 basic.showString('Hi!')
 input.onButtonPressed(Button.A, () => {})
-
 ```
-
-
-* **on button pressed** : [read more...](/reference/input/on-button-pressed)
 
 ## Objectives
 

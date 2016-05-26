@@ -1,13 +1,5 @@
 # game counter activity
 
-Turn an LED on and off with forever loop
-
-### ~avatar avatar
-
-### @video td/videos/counter-0
-
-### ~
-
 Have you ever tried to create a game counter? The concept is fairly simply: increase the game `score` with `on button pressed` .
 
 Let's start by adding `on button (A) pressed` will run each time the user presses A. Let's add a line of code that increments `score` by `1`.

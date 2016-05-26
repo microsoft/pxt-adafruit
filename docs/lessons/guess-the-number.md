@@ -2,8 +2,6 @@
 
 Learn to create a random number with input from button A.
 
-### @video td/videos/guess-the-number-0
-
 ## Topic
 
 Math - Pick Random

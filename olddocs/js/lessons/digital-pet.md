@@ -2,8 +2,6 @@
 
 a display of pet images for the BBC micro:bit.
 
-### @video td/videos/digital-pet-0
-
 ## Topic
 
 Functions

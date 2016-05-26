@@ -1,8 +1,8 @@
-# die roll quiz answers
+# dice roll quiz answers
 
-Create a die when the BBC micro:bit is shaken 
+Create a dice when the BBC micro:bit is shaken 
 
-These are the answers to the [die roll quiz](/lessons/die-roll/quiz).
+These are the answers to the [dice roll quiz](/lessons/dice-roll/quiz).
 
 ## 1. Create a variable named 'roll' that will be randomly assigned to a number between 0 and 5.
 

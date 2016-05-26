@@ -2,8 +2,6 @@
 
 change the brightness of the BBC micro:bit.
 
-### @video td/videos/night-light-0
-
 ## Topic
 
 Set Brightness

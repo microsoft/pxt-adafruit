@@ -45,8 +45,6 @@ input.onPinPressed(TouchPin.P0, () => {
 
 ### Challenge 3
 
-### @video td/videos/love-meter-3
-
 **If** the rating is between 4 and 7, display the text "MEDIOCRE!" **else** display the text "MATCHED!"
 
 ```blocks

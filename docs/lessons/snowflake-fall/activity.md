@@ -4,7 +4,7 @@ design a blinking rectangle animation.
 
 ### ~avatar avatar
 
-### @video td/videos/snowflake-fall-0
+
 
 Welcome! This tutorial will teach how design a **snowfall animation**. Let's get started!
 

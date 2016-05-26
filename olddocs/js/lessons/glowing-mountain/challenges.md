@@ -4,8 +4,6 @@ These challenges will help you display a glowing image that fades in and out at 
 
 **Challenge 0**
 
-### @video vimeo/134649269
-
 [This guided tutorial](https://test.microbit.co.uk/td/lessons/glowing-mountain/tutorial) will teach you how to create a mountain that fades out.
 
 ```
@@ -37,9 +35,7 @@ basic.pause(1000) // ***
 
 * Run the code to see if it works as expected.
 
-**Challenge 2**
-
-### @video vimeo/134674595
+### Challenge 2
 
 After the pause, let's add `led->fade in(2000)` so that we can create a glowing effect.
 

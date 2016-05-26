@@ -4,8 +4,6 @@ Show a number on the LED screen.
 
 ### ~avatar avatar
 
-### @video td/videos/lucky-7-0
-
 Let's learn how to show the lucky number 7 on the LED screen.
 
 ### ~

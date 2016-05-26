@@ -54,7 +54,7 @@ input.onButtonPressed(Button.A, () => {
 
 ### Challenge 2
 
-### @video td/videos/smiley-2
+
 
 Now, we want to show a frowny face when this button is pressed. Let's show the LEDs.
 

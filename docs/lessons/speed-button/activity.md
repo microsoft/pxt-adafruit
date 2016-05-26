@@ -63,7 +63,7 @@ input.onButtonPressed(Button.A, () => {
 
 ### Challenge 3
 
-### @video td/videos/speed-button-3
+
 
 Now let's display if the user won or lost. To do so, we need to check the status of `fastPress` when the game is finished, and then show the correct message.
 
@@ -91,7 +91,7 @@ input.onButtonPressed(Button.A, () => {
 
 ### Challenge 4
 
-### @video td/videos/speed-button-4
+
 
 Modify the code to change the difficulty level. Increasing the time will make it easier, while decreasing the time will make it harder. For example, changing the 5000 milliseconds to 6000 milliseconds will make the difficulty easier.
 

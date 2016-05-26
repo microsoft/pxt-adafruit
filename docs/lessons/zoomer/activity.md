@@ -4,7 +4,7 @@ Measure the acceleration on the micro:bit in the "z" direction.
 
 ### ~avatar avatar
 
-### @video td/videos/zoomer-0
+
 
 ### ~
 

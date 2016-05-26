@@ -50,8 +50,6 @@ input.onGesture(Gesture.Shake, () => {
 
 ### Challenge 2
 
-### @video td/videos/flipping-bird-2
-
 Inside of that `if` statement you created in challenge 1, add `basic->plot image()` and display an upside down flying bird.
 
 ```

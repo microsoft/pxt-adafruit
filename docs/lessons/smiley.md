@@ -2,7 +2,7 @@
 
 design a blinking image lesson #docs
 
-### @video td/videos/smiley-0
+
 
 ## Topic 
 

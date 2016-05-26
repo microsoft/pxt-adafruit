@@ -575,6 +575,18 @@ declare namespace serial {
     //% weight=87
     //% blockId=serial_writestring block="serial write string %text" shim=serial::writeString
     function writeString(text: string): void;
+
+    /**
+     * Dynamically configuring the serial instance to use pins other than USBTX and USBRX.
+     * @param tx the new transmission pins
+     * @param rx the new reception pin
+     * @param baud the new baud rate. eg: 115200
+     */
+    //% weight=10
+    //% help=serial/redirect
+    //% blockId=serial_redirect block="serial redirect to|TX %tx|RX %rx|at baud rate %rate"
+    //% blockExternalInputs=1 shim=serial::redirect
+    function redirect(tx: SerialPin, rx: SerialPin, rate: BaudRate): void;
 }
 
 

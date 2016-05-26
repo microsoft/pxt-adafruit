@@ -438,6 +438,10 @@ namespace pxsim.serial {
         let b = board();
         b.bus.listen(DAL.MICROBIT_ID_SERIAL, DAL.MICROBIT_SERIAL_EVT_DELIM_MATCH, handler);
     }
+
+    export function redirect(tx: number, rx: number, rate: number) {
+        // TODO?
+    }
 }
 
 

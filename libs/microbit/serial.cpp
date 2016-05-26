@@ -1,5 +1,24 @@
 #include "ksbit.h"
 
+enum class SerialPin {
+    P0 = MICROBIT_ID_IO_P0,
+    P1 = MICROBIT_ID_IO_P1,
+    P2 = MICROBIT_ID_IO_P2,
+    P8 = MICROBIT_ID_IO_P8,
+    P12 = MICROBIT_ID_IO_P12,
+    P13 = MICROBIT_ID_IO_P13,
+    P14 = MICROBIT_ID_IO_P14,
+    P15 = MICROBIT_ID_IO_P15,
+    P16 = MICROBIT_ID_IO_P16
+};
+
+enum class BaudRate {
+  //% block=115200
+  BaudRate115200 = 115200,
+  //% block=9600
+  BaudRate9600 = 9600
+};
+
 //% weight=2 color=30
 namespace serial {
     // note that at least one // followed by % is needed per declaration!
@@ -33,5 +52,20 @@ namespace serial {
     void onDataReceived(StringData* delimiters, Action body) {
       uBit.serial.eventOn(ManagedString(delimiters));
       registerWithDal(MICROBIT_ID_SERIAL, MICROBIT_SERIAL_EVT_DELIM_MATCH, body);
+    }
+    
+    /**
+    * Dynamically configuring the serial instance to use pins other than USBTX and USBRX.
+    * @param tx the new transmission pins
+    * @param rx the new reception pin
+    * @param baud the new baud rate. eg: 115200
+    */
+    //% weight=10
+    //% help=serial/redirect
+    //% blockId=serial_redirect block="serial redirect to|TX %tx|RX %rx|at baud rate %rate"
+    //% blockExternalInputs=1
+    void redirect(SerialPin tx, SerialPin rx, BaudRate rate) {
+      uBit.serial.redirect((PinName)tx, (PinName)rx);
+      uBit.serial.baud((int)rate);
     }
 }

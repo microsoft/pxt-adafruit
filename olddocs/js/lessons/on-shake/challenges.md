@@ -4,8 +4,6 @@ These challenges will allow you to create and display a flipping image of a bird
 
 ### Challenge 0
 
-### @video vimeo/134449611
-
 Greetings! This [guided tutorial](/lessons/flipping-bird/tutorial) will begin to show you how to flip a bird.
 
 ```

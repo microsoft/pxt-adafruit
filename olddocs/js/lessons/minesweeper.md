@@ -2,8 +2,6 @@
 
 A game that tests your memory for placing a LED mine then finding the hidden LED mine.
 
-### @video td/videos/minesweeper-0
-
 ## Topic
 
 Global Variables

@@ -1,8 +1,6 @@
 # jailbreak lesson
 
-break out of a counting loop by pressing button "A".
-
-### @video td/videos/jailbreak-0
+Break out of a counting loop by pressing button "A".
 
 ## Topic
 

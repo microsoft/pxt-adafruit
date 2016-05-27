@@ -37,8 +37,6 @@ basic.pause(1000) // ***
 
 ### Challenge 2
 
-### @video td/videos/glowing-sword-2
-
 After the pause, let's add `led->fade in(2000)` so that we can create a glowing effect.
 
 ```

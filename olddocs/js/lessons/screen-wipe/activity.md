@@ -4,8 +4,6 @@ Clear the screen by pressing buttons on the BBC micro:bit.
 
 ### ~avatar avatar
 
-### @video td/videos/screen-wipe-0
-
 This activity will teach how to clear the screen by pressing button ``A`` on the BBC micro:bit.
 
 ### ~

@@ -19,8 +19,6 @@ for (let i = 0; i < 6; i++) {
 
 ### Challenge 1
 
-### @video td/videos/looper-1
-
 What if we want to count up to lucky number 7 instead? Let's do that by changing the ending value to `8` instead of `6`.
 
 ```
@@ -33,8 +31,6 @@ for (let i1 = 0; i1 < 8; i1++) {
 * Run the program now to see your changes.
 
 ### Challenge 2
-
-### @video td/videos/looper-2
 
 What about 9? Let's do that by changing the ending value to `10`.
 
@@ -49,8 +45,6 @@ for (let i2 = 0; i2 < 10; i2++) {
 
 ### Challenge 3
 
-### @video td/videos/looper-3
-
 Now let's start counting from `3` instead! Our for loop will always start at `0` so we simply add `3` to the `i` variable when passing it to `basic->show number`.
 
 ```
@@ -63,8 +57,6 @@ for (let i3 = 0; i3 < 8; i3++) {
 Run it on the simulator!
 
 ### Challenge 4
-
-### @video td/videos/looper-4
 
 Now, let's **count down from 9**. Change the line `basic->show number(i + 3, 150)` to `basic->show number(9 - i, 150)`.
 

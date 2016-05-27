@@ -1,8 +1,6 @@
 # line of fire lesson
 
-create a game that relies on precise instincts and timing reflexes #if #.
-
-### @video td/videos/timing-game-0
+Create a game that relies on precise instincts and timing reflexes #if #.
 
 ## Topic
 

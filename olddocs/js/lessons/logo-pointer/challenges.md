@@ -2,9 +2,7 @@
 
 These challenges will help you show arrows that point which way the logo is pointing! #docs
 
-**Challenge 0**
-
-### @video vimeo/134638098
+## Challenge 0
 
 This [guided tutorial](/zysycw) will help you display an arrow pointing the direction the logo is oriented!
 
@@ -42,9 +40,7 @@ input.onLogoDown(() => {
 }) // ***
 ```
 
-**Challenge 2**
-
-### @video vimeo/134639918
+## Challenge 2
 
 Now we need to display the arrow!
 

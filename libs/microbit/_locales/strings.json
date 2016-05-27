@@ -1,4 +1,6 @@
 {
+  "Math.randomBoolean": "Generates a `true` or `false` value randomly, just like flipping a coin.",
+  "String.fromCharCode": "Make a string from the given ASCII character code.",
   "basic": "Provides access to basic micro:bit functionality.",
   "basic.clearScreen": "Turn off all LEDs",
   "basic.forever": "Repeats the code forever in the background. On each iteration, allows other codes to run.",
@@ -76,10 +78,14 @@
   "pins.i2cWriteNumber": "Write one number to a 7-bit I2C address.",
   "pins.map": "Re-maps a number from one range to another. That is, a value of ``from low`` would get mapped to ``to low``, a value of ``from high`` to ``to high``, values in-between to values in-between, etc.",
   "pins.onPulsed": "Configures this pin to a digital input, and generates events where the timestamp is the duration that this pin was either ``high`` or ``low``.",
-  "pins.pulseDuration": "Gets the duration of the last pulse in micro-seconds. This function should be called from a ``onPulse`` handler.",
+  "pins.pulseDuration": "Gets the duration of the last pulse in micro-seconds. This function should be called from a ``onPulsed`` handler.",
   "pins.servoSetPulse": "Configures this IO pin as an analog/pwm output, configures the period to be 20 ms, and sets the pulse width, based on the value it is given **microseconds** or `1/1000` milliseconds.",
   "pins.servoWritePin": "Writes a value to the servo, controlling the shaft accordingly. On a standard servo, this will set the angle of the shaft (in degrees), moving the shaft to that orientation. On a continuous rotation servo, this will set the speed of the servo (with ``0`` being full-speed in one direction, ``180`` being full speed in the other, and a value near ``90`` being no movement).",
   "serial": "Reading and writing data over a serial connection.",
+  "serial.readLine": "Reads a line of text from the serial port.",
+  "serial.redirect": "Dynamically configuring the serial instance to use pins other than USBTX and USBRX.",
   "serial.writeLine": "Prints a line of text to the serial",
+  "serial.writeNumber": "Prints a numeric value to the serial",
+  "serial.writeString": "Sends a piece of text through Serial connection.",
   "serial.writeValue": "Writes a ``name: value`` pair line to the serial."
 }

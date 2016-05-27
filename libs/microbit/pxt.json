@@ -26,7 +26,8 @@
         "pins.ts",
         "serial.cpp",
         "serial.ts",
-        "buffer.cpp"
+        "buffer.cpp",
+        "_locales/fr/strings.json"
     ],
     "public": true,
     "dependencies": {},

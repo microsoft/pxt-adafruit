@@ -1,32 +1,38 @@
 # Send String
 
-Broadcasts a string data packet to other micro:bits connected via ``radio``.
 
-## Important Security Consideration
 
-The functions in the ``radio`` namespace allow the BBC micro:bit to communicate with other micro:bits.
-
-This API does not contain any form of encryption, authentication or authorization. It's purpose is solely for use as a teaching aid to demonstrate how simple communications operates, and to provide a sandpit through which learning can take place.
-
-For serious applications, BLE should be considered a substantially more secure alternative.
+Sends a string to other micro:bits in the area connected by radio.
 
 ```sig
-radio.sendString("Hello world!")
+radio.sendString("Hello!")
 ```
 
 ### Parameters
 
-* msg - a string to be transmitted.
+* `text` is a [String](/reference/types/string) to send by radio.
 
-### Examples
+### Example: Two-way radio
 
-Broadcasts the provided string to other micro:bits.
+If you load this program onto two or more micro:bits, you can send a code word from one of them to the others by pressing button `A`.
+The other micro:bits will receive the code word and then show it.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
-    radio.sendString("Mr. Watson, come here, I want to see you.")
+    radio.sendString("Codeword: TRIMARAN")
+    basic.showString("SENT");
 })
+
+radio.onDataReceived(() => {
+    basic.showString(radio.receiveString());
+});
 ```
+
+### ~hint
+
+A radio that can both transmit and receive is called a _transceiver_.
+
+### ~
 
 ### See also
 

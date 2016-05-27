@@ -1,14 +1,6 @@
 # Receive String
 
-Reads the next radio packet if any and returns the first string.
-
-## Important Security Consideration
-
-The functions in the ``radio`` namespace allow the BBC micro:bit to communicate with other micro:bits.
-
-This API does not contain any form of encryption, authentication or authorization. It's purpose is solely for use as a teaching aid to demonstrate how simple communications operates, and to provide a sandpit through which learning can take place.
-
-For serious applications, BLE should be considered a substantially more secure alternative.
+Find the next string sent by `radio` from another micro:bit.
 
 ```sig
 radio.receiveString()
@@ -16,11 +8,11 @@ radio.receiveString()
 
 ### Return value
 
-* the first [string](/reference/types/string) of the packet if any. ```""``` otherwise.
+* the first [string](/reference/types/string) that was sent. If no string was sent, then this function returns an empty (blank) string.
 
-### Examples
+### Example: Simple receiver
 
-Read the string broadcasted by other micro:bits and display it.
+Show the string sent by another micro:bit.
 
 ```blocks
 radio.onDataReceived(() => {
@@ -28,7 +20,34 @@ radio.onDataReceived(() => {
 });
 ```
 
-A simple program to send whether you are happy, or sad over ```radio```, using the A or B button to select an emotion.
+### Example: Two-way radio
+
+If you load this program onto two or more micro:bits, you can send a code word from one of them to the others by pressing button `A`.
+The other micro:bits will receive the code word and then show it.
+
+```blocks
+input.onButtonPressed(Button.A, () => {
+    radio.sendString("Codeword: TRIMARAN")
+    basic.showString("SENT");
+})
+
+radio.onDataReceived(() => {
+    basic.showString(radio.receiveString());
+});
+```
+
+### ~hint
+
+A radio that can both transmit and receive is called a _transceiver_.
+
+### ~
+
+### Example: Mood radio
+
+This is a simple program to send whether you are happy or sad over ```radio```.
+Use the `A` or `B` button to select an emotion.
+
+This program will also receive your friend's mood.
 
 ```blocks
 let data: string = "";
@@ -64,4 +83,4 @@ radio.onDataReceived(() => {
 
 ### See also
 
-[send string](/reference/input/send-string), [on data received](/reference/radio/on-data-received)
+[send string](/reference/radio/send-string), [on data received](/reference/radio/on-data-received)

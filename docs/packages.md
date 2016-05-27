@@ -10,5 +10,12 @@ to a microbit.
 
 ## Finding libraries
 
+From the editor, the user clicks on **More** then **Add Package** and searches for the package. 
+
+To see the list of packages, click on **More** then **Show Files** to see the project file list.
+
+To remove a package, click on the garbage button in the file list next to the package.
+
 ## Publishing libraries
 
+Packages can be published from the pxt command line. We are still sorting out the details.

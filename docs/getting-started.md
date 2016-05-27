@@ -168,4 +168,4 @@ input.onPinPressed(TouchPin.P0, () => {
 
 ### Your turn now!
 
-Use the scree, buttons, gestures, pins to create a fun game using the micro:bit.
+Use the screen, buttons, gestures, pins to create a fun game using the micro:bit.

@@ -1,7 +1,7 @@
 # micro:bit target for PXT
 
 This target allow to program a [BBC micro:bit](https://www.microbit.co.uk/) using 
-[Microsoft Programming Experience Toolkit](https://github.com/Microsoft/pxt).
+PXT ([Microsoft Programming Experience Toolkit](https://github.com/Microsoft/pxt)).
 
 * [Try it live](https://m.pxt.io)
 
@@ -28,17 +28,26 @@ Run this command to open a local web server:
 ```
 pxt serve
 ```
+If the local server opens in the wrong browser, make sure to copy the URL containing the local token. 
+Otherwise, the editor will not be able to load the projects.
+
+If you need modify the `.cpp` files, turn on yotta compilation with the ``-yt`` flag:
+```
+pxt serve -yt
+```
+
 To make sure you're running the latest tools, run
 ```
 npm update
 ```
+
 
 More instructions at https://github.com/Microsoft/pxt#running-a-target-from-localhost 
 
 ## Universal Windows App
 
 The Windows 10 app is a [Universal Windows Hosted Web App](https://microsoftedge.github.io/WebAppsDocs/en-US/win10/CreateHWA.htm)
-that wraps m.pxt.io and provides additional features.
+that wraps ``m.pxt.io`` and provides additional features.
 
 ### Building
 

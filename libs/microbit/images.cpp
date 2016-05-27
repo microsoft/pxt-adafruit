@@ -35,17 +35,17 @@ namespace ImageMethods {
 
     /**
      * Shows an frame from the image at offset ``x offset``.
-     * @param xOffset TODO
+     * @param xOffset column index to start displaying the image
      */
-    //% help=images/show-image weight=80 async
-    //% BUGblockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8
-    void showImage(Image i, int xOffset = 0) {
-      uBit.display.print(MicroBitImage(i), -xOffset, 0, 0);
+    //% help=images/show-image weight=80 blockNamespace=images
+    //% blockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8
+    void showImage(Image sprite, int xOffset) {
+      uBit.display.print(MicroBitImage(sprite), -xOffset, 0, 0);
     }
     
     /**
      * Draws the ``index``-th frame of the image on the screen.
-     * @param xOffset TODO
+     * @param xOffset column index to start displaying the image
      */
     //% help=images/plot-frame weight=80
     void plotFrame(Image i, int xOffset) {
@@ -58,9 +58,9 @@ namespace ImageMethods {
      * @param frameOffset x offset moved on each animation step, eg: 5, 1, -1
      * @param interval time between each animation step in milli seconds, eg: 200
      */
-    //% help=images/show-image weight=79 async
-    //% BUGblockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8
-    void scrollImage(Image id, int frameOffset = 0, int interval = 200) {
+    //% help=images/show-image weight=79 async blockNamespace=images
+    //% blockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8
+    void scrollImage(Image id, int frameOffset, int interval) {
       MicroBitImage i(id);
       if (i.getWidth() <= 5)
         showImage(id, 0);
@@ -80,7 +80,7 @@ namespace ImageMethods {
     /**
      * Sets a specific pixel brightness at a given position
      */
-    //% help=
+    //%
     void setPixelBrightness(Image i, int x, int y, int value) {
       MicroBitImage(i).setPixelValue(x, y, value);
     }
@@ -89,7 +89,7 @@ namespace ImageMethods {
     /**
      * Gets the pixel brightness ([0..255]) at a given position
      */
-    //% help=
+    //%
     int pixelBrightness(Image i, int x, int y) {
       int pix = MicroBitImage(i).getPixelValue(x, y);
       if (pix < 0) return 0;
@@ -108,7 +108,7 @@ namespace ImageMethods {
     /**
      * Gets the height in rows (always 5)
      */
-    //% shim=
+    //%
     int height(Image i) {
         return i->height;
     }
@@ -119,7 +119,7 @@ namespace ImageMethods {
      * @param y TODO
      * @param value TODO
      */
-    //% help=functions/set-pixel
+    //% help=images/set-pixel
     void setPixel(Image i, int x, int y, bool value) {
         setPixelBrightness(i, x, y, value ? 255 : 0);
     }
@@ -129,7 +129,7 @@ namespace ImageMethods {
      * @param x TODO
      * @param y TODO
      */
-    //% help=functions/pixel
+    //% help=images/pixel
     bool pixel(Image i, int x, int y) {
         return pixelBrightness(i, x, y) > 0;
     }
@@ -139,7 +139,7 @@ namespace ImageMethods {
      * Shows a particular frame of the image strip.
      * @param frame TODO
      */
-    //% weight=70 help=functions/show-frame
+    //% weight=70 help=images/show-frame
     void showFrame(Image i, int frame) {
         showImage(i, frame * 5);
     }

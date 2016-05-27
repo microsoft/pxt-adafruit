@@ -32,15 +32,15 @@ declare interface Image {
 
     /**
      * Shows an frame from the image at offset ``x offset``.
-     * @param xOffset TODO
+     * @param xOffset column index to start displaying the image
      */
-    //% help=images/show-image weight=80 async
-    //% BUGblockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8 xOffset.defl=0 shim=ImageMethods::showImage
-    showImage(xOffset?: number): void;
+    //% help=images/show-image weight=80 blockNamespace=images
+    //% blockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8 shim=ImageMethods::showImage
+    showImage(xOffset: number): void;
 
     /**
      * Draws the ``index``-th frame of the image on the screen.
-     * @param xOffset TODO
+     * @param xOffset column index to start displaying the image
      */
     //% help=images/plot-frame weight=80 shim=ImageMethods::plotFrame
     plotFrame(xOffset: number): void;
@@ -50,9 +50,9 @@ declare interface Image {
      * @param frameOffset x offset moved on each animation step, eg: 5, 1, -1
      * @param interval time between each animation step in milli seconds, eg: 200
      */
-    //% help=images/show-image weight=79 async
-    //% BUGblockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8 frameOffset.defl=0 interval.defl=200 shim=ImageMethods::scrollImage
-    scrollImage(frameOffset?: number, interval?: number): void;
+    //% help=images/show-image weight=79 async blockNamespace=images
+    //% blockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8 shim=ImageMethods::scrollImage
+    scrollImage(frameOffset: number, interval: number): void;
 
     /**
      * Sets all pixels off.
@@ -63,13 +63,13 @@ declare interface Image {
     /**
      * Sets a specific pixel brightness at a given position
      */
-    //% help= shim=ImageMethods::setPixelBrightness
+    //% shim=ImageMethods::setPixelBrightness
     setPixelBrightness(x: number, y: number, value: number): void;
 
     /**
      * Gets the pixel brightness ([0..255]) at a given position
      */
-    //% help= shim=ImageMethods::pixelBrightness
+    //% shim=ImageMethods::pixelBrightness
     pixelBrightness(x: number, y: number): number;
 
     /**
@@ -81,7 +81,7 @@ declare interface Image {
     /**
      * Gets the height in rows (always 5)
      */
-    //% shim= shim=ImageMethods::height
+    //% shim=ImageMethods::height
     height(): number;
 
     /**
@@ -90,7 +90,7 @@ declare interface Image {
      * @param y TODO
      * @param value TODO
      */
-    //% help=functions/set-pixel shim=ImageMethods::setPixel
+    //% help=images/set-pixel shim=ImageMethods::setPixel
     setPixel(x: number, y: number, value: boolean): void;
 
     /**
@@ -98,14 +98,14 @@ declare interface Image {
      * @param x TODO
      * @param y TODO
      */
-    //% help=functions/pixel shim=ImageMethods::pixel
+    //% help=images/pixel shim=ImageMethods::pixel
     pixel(x: number, y: number): boolean;
 
     /**
      * Shows a particular frame of the image strip.
      * @param frame TODO
      */
-    //% weight=70 help=functions/show-frame shim=ImageMethods::showFrame
+    //% weight=70 help=images/show-frame shim=ImageMethods::showFrame
     showFrame(frame: number): void;
 }
 

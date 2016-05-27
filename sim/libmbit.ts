@@ -187,7 +187,7 @@ namespace pxsim.basic {
         if (interval < 0) return;
 
         let leds = createImageFromString(x.toString());
-        if (x < 0 || x >= 10) ImageMethods.scrollImage(leds, interval, 1);
+        if (x < 0 || x >= 10) ImageMethods.scrollImage(leds, 1, interval);
         else showLeds(leds, interval * 5);
     }
 
@@ -198,7 +198,7 @@ namespace pxsim.basic {
             pause(interval * 5);
         } else {
             if (s.length == 1) showLeds(createImageFromString(s), interval * 5)
-            else ImageMethods.scrollImage(createImageFromString(s + " "), interval, 1);
+            else ImageMethods.scrollImage(createImageFromString(s + " "), 1, interval);
         }
     }
 
@@ -211,8 +211,8 @@ namespace pxsim.basic {
         runtime.queueDisplayUpdate()
     }
 
-    export function showAnimation(leds: Image, interval: number = 400): void {
-        ImageMethods.scrollImage(leds, interval, 5);
+    export function showAnimation(leds: Image, interval: number): void {
+        ImageMethods.scrollImage(leds, 5, interval);
     }
 
     export function plotLeds(leds: Image): void {
@@ -674,10 +674,11 @@ namespace pxsim.ImageMethods {
         return i.get(x, y);
     }
 
-    export function scrollImage(leds: Image, interval: number, stride: number): void {
+    export function scrollImage(leds: Image, stride: number, interval: number): void {
         if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);
+        if (stride == 0) stride = 1;
 
-        let cb = getResume()
+        let cb = getResume();
         let off = stride > 0 ? 0 : leds.width - 1;
         let display = board().image;
 

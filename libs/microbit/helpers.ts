@@ -10,7 +10,7 @@ namespace Math {
      * Generates a `true` or `false` value randomly, just like flipping a coin.
      */
     //% blockId=logic_random block="pick random true or false"
-    //% help=math/random-boolean color=210
+    //% help=math/random-boolean color=230
     export function randomBoolean(): boolean {
         return Math.random(2) == 0;
     }

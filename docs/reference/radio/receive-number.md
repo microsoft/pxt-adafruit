@@ -1,26 +1,15 @@
 # Receive Number
 
-Reads the next radio packet if any and returns the first number.
-
-## Important Security Consideration
-
-The functions in the ``radio`` namespace allow the BBC micro:bit to communicate with other micro:bits.
-
-This API does not contain any form of encryption, authentication or authorization. It's purpose is solely for use as a teaching aid to demonstrate how simple communications operates, and to provide a sandpit through which learning can take place.
-
-For serious applications, BLE should be considered a substantially more secure alternative.
-
-```sig
-radio.receiveNumber()
-```
+Receives the next number sent by a micro:bit in the same ``radio`` group.
 
 ### Return value
 
-* the first number [number](/reference/types/number) of the packet if any. `0` otherwise.
+* the first  [number](/reference/types/number) that the micro:bit received. If it did not receive any numbers, this function will return `0`.
 
-### Examples
+### Example: Simple number receiver
 
-Read the number broadcasted by other micro:bits.
+This example receives the number broadcasted another micro:bit and shows it
+as a bar graph.
 
 ```blocks
 radio.onDataReceived(() => {
@@ -28,7 +17,42 @@ radio.onDataReceived(() => {
 })
 ```
 
+### Example: Light level receiver 
+
+This example shows the light level from the [light level sender example](/reference/input/send-number)
+as a number.
+
+```blocks
+radio.setGroup(99)
+basic.forever(() => {
+    let level = radio.receiveNumber()
+    basic.showNumber(level)
+})
+```
+
+### Example: Mailbot
+
+This example receives the light level from the [light level sender example](/reference/input/send-number)
+and shows a text string like **ALERT** if the light level becomes much brighter.
+To find when the mail arrives, you can put the light level sender in your mailbox and it will
+tell you when someone opens the box. You can try this with a normal
+box too, like a present for a friend.
+
+```blocks
+radio.setGroup(99)
+let max = 0
+basic.forever(() => {
+    let level = radio.receiveNumber()
+    if (level > max) {
+        max = level
+    }
+    if (max > 10) {
+        basic.showString("ALERT")
+    }
+})
+```
+
 ### See also
 
-[receive number](/reference/input/receive-number), [on data received](/reference/radio/on-data-received)
+[send number](/reference/input/send-number), [on data received](/reference/radio/on-data-received)
 

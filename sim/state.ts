@@ -42,14 +42,14 @@ namespace pxsim {
         constructor(private runtime: Runtime) { }
 
         listen(id: number, evid: number, handler: RefAction) {
-            let k = id + ':' + evid;
+            let k = id + ":" + evid;
             let queue = this.queues[k];
             if (!queue) queue = this.queues[k] = new EventQueue<number>(this.runtime);
             queue.handler = handler;
         }
 
         queue(id: number, evid: number, value: number = 0) {
-            let k = id + ':' + evid;
+            let k = id + ":" + evid;
             let queue = this.queues[k];
             if (queue) queue.push(value);
         }
@@ -122,7 +122,7 @@ namespace pxsim {
 
         broadcast(msg: number) {
             Runtime.postMessage(<SimulatorEventBusMessage>{
-                type: 'eventbus',
+                type: "eventbus",
                 id: DAL.MES_BROADCAST_GENERAL_ID,
                 eventid: msg,
                 power: this.power,
@@ -551,12 +551,12 @@ namespace pxsim {
                 default: theme = pxsim.micro_bit.randomTheme();
             }
 
-            console.log('setting up microbit simulator')
+            console.log("setting up microbit simulator")
             let view = new pxsim.micro_bit.MicrobitBoardSvg({
                 theme: theme,
                 runtime: runtime
             })
-            document.body.innerHTML = ''; // clear children
+            document.body.innerHTML = ""; // clear children
             document.body.appendChild(view.element);
 
             return Promise.resolve();
@@ -581,22 +581,27 @@ namespace pxsim {
         }
 
         readSerial() {
-            let v = this.serialIn.shift() || '';
+            let v = this.serialIn.shift() || "";
             return v;
         }
 
-        serialOutBuffer: string = '';
+        kill() {
+            super.kill();
+            AudioContextManager.stop();
+        }
+
+        serialOutBuffer: string = "";
         writeSerial(s: string) {
             for (let i = 0; i < s.length; ++i) {
                 let c = s[i];
                 this.serialOutBuffer += c;
-                if (c == '\n') {
+                if (c == "\n") {
                     Runtime.postMessage(<SimulatorSerialMessage>{
-                        type: 'serial',
+                        type: "serial",
                         data: this.serialOutBuffer,
                         id: runtime.id
                     })
-                    this.serialOutBuffer = ''
+                    this.serialOutBuffer = ""
                     break;
                 }
             }

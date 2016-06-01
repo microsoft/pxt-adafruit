@@ -446,7 +446,7 @@ svg.sim.grayscale {
 }
 @keyframes sim-theme-glow-animation {  
     from { opacity: 1; }
-    to   { opacity: 0.8; }
+    to   { opacity: 0.75; }
 }
 
 .sim-flash {

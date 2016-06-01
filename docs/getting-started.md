@@ -106,8 +106,8 @@ input.onButtonPressed(Button.B, () => {
 
 Now try to unscramble these blocks in the editor so that the micro:bit
 shows **YES** when you press button `A` and **NO** when when you press
-button `B`.  All of the blocks under `on button A pressed` or `on
-button B pressed` should run when you press that button.
+button `B`.  All of the blocks under `on button A pressed` or
+`on button B pressed` should run when you press that button.
 
 ```shuffle
 input.onButtonPressed(Button.A, () => {

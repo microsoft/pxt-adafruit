@@ -55,7 +55,8 @@ input.onGesture(Gesture.Shake, () => {
 ```
 
 Next, when you shake the micro:bit, it should pick a random number from `0` to `2`
-and store it in the variable.
+and store it in the variable `weapon`. (This variable is named `weapon` because 
+rock, paper, and scissors are the weapons you use to battle your friends!)
 
 Add a ``set`` block with a variable. Then add a ``pick random`` block,
 and store the random number in the variable,
@@ -230,4 +231,4 @@ input.onButtonPressed(Button.B, () => {
 ## Step 8: Hacking Rock Paper Scissors
 
 How else can you make your game better?
-Ever hear of [Rock Paper Scissors Spock Lizard](https://en.wikipedia.org/wiki/Rock-paper-scissors#Additional_weapons)?
+Ever hear of [Rock Paper Scissors Spock Lizard](http://www.samkass.com/theories/RPSSL.html)?

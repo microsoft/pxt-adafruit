@@ -94,12 +94,16 @@
                 "path": "/about"
             },
             {
-                "name": "Lessons",
-                "path": "/lessons"
+                "name": "Getting Started",
+                "path": "/getting-started"
             },
             {
                 "name": "Reference",
                 "path": "/reference"
+            },
+            {
+                "name": "Lessons",
+                "path": "/lessons"
             },
             {
                 "name": "Device",

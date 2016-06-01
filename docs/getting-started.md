@@ -2,10 +2,6 @@
 
 Are you ready to build cool BBC micro:bit programs? For each challenge, reorder the blocks to recreate the program.
 
-## Open [https://m.pxt.io](/) and create a new **Blocks Editor** project
-
-## Basic
-
 ### Show leds
 
 Use the blocks below to draw a figure on the screen. You can redo the smiley face or try something else!
@@ -22,7 +18,7 @@ basic.showLeds(`
 
 To transfer your code to the BBC micro:bit, 
 * connect your micro:bit to the computer using the USB cable
-* click on **Download**
+* click on **Compile**
 * drag&drop the **.hex** file into the **MICROBIT** drive
 * wait till the yellow light is done blinking!
 
@@ -47,6 +43,11 @@ Show one image after the other to create an animation by snapping them together.
         `)
 ```
 
+To transfer your code to the BBC micro:bit, 
+* connect your micro:bit to the computer using the USB cable
+* click on **Compile**
+* drag&drop the **.hex** file into the **MICROBIT** drive
+* wait till the yellow light is done blinking!
 
 ### Repeat forever
 
@@ -76,8 +77,6 @@ basic.forever(() => {
 
 Use the blocks ``show leds`` and ``forever``
 to create your own custom awesome animation!
-
-## Inputs
 
 ### Button A and B
 

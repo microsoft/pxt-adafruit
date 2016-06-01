@@ -1,10 +1,14 @@
 # Getting started
 
-Are you ready to build cool BBC micro:bit programs? For each challenge, reorder the blocks to recreate the program.
+Are you ready to build cool BBC micro:bit programs?
 
-### Show leds
+Here are some challenges for you.  Unscramble the blocks in the editor
+to make real programs that work!
 
-Use the blocks below to draw a figure on the screen. You can redo the smiley face or try something else!
+### Show LEDs
+
+Use the blocks below to draw something.  You can draw another smiley
+face, or try something else.
 
 ```shuffle
 basic.showLeds(`
@@ -16,15 +20,16 @@ basic.showLeds(`
     `)
 ```
 
-To transfer your code to the BBC micro:bit, 
-* connect your micro:bit to the computer using the USB cable
-* click on **Compile**
-* drag&drop the **.hex** file into the **MICROBIT** drive
-* wait till the yellow light is done blinking!
+To move your program from your computer to the BBC micro:bit:
+* Connect your micro:bit to the computer with the USB cable.
+* Click **Compile**.
+* Drag and drop the new file whose name ends in **.hex** into the **MICROBIT** window.
+* Wait until the yellow light stops blinking!
 
-### Show animation Forever
+### Show Animation Forever
 
-Show one image after the other to create an animation by snapping them together.
+Show one image after another by snapping blocks together to create an
+animation (like a cartoon)!
 
 ```blocks
     basic.showLeds(`
@@ -43,17 +48,20 @@ Show one image after the other to create an animation by snapping them together.
         `)
 ```
 
-To transfer your code to the BBC micro:bit, 
-* connect your micro:bit to the computer using the USB cable
-* click on **Compile**
-* drag&drop the **.hex** file into the **MICROBIT** drive
-* wait till the yellow light is done blinking!
+To move your program from your computer to the BBC micro:bit:
+* Connect your micro:bit to the computer with the USB cable.
+* Click **Compile**.
+* Drag and drop the new file whose name ends in **.hex** into the **MICROBIT** window.
+* Wait until the yellow light stops blinking!
 
-### Repeat forever
+### Repeat Forever
 
-Use the ``forever`` block to repeat your code and have a continuous animation.
+Make an animation that never stops with the ``forever`` block.
 
-Unsuffle the blocks to create a happy, unhappy animation.... or changes the image to make it your own!
+Unscramble these blocks in the editor to make an animation that first
+shows a happy face, then an unhappy face, then a happy face, and never
+stops.  You can also change the pictures to make your own animation.
+
 ```shuffle
 basic.forever(() => {
     basic.showLeds(`
@@ -75,21 +83,32 @@ basic.forever(() => {
 
 ### Your turn now!
 
-Use the blocks ``show leds`` and ``forever``
-to create your own custom awesome animation!
+Make your own awesome animation with the ``show leds`` and ``forever``
+blocks.
+
+#### ~hint
+
+You can make your animation longer if you use more than two pictures.
+
+#### ~
 
 ### Button A and B
 
-Unshuffle the blocks so that the micro:bit shows "YES" when button A is pressed, and "NO" when B is pressed. 
-The key idea is that all the blocks nested under `on button ... pressed` will run when that button is pressed.
+In the editor, unscramble the blocks below so that the micro:bit shows
+**YES** when you press button `A` and **NO** when when you press
+button `B`.  All of the blocks under `on button A pressed` or `on
+button B pressed` should run when you press that button. For example,
+this program will show the word `banana` on the LED screen when you
+press `B`.
 
 ```blocks
-input.onButtonPressed(Button.A, () => {
-    basic.showString("AAAAA");
+input.onButtonPressed(Button.B, () => {
+    basic.showString("banana");
 });
 ```
 
-Try to unshuffle those blocks:
+Now try to unscramble these blocks in the editor:
+
 ```shuffle
 input.onButtonPressed(Button.A, () => {
     basic.showString("YES");
@@ -101,9 +120,13 @@ input.onButtonPressed(Button.B, () => {
 
 ### Shake
 
-Using the data from the **accelerometer**, it is possible to detect that the BBC micro:bit is being shaken.
+You can find when someone is shaking the BBC micro:bit with the
+**accelerometer** (it finds whether the micro:bit is speeding up or
+slowing down).
 
-Unshuffle the code to display a frownie when shaken.
+Unscramble these blocks in the editor to show a frownie
+when someone shakes the micro:bit.
+
 ```shuffle
 input.onGesture(Gesture.Shake, () => {
     basic.showLeds(`
@@ -115,12 +138,18 @@ input.onGesture(Gesture.Shake, () => {
 });
 ```
 
-### Tilting
+### Tilting with gestures
 
-Aside from shake, it is also possible to detect tilt left and right, logo up and down or face up and down.
-Let's build a rock paper scissors game where you turn the micro:bit left to display paper, right to display scissors and down to display rock.
+You can also find when someone is tilting the micro:bit left or right,
+face up or face down, and logo up or logo down (the logo is the yellow
+oval picture at the top of the board).
 
-Unshuffle and try this code on the micro:bit itself!
+Try to build a Rock Paper Scissors game where you turn the micro:bit
+left to show paper, right to show scissors, and down to show rock.
+
+Unscramble these blocks in the editor and try this program on the
+micro:bit itself!
+
 ```shuffle
 input.onGesture(Gesture.TiltLeft, () => {
     basic.showLeds(`
@@ -150,10 +179,16 @@ input.onGesture(Gesture.TiltRight, () => {
 
 ### Pins
 
-It is possible to use the pins (big metal bar at the bottom of the board) as button. Hold the ``GND`` button with one hand and press the ``0`` pin 
-(called ``P0``) with the other hand to trigger a pin pressed.
+You can also use the pins as buttons.
+(The pins are the holes in the big metal bar at the bottom
+of the board.)
 
-Unshuffle the blocks to display a smiley when pin ``P0`` is pressed.
+Hold the ``GND`` button with one hand and touch the ``0`` pin (called
+``P0``) with your other hand to tell the micro:bit you're pressing it.
+
+Unscramble the blocks in the editor to show a smiley when you press
+pin ``P0``.
+
 ```shuffle
 input.onPinPressed(TouchPin.P0, () => {
     basic.showLeds(`
@@ -167,4 +202,5 @@ input.onPinPressed(TouchPin.P0, () => {
 
 ### Your turn now!
 
-Use the screen, buttons, gestures, pins to create a fun game using the micro:bit.
+Use the screen, buttons, gestures, and pins to make your own fun game
+with the BBC micro:bit!

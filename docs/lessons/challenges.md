@@ -1,6 +1,6 @@
 # blocks - challenges
 
-Extra stuff for the Block Editor - an introduction to GPIO #docs
+Extra stuff for the Block Editor - an introduction to GPIO
 
 ## Before we get started
 

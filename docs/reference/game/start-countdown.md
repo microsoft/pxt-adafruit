@@ -1,7 +1,5 @@
 # Start Countdown
 
-The game library #docs
-
 The game library supports simple single-player time-based games. The general goal of a game will be to achieve a top score before time runs out of time.
 
 ## Block Editor

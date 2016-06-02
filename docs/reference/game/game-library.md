@@ -1,18 +1,10 @@
 # Game Library
 
-The game library #docs
-
 The game library supports simple single-player time-based games. The player has a **sprite**, number of **lives** and a **score**. The game has a sprite, number of **levels** and a **countdown clock**.  The general goal of a game will be to move the sprite and achieve a top score before time runs out or the number of lives goes to zero.
-
-## Block Editor
-
-![](/static/mb/game-library/pic0.png)
-
-## KindScript
 
 The code below shows a simple game where the user gets to press the button ``A`` as much times as possible in 10 seconds.
 
-```
+```blocks
 input.onButtonPressed(Button.A, () => {
     game.addScore(1)
 })

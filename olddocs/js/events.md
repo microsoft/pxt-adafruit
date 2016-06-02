@@ -1,7 +1,5 @@
 # Events Library
 
-The events library #docs
-
 The functions in the events namespace allow the BBC micro:bit to communicate with a separate (remote) device, such as a smartphone, over Bluetooth (Smart).  The set of supported events will depend on the remote device and the BBC micro:bit apps available for the remote device. The events accessible from Touch Develop are listed below.
 
 ### Remote control

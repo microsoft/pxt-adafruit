@@ -1,6 +1,6 @@
 # prank wifi challenges
 
-create a fake wifi app to trick your friends. #docs
+create a fake wifi app to trick your friends.
 
 ## Before we get started
 

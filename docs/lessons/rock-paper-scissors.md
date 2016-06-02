@@ -1,8 +1,6 @@
 # rock paper scissors lesson
 
-a game against the BBC micro:bit.
-
-
+A game against the BBC micro:bit.
 
 ## Topic
 

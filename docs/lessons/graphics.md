@@ -1,6 +1,6 @@
 # blocks - rendering graphics
 
-An introduction to graphics for the Block Editor. #docs
+An introduction to graphics for the Block Editor.
 
 ## Before we get started
 

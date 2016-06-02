@@ -1,6 +1,6 @@
 # The micro:bit - a reactive system
 
-The micro:bit is a reactive system. #docs
+The micro:bit is a reactive system.
 
 ### Computing systems
 

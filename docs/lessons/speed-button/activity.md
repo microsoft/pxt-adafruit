@@ -1,6 +1,6 @@
 # speed button challenges
 
-Coding challenges for the speed button tutorial. #docs
+Coding challenges for the speed button tutorial.
 
 ## Before we get started
 

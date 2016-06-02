@@ -1,6 +1,6 @@
 # game of chance blocks lesson
 
-create an answering machine on the BBC micro:bit #docs
+create an answering machine on the BBC micro:bit
 
 ## Topic
 

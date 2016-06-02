@@ -1,6 +1,6 @@
 # blocks - loops
 
-An introduction to Loops for the Block Editor. #docs
+An introduction to Loops for the Block Editor.
 
 We may want to handle the user’s input multiple times or remain waiting for their input for a long time. We use loops to make sure that our code runs multiple times. These can be found in the **Loops** drawer.
 

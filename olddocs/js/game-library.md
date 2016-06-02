@@ -1,7 +1,5 @@
 # Game Library
 
-The game library #docs
-
 The game library supports simple single-player time-based games. The player has a number of **lives** and a **score**. The game has a number of **levels** and a **countdown clock**.  The general goal of a game will be to achieve a top score before time runs out or the number of lives goes to zero.
 
 ## Touch Develop

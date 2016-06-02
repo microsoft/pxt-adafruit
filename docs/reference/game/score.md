@@ -1,20 +1,10 @@
 # Score
 
-The game library #docs
-
 The game library supports simple single-player games. The player has a **score**.
-
-## Block Editor
-
-The code below shows a simple game where the user gets to press the button ``A`` and adds 1 point to score that will be displayed on the BBC micro:bit screen
-
-![](/static/mb/game-library/add-point-to-score-0.png)
-
-## KindScript
 
 The code below shows a simple game where the user gets to press the button ``A`` as much times as possible in 10 seconds.
 
-```
+```blocks
 input.onButtonPressed(Button.A, () => {
     game.addScore(1)
 })

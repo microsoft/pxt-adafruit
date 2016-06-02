@@ -1,6 +1,6 @@
 # offset image challenges
 
-Coding challenges for the offset image tutorial. #docs
+Coding challenges for the offset image tutorial.
 
 ## Before we get started
 

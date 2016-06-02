@@ -1,6 +1,6 @@
 # micro:bit - the device
 
-The micro:bit device #docs
+The micro:bit device
 
 The micro:bit is a very capable device with many components:
 

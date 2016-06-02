@@ -1,8 +1,6 @@
 # smiley blocks lesson 
 
-design a blinking image lesson #docs
-
-
+Design a blinking image lesson
 
 ## Topic 
 

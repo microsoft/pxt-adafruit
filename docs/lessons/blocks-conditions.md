@@ -1,6 +1,6 @@
 # blocks - if statements
 
-An introduction to conditions for the Block Editor. #docs
+An introduction to conditions for the Block Editor.
 
 ## Introduction to conditions
 

@@ -1,8 +1,6 @@
 # screen wipe blocks lesson
 
-clear the screen by pressing button "A".
-
-
+Clear the screen by pressing button "A".
 
 ## Topic
 

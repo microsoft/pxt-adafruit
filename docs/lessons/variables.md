@@ -1,6 +1,6 @@
 # Blocks - Variables
 
-An introduction to variables for the Block Editor. #docs
+An introduction to variables for the Block Editor.
 
 ## What is a variable?
 

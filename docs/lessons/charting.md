@@ -7,7 +7,7 @@ Create a charting app for simulating and measuring the acceleration applied to t
 Acceleration
 
 ## Quick Links
-* [activity](/lessons/charting/acceleration) 
+* [activity](/lessons/charting/activity) 
 * [challenge](/lessons/charting/challenge) 
 * [quiz](/lessons/charting/quiz) 
 * [answers](/lessons/charting/quiz-answers)

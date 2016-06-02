@@ -5,12 +5,12 @@ Are you ready to build cool BBC micro:bit programs?
 Here are some challenges for you.  Unscramble the blocks in the editor
 to make real programs that work!
 
-### Blinky face
+### Happy face
 
 You should see three blocks in the editor to the left.
 These are a block with a smiley face, ...
 
-```shuffle
+```blocks
 basic.forever(() => {
     basic.showLeds(`
         . . . . .
@@ -29,65 +29,18 @@ basic.forever(() => {
 });
 ```
 
-
-### Show LEDs
-
-Draw something in the editor with this block.  You can draw another
-smiley face, or try something else.
-
-```shuffle
-basic.showLeds(`
-    . . . . .
-    . # . # .
-    . . . . .
-    # . . . #
-    . # # # .
-    `)
-```
-
 To move your program from your computer to the BBC micro:bit:
 * Connect your micro:bit to the computer with the USB cable.
 * Click **Compile**.
 * Drag and drop the new file whose name ends in **.hex** into the **MICROBIT** window.
 * Wait until the yellow light stops blinking!
 
-### Show animation forever
+### Happy unhappy face
 
-Show one picture after another by snapping blocks together to create an
-animation (like a cartoon)!
+Let's draw an unhappy face instead of the blank screen. Click on the dots in the ``show leds`` block
+until it matches the blocks below.
 
 ```blocks
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . . . . .
-        # . . . #
-        . # # # .
-        `)
-    basic.showLeds(`
-        . . . . .
-        . # . # .
-        . . . . .
-        . # # # .
-        # . . . #
-        `)
-```
-
-To move your program from your computer to the BBC micro:bit:
-* Connect your micro:bit to the computer with the USB cable.
-* Click **Compile**.
-* Drag and drop the new file whose name ends in **.hex** into the **MICROBIT** window.
-* Wait until the yellow light stops blinking!
-
-### Repeat Forever
-
-Make an animation that never stops with the ``forever`` block.
-
-Unscramble these blocks in the editor to make an animation that first
-shows a happy face, then an unhappy face, then a happy face, and never
-stops.  
-
-```shuffle
 basic.forever(() => {
     basic.showLeds(`
         . . . . .
@@ -105,41 +58,71 @@ basic.forever(() => {
         `)
 });
 ```
+
+To move your program from your computer to the BBC micro:bit:
+* Connect your micro:bit to the computer with the USB cable.
+* Click **Compile**.
+* Drag and drop the new file whose name ends in **.hex** into the **MICROBIT** window.
+* Wait until the yellow light stops blinking!
 
 ### Your turn!
 
-You can also change the pictures to make your own animation.
-Make your own awesome animation with the ``show leds`` and ``forever``
-blocks.
+Pile up more ``show leds`` blocks to create your animation! Create an animation with at least 5 images.
+
+```blocks
+basic.forever(() => {
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        # . . . #
+        . # # # .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        . # # # .
+        # . . . #
+        `)
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        # # # # #
+        . . . . .
+        `)
+});
+```
+
+To move your program from your computer to the BBC micro:bit:
+* Connect your micro:bit to the computer with the USB cable.
+* Click **Compile**.
+* Drag and drop the new file whose name ends in **.hex** into the **MICROBIT** window.
+* Wait until the yellow light stops blinking!
 
 #### ~hint
 
-You can make your animation longer if you use more than two pictures.
-
+You can find the ``show leds`` block under the **Basic** category.
 #### ~
 
 ### Button A and B
 
 This program will show the word `banana` on the LED
-screen when you press button `B`.
+screen when you press button `A`.
 
 ```blocks
-input.onButtonPressed(Button.B, () => {
+input.onButtonPressed(Button.A, () => {
     basic.showString("banana");
 });
 ```
 
 Now try to unscramble these blocks in the editor so that the micro:bit
-shows **YES** when you press button `A` and **NO** when when you press
-button `B`.  All of the blocks under `on button A pressed` or
-`on button B pressed` should run when you press that button.
+shows **apple** when you press button `B`.
 
 ```shuffle
-input.onButtonPressed(Button.A, () => {
-    basic.showString("YES");
-});
 input.onButtonPressed(Button.B, () => {
-    basic.showString("NO");
+    basic.showString("apple");
 });
 ```
 

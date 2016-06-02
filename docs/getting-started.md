@@ -5,6 +5,31 @@ Are you ready to build cool BBC micro:bit programs?
 Here are some challenges for you.  Unscramble the blocks in the editor
 to make real programs that work!
 
+### Blinky face
+
+You should see three blocks in the editor to the left.
+These are a block with a smiley face, ...
+
+```shuffle
+basic.forever(() => {
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        # . . . #
+        . # # # .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
+});
+```
+
+
 ### Show LEDs
 
 Draw something in the editor with this block.  You can draw another

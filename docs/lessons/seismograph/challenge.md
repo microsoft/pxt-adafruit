@@ -149,7 +149,7 @@ You have two options to Analyze Data:
 
 Click or tap Download data
 
-![](/static/mb/seismograph9.png)
+![](/static/mb/lessons/seismograph9.png)
 
 ## 12. 
 

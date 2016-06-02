@@ -28,6 +28,7 @@ input.onButtonPressed(Button.B, () => {
 * Browse the [API reference](/reference)
 * Learn more about the [device](/device)
 * Get started with [lessons](/lessons)
+* Frequently Asked Question [faq](/faq)
 * Follow up with the [release notes](/release-notes)
 
 ### Developers

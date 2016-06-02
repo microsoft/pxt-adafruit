@@ -1,13 +1,5 @@
 # Start Countdown
 
-The game library supports simple single-player time-based games. The general goal of a game will be to achieve a top score before time runs out of time.
-
-## Block Editor
-
-![](/static/mb/game-library/start-countdown-0.png)
-
-## KindScript
-
 The code below shows a simple game where the user gets to press the button ``A`` as much times as possible in 10 seconds.
 
 ```

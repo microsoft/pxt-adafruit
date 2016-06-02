@@ -1,30 +1,6 @@
 # Reports
 
-The game library
-
-### Reports
-
 Reports the x or y position,  the current direction of a sprite, or the brightness of a sprite on the LED screen
-
-## Block Editor
-
-Reports the x position of a sprite on the LED screen
-
-![](/static/mb/game-library/position-0.png)
-
-Reports the y position of a sprite on the LED screen
-
-![](/static/mb/game-library/reports-0.jpg)
-
-Reports the brightness of a sprite on the LED screen
-
-![](/static/mb/game-library/reports-1.jpg)
-
-Reports the direction of a sprite on the LED screen
-
-![](/static/mb/game-library/reports-2.jpg)
-
-## KindScript
 
 Reports the x position of a sprite on the LED screen
 

@@ -1,17 +1,5 @@
 # Turn
 
-The game library 
-
-Rotates a sprite to the right by a certain number of degrees
-
-## Block Editor
-
-Rotates a sprite to the right by a certain number of degrees
-
-![](/static/mb/game-library/turn-0.png)
-
-## KindScript
-
 Rotates a sprite to the right by a certain number of degrees
 
 ```

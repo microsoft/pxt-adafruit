@@ -147,6 +147,13 @@ input.onButtonPressed(Button.A, () => {
 });
 ```
 
+#### ~hint
+
+The ``showString`` block can show letters, numbers, and punctuation
+on the micro:bit screen.
+
+#### ~
+
 Now try to unscramble these blocks in the editor so that the micro:bit
 shows **banana** when you press button `B`.
 
@@ -160,10 +167,13 @@ input.onButtonPressed(Button.B, () => {
 You can find the letter `B` by clicking the letter `A` on the
 ``onButtonPressed`` block.
 
-#### 
+#### ~
 
-Can you combine these blocks so your program shows **anteater** when
-you press `A`, but **banana** when you press `B`?
+#### Your turn!
+
+Can you combine these blocks so your program shows your real name
+instead of **anteater** when you press `A`, but _your secret agent
+name_ instead of **banana** when you press `B`?
 
 ### Shake
 

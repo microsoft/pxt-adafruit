@@ -38,26 +38,19 @@ Computer Science: The seismograph has been built. We are ready to program the mi
 
 ### ~
 
-# Computer Science Steps
-
+# Programming Steps
+    
 ## 3. 
 
-Go to Codemicrobit.com
-
-* Click or tap New Project
-* Click or tap Blocks
-    
-## 4. 
-
-We will measure `acceleration (mg)` in terms of strength or Magnitude. Get the acceleration value (milli g-force), as measured in strength or Magnitude.
+We will measure `acceleration (mg)` in terms of strength or Magnitude.
 
 ```blocks
 input.acceleration(Dimension.Strength);
 ```
 
-## 5. 
+## 4. 
 
-Use the plot bar chart to visualize the acceleration on the LED screen of the micro:bit in the specified range. You implement forever and plot Bar Graph to constantly display a vertical bar graph, which will be based on the "value" and "high" value. Then measure the acceleration based on the strength or Magnitude. 
+Use the plot bar chart to visualize the acceleration on the LED screen. Use a forever to keep reading the acceleration value and displaying it on the screen.
 
 ```blocks
 basic.forever(() => {
@@ -68,7 +61,7 @@ basic.forever(() => {
 
 ## 6. 
 
-Finally, we subtract the gravity from acceleration strength. 
+At rest, the micro:bit is always subject to Earth gravity, whose magnitude is measured around ``1023``. Substract ``1023`` to measure a data close to ``0``. 
 
 ```blocks
 basic.forever(() => {
@@ -81,11 +74,11 @@ basic.forever(() => {
 
 ### ~avatar avatar
 
-Science: We now need to use the micro:bit to Analyze Data and chart for the strength of the acceleration.
+Data Analysis: We now need to use the micro:bit to Analyze Data and chart for the strength of the acceleration.
 
 ### ~
 
-# Science Steps
+# Data Analysis Steps
 
 ## 7. 
 

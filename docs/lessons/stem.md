@@ -41,7 +41,7 @@ Overview of Blocks lessons for the BBC micro:bit.
 * [The Watch](/lessons/the-watch), design and create The Watch
 * [Truth or dare](/lessons/truth-or-dare), a game that forces each player to reveal a secret or do something funny with if statement
 * [Spinner](/lessons/spinner), spin the arrow with multiple if statements
-* [Die roll](/lessons/die-roll), spin with more if statements
+* [Dice roll](/lessons/dice-roll), spin with more if statements
 * [Beatbox](/lessons/classic-beatbox), make a beatbox music player with variables
 * [Temperature](/lessons/temperature), get the ambient temperature (degree Celsius °C)
 

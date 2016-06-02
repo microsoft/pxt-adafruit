@@ -18,8 +18,6 @@ basic.showLeds(`
 
 ### Challenge 1
 
-### @video td/videos/beautiful-image-1-2
-
 Now show an new image that will display on the micro:bit.
 
 ```blocks

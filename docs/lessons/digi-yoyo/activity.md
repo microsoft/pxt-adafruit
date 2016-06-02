@@ -4,8 +4,6 @@ Create a counter with a while loop.
 
 ### ~avatar avatar
 
-### @video td/videos/digi-yoyo-0
-
 Welcome! This tutorial will teach how to create a counter with a while loop. Let's get started!
 
 ### ~

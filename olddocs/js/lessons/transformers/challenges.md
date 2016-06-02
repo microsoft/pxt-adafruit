@@ -34,8 +34,6 @@ export function square(n: number) : number {
 
 ### Challenge 2
 
-### @video td/videos/transformers-2
-
 Add a condition for when button `B` is pressed. We will use this condition in the last challenge.
 
 ```

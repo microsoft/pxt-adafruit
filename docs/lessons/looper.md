@@ -2,8 +2,6 @@
 
 Learn to control blinking LEDs.
 
-### @video td/videos/looper-0
-
 ## Topic
 
 For Loop

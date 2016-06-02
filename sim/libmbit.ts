@@ -187,7 +187,7 @@ namespace pxsim.basic {
         if (interval < 0) return;
 
         let leds = createImageFromString(x.toString());
-        if (x < 0 || x >= 10) ImageMethods.scrollImage(leds, interval, 1);
+        if (x < 0 || x >= 10) ImageMethods.scrollImage(leds, 1, interval);
         else showLeds(leds, interval * 5);
     }
 
@@ -198,7 +198,7 @@ namespace pxsim.basic {
             pause(interval * 5);
         } else {
             if (s.length == 1) showLeds(createImageFromString(s), interval * 5)
-            else ImageMethods.scrollImage(createImageFromString(s + " "), interval, 1);
+            else ImageMethods.scrollImage(createImageFromString(s + " "), 1, interval);
         }
     }
 
@@ -211,8 +211,8 @@ namespace pxsim.basic {
         runtime.queueDisplayUpdate()
     }
 
-    export function showAnimation(leds: Image, interval: number = 400): void {
-        ImageMethods.scrollImage(leds, interval, 5);
+    export function showAnimation(leds: Image, interval: number): void {
+        ImageMethods.scrollImage(leds, 5, interval);
     }
 
     export function plotLeds(leds: Image): void {
@@ -429,6 +429,19 @@ namespace pxsim.serial {
     export function readString(): string {
         return board().readSerial();
     }
+
+    export function readLine(): string {
+        return board().readSerial();
+    }
+
+    export function onDataReceived(delimiters: string, handler: RefAction) {
+        let b = board();
+        b.bus.listen(DAL.MICROBIT_ID_SERIAL, DAL.MICROBIT_SERIAL_EVT_DELIM_MATCH, handler);
+    }
+
+    export function redirect(tx: number, rx: number, rate: number) {
+        // TODO?
+    }
 }
 
 
@@ -457,6 +470,10 @@ namespace pxsim.radio {
         board().radio.datagram.send([value]);
     }
 
+    export function sendString(msg: string): void {
+        board().radio.datagram.send(msg);
+    }
+
     export function writeValueToSerial(): void {
         let b = board();
         let v = b.radio.datagram.recv().data[0];
@@ -468,11 +485,23 @@ namespace pxsim.radio {
     }
 
     export function receiveNumber(): number {
-        return board().radio.datagram.recv().data[0];
+        let buffer = board().radio.datagram.recv().data;
+        if (buffer instanceof Array) return buffer[0];
+
+        return 0;
+    }
+
+    export function receiveString(): string {
+        let buffer = board().radio.datagram.recv().data;
+        if (typeof buffer === "string") return <string>buffer;
+        return "";
     }
 
     export function receivedNumberAt(index: number): number {
-        return board().radio.datagram.lastReceived.data[index] || 0;
+        let buffer = board().radio.datagram.recv().data;
+        if (buffer instanceof Array) return buffer[index] || 0;
+
+        return 0;
     }
 
     export function receivedSignalStrength(): number {
@@ -485,6 +514,13 @@ namespace pxsim.radio {
 }
 
 namespace pxsim.pins {
+    export function onPulse(name: number, pulse: number, body: RefAction) {
+    }
+
+    export function pulseDuration(): number {
+        return 0;
+    }
+
     export function digitalReadPin(pinId: number): number {
         let pin = getPin(pinId);
         if (!pin) return;
@@ -638,10 +674,11 @@ namespace pxsim.ImageMethods {
         return i.get(x, y);
     }
 
-    export function scrollImage(leds: Image, interval: number, stride: number): void {
+    export function scrollImage(leds: Image, stride: number, interval: number): void {
         if (!leds) panic(PanicCode.MICROBIT_NULL_DEREFERENCE);
+        if (stride == 0) stride = 1;
 
-        let cb = getResume()
+        let cb = getResume();
         let off = stride > 0 ? 0 : leds.width - 1;
         let display = board().image;
 

@@ -55,7 +55,7 @@ input.onButtonPressed(Button.B, () => {
 
 ### Challenge 2
 
-### @video td/videos/offset-image-2
+
 
 Now we want to make sure that the button does not go off the screen to the right. Add a new line that checks to see if offset = 5 after button `A` is pressed.
 

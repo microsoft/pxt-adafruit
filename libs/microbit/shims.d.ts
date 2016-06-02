@@ -4,7 +4,7 @@
     /**
      * Creation, manipulation and display of LED images.
      */
-    //% color=45 weight=31
+    //% color=#5C2D91 weight=31
 declare namespace images {
 
     /**
@@ -32,15 +32,15 @@ declare interface Image {
 
     /**
      * Shows an frame from the image at offset ``x offset``.
-     * @param xOffset TODO
+     * @param xOffset column index to start displaying the image
      */
-    //% help=images/show-image weight=80 async
-    //% BUGblockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8 xOffset.defl=0 shim=ImageMethods::showImage
-    showImage(xOffset?: number): void;
+    //% help=images/show-image weight=80 blockNamespace=images
+    //% blockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8 shim=ImageMethods::showImage
+    showImage(xOffset: number): void;
 
     /**
      * Draws the ``index``-th frame of the image on the screen.
-     * @param xOffset TODO
+     * @param xOffset column index to start displaying the image
      */
     //% help=images/plot-frame weight=80 shim=ImageMethods::plotFrame
     plotFrame(xOffset: number): void;
@@ -50,9 +50,9 @@ declare interface Image {
      * @param frameOffset x offset moved on each animation step, eg: 5, 1, -1
      * @param interval time between each animation step in milli seconds, eg: 200
      */
-    //% help=images/show-image weight=79 async
-    //% BUGblockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8 frameOffset.defl=0 interval.defl=200 shim=ImageMethods::scrollImage
-    scrollImage(frameOffset?: number, interval?: number): void;
+    //% help=images/show-image weight=79 async blockNamespace=images
+    //% blockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8 shim=ImageMethods::scrollImage
+    scrollImage(frameOffset: number, interval: number): void;
 
     /**
      * Sets all pixels off.
@@ -63,13 +63,13 @@ declare interface Image {
     /**
      * Sets a specific pixel brightness at a given position
      */
-    //% help= shim=ImageMethods::setPixelBrightness
+    //% shim=ImageMethods::setPixelBrightness
     setPixelBrightness(x: number, y: number, value: number): void;
 
     /**
      * Gets the pixel brightness ([0..255]) at a given position
      */
-    //% help= shim=ImageMethods::pixelBrightness
+    //% shim=ImageMethods::pixelBrightness
     pixelBrightness(x: number, y: number): number;
 
     /**
@@ -81,7 +81,7 @@ declare interface Image {
     /**
      * Gets the height in rows (always 5)
      */
-    //% shim= shim=ImageMethods::height
+    //% shim=ImageMethods::height
     height(): number;
 
     /**
@@ -90,7 +90,7 @@ declare interface Image {
      * @param y TODO
      * @param value TODO
      */
-    //% help=functions/set-pixel shim=ImageMethods::setPixel
+    //% help=images/set-pixel shim=ImageMethods::setPixel
     setPixel(x: number, y: number, value: boolean): void;
 
     /**
@@ -98,14 +98,14 @@ declare interface Image {
      * @param x TODO
      * @param y TODO
      */
-    //% help=functions/pixel shim=ImageMethods::pixel
+    //% help=images/pixel shim=ImageMethods::pixel
     pixel(x: number, y: number): boolean;
 
     /**
      * Shows a particular frame of the image strip.
      * @param frame TODO
      */
-    //% weight=70 help=functions/show-frame shim=ImageMethods::showFrame
+    //% weight=70 help=images/show-frame shim=ImageMethods::showFrame
     showFrame(frame: number): void;
 }
 
@@ -113,7 +113,7 @@ declare interface Image {
     /**
      * Provides access to basic micro:bit functionality.
      */
-    //% color=190 weight=100
+    //% color=#0078D7 weight=100
 declare namespace basic {
 
     /**
@@ -200,7 +200,7 @@ declare namespace input {
      * @param button TODO
      * @param body TODO
      */
-    //% help=input/on-button-pressed weight=85
+    //% help=input/on-button-pressed weight=85 blockGap=8
     //% blockId=device_button_event block="on button|%NAME|pressed" icon="\uf192" shim=input::onButtonPressed
     function onButtonPressed(button: Button, body: () => void): void;
 
@@ -208,7 +208,7 @@ declare namespace input {
      * Attaches code to run when the screen is facing up.
      * @param body TODO
      */
-    //% help=input/on-gesture weight=84
+    //% help=input/on-gesture weight=84 blockGap=8
     //% blockId=device_gesture_event block="on |%NAME" icon="\uf135" shim=input::onGesture
     function onGesture(gesture: Gesture, body: () => void): void;
 
@@ -332,16 +332,30 @@ declare namespace control {
      * @param value Component specific code indicating the cause of the event.
      * @param mode optional definition of how the event should be processed after construction (default is CREATE_AND_FIRE).
      */
-    //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source|with value %value=control_event_value" blockExternalInputs=1
+    //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source_id|with value %value=control_event_value_id" blockExternalInputs=1
     //% mode.defl=1 shim=control::raiseEvent
     function raiseEvent(src: number, value: number, mode?: EventCreationMode): void;
 
     /**
      * Raises an event in the event bus.
      */
-    //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_event_source|with value %value=control_event_value" 
+    //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_event_source_id|with value %value=control_event_value_id" 
     //% blockExternalInputs=1 shim=control::onEvent
     function onEvent(src: number, value: number, handler: () => void): void;
+
+    /**
+     * Gets the value of the last event executed on the bus
+     */
+    //% blockId=control_event_value" block="event value"
+    //% weight=18 shim=control::eventValue
+    function eventValue(): number;
+
+    /**
+     * Gets the timestamp of the last event executed on the bus
+     */
+    //% blockId=control_event_timestamp" block="event timestamp"
+    //% weight=19 blockGap=8 shim=control::eventTimestamp
+    function eventTimestamp(): number;
 
     /**
      * Gets a friendly name for the device derived from the its serial number
@@ -469,9 +483,24 @@ declare namespace pins {
      * @param name analog pin to set period to
      * @param micros period in micro seconds. eg:20000
      */
-    //% help=pins/analog-set-period weight=23
+    //% help=pins/analog-set-period weight=23 blockGap=8
     //% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros" shim=pins::analogSetPeriod
     function analogSetPeriod(name: AnalogPin, micros: number): void;
+
+    /**
+     * Configures this pin to a digital input, and generates events where the timestamp is the duration that this pin was either ``high`` or ``low``.
+     */
+    //% help=pins/on-pulsed weight=22 blockGap=8
+    //% blockId=pins_on_pulsed block="on|pin %pin|pulsed %pulse" shim=pins::onPulsed
+    function onPulsed(name: DigitalPin, pulse: PulseValue, body: () => void): void;
+
+    /**
+     * Gets the duration of the last pulse in micro-seconds. This function should be called from a ``onPulsed`` handler.
+     */
+    //% help=pins/pulse-micros
+    //% blockId=pins_pulse_duration block="pulse duration (µs)"
+    //% weight=21 shim=pins::pulseDuration
+    function pulseDuration(): number;
 
     /**
      * Writes a value to the servo, controlling the shaft accordingly. On a standard servo, this will set the angle of the shaft (in degrees), moving the shaft to that orientation. On a continuous rotation servo, this will set the speed of the servo (with ``0`` being full-speed in one direction, ``180`` being full speed in the other, and a value near ``90`` being no movement).
@@ -534,14 +563,30 @@ declare namespace serial {
     /**
      * Reads a line of text from the serial port.
      */
-    //% shim=serial::readString
-    function readString(): string;
+    //% help=serial/read-line
+    //% blockId=serial_read_line block="serial read line"
+    //% weight=20 shim=serial::readLine
+    function readLine(): string;
 
     /**
      * Sends a piece of text through Serial connection.
      */
-    //% blockId=serial_writestring block="serial write %text" shim=serial::writeString
+    //% help=serial/write-string
+    //% weight=87
+    //% blockId=serial_writestring block="serial write string %text" shim=serial::writeString
     function writeString(text: string): void;
+
+    /**
+     * Dynamically configuring the serial instance to use pins other than USBTX and USBRX.
+     * @param tx the new transmission pins
+     * @param rx the new reception pin
+     * @param baud the new baud rate. eg: 115200
+     */
+    //% weight=10
+    //% help=serial/redirect
+    //% blockId=serial_redirect block="serial redirect to|TX %tx|RX %rx|at baud rate %rate"
+    //% blockExternalInputs=1 shim=serial::redirect
+    function redirect(tx: SerialPin, rx: SerialPin, rate: BaudRate): void;
 }
 
 
@@ -595,39 +640,6 @@ declare interface Buffer {
      */
     //% shim=BufferMethods::write
     write(dstOffset: number, src: Buffer): void;
-}
-
-
-    /**
-     * This allows reading and writing of small blocks of data to FLASH memory.
-     */
-    //% weight=10 color=#cc6600
-declare namespace storage {
-
-    /**
-     * Writes the key and buffer pair into FLASH. This operation is rather costly as all the key/value pairs
-     * have to be rewritten as well.
-     */
-    //% shim=storage::putBuffer
-    function putBuffer(key: string, buffer: Buffer): void;
-
-    /**
-     * Gets the buffer at the given key if any. If no key is available, empty buffer is returned.
-     */
-    //% shim=storage::getBuffer
-    function getBuffer(key: string): Buffer;
-
-    /**
-     * Removes an entry identified by the key.
-     */
-    //% shim=storage::remove
-    function remove(key: string): void;
-
-    /**
-     * The number of entries in the key value store
-     */
-    //% shim=storage::size
-    function size(): number;
 }
 
 // Auto-generated. Do not edit. Really.

@@ -2,8 +2,6 @@
 
 Learn how to create a blinking LED.
 
-### @video td/videos/blink-0
-
 ## Topic
 
 Plot
@@ -29,7 +27,6 @@ led.unplot(0, 0)
 basic.pause(100)
 basic.forever(() => {})
 ```
-
 
 ## Objectives
 

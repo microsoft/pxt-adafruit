@@ -2,7 +2,7 @@
 
 Learn how to create a blinking LED script.
 
-### @video td/videos/strobe-light-0
+
 
 ## Topic
 

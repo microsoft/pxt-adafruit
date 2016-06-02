@@ -2,7 +2,7 @@
 
 create a love meter with the BBC micro:bit.
 
-### @video td/videos/truth-or-dare-0
+
 
 ## Topic
 

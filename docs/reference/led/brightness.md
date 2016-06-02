@@ -1,6 +1,6 @@
 # Brightness
 
-Set the brightness of the [LED screen](/device/screen).
+Find how bright the [LED screen](/device/screen) is.
 
 ```sig
 led.brightness();
@@ -8,11 +8,11 @@ led.brightness();
 
 ### Returns
 
-* [Number](/reference/types/number) - returns the LCD screen brightness as a number from 0 to 255. A return value of 255 means the screen brightness is at 100% and 127 is about 50% brightness.
+* a [Number](/reference/types/number) that means how bright the screen is, from `0` (darkest) to `255` (brightest). For example, the number `127` means the screen is halfway bright.
 
-### Example: maximum brightness
+### Example: highest brightness
 
-If the screen brightness is < 100%, the following code sets the brightness to 100% (255):
+This program makes the screen completely bright if it is not that way already:
 
 ```blocks
 if (led.brightness() < 255) {

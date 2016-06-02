@@ -27,7 +27,7 @@
         "serial.cpp",
         "serial.ts",
         "buffer.cpp",
-        "storage.cpp"
+        "_locales/fr/strings.json"
     ],
     "public": true,
     "dependencies": {},

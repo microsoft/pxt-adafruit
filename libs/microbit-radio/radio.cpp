@@ -43,7 +43,7 @@ namespace radio {
      */    
     //% help=radio/send-number
     //% weight=60
-    //% blockId=radio_datagram_send block="send number %MESSAGE" blockGap=8
+    //% blockId=radio_datagram_send block="send number %value" blockGap=8
     void sendNumber(int value) { 
         if (radioEnable() != MICROBIT_OK) return;        
         uint32_t t = system_timer_current_time();
@@ -60,7 +60,7 @@ namespace radio {
     */
     //% help=radio/send-value
     //% weight=59
-    //% blockId=radio_datagram_send_value block="send|value %name|= %value"
+    //% blockId=radio_datagram_send_value block="send|value %name|= %value" blockGap=8
     void sendValue(StringData* name, int value) {
         if (radioEnable() != MICROBIT_OK) return;
 
@@ -81,6 +81,22 @@ namespace radio {
         uBit.radio.datagram.send(buf, 13 + len);
     }
     
+    /**
+     * Broadcasts a number over radio to any connected micro:bit in the group.
+     */    
+    //% help=radio/send-string
+    //% weight=58
+    //% blockId=radio_datagram_send_string block="send string %msg"
+    void sendString(StringData* msg) {
+        if (radioEnable() != MICROBIT_OK) return;        
+        
+        ManagedString s(msg);
+        if (s.length() > MICROBIT_RADIO_MAX_PACKET_SIZE)
+            s = s.substring(0, MICROBIT_RADIO_MAX_PACKET_SIZE);
+        
+        uBit.radio.datagram.send(s);
+    }
+            
     /**
     * Reads a value sent with `stream value` and writes it
     * to the serial stream as JSON
@@ -159,7 +175,19 @@ namespace radio {
         packet = uBit.radio.datagram.recv();
         return receivedNumberAt(0);
     }
-
+    
+    /**
+    * Reads the next packet as a string and returns it.
+    */
+    //% blockId=radio_datagram_receive_string block="receive string" blockGap=8
+    //% weight=44
+    //% help=radio/receive-string
+    StringData* receiveString() {
+        if (radioEnable() != MICROBIT_OK) return ManagedString().leakData();
+        packet = uBit.radio.datagram.recv();
+        return ManagedString(packet).leakData();        
+    }
+    
     /**
      * Gets the received signal strength indicator (RSSI) from the packet received by ``receive number``. Not supported in simulator.
      * namespace=radio

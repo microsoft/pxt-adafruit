@@ -4,8 +4,6 @@ Make glowing sword.
 
 ### ~avatar avatar
 
-### @video td/videos/glowing-sword-0
-
 In this activity, we will learn how to fade in and out the screen to create a glowing animation. Let's get started!
 
 ### ~

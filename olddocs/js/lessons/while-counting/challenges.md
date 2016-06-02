@@ -4,8 +4,6 @@ These challenges will teach you how to create a counter 10 to 1. #docs
 
 **Challenge 0**
 
-### @video vimeo/134459911
-
 [This guided tutorial](/lessons/digi-yoyo/tutorial) will teach you how to make a counter from 0-9 using a while loop.
 
 ```
@@ -52,8 +50,6 @@ while (count > 0) {
 * Run the code to see if it works as expected.
 
 **Challenge 3**
-
-### @video vimeo/134449661
 
 Now, we need `count` to decrease by one after the micro:bit has displayed the value of `count`.
 

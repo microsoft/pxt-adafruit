@@ -86,7 +86,7 @@ declare const enum DAL {
     MICROBIT_DFU_HISTOGRAM_HEIGHT = 5,
     // built/yt/yotta_modules/microbit-dal/inc//bluetooth/MicroBitEventService.h
     // built/yt/yotta_modules/microbit-dal/inc//bluetooth/MicroBitIOPinService.h
-    MICROBIT_IO_PIN_SERVICE_PINCOUNT = 20,
+    MICROBIT_IO_PIN_SERVICE_PINCOUNT = 19,
     MICROBIT_IO_PIN_SERVICE_DATA_SIZE = 10,
     // built/yt/yotta_modules/microbit-dal/inc//bluetooth/MicroBitLEDService.h
     MICROBIT_BLE_MAXIMUM_SCROLLTEXT = 20,
@@ -208,6 +208,7 @@ declare const enum DAL {
     MMA8653_SAMPLE_RANGES = 3,
     MMA8653_SAMPLE_RATES = 8,
     MICROBIT_ACCELEROMETER_EVT_DATA_UPDATE = 1,
+    MICROBIT_ACCELEROMETER_EVT_NONE = 0,
     MICROBIT_ACCELEROMETER_EVT_TILT_UP = 1,
     MICROBIT_ACCELEROMETER_EVT_TILT_DOWN = 2,
     MICROBIT_ACCELEROMETER_EVT_TILT_LEFT = 3,
@@ -229,18 +230,6 @@ declare const enum DAL {
     MICROBIT_ACCELEROMETER_GESTURE_DAMPING = 10,
     MICROBIT_ACCELEROMETER_SHAKE_DAMPING = 10,
     MICROBIT_ACCELEROMETER_SHAKE_COUNT_THRESHOLD = 4,
-    GESTURE_NONE = 0,
-    GESTURE_UP = 1,
-    GESTURE_DOWN = 2,
-    GESTURE_LEFT = 3,
-    GESTURE_RIGHT = 4,
-    GESTURE_FACE_UP = 5,
-    GESTURE_FACE_DOWN = 6,
-    GESTURE_FREEFALL = 7,
-    GESTURE_3G = 8,
-    GESTURE_6G = 9,
-    GESTURE_8G = 10,
-    GESTURE_SHAKE = 11,
     // built/yt/yotta_modules/microbit-dal/inc//drivers/MicroBitButton.h
     MICROBIT_BUTTON_EVT_DOWN = 1,
     MICROBIT_BUTTON_EVT_UP = 2,
@@ -343,14 +332,22 @@ declare const enum DAL {
     IO_STATUS_ANALOG_IN = 0x04,
     IO_STATUS_ANALOG_OUT = 0x08,
     IO_STATUS_TOUCH_IN = 0x10,
-    IO_STATUS_EVENTBUS_ENABLED = 0x80,
+    IO_STATUS_EVENT_ON_EDGE = 0x20,
+    IO_STATUS_EVENT_PULSE_ON_EDGE = 0x40,
     MICROBIT_PIN_MAX_OUTPUT = 1023,
     MICROBIT_PIN_MAX_SERVO_RANGE = 180,
     MICROBIT_PIN_DEFAULT_SERVO_RANGE = 2000,
     MICROBIT_PIN_DEFAULT_SERVO_CENTER = 1500,
+    MICROBIT_PIN_EVENT_NONE = 0,
+    MICROBIT_PIN_EVENT_ON_EDGE = 1,
+    MICROBIT_PIN_EVENT_ON_PULSE = 2,
+    MICROBIT_PIN_EVENT_ON_TOUCH = 3,
+    MICROBIT_PIN_EVT_RISE = 2,
+    MICROBIT_PIN_EVT_FALL = 3,
+    MICROBIT_PIN_EVT_PULSE_HI = 4,
+    MICROBIT_PIN_EVT_PULSE_LO = 5,
     PIN_CAPABILITY_DIGITAL = 0x01,
     PIN_CAPABILITY_ANALOG = 0x02,
-    PIN_CAPABILITY_TOUCH = 0x04,
     // built/yt/yotta_modules/microbit-dal/inc//drivers/MicroBitRadio.h
     MICROBIT_RADIO_STATUS_INITIALISED = 0x0001,
     MICROBIT_RADIO_BASE_ADDRESS = 0x75626974,
@@ -388,6 +385,7 @@ declare const enum DAL {
     MICROBIT_THERMOMETER_PERIOD = 1000,
     MICROBIT_THERMOMETER_EVT_UPDATE = 1,
     MICROBIT_THERMOMETER_ADDED_TO_IDLE = 2,
+    // built/yt/yotta_modules/microbit-dal/inc//drivers/TimedInterruptIn.h
     // built/yt/yotta_modules/microbit-dal/inc//platform/yotta_cfg_mappings.h
     // built/yt/yotta_modules/microbit-dal/inc//types/ManagedString.h
     // built/yt/yotta_modules/microbit-dal/inc//types/ManagedType.h

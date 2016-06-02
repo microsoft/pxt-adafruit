@@ -1,28 +1,22 @@
 # Set Group
 
-Sets the group id for ``radio`` communications. A micro:bit can only listen to one group ID at any time.
+Make a program have the group ID you tell it for sending and receiving
+with ``radio``.  A group is like a cable channel (a micro:bit can only
+send or receive in one group at a time). A group ID is like the cable
+channel number.
 
-Unless specified, the group id is automatically inferred from the script source. Every script with the same exact source code with start with the same group id.
-
-## Important Security Consideration
-
-The functions in the ``radio`` namespace allow the BBC micro:bit to communicate with other micro:bits.
-
-This API does not contain any form of encryption, authentication or authorization. It's purpose is solely for use as a teaching aid to demonstrate how simple communications operates, and to provide a sandpit through which learning can take place.
-
-For serious applications, BLE should be considered a substantially more secure alternative.
-
-```sig
-radio.setGroup(1)
-```
+If you do not tell your program which group ID to use with this
+function, it will figure out its own group ID by itself.  If you load
+the very same program onto two different micro:bits, they will be able
+to talk to each other because they will have the same group ID.
 
 ### Parameters
 
-* ``id`` -- a [number](/reference/types/number) between ``0`` and ``255``.
+* ``id`` is a [number](/reference/types/number) from ``0`` to ``255``.
 
 ### Example
 
-Sets the group to 128.
+This program makes the group ID equal 128.
 
 ```blocks
 radio.setGroup(128)

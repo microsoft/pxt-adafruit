@@ -41,8 +41,6 @@ basic.forever(() => {
 
 ### Challenge 2
 
-### @video td/videos/digital-pet-2
-
 Now we want to show your eating pet! Let's create a function called `set eat` that will do create an image. Store that image in a variable and then show it.
 
 ```
@@ -76,8 +74,6 @@ basic.forever(() => {
 
 ### Challenge 3
 
-### @video td/videos/digital-pet-3
-
 Have your pet tell you when it is going to sleep! Do this inside of the **IF** statement that checks if button `A` is pressed before you call the function `set sleep`.
 
 ```
@@ -96,8 +92,6 @@ basic.forever(() => {
 ```
 
 ### Challenge 4
-
-### @video td/videos/digital-pet-4
 
 Now, how about we keep track of how many times our pet eats? Add a global variable  called `feed` that keeps track of how many times you feed your pet. If button `B` is pressed, increment `feed` by one.  Add a condition `on shake` to check your total.
 

@@ -77,17 +77,17 @@ enum BeatFraction {
 /**
  * Generation of music tones through pin ``P0``.
  */
-//% color=52 weight=33
+//% color=#D83B01 weight=98
 namespace music {
-    var beatsPerMinute: number = 120;
+    let beatsPerMinute: number = 120;
 
     /**
      * Plays a tone through pin ``P0`` for the given duration.
-     * @param frequency TODO
-     * @param ms TODO
+     * @param frequency pitch of the tone to play in Hertz (Hz)
+     * @param ms tone duration in milliseconds (ms)
      */
     //% help=music/play-tone weight=90
-    //% blockId=device_play_note block="play|tone (Hz) %note=device_note|for (ms) %duration=device_beat" icon="\uf025" blockGap=8
+    //% blockId=device_play_note block="play|tone %note=device_note|for %duration=device_beat" icon="\uf025" blockGap=8
     export function playTone(frequency: number, ms: number): void {
         pins.analogSetPitchPin(AnalogPin.P0);
         pins.analogPitch(frequency, ms);
@@ -95,7 +95,7 @@ namespace music {
 
     /**
      * Plays a tone through pin ``P0``.
-     * @param frequency TODO
+     * @param frequency pitch of the tone to play in Hertz (Hz)
      */
     //% help=music/ring-tone weight=80
     //% blockId=device_ring block="ring tone (Hz)|%note=device_note" icon="\uf025" blockGap=8
@@ -106,7 +106,7 @@ namespace music {
 
     /**
      * Rests (plays nothing) for a specified time through pin ``P0``.
-     * @param ms TODO
+     * @param ms rest duration in milliseconds (ms)
      */
     //% help=music/rest weight=79
     //% blockId=device_rest block="rest(ms)|%duration=device_beat"
@@ -117,16 +117,16 @@ namespace music {
 
     /**
      * Gets the frequency of a note.
-     * @param name TODO
+     * @param name the note name
      */
     //% weight=50 help=music/note-frequency
     //% blockId=device_note block="%note"
     export function noteFrequency(name: Note): number {
         return name;
     }
-    
+
     function init() {
-        if (beatsPerMinute <= 0) beatsPerMinute = 120;        
+        if (beatsPerMinute <= 0) beatsPerMinute = 120;
     }
 
     /**

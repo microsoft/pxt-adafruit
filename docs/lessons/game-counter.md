@@ -2,8 +2,6 @@
 
 Learn how to create a counter with with on button pressed.
 
-### @video td/videos/counter-0
-
 ## Topic
 
 Game Library

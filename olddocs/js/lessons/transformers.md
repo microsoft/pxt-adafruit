@@ -2,8 +2,6 @@
 
 use functions to return values.
 
-### @video td/videos/transformers-0
-
 ## Topic
 
 Return

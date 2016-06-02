@@ -4,8 +4,6 @@ These challenges will allow you to make an exploding rectangle. #docs
 
 **Challenge 0**
 
-### @video vimeo/134649147
-
 This [guided tutorial](https://test.microbit.co.uk/td/lessons/rectangle-explosion/tutorial) will help you create a snowflake animation!
 
 ```
@@ -21,8 +19,6 @@ basic.forever(() => {
 ```
 
 **Challenge 1**
-
-### @video vimeo/134649148
 
 Let's begin creating our falling effect by adding another snowflake with `show animation` that displays a different snowflake pattern after the first one.
 
@@ -46,8 +42,6 @@ basic.forever(() => {
 ```
 
 **Challenge 2**
-
-### @video vimeo/134649149
 
 To finalize our snowflake fall, let's add a different snowflake pattern.
 

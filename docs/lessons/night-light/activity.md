@@ -4,8 +4,6 @@ Change the brightness of the micro:bit.
 
 ### ~avatar avatar
 
-### @video td/videos/night-light-0
-
 Welcome! This tutorial will teach you how to change the brightness of the micro:bit. Let's get started!
 
 ### ~

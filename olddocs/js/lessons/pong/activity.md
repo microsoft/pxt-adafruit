@@ -4,8 +4,6 @@ Building a game of pong with sprites.
 
 ### ~avatar avatar
 
-### @video td/videos/pong-0
-
 Welcome! This tutorial will teach you how to build a simple pong game using sprites.
 
 ### ~

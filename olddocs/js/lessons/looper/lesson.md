@@ -2,8 +2,6 @@
 
 Learn to control blinking LEDs.
 
-### @video vimeo/134453504
-
 ## Topic
 
 For loop - Blinking LED

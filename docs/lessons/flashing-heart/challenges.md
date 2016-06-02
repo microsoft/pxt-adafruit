@@ -25,8 +25,6 @@ basic.forever(() => {
 
 ### Challenge 1
 
-### @video td/videos/flashing-heart-1
-
 Let's plot a different image. Let's display a broken heart!
 
 To do this, you need to add a block between the last line and the end loop. Add a `show LEDs` block and then add a `pause` of 500 milliseconds.
@@ -59,8 +57,6 @@ basic.forever(() => {
 * click *run main* to see if the code works as expected.
 
 ### Challenge 2
-
-### @video td/videos/flashing-heart-2
 
 Now let's alternate flashing the heart and the broken heart. To do this, we need to add a `clear screen` block and then add a `pause` block of 500 milliseconds under the new code we added in Challenge 1.
 

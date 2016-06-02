@@ -1,6 +1,6 @@
 # Show String
 
-Show a string on the [LED screen](/device/screen) one character at a time (scrolling from left to right).
+Show a number on the [LED screen](/device/screen). It will slide left if it is bigger than the screen.
 
 ```sig
 basic.showString("Hello!")
@@ -8,18 +8,18 @@ basic.showString("Hello!")
 
 ### Parameters
 
-* `text` - a [String](/reference/types/string)
-* (optional) `ms` - [Number](/reference/types/number); the time (in milliseconds) before scrolling left by one LED; the larger the number, the slower the scroll
+* `text` is a [String](/reference/types/string). It can contain letters, numbers, and punctuation.
+* `ms` is an optional [Number](/reference/types/number). It means the number of milliseconds before sliding the [String](/reference/types/string) left by one LED each time. Bigger intervals make the sliding slower.
 
 ### Examples:
 
-To display Hello:
+To show the word **Hello**:
 
 ```blocks
 basic.showString("Hello")
 ```
 
-To display the content of a string variable:
+To show what is stored in a [String](/reference/types/string) variable:
 
 ```blocks
 let s = "Hi"
@@ -28,8 +28,8 @@ basic.showString(s)
 
 ### Other show functions
 
-* use [show number](/reference/basic/show-number) to show a number on the screen
-* use [show animation](/reference/basic/show-animation) to show a series of images on the screen
+* Use [show number](/reference/basic/show-number) to show a number on the [LED screen](/device/screen).
+* Use [show animation](/reference/basic/show-animation) to show a group of pictures on the screen, one after another.
 
 ### Lessons
 

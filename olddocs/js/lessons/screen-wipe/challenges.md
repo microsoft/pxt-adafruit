@@ -40,8 +40,6 @@ input.onButtonPressed(Button.B, () => {
 
 **Challenge 2**
 
-### @video td/videos/screen-wipe-2
-
 Replay the animation when the "B" button is pressed by typing in `basic->show animation(..., 400)`.
 
 ```

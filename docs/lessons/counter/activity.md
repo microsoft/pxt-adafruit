@@ -4,8 +4,6 @@ Display a number with a variable.
 
 ### ~avatar avatar
 
-### @video td/videos/counter-0
-
 Welcome! This tutorial will teach you how to make a counter that increments when button A is pressed. Let's get started!
 
 ### ~

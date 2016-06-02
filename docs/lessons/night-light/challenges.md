@@ -23,7 +23,7 @@ input.onButtonPressed(Button.A, () => {
 ```
 ### Challenge 1
 
-### @video td/videos/night-light-2
+
 
 What if we want to turn off all the LEDs? Let's do this by setting the brightness to `0` when button `B` is pressed. Add an event handler with `on button pressed(B)` add `set brightness(0)` to turn off the LEDs.
 

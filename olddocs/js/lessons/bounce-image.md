@@ -2,8 +2,6 @@
 
 scroll an image across the screen.
 
-### @video td/videos/bounce-image-0
-
 ## Topic
 
 Basic- Show Animation

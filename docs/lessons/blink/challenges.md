@@ -17,8 +17,6 @@ basic.forever(() => {
 
 ### Challenge 1
 
-### @video td/videos/blink-1
-
 Let's display a "smiley face" on the screen! We'll start by plotting the eyes.
 
 Add `plot(1,1)` and `plot(3,1)` under `plot(2,2)` ; then add `unplot(1,1)`, `unplot(3,1)` and `unplot(2,2)` after `pause`. When you're ready, don't forget to run your code to try it out!
@@ -37,8 +35,6 @@ basic.forever(() => {
 ```
 
 ### Challenge 2
-
-### @video td/videos/blink-2
 
 Let's add the code to plot the mouth by using `plot` and `unplot` to the following coordinates: (1,4), (2,4) and (3,4). When you're ready, don't forget to run your code to try it out!
 
@@ -62,8 +58,6 @@ basic.forever(() => {
 ```
 
 ### Challenge 3
-
-### @video td/videos/blink-3
 
 Let's keep using `plot` to convert the mouth into a smiley face.
 

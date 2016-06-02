@@ -2,8 +2,6 @@
 
 make a glowing sword.
 
-### @video td/videos/glowing-sword-0
-
 ## Topic
 
 Fade Out

@@ -108,8 +108,6 @@ basic.forever(() => {
 
 ### Challenge 3
 
-### @video td/videos/catch-the-egg-game-4
-
 Let's make the egg fall faster by decreasing the amount of time it pauses in each position by decreasing **falling pause** by `25` every 5 catches. Now, instead of pausing for 300 milliseconds we can pause for the value of **falling pause**.
 
 ```blocks

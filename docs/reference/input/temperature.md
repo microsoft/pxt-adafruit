@@ -1,6 +1,7 @@
 # Temperature
 
-Get the ambient temperature (degree Celsius °C). The temperature is inferred from the the surface temperature of the various chips on the micro:bit.
+Find the temperature where you are. The temperature is measured in Celsius (metric).
+The micro:bit can find the temperature nearby by checking how hot its computer chips are.
 
 ```sig
 input.temperature();
@@ -8,24 +9,48 @@ input.temperature();
 
 ### Returns
 
-* [Number](/reference/types/number) - temperature in degree Celsius °C.
+* a [Number](/reference/types/number) that means the Celsius temperature.
 
 ### How does it work?
 
-The BBC micro:bit does not have a dedicated temperature sensor. Instead, the temperature provided is actually the temperature of the silicon die on the main CPU. As the processor generally runs cold though (it is a high efficiency ARM core), the temperature is a good approximation of the ambient temperature... you might warm up if you give the processor a lot of work to do though, and don't [sleep](/reference/basic/pause)!
-
-The temperature sensor has a high precision, but isn't trimmed for accuracy. In other words, it can sense changes in temperature very well, but there may be (and probably is) base line offset. i.e. it might return 20 degrees when it's actually 17, but it would return 21 when it is 18 etc.
+The BBC micro:bit checks how hot its CPU (main computer chip) is.
+Because the micro:bit does not usually get very hot, the temperature of the CPU
+is usually close to the temperature of wherever you are.
+The micro:bit might warm up a little if you make it work hard, though!
 
 ### Example: micro:bit thermometer
 
-The following example uses the `temperature` and the `show number` to display the room temperature.
+The following example uses `temperature` and `show number` to show the temperature of the room.
 
-```sig
+```blocks
 basic.forever(() => {
     let temp = input.temperature()
     basic.showNumber(temp)
 })
 ```
+### Example: Fahrenheit thermometer
+
+This program measures the temperature using Fahrenheit degrees.
+Fahrenheit is a way of measuring temperature that is commonly used in the United States.
+To make a Celsius temperature into a Fahrenheit one, multiply the Celsius temperature by
+1.8 and add 32.
+
+```blocks
+basic.forever(() => {
+    let c = input.temperature()
+    let f = (c * 1.8) + 32
+    basic.showNumber(f)
+})
+```
+
+### ~hint
+
+Try comparing the temperature your micro:bit shows to a real thermometer in the same place.
+You might be able to figure out how much to subtract from the number the micro:bit
+shows to get the real temperature. Then you can change your program so the micro:bit is a 
+better thermometer.
+
+### ~
 
 ### Lessons
 

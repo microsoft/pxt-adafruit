@@ -1,8 +1,8 @@
 /// <reference path="../node_modules/pxt-core/built/pxt.d.ts"/>
 
-import * as fs from 'fs';
-import * as path from 'path';
-import * as child_process from 'child_process';
+import * as fs from "fs";
+import * as path from "path";
+import * as child_process from "child_process";
 
 let writeFileAsync: any = Promise.promisify(fs.writeFile)
 let execAsync: (cmd: string, options?: { cwd?: string }) => Promise<Buffer> = Promise.promisify(child_process.exec)
@@ -13,10 +13,10 @@ export function deployCoreAsync(res: ts.pxt.CompileResult) {
             if (drives.length == 0) {
                 console.log("cannot find any drives to deploy to")
             } else {
-                console.log("copy microbit.hex to " + drives.join(", "))
+                console.log(`copy ${ts.pxt.BINARY_HEX} to ` + drives.join(", "))
             }
             return Promise.map(drives, d =>
-                writeFileAsync(d + "microbit.hex", res.outfiles["microbit.hex"])
+                writeFileAsync(d + ts.pxt.BINARY_HEX, res.outfiles[ts.pxt.BINARY_HEX])
                     .then(() => {
                         console.log("wrote hex file to " + d)
                     }))

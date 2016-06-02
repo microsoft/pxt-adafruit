@@ -24,8 +24,6 @@ basic.forever(() => {
 
 ### Challenge 1
 
-### @video td/videos/bounce-image-1
-
 Now, let's add frames to reverse the animation so it looks like the bar is bouncing off the right edge of the display.
 
 ```
@@ -60,9 +58,7 @@ input.onGesture(Gesture.Shake, () => {
 }) // ***
 ```
 
-**Challenge 3**
-
-### @video td/videos/bounce-image-2-3
+### Challenge 3
 
 When the BBC micro:bit is shaken we want to show a new animation. Here is an example, but you can create your own. Be creative!
 

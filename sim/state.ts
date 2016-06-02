@@ -42,21 +42,21 @@ namespace pxsim {
         constructor(private runtime: Runtime) { }
 
         listen(id: number, evid: number, handler: RefAction) {
-            let k = id + ':' + evid;
+            let k = id + ":" + evid;
             let queue = this.queues[k];
             if (!queue) queue = this.queues[k] = new EventQueue<number>(this.runtime);
             queue.handler = handler;
         }
 
         queue(id: number, evid: number, value: number = 0) {
-            let k = id + ':' + evid;
+            let k = id + ":" + evid;
             let queue = this.queues[k];
             if (queue) queue.push(value);
         }
     }
 
     export interface PacketBuffer {
-        data: number[];
+        data: number[] | string;
         rssi?: number;
     }
 
@@ -77,10 +77,13 @@ namespace pxsim {
             }
         }
 
-        send(buffer: number[]) {
+        send(buffer: number[] | string) {
+            if (buffer instanceof String) buffer = buffer.slice(0, 32);
+            else buffer = buffer.slice(0, 8);
+
             Runtime.postMessage(<SimulatorRadioPacketMessage>{
-                type: 'radiopacket',
-                data: buffer.slice(0, 8)
+                type: "radiopacket",
+                data: buffer
             })
         }
 
@@ -119,7 +122,7 @@ namespace pxsim {
 
         broadcast(msg: number) {
             Runtime.postMessage(<SimulatorEventBusMessage>{
-                type: 'eventbus',
+                type: "eventbus",
                 id: DAL.MES_BROADCAST_GENERAL_ID,
                 eventid: msg,
                 power: this.power,
@@ -127,21 +130,6 @@ namespace pxsim {
             })
         }
     }
-
-    export enum BasicGesture {
-        GESTURE_NONE,
-        GESTURE_UP,
-        GESTURE_DOWN,
-        GESTURE_LEFT,
-        GESTURE_RIGHT,
-        GESTURE_FACE_UP,
-        GESTURE_FACE_DOWN,
-        GESTURE_FREEFALL,
-        GESTURE_3G,
-        GESTURE_6G,
-        GESTURE_8G,
-        GESTURE_SHAKE
-    };
 
     interface AccelerometerSample {
         x: number;
@@ -196,8 +184,8 @@ namespace pxsim {
 
     export class Accelerometer {
         private sigma: number = 0;              // the number of ticks that the instantaneous gesture has been stable.
-        private lastGesture: BasicGesture = BasicGesture.GESTURE_NONE;        // the last, stable gesture recorded.
-        private currentGesture: BasicGesture = BasicGesture.GESTURE_NONE;     // the instantaneous, unfiltered gesture detected.
+        private lastGesture: number = 0;       // the last, stable gesture recorded.
+        private currentGesture: number = 0     // the instantaneous, unfiltered gesture detected.
         private sample: AccelerometerSample = { x: 0, y: 0, z: -1023 }
         private shake: ShakeHistory = { x: false, y: false, z: false, count: 0, shaken: 0, timer: 0 }; // State information needed to detect shake events.
         private pitch: number;
@@ -250,7 +238,7 @@ namespace pxsim {
          *
          * @return A best guess of the current posture of the device, based on instantaneous data.
          */
-        private instantaneousPosture(): BasicGesture {
+        private instantaneousPosture(): number {
             let force = this.instantaneousAccelerationSquared();
             let shakeDetected = false;
 
@@ -287,42 +275,42 @@ namespace pxsim {
             }
 
             if (this.shake.shaken)
-                return BasicGesture.GESTURE_SHAKE;
+                return DAL.MICROBIT_ACCELEROMETER_EVT_SHAKE;
 
             let sq = (n: number) => n * n
 
             if (force < sq(DAL.MICROBIT_ACCELEROMETER_FREEFALL_TOLERANCE))
-                return BasicGesture.GESTURE_FREEFALL;
+                return DAL.MICROBIT_ACCELEROMETER_EVT_FREEFALL;
 
             if (force > sq(DAL.MICROBIT_ACCELEROMETER_3G_TOLERANCE))
-                return BasicGesture.GESTURE_3G;
+                return DAL.MICROBIT_ACCELEROMETER_EVT_3G;
 
             if (force > sq(DAL.MICROBIT_ACCELEROMETER_6G_TOLERANCE))
-                return BasicGesture.GESTURE_6G;
+                return DAL.MICROBIT_ACCELEROMETER_EVT_6G;
 
             if (force > sq(DAL.MICROBIT_ACCELEROMETER_8G_TOLERANCE))
-                return BasicGesture.GESTURE_8G;
+                return DAL.MICROBIT_ACCELEROMETER_EVT_8G;
 
             // Determine our posture.
             if (this.getX() < (-1000 + DAL.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
-                return BasicGesture.GESTURE_LEFT;
+                return DAL.MICROBIT_ACCELEROMETER_EVT_TILT_LEFT;
 
             if (this.getX() > (1000 - DAL.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
-                return BasicGesture.GESTURE_RIGHT;
+                return DAL.MICROBIT_ACCELEROMETER_EVT_TILT_RIGHT;
 
             if (this.getY() < (-1000 + DAL.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
-                return BasicGesture.GESTURE_DOWN;
+                return DAL.MICROBIT_ACCELEROMETER_EVT_TILT_DOWN;
 
             if (this.getY() > (1000 - DAL.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
-                return BasicGesture.GESTURE_UP;
+                return DAL.MICROBIT_ACCELEROMETER_EVT_TILT_UP;
 
             if (this.getZ() < (-1000 + DAL.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
-                return BasicGesture.GESTURE_FACE_UP;
+                return DAL.MICROBIT_ACCELEROMETER_EVT_FACE_UP;
 
             if (this.getZ() > (1000 - DAL.MICROBIT_ACCELEROMETER_TILT_TOLERANCE))
-                return BasicGesture.GESTURE_FACE_DOWN;
+                return DAL.MICROBIT_ACCELEROMETER_EVT_FACE_DOWN;
 
-            return BasicGesture.GESTURE_NONE;
+            return 0;
         }
 
         updateGesture() {
@@ -563,12 +551,12 @@ namespace pxsim {
                 default: theme = pxsim.micro_bit.randomTheme();
             }
 
-            console.log('setting up microbit simulator')
+            console.log("setting up microbit simulator")
             let view = new pxsim.micro_bit.MicrobitBoardSvg({
                 theme: theme,
                 runtime: runtime
             })
-            document.body.innerHTML = ''; // clear children
+            document.body.innerHTML = ""; // clear children
             document.body.appendChild(view.element);
 
             return Promise.resolve();
@@ -578,37 +566,42 @@ namespace pxsim {
             if (!runtime || runtime.dead) return;
 
             switch (msg.type || "") {
-                case 'eventbus':
+                case "eventbus":
                     let ev = <SimulatorEventBusMessage>msg;
                     this.bus.queue(ev.id, ev.eventid, ev.value);
                     break;
-                case 'serial':
-                    this.serialIn.push((<SimulatorSerialMessage>msg).data || '');
+                case "serial":
+                    this.serialIn.push((<SimulatorSerialMessage>msg).data || "");
                     break;
-                case 'radiopacket':
+                case "radiopacket":
                     let packet = <SimulatorRadioPacketMessage>msg;
-                    this.radio.datagram.queue({ data: packet.data || [], rssi: packet.rssi || 0 })
+                    this.radio.datagram.queue({ data: packet.data, rssi: packet.rssi || 0 })
                     break;
             }
         }
 
         readSerial() {
-            let v = this.serialIn.shift() || '';
+            let v = this.serialIn.shift() || "";
             return v;
         }
 
-        serialOutBuffer: string = '';
+        kill() {
+            super.kill();
+            AudioContextManager.stop();
+        }
+
+        serialOutBuffer: string = "";
         writeSerial(s: string) {
             for (let i = 0; i < s.length; ++i) {
                 let c = s[i];
                 this.serialOutBuffer += c;
-                if (c == '\n') {
+                if (c == "\n") {
                     Runtime.postMessage(<SimulatorSerialMessage>{
-                        type: 'serial',
+                        type: "serial",
                         data: this.serialOutBuffer,
                         id: runtime.id
                     })
-                    this.serialOutBuffer = ''
+                    this.serialOutBuffer = ""
                     break;
                 }
             }

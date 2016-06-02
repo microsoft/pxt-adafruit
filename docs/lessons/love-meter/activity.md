@@ -4,8 +4,6 @@ Create a love meter with the micro:bit
 
 ### ~avatar avatar
 
-### @video td/videos/love-meter-0
-
 Welcome! This activity will help you create a love meter with the micro:bit. Let's get started!
 
 ### ~

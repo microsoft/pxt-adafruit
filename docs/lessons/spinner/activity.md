@@ -4,7 +4,7 @@ Create an arrow that randomly points to a player.
 
 ### ~avatar avatar
 
-### @video td/videos/spinner-0
+
 
 ### ~
 

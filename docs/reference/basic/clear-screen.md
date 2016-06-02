@@ -8,7 +8,7 @@ basic.clearScreen()
 
 ### Example: vanishing heart
 
-The following code displays a heart on the screen and then turns off all the LED lights using `clear screen`:
+The following code shows a heart on the screen and then turns off all the LED lights using `clear screen`:
 
 ```blocks
 basic.showLeds(`

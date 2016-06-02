@@ -4,7 +4,15 @@ Turn an LED on and off with forever
 
 ### ~avatar avatar
 
-### @video td/videos/blink-0
+```sim
+basic.forever(() => {
+    led.plot(2, 2)
+    basic.pause(500)
+    led.unplot(2, 2)
+    basic.pause(500)
+})
+```
+Let's build a blinking light!
 
 ### ~
 
@@ -43,7 +51,6 @@ basic.forever(() => {
     led.unplot(2, 2)
     basic.pause(500)
 })
-
 ```
 
 ### ~avatar boothing

@@ -141,7 +141,7 @@ namespace control {
      * @param value Component specific code indicating the cause of the event.
      * @param mode optional definition of how the event should be processed after construction (default is CREATE_AND_FIRE).
      */
-    //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source|with value %value=control_event_value" blockExternalInputs=1
+    //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from source %src=control_event_source_id|with value %value=control_event_value_id" blockExternalInputs=1
     //% mode.defl=CREATE_AND_FIRE
     void raiseEvent(int src, int value, EventCreationMode mode) { 
         MicroBitEvent evt(src, value, (MicroBitEventLaunchMode)mode); 
@@ -150,10 +150,28 @@ namespace control {
     /**
      * Raises an event in the event bus.
      */
-    //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_event_source|with value %value=control_event_value" 
+    //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src=control_event_source_id|with value %value=control_event_value_id" 
     //% blockExternalInputs=1
     void onEvent(int src, int value, Action handler) { 
         registerWithDal(src, value, handler);
+    }
+
+    /**
+    * Gets the value of the last event executed on the bus
+    */
+    //% blockId=control_event_value" block="event value"
+    //% weight=18
+    int eventValue() {
+        return pxt::lastEvent.value;
+    }
+    
+    /**
+    * Gets the timestamp of the last event executed on the bus
+    */
+    //% blockId=control_event_timestamp" block="event timestamp"
+    //% weight=19 blockGap=8
+    int eventTimestamp() {
+        return pxt::lastEvent.timestamp;
     }
     
     /**

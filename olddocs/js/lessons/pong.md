@@ -2,8 +2,6 @@
 
 code your own game of Pong on the micro:bit. #.
 
-### @video td/videos/pong-0
-
 ## Topic
 
 Functions

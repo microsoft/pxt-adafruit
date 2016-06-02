@@ -2,7 +2,7 @@
 
 clear the screen by pressing button "A".
 
-### @video td/videos/screen-wipe-0
+
 
 ## Topic
 

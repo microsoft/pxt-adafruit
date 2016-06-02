@@ -16,8 +16,6 @@ input.onButtonPressed(Button.A, () => {
 
 ### Challenge 1
 
-### @video td/videos/counter-1-2
-
 Let's add the code to `count` when `B` is pressed. Add an event handler with `on button pressed(B)` then add the code to `count`.
 
 
@@ -32,7 +30,6 @@ input.onButtonPressed(Button.B, () => {
     basic.showNumber(count)
 })
 ```
-
 
 ### Challenge 3
 

@@ -4,8 +4,6 @@ These challenges will allow you to change the brightness of the micro:bit. docs
 
 **Challenge 0**
 
-### @video vimeo/133782335
-
 [This tutorial](/lessons/set-brightness/tutorial) will show you how to set the brightness on the micro:bit.
 
 ```
@@ -17,8 +15,6 @@ input.onButtonPressed(Button.A, () => {
 ```
 
 **Challenge 1**
-
-### @video vimeo/133782335
 
 What if we want to turn off all the LEDs? Let's do this by setting the brightness to `0` when button `B` is pressed. Add a condition for `input->on button pressed("B")`.
 

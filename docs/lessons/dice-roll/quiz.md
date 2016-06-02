@@ -1,12 +1,12 @@
-# die roll quiz
+# dice roll quiz
 
-Create a die when the BBC micro:bit is shaken 
+Create a dice when the BBC micro:bit is shaken 
 
 ## Name
 
 ## Directions
 
-Use this activity document to guide your work in the [die roll tutorial](/lessons/die-roll/activity).
+Use this activity document to guide your work in the [dice roll tutorial](/lessons/dice-roll/activity).
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

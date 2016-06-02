@@ -2,7 +2,7 @@
 
 design a blinking rectangle animation.
 
-### @video td/videos/snowflake-fall-0
+
 
 ## Topic
 

@@ -24,8 +24,6 @@ input.onLogoUp(() => {
 
 How about when the logo is down? We should display an arrow pointing downward!
 
-### @video td/videos/magic-logo-1-2
-
 ```blocks
 input.onLogoUp(() => {
     basic.showLeds(`

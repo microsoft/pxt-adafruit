@@ -2,8 +2,6 @@
 
 A game to catch eggs in a basket.
 
-### @video td/videos/catch-the-egg-game-0
-
 ## Topic
 
 Variables

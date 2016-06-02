@@ -1,34 +1,34 @@
 # Assignment Operator
 
-Set the value for local and global variables.
+Use an equals sign to make a [variable](/reference/variables/var) store the [number](/reference/types/number) 
+or [string](/reference/types/string) you say.
 
-### @parent blocks/operators
+When you use the equals sign to store something in a variable, the equals sign is called
+an *assignment operator*, and what you store is called a *value*.
 
-Set or change the value of a variable
+### Storing numbers in variables
 
-````blocks
-let item = 0
-````
-
-Use the assignment operator to set or change the value of a [variable](/reference/variables/var).
-
-### Declare a variable
-
-Declare a new *local* variable using the [variable](/reference/variables/var) statement and the assignment operator. Like this:
+This program makes the variable `item` equal `5` and then shows it on the [LED screen](/device/screen).
 
 ````blocks
-let num1 = 42;
-let name = "Joe";
+let item = 5
+basic.showNumber(item)
 ````
 
-The variable's name is on the left of the assignment operator and the variable's value is on the right:
+### Storing strings in variables
+
+This program makes the variable `name` equal `Joe` and then shows it on the [LED screen](/device/screen).
 
 ````blocks
-let num1 = 42
+let name = "Joe"
+basic.showString(name);
 ````
+
 ### Notes
 
-* You can use the assignment operator with variables of each of the supported [types](/reference/types).
+You can use the assignment operator with variables of 
+every [type](/reference/types). A *type* is which kind of thing
+a variable can store, like a number or string.
 
 ### Lessons
 

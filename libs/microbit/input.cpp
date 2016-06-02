@@ -59,42 +59,52 @@ enum class Gesture {
      * Raised when shaken
      */
     //% block=shake
-    Shake = GESTURE_SHAKE,
+    Shake = MICROBIT_ACCELEROMETER_EVT_SHAKE,
     /**
      * Raised when the logo is upward and the screen is vertical
      */
     //% block="logo up"
-    LogoUp = GESTURE_UP,
+    LogoUp = MICROBIT_ACCELEROMETER_EVT_TILT_UP,
     /**
      * Raised when the logo is downward and the screen is vertical
      */
     //% block="logo down"
-    LogoDown = GESTURE_DOWN,
+    LogoDown = MICROBIT_ACCELEROMETER_EVT_TILT_DOWN,
     /**
      * Raised when the screen is pointing down and the board is horizontal
      */
     //% block="screen up"
-    ScreenUp = GESTURE_FACE_UP,
+    ScreenUp = MICROBIT_ACCELEROMETER_EVT_FACE_UP,
     /**
      * Raised when the screen is pointing up and the board is horizontal
      */
     //% block="screen down"
-    ScreenDown = GESTURE_FACE_DOWN,
+    ScreenDown = MICROBIT_ACCELEROMETER_EVT_FACE_DOWN,
     /**
      * Raised when the screen is pointing left
      */
     //% block="tilt left"
-    TiltLeft = GESTURE_LEFT,
+    TiltLeft = MICROBIT_ACCELEROMETER_EVT_TILT_LEFT,
     /**
      * Raised when the screen is pointing right
      */
     //% block="tilt right"
-    TiltRight = GESTURE_RIGHT,    
+    TiltRight = MICROBIT_ACCELEROMETER_EVT_TILT_RIGHT,    
     /**
      * Raised when the board is falling!
      */
     //% block="free fall"
-    FreeFall = GESTURE_FREEFALL
+    FreeFall = MICROBIT_ACCELEROMETER_EVT_FREEFALL,
+    /**
+    * Raised when a 3G shock is detected
+    */
+    //% block="3g"
+    ThreeG = MICROBIT_ACCELEROMETER_EVT_3G,
+    /**
+    * Raised when a 6G shock is detected
+    */
+    //% block="6g"
+    SixG = MICROBIT_ACCELEROMETER_EVT_6G
 };
 
 //% color=300 weight=99
@@ -104,7 +114,7 @@ namespace input {
      * @param button TODO
      * @param body TODO
      */
-    //% help=input/on-button-pressed weight=85
+    //% help=input/on-button-pressed weight=85 blockGap=8
     //% blockId=device_button_event block="on button|%NAME|pressed" icon="\uf192"
     void onButtonPressed(Button button, Action body) {
         registerWithDal((int)button, MICROBIT_BUTTON_EVT_CLICK, body);
@@ -114,9 +124,13 @@ namespace input {
      * Attaches code to run when the screen is facing up.
      * @param body TODO
      */
-    //% help=input/on-gesture weight=84
+    //% help=input/on-gesture weight=84 blockGap=8
     //% blockId=device_gesture_event block="on |%NAME" icon="\uf135"
     void onGesture(Gesture gesture, Action body) {
+        if ((int)gesture == MICROBIT_ACCELEROMETER_EVT_3G && uBit.accelerometer.getRange() < 3)
+            uBit.accelerometer.setRange(4);
+        else if ((int)gesture == MICROBIT_ACCELEROMETER_EVT_6G && uBit.accelerometer.getRange() < 6)
+            uBit.accelerometer.setRange(8);            
         registerWithDal(MICROBIT_ID_GESTURE, (int)gesture, body);
     }
 

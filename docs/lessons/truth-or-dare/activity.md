@@ -4,7 +4,7 @@ A multi-player game that forces each player to reveal a secret or something funn
 
 ### ~avatar avatar
 
-### @video td/videos/truth-or-dare-0
+
 
 Welcome! This tutorial will teach how to program a game of truth or dare on the micro:bit. Let's get started!
 

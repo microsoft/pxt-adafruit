@@ -93,7 +93,7 @@ input.onButtonPressed(Button.A, () => {
 
 ### Challenge 2
 
-### @video td/videos/rotation-animation-1-and-2
+
 
 Now that we have the on button pressed condition, let's make the animation stop rotating by setting the rotating global variable to false when button `A` is pressed.
 

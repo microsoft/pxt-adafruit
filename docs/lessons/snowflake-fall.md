@@ -21,10 +21,6 @@ Learn how to show LEDs with a, `pause` to pause program execution for a specifie
 
 ## Documentation
 
-* **show LEDs** : [read more...](/reference/basic/show-leds)
-* **pause** : [read more...](/reference/basic/pause)
-* **forever** : [read more...](/reference/basic/forever)
-
 ```cards
 basic.showLeds(`
     . . . . .

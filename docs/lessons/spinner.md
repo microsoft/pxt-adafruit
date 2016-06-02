@@ -21,7 +21,6 @@ Learn how to use an if statement to run code run code depending on whether a con
 
 ## Documentation
 
-
 ```cards
 if (true) {}
 let x = 0

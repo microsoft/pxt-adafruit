@@ -13,7 +13,6 @@ Let's measure `acceleration (mg)` in the "x" direction. Get the acceleration val
 
 ```blocks
 input.acceleration(Dimension.X)
-
 ```
 
 ### ~
@@ -41,7 +40,7 @@ Vigorously move the micro:bit in the micro:bit simulatator by moving the micro:b
 
 We want to chart the data collected by using a tool in Excel. 
 
-The final part of this experiment is opening and reviewing the data in the Excel CSV file. Simply click on the line beneath the simulator. A CSV file will be generated to display the data points collected by moving the micro:bit in the X direction. Then click or tap on the data Excel file that was downloaded to your local Downloads Folder. 
+The final part of this experiment is opening and reviewing the data in the Excel CSV file. Simply click on the line beneath the simulator. A CSV file will be generated to display the data points collected by moving the micro:bit in the X direction. Then click or tap on the data Excel file that was downloaded to your local ``Downloads`` Folder. 
 
 
 ### ~
@@ -57,25 +56,9 @@ Use the Recommended Charts command on the Insert tab to quickly create a chart t
 
 * Click Insert > Recommended Charts.
 
-![](/static/mb/chart1.png)
+![](/static/mb/lessons/chart1.png)
 
-* On the Recommended Charts tab, scroll through the list of chart types that Excel recommends for your data.
-
-Click any chart type to see how your data will look in that format. 
-
-When you find the chart type that you want, click it, and then click OK. We want to select the chart called Line. A line chart is used to display trends over time. We will use the line chart because there are many data points over time. 
-
-Tip: If you don’t see a chart type that you want, click the All Charts tab to see all of the available chart types.
-
-![](/static/mb/chart_title.png)
-
-* Use the Chart Elements, Chart Styles, and Chart Filters buttons next to the upper-right corner of the chart to add chart elements like axis titles or data labels, to customize the look of your chart
-
-![](/static/mb/elements_styles_filters.png)
-
-* Connect a micro:bit to your computer using your USB cable; compile; and repeat this experiment by moving the micro:bit in the "x" direction. Then collect and chart the data on Excel. 
-* Review and analyze the actual micro:bit device data on Excel
-* Display acceleration with y or z using plot bar graph by changing acceleration from "x" to "y" or "z" 
+* On the Recommended Charts tab, scroll through the list of chart types that Excel recommends for your data. Pick the **scatter plot**.
 
 ### ~avatar avatar
 

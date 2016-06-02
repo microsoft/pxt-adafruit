@@ -14,7 +14,8 @@ Telegraph
 
 ## Prior learning/place of lesson in scheme of work
 
-Learn how to convert your BBC micro:bit into a telegraph using a second BBC micro:bit as well as pin P1, P2, 3V, GND, and crocodile clips (or spring clips). The connect BBC micro:bit uses pins P1, P2, 3V, GND.
+Learn how to convert your BBC micro:bit into a telegraph using a second BBC micro:bit as well as pin P1, P2, 3V, GND, 
+and crocodile clips (or spring clips). The connect BBC micro:bit uses pins P1, P2, 3V, GND.
 
 ## Objectives
 

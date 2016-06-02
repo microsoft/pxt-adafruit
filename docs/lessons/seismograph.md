@@ -18,12 +18,12 @@ Learn how to **show LEDs** to turn on a LED light pattern on the LED screen. We 
 ## Documentation
 
 ```cards
-basic.forever(() => {
-    radio.sendNumber(input.acceleration(Dimension.Strength) - 1023);
-});
-radio.onDataReceived(() => {
-    led.plotBarGraph(radio.receiveNumber(), 0);
-});
+basic.forever(() => {});
+radio.sendNumber(0);
+input.acceleration(Dimension.Strength)
+radio.onDataReceived(() => {});
+led.plotBarGraph(0, 0);
+radio.receiveNumber();
 ```
 
 ## Objectives

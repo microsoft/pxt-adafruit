@@ -2,7 +2,8 @@
 
 ### ~avatar avatar 
 
-Welcome! The activity will teach you how to use the acceleration of the 1st micro:bit and to visualize the acceleration on the 2nd micro:bit. Let's get started!
+Welcome! The activity will teach you how to use the acceleration of the 1st micro:bit and to visualize the acceleration on the 2nd micro:bit. 
+Let's get started!
 
 ### ~
 Let's measure `acceleration (mg)` and then `send number`. `Acceleration` is measured in **milli-gravities**, so a value of -1000 is equivalent to -1g or -9.81m/s^2. We will be able to get the acceleration value (g-force), in the specified "x" dimension. `Send number` will broadcast a number data packet to other micro:bits connected via radio.
@@ -52,7 +53,7 @@ Notice that moving the micro:bit the farthest direction in the x direction will 
 NOTE: The colors of the charts reflect the color of the micro:bit simulator. In this instance, the micro:bits are blue and green. So the colors of the line graphs reflect the colors of the micro:bit
  
  ### ~
-After running this simulatation several seconds by moving the micro:bit side to side in the x direction, you are ready to graph or chart the accceleration of the micro:bit.  We want a printout of our acceleration on Excel. We will graph the fluctuating acceleration of the simulation experiment. 
+After running this simulation several seconds by moving the micro:bit side to side in the x direction, you are ready to graph or chart the accceleration of the micro:bit.  We want a printout of our acceleration on Excel. We will graph the fluctuating acceleration of the simulation experiment. 
 
 ![](/static/mb/acc2.png)
 
@@ -67,15 +68,9 @@ Use the Recommended Charts command on the Insert tab to quickly create a chart t
 
 * Click Insert > Recommended Charts.
 
-![](/static/mb/chart1.png)
+![](/static/mb/lessons/chart1.png)
 
-* On the Recommended Charts tab, scroll through the list of chart types that Excel recommends for your data.
-
-Click any chart type to see how your data will look in that format. 
-
-When you find the chart type that you want, click it, and then click OK. We want to select the chart called Line. A line chart is used to display trends over time. We will use the line chart because there are many data points over time. 
-
-Tip: If you don’t see a chart type that you want, click the All Charts tab to see all of the available chart types.
+* On the Recommended Charts tab, scroll through the list of chart types that Excel recommends for your data. Pick the **scatter plot**.
 
 ![](/static/mb/chart_title.png)
 
@@ -91,4 +86,3 @@ Have fun reviewing your simulation and analyze the acceleration by chart the Exc
 * The first person and second person take turns tilting the micro:bit in the "x" direction while the other player charts the data on the micro:bit!
 * Review and analyze the actual micro:bit device acceleration data on Excel
 * Display acceleration with y or z using plot bar graph by changing acceleration from "x" to "y" or "z" 
-

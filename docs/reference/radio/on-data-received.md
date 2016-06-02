@@ -1,12 +1,18 @@
 # On Data Received
 
-Registers code to run when a packet is received over ``radio``.
+Run part of a program when the micro:bit receives a
+[number](/reference/types/number) or [string](/reference/types/string) over ``radio``.
 
 ### Parameters
 
-* body - is an action
+* **body** is the part of the program to run when the micro:bit receives information over ``radio``.
 
 ### Example
+
+This program never stops.  It keeps sending numbers that says how
+fast the micro:bit is slowing down or speeding up.  It also receives
+numbers that say how fast nearby micro:bits are going. It
+shows these numbers as a [bar graph](/reference/led/plot-bar-graph).
 
 ```blocks
 basic.forever(() => {
@@ -19,5 +25,6 @@ radio.onDataReceived(() => {
 
 ### See also
 
-[receive number](/reference/radio/receive-number), [send number](/reference/radio/send-number), [set group](/reference/radio/set-group)
+[receive number](/reference/radio/receive-number),
+[send number](/reference/radio/send-number), [set group](/reference/radio/set-group)
 

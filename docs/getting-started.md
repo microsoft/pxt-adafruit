@@ -1,9 +1,13 @@
 # Getting started
 
+## ~avatar
+
 Are you ready to build cool BBC micro:bit programs?
 
 Here are some challenges for you.  Unscramble the blocks in the editor
 to make real programs that work!
+
+## ~
 
 ### Happy face
 
@@ -33,11 +37,7 @@ When you run this program, you will see a smiley face, then a blank
 screen, then a smiley again -- it never stops! (That's because of the
 ``forever`` block.)
 
-To move your program from your computer to the BBC micro:bit:
-* Connect your micro:bit to the computer with the USB cable.
-* Click **Compile**.
-* Drag and drop the new file whose name ends in **.hex** into the **MICROBIT** window.
-* Wait until the yellow light stops blinking!
+Now move your program from your computer to the BBC micro:bit!
 
 ### Happy unhappy face
 
@@ -66,11 +66,7 @@ basic.forever(() => {
 });
 ```
 
-To move your program from your computer to the BBC micro:bit:
-* Connect your micro:bit to the computer with the USB cable.
-* Click **Compile**.
-* Drag and drop the new file whose name ends in **.hex** into the **MICROBIT** window.
-* Wait until the yellow light stops blinking!
+Now move your program from your computer to the BBC micro:bit!
 
 ### Your turn!
 
@@ -124,11 +120,7 @@ basic.forever(() => {
 });
 ```
 
-To move your program from your computer to the BBC micro:bit:
-* Connect your micro:bit to the computer with the USB cable.
-* Click **Compile**.
-* Drag and drop the new file whose name ends in **.hex** into the **MICROBIT** window.
-* Wait until the yellow light stops blinking!
+Now move your program from your computer to the BBC micro:bit!
 
 #### ~hint
 
@@ -138,12 +130,12 @@ You can find the ``show leds`` block in the **Basic** part of the editor.
 
 ### Button A and button B
 
-This program will show the word **anteater** on the LED
+This program will show the word **ANTEATER** on the LED
 screen when you press button `A`.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
-    basic.showString("anteater");
+    basic.showString("ANTEATER");
 });
 ```
 
@@ -155,11 +147,11 @@ on the micro:bit screen.
 #### ~
 
 Now try to unscramble these blocks in the editor so that the micro:bit
-shows **banana** when you press button `B`.
+shows **BANANA** when you press button `B`.
 
 ```shuffle
 input.onButtonPressed(Button.B, () => {
-    basic.showString("banana");
+    basic.showString("BANANA");
 });
 ```
 #### ~hint
@@ -172,8 +164,8 @@ You can find the letter `B` by clicking the letter `A` on the
 #### Your turn!
 
 Can you combine these blocks so your program shows your real name
-instead of **anteater** when you press `A`, but _your secret agent
-name_ instead of **banana** when you press `B`?
+instead of **ANTEATER** when you press `A`, but _your secret agent
+name_ instead of **BANANA** when you press `B`?
 
 ### Shake
 
@@ -271,3 +263,242 @@ with the BBC micro:bit!  What about some of these?
 These are all things you can make with the BBC micro:bit by itself.
 Just think what you can do if you connect the micro:bit's pins to
 extra parts like microphones and other **sensors**!
+
+## Let's play Rock Paper Scissors!
+
+### ~avatar avatar
+
+```sim
+input.onGesture(Gesture.Shake, () => {
+    let img = Math.random(3)
+    if (img == 0) {
+        basic.showLeds(`
+            # # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # #
+            `)
+
+    } else if (img == 1) {
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            . . . . .
+            `)
+    } else {
+        basic.showLeds(`
+            # # . . #
+            # # . # .
+            . . # . .
+            # # . # .
+            # # . . #
+            `)
+    }
+})
+```
+Build a Rock Paper Scissors game with the BBC micro:bit!
+You can play the game with a friend who has it on a micro:bit.
+You can also play it with friends who are just using their hands.
+
+## [START PROJECT](/#follow:/projects/rock-paper-scissors)
+
+### ~
+
+
+## Materials needed
+
+* Your BBC micro:bit -- that's it!
+
+## Step 1: Getting started
+
+We want the micro:bit to choose rock, paper, or scissors when you
+shake it.  Try creating an ``on shake`` block so when you shake the
+micro:bit, it will run part of a program.
+
+```blocks
+input.onGesture(Gesture.Shake, () => {
+    
+})
+```
+
+Next, when you shake the micro:bit, it should pick a random number from `0` to `2`
+and store it in the variable `weapon`. (This variable is named `weapon` because 
+rock, paper, and scissors are the weapons you use to battle your friends!)
+
+Add a ``set`` block with a variable. Then add a ``pick random`` block,
+and store the random number in the variable,
+like this:
+
+```blocks
+input.onGesture(Gesture.Shake, () => {
+    let weapon = Math.random(3)
+})
+
+```
+
+### ~hint
+No one can predict random numbers. That's what makes them great for Rock Paper Scissors!
+### ~
+
+Each possible number these blocks can make (`0`, `1`, or `2`) means a different picture.
+We will show the right picture for that number on the LED screen.
+
+
+## Step 2: Picking paper
+
+Put an ``if`` block after the ``let`` block that checks whether
+`weapon` is `0`. Make sure the ``if`` block has an ``else if`` part
+and an ``else`` part.
+
+Next, add a ``show leds`` block that shows a
+picture of a piece of paper:
+
+```blocks
+input.onGesture(Gesture.Shake, () => {
+    let weapon = Math.random(3)
+    if (weapon == 0) {
+        basic.showLeds(`
+            # # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # #
+            `)
+    } else if (false) {
+
+    } else {
+
+    }
+})
+```
+
+## Step 3: A random rock
+
+Now we are going to add a new picture for the micro:bit to show
+when another random number comes up.
+
+Make the ``else if`` part check if the variable `weapon` is `1`.
+Then add a ``show leds`` block with a picture of a rock.
+
+```blocks
+input.onGesture(Gesture.Shake, () => {
+    let weapon = Math.random(3)
+    if (weapon == 0) {
+        basic.showLeds(`
+            # # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # #
+            `)
+
+    } else if (weapon == 1) {
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            . . . . .
+            `)
+    } else {
+
+    }
+})
+```
+
+## Step 4: Suddenly scissors
+
+Add a ``show leds`` block with a picture of scissors to the ``else`` part:
+
+```blocks
+input.onGesture(Gesture.Shake, () => {
+    let weapon = Math.random(3)
+    if (weapon == 0) {
+        basic.showLeds(`
+            # # # # #
+            # . . . #
+            # . . . #
+            # . . . #
+            # # # # #
+            `)
+
+    } else if (weapon == 1) {
+        basic.showLeds(`
+            . . . . .
+            . # # # .
+            . # # # .
+            . # # # .
+            . . . . .
+            `)
+    } else {
+        basic.showLeds(`
+            # # . . #
+            # # . # .
+            . . # . .
+            # # . # .
+            # # . . #
+            `)
+    }
+})
+
+```
+
+### ~hint
+
+You don't need to check if `weapon` is `2` because `2` is the only number left out of `0`, `1`, and `2`.
+That's why you can use an ``else`` instead of an ``else if``.
+
+### ~
+
+Your game is ready! Have fun!
+
+## Step 5: Are you the greatest?
+
+Here is a way you can make your Rock Paper Scissors game better.
+When button ``A`` is pressed, 
+the micro:bit will add `1` to your score.
+
+Open the ``Game`` drawer, and then add the block ``change score by 1`` to your program,
+like this:
+
+```blocks
+input.onButtonPressed(Button.A, () => {
+    game.addScore(1)
+})
+
+```
+
+## Step 6: Prove you're the greatest!
+
+After your micro:bit can add `1` to the score, show how many wins you have.
+
+```blocks
+input.onButtonPressed(Button.A, () => {
+    game.addScore(1)
+    basic.showString("WINS:")
+    basic.showNumber(game.score())
+})
+```
+## Step 7: Staying honest
+
+Success! Your micro:bit can track wins!
+But what about losses? 
+Use the ``Game`` drawer to subtract `1` from your score when you press button `B`. 
+
+Here are all the blocks you will need:
+
+```shuffle
+input.onButtonPressed(Button.B, () => {
+    game.addScore(-1)
+    basic.showString("LOSSES:")
+    basic.showNumber(game.score())
+})
+```
+
+## Your turn!
+
+How else can you make your game better?
+Ever hear of [Rock Paper Scissors Spock Lizard](http://www.samkass.com/theories/RPSSL.html)?

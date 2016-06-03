@@ -50,7 +50,9 @@
     "compile": {
         "isNative": false,
         "hasHex": true,
-        "deployDrives": "^MICROBIT"
+        "deployDrives": "^MICROBIT",
+        "driveName": "MICROBIT",
+        "hexMimeType": "application/x-microbit-hex"
     },
     "runtime": {
         "mathBlocks": true,
@@ -84,10 +86,9 @@
         "organizationLogo": "./static/Microsoft-logo_rgb_c-gray.png",
         "homeUrl": "https://m.pxt.io/",
         "embedUrl": "https://m.pxt.io/",
-        "koduUrl": "https://www.kodugamelab.com/bbc-microbit/",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
-        "visualStudioCode": true,
+        "boardName": "BBC micro:bit",
         "docMenu": [
             {
                 "name": "About",

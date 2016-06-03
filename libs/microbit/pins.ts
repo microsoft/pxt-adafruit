@@ -1,3 +1,9 @@
+enum PinMode {
+    PullDown,
+    PullUp,
+    PullNone
+}
+
 /**
  * Control currents in Pins for analog/digital signals, servos, i2c, ...
  */

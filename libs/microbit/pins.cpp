@@ -135,6 +135,17 @@ namespace pins {
     }
     
     /**
+    * Configures the pull of this pin.
+    * @param name pin to set the pull mode on
+    * @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone 
+    */
+    //% help=pins/digital-set-pull weight=21 blockGap=8
+    //% blockId=device_set_pull block="digital set pull|pin %pin|to %pull"
+    void setPull(DigitalPin name, PinMode pull) {
+        PINOP(setPull(pull));
+    }
+    
+    /**
     * Configures this pin to a digital input, and generates events where the timestamp is the duration that this pin was either ``high`` or ``low``.
     */
     //% help=pins/on-pulsed weight=22 blockGap=8

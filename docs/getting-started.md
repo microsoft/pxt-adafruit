@@ -37,7 +37,7 @@ When you run this program, you will see a smiley face, then a blank
 screen, then a smiley again -- it never stops! (That's because of the
 ``forever`` block.)
 
-Now move your program from your computer to the BBC micro:bit!
+Click **Compile** to move your program to the BBC micro:bit!
 
 ### Happy unhappy face
 
@@ -65,8 +65,7 @@ basic.forever(() => {
         `)
 });
 ```
-
-Now move your program from your computer to the BBC micro:bit!
+Click **Compile** to move your program to the BBC micro:bit!
 
 ### Your turn!
 
@@ -119,8 +118,7 @@ basic.forever(() => {
         `)
 });
 ```
-
-Now move your program from your computer to the BBC micro:bit!
+Click **Compile** to move your program to the BBC micro:bit!
 
 #### ~hint
 
@@ -161,6 +159,8 @@ You can find the letter `B` by clicking the letter `A` on the
 
 #### ~
 
+Click **Compile** to move your program to the BBC micro:bit!
+
 #### Your turn!
 
 Can you combine these blocks so your program shows your real name
@@ -186,6 +186,7 @@ input.onGesture(Gesture.Shake, () => {
 # . . . #`);
 });
 ```
+Click **Compile** to move your program to the BBC micro:bit!
 
 ### Tilting with gestures
 
@@ -226,6 +227,7 @@ input.onGesture(Gesture.TiltRight, () => {
 # # . . #`);
 });
 ```
+Click **Compile** to move your program to the BBC micro:bit!
 
 ### Pins
 
@@ -247,6 +249,7 @@ input.onPinPressed(TouchPin.P0, () => {
 . # # # .`);
 });
 ```
+Click **Compile** to move your program to the BBC micro:bit!
 
 ### Your turn!
 
@@ -453,7 +456,11 @@ That's why you can use an ``else`` instead of an ``else if``.
 
 ### ~
 
-Your game is ready! Have fun!
+Your game is ready!
+
+Click **Compile** to move your program to the BBC micro:bit!
+
+Have fun!
 
 ## Step 5: Are you the greatest?
 
@@ -497,6 +504,7 @@ input.onButtonPressed(Button.B, () => {
     basic.showNumber(game.score())
 })
 ```
+Click **Compile** to move your program to the BBC micro:bit!
 
 ## Your turn!
 

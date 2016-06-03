@@ -1,33 +1,27 @@
 # Set Transmit Power
 
-Sets the transmitter power for ``radio`` communications.    
-The power can be set to a value between 0 (-30dbm) and 7 (+4dbm).
+Make the ``radio`` signal of the micro:bit stronger or weaker.
+It can be as weak as `0` and as strong as `7`.
+
+The scientific name for the strength of the ``radio`` signal is
+**dBm**, or **decibel-milliwatts**. A signal strength of `0`
+can be measured as -30 dBm, and a strength of `7` can be
+measured as +4 dBm.
 
 ## Range
    
-At power level 7, in an open area without significant interference (coming from WiFi networks or other devices operating on the 2.4 GHz range), you can get a **range of over 70m**.   
- 
-Indoors (or with additional interference), range will be significantly reduced.
-
-## Important Security Consideration
-
-The functions in the ``radio`` namespace allow the BBC micro:bit to communicate with other micro:bits.
-
-This API does not contain any form of encryption, authentication or authorization. It's purpose is solely for use as a teaching aid to demonstrate how simple communications operates, and to provide a sandpit through which learning can take place.
-
-For serious applications, BLE should be considered a substantially more secure alternative.
-
-```sig
-radio.setTransmitPower(1)
-```
+If your micro:bit is sending with a strength of `7`, and you are in
+an open area without many other computers around, the micro:bit signal
+can reach as far as 70 meters (about 230 feet).
 
 ### Parameters
 
-* ``power`` -- a [number](/reference/types/number) between ``0`` and ``7``.
+* a [number](/reference/types/number) between ``0`` and ``7`` that
+means how strong the signal is.
 
 ### Example
 
-Sets the transmitter power to full power at 7.
+This program makes the ``radio`` send at full strength.
 
 ```blocks
 radio.setTransmitPower(7)

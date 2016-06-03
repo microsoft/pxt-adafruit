@@ -5,14 +5,14 @@ Run part of a program when the micro:bit receives a
 
 ### Parameters
 
-* **body** is the part of the program to run when the micro:bit receives information over ``radio``.
+* the part of the program to run when the micro:bit receives information over ``radio``.
 
 ### Example
 
-This program never stops.  It keeps sending numbers that says how
-fast the micro:bit is slowing down or speeding up.  It also receives
-numbers that say how fast nearby micro:bits are going. It
-shows these numbers as a [bar graph](/reference/led/plot-bar-graph).
+This program keeps sending numbers that says how fast the micro:bit is
+slowing down or speeding up.  It also receives numbers for the same
+thing from nearby micro:bits. It shows these numbers as a
+[bar graph](/reference/led/plot-bar-graph).
 
 ```blocks
 basic.forever(() => {

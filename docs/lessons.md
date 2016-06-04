@@ -71,4 +71,4 @@
 
 ### @section full
 
-The lessons promote computational thinking and computer science literacy[ read more...](/lessons/teach)
+The lessons promote computational thinking and computer science literacy.

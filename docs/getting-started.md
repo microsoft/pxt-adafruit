@@ -7,8 +7,6 @@ Are you ready to build cool BBC micro:bit programs?
 Here are some challenges for you.  Unscramble the blocks in the editor
 to make real programs that work!
 
-[OPEN EDITOR](/#follow:getting-started)
-
 ## ~
 
 ### Happy face

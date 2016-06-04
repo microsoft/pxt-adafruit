@@ -36,6 +36,15 @@ enum class PulseValue {
     Low = MICROBIT_PIN_EVT_PULSE_LO
 };
 
+enum class PinPullMode {
+    //% block="down"
+    PullDown = 0,
+    //% block="up"
+    PullUp = 1,
+    //% block="none"
+    PullNone = 2
+};
+
 MicroBitPin *getPin(int id) {
     switch (id) {
         case MICROBIT_ID_IO_P0: return &uBit.io.P0;
@@ -135,17 +144,6 @@ namespace pins {
     }
     
     /**
-    * Configures the pull of this pin.
-    * @param name pin to set the pull mode on
-    * @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone 
-    */
-    //% help=pins/digital-set-pull weight=21 blockGap=8
-    //% blockId=device_set_pull block="digital set pull|pin %pin|to %pull"
-    void setPull(DigitalPin name, PinMode pull) {
-        PINOP(setPull(pull));
-    }
-    
-    /**
     * Configures this pin to a digital input, and generates events where the timestamp is the duration that this pin was either ``high`` or ``low``.
     */
     //% help=pins/on-pulsed weight=22 blockGap=8
@@ -223,6 +221,22 @@ namespace pins {
           // TODO why do we use wait_ms() here? it's a busy wait I think
           wait_ms(5);
       }
+    }
+
+    
+    /**
+    * Configures the pull of this pin.
+    * @param name pin to set the pull mode on
+    * @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone 
+    */
+    //% help=pins/digital-set-pull weight=3
+    //% blockId=device_set_pull block="set pull|pin %pin|to %pull"
+    void setPull(DigitalPin name, PinPullMode pull) {
+        PinMode m = pull == PinPullMode::PullDown 
+            ? PinMode::PullDown
+            : pull == PinPullMode::PullUp ? PinMode::PullUp 
+            : PinMode::PullNone;
+        PINOP(setPull(m));
     }
 
     /**

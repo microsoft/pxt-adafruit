@@ -183,20 +183,20 @@ namespace pxsim.micro_bit {
             if (!pin) return;
             let text = this.pinTexts[index];
             let v = "";
-            if (pin.mode & PinMode.Analog) {
+            if (pin.mode & PinFlags.Analog) {
                 v = Math.floor(100 - (pin.value || 0) / 1023 * 100) + "%";
                 if (text) text.textContent = (pin.period ? "~" : "") + (pin.value || 0) + "";
             }
-            else if (pin.mode & PinMode.Digital) {
+            else if (pin.mode & PinFlags.Digital) {
                 v = pin.value > 0 ? '0%' : '100%';
                 if (text) text.textContent = pin.value > 0 ? "1" : "0";
             }
-            else if (pin.mode & PinMode.Touch) {
-                v = pin.touched ? '0%' : '100%';
+            else if (pin.mode & PinFlags.Touch) {
+                v = pin.touched ? "0%" : "100%";
                 if (text) text.textContent = "";
             } else {
-                v = '100%';
-                if (text) text.textContent = '';
+                v = "100%";
+                if (text) text.textContent = "";
             }
             if (v) svg.setGradientValue(this.pinGradients[index], v);
         }
@@ -651,7 +651,7 @@ svg.sim.grayscale {
                         let state = this.board;
                         let pin = state.pins[index];
                         let svgpin = this.pins[index];
-                        if (pin.mode & PinMode.Input) {
+                        if (pin.mode & PinFlags.Input) {
                             let cursor = svg.cursorPoint(pt, this.element, ev);
                             let v = (400 - cursor.y) / 40 * 1023
                             pin.value = Math.max(0, Math.min(1023, Math.floor(v)));
@@ -664,7 +664,7 @@ svg.sim.grayscale {
                         let pin = state.pins[index];
                         let svgpin = this.pins[index];
                         svg.addClass(svgpin, "touched");
-                        if (pin.mode & PinMode.Input) {
+                        if (pin.mode & PinFlags.Input) {
                             let cursor = svg.cursorPoint(pt, this.element, ev);
                             let v = (400 - cursor.y) / 40 * 1023
                             pin.value = Math.max(0, Math.min(1023, Math.floor(v)));

@@ -7,6 +7,8 @@ Are you ready to build cool BBC micro:bit programs?
 Here are some challenges for you.  Unscramble the blocks in the editor
 to make real programs that work!
 
+[OPEN EDITOR](/#follow:getting-started)
+
 ## ~
 
 ### Happy face
@@ -188,47 +190,6 @@ input.onGesture(Gesture.Shake, () => {
 ```
 Click **Compile** to move your program to the BBC micro:bit!
 
-### Tilting with gestures
-
-You can also find when someone is tilting the micro:bit left or right,
-face up or face down, and logo up or logo down (the logo is the yellow
-oval picture at the top of the board). Tilting a micro:bit like this
-is called a **gesture**.
-
-Try to build a Rock Paper Scissors game where you tilt the micro:bit
-left to show paper, right to show scissors, and down to show rock.
-
-Unscramble these blocks in the editor and try this program on a real
-micro:bit!
-
-```shuffle
-input.onGesture(Gesture.TiltLeft, () => {
-    basic.showLeds(`
-# # # # #
-# . . . #
-# . . . #
-# . . . #
-# # # # #`);
-});
-input.onGesture(Gesture.LogoDown, () => {
-    basic.showLeds(`
-. . . . .
-. # # # .
-. # # # .
-. # # # .
-. . . . .`);
-});
-input.onGesture(Gesture.TiltRight, () => {
-    basic.showLeds(`
-# # . . #
-# # . # .
-. . # . .
-# # . # .
-# # . . #`);
-});
-```
-Click **Compile** to move your program to the BBC micro:bit!
-
 ### Pins
 
 You can also use the pins as buttons.  (The pins are the holes in the
@@ -236,90 +197,46 @@ metal stripe at the bottom of the micro:bit board.)  For example, hold
 the ``GND`` button with one hand and touch the ``0`` pin (called
 ``P0``) with your other hand to tell the micro:bit you're pressing it.
 
-Unscramble the blocks in the editor to show a smiley when you press
+Unscramble the blocks in the editor to show a heart when you press
 pin ``P0``.
 
 ```shuffle
 input.onPinPressed(TouchPin.P0, () => {
     basic.showLeds(`
-. . . . .
 . # . # .
-. . . . .
+# . # . #
 # . . . #
-. # # # .`);
+. # . # .
+. . # . .`);
 });
 ```
 Click **Compile** to move your program to the BBC micro:bit!
 
-### Your turn!
+## ~hint
 
-Use the screen, buttons, gestures, and pins to make your own fun game
-with the BBC micro:bit!  What about some of these?
+Try this experiment: find a friend and hold hands together. Press the ``GND`` button
+while your friend pressed the ``P0`` button. You should see the heart! The electric current is going through your bodies and accross your handshake
+to make it happen!
 
-* A backpack burglar alarm
-* Daily news broadcaster for your class
-* Animated jewelry
-* A _complete_ animated cartoon
-* A calculator
-* A music box
-
-These are all things you can make with the BBC micro:bit by itself.
-Just think what you can do if you connect the micro:bit's pins to
-extra parts like microphones and other **sensors**!
+## ~
 
 ## Let's play Rock Paper Scissors!
 
 ### ~avatar avatar
 
-```sim
-input.onGesture(Gesture.Shake, () => {
-    let img = Math.random(3)
-    if (img == 0) {
-        basic.showLeds(`
-            # # # # #
-            # . . . #
-            # . . . #
-            # . . . #
-            # # # # #
-            `)
-
-    } else if (img == 1) {
-        basic.showLeds(`
-            . . . . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . . . .
-            `)
-    } else {
-        basic.showLeds(`
-            # # . . #
-            # # . # .
-            . . # . .
-            # # . # .
-            # # . . #
-            `)
-    }
-})
-```
 Build a Rock Paper Scissors game with the BBC micro:bit!
 You can play the game with a friend who has it on a micro:bit.
 You can also play it with friends who are just using their hands.
 
-## [START PROJECT](/#follow:/projects/rock-paper-scissors)
-
 ### ~
-
-
-## Materials needed
-
-* Your BBC micro:bit -- that's it!
 
 ## Step 1: Getting started
 
 We want the micro:bit to choose rock, paper, or scissors when you
 shake it.  Try creating an ``on shake`` block so when you shake the
 micro:bit, it will run part of a program.
+
+Clear up the blocks and add the blocks below.
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
@@ -328,8 +245,7 @@ input.onGesture(Gesture.Shake, () => {
 ```
 
 Next, when you shake the micro:bit, it should pick a random number from `0` to `2`
-and store it in the variable `weapon`. (This variable is named `weapon` because 
-rock, paper, and scissors are the weapons you use to battle your friends!)
+and store it in the variable `item`.
 
 Add a ``set`` block with a variable. Then add a ``pick random`` block,
 and store the random number in the variable,
@@ -337,7 +253,7 @@ like this:
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
-    let weapon = Math.random(3)
+    let item = Math.random(3)
 })
 
 ```
@@ -353,7 +269,7 @@ We will show the right picture for that number on the LED screen.
 ## Step 2: Picking paper
 
 Put an ``if`` block after the ``let`` block that checks whether
-`weapon` is `0`. Make sure the ``if`` block has an ``else if`` part
+`item` is `0`. Make sure the ``if`` block has an ``else if`` part
 and an ``else`` part.
 
 Next, add a ``show leds`` block that shows a
@@ -361,8 +277,8 @@ picture of a piece of paper:
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
-    let weapon = Math.random(3)
-    if (weapon == 0) {
+    let item = Math.random(3)
+    if (item == 0) {
         basic.showLeds(`
             # # # # #
             # . . . #
@@ -383,13 +299,13 @@ input.onGesture(Gesture.Shake, () => {
 Now we are going to add a new picture for the micro:bit to show
 when another random number comes up.
 
-Make the ``else if`` part check if the variable `weapon` is `1`.
+Make the ``else if`` part check if the variable `item` is `1`.
 Then add a ``show leds`` block with a picture of a rock.
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
-    let weapon = Math.random(3)
-    if (weapon == 0) {
+    let item = Math.random(3)
+    if (item == 0) {
         basic.showLeds(`
             # # # # #
             # . . . #
@@ -397,8 +313,7 @@ input.onGesture(Gesture.Shake, () => {
             # . . . #
             # # # # #
             `)
-
-    } else if (weapon == 1) {
+    } else if (item == 1) {
         basic.showLeds(`
             . . . . .
             . # # # .
@@ -418,8 +333,8 @@ Add a ``show leds`` block with a picture of scissors to the ``else`` part:
 
 ```blocks
 input.onGesture(Gesture.Shake, () => {
-    let weapon = Math.random(3)
-    if (weapon == 0) {
+    let item = Math.random(3)
+    if (item == 0) {
         basic.showLeds(`
             # # # # #
             # . . . #
@@ -428,7 +343,7 @@ input.onGesture(Gesture.Shake, () => {
             # # # # #
             `)
 
-    } else if (weapon == 1) {
+    } else if (item == 1) {
         basic.showLeds(`
             . . . . .
             . # # # .
@@ -451,7 +366,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### ~hint
 
-You don't need to check if `weapon` is `2` because `2` is the only number left out of `0`, `1`, and `2`.
+You don't need to check if `item` is `2` because `2` is the only number left out of `0`, `1`, and `2`.
 That's why you can use an ``else`` instead of an ``else if``.
 
 ### ~

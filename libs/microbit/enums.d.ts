@@ -278,6 +278,16 @@ declare namespace led {
     High = 4,  // MICROBIT_PIN_EVT_PULSE_HI
     Low = 5,  // MICROBIT_PIN_EVT_PULSE_LO
     }
+
+
+    declare enum PinPullMode {
+    //% block="down"
+    PullDown = 0,
+    //% block="up"
+    PullUp = 1,
+    //% block="none"
+    PullNone = 2,
+    }
 declare namespace pins {
 }
 

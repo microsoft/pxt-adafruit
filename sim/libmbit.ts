@@ -524,29 +524,35 @@ namespace pxsim.pins {
     export function digitalReadPin(pinId: number): number {
         let pin = getPin(pinId);
         if (!pin) return;
-        pin.mode = PinMode.Digital | PinMode.Input;
+        pin.mode = PinFlags.Digital | PinFlags.Input;
         return pin.value > 100 ? 1 : 0;
     }
 
     export function digitalWritePin(pinId: number, value: number) {
         let pin = getPin(pinId);
         if (!pin) return;
-        pin.mode = PinMode.Digital | PinMode.Output;
+        pin.mode = PinFlags.Digital | PinFlags.Output;
         pin.value = value > 0 ? 1023 : 0;
         runtime.queueDisplayUpdate();
+    }
+
+    export function setPull(pinId: number, pull: number) {
+        let pin = getPin(pinId);
+        if (!pin) return;
+        pin.pull = pull;
     }
 
     export function analogReadPin(pinId: number): number {
         let pin = getPin(pinId);
         if (!pin) return;
-        pin.mode = PinMode.Analog | PinMode.Input;
+        pin.mode = PinFlags.Analog | PinFlags.Input;
         return pin.value || 0;
     }
 
     export function analogWritePin(pinId: number, value: number) {
         let pin = getPin(pinId);
         if (!pin) return;
-        pin.mode = PinMode.Analog | PinMode.Output;
+        pin.mode = PinFlags.Analog | PinFlags.Output;
         pin.value = value ? 1 : 0;
         runtime.queueDisplayUpdate();
     }
@@ -554,7 +560,7 @@ namespace pxsim.pins {
     export function analogSetPeriod(pinId: number, micros: number) {
         let pin = getPin(pinId);
         if (!pin) return;
-        pin.mode = PinMode.Analog | PinMode.Output;
+        pin.mode = PinFlags.Analog | PinFlags.Output;
         pin.period = micros;
         runtime.queueDisplayUpdate();
     }
@@ -580,7 +586,7 @@ namespace pxsim.pins {
     export function analogPitch(frequency: number, ms: number) {
         // update analog output
         let pin = board().pins.filter(pin => !!pin && pin.pitch)[0] || board().pins[0];
-        pin.mode = PinMode.Analog | PinMode.Output;
+        pin.mode = PinFlags.Analog | PinFlags.Output;
         if (frequency <= 0) {
             pin.value = 0;
             pin.period = 0;
@@ -598,7 +604,7 @@ namespace pxsim.pins {
                 AudioContextManager.stop();
                 pin.value = 0;
                 pin.period = 0;
-                pin.mode = PinMode.Unused;
+                pin.mode = PinFlags.Unused;
                 runtime.queueDisplayUpdate();
                 cb()
             }, ms);

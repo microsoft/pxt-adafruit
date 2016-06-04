@@ -536,6 +536,15 @@ declare namespace pins {
     function analogPitch(frequency: number, ms: number): void;
 
     /**
+     * Configures the pull of this pin.
+     * @param name pin to set the pull mode on
+     * @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone 
+     */
+    //% help=pins/digital-set-pull weight=3
+    //% blockId=device_set_pull block="set pull|pin %pin|to %pull" shim=pins::setPull
+    function setPull(name: DigitalPin, pull: PinPullMode): void;
+
+    /**
      * Create a new zero-initialized buffer.
      * @param size number of bytes in the buffer
      */

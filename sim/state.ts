@@ -8,7 +8,7 @@ namespace pxsim {
         greyscale
     }
 
-    export enum PinMode {
+    export enum PinFlags {
         Unused = 0,
         Digital = 0x0001,
         Analog = 0x0002,
@@ -22,11 +22,12 @@ namespace pxsim {
         touched = false;
         value = 0;
         period = 0;
-        mode = PinMode.Unused;
+        mode = PinFlags.Unused;
         pitch = false;
+        pull = 0; // PullDown
 
         isTouched(): boolean {
-            this.mode = PinMode.Touch;
+            this.mode = PinFlags.Touch;
             return this.touched;
         }
     }

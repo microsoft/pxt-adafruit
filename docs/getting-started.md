@@ -195,7 +195,7 @@ metal stripe at the bottom of the micro:bit board.)  For example, hold
 the ``GND`` button with one hand and touch the ``0`` pin (called
 ``P0``) with your other hand to tell the micro:bit you're pressing it.
 
-Unscramble the blocks in the editor to show a heart when you press
+Unscramble the blocks in the editor to show a heart when you touch
 pin ``P0``.
 
 ```shuffle
@@ -212,19 +212,101 @@ Click **Compile** to move your program to the BBC micro:bit!
 
 ## ~hint
 
-Try this experiment: find a friend and hold hands together. Press the ``GND`` button
-while your friend pressed the ``P0`` button. You should see the heart! The electric current is going through your bodies and accross your handshake
-to make it happen!
+Try this experiment: find a friend and hold hands. Touch the ``GND``
+pin while your friend presses the ``P0`` pin. You should see the
+heart! The electric current is going through your bodies and across
+your handshake to make it happen!
 
 ## ~
+
+## The amazing coin flipper
+
+### ~avatar avatar
+
+Are you trying to choose whether to play soccer or go to the movies
+instead, or which toppings to have on your pizza?  Build a coin
+flipping machine with the BBC micro:bit to choose for you!
+
+### ~
+
+Here are the blocks to make your coin flipper.  When you press button
+`B`, the coin flipper will show either `H` for heads or `T` for tails
+on the LED screen.
+
+```blocks
+basic.forever(() => {
+    input.onButtonPressed(Button.B, () => {
+        if (Math.randomBoolean()) {
+            basic.showString("H");
+        } else {
+            basic.showString("T");
+        }
+    });
+});
+```
+### ~hint
+
+The ``pick random true or false`` block randomly tells the ``if``
+block `true` or `false`.  If the ``pick`` block
+picked `true`, the ``if`` block shows the letter `H`. Otherwise, it
+shows the letter `T`.
+
+That's it!
+
+### ~
+
+### Keeping score
+
+#### ~avatar
+
+To keep track out of how many guesses you've won,
+add these blocks to your coin flipper:
+
+#### ~
+
+```blocks
+input.onButtonPressed(Button.A, () => {
+    game.addScore(1);
+});
+input.onButtonPressed(Button.AB, () => {
+    basic.showNumber(game.score());
+});
+```
+
+These blocks mean that if you press button `A`, you will add `1` to
+your score, and if you press `A` and `B` together, the micro:bit will
+show your score.
+
+When you're done, your coin flipping program should look like this:
+
+```blocks
+basic.forever(() => {
+    input.onButtonPressed(Button.B, () => {
+        if (Math.randomBoolean()) {
+            basic.showString("H");
+        } else {
+            basic.showString("T");
+        }
+    });
+    input.onButtonPressed(Button.A, () => {
+        game.addScore(1);
+    });
+    input.onButtonPressed(Button.AB, () => {
+        basic.showNumber(game.score());
+    });
+});
+```
+
+Flip until your thumbs get tired!
 
 ## Let's play Rock Paper Scissors!
 
 ### ~avatar avatar
 
-Build a Rock Paper Scissors game with the BBC micro:bit!
-You can play the game with a friend who has it on a micro:bit.
-You can also play it with friends who are just using their hands.
+Build a Rock Paper Scissors game with the BBC micro:bit!  You can play
+the game with a friend who has it on a micro:bit.  You can also play
+it with friends who are just using their hands.  (The game is built
+like a coin flipper, but with three choices instead of two.)
 
 ### ~
 

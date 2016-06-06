@@ -24,23 +24,22 @@ npm install
 
 ### Running
 
-Run this command to open a local web server:
+Run this command to open a local web server (add ``sudo`` for Mac/Linux shells)
 ```
 pxt serve
 ```
 If the local server opens in the wrong browser, make sure to copy the URL containing the local token. 
 Otherwise, the editor will not be able to load the projects.
 
-If you need modify the `.cpp` files, turn on yotta compilation with the ``-yt`` flag:
+If you need modify the `.cpp` files, turn on yotta compilation with the ``-yt`` flag (add ``sudo`` for Mac/Linux shells):
 ```
 pxt serve -yt
 ```
 
-To make sure you're running the latest tools, run
+To make sure you're running the latest tools, run (add ``sudo`` for Mac/Linux shells)
 ```
-npm update
+pxt update
 ```
-
 
 More instructions at https://github.com/Microsoft/pxt#running-a-target-from-localhost 
 

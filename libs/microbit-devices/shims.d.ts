@@ -7,7 +7,7 @@ declare namespace devices {
 
     /**
      * Sends a ``camera`` command to the parent device.
-     * @param event TODO
+     * @param event event description
      */
     //% weight=30 help=devices/tell-camera-to
     //% blockId=devices_camera icon="\uf030" block="tell camera to|%property" blockGap=8 shim=devices::tellCameraTo
@@ -15,7 +15,7 @@ declare namespace devices {
 
     /**
      * Sends a ``remote control`` command to the parent device.
-     * @param event TODO
+     * @param event event description
      */
     //% weight=29 help=devices/tell-remote-control-to
     //% blockId=devices_remote_control block="tell remote control to|%property" blockGap=14 icon="\uf144" shim=devices::tellRemoteControlTo
@@ -23,7 +23,7 @@ declare namespace devices {
 
     /**
      * Sends an ``alert`` command to the parent device.
-     * @param event TODO
+     * @param event event description
      */
     //% weight=27 help=devices/raise-alert-to
     //% blockId=devices_alert block="raise alert to|%property" icon="\uf0f3" shim=devices::raiseAlertTo
@@ -31,17 +31,17 @@ declare namespace devices {
 
     /**
      * Registers code to run when the device notifies about a particular event.
-     * @param event TODO
-     * @param body TODO
+     * @param event event description
+     * @param body code handler when event is triggered
      */
     //% help=devices/on-notified weight=26
-    //% blockId=devices_device_info_event block="on notified" icon="\uf10a" shim=devices::onNotified
+    //% blockId=devices_device_info_event block="on notified|%event" icon="\uf10a" shim=devices::onNotified
     function onNotified(event: MesDeviceInfo, body: () => void): void;
 
     /**
      * Register code to run when the micro:bit receives a command from the paired gamepad.
-     * @param name TODO
-     * @param body TODO
+     * @param name button name
+     * @param body code to run when button is pressed
      */
     //% help=devices/on-gamepad-button weight=40
     //% weight=25

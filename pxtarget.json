@@ -5,7 +5,9 @@
     "corepkg": "microbit",
     "bundleddirs": [
         "libs/microbit",
-        "libs/microbit-radio"
+        "libs/microbit-radio",
+        "libs/microbit-devices",
+        "libs/neopixel"
     ],
     "cloud": {
         "workspace": false,
@@ -105,10 +107,6 @@
             {
                 "name": "Lessons",
                 "path": "/lessons"
-            },
-            {
-                "name": "Device",
-                "path": "/device"
             }
         ],
         "sideDoc": "getting-started"

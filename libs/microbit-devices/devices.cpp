@@ -188,7 +188,7 @@ namespace devices {
     static void initSignalStrength() {
         if (_signalStrength < 0) {
             _signalStrength = 0;
-            uBit.MessageBus.listen(MES_SIGNAL_STRENGTH_ID, MICROBIT_EVT_ANY, signalStrengthHandler);
+            uBit.messageBus.listen(MES_SIGNAL_STRENGTH_ID, MICROBIT_EVT_ANY, signalStrengthHandler);
         }        
     }
     

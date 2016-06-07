@@ -1,10 +1,11 @@
 # Change Tempo By
 
-Change the tempo by the specified amount
+Makes the [tempo](/reference/music/tempo) (speed of a piece of music)
+faster or slower by the amount you say.
 
 ## Simulator
 
-Simulation of this function is available in many, but not all browsers.
+This function only works on the micro:bit and in some browsers.
 
 ```sig
 music.changeTempoBy(20)
@@ -12,7 +13,21 @@ music.changeTempoBy(20)
 
 ### Parameters
 
-* `bpm` : [Number](/reference/types/number) - change the tempo by beats per minute
+* a [number](/reference/types/number) that says how much to change the bpm (beats per minute, or number of beats in a minute of the music that the micro:bit is playing).
+
+### Examples
+
+This program makes the music faster by 12 bpm.
+
+```blocks
+music.changeTempoBy(12)
+```
+
+This program makes the music _slower_ by 12 bpm.
+
+```blocks
+music.changeTempoBy(-12)
+```
 
 ### See also
 

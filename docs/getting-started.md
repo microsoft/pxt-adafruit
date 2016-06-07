@@ -234,22 +234,19 @@ Here are the blocks to make your coin flipper.  When you press button
 on the LED screen.
 
 ```blocks
-basic.forever(() => {
-    input.onButtonPressed(Button.B, () => {
-        if (Math.randomBoolean()) {
-            basic.showString("H");
-        } else {
-            basic.showString("T");
-        }
-    });
+input.onButtonPressed(Button.B, () => {
+    if (Math.randomBoolean()) {
+        basic.showString("H");
+    } else {
+        basic.showString("T");
+    }
 });
 ```
 ### ~hint
 
 The ``pick random true or false`` block randomly tells the ``if``
-block `true` or `false`.  If the ``pick`` block
-picked `true`, the ``if`` block shows the letter `H`. Otherwise, it
-shows the letter `T`.
+block `true` or `false`.  If the ``pick`` block picked `true`, the
+``if`` block shows the letter `H`. Otherwise, it shows the letter `T`.
 
 That's it!
 
@@ -280,20 +277,18 @@ show your score.
 When you're done, your coin flipping program should look like this:
 
 ```blocks
-basic.forever(() => {
-    input.onButtonPressed(Button.B, () => {
-        if (Math.randomBoolean()) {
-            basic.showString("H");
-        } else {
-            basic.showString("T");
-        }
-    });
-    input.onButtonPressed(Button.A, () => {
-        game.addScore(1);
-    });
-    input.onButtonPressed(Button.AB, () => {
-        basic.showNumber(game.score());
-    });
+input.onButtonPressed(Button.B, () => {
+    if (Math.randomBoolean()) {
+        basic.showString("H");
+    } else {
+        basic.showString("T");
+    }
+});
+input.onButtonPressed(Button.A, () => {
+    game.addScore(1);
+});
+input.onButtonPressed(Button.AB, () => {
+    basic.showNumber(game.score());
 });
 ```
 

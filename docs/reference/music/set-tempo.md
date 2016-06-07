@@ -1,14 +1,17 @@
 # Set Tempo 
 
-Sets the tempo to the specified amount
+Makes the tempo (speed of a piece of music) as fast or slow as you say.
 
 ```sig
 music.setTempo(60)
 ```
+## Simulator
+
+This function only works on the micro:bit and in some browsers.
 
 ### Parameters
 
-* Returns : [Number](/reference/types/number) - sets the tempo in beats per minute
+* a [number](/reference/types/number) that means the bpm you want (beats per minute, or number of beats in a minute of the music that the micro:bit is playing).
 
 ### See also
 

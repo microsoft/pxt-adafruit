@@ -9,9 +9,13 @@
     "testFiles": [
         "neotest.ts"
     ],
-    "microbit": {
+    "yotta": {
         "config": {
-            "MICROBIT_BLE_ENABLED": "0"
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 0
+                }
+            }
         }
     },
     "public": true,

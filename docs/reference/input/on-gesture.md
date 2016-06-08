@@ -1,19 +1,17 @@
 # On Gesture
 
-Register an [event handler](/reference/event-handler) that will execute whenever the user executes a gesture withthe BBC micro:bit.
+Start an [event handler](/reference/event-handler) (part of the
+program that will run when something happens) This handler works when
+you do a **gesture** (like shake, tilt, or drop the micro:bit).
 
 ```sig
 input.onGesture(Gesture.Shake,() => {
 })
 ```
 
-## Gestures
+## Example: random number
 
-
-
-### Example: random number
-
-The following example displays a number from 0-9 on the screen when you shake the BBC micro:bit.
+This program shows a number from `0` to `9` when you shake the micro:bit.
 
 ```blocks
 input.onGesture(Gesture.Shake,() => {
@@ -22,24 +20,7 @@ input.onGesture(Gesture.Shake,() => {
 })
 ```
 
-### Example: rock, paper, scissors
+## Lessons
 
-The following example shows one of three images (rock, paper, or scissors) when you shake the BBC micro:bit.
-
-```blocks
-input.onGesture(Gesture.Shake,() => {
-    let img = images.createImage(`
-. . . . . # # # # # . . . . #
-. # # # . # . . . # # # . # .
-. # # # . # . . . # . # # . .
-. # # # . # . . . # # # . # .
-. . . . . # # # # # . . . . #
-`)
-    img.showFrame(Math.random(3))
-})
-```
-
-### Lessons
-
-[bounce image](/lessons/bounce-image), [rock paper scissors](/lessons/rock-paper-scissors)
+[bounce image](/lessons/bounce-image)
 

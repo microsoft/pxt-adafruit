@@ -17,6 +17,8 @@
     <Application Id="App" StartPage="https://m.pxt.io/">
       <uap:ApplicationContentUriRules>
         <uap:Rule Match="https://m.pxt.io/" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://codemicrobit.com/" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://codethemicrobit.com/" Type="include" WindowsRuntimeAccess="all" />
       </uap:ApplicationContentUriRules>
       <uap:VisualElements DisplayName="m.pxt.io" Description="Code editors for the BBC micro:bit" BackgroundColor="white" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
         <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" ShortName="m.pxt.io">

@@ -188,7 +188,7 @@ namespace pxsim.micro_bit {
                 if (text) text.textContent = (pin.period ? "~" : "") + (pin.value || 0) + "";
             }
             else if (pin.mode & PinFlags.Digital) {
-                v = pin.value > 0 ? '0%' : '100%';
+                v = pin.value > 0 ? "0%" : "100%";
                 if (text) text.textContent = pin.value > 0 ? "1" : "0";
             }
             else if (pin.mode & PinFlags.Touch) {
@@ -382,7 +382,13 @@ svg.sim.grayscale {
     stroke:grey;
     stroke-width: 3px;
 }
-
+.sim-button-nut {
+    fill:#704A4A;
+    pointer-events:none;
+}
+.sim-button-nut:hover {
+    stroke:1px solid #704A4A; 
+}
 .sim-pin:hover {
     stroke:#D4AF37;
     stroke-width:2px;
@@ -564,17 +570,29 @@ svg.sim.grayscale {
                 return lg;
             })
 
-            this.pinTexts = [67, 165, 275].map(x => <SVGTextElement>svg.child(this.g, "text", { class: 'sim-text-pin', x: x, y: 345 }));
-
+            this.pinTexts = [67, 165, 275].map(x => <SVGTextElement>svg.child(this.g, "text", { class: "sim-text-pin", x: x, y: 345 }));
             this.buttonsOuter = []; this.buttons = [];
-            this.buttonsOuter.push(svg.path(this.g, "sim-button-outer", "M82.1,232.6H25.9c-0.5,0-1-0.4-1-1v-56.2c0-0.5,0.4-1,1-1h56.2c0.5,0,1,0.4,1,1v56.2C83,232.2,82.6,232.6,82.1,232.6", "A"));
+
+            const outerBtn = (left: number, top: number) => {
+                const btnr = 4;
+                const btnw = 56.2;
+                const btnn = 6;
+                const btnnm = 10
+                this.buttonsOuter.push(svg.child(this.g, "rect", { class: "sim-button-outer", x: left, y: top, rx: btnr, ry: btnr, width: btnw, height: btnw }));
+                svg.child(this.g, "circle", { class: "sim-button-nut", cx: left + btnnm, cy: top + btnnm, r: btnn });
+                svg.child(this.g, "circle", { class: "sim-button-nut", cx: left + btnnm, cy: top + btnw - btnnm, r: btnn });
+                svg.child(this.g, "circle", { class: "sim-button-nut", cx: left + btnw - btnnm, cy: top + btnw - btnnm, r: btnn });
+                svg.child(this.g, "circle", { class: "sim-button-nut", cx: left + btnw - btnnm, cy: top + btnnm, r: btnn });
+            }
+
+            outerBtn(25.9, 176.4);
             this.buttons.push(svg.path(this.g, "sim-button", "M69.7,203.5c0,8.7-7,15.7-15.7,15.7s-15.7-7-15.7-15.7c0-8.7,7-15.7,15.7-15.7S69.7,194.9,69.7,203.5"));
-            this.buttonsOuter.push(svg.path(this.g, "sim-button-outer", "M474.3,232.6h-56.2c-0.5,0-1-0.4-1-1v-56.2c0-0.5,0.4-1,1-1h56.2c0.5,0,1,0.4,1,1v56.2C475.3,232.2,474.8,232.6,474.3,232.6", "B"));
+            outerBtn(418.1, 176.4);
             this.buttons.push(svg.path(this.g, "sim-button", "M461.9,203.5c0,8.7-7,15.7-15.7,15.7c-8.7,0-15.7-7-15.7-15.7c0-8.7,7-15.7,15.7-15.7C454.9,187.8,461.9,194.9,461.9,203.5"));
-            this.buttonsOuter.push(svg.child(this.g, "rect", { class: "sim-button-outer", x: 417, y: 250, width: 58, height: 58, rx: 1, ry: 1, title: "A+B" }));
+            outerBtn(417, 250);
             this.buttons.push(svg.child(this.g, "circle", { class: "sim-button", cx: 446, cy: 278, r: 16.5 }));
-            (<any>this.buttonsOuter[2]).style.visibility = 'hidden';
-            (<any>this.buttons[2]).style.visibility = 'hidden';
+            (<any>this.buttonsOuter[2]).style.visibility = "hidden";
+            (<any>this.buttons[2]).style.visibility = "hidden";
 
             svg.path(this.g, "sim-label", "M35.7,376.4c0-2.8,2.1-5.1,5.5-5.1c3.3,0,5.5,2.4,5.5,5.1v4.7c0,2.8-2.2,5.1-5.5,5.1c-3.3,0-5.5-2.4-5.5-5.1V376.4zM43.3,376.4c0-1.3-0.8-2.3-2.2-2.3c-1.3,0-2.1,1.1-2.1,2.3v4.7c0,1.2,0.8,2.3,2.1,2.3c1.3,0,2.2-1.1,2.2-2.3V376.4z");
             svg.path(this.g, "sim-label", "M136.2,374.1c2.8,0,3.4-0.8,3.4-2.5h2.9v14.3h-3.4v-9.5h-3V374.1z");

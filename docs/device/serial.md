@@ -11,16 +11,35 @@ input.onButtonPressed(Button.A, () => {
 })
 ```
 
+Data is also automatically streamed to serial by the ** bar graph** block
+and picked up by the editor. This data can be streamed to the cloud as well.
+
+```blocks
+basic.forever(() => {
+   led.plotBarGraph(input.acceleration(Dimension.X), 0);
+});
+```
+
 ## How to read the micro:bit's serial output from your computer
 
 Unfortunately, using the serial library requires quite a bit of a setup.
+
+### BBC micro:bit Chrome Extension
+
+If you are using the Google Chrome browser, you can use our extension to get serial data streaming in the editor.
+
+* Install the [Extension for BBC micro:bit](https://chrome.google.com/webstore/detail/extension-for-bbc-microbi/cihhkhnngbjlhahcfmhekmbnnjcjdbge?hl=en-US) on the Chrome Web Store.
+* Restart Chrome and open the web editor.
 
 ### Windows
 
 You must install a device driver (for the computer to recognize the serial interface of the micro:bit); then, you must also install a terminal emulator (which is going to connect to the micro:bit and read its output). Here's how to do it:
 
 * Follow instructions at https://developer.mbed.org/handbook/Windows-serial-configuration in order to install the device driver
-* Install a terminal emulator; we recommend [Tera Term](https://ttssh2.osdn.jp/index.html.en). At the time of this writing, the latest version is 4.88 and can be downloaded [from here](http://en.osdn.jp/frs/redir.php?m=jaist&f=%2Fttssh2%2F63767%2Fteraterm-4.88.exe). Follow the instructions from the installer.
+
+#### Windows > Tera Term
+
+* Install the terminal emulator [Tera Term](https://ttssh2.osdn.jp/index.html.en). At the time of this writing, the latest version is 4.88 and can be downloaded [from here](http://en.osdn.jp/frs/redir.php?m=jaist&f=%2Fttssh2%2F63767%2Fteraterm-4.88.exe). Follow the instructions from the installer.
 
 Once both the driver and the terminal emulator are installed, plug in the micro:bit and wait until the device is fully setup. Then, open TeraTerm.
 
@@ -32,7 +51,7 @@ You should be good. Feel free to hit `Setup` > `Save Setup` in the menus to eras
 
 Please note that Windows will assign you a different COM port if you plug in another micro:bit. If you're juggling between micro:bits, you'll have to change the COM port every time.
 
-### Alternative Windows setup with Putty
+#### Windows > Putty
 
 If you prefer another terminal emulator (such as [PuTTY](http://www.putty.org/)), here are some instructions.
 

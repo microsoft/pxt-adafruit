@@ -34,7 +34,7 @@ Just like Arduino, the micro:bit can be connected to and interact with sensors, 
 The student can program the BBC micro:bit using [visual blocks](http://www.github.com/Google/blockly) or JavaScript.
 
 ```blocks
-basic.showString("BBC micro:bit!");
+basic.showString("Hi!");
 ```
 
 ## Compile and Flash
@@ -54,5 +54,10 @@ The simulator has support for the LED screen, buttons, as well as compass, accel
 
 The [C++ BBC micro:bit runtime](http://lancaster-university.github.io/microbit-docs/), created at [Lancaster University](http://www.lancaster.ac.uk/), provides access to the hardware functions of the micro:bit, 
 as well as a set of helper functions (such as displaying a number/image/string on the LED screen). 
+
 The JavaScript micro:bit library mirrors the functions of the C++ library. 
 When code is compiled to ARM machine code, the calls to JavaScript micro:bit functions are replaced with calls to the corresponding C++ functions.
+
+## Open Source
+
+The editor for the BBC micro:bit is [open source](/open-source) on GitHub. Contributors are welcome!

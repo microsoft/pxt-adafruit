@@ -9,21 +9,11 @@ The format for received data printed to serial is as follows
 - [send value](/reference/radio/send-number) - ```{v:Value,t:MicrobitTimeAlive,s:Unused,n:"Name"}```
 - [send string](/reference/radio/send-string) - ```{}``` (currently unavailable)
 
-## Important Security Consideration
 
-The functions in the ``radio`` namespace allow the BBC micro:bit to communicate with other micro:bits.
 
-This API does not contain any form of encryption, authentication or authorization. It's purpose is solely for use as a teaching aid to demonstrate how simple communications operates, and to provide a sandpit through which learning can take place.
+### Simulator
 
-For serious applications, BLE should be considered a substantially more secure alternative.
-
-```sig
-radio.writeValueToSerial()
-```
-
-### Parameters
-
-* None
+This function only works on the micro:bit, not in browsers.
 
 ### Examples
 

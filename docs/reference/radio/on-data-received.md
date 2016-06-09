@@ -7,6 +7,10 @@ Run part of a program when the micro:bit receives a
 
 * the part of the program to run when the micro:bit receives information over ``radio``.
 
+### Simulator
+
+This function only works on the micro:bit, not in browsers.
+
 ### Example
 
 This program keeps sending numbers that says how fast the micro:bit is

@@ -13,7 +13,7 @@ it needs to run **receive number** first.
 * a [number](/reference/types/number) between `255` and `0` that means
 how strong the signal is.
 
-## Simulator
+### Simulator
 
 This function only works on the micro:bit, not in browsers.
 

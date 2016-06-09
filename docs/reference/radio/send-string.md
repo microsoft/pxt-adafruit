@@ -1,7 +1,5 @@
 # Send String
 
-
-
 Sends a string to other micro:bits in the area connected by radio.
 
 ```sig
@@ -11,6 +9,12 @@ radio.sendString("Hello!")
 ### Parameters
 
 * `text` is a [String](/reference/types/string) to send by radio.
+
+### Simulator
+
+This function only works on the micro:bit, not in browsers.
+
+
 
 ### Example: Two-way radio
 

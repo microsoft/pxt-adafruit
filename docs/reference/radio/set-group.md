@@ -14,6 +14,10 @@ to talk to each other because they will have the same group ID.
 
 * ``id`` is a [number](/reference/types/number) from ``0`` to ``255``.
 
+### Simulator
+
+This function only works on the micro:bit, not in browsers.
+
 ### Example
 
 This program makes the group ID equal 128.

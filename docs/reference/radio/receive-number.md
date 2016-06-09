@@ -2,9 +2,13 @@
 
 Receives the next number sent by a micro:bit in the same ``radio`` group.
 
-### Return value
+### Returns
 
 * the first  [number](/reference/types/number) that the micro:bit received. If it did not receive any numbers, this function will return `0`.
+
+### Simulator
+
+This function only works on the micro:bit, not in browsers.
 
 ### Example: Simple number receiver
 

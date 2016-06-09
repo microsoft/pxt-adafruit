@@ -6,6 +6,10 @@ Broadcast a number to other micro:bits connected via ``radio``.
 
 * num - a number to send.
 
+### Simulator
+
+This function only works on the micro:bit, not in browsers.
+
 ### Example: Broadcasting acceleration
 
 This example broadcasts the value of your micro:bit's ``acceleration`` in the `x` direction 

@@ -6,9 +6,13 @@ Find the next string sent by `radio` from another micro:bit.
 radio.receiveString()
 ```
 
-### Return value
+### Returns
 
 * the first [string](/reference/types/string) that was sent. If no string was sent, then this function returns an empty (blank) string.
+
+### Simulator
+
+This function only works on the micro:bit, not in browsers.
 
 ### Example: Simple receiver
 

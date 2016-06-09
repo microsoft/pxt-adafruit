@@ -1,24 +1,33 @@
 # Pin Is Pressed
 
-Gets the pin state (pressed or not pressed), by detecting when the user holds the `GND` pin with one hand, and presses pin `0`, `1`, or `2` with the other hand, thus completing a circuit.
+Find whether the pin you say is pressed or not pressed.
 
-*Note* that this function works best when the BBC micro:bit is powered by AAA battery.
+If you hold the `GND` pin with one hand and touch pin `0`, `1`, or `2` with the other,
+a very small (safe) amount of electricity will flow through your body and back into
+the micro:bit. This is called **completing a circuit**. It's like you're a big wire!
 
 ```sig
 input.pinIsPressed(TouchPin.P0);
 ```
 
+## ~hint
+
+This function works best when the BBC:microbit is using batteries for power,
+instead of the USB cable.
+
+## ~
+
 ### Parameters
 
-* name - [String](/reference/types/string); the pin name ("P0", "P1", or "P2")
+* a [string](/reference/types/string) that holds the pin name (**P0**, **P1**, or **P2**)
 
 ### returns
 
-* [Boolean](/reference/types/boolean) - `true` if pressed, `false` if not pressed
+* a [boolean](/reference/types/boolean) that means whether the pin you say is pressed (`true` or `false`)
 
 ### Example
 
-This example displays 1 if P0 is pressed, and 0 if P0 is not pressed:
+This program shows `1` if `P0` is pressed, and `0` if `P0` is not pressed:
 
 ```blocks
 basic.forever(() => {

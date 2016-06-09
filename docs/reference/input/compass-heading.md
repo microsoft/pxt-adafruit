@@ -1,6 +1,10 @@
 # Compass Heading
 
-Get the compass heading of the micro:bit in degrees. Your micro:bit has a built-in **magnetometer** so it can your direction with respect to the North Magnetic Pole.
+Find which direction on a compass the micro:bit is facing.
+
+The micro:bit measures the **compass heading** from `0` to `360`
+degrees with its **magnetometer** chip. Different numbers mean north,
+east, south, and west.
 
 ```sig
 input.compassHeading();
@@ -8,15 +12,12 @@ input.compassHeading();
 
 ### Returns
 
-* [Number](/reference/types/number) - the heading in degrees (0 to 360 degrees). If the compass is calibrating, it returns ``-1003``.
-
-## Simulator
-
-Calibration does not work on the simulator.
+* a [number](/reference/types/number) from `0` to `360` degrees, which means the compass heading. If the compass isn't ready, it returns `-1003`.
 
 ### Example
 
-The following code gets the compass heading and stores it in the `degrees` variable:
+This program finds the compass heading and stores it in the
+`degrees` variable.
 
 ```blocks
 let degrees = input.compassHeading()
@@ -24,13 +25,16 @@ let degrees = input.compassHeading()
 
 ### ~hint 
 
-When running code with this function in a web browser, click and drag the on-screen compass needle to change heading.
+When you run a program that uses this function in a browser, click and drag
+the compass needle on the screen to change the compass heading.
 
 ### ~
 
 ### Example: compass
 
-The following example gets the `compass heading` and then displays a letter depending on the value of `degrees`: N for north, E for East, S for South, and W for West.
+This program finds the compass heading and then shows a letter
+that means whether the micro:bit is facing north (N), south (S),
+east (E), or west (W).
 
 ```blocks
 basic.forever(() => {
@@ -47,11 +51,13 @@ basic.forever(() => {
 
 ### Calibration
 
-On the first use of the compass, the **calibration** procedure will automatically start. The user must draw a circle with the device until it is fully calibrated.
+Every time you start to use the compass (for example, if you have just
+turned the micro:bit on), the micro:bit will start to **calibrate**
+(adjust itself).  It will ask you to draw a circle by tilting the
+micro:bit.
 
-An enclosure made from metal, or using in proximity of metal objects, might affect the accuracy of the reading and calibration.
-
-During calibration, ``compass heading`` returns ``-1003``.
+If you are calibrating or using the compass near metal, it might
+confuse the micro:bit.
 
 ### Lessons
 
@@ -60,4 +66,3 @@ During calibration, ``compass heading`` returns ``-1003``.
 ### See also
 
 [acceleration](/reference/input/acceleration)
-

@@ -12,7 +12,7 @@ input.pinIsPressed(TouchPin.P0);
 
 ## ~hint
 
-This function works best when the BBC:microbit is using batteries for power,
+This function works best when the BBC micro:bit is using batteries for power,
 instead of the USB cable.
 
 ## ~

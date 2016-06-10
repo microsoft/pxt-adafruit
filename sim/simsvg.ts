@@ -578,11 +578,13 @@ svg.sim.grayscale {
                 const btnw = 56.2;
                 const btnn = 6;
                 const btnnm = 10
-                this.buttonsOuter.push(svg.child(this.g, "rect", { class: "sim-button-outer", x: left, y: top, rx: btnr, ry: btnr, width: btnw, height: btnw }));
-                svg.child(this.g, "circle", { class: "sim-button-nut", cx: left + btnnm, cy: top + btnnm, r: btnn });
-                svg.child(this.g, "circle", { class: "sim-button-nut", cx: left + btnnm, cy: top + btnw - btnnm, r: btnn });
-                svg.child(this.g, "circle", { class: "sim-button-nut", cx: left + btnw - btnnm, cy: top + btnw - btnnm, r: btnn });
-                svg.child(this.g, "circle", { class: "sim-button-nut", cx: left + btnw - btnnm, cy: top + btnnm, r: btnn });
+                let btng = svg.child(this.g, "g");
+                this.buttonsOuter.push(btng);
+                svg.child(btng, "rect", { class: "sim-button-outer", x: left, y: top, rx: btnr, ry: btnr, width: btnw, height: btnw });
+                svg.child(btng, "circle", { class: "sim-button-nut", cx: left + btnnm, cy: top + btnnm, r: btnn });
+                svg.child(btng, "circle", { class: "sim-button-nut", cx: left + btnnm, cy: top + btnw - btnnm, r: btnn });
+                svg.child(btng, "circle", { class: "sim-button-nut", cx: left + btnw - btnnm, cy: top + btnw - btnnm, r: btnn });
+                svg.child(btng, "circle", { class: "sim-button-nut", cx: left + btnw - btnnm, cy: top + btnnm, r: btnn });
             }
 
             outerBtn(25.9, 176.4);

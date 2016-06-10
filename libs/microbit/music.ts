@@ -159,7 +159,7 @@ namespace music {
      * Change the tempo by the specified amount
      * @param bpm The change in beats per minute to the tempo, eg: 20
      */
-    //% help=music/tempo weight=39
+    //% help=music/change-tempo weight=39
     //% blockId=device_change_tempo block="change tempo by (bpm)|%value" blockGap=8
     export function changeTempoBy(bpm: number): void {
         setTempo(beat(BeatFraction.Whole) + bpm);
@@ -169,7 +169,7 @@ namespace music {
      * Sets the tempo to the specified amount
      * @param bpm The new tempo in beats per minute, eg: 120
      */
-    //% help=music/tempo weight=38
+    //% help=music/set-tempo weight=38
     //% blockId=device_set_tempo block="set tempo to (bpm)|%value"
     export function setTempo(bpm: number): void {
         init();

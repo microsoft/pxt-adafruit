@@ -2,40 +2,36 @@
 
 Get the acceleration value (milli g-force), in one of three specified dimensions.
 
+Find the acceleration of the micro:bit (how fast it is speeding up or slowing down).
+
 ```sig
 input.acceleration(Dimension.X);
 ```
 
+## ~hint
+
+You measure acceleration with the **milli-g**, which is 1/1000 of a **g**.
+A **g** is as much acceleration as you get from Earth's gravity.
+
+## ~
+
+
+
 ### Parameters
 
-* dimension : [String](/reference/types/string) - one of three values specifying the axis of acceleration: ``x`` (left/right); ``y`` (forward/backwards); ``z`` (up/down)
+* which direction you are checking for acceleration, either `Dimension.X` (left and right), `Dimension.Y` (forward and backward), or `Dimension.Z` (up and down)
 
 ### Returns
 
-* [Number](/reference/types/number) - acceleration, in milli-gravities. When the micro:bit is laying flat with the screen up, x=0, y=0 and z=-1023.
+* a [number](/reference/types/number) that means the amount of acceleration. When the micro:bit is lying flat on a surface with the screen pointing up, `x` is `0`, `y` is `0`, and `z` is `-1023`.
 
 ### Example: bar chart
 
-Use the ``plot bar chart`` to visual the acceleration on the LED screen.
+This example shows the acceleration of the micro:bit with a bar graph.
 
 ```blocks
 basic.forever(() => {
-    led.plotBarGraph(input.acceleration("x"), 1023)
-})
-```
-
-### Example: micro:bit leveller
-
-The following example uses the `acceleration` and the `plot` function to help you move the micro:bit until it's level (the centre LED is *on* when the device is level). When running this code in a web browser, move your mouse to simulate the accelerometer.
-
-```blocks
-basic.forever(() => {
-    let ax = input.acceleration(Dimension.X)
-    let x = pins.map(-1023, 1023, 0, 4, ax)
-    let ay = input.acceleration("y")
-    let y = pins.map(-1023, 1023, 0, 4, ay)
-    basic.clearScreen()
-    led.plot(x, y)
+    led.plotBarGraph(input.acceleration(Dimension.X), 1023)
 })
 ```
 

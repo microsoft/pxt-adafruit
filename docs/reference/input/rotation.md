@@ -1,45 +1,58 @@
 # Rotation
 
-Get a rotation angle in degrees inferred from the accelerometer readings.
+Find how much the micro:bit is tilted in different directions.
 
 ```sig
 input.rotation(Rotation.Roll);
 ```
 
+## ~hint
+
+The BBC micro:bit has a part called the **accelerometer** that can
+check how the micro:bit is moving.
+
+## ~
+
 ### Parameters
 
-* kind: [String](/reference/types/string) - one of values specifying the kind of rotation: ``pitch`` (up/down around the ``x`` axis); ``roll`` (left/right around the ``y`` axis)
+* which direction you are checking: `Rotation.Pitch` (up and down) or `Rotation.Roll` (left and right)
 
 ### Returns
 
-* [Number](/reference/types/number) - angle, in degrees.
+* a [number](/reference/types/number) that means how much the microbit is tilted in the direction you say, from `0` to `360` degrees
 
-### Example: micro:bit leveller
+### Example: micro:bit leveler
 
-The following example uses the `rotation` and the `plot leds` function to help you move the BBC micro:bit until it's level: when it is level, a smiley shows up on the screen. When running this code in a web browser, move your mouse to simulate the rotation.
+This program helps you move the BBC micro:bit until it is level.  When
+it is level, the micro:bit shows a smiley.
 
-```sig
+If you are running this program in a browser, you can tilt the
+micro:bit with your mouse.
+
+
+```blocks
+let pitch = 0;
 basic.forever(() => {
-    let pitch = input.rotation(Rotation.Pitch)
-    let roll = input.rotation(Rotation.Roll)
+    pitch = input.rotation(Rotation.Pitch);
+    let roll = input.rotation(Rotation.Roll);
     if (Math.abs(pitch) < 10 && Math.abs(roll) < 10) {
-        basic.plotLeds(`
-. . . . .
-. # . # .
-. . . . .
-# . . . #
-. # # # .
-`)
+        basic.showLeds(`
+            . # . # .
+            . . . . .
+            . . . . .
+            # . . . #
+            . # # # .
+            `);
     } else {
-        basic.plotLeds(`
-# . . . #
-. # . # .
-. . # . .
-. # . # .
-# . . . #
-`)
-    }
-})
+        basic.showLeds(`
+            # . . . #
+            . # . # .
+            . . # . .
+            . # . # .
+            # . . . #
+            `);
+        }
+	});
 ```
 
 ### See also

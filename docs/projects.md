@@ -1,15 +1,6 @@
-# Projects 
+![](/static/mb/projects/a1-display.png)
 
+[Flashing Heart](/projects/a1-display)
 
-### @short Projects
-
-### ~column 
-
-## Beginner
-
-* [Rock Paper Scissors](/projects/rock-paper-scissors)
-
-### ~
-
-### ~column 
+[Rock Paper Scissors](/projects/rock-paper-scissors)
 

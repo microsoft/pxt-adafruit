@@ -1,7 +1,6 @@
-## Getting started
-	• Go to https://m.pxt.io/
-	• To create a new project, click new Project
-Tap or click Blocks.
+![](/static/mb/projects/a1-display.png)
+
+Use the LEDs to display a flashing heart.
 
 ## Step 1
 
@@ -16,8 +15,6 @@ basic.showLeds(`
 . . # . .`);
 ```
 
-Once you are done coding, don't forget to run your code with the Play button.
-
 ## Step 2
 
 Add a [pause](/reference/basic/pause) to wait and [clear screen](/reference/basic/clearScreen) to turn off the LEDs.
@@ -31,4 +28,21 @@ basic.showLeds(`
 . . # . .`);
 basic.pause(500);
 basic.clearScreen();
+```
+
+## Step 3
+
+Put a [forever loop](/reference/basic/forever) around it.
+
+```blocks
+basic.forever(() => {
+basic.showLeds(`
+. # . # .
+# # # # #
+# # # # #
+. # # # .
+. . # . .`);
+basic.pause(500);
+basic.clearScreen();
+})
 ```

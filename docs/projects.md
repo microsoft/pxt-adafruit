@@ -1,5 +1,7 @@
 # Projects
 
+![](/static/mb/projects/all10.png)
+
 ![](/static/mb/projects/a1-display.png)
 
 [Flashing Heart](/projects/flashing-heart)

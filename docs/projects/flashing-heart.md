@@ -46,3 +46,49 @@ basic.pause(500);
 basic.clearScreen();
 })
 ```
+
+## Step 4
+
+Add a [pause](/reference/basic/pause) to wait after clearing the screen.
+
+```blocks
+basic.forever(() => {
+basic.showLeds(`
+. # . # .
+# # # # #
+# # # # #
+. # # # .
+. . # . .`);
+basic.pause(500);
+basic.clearScreen();
+basic.pause(500);
+})
+```
+
+## Step 5
+
+Add a second image of a broken heart. 
+
+
+```blocks
+basic.forever(() => {
+basic.showLeds(`
+. # . # .
+# # # # #
+# # # # #
+. # # # .
+. . # . .`);
+basic.pause(500);
+basic.clearScreen();
+basic.pause(500);
+basic.showLeds(`
+. # . # .
+# . # # #
+# . . . #
+. # # # .
+. . # . .`);
+basic.pause(500);
+basic.clearScreen();
+basic.pause(500);
+})
+```

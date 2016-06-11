@@ -16,6 +16,8 @@
 
 ![](/static/mb/projects/a4-motion.png)
 
+## [Rock Paper Scissors](/projects/rock-paper-scissors)
+
 ![](/static/mb/projects/a5-compass.png)
 
 ![](/static/mb/projects/a6-music.png)
@@ -28,5 +30,5 @@
 
 ![](/static/mb/projects/a10-watch.png)
 
-## [Rock Paper Scissors](/projects/rock-paper-scissors)
+
 

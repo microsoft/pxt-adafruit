@@ -101,6 +101,10 @@
                 "path": "/getting-started"
             },
             {
+                "name": "Projects",
+                "path": "/projects"
+            },
+            {
                 "name": "Reference",
                 "path": "/reference"
             },

@@ -1,5 +1,7 @@
 # rock paper scissors
 
+![](/static/mb/projects/a4-motion.png)
+
 ### ~avatar avatar
 
 ```sim

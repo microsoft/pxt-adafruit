@@ -22,15 +22,15 @@
 
 ![](/static/mb/projects/a5-compass.png)
 
-## Music
+## [Hack your headphones](/lessons/hack-your-headphones/activity)
 
 ![](/static/mb/projects/a6-music.png)
 
-## Conductive
+## [Banana keyboard](/lessons/banana-keyboard/activity)
 
 ![](/static/mb/projects/a7-conductive.png)
 
-## Network
+## [Telegraph](/lessons/telegraph/activity)
 
 ![](/static/mb/projects/a8-network.png)
 
@@ -38,7 +38,7 @@
 
 ![](/static/mb/projects/a9-radio.png)
 
-## Watch
+## [Watch](/lessons/the-watch/activity)
 
 ![](/static/mb/projects/a10-watch.png)
 

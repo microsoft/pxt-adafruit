@@ -35,9 +35,6 @@ basic.forever(() => {
 })
 ```
 
-### Lessons
-
-[zoomer](/lessons/zoomer)
 
 ### See also
 

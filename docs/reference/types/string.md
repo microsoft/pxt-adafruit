@@ -34,10 +34,6 @@ Use [show string](/reference/basic/show-string) to display a string on the [LED 
 
 The  parameter of `show string` specifies the string
 
-### Lessons
-
-[glowing pendulum](/lessons/glowing-pendulum), [zoomer](/lessons/zoomer), [temperature](/lessons/temperature)
-
 ### See also
 
 [variables](/reference/variables/var), [string functions](/reference/types/string-functions), [Number](/reference/types/number), [show string](/reference/basic/show-string)

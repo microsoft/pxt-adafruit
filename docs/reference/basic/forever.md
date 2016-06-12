@@ -63,10 +63,6 @@ input.onButtonPressed(Button.A, () => {
 })
 ```
 
-### Lessons
-
-[blink](/lessons/blink), [snowflake-fall](/lessons/snowflake-fall), [flashing-heart](/lessons/flashing-heart)
-
 ### See also
 
 [while](/reference/loops/while), [on button pressed](/reference/input/on-button-pressed), [in background](/reference/control/in-background)

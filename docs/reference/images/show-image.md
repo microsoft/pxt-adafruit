@@ -45,10 +45,6 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-### Lessons
-
-[rock paper scissors](/lessons/rock-paper-scissors), [digital pet](/lessons/digital-pet), [offset-image](/lessons/offset-image)
-
 ### See also
 
 [show animation](/reference/basic/show-animation), [image](/reference/images/image), [create image](/reference/images/create-image), [scroll image](/reference/images/scroll-image)

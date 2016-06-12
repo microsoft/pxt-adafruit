@@ -31,10 +31,6 @@ basic.showString(s)
 * Use [show number](/reference/basic/show-number) to show a number on the [LED screen](/device/screen).
 * Use [show animation](/reference/basic/show-animation) to show a group of pictures on the screen, one after another.
 
-### Lessons
-
-[answering machine](/lessons/answering-machine), [rock paper scissors](/lessons/rock-paper-scissors), [love meter](/lessons/love-meter)
-
 ### See also
 
 [String](/reference/types/string), [show number](/reference/basic/show-number), [show animation](/reference/basic/show-animation)

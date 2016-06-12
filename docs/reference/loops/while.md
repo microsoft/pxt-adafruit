@@ -26,10 +26,6 @@ while(index >= 0) {
 }
 ```
 
-### Lessons
-
-[rotation animation](/lessons/rotation-animation)
-
 ### See also
 
 [on button pressed](/reference/input/on-button-pressed), [for](/reference/loops/for), [if](/reference/logic/if), [forever](/reference/basic/forever)

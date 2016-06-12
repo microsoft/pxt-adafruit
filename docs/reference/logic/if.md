@@ -22,10 +22,6 @@ if(input.lightLevel()<100){
 
 If the [light level](/input/light-level) is `< 100`, this code sets the brightness to `255`:
 
-### Lessons
-
-[love meter](/lessons/love-meter), [zoomer](/lessons/zoomer)
-
 ### See also
 
 [while loop](/reference/loops/while), [for](/reference/loops/for), [boolean](/reference/types/boolean)

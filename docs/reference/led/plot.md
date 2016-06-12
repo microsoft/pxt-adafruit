@@ -41,10 +41,6 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-### Lessons
-
-[blink](/lessons/blink), [beautiful  image](/lessons/beautiful-image), [strobe light](/lessons/strobe-light)
-
 ### See also
 
 [unplot](/reference/led/unplot), [point](/reference/led/point), [LED screen](/device/screen)

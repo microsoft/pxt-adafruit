@@ -46,10 +46,6 @@ You should see code similar to this:
 * [show image](/reference/images/show-image): show an image on the screen
 * [scroll image](/reference/images/scroll-image): scroll an image on the screen
 
-### Lessons
-
-* [smiley](/lessons/smiley)
-
 ### See also
 
 [Show LEDs](/reference/basic/show-leds), [create image](/reference/images/create-image), [show image](/reference/images/show-image), [LED screen](/device/screen)

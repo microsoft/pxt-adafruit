@@ -25,8 +25,3 @@ Reports the current direction of a sprite on the LED screen
 ```
 export function direction(_this: micro_bitSprites.LedSprite) : number
 ```
-
-### Lessons
-
-[game of chance](/lessons/game-of-chance) | [game counter](/lessons/game-counter)
-

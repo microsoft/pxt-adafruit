@@ -27,10 +27,6 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-### Lessons
-
-[jailbreak](/lessons/jailbreak)
-
 ### See also
 
 [for](/reference/loops/for), [while](/js/while)

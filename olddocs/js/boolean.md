@@ -112,10 +112,6 @@ if (x < 5) {
 
 See the documentation on [Numbers](/reference/types/number) for more information on comparing two Numbers. You can also [compare strings](/reference/types/string-functions) using the `equals` function.
 
-### Lessons
-
-[rotation animation](/lessons/rotation-animation), [digi yoyo](/lessons/digi-yoyo), [love meter](/lessons/love-meter), [zoomer](/lessons/zoomer)
-
 ### See also
 
 [if](/reference/logic/if), [while](/js/while), [number](/reference/types/number)

@@ -41,10 +41,6 @@ Otherwise, sometimes they would show a `0`.
 
 ### ~
 
-### Lessons
-
-[smiley](/lessons/smiley), [answering machine](/lessons/answering-machine), [screen wipe](/lessons/screen-wipe), [rotation animation](/lessons/rotation-animation)
-
 ### See also
 
 [button is pressed](/reference/input/button-is-pressed), [forever](/reference/basic/forever), [random](/reference/math/math)

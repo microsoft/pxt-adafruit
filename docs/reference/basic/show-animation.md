@@ -62,8 +62,3 @@ basic.showAnimation(`
 Use [forever](/reference/basic/forever) to show an animation over and over.
 
 ### ~
-
-### Lessons
-
-[smiley](/lessons/smiley), [snowflake fall](/lessons/snowflake-fall), [rotation animation](/lessons/rotation-animation)
-

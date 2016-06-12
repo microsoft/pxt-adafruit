@@ -20,10 +20,6 @@ basic.showString("A", 1000)
 led.fadeOut(1000)
 ```
 
-### Lessons
-
-[glowing sword](/lessons/glowing-sword)
-
 ### See also
 
 [brightness](/reference/led/brightness), [fade in](/reference/led/fade-in), [set brightness](/reference/led/set-brightness)

@@ -98,10 +98,6 @@ if(x < 5) {
 
 See the documentation on [Numbers](/reference/types/number) for more information on comparing two Numbers. You can also [compare strings](/reference/types/string-functions) using the `equals` function.
 
-### Lessons
-
-[rotation animation](/lessons/rotation-animation), [love meter](/lessons/love-meter), [zoomer](/lessons/zoomer)
-
 ### See also
 
 [if](/reference/logic/if), [while](/reference/loops/while), [number](/reference/types/number)

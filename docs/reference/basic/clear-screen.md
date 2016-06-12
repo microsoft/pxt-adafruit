@@ -21,10 +21,6 @@ basic.showLeds(`
 basic.clearScreen()
 ```
 
-### Lessons
-
-[blink](/lessons/blink), [flashing heart](/lessons/flashing-heart), [screen wipe](/lessons/screen-wipe)
-
 ### See also
 
 [set brightness](/reference/led/set-brightness), [unplot](/reference/led/unplot), [plot](/reference/led/plot), [Image](/reference/images/image), [clear](/reference/basic/clear-screen)

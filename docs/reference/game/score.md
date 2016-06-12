@@ -43,7 +43,3 @@ If your game has a time limit, you can start a countdown in which case `game->cu
 export function startCountdown(ms: number)
 ```
 
-### Lessons
-
-[game of chance](/lessons/game-of-chance), [game counter](/lessons/game-counter)
-

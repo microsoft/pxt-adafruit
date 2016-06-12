@@ -27,7 +27,7 @@ input.onButtonPressed(Button.B, () => {
 * **[getting started](/getting-started)**   
 * Browse the [API reference](/reference)
 * Learn more about the [device](/device)
-* Get started with [lessons](/lessons)
+* Get started with [projects](/projects)
 * Frequently Asked Question [faq](/faq)
 * Follow up with the [release notes](/release-notes)
 

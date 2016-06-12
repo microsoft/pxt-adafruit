@@ -44,10 +44,6 @@ num1 = 42
 * Don't confuse the assignment operator `:=` with the equality operator `=`, which is used to compare values.
 * You can use the assignment operator  `:=` with variables of each of the supported [types](/js/types).
 
-### Lessons
-
-[counter](/lessons/counter), [rotation animation](/lessons/rotation-animation), [digital pet](/lessons/digital-pet), [offset image](/lessons/offset-image)
-
 ### See also
 
 [local variables](/reference/variables/var), [global variables](/js/data), [types](/js/types)

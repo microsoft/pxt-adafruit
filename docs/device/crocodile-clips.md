@@ -11,12 +11,6 @@ This example displays a random number every time the crocodile clip holds  `GND`
 
 ### Connecting Crocodile Clips
 
-
-
-### Lessons
-
-[love meter](/lessons/love-meter)
-
 ### See also
 
 [micro:bit pins](/device/pins), [pin is pressed](/reference/input/pin-is-pressed), [analog read pin](/reference/pins/analog-read-pin), [analog write pin](/reference/pins/analog-write-pin), [digital read pin](/reference/pins/digital-read-pin), [digital write pin](/reference/pins/digital-write-pin)

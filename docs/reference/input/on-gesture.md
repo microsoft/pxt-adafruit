@@ -20,7 +20,3 @@ input.onGesture(Gesture.Shake,() => {
 })
 ```
 
-## Lessons
-
-[bounce image](/lessons/bounce-image)
-

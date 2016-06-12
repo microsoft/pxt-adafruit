@@ -81,10 +81,6 @@ if (led.brightness() > 128) {
 
 * You can use the default variable names if you'd like, however, it's best to use descriptive variable names. To change a variable name in the editor, select the down arrow next to the variable and then click "new variable".
 
-### Lessons
-
-[glowing pendulum](/lessons/glowing-pendulum), [love meter](/lessons/love-meter), [temperature](/lessons/temperature), [zoomer](/lessons/zoomer)
-
 ### See also
 
 [types](/reference/types), [assignment operator](/reference/variables/assign)

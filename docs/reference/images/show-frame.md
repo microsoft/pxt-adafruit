@@ -31,10 +31,6 @@ let img = images.createImage(`
 img.showFrame(1)
 ```
 
-### Lessons
-
-[smiley](/lessons/smiley), [flashing heart](/lessons/flashing-heart), [magic logo](/lessons/magic-logo)
-
 ### See also
 
 [create image](/reference/images/create-image), [show animation](/reference/basic/show-animation), [image](/reference/images/image), [show image](/reference/images/show-image), [scroll image](/reference/images/scroll-image)

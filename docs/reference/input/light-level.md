@@ -43,8 +43,6 @@ basic.forever(() => {
 })
 ```
 
-### Lessons
-
 ### See also
 
 [acceleration](/reference/input/acceleration), [compass-heading](/reference/input/compass-heading)

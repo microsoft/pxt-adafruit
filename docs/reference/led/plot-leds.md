@@ -28,10 +28,6 @@ basic.plotLeds(`
 `)
 ```
 
-### Lessons
-
-[smiley](/lessons/smiley), [flashing heart](/lessons/flashing-heart), [magic logo](/lessons/magic-logo)
-
 ### See also
 
 [show animation](/reference/basic/show-animation), [image](/reference/images/image), [show image](/reference/images/show-image), [scroll image](/reference/images/scroll-image)

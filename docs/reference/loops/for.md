@@ -14,10 +14,6 @@ basic.showNumber(i)
 }
 ```
 
-### Lessons
-
-[looper](/lessons/looper)
-
 ### See also
 
 [repeat](/reference/loops/repeat), [while](/reference/loops/while), [if](/reference/logic/if), [show number](/reference/basic/show-number)

@@ -59,10 +59,6 @@ micro:bit.
 If you are calibrating or using the compass near metal, it might
 confuse the micro:bit.
 
-### Lessons
-
-[compass](/lessons/compass)
-
 ### See also
 
 [acceleration](/reference/input/acceleration)

@@ -24,10 +24,6 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-### Lessons
-
-[glowing sword](/lessons/glowing-sword)
-
 ### See also
 
 [brightness](/reference/led/brightness), [fade out](/reference/led/fade-out), [set brightness](/reference/led/set-brightness)

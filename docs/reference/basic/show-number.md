@@ -42,10 +42,6 @@ for (let i = 0; i < 6; i++) {
 * Use [show string](/reference/basic/show-string) to show a [String](/reference/types/string) with letters on the screen.
 * Use [show animation](/reference/basic/show-animation) to show a group of pictures on the screen, one after another.
 
-### Lessons
-
-* [lucky 7](/lessons/lucky-7)
-
 ### See also
 
 [show string](/reference/basic/show-string), [show animation](/reference/basic/show-animation), [Number](/reference/types/number), [math library](/reference/math)

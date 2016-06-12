@@ -36,10 +36,6 @@ basic.showLeds(`
 
 If you are programming in JavaScript, `#` means an LED that is turned on and `.` means an LED that is turned off.
 
-### Lessons
-
-[smiley](/lessons/smiley), [flashing heart](/lessons/flashing-heart), [magic logo](/lessons/magic-logo)
-
 ### See also
 
 [plot leds](/reference/led/plot-leds), [show animation](/reference/basic/show-animation)

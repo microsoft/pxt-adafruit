@@ -43,10 +43,6 @@ basic.pause(500)
 led.unplot(2, 2)
 ```
 
-### Lessons
-
-[strobe light](/lessons/strobe-light)
-
 ### See also
 
 [plot](/reference/led/plot), [point](/reference/led/point), [LED screen](/device/screen), [create image](/reference/images/create-image)

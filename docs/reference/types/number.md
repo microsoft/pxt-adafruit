@@ -51,10 +51,6 @@ The [math library](/reference/math) includes math related functions. In the [Blo
 
 ![](/static/mb/blocks/number-3.png)
 
-### Lessons
-
-[game counter](/lessons/game-counter), [love meter](/lessons/love-meter)
-
 ### See also
 
 [math library](/reference/math), [var](/reference/variables/var), [Boolean](/reference/types/boolean), [show number](/reference/basic/show-number)

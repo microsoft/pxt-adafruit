@@ -18,7 +18,3 @@ You can end the game by calling the `game -> game over` function:
 game.gameOver()
 ```
 
-### Lessons
-
-[game of chance](/lessons/game-of-chance)
-

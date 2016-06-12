@@ -12,7 +12,3 @@ Rotates a sprite to the left by a certain number of degrees
 export function turnLeft(_this: micro_bitSprites.LedSprite, degrees: number)
 ```
 
-### Lessons
-
-[game of chance](/lessons/game-of-chance) | [game counter](/lessons/game-counter)
-

@@ -24,9 +24,6 @@ input.onButtonPressed(Button.B, () => {
 })
 ```
 
-### Lessons
-
-[speed button](/lessons/speed-button)
 
 ### See also
 

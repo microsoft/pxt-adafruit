@@ -33,10 +33,6 @@ basic.forever(() => {
 })
 ```
 
-### Lessons
-
-[zoomer](/lessons/zoomer)
-
 ### See also
 
 [on button pressed](/reference/input/on-button-pressed), [if](/reference/logic/if), [forever](/reference/basic/forever)

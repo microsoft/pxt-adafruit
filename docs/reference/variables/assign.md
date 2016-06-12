@@ -30,10 +30,6 @@ You can use the assignment operator with variables of
 every [type](/reference/types). A *type* is which kind of thing
 a variable can store, like a number or string.
 
-### Lessons
-
-[rotation animation](/lessons/rotation-animation)
-
 ### See also
 
 [variable](/reference/variables/var), [types](/reference/types)

@@ -42,10 +42,6 @@ returns a random [Number](/reference/types/number) between 0 and the parameter *
 
 ![](/static/mb/blocks/math-3.png)
 
-### Lessons
-
-[love meter](/lessons/love-meter)
-
 ### See also
 
 [Block Editor documentation](/blocks/contents), [Number](/reference/types/number)

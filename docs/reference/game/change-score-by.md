@@ -24,8 +24,3 @@ export function addScore(points: number)
 ```
 export function score() : number
 ```
-
-### Lessons
-
-[game of chance](/lessons/game-of-chance), [game counter](/lessons/game-counter)
-

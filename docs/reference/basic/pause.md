@@ -24,10 +24,6 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-### Lessons
-
-[blink](/lessons/blink), [lucky 7](/lessons/lucky-7), [smiley](/lessons/smiley), [flashing heart](/lessons/flashing-heart)
-
 ### See also
 
 [while](/reference/loops/while), [running time](/reference/input/running-time), [for](/reference/loops/for)

@@ -52,8 +52,6 @@ better thermometer.
 
 ### ~
 
-### Lessons
-
 ### See also
 
 [compass-heading](/reference/input/compass-heading), [acceleration](/reference/input/acceleration)

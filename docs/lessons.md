@@ -51,7 +51,6 @@
 ### ~column 
 
 ## Maker
-* [The Watch](/lessons/the-watch), design and create The Watch
 * [Hack your Headphones](/lessons/hack-your-headphones), create music on the BBC micro:bit by hacking your headphones
 * [Banana Keyboard](/lessons/banana-keyboard), create music with fruits
 * [Telegraph](/lessons/telegraph), play the telegraph game between two BBC micro:bits

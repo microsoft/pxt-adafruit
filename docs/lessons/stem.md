@@ -38,7 +38,6 @@ Overview of Blocks lessons for the BBC micro:bit.
 
 ## Engineering
 
-* [The Watch](/lessons/the-watch), design and create The Watch
 * [Truth or dare](/lessons/truth-or-dare), a game that forces each player to reveal a secret or do something funny with if statement
 * [Spinner](/lessons/spinner), spin the arrow with multiple if statements
 * [Dice roll](/lessons/dice-roll), spin with more if statements

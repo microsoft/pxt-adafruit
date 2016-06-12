@@ -38,7 +38,7 @@
 
 ![](/static/mb/projects/a9-radio.png)
 
-## [Watch](/lessons/the-watch/activity)
+## [Watch](/projects/the-watch)
 
 ![](/static/mb/projects/a10-watch.png)
 

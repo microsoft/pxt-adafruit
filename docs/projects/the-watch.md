@@ -1,6 +1,4 @@
-# The watch activity
-
-Control images with variables. 
+![](/static/mb/projects/a10-watch.png)
 
 # micro:bit watch
 
@@ -152,7 +150,7 @@ Your watch is ready!
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/lessons/rock-paper-scissors/activity)!
+Excellent, you're ready to continue with the [challenges](/projects/rock-paper-scissors)!
 
 ### ~
 

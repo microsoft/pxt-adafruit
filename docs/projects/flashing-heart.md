@@ -39,7 +39,7 @@ basic.forever(() => {
 basic.showLeds(`
 . # . # .
 # # # # #
-# # # # #d
+# # # # #
 . # # # .
 . . # . .`);
 basic.pause(500);

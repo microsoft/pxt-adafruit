@@ -2,7 +2,7 @@
 
 ### ~avatar avatar
 
-The Uploader **automatically** deploys .hex files to all BBC micro:bit connected to your computer.
+The Uploader **automatically** deploys .hex files to all micro:bits connected to your computer.
 
 ## [DOWNLOAD](https://www.pxt.io/microbit-uploader.zip)
 
@@ -12,8 +12,8 @@ The Uploader **automatically** deploys .hex files to all BBC micro:bit connected
 
 ### Works with any browser!
 
-The uploader monitors your Downloads folder looking for any .hex file being download. 
-When it detects a new .hex file, the uploader tries to copy it to all connected BBC micro:bits (it copies it to the MICROBIT drives). 
+The uploader monitors your Downloads folder looking for any .hex file that has been downloaded (saved from the browser). 
+When it detects a new .hex file, the uploader tries to copy it to all MICROBIT drives. 
 That's it!
 
 ![](/static/uploader/tooltip.png)

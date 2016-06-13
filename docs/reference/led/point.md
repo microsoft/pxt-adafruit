@@ -1,6 +1,7 @@
 # Point
 
-Get the on/off state of a LED on the [LED screen](/device/screen). Specify the LED using x, y coordinates.
+Find whether the LED you say on the 
+[LED screen](/device/screen) is on or off.
 
 ```sig
 led.point(0,0);
@@ -8,30 +9,36 @@ led.point(0,0);
 
 ### Parameters
 
-* x  - [Number](/reference/types/number); the *x coordinate* or horizontal position (0, 1, 2, 3, 4)
-* y - [Number](/reference/types/number); the *y coordinate* or vertical position (0, 1, 2, 3, 4)
+* **x** is a [number](/reference/types/number) that means the horizontal spot on the LED screen (from left to right: 0, 1, 2, 3, or 4)
+* **y** is a [number](/reference/types/number) that means the vertical spot on the LED screen (from top to bottom: 0, 1, 2, 3, or 4)
 
-If a parameter is [out of bounds](/reference/out-of-bounds) (a value other than 0-4), then this function will return `false`.
+If a parameter is [out of bounds](/reference/out-of-bounds) (a value
+other than 0 to 4), this function will return `false`.
 
 ### Returns
 
-* [Boolean](/reference/types/boolean) - `true` if the LED is *on* and `false` if the LED is *off*
+* a [boolean](/reference/types/boolean). If it is `true`, that means the LED is on. If it is `false`, that means the LED is off.
 
-### x, y coordinates?
+### ~hint
 
-The LED screen is made up of 25 LEDs arranged in a 5x5 grid. To figure out the ``x``, ``y`` coordinates, see [LED screen](/device/screen).
+The LED screen is a solid square of LEDs with five LEDs on each side.
+To learn more about how you number the LEDs with ``x`` and ``y``
+coordinates, see [LED screen](/device/screen).
 
-### Example: toggle off
+### ~
 
-If `point(1, 1)` returns `true`, then the following code turns off the LED:
+### Example: Toggle off
+
+This program turns the center LED (2, 2) off if it is already on.  (If
+it is already off, this program leaves it off.)
 
 ```blocks
-if (led.point(1, 1)) {
-    led.unplot(1, 1)
+if (led.point(2, 2)) {
+    led.unplot(2, 2)
 }
 ```
 
 ### See also
 
-[unplot](/reference/led/unplot), [plot](/reference/led/plot), [LED screen](/device/screen), [create image](/reference/images/create-image)
+[unplot](/reference/led/unplot), [plot](/reference/led/plot), [LED screen](/device/screen)
 

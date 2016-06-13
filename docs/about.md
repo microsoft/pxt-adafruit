@@ -31,7 +31,7 @@ Just like Arduino, the micro:bit can be connected to and interact with sensors, 
 
 ## Blocks or JavaScript
 
-The student can program the BBC micro:bit using [visual blocks](http://www.github.com/Google/blockly) or JavaScript.
+The student can program the BBC micro:bit using Blocks or JavaScript.
 
 ```blocks
 basic.showString("Hi!");
@@ -39,7 +39,7 @@ basic.showString("Hi!");
 
 ## Compile and Flash
 
-When a user has her code ready, she can connect her BBC micro:bit to a computer via a USB cable, so it appears as a mounted drive.
+When a user has her code ready, she can connect her BBC micro:bit to a computer via a USB cable, so it appears as a mounted drive (named MICROBIT). 
 
 Compilation to the ARM thumb machine code happens in the browser.
 
@@ -47,6 +47,7 @@ The student is prompted to save the ARM binary program to a file, which she then
 which flashes the micro:bit device with the new program.
 
 ## Simulator: Test Your Code
+
 Before a student compiles her code for the micro:bit, she can run it using the micro:bit simulator, all within the confines of a web browser. 
 The simulator has support for the LED screen, buttons, as well as compass, accelerometer, and digital I/O pins.
 

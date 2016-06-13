@@ -15,11 +15,13 @@ It flashes yellow when the system wants to tell the user that something has happ
 ### Buttons
 
 Buttons A and B are a form of input.  When you press a button, it completes an electrical circuit. 
-The micro:bit can detect either of its two buttons being pressed and un-pressed and be programmed 
-to act on that or send the information to another device.
+The micro:bit can detect either of its two buttons being pressed/released and be programmed 
+to act on these events.
 
 Button R on the back of the micro:bit is a system button. It has different uses. 
 When you have downloaded and run your code onto your micro:bit, press Button R to restart and run your program from the beginning.
+
+### USB connection
 
 When you plug in your micro:bit, it should appear as MICROBIT. 
 If you accidentally hold down the reset button as you’re plugging in your micro:bit, 
@@ -43,7 +45,7 @@ This data can be used by the micro:bit in a program or be sent to another device
 
 ### Accelerometer
 
-There is a an accelerometer on your micro:bit which detects changes in the micro:bit’s speed. 
+There is an accelerometer on your micro:bit which detects changes in the micro:bit’s speed. 
 It converts analogue information into digital form that can be used in micro:bit programs. 
 Output is in milli-g. The device will also detect a small number of standard actions e.g. shake, tilt and free-fall.
 
@@ -63,7 +65,7 @@ and about the error messages you might get [here](/device/error-codes).
 
 ### Powering your micro:bit
 
-When your micro:bit  is connected to your computer with the micro USB, it doesn’t need another power source.  
+When your micro:bit is connected to your computer with the micro USB, it doesn’t need another power source.  
 When your micro:bit isn’t connected to your computer, tablet or mobile, you will need 2 x AAA 1.5 V batteries to power it.
 
 The pins labelled 3V and GND are the power supply pins. 
@@ -75,7 +77,7 @@ The BBC micro:bit can send an receive data via [serial communication](/device/se
 
 ### Bluetooth Low Energy (BLE) Antenna
 
-You will see the label BLE ANNTENA on the back of your micro:bit. It is for a messaging service, 
+You will see the label BLE ANTENNA on the back of your micro:bit. It is for a messaging service, 
 so that devices can talk to each other. The micro:bit is a peripheral 
 device which can talk to a central device like a smart phone or tablet that has Bluetooth Low Energy (BLE). 
 The micro:bit can send signals and receive signals from a central device so another BLE device can 

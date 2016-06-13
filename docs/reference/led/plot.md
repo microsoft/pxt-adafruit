@@ -1,35 +1,47 @@
 # Plot
 
-Turn on a LED light on the [LED screen](/device/screen). Specify which LED using x, y coordinates. Use [unplot](/reference/led/unplot) to turn a LED off.
+Turn on the LED light you say on the [LED screen](/device/screen).
 
 ```sig
 led.plot(0,0);
 ```
 
+## ~hint
+
+Use [unplot](/reference/led/unplot) to turn **off** an LED.
+
+## ~
+
 ### Parameters
 
-* x - [Number](/reference/types/number); the *x coordinate* or horizontal position (0, 1, 2, 3, 4)
-* y - [Number](/reference/types/number); the *y coordinate* or vertical position (0, 1, 2, 3, 4)
+* **x** is a [number](/reference/types/number) that means the horizontal spot on the LED screen (from left to right: 0, 1, 2, 3, or 4)
+* **y** is a [number](/reference/types/number) that means the vertical spot on the LED screen (from top to bottom: 0, 1, 2, 3, or 4)
 
-If a parameter is [out of bounds](/reference/out-of-bounds) (a value other than 0-4), then this function will do nothing.
+If a parameter is [out of bounds](/reference/out-of-bounds) (a value
+other than 0 to 4), then this function will do nothing.
 
-### x, y coordinates?
+### ~hint
 
-The LED screen is made up of 25 LEDs arranged in a 5x5 grid. To figure out the ``x``, ``y`` coordinates, see [LED screen](/device/screen).
+The LED screen is a solid square of LEDs with five LEDs on each side.
+To learn more about how you number the LEDs with ``x`` and ``y``
+coordinates, see [LED screen](/device/screen).
 
-This code turns on the centre LED:
+### ~
+
+### Example: One LED
+
+This program turns on the bottom right LED.
 
 ```blocks
-led.plot(2, 2)
+led.plot(4, 4)
 ```
 
-### Get the LED on/off state
 
-Use the [point](/reference/led/point) function to find out if a LED is on or off.
+### Example: Square
 
-### Example: a square
-
-The following example uses a [for loop](/reference/loops/for) and the `plot` function to turn on the LED lights along the edge of the screen, making a square:
+This program uses a [for loop](/reference/loops/for)
+and the `plot` function
+to make a square around the edges of the LED screen.
 
 ```blocks
 for (let i = 0; i < 5; i++) {
@@ -41,7 +53,13 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
+### ~hint
+
+Use the [point](/reference/led/point) function to find out if an LED is
+on or off.
+
+### ~
+
 ### See also
 
 [unplot](/reference/led/unplot), [point](/reference/led/point), [LED screen](/device/screen)
-

@@ -20,6 +20,20 @@ if (led.brightness() < 255) {
 }
 ```
 
+
+### Example: change brightness
+
+This program makes the screen brightness 100% (255).  Then it turns on
+the center LED (`2, 2`), waits for one second and then sets the screen
+brightness to 50% (128):
+
+```blocks
+led.setBrightness(255)
+led.plot(2, 2)
+basic.pause(1000)
+led.setBrightness(led.brightness() / 2)
+```
+
 ### See also
 
 [set brightness](/reference/led/set-brightness), [fade in](/reference/led/fade-in), [fade out](/reference/led/fade-out)

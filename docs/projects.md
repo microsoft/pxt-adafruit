@@ -30,11 +30,11 @@
 
 ![](/static/mb/projects/a7-conductive.png)
 
-## [Telegraph](/lessons/telegraph/activity)
+## [Telegraph](/projects/telegraph)
 
 ![](/static/mb/projects/a8-network.png)
 
-## Radio
+## [Radio](/projects/radio)
 
 ![](/static/mb/projects/a9-radio.png)
 

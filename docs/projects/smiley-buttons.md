@@ -1,3 +1,5 @@
+# smiley buttons
+
 ![](/static/mb/projects/a2-buttons.png)
 
 Use buttons to show a smiley or frowny face. 

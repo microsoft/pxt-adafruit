@@ -1,6 +1,6 @@
 ![](/static/mb/projects/a10-watch.png)
 
-# micro:bit watch
+# the watch
 
 ![](/static/mb/lessons/the-watch-0.png)
 

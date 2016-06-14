@@ -1,4 +1,4 @@
-# hack your headphones activity 
+# hack your headphones 
 
 Hack your headphones
 

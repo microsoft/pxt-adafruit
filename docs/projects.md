@@ -22,11 +22,11 @@
 
 ![](/static/mb/projects/a5-compass.png)
 
-## [Hack your headphones](/lessons/hack-your-headphones/activity)
+## [Hack your headphones](/projects/hack-your-headphones)
 
 ![](/static/mb/projects/a6-music.png)
 
-## [Banana keyboard](/lessons/banana-keyboard/activity)
+## [Banana keyboard](/projects/banana-keyboard)
 
 ![](/static/mb/projects/a7-conductive.png)
 

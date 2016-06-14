@@ -70,6 +70,6 @@ Using the 4th crocodile clip, connect the unattached end of the crocodile clip o
 
 ### ~avatar avatar
 
-Excellent, you're ready to continue with the [challenges](/lessons/telegraph/challenges)!
+Excellent, you're ready to continue with the [challenges](/projects/telegraph-challenges)!
 
 ### ~

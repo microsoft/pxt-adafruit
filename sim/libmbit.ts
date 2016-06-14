@@ -630,6 +630,9 @@ namespace pxsim.bluetooth {
     export function startAccelerometerService(): void {
         // TODO
     }
+    export function startButtonService(): void {
+        // TODO
+    }
 }
 
 namespace pxsim.images {

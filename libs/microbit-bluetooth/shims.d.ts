@@ -39,6 +39,13 @@ declare namespace bluetooth {
     //% help=bluetooth/start-accelerometer-service
     //% blockId=bluetooth_start_accelerometer_service block="bluetooth accelerometer service" blockGap=8 shim=bluetooth::startAccelerometerService
     function startAccelerometerService(): void;
+
+    /**
+     *  Starts the button service
+     */
+    //% help=bluetooth/start-button-service
+    //% blockId=bluetooth_start_button_service block="bluetooth button service" blockGap=8 shim=bluetooth::startButtonService
+    function startButtonService(): void;
 }
 
 // Auto-generated. Do not edit. Really.

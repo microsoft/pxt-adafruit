@@ -48,4 +48,13 @@ namespace bluetooth {
     void startAccelerometerService() {
         new MicroBitAccelerometerService(*uBit.ble, uBit.accelerometer);        
     }
+
+    /**
+    *  Starts the button service
+    */
+    //% help=bluetooth/start-button-service
+    //% blockId=bluetooth_start_button_service block="bluetooth button service" blockGap=8
+    void startButtonService() {
+        new MicroBitButtonService(*uBit.ble);      
+    }
 }

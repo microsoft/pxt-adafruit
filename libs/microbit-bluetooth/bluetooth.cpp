@@ -30,4 +30,13 @@ namespace bluetooth {
     void startTemperatureService() {    
         new MicroBitTemperatureService(*uBit.ble, uBit.thermometer);        
     }
+
+    /**
+    *  Starts the magnetometer service
+    */
+    //% help=bluetooth/start-magnetometer-service
+    //% blockId=bluetooth_start_magnetometer_service block="bluetooth magnetometer service"
+    void startMagnetometerService() {    
+        new MicroBitMagnetometerService(*uBit.ble, uBit.compass); 
+    }
 }

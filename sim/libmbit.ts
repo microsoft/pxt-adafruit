@@ -624,6 +624,9 @@ namespace pxsim.bluetooth {
     export function startTemperatureService(): void {
         // TODO
     }
+    export function startMagnetometerService(): void {
+        // TODO
+    }
 }
 
 namespace pxsim.images {

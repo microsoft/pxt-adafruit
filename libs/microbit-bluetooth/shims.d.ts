@@ -25,6 +25,13 @@ declare namespace bluetooth {
     //% help=bluetooth/start-temperature-service
     //% blockId=bluetooth_start_temperature_service block="bluetooth temperature service" shim=bluetooth::startTemperatureService
     function startTemperatureService(): void;
+
+    /**
+     *  Starts the magnetometer service
+     */
+    //% help=bluetooth/start-magnetometer-service
+    //% blockId=bluetooth_start_magnetometer_service block="bluetooth magnetometer service" shim=bluetooth::startMagnetometerService
+    function startMagnetometerService(): void;
 }
 
 // Auto-generated. Do not edit. Really.

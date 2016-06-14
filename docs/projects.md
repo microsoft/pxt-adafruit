@@ -1,4 +1,4 @@
-# Projects
+# Ten Projects
 
 ![](/static/mb/projects/all10.png)
 

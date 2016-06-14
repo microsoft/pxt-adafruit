@@ -26,8 +26,8 @@ input.onButtonPressed(Button.B, () => {
 
 * **[getting started](/getting-started)**
 * Get started with [projects](/projects)
-* Browse the [API reference](/reference)
-* Learn more about the [device](/device)
+* Browse the [micro:bit APIs](/reference)
+* Learn more about the [micro:bit device](/device)
 * Frequently Asked Question [faq](/faq)
 * Follow up with the [release notes](/release-notes)
 

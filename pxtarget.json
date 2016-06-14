@@ -102,15 +102,15 @@
                 "path": "/getting-started"
             },
             {
-                "name": "Projects",
+                "name": "Ten Projects",
                 "path": "/projects"
             },
             {
-                "name": "Reference",
+                "name": "Micro:bit APIs",
                 "path": "/reference"
             },
             {
-                "name": "Device",
+                "name": "Micro:bit Device",
                 "path": "/device"
             }
         ],

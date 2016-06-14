@@ -1,6 +1,5 @@
 # Lessons 
 
-
 ### @short Lessons
 
 ### ~column 

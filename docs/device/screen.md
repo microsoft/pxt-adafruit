@@ -3,7 +3,13 @@
 The micro:bit LED screen 
 
 ```sim
-basic.showString(" ");
+    basic.showLeds(`
+        # . # . #
+        . # . # .
+        # . # . #
+        . # . # .
+        # . # . #
+        `);
 ```
 
 The micro:bit LED screen consists of 25 red LED lights arranged in a 5X5 grid (5 LEDs across by 5 LEDs down).
@@ -14,15 +20,15 @@ You use ``x , y`` coordinates to specify a particular LED in the grid; where ``x
 
 Here are the x, y coordinates for the LEDs in the 5X5 grid:
 
-`0, 0` `1, 0` `2, 0` `3, 0` `4, 0`
+`(0,0)` `(1,0)` `(2,0)` `(3,0)` `(4,0)`
 
-`0, 1` `1, 1` `2, 1` `3, 1` `4, 1`
+`(0,1)` `(1,1)` `(2,1)` `(3,1)` `(4,1)`
 
-`0, 2` `1, 2` `2, 2` `3, 2` `4, 2`
+`(0,2)` `(1,2)` `(2,2)` `(3,2)` `(4,2)`
 
-`0, 3` `1, 3` `2, 3` `3, 3` `4, 3`
+`(0,3)` `(1,3)` `(2,3)` `(3,3)` `(4,3)`
 
-`0, 4` `1, 4` `2, 4` `3, 4` `4, 4`
+`(0,4)` `(1,4)` `(2,4)` `(3,4)` `(4,4)`
 
 The x, y coordinates for the LED in the centre of the grid are `2, 2`. Starting from `0, 0` count over 2 columns and then down 2 rows.
 
@@ -35,7 +41,8 @@ Since the row and column numbers start at 0, an easy way to figure out the x, y 
 Use [plot](/reference/led/plot) and [unplot](/reference/led/unplot) to turn a LED on or off
 
 ```blocks
-led.plot(0,0)
+led.plot(0,0);
+basic.pause(1000);
 led.unplot(0,0)
 ```
 

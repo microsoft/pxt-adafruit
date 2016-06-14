@@ -22,7 +22,7 @@ declare namespace bluetooth {
     /**
      *  Starts the temperature service
      */
-    //% help=bluetooth/start-led-service
+    //% help=bluetooth/start-temperature-service
     //% blockId=bluetooth_start_temperature_service block="bluetooth temperature service" shim=bluetooth::startTemperatureService
     function startTemperatureService(): void;
 }

@@ -1,6 +1,29 @@
+# flashing heart
+
 ![](/static/mb/projects/a1-display.png)
 
-Use the LEDs to display a flashing heart.
+### ~avatar avatar
+
+```sim
+basic.forever(() => {
+basic.showLeds(`
+. # . # .
+# # # # #
+# # # # #
+. # # # .
+. . # . .`);
+basic.pause(500);
+basic.clearScreen();
+basic.pause(500);
+})
+```
+
+Use the LEDs to display a flashing heart, and then create
+an animation of a broken heart. :(
+
+## [START PROJECT](/#follow:/projects/flashing-heart)
+
+### ~
 
 ## Step 1
 

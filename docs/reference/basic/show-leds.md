@@ -15,9 +15,9 @@ basic.showLeds(`
 
 ### Parameters
 
-* `leds` is a [string](/reference/types/string) that means which LEDs are on and off.
+* `leds` is a [string](/reference/types/string) that controls which LEDs are on and off.
 * `interval` is an optional [number](/reference/types/number) that means how many milliseconds to wait after showing a picture.
-If you are programming with blocks, `interval` starts out as 400 milliseconds.
+If you are programming with blocks, `interval` is set at 400 milliseconds.
 
 ### Example
 

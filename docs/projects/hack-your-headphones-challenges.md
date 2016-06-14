@@ -1,4 +1,4 @@
-# light beatbox activity
+# hack your headphones challenges
 
 Control sound with the light level. 
 
@@ -70,11 +70,4 @@ input.onButtonPressed(Button.A, () => {
 ```
 
 * click *compile* and run your code on the micro:bit.
-
-
-### ~avatar avatar
-
-Excellent, you're ready to continue by connecting your headphones with these [challenges](/lessons/hack-your-headphones/activity)!
-
-### ~
 

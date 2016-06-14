@@ -1,6 +1,5 @@
 # Lessons 
 
-
 ### @short Lessons
 
 ### ~column 
@@ -51,9 +50,6 @@
 ### ~column 
 
 ## Maker
-* [Hack your Headphones](/lessons/hack-your-headphones), create music on the BBC micro:bit by hacking your headphones
-* [Banana Keyboard](/lessons/banana-keyboard), create music with fruits
-* [Telegraph](/lessons/telegraph), play the telegraph game between two BBC micro:bits
 * [Pogo](/lessons/pogo), create a pogo game to test your jumping abilities
 
 ## Science

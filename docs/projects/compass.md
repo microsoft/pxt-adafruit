@@ -1,4 +1,4 @@
-# compass activity
+# compass
 
 ![](/static/mb/projects/a5-compass.png)
 

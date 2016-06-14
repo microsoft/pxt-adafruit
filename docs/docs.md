@@ -24,10 +24,10 @@ input.onButtonPressed(Button.B, () => {
 });
 ``` 
 
-* **[getting started](/getting-started)**   
+* **[getting started](/getting-started)**
+* Get started with [projects](/projects)
 * Browse the [API reference](/reference)
 * Learn more about the [device](/device)
-* Get started with [projects](/projects)
 * Frequently Asked Question [faq](/faq)
 * Follow up with the [release notes](/release-notes)
 

@@ -29,7 +29,7 @@ the magnetic force is stronger, and dimmer when it is weaker.
 ```blocks
 led.plot(2, 2)
 basic.forever(() => {
-    let f = input.magneticForce("x")
+    let f = input.magneticForce(Dimension.X)
     led.setBrightness(f / 2000)
 })
 ```

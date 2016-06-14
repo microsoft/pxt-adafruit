@@ -2,14 +2,14 @@
 
 
 
-    //% color=156 weight=79
+    //% color=#0082FB weight=2
 declare namespace bluetooth {
 
     /**
      *  Starts the Bluetooth IO pin service
      */
-    //% help=reference/bluetooth/io-pin-service
-    //% blockId=bluetooth-io-pin-service block="start io pin service" shim=bluetooth::startIOPinService
+    //% help=bluetooth/io-pin-service
+    //% blockId=bluetooth-io-pin-service block="bluetooth io pin service" shim=bluetooth::startIOPinService
     function startIOPinService(): void;
 }
 

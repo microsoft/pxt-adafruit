@@ -13,10 +13,15 @@ The micro:bit LED screen
 ```
 
 The micro:bit LED screen consists of 25 red LED lights arranged in a 5X5 grid (5 LEDs across by 5 LEDs down).
+In the screen above, we created a checkerboard pattern using the LEDs.
 
 ### Which LED?
 
-You use ``x , y`` coordinates to specify a particular LED in the grid; where ``x`` is the horizontal position and ``y`` is the vertical position (0, 1, 2, 3, 4). To figure out the ``x``, ``y`` coordinates, position your micro:bit horizontally, like a credit card (see picture above).
+You use `(x ,y)` coordinates to specify a particular LED in the grid; 
+where `x` is the horizontal position (0,1,2,3,4) and `y` is the vertical position 
+(0, 1, 2, 3, 4). 
+
+To figure out the ``x``, ``y`` coordinates, position your micro:bit horizontally, like a credit card (see picture above).
 
 Here are the x, y coordinates for the LEDs in the 5X5 grid:
 
@@ -30,11 +35,17 @@ Here are the x, y coordinates for the LEDs in the 5X5 grid:
 
 `(0,4)` `(1,4)` `(2,4)` `(3,4)` `(4,4)`
 
-The x, y coordinates for the LED in the centre of the grid are `2, 2`. Starting from `0, 0` count over 2 columns and then down 2 rows.
+The x, y coordinates for the LED in the centre of the grid are `(2,2)`. Starting from `(0,0)` count over 2 columns and then down 2 rows.
+
+### Check your understanding
+
+Which LEDs are turned on in the checkboard pattern above? 
 
 ### Row, column - 1
 
-Since the row and column numbers start at 0, an easy way to figure out the x, y coordinates is to subtract 1 from the row and column number (when counting from 1). In other words, to specify the LED in the 4th column 5th row, subtract 1 from each number to get coordinates `3, 4`.
+Since the row and column numbers start at 0, an easy way to figure out the (x,y) coordinates 
+is to subtract 1 from the row and column number (when counting from 1). 
+In other words, to specify the LED in the 4th column 5th row, subtract 1 from each number to get coordinates `(3,4)`.
 
 ### Turn a LED on/off
 
@@ -42,8 +53,11 @@ Use [plot](/reference/led/plot) and [unplot](/reference/led/unplot) to turn a LE
 
 ```blocks
 led.plot(0,0);
+led.plot(1,1);
 basic.pause(1000);
-led.unplot(0,0)
+led.unplot(0,0);
+basic.pause(1000);
+led.unplot(1,1);
 ```
 
 ### Is a LED on/off?

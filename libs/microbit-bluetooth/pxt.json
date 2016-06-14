@@ -1,0 +1,24 @@
+{
+    "name": "microbit-bluetooth",
+    "description": "Bluetooth services",
+    "files": [
+        "README.md",
+        "enums.d.ts",
+        "shims.d.ts",
+        "bluetooth.cpp"
+    ],
+    "public": true,
+    "dependencies": {
+        "microbit": "file:../microbit"
+    },
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 1
+                }
+            }
+        }
+    },
+    "installedVersion": "prfndw"
+}

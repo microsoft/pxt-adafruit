@@ -57,7 +57,7 @@ declare namespace devices {
 
     /**
      * Registers code to run when the device notifies about a change of signal strength.
-     * @param body TODO
+     * @param body Code run when the signal strength changes.
      */
     //% weight=23 help=devices/on-signal-strength-changed
     //% blockId=devices_signal_strength_changed_event block="on signal strength changed" icon="\uf012" shim=devices::onSignalStrengthChanged

@@ -7,6 +7,7 @@
         "libs/microbit",
         "libs/microbit-radio",
         "libs/microbit-devices",
+        "libs/microbit-bluetooth",
         "libs/neopixel"
     ],
     "cloud": {

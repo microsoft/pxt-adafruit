@@ -128,8 +128,8 @@ declare namespace basic {
 
     /**
      * Draws an image on the LED screen.
-     * @param leds TODO
-     * @param interval TODO
+     * @param leds the pattern of LED to turn on/off
+     * @param interval time in milliseconds to pause after drawing
      */
     //% help=basic/show-leds 
     //% weight=95 blockGap=8
@@ -159,22 +159,22 @@ declare namespace basic {
 
     /**
      * Shows a sequence of LED screens as an animation.
-     * @param leds TODO
-     * @param interval TODO
+     * @param leds pattern of LEDs to turn on/off
+     * @param interval time in milliseconds between each redraw
      */
     //% help=basic/show-animation imageLiteral=1 async interval.defl=400 shim=basic::showAnimation
     function showAnimation(leds: string, interval?: number): void;
 
     /**
      * Draws an image on the LED screen.
-     * @param leds TODO
+     * @param leds pattern of LEDs to turn on/off
      */
     //% help=basic/plot-leds weight=80 imageLiteral=1 shim=basic::plotLeds
     function plotLeds(leds: string): void;
 
     /**
      * Repeats the code forever in the background. On each iteration, allows other codes to run.
-     * @param body TODO
+     * @param body code to execute
      */
     //% help=basic/forever weight=55 blockGap=8
     //% blockId=device_forever block="forever" icon="\uf01e" shim=basic::forever

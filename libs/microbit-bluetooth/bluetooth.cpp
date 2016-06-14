@@ -21,4 +21,13 @@ namespace bluetooth {
     void startLEDService() {
         new MicroBitLEDService(*uBit.ble, uBit.display);
     }
+
+    /**
+    *  Starts the temperature service
+    */
+    //% help=bluetooth/start-temperature-service
+    //% blockId=bluetooth_start_temperature_service block="bluetooth temperature service"
+    void startTemperatureService() {    
+        new MicroBitTemperatureService(*uBit.ble, uBit.thermometer);        
+    }
 }

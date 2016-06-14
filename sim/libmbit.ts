@@ -614,6 +614,18 @@ namespace pxsim.pins {
 
 }
 
+namespace pxsim.bluetooth {
+    export function startIOPinService(): void {
+        // TODO
+    }
+    export function startLEDService(): void {
+        // TODO
+    }
+    export function startTemperatureService(): void {
+        // TODO
+    }
+}
+
 namespace pxsim.images {
     export function createImage(img: Image) { return img }
     export function createBigImage(img: Image) { return img }

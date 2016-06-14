@@ -6,7 +6,7 @@ Use buttons to show a smiley or frowny face.
 
 ## Step 1
 
-Use [show leds](/reference/basic/showLeds) to make a smiley face:
+Use [show leds](/reference/basic/show-leds) to make a smiley face:
 
 ```blocks
 basic.showLeds(`

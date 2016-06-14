@@ -2,7 +2,8 @@
 
 How to compile, transfer, and run a script on your micro:bit.
 
-While you're writing and testing your Block Editor or Touch Develop scripts, you'll mostly be running scripts in your browser by clicking the `Run` button (see [run code in your browser](/device/simulator) for info about this).
+While you're writing and testing your scripts, you'll mostly be running scripts in your browser by clicking the `PLay` button 
+(see [run code in your browser](/device/simulator) for info about this).
 
 Once your masterpiece is complete, you can compile your script and run it on your micro:bit.
 

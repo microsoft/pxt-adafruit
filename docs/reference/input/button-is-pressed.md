@@ -16,7 +16,7 @@ input.buttonIsPressed(Button.A);
 
 ### Example
 
-This program uses an [if](/reference/logic/if) to run 
+This program uses an [if](/blocks/logic/if) to run 
 one part of the program if the `A` button is pressed, and 
 another part if it is not pressed.
 
@@ -35,5 +35,5 @@ basic.forever(() => {
 
 ### See also
 
-[on button pressed](/reference/input/on-button-pressed), [if](/reference/logic/if), [forever](/reference/basic/forever)
+[on button pressed](/reference/input/on-button-pressed), [if](/blocks/logic/if), [forever](/reference/basic/forever)
 

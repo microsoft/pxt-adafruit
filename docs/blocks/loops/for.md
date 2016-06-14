@@ -16,5 +16,5 @@ basic.showNumber(i)
 
 ### See also
 
-[repeat](/reference/loops/repeat), [while](/reference/loops/while), [if](/reference/logic/if), [show number](/reference/basic/show-number)
+[repeat](/blocks/loops/repeat), [while](/blocks/loops/while), [if](/blocks/logic/if), [show number](/reference/basic/show-number)
 

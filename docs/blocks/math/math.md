@@ -1,14 +1,8 @@
-# Math Library
-
-Functions in the math library.
+# Math functions
 
 ### @parent blocks/language
 
 The math library includes math related functions that you can use with [Numbers](/reference/types/number).
-
-* In the [Block editor](/blocks/editor), click **maths** on the left to see the available blocks
-
-The functions available in Block Editor are:
 
 ### abs
 
@@ -44,5 +38,5 @@ returns a random [Number](/reference/types/number) between 0 and the parameter *
 
 ### See also
 
-[Block Editor documentation](/blocks/contents), [Number](/reference/types/number)
+[Number](/reference/types/number)
 

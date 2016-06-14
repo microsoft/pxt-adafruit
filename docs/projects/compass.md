@@ -104,9 +104,3 @@ basic.forever(() => {
 });
 ```
 
-### ~avatar avatar
-
-Excellent, you're ready to continue with the [challenges](/lessons/compass/challenges)!
-
-### ~
-

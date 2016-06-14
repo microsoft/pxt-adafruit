@@ -26,5 +26,5 @@ for (let i = 0; i < 5; i++) {
 
 ### See also
 
-[while](/reference/loops/while), [running time](/reference/input/running-time), [for](/reference/loops/for)
+[while](/blocks/loops/while), [running time](/reference/input/running-time), [for](/blocks/loops/for)
 

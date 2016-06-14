@@ -13,7 +13,7 @@ A variable is a place where you can store and retrieve data. Variables have a na
 ### Var statement
 
 Use the Block Editor variable statement to create a variable 
-and the [assignment operator](/reference/variables/assign) 
+and the [assignment operator](/blocks/variables/assign) 
 to store something in the variable.
 
 For example, this code stores the number `2` in the `x` variable:
@@ -27,7 +27,7 @@ Here's how to define a variable in the Block Editor:
 
 2. Change the default variable name if you like.
 
-3. Drag a block type on the right-side of the [assignment operator](/reference/variables/assign) and click the down arrow to change the variable name.
+3. Drag a block type on the right-side of the [assignment operator](/blocks/variables/assign) and click the down arrow to change the variable name.
 
 A variable is created for the number returned by the [brightness](/reference/led/brightness) function.
 
@@ -83,5 +83,5 @@ if (led.brightness() > 128) {
 
 ### See also
 
-[types](/reference/types), [assignment operator](/reference/variables/assign)
+[types](/reference/types), [assignment operator](/blocks/variables/assign)
 

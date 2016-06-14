@@ -8,7 +8,7 @@ An *Image* is a matrix of pixels to show on the [LED screen](/device/screen)
 
 ### Block Editor: Show LEDs
 
-To display an image using the [Block Editor](/blocks/editor):
+To display an image:
 
 * click `Basic` , `Show LEDs`, and tap on the LEDs`
 * when you're done, return to your code
@@ -20,10 +20,6 @@ You should see code similar to this:
 ### Creating an image
 
 To create an image that you can later modify, see the [create image](/reference/images/create-image) function.
-
-### Block editor: create and show images
-
-To create images using the [Block editor](/blocks/editor):
 
 1. Click the **Images** category on the left.
 

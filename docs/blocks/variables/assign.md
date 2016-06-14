@@ -1,6 +1,6 @@
 # Assignment Operator
 
-Use an equals sign to make a [variable](/reference/variables/var) store the [number](/reference/types/number) 
+Use an equals sign to make a [variable](/blocks/variables/var) store the [number](/reference/types/number) 
 or [string](/reference/types/string) you say.
 
 When you use the equals sign to store something in a variable, the equals sign is called
@@ -32,5 +32,5 @@ a variable can store, like a number or string.
 
 ### See also
 
-[variable](/reference/variables/var), [types](/reference/types)
+[variable](/blocks/variables/var), [types](/reference/types)
 

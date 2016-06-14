@@ -95,6 +95,6 @@ Tap your banana instrument to play sound against... the fruit!
 
 ### ~avatar boothing
 
-Excellent, you're ready to continue with the [challenges](/banana-keyboard-challenges)!
+Excellent, you're ready to continue with the [challenges](/projects/banana-keyboard-challenges)!
 
 ### ~

@@ -65,5 +65,5 @@ input.onButtonPressed(Button.A, () => {
 
 ### See also
 
-[while](/reference/loops/while), [on button pressed](/reference/input/on-button-pressed), [in background](/reference/control/in-background)
+[while](/blocks/loops/while), [on button pressed](/reference/input/on-button-pressed), [in background](/reference/control/in-background)
 

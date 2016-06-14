@@ -6,13 +6,13 @@ a piece of text.
 
 A *String* is a sequence of characters. For the BBC micro:bit, ASCII character codes 32 to 126 are supported; letters, digits, punctuation marks, and a few symbols. All other character codes appear as a ? on the [LED screen](/device/screen).
 
-### Declare a string
+### Create a string variable
 
-Use the [var statement](/reference/variables/var) and the [assignment operator](/reference/variables/assign) to declare a new *local* string variable. Like this:
+```block
+salutation = "Hello";
+```
 
-![](/static/mb/blocks/string-0.png)
-
-To declare a string using the [Block Editor](/blocks/editor):
+To create a variable that holds a string:
 
 1. Click `Variables` (as the Block drawer).
 
@@ -24,17 +24,22 @@ To declare a string using the [Block Editor](/blocks/editor):
 
 Your code should look something like this:
 
-![](/static/mb/blocks/string-1.png)
+```block
+salutation = "Hello";
+```
 
 ### The function `show string`
 
-Use [show string](/reference/basic/show-string) to display a string on the [LED screen](/device/screen). If the string is multiple characters, the string scrolls right to left. The following example displays `Hello world!` on the micro:bit screen:
+Use [show string](/reference/basic/show-string) to display a string on the [LED screen](/device/screen). 
+If the string is multiple characters, the string scrolls right to left. The following example displays `Hello world!` on the micro:bit screen:
 
-![](/static/mb/blocks/string-2.png)
+```block
+basic.showString("Hello world!");
+```
 
 The  parameter of `show string` specifies the string
 
 ### See also
-
-[variables](/reference/variables/var), [string functions](/reference/types/string-functions), [Number](/reference/types/number), [show string](/reference/basic/show-string)
+ 
+[string functions](/reference/types/string-functions), [Number](/reference/types/number), [show string](/reference/basic/show-string)
 

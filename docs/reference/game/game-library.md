@@ -11,7 +11,7 @@ input.onButtonPressed(Button.A, () => {
 game.startCountdown(10000)
 ```
 
-### [Create sprite](/functions/game-library/create-sprite)
+### [Create sprite](/reference/game/create-sprite)
 
 Create sprite with x, y coordinates and returns a LED Sprite. Create a new LED sprite.
 
@@ -21,7 +21,7 @@ Create sprite with x, y coordinates and returns a LED Sprite. Create a new LED s
 export function createSprite(x: number, y: number) : micro_bitSprites.LedSprite
 ```
 
-### [Move](/functions/game-library/move)
+### [Move](/reference/game/move)
 
 Sprite move by a certain number
 
@@ -31,7 +31,7 @@ Sprite move by a certain number
 export function move(_this: micro_bitSprites.LedSprite, leds: number)
 ```
 
-### [Turn](/functions/game-library/turn)
+### [Turn](/reference/game/turn)
 
 Rotates a sprite to the right by a certain number of degrees
 
@@ -47,7 +47,7 @@ Rotates a sprite to the left by a certain number of degrees
 export function turnLeft(_this: micro_bitSprites.LedSprite, degrees: number)
 ```
 
-### [Change](/functions/game-library/change)
+### [Change](/reference/game/change)
 
 Sprite will change the x position by this number
 
@@ -63,7 +63,7 @@ Sprite will change the y position by this number
 export function changeYBy(_this: micro_bitSprites.LedSprite, y: number)
 ```
 
-### [Set](/functions/game-library/set)
+### [Set](/reference/game/set)
 
 Sprite will change the x position by this number
 
@@ -79,7 +79,7 @@ Sprite will change the y position by this number
 export function changeYBy(_this: micro_bitSprites.LedSprite, y: number)
 ```
 
-### [If on edge, bounce](/functions/game-library/if-on-edge-bounce)
+### [If on edge, bounce](/reference/game/if-on-edge-bounce)
 
 Sprite - If the sprite is on the edge, the sprite will bounce
 
@@ -89,7 +89,7 @@ Sprite - If the sprite is on the edge, the sprite will bounce
 export function ifOnEdge_Bounce(_this: micro_bitSprites.LedSprite)
 ```
 
-### [Change score by](/functions/game-library/change-score-by)
+### [Change score by](/reference/game/change-score-by)
 
 When a player achieves a goal, you can increase the game score
 
@@ -101,7 +101,7 @@ When a player achieves a goal, you can increase the game score
 export function addScore(points: number)
 ```
 
-### [Score](/functions/game-library/score)
+### [Score](/reference/game/score)
 
 * set the current score to a particular value.
 
@@ -117,7 +117,7 @@ export function setScore(value: number)
 export function score() : number
 ```
 
-### [Countdown](/functions/game-library/start-countdown)
+### [Countdown](/reference/game/start-countdown)
 
 If your game has a time limit, you can start a countdown in which case `game->current time` returns the remaining time.
 
@@ -129,7 +129,7 @@ If your game has a time limit, you can start a countdown in which case `game->cu
 export function startCountdown(ms: number)
 ```
 
-### [Game over](/functions/game-library/game-over)
+### [Game over](/reference/game/game-over)
 
 If the `life` reaches zero or the time expires (see countdown), the game enters the **game over** mode. When the game is over, `game->is running` returns false
 

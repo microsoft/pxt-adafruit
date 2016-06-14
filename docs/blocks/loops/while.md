@@ -28,5 +28,5 @@ while(index >= 0) {
 
 ### See also
 
-[on button pressed](/reference/input/on-button-pressed), [for](/reference/loops/for), [if](/reference/logic/if), [forever](/reference/basic/forever)
+[on button pressed](/reference/input/on-button-pressed), [for](/blocks/loops/for), [if](/blocks/logic/if), [forever](/reference/basic/forever)
 

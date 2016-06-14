@@ -32,7 +32,7 @@ The next six blocks represent comparison operators that yield a Boolean value. M
 42 >= 0;
 ```
 
-Boolean values and operators are often used with an [if](/reference/logic/if) or [while](/reference/loops/while) statement to determine which code will execute next. For example:
+Boolean values and operators are often used with an [if](/blocks/logic/if) or [while](/blocks/loops/while) statement to determine which code will execute next. For example:
 
 ### Functions that return a Boolean
 
@@ -100,5 +100,5 @@ See the documentation on [Numbers](/reference/types/number) for more information
 
 ### See also
 
-[if](/reference/logic/if), [while](/reference/loops/while), [number](/reference/types/number)
+[if](/blocks/logic/if), [while](/blocks/loops/while), [number](/reference/types/number)
 

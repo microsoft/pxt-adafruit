@@ -39,8 +39,6 @@ In this project, you will build a Rock Paper Scissors game with the BBC micro:bi
 You can play the game with a friend who has it on a micro:bit.
 You can also play it with friends who are just using their hands.
 
-## [START PROJECT](/#follow:/projects/rock-paper-scissors)
-
 ### ~
 
 

@@ -39,7 +39,7 @@ led.plot(4, 4)
 
 ### Example: Square
 
-This program uses a [for loop](/reference/loops/for)
+This program uses a [for loop](/blocks/loops/for)
 and the `plot` function
 to make a square around the edges of the LED screen.
 

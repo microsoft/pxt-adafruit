@@ -1,6 +1,6 @@
 # Blocks language
 
-```namspaces
+```namespaces
 for (let i = 0;i<5;++i) {}
 if (true){}
 let x = 0;

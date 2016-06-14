@@ -31,7 +31,7 @@ let condition2 = true
 
 ### ~
 
-Boolean values and operators are often used with an [if](/reference/logic/if) or [while](/js/while) statement to determine which code will execute next. For example:
+Boolean values and operators are often used with an [if](/blocks/logic/if) or [while](/js/while) statement to determine which code will execute next. For example:
 
 ```
 if (condition && condition2) {

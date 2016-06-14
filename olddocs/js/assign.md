@@ -13,11 +13,11 @@ Set or change the value of a variable
 
 ### Touch Develop
 
-Use the assignment operator (:=) to set or change the value of a [local variable](/reference/variables/var) or a [global variable](/js/data).
+Use the assignment operator (:=) to set or change the value of a [local variable](/blocks/variables/var) or a [global variable](/js/data).
 
 ### Declare a variable
 
-Declare a new *local* variable using the [var](/reference/variables/var) statement and the assignment operator (`:=`). Like this:
+Declare a new *local* variable using the [var](/blocks/variables/var) statement and the assignment operator (`:=`). Like this:
 
 ```blocks
 let num1 = 7

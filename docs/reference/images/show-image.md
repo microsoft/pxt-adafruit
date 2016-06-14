@@ -29,7 +29,7 @@ img.showImage(0)
 
 ### Example: display numbers 1-5
 
-The following example creates an image with 5 frames and then uses a [for loop](/reference/loops/for) to show each frame on the screen:
+The following example creates an image with 5 frames and then uses a [for loop](/blocks/loops/for) to show each frame on the screen:
 
 ```
 let img2 = images.createImage(`

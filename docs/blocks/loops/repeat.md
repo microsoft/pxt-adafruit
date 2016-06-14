@@ -8,5 +8,5 @@ Run part of the program the number of times you say.
 
 ### See also
 
-[for](/reference/loops/for), [while](/reference/loops/while), [if](/reference/logic/if), [show number](/reference/basic/show-number)
+[for](/blocks/loops/for), [while](/blocks/loops/while), [if](/blocks/logic/if), [show number](/reference/basic/show-number)
 

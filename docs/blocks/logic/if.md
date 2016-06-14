@@ -1,0 +1,28 @@
+# If
+
+### @parent blocks/language
+ 
+
+Conditionally run code depending on whether a [Boolean](/reference/types/boolean) condition is true or false.
+
+```blocks
+if(true) {
+}
+```
+
+Click on the dark blue gear icon (see above) to add an *else* or *if* to the current block.
+
+### Example: adjusting screen brightness
+
+```blocks
+if(input.lightLevel()<100){
+    led.setBrightness(255);
+}
+```
+
+If the [light level](/reference/input/light-level) is `< 100`, this code sets the brightness to `255`:
+
+### See also
+
+[while loop](/blocks/loops/while), [for](/blocks/loops/for), [boolean](/reference/types/boolean)
+

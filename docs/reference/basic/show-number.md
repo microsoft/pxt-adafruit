@@ -28,7 +28,7 @@ basic.showNumber(x)
 
 ### Example: count to 5
 
-This example uses a [for](/reference/loops/for) loop to show numbers ``0`` through ``5`` on the screen:
+This example uses a [for](/blocks/loops/for) loop to show numbers ``0`` through ``5`` on the screen:
 
 ~~~~blocks
 for (let i = 0; i < 6; i++) {
@@ -44,5 +44,5 @@ for (let i = 0; i < 6; i++) {
 
 ### See also
 
-[show string](/reference/basic/show-string), [show animation](/reference/basic/show-animation), [Number](/reference/types/number), [math library](/reference/math)
+[show string](/reference/basic/show-string), [show animation](/reference/basic/show-animation), [Number](/reference/types/number), [math](/blocks/math)
 

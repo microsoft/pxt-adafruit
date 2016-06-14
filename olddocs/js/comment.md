@@ -21,11 +21,6 @@ To insert a comment in a Touch Develop script:
 
 3. Click `// comment` and then type some text (your comment).
 
-### ~hint 
-
-To find out how to insert comments using the Blocks editor, see [the Blocks editor](/blocks/editor).
-
-### ~
 
 ### Sample function with comments
 
@@ -52,7 +47,7 @@ To comment out a block of code:
 
 2. Press and hold the Shift key, and then press the Down arrow key to select a block of code.
 
-3. In the block editing window, scroll down to **surround with** and click `comment out`. This adds an [if](/reference/logic/if) statement around your code, like this:
+3. In the block editing window, scroll down to **surround with** and click `comment out`. This adds an [if](/blocks/logic/if) statement around your code, like this:
 
 ```
 if (false) {
@@ -69,5 +64,5 @@ When you want to uncomment your code, click the `if false then` statement in you
 
 ### See also
 
-[markdown syntax](/js/markdown), [Touch Develop editor](/js/editor), [Block editor](/blocks/editor)
+[markdown syntax](/js/markdown), [Touch Develop editor](/js/editor)
 

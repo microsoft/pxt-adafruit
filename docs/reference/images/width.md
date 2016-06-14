@@ -38,7 +38,7 @@ let w = img.width()
 
 ### Example: show each frame
 
-The following example uses the `width` function with a [for](/reference/loops/for) loop to show each image frame on the screen:
+The following example uses the `width` function with a [for](/blocks/loops/for) loop to show each image frame on the screen:
 
 ```
 let img2 = images.createImage(`

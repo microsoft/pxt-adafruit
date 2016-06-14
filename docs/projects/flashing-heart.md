@@ -21,13 +21,11 @@ basic.pause(500);
 Use the LEDs to display a flashing heart, and then create
 an animation of a broken heart. :(
 
-## [START PROJECT](/#follow:/projects/flashing-heart)
-
 ### ~
 
 ## Step 1
 
-Use [show leds](/reference/basic/showLeds) and make your code look like this:
+Use [show leds](/reference/basic/show-leds) and make your code look like this:
 
 ```blocks
 basic.showLeds(`
@@ -40,7 +38,7 @@ basic.showLeds(`
 
 ## Step 2
 
-Add a [pause](/reference/basic/pause) to wait and [clear screen](/reference/basic/clearScreen) to turn off the LEDs.
+Add a [pause](/reference/basic/pause) to wait and [clear screen](/reference/basic/clear-screen) to turn off the LEDs.
 
 ```blocks
 basic.showLeds(`

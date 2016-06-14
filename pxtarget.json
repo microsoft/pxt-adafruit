@@ -112,6 +112,10 @@
             {
                 "name": "Micro:bit Device",
                 "path": "/device"
+            },
+            {
+                "name": "Blocks Language",
+                "path": "/blocks"
             }
         ],
         "sideDoc": "getting-started"

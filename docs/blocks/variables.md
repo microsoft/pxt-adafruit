@@ -1,6 +1,6 @@
 ## Variables
 
-[Assign](/reference/variables/assign) (set) a variable's value
+[Assign](/blocks/variables/assign) (set) a variable's value
 
 ```blocks
 let x = 0;
@@ -13,7 +13,7 @@ let x = 0;
 x;
 ```
 
-[Change](/reference/variables/change-var) a variable's value
+[Change](/blocks/variables/change-var) a variable's value
 
 ```blocks
 let x = 0;

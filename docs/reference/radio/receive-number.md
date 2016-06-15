@@ -23,7 +23,7 @@ radio.onDataReceived(() => {
 
 ### Example: Light level receiver 
 
-This example shows the light level from the [light level sender example](/reference/input/send-number)
+This example shows the light level from the [light level sender example](/reference/radio/send-number)
 as a number.
 
 ```blocks
@@ -36,7 +36,7 @@ basic.forever(() => {
 
 ### Example: Mailbot
 
-This example receives the light level from the [light level sender example](/reference/input/send-number)
+This example receives the light level from the [light level sender example](/reference/radio/send-number)
 and shows a text string like **ALERT** if the light level becomes much brighter.
 To find when the mail arrives, you can put the light level sender in your mailbox and it will
 tell you when someone opens the box. You can try this with a normal
@@ -58,5 +58,5 @@ basic.forever(() => {
 
 ### See also
 
-[send number](/reference/input/send-number), [on data received](/reference/radio/on-data-received)
+[send number](/reference/radio/send-number), [on data received](/reference/radio/on-data-received)
 

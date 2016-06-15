@@ -21,7 +21,7 @@ To figure out the ``x``, ``y`` coordinates, see [LED screen](/device/screen).
 
 ### Returns
 
-* [Boolean](/reference/types/boolean) - `true` for on and `false` for off
+* [Boolean](/blocks/logic/boolean) - `true` for on and `false` for off
 
 ### Example
 

@@ -3,7 +3,7 @@
 ### @parent blocks/language
  
 
-Conditionally run code depending on whether a [Boolean](/reference/types/boolean) condition is true or false.
+Conditionally run code depending on whether a [Boolean](/blocks/logic/boolean) condition is true or false.
 
 ```blocks
 if(true) {
@@ -24,5 +24,5 @@ If the [light level](/reference/input/light-level) is `< 100`, this code sets th
 
 ### See also
 
-[while loop](/blocks/loops/while), [for](/blocks/loops/for), [boolean](/reference/types/boolean)
+[while loop](/blocks/loops/while), [for](/blocks/loops/for), [boolean](/blocks/logic/boolean)
 

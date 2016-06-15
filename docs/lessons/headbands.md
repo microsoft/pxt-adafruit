@@ -42,19 +42,18 @@ Learn how to create a charades game with **collections**, ` create -> Collection
 ## Documentation
 
 * **collection**
-* **global variables** : [read more...](/reference/variables/globals.md)
-* **Boolean** : [read more...](/reference/types/boolean)
-* **on logo up** [read more...](/functions/on-logo-up)
-* **on screen down** [read more...](/functions/on-screen-down)
-* **on screen up** [read more...](/functions/on-screen-up)
+* **variables** : [read more...](/blocks/variables)
+* **Boolean** : [read more...](/blocks/logic/boolean)
+* **on logo up** [read more...](/reference/input/on-gesture)
+* **on screen down** [read more...](/reference/input/on-gesture)
+* **on screen up** [read more...](/reference/input/on-gesture)
 * **show string** : [read more...](/reference/basic/show-string)
-* **game library** : [read more...](/reference/game-library)
+* **game library** : [read more...](/reference/game)
 
 ## Resources
 
 * Activity: [tutorial](/lessons/headbands/activity)
-* Activity: [quiz](/lessons/headbands/quiz)
-* Extended Activity: [challenges](/lessons/headbands/challenges)
+* Quiz: [quiz](/lessons/headbands/quiz)
 
 ## Objectives
 

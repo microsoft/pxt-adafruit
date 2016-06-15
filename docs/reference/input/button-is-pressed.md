@@ -12,7 +12,7 @@ input.buttonIsPressed(Button.A);
 
 ### Returns
 
-* [Boolean](/reference/types/boolean) that is `true` if the button you are checking is pressed, `false` if it is not pressed.
+* [Boolean](/blocks/logic/boolean) that is `true` if the button you are checking is pressed, `false` if it is not pressed.
 
 ### Example
 

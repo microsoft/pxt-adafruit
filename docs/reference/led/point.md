@@ -17,7 +17,7 @@ other than 0 to 4), this function will return `false`.
 
 ### Returns
 
-* a [boolean](/reference/types/boolean). If it is `true`, that means the LED is on. If it is `false`, that means the LED is off.
+* a [boolean](/blocks/logic/boolean). If it is `true`, that means the LED is on. If it is `false`, that means the LED is off.
 
 ### ~hint
 

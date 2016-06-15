@@ -23,7 +23,7 @@ instead of the USB cable.
 
 ### returns
 
-* a [boolean](/reference/types/boolean) that means whether the pin you say is pressed (`true` or `false`)
+* a [boolean](/blocks/logic/boolean) that means whether the pin you say is pressed (`true` or `false`)
 
 ### Example
 

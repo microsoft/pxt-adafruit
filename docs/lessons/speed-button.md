@@ -22,10 +22,10 @@ Learn how to declare a **Boolean** variable, `var t:= true` `var f:=false` for o
 ## Documentation
 
 * **running time** : [read more...](/reference/input/running-time)
-* **global variable** : [read more...](/reference/variables/globals)
-* **Boolean** : [read more...](/reference/types/boolean)
+* **variable** : [read more...](/blocks/variables)
+* **Boolean** : [read more...](/blocks/logic/boolean)
 * **on button pressed** : [read more...](/reference/input/on-button-pressed)
-* **if** : [read more...](/reference/logic/if)
+* **if** : [read more...](/blocks/logic/if)
 * **show string** : [read more...](/reference/basic/show-string)
 
 ## Objectives

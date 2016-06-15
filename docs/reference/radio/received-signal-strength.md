@@ -20,7 +20,7 @@ This function only works on the micro:bit, not in browsers.
 ### Example
 
 This example shows how strong the radio signal of the
-[light level sender example](/reference/input/send-number) is.
+[light level sender example](/reference/radio/send-number) is.
 
 ```blocks
 let x = 0;

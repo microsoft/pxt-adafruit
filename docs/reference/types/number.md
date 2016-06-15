@@ -27,7 +27,7 @@ The following arithmetic operators work on numbers and return a [Number](/refere
 
 ### Relational operators
 
-The following relational operators work on numbers and return a [Boolean](/reference/types/boolean):
+The following relational operators work on numbers and return a [Boolean](/blocks/logic/boolean):
 
 * equality: `(3 + 1) = 4`
 * inequality: `3 != 4`
@@ -67,5 +67,5 @@ basic.showNumber(abs);
 
 ### See also
 
-[math](/blocks/math), [var](/blocks/variables/var), [Boolean](/reference/types/boolean), [show number](/reference/basic/show-number)
+[math](/blocks/math), [var](/blocks/variables/var), [Boolean](/blocks/logic/boolean), [show number](/reference/basic/show-number)
 

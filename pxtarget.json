@@ -114,8 +114,12 @@
                 "path": "/device"
             },
             {
-                "name": "Blocks Language",
+                "name": "Blocks",
                 "path": "/blocks"
+            },
+            {
+                "name": "TypeScript",
+                "path": "/typescript"
             }
         ],
         "sideDoc": "getting-started"

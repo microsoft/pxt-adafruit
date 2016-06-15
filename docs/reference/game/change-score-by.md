@@ -1,6 +1,16 @@
 # Change Score By
 
-The code below shows a simple game where the user gets to press the button ``A`` as much times as possible and the score will display on the screen.
+Add the amount you say to the score for the game.
+
+```sig
+game.addScore(1)
+```
+
+### Examples
+
+This program is a simple game.
+Press button ``A`` as much as possible.
+At the end of 10 seconds, the program will show your score.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
@@ -9,18 +19,6 @@ input.onButtonPressed(Button.A, () => {
 game.startCountdown(10000)
 ```
 
-### Score
+### See Also
 
-When a player achieves a goal, you can increase the game score
-
-* add score points to the current score
-
-```
-export function addScore(points: number)
-```
-
-* get the current score value
-
-```
-export function score() : number
-```
+[score](/reference/game/score), [start countdown](/reference/game/start-countdown)

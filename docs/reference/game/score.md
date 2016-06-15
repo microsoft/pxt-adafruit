@@ -1,45 +1,25 @@
 # Score
 
-The game library supports simple single-player games. The player has a **score**.
+Find the number of points scored in your game.
 
-The code below shows a simple game where the user gets to press the button ``A`` as much times as possible in 10 seconds.
+```sig
+game.score()
+```
+
+### Example
+
+This program adds one point to your score every time you press button
+`A`, and shows an animation.  Then it waits 500 milliseconds (half a
+second) and shows your score.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
-    game.addScore(1)
-})
-game.startCountdown(10000)
+    game.addScore(1);
+    basic.pause(500);
+    basic.showNumber(game.score());
+	});
 ```
 
-### Score
+### See Also
 
-When a player achieves a goal, you can increase the game score
-
-* add score points to the current score
-
-```
-export function addScore(points: number)
-```
-
-* set the current score to a particular value.
-
-```
-export function setScore(value: number)
-```
-
-* get the current score value
-
-```
-export function score() : number
-```
-
-### Countdown
-
-If your game has a time limit, you can start a countdown in which case `game->current time` returns the remaining time.
-
-* start a countdown with the maximum duration of the game in milliseconds.
-
-```
-export function startCountdown(ms: number)
-```
-
+[change score by](/reference/game/score), [start countdown](/reference/game/start-countdown)

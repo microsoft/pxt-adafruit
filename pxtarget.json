@@ -94,24 +94,16 @@
         "boardName": "BBC micro:bit",
         "docMenu": [
             {
-                "name": "About",
-                "path": "/about"
-            },
-            {
                 "name": "Getting Started",
                 "path": "/getting-started"
             },
             {
-                "name": "Ten Projects",
+                "name": "Projects",
                 "path": "/projects"
             },
             {
-                "name": "Micro:bit APIs",
+                "name": "Reference",
                 "path": "/reference"
-            },
-            {
-                "name": "Micro:bit Device",
-                "path": "/device"
             },
             {
                 "name": "Blocks",

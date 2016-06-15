@@ -29,7 +29,11 @@ The BBC micro:bit was made possible by many [partners](https://www.microbit.co.u
 The micro:bit provides an easy and fun introduction to programming and making – switch on, program it to do something fun – wear it, customize it.
 Just like Arduino, the micro:bit can be connected to and interact with sensors, displays, and other devices. 
 
-## Blocks or JavaScript
+## Hardware: The Device
+
+Learn about about the [hardware components](/device) of the micro:bit to make the most of it!
+
+## Programming: Blocks or JavaScript
 
 The student can program the BBC micro:bit using [Blocks](/blocks) or [JavaScript](/typescript), via the [micro:bit APIs](/reference):
 
@@ -37,7 +41,7 @@ The student can program the BBC micro:bit using [Blocks](/blocks) or [JavaScript
 basic.showString("Hi!");
 ```
 
-## Compile and Flash
+## Compile and Flash: Your Program!
 
 When a user has her code ready, she can connect her BBC micro:bit to a computer via a USB cable, so it appears as a mounted drive (named MICROBIT). 
 

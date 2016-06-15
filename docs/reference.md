@@ -1,4 +1,4 @@
-# Microb:bit APIs
+# Micro:bit APIs
 
 ```namespaces
 basic.showNumber(0);

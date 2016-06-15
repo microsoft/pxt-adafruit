@@ -4,7 +4,7 @@
 
 Are you ready to build cool BBC micro:bit programs?
 
-Here are some challenges for you. Unscramble the blocks in the editor
+Here are some challenges for you. Arrange the blocks in the editor
 to make real programs that work!
 
 ## ~
@@ -12,7 +12,7 @@ to make real programs that work!
 ### Happy face
 
 There are three blocks in the editor (the area to the left).
-They should look like this:
+Arrange them to look like this:
 
 ```blocks
 basic.forever(() => {

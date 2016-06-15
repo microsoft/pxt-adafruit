@@ -8,9 +8,12 @@ A *Number* is an integer such as `42` or `-42`. More precisely, a *Number* is a 
 
 ### Declare a number variable
 
-Use the [var statement](/reference/variables/var) and the [assignment operator](/reference/variables/assign) declare a *local* number variable. Like this:
+You can assign a number to a variable:
 
-![](/static/mb/blocks/number-0.png)
+```blocks
+let num = 42;
+basic.showNumber(42);
+```
 
 ### Arithmetic operators
 
@@ -20,7 +23,7 @@ The following arithmetic operators work on numbers and return a [Number](/refere
 * subtraction: `1 - 3 `
 * multiplication: `3 * 2`
 * integer division: `7 / 3`
-* modulo is available through the [math library](/reference/math)
+* modulo is available through the [math library](/blocks/math)
 
 ### Relational operators
 
@@ -35,23 +38,34 @@ The following relational operators work on numbers and return a [Boolean](/refer
 
 ### Show number
 
-The [show number](/reference/basic/show-number) function displays a number on the [LED screen](/device/screen). For example, this code displays the number 42:
+The [show number](/reference/basic/show-number) function displays a number on the [LED screen](/device/screen). 
+For example, this code displays the number 42:
 
-![](/static/mb/blocks/number-1.png)
+```blocks
+basic.showNumber(42);
+```
 
 ### Functions that return a number
 
-Some functions return a number, which you can store in a variable. For example the following code gets the display brightness (using the [brightness function](/reference/led/brightness)) and stores the value in a variable named `brightness`:
+Some functions return a number, which you can store in a variable. 
+For example the following code gets the display brightness 
+(using the [brightness function](/reference/led/brightness)) and stores the value in a variable named `brightness`:
 
-![](/static/mb/blocks/number-2.png)
+```blocks
+let brightness = led.brightness()
+```
 
 ### Math functions
 
-The [math library](/reference/math) includes math related functions. In the [Block Editor](/blocks/editor), click `math` on the Code Keyboard to see the math functions. For example, the `absolute` function returns the returns the absolute value of input parameter `x`:
+The [math library](/reference/math) includes math related functions. 
+For example, the `absolute` function returns the returns the absolute value of input parameter `x`:
 
-![](/static/mb/blocks/number-3.png)
+```blocks
+let abs = math.absolute(-42);
+basic.showNumber(abs);
+```
 
 ### See also
 
-[math library](/reference/math), [var](/reference/variables/var), [Boolean](/reference/types/boolean), [show number](/reference/basic/show-number)
+[math](/blocks/math), [var](/blocks/variables/var), [Boolean](/reference/types/boolean), [show number](/reference/basic/show-number)
 

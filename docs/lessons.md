@@ -65,5 +65,3 @@
 ### ~
 
 ### @section full
-
-The lessons promote computational thinking and computer science literacy.

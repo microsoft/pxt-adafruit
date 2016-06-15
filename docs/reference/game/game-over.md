@@ -1,20 +1,24 @@
 # Game Over
 
-The game library 
+End the game and show the score.
 
-The game library supports simple single-player time-based games. The game can end the game by calling the `game over` function
+### Example
 
-## Block Editor
+This program asks you to pick a button.
+If you press button `A`, the program says `YOU WIN!`.
+If you press button `B`, it shows an animation and ends the game.
 
-You can end the game by calling the `game over ` function. In this example, if BBC micro:bit's answer to the question is GAME OVER, GAME OVER will be displayed to end the game.
-
-![](/static/mb/game-library/game-over-0.png)
-
-## KindScript
-
-You can end the game by calling the `game -> game over` function:
-
+```blocks
+basic.showString("PICK A BUTTON");
+input.onButtonPressed(Button.A, () => {
+    basic.showString("YOU WIN!");
+});
+input.onButtonPressed(Button.B, () => {
+    game.gameOver();
+});
 ```
-game.gameOver()
-```
 
+### See Also
+
+[score](/reference/game/score),
+[change score by](/reference/game/change-score-by), [start countdown](/reference/game/start-countdown)

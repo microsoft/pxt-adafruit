@@ -30,7 +30,6 @@
 * [Guess the Number](/lessons/guess-the-number),  guess a random number with pick number
 * [Counter](/lessons/counter), display a number with a variable
 * [Love Meter](/lessons/love-meter), create a love meter with on pin pressed
-* [Rock Paper Scissors](/lessons/rock-paper-scissors), create the classic game of rock paper scissors with if statement
 * [Truth or Dare](/lessons/truth-or-dare), a game that forces each player to reveal a secret or do something funny with if statement
 * [Spinner](/lessons/spinner), spin the arrow with multiple if statements
 * [Dice Roll](/lessons/dice-roll), spin with more if statements
@@ -43,7 +42,6 @@
 * [Zoomer](/lessons/zoomer), measure the force with acceleration
 * [Glowing Pendulum](/lessons/glowing-pendulum), construct a pendulum that glows using acceleration
 * [Classic Beatbox](/lessons/classic-beatbox), make a beatbox music player with variables
-* [Light Beatbox](/lessons/light-beatbox), make a beatbox music player with light level
 
 ### ~
 

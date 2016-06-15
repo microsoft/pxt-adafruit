@@ -1,4 +1,4 @@
-# Typescript
+# TypeScript
 
 You can write micro:bit programs in a subset of [TypeScript](https://www.typescriptlang.org). 
 TypeScript itself is a superset of JavaScript, and many micro:bit programs,

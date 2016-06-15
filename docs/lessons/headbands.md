@@ -114,15 +114,6 @@ Computational Thinking Concept: AB = Abstraction; DE = Decomposition; AL = Algor
 * [tutorial](/lessons/headbands/activity)
 * [quiz](/lessons/headbands/quiz)
 
-## Extended Activity
-
-* time: 20 min.
-* [challenges](/lessons/headbands/challenges)
-
-## Homework
-
-* Extended Activity: [challenges](/lessons/headbands/challenges)
-
 ## Intended follow on
 
 Publish script to the classroom.

@@ -81,6 +81,7 @@
   "pins.pulseDuration": "Gets the duration of the last pulse in micro-seconds. This function should be called from a ``onPulsed`` handler.",
   "pins.servoSetPulse": "Configures this IO pin as an analog/pwm output, configures the period to be 20 ms, and sets the pulse width, based on the value it is given **microseconds** or `1/1000` milliseconds.",
   "pins.servoWritePin": "Writes a value to the servo, controlling the shaft accordingly. On a standard servo, this will set the angle of the shaft (in degrees), moving the shaft to that orientation. On a continuous rotation servo, this will set the speed of the servo (with ``0`` being full-speed in one direction, ``180`` being full speed in the other, and a value near ``90`` being no movement).",
+  "pins.setPull": "Configures the pull of this pin.",
   "serial": "Reading and writing data over a serial connection.",
   "serial.readLine": "Reads a line of text from the serial port.",
   "serial.redirect": "Dynamically configuring the serial instance to use pins other than USBTX and USBRX.",

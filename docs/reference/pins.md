@@ -17,6 +17,7 @@ pins.servoWritePin(AnalogPin.P0, 180);
 pins.servoSetPulse(AnalogPin.P0, 1500);
 pins.i2cReadNumber(0, NumberFormat.Int8LE);
 pins.i2cWriteNumber(0, 0, NumberFormat.Int8LE);
+pins.setPull(DigitalPin.P0, PinPullMode.PullDown);
 pins.analogPitch(0, 0);
 pins.analogSetPitchPin(AnalogPin.P0);
 ```

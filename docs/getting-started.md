@@ -496,7 +496,7 @@ input.onButtonPressed(Button.B, () => {
 ```
 Click **Compile** to move your program to the BBC micro:bit!
 
-## Your turn!
 
-How else can you make your game better?
-Ever hear of [Rock Paper Scissors Spock Lizard](http://www.samkass.com/theories/RPSSL.html)?
+# Want to do more?
+
+There are [10 great projects](/projects) waiting for you.

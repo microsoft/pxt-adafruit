@@ -19,6 +19,7 @@ other micro:bits. This kind of program might be useful in a model car
 or model rocket.
 
 ```blocks
+radio.setGroup(99)
 input.onButtonPressed(Button.A, () => {
     radio.sendValue("acc",input.acceleration(Dimension.X))
 })
@@ -28,6 +29,7 @@ This program receives the string and number sent by the last program.
 Then it shows them on the LED screen.
 
 ```blocks
+radio.setGroup(99)
 radio.onDataReceived(() => {
 	basic.showString(radio.receiveString());
     basic.showNumber(radio.receiveNumber());

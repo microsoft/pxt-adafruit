@@ -498,5 +498,5 @@ Click **Compile** to move your program to the BBC micro:bit!
 
 ## Your turn!
 
-How else can you make your game better?
-Ever hear of [Rock Paper Scissors Spock Lizard](http://www.samkass.com/theories/RPSSL.html)?
+Well done! Are your ready for more fun? [Try tons of fun projects using the micro:bit](/projects).
+

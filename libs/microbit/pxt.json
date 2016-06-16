@@ -27,7 +27,11 @@
         "serial.cpp",
         "serial.ts",
         "buffer.cpp",
-        "_locales/fr/microbit-strings.json"
+        "_locales/ar/microbit-strings.json",
+        "_locales/de/microbit-strings.json",
+        "_locales/es-ES/microbit-strings.json",
+        "_locales/fr/microbit-strings.json",
+        "_locales/ja/microbit-strings.json"
     ],
     "public": true,
     "dependencies": {},

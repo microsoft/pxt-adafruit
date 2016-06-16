@@ -1,42 +1,29 @@
 # Start Countdown
 
-The code below shows a simple game where the user gets to press the button ``A`` as much times as possible in 10 seconds.
+Start counting down time from the number of milliseconds you say.
 
+```sig
+game.startCountdown(1000)
 ```
+
+### Parameters
+
+* a [number](/reference/types/number) that means how many milliseconds to count down (one second is 1000 milliseconds)
+
+### Examples
+
+This program is a simple game.
+Press button ``A`` as much as possible.
+At the end of 10 seconds, the program will show your score.
+
+```blocks
 input.onButtonPressed(Button.A, () => {
     game.addScore(1)
 })
 game.startCountdown(10000)
 ```
 
-### Score
+### See Also
 
-When a player achieves a goal, you can increase the game score
+[score](/reference/game/score), [change score by](/reference/game/change-score-by)
 
-* add score points to the current score
-
-```
-export function addScore(points: number)
-```
-
-* set the current score to a particular value.
-
-```
-export function setScore(value: number)
-```
-
-* get the current score value
-
-```
-export function score() : number
-```
-
-### Countdown
-
-If your game has a time limit, you can start a countdown in which case `game->current time` returns the remaining time.
-
-* start a countdown with the maximum duration of the game in milliseconds.
-
-```
-export function startCountdown(ms: number)
-```

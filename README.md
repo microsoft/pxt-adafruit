@@ -13,6 +13,7 @@ PXT ([Microsoft Programming Experience Toolkit](https://github.com/Microsoft/pxt
 
 The following commands are a 1-time setup after synching the repo on your machine.
 
+* clone this repo to your computer
 * install the PXT command line
 ```
 npm install -g pxt

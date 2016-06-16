@@ -5,6 +5,9 @@ Add the amount you say to the score for the game.
 ```sig
 game.addScore(1)
 ```
+### Parameters
+
+* a [number](/reference/types/number) that means how much to add to the score. A negative number means to subtract from the score.
 
 ### Examples
 

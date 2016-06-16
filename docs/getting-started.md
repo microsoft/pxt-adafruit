@@ -12,7 +12,7 @@ to make real programs that work!
 ### Happy face
 
 Use the **Basic** drawer in the editor (to the left) 
-to drag out and arrange three blocks (two ``show leds` and one ``forever)
+to drag out and arrange three blocks (two `show leds` and one `forever` block)
 to create this program:
 
 ```blocks

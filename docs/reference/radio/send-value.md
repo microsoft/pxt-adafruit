@@ -1,11 +1,11 @@
-# Send Number
+# Send Value
 
-Broadcast a (name,number) pair to other micro:bits connected via ``radio``.
+Send a [string]() and [number]() together by ``radio`` to other micro:bits.
 
 ### Parameters
 
-* name - a string to send
-* num - a number to send.
+* a [string](/reference/types/string) to send by radio
+* a [number](/reference/types/number) to send by radio
 
 ### Simulator
 
@@ -13,14 +13,25 @@ This function only works on the micro:bit, not in browsers.
 
 ### Example: Broadcasting acceleration
 
-This example broadcasts the value of your micro:bit's ``acceleration`` in the `x` direction 
-(left and right) to other micro:bits.
-This kind of program might be useful in a model car or model rocket.
+This program sends your micro:bit's **acceleration** (amount it is
+speeding up or slowing down) in the `x` direction (left and right) to
+other micro:bits. This kind of program might be useful in a model car
+or model rocket.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
     radio.sendValue("acc",input.acceleration(Dimension.X))
 })
+```
+
+This program receives the string and number sent by the last program.
+Then it shows them on the LED screen.
+
+```blocks
+radio.onDataReceived(() => {
+	basic.showString(radio.receiveString());
+    basic.showNumber(radio.receiveNumber());
+});
 ```
 
 ### See also

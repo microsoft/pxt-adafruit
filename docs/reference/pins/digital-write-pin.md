@@ -31,5 +31,5 @@ basic.forever(() => {
 
 ### See also
 
-[micro:bit pins](/device/pins), [digital read pin](/reference/pins/digital-read-pin), [analog read pin](/reference/pins/analog-read-pin), [analog write pin](/reference/pins/analog-write-pin), [on pin pressed](/reference/input/on-pin-pressed), [pin is pressed](/reference/pins/pin-is-pressed)
+[micro:bit pins](/device/pins), [digital read pin](/reference/pins/digital-read-pin), [analog read pin](/reference/pins/analog-read-pin), [analog write pin](/reference/pins/analog-write-pin), [on pin pressed](/reference/input/on-pin-pressed)
 

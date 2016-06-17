@@ -110,8 +110,8 @@
                 "path": "/blocks"
             },
             {
-                "name": "TypeScript",
-                "path": "/typescript"
+                "name": "JavaScript",
+                "path": "/javascript"
             }
         ],
         "sideDoc": "getting-started"

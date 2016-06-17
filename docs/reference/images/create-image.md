@@ -1,6 +1,7 @@
 # Create Image
 
-Create an [Image](/reference/images/image) to show on the [LED screen](/device/screen).
+Make an [image](/reference/images/image) (picture) for the micro:bit
+[LED screen](/device/screen).
 
 ```sig
 images.createImage(`
@@ -12,24 +13,34 @@ images.createImage(`
 `)
 ```
 
-### Example: rock, paper, scissors
+### Example: Flip-flopping arrow
 
-The following example shows one of three images (rock, paper, or scissors) when you shake the micro:bit:
+If you press button `A`, this program will make a picture of an
+arrow and show it on the LED screen. If you press button `B`, the
+program will show a picture of the button upside-down.
 
-```
-input.onGesture(Gesture.Shake, () => {
-    let rockpaper = images.createImage(`
-. . . . . # # # # # . . . . #
-. # # # . # . . . # # # . # .
-. # # # . # . . . # . # # . .
-. # # # . # . . . # # # . # .
-. . . . . # # # # # . . . . #
-`)
-    rockpaper.showFrame(Math.random(3))
-})
+```blocks
+input.onButtonPressed(Button.A, () => {
+    images.createImage(`
+        . . # . .
+        . # # # .
+        # . # . #
+        . . # . .
+        . . # . .
+        `).showImage(0);
+});
+input.onButtonPressed(Button.B, () => {
+    images.createImage(`
+        . . # . .
+        . . # . .
+        # . # . #
+        . # # # .
+        . . # . .
+        `).showImage(0);
+});
 ```
 
 ### See also
 
-[show animation](/reference/basic/show-animation), [image](/reference/images/image), [show image](/reference/image/show-image), [scroll image](/reference/image/scroll-image)
-
+[Getting Started](/reference/getting-started), [image](/reference/images/image), [show image](/reference/image/show-image),
+[scroll image](/reference/image/scroll-image), [show animation](/reference/basic/show-animation)

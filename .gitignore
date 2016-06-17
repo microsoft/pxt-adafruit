@@ -6,9 +6,11 @@ typings
 tmp
 temp
 projects/**
-win10/app/bin
-win10/app/bld
-win10/*.opendb
+clients/win10/app/bin
+clients/win10/app/bld
+clients/win10/*.opendb
+clients/**/bin/**
+clients/**/obj/**
 
 *.user
 *.sw?

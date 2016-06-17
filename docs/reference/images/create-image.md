@@ -17,7 +17,7 @@ images.createImage(`
 
 If you press button `A`, this program will make a picture of an
 arrow and show it on the LED screen. If you press button `B`, the
-program will show a picture of the button upside-down.
+program will show a picture of the arrow upside-down.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
@@ -42,5 +42,8 @@ input.onButtonPressed(Button.B, () => {
 
 ### See also
 
-[Getting Started](/reference/getting-started), [image](/reference/images/image), [show image](/reference/image/show-image),
+[Getting Started](/reference/getting-started), [image](/reference/images/image),
+[create big image](/reference/images/create-big-image),
+[show image](/reference/image/show-image),
 [scroll image](/reference/image/scroll-image), [show animation](/reference/basic/show-animation)
+

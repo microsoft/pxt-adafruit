@@ -35,7 +35,7 @@ Learn about about the [hardware components](/device) of the micro:bit to make th
 
 ## Programming: Blocks or JavaScript
 
-The student can program the BBC micro:bit using [Blocks](/blocks) or [JavaScript](/typescript), via the [micro:bit APIs](/reference):
+The student can program the BBC micro:bit using [Blocks](/blocks) or [JavaScript](/javascript), via the [micro:bit APIs](/reference):
 
 ```blocks
 basic.showString("Hi!");
@@ -45,7 +45,7 @@ basic.showString("Hi!");
 
 When a user has her code ready, she can connect her BBC micro:bit to a computer via a USB cable, so it appears as a mounted drive (named MICROBIT). 
 
-Compilation to ARM thumb machine code from [Blocks](/blocks) or [JavaScript](/typescript) happens in the browser.
+Compilation to ARM thumb machine code from [Blocks](/blocks) or [JavaScript](/javascript) happens in the browser.
 
 The student is prompted to save the ARM binary program to a file, which she then simply drags to the micro:bit mounted drive, 
 which flashes the micro:bit device with the new program.

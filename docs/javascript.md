@@ -1,8 +1,8 @@
-# TypeScript
+# JavaScript
 
-You can write micro:bit programs in a subset of [TypeScript](https://www.typescriptlang.org). 
-TypeScript itself is a superset of JavaScript, and many micro:bit programs,
-especially at the beginner's level, are also just plain JavaScript.
+You can write micro:bit programs in a subset of [TypeScript](https://www.typescriptlang.org), a superset of JavaScript.
+Many micro:bit programs, especially at the beginner's level, are just plain JavaScript. TypeScript introduces class-based 
+object-oriented programming, such as:
 
 ```js
 class Greeter {

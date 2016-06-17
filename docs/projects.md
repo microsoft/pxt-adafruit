@@ -4,8 +4,6 @@
 
 Here are some cool projects that you can build with your micro:bit!
 
-![](/static/mb/projects/all10.png)
-
 ### ~
 
 

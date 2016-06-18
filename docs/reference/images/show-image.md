@@ -1,51 +1,42 @@
 # Show Image
 
-The show image function.
-
-Show an [Image](/reference/images/image) on the [LED screen](/device/screen), followed by a 400ms pause.
-
-```
-export function showImage(_this: micro_bit.Image, xOffset: number)
-```
+Show an [image](/reference/images/image) (picture) on the
+[LED screen](/device/screen).  After the micro:bit shows an image, it
+will pause for 400 milliseconds (1000 milliseconds is one second).
 
 ### Parameters
 
-* x offset - [Number](/reference/types/number); the horizontal starting point of an image; use 0 for the first frame of the image, 5 for the second frame of the image, 10 for the third frame and so on.
+* an [image](/reference/images/image) (picture). It is usually a square with five LEDs on a side, but it might be wider. 
+* a [number](/reference/types/number) that says how many LEDs from the left of the picture the micro:bit should start. `0` means start at the first **frame** of the picture, `5` means start at the second frame, `10` means start at the third, and so on.
 
-### Create image and show image
+### Example: Flip-flopping arrow
 
-Use the [image editor](/reference/images/image) to create images using the [create image](/reference/images/create-image) function, and then use `show image` like this:
+This program makes a big image with a frame of an arrow pointing up,
+and a frame of an arrow pointing down.  If you press button `A`, the
+program will use ``show image`` to show the arrow pointing up. (It
+starts `0` LEDs from the left in the big image.) If you press button
+`B`, the program will use ``show image`` to show the arrow pointing
+down, which starts `5` LEDs from the left.
 
-```
-let img = images.createImage(`
-. . # . .
-. # . # .
-. . # . .
-. # . # .
-. . # . .
-`)
-img.showImage(0)
-```
-
-### Example: display numbers 1-5
-
-The following example creates an image with 5 frames and then uses a [for loop](/blocks/loops/for) to show each frame on the screen:
-
-```
-let img2 = images.createImage(`
-. . # . . . # # # # . # # # . . . . # . . # # # .
-. # # . . . . . . # . . . # . . . # # . . # . . .
-. . # . . . . . # . . . # . . . # # # # . # # # .
-. . # . . . . # . . . . . # . . . . # . . . . # .
-. . # . . . # # # # . # # # . . . . # . . # # # .
-`)
-for (let i = 0; i < 5; i++) {
-    img2.showImage(i * 5)
-    basic.pause(1000)
-}
+```blocks
+let arrows = images.createBigImage(`
+    . . # . .   . . # . .
+    . # # # .   . . # . .
+    # . # . #   # . # . #
+    . . # . .   . # # # .
+    . . # . .   . . # . .
+    `);
+input.onButtonPressed(Button.A, () => {
+    arrows.showImage(0);
+});
+input.onButtonPressed(Button.B, () => {
+    arrows.showImage(5);
+});
 ```
 
 ### See also
 
-[show animation](/reference/basic/show-animation), [image](/reference/images/image), [create image](/reference/images/create-image), [scroll image](/reference/images/scroll-image)
-
+[Getting Started](/reference/getting-started), [image](/reference/images/image),
+[create image](/reference/images/create-image),
+[create big image](/reference/images/create-big-image),
+[scroll image](/reference/images/scroll-image), [show animation](/reference/basic/show-animation)

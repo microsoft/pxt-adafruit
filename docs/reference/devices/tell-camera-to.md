@@ -76,5 +76,5 @@ devices.tellCameraTo("stop video mode")
 
 ### See Also
 
-[tell remote control to](/reference/devices/tell-remote-control-to), [raise alert to](/reference/devices/raise-alert-to), [on notified](/reference/devices/on-notified)
+[tell remote control to](/reference/devices/tell-remote-control-to), [raise alert to](/reference/devices/raise-alert-to)
 

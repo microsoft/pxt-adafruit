@@ -57,7 +57,7 @@ let brightness = led.brightness()
 
 ### Math functions
 
-The [math library](/reference/math) includes math related functions. 
+The [math library](/blocks/math) includes math related functions. 
 For example, the `absolute` function returns the returns the absolute value of input parameter `x`:
 
 ```blocks

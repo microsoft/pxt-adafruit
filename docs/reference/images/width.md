@@ -56,5 +56,5 @@ for (let i = 0; i < img2.width() / 5; i++) {
 
 ### See also
 
-[show image](/reference/images/show-image), [image](/reference/image/image), [create image](/reference/images/create-image), [scroll image](/reference/images/scroll-image), [show animation](/reference/basic/show-animation)
+[show image](/reference/images/show-image), [image](/reference/images/image), [create image](/reference/images/create-image), [scroll image](/reference/images/scroll-image), [show animation](/reference/basic/show-animation)
 

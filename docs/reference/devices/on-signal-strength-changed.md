@@ -30,5 +30,4 @@ devices.onSignalStrengthChanged(() => {
 
 ### See Also
 
-[tell remote control to](/reference/devices/tell-remote-control-to), [raise alert to](/reference/devices/raise-alert-to), [on notified](/reference/devices/on-notified), [signal strength](/reference/devices/signal-strength)
-
+[tell remote control to](/reference/devices/tell-remote-control-to), [raise alert to](/reference/devices/raise-alert-to), [signal strength](/reference/devices/signal-strength)

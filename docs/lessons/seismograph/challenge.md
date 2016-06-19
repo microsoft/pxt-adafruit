@@ -106,7 +106,7 @@ Science: Welcome! The activity will teach you how to chart the acceleration of t
 ## 6. 
 First, notice that moving the 1st micro:bit in the simulator in any direction, you will change the acceleration value of the 2nd micro:bit. Also, notice that by moving the micro:bit simulator, there is a changing acceleration value of the second micro:bit. Second, the flat colored horizontal line will start a waving line on the 2nd micro:bit to display the value of the strength as measured in milli-gravities. Finally, notice that the LED display will fluctate based on the movement of the 2nd micro:bit simulator.
 
-![](/static/mb//lessons/seis_challenge02.png)
+![](/static/mb/lessons/seis_challenge02.png)
 
 ## 7. 
  

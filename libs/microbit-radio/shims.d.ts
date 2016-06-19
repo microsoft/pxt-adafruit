@@ -94,7 +94,7 @@ declare namespace radio {
 
     /**
      * Change the output power level of the transmitter to the given value.
-     * @param power a value in the range 0..7, where 0 is the lowest power and 7 is the highest, 7 eg
+     * @param power a value in the range 0..7, where 0 is the lowest power and 7 is the highest. eg: 7
      */
     //% help=radio/set-transmit-power
     //% weight=9

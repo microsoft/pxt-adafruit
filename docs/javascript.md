@@ -4,7 +4,7 @@ You can write micro:bit programs in a subset of [TypeScript](https://www.typescr
 Many micro:bit programs, especially at the beginner's level, are just plain JavaScript. TypeScript introduces class-based 
 object-oriented programming, such as:
 
-```js
+```typescript
 class Greeter {
     greeting: string;
     constructor(message: string) {

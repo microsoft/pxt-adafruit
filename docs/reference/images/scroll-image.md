@@ -1,70 +1,45 @@
 # Scroll Image
 
-The scroll image function.
-
-Scrolls the frames within an [Image](/reference/images/image) on the [LED screen](/device/screen).
-
-### Block Editor
-
-![](/static/mb/scroll-image-0.png)
-
-### JavaScript
-
-```
-export function scrollImage(_this: micro_bit.Image, xOffsetPerStep: number, interval: number)
-```
+Scroll (slide) an [image](/reference/images/image) (picture) from one
+side to the other of the [LED screen](/device/screen).
 
 ### Parameters
 
-* x offset per step : [Number](/reference/types/number) - the number of columns to scroll at a time (horizontal offset). Use a positive number to scroll an image to the right and a negative number to scroll left. To jump from one image frame to the next, use an offset of 5 or -5.
-* interval (ms) : [Number](/reference/types/number) - the time (in milliseconds) before scrolling by `x offset per step`; the larger the number, the slower the scroll.
+* ``offset`` is a [number](/reference/types/number) that means
+  how many LEDs to scroll at a time, from right to left or
+  left to right. If you use a positive number like `2`, the image
+  will scroll from the right side of the screen to the left.
+  If you use a negative number like `-2`, the image will scroll
+  in the other direction. If you use `5` or `-5`, the image
+  will scroll one **frame** at a time. (A frame is a part of the
+  image. It is a square with five LEDs on a side). This is
+  useful for **animation**.
 
-### ~hide
+* ``interval (ms)`` is a [number](/reference/types/number) that means
+  how many milliseconds to wait before scrolling the amount that
+  ``offset`` says. (1000 milliseconds is one second.) The bigger you
+  make this number, the slower the image will scroll.
 
-```
-let img = images.createImage(`
-. . # . . . # # # . . # # # .
-. . # . . . . . # . . . . # .
-. . # . . . . # . . . # # # .
-. . # . . . # . . . . . . # .
-. . # . . . # # # . . # # # .
-`)
-```
+### Example
 
-### ~
+This program scrolls an image of two arrows five LEDs at a time,
+with a pause of 200 milliseconds between each time it scrolls.
+Because each frame is five LEDs wide, that means this program
+will look like it's animating one arrow flipping and flopping.
+Of course, you can use any two frames you want instead.
 
-To scroll an image 1 column at a time to the right:
 
-```
-img.scrollImage(1, 1000)
-```
-
-To scroll an image 5 columns at a time (skip from frame to frame):
-
-```
-img.scrollImage(5, 1000)
-```
-
-To scroll an image 1 column at a time to the left:
-
-```
-img.scrollImage(-1, 500)
-```
-
-### Example: scroll through frames
-
-This example creates an image with 3 frames, then scrolls through the 3 frames:
-
-```
-img = images.createImage(`
-. . # . . . # # # . . # # # .
-. . # . . . . . # . . . . # .
-. . # . . . . # . . . # # # .
-. . # . . . # . . . . . . # .
-. . # . . . # # # . . # # # .
-`)
-img.showImage(0)
-img.scrollImage(5, 1000)
+```blocks
+let arrows = images.createBigImage(`
+    . . # . .   . . # . .
+    . # # # .   . . # . .
+    # . # . #   # . # . #
+    . . # . .   . # # # .
+    . . # . .   . . # . .
+    `);
+basic.forever(() => {
+    arrows.scrollImage(5, 200);
+});	
 ```
 
 ### See also

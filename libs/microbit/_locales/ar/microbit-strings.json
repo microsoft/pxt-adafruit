@@ -35,7 +35,7 @@
   "control.inBackground|block":"تشغيل في الخلفية",
   "control.reset":"يعيد تعيين الصغير: بت ال بي بي سي.",
   "control.reset|block":"إعادة تعيين",
-  "control|block":"عنصر التحكم",
+  "control|block":"التحكم",
   "game":"محرك لعبة واحدة تقودها العفريت",
   "game.addScore":"إضافة نقاط إلى النتيجة الحالية",
   "game.addScore|block":"تغيير درجة by|%points",
@@ -236,5 +236,5 @@
   "serial.writeValue|block":"serial|write قيمة %name| = القيمة %",
   "serial.writeValue|param|name":"اسم القيمة الدفق، على سبيل المثال: x",
   "serial.writeValue|param|value":"يكتب",
-  "serial|block":"المسلسل"
+  "serial|block":"مصدر الاتصال"
 }

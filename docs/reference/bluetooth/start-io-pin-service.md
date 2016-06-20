@@ -6,6 +6,10 @@ The Bluetooth IO pin service makes it possible for another device such as a smar
 
 No additional code is needed on the micro:bit to use the Bluetooth IO pin service from another device. 
 
+~~~~sig
+bluetooth.startIOPinService();
+~~~~
+
 ### Example: Starting the Bluetooth IO pin service
 
 The following code shows the Bluetooth IO pin service being started:

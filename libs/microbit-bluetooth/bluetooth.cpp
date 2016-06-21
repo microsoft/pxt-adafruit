@@ -2,6 +2,10 @@
 #include "MESEvents.h"
 
 using namespace pxt;
+
+/**
+ * Support for additional Bluetooth services.
+ */
 //% color=#0082FB weight=20
 namespace bluetooth {
     /**

@@ -53,3 +53,7 @@ that wraps ``m.pxt.io`` and provides additional features.
 
 * Install Visual Studio 2015 Update 2 or higher. Make sure the Windows 10 templates are installed.
 * open the ``win10/app.sln`` solution and launch the ``m.pxt.io`` project.
+
+## Code of Conduct
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.

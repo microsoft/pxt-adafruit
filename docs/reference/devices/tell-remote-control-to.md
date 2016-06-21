@@ -1,23 +1,17 @@
 # tell remote control to
 
-The tell remote control to function.
-
 Control the presentation of media content available on a remote device using the `tell remote control` to function.
 
-## 
+### ~hint
 
-The functions in the ``devices`` namespace allow the BBC micro:bit to communicate with a separate (remote) device, such as a smartphone, over Bluetooth (Smart).
-
+The functions in the ``devices`` namespace allow the BBC micro:bit to communicate with a separate (remote) device, 
+such as a smartphone, over Bluetooth (Smart).
 The set of supported events will depend on the remote device and the BBC micro:bit apps available for the remote device.
 
-### Block Editor
+### ~
 
-![](/static/mb/tell-remote-control-to-0.png)
-
-### JavaScript
-
-```
-export function tellRemoteControlTo(event: string)
+```sig
+devices.tellRemoteControlTo(event: string)
 ```
 
 ### Parameters
@@ -40,49 +34,49 @@ export function tellRemoteControlTo(event: string)
 
 To tell the connected device to start playing:
 
-```
+```blocks
 devices.tellRemoteControlTo("play")
 ```
 
 To tell the connected device to stop playing
 
-```
+```blocks
 devices.tellRemoteControlTo("stop")
 ```
 
 To tell the connected device to go to next track
 
-```
+```blocks
 devices.tellRemoteControlTo("next track")
 ```
 
 To tell the connected device to go to previous track
 
-```
+```blocks
 devices.tellRemoteControlTo("previous track")
 ```
 
 To tell the connected device to go forward
 
-```
+```blocks
 devices.tellRemoteControlTo("forward")
 ```
 
 To tell the connected device to rewind
 
-```
+```blocks
 devices.tellRemoteControlTo("rewind")
 ```
 
 To tell the connected device volume up
 
-```
+```blocks
 devices.tellRemoteControlTo("volume up")
 ```
 
 To tell the connected device volume down
 
-```
+```blocks
 devices.tellRemoteControlTo("volume down")
 ```
 
@@ -90,3 +84,7 @@ devices.tellRemoteControlTo("volume down")
 
 [tell camera to](/reference/devices/tell-camera-to), [raise alert to](/reference/devices/raise-alert-to)
 
+
+```package
+microbit-devices
+```

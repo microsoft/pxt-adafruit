@@ -11,8 +11,9 @@ to make real programs that work!
 
 ### Happy face
 
-There are three blocks in the editor (the area to the left).
-Arrange them to look like this:
+Use the **Basic** drawer in the editor (to the left) 
+to drag out and arrange three blocks (two `show leds` and one `forever` block)
+to create this program:
 
 ```blocks
 basic.forever(() => {
@@ -33,7 +34,7 @@ basic.forever(() => {
 });
 ```
 
-When you run this program, you will see a smiley face, then a blank
+When you run this program (click the **Play** button) you will see a smiley face, then a blank
 screen, then a smiley again -- it never stops! (That's because of the
 ``forever`` block.)
 
@@ -69,7 +70,7 @@ Click **Compile** to move your program to the BBC micro:bit!
 
 ### Your turn!
 
-Pile up more ``show leds`` blocks to create your animation! Create an
+Pile up more ``show leds`` blocks to create an animation! Create an
 animation with at least 5 pictures.  What does this animation show?
 
 ```blocks
@@ -496,7 +497,7 @@ input.onButtonPressed(Button.B, () => {
 ```
 Click **Compile** to move your program to the BBC micro:bit!
 
-## Your turn!
 
-How else can you make your game better?
-Ever hear of [Rock Paper Scissors Spock Lizard](http://www.samkass.com/theories/RPSSL.html)?
+# Want to do more?
+
+There are [10 great projects](/projects) waiting for you.

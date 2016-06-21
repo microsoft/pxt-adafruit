@@ -7,7 +7,7 @@ Measure the acceleration on the micro:bit in the "x" direction.
 
 ## Directions
 
-Use this activity document to guide your work in the [glowing pendulum activity](/lessons/charting/acceleration)
+Use this activity document to guide your work in the [charting activity](/lessons/charting)
 
 Answer the questions while completing the tutorial. Pay attention to the dialogues!
 

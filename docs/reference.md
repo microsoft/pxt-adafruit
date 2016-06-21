@@ -22,3 +22,15 @@ control.inBackground(() => {
     
 });
 ```
+
+## Advanced
+
+```namespaces
+bluetooth.onBluetoothConnected(() => {
+    
+});
+```
+
+```package
+microbit-bluetooth
+```

@@ -79,7 +79,7 @@
             this.MinimizeBox = false;
             this.Name = "LicenseDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "code the micro:bit uploader Terms Of Use";
+            this.Text = "code the micro:bit terms of use";
             this.ResumeLayout(false);
 
         }

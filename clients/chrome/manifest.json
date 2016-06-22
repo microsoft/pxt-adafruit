@@ -1,0 +1,28 @@
+{
+  "app": {
+    "background": {
+      "scripts": [ "background.js" ]
+    }
+  },
+
+  "manifest_version": 2,
+  "name": "code the micro:bit",
+  "version": "0.1.0",
+  "author": "Microsoft Corporation",
+  "short_name": "code the micro:bit",
+
+  "description": "This extension reads the serial output from connected BBC micro:bit and sends it to https://codethemicrobit.com.",
+  "icons": {
+    "48": "logo48.png",
+    "128": "logo128.png"
+  },
+
+  "permissions": [
+    "serial",
+    "usb"
+  ],
+
+  "externally_connectable": {
+    "matches": [ "*://localhost/*", "https://*.pxt.io/*", "https://codethemicrobit.com/*" ]
+  }
+}

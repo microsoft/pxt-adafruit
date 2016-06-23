@@ -1,6 +1,7 @@
 # Analog Read Pin
 
-Read the specified [pin](/device/pins) (P0, P1, P2) as analog.
+Read an **analog** signal (`0` through `1023`) from the
+[pin](/device/pins) you say.
 
 ```sig
 pins.analogReadPin(AnalogPin.P0)
@@ -8,13 +9,14 @@ pins.analogReadPin(AnalogPin.P0)
 
 ### Parameters
 
-* name - the  pin name (`P0`, `P1`, or `P2`)
+* a [string](/reference/types/string) that stores the pin you say  (`P0` through `P4`, or `P10`)
 
 ### Returns
 
-* [Number](/reference/types/number) - a number between 0 and 1023 (included)
+* a [number](/reference/types/number) from `0` through `1024`
 
-The following code reads `P1` and charts it on the screen:
+This program reads pin `P1` and shows the number as a
+[bar graph](/reference/led/plot-bar-graph).
 
 ```blocks
 basic.forever(() => {
@@ -25,5 +27,9 @@ basic.forever(() => {
 
 ### See also
 
-[micro:bit pins](/device/pins), [on pin pressed](/reference/input/on-pin-pressed), [analog write pin](/reference/pins/analog-write-pin), [digital read pin](/reference/pins/digital-read-pin), [digital write pin](/reference/pins/digital-write-pin)
+[micro:bit pins](/device/pins),
+[on pin pressed](/reference/input/on-pin-pressed),
+[analog write pin](/reference/pins/analog-write-pin),
+[digital read pin](/reference/pins/digital-read-pin),
+[digital write pin](/reference/pins/digital-write-pin)
 

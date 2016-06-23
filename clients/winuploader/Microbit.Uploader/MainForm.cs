@@ -243,11 +243,7 @@ namespace Microsoft.MicroBit
 
         private void backgroundPictureBox_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Process.Start("https://codethemicrobit.com");
-            }
-            catch (IOException) { }
+            this.openEditor();
         }
 
         private void SettingsLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -259,6 +255,11 @@ namespace Microsoft.MicroBit
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.openEditor();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             this.openEditor();
         }

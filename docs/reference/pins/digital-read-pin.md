@@ -1,24 +1,32 @@
 # Digital Read Pin
 
-The digital read pin function.
-
-Digitally read the specified [pin](/device/pins) (``P0``, ``P1``, ``P2``, ...) as digital. **Some pins are also used by the display, read the [pin documentation ](/device/pins) carefully.**
+Read a **digital** (`0` or `1`) signal from a [pin](/device/pins) on
+the micro:bit board.
 
 ```sig
 pins.digitalReadPin(DigitalPin.P3)
 ```
 
+### ~avatar
+
+Some pins are also used by the [LED screen](/device/screen).
+Please read the [page about pins](/device/pins) carefully.
+
+### ~
+
 ### Parameters
 
-* name - the pin name ``P0``, ``P1``, ``P2``, ...
+* a [string](/reference/types/string) that stores the name of the pin (``P0``, ``P1``, or ``P2``, up through ``P20``)
 
 ### Returns
 
-* [Number](/reference/types/number) - 0 or 1
+* a [number](/reference/types/number) that can be `0` or `1`
 
 ### Example: football score keeper
 
-The following example reads `P0` to determine when a goal is scored. When `P0 = 1`, the code uses `digital write pin` to play a buzzer sound:
+This program reads pin `P0` to find when a goal is scored.  When `P0`
+is `1`, the program makes the score bigger and plays a buzzer sound
+through `P2` with ``digital write pin``.
 
 ```blocks
 let score = 0
@@ -34,7 +42,29 @@ basic.forever(() => {
 })
 ```
 
+This program is a remote control for the score keeper program.  If you
+connect `P1` on the remote control micro:bit to `P0` on the score
+keeper micro:bit, you can press button `B` on the remote to buzz and
+make the score bigger on the other micro:bit.
+
+```blocks
+input.onButtonPressed(Button.B, () => {
+    pins.digitalWritePin(DigitalPin.P1, 1);
+    basic.pause(500);
+    pins.digitalWritePin(DigitalPin.P1, 0);
+});
+```
+#### ~hint
+
+Remember to connect `GND` on both micro:bits together!
+
+#### ~
+
 ### See also
 
-[micro:bit pins](/device/pins), [digital write pin](/reference/pins/digital-write-pin), [analog read pin](/reference/pins/analog-read-pin), [analog write pin](/reference/pins/analog-write-pin), [on pin pressed](/reference/input/on-pin-pressed), [pin is pressed](/reference/input/pin-is-pressed)
-
+[micro:bit pins](/device/pins),
+[digital write pin](/reference/pins/digital-write-pin),
+[analog read pin](/reference/pins/analog-read-pin),
+[analog write pin](/reference/pins/analog-write-pin),
+[on pin pressed](/reference/input/on-pin-pressed),
+[pin is pressed](/reference/input/pin-is-pressed)

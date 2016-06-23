@@ -26,11 +26,11 @@ control.inBackground(() => {
 ## Advanced
 
 ```namespaces
-bluetooth.onBluetoothConnected(() => {
-    
-});
+devices.tellCameraTo(MesCameraEvent.TakePhoto);
+bluetooth.onBluetoothConnected(() => {});
 ```
 
 ```package
+microbit-devices
 microbit-bluetooth
 ```

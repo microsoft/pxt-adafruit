@@ -27,7 +27,7 @@ bluetooth.startAccelerometerService();
 
 ### Video - Accelerometer service demo - Starts at 0:18
 
-http://www.youtube.com/watch?v=aep_GVowKfs
+http://www.youtube.com/watch?v=aep_GVowKfs#t=18s
 
 ### Advanced
  

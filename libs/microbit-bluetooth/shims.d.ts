@@ -71,6 +71,21 @@ declare namespace bluetooth {
     //% help=bluetooth/start-uart-service
     //% blockId=bluetooth_start_uart_service block="bluetooth|uart|service" blockGap=8 shim=bluetooth::startUartService
     function startUartService(): void;
+
+    /**
+     *  Reads the Bluetooth UART service buffer, returning when a specified 'end of message' delimiter character is encountered
+     * @param eom End of Message delimiter character
+     */
+    //% help=bluetooth/uart-read
+    //% blockId=bluetooth_uart_read block="bluetooth|uart|read %eom" blockGap=8 shim=bluetooth::uartRead
+    function uartRead(eom: char*): string;
+
+    /**
+     *  Writes to the Bluetooth UART service buffer. From there the data is transmitted over Bluetooth to a connected device.
+     */
+    //% help=bluetooth/uart-write
+    //% blockId=bluetooth_uart_write block="bluetooth|uart|write %data" blockGap=8 shim=bluetooth::uartWrite
+    function uartWrite(data: string): void;
 }
 
 // Auto-generated. Do not edit. Really.

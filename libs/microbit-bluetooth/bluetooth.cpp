@@ -1,5 +1,7 @@
 #include "pxt.h"
 #include "MESEvents.h"
+#include "MicroBitUARTService.h"
+MicroBitUARTService *uart;
 
 using namespace pxt;
 //% color=#0082FB weight=20
@@ -77,6 +79,16 @@ namespace bluetooth {
     void onBluetoothDisconnected(Action body) {
         registerWithDal(MICROBIT_ID_BLE, MICROBIT_BLE_EVT_DISCONNECTED, body);
     }    
-  
-  
+
+    /**
+    *  Starts the Bluetooth UART service
+    */
+    //% help=bluetooth/start-uart-service
+    //% blockId=bluetooth_start_uart_service block="bluetooth|uart|service" blockGap=8
+
+    void startUartService() {
+        // 32 octet buffer size is 
+        uart = new MicroBitUARTService(*uBit.ble, 32, 32);
+    }
+      
 }

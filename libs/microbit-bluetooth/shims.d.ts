@@ -62,6 +62,13 @@ declare namespace bluetooth {
     //% help=bluetooth/on-bluetooth-disconnected
     //% blockId=bluetooth_on_disconnected block="on bluetooth disconnected" shim=bluetooth::onBluetoothDisconnected
     function onBluetoothDisconnected(body: () => void): void;
+
+    /**
+     *  Starts the Bluetooth UART service
+     */
+    //% help=bluetooth/start-uart-service
+    //% blockId=bluetooth_start_uart_service block="bluetooth|uart|service" blockGap=8 shim=bluetooth::startUartService
+    function startUartService(): void;
 }
 
 // Auto-generated. Do not edit. Really.

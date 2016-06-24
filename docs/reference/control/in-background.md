@@ -1,15 +1,25 @@
-# In Background
+# Run In Background
 
-Run code in the background as a separate process or thread; for more information on this advanced construct, see [the micro:bit - a reactive system](/device/reactive).
+Run part of a program while the rest of it is doing something else.
 
 ```sig
 control.inBackground(() => {
 })
 ```
 
+### ~hint
+
+For more information, read 
+[The micro:bit - a reactive system](/device/reactive).
+It is pretty advanced!
+
+### ~
+
 ### Example
 
-The example below shows how a background process can be used to display the current value of the global variable `num`, while code (like the `on button pressed` handler) can change the value of the variable.
+This program shows how running in the background can say what is
+stored in a variable like `num`, while another part (``on button pressed``)
+changes what is stored there.
 
 ```blocks
 let num = 0
@@ -24,7 +34,8 @@ input.onButtonPressed(Button.A, () => {
 })
 ```
 
-The code below using the `forever` loop is equivalent to the code above
+This program does the same thing, but in a more usual way,
+with a ``forever`` loop.
 
 ```blocks
 let num = 0
@@ -36,20 +47,8 @@ input.onButtonPressed(Button.A, () => {
 })
 ```
 
-### Contention for the LED display
-
-If you have multiple processes that each show something on the LED screen, you may get unexpected results. Try, for example:
-
-```blocks
-basic.forever(() => {
-    basic.showNumber(6789, 150)
-})
-input.onButtonPressed(Button.A, () => {
-    basic.showNumber(2, 150)
-})
-```
-
 ### See also
 
-[while](/blocks/loops/while), [forever](/reference/basic/forever), [on button pressed](/reference/input/on-button-pressed)
+[while](/blocks/loops/while), [forever](/reference/basic/forever),
+[on button pressed](/reference/input/on-button-pressed)
 

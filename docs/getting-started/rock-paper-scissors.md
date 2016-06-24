@@ -200,7 +200,4 @@ input.onButtonPressed(Button.B, () => {
 ```
 Click **Compile** to move your program to the BBC micro:bit!
 
-
-# Want to do more?
-
-There are [10 great projects](/projects) waiting for you.
+## [NEXT: PROJECTS!](/projects)

@@ -26,7 +26,7 @@ that there is a data stream and displays a graph.
 The log view will automatically start to collect and organize the data it detects. Simply click on the log view to open the various options
 to export the data. The simplest option is to download the data as a **CSV file**. This file can easily be opened in programs like Office Excel.
 
-## Cloud upload
+## Cloud upload via Azure
 
-In the data export dialog, there is another option to upload the data to the cloud. This allows to upload small amounts of data 
+In the data export dialog, there is another option to upload the data to the Azure cloud. This allows to upload small amounts of data 
 without any kind setup. The data can be accessed via web services or directly from Office Excel.

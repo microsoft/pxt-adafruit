@@ -112,6 +112,10 @@
             {
                 "name": "JavaScript",
                 "path": "/javascript"
+            },
+            {
+                "name": "Streaming Data",
+                "path": "/streaming"
             }
         ],
         "sideDoc": "getting-started"

@@ -3,7 +3,7 @@
 ### ~hint
 ![](/static/bluetooth/Bluetooth_SIG.png)
 
-For another device like a smartphone to use any of the Bluetooth "services" which the micro:bit has, it must first connect to the micro:bit.
+For another device like a smartphone to use any of the Bluetooth "services" which the micro:bit has, it must first be [paired with the micro:bit](/reference/bluetooth/bluetooth-pairing). Once paired, the other device may connect to the micro:bit and exchange data relating to many of the micro:bit's features.
 
 ### ~
 
@@ -27,7 +27,7 @@ bluetooth.startAccelerometerService();
 
 ### Video - Accelerometer service demo - Starts at 0:18
 
-http://www.youtube.com/watch?v=aep_GVowKfs
+http://www.youtube.com/watch?v=aep_GVowKfs#t=18s
 
 ### Advanced
  

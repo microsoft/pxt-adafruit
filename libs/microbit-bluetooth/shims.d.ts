@@ -50,6 +50,27 @@ declare namespace bluetooth {
     function startButtonService(): void;
 
     /**
+     *  Starts the Bluetooth UART service
+     */
+    //% help=bluetooth/start-uart-service
+    //% blockId=bluetooth_start_uart_service block="bluetooth uart service" blockGap=8 shim=bluetooth::startUartService
+    function startUartService(): void;
+
+    /**
+     *  Writes to the Bluetooth UART service buffer. From there the data is transmitted over Bluetooth to a connected device.
+     */
+    //% help=bluetooth/uart-write
+    //% blockId=bluetooth_uart_write block="bluetooth uart write %data" blockGap=8 shim=bluetooth::uartWrite
+    function uartWrite(data: string): void;
+
+    /**
+     *  Reads from the Bluetooth UART service buffer, returning its contents when the specified delimiter character is encountered.
+     */
+    //% help=bluetooth/uart-read
+    //% blockId=bluetooth_uart_read block="bluetooth uart read %del" blockGap=8 shim=bluetooth::uartRead
+    function uartRead(del: string): string;
+
+    /**
      * Register code to run when the micro:bit is connected to over Bluetooth
      * @param body Code to run when a Bluetooth connection is established
      */

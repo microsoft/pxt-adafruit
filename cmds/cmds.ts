@@ -6,6 +6,8 @@ import * as child_process from "child_process";
 
 let writeFileAsync: any = Promise.promisify(fs.writeFile)
 let execAsync: (cmd: string, options?: { cwd?: string }) => Promise<Buffer> = Promise.promisify(child_process.exec)
+let readDirAsync = Promise.promisify(fs.readdir)
+
 
 export function deployCoreAsync(res: ts.pxt.CompileResult) {
     return getBitDrivesAsync()
@@ -37,6 +39,10 @@ function getBitDrivesAsync(): Promise<string[]> {
                 })
                 return res
             })
+    }
+    else if (process.platform == "darwin") {
+        return readDirAsync("/Volumes")
+            .then(lst => lst.filter(s => /MICROBIT/.test(s)).map(s => "/Volumes/" + s + "/"))
     } else {
         return Promise.resolve([])
     }

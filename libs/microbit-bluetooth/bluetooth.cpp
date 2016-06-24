@@ -5,6 +5,22 @@ MicroBitUARTService *uart;
 
 using namespace pxt;
 
+enum Delimiters {
+    //% block="new line"
+    NewLine = 1,
+    //% block=","
+    Comma = 2,
+    //% block="$"
+    Dollar = 3,
+    //% block=":"
+    Colon = 4,
+    //% block="."
+    Fullstop = 5,
+    //% block="#"
+    Hash = 6,
+};
+
+
 /**
  * Support for additional Bluetooth services.
  */
@@ -63,8 +79,30 @@ namespace bluetooth {
     void startButtonService() {
         new MicroBitButtonService(*uBit.ble);      
     }
+
+    /**
+    *  Starts the Bluetooth UART service
+    */
+    //% help=bluetooth/start-uart-service
+    //% blockId=bluetooth_start_uart_service block="bluetooth uart service" blockGap=8
+
+    void startUartService() {
+        // 61 octet buffer size is 3 x (MTU - 3) + 1
+        // MTU on nRF51822 is 23 octets. 3 are used by Attribute Protocol header data leaving 20 octets for payload
+        // So we allow a RX buffer that can contain 3 x max length messages plus one octet for a terminator character
+        uart = new MicroBitUARTService(*uBit.ble, 61, 60);
+    }
     
-     /**
+    /**
+    *  Writes to the Bluetooth UART service buffer. From there the data is transmitted over Bluetooth to a connected device.
+    */
+    //% help=bluetooth/uart-write
+    //% blockId=bluetooth_uart_write block="bluetooth|uart|write %data" blockGap=8
+    void uartWrite(StringData *data) {
+            uart->send(ManagedString(data));
+    }    
+
+    /**
      * Register code to run when the micro:bit is connected to over Bluetooth
      * @param body Code to run when a Bluetooth connection is established
      */
@@ -83,40 +121,6 @@ namespace bluetooth {
     void onBluetoothDisconnected(Action body) {
         registerWithDal(MICROBIT_ID_BLE, MICROBIT_BLE_EVT_DISCONNECTED, body);
     }    
-
-    /**
-    *  Starts the Bluetooth UART service
-    */
-    //% help=bluetooth/start-uart-service
-    //% blockId=bluetooth_start_uart_service block="bluetooth|uart|service" blockGap=8
-
-    void startUartService() {
-        // 61 octet buffer size is 3 x (MTU - 3) + 1
-        // MTU on nRF51822 is 23 octets. 3 are used by Attribute Protocol header data leaving 20 octets for payload
-        // So we allow a buffer that can contain 3 x max length messages plus one octet for a terminator character
-        uart = new MicroBitUARTService(*uBit.ble, 61, 60);
-    }
-    
-      
-    /**
-    *  Reads the Bluetooth UART service buffer, returning when a specified 'end of message' delimiter character is encountered
-    * @param eom End of Message delimiter character
-    */
-    //% help=bluetooth/uart-read
-    //% blockId=bluetooth_uart_read block="bluetooth|uart|read %eom" blockGap=8
-    StringData* uartRead(char* eom) {
-        // temp hard coding of : as eom delimiter
-        char delim[6] = {':', 0};
-        return uart->readUntil(delim).leakData();
-    }
-    
-   /**
-    *  Writes to the Bluetooth UART service buffer. From there the data is transmitted over Bluetooth to a connected device.
-    */
-    //% help=bluetooth/uart-write
-    //% blockId=bluetooth_uart_write block="bluetooth|uart|write %data" blockGap=8
-    void uartWrite(StringData* data) {
-            uart->send(ManagedString(data));
-    }    
-      
+  
+  
 }

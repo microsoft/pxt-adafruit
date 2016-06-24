@@ -1,7 +1,6 @@
 #include "pxt.h"
 #include "MESEvents.h"
 #include "MicroBitUARTService.h"
-MicroBitUARTService *uart;
 
 using namespace pxt;
 
@@ -26,6 +25,8 @@ enum Delimiters {
  */
 //% color=#0082FB weight=20
 namespace bluetooth {
+    MicroBitUARTService *uart = NULL;
+
     /**
     *  Starts the Bluetooth IO pin service.
     */
@@ -83,10 +84,10 @@ namespace bluetooth {
     /**
     *  Starts the Bluetooth UART service
     */
-    //% help=bluetooth/start-uart-service
-    //% blockId=bluetooth_start_uart_service block="bluetooth uart service" blockGap=8
-
+    // help=bluetooth/start-uart-service
+    // blockId=bluetooth_start_uart_service block="bluetooth uart service" blockGap=8
     void startUartService() {
+        if (uart) return;
         // 61 octet buffer size is 3 x (MTU - 3) + 1
         // MTU on nRF51822 is 23 octets. 3 are used by Attribute Protocol header data leaving 20 octets for payload
         // So we allow a RX buffer that can contain 3 x max length messages plus one octet for a terminator character
@@ -99,24 +100,35 @@ namespace bluetooth {
     //% help=bluetooth/uart-write
     //% blockId=bluetooth_uart_write block="bluetooth uart write %data" blockGap=8
     void uartWrite(StringData *data) {
-            uart->send(ManagedString(data));
+        startUartService();
+    	uart->send(ManagedString(data));
     }    
 
     /**
     *  Reads from the Bluetooth UART service buffer, returning its contents when the specified delimiter character is encountered.
     */
     //% help=bluetooth/uart-read
-    //% blockId=bluetooth_uart_read block="bluetooth uart read %del" blockGap=8
+    //% blockId=bluetooth_uart_read block="bluetooth uart read %del=bluetooth_uart_delimiter_conv" blockGap=8
     StringData* uartRead(StringData *del) {
+        startUartService();
         return uart->readUntil(ManagedString(del)).leakData();
     }    
 
     /**
+    * Returns the delimiter corresponding string
+    */
+    //% blockId="bluetooth_uart_delimiter_conv" block="%del"
+    //% weight=1
+    StringData* delimiters(Delimiters del) {  
+        ManagedString c("\n\n,$:.#"[max(0, min(6, (int)del))]);
+        return c.leakData();
+    }
+    /**
      * Register code to run when the micro:bit is connected to over Bluetooth
      * @param body Code to run when a Bluetooth connection is established
      */
-    //% help=bluetooth/on-bluetooth-connected
-    //% blockId=bluetooth_on_connected block="on bluetooth connected"
+    //% help=bluetooth/on-bluetooth-connected weight=20
+    //% blockId=bluetooth_on_connected block="on bluetooth connected" blockGap=8
     void onBluetoothConnected(Action body) {
         registerWithDal(MICROBIT_ID_BLE, MICROBIT_BLE_EVT_CONNECTED, body);
     }    
@@ -125,7 +137,7 @@ namespace bluetooth {
      * Register code to run when a bluetooth connection to the micro:bit is lost
      * @param body Code to run when a Bluetooth connection is lost
      */
-    //% help=bluetooth/on-bluetooth-disconnected
+    //% help=bluetooth/on-bluetooth-disconnected weight=19
     //% blockId=bluetooth_on_disconnected block="on bluetooth disconnected"
     void onBluetoothDisconnected(Action body) {
         registerWithDal(MICROBIT_ID_BLE, MICROBIT_BLE_EVT_DISCONNECTED, body);

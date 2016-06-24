@@ -50,13 +50,6 @@ declare namespace bluetooth {
     function startButtonService(): void;
 
     /**
-     *  Starts the Bluetooth UART service
-     */
-    //% help=bluetooth/start-uart-service
-    //% blockId=bluetooth_start_uart_service block="bluetooth uart service" blockGap=8 shim=bluetooth::startUartService
-    function startUartService(): void;
-
-    /**
      *  Writes to the Bluetooth UART service buffer. From there the data is transmitted over Bluetooth to a connected device.
      */
     //% help=bluetooth/uart-write
@@ -67,22 +60,29 @@ declare namespace bluetooth {
      *  Reads from the Bluetooth UART service buffer, returning its contents when the specified delimiter character is encountered.
      */
     //% help=bluetooth/uart-read
-    //% blockId=bluetooth_uart_read block="bluetooth uart read %del" blockGap=8 shim=bluetooth::uartRead
+    //% blockId=bluetooth_uart_read block="bluetooth uart read %del=bluetooth_uart_delimiter_conv" blockGap=8 shim=bluetooth::uartRead
     function uartRead(del: string): string;
+
+    /**
+     * Returns the delimiter corresponding string
+     */
+    //% blockId="bluetooth_uart_delimiter_conv" block="%del"
+    //% weight=1 shim=bluetooth::delimiters
+    function delimiters(del: Delimiters): string;
 
     /**
      * Register code to run when the micro:bit is connected to over Bluetooth
      * @param body Code to run when a Bluetooth connection is established
      */
-    //% help=bluetooth/on-bluetooth-connected
-    //% blockId=bluetooth_on_connected block="on bluetooth connected" shim=bluetooth::onBluetoothConnected
+    //% help=bluetooth/on-bluetooth-connected weight=20
+    //% blockId=bluetooth_on_connected block="on bluetooth connected" blockGap=8 shim=bluetooth::onBluetoothConnected
     function onBluetoothConnected(body: () => void): void;
 
     /**
      * Register code to run when a bluetooth connection to the micro:bit is lost
      * @param body Code to run when a Bluetooth connection is lost
      */
-    //% help=bluetooth/on-bluetooth-disconnected
+    //% help=bluetooth/on-bluetooth-disconnected weight=19
     //% blockId=bluetooth_on_disconnected block="on bluetooth disconnected" shim=bluetooth::onBluetoothDisconnected
     function onBluetoothDisconnected(body: () => void): void;
 }

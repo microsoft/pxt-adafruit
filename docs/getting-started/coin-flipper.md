@@ -73,4 +73,6 @@ input.onButtonPressed(Button.AB, () => {
 
 Flip until your thumbs get tired!
 
-## [NEXT: ROCK PAPER SCISSORS](/getting-started/rock-paper-scissors)
+### ~button /getting-started/rock-paper-scissors
+NEXT: ROCK PAPER SCISSORS
+### ~

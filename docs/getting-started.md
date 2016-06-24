@@ -39,4 +39,6 @@ screen, then a smiley again -- it never stops! (That's because of the
 Click **Compile** to move your program to the BBC micro:bit! 
 Make sure to follow the instructions.
 
-## [NEXT: THE SCREEN](/getting-started/screen)
+### ~button /getting-started/screen
+NEXT: THE SCREEN
+### ~

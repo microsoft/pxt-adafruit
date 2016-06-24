@@ -76,4 +76,6 @@ your handshake to make it happen!
 
 ## ~
 
-## [NEXT: SHAKE](/getting-started/shake)
+### ~button /getting-started/shake
+NEXT: SHAKE
+### ~

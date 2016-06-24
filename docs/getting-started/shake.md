@@ -19,4 +19,6 @@ input.onGesture(Gesture.Shake, () => {
 ```
 Click **Compile** to move your program to the BBC micro:bit!
 
-## [NEXT: COIN FLIPPER GAME](/getting-started/coin-flipper)
+### ~button /getting-started/coin-flipper
+NEXT: COIN FLIPPER GAME
+### ~

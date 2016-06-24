@@ -93,4 +93,6 @@ You can find the ``show leds`` block in the **Basic** part of the editor.
 
 #### ~
 
-## [NEXT: BUTTONS](/getting-started/buttons)
+### ~button /getting-started/buttons
+NEXT: BUTTONS
+### ~

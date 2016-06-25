@@ -521,7 +521,7 @@ namespace pxsim.pins {
         return 0;
     }
 
-    export function createBuffer(sz:number) {
+    export function createBuffer(sz: number) {
         return pxsim.BufferMethods.createBuffer(sz)
     }
 
@@ -578,6 +578,15 @@ namespace pxsim.pins {
         let pin = getPin(pinId);
         if (!pin) return;
         // TODO
+    }
+
+    export function i2cReadBuffer(address: number, size: number, repeat?: boolean): RefBuffer {
+        // fake reading zeros
+        return createBuffer(size)
+    }
+
+    export function i2cWriteBuffer(address: number, buf: RefBuffer, repeat?: boolean): void {
+        // fake - noop
     }
 
     export function analogSetPitchPin(pinId: number) {

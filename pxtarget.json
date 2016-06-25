@@ -1,7 +1,7 @@
 {
     "id": "microbit",
-    "name": "m.pxt.io",
-    "title": "m.pxt.io",
+    "name": "code the micro:bit",
+    "title": "code the micro:bit",
     "corepkg": "microbit",
     "bundleddirs": [
         "libs/microbit",
@@ -81,14 +81,14 @@
     },
     "appTheme": {
         "accentColor": "#5C005C",
-        "logoUrl": "https://m.pxt.io/about",
+        "logoUrl": "https://codethemicrobit.com/about",
         "logo": "./static/microbit.simplified.svg",
         "docsLogo": "./static/microbit.simplified.svg",
         "portraitLogo": "./static/microbit.simplified.svg",
         "footerLogo": "./static/microbit.simplified.svg",
         "organizationLogo": "./static/Microsoft-logo_rgb_c-gray.png",
-        "homeUrl": "https://m.pxt.io/",
-        "embedUrl": "https://m.pxt.io/",
+        "homeUrl": "https://codethemicrobit.com/",
+        "embedUrl": "https://codethemicrobit.com/",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
         "boardName": "BBC micro:bit",
@@ -112,6 +112,10 @@
             {
                 "name": "JavaScript",
                 "path": "/javascript"
+            },
+            {
+                "name": "Streaming Data",
+                "path": "/streaming"
             }
         ],
         "sideDoc": "getting-started"

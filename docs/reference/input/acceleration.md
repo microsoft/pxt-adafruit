@@ -38,5 +38,7 @@ basic.forever(() => {
 
 ### See also
 
-[compass-heading](/reference/input/compass-heading), [lightlevel](/reference/input/light-level)
+[set accelerometer range](/reference/input/set-accelerometer-range),
+[compass heading](/reference/input/compass-heading),
+[light level](/reference/input/light-level)
 

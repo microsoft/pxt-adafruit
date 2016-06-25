@@ -23,13 +23,13 @@ When you have downloaded and run your code onto your micro:bit, press Button R t
 
 ### USB connection
 
-When you plug in your micro:bit, it should appear as MICROBIT. 
+When you plug in your micro:bit, it should appear as ``MICROBIT``. 
 If you accidentally hold down the reset button as you’re plugging in your micro:bit, 
-the micro:bit will appear as a MAINTENANCE drive instead of MICROBIT. This is known as maintenance mode.**
+the micro:bit will appear as a MAINTENANCE drive instead of ``MICROBIT``. This is known as maintenance mode.**
 
-To continue programming your micro:bit YOU MUST unplug your USB and reconnect it. Check that the drive now shows as MICROBIT.
+To continue programming your micro:bit YOU MUST unplug your USB and reconnect it. Check that the drive now shows as ``MICROBIT``.
 
-**Use with caution. If you click on the drive while it shows as MAINTENANCE, 
+**Use with caution. If you click on the drive while it shows as ``MAINTENANCE``, 
 you can see which version of firmware you have running on your micro:bit. 
 Firmware on your micro:bit should be up-to-date already. 
 You can find the version of firmware in the 'version.txt' file on the micro:bit. Further information on the firmware can be found here:
@@ -55,6 +55,10 @@ The pins can be a form of input or output.
 There are labels for the input/output pins P0, P1, P2, which you can attach external sensors to such as thermometers or moisture detectors. 
 You can read more about large and small pins [here](/device/pins).
 
+### Light level
+
+The screen can also be used a light level sensor (it's a really cool trick).
+
 ### How do I connect the micro:bit to my computer?
 
 Your micro:bit can be connected to your computer via a micro USB cable. 
@@ -73,7 +77,7 @@ You can attach an external device such as a motor to these and power it using th
 
 ### Serial Communication
 
-The BBC micro:bit can send an receive data via [serial communication](/device/serial). The serial data can be transfered via USB or BlE.
+The BBC micro:bit can send an receive data via [serial communication](/device/serial). The serial data can be transfered via USB or BLE.
 
 ### Bluetooth Low Energy (BLE) Antenna
 

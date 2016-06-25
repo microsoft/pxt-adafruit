@@ -1,6 +1,11 @@
 # Bluetooth Button Service 
 
+### ~hint
 ![](/static/bluetooth/Bluetooth_SIG.png)
+
+For another device like a smartphone to use any of the Bluetooth "services" which the micro:bit has, it must first be [paired with the micro:bit](/reference/bluetooth/bluetooth-pairing). Once paired, the other device may connect to the micro:bit and exchange data relating to many of the micro:bit's features.
+
+### ~
 
 The Bluetooth button service makes it possible for another device such as a smartphone to be notified wirelessly whenever a button on the front of a micro:bit is pressed. Each of the two micro:bit buttons can be in one of three possible states:
 
@@ -12,23 +17,21 @@ The button service allows you to make other things which are connected to your m
 
 No additional code is needed on the micro:bit to use the Bluetooth button service from another device.
 
-~~~~sig
+```sig
 bluetooth.startButtonService();
-~~~~
+```
 
 ### Example: Starting the Bluetooth button service
 
 The following code shows the Bluetooth button service being started:
 
-~~~~blocks
+```blocks
 bluetooth.startButtonService();
-~~~~
+```
 
 ### Video - Button service demo - Starts at 0:59
 
-[![micro:bit Bluetooth demo video](/static/bluetooth/microbit_button.png)](
-    http://www.youtube.com/watch?v=aep_GVowKfs "Click to launch YouTube video"
-    )
+http://www.youtube.com/watch?v=aep_GVowKfs
 
 ### Advanced
  
@@ -36,7 +39,8 @@ For more advanced information on the micro:bit Bluetooth button service includin
 
 ### See also
 
-[Bluetooth SIG](https://www.bluetooth.com)
+[Bluetooth SIG](https://www.bluetooth.com),[Bluetooth on micro:bit resources](http://bluetooth-mdw.blogspot.co.uk/p/bbc-microbit.html)
 
-[Bluetooth on micro:bit resources](http://bluetooth-mdw.blogspot.co.uk/p/bbc-microbit.html)
-
+```package
+microbit-bluetooth
+```

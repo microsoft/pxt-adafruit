@@ -1,28 +1,31 @@
 # Bluetooth IO Pin Service 
 
+### ~hint
 ![](/static/bluetooth/Bluetooth_SIG.png)
+
+For another device like a smartphone to use any of the Bluetooth "services" which the micro:bit has, it must first be [paired with the micro:bit](/reference/bluetooth/bluetooth-pairing). Once paired, the other device may connect to the micro:bit and exchange data relating to many of the micro:bit's features.
+
+### ~
 
 The Bluetooth IO pin service makes it possible for another device such as a smartphone to communicate with other electronic 'things' connected to a micro:bit's edge connector. You could for example, use your smartphone to switch on or off a light which is connected to the micro:bit or your smartphone could receive data collected from a sensor connected to the micro:bit. In fact you could do both of these things at the same time since the Bluetooth IO pin service lets you interact with multiple 'pins' on the edge conector in different ways all at the same time. 
 
 No additional code is needed on the micro:bit to use the Bluetooth IO pin service from another device. 
 
-~~~~sig
+```sig
 bluetooth.startIOPinService();
-~~~~
+```
 
 ### Example: Starting the Bluetooth IO pin service
 
 The following code shows the Bluetooth IO pin service being started:
 
-~~~~blocks
+```blocks
 bluetooth.startIOPinService();
-~~~~
+```
 
 ### Video - IO pin service demo starts at 3:49
 
-[![micro:bit Bluetooth demo video](/static/bluetooth/microbit_pin_io.png)](
-    http://www.youtube.com/watch?v=aep_GVowKfs "Click to launch YouTube video"
-    )
+http://www.youtube.com/watch?v=aep_GVowKfs
 
 ### Advanced
  
@@ -30,7 +33,8 @@ For more advanced information on the micro:bit Bluetooth IO pin service includin
 
 ### See also
 
-[Bluetooth SIG](https://www.bluetooth.com)
+[Bluetooth SIG](https://www.bluetooth.com), [Bluetooth on micro:bit resources](http://bluetooth-mdw.blogspot.co.uk/p/bbc-microbit.html)
 
-[Bluetooth on micro:bit resources](http://bluetooth-mdw.blogspot.co.uk/p/bbc-microbit.html)
-
+```package
+microbit-bluetooth
+```

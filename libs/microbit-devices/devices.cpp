@@ -120,7 +120,9 @@ enum class MesDpadButtonInfo {
     _4Up = MES_DPAD_BUTTON_4_UP,
 };
 
-
+/**
+ * Control a phone with the BBC micro:bit via Bluetooth.
+ */
 //% color=156 weight=80
 namespace devices {
     static void genEvent(int id, int event) {

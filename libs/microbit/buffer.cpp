@@ -1,5 +1,6 @@
 #include "ksbit.h"
 
+// keep in sync with github/pxt/pxtsim/libgeneric.ts
 enum class NumberFormat {
     Int8LE = 1,
     UInt8LE,

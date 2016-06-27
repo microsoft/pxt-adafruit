@@ -35,7 +35,7 @@ For more advanced information on the micro:bit Bluetooth temperature service inc
 
 ### See also
 
-[Bluetooth SIG](https://www.bluetooth.com), [Bluetooth on micro:bit resources](http://bluetooth-mdw.blogspot.co.uk/p/bbc-microbit.html)
+[Bluetooth SIG](https://www.bluetooth.com), [micro:bit Bluetooth profile ](http://lancaster-university.github.io/microbit-docs/ble/profile/), [micro:bit Bluetooth profile reference](http://lancaster-university.github.io/microbit-docs/resources/bluetooth/microbit-profile-V1.9-Level-2.pdf),  [Bluetooth on micro:bit resources](http://bluetooth-mdw.blogspot.co.uk/p/bbc-microbit.html)
 
 
 ```package

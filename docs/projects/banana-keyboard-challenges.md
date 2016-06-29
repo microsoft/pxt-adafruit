@@ -59,5 +59,6 @@ input.onPinPressed(TouchPin.P2, () => {
 
 * click *run* to see if the code works as expected.
 
-
-
+### ~button /projects/telegraph
+NEXT: Telegraph
+### ~

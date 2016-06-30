@@ -13,7 +13,7 @@ basic.showString("Hello!")
 If you want to see all functions available in a namespace, simply type `basic`
 followed by `.`; a list of all the functions will appear. 
 
-![](/static/mb/js/basicFun.png)
+![](/static/mb/js/basicFuns.png)
 
 Continue typing to select one of the functions, or click on one of the functions
 to select. You also narrow down the set of functions by typing, as below:

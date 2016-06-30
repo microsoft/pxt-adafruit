@@ -9,7 +9,7 @@ pins.analogReadPin(AnalogPin.P0)
 
 ### Parameters
 
-* a [string](/reference/types/string) that stores the name of the pin
+* a [string](/reference/types/string) with the name of the pin
   you say (`P0` through `P4`, or `P10`)
 
 ### Returns
@@ -25,6 +25,14 @@ basic.forever(() => {
     basic.showNumber(value)
 });
 ```
+
+#### ~hint
+
+If you are using **analog read pin** with another micro:bit
+running **analog write pin**, it is a good idea to check
+**analog read pin** many times and then take an average.
+
+#### ~
 
 ### See also
 

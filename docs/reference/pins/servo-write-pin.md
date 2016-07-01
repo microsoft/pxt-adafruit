@@ -1,9 +1,12 @@
 # Servo Write Pin
 
-Writes a value to the servo on to the specified [pin](/device/pins) (``P0``, ``P1``, ``P2``), controlling the shaft accordingly.
+Write a value to the servo on the specified [pin](/device/pins)
+and control the shaft.
 
-* on a standard servo, this will set the angle of the shaft (in degrees), moving the shaft to that orientation.
-* on a continuous rotation servo, this will set the speed of the servo (with 0 being full-speed in one direction, 180 being full speed in the other, and a value near 90 being no movement).
+This function will move the shaft of a standard servo to the specified
+angle, or set the speed of a continuous rotation servo. (`0` specifies
+full speed in one direction, `180` specifies full speed in the other,
+and approximately `90` specifies no movement.)
 
 ```sig
 pins.servoWritePin(AnalogPin.P0, 180)
@@ -11,18 +14,18 @@ pins.servoWritePin(AnalogPin.P0, 180)
 
 ### Parameters
 
-* `name` - [String](/reference/types/string); the pin name ("P0", "P1", or "P2")
-* `value` - a [Number](/reference/types/number) between 0 and 180 included
+* a [string](/reference/types/string) that specifies the pin name (`P0` through `P4`, or `P10`)
+* a [number](/reference/types/number) from `0` through `180`
 
 ### Examples
 
-* setting the shaft angle to mid point on a servo
+#### Setting the shaft angle to midpoint on a servo
 
 ```blocks
 pins.servoWritePin(AnalogPin.P0, 90)
 ```
 
-* control the shaft by using the tilt information of the accelerometer
+#### Controlling the shaft by using the tilt information of the accelerometer
 
 ```blocks
 basic.forever(() => {
@@ -33,7 +36,7 @@ basic.forever(() => {
 })
 ```
 
-* setting the full speed on a continuous servo
+#### Setting the full speed on a continuous servo
 
 ```blocks
 pins.servoWritePin(AnalogPin.P0, 0)

@@ -1,6 +1,8 @@
 # Analog Set Period
 
-Configures the period of the Pulse Width Modulation (PWM) on the specified analog [pin](/device/pins) (``P0``, ``P1`` or ``P2``). Prior to calling this function, the given pin should be set as analog.
+Configure the period of Pulse Width Modulation (PWM) on the specified 
+analog [pin](/device/pins).
+Before you call this function, you should set the specified pin as analog.
 
 ```sig
 pins.analogSetPeriod(AnalogPin.P0, 20000)
@@ -8,10 +10,11 @@ pins.analogSetPeriod(AnalogPin.P0, 20000)
 
 ### Parameters
 
-* `name` - [String](/reference/types/string); the pin name ("P0", "P1", or "P2")
-* `micros` - a [Number](/reference/types/number) representing the micro-seconds of the analog period.
+* `pin`: a [string](/reference/types/string) that specifies the pin to configure (`P0` through `P4`, or `P10`)
+* `μs`: a [number](/reference/types/number) that specifies the analog period in microseconds.
 
-The following code
+The following code first sets `P0` to analog with **analog write
+pin**, and then sets the PWM period of `P0` to 20,000 microseconds.
 
 ```blocks
 pins.analogWritePin(AnalogPin.P0, 512)
@@ -20,5 +23,9 @@ pins.analogSetPeriod(AnalogPin.P0, 20000)
 
 ### See also
 
-[micro:bit pins](/device/pins), [on pin pressed](/reference/input/on-pin-pressed), [analog read pin](/reference/pins/analog-read-pin), [digital read pin](/reference/pins/digital-read-pin), [digital write pin](/reference/pins/digital-write-pin)
-
+[micro:bit pins](/device/pins),
+[on pin pressed](/reference/input/on-pin-pressed),
+[analog read pin](/reference/pins/analog-read-pin),
+[analog write pin](/reference/pins/analog-write-pin),
+[digital read pin](/reference/pins/digital-read-pin),
+[digital write pin](/reference/pins/digital-write-pin)

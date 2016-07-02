@@ -20,21 +20,29 @@ to select. You also narrow down the set of functions by typing, as below:
 
 ![](/static/mb/js/basicIntell.png)
 
-# Function parameters
+## Function arguments
 
-You might have noticed that the call `showString` above takes one value, 
+You might have noticed that the call `showString` above takes one argument, 
 the string to be scrolled on the LED screen. There is a second (optional)
-parameter that controls the speed of the scroll. Try this:
+argunment that controls the speed of the scroll. Try this:
 
 ```typescript
 basic.showString("Hello!",50)
 ```
 
-If you don't give a value for an optional parameter, where does its value
-come from? TBD. 
+If you don't give a value for an optional argument, where does its value
+come from?
 
-You might have noticed that the function list above shows all
-the available parameters for each function. 
+## Left and right parentheses, please!
+
+Whenever you want to call a function, you give the name of the function
+followed by `(` and ending with `)`. Inbetween the left and right
+parentheses go the function arguments.  If a function has zero arguments, you still
+need the parentheses. For example
+
+```typescript
+basic.clearScreen()
+```
 
 ### ~button /js/sequence
 NEXT: Sequencing Commands

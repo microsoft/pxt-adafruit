@@ -24,35 +24,18 @@ to select. You also narrow down the set of functions by typing, as below:
 
 You might have noticed that the call `showString` above takes one value, 
 the string to be scrolled on the LED screen. There is a second (optional)
-parameter that controls the speed of the the scroll. Try this:
+parameter that controls the speed of the scroll. Try this:
 
 ```typescript
 basic.showString("Hello!",50)
 ```
 
+If you don't give a value for an optional parameter, where does its value
+come from? TBD. 
+
 You might have noticed that the function list above shows all
 the available parameters for each function. 
 
-
-```typescript
-basic.showString("Hello!")
-basic.showLeds(`
-    . # . # .
-    . . . . .
-    . . # . .
-    # . . . #
-    . # # # .
-    `)
-basic.pause(1000)
-basic.clearScreen()
-basic.showString("Goodbye!")
-basic.showLeds(`
-    . # . # .
-    . . . . .
-    . . . . .
-    . # # # .
-    # . . . #
-    `)
-basic.pause(1000)
-basic.clearScreen()
-```
+### ~button /js/sequence
+NEXT: Sequencing Commands
+### ~

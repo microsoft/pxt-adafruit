@@ -15,33 +15,38 @@ followed by `.`; a list of all the functions will appear.
 
 ![](/static/mb/js/basicFuns.png)
 
-Continue typing to select one of the functions, or click on one of the functions
-to select. You also narrow down the set of functions by typing, as below:
+We call this feature "Intellisense". Continue typing to select one of the functions, 
+or click on one of the functions to select. You also narrow down the set of functions by typing, as below:
 
 ![](/static/mb/js/basicIntell.png)
 
-## Function arguments
+## Function parameter values
 
-You might have noticed that the call `showString` above takes one argument, 
+You might have noticed that the call `showString` above takes one parameter value, 
 the string to be scrolled on the LED screen. There is a second (optional)
-argunment that controls the speed of the scroll. Try this:
+parameter that controls the speed of the scroll. Try this:
 
 ```typescript
 basic.showString("Hello!",50)
 ```
 
-If you don't give a value for an optional argument, where does its value
-come from?
+Intellisense shows all the available parameters for a function. 
 
 ## Left and right parentheses, please!
 
 Whenever you want to call a function, you give the name of the function
 followed by `(` and ending with `)`. Inbetween the left and right
 parentheses go the function arguments.  If a function has zero arguments, you still
-need the parentheses. For example
+need the parentheses in order to call the function. For example
 
 ```typescript
 basic.clearScreen()
+```
+
+It's a syntax error to have a left parenthesis without the "closing" right parenthesis:
+
+```typescript
+basic.clearScreen(
 ```
 
 ### ~button /js/sequence

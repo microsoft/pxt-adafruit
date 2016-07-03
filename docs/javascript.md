@@ -6,10 +6,10 @@ Otherwise, visit the cards below to starting programming JavaScript with the mic
 ```codecard
 [{
   "name": "Calling Functions",
-  "url":"/js/call.md"
+  "url":"/js/call"
 },{
   "name": "Sequencing Commands",
-  "url":"/js/sequence.md"
+  "url":"/js/sequence"
 }
 ]
 ```

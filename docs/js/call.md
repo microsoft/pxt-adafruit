@@ -3,22 +3,28 @@
 The simplest way to get started in JavaScript with your micro:bit is to
 call one of the micro:bit's built-in JavaScript functions. Just like Blocks
 are organized into categories/drawers, the micro:bit functions are organized by
-namespaces.  The `basic` namespace contains a number of very helpful
-functions:
+namespaces, with names corresponding to the drawer names.  
+The `basic` namespace contains a number of very helpful functions:
 
 ```typescript
 basic.showString("Hello!")
 ```
 
-If you want to see all functions available in a namespace, simply type `basic`
-followed by `.`; a list of all the functions will appear. 
+If you want to see all functions available in the `basic` namespace, simply type `basic`
+followed by `.` and a list of all the functions will appear. 
 
 ![](/static/mb/js/basicFuns.png)
 
-We call this feature "Intellisense". Continue typing to select one of the functions, 
+This feature is known as "Intellisense". Continue typing to select one of the functions, 
 or click on one of the functions to select. You also narrow down the set of functions by typing, as below:
 
 ![](/static/mb/js/basicIntell.png)
+
+## ~ hint
+You can type anything to see what Intellisense will find for you. Here's an example
+of what happens when you type the word `for`:
+![](/static/mb/js/forIntell.png)
+## ~
 
 ## Function parameter values
 

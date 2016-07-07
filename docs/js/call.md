@@ -20,11 +20,9 @@ or click on one of the functions to select. You also narrow down the set of func
 
 ![](/static/mb/js/basicIntell.png)
 
-## ~ hint
 You can type anything to see what Intellisense will find for you. Here's an example
 of what happens when you type the word `for`:
 ![](/static/mb/js/forIntell.png)
-## ~
 
 ## Function parameter values
 

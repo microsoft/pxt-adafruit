@@ -11,7 +11,7 @@ serial.writeLine("");
 
 * `line` is the [string](/reference/types/string) to write to the serial port
 
-### Example
+### Example: simple serial
 
 This program writes the word `BOFFO` to the serial port repeatedly.
 
@@ -47,4 +47,5 @@ basic.forever(() => {
 ### See also
 
 [serial](/device/serial),
+[serial write number](/reference/serial/write-number),
 [serial write value](/reference/serial/write-value)

@@ -9,7 +9,7 @@ serial.writeLine("");
 
 ### Parameters
 
-* `line` is the [string](/reference/types/string) to write to the serial port
+* `text` is the [string](/reference/types/string) to write to the serial port
 
 ### Example: simple serial
 
@@ -48,4 +48,5 @@ basic.forever(() => {
 
 [serial](/device/serial),
 [serial write number](/reference/serial/write-number),
+[serial write string](/reference/serial/write-string),
 [serial write value](/reference/serial/write-value)

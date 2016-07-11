@@ -6,6 +6,14 @@ Write a name/value pair and a newline character (`\r\n`) to the [serial](/device
 serial.writeValue("x", 0);
 ```
 
+### Parameters
+
+* `name` is the [string](/reference/types/string) to write to the serial port
+* `value` is the [number](/reference/types/number) to write to the serial port
+
+
+
+
 ### Example: streaming data
 
 Every 10 seconds, the example below sends the temperature and light level

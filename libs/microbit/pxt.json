@@ -36,6 +36,7 @@
     "public": true,
     "dependencies": {},
     "yotta": {
+        "configIsJustDefaults": true,
         "config": {
             "microbit-dal": {
                 "bluetooth": {

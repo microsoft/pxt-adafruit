@@ -33,9 +33,16 @@ If you are using the Google Chrome browser, you can use our extension to get ser
 
 ### Windows
 
-You must install a device driver (for the computer to recognize the serial interface of the micro:bit); then, you must also install a terminal emulator (which is going to connect to the micro:bit and read its output). Here's how to do it:
+You must install a device driver (for the computer to recognize the
+serial interface of the micro:bit); then, you must also install a
+terminal emulator (which is going to connect to the micro:bit and read
+its output).
 
-* Follow instructions at https://developer.mbed.org/handbook/Windows-serial-configuration in order to install the device driver
+* Follow the instructions at
+  https://developer.mbed.org/handbook/Windows-serial-configuration to
+  install the device driver.
+
+* Instructions for installing a terminal emulator are below.
 
 #### Windows > Tera Term
 
@@ -66,14 +73,16 @@ If you prefer another terminal emulator (such as [PuTTY](http://www.putty.org/))
 
 ### Linux
 
-(Untested).
+* Install the program `screen` if it is not already installed.
+* Plug in the micro:bit.
+* Open a terminal.
+* Find which device node the micro:bit was assigned to with the command `ls /dev/ttyACM*`.
+* If it was `/dev/ttyACM0`, type the command `screen /dev/ttyACM0 115200`. If it was some other device node,
+  use that one in the command instead. **Note:** You may need root access to run `screen`
+  successfully. You can probably use the command `sudo` like this: `sudo screen /dev/ttyACM0 115200`.
+* To exit `screen`, type `Ctrl-A` `Ctrl-D`.
 
-* Plug in the micro:bit
-* Open a terminal
-* `dmesg | tail` will show you which `/dev/` node the micro:bit was assigned (e.g. `/dev/ttyUSB0`)
-* Then, do: `screen /dev/ttyUSB0 115200` (install the `screen` program if you don't have it). To exit, run `Ctrl-A` `Ctrl-D`.
-
-Alternative programs include minicom, etc.
+Alternative programs include `minicom` and so on.
 
 ### Mac OS
 

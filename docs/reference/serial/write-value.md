@@ -1,14 +1,23 @@
 # Write Value
 
-Writes name/value pair and a new line character (`\r\n`) to [serial](/device/serial).
+Write a name/value pair and a newline character (`\r\n`) to the [serial](/device/serial) port.
 
 ```sig
 serial.writeValue("x", 0);
 ```
 
+### Parameters
+
+* `name` is the [string](/reference/types/string) to write to the serial port
+* `value` is the [number](/reference/types/number) to write to the serial port
+
+
+
+
 ### Example: streaming data
 
-The sample below sends the temperature and light level every 10 seconds.
+Every 10 seconds, the example below sends the temperature and light level
+to the serial port.
 
 ```blocks
 basic.forever(() => {
@@ -18,19 +27,17 @@ basic.forever(() => {
 })
 ```
 
-### Plot bar graph does serial!
+#### ~hint
 
-If you use the `led.plotBarGraph` function, it automatically writes the value to the serial as well.
+The [send value](/reference/radio/send-value) function broadcasts
+string/number pairs.  You can use a second micro:bit to receive them,
+and then send them directly to the serial port with ``write value``.
 
-```blocks
-basic.forever(() => {
-    led.plotBarGraph(input.lightLevel(), 255)
-    basic.pause(10000);
-})
-```
-
+#### ~
 
 ### See also
 
-[serial](/device/serial), [write line](/reference/serial/write-line)
-
+[serial](/device/serial),
+[serial write line](/reference/serial/write-line),
+[serial write number](/reference/serial/write-number),
+[send value](/reference/radio/send-value)

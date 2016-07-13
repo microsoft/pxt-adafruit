@@ -11,6 +11,7 @@ item.isTouching(null);
 
 ### Parameters
 
+* a **sprite** you are checking
 * another **sprite** that might be touching the one you are checking
 
 ### Returns
@@ -35,5 +36,6 @@ if (matter.isTouching(antimatter)) {
 
 ### See also
 
+[create sprite](/reference/game/create-sprite),
 [touching edge](/reference/game/touching-edge),
 [if on edge, bounce](/reference/game/if-on-edge-bounce)

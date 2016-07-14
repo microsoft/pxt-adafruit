@@ -35,7 +35,7 @@ Learn about about the [hardware components](/device) of the micro:bit to make th
 
 ## Programming: Blocks or JavaScript
 
-The student can program the BBC micro:bit using [Blocks](/blocks) or [JavaScript](/javascript), via the [micro:bit APIs](/reference):
+You can program the micro:bit using [Blocks](/blocks) or [JavaScript](/javascript), via the [micro:bit APIs](/reference):
 
 ```blocks
 basic.showString("Hi!");
@@ -43,21 +43,19 @@ basic.showString("Hi!");
 
 ## Compile and Flash: Your Program!
 
-When a user has her code ready, she can connect her BBC micro:bit to a computer via a USB cable, so it appears as a mounted drive (named MICROBIT). 
+When you have your code ready, you connect your micro:bit to a computer via a USB cable, so it appears as a mounted drive (named MICROBIT). 
 
-Compilation to ARM thumb machine code from [Blocks](/blocks) or [JavaScript](/javascript) happens in the browser.
-
-The student is prompted to save the ARM binary program to a file, which she then simply drags to the micro:bit mounted drive, 
-which flashes the micro:bit device with the new program.
+Compilation to ARM thumb machine code from [Blocks](/blocks) or [JavaScript](/javascript) happens in the browser. You save the ARM binary 
+program to a file, which you then copy to the micro:bit drive, which flashes the micro:bit device with the new program.
 
 ## Simulator: Test Your Code
 
-Before a student compiles her code for the micro:bit, she can run it using the micro:bit simulator, all within the confines of a web browser. 
+You can run your code using the micro:bit simulator, all within the confines of a web browser. 
 The simulator has support for the LED screen, buttons, as well as compass, accelerometer, and digital I/O pins.
 
 ## C++ Runtime
 
-The [C++ BBC micro:bit runtime](http://lancaster-university.github.io/microbit-docs/), created at [Lancaster University](http://www.lancaster.ac.uk/), provides access to the hardware functions of the micro:bit, 
+The [C++ micro:bit runtime](http://lancaster-university.github.io/microbit-docs/), created at [Lancaster University](http://www.lancaster.ac.uk/), provides access to the hardware functions of the micro:bit, 
 as well as a set of helper functions (such as displaying a number/image/string on the LED screen). 
 
 The [micro:bit library](/reference) mirrors the functions of the C++ library. 
@@ -65,4 +63,4 @@ When code is compiled to ARM machine code, the calls to JavaScript micro:bit fun
 
 ## Open Source
 
-The editor for the BBC micro:bit is [open source](/open-source) on GitHub. Contributors are welcome!
+The code for the micro:bit is [open source](/open-source) on GitHub. Contributors are welcome!

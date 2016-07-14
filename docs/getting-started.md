@@ -2,7 +2,7 @@
 
 ## ~avatar
 
-Are you ready to build cool BBC micro:bit programs?
+Are you ready to build cool micro:bit programs?
 
 Here are some challenges for you. Arrange the blocks in the editor
 to make real programs that work!

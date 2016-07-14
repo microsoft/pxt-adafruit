@@ -1,6 +1,6 @@
 # Device
 
-All the bits and pieces that make up your BBC micro:bit
+All the bits and pieces that make up the BBC micro:bit
 
 ![](/static/mb/device-0.png)
 
@@ -77,7 +77,7 @@ You can attach an external device such as a motor to these and power it using th
 
 ### Serial Communication
 
-The BBC micro:bit can send an receive data via [serial communication](/device/serial). The serial data can be transfered via USB or BLE.
+The micro:bit can send an receive data via [serial communication](/device/serial). The serial data can be transfered via USB or BLE.
 
 ### Bluetooth Low Energy (BLE) Antenna
 

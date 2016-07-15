@@ -74,7 +74,7 @@ namespace neopixel {
         
         /**
          * Shift LEDs forward and clear with zeros.
-         * @params off number of pixels to shift forward, eg: 1
+         * @param off number of pixels to shift forward, eg: 1
          */
         //% blockId="neopixel_shift" block="%strip|shift pixels forward by %off" blockGap=8
         //% weight=40
@@ -84,7 +84,7 @@ namespace neopixel {
 
         /**
          * Rotate LEDs forward.
-         * @params off number of pixels to rotate forward, eg: 1
+         * @param off number of pixels to rotate forward, eg: 1
          */
         //% blockId="neopixel_rotate" block="%strip|rotate pixels forward by %off" blockGap=8
         //% weight=39
@@ -104,8 +104,8 @@ namespace neopixel {
 
     /**
      * Create a new NeoPixel driver for `numleds` LEDs.
-     * @params pin the pin where the neopixel is connected.
-     * @params numleds number of leds in the strip, eg: 24,30,60,64
+     * @param pin the pin where the neopixel is connected.
+     * @param numleds number of leds in the strip, eg: 24,30,60,64
      */
     //% blockId="neopixel_create" block="neopixel create|at pin %pin|with %numleds leds"
     //% weight=90

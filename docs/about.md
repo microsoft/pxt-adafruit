@@ -31,7 +31,7 @@ Just like Arduino, the micro:bit can be connected to and interact with sensors, 
 
 ## Hardware: The Device
 
-Learn about about the [hardware components](/device) of the micro:bit to make the most of it!
+Learn about the [hardware components](/device) of the micro:bit to make the most of it!
 
 ## Programming: Blocks or JavaScript
 

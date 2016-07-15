@@ -118,6 +118,10 @@
             {
                 "name": "Streaming Data",
                 "path": "/streaming"
+            },
+            {
+                "name": "The Device",
+                "path": "/device"
             }
         ],
         "sideDoc": "getting-started"

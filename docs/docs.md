@@ -1,36 +1,26 @@
 # Documentation
 
-```sim
-basic.forever(() => {
-  basic.showString("DOCS ");
-})
-input.onButtonPressed(Button.A, () => {
-    led.stopAnimation();
-    basic.showLeds(`
-. . . . .
-. # . # .
-. . . . .
-# . . . #
-. # # # .`);
-});
-input.onButtonPressed(Button.B, () => {
-    led.stopAnimation();
-    basic.showLeds(`
-. # . # .
-# . # . #
-# . . . #
-. # . # .
-. . # . .`);
-});
-``` 
+### Things to do
 
-* **[getting started](/getting-started)**
-* Get started with [projects](/projects)
-* Browse the [micro:bit APIs](/reference)
-* Learn more about the [micro:bit device](/device)
-* Frequently Asked Question [faq](/faq)
-* Follow up with the [release notes](/release-notes)
+* **[Getting Started](/getting-started)**
+* [Ten projects](/projects)
+
+### Micro:bit reference
+
+* [The micro:bit APIs](/reference)
+* [The micro:bit device](/device)
+
+### Language and data reference
+
+* [Blocks language](/blocks)
+* [JavaScript language](/javascript)
+* [Streaming data](/streaming)
+
+### More questions?
+
+* [Frequently Asked Question](/faq)
+* [Release notes](/release-notes)
 
 ### Developers
 
-* Learn about [packages](/packages) (possibly using C++ or ARM thumb)
+* Learn about [packages](/packages)

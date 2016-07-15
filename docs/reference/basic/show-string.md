@@ -9,7 +9,7 @@ basic.showString("Hello!")
 ### Parameters
 
 * `text` is a [String](/reference/types/string). It can contain letters, numbers, and punctuation.
-* `ms` is an optional [Number](/reference/types/number). It means the number of milliseconds before sliding the [String](/reference/types/string) left by one LED each time. Bigger intervals make the sliding slower.
+* `interval` is an optional [Number](/reference/types/number). It means the number of milliseconds before sliding the [String](/reference/types/string) left by one LED each time. Bigger intervals make the sliding slower.
 
 ### Examples:
 

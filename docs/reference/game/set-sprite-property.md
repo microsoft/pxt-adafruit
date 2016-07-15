@@ -1,6 +1,6 @@
 # Set Sprite Property
 
-Make a sprite store the kind of [number](/reference/types/number) you say.
+Make a [sprite](/reference/game/create-sprite) store the kind of [number](/reference/types/number) you say.
 
 ```sig
 let item: game.LedSprite = null;

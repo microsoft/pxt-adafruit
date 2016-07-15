@@ -19,7 +19,7 @@ A **g** is as much acceleration as you get from Earth's gravity.
 
 ### Parameters
 
-* which direction you are checking for acceleration, either `Dimension.X` (left and right), `Dimension.Y` (forward and backward), or `Dimension.Z` (up and down)
+* ``dimension`` means which direction you are checking for acceleration, either `Dimension.X` (left and right), `Dimension.Y` (forward and backward), or `Dimension.Z` (up and down)
 
 ### Returns
 

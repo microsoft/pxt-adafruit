@@ -15,7 +15,10 @@ The micro:bit measures magnetic force with **microteslas**.
 
 ### Parameters
 
-* a [string](/reference/types/string) that says which direction the micro:bit should measure magnetic force in: either `x` (the left-right direction), `y` (the forward/backward direction), or `z` (the up/down direction)
+* ``dimension`` means which direction the micro:bit should measure
+  magnetic force in: either `Dimension.X` (the left-right direction),
+  `Dimension.Y` (the forward/backward direction), or `Dimension.Z`
+  (the up/down direction)
 
 ### Returns
 

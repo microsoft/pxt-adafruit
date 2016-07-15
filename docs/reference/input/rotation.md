@@ -15,7 +15,7 @@ check how the micro:bit is moving.
 
 ### Parameters
 
-* which direction you are checking: `Rotation.Pitch` (up and down) or `Rotation.Roll` (left and right)
+* ``kind`` means which direction you are checking: `Rotation.Pitch` (up and down) or `Rotation.Roll` (left and right)
 
 ### Returns
 

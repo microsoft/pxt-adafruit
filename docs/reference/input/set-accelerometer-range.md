@@ -5,12 +5,16 @@ Set up the part of the micro:bit that measures
 is speeding up or slowing down), in case you need to measure high
 or low acceleration.
 
+```sig
+input.setAccelerometerRange(AcceleratorRange.OneG);
+```
+
 ### Parameters
 
-* the biggest number of gravities of acceleration you will be
-  measuring (either 1G, 2G, 4G, or 8G).  Any bigger numbers will be
-  ignored by your micro:bit, both when you are picking a number of
-  gravities, and when you are measuring acceleration.
+* ``range`` means the biggest number of gravities of acceleration you
+  will be measuring (either `1g`, `2g`, `4g`, or `8g`).  Any bigger numbers
+  will be ignored by your micro:bit, both when you are picking a
+  number of gravities, and when you are measuring acceleration.
 
 ### Example
 

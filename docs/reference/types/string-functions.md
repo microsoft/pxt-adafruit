@@ -1,3 +1,3 @@
-## String functions
+# String functions
 
 TBD

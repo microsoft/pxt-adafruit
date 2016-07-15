@@ -1,4 +1,4 @@
-## Variables
+# Variables
 
 [Assign](/blocks/variables/assign) (set) a variable's value
 

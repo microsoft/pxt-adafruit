@@ -29,7 +29,8 @@ Unfortunately, using the serial library requires quite a bit of a setup.
 If you are using the Google Chrome browser, you can use our extension to get serial data streaming in the editor.
 
 * Install the [Extension for BBC micro:bit](https://chrome.google.com/webstore/detail/extension-for-bbc-microbi/cihhkhnngbjlhahcfmhekmbnnjcjdbge?hl=en-US) on the Chrome Web Store.
-* Restart Chrome and open the web editor.
+* Restart Chrome and open the [web editor](https://codethemicrobit.com)
+* The serial data will show below the simulator
 
 ### Windows
 

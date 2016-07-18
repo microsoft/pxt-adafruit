@@ -9,13 +9,16 @@ led.setBrightness(121)
 
 ### Parameters
 
-* a [number](/reference/types/number) that means how bright the screen is when it is turned on, from `0` (darkest) to `255` (brightest). For example, the number `127` means the screen is halfway bright when it is turned on.
+* ``value`` is a [number](/reference/types/number) that means how
+  bright the screen is when it is turned on, from `0` (darkest) to
+  `255` (brightest). For example, the number `127` means the screen is
+  halfway bright when it is turned on.
 
 ### Example: change brightness
 
-This program makes the screen brightness 100% (255).  Then it turns on
+This program makes the screen brightness 100% (`255`).  Then it turns on
 the center LED (`2, 2`), waits for one second, and then sets the screen
-brightness to 50% (128):
+brightness to 50% (`128`):
 
 ```blocks
 led.setBrightness(255)
@@ -27,4 +30,3 @@ led.setBrightness(led.brightness() / 2)
 ### See also
 
 [brightness](/reference/led/brightness), [fade in](/reference/led/fade-in), [fade out](/reference/led/fade-out), [LED screen](/device/screen)
-

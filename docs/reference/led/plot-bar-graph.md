@@ -9,8 +9,13 @@ led.plotBarGraph(2, 20);
 
 ### Parameters
 
-* `value` is a [Number](/reference/types/number) that means what you are measuring or trying to show. For example, if you are measuring the temperature of ice with the BBC micro:bit, `value` might be 0 because the temperature might be 0 degrees centigrade.
-* `high` is a [Number](/reference/types/number) that means the highest possible number that the `value` parameter can be. This number is also the tallest that the lines in the bar chart can be.
+* ``value`` is a [number](/reference/types/number) that means what you
+  are measuring or trying to show. For example, if you are measuring
+  the temperature of ice with the BBC micro:bit, ``value`` might be `0`
+  because the temperature might be 0 degrees centigrade.
+* ``high`` is a [number](/reference/types/number) that means the highest
+  possible number that the ``value`` parameter can be. This number is
+  also the tallest that the lines in the bar chart can be.
 
 ### Example: chart acceleration
 

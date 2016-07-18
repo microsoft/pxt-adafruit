@@ -12,7 +12,9 @@ music.rest(400)
 
 ### Parameters
 
-* a [number](/reference/types/number) saying how many milliseconds the micro:bit should rest. One second is 1000 milliseconds.
+* ``ms`` is a [number](/reference/types/number) saying how many
+  milliseconds the micro:bit should rest. One second is 1000
+  milliseconds.
 
 ## Example
 

@@ -8,7 +8,8 @@ music.tempo()
 
 ### Returns
 
-* a [Number](/reference/types/number) that means the bpm (beats per minute, or number of beats in a minute of the music that the micro:bit is playing).
+* a [number](/reference/types/number) that means the beats per minute (number of
+  beats in a minute of the music that the micro:bit is playing).
 
 ### See also
 

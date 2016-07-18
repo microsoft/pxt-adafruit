@@ -11,7 +11,7 @@ This function only works on the micro:bit and in some browsers.
 
 ### Parameters
 
-* a [number](/reference/types/number) that means the bpm you want (beats per minute, or number of beats in a minute of the music that the micro:bit is playing).
+* ``bpm`` is a [number](/reference/types/number) that means the beats per minute you want (the number of beats in a minute of the music that the micro:bit is playing).
 
 ### See also
 

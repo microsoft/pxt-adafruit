@@ -13,8 +13,8 @@ music.ringTone(440)
 
 ### Parameters
 
-* a [number](/reference/types/number) that says the tone's
-**frequency** (how high-pitched or low-pitched the tone is).  This
+* ``frequency`` is a [number](/reference/types/number) that says
+how high-pitched or low-pitched the tone is.  This
 number is in **Hz** (**Hertz**), which is a measurement of frequency
 or pitch.
 

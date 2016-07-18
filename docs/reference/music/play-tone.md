@@ -12,8 +12,8 @@ music.playTone(440, 120)
 
 ### Parameters
 
-* `Hz` is the [Number](/reference/types/number) of Hertz (the frequency, how high or low the tone is).
-* `ms` is the [Number](/reference/types/number) of milliseconds that the tone lasts.
+* ``frequency`` is the [number](/reference/types/number) of Hertz (how high or low the tone is).
+* ``ms`` is the [number](/reference/types/number) of milliseconds that the tone lasts
 
 ## Example
 

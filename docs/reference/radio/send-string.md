@@ -8,18 +8,17 @@ radio.sendString("Hello!")
 
 ### Parameters
 
-* `text` is a [String](/reference/types/string) to send by radio.
+* `msg` is a [string](/reference/types/string) to send by radio.
 
 ### Simulator
 
 This function only works on the micro:bit, not in browsers.
 
-
-
 ### Example: Two-way radio
 
-If you load this program onto two or more micro:bits, you can send a code word from one of them to the others by pressing button `A`.
-The other micro:bits will receive the code word and then show it.
+If you load this program onto two or more micro:bits, you can send a
+code word from one of them to the others by pressing button `A`.  The
+other micro:bits will receive the code word and then show it.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {

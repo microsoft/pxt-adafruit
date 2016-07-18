@@ -1,10 +1,14 @@
 # Send Number
 
-Broadcast a number to other micro:bits connected via ``radio``.
+Broadcast a [number](/reference/types/number) to other micro:bits connected via ``radio``.
+
+```sig
+radio.sendNumber(0);
+```
 
 ### Parameters
 
-* num - a number to send.
+* ``value`` - a [number](/reference/types/number) to send.
 
 ### Simulator
 
@@ -12,9 +16,9 @@ This function only works on the micro:bit, not in browsers.
 
 ### Example: Broadcasting acceleration
 
-This example broadcasts the value of your micro:bit's ``acceleration`` in the `x` direction 
-(left and right) to other micro:bits.
-This kind of program might be useful in a model car or model rocket.
+This example broadcasts the value of your micro:bit's ``acceleration``
+in the `x` direction (left and right) to other micro:bits.  This kind
+of program might be useful in a model car or model rocket.
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
@@ -39,4 +43,3 @@ basic.forever(() => {
 ### See also
 
 [receive number](/reference/radio/receive-number), [on data received](/reference/radio/on-data-received)
-

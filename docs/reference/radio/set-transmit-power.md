@@ -8,6 +8,10 @@ The scientific name for the strength of the ``radio`` signal is
 can be measured as -30 dBm, and a strength of `7` can be
 measured as +4 dBm.
 
+```sig
+radio.setTransmitPower(7);
+```
+
 ### Range
    
 If your micro:bit is sending with a strength of `7`, and you are in
@@ -16,7 +20,7 @@ can reach as far as 70 meters (about 230 feet).
 
 ### Parameters
 
-* a [number](/reference/types/number) between ``0`` and ``7`` that
+* ``power`` is a [number](/reference/types/number) between ``0`` and ``7`` that
 means how strong the signal is.
 
 ### Simulator

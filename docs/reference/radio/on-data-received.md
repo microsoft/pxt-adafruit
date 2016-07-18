@@ -3,9 +3,10 @@
 Run part of a program when the micro:bit receives a
 [number](/reference/types/number) or [string](/reference/types/string) over ``radio``.
 
-### Parameters
 
-* the part of the program to run when the micro:bit receives information over ``radio``.
+```sig
+radio.onDataReceived(() => { });
+```
 
 ### Simulator
 

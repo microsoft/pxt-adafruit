@@ -1,15 +1,18 @@
 # Write Value To Serial
 
 Writes the full data received data  via ``radio`` to serial in JSON format.   
+
 **Note** - This method only works for [send number](/reference/radio/send-number) and [send value](/reference/radio/send-value). It does not work for [send string](/reference/radio/send-string) (although a string can be sent with [send value](/reference/radio/send-value)).   
+
+```sig
+radio.writeValueToSerial();
+```
 
 ## Data received format
 The format for received data printed to serial is as follows    
 - [send number](/reference/radio/send-number) - ```{v:ValueSent,t:MicrobitTimeAlive,s:Unused}```
 - [send value](/reference/radio/send-number) - ```{v:Value,t:MicrobitTimeAlive,s:Unused,n:"Name"}```
 - [send string](/reference/radio/send-string) - ```{}``` (currently unavailable)
-
-
 
 ### Simulator
 

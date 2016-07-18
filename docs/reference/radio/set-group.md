@@ -10,6 +10,10 @@ function, it will figure out its own group ID by itself.  If you load
 the very same program onto two different micro:bits, they will be able
 to talk to each other because they will have the same group ID.
 
+```sig
+radio.setGroup(0);
+```
+
 ### Parameters
 
 * ``id`` is a [number](/reference/types/number) from ``0`` to ``255``.

@@ -2,10 +2,14 @@
 
 Send a [string]() and [number]() together by ``radio`` to other micro:bits.
 
+```sig
+radio.sendValue("data", 0);
+```
+
 ### Parameters
 
-* a [string](/reference/types/string) to send by radio
-* a [number](/reference/types/number) to send by radio
+* ``name`` is a [string](/reference/types/string) to send by radio
+* ``value`` a [number](/reference/types/number) to send by radio
 
 ### Simulator
 

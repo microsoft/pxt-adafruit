@@ -8,6 +8,10 @@ the last time it ran the
 [receive number](/reference/radio/receive-number) function. That means
 it needs to run **receive number** first.
 
+```sig
+radio.receivedSignalStrength();
+```
+
 ### Returns
 
 * a [number](/reference/types/number) between `255` and `0` that means

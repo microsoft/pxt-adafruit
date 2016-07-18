@@ -2,6 +2,10 @@
 
 End the game and show the score.
 
+```sig
+game.gameOver();
+```
+
 ### Example
 
 This program asks you to pick a button.

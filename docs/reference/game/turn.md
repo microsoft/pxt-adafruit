@@ -2,10 +2,15 @@
 
 Turn the sprite as much as you say in the direction you say.
 
+```sig
+let item: game.LedSprite = null;
+item.turn(Direction.Right, 45);
+```
+
 ### Parameters
 
-* ``turn`` is a choice whether the sprite should turn **left** or **right**
-* ``by`` is a [number](/reference/types/number) that means how much the sprite should turn.
+* a choice whether the sprite should turn **left** or **right**
+* a [number](/reference/types/number) that means how much the sprite should turn.
   This number is in **degrees**, so a straight left or right turn is 90 degrees.
 
 ### Example

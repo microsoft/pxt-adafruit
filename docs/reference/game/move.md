@@ -2,9 +2,14 @@
 
 Move the sprite the number of LEDs you say.
 
+```sig
+let item: game.LedSprite = null;
+item.move(1);
+```
+
 ### Parameters
 
-* ``move by`` is a [number](/reference/types/number) that means how many LEDs the sprite should move
+* a [number](/reference/types/number) that means how many LEDs the sprite should move
 
 ### Example
 

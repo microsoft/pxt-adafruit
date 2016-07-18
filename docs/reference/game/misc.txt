@@ -1,0 +1,54 @@
+
+### Score
+
+When a player achieves a goal, you can increase the game score
+
+* add score points to the current score
+
+```
+export function addScore(points: number)
+```
+
+* get the current score value
+
+```
+export function score() : number
+```
+
+
+### Score
+
+When a player achieves a goal, you can increase the game score
+
+* add score points to the current score
+
+```
+export function addScore(points: number)
+```
+
+* set the current score to a particular value.
+
+```
+export function setScore(value: number)
+```
+
+* get the current score value
+
+```
+export function score() : number
+
+
+
+```
+
+### Countdown
+
+If your game has a time limit, you can start a countdown in which case `game->current time` returns the remaining time.
+
+* start a countdown with the maximum duration of the game in milliseconds.
+
+```
+export function startCountdown(ms: number)
+```
+
+

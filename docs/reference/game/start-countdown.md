@@ -8,7 +8,7 @@ game.startCountdown(1000)
 
 ### Parameters
 
-* a [number](/reference/types/number) that means how many milliseconds to count down (one second is 1000 milliseconds)
+* ``ms`` is a [number](/reference/types/number) that says how many milliseconds to count down (one second is 1000 milliseconds)
 
 ### Examples
 

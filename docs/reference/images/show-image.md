@@ -4,6 +4,11 @@ Show an [image](/reference/images/image) (picture) on the
 [LED screen](/device/screen).  After the micro:bit shows an image, it
 will pause for 400 milliseconds (1000 milliseconds is one second).
 
+```sig
+let item: Image = null;
+item.showImage(0);
+```
+
 ### Parameters
 
 * an [image](/reference/images/image) (picture). It is usually a square with five LEDs on a side, but it might be wider. 

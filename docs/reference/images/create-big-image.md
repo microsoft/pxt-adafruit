@@ -4,7 +4,7 @@ Make a big [image](/reference/images/image) (picture) for the micro:bit
 [LED screen](/device/screen). The big image made of two squares.
 Each of the squares is five LEDs on a side, like a regular image.
 
-```blocks
+```sig
 images.createBigImage(`
     . . # . .   . . # . .
     . # # # .   . . # . .
@@ -13,6 +13,12 @@ images.createBigImage(`
     . . # . .   . . # . .
     `);
 ```
+
+### Parameters
+
+* ``leds`` is a [string](/reference/types/string) that says which LEDs
+on the screen should be on and which should be off.
+
 
 ### Example: Flip-flopping arrow
 

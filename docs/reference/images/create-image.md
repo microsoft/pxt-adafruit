@@ -13,6 +13,11 @@ images.createImage(`
 `)
 ```
 
+### Parameters
+
+* ``leds`` is a [string](/reference/types/string) that says which LEDs
+on the screen should be on and which should be off.
+
 ### Example: Flip-flopping arrow
 
 If you press button `A`, this program will make a picture of an

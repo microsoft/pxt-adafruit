@@ -3,9 +3,14 @@
 Scroll (slide) an [image](/reference/images/image) (picture) from one
 side to the other of the [LED screen](/device/screen).
 
+```sig
+let item: Image = null;
+item.scrollImage(5, 200);
+```
+
 ### Parameters
 
-* ``offset`` is a [number](/reference/types/number) that means
+* a [number](/reference/types/number) that means
   how many LEDs to scroll at a time, from right to left or
   left to right. If you use a positive number like `2`, the image
   will scroll from the right side of the screen to the left.
@@ -15,7 +20,7 @@ side to the other of the [LED screen](/device/screen).
   image. It is a square with five LEDs on a side). This is
   useful for **animation**.
 
-* ``interval (ms)`` is a [number](/reference/types/number) that means
+* a [number](/reference/types/number) that means
   how many milliseconds to wait before scrolling the amount that
   ``offset`` says. (1000 milliseconds is one second.) The bigger you
   make this number, the slower the image will scroll.

@@ -16,7 +16,7 @@ Please read the [page about pins](/device/pins) carefully.
 
 ### Parameters
 
-* a [string](/reference/types/string) that stores the name of the pin (``P0``, ``P1``, or ``P2``, up through ``P20``)
+* ``name`` is a [string](/reference/types/string) that stores the name of the pin (``P0``, ``P1``, or ``P2``, up through ``P20``)
 
 ### Returns
 

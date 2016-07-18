@@ -10,8 +10,8 @@ pins.onPulsed(DigitalPin.P0, PulseValue.High, () => { });
 
 ### Parameters
 
-* ``pin``: The micro:bit hardware pin to configure (``P0`` through ``P20``)
-* ``pulsed``: Which state will cause the associated block to execute (**High** or **Low**)
+* ``name``: The micro:bit hardware pin to configure (``P0`` through ``P20``)
+* ``pulse``: Which state will cause the associated block to execute (**High** or **Low**)
 
 ### Example
 

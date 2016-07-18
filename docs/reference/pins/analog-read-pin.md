@@ -9,7 +9,7 @@ pins.analogReadPin(AnalogPin.P0)
 
 ### Parameters
 
-* a [string](/reference/types/string) with the name of the pin
+* ``name`` is a [string](/reference/types/string) with the name of the pin
   you say (`P0` through `P4`, or `P10`)
 
 ### Returns

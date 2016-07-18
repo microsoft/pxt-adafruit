@@ -17,10 +17,10 @@ pins.map(0, 0, 4, 0, 1023);
 ### Parameters
 
 * ``value``: a [number](/reference/types/number) that specifies the value to map
-* ``from low``: a [number](/reference/types/number)  that specifies the lower bound of the origin interval
-* ``from high``: a [number](/reference/types/number)  that specifies the upper bound of the origin interval
-* ``to low``: a [number](/reference/types/number)  that specifies the lower bound of the target interval
-* ``to high``: a [number](/reference/types/number)  that specifies the upper bound of the target interval
+* ``fromLow``: a [number](/reference/types/number)  that specifies the lower bound of the origin interval
+* ``fromHigh``: a [number](/reference/types/number)  that specifies the upper bound of the origin interval
+* ``toLow``: a [number](/reference/types/number)  that specifies the lower bound of the target interval
+* ``toHigh``: a [number](/reference/types/number)  that specifies the upper bound of the target interval
 
 ## Example
 

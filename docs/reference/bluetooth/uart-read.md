@@ -18,15 +18,15 @@ bluetooth.uartRead("");
 ### Example: Starting the Bluetooth UART service and then reading data received from another device which is terminated by ":" character and then displaying it
 
 ```blocks
-let uart_data = "";
+let uartData = "";
 let connected = 0;
 basic.showString("UART");
 bluetooth.onBluetoothConnected(() => {
     basic.showString("C");
     connected = 1;
     while (connected == 1) {
-        uart_data = bluetooth.uartRead(":");
-        basic.showString(uart_data);
+        uartData = bluetooth.uartRead(":");
+        basic.showString(uartData);
     }
 });
 bluetooth.onBluetoothDisconnected(() => {

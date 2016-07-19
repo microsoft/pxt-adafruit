@@ -41,7 +41,7 @@ Now let's add some more types of instructions for the player to follow. Let's ad
 /**
  * {highlight}
  */
-export function newAction_() {
+export function newAction() {
     action = Math.random(4) // ***
     if (action == 0) {
         basic.showString("PUSH A", 150) // ***

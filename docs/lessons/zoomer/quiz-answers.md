@@ -15,7 +15,7 @@ Write the line of code to measure the acceleration and then store in it a variab
 <br/>
 
 ```blocks
-let accX_ = input.acceleration("x")
+let accX = input.acceleration("x")
 ```
 
 Note: acceleration does not have be measured in the "x" direction. It can also be in the "y" or "z" direction.

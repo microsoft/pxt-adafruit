@@ -86,7 +86,7 @@ Sprite - If the sprite is on the edge, the sprite will bounce
 ![](/static/mb/game-library/if-on-edge-bounce-0.png)
 
 ```
-export function ifOnEdge_Bounce(_this: micro_bitSprites.LedSprite)
+export function ifOnEdgeBounce(_this: micro_bitSprites.LedSprite)
 ```
 
 ### [Change score by](/reference/game/change-score-by)

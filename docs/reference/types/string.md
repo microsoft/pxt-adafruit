@@ -9,7 +9,7 @@ A *String* is a sequence of characters. For the BBC micro:bit, ASCII character c
 ### Create a string variable
 
 ```block
-salutation = "Hello";
+let salutation = "Hello";
 ```
 
 To create a variable that holds a string:
@@ -25,7 +25,7 @@ To create a variable that holds a string:
 Your code should look something like this:
 
 ```block
-salutation = "Hello";
+let salutation = "Hello";
 ```
 
 ### The function `show string`

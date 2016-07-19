@@ -14,7 +14,7 @@ salutation = "Hello";
 
 To create a variable that holds a string:
 
-1. Click `Variables` (as the Block drawer).
+1. Click `Variables` (in the Block drawer).
 
 2. Type a name for your new string variable by clicking the down arrow, then click New Variable. Then type the variable name "salutation"
 

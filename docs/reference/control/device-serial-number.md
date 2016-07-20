@@ -1,6 +1,6 @@
-# Do Something
+# Device Serial Number
 
-Do something.
+Derive a unique, consistent serial number of this device from internal data.
 
 ```sig
 

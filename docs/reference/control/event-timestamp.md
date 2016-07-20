@@ -1,6 +1,6 @@
-# Do Something
+# Event Timestamp
 
-Do something.
+Get the timestamp of the last event executed on the bus
 
 ```sig
 

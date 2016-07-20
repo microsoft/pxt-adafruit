@@ -1,6 +1,6 @@
-# Do Something
+# On Event
 
-Do something.
+Raise an event in the event bus.
 
 ```sig
 

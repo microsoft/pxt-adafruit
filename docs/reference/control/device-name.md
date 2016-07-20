@@ -1,6 +1,6 @@
-# Do Something
+# Device Name
 
-Do something.
+Gets a friendly name for the device derived from the its serial number.
 
 ```sig
 

@@ -1,6 +1,6 @@
-# Do Something
+# Event Value
 
-Do something.
+Get the value of the last event executed on the bus.
 
 ```sig
 

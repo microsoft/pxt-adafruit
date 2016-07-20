@@ -284,7 +284,7 @@ namespace input {
      * Sets the accelerometer sample range in gravities.
      * @param range a value describe the maximum strengh of acceleration measured
      */
-    //% help=input/set-accelerator-range
+    //% help=input/set-accelerometer-range
     //% blockId=device_set_accelerometer_range block="set accelerometer|range %range" icon="\uf135"
     //% weight=5
     void setAccelerometerRange(AcceleratorRange range) {

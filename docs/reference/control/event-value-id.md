@@ -1,32 +1,12 @@
-# Do Something
+# Event Value ID
 
-Do something.
+Return a code representing the type of the event (button click, device gesture, and so on). 
 
 ```sig
-
+control.eventValueId(EventBusValue.MICROBIT_EVT_ANY);
 ```
 
-### Parameters
 
-* ``a``: 
-* ``b``: 
-* ``c``: 
-
-### Returns
-
-
-
-### Example
-
-The following example / This program does something.
-
-```blocks
-
-```
-
-### See also
-
-[bar bas](/reference/foo/bar-bas),
-[bar bas](/reference/foo/bar-bas),
-[bar bas](/reference/foo/bar-bas)
+**This is an advanced API.**  For more information, see the
+[micro:bit runtime messageBus documentation](https://lancaster-university.github.io/microbit-docs/ubit/messageBus/).
 

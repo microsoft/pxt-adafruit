@@ -2,16 +2,13 @@
 
 ## ~avatar
 
-Are you ready to build cool micro:bit programs?
-
 Here are some challenges for you. Arrange the blocks in the editor
 to make real programs that work!
 
 ## ~
 
-Use the **Basic** drawer in the editor (to the left) 
-to drag out and arrange three blocks (two `show leds` and one `forever` block)
-to create this program:
+Use the **Basic** drawer in the editor
+to drag out and arrange three blocks to create this program:
 
 ```blocks
 basic.forever(() => {

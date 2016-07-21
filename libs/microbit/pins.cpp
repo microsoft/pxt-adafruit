@@ -229,7 +229,7 @@ namespace pins {
     * @param name pin to set the pull mode on
     * @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone 
     */
-    //% help=pins/digital-set-pull weight=3
+    //% help=pins/set-pull weight=3
     //% blockId=device_set_pull block="set pull|pin %pin|to %pull"
     void setPull(DigitalPin name, PinPullMode pull) {
         PinMode m = pull == PinPullMode::PullDown 

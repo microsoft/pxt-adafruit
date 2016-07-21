@@ -61,7 +61,7 @@ namespace serial {
     * @param baud the new baud rate. eg: 115200
     */
     //% weight=10
-    //% help=serial/redirect
+    //% help=serial/redirect-to
     //% blockId=serial_redirect block="serial redirect to|TX %tx|RX %rx|at baud rate %rate"
     //% blockExternalInputs=1
     void redirect(SerialPin tx, SerialPin rx, BaudRate rate) {

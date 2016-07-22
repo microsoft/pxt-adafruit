@@ -1,6 +1,6 @@
 # Analog Pitch
 
-Emits a Pulse With Modulation (PWM) signal to the current pitch [pin](/device/pins). Use [analog set pitch pin](/reference/pins/analog-set-pitch-pin) to set the pitch pin.
+Emits a Pulse With Modulation (PWM) signal to the current pitch [pin](/device/pins). Use [analog set pitch pin](/reference/pins/analog-set-pitch-pin) to set the current pitch pin.
 
 ```sig
 pins.analogPitch(440, 300)

@@ -19,7 +19,7 @@ A 'collection' is a group of variables of the same type stored together. A 'coll
 ## 2. Consider the following lines of code.
 
 ```blocks
-let coll = (<string[]>[])
+let coll: string[] = []
 coll.push("puppy")
 coll.push("clock")
 ```
@@ -35,7 +35,7 @@ basic.showString(coll[0], 150)
 ## 3. Consider the following lines of code.
 
 ```blocks
-let coll = (<string[]>[])
+let coll: string[] = []
 coll.push("puppy")
 coll.push("clock")
 coll.push("cat")
@@ -52,7 +52,7 @@ basic.showString(coll[2], 150)
 ## 4. Consider the following line of code.
 
 ```blocks
-let coll = (<string[]>[])
+let coll: string[] = []
 ```
 
 Write the five (5) lines of code that will add the following five words to `data->coll`: puppy, clock, night, cat, cow.
@@ -60,7 +60,8 @@ Write the five (5) lines of code that will add the following five words to `data
 <br/>
 
 ```blocks
-let coll.push("puppy")
+let coll: string[] = []
+coll.push("puppy")
 coll.push("clock")
 coll.push("night")
 coll.push("cat")

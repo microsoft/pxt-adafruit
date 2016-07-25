@@ -69,7 +69,7 @@ namespace radio {
         uint32_t sn = transmitSerialNumber ? microbit_serial_number() : 0;
         uint8_t buf[32];
         uint32_t* buf32 = (uint32_t*)buf;
-        memset(buf, 32, 0);
+        memset(buf, 0, 32);
         buf32[0] = value;                      // 4 bytes: value
         buf32[1] = t; // 4 bytes: running time
         buf32[2] = sn; // 4 bytes: serial number

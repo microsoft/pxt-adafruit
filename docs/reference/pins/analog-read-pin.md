@@ -28,9 +28,7 @@ basic.forever(() => {
 
 #### ~hint
 
-If you are using **analog read pin** with another micro:bit
-running **analog write pin**, it is a good idea to check
-**analog read pin** many times and then take an average.
+If you are using **analog read pin** with another micro:bit running **analog write pin**, then things can get tricky. Remember that the micro:bit that runs **analog set pin** writes 0's and 1's at a very high frequency to achieve an average of the desired value. Sadly, if you try to read that average from another micro:bit, then the micro:bit will either read 0 or 1023. You could try to read a higher number of values (e.g. a million) in a loop, then computer then average. Alternatively, you can plug in a capacitor in-between the two micro:bits.
 
 #### ~
 

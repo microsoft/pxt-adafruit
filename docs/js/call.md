@@ -3,8 +3,8 @@
 The simplest way to get started in JavaScript with your micro:bit is to
 call one of the micro:bit's built-in JavaScript functions. Just like Blocks
 are organized into categories/drawers, the micro:bit functions are organized by
-namespaces, with names corresponding to the drawer names.  
-The `basic` namespace contains a number of very helpful functions:
+namespaces, with names corresponding to the drawer names.  The `basic` namespace 
+contains a number of helpful functions, such as:
 
 ```typescript
 basic.showString("Hello!")

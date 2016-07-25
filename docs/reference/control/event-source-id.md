@@ -1,32 +1,10 @@
-# Do Something
+# Event Source ID
 
-Do something.
+Return a code representing the origin of the event on the bus (button, pin, radio, and so on).
 
 ```sig
-
+control.eventSourceId(EventBusSource.MICROBIT_ID_BUTTON_A);
 ```
 
-### Parameters
-
-* ``a``: 
-* ``b``: 
-* ``c``: 
-
-### Returns
-
-
-
-### Example
-
-The following example / This program does something.
-
-```blocks
-
-```
-
-### See also
-
-[bar bas](/reference/foo/bar-bas),
-[bar bas](/reference/foo/bar-bas),
-[bar bas](/reference/foo/bar-bas)
-
+**This is an advanced API.**  For more information, see the
+[micro:bit runtime messageBus documentation](https://lancaster-university.github.io/microbit-docs/ubit/messageBus/)

@@ -1,0 +1,13 @@
+{
+    "name": "base-test",
+    "description": "Base package for tests",
+    "files": [
+        "main.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "microbit": "*",
+        "microbit-radio": "*"
+    },
+    "installedVersion": "file:."
+}

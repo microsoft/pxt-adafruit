@@ -159,7 +159,7 @@ namespace pins {
     /**
     * Gets the duration of the last pulse in micro-seconds. This function should be called from a ``onPulsed`` handler.
     */
-    //% help=pins/pulse-micros
+    //% help=pins/pulse-duration
     //% blockId=pins_pulse_duration block="pulse duration (µs)"
     //% weight=21
     int pulseDuration() {
@@ -229,7 +229,7 @@ namespace pins {
     * @param name pin to set the pull mode on
     * @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone 
     */
-    //% help=pins/digital-set-pull weight=3
+    //% help=pins/set-pull weight=3
     //% blockId=device_set_pull block="set pull|pin %pin|to %pull"
     void setPull(DigitalPin name, PinPullMode pull) {
         PinMode m = pull == PinPullMode::PullDown 

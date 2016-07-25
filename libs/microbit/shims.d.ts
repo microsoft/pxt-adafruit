@@ -301,7 +301,7 @@ declare namespace input {
      * Sets the accelerometer sample range in gravities.
      * @param range a value describe the maximum strengh of acceleration measured
      */
-    //% help=input/set-accelerator-range
+    //% help=input/set-accelerometer-range
     //% blockId=device_set_accelerometer_range block="set accelerometer|range %range" icon="\uf135"
     //% weight=5 shim=input::setAccelerometerRange
     function setAccelerometerRange(range: AcceleratorRange): void;
@@ -497,7 +497,7 @@ declare namespace pins {
     /**
      * Gets the duration of the last pulse in micro-seconds. This function should be called from a ``onPulsed`` handler.
      */
-    //% help=pins/pulse-micros
+    //% help=pins/pulse-duration
     //% blockId=pins_pulse_duration block="pulse duration (µs)"
     //% weight=21 shim=pins::pulseDuration
     function pulseDuration(): number;
@@ -540,7 +540,7 @@ declare namespace pins {
      * @param name pin to set the pull mode on
      * @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone 
      */
-    //% help=pins/digital-set-pull weight=3
+    //% help=pins/set-pull weight=3
     //% blockId=device_set_pull block="set pull|pin %pin|to %pull" shim=pins::setPull
     function setPull(name: DigitalPin, pull: PinPullMode): void;
 
@@ -592,7 +592,7 @@ declare namespace serial {
      * @param baud the new baud rate. eg: 115200
      */
     //% weight=10
-    //% help=serial/redirect
+    //% help=serial/redirect-to
     //% blockId=serial_redirect block="serial redirect to|TX %tx|RX %rx|at baud rate %rate"
     //% blockExternalInputs=1 shim=serial::redirect
     function redirect(tx: SerialPin, rx: SerialPin, rate: BaudRate): void;

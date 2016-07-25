@@ -42,11 +42,15 @@ followed by a call to `showNumber` that will never execute:
 ```typescript
 while(true) ;  basic.showNumber(1);
 ```
+
+
+### ~hint
 For the micro:bit, we don't allow a program to contain an empty statement, such as shown above. 
 If you really want an empty statement, you need to use curly braces to delimit an empty statement block:
 ```typescript
 while(true) { } basic.showNumber(1);
 ```
+### ~
 
 [Read more](http://inimino.org/~inimino/blog/javascript_semicolons) about semicolons in JavaScript.
 

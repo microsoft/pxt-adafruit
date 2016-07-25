@@ -1,8 +1,11 @@
 ## Operators
 
 The following JavaScript operators are supported for the micro:bit.
+
+### ~hint
 Note that for the micro:bit all arithmetic is performed on integers, rather than floating point.
 This also is true when simulating in the browser.
+### ~
 
 # Assignment, arithmetic and bitwise
 
@@ -22,6 +25,6 @@ This also is true when simulating in the browser.
 * strings, with a few common methods
 * [string templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (`` `x is ${x}` ``)
 
-### ~button /js/controlflow
-NEXT: Control Flow
+### ~button /js/statements
+NEXT: Statements
 ### ~

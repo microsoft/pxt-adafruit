@@ -5,7 +5,7 @@
 Your beginning code should look like this:
 
 ```blocks 
-let coll = new Array<string>
+let coll: string[] = []
 coll.push("puppy")
 coll.push("clock")
 coll.push("night")

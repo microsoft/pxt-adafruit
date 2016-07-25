@@ -1,0 +1,562 @@
+767 snippets compiled to blocks
+110 snippets did not compile to blocks:
+built/docs/snippets/blocks/blocks-logic-boolean-7.ts
+  Cannot read property 'kind' of null
+  Unsupported syntax node: FirstBinaryOperator (generic operator)
+built/docs/snippets/blocks/lessons-bop-it-activity-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/lessons-headbands-activity-1.ts
+  ',' expected.
+  '=' expected.
+built/docs/snippets/blocks/lessons-headbands-quiz-answers-1.ts
+  Unsupported syntax node: ElementAccessExpression (unsupported indexer)
+built/docs/snippets/blocks/lessons-headbands-quiz-answers-3.ts
+  Unsupported syntax node: ElementAccessExpression (unsupported indexer)
+built/docs/snippets/blocks/lessons-headbands-quiz-answers-5.ts
+  ',' expected.
+  '=' expected.
+built/docs/snippets/blocks/lessons-headbands-quiz-answers-6.ts
+  Cannot read property 'kind' of null
+  Unsupported syntax node: ElementAccessExpression (unsupported indexer)
+built/docs/snippets/blocks/lessons-hero-activity-9.ts
+  ',' expected.
+  '=' expected.
+  ';' expected.
+built/docs/snippets/blocks/lessons-spinner-quiz-answers-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/lessons-spinner-quiz-answers-2.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-bluetooth-on-bluetooth-connected-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-bluetooth-on-bluetooth-disconnected-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-bluetooth-start-accelerometer-service-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-bluetooth-start-button-service-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-bluetooth-start-io-pin-service-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-bluetooth-start-led-service-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-bluetooth-start-magnetometer-service-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-bluetooth-start-temperature-service-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-bluetooth-start-uart-service-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-bluetooth-uart-read-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-bluetooth-uart-write-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-raise-alert-to-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-raise-alert-to-2.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-raise-alert-to-3.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-raise-alert-to-4.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-raise-alert-to-5.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-raise-alert-to-6.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-signal-strength-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-camera-to-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-camera-to-2.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-camera-to-3.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-camera-to-4.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-camera-to-5.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-camera-to-6.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-camera-to-7.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-camera-to-8.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-remote-control-to-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-remote-control-to-2.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-remote-control-to-3.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-remote-control-to-4.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-remote-control-to-5.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-remote-control-to-6.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-remote-control-to-7.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-devices-tell-remote-control-to-8.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/blocks/reference-led-plot-leds-1.ts
+  Only 0 . _ (off) and 1 # * (on) are allowed in image literals
+built/docs/snippets/blocks/reference-pins-servo-write-pin-2.ts
+  Cannot read property 'kind' of null
+built/docs/snippets/blocks/reference-types-number-3.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/cards/lessons-lucky-7-tutorial-1.ts
+  unsupported type: any 0x1
+  unsupported type: any 0x1
+built/docs/snippets/cards/reference-bluetooth-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/cards/reference-devices-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/cards/reference-serial-0.ts
+  Cannot read property 'kind' of null
+built/docs/snippets/codecard/javascript-0.ts
+  Unsupported syntax node: ObjectLiteralExpression
+  Unsupported syntax node: ObjectLiteralExpression
+built/docs/snippets/codecard/projects-0.ts
+  Unsupported syntax node: ObjectLiteralExpression
+  Unsupported syntax node: ObjectLiteralExpression
+  Unsupported syntax node: ObjectLiteralExpression
+  Unsupported syntax node: ObjectLiteralExpression
+  Unsupported syntax node: ObjectLiteralExpression
+  Unsupported syntax node: ObjectLiteralExpression
+  Unsupported syntax node: ObjectLiteralExpression
+  Unsupported syntax node: ObjectLiteralExpression
+  Unsupported syntax node: ObjectLiteralExpression
+  Unsupported syntax node: ObjectLiteralExpression
+built/docs/snippets/namespaces/reference-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/package/reference-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-1.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-about-bluetooth-0.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-bluetooth-pairing-0.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-on-bluetooth-connected-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-on-bluetooth-disconnected-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-start-accelerometer-service-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-start-button-service-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-start-io-pin-service-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-start-led-service-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-start-magnetometer-service-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-start-temperature-service-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-start-uart-service-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-uart-read-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-bluetooth-uart-write-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-devices-on-gamepad-button-1.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-devices-on-signal-strength-changed-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-devices-raise-alert-to-7.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-devices-signal-strength-2.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-devices-tell-camera-to-9.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/package/reference-devices-tell-remote-control-to-9.ts
+  Unsupported syntax node: MinusToken (generic operator)
+built/docs/snippets/pre/blocks-variables-var-3.ts
+  Invalid character.
+  Invalid character.
+  Invalid character.
+  ';' expected.
+  ';' expected.
+  ':' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  Unterminated string literal.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  Unterminated template literal.
+built/docs/snippets/pre/device-reactive-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Unsupported syntax node: PlusToken (generic operator)
+built/docs/snippets/pre/device-reactive-2.ts
+  Cannot read property 'kind' of null
+built/docs/snippets/pre/device-reactive-3.ts
+  Cannot read property 'kind' of null
+built/docs/snippets/pre/lessons-bop-it-activity-2.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/pre/lessons-dice-roll-challenges-0.ts
+  Invalid character.
+  Invalid character.
+  Invalid character.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  '(' expected.
+  ')' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  Identifier expected.
+  Invalid character.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Invalid character.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Invalid character.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Invalid character.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Invalid character.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Invalid character.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Identifier expected.
+  Invalid character.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Declaration or statement expected.
+  Unterminated template literal.
+built/docs/snippets/pre/lessons-headbands-activity-0.ts
+  Invalid character.
+  Invalid character.
+  Invalid character.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  ';' expected.
+  Identifier expected.
+  Unterminated template literal.
+built/docs/snippets/pre/packages-0.ts
+  Declaration or statement expected.
+  ';' expected.
+  Expression expected.
+built/docs/snippets/pre/packages-1.ts
+  ';' expected.
+built/docs/snippets/pre/packages-2.ts
+  Unsupported syntax node: SlashToken (generic operator)
+  Unsupported syntax node: SlashToken (generic operator)
+  Unsupported syntax node: SlashToken (generic operator)
+built/docs/snippets/pre/reference-devices-on-signal-strength-changed-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/pre/reference-devices-tell-microphone-to-1.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/pre/reference-devices-tell-microphone-to-2.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/pre/reference-images-pixel-2.ts
+  Cannot read property 'kind' of null
+built/docs/snippets/pre/reference-images-width-2.ts
+  Cannot read property 'kind' of null
+built/docs/snippets/sig/reference-bluetooth-on-bluetooth-connected-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-bluetooth-on-bluetooth-disconnected-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-bluetooth-start-accelerometer-service-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-bluetooth-start-button-service-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-bluetooth-start-io-pin-service-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-bluetooth-start-led-service-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-bluetooth-start-magnetometer-service-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-bluetooth-start-temperature-service-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-bluetooth-start-uart-service-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-bluetooth-uart-read-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-bluetooth-uart-write-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-devices-on-gamepad-button-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-devices-on-signal-strength-changed-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-devices-signal-strength-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-devices-tell-camera-to-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-devices-tell-remote-control-to-0.ts
+  ',' expected.
+built/docs/snippets/sig/reference-images-width-0.ts
+  Cannot read property 'kind' of null
+  unsupported type: any 0x1
+built/docs/snippets/sig/reference-led-plot-leds-0.ts
+  Only 0 . _ (off) and 1 # * (on) are allowed in image literals
+built/docs/snippets/sim/about-0.ts
+  ';' expected.
+built/docs/snippets/typescript/js-call-3.ts
+  ')' expected.

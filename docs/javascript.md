@@ -27,5 +27,10 @@ Visit the cards below to starting programming JavaScript and TypeScript with the
 },{
   "name": "Classes",
   "url": "/js/classes"
-}]
+},{
+  "name": "FAQ",
+  "url": "/js/faq"
+}
+]
+
 ```

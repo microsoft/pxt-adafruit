@@ -1,15 +1,31 @@
-# JavaScript
+# JavaScript and TypeScript
 
-If you already know some JavaScript, you might be interested in [the JavaScript and TypeScript languages](/js/lang).
-Otherwise, visit the cards below to starting programming JavaScript with the micro:bit:
+Visit the cards below to starting programming JavaScript and TypeScript with the micro:bit:
 
 ```codecard
 [{
-  "name": "Calling Functions",
-  "url":"/js/call"
+  "name": "Calling",
+  "url":  "/js/call"
 },{
-  "name": "Sequencing Commands",
-  "url":"/js/sequence"
-}
-]
+  "name": "Sequencing",
+  "url":  "/js/sequence"
+},{
+  "name": "Variables",
+  "url":  "/js/variables"
+},{
+  "name": "Operators",
+  "url": "/js/operators"
+},{
+  "name": "Statements",
+  "url": "/js/statements"
+},{
+  "name": "Functions",
+  "url": "/js/functions"
+},{
+  "name": "Types",
+  "url": "/js/types"
+},{
+  "name": "Classes",
+  "url": "/js/classes"
+}]
 ```

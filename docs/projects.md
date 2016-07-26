@@ -14,7 +14,7 @@ Here are some cool projects that you can build with your micro:bit!
   "imageUrl": "/static/mb/projects/a2-buttons.png"
 },{
   "name": "Love Meter",
-  "url":"/projects/lover-meter",
+  "url":"/projects/love-meter",
   "imageUrl":"/static/mb/projects/a3-pins.png"
 },{
   "name": "Rock Paper Scissors",

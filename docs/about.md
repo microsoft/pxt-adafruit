@@ -38,7 +38,9 @@ Learn about the [hardware components](/device) of the micro:bit to make the most
 You can program the micro:bit using [Blocks](/blocks) or [JavaScript](/javascript), via the [micro:bit APIs](/reference):
 
 ```blocks
-basic.showString("Hi!");
+input.onButtonPressed(Button.A, () => {
+    basic.showString("Hi!");
+})
 ```
 
 ## Compile and Flash: Your Program!

@@ -26,11 +26,13 @@ cases, the semicolon is optional and can be omitted. So both code sequences belo
 legal:
 
 ```typescript
-basic.showNumber(1)  basic.showNumber(2)
+basic.showNumber(1)
+basic.showNumber(2)
 ```
 
 ```typescript
-basic.showNumber(1); basic.showNumber(2);
+basic.showNumber(1); 
+basic.showNumber(2);
 ```
 
 ## The empty statement
@@ -40,7 +42,8 @@ a semicolon in the context where a statement is expected.
 So, the following code is an infinite loop
 followed by a call to `showNumber` that will never execute:
 ```typescript
-while(true) ;  basic.showNumber(1);
+while(true) ;  
+basic.showNumber(1);
 ```
 
 
@@ -48,7 +51,8 @@ while(true) ;  basic.showNumber(1);
 For the micro:bit, we don't allow a program to contain an empty statement, such as shown above. 
 If you really want an empty statement, you need to use curly braces to delimit an empty statement block:
 ```typescript
-while(true) { } basic.showNumber(1);
+while(true) { } 
+basic.showNumber(1);
 ```
 ### ~
 

@@ -47,7 +47,6 @@ Learn how to create a guessing game with **global variables** `var str: "this is
 * **on screen down** [read more...](/functions/on-screen-down)
 * **on screen up** [read more...](/functions/on-screen-up)
 * **math random** : [read more...](/js/math)
-* **game library** [read more...](/js/game-library)
 
 ## Resources
 

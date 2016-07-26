@@ -16,7 +16,7 @@ export function showFrame(img: micro_bit.Image, frame: number)
 
 ### Difference from `plot frame`
 
-The `show frame` function is the same as [plot frame](/reference/image/plot-frame), but contains a built-in delay after the LED screen has been updated (whereas `plot frame` has no built-in delay)
+The `show frame` function is the same as [plot frame](/reference/images/plot-frame), but contains a built-in delay after the LED screen has been updated (whereas `plot frame` has no built-in delay)
 
 ### Example
 

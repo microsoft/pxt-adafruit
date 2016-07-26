@@ -185,7 +185,6 @@ Functions in this category require to be connected to a remote device.
 
 ### Libraries
 
-* [game library](/js/game-library)
 * [serial library](/js/serial-library)
 
 ### ~

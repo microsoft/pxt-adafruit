@@ -35,7 +35,7 @@ basic.showNumber(1);
 basic.showNumber(2);
 ```
 
-## The empty statement
+### The empty statement
 
 In JavaScript, there is the concept of an *empty statement*, which is whitespace followed by
 a semicolon in the context where a statement is expected.

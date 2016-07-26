@@ -231,6 +231,15 @@ declare namespace input {
     function buttonIsPressed(button: Button): boolean;
 
     /**
+     * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
+     * @param name pin used to detect the touch
+     */
+    //% help=input/pin-is-pressed weight=56
+    //% blockId="device_pin_is_pressed" block="pin %NAME|is pressed" icon="\uf094"
+    //% blockGap=8 shim=input::pinIsPressed
+    function pinIsPressed(name: TouchPin): boolean;
+
+    /**
      * Get the current compass compass heading in degrees.
      */
     //% help=input/compass-heading 

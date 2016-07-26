@@ -291,13 +291,6 @@ declare namespace input {
     function calibrate(): void;
 
     /**
-     * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
-     * @param name pin used to detect the touch
-     */
-    //% help=input/pin-is-pressed weight=58 block="pin|%NAME|is pressed" icon="\uf094" shim=input::pinIsPressed
-    function pinIsPressed(name: TouchPin): boolean;
-
-    /**
      * Sets the accelerometer sample range in gravities.
      * @param range a value describe the maximum strengh of acceleration measured
      */

@@ -167,6 +167,17 @@ namespace input {
       return false;
     }
 
+    /**
+     * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
+     * @param name pin used to detect the touch
+     */
+    //% help=input/pin-is-pressed weight=56
+    //% blockId="device_pin_is_pressed" block="pin %NAME|is pressed" icon="\uf094"
+    //% blockGap=8
+    bool pinIsPressed(TouchPin name) {
+        auto pin = getPin((int)name);
+        return pin && pin->isTouched();
+    }
 
     /**
      * Get the current compass compass heading in degrees.
@@ -269,16 +280,6 @@ namespace input {
      */
     //% help=input/calibrate weight=0
     void calibrate() { }
-
-    /**
-     * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
-     * @param name pin used to detect the touch
-     */
-    //% help=input/pin-is-pressed weight=58 block="pin|%NAME|is pressed" icon="\uf094"
-    bool pinIsPressed(TouchPin name) {
-        auto pin = getPin((int)name);
-        return pin && pin->isTouched();
-    }
 
     /**
      * Sets the accelerometer sample range in gravities.

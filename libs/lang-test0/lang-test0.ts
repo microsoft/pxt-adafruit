@@ -114,11 +114,11 @@ function testDefaultArgs() {
     assert(optstring2(3, "7") == 10, "os1")
 }
 
-function optargs(x: number, y ?: number, z ?: number) {
+function optargs(x: number, y?: number, z?: number) {
     return x + y;
 }
 
-function optstring(x: number, s ?: string) {
+function optstring(x: number, s?: string) {
     if (s != null) {
         return parseInt(s) + x;
     }
@@ -235,7 +235,7 @@ function testStrings(): void {
 
     x = 21
     s = "foo"
-    s = `a${ x * 2 }X${ s }X${ s }Z`
+    s = `a${x * 2}X${s}X${s}Z`
     assert(s == "a42XfooXfoo" + "Z", "`")
 
     assert("X" + true == "Xt" + "rue", "boolStr")
@@ -243,7 +243,7 @@ function testStrings(): void {
 
 
 function testNumCollection(): void {
-    let collXYZ: number[] =[];
+    let collXYZ: number[] = [];
     assert(collXYZ.length == 0, "");
     collXYZ.push(42);
     assert(collXYZ.length == 1, "");
@@ -258,7 +258,7 @@ function testNumCollection(): void {
     }
     assert(collXYZ.length == 100, "");
 
-    collXYZ =[1, 2, 3];
+    collXYZ = [1, 2, 3];
     assert(collXYZ.length == 3, "cons");
     assert(collXYZ[0] == 1, "cons0");
     assert(collXYZ[1] == 2, "cons1");
@@ -266,12 +266,12 @@ function testNumCollection(): void {
 }
 
 function testStringCollection(): void {
-    let coll = (< string[] >[]);
+    let coll = (<string[]>[]);
     coll.push("foobar");
     coll.push((12).toString());
     coll.push(coll[0] + "xx");
     assert(coll.indexOf("12") == 1, "idx");
-    coll =[
+    coll = [
         "a" + "b",
         coll[2],
     ]
@@ -341,7 +341,7 @@ function testRec0(): Testrec {
     assert(testrec.str == "Hello world", "recstr");
     assert(testrec.num == 42, "recnum");
     msg(testrec.str2);
-    let testrec2 = < Testrec > null;
+    let testrec2 = <Testrec>null;
     assert(testrec2 == null, "isinv");
     assert(testrec == testrec, "eq");
     assert(testrec != null, "non inv");
@@ -349,7 +349,7 @@ function testRec0(): Testrec {
 }
 
 function testReccoll(): void {
-    let coll: Testrec[] =[];
+    let coll: Testrec[] = [];
     let item = testRec0();
     msg("in reccoll");
     coll.push(item);
@@ -395,7 +395,7 @@ function testIter() {
 
 function testAction(p: number): void {
     let s = "hello" + "1";
-    let coll =[] as number[];
+    let coll = [] as number[];
     let p2 = p * 2;
     x = 42;
     runTwice(() => {
@@ -506,9 +506,9 @@ function testLazyOps(): void {
     }
 
     lazyAcc = 0;
-    assert((true ? incrLazyNum(1, 42): incrLazyNum(10, 36)) == 42, "?:")
+    assert((true ? incrLazyNum(1, 42) : incrLazyNum(10, 36)) == 42, "?:")
     assert(lazyAcc == 1, "?:0");
-    assert((false ? incrLazyNum(1, 42): incrLazyNum(10, 36)) == 36, "?:1")
+    assert((false ? incrLazyNum(1, 42) : incrLazyNum(10, 36)) == 36, "?:1")
     assert(lazyAcc == 11, "?:2");
 }
 
@@ -644,7 +644,7 @@ class Foo {
     }
 
     init() {
-        this.buf =[1, 2]
+        this.buf = [1, 2]
     }
 }
 
@@ -728,7 +728,7 @@ function bufferIs(b: Buffer, a: number[]) {
     assert(b.length == a.length, "bis-len")
     for (let i = 0; i < a.length; ++i) {
         if (a[i] != b[i]) {
-            assert(false, `bufferIs: buf[${ i }]:${ b[i] } != ${ a[i] }`)
+            assert(false, `bufferIs: buf[${i}]:${b[i]} != ${a[i]}`)
         }
     }
 }
@@ -742,33 +742,33 @@ function testBuffer() {
     assert(b[100000] == 0, "bufM");
 
     b[0] = 42;
-    bufferIs(b,[42, 0, 0]);
+    bufferIs(b, [42, 0, 0]);
     b[2] = 41;
-    bufferIs(b,[42, 0, 41]);
+    bufferIs(b, [42, 0, 41]);
 
     b.rotate(1)
-    bufferIs(b,[0, 41, 42]);
+    bufferIs(b, [0, 41, 42]);
     b.rotate(-2)
-    bufferIs(b,[41, 42, 0]);
+    bufferIs(b, [41, 42, 0]);
     b.shift(1)
-    bufferIs(b,[42, 0, 0]);
+    bufferIs(b, [42, 0, 0]);
     b.rotate(9)
-    bufferIs(b,[42, 0, 0]);
+    bufferIs(b, [42, 0, 0]);
     b.rotate(-9)
-    bufferIs(b,[42, 0, 0]);
+    bufferIs(b, [42, 0, 0]);
 
     b.fill(4);
-    bufferIs(b,[4, 4, 4]);
+    bufferIs(b, [4, 4, 4]);
 
     b.fill(12, 1, 1);
-    bufferIs(b,[4, 12, 4]);
+    bufferIs(b, [4, 12, 4]);
 
     b.fill(13, 1, -1);
-    bufferIs(b,[4, 13, 13]);
+    bufferIs(b, [4, 13, 13]);
 
     b.fill(100, -1, -1);
-    bufferIs(b,[4, 13, 13]);
+    bufferIs(b, [4, 13, 13]);
 
     b.shift(-1)
-    bufferIs(b,[0, 4, 13]);
+    bufferIs(b, [0, 4, 13]);
 }

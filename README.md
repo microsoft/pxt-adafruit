@@ -9,11 +9,14 @@ PXT ([Microsoft Programming Experience Toolkit](https://github.com/Microsoft/pxt
 
 ## Local server
 
+The local server allows to run the editor and the documentation from your computer.
+
 ### Setup
 
 The following commands are a 1-time setup after synching the repo on your machine.
 
-* clone this repo to your computer
+* [clone this repo](https://help.github.com/articles/cloning-a-repository/) to your computer
+* install [Node.js 4.4.5 or higher](https://nodejs.org/en/download/)
 * install the PXT command line
 ```
 npm install -g pxt

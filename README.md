@@ -15,9 +15,9 @@ The local server allows to run the editor and the documentation from your comput
 
 The following commands are a 1-time setup after synching the repo on your machine.
 
+* if not yet installed, install [Node.js 4.4.5 or higher](https://nodejs.org/en/download/)
 * [clone this repo](https://help.github.com/articles/cloning-a-repository/) to your computer
-* install [Node.js 4.4.5 or higher](https://nodejs.org/en/download/)
-* install the PXT command line
+* install the PXT command line (add ``sudo`` for Mac/Linux shells).
 ```
 npm install -g pxt
 ```
@@ -40,7 +40,9 @@ If you need modify the `.cpp` files, turn on yotta compilation with the ``-yt`` 
 pxt serve -yt
 ```
 
-To make sure you're running the latest tools, run (add ``sudo`` for Mac/Linux shells)
+## Updates
+
+To update your PXT version and make sure you're running the latest tools, run (add ``sudo`` for Mac/Linux shells)
 ```
 pxt update
 ```

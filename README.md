@@ -54,6 +54,23 @@ that wraps ``codethemicrobit.com`` and provides additional features.
 * Install Visual Studio 2015 Update 2 or higher. Make sure the Windows 10 templates are installed.
 * open the ``win10/app.sln`` solution and launch the ``codethemicrobit`` project.
 
+## Testing
+
+The build automatically runs the following:
+
+* make sure the built-in packages compile
+* `pxt run` in `libs/lang-test*` - this will run the test in command line runner; 
+  there is a number of asserts in both of these
+* `pxt testdir` in `tests` - this makes sure all the files compile and generates .hex files
+* run the TD->TS converter on a number of test scripts from `microbit.co.uk` and make sure the results compile
+
+To test something on the device:
+
+* do a `pxt deploy` in `libs/lang-test*` - they should show `1` or `2` on the screen (and not unhappy face)
+* run `pxt testdir` in `tests` and deploy some of the hex files from `tests/built`
+
+The `lang-test0` source comes from the `pxt-core` package. It's also tested with `pxt run` there. 
+
 ## Code of Conduct
 
 This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.

@@ -23,7 +23,7 @@ namespace basic {
       if (value < 0 || value >= 10) {
         uBit.display.scroll(t, interval);
       } else {
-        uBit.display.print(t.charAt(0), interval * 5);
+        uBit.display.printChar(t.charAt(0), interval * 5);
       }
     }
 

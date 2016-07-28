@@ -22,3 +22,15 @@ control.inBackground(() => {
     
 });
 ```
+
+## Advanced
+ 
+```namespaces
+devices.tellCameraTo(MesCameraEvent.TakePhoto);
+bluetooth.onBluetoothConnected(() => {});
+```
+ 
+```package
+microbit-devices
+microbit-bluetooth
+```

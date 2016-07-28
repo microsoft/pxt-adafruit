@@ -725,7 +725,8 @@ namespace pxsim.ImageMethods {
         board().animationQ.enqueue({
             interval: interval,
             frame: () => {
-                if (off >= leds.width || off < 0) return false;
+                //TODO: support right to left.
+                if (off >= leds.width + 5 || off < 0) return false;
                 stride > 0 ? display.shiftLeft(stride) : display.shiftRight(-stride);
                 let c = Math.min(stride, leds.width - off);
                 leds.copyTo(off, c, display, 5 - stride)

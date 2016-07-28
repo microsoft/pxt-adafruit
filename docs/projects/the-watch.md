@@ -148,12 +148,6 @@ Trim any leftover fabric, threads or tape.
 
 Your watch is ready!
 
-### ~avatar avatar
-
-Excellent, you're ready to continue with the [challenges](/projects/rock-paper-scissors)!
-
-### ~
-
 ### Acknowledgements
 
 Artistic design by Melinda Hoeneisen.

@@ -4,6 +4,9 @@ node_js:
 script:
   - "node node_modules/pxt-core/built/pxt.js travis"  
   - "(cd libs/lang-test0; node ../../node_modules/pxt-core/built/pxt.js run)"
+  - "(cd libs/lang-test1; node ../../node_modules/pxt-core/built/pxt.js run)"
+  - "(cd libs/lang-test0; node ../../node_modules/pxt-core/built/pxt.js test)"
+  - "(cd libs/lang-test1; node ../../node_modules/pxt-core/built/pxt.js test)"
   - "node node_modules/pxt-core/built/pxt.js testdir tests"
   - "node node_modules/pxt-core/built/pxt.js uploaddoc"
   - "(cd libs/hello; node ../../node_modules/pxt-core/built/pxt.js testconv https://az851932.vo.msecnd.net/files/td-converter-tests-v0.json)"

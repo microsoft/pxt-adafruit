@@ -211,7 +211,7 @@ Let's setup the logic for the food and the ghost to be in different quadrants. F
 let hero = game.createSprite(2, 2);
 let food = game.createSprite(4, 4);
 let ghost = game.createSprite(0, 0);
-let ghost.change(LedSpriteProperty.Blink, 100);
+ghost.change(LedSpriteProperty.Blink, 100);
 food = led.brightness() == 8;
 while (true) {
     basic.pause(400);
@@ -265,7 +265,7 @@ while (true) {
     }
 
 }
-0.set(LedSpriteProperty.X, 4);
+ghost.set(LedSpriteProperty.X, 4);
 
 
 ```

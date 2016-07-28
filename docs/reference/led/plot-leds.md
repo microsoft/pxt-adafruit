@@ -3,11 +3,11 @@
 Display an [Image](/reference/images/image) on the BBC micro:bit's [LED screen](/device/screen). NOTE: `basic -> plot image` has been replaced by `basic -> show leds`.
 
 ```sig
-basic.plotLeds(`
+basic.showLeds(`
 . . . . .
 . # . # .
 . . # . .
-# ; . . #
+# . . . #
 . # # # .
 `)
 ```
@@ -16,14 +16,14 @@ basic.plotLeds(`
 
 * leds - a series of LED on/off states that form an image (see steps below)
 
-### Example: simley
+### Example: smiley
 
 ```blocks
-basic.plotLeds(`
+basic.showLeds(`
 . . . . .
 . # . # .
 . . # . .
-# ; . . #
+# . . . #
 . # # # .
 `)
 ```

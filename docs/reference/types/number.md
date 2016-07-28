@@ -61,7 +61,7 @@ The [math library](/blocks/math) includes math related functions.
 For example, the `absolute` function returns the returns the absolute value of input parameter `x`:
 
 ```blocks
-let abs = math.absolute(-42);
+let abs = Math.abs(-42);
 basic.showNumber(abs);
 ```
 

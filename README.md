@@ -9,12 +9,19 @@ PXT ([Microsoft Programming Experience Toolkit](https://github.com/Microsoft/pxt
 
 ## Local server
 
+The local server allows to run the editor and the documentation from your computer.
+
 ### Setup
 
 The following commands are a 1-time setup after synching the repo on your machine.
 
-* clone this repo to your computer
-* install the PXT command line
+* if not yet installed, install [Node.js 4.4.5 or higher](https://nodejs.org/en/download/)
+* [clone this repo](https://help.github.com/articles/cloning-a-repository/) to your computer and go in the project folder
+```
+git clone https://github.com/microsoft/pxt-microbit
+cd pxt-microbit
+```
+* install the PXT command line (add ``sudo`` for Mac/Linux shells).
 ```
 npm install -g pxt
 ```
@@ -37,7 +44,9 @@ If you need modify the `.cpp` files, turn on yotta compilation with the ``-yt`` 
 pxt serve -yt
 ```
 
-To make sure you're running the latest tools, run (add ``sudo`` for Mac/Linux shells)
+## Updates
+
+To update your PXT version and make sure you're running the latest tools, run (add ``sudo`` for Mac/Linux shells)
 ```
 pxt update
 ```

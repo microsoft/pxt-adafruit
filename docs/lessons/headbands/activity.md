@@ -5,7 +5,7 @@
 Your beginning code should look like this:
 
 ```blocks 
-let coll = (<string[]>[])
+let coll: string[] = []
 coll.push("puppy")
 coll.push("clock")
 coll.push("night")
@@ -27,7 +27,7 @@ game.startCountdown(30000)
 Let's add more words for the player to act out! But first, we need to increase the time in one round to give the player more time get through all the words. Let's change the `game->start countdown` statement.
 
 ```blocks
-let coll = (<string[]>[])
+let coll: string[] = []
 coll.push("puppy")
 coll.push("clock")
 coll.push("night")
@@ -52,7 +52,8 @@ game.startCountdown(60000)
 Now let's add 5 more words to our list of charade words. Right above the the line `word:=coll->at(index)` add 5 lines that say `coll->add("")`. In this example, we will add the words **bicycle, telephone, sun, car, and ant** but you can add whatever words you like.
 
 ```blocks
-let coll.push("puppy")
+let coll: string[] = []
+coll.push("puppy")
 coll.push("clock")
 coll.push("night")
 coll.push("cat")

@@ -92,7 +92,7 @@
   "input.onShake": "Attaches code to run when the device is shaken.",
   "input.onShake|param|body": "TODO",
   "input.pinIsPressed": "Get the pin state (pressed or not). Requires to hold the ground to close the circuit.",
-  "input.pinIsPressed|block": "pin|%NAME|is pressed",
+  "input.pinIsPressed|block": "pin %NAME|is pressed",
   "input.pinIsPressed|param|name": "pin used to detect the touch",
   "input.rotation": "The pitch of the device, rotation along the ``x-axis``, in degrees.",
   "input.rotation|block": "rotation (°)|%NAME",

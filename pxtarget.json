@@ -52,7 +52,7 @@
     "compile": {
         "isNative": false,
         "hasHex": true,
-        "deployDrives": "^MICROBIT",
+        "deployDrives": "(MICROBIT|MBED)",
         "driveName": "MICROBIT",
         "hexMimeType": "application/x-microbit-hex"
     },

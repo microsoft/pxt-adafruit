@@ -28,11 +28,12 @@ export function deployCoreAsync(res: ts.pxt.CompileResult) {
 
 function getBitDrivesAsync(): Promise<string[]> {
     if (process.platform == "win32") {
+        let rx = new RegExp("^([A-Z]:).* " + pxt.appTarget.compile.deployDrives)
         return execAsync("wmic PATH Win32_LogicalDisk get DeviceID, VolumeName, FileSystem")
             .then(buf => {
                 let res: string[] = []
                 buf.toString("utf8").split(/\n/).forEach(ln => {
-                    let m = /^([A-Z]:).* MICROBIT/.exec(ln)
+                    let m = rx.exec(ln)
                     if (m) {
                         res.push(m[1] + "/")
                     }
@@ -41,8 +42,9 @@ function getBitDrivesAsync(): Promise<string[]> {
             })
     }
     else if (process.platform == "darwin") {
+        let rx = new RegExp(pxt.appTarget.compile.deployDrives)
         return readDirAsync("/Volumes")
-            .then(lst => lst.filter(s => /MICROBIT/.test(s)).map(s => "/Volumes/" + s + "/"))
+            .then(lst => lst.filter(s => rx.test(s)).map(s => "/Volumes/" + s + "/"))
     } else {
         return Promise.resolve([])
     }

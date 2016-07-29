@@ -612,9 +612,9 @@ svg.sim.grayscale {
 
         private attachEvents() {
             Runtime.messagePosted = (msg) => {
-                switch (msg.type || '') {
-                    case 'serial': this.flashSystemLed(); break;
-                    case 'radiopacket': this.flashAntenna(); break;
+                switch (msg.type || "") {
+                    case "serial": this.flashSystemLed(); break;
+                    case "radiopacket": this.flashAntenna(); break;
                 }
             }
             let tiltDecayer = 0;

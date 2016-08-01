@@ -7,6 +7,9 @@ typings
 tmp
 temp
 projects/**
+clients/win10/app/AppPackages
+clients/win10/app/BundlePackages
+clients/win10/app/BundleArtifacts
 clients/win10/app/bin
 clients/win10/app/bld
 clients/win10/*.opendb

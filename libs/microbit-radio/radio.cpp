@@ -43,7 +43,7 @@ namespace radio {
      */    
     //% help=radio/send-number
     //% weight=60
-    //% blockId=radio_datagram_send block="send number %value" blockGap=8
+    //% blockId=radio_datagram_send block="radio send number %value" blockGap=8
     void sendNumber(int value) { 
         if (radioEnable() != MICROBIT_OK) return;        
         uint32_t t = system_timer_current_time();
@@ -54,13 +54,13 @@ namespace radio {
     
     /**
     * Broadcasts a name / value pair along with the device serial number
-    * and running time to any connected BBC micro:bit in the group.
+    * and running time to any connected micro:bit in the group.
     * @param name the field name (max 12 characters), eg: "data"
     * @param value the numberic value
     */
     //% help=radio/send-value
     //% weight=59
-    //% blockId=radio_datagram_send_value block="send|value %name|= %value" blockGap=8
+    //% blockId=radio_datagram_send_value block="radio send|value %name|= %value" blockGap=8
     void sendValue(StringData* name, int value) {
         if (radioEnable() != MICROBIT_OK) return;
 
@@ -86,7 +86,7 @@ namespace radio {
      */    
     //% help=radio/send-string
     //% weight=58
-    //% blockId=radio_datagram_send_string block="send string %msg"
+    //% blockId=radio_datagram_send_string block="radio send string %msg"
     void sendString(StringData* msg) {
         if (radioEnable() != MICROBIT_OK) return;        
         
@@ -103,7 +103,7 @@ namespace radio {
     */
     //% help=radio/write-value-to-serial
     //% weight=3
-    //% blockId=radio_write_value_serial block="write value to serial"
+    //% blockId=radio_write_value_serial block="radio write value to serial"
     void writeValueToSerial() {
         if (radioEnable() != MICROBIT_OK) return;
         PacketBuffer p = uBit.radio.datagram.recv();
@@ -139,7 +139,7 @@ namespace radio {
      */
     //% help=radio/on-data-received
     //% weight=50
-    //% blockId=radio_datagram_received_event block="on data received" blockGap=8
+    //% blockId=radio_datagram_received_event block="radio on data received" blockGap=8
     void onDataReceived(Action body) {
         if (radioEnable() != MICROBIT_OK) return;
         registerWithDal(MICROBIT_ID_RADIO, MICROBIT_RADIO_EVT_DATAGRAM, body);    
@@ -151,7 +151,7 @@ namespace radio {
      */
     //% help=radio/received-number-at
     //% weight=45 debug=true
-    //% blockId=radio_datagram_received_number_at block="receive number|at %VALUE" blockGap=8
+    //% blockId=radio_datagram_received_number_at block="radio receive number|at %VALUE" blockGap=8
     int receivedNumberAt(int index) {
         if (radioEnable() != MICROBIT_OK) return 0;
         if (0 <= index && index < packet.length() / 4) {
@@ -168,7 +168,7 @@ namespace radio {
      */
     //% help=radio/receive-number
     //% weight=46
-    //% blockId=radio_datagram_receive block="receive number" blockGap=8
+    //% blockId=radio_datagram_receive block="radio receive number" blockGap=8
     int receiveNumber()
     {
         if (radioEnable() != MICROBIT_OK) return 0;
@@ -179,7 +179,7 @@ namespace radio {
     /**
     * Reads the next packet as a string and returns it.
     */
-    //% blockId=radio_datagram_receive_string block="receive string" blockGap=8
+    //% blockId=radio_datagram_receive_string block="radio receive string" blockGap=8
     //% weight=44
     //% help=radio/receive-string
     StringData* receiveString() {
@@ -194,7 +194,7 @@ namespace radio {
      */
     //% help=radio/received-signal-strength
     //% weight=40
-    //% blockId=radio_datagram_rssi block="received signal strength"
+    //% blockId=radio_datagram_rssi block="radio received signal strength"
     int receivedSignalStrength() {
         if (radioEnable() != MICROBIT_OK) return 0;
         return packet.getRSSI();
@@ -205,8 +205,8 @@ namespace radio {
      * @ param id the group id between ``0`` and ``255``, 1 eg
      */
     //% help=radio/set-group
-    //% weight=10
-    //% blockId=radio_set_group block="set group %ID"
+    //% weight=10 blockGap=8
+    //% blockId=radio_set_group block="radio set group %ID"
     void setGroup(int id) {
         if (radioEnable() != MICROBIT_OK) return;
         uBit.radio.setGroup(id);
@@ -217,8 +217,8 @@ namespace radio {
     * @param power a value in the range 0..7, where 0 is the lowest power and 7 is the highest. eg: 7
     */
     //% help=radio/set-transmit-power
-    //% weight=9
-    //% blockId=radio_set_transmit_power block="set transmit power %power"
+    //% weight=9 blockGap=8
+    //% blockId=radio_set_transmit_power block="radio set transmit power %power"
     void setTransmitPower(int power) {
         if (radioEnable() != MICROBIT_OK) return;
         uBit.radio.setTransmitPower(power);
@@ -228,8 +228,8 @@ namespace radio {
     * Set the radio to transmit the serial number in each message.
     */
     //% help=radio/set-transmit-serial-number
-    //% weight=8
-    //% block=radio_set_transmit_serial_number block="set tranmist serial number %transmit"
+    //% weight=8 blockGap=8
+    //% blockId=radio_set_transmit_serial_number block="radio set transmit serial number %transmit"
     void setTransmitSerialNumber(bool transmit) {
         transmitSerialNumber = transmit;
     }

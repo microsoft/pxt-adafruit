@@ -10,18 +10,18 @@ declare namespace radio {
      */
     //% help=radio/send-number
     //% weight=60
-    //% blockId=radio_datagram_send block="send number %value" blockGap=8 shim=radio::sendNumber
+    //% blockId=radio_datagram_send block="radio send number %value" blockGap=8 shim=radio::sendNumber
     function sendNumber(value: number): void;
 
     /**
      * Broadcasts a name / value pair along with the device serial number
-     * and running time to any connected BBC micro:bit in the group.
+     * and running time to any connected micro:bit in the group.
      * @param name the field name (max 12 characters), eg: "data"
      * @param value the numberic value
      */
     //% help=radio/send-value
     //% weight=59
-    //% blockId=radio_datagram_send_value block="send|value %name|= %value" blockGap=8 shim=radio::sendValue
+    //% blockId=radio_datagram_send_value block="radio send|value %name|= %value" blockGap=8 shim=radio::sendValue
     function sendValue(name: string, value: number): void;
 
     /**
@@ -29,7 +29,7 @@ declare namespace radio {
      */
     //% help=radio/send-string
     //% weight=58
-    //% blockId=radio_datagram_send_string block="send string %msg" shim=radio::sendString
+    //% blockId=radio_datagram_send_string block="radio send string %msg" shim=radio::sendString
     function sendString(msg: string): void;
 
     /**
@@ -38,7 +38,7 @@ declare namespace radio {
      */
     //% help=radio/write-value-to-serial
     //% weight=3
-    //% blockId=radio_write_value_serial block="write value to serial" shim=radio::writeValueToSerial
+    //% blockId=radio_write_value_serial block="radio write value to serial" shim=radio::writeValueToSerial
     function writeValueToSerial(): void;
 
     /**
@@ -46,7 +46,7 @@ declare namespace radio {
      */
     //% help=radio/on-data-received
     //% weight=50
-    //% blockId=radio_datagram_received_event block="on data received" blockGap=8 shim=radio::onDataReceived
+    //% blockId=radio_datagram_received_event block="radio on data received" blockGap=8 shim=radio::onDataReceived
     function onDataReceived(body: () => void): void;
 
     /**
@@ -55,7 +55,7 @@ declare namespace radio {
      */
     //% help=radio/received-number-at
     //% weight=45 debug=true
-    //% blockId=radio_datagram_received_number_at block="receive number|at %VALUE" blockGap=8 shim=radio::receivedNumberAt
+    //% blockId=radio_datagram_received_number_at block="radio receive number|at %VALUE" blockGap=8 shim=radio::receivedNumberAt
     function receivedNumberAt(index: number): number;
 
     /**
@@ -63,13 +63,13 @@ declare namespace radio {
      */
     //% help=radio/receive-number
     //% weight=46
-    //% blockId=radio_datagram_receive block="receive number" blockGap=8 shim=radio::receiveNumber
+    //% blockId=radio_datagram_receive block="radio receive number" blockGap=8 shim=radio::receiveNumber
     function receiveNumber(): number;
 
     /**
      * Reads the next packet as a string and returns it.
      */
-    //% blockId=radio_datagram_receive_string block="receive string" blockGap=8
+    //% blockId=radio_datagram_receive_string block="radio receive string" blockGap=8
     //% weight=44
     //% help=radio/receive-string shim=radio::receiveString
     function receiveString(): string;
@@ -80,7 +80,7 @@ declare namespace radio {
      */
     //% help=radio/received-signal-strength
     //% weight=40
-    //% blockId=radio_datagram_rssi block="received signal strength" shim=radio::receivedSignalStrength
+    //% blockId=radio_datagram_rssi block="radio received signal strength" shim=radio::receivedSignalStrength
     function receivedSignalStrength(): number;
 
     /**
@@ -88,8 +88,8 @@ declare namespace radio {
      * @ param id the group id between ``0`` and ``255``, 1 eg
      */
     //% help=radio/set-group
-    //% weight=10
-    //% blockId=radio_set_group block="set group %ID" shim=radio::setGroup
+    //% weight=10 blockGap=8
+    //% blockId=radio_set_group block="radio set group %ID" shim=radio::setGroup
     function setGroup(id: number): void;
 
     /**
@@ -97,16 +97,16 @@ declare namespace radio {
      * @param power a value in the range 0..7, where 0 is the lowest power and 7 is the highest. eg: 7
      */
     //% help=radio/set-transmit-power
-    //% weight=9
-    //% blockId=radio_set_transmit_power block="set transmit power %power" shim=radio::setTransmitPower
+    //% weight=9 blockGap=8
+    //% blockId=radio_set_transmit_power block="radio set transmit power %power" shim=radio::setTransmitPower
     function setTransmitPower(power: number): void;
 
     /**
      * Set the radio to transmit the serial number in each message.
      */
     //% help=radio/set-transmit-serial-number
-    //% weight=8
-    //% block=radio_set_transmit_serial_number block="set tranmist serial number %transmit" shim=radio::setTransmitSerialNumber
+    //% weight=8 blockGap=8
+    //% blockId=radio_set_transmit_serial_number block="radio set transmit serial number %transmit" shim=radio::setTransmitSerialNumber
     function setTransmitSerialNumber(transmit: boolean): void;
 }
 

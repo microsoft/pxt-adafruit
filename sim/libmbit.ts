@@ -197,7 +197,7 @@ namespace pxsim.basic {
             clearScreen();
             pause(interval * 5);
         } else {
-            if (s.length == 1) showLeds(createImageFromString(s), interval * 5)
+            if (s.length == 1) showLeds(createImageFromString(s + " "), interval * 5)
             else ImageMethods.scrollImage(createImageFromString(s + " "), 1, interval);
         }
     }
@@ -726,7 +726,7 @@ namespace pxsim.ImageMethods {
             interval: interval,
             frame: () => {
                 //TODO: support right to left.
-                if (off >= leds.width + 5 || off < 0) return false;
+                if (off >= leds.width || off < 0) return false;
                 stride > 0 ? display.shiftLeft(stride) : display.shiftRight(-stride);
                 let c = Math.min(stride, leds.width - off);
                 leds.copyTo(off, c, display, 5 - stride)

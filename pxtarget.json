@@ -124,5 +124,9 @@
             }
         ],
         "sideDoc": "getting-started"
+    },
+    "analytics": {
+        "userVoiceApiKey": "WEkkIGaj1WtJnSUF59iwaA",
+        "userVoiceForumId": 402381
     }
 }

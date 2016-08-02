@@ -23,7 +23,7 @@
         value = Math.abs(value);
 
         if (high != 0) barGraphHigh = high;
-        else if (value > barGraphHigh || now - barGraphHighLast > 5000) {
+        else if (value > barGraphHigh || now - barGraphHighLast > 10000) {
             barGraphHigh = value;
             barGraphHighLast = now;
         }

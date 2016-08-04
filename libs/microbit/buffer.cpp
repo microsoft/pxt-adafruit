@@ -123,21 +123,25 @@ namespace BufferMethods {
     /**
      * Shift buffer left in place, with zero padding.
      * @param offset number of bytes to shift; use negative value to shift right
+     * @param start start offset in buffer. Default is 0.
+     * @param length number of elements in buffer. If negative, length is set as the buffer length minus start. eg: -1
      */
     //%
-    void shift(Buffer buf, int offset)
+    void shift(Buffer buf, int offset, int start = 0, int length = -1)
     {
-        ManagedBuffer(buf).shift(offset);
+        ManagedBuffer(buf).shift(offset, start, length);
     }
 
     /**
      * Rotate buffer left in place.
      * @param offset number of bytes to shift; use negative value to shift right
+     * @param start start offset in buffer. Default is 0.
+     * @param length number of elements in buffer. If negative, length is set as the buffer length minus start. eg: -1
      */
     //%
-    void rotate(Buffer buf, int offset)
+    void rotate(Buffer buf, int offset, int start = 0, int length = -1)
     {
-        ManagedBuffer(buf).rotate(offset);
+        ManagedBuffer(buf).rotate(offset, start, length);
     }
 
     // int readBytes(uint8_t *dst, int offset, int length, bool swapBytes = false) const;

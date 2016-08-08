@@ -42,14 +42,6 @@ declare namespace radio {
     function writeValueToSerial(): void;
 
     /**
-     * Registers code to run when a packet is received over radio.
-     */
-    //% help=radio/on-data-received
-    //% weight=50
-    //% blockId=radio_datagram_received_event block="radio on data received" blockGap=8 shim=radio::onDataReceived
-    function onDataReceived(body: () => void): void;
-
-    /**
      * Reads a number at a given index, between ``0`` and ``3``, from the packet received by ``receive number``. Not supported in simulator.
      * @param index index of the number to read from 0 to 3. 1 eg
      */
@@ -65,6 +57,14 @@ declare namespace radio {
     //% weight=46
     //% blockId=radio_datagram_receive block="radio receive number" blockGap=8 shim=radio::receiveNumber
     function receiveNumber(): number;
+
+    /**
+     * Registers code to run when a packet is received over radio.
+     */
+    //% help=radio/on-data-received
+    //% weight=50
+    //% blockId=radio_datagram_received_event block="radio on data received" blockGap=8 shim=radio::onDataReceived
+    function onDataReceived(body: () => void): void;
 
     /**
      * Reads the next packet as a string and returns it.

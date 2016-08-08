@@ -517,6 +517,7 @@ namespace pxsim.radio {
 
     export function onDataReceived(handler: RefAction): void {
         pxt.registerWithDal(DAL.MICROBIT_ID_RADIO, DAL.MICROBIT_RADIO_EVT_DATAGRAM, handler);
+        radio.receiveNumber();
     }
 }
 

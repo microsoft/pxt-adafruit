@@ -294,7 +294,14 @@ namespace pxsim.input {
         let pin = getPin(pinId);
         if (!pin) return;
         pin.isTouched();
-        input.onButtonPressed(pin.id, handler);
+        pxt.registerWithDal(pin.id, DAL.MICROBIT_BUTTON_EVT_CLICK, handler);
+    }
+
+    export function onPinReleased(pinId: number, handler: RefAction) {
+        let pin = getPin(pinId);
+        if (!pin) return;
+        pin.isTouched();
+        pxt.registerWithDal(pin.id, DAL.MICROBIT_BUTTON_EVT_UP, handler);
     }
 
     export function pinIsPressed(pinId: number): boolean {

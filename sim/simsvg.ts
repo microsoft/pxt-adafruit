@@ -716,6 +716,7 @@ svg.sim.grayscale {
                     let state = this.board;
                     state.pins[index].touched = false;
                     this.updatePin(state.pins[index], index);
+                    this.board.bus.queue(state.pins[index].id, DAL.MICROBIT_BUTTON_EVT_UP);
                     this.board.bus.queue(state.pins[index].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
                 })
             })
@@ -734,7 +735,7 @@ svg.sim.grayscale {
                     let state = this.board;
                     state.buttons[index].pressed = false;
                     svg.fill(this.buttons[index], this.props.theme.buttonUp);
-
+                    this.board.bus.queue(state.buttons[index].id, DAL.MICROBIT_BUTTON_EVT_UP);
                     this.board.bus.queue(state.buttons[index].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
                 })
             })
@@ -765,6 +766,7 @@ svg.sim.grayscale {
                 svg.fill(this.buttons[1], this.props.theme.buttonUp);
                 svg.fill(this.buttons[2], this.props.theme.virtualButtonUp);
 
+                this.board.bus.queue(state.buttons[2].id, DAL.MICROBIT_BUTTON_EVT_UP);
                 this.board.bus.queue(state.buttons[2].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
             })
         }

@@ -1,0 +1,19 @@
+{
+  "radio": "Communicate data using radio packets",
+  "radio.onDataReceived": "Registers code to run when a packet is received over radio.",
+  "radio.receiveNumber": "Reads the next packet as a number from the radio queue.",
+  "radio.receiveString": "Reads the next packet as a string and returns it.",
+  "radio.receivedNumberAt": "Reads a number at a given index, between ``0`` and ``3``, from the packet received by ``receive number``. Not supported in simulator.",
+  "radio.receivedNumberAt|param|index": "index of the number to read from 0 to 3. 1 eg",
+  "radio.receivedSignalStrength": "Gets the received signal strength indicator (RSSI) from the packet received by ``receive number``. Not supported in simulator.\nnamespace=radio",
+  "radio.sendNumber": "Broadcasts a number over radio to any connected micro:bit in the group.",
+  "radio.sendString": "Broadcasts a number over radio to any connected micro:bit in the group.",
+  "radio.sendValue": "Broadcasts a name / value pair along with the device serial number\nand running time to any connected micro:bit in the group.",
+  "radio.sendValue|param|name": "the field name (max 12 characters), eg: \"data\"",
+  "radio.sendValue|param|value": "the numberic value",
+  "radio.setGroup": "Sets the group id for radio communications. A micro:bit can only listen to one group ID at any time.\n@ param id the group id between ``0`` and ``255``, 1 eg",
+  "radio.setTransmitPower": "Change the output power level of the transmitter to the given value.",
+  "radio.setTransmitPower|param|power": "a value in the range 0..7, where 0 is the lowest power and 7 is the highest. eg: 7",
+  "radio.setTransmitSerialNumber": "Set the radio to transmit the serial number in each message.",
+  "radio.writeValueToSerial": "Reads a value sent with `stream value` and writes it\nto the serial stream as JSON"
+}

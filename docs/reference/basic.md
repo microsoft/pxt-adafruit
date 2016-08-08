@@ -32,3 +32,7 @@ basic.showAnimation(`
 . . . . .
 `);
 ```
+
+### See Also
+
+[showNumber](/reference/basic/show-number), [showLeds](/reference/basic/show-leds), [showString](/reference/basic/show-string), [clearScreen](/reference/basic/clear-screen), [forever](/reference/basic/forever), [pause](/reference/basic/pause), [plotLeds](/reference/basic/plot-leds), [showAnimation](/reference/basic/show-animation)

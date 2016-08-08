@@ -10,3 +10,7 @@ serial.writeString("");
 serial.readLine();
 serial.redirect(SerialPin.P0, SerialPin.P0, BaudRate.BaudRate115200);
 ```
+
+### See Also
+
+[writeLine](/reference/serial/write-line), [writeNumber](/reference/serial/write-number), [writeValue](/reference/serial/write-value), [writeString](/reference/serial/write-string), [readLine](/reference/serial/read-line), [redirect](/reference/serial/redirect-to)

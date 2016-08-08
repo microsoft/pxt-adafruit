@@ -21,3 +21,7 @@ pins.setPull(DigitalPin.P0, PinPullMode.PullDown);
 pins.analogPitch(0, 0);
 pins.analogSetPitchPin(AnalogPin.P0);
 ```
+
+### See Also
+
+[digitalReadPin](/reference/pins/digital-read-pin), [digitalWritePin](/reference/pins/digital-write-pin), [analogReadPin](/reference/pins/analog-read-pin), [analogWritePin](/reference/pins/analog-write-pin), [analogSetPeriod](/reference/pins/analog-set-period), [map](/reference/pins/map), [onPulsed](/reference/pins/on-pulsed), [pulseDuration](/reference/pins/pulse-duration), [servoWritePin](/reference/pins/servo-write-pin), [servoSetPulse](/reference/pins/serial-set-pulse), [i2cReadNumber](/reference/pins/i2c-read-number), [i2cWriteNumber](/reference/pins/i2c-write-number), [setPull](/reference/pins/set-pull), [analogPitch](/reference/pins/analog-pitch), [analogSetPitchPin](/reference/pins/analog-set-pitch)

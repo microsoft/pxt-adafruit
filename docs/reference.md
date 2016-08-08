@@ -33,3 +33,7 @@ bluetooth.onBluetoothConnected(() => {});
 microbit-devices
 microbit-bluetooth
 ```
+
+### See Also
+
+[basic](/reference/basic), [input](/reference/input), [music](/reference/music), [led](/reference/led), [Math](/reference/Math), [String](/reference/String), [game](/reference/game), [images](/reference/images), [pins](/reference/pins), [serial](/reference/serial), [control](/reference/control), [radio](/reference/radio), [devices](/reference/devices), [bluetooth](/reference/bluetooth)

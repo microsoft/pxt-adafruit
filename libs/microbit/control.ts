@@ -23,18 +23,17 @@ namespace control {
      * Display specified error code and stop the program.
      */
     //% shim=pxtrt::panic
-    export function panic(code: number) {
-    }
+    export function panic(code: number) { }
 
     /**
      * If the condition is false, display msg on serial console, and panic with code 098.
      */
-    export function assert(condition:boolean, msg?: string)
-    {
+    export function assert(condition: boolean, msg ?: string) {
         if (!condition) {
             console.log("ASSERTION FAILED")
-            if (msg != null)
+            if (msg != null) {
                 console.log(msg)
+            }
             panic(98)
         }
     }

@@ -1,7 +1,7 @@
 {
     "id": "microbit",
     "name": "code the micro:bit",
-    "title": "code the micro:bit",
+    "title": "code the micro:bit - Blocks / Javascript editor",
     "corepkg": "microbit",
     "bundleddirs": [
         "libs/microbit",

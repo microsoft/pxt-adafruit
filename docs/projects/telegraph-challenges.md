@@ -1,12 +1,12 @@
 # telegraph activity 
 
-Build a telgraph.
+Build a telegraph.
 
 # micro:bit telegraph
 
 Have you ever tried to communicate through a telegraph? Let's try coding a "Telegraph" on two BBC micro:bits !
 
-Complete the following [guided tutorial](/projects/telegraph), your hack should look like this:
+Complete the following [tutorial](/projects/telegraph), your hack should look like this:
 
 ![](/static/mb/lessons/telegraph-0.png)
 

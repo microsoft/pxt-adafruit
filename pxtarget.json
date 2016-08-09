@@ -11,7 +11,10 @@
     ],
     "cloud": {
         "workspace": false,
-        "packages": true
+        "packages": true,
+        "preferredPackages": [
+            "Microsoft/pxt-neopixel"
+        ]
     },
     "blocksprj": {
         "id": "blocksprj",

@@ -48,21 +48,21 @@ The micro:bit’s *scheduler* provides the capability to concurrently execute di
 
 The first job of the scheduler is to allow multiple *subprograms* to be queued up for later execution . For our purposes, a subprogram is just a statement or sequence of statements in the context of a larger program. Consider the Touch Develop program below for counting button presses.
 
-```
+```blocks
 export function countButtonPresses() {
+    let count = 0
     input.onButtonPressed(Button.A, () => {
         count = count + 1
     })
     basic.forever(() => {
         basic.showNumber(count, 150)
     })
-    count = 0
 }
 ```
 
 The program above contains three statements that execute in order from top to bottom. The first statement
 
-```
+```blocks
 input.onButtonPressed(Button.A, () => {
     count = count + 1
 })
@@ -70,7 +70,7 @@ input.onButtonPressed(Button.A, () => {
 
 informs the scheduler that on each and every event of the A button being pressed, a subprogram (called the event handler) should be queued for execution. The event handler is demarcated by the do/end keywords; it increments the global variable `count` by one.  The second statement
 
-```
+```blocks
 basic.forever(() => {
     basic.showNumber(count, 150)
 })
@@ -78,7 +78,7 @@ basic.forever(() => {
 
 queues a `forever` loop for later execution by the scheduler; the body of this loop (between the do/end keywords) displays the current value of global variable `count` on the LED screen. The third statement
 
-```
+```blocks
 count = 0
 ```
 
@@ -128,7 +128,7 @@ Through this example, we have seen that the micro:bit scheduler enables you to c
 
 As a result, you can easily add a new capability to the micro:bit by just adding a new subprogram. For example, if you want to add a reset feature to the counter program, all you need to do is add a new event handler for a press of button B that sets the global variable "count" to zero, as shown below:
 
-```
+```blocks
 export function countButtonPressesWithReset() {
     input.onButtonPressed(Button.A, () => {
         count = count + 1

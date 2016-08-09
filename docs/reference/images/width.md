@@ -20,7 +20,7 @@ The following example gets the width of `img` and stores it in the `w` variable:
 
 ### ~hide
 
-```
+```blocks
 let img = images.createImage(`
 . . # . . . . . . .
 . # . # . . . # . .
@@ -32,7 +32,7 @@ let img = images.createImage(`
 
 ### ~
 
-```
+```blocks
 let w = img.width()
 ```
 
@@ -40,7 +40,7 @@ let w = img.width()
 
 The following example uses the `width` function with a [for](/blocks/loops/for) loop to show each image frame on the screen:
 
-```
+```blocks
 let img2 = images.createImage(`
 . . # . . . # # # # . # # # .
 . # # . . . . . . # . . . # .

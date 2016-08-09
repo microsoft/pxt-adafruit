@@ -6,7 +6,7 @@ Get the state of a pixel in an [Image](/reference/images/image).
 
 ### JavaScript
 
-```
+```sig
 export function pixel(_this: micro_bit.Image, x: number, y: number) : boolean
 ```
 
@@ -29,7 +29,7 @@ This example gets the state of pixel `0, 0` in the `img` variable:
 
 ### ~hide
 
-```
+```blocks
 let img = images.createImage(`
 . . # . . . . . . .
 . # . # . . . # . .
@@ -41,7 +41,7 @@ let img = images.createImage(`
 
 ### ~
 
-```
+```blocks
 let state = img.pixel(0, 0)
 ```
 

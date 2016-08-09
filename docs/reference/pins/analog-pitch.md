@@ -13,7 +13,7 @@ pins.analogPitch(440, 300)
 
 ### Example
 
-```
+```blocks
 pins.analogSetPitchPin("P0")
 let frequency1 = 440
 let duration = 1000

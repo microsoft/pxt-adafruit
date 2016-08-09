@@ -23,7 +23,7 @@ devices.onSignalStrengthChanged(() => {})
 
 Display the signal strength on screen:
 
-```
+```blocks
 devices.onSignalStrengthChanged(() => {
     basic.showNumber(devices.signalStrength(), 150)
 })

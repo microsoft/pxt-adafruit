@@ -23,7 +23,7 @@ In this animation, each row is 15 spaces wide because
 there are three frames in the animation, and each frame is
 five spaces wide, just like the screen on the BBC micro:bit.
 
-```
+```blocks
 basic.showAnimation(`
 . . # . . . # # # . . # # # .
 . # # . . . . . # . . . . # .
@@ -47,7 +47,7 @@ In this animation, each row is 30 spaces wide because
 there are six frames in the animation, and each frame is
 five spaces wide, just like the screen.
 
-```
+```blocks
 basic.showAnimation(`
 . . . . . # . . . . . . . . . . . . . # . . . . . # . . . .
 . . # . . . . . . . . . # . . . . . . . . . # . . . . . . .

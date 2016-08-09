@@ -34,8 +34,7 @@ Let's code the third part of Happy Birthday!
 
 To do this, you need to add blocks after the last line of the `play` blocks. We want to continue to adding musical chords with the `play` block. Then insert the appropriate chord blocks `G`, `E`, `C`, `B`, `A` to complete the third part of the song. Modify your code so that your code looks like this.
 
-``` blocks
-
+```blocks
 music.playTone(music.noteFrequency(Note.C), music.beat(BeatFraction.Quater));
 music.playTone(music.noteFrequency(Note.C), music.beat(BeatFraction.Quater));
 music.playTone(music.noteFrequency(Note.D), music.beat(BeatFraction.Quater));
@@ -57,8 +56,7 @@ music.playTone(music.noteFrequency(Note.F), music.beat(BeatFraction.Quater));
 music.playTone(music.noteFrequency(Note.E), music.beat(BeatFraction.Quater));
 music.playTone(music.noteFrequency(Note.D), music.beat(BeatFraction.Quater));
 basic.pause(100);
-
-``` 
+```
 
 * click *run * to see if the code works as expected.
 

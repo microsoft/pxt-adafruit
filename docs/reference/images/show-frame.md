@@ -6,7 +6,7 @@ Display an [Image](/reference/images/image) on the BBC micro:bit's [LED screen](
 
 ### JavaScript
 
-```
+```sig
 export function showFrame(img: micro_bit.Image, frame: number)
 ```
 
@@ -20,7 +20,7 @@ The `show frame` function is the same as [plot frame](/reference/images/plot-fra
 
 ### Example
 
-```
+```blocks
 let img = images.createImage(`
 # . . . # # . . . #
 . # . # . . # # # .

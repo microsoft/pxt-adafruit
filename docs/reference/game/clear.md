@@ -6,7 +6,7 @@ Turn off all the pixels in an [Image](/reference/images/image).
 
 ### JavaScript
 
-```
+```sig
 export function clear(img: micro_bit.Image)
 ```
 
@@ -18,7 +18,7 @@ export function clear(img: micro_bit.Image)
 
 The following example turns off the pixels of `img` when the A input button is pressed:
 
-```
+```blocks
 let img = images.createImage(`
 . . . . .
 . # # # .

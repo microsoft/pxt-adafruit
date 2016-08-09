@@ -12,7 +12,7 @@ pins.analogSetPitchPin(AnalogPin.P0)
 
 ### Example
 
-```
+```blocks
 pins.analogSetPitchPin(AnalogPin.P0)
 let frequency = 440
 let duration = 1000

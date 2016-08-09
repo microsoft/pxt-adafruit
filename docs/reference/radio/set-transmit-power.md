@@ -38,3 +38,7 @@ radio.setTransmitPower(7)
 ### See also
 
 [receive number](/reference/radio/receive-number), [send number](/reference/radio/send-number), [on data received](/reference/radio/on-data-received)
+
+```package
+microbit-radio
+```

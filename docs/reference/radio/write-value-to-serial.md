@@ -41,10 +41,17 @@ radio.onDataReceived(() => {
 });
 ```
 Sample output to serial when ``A`` button pressed:
-```{v:27,t:323,s:0}```
+
+```Text
+{v:27,t:323,s:0}
+```
 
 ### See also
 
 [send number](/reference/radio/send-number),
 [send value](/reference/radio/send-value),
 [on data received](/reference/radio/on-data-received)
+
+```package
+microbit-radio
+```

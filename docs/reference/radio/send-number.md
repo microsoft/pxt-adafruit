@@ -43,3 +43,7 @@ basic.forever(() => {
 ### See also
 
 [receive number](/reference/radio/receive-number), [on data received](/reference/radio/on-data-received)
+
+```package
+microbit-radio
+```

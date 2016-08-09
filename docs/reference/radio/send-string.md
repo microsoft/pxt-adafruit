@@ -40,3 +40,7 @@ A radio that can both transmit and receive is called a _transceiver_.
 ### See also
 
 [receive string](/reference/radio/receive-string), [on data received](/reference/radio/on-data-received)
+
+```package
+microbit-radio
+```

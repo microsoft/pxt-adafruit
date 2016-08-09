@@ -64,3 +64,6 @@ basic.forever(() => {
 
 [send number](/reference/radio/send-number), [on data received](/reference/radio/on-data-received)
 
+```package
+microbit-radio
+```

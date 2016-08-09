@@ -1,0 +1,14 @@
+{
+  "name": "codethemicrobit",
+  "version": "0.1.0",
+  "description": "A Blocks / JavaScript editor for the micro:bit",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Microsoft",
+  "license": "MIT",
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.0"
+  }
+}

@@ -12,7 +12,7 @@ The functions in the antenna namespace allow the BBC micro:bit to communicate wi
 
 ### JavaScript
 
-```
+```sig
 export function tellMicrophoneTo(event: string)
 ```
 
@@ -36,12 +36,16 @@ export function tellMicrophoneTo(event: string)
 
 To tell the connected device to start recording audio
 
-```
+```blocks
 devices.tellMicrophoneTo("start capture")
 ```
 
 To tell the connected device to stop recording audio
 
-```
+```blocks
 devices.tellMicrophoneTo("stop capture")
+```
+
+```package
+microbit-devices
 ```

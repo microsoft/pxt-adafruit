@@ -84,8 +84,8 @@ namespace bluetooth {
     /**
     *  Starts the Bluetooth UART service
     */
-    // help=bluetooth/start-uart-service
-    // blockId=bluetooth_start_uart_service block="bluetooth uart service" blockGap=8
+    //% help=bluetooth/start-uart-service
+    //% blockId=bluetooth_start_uart_service block="bluetooth uart service" blockGap=8
     void startUartService() {
         if (uart) return;
         // 61 octet buffer size is 3 x (MTU - 3) + 1

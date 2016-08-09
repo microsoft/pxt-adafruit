@@ -50,6 +50,13 @@ declare namespace bluetooth {
     function startButtonService(): void;
 
     /**
+     *  Starts the Bluetooth UART service
+     */
+    //% help=bluetooth/start-uart-service
+    //% blockId=bluetooth_start_uart_service block="bluetooth uart service" blockGap=8 shim=bluetooth::startUartService
+    function startUartService(): void;
+
+    /**
      *  Writes to the Bluetooth UART service buffer. From there the data is transmitted over Bluetooth to a connected device.
      */
     //% help=bluetooth/uart-write

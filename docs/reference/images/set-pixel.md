@@ -6,7 +6,7 @@ Set the on/off state of pixel in an [Image](/reference/images/image).
 
 ### JavaScript
 
-```
+```sig
 export function setPixel(_this: micro_bit.Image, x: number, y: number, value: boolean)
 ```
 
@@ -24,7 +24,7 @@ To figure out the ``x``, ``y`` coordinates, see [LED screen](/device/screen).
 
 The following example creates an image and stores it in the `img` variable. The `set pixel` function sets the centre pixel off, before `img` is shown using `show image`.
 
-```
+```blocks
 let img = images.createImage(`
 . . # . .
 . # . # .

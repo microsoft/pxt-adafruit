@@ -6,7 +6,7 @@ Display an [Image](/reference/images/image) on the BBC micro:bit's [LED screen](
 
 ### JavaScript
 
-```
+```sig
 export function plotImage(_this: micro_bit.Image, xOffset: number)
 ```
 
@@ -20,7 +20,7 @@ The `show image` function has a built in delay of 400ms after display of the ima
 
 ### Example
 
-```
+```blocks
 let img = images.createImage(`
 # . . . # # . . . #
 . # . # . . # # # .

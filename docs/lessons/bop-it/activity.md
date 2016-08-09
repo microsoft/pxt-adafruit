@@ -62,7 +62,7 @@ export function newAction() {
 
 Now let's implement `PRESS PIN 0` in the main. Create a condition of `input->on pin pressed("P0")` that will add one to the score and calls the method `new action`.
 
-```
+```blocks
 // **. . .**
 input.onButtonPressed(Button.B, () => {
     basic.showNumber(game.score(), 150) // ***

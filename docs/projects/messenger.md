@@ -22,7 +22,7 @@ by radio.
 ```blocks
 let message = 0;
 radio.onDataReceived(() => {
-    message = radio.receivedNumber();
+    message = radio.receiveNumber();
     if (message == 0) {
         basic.showString("YO")
     }
@@ -49,7 +49,7 @@ by radio.
 ```blocks
 let message = 0;
 radio.onDataReceived(() => {
-    message = radio.receivedNumber();
+    message = radio.receiveNumber();
     if (message == 0) {
         basic.showString("YO")
     }

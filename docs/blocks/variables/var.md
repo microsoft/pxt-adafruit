@@ -46,7 +46,7 @@ basic.showNumber(counter);
 
 To change the contents of a variable use the assignment operator. The following code sets `counter` to 1 and then increments `counter` by 10:
 
-```blocks 
+```blocks
 let counter = 1;
 counter = counter + 10;
 basic.showNumber(counter);

@@ -44,7 +44,7 @@ Another property of block-scoped variables is that they can't be read or written
 While these variables are "present" throughout their scope, all points up until their declaration are part of their *temporal dead zone*.
 This is just a sophisticated way of saying you can't access them before the `let` statement, and luckily TypeScript will let you know that.
 
-```typescript
+```typescript-ignore
 a++; // illegal to use 'a' before it's declared;
 let a;
 ```

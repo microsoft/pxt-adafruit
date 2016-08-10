@@ -32,7 +32,7 @@ let img = images.createImage(`
 
 ### ~
 
-```blocks
+```typescript-ignore
 let w = img.width()
 ```
 
@@ -40,7 +40,7 @@ let w = img.width()
 
 The following example uses the `width` function with a [for](/blocks/loops/for) loop to show each image frame on the screen:
 
-```blocks
+```typescript
 let img2 = images.createImage(`
 . . # . . . # # # # . # # # .
 . # # . . . . . . # . . . # .

@@ -162,3 +162,7 @@ radio.onDataReceived(() => {
 Connect the first micro:bit to your computer using your USB cable and run the pogo script on it.
 Connect the second micro:bit to your computer using your USB cable and run the pogo script on it.
 The first person and second person take turns jumping in the “y” direction while the other player uses the micro:bit to track the results on the micro:bit!
+
+```package
+microbit-radio
+```

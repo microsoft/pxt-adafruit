@@ -45,7 +45,7 @@ TypeScript can figure the return type out by looking at the return statements, s
 
 In TypeScript, the number of arguments given to a function has to match the number of parameters the function expects.
 
-```ts
+```ts-ignore
 function buildName(firstName: string, lastName: string) {
     return firstName + " " + lastName;
 }
@@ -60,7 +60,7 @@ When they do, their value is `undefined`.
 We can get this functionality in TypeScript by adding a `?` to the end of parameters we want to be optional.
 For example, let's say we want the last name parameter from above to be optional:
 
-```ts
+```ts-ignore
 function buildName(firstName: string, lastName?: string) {
     if (lastName)
         return firstName + " " + lastName;
@@ -80,7 +80,7 @@ In TypeScript, we can also set a value that a parameter will be assigned if the 
 These are called default-initialized parameters.
 Let's take the previous example and default the last name to `"Smith"`.
 
-```ts
+```ts-ignore
 function buildName(firstName: string, lastName = "Smith") {
     return firstName + " " + lastName;
 }
@@ -115,7 +115,7 @@ Unlike plain optional parameters, default-initialized parameters don't *need* to
 If a default-initialized parameter comes before a required parameter, users need to explicitly pass `undefined` to get the default initialized value.
 For example, we could write our last example with only a default initializer on `firstName`:
 
-```ts
+```ts-ignore
 function buildName(firstName = "Will", lastName: string) {
     return firstName + " " + lastName;
 }
@@ -134,7 +134,7 @@ In JavaScript, you can work with the arguments directly using the `arguments` va
 
 In TypeScript, you can gather these arguments together into a variable:
 
-```ts
+```ts-ignore
 function buildName(firstName: string, ...restOfName: string[]) {
     return firstName + " " + restOfName.join(" ");
 }
@@ -148,7 +148,7 @@ The compiler will build an array of the arguments passed in with the name given 
 
 The ellipsis is also used in the type of the function with rest parameters:
 
-```ts
+```ts-ignore
 function buildName(firstName: string, ...restOfName: string[]) {
     return firstName + " " + restOfName.join(" ");
 }

@@ -12,4 +12,4 @@ game.setScore(0);
 
 ### See Also
 
-[addScore](/reference/game/add-score), [score](/reference/game/score), [startCountdown](/reference/game/start-countdown), [gameOver](/reference/game/game-over), [setScore](/reference/game/set-score)
+[addScore](/reference/game/change-score-by), [score](/reference/game/score), [startCountdown](/reference/game/start-countdown), [gameOver](/reference/game/game-over), [setScore](/reference/game/set-score)

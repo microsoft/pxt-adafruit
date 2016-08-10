@@ -283,7 +283,7 @@ declare namespace input {
      * The pitch of the device, rotation along the ``x-axis``, in degrees.
      * @param kind TODO
      */
-    //% help=/input/rotation weight=52
+    //% help=input/rotation weight=52
     //% blockId=device_get_rotation block="rotation (°)|%NAME" blockGap=8 icon="\uf197" shim=input::rotation
     function rotation(kind: Rotation): number;
 
@@ -439,7 +439,7 @@ declare namespace led {
      * Sets the display mode between black and white and greyscale for rendering LEDs.
      * @param mode TODO
      */
-    //% weight=1 help=/led/set-display-mode shim=led::setDisplayMode
+    //% weight=1 help=led/set-display-mode shim=led::setDisplayMode
     function setDisplayMode(mode: DisplayMode): void;
 
     /**
@@ -527,7 +527,7 @@ declare namespace pins {
      * @param name pin name
      * @param micros pulse duration in micro seconds, eg:1500
      */
-    //% help=pins/serial-set-pulse weight=19
+    //% help=pins/servo-set-pulse weight=19
     //% blockId=device_set_servo_pulse block="servo set pulse|pin %value|to (µs) %micros" shim=pins::servoSetPulse
     function servoSetPulse(name: AnalogPin, micros: number): void;
 

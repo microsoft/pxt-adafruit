@@ -253,7 +253,7 @@ namespace input {
      * The pitch of the device, rotation along the ``x-axis``, in degrees.
      * @param kind TODO
      */
-    //% help=/input/rotation weight=52
+    //% help=input/rotation weight=52
     //% blockId=device_get_rotation block="rotation (°)|%NAME" blockGap=8 icon="\uf197"
     int rotation(Rotation kind) {
       switch (kind) {

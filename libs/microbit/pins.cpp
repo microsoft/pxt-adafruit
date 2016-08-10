@@ -182,7 +182,7 @@ namespace pins {
      * @param name pin name
      * @param micros pulse duration in micro seconds, eg:1500
      */
-    //% help=pins/serial-set-pulse weight=19
+    //% help=pins/servo-set-pulse weight=19
     //% blockId=device_set_servo_pulse block="servo set pulse|pin %value|to (µs) %micros"
     void servoSetPulse(AnalogPin name, int micros) { 
         PINOP(setServoPulseUs(micros));

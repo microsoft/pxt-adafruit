@@ -49,15 +49,13 @@ The micro:bit’s *scheduler* provides the capability to concurrently execute di
 The first job of the scheduler is to allow multiple *subprograms* to be queued up for later execution . For our purposes, a subprogram is just a statement or sequence of statements in the context of a larger program. Consider the Touch Develop program below for counting button presses.
 
 ```blocks
-export function countButtonPresses() {
-    let count = 0
-    input.onButtonPressed(Button.A, () => {
-        count = count + 1
-    })
-    basic.forever(() => {
-        basic.showNumber(count, 150)
-    })
-}
+input.onButtonPressed(Button.A, () => {
+    count = count + 1
+})
+basic.forever(() => {
+    basic.showNumber(count, 150)
+})
+let count = 0
 ```
 
 The program above contains three statements that execute in order from top to bottom. The first statement

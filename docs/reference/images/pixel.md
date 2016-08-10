@@ -41,7 +41,7 @@ let img = images.createImage(`
 
 ### ~
 
-```blocks
+```typescript-ignore
 let state = img.pixel(0, 0)
 ```
 

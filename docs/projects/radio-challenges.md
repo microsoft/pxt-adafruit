@@ -90,3 +90,7 @@ Have fun reviewing your simulation and analyze the acceleration by chart the Exc
 ### ~button /projects/the-watch
 NEXT: The Watch
 ### ~
+
+```package
+microbit-radio
+```

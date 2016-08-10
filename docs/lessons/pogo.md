@@ -42,3 +42,7 @@ radio.onDataReceived(() => { })
 * learn how to conditionally run code depending on whether a condition is true or not
 * learn how to run code when an input button is pressed
 * learn how to pause your code for the specified number of milliseconds
+
+```package
+microbit-radio
+```

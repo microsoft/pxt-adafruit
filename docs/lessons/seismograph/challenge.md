@@ -195,4 +195,6 @@ Let's select Style 10 as an example.
 * The first person and second person take shaking or moving the micor:bit in any direction while the other player charts the data on the micro:bit!
 * Review and analyze the actual micro:bit device acceleration data on Excel
 
-
+```package
+microbit-radio
+```

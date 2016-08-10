@@ -49,24 +49,31 @@ The micro:bit’s *scheduler* provides the capability to concurrently execute di
 The first job of the scheduler is to allow multiple *subprograms* to be queued up for later execution . For our purposes, a subprogram is just a statement or sequence of statements in the context of a larger program. Consider the Touch Develop program below for counting button presses.
 
 ```blocks
+let count = 0
 input.onButtonPressed(Button.A, () => {
-    count = count + 1
+    count++;
 })
 basic.forever(() => {
     basic.showNumber(count, 150)
 })
+```
+
+The program above contains three statements that execute in order from top to bottom. 
+The first statement initializes the global variable `count` to zero.
+
+```blocks
 let count = 0
 ```
 
-The program above contains three statements that execute in order from top to bottom. The first statement
+The second statement informs the scheduler that on each and every event of the A button being pressed, a subprogram (called the event handler) should be queued for execution. The event handler is demarcated by the do/end keywords; it increments the global variable `count` by one.  
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
-    count = count + 1
+    count++;
 })
 ```
 
-informs the scheduler that on each and every event of the A button being pressed, a subprogram (called the event handler) should be queued for execution. The event handler is demarcated by the do/end keywords; it increments the global variable `count` by one.  The second statement
+The third statement queues a `forever` loop for later execution by the scheduler; the body of this loop (between the do/end keywords) displays the current value of global variable `count` on the LED screen. The third statement
 
 ```blocks
 basic.forever(() => {
@@ -74,13 +81,8 @@ basic.forever(() => {
 })
 ```
 
-queues a `forever` loop for later execution by the scheduler; the body of this loop (between the do/end keywords) displays the current value of global variable `count` on the LED screen. The third statement
 
-```blocks
-count = 0
-```
-
-initializes the global variable `count` to zero.  The function ends after the execution of these three statements, but this is not the end of program execution!  That’s because the function queued the `forever` loop for execution by the scheduler.
+The function ends after the execution of these three statements, but this is not the end of program execution!  That’s because the function queued the `forever` loop for execution by the scheduler.
 
 The second job of the scheduler is to periodically interrupt execution to read (poll) the various inputs to the micro:bit (the buttons, pins, etc.) and fire off events (such as “button A pressed”). Recall that the firing of an event causes the event handler subprogram associated with that event to be queued for later execution. The scheduler uses a timer built into the micro:bit hardware to interrupt execution every 6 milliseconds and poll the inputs, which is more than fast enough to catch the quickest press of a button.
 
@@ -94,9 +96,18 @@ If you hadn’t guessed already, a footballer represents subprogram and dribblin
 
 We will call this “passing control of execution” rather than “passing the ball”.  However, in the world of the micro:bit, the concurrently executing subprograms are not aware of each other, so they don’t actually pass control directly to one another.  Rather they pass control of execution back to the scheduler and the scheduler determines the subprogram to pass control to next.  The programmer inserts a call to the `pause` function to indicate a point in the subprogram where control of execution passes to the scheduler. Also, when a subprogram ends execution, control passes to the scheduler.
 
-Let’s take a look at the implementation of the `forever` statement to see an example of cooperative scheduling:
+Let’s take a look at the implementation of the `basic.forever` function to see an example of cooperative scheduling:
 
-![](/static/mb/device/reactive-2.png)
+```typescript
+function forever(body: () => void) {
+    control.inBackground(() => {
+        while(true) {
+            body()
+            basic.pause(20)
+        }
+    })
+}
+```
 
 The `forever` loop actually is a function that takes a subprogram (an *Action* in Touch Develop) as a parameter. The function uses the `control -> in background` function of the micro:bit runtime to queue a `while true` loop for execution by the scheduler. The while loop has two statements. The first statement runs the subprogram represented by the `body` parameter. The second statement passes control to the scheduler (requesting to “sleep” for 20 milliseconds).
 
@@ -126,15 +137,15 @@ Through this example, we have seen that the micro:bit scheduler enables you to c
 
 As a result, you can easily add a new capability to the micro:bit by just adding a new subprogram. For example, if you want to add a reset feature to the counter program, all you need to do is add a new event handler for a press of button B that sets the global variable "count" to zero, as shown below:
 
-```blocks
+```typescript
 export function countButtonPressesWithReset() {
+    let count = 0
     input.onButtonPressed(Button.A, () => {
         count = count + 1
     })
     basic.forever(() => {
         basic.showNumber(count, 150)
     })
-    count = 0
     input.onButtonPressed(Button.B, () => {
         count = 0
     })

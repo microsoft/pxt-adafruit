@@ -3,14 +3,26 @@ const electron = require('electron')
 const app = electron.app
 // Module to create native browser window.
 const BrowserWindow = electron.BrowserWindow
+// pxt toolchain
+const pxt = require('pxt-core')
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
-function createWindow () {
+function createWindow() {
+  console.log('starting app...')
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600})
+  mainWindow = new BrowserWindow({
+    width: 800, height: 600,
+    webPreferences: {
+      nodeIntegration: false,
+    }
+  })
+
+  ts.pxt.Util.debug = true;
+  pxt.mainCli("C:/gh/pxt-microbit/clients/electron/node_modules/pxt-microbit", ["serve", "-just"]);
+  
   // no menu
   mainWindow.setMenu(null);
 

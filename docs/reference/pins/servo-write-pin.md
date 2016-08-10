@@ -29,7 +29,7 @@ pins.servoWritePin(AnalogPin.P0, 90)
 
 ```blocks
 basic.forever(() => {
-    let millig = input.acceleration(Dimensions.X)
+    let millig = input.acceleration(Dimension.X)
     // map accelerometer readings to angle
     let angle = pins.map(millig, -1023, 1023, 0, 180)
     pins.servoWritePin(AnalogPin.P0, angle)

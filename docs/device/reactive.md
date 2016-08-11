@@ -68,6 +68,8 @@ let count = 0
 The second statement informs the scheduler that on each and every event of the A button being pressed, a subprogram (called the event handler) should be queued for execution. The event handler is demarcated by the do/end keywords; it increments the global variable `count` by one.  
 
 ```blocks
+let count = 0
+// ...
 input.onButtonPressed(Button.A, () => {
     count++;
 })
@@ -76,6 +78,8 @@ input.onButtonPressed(Button.A, () => {
 The third statement queues a `forever` loop for later execution by the scheduler; the body of this loop (between the do/end keywords) displays the current value of global variable `count` on the LED screen. The third statement
 
 ```blocks
+let count = 0
+// ...
 basic.forever(() => {
     basic.showNumber(count, 150)
 })

@@ -288,8 +288,6 @@ declare namespace led {
     //% block="none"
     PullNone = 2,
     }
-declare namespace pins {
-}
 
 
     declare enum SerialPin {

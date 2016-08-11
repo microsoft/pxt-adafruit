@@ -588,6 +588,11 @@ namespace pxsim.pins {
         // TODO
     }
 
+    export function spiWrite(value: number): number {
+        // TODO
+        return 0;
+    }
+
     export function i2cReadBuffer(address: number, size: number, repeat?: boolean): RefBuffer {
         // fake reading zeros
         return createBuffer(size)

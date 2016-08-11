@@ -71,7 +71,6 @@ MicroBitPin *getPin(int id) {
 }
 
 
-//% color=351 weight=30
 namespace pins {
     #define PINOP(op) \
       MicroBitPin *pin = getPin((int)name); \
@@ -268,4 +267,23 @@ namespace pins {
     {
       uBit.i2c.write(address << 1, (char*)buf->payload, buf->length, repeat);
     }
+
+    SPI* spi = NULL;
+    SPI* allocSPI() {
+        if (spi == NULL)
+            spi = new SPI(MOSI, MISO, SCK);
+        return spi;
+    }
+
+    /**
+    * Write to the SPI slave and return the response
+    * @param value Data to be sent to the SPI slave
+    */
+    //% help=pins/spi-write weight=5
+    //% blockId=spi_write block="spi write %value"
+    int spiWrite(int value) {
+        auto p = allocSPI();
+        return p->write(value);
+    }
+    
 }

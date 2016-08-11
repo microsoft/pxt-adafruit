@@ -448,10 +448,6 @@ declare namespace led {
     //% help=led/screenshot shim=led::screenshot
     function screenshot(): Image;
 }
-
-
-
-    //% color=351 weight=30
 declare namespace pins {
 
     /**
@@ -573,6 +569,14 @@ declare namespace pins {
      */
     //% repeat.defl=0 shim=pins::i2cWriteBuffer
     function i2cWriteBuffer(address: number, buf: Buffer, repeat?: boolean): void;
+
+    /**
+     * Write to the SPI slave and return the response
+     * @param value Data to be sent to the SPI slave
+     */
+    //% help=pins/spi-write weight=5
+    //% blockId=spi_write block="spi write %value" shim=pins::spiWrite
+    function spiWrite(value: number): number;
 }
 
 

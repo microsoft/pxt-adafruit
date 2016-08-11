@@ -1,6 +1,6 @@
 {
   "name": "pxt-microbit",
-  "version": "0.3.25",
+  "version": "0.3.26",
   "description": "BBC micro:bit target for PXT",
   "keywords": [
     "JavaScript",

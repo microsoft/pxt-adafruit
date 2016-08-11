@@ -118,11 +118,7 @@
                 "path": "/javascript"
             },
             {
-                "name": "Streaming Data",
-                "path": "/streaming"
-            },
-            {
-                "name": "The Device",
+                "name": "Hardware",
                 "path": "/device"
             }
         ],

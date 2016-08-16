@@ -551,7 +551,6 @@ namespace pxsim {
                 default: theme = pxsim.micro_bit.randomTheme();
             }
 
-            console.log("setting up microbit simulator")
             let view = new pxsim.micro_bit.MicrobitBoardSvg({
                 theme: theme,
                 runtime: runtime

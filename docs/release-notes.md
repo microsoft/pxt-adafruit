@@ -4,6 +4,11 @@
 basic.forever(() => { basic.showString("RELEASE NOTES"); });
 ```
 
+## August 2016
+
+* The JavaScript editor is using Monaco
+* New [package system](/packages) based on GitHub
+
 ## June 2016
 
 * It is now possible to stream data into the cloud (Azure) from the PXT editor. Simply click on the log view to get started.

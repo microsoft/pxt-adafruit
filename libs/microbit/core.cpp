@@ -171,9 +171,13 @@ namespace pxt {
   //%
   void registerWithDal(int id, int event, Action a);
   //%
-  void runAction0(Action a);
+  uint32_t runAction3(Action a, int arg0, int arg1, int arg2);
   //%
-  void runAction1(Action a, int arg);
+  uint32_t runAction2(Action a, int arg0, int arg1);
+  //%
+  uint32_t runAction1(Action a, int arg0);
+  //%
+  uint32_t runAction0(Action a);
   //%
   Action mkAction(int reflen, int totallen, int startptr);
   //%

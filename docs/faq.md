@@ -20,6 +20,10 @@ To share your project with others, you can use the **Embed** feature. It stores 
 
 If you are using [Visual Studio Code](/code), all your programs are stored as files on your computer and you can use your favorite source control system as needed.
 
+## Is the web site available in other languages?
+
+You can [help us translate](/translate) the web site, documentation and blocks via our crowd-source translations! 
+
 ## Troubleshooting
 
 ### My micro:bit does not show up as a drive when I connect it to my computer.

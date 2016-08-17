@@ -19,6 +19,7 @@
 ### More questions?
 
 * [Frequently Asked Question](/faq)
+* [Help Translate](/translate)
 * [Release notes](/release-notes)
 
 ### Developers

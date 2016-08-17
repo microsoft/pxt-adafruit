@@ -14,7 +14,8 @@
         "workspace": false,
         "packages": true,
         "preferredPackages": [
-            "Microsoft/pxt-neopixel"
+            "Microsoft/pxt-neopixel",
+            "Microsoft/pxt-max6675"
         ]
     },
     "blocksprj": {

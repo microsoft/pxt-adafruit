@@ -592,6 +592,13 @@ namespace pxsim.pins {
         // TODO
     }
 
+    export function pulseIn(name: number, value: number) : number {
+        let pin = getPin(name);
+        if (!pin) return 0;
+
+        return 5000;
+    }
+
     export function spiWrite(value: number): number {
         // TODO
         return 0;

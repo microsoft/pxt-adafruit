@@ -11,7 +11,7 @@ namespace pins {
      * @param toLow the lower bound of the value's target range
      * @param toHigh the upper bound of the value's target range, eg: 4
      */
-    //% help=pins/map weight=22
+    //% help=pins/map weight=23
     //% blockId=math_map block="map %value|from low %fromLow|from high %fromHigh|to low %toLow|to high %toHigh"
     export function map(value: number, fromLow: number, fromHigh: number, toLow: number, toHigh: number): number {
         return ((value - fromLow) * (toHigh - toLow)) / (fromHigh - fromLow) + toLow;

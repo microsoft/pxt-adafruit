@@ -160,9 +160,30 @@ namespace pins {
     */
     //% help=pins/pulse-duration
     //% blockId=pins_pulse_duration block="pulse duration (µs)"
-    //% weight=21
+    //% weight=21 blockGap=8
     int pulseDuration() {
         return pxt::lastEvent.timestamp;
+    }
+
+    /**
+    * Returns the duration of a pulse in microseconds
+    * @param name the pin which measures the pulse
+    * @param value the value of the pulse (default high)
+    */    
+    //% blockId="pins_pulse_in" block="pulse in (µs)|pin %name"
+    //% weight=20
+    int pulseIn(DigitalPin name, PulseValue value) {
+        MicroBitPin* pin = getPin((int)name);
+        if (!pin) return 0;
+
+        int pulse = value == PulseValue::High ? 1 : 0;
+        while(pin->getDigitalValue() != pulse);
+
+        uint64_t start =  system_timer_current_time_us();       
+        while(pin->getDigitalValue() == pulse);
+        uint64_t end =  system_timer_current_time_us();       
+        
+        return end - start;         
     }
 
     /**

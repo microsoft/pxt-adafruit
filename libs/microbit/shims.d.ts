@@ -514,8 +514,17 @@ declare namespace pins {
      */
     //% help=pins/pulse-duration
     //% blockId=pins_pulse_duration block="pulse duration (µs)"
-    //% weight=21 shim=pins::pulseDuration
+    //% weight=21 blockGap=8 shim=pins::pulseDuration
     function pulseDuration(): number;
+
+    /**
+     * Returns the duration of a pulse in microseconds
+     * @param name the pin which measures the pulse
+     * @param value the value of the pulse (default high)
+     */
+    //% blockId="pins_pulse_in" block="pulse in (µs)|pin %name"
+    //% weight=20 shim=pins::pulseIn
+    function pulseIn(name: DigitalPin, value: PulseValue): number;
 
     /**
      * Writes a value to the servo, controlling the shaft accordingly. On a standard servo, this will set the angle of the shaft (in degrees), moving the shaft to that orientation. On a continuous rotation servo, this will set the speed of the servo (with ``0`` being full-speed in one direction, ``180`` being full speed in the other, and a value near ``90`` being no movement).

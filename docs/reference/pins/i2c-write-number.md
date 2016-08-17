@@ -27,6 +27,13 @@ address `32` in big-endian 32-bit integer format.
 ```blocks
 pins.i2cWriteNumber(32, 2055, NumberFormat.Int32BE);
 ```
+
+#### ~hint
+
+This function is not supported in the simulator.
+
+#### ~
+
 ### See also
 
 [I2C](https://en.wikipedia.org/wiki/I%C2%B2C)

@@ -27,6 +27,12 @@ format from the 7-bit I2C address `32`.
 pins.i2cReadNumber(32, NumberFormat.UInt16BE);
 ```
 
+#### ~hint
+
+This function is not supported in the simulator.
+
+#### ~
+
 ### See also
 
 [I2C](https://en.wikipedia.org/wiki/I%C2%B2C)

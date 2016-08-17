@@ -18,12 +18,13 @@ Please read the [page about pins](/device/pins) carefully.
 
 * ``name`` is a [string](/reference/types/string) that stores the name of the pin (``P0``, ``P1``, or ``P2``, up through ``P20``)
 * ``value`` is the value of the pulse, ``high`` or ``low``
+* ``maxDuration``, maximum duration in micro-seconds. If no pulse is received 
 
 ### Returns
 
 * a [number](/reference/types/number) that represents the pulse duration in micro-seconds
 
-### Example: football score keeper
+### Example: Measuring distance with a sonar
 
 The following script sends a pulse on ``P0`` and reads the pulse returned by a HC-SR04 sonar to determine the distance of the object in front of the sensor.
 

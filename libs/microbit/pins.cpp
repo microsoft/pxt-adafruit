@@ -169,20 +169,28 @@ namespace pins {
     * Returns the duration of a pulse in microseconds
     * @param name the pin which measures the pulse
     * @param value the value of the pulse (default high)
+    * @param maximum duration in micro-seconds
     */    
-    //% blockId="pins_pulse_in" block="pulse in (µs)|pin %name"
+    //% blockId="pins_pulse_in" block="pulse in (µs)|pin %name|pulsed %value"
     //% weight=20
-    int pulseIn(DigitalPin name, PulseValue value) {
+    int pulseIn(DigitalPin name, PulseValue value, int maxDuration = 2000000) {
         MicroBitPin* pin = getPin((int)name);
         if (!pin) return 0;
 
         int pulse = value == PulseValue::High ? 1 : 0;
-        while(pin->getDigitalValue() != pulse);
+        uint64_t tick =  system_timer_current_time_us(); 
+        uint64_t maxd = (uint64_t)maxDuration;      
+        while(pin->getDigitalValue() != pulse) {
+            if(system_timer_current_time_us() - tick > maxd)
+                return 0;            
+        }
 
         uint64_t start =  system_timer_current_time_us();       
-        while(pin->getDigitalValue() == pulse);
+        while(pin->getDigitalValue() == pulse) {
+            if(system_timer_current_time_us() - tick > maxd)
+                return 0;            
+        }        
         uint64_t end =  system_timer_current_time_us();       
-        
         return end - start;         
     }
 

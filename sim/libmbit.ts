@@ -592,7 +592,7 @@ namespace pxsim.pins {
         // TODO
     }
 
-    export function pulseIn(name: number, value: number) : number {
+    export function pulseIn(name: number, value: number, maxDuration: number): number {
         let pin = getPin(name);
         if (!pin) return 0;
 

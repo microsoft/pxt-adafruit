@@ -129,10 +129,20 @@ namespace control {
     /**
      * Resets the BBC micro:bit.
      */
-    //% weight=30 async help=control/reset
+    //% weight=30 async help=control/reset blockGap=8
     //% blockId="control_reset" block="reset"
     void reset() { 
       microbit_reset();
+    }
+
+    /**
+    * Blocks the current fiber for the given microseconds
+    * @param micros number of micro-seconds to wait. eg: 4
+    */
+    //% help=control/wait-micros weight=29
+    //% blockId="control_wait_us" block="wait (µs)%micros"
+    void waitMicros(int micros) {
+        wait_us(micros);
     }
 
     /**

@@ -333,9 +333,17 @@ declare namespace control {
     /**
      * Resets the BBC micro:bit.
      */
-    //% weight=30 async help=control/reset
+    //% weight=30 async help=control/reset blockGap=8
     //% blockId="control_reset" block="reset" shim=control::reset
     function reset(): void;
+
+    /**
+     * Blocks the current fiber for the given microseconds
+     * @param micros number of micro-seconds to wait. eg: 4
+     */
+    //% help=control/wait-micros weight=29
+    //% blockId="control_wait_us" block="wait (µs)%micros" shim=control::waitMicros
+    function waitMicros(micros: number): void;
 
     /**
      * Raises an event in the event bus.

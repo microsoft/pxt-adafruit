@@ -227,6 +227,10 @@ namespace pxsim.control {
         U.userError("reset not implemented in simulator yet")
     }
 
+    export function waitMicros(micros: number) {
+        // TODO        
+    }
+
     export function deviceName(): string {
         let b = board();
         return b && b.id

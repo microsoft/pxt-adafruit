@@ -1,5 +1,7 @@
 # Lessons 
 
+### @description Lessons to teach computer science and coding.
+
 ### @short Lessons
 
 ### ~column 

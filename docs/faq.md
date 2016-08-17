@@ -1,5 +1,7 @@
 # Frequently Asked Questions
 
+### @description Frequently asked questions and answers from our users.
+
 ### Where can I get a BBC micro:bit?
 
 More information at [http://uk.farnell.com/bbc-microbit](http://uk.farnell.com/bbc-microbit).

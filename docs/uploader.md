@@ -1,5 +1,7 @@
 # Uploader
 
+### @description A Windows application that automatically deploys .hex files to connected micro:bit boards
+
 ### ~avatar avatar
 
 The Uploader **automatically** deploys .hex files to all micro:bits connected to your computer.

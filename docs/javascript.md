@@ -1,4 +1,4 @@
-# JavaScript and TypeScript
+# JavaScript
 
 Visit the cards below to starting programming JavaScript and TypeScript with the micro:bit:
 

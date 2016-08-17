@@ -1,4 +1,4 @@
-# Extensions
+# Packages
 
 You can publish libraries (also known as packages or extensions)
 that users can then add to their scripts. These typically
@@ -10,7 +10,7 @@ to a microbit.
 * [Sample C++ extension](https://github.com/Microsoft/pxt-microbit-cppsample)
 * [Sample TypeScript extension](https://github.com/Microsoft/pxt-microbit/tree/master/libs/i2c-fram)
 
-## Finding libraries
+## Finding packages
 
 From the editor, the user clicks on **More** then **Add Package** and searches for the package. 
 
@@ -18,11 +18,11 @@ To see the list of packages, click on **More** then **Show Files** to see the pr
 
 To remove a package, click on the garbage button in the file list next to the package.
 
-## Publishing libraries
+## Publishing packages
 
 Packages can be published from the pxt command line. We are still sorting out the details.
 
-## Localizing libraries
+## Localizing packages
 
 It is possible to package localization strings for the **jsDoc** description associated to the API in the package.
 

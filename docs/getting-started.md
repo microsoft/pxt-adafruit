@@ -1,5 +1,7 @@
 # Getting started
 
+### @description An activity for beginners to get started with the micro:bit
+
 ## ~avatar
 
 Here are some challenges for you. Arrange the blocks in the editor

@@ -1,5 +1,7 @@
 # Reference
 
+### @description List of API categories available in the editors
+
 ```namespaces
 basic.showNumber(0);
 input.onButtonPressed(Button.A, () => {

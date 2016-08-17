@@ -1,5 +1,7 @@
 # Release notes
 
+### @description Editor release notes
+
 ```sim
 basic.forever(() => { basic.showString("RELEASE NOTES"); });
 ```

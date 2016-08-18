@@ -162,7 +162,8 @@ namespace music {
     //% help=music/change-tempo weight=39
     //% blockId=device_change_tempo block="change tempo by (bpm)|%value" blockGap=8
     export function changeTempoBy(bpm: number): void {
-        setTempo(beat(BeatFraction.Whole) + bpm);
+	init();
+        setTempo(beatsPerMinute + bpm);
     }
 
     /**

@@ -29,7 +29,7 @@ radio.onDataReceived(() => {
 })
 ```
 
-Compile the program and **upload the same .hex file to 2 devices!**
+Download the program and **upload the same .hex file to 2 devices!**
 
 ## Step 3
 

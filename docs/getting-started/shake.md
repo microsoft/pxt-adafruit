@@ -17,7 +17,7 @@ input.onGesture(Gesture.Shake, () => {
 # . . . #`);
 });
 ```
-Click **Compile** to move your program to the BBC micro:bit!
+Click **Download** to move your program to the BBC micro:bit!
 
 ### ~button /getting-started/coin-flipper
 NEXT: COIN FLIPPER GAME

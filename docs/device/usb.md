@@ -40,7 +40,7 @@ Next, compile your script:
 
 2. Open your script (find the script in **My Scripts** and click `Edit`).
 
-3. Click `compile`. Your script is converted into a hex file that you can transfer and run on your micro:bit.
+3. Click **Download**. Your script is converted into a hex file that you can transfer and run on your micro:bit.
 
 4. When prompted, choose to save the compiled file on your computer (or anywhere other than the micro:bit). Depending on which browser you are using, the download will adopt the download behaviour of that particular browser.
 
@@ -66,13 +66,13 @@ A dialogue box will appear, asking whether you would like to open or save your h
 
 **IE10**
 
-Click on compile. You will see a message “Do you want to save this .hex file.” Select **Save**.
+Click on **Download**. You will see a message “Do you want to save this .hex file.” Select **Save**.
 
 ### Mac
 
 ** Safari**
 
-When you select **compile** in Safari on Mac, your file will be downloaded to your downloads folder. Go to your downloads folder and open the file. In Safari the file will appear as unknown.txt rather than a named .hex file. Drag and drop it onto your MICROBIT drive.
+When you select **Download** in Safari on Mac, your file will be downloaded to your downloads folder. Go to your downloads folder and open the file. In Safari the file will appear as unknown.txt rather than a named .hex file. Drag and drop it onto your MICROBIT drive.
 
 ![](/static/mb/device/usb-4.jpg)
 
@@ -86,7 +86,7 @@ A dialogue box will appear, asking whether you would like to open or save your h
 
 **Chrome**
 
-When you select **compile** in Chrome, the file will be downloaded to the bottom of the browser in .hex format. Click on the small arrow and select **Show in Finder**. This will show the file in your download folder. Drag and drop the file onto your MICROBIT drive.
+When you select **Download** in Chrome, the file will be downloaded to the bottom of the browser in .hex format. Click on the small arrow and select **Show in Finder**. This will show the file in your download folder. Drag and drop the file onto your MICROBIT drive.
 
 ![](/static/mb/device/usb-7.jpg)
 

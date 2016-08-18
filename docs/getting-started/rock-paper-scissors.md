@@ -152,7 +152,7 @@ That's why you can use an ``else`` instead of an ``else if``.
 
 Your game is ready!
 
-Click **Compile** to move your program to the BBC micro:bit!
+Click **Download** to move your program to the BBC micro:bit!
 
 Have fun!
 
@@ -198,7 +198,7 @@ input.onButtonPressed(Button.B, () => {
     basic.showNumber(game.score())
 })
 ```
-Click **Compile** to move your program to the BBC micro:bit!
+Click **Download** to move your program to the BBC micro:bit!
 
 ### ~button /projects
 NEXT: PROJECTS!

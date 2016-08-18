@@ -37,7 +37,7 @@ You can find the letter `B` by clicking the letter `A` on the
 
 #### ~
 
-Click **Compile** to move your program to the BBC micro:bit!
+Click **Download** to move your program to the BBC micro:bit!
 
 #### Your turn!
 
@@ -65,7 +65,7 @@ input.onPinPressed(TouchPin.P0, () => {
 . . # . .`);
 });
 ```
-Click **Compile** to move your program to the BBC micro:bit!
+Click **Download** to move your program to the BBC micro:bit!
 
 ## ~hint
 

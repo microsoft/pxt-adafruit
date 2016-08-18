@@ -92,7 +92,7 @@ Connect a micro:bit to your computer using your USB cable
 
 ![](/static/mb/lessons/seismograph33.png)
 
-Click or tap the compile button for the seismograph program to run the program on the micro:bit. 
+Click or tap the **Download** button for the seismograph program to run the program on the micro:bit. 
 
 ![](/static/mb/lessons/seismograph22.png)
 

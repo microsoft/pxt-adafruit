@@ -42,7 +42,7 @@ We want the message "Press A!" to scroll across the BBC micro:bit, so right-clic
 
 ![](/static/mb/blocks/lessons/blocks-conditions-2.png)
 
-So, to recap: the `forever` block makes sure our code runs forever. The BBC micro:bit checks if the user is pressing the left button, if the user is not then the “Press the button!” message will scroll across the LEDs. If the user is pressing the button then the “hello, world!” message will scroll across the screen. Check this in the simulator or attach the BBC micro:bit to the computer then click **compile** to send the code onto the BBC micro:bit.
+So, to recap: the `forever` block makes sure our code runs forever. The BBC micro:bit checks if the user is pressing the left button, if the user is not then the “Press the button!” message will scroll across the LEDs. If the user is pressing the button then the “hello, world!” message will scroll across the screen. Check this in the simulator or attach the BBC micro:bit to the computer then click **Download** to send the code onto the BBC micro:bit.
 
 ## What is a condition?
 

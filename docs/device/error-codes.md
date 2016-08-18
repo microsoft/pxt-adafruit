@@ -9,7 +9,15 @@ Below is a list of error numbers and what they mean:
 * **10** (`MICROBIT_I2C_LOCKUP`): the micro:bit's I2C bus is not working
 * **20** (`MICROBIT_OOM`): there is no free memory on the micro:bit
 
-![](/static/mb/device/error-codes-0.png)
+```sim
+basic.showLeds(`
+    # . . . #
+    # # . # #
+    . . . . .
+    . # # # .
+    # . . . #
+    `)
+```
 
 ### See also
 

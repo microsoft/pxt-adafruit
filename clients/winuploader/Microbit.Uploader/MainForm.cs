@@ -32,7 +32,7 @@ namespace Microsoft.MicroBit
         private void openEditor()
         {
             // lanch editor
-            try { Process.Start("https://codethemicrobit.com"); } catch (Exception) { }
+            try { Process.Start("https://codethemicrobit.com#uploader"); } catch (Exception) { }
         }
 
         private void initializeFileWatch()

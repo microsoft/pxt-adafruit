@@ -22,6 +22,7 @@ console.log("Starting...")
 basic.showNumber(0);
 
 testBuffer()
+testBufferShiftRotate()
 
 basic.showNumber(2);
 console.log("ALL TESTS OK")
@@ -74,4 +75,64 @@ function testBuffer() {
 
     b.shift(-1)
     bufferIs(b, [0, 4, 13]);
+}
+
+
+function testBufferShiftRotate() {
+    let b = pins.createBuffer(5);
+
+    function initb() {
+        for (let i = 0; i < b.length; ++i) {
+            b[i] = i;
+        }
+    }
+    function assertb(ex: number[]) {
+        bufferIs(b, ex)
+    }
+
+    initb()
+    assertb([0, 1, 2, 3, 4])
+
+    //shifting
+    initb()
+    b.shift(-1);
+    assertb([0, 0, 1, 2, 3])
+
+    initb()
+    b.shift(-1, 0, 3);
+    assertb([0, 0, 1, 3, 4])
+
+    initb()
+    b.shift(-1, 1, 3);
+    assertb([0, 0, 1, 2, 4])
+
+    initb()
+    b.shift(1)
+    assertb([1, 2, 3, 4, 0])
+
+    initb()
+    b.shift(1, 1, 3)
+    assertb([0, 2, 3, 0, 4])
+
+    //rotating
+    initb()
+    b.rotate(-1);
+    assertb([4, 0, 1, 2, 3])
+
+    initb()
+    b.rotate(-1, 0, 3);
+    assertb([2, 0, 1, 3, 4])
+
+    initb()
+    b.rotate(-1, 1, 3);
+    assertb([0, 3, 1, 2, 4])
+
+    initb()
+    b.rotate(2)
+    assertb([2, 3, 4, 0, 1])
+
+    initb()
+    b.rotate(1, 1, 3)
+    assertb([0, 2, 3, 1, 4])
+
 }

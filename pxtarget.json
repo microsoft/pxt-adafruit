@@ -16,7 +16,8 @@
         "preferredPackages": [
             "Microsoft/pxt-neopixel",
             "Microsoft/pxt-sonar",
-            "Microsoft/pxt-max6675"
+            "Microsoft/pxt-max6675",
+            "Microsoft/pxt-i2c-fram"
         ]
     },
     "blocksprj": {

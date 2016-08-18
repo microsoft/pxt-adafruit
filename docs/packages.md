@@ -5,8 +5,11 @@ that users can then add to their scripts. These typically
 provide a driver for a particular hardware device you can connect
 to a microbit.
 
-* [pxt-max6675](https://github.com/Microsoft/pxt-max6675) -- TypeScript only package
+* [pxt-max6675](https://github.com/Microsoft/pxt-max6675) -- TypeScript
 * [pxt-neopixel](https://github.com/Microsoft/pxt-neopixel) -- TypeScript + ARM Thumb assembly package
+* [pxt-sonar](https://github.com/microsoft/pxt-sonar) -- TypeScript
+* [pxt-i2c-fram](https://github.com/microsoft/pxt-i2c-fram) -- TypeScript
+
 * [Sample C++ extension](https://github.com/Microsoft/pxt-microbit-cppsample)
 * [Sample TypeScript extension](https://github.com/Microsoft/pxt-microbit/tree/master/libs/i2c-fram)
 

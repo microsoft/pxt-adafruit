@@ -116,7 +116,7 @@ Connect the 2nd micro:bit to your computer using your USB cable. We should have 
 
 ## 8.
 
-Click or tap the compile button for the seismograph program to run the program on the 1st micro:bit and 2nd micro:bit.
+Click or tap the **Download** button for the seismograph program to run the program on the 1st micro:bit and 2nd micro:bit.
 
 ## 9. 
 

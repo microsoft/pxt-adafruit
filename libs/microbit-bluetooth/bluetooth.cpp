@@ -32,6 +32,7 @@ namespace bluetooth {
     */
     //% help=bluetooth/start-io-pin-service
     //% blockId=bluetooth_start_io_pin_service block="bluetooth io pin service" blockGap=8
+    //% parts="bluetooth"
     void startIOPinService() {
         new MicroBitIOPinService(*uBit.ble, uBit.io);
     }
@@ -41,6 +42,7 @@ namespace bluetooth {
     */
     //% help=bluetooth/start-led-service
     //% blockId=bluetooth_start_led_service block="bluetooth led service" blockGap=8
+    //% parts="bluetooth"
     void startLEDService() {
         new MicroBitLEDService(*uBit.ble, uBit.display);
     }
@@ -50,6 +52,7 @@ namespace bluetooth {
     */
     //% help=bluetooth/start-temperature-service
     //% blockId=bluetooth_start_temperature_service block="bluetooth temperature service" blockGap=8
+    //% parts="bluetooth"
     void startTemperatureService() {    
         new MicroBitTemperatureService(*uBit.ble, uBit.thermometer);        
     }
@@ -59,6 +62,7 @@ namespace bluetooth {
     */
     //% help=bluetooth/start-magnetometer-service
     //% blockId=bluetooth_start_magnetometer_service block="bluetooth magnetometer service" blockGap=8
+    //% parts="bluetooth"
     void startMagnetometerService() {    
         new MicroBitMagnetometerService(*uBit.ble, uBit.compass); 
     }
@@ -68,6 +72,7 @@ namespace bluetooth {
     */
     //% help=bluetooth/start-accelerometer-service
     //% blockId=bluetooth_start_accelerometer_service block="bluetooth accelerometer service" blockGap=8
+    //% parts="bluetooth"
     void startAccelerometerService() {
         new MicroBitAccelerometerService(*uBit.ble, uBit.accelerometer);        
     }
@@ -77,6 +82,7 @@ namespace bluetooth {
     */
     //% help=bluetooth/start-button-service
     //% blockId=bluetooth_start_button_service block="bluetooth button service" blockGap=8
+    //% parts="bluetooth"
     void startButtonService() {
         new MicroBitButtonService(*uBit.ble);      
     }
@@ -86,6 +92,7 @@ namespace bluetooth {
     */
     //% help=bluetooth/start-uart-service
     //% blockId=bluetooth_start_uart_service block="bluetooth uart service" blockGap=8
+    //% parts="bluetooth"
     void startUartService() {
         if (uart) return;
         // 61 octet buffer size is 3 x (MTU - 3) + 1
@@ -99,6 +106,7 @@ namespace bluetooth {
     */
     //% help=bluetooth/uart-write
     //% blockId=bluetooth_uart_write block="bluetooth uart write %data" blockGap=8
+    //% parts="bluetooth"
     void uartWrite(StringData *data) {
         startUartService();
     	uart->send(ManagedString(data));
@@ -109,6 +117,7 @@ namespace bluetooth {
     */
     //% help=bluetooth/uart-read
     //% blockId=bluetooth_uart_read block="bluetooth uart read %del=bluetooth_uart_delimiter_conv" blockGap=8
+    //% parts="bluetooth"
     StringData* uartRead(StringData *del) {
         startUartService();
         return uart->readUntil(ManagedString(del)).leakData();
@@ -119,6 +128,7 @@ namespace bluetooth {
     */
     //% blockId="bluetooth_uart_delimiter_conv" block="%del"
     //% weight=1
+    //% parts="bluetooth"
     StringData* delimiters(Delimiters del) {  
         ManagedString c("\n\n,$:.#"[max(0, min(6, (int)del))]);
         return c.leakData();
@@ -129,6 +139,7 @@ namespace bluetooth {
      */
     //% help=bluetooth/on-bluetooth-connected weight=20
     //% blockId=bluetooth_on_connected block="on bluetooth connected" blockGap=8
+    //% parts="bluetooth"
     void onBluetoothConnected(Action body) {
         registerWithDal(MICROBIT_ID_BLE, MICROBIT_BLE_EVT_CONNECTED, body);
     }    
@@ -139,6 +150,7 @@ namespace bluetooth {
      */
     //% help=bluetooth/on-bluetooth-disconnected weight=19
     //% blockId=bluetooth_on_disconnected block="on bluetooth disconnected"
+    //% parts="bluetooth"
     void onBluetoothDisconnected(Action body) {
         registerWithDal(MICROBIT_ID_BLE, MICROBIT_BLE_EVT_DISCONNECTED, body);
     }    

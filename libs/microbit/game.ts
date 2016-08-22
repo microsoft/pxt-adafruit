@@ -41,6 +41,7 @@ namespace game {
      */
     //% weight=60
     //% blockId=game_create_sprite block="create sprite at|x: %x|y: %y"
+    //% parts="ledmatrix"
     export function createSprite(x: number, y: number): LedSprite {
         init();
         let p = new LedSprite(x, y);
@@ -64,6 +65,7 @@ namespace game {
      */
     //% weight=10 help=game/add-score
     //% blockId=game_add_score block="change score by|%points" blockGap=8
+    //% parts="ledmatrix"
     export function addScore(points: number): void {
         setScore(_score + points);
         control.inBackground(() => {
@@ -82,6 +84,7 @@ namespace game {
      */
     //% weight=9 help=game/start-countdown
     //% blockId=game_start_countdown block="start countdown|(ms) %duration" blockGap=8
+    //% parts="ledmatrix"
     export function startCountdown(ms: number): void {
         if (checkStart()) {
             basic.showAnimation(`1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 0 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0
@@ -104,6 +107,7 @@ namespace game {
      */
     //% weight=8 help=game/game-over
     //% blockId=game_game_over block="game over"
+    //% parts="ledmatrix"
     export function gameOver(): void {
         if (!_isGameOver) {
             _isGameOver = true;
@@ -194,6 +198,7 @@ namespace game {
      * @param life TODO
      */
     //% weight=10
+    //% parts="ledmatrix"
     export function removeLife(life: number): void {
         setLife(_life - life);
         control.inBackground(() => {
@@ -210,6 +215,7 @@ namespace game {
      * Increments the level and display a message.
      */
     //% weight=10
+    //% parts="ledmatrix"
     export function levelUp(): void {
         _level = _level + 1;
         basic.showString("LEVEL:", 150);
@@ -246,6 +252,7 @@ namespace game {
      * Displays the score on the screen.
      */
     //%  weight=60
+    //% parts="ledmatrix"
     export function showScore(): void {
         basic.showString(" SCORE ", 100);
         basic.showNumber(_score, 150);
@@ -303,6 +310,7 @@ namespace game {
          */
         //% weight=50
         //% blockId=game_move_sprite block="%sprite|move by %leds" blockGap=8
+        //% parts="ledmatrix"
         public move(leds: number): void {
             if (this._dir == 0) {
                 this._y = this._y - leds;
@@ -336,6 +344,7 @@ namespace game {
          * @param x TODO
          * @param y TODO
          */
+        //% parts="ledmatrix"
         public goTo(x: number, y: number): void {
             this._x = x;
             this._y = y;
@@ -350,6 +359,7 @@ namespace game {
          */
         //% weight=18
         //% blockId=game_sprite_bounce block="%sprite|if on edge, bounce"
+        //% parts="ledmatrix"
         public ifOnEdgeBounce(): void {
             if (this._dir == 0 && this._y == 0) {
                 this._dir = 180;
@@ -484,6 +494,7 @@ namespace game {
          * @param this TODO
          * @param degrees TODO
          */
+        //% parts="ledmatrix"
         public setDirection(degrees: number): void {
             this._dir = ((degrees / 45) % 8) * 45;
             if (this._dir <= -180) {
@@ -596,6 +607,7 @@ namespace game {
          * @param this TODO
          * @param brightness TODO
          */
+        //% parts="ledmatrix"
         public setBrightness(brightness: number): void {
             this._brightness = Math.clamp(0, 255, brightness);
             plot();
@@ -664,6 +676,7 @@ namespace game {
         }
 
         //% weight=-1
+        //% parts="ledmatrix"
         public _plot(now: number) {
             let ps = this
             if (ps._brightness > 0) {
@@ -701,6 +714,7 @@ namespace game {
     /**
      * Plots the current sprites on the screen
      */
+    //% parts="ledmatrix"
     function plot(): void {
         if (game.isGameOver()) {
             return;

@@ -15,6 +15,7 @@ namespace basic {
     //% weight=96
     //% blockId=device_show_number block="show|number %number" blockGap=8 icon="\uf1ec"
     //% async
+    //% parts="ledmatrix"
     void showNumber(int value, int interval = 150) { 
       if (interval < 0)
         return;
@@ -37,6 +38,7 @@ namespace basic {
     //% imageLiteral=1 async
     //% blockId=device_show_leds
     //% block="show leds" icon="\uf00a"
+    //% parts="ledmatrix"
     void showLeds(ImageLiteral leds, int interval = 400) {
       uBit.display.print(MicroBitImage(imageBytes(leds)), 0, 0, 0, interval);
     }
@@ -51,6 +53,7 @@ namespace basic {
     //% block="show|string %text" icon="\uf031" 
     //% async
     //% blockId=device_print_message
+    //% parts="ledmatrix"
     void showString(StringData *text, int interval = 150) {
       if (interval < 0)
         return;
@@ -71,6 +74,7 @@ namespace basic {
      */
     //% help=basic/clear-screen weight=79
     //% blockId=device_clear_display block="clear screen" icon="\uf12d"
+    //% parts="ledmatrix"
     void clearScreen() {
       uBit.display.image.clear();
     }
@@ -81,6 +85,7 @@ namespace basic {
      * @param interval time in milliseconds between each redraw
      */
     //% help=basic/show-animation imageLiteral=1 async
+    //% parts="ledmatrix"
     void showAnimation(ImageLiteral leds, int interval = 400) {
       uBit.display.animate(MicroBitImage(imageBytes(leds)), interval, 5, 0);
     }
@@ -90,6 +95,7 @@ namespace basic {
      * @param leds pattern of LEDs to turn on/off
      */
     //% help=basic/plot-leds weight=80
+    //% parts="ledmatrix"
     void plotLeds(ImageLiteral leds) {
       MicroBitImage i(imageBytes(leds));
       uBit.display.print(i, 0, 0, 0, 0);

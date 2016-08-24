@@ -470,7 +470,7 @@ namespace pxsim {
         radio: RadioBus;
 
         // display
-        image = createImage(5);
+        image = createInternalImage(5);
         brigthness = 255;
         displayMode = DisplayMode.bw;
         font: Image = createFont();
@@ -608,13 +608,18 @@ namespace pxsim {
         }
     }
 
-    export class Image {
+    export class Image extends RefObject {
         public static height: number = 5;
         public width: number;
         public data: number[];
         constructor(width: number, data: number[]) {
+            super()
             this.width = width;
             this.data = data;
+        }
+
+        public print() {
+            console.log(`Image id:${this.id} refs:${this.refcnt} size:${this.width}x${Image.height}`)
         }
         public get(x: number, y: number): number {
             if (x < 0 || x >= this.width || y < 0 || y >= 5) return 0;
@@ -648,6 +653,12 @@ namespace pxsim {
             for (let i = 0; i < this.data.length; ++i)
                 this.data[i] = 0;
         }
+    }
+
+    export function createInternalImage(width: number): Image {
+        let img = createImage(width)
+        pxsim.noLeakTracking(img)
+        return img
     }
 
     export function createImage(width: number): Image {
@@ -685,7 +696,7 @@ namespace pxsim {
 
         let nb = data.length;
         let n = nb / 5;
-        let font = createImage(nb);
+        let font = createInternalImage(nb);
         for (let c = 0; c < n; c++) {
             for (let row = 0; row < 5; row++) {
                 let char = data[c * 5 + row];

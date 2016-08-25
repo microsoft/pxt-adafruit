@@ -23,7 +23,7 @@ To remove a package, click on the garbage button in the file list next to the pa
 
 ## Publishing packages
 
-Packages can be published from the pxt command line. We are still sorting out the details.
+Packages can be published from the pxt command line. Check out [the docs](https://www.pxt.io/packages).
 
 ## Localizing packages
 

@@ -672,7 +672,7 @@ namespace pxsim {
     export function createImageFromString(text: string): Image {
         let font = board().font;
         let w = font.width;
-        let sprite = createImage(6 * text.length - 1);
+        let sprite = createInternalImage(6 * text.length - 1);
         let k = 0;
         for (let i = 0; i < text.length; i++) {
             let charCode = text.charCodeAt(i);

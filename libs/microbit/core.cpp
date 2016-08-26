@@ -276,6 +276,34 @@ namespace pxtrt {
     microbit_panic(code);
   }
 
+  //%
+  int stringToBool(StringData *s) {
+    if (s == NULL) return 0;
+    if (s->len == 0) {
+      s->decr();
+      return 0;
+    }
+    s->decr();
+    return 1;
+  }
+
+  //%
+  StringData* emptyToNull(StringData *s) {
+    if (!s || s->len == 0)
+      return NULL;
+    return s;
+  }
+
+  //%
+  int ptrToBool(uint32_t p) {
+    if (p) {
+      decr(p);
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+
   //
   // Debugger
   //

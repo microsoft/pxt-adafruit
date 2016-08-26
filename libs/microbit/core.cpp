@@ -261,36 +261,6 @@ namespace pxtrt {
     r->unref();
   }
 
-  //%
-  uint32_t ldglb(int idx) {
-    check(0 <= idx && idx < numGlobals, ERR_OUT_OF_BOUNDS, 7);
-    return globals[idx];
-  }
-
-  //%
-  uint32_t ldglbRef(int idx) {
-    check(0 <= idx && idx < numGlobals, ERR_OUT_OF_BOUNDS, 7);
-    uint32_t tmp = globals[idx];
-    incr(tmp);
-    return tmp;
-  }
-
-  // note the idx comes last - it's more convenient that way in the emitter
-  //%
-  void stglb(uint32_t v, int idx)
-  {
-    check(0 <= idx && idx < numGlobals, ERR_OUT_OF_BOUNDS, 7);
-    globals[idx] = v;
-  }
-
-  //%
-  void stglbRef(uint32_t v, int idx)
-  {
-    check(0 <= idx && idx < numGlobals, ERR_OUT_OF_BOUNDS, 7);
-    decr(globals[idx]);
-    globals[idx] = v;
-  }
-
   // Store a captured local in a closure. It returns the action, so it can be chained.
   //%
   RefAction *stclo(RefAction *a, int idx, uint32_t v)

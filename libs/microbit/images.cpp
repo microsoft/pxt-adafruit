@@ -10,6 +10,7 @@ namespace images {
      */
     //% weight=75 help=images/create-image
     //% blockId=device_build_image block="create image"
+    //% parts="ledmatrix"
     Image createImage(ImageLiteral leds) {
         return MicroBitImage(imageBytes(leds)).clone().leakData();
     }
@@ -19,6 +20,7 @@ namespace images {
      */
     //% weight=74 help=images/create-big-image
     //% blockId=device_build_big_image block="create big image" imageLiteral=2
+    //% parts="ledmatrix"
     Image createBigImage(ImageLiteral leds) {
         return createImage(leds);
     }
@@ -29,6 +31,7 @@ namespace ImageMethods {
      * Plots the image at a given column to the screen
      */            
     //% help=images/plot-image
+    //% parts="ledmatrix"
     void plotImage(Image i, int xOffset = 0) {
       uBit.display.print(MicroBitImage(i), -xOffset, 0, 0, 0);
     }
@@ -39,6 +42,7 @@ namespace ImageMethods {
      */
     //% help=images/show-image weight=80 blockNamespace=images
     //% blockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8
+    //% parts="ledmatrix"
     void showImage(Image sprite, int xOffset) {
       uBit.display.print(MicroBitImage(sprite), -xOffset, 0, 0);
     }
@@ -48,6 +52,7 @@ namespace ImageMethods {
      * @param xOffset column index to start displaying the image
      */
     //% help=images/plot-frame weight=80
+    //% parts="ledmatrix"
     void plotFrame(Image i, int xOffset) {
       // TODO showImage() used in original implementation
       plotImage(i, xOffset * 5);
@@ -60,6 +65,7 @@ namespace ImageMethods {
      */
     //% help=images/show-image weight=79 async blockNamespace=images
     //% blockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8
+    //% parts="ledmatrix"
     void scrollImage(Image id, int frameOffset, int interval) {
       MicroBitImage i(id);
       if (i.getWidth() <= 5)
@@ -73,6 +79,7 @@ namespace ImageMethods {
      * Sets all pixels off.
      */
     //% help=images/clear
+    //% parts="ledmatrix"
     void clear(Image i) {
       MicroBitImage(i).clear();
     }
@@ -81,6 +88,7 @@ namespace ImageMethods {
      * Sets a specific pixel brightness at a given position
      */
     //%
+    //% parts="ledmatrix"
     void setPixelBrightness(Image i, int x, int y, int value) {
       MicroBitImage(i).setPixelValue(x, y, value);
     }
@@ -90,6 +98,7 @@ namespace ImageMethods {
      * Gets the pixel brightness ([0..255]) at a given position
      */
     //%
+    //% parts="ledmatrix"
     int pixelBrightness(Image i, int x, int y) {
       int pix = MicroBitImage(i).getPixelValue(x, y);
       if (pix < 0) return 0;
@@ -120,6 +129,7 @@ namespace ImageMethods {
      * @param value TODO
      */
     //% help=images/set-pixel
+    //% parts="ledmatrix"
     void setPixel(Image i, int x, int y, bool value) {
         setPixelBrightness(i, x, y, value ? 255 : 0);
     }
@@ -130,6 +140,7 @@ namespace ImageMethods {
      * @param y TODO
      */
     //% help=images/pixel
+    //% parts="ledmatrix"
     bool pixel(Image i, int x, int y) {
         return pixelBrightness(i, x, y) > 0;
     }
@@ -140,6 +151,7 @@ namespace ImageMethods {
      * @param frame TODO
      */
     //% weight=70 help=images/show-frame
+    //% parts="ledmatrix"
     void showFrame(Image i, int frame) {
         showImage(i, frame * 5);
     }

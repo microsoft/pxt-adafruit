@@ -11,14 +11,16 @@ declare namespace images {
      * Creates an image that fits on the LED screen.
      */
     //% weight=75 help=images/create-image
-    //% blockId=device_build_image block="create image" imageLiteral=1 shim=images::createImage
+    //% blockId=device_build_image block="create image"
+    //% parts="ledmatrix" imageLiteral=1 shim=images::createImage
     function createImage(leds: string): Image;
 
     /**
      * Creates an image with 2 frames.
      */
     //% weight=74 help=images/create-big-image
-    //% blockId=device_build_big_image block="create big image" imageLiteral=2 shim=images::createBigImage
+    //% blockId=device_build_big_image block="create big image" imageLiteral=2
+    //% parts="ledmatrix" shim=images::createBigImage
     function createBigImage(leds: string): Image;
 }
 
@@ -27,7 +29,8 @@ declare interface Image {
     /**
      * Plots the image at a given column to the screen
      */
-    //% help=images/plot-image xOffset.defl=0 shim=ImageMethods::plotImage
+    //% help=images/plot-image
+    //% parts="ledmatrix" xOffset.defl=0 shim=ImageMethods::plotImage
     plotImage(xOffset?: number): void;
 
     /**
@@ -35,14 +38,16 @@ declare interface Image {
      * @param xOffset column index to start displaying the image
      */
     //% help=images/show-image weight=80 blockNamespace=images
-    //% blockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8 shim=ImageMethods::showImage
+    //% blockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8
+    //% parts="ledmatrix" shim=ImageMethods::showImage
     showImage(xOffset: number): void;
 
     /**
      * Draws the ``index``-th frame of the image on the screen.
      * @param xOffset column index to start displaying the image
      */
-    //% help=images/plot-frame weight=80 shim=ImageMethods::plotFrame
+    //% help=images/plot-frame weight=80
+    //% parts="ledmatrix" shim=ImageMethods::plotFrame
     plotFrame(xOffset: number): void;
 
     /**
@@ -51,25 +56,29 @@ declare interface Image {
      * @param interval time between each animation step in milli seconds, eg: 200
      */
     //% help=images/show-image weight=79 async blockNamespace=images
-    //% blockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8 shim=ImageMethods::scrollImage
+    //% blockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8
+    //% parts="ledmatrix" shim=ImageMethods::scrollImage
     scrollImage(frameOffset: number, interval: number): void;
 
     /**
      * Sets all pixels off.
      */
-    //% help=images/clear shim=ImageMethods::clear
+    //% help=images/clear
+    //% parts="ledmatrix" shim=ImageMethods::clear
     clear(): void;
 
     /**
      * Sets a specific pixel brightness at a given position
      */
-    //% shim=ImageMethods::setPixelBrightness
+    //%
+    //% parts="ledmatrix" shim=ImageMethods::setPixelBrightness
     setPixelBrightness(x: number, y: number, value: number): void;
 
     /**
      * Gets the pixel brightness ([0..255]) at a given position
      */
-    //% shim=ImageMethods::pixelBrightness
+    //%
+    //% parts="ledmatrix" shim=ImageMethods::pixelBrightness
     pixelBrightness(x: number, y: number): number;
 
     /**
@@ -90,7 +99,8 @@ declare interface Image {
      * @param y TODO
      * @param value TODO
      */
-    //% help=images/set-pixel shim=ImageMethods::setPixel
+    //% help=images/set-pixel
+    //% parts="ledmatrix" shim=ImageMethods::setPixel
     setPixel(x: number, y: number, value: boolean): void;
 
     /**
@@ -98,14 +108,16 @@ declare interface Image {
      * @param x TODO
      * @param y TODO
      */
-    //% help=images/pixel shim=ImageMethods::pixel
+    //% help=images/pixel
+    //% parts="ledmatrix" shim=ImageMethods::pixel
     pixel(x: number, y: number): boolean;
 
     /**
      * Shows a particular frame of the image strip.
      * @param frame TODO
      */
-    //% weight=70 help=images/show-frame shim=ImageMethods::showFrame
+    //% weight=70 help=images/show-frame
+    //% parts="ledmatrix" shim=ImageMethods::showFrame
     showFrame(frame: number): void;
 }
 
@@ -123,7 +135,8 @@ declare namespace basic {
     //% help=basic/show-number
     //% weight=96
     //% blockId=device_show_number block="show|number %number" blockGap=8 icon="\uf1ec"
-    //% async interval.defl=150 shim=basic::showNumber
+    //% async
+    //% parts="ledmatrix" interval.defl=150 shim=basic::showNumber
     function showNumber(value: number, interval?: number): void;
 
     /**
@@ -135,7 +148,8 @@ declare namespace basic {
     //% weight=95 blockGap=8
     //% imageLiteral=1 async
     //% blockId=device_show_leds
-    //% block="show leds" icon="\uf00a" interval.defl=400 shim=basic::showLeds
+    //% block="show leds" icon="\uf00a"
+    //% parts="ledmatrix" interval.defl=400 shim=basic::showLeds
     function showLeds(leds: string, interval?: number): void;
 
     /**
@@ -147,14 +161,16 @@ declare namespace basic {
     //% weight=87 blockGap=8
     //% block="show|string %text" icon="\uf031" 
     //% async
-    //% blockId=device_print_message interval.defl=150 shim=basic::showString
+    //% blockId=device_print_message
+    //% parts="ledmatrix" interval.defl=150 shim=basic::showString
     function showString(text: string, interval?: number): void;
 
     /**
      * Turn off all LEDs
      */
     //% help=basic/clear-screen weight=79
-    //% blockId=device_clear_display block="clear screen" icon="\uf12d" shim=basic::clearScreen
+    //% blockId=device_clear_display block="clear screen" icon="\uf12d"
+    //% parts="ledmatrix" shim=basic::clearScreen
     function clearScreen(): void;
 
     /**
@@ -162,14 +178,16 @@ declare namespace basic {
      * @param leds pattern of LEDs to turn on/off
      * @param interval time in milliseconds between each redraw
      */
-    //% help=basic/show-animation imageLiteral=1 async interval.defl=400 shim=basic::showAnimation
+    //% help=basic/show-animation imageLiteral=1 async
+    //% parts="ledmatrix" interval.defl=400 shim=basic::showAnimation
     function showAnimation(leds: string, interval?: number): void;
 
     /**
      * Draws an image on the LED screen.
      * @param leds pattern of LEDs to turn on/off
      */
-    //% help=basic/plot-leds weight=80 imageLiteral=1 shim=basic::plotLeds
+    //% help=basic/plot-leds weight=80
+    //% parts="ledmatrix" imageLiteral=1 shim=basic::plotLeds
     function plotLeds(leds: string): void;
 
     /**
@@ -201,7 +219,8 @@ declare namespace input {
      * @param body TODO
      */
     //% help=input/on-button-pressed weight=85 blockGap=8
-    //% blockId=device_button_event block="on button|%NAME|pressed" icon="\uf192" shim=input::onButtonPressed
+    //% blockId=device_button_event block="on button|%NAME|pressed" icon="\uf192"
+    //% parts="buttonpair" shim=input::onButtonPressed
     function onButtonPressed(button: Button, body: () => void): void;
 
     /**
@@ -209,7 +228,8 @@ declare namespace input {
      * @param body TODO
      */
     //% help=input/on-gesture weight=84 blockGap=8
-    //% blockId=device_gesture_event block="on |%NAME" icon="\uf135" shim=input::onGesture
+    //% blockId=device_gesture_event block="on |%NAME" icon="\uf135"
+    //% parts="accelerometer" shim=input::onGesture
     function onGesture(gesture: Gesture, body: () => void): void;
 
     /**
@@ -236,7 +256,8 @@ declare namespace input {
     //% help=input/button-is-pressed weight=57
     //% block="button|%NAME|is pressed"
     //% blockId=device_get_button2
-    //% icon="\uf192" blockGap=8 shim=input::buttonIsPressed
+    //% icon="\uf192" blockGap=8
+    //% parts="buttonpair" shim=input::buttonIsPressed
     function buttonIsPressed(button: Button): boolean;
 
     /**
@@ -253,7 +274,8 @@ declare namespace input {
      */
     //% help=input/compass-heading 
     //% weight=56 icon="\uf14e"
-    //% blockId=device_heading block="compass heading (°)" blockGap=8 shim=input::compassHeading
+    //% blockId=device_heading block="compass heading (°)" blockGap=8
+    //% parts="compass" shim=input::compassHeading
     function compassHeading(): number;
 
     /**
@@ -261,7 +283,8 @@ declare namespace input {
      */
     //% weight=55 icon="\uf06d"
     //% help=input/temperature
-    //% blockId=device_temperature block="temperature (°C)" blockGap=8 shim=input::temperature
+    //% blockId=device_temperature block="temperature (°C)" blockGap=8
+    //% parts="thermometer" shim=input::temperature
     function temperature(): number;
 
     /**
@@ -269,14 +292,16 @@ declare namespace input {
      * @param dimension TODO
      */
     //% help=input/acceleration weight=54 icon="\uf135"
-    //% blockId=device_acceleration block="acceleration (mg)|%NAME" blockGap=8 shim=input::acceleration
+    //% blockId=device_acceleration block="acceleration (mg)|%NAME" blockGap=8
+    //% parts="accelerometer" shim=input::acceleration
     function acceleration(dimension: Dimension): number;
 
     /**
      * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` bright.
      */
     //% help=input/light-level weight=53
-    //% blockId=device_get_light_level block="light level" blockGap=8 icon="\uf185" shim=input::lightLevel
+    //% blockId=device_get_light_level block="light level" blockGap=8 icon="\uf185"
+    //% parts="ledmatrix" shim=input::lightLevel
     function lightLevel(): number;
 
     /**
@@ -284,7 +309,8 @@ declare namespace input {
      * @param kind TODO
      */
     //% help=input/rotation weight=52
-    //% blockId=device_get_rotation block="rotation (°)|%NAME" blockGap=8 icon="\uf197" shim=input::rotation
+    //% blockId=device_get_rotation block="rotation (°)|%NAME" blockGap=8 icon="\uf197"
+    //% parts="accelerometer" shim=input::rotation
     function rotation(kind: Rotation): number;
 
     /**
@@ -292,7 +318,8 @@ declare namespace input {
      * @param dimension TODO
      */
     //% help=input/magnetic-force weight=51
-    //% blockId=device_get_magnetic_force block="magnetic force (µT)|%NAME" blockGap=8 icon="\uf076" shim=input::magneticForce
+    //% blockId=device_get_magnetic_force block="magnetic force (µT)|%NAME" blockGap=8 icon="\uf076"
+    //% parts="compass" shim=input::magneticForce
     function magneticForce(dimension: Dimension): number;
 
     /**
@@ -314,7 +341,8 @@ declare namespace input {
      */
     //% help=input/set-accelerometer-range
     //% blockId=device_set_accelerometer_range block="set accelerometer|range %range" icon="\uf135"
-    //% weight=5 shim=input::setAccelerometerRange
+    //% weight=5
+    //% parts="accelerometer" shim=input::setAccelerometerRange
     function setAccelerometerRange(range: AcceleratorRange): void;
 }
 
@@ -400,7 +428,8 @@ declare namespace led {
      * @param y TODO
      */
     //% help=led/plot weight=78
-    //% blockId=device_plot block="plot|x %x|y %y" icon="\uf205" blockGap=8 shim=led::plot
+    //% blockId=device_plot block="plot|x %x|y %y" icon="\uf205" blockGap=8
+    //% parts="ledmatrix" shim=led::plot
     function plot(x: number, y: number): void;
 
     /**
@@ -409,7 +438,8 @@ declare namespace led {
      * @param y TODO
      */
     //% help=led/unplot weight=77
-    //% blockId=device_unplot block="unplot|x %x|y %y" icon="\uf204" blockGap=8 shim=led::unplot
+    //% blockId=device_unplot block="unplot|x %x|y %y" icon="\uf204" blockGap=8
+    //% parts="ledmatrix" shim=led::unplot
     function unplot(x: number, y: number): void;
 
     /**
@@ -418,14 +448,16 @@ declare namespace led {
      * @param y TODO
      */
     //% help=led/point weight=76
-    //% blockId=device_point block="point|x %x|y %y" icon="\uf10c" shim=led::point
+    //% blockId=device_point block="point|x %x|y %y" icon="\uf10c"
+    //% parts="ledmatrix" shim=led::point
     function point(x: number, y: number): boolean;
 
     /**
      * Get the screen brightness from 0 (off) to 255 (full bright).
      */
     //% help=led/brightness weight=60
-    //% blockId=device_get_brightness block="brightness" icon="\uf042" blockGap=8 shim=led::brightness
+    //% blockId=device_get_brightness block="brightness" icon="\uf042" blockGap=8
+    //% parts="ledmatrix" shim=led::brightness
     function brightness(): number;
 
     /**
@@ -433,27 +465,31 @@ declare namespace led {
      * @param value the brightness value, eg:255, 127, 0
      */
     //% help=led/set-brightness weight=59
-    //% blockId=device_set_brightness block="set brightness %value" icon="\uf042" shim=led::setBrightness
+    //% blockId=device_set_brightness block="set brightness %value" icon="\uf042"
+    //% parts="ledmatrix" shim=led::setBrightness
     function setBrightness(value: number): void;
 
     /**
      * Cancels the current animation and clears other pending animations.
      */
     //% weight=50 help=led/stop-animation
-    //% blockId=device_stop_animation block="stop animation" icon="\uf04d" shim=led::stopAnimation
+    //% blockId=device_stop_animation block="stop animation" icon="\uf04d"
+    //% parts="ledmatrix" shim=led::stopAnimation
     function stopAnimation(): void;
 
     /**
      * Sets the display mode between black and white and greyscale for rendering LEDs.
      * @param mode TODO
      */
-    //% weight=1 help=led/set-display-mode shim=led::setDisplayMode
+    //% weight=1 help=led/set-display-mode
+    //% parts="ledmatrix" shim=led::setDisplayMode
     function setDisplayMode(mode: DisplayMode): void;
 
     /**
      * Takes a screenshot of the LED screen and returns an image.
      */
-    //% help=led/screenshot shim=led::screenshot
+    //% help=led/screenshot
+    //% parts="ledmatrix" shim=led::screenshot
     function screenshot(): Image;
 }
 declare namespace pins {

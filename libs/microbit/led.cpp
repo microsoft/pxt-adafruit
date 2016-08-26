@@ -18,6 +18,7 @@ namespace led {
      */
     //% help=led/plot weight=78
     //% blockId=device_plot block="plot|x %x|y %y" icon="\uf205" blockGap=8
+    //% parts="ledmatrix"
     void plot(int x, int y) { 
       uBit.display.image.setPixelValue(x, y, 1);
     }
@@ -29,6 +30,7 @@ namespace led {
      */
     //% help=led/unplot weight=77
     //% blockId=device_unplot block="unplot|x %x|y %y" icon="\uf204" blockGap=8
+    //% parts="ledmatrix"
     void unplot(int x, int y) { 
       uBit.display.image.setPixelValue(x, y, 0);
     }
@@ -40,6 +42,7 @@ namespace led {
      */
     //% help=led/point weight=76
     //% blockId=device_point block="point|x %x|y %y" icon="\uf10c"
+    //% parts="ledmatrix"
     bool point(int x, int y) {
       int pix = uBit.display.image.getPixelValue(x, y);
       return pix > 0;
@@ -50,6 +53,7 @@ namespace led {
      */
     //% help=led/brightness weight=60
     //% blockId=device_get_brightness block="brightness" icon="\uf042" blockGap=8
+    //% parts="ledmatrix"
     int brightness() {
       return uBit.display.getBrightness();
     }
@@ -60,6 +64,7 @@ namespace led {
      */
     //% help=led/set-brightness weight=59
     //% blockId=device_set_brightness block="set brightness %value" icon="\uf042"
+    //% parts="ledmatrix"
     void setBrightness(int value) { 
        uBit.display.setBrightness(value);
     }
@@ -69,6 +74,7 @@ namespace led {
      */
     //% weight=50 help=led/stop-animation
     //% blockId=device_stop_animation block="stop animation" icon="\uf04d"
+    //% parts="ledmatrix"
     void stopAnimation() { 
        uBit.display.stopAnimation();
     }
@@ -78,6 +84,7 @@ namespace led {
      * @param mode TODO
      */
     //% weight=1 help=led/set-display-mode
+    //% parts="ledmatrix"
     void setDisplayMode(DisplayMode_ mode) { 
         uBit.display.setDisplayMode((DisplayMode)mode);
     }
@@ -86,6 +93,7 @@ namespace led {
      * Takes a screenshot of the LED screen and returns an image.
      */
     //% help=led/screenshot
+    //% parts="ledmatrix"
     Image screenshot() {
       return uBit.display.screenShot().leakData();
         /*

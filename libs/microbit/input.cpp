@@ -116,6 +116,7 @@ namespace input {
      */
     //% help=input/on-button-pressed weight=85 blockGap=8
     //% blockId=device_button_event block="on button|%NAME|pressed" icon="\uf192"
+    //% parts="buttonpair"
     void onButtonPressed(Button button, Action body) {
         registerWithDal((int)button, MICROBIT_BUTTON_EVT_CLICK, body);
     }
@@ -126,6 +127,7 @@ namespace input {
      */
     //% help=input/on-gesture weight=84 blockGap=8
     //% blockId=device_gesture_event block="on |%NAME" icon="\uf135"
+    //% parts="accelerometer"
     void onGesture(Gesture gesture, Action body) {
         if ((int)gesture == MICROBIT_ACCELEROMETER_EVT_3G && uBit.accelerometer.getRange() < 3)
             uBit.accelerometer.setRange(4);
@@ -134,7 +136,7 @@ namespace input {
         registerWithDal(MICROBIT_ID_GESTURE, (int)gesture, body);
     }
 
-    /**
+     /**
      * Do something when a pin is pressed.
      * @param name the pin that needs to be pressed
      * @param body the code to run when the pin is pressed
@@ -173,6 +175,7 @@ namespace input {
     //% block="button|%NAME|is pressed"
     //% blockId=device_get_button2
     //% icon="\uf192" blockGap=8
+    //% parts="buttonpair"
     bool buttonIsPressed(Button button) {
       if (button == Button::A)
         return uBit.buttonA.isPressed();
@@ -201,6 +204,7 @@ namespace input {
     //% help=input/compass-heading 
     //% weight=56 icon="\uf14e"
     //% blockId=device_heading block="compass heading (°)" blockGap=8
+    //% parts="compass"
     int compassHeading() {
         return uBit.compass.heading();
     }
@@ -212,6 +216,7 @@ namespace input {
     //% weight=55 icon="\uf06d"
     //% help=input/temperature
     //% blockId=device_temperature block="temperature (°C)" blockGap=8
+    //% parts="thermometer"
     int temperature() {
         return uBit.thermometer.getTemperature();
     }
@@ -229,6 +234,7 @@ namespace input {
      */
     //% help=input/acceleration weight=54 icon="\uf135"
     //% blockId=device_acceleration block="acceleration (mg)|%NAME" blockGap=8
+    //% parts="accelerometer"
     int acceleration(Dimension dimension) {
       switch (dimension) {
       case Dimension::X: return uBit.accelerometer.getX();
@@ -245,6 +251,7 @@ namespace input {
      */
     //% help=input/light-level weight=53
     //% blockId=device_get_light_level block="light level" blockGap=8 icon="\uf185"
+    //% parts="ledmatrix"
     int lightLevel() {
         return uBit.display.readLightLevel();
     }
@@ -255,6 +262,7 @@ namespace input {
      */
     //% help=input/rotation weight=52
     //% blockId=device_get_rotation block="rotation (°)|%NAME" blockGap=8 icon="\uf197"
+    //% parts="accelerometer"
     int rotation(Rotation kind) {
       switch (kind) {
       case Rotation::Pitch: return uBit.accelerometer.getPitch();
@@ -269,6 +277,7 @@ namespace input {
      */
     //% help=input/magnetic-force weight=51
     //% blockId=device_get_magnetic_force block="magnetic force (µT)|%NAME" blockGap=8 icon="\uf076"
+    //% parts="compass"
     int magneticForce(Dimension dimension) {
       if (!uBit.compass.isCalibrated())
         uBit.compass.calibrate();
@@ -304,6 +313,7 @@ namespace input {
     //% help=input/set-accelerometer-range
     //% blockId=device_set_accelerometer_range block="set accelerometer|range %range" icon="\uf135"
     //% weight=5
+    //% parts="accelerometer"
     void setAccelerometerRange(AcceleratorRange range) {
         uBit.accelerometer.setRange((int)range);
     }

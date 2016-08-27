@@ -9,16 +9,16 @@ let execAsync: (cmd: string, options?: { cwd?: string }) => Promise<Buffer> = Pr
 let readDirAsync = Promise.promisify(fs.readdir)
 
 
-export function deployCoreAsync(res: pxtc.CompileResult) {
+export function deployCoreAsync(res: ts.pxtc.CompileResult) {
     return getBitDrivesAsync()
         .then(drives => {
             if (drives.length == 0) {
                 console.log("cannot find any drives to deploy to")
             } else {
-                console.log(`copy ${pxtc.BINARY_HEX} to ` + drives.join(", "))
+                console.log(`copy ${ts.pxtc.BINARY_HEX} to ` + drives.join(", "))
             }
             return Promise.map(drives, d =>
-                writeFileAsync(d + pxtc.BINARY_HEX, res.outfiles[pxtc.BINARY_HEX])
+                writeFileAsync(d + ts.pxtc.BINARY_HEX, res.outfiles[ts.pxtc.BINARY_HEX])
                     .then(() => {
                         console.log("wrote hex file to " + d)
                     }))

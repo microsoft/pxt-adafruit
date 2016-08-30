@@ -196,6 +196,8 @@ namespace pxt {
   int programHash();
   //%
   void *ptrOfLiteral(int offset);
+  //%
+  int getNumGlobals();
 }
 
 namespace pxtrt {
@@ -307,11 +309,6 @@ namespace pxtrt {
   //
   // Debugger
   //
-
-  //%
-  uint32_t getNumGlobals() {
-    return numGlobals;
-  }
 
   //%
   void* getGlobalsPtr() {

@@ -1,0 +1,4 @@
+# don't check in until OSS request is approved
+neopixel-black-60-vert.svg 
+sparkfun-*
+raspberrypi-*

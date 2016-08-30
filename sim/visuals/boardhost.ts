@@ -21,8 +21,6 @@ namespace pxsim.visuals {
                 this.boardView = new visuals.MicrobitBoardSvg({
                     runtime: runtime,
                     theme: visuals.randomTheme(),
-                    activeComponents: activeComponents,
-                    fnArgs: fnArgs,
                     disableTilt: false
                 });
             } else {

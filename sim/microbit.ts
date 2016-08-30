@@ -86,8 +86,6 @@ namespace pxsim.visuals {
         runtime: pxsim.Runtime;
         theme?: IBoardTheme;
         disableTilt?: boolean;
-        activeComponents: string[];
-        fnArgs?: any;
     }
 
     const pointerEvents = !!(window as any).PointerEvent ? {

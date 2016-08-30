@@ -2,7 +2,7 @@
 
 It is possible to use the codethemicrobit tools from a command line interface (CLI). The PXT CLI allows to 
 * edit, compile or deploy JavaScript programs
-* can easily be integrated in most IDEs (it comes with built-in support for [Visual Studio Code](https://code.visualstudio.com/))
+* can easily be integrated in most IDEs. It comes with built-in support for [Visual Studio Code](/code)!
 * run a local web server for the web editor
 * author packages using JavaScript and/or C++
 

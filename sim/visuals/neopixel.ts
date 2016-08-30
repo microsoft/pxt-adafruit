@@ -59,7 +59,7 @@ namespace pxsim.visuals {
         const NP_PART_YOFF = -11;
         const NP_PART_WIDTH = 87.5;
         const NP_PART_HEIGHT = 190;
-        const NEOPIXEL_PART_IMG = "neopixel-black-60-vert.svg";
+        const NEOPIXEL_PART_IMG = "neopixel.svg";
         let [x, y] = xy;
         let l = x + NP_PART_XOFF;
         let t = y + NP_PART_YOFF;

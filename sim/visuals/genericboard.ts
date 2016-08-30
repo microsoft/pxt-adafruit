@@ -180,7 +180,7 @@ namespace pxsim.visuals {
         `;
 
     let nextBoardId = 0;
-    export class GenericBoardSvg {
+    export class GenericBoardSvg /*TODO: implements BoardView*/ {
         public hostElement: SVGSVGElement;
         private style: SVGStyleElement;
         private defs: SVGDefsElement;

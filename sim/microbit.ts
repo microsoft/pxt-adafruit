@@ -102,8 +102,7 @@ namespace pxsim.visuals {
             leave: "mouseleave"
         };
 
-    export class MicrobitBoardSvg {
-        public hostElement: SVGSVGElement;
+    export class MicrobitBoardSvg implements BoardView {
         public element: SVGSVGElement;
         private style: SVGStyleElement;
         private defs: SVGDefsElement;
@@ -132,131 +131,38 @@ namespace pxsim.visuals {
         private shakeButton: SVGCircleElement;
         private shakeText: SVGTextElement;
         public board: pxsim.DalBoard;
-
-        //EXPERIMENTAl
-        private wireFactory: WireFactory;
-        private breadboard: Breadboard;
-        private components: IBoardComponent<any>[] = [];
         private pinNmToCoord: Map<Coord> = {};
-        private fromBBCoord: (xy: Coord) => Coord;
-        private fromMBCoord: (xy: Coord) => Coord;
 
         constructor(public props: IBoardProps) {
             this.board = this.props.runtime.board as pxsim.DalBoard;
-            this.board.updateView = () => this.updateState();
+            this.board.updateSubscribers.push(() => this.updateState());
 
-            //EXPERIMENTAl
-            let boardDef = MICROBIT_DEF;
-            let cmpsDef: Map<ComponentDefinition> = COMPONENT_DEFINITIONS;
-            this.breadboard = new Breadboard();
-            this.buildDom();
-            this.hostElement = this.element;
             this.recordPinCoords();
-            let cmps = props.activeComponents.filter(a => a === "neopixel");
-            if (0 < cmps.length) {
-                let compRes = composeSVG({
-                    el1: {el: this.element, y: 0, x: 0, w: MB_WIDTH, h: MB_HEIGHT},
-                    scaleUnit1: littlePinDist * 1.7,
-                    el2: this.breadboard.getSVGAndSize(),
-                    scaleUnit2: this.breadboard.getPinDist(),
-                    margin: [0, 0, 10, 0],
-                    middleMargin: 80,
-                    maxWidth: 299,
-                    maxHeight: 433,
-                });
-                let under = compRes.under;
-                let over = compRes.over;
-                this.hostElement = compRes.host;
-                let edges = compRes.edges;
-                this.fromMBCoord = compRes.toHostCoord1;
-                this.fromBBCoord = compRes.toHostCoord2;
-                let pinDist = compRes.scaleUnit;
-
-                this.wireFactory = new WireFactory(under, over, edges, this.style, this.getLocCoord.bind(this));
-                let allocRes = allocateDefinitions({
-                    boardDef: boardDef,
-                    cmpDefs: cmpsDef,
-                    fnArgs: this.props.fnArgs,
-                    getBBCoord: this.getBBCoord.bind(this),
-                    cmpList: cmps,
-                });
-                this.addAll(allocRes);
-            } else {
-                svg.hydrate(this.hostElement, {
-                    width: 299,
-                    height: 433,
-                });
-            }
+            this.buildDom();
 
             this.updateTheme();
             this.updateState();
             this.attachEvents();
         }
 
-        //EXPERIMENTAl
-        private getBoardPinCoord(pinNm: string): Coord {
-            let coord = this.pinNmToCoord[pinNm];
-            return this.fromMBCoord(coord);
+        public getView(): SVGAndSize<SVGSVGElement> {
+            return {
+                el: this.element,
+                y: 0,
+                x: 0,
+                w: MB_WIDTH,
+                h: MB_HEIGHT
+            };
         }
-        private getBBCoord(rowCol: BBRowCol): Coord {
-            let bbCoord = this.breadboard.getCoord(rowCol);
-            if (!bbCoord)
-                return null;
-            return this.fromBBCoord(bbCoord);
+
+        public getCoord(pinNm: string): Coord {
+            return this.pinNmToCoord[pinNm];
         }
-        public getLocCoord(loc: Loc): Coord {
-            let coord: Coord;
-            if (loc.type === "breadboard") {
-                let rowCol = (<BBLoc>loc).rowCol;
-                coord = this.getBBCoord(rowCol);
-            } else {
-                let pinNm = (<BoardLoc>loc).pin;
-                coord = this.getBoardPinCoord(pinNm);
-            }
-            if (!coord) {
-                console.error("Unknown location: " + name)
-                return [0, 0];
-            }
-            return coord;
+
+        public getPinDist(): number {
+            return littlePinDist * 1.7;
         }
-        public addWire(inst: WireInst): Wire {
-            return this.wireFactory.addWire(inst.start, inst.end, inst.color, true);
-        }
-        public addAll(basicWiresAndCmpsAndWires: AllocatorResult) {
-            let {powerWires, components} = basicWiresAndCmpsAndWires;
-            powerWires.forEach(w => this.addWire(w));
-            components.forEach((cAndWs, idx) => {
-                let {component, wires} = cAndWs;
-                wires.forEach(w => this.addWire(w));
-                this.addComponent(component);
-            });
-        }
-        public addComponent(cmpDesc: CmpInst): IBoardComponent<any> {
-            let cmp: IBoardComponent<any> = null;
-            if (typeof cmpDesc.visual === "string") {
-                let builtinVisual = cmpDesc.visual as string;
-                let cnstr = builtinComponentSimVisual[builtinVisual];
-                let stateFn = builtinComponentSimState[builtinVisual];
-                let cmp = cnstr();
-                cmp.init(this.board.bus, stateFn(this.board), this.element, cmpDesc.microbitPins, cmpDesc.otherArgs);
-                this.components.push(cmp);
-                this.hostElement.appendChild(cmp.element);
-                if (cmp.defs)
-                    cmp.defs.forEach(d => this.defs.appendChild(d));
-                this.style.textContent += cmp.style || "";
-                let rowCol = <BBRowCol>[`${cmpDesc.breadboardStartRow}`, `${cmpDesc.breadboardStartColumn}`];
-                let coord = this.getBBCoord(rowCol);
-                cmp.moveToCoord(coord);
-                let getCmpClass = (type: string) => `sim-${type}-cmp`;
-                let cls = getCmpClass(name);
-                svg.addClass(cmp.element, cls);
-                svg.addClass(cmp.element, "sim-cmp");
-                cmp.updateTheme();
-                cmp.updateState();
-            } else {
-            }
-            return cmp;
-        }
+
         public recordPinCoords() {
             const pinsY = 356.7 + 40;
             pinNames.forEach((nm, i) => {
@@ -311,9 +217,6 @@ namespace pxsim.visuals {
 
             if (!runtime || runtime.dead) svg.addClass(this.element, "grayscale");
             else svg.removeClass(this.element, "grayscale");
-
-            //EXPERIMENTAl
-            this.components.forEach(c => c.updateState());
         }
 
         private updateGestures() {

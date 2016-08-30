@@ -202,4 +202,10 @@ namespace pxsim.visuals {
     export type SVGElAndSize = SVGAndSize<SVGElement>;
 
     export const PIN_DIST = 15;
+
+    export interface BoardView {
+        getView(): SVGAndSize<SVGSVGElement>;
+        getCoord(pinNm: string): Coord;
+        getPinDist(): number;
+    }
 }

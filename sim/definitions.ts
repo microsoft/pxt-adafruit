@@ -24,6 +24,7 @@ namespace pxsim {
         groundPins: string[],
         threeVoltPins: string[],
         attachPowerOnRight?: boolean,
+        onboardComponents?: string[]
     }
     export interface FactoryFunctionPinAlloc {
         type: "factoryfunction",
@@ -92,6 +93,7 @@ namespace pxsim {
         groundPins: ["GND"],
         threeVoltPins: ["+3v3"],
         attachPowerOnRight: true,
+        onboardComponents: ["buttonpair", "ledmatrix"],
     }
     export const RASPBERRYPI_MODELB: BoardDefinition = {
         visual: {

@@ -17,6 +17,9 @@ namespace pxsim {
         radioState: RadioState;
         neopixelState: NeoPixelState;
 
+        // updates
+        updateSubscribers: (() => void)[];
+
         constructor() {
             super()
             this.id = "b" + Math_.random(2147483647);
@@ -33,6 +36,12 @@ namespace pxsim {
             this.lightSensorState = new LightSensorState();
             this.compassState = new CompassState();
             this.neopixelState = new NeoPixelState();
+
+            // updates
+            this.updateSubscribers = []
+            this.updateView = () => {
+                this.updateSubscribers.forEach(sub => sub());
+            }
         }
 
         receiveMessage(msg: SimulatorMessage) {
@@ -62,34 +71,20 @@ namespace pxsim {
         initAsync(msg: SimulatorRunMessage): Promise<void> {
             let options = (msg.options || {}) as RuntimeOptions;
 
-            let boardDef = ARDUINO_ZERO; //TODO: read from pxt.json/pxttarget.json
+            //TODO: read from pxt.json/pxttarget.json
+            let boardDef = MICROBIT_DEF;
+            // let boardDef = ARDUINO_ZERO;
+            // let boardDef = SPARKFUN_PHOTON;
+            // let boardDef = RASPBERRYPI_MODELB;
+
             let cmpsList = msg.parts;
-            cmpsList.sort();
             let cmpDefs = COMPONENT_DEFINITIONS; //TODO: read from pxt.json/pxttarget.json
             let fnArgs = msg.fnArgs;
 
-            let mb = true;
-            let view: visuals.GenericBoardSvg | visuals.MicrobitBoardSvg;
-            if (mb) {
-                view = new visuals.MicrobitBoardSvg({
-                    runtime: runtime,
-                    theme: visuals.randomTheme(),
-                    activeComponents: cmpsList,
-                    fnArgs: fnArgs,
-                    disableTilt: false
-                });
-            } else {
-                view = new visuals.GenericBoardSvg({
-                    boardDef: boardDef,
-                    activeComponents: cmpsList,
-                    componentDefinitions: cmpDefs,
-                    runtime: runtime,
-                    fnArgs: fnArgs
-                })
-            }
+            let viewHost = new visuals.BoardHost(this, boardDef, cmpsList, cmpDefs, fnArgs);
 
             document.body.innerHTML = ""; // clear children
-            document.body.appendChild(view.hostElement);
+            document.body.appendChild(viewHost.getView());
 
             return Promise.resolve();
         }

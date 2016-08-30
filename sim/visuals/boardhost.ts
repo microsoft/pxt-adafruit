@@ -34,8 +34,8 @@ namespace pxsim.visuals {
                 // })
             }
 
-            const VIEW_WIDTH = 299;
-            const VIEW_HEIGHT = 433;
+            const VIEW_WIDTH = "100%";
+            const VIEW_HEIGHT = "100%";
 
             if (0 < activeComponents.length) {
                 this.breadboard = new Breadboard();

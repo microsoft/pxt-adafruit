@@ -68,8 +68,8 @@ namespace pxsim.visuals {
         scaleUnit2: number,
         margin: [number, number, number, number],
         middleMargin: number,
-        maxWidth: number,
-        maxHeight: number,
+        maxWidth?: string,
+        maxHeight?: string,
     }
     export interface ComposeResult {
         host: SVGSVGElement,
@@ -84,16 +84,17 @@ namespace pxsim.visuals {
         let [a, b] = [opts.el1, opts.el2];
         U.assert(a.x == 0 && a.y == 0 && b.x == 0 && b.y == 0, "el1 and el2 x,y offsets not supported");
         let setXY = (e: SVGSVGElement, x: number, y: number) => svg.hydrate(e, {x: x, y: y});
-        let setWH = (e: SVGSVGElement, w: number, h: number) => svg.hydrate(e, {width: w, height: h});
+        let setWH = (e: SVGSVGElement, w: string, h: string) => svg.hydrate(e, {width: w, height: h});
+        let setWHpx = (e: SVGSVGElement, w: number, h: number) => svg.hydrate(e, {width: `${w}px`, height: `${h}px`});
         let scaleUnit = opts.scaleUnit2;
         let aScalar = opts.scaleUnit2 / opts.scaleUnit1;
         let bScalar = 1.0;
         let aw = a.w * aScalar;
         let ah = a.h * aScalar;
-        setWH(a.el, aw, ah);
+        setWHpx(a.el, aw, ah);
         let bw = b.w * bScalar;
         let bh = b.h * bScalar;
-        setWH(b.el, bw, bh);
+        setWHpx(b.el, bw, bh);
         let [mt, mr, mb, ml] = opts.margin;
         let mm = opts.middleMargin;
         let innerW = Math.max(aw, bw);
@@ -111,7 +112,8 @@ namespace pxsim.visuals {
             "viewBox": `0 0 ${w} ${h}`,
             "class": `sim-bb`,
         });
-        setWH(host, opts.maxWidth, opts.maxHeight);
+        if (opts.maxWidth &&  opts.maxHeight)
+            setWH(host, opts.maxWidth, opts.maxHeight);
         setXY(host, 0, 0);
         let under = <SVGGElement>svg.child(host, "g");
         host.appendChild(a.el);

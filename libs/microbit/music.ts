@@ -88,6 +88,7 @@ namespace music {
      */
     //% help=music/play-tone weight=90
     //% blockId=device_play_note block="play|tone %note=device_note|for %duration=device_beat" icon="\uf025" blockGap=8
+    //% parts="speaker"
     export function playTone(frequency: number, ms: number): void {
         pins.analogSetPitchPin(AnalogPin.P0);
         pins.analogPitch(frequency, ms);
@@ -99,6 +100,7 @@ namespace music {
      */
     //% help=music/ring-tone weight=80
     //% blockId=device_ring block="ring tone (Hz)|%note=device_note" icon="\uf025" blockGap=8
+    //% parts="speaker"
     export function ringTone(frequency: number): void {
         pins.analogSetPitchPin(AnalogPin.P0);
         pins.analogPitch(frequency, 0);
@@ -110,6 +112,7 @@ namespace music {
      */
     //% help=music/rest weight=79
     //% blockId=device_rest block="rest(ms)|%duration=device_beat"
+    //% parts="speaker"
     export function rest(ms: number): void {
         playTone(0, ms);
     }
@@ -121,6 +124,7 @@ namespace music {
      */
     //% weight=50 help=music/note-frequency
     //% blockId=device_note block="%note"
+    //% parts="speaker"
     export function noteFrequency(name: Note): number {
         return name;
     }
@@ -134,6 +138,7 @@ namespace music {
      */
     //% help=music/beat weight=49
     //% blockId=device_beat block="%fraction|beat"
+    //% parts="speaker"
     export function beat(fraction?: BeatFraction): number {
         init();
         if (fraction == null) fraction = BeatFraction.Whole;
@@ -150,6 +155,7 @@ namespace music {
      */
     //% help=music/tempo weight=40
     //% blockId=device_tempo block="tempo (bpm)" blockGap=8
+    //% parts="speaker"
     export function tempo(): number {
         init();
         return beatsPerMinute;
@@ -161,8 +167,9 @@ namespace music {
      */
     //% help=music/change-tempo weight=39
     //% blockId=device_change_tempo block="change tempo by (bpm)|%value" blockGap=8
+    //% parts="speaker"
     export function changeTempoBy(bpm: number): void {
-	init();
+        init();
         setTempo(beatsPerMinute + bpm);
     }
 
@@ -172,6 +179,7 @@ namespace music {
      */
     //% help=music/set-tempo weight=38
     //% blockId=device_set_tempo block="set tempo to (bpm)|%value"
+    //% parts="speaker"
     export function setTempo(bpm: number): void {
         init();
         if (bpm > 0) {

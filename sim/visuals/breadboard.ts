@@ -280,6 +280,10 @@ namespace pxsim.visuals {
         el: SVGRectElement,
         group?: string
     };
+
+    export interface BreadboardOpts {
+        wireframe?: boolean,
+    }
     export class Breadboard {
         public bb: SVGSVGElement;
         private styleEl: SVGStyleElement;
@@ -293,8 +297,11 @@ namespace pxsim.visuals {
         private rowColToPin: Map<Map<GridPin>> = {};
         private rowColToLbls: Map<Map<GridLabel[]>> = {};
 
-        constructor() {
+        constructor(opts: BreadboardOpts) {
             this.buildDom();
+
+            if (opts.wireframe)
+                svg.addClass(this.bb, "sim-bb-outline");
         }
 
         public updateLocation(x: number, y: number) {
@@ -627,7 +634,8 @@ namespace pxsim.visuals {
             return {el: this.bb, y: 0, x: 0, w: WIDTH, h: HEIGHT};
         }
 
-        public highlightLoc(row: string, col: string) {
+        public highlightLoc(rowCol: BBRowCol) {
+            let [row, col] = rowCol;
             let pin = this.rowColToPin[row][col];
             let {cx, cy} = pin;
             let lbls = this.rowColToLbls[row][col];

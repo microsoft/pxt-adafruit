@@ -209,5 +209,6 @@ namespace pxsim.visuals {
         getView(): SVGAndSize<SVGSVGElement>;
         getCoord(pinNm: string): Coord;
         getPinDist(): number;
+        highlightPin(pinNm: string): void;
     }
 }

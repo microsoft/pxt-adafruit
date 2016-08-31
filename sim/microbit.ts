@@ -1,4 +1,121 @@
 namespace pxsim.visuals {
+    const MB_STYLE = `
+        svg.sim {
+            margin-bottom:1em;
+        }
+        svg.sim.grayscale {
+            -moz-filter: grayscale(1);
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+        }
+        .sim-button {
+            pointer-events: none;
+        }
+
+        .sim-button-outer:hover {
+            stroke:grey;
+            stroke-width: 3px;
+        }
+        .sim-button-nut {
+            fill:#704A4A;
+            pointer-events:none;
+        }
+        .sim-button-nut:hover {
+            stroke:1px solid #704A4A;
+        }
+        .sim-pin:hover {
+            stroke:#D4AF37;
+            stroke-width:2px;
+        }
+
+        .sim-pin-touch.touched:hover {
+            stroke:darkorange;
+        }
+
+        .sim-led-back:hover {
+            stroke:#a0a0a0;
+            stroke-width:3px;
+        }
+        .sim-led:hover {
+            stroke:#ff7f7f;
+            stroke-width:3px;
+        }
+
+        .sim-systemled {
+            fill:#333;
+            stroke:#555;
+            stroke-width: 1px;
+        }
+
+        .sim-light-level-button {
+            stroke:#fff;
+            stroke-width: 3px;
+        }
+
+        .sim-antenna {
+            stroke:#555;
+            stroke-width: 2px;
+        }
+
+        .sim-text {
+        font-family:"Lucida Console", Monaco, monospace;
+        font-size:25px;
+        fill:#fff;
+        pointer-events: none;
+        }
+
+        .sim-text-pin {
+        font-family:"Lucida Console", Monaco, monospace;
+        font-size:20px;
+        fill:#fff;
+        pointer-events: none;
+        }
+
+        .sim-thermometer {
+            stroke:#aaa;
+            stroke-width: 3px;
+        }
+
+        /* animations */
+        .sim-theme-glow {
+            animation-name: sim-theme-glow-animation;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-duration: 1.25s;
+        }
+        @keyframes sim-theme-glow-animation {
+            from { opacity: 1; }
+            to   { opacity: 0.75; }
+        }
+
+        .sim-flash {
+            animation-name: sim-flash-animation;
+            animation-duration: 0.1s;
+        }
+
+        @keyframes sim-flash-animation {
+            from { fill: yellow; }
+            to   { fill: default; }
+        }
+
+        .sim-flash-stroke {
+            animation-name: sim-flash-stroke-animation;
+            animation-duration: 0.4s;
+            animation-timing-function: ease-in;
+        }
+
+        @keyframes sim-flash-stroke-animation {
+            from { stroke: yellow; }
+            to   { stroke: default; }
+        }
+
+        /* wireframe */
+        .sim-wireframe * {
+            fill: none;
+            stroke: black;
+        }
+    `;
     const pins4onXs = [66.7, 79.1, 91.4, 103.7, 164.3, 176.6, 188.9, 201.3, 213.6, 275.2, 287.5, 299.8, 312.1, 324.5, 385.1, 397.4, 409.7, 422];
     const pins4onMids = pins4onXs.map(x => x + 5);
     const littlePinDist = pins4onMids[1] - pins4onMids[0];
@@ -83,9 +200,10 @@ namespace pxsim.visuals {
     }
 
     export interface IBoardProps {
-        runtime: pxsim.Runtime;
+        runtime?: pxsim.Runtime;
         theme?: IBoardTheme;
         disableTilt?: boolean;
+        wireframe?: boolean;
     }
 
     const pointerEvents = !!(window as any).PointerEvent ? {
@@ -132,15 +250,20 @@ namespace pxsim.visuals {
         private pinNmToCoord: Map<Coord> = {};
 
         constructor(public props: IBoardProps) {
-            this.board = this.props.runtime.board as pxsim.DalBoard;
-            this.board.updateSubscribers.push(() => this.updateState());
-
             this.recordPinCoords();
             this.buildDom();
+            if (props && props.wireframe)
+                svg.addClass(this.element, "sim-wireframe");
 
-            this.updateTheme();
-            this.updateState();
-            this.attachEvents();
+            if (props && props.theme)
+                this.updateTheme();
+
+            if (props && props.runtime) {
+                this.board = this.props.runtime.board as pxsim.DalBoard;
+                this.board.updateSubscribers.push(() => this.updateState());
+                this.updateState();
+                this.attachEvents();
+            }
         }
 
         public getView(): SVGAndSize<SVGSVGElement> {
@@ -155,6 +278,10 @@ namespace pxsim.visuals {
 
         public getCoord(pinNm: string): Coord {
             return this.pinNmToCoord[pinNm];
+        }
+
+        public highlightPin(pinNm: string): void {
+            //TODO: for instructions
         }
 
         public getPinDist(): number {
@@ -438,118 +565,7 @@ namespace pxsim.visuals {
                 "height": MB_HEIGHT + "px",
             });
             this.style = <SVGStyleElement>svg.child(this.element, "style", {});
-            this.style.textContent = `
-                svg.sim {
-                    margin-bottom:1em;
-                }
-                svg.sim.grayscale {
-                    -moz-filter: grayscale(1);
-                    -webkit-filter: grayscale(1);
-                    filter: grayscale(1);
-                }
-                .sim-button {
-                    pointer-events: none;
-                }
-
-                .sim-button-outer:hover {
-                    stroke:grey;
-                    stroke-width: 3px;
-                }
-                .sim-button-nut {
-                    fill:#704A4A;
-                    pointer-events:none;
-                }
-                .sim-button-nut:hover {
-                    stroke:1px solid #704A4A;
-                }
-                .sim-pin:hover {
-                    stroke:#D4AF37;
-                    stroke-width:2px;
-                }
-
-                .sim-pin-touch.touched:hover {
-                    stroke:darkorange;
-                }
-
-                .sim-led-back:hover {
-                    stroke:#a0a0a0;
-                    stroke-width:3px;
-                }
-                .sim-led:hover {
-                    stroke:#ff7f7f;
-                    stroke-width:3px;
-                }
-
-                .sim-systemled {
-                    fill:#333;
-                    stroke:#555;
-                    stroke-width: 1px;
-                }
-
-                .sim-light-level-button {
-                    stroke:#fff;
-                    stroke-width: 3px;
-                }
-
-                .sim-antenna {
-                    stroke:#555;
-                    stroke-width: 2px;
-                }
-
-                .sim-text {
-                font-family:"Lucida Console", Monaco, monospace;
-                font-size:25px;
-                fill:#fff;
-                pointer-events: none;
-                }
-
-                .sim-text-pin {
-                font-family:"Lucida Console", Monaco, monospace;
-                font-size:20px;
-                fill:#fff;
-                pointer-events: none;
-                }
-
-                .sim-thermometer {
-                    stroke:#aaa;
-                    stroke-width: 3px;
-                }
-
-                /* animations */
-                .sim-theme-glow {
-                    animation-name: sim-theme-glow-animation;
-                    animation-timing-function: ease-in-out;
-                    animation-direction: alternate;
-                    animation-iteration-count: infinite;
-                    animation-duration: 1.25s;
-                }
-                @keyframes sim-theme-glow-animation {
-                    from { opacity: 1; }
-                    to   { opacity: 0.75; }
-                }
-
-                .sim-flash {
-                    animation-name: sim-flash-animation;
-                    animation-duration: 0.1s;
-                }
-
-                @keyframes sim-flash-animation {
-                    from { fill: yellow; }
-                    to   { fill: default; }
-                }
-
-                .sim-flash-stroke {
-                    animation-name: sim-flash-stroke-animation;
-                    animation-duration: 0.4s;
-                    animation-timing-function: ease-in;
-                }
-
-                @keyframes sim-flash-stroke-animation {
-                    from { stroke: yellow; }
-                    to   { stroke: default; }
-                }
-
-            `;
+            this.style.textContent = MB_STYLE;
 
             this.defs = <SVGDefsElement>svg.child(this.element, "defs", {});
             this.g = <SVGGElement>svg.elt("g");

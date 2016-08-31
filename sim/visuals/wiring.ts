@@ -67,14 +67,18 @@ namespace pxsim.visuals {
         colorClass?: string,
         bendFactor?: number,
     }
-    export function mkWirePart(cp: [number, number], clr: string): visuals.SVGAndSize<SVGGElement> {
+    export function mkWirePart(cp: [number, number], clr: string, croc: boolean = false): visuals.SVGAndSize<SVGGElement> {
         let g = <SVGGElement>svg.elt("g");
         let [cx, cy] = cp;
         let offset = WIRE_PART_CURVE_OFF;
         let p1: visuals.Coord = [cx - offset, cy - WIRE_PART_LENGTH / 2];
         let p2: visuals.Coord = [cx + offset, cy + WIRE_PART_LENGTH / 2];
         clr = visuals.mapWireColor(clr);
-        let e1 = mkOpenJumperEnd(p1, true, clr);
+        let e1: SVGElAndSize;
+        if (croc)
+            e1 = mkCrocEnd(p1, true, clr);
+        else
+            e1 = mkOpenJumperEnd(p1, true, clr);
         let s = mkWirePartSeg(p1, p2, clr);
         let e2 = mkOpenJumperEnd(p2, false, clr);
         g.appendChild(s.el);

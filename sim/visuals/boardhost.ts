@@ -1,4 +1,15 @@
 namespace pxsim.visuals {
+    export interface BoardHostOpts {
+        state: DalBoard,
+        boardDef: BoardDefinition,
+        cmpsList?: string[],
+        cmpDefs: Map<PartDefinition>,
+        fnArgs: any,
+        forceBreadboard?: boolean,
+        maxWidth?: string,
+        maxHeight?: string
+        wireframe?: boolean
+    }
     export class BoardHost {
         private components: IBoardComponent<any>[] = [];
         private wireFactory: WireFactory;
@@ -11,33 +22,27 @@ namespace pxsim.visuals {
         private defs: SVGDefsElement;
         private state: DalBoard;
 
-        constructor(state: DalBoard, boardDef: BoardDefinition, cmpsList: string[], cmpDefs: Map<PartDefinition>, fnArgs: any) {
-            this.state = state;
-            let onboardCmps = boardDef.onboardComponents || [];
-            let activeComponents = (cmpsList || []).filter(c => onboardCmps.indexOf(c) < 0);
+        constructor(opts: BoardHostOpts) {
+            this.state = opts.state;
+            let onboardCmps = opts.boardDef.onboardComponents || [];
+            let activeComponents = (opts.cmpsList || []).filter(c => onboardCmps.indexOf(c) < 0);
             activeComponents.sort();
 
-            // boardDef.visual === "microbit"
             this.boardView = new visuals.MicrobitBoardSvg({
                 runtime: runtime,
                 theme: visuals.randomTheme(),
-                disableTilt: false
+                disableTilt: false,
+                wireframe: opts.wireframe,
             });
-            //TODO: port Arduino/generic board
-            // this.boardView = new visuals.GenericBoardSvg({
-            //     boardDef: boardDef,
-            //     activeComponents: activeComponents,
-            //     componentDefinitions: cmpDefs,
-            //     runtime: runtime,
-            //     fnArgs: fnArgs
-            // })
-            // }
 
-            const VIEW_WIDTH = "100%";
-            const VIEW_HEIGHT = "100%";
+            let maxWidth = opts.maxWidth || "100%";
+            let maxHeight = opts.maxHeight || "100%";
 
-            if (0 < activeComponents.length) {
-                this.breadboard = new Breadboard();
+            let useBreadboard = 0 < activeComponents.length || opts.forceBreadboard;
+            if (useBreadboard) {
+                this.breadboard = new Breadboard({
+                    wireframe: opts.wireframe,
+                });
                 let composition = composeSVG({
                     el1: this.boardView.getView(),
                     scaleUnit1: this.boardView.getPinDist(),
@@ -45,8 +50,8 @@ namespace pxsim.visuals {
                     scaleUnit2: this.breadboard.getPinDist(),
                     margin: [0, 0, 10, 0],
                     middleMargin: 80,
-                    maxWidth: VIEW_WIDTH,
-                    maxHeight: VIEW_HEIGHT,
+                    maxWidth: maxWidth,
+                    maxHeight: maxHeight,
                 });
                 let under = composition.under;
                 let over = composition.over;
@@ -62,9 +67,9 @@ namespace pxsim.visuals {
                 this.wireFactory = new WireFactory(under, over, edges, this.style, this.getLocCoord.bind(this));
 
                 let allocRes = allocateDefinitions({
-                    boardDef: boardDef,
-                    cmpDefs: cmpDefs,
-                    fnArgs: fnArgs,
+                    boardDef: opts.boardDef,
+                    cmpDefs: opts.cmpDefs,
+                    fnArgs: opts.fnArgs,
                     getBBCoord: this.breadboard.getCoord.bind(this.breadboard),
                     cmpList: activeComponents,
                 });
@@ -74,12 +79,35 @@ namespace pxsim.visuals {
                 let el = this.boardView.getView().el;
                 this.view = el;
                 svg.hydrate(this.view, {
-                    width: VIEW_WIDTH,
-                    height: VIEW_HEIGHT,
+                    width: maxWidth,
+                    height: maxHeight,
                 });
             }
 
             this.state.updateSubscribers.push(() => this.updateState());
+        }
+
+        public highlightBoardPin(pinNm: string) {
+            this.boardView.highlightPin(pinNm);
+        }
+
+        public highlightBreadboardPin(rowCol: BBRowCol) {
+            this.breadboard.highlightLoc(rowCol);
+        }
+
+        public highlightWire(wire: Wire) {
+            //underboard wires
+            wire.wires.forEach(e => {
+                (<any>e).style["visibility"] = "visible";
+            });
+
+            //un greyed out
+            [wire.end1, wire.end2].forEach(e => {
+                svg.addClass(e, "highlight");
+            });
+            wire.wires.forEach(e => {
+                svg.addClass(e, "highlight");
+            });
         }
 
         public getView(): SVGElement {
@@ -120,7 +148,7 @@ namespace pxsim.visuals {
                 let builtinVisual = cmpDesc.visual as string;
                 let cnstr = builtinComponentSimVisual[builtinVisual];
                 let stateFn = builtinComponentSimState[builtinVisual];
-                let cmp = cnstr();
+                cmp = cnstr();
                 cmp.init(this.state.bus, stateFn(this.state), this.view, cmpDesc.microbitPins, cmpDesc.otherArgs);
                 this.components.push(cmp);
                 this.view.appendChild(cmp.element);

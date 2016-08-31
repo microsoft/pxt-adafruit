@@ -14,16 +14,16 @@ namespace pxsim.visuals {
         constructor(state: DalBoard, boardDef: BoardDefinition, cmpsList: string[], cmpDefs: Map<ComponentDefinition>, fnArgs: any) {
             this.state = state;
             let onboardCmps = boardDef.onboardComponents || [];
-            let activeComponents = cmpsList.filter(c => onboardCmps.indexOf(c) < 0);
+            let activeComponents = (cmpsList || []).filter(c => onboardCmps.indexOf(c) < 0);
             activeComponents.sort();
 
-            if (boardDef.visual === "microbit") {
+          //  if (boardDef.visual === "microbit") {
                 this.boardView = new visuals.MicrobitBoardSvg({
                     runtime: runtime,
                     theme: visuals.randomTheme(),
                     disableTilt: false
                 });
-            } else {
+         //   } else {
                 //TODO: port Arduino/generic board
                 // this.boardView = new visuals.GenericBoardSvg({
                 //     boardDef: boardDef,
@@ -32,7 +32,7 @@ namespace pxsim.visuals {
                 //     runtime: runtime,
                 //     fnArgs: fnArgs
                 // })
-            }
+        //    }
 
             const VIEW_WIDTH = "100%";
             const VIEW_HEIGHT = "100%";

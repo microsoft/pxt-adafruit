@@ -75,7 +75,13 @@
     },
     "simulator": {
         "autoRun": true,
-        "aspectRatio": 0.69
+        "aspectRatio": 1.22,
+        "partsAspectRatio": 0.69,
+        "builtinParts": {
+            "accelerometer": true,
+            "buttonpair": true,
+            "ledmatrix": true
+        }
     },
     "compileService": {
         "yottaTarget": "bbc-microbit-classic-gcc",

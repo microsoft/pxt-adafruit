@@ -26,6 +26,7 @@ namespace pxsim.visuals {
         }
         .grayed .sim-bb-wire-end:not(.highlight) {
             stroke: #777;
+            fill: #777;
         }
         .grayed .sim-bb-wire:not(.highlight) {
             stroke: #CCC;

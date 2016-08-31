@@ -232,7 +232,7 @@ namespace pxsim.visuals {
             this.componentDefs = props.componentDefinitions;
 
             // breadboard
-            this.breadboard = new Breadboard()
+            this.breadboard = new Breadboard({})
             this.g.appendChild(this.breadboard.bb);
             let bbSize = this.breadboard.getSVGAndSize();
             let [bbWidth, bbHeight] = [bbSize.w, bbSize.h];

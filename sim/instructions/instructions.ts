@@ -45,7 +45,6 @@ namespace pxsim.instructions {
     const NUM_MARGIN = 5;
     const FRONT_PAGE_BOARD_WIDTH = 200;
     const STYLE = `
-            ${visuals.BOARD_SYTLE}
             .instr-panel {
                 margin: ${PANEL_MARGIN}px;
                 padding: ${PANEL_PADDING}px;
@@ -126,22 +125,12 @@ namespace pxsim.instructions {
         cmpScale?: number
     };
     function mkBoardImgSvg(def: BoardImageDefinition): visuals.SVGElAndSize {
-        let img = svg.elt( "image");
-        let [l, t] = [0, 0];
-        let w = def.width;
-        let h = def.height;
-        svg.hydrate(img, {
-            class: "sim-board",
-            x: l,
-            y: t,
-            width: def.width,
-            height: def.height,
-            "href": `${def.image}`});
-
-        return {el: img, w: w, h: h, x: l, y: t};
+        return new visuals.MicrobitBoardSvg({
+            theme: visuals.randomTheme()
+        }).getView();
     }
     function mkBBSvg(): visuals.SVGElAndSize {
-        let bb = new visuals.Breadboard();
+        let bb = new visuals.Breadboard({});
         return bb.getSVGAndSize();
     }
     function wrapSvg(el: visuals.SVGElAndSize, opts: mkCmpDivOpts): HTMLElement {
@@ -280,7 +269,8 @@ namespace pxsim.instructions {
     function mkCmpDiv(type: "wire" | string, opts: mkCmpDivOpts): HTMLElement {
         let el: visuals.SVGElAndSize;
         if (type == "wire") {
-            el = visuals.mkWirePart([0, 0], opts.wireClr || "red");
+            //TODO: support non-croc wire parts
+            el = visuals.mkWirePart([0, 0], opts.wireClr || "red", true);
         } else {
             let cnstr = builtinComponentPartVisual[type];
             el = cnstr([0, 0]);
@@ -290,6 +280,7 @@ namespace pxsim.instructions {
     type BoardProps = {
         boardDef: BoardDefinition,
         cmpDefs: Map<PartDefinition>,
+        fnArgs: any,
         allAlloc: AllocatorResult,
         stepToWires: WireInst[][],
         stepToCmps: CmpInst[][]
@@ -338,6 +329,7 @@ namespace pxsim.instructions {
         return {
             boardDef: allocOpts.boardDef,
             cmpDefs: allocOpts.cmpDefs,
+            fnArgs: allocOpts.fnArgs,
             allAlloc: allocRes,
             stepToWires: stepToWires,
             stepToCmps: stepToCmps,
@@ -348,28 +340,19 @@ namespace pxsim.instructions {
             allWireColors: allWireColors,
         };
     }
-    function mkBoard(boardDef: BoardDefinition, cmpDefs: Map<PartDefinition>, width: number, buildMode: boolean = false): visuals.GenericBoardSvg {
-        let board = new visuals.GenericBoardSvg({
-            runtime: pxsim.runtime,
-            boardDef: boardDef,
-            activeComponents: [],
-            componentDefinitions: cmpDefs,
-        })
-        svg.hydrate(board.hostElement, {
-            "width": width,
+    function mkBlankBoardAndBreadboard(boardDef: BoardDefinition, cmpDefs: Map<PartDefinition>, fnArgs: any, width: number, buildMode: boolean = false): visuals.BoardHost {
+        let state = runtime.board as pxsim.DalBoard;
+        let boardHost = new visuals.BoardHost({
+            state: state, 
+            boardDef: boardDef, 
+            forceBreadboard: true,
+            cmpDefs: cmpDefs, 
+            maxWidth: `${width}px`,
+            fnArgs: fnArgs,
+            wireframe: buildMode,
         });
-        svg.addClass(board.hostElement, "board-svg");
-        if (buildMode) {
-            svg.hydrate(board.background, {
-                "href": `${(<BoardImageDefinition>boardDef.visual).outlineImage}`
-            })
-            svg.addClass(board.hostElement, "sim-board-outline")
-            let bb = board.breadboard.bb;
-            svg.addClass(bb, "sim-bb-outline")
-            let style = <SVGStyleElement>svg.child(bb, "style", {});
-        }
-
-        board.updateState();
+        let view = boardHost.getView();
+        svg.addClass(view, "board-svg");
 
         //set smiley
         //HACK
@@ -383,11 +366,12 @@ namespace pxsim.instructions {
         // img.set(4, 2, 255);
         // board.updateState();
 
-        return board;
+        return boardHost;
     }
-    function drawSteps(board: visuals.GenericBoardSvg, step: number, props: BoardProps) {
+    function drawSteps(board: visuals.BoardHost, step: number, props: BoardProps) {
+        let view = board.getView();
         if (step > 0) {
-            svg.addClass(board.hostElement, "grayed");
+            svg.addClass(view, "grayed");
         }
 
         for (let i = 0; i <= step; i++) {
@@ -399,16 +383,15 @@ namespace pxsim.instructions {
                     if (i === step) {
                         //location highlights
                         if (w.start.type == "breadboard") {
-                            let [row, col] = (<BBLoc>w.start).rowCol;
-                            let lbls = board.breadboard.highlightLoc(row, col);
+                            let lbls = board.highlightBreadboardPin((<BBLoc>w.start).rowCol);
                         } else {
-                            board.highlightLoc((<BoardLoc>w.start).pin);
+                            board.highlightBoardPin((<BoardLoc>w.start).pin);
                         }
                         if (w.end.type == "breadboard") {
                             let [row, col] = (<BBLoc>w.end).rowCol;
-                            let lbls = board.breadboard.highlightLoc(row, col);
+                            let lbls = board.highlightBreadboardPin((<BBLoc>w.end).rowCol);
                         } else {
-                            board.highlightLoc((<BoardLoc>w.end).pin);
+                            board.highlightBoardPin((<BoardLoc>w.end).pin);
                         }
                         //highlight wire
                         board.highlightWire(wire);
@@ -419,14 +402,14 @@ namespace pxsim.instructions {
             if (cmps) {
                 cmps.forEach(cmpInst => {
                     let cmp = board.addComponent(cmpInst)
-                    let [row, col]: BBRowCol = [`${cmpInst.breadboardStartRow}`, `${cmpInst.breadboardStartColumn}`];
+                    let rowCol: BBRowCol = [`${cmpInst.breadboardStartRow}`, `${cmpInst.breadboardStartColumn}`];
                     //last step
                     if (i === step) {
-                        board.breadboard.highlightLoc(row, col);
+                        board.highlightBreadboardPin(rowCol);
                         if (cmpInst.visual === "buttonpair") {
                             //TODO: don't specialize this
-                            let [row2, col2]: BBRowCol = [`${cmpInst.breadboardStartRow}`, `${cmpInst.breadboardStartColumn + 3}`];
-                            board.breadboard.highlightLoc(row2, col2);
+                            let rowCol2: BBRowCol = [`${cmpInst.breadboardStartRow}`, `${cmpInst.breadboardStartColumn + 3}`];
+                            board.highlightBreadboardPin(rowCol2);
                         }
                         svg.addClass(cmp.element, "notgrayed");
                     }
@@ -498,9 +481,9 @@ namespace pxsim.instructions {
         let panel = mkPanel();
 
         //board
-        let board = mkBoard(props.boardDef, props.cmpDefs, BOARD_WIDTH, true)
+        let board = mkBlankBoardAndBreadboard(props.boardDef, props.cmpDefs, props.fnArgs, BOARD_WIDTH, true)
         drawSteps(board, step, props);
-        panel.appendChild(board.hostElement);
+        panel.appendChild(board.getView());
 
         //number
         let numDiv = document.createElement("div");
@@ -568,9 +551,9 @@ namespace pxsim.instructions {
     function updateFrontPanel(props: BoardProps): [HTMLElement, BoardProps] {
         let panel = document.getElementById("front-panel");
 
-        let board = mkBoard(props.boardDef, props.cmpDefs, FRONT_PAGE_BOARD_WIDTH, false);
+        let board = mkBlankBoardAndBreadboard(props.boardDef, props.cmpDefs, props.fnArgs, FRONT_PAGE_BOARD_WIDTH, false);
         board.addAll(props.allAlloc);
-        panel.appendChild(board.hostElement);
+        panel.appendChild(board.getView());
 
         return [panel, props];
     }
@@ -579,9 +562,9 @@ namespace pxsim.instructions {
 
         let panel = mkPanel();
         addClass(panel, "back-panel");
-        let board = mkBoard(props.boardDef, props.cmpDefs, BACK_PAGE_BOARD_WIDTH, false)
+        let board = mkBlankBoardAndBreadboard(props.boardDef, props.cmpDefs, props.fnArgs, BACK_PAGE_BOARD_WIDTH, false)
         board.addAll(props.allAlloc);
-        panel.appendChild(board.hostElement);
+        panel.appendChild(board.getView());
 
         return panel;
     }
@@ -646,11 +629,14 @@ namespace pxsim.instructions {
         const cmpDefs = PART_DEFINITIONS;
 
         //props
-        let dummyBreadboard = new visuals.Breadboard();
+        let dummyBreadboard = new visuals.Breadboard({});
+        let onboardCmps = boardDef.onboardComponents || [];
+        let activeComponents = (parts || []).filter(c => onboardCmps.indexOf(c) < 0);
+        activeComponents.sort();
         let props = mkBoardProps({
             boardDef: boardDef,
             cmpDefs: cmpDefs,
-            cmpList: parts,
+            cmpList: activeComponents,
             fnArgs: fnArgs,
             getBBCoord: dummyBreadboard.getCoord.bind(dummyBreadboard)
         });
@@ -669,7 +655,7 @@ namespace pxsim.instructions {
         }
 
         //final
-        let finalPanel = mkFinalPanel(props);
-        document.body.appendChild(finalPanel);
+        // let finalPanel = mkFinalPanel(props);
+        // document.body.appendChild(finalPanel);
     }
 }

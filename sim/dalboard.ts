@@ -81,7 +81,13 @@ namespace pxsim {
             let cmpDefs = PART_DEFINITIONS; //TODO: read from pxt.json/pxttarget.json
             let fnArgs = msg.fnArgs;
 
-            let viewHost = new visuals.BoardHost(this, boardDef, cmpsList, cmpDefs, fnArgs);
+            let viewHost = new visuals.BoardHost({
+                state: this,
+                boardDef: boardDef,
+                cmpsList: cmpsList,
+                cmpDefs: cmpDefs,
+                fnArgs: fnArgs
+            });
 
             document.body.innerHTML = ""; // clear children
             document.body.appendChild(viewHost.getView());

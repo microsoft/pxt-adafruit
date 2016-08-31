@@ -127,6 +127,11 @@ namespace pxsim.visuals {
         {
             visibility: hidden;
         }
+        .sim-wireframe .sim-label
+        {
+            stroke: none;
+            fill: #777;
+        }
         .sim-wireframe .sim-board {
             stroke-width: 2px;
         }

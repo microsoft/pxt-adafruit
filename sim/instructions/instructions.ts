@@ -289,7 +289,7 @@ namespace pxsim.instructions {
     }
     type BoardProps = {
         boardDef: BoardDefinition,
-        cmpDefs: Map<ComponentDefinition>,
+        cmpDefs: Map<PartDefinition>,
         allAlloc: AllocatorResult,
         stepToWires: WireInst[][],
         stepToCmps: CmpInst[][]
@@ -348,7 +348,7 @@ namespace pxsim.instructions {
             allWireColors: allWireColors,
         };
     }
-    function mkBoard(boardDef: BoardDefinition, cmpDefs: Map<ComponentDefinition>, width: number, buildMode: boolean = false): visuals.GenericBoardSvg {
+    function mkBoard(boardDef: BoardDefinition, cmpDefs: Map<PartDefinition>, width: number, buildMode: boolean = false): visuals.GenericBoardSvg {
         let board = new visuals.GenericBoardSvg({
             runtime: pxsim.runtime,
             boardDef: boardDef,
@@ -642,8 +642,8 @@ namespace pxsim.instructions {
 
         style.textContent += STYLE;
 
-        let boardDef = ARDUINO_ZERO;
-        let cmpDefs = COMPONENT_DEFINITIONS;
+        const boardDef = MICROBIT_DEF;
+        const cmpDefs = PART_DEFINITIONS;
 
         //props
         let dummyBreadboard = new visuals.Breadboard();

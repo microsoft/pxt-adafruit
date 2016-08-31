@@ -2,7 +2,7 @@
 namespace pxsim {
     export interface AllocatorOpts {
         boardDef: BoardDefinition,
-        cmpDefs: Map<ComponentDefinition>,
+        cmpDefs: Map<PartDefinition>,
         fnArgs: any,
         getBBCoord: (loc: BBRowCol) => visuals.Coord,
         cmpList: string[]
@@ -21,7 +21,7 @@ namespace pxsim {
         breadboardStartColumn: number,
         breadboardStartRow: string,
         assemblyStep: number,
-        visual: string | ComponentVisualDefinition,
+        visual: string | PartVisualDefinition,
         microbitPins: string[],
         otherArgs?: string[],
     }
@@ -33,7 +33,7 @@ namespace pxsim {
     };
     interface PartialCmpAlloc {
         name: string,
-        def: ComponentDefinition,
+        def: PartDefinition,
         pinsAssigned: string[],
         pinsNeeded: number | number[],
         breadboardColumnsNeeded: number,
@@ -95,7 +95,7 @@ namespace pxsim {
             this.opts = opts;
         }
 
-        private allocateLocation(location: LocationDefinition, opts: AllocLocOpts): Loc {
+        private allocateLocation(location: WireLocationDefinition, opts: AllocLocOpts): Loc {
             if (location === "ground" || location === "threeVolt") {
                 U.assert(!!opts.nearestBBPin);
                 let nearLoc = opts.nearestBBPin;
@@ -213,7 +213,7 @@ namespace pxsim {
             return {start: endInsts[0], end: endInsts[1], color: wireDef.color, assemblyStep: wireDef.assemblyStep};
         }
         private allocatePartialCmps(): PartialCmpAlloc[] {
-            let cmpNmAndDefs = this.opts.cmpList.map(cmpName => <[string, ComponentDefinition]>[cmpName, this.opts.cmpDefs[cmpName]]).filter(d => !!d[1]);
+            let cmpNmAndDefs = this.opts.cmpList.map(cmpName => <[string, PartDefinition]>[cmpName, this.opts.cmpDefs[cmpName]]).filter(d => !!d[1]);
             let cmpNmsList = cmpNmAndDefs.map(p => p[0]);
             let cmpDefsList = cmpNmAndDefs.map(p => p[1]);
             let partialCmps: PartialCmpAlloc[] = [];

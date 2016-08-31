@@ -11,7 +11,7 @@ namespace pxsim.visuals {
         disableTilt?: boolean;
         activeComponents: string[];
         fnArgs?: any;
-        componentDefinitions: Map<ComponentDefinition>;
+        componentDefinitions: Map<PartDefinition>;
     }
 
     export const VIEW_WIDTH = 498;
@@ -192,7 +192,7 @@ namespace pxsim.visuals {
         private underboard: SVGGElement;
         public boardDef: BoardDefinition;
         private boardDim: ComputedBoardDimensions;
-        public componentDefs: Map<ComponentDefinition>;
+        public componentDefs: Map<PartDefinition>;
         private boardEdges: number[];
         private id: number;
         public bbX: number;

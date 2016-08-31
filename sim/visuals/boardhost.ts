@@ -11,28 +11,27 @@ namespace pxsim.visuals {
         private defs: SVGDefsElement;
         private state: DalBoard;
 
-        constructor(state: DalBoard, boardDef: BoardDefinition, cmpsList: string[], cmpDefs: Map<ComponentDefinition>, fnArgs: any) {
+        constructor(state: DalBoard, boardDef: BoardDefinition, cmpsList: string[], cmpDefs: Map<PartDefinition>, fnArgs: any) {
             this.state = state;
             let onboardCmps = boardDef.onboardComponents || [];
             let activeComponents = (cmpsList || []).filter(c => onboardCmps.indexOf(c) < 0);
             activeComponents.sort();
 
-          //  if (boardDef.visual === "microbit") {
-                this.boardView = new visuals.MicrobitBoardSvg({
-                    runtime: runtime,
-                    theme: visuals.randomTheme(),
-                    disableTilt: false
-                });
-         //   } else {
-                //TODO: port Arduino/generic board
-                // this.boardView = new visuals.GenericBoardSvg({
-                //     boardDef: boardDef,
-                //     activeComponents: activeComponents,
-                //     componentDefinitions: cmpDefs,
-                //     runtime: runtime,
-                //     fnArgs: fnArgs
-                // })
-        //    }
+            // boardDef.visual === "microbit"
+            this.boardView = new visuals.MicrobitBoardSvg({
+                runtime: runtime,
+                theme: visuals.randomTheme(),
+                disableTilt: false
+            });
+            //TODO: port Arduino/generic board
+            // this.boardView = new visuals.GenericBoardSvg({
+            //     boardDef: boardDef,
+            //     activeComponents: activeComponents,
+            //     componentDefinitions: cmpDefs,
+            //     runtime: runtime,
+            //     fnArgs: fnArgs
+            // })
+            // }
 
             const VIEW_WIDTH = "100%";
             const VIEW_HEIGHT = "100%";

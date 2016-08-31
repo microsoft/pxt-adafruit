@@ -78,7 +78,7 @@ namespace pxsim {
             // let boardDef = RASPBERRYPI_MODELB;
 
             let cmpsList = msg.parts;
-            let cmpDefs = COMPONENT_DEFINITIONS; //TODO: read from pxt.json/pxttarget.json
+            let cmpDefs = PART_DEFINITIONS; //TODO: read from pxt.json/pxttarget.json
             let fnArgs = msg.fnArgs;
 
             let viewHost = new visuals.BoardHost(this, boardDef, cmpsList, cmpDefs, fnArgs);

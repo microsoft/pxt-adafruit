@@ -37,6 +37,7 @@ namespace pxsim.visuals {
             fill:#555;
             pointer-events: all;
             stroke-width: 0;
+            cursor: default;
         }
         .sim-bb-label-hover {
             visibility: hidden;

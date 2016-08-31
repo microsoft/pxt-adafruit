@@ -115,6 +115,26 @@ namespace pxsim.visuals {
             fill: none;
             stroke: black;
         }
+        .sim-wireframe .sim-display,
+        .sim-wireframe .sim-led,
+        .sim-wireframe .sim-led-back,
+        .sim-wireframe .sim-head,
+        .sim-wireframe .sim-theme,
+        .sim-wireframe .sim-button-group,
+        .sim-wireframe .sim-button-label,
+        .sim-wireframe .sim-button,
+        .sim-wireframe .sim-text-pin
+        {
+            visibility: hidden;
+        }
+        .sim-wireframe .sim-label
+        {
+            stroke: none;
+            fill: #777;
+        }
+        .sim-wireframe .sim-board {
+            stroke-width: 2px;
+        }
     `;
     const pins4onXs = [66.7, 79.1, 91.4, 103.7, 164.3, 176.6, 188.9, 201.3, 213.6, 275.2, 287.5, 299.8, 312.1, 324.5, 385.1, 397.4, 409.7, 422];
     const pins4onMids = pins4onXs.map(x => x + 5);
@@ -156,8 +176,8 @@ namespace pxsim.visuals {
         "P20, I2C - SDA",
         "GND", "GND", "+3v3", "GND"
     ];
-    const MB_WIDTH = 498;
-    const MB_HEIGHT = 406;
+    const MB_WIDTH = 500;
+    const MB_HEIGHT = 408;
     export interface IBoardTheme {
         accent?: string;
         display?: string;
@@ -605,7 +625,7 @@ namespace pxsim.visuals {
             }
 
             // head
-            this.head = <SVGGElement>svg.child(this.g, "g", {});
+            this.head = <SVGGElement>svg.child(this.g, "g", {class: "sim-head"});
             svg.child(this.head, "circle", { cx: 258, cy: 75, r: 100, fill: "transparent" })
             this.logos.push(svg.path(this.head, "sim-theme sim-theme-glow", "M269.9,50.2L269.9,50.2l-39.5,0v0c-14.1,0.1-24.6,10.7-24.6,24.8c0,13.9,10.4,24.4,24.3,24.7v0h39.6c14.2,0,24.8-10.6,24.8-24.7C294.5,61,284,50.3,269.9,50.2 M269.7,89.2L269.7,89.2l-39.3,0c-7.7-0.1-14-6.4-14-14.2c0-7.8,6.4-14.2,14.2-14.2h39.1c7.8,0,14.2,6.4,14.2,14.2C283.9,82.9,277.5,89.2,269.7,89.2"));
             this.logos.push(svg.path(this.head, "sim-theme sim-theme-glow", "M230.6,69.7c-2.9,0-5.3,2.4-5.3,5.3c0,2.9,2.4,5.3,5.3,5.3c2.9,0,5.3-2.4,5.3-5.3C235.9,72.1,233.5,69.7,230.6,69.7"));
@@ -648,7 +668,7 @@ namespace pxsim.visuals {
                 const btnw = 56.2;
                 const btnn = 6;
                 const btnnm = 10
-                let btng = svg.child(this.g, "g");
+                let btng = svg.child(this.g, "g", {class: "sim-button-group"});
                 this.buttonsOuter.push(btng);
                 svg.child(btng, "rect", { class: "sim-button-outer", x: left, y: top, rx: btnr, ry: btnr, width: btnw, height: btnw });
                 svg.child(btng, "circle", { class: "sim-button-nut", cx: left + btnnm, cy: top + btnnm, r: btnn });

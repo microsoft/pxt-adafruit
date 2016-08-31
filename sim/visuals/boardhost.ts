@@ -45,7 +45,7 @@ namespace pxsim.visuals {
                     scaleUnit1: this.boardView.getPinDist(),
                     el2: this.breadboard.getSVGAndSize(),
                     scaleUnit2: this.breadboard.getPinDist(),
-                    margin: [0, 0, 10, 0],
+                    margin: [0, 0, 20, 0],
                     middleMargin: 80,
                     maxWidth: opts.maxWidth,
                     maxHeight: opts.maxHeight,
@@ -93,18 +93,15 @@ namespace pxsim.visuals {
         }
 
         public highlightWire(wire: Wire) {
+            //TODO: move to wiring.ts
             //underboard wires
             wire.wires.forEach(e => {
+                svg.addClass(e, "highlight");
                 (<any>e).style["visibility"] = "visible";
             });
 
             //un greyed out
-            [wire.end1, wire.end2].forEach(e => {
-                svg.addClass(e, "highlight");
-            });
-            wire.wires.forEach(e => {
-                svg.addClass(e, "highlight");
-            });
+            svg.addClass(wire.endG, "highlight");
         }
 
         public getView(): SVGElement {

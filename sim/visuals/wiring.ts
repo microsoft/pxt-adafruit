@@ -24,8 +24,9 @@ namespace pxsim.visuals {
             stroke-dasharray: ${PIN_DIST / 10.0},${PIN_DIST / 1.5};
             /*stroke-opacity: 0.4;*/
         }
-        .grayed .sim-bb-wire-end:not(.highlight) {
+        .grayed .sim-bb-wire-ends-g:not(.highlight) .sim-bb-wire-end {
             stroke: #777;
+            fill: #777;
         }
         .grayed .sim-bb-wire:not(.highlight) {
             stroke: #CCC;

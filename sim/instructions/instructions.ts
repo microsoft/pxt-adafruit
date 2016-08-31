@@ -44,6 +44,10 @@ namespace pxsim.instructions {
     const NUM_FONT = 40;
     const NUM_MARGIN = 5;
     const FRONT_PAGE_BOARD_WIDTH = 200;
+    const PARTS_BOARD_SCALE = 0.17;
+    const PARTS_BB_SCALE = 0.25;
+    const PARTS_CMP_SCALE = 0.3;
+    const PARTS_WIRE_SCALE = 0.23;
     const STYLE = `
             .instr-panel {
                 margin: ${PANEL_MARGIN}px;
@@ -427,17 +431,12 @@ namespace pxsim.instructions {
     function mkPartsPanel(props: BoardProps) {
         let panel = mkPanel();
 
-        const BOARD_SCALE = 0.1;
-        const BB_SCALE = 0.25;
-        const CMP_SCALE = 0.3;
-        const WIRE_SCALE = 0.23;
-
         // board and breadboard
         let boardImg = mkBoardImgSvg(<BoardImageDefinition>props.boardDef.visual);
-        let board = wrapSvg(boardImg, {left: QUANT_LBL(1), leftSize: QUANT_LBL_SIZE, cmpScale: BOARD_SCALE});
+        let board = wrapSvg(boardImg, {left: QUANT_LBL(1), leftSize: QUANT_LBL_SIZE, cmpScale: PARTS_BOARD_SCALE});
         panel.appendChild(board);
         let bbRaw = mkBBSvg();
-        let bb = wrapSvg(bbRaw, {left: QUANT_LBL(1), leftSize: QUANT_LBL_SIZE, cmpScale: BB_SCALE});
+        let bb = wrapSvg(bbRaw, {left: QUANT_LBL(1), leftSize: QUANT_LBL_SIZE, cmpScale: PARTS_BB_SCALE});
         panel.appendChild(bb);
 
         // components
@@ -453,7 +452,7 @@ namespace pxsim.instructions {
                 let cmp = mkCmpDiv(builtinVisual, {
                     left: QUANT_LBL(quant),
                     leftSize: QUANT_LBL_SIZE,
-                    cmpScale: CMP_SCALE,
+                    cmpScale: PARTS_CMP_SCALE,
                 });
                 addClass(cmp, "partslist-cmp");
                 panel.appendChild(cmp);
@@ -469,7 +468,7 @@ namespace pxsim.instructions {
                 left: QUANT_LBL(quant),
                 leftSize: WIRE_QUANT_LBL_SIZE,
                 wireClr: clr,
-                cmpScale: WIRE_SCALE
+                cmpScale: PARTS_WIRE_SCALE
             })
             addClass(cmp, "partslist-wire");
             panel.appendChild(cmp);
@@ -664,7 +663,7 @@ ${tsPackage}
         }
 
         //final
-        // let finalPanel = mkFinalPanel(props);
-        // document.body.appendChild(finalPanel);
+        let finalPanel = mkFinalPanel(props);
+        document.body.appendChild(finalPanel);
     }
 }

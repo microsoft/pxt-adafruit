@@ -26,4 +26,5 @@
 
 ### Developers
 
+* [Command Line Interface](/cli)
 * Learn about [packages](/packages)

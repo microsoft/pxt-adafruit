@@ -86,7 +86,9 @@ namespace pxsim {
                 boardDef: boardDef,
                 cmpsList: cmpsList,
                 cmpDefs: cmpDefs,
-                fnArgs: fnArgs
+                fnArgs: fnArgs,
+                maxWidth: "100%",
+                maxHeight: "100%",
             });
 
             document.body.innerHTML = ""; // clear children

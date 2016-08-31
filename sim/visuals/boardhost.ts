@@ -35,9 +35,6 @@ namespace pxsim.visuals {
                 wireframe: opts.wireframe,
             });
 
-            let maxWidth = opts.maxWidth || "100%";
-            let maxHeight = opts.maxHeight || "100%";
-
             let useBreadboard = 0 < activeComponents.length || opts.forceBreadboard;
             if (useBreadboard) {
                 this.breadboard = new Breadboard({
@@ -50,8 +47,8 @@ namespace pxsim.visuals {
                     scaleUnit2: this.breadboard.getPinDist(),
                     margin: [0, 0, 10, 0],
                     middleMargin: 80,
-                    maxWidth: maxWidth,
-                    maxHeight: maxHeight,
+                    maxWidth: opts.maxWidth,
+                    maxHeight: opts.maxHeight,
                 });
                 let under = composition.under;
                 let over = composition.over;
@@ -78,10 +75,10 @@ namespace pxsim.visuals {
             } else {
                 let el = this.boardView.getView().el;
                 this.view = el;
-                svg.hydrate(this.view, {
-                    width: maxWidth,
-                    height: maxHeight,
-                });
+                if (opts.maxWidth)
+                    svg.hydrate(this.view, { width: opts.maxWidth });
+                if (opts.maxHeight)
+                    svg.hydrate(this.view, { height: opts.maxHeight });
             }
 
             this.state.updateSubscribers.push(() => this.updateState());

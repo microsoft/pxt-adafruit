@@ -84,7 +84,12 @@ namespace pxsim.visuals {
         let [a, b] = [opts.el1, opts.el2];
         U.assert(a.x == 0 && a.y == 0 && b.x == 0 && b.y == 0, "el1 and el2 x,y offsets not supported");
         let setXY = (e: SVGSVGElement, x: number, y: number) => svg.hydrate(e, {x: x, y: y});
-        let setWH = (e: SVGSVGElement, w: string, h: string) => svg.hydrate(e, {width: w, height: h});
+        let setWH = (e: SVGSVGElement, w: string, h: string) => {
+            if (w)
+                svg.hydrate(e, {width: w});
+            if (h)
+                svg.hydrate(e, {height: h});
+        }
         let setWHpx = (e: SVGSVGElement, w: number, h: number) => svg.hydrate(e, {width: `${w}px`, height: `${h}px`});
         let scaleUnit = opts.scaleUnit2;
         let aScalar = opts.scaleUnit2 / opts.scaleUnit1;
@@ -112,8 +117,7 @@ namespace pxsim.visuals {
             "viewBox": `0 0 ${w} ${h}`,
             "class": `sim-bb`,
         });
-        if (opts.maxWidth &&  opts.maxHeight)
-            setWH(host, opts.maxWidth, opts.maxHeight);
+        setWH(host, opts.maxWidth, opts.maxHeight);
         setXY(host, 0, 0);
         let under = <SVGGElement>svg.child(host, "g");
         host.appendChild(a.el);

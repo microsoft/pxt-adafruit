@@ -80,7 +80,11 @@
         "builtinParts": {
             "accelerometer": true,
             "buttonpair": true,
-            "ledmatrix": true
+            "ledmatrix": true,
+            "speaker": true,
+            "bluetooth": true,
+            "thermometer": true,
+            "compass": true
         }
     },
     "compileService": {

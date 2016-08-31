@@ -579,12 +579,21 @@ namespace pxsim.instructions {
 
         //project code
         let tsCode = getQsVal("code");
+        let tsPackage = getQsVal("package") || "";
         let codeSpinnerDiv = document.getElementById("proj-code-spinner");
         let codeContainerDiv = document.getElementById("proj-code-container");
         if (tsCode) {
             //we use the docs renderer to decompile the code to blocks and render it
             //TODO: render the blocks code directly
-            let md = "```blocks\n" + tsCode + "```"
+            let md = 
+`\`\`\`blocks
+${tsCode}
+\`\`\`
+\`\`\`package
+${tsPackage}
+\`\`\`
+`
+
             pxtdocs.requireMarked = function() { return (<any>window).marked; }
             pxtrunner.renderMarkdownAsync(codeContainerDiv, md)
                 .done(function() {

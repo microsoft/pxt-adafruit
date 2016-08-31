@@ -45,7 +45,7 @@ namespace pxsim.visuals {
                     scaleUnit1: this.boardView.getPinDist(),
                     el2: this.breadboard.getSVGAndSize(),
                     scaleUnit2: this.breadboard.getPinDist(),
-                    margin: [0, 0, 10, 0],
+                    margin: [0, 0, 20, 0],
                     middleMargin: 80,
                     maxWidth: opts.maxWidth,
                     maxHeight: opts.maxHeight,

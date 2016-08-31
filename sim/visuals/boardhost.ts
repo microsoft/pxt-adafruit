@@ -159,6 +159,8 @@ namespace pxsim.visuals {
                 cmp.updateTheme();
                 cmp.updateState();
             } else {
+                let vis = cmpDesc.visual as PartVisualDefinition;
+                console.log("TODO PART: " + vis.image);
                 //TODO: support generic parts
             }
             return cmp;

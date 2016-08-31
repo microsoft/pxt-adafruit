@@ -41,6 +41,12 @@ namespace pxsim {
         gpioPinsNeeded: number | number[],
     }
     export interface PartVisualDefinition {
+        image: string,
+        width: number,
+        height: number,
+        left: number,
+        top: number,
+        pinDist: number,
     }
     export interface PartDefinition {
         visual: string | PartVisualDefinition,

@@ -17,7 +17,6 @@ let condition = false
 
 ### Block Editor
 
-![](/static/mb/string-0.png)
 
 ### Touch Develop
 

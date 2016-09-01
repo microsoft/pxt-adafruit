@@ -278,14 +278,18 @@ namespace pxsim.instructions {
         div.appendChild(svgEl);
         return div;
     }
-    function mkCmpDiv(type: "wire" | string, opts: mkCmpDivOpts): HTMLElement {
+    function mkCmpDiv(cmp: "wire" | string | PartVisualDefinition, opts: mkCmpDivOpts): HTMLElement {
         let el: visuals.SVGElAndSize;
-        if (type == "wire") {
+        if (cmp == "wire") {
             //TODO: support non-croc wire parts
             el = visuals.mkWirePart([0, 0], opts.wireClr || "red", true);
-        } else {
-            let cnstr = builtinComponentPartVisual[type];
+        } else if (typeof cmp == "string") {
+            let builtinVis = <string>cmp;
+            let cnstr = builtinComponentPartVisual[builtinVis];
             el = cnstr([0, 0]);
+        } else {
+            let partVis = <PartVisualDefinition> cmp;
+            el = visuals.mkGenericPartSVG(partVis);
         }
         return wrapSvg(el, opts);
     }
@@ -414,7 +418,8 @@ namespace pxsim.instructions {
             if (cmps) {
                 cmps.forEach(cmpInst => {
                     let cmp = board.addComponent(cmpInst)
-                    let rowCol: BBRowCol = [`${cmpInst.breadboardStartRow}`, `${cmpInst.breadboardStartColumn}`];
+                    let colOffset = (<any>cmpInst.visual).breadboardStartColIdx || 0;
+                    let rowCol: BBRowCol = [`${cmpInst.breadboardStartRow}`, `${colOffset + cmpInst.breadboardStartColumn}`];
                     //last step
                     if (i === step) {
                         board.highlightBreadboardPin(rowCol);
@@ -455,18 +460,13 @@ namespace pxsim.instructions {
             if (c.visual === "buttonpair") {
                 quant = 2;
             }
-            if (typeof c.visual === "string") {
-                let builtinVisual = <string>c.visual;
-                let cmp = mkCmpDiv(builtinVisual, {
-                    left: QUANT_LBL(quant),
-                    leftSize: QUANT_LBL_SIZE,
-                    cmpScale: PARTS_CMP_SCALE,
-                });
-                addClass(cmp, "partslist-cmp");
-                panel.appendChild(cmp);
-            } else {
-                //TODO: handle generic components
-            }
+            let cmp = mkCmpDiv(c.visual, {
+                left: QUANT_LBL(quant),
+                leftSize: QUANT_LBL_SIZE,
+                cmpScale: PARTS_CMP_SCALE,
+            });
+            addClass(cmp, "partslist-cmp");
+            panel.appendChild(cmp);
         });
 
         // wires
@@ -537,19 +537,14 @@ namespace pxsim.instructions {
             }
             locs.forEach((l, i) => {
                 let [row, col] = l;
-                if (typeof c.visual === "string") {
-                    let builtinVisual = <string>c.visual;
-                    let cmp = mkCmpDiv(builtinVisual, {
-                        top: `(${row},${col})`,
-                        topSize: LOC_LBL_SIZE,
-                        cmpHeight: REQ_CMP_HEIGHT,
-                        cmpScale: REQ_CMP_SCALE
-                    })
-                    addClass(cmp, "cmp-div");
-                    reqsDiv.appendChild(cmp);
-                } else {
-                    //TODO: generic component
-                }
+                let cmp = mkCmpDiv(c.visual, {
+                    top: `(${row},${col})`,
+                    topSize: LOC_LBL_SIZE,
+                    cmpHeight: REQ_CMP_HEIGHT,
+                    cmpScale: REQ_CMP_SCALE
+                })
+                addClass(cmp, "cmp-div");
+                reqsDiv.appendChild(cmp);
             });
         });
 

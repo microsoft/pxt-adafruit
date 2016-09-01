@@ -48,6 +48,7 @@ namespace pxsim {
         width: number,
         height: number,
         pinDist: number,
+        extraColumnOffset?: number,
         firstPin: [number, number],
     }
     export interface PartDefinition {
@@ -167,8 +168,9 @@ namespace pxsim {
                 image: "/static/hardware/speaker.svg",
                 width: 500,
                 height: 500,
-                firstPin: [110, 135],
+                firstPin: [180, 135],
                 pinDist: 70,
+                extraColumnOffset: 1,
             },
             breadboardColumnsNeeded: 5,
             breadboardStartRow: "f",

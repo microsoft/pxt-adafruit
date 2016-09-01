@@ -414,7 +414,8 @@ namespace pxsim.instructions {
             if (cmps) {
                 cmps.forEach(cmpInst => {
                     let cmp = board.addComponent(cmpInst)
-                    let rowCol: BBRowCol = [`${cmpInst.breadboardStartRow}`, `${cmpInst.breadboardStartColumn}`];
+                    let colOffset = (<any>cmpInst.visual).breadboardStartColIdx || 0;
+                    let rowCol: BBRowCol = [`${cmpInst.breadboardStartRow}`, `${colOffset + cmpInst.breadboardStartColumn}`];
                     //last step
                     if (i === step) {
                         board.highlightBreadboardPin(rowCol);

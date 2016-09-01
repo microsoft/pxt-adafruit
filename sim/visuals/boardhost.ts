@@ -149,6 +149,7 @@ namespace pxsim.visuals {
 
         public addComponent(cmpDesc: CmpInst): IBoardComponent<any> {
             let cmp: IBoardComponent<any> = null;
+            let colOffset = 0;
             if (typeof cmpDesc.visual === "string") {
                 let builtinVisual = cmpDesc.visual as string;
                 let cnstr = builtinComponentSimVisual[builtinVisual];
@@ -158,13 +159,14 @@ namespace pxsim.visuals {
             } else {
                 let vis = cmpDesc.visual as PartVisualDefinition;
                 cmp = new GenericPart(vis);
+                colOffset = vis.extraColumnOffset || 0;
             }
             this.components.push(cmp);
             this.view.appendChild(cmp.element);
             if (cmp.defs)
                 cmp.defs.forEach(d => this.defs.appendChild(d));
             this.style.textContent += cmp.style || "";
-            let rowCol = <BBRowCol>[`${cmpDesc.breadboardStartRow}`, `${cmpDesc.breadboardStartColumn}`];
+            let rowCol = <BBRowCol>[`${cmpDesc.breadboardStartRow}`, `${colOffset + cmpDesc.breadboardStartColumn}`];
             let coord = this.getBBCoord(rowCol);
             cmp.moveToCoord(coord);
             let getCmpClass = (type: string) => `sim-${type}-cmp`;

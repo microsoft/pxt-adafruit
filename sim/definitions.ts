@@ -28,6 +28,16 @@ namespace pxsim {
         onboardComponents?: string[]
         useCrocClips?: boolean,
         marginWhenBreadboarding?: [number, number, number, number],
+        spiPins?: {
+            MOSI: string,
+            MISO: string,
+            SCK: string,
+        },
+        i2cPins?: {
+            SDA: string,
+            SCL: string,
+        },
+        analogInPins?: string[], //TODO: implement allocation
     }
     export interface FactoryFunctionPinAlloc {
         type: "factoryfunction",
@@ -65,8 +75,15 @@ namespace pxsim {
         color: string,
         assemblyStep: number
     };
-    export type WireLocationDefinition =
-        ["breadboard", string, number] | ["GPIO", number] | "ground" | "threeVolt";
+    export type SPIPin = "MOSI" | "MISO" | "SCK";
+    export type I2CPin = "SDA" | "SCL";
+    export type WireLocationDefinition = (
+          ["breadboard", string, number]
+        | ["GPIO", number]
+        | SPIPin
+        | I2CPin
+        | "ground"
+        | "threeVolt");
 
     export const MICROBIT_DEF: BoardDefinition = {
         visual: "microbit",
@@ -75,8 +92,7 @@ namespace pxsim {
             ["P3"],
             ["P4", "P5", "P6", "P7"],
             ["P8", "P9", "P10", "P11", "P12"],
-            ["P13", "P14", "P15", "P16"],
-            ["P19", "P20"],
+            ["P16"],
         ],
         gpioPinMap: {
             "P0": "P0",
@@ -99,6 +115,16 @@ namespace pxsim {
             "P19": "P19",
             "P20": "P20",
         },
+        spiPins: {
+            MOSI: "P15",
+            MISO: "P14",
+            SCK: "P13",
+        },
+        i2cPins: {
+            SDA: "P20",
+            SCL: "P19",
+        },
+        analogInPins: ["P0", "P1", "P2", "P3", "P10"],
         groundPins: ["GND"],
         threeVoltPins: ["+3v3"],
         attachPowerOnRight: true,
@@ -229,6 +255,18 @@ namespace pxsim {
             "P19": "~11",
             "P20": "~12",
         },
+        //TODO: add SPI pins to Arduino board
+        // spiPins: {
+        //     ChipSelect: "P16",
+        //     MOSI: "P15",
+        //     MISO: "P14",
+        //     SCK: "P13",
+        // },
+        // i2cPins: {
+        //     SDA: "P20",
+        //     SCL: "P19",
+        // },
+        analogInPins: ["A0", "A1", "A2", "A3", "A4", "A5"],
         groundPins: ["GND0", "GND1", "GND2"],
         threeVoltPins: ["3.3V"],
         marginWhenBreadboarding: [20, 0, 40, 0],
@@ -311,6 +349,31 @@ namespace pxsim {
                 {start: ["breadboard", "j", 3], end: "ground", color: "blue", assemblyStep: 1},
             ],
         },
+        "max6675": {
+            visual: {
+                image: "/static/hardware/max6675.svg",
+                width: 58,
+                height: 64,
+                firstPin: [11, 5],
+                pinDist: 7.2,
+                extraColumnOffset: 2,
+            },
+            breadboardColumnsNeeded: 10,
+            breadboardStartRow: "h",
+            pinAllocation: {
+                type: "factoryfunction",
+                functionName: "max6675.temperature",
+                pinArgPositions: [0]
+            },
+            assemblyStep: 0,
+            wires: [
+                {start: ["breadboard", "j", 2], end: "SCK", color: "green", assemblyStep: 1},
+                {start: ["breadboard", "j", 3], end: ["GPIO", 0], color: "blue", assemblyStep: 1},
+                {start: ["breadboard", "j", 4], end: "MISO", color: "orange", assemblyStep: 1},
+                {start: ["breadboard", "j", 5], end: "ground", color: "blue", assemblyStep: 0},
+                {start: ["breadboard", "j", 6], end: "threeVolt", color: "red", assemblyStep: 1},
+            ],
+        },
     }
 
     export const builtinComponentSimVisual: Map<() => visuals.IBoardComponent<any>> = {
@@ -337,6 +400,5 @@ namespace pxsim {
     };
 
     //TODO: add multiple board support
-    //export const CURRENT_BOARD = MICROBIT_DEF;
-    export const CURRENT_BOARD = ARDUINO_ZERO;
+    export const CURRENT_BOARD = MICROBIT_DEF;
 }

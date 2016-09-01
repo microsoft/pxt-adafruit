@@ -163,6 +163,41 @@ namespace pxsim.visuals {
         g.appendChild(el);
         return {el: g, x: x1 - strokeWidth, y: Math.min(y1, y2), w: w1 + strokeWidth * 2, h: h1 + h2};
     }
+    function mkSmallMBPinEnd(p: [number, number], top: boolean, clr: string): visuals.SVGElAndSize {
+        //HACK
+        //TODO: merge with mkOpenJumperEnd()
+        let k = visuals.PIN_DIST * 0.24;
+        let plasticLength = k * 4;
+        let plasticWidth = k * 1.2;
+        let metalLength = k * 10;
+        let metalWidth = k;
+        const strokeWidth = visuals.PIN_DIST / 4.0;
+        let [cx, cy] = p;
+        let yOffset = 10;
+        let o = top ? -1 : 1;
+        let g = svg.elt("g")
+
+        let el = svg.elt("rect");
+        let h1 = plasticLength;
+        let w1 = plasticWidth;
+        let x1 = cx - w1 / 2;
+        let y1 = cy + yOffset - (h1 / 2);
+        svg.hydrate(el, {x: x1, y: y1, width: w1, height: h1, rx: 0.5, ry: 0.5, class: "sim-bb-wire-end"});
+        (<any>el).style["stroke-width"] = `${strokeWidth}px`;
+
+        let el2 = svg.elt("rect");
+        let h2 = metalLength;
+        let w2 = metalWidth;
+        let cy2 = cy + yOffset + o * (h1 / 2 + h2 / 2);
+        let x2 = cx - w2 / 2;
+        let y2 = cy2 - (h2 / 2);
+        svg.hydrate(el2, {x: x2, y: y2, width: w2, height: h2, class: "sim-bb-wire-bare-end"});
+        (<any>el2).style["fill"] = `#bbb`;
+
+        g.appendChild(el2);
+        g.appendChild(el);
+        return {el: g, x: x1 - strokeWidth, y: Math.min(y1, y2), w: w1 + strokeWidth * 2, h: h1 + h2};
+    }
     function mkCrocEnd(p: [number, number], top: boolean, clr: string): SVGElAndSize {
         //TODO: merge with mkOpenJumperEnd()
         let k = visuals.PIN_DIST * 0.24;
@@ -325,7 +360,7 @@ namespace pxsim.visuals {
 
             return {endG: endG, end1: end1, end2: end2, wires: wires};
         }
-        private drawWireWithCrocs(pin1: Coord, pin2: Coord, color: string): Wire {
+        private drawWireWithCrocs(pin1: Coord, pin2: Coord, color: string, smallPin: boolean = false): Wire {
             //TODO: merge with drawWire()
             const PIN_Y_OFF = 40;
             const CROC_Y_OFF = -17;
@@ -349,7 +384,11 @@ namespace pxsim.visuals {
             pin2 = [x2, y2 + PIN_Y_OFF];//HACK
             [x2, y2] = pin2;
             let endCoord2: Coord = [x2, y2 + CROC_Y_OFF]
-            let end2AndSize = mkCrocEnd(endCoord2, true, color);
+            let end2AndSize: SVGElAndSize;
+            if (smallPin)
+                end2AndSize = mkSmallMBPinEnd(endCoord2, true, color);
+            else
+                end2AndSize = mkCrocEnd(endCoord2, true, color);
             let end2 = end2AndSize.el;
             let endG = <SVGGElement>svg.child(g, "g", {class: "sim-bb-wire-ends-g"});
             endG.appendChild(end1);
@@ -415,7 +454,13 @@ namespace pxsim.visuals {
             let endLoc = this.getLocCoord(end);
             let wireEls: Wire;
             if (withCrocs && end.type == "dalboard") {
-                wireEls = this.drawWireWithCrocs(startLoc, endLoc, color);
+                let boardPin = (<BoardLoc>end).pin;
+                if (boardPin == "P0" || boardPin == "P1" || boardPin == "P0" || boardPin == "GND" || boardPin == "+3v3" ) {
+                    //HACK
+                    wireEls = this.drawWireWithCrocs(startLoc, endLoc, color);
+                } else {
+                    wireEls = this.drawWireWithCrocs(startLoc, endLoc, color, true);
+                }
             } else {
                 wireEls = this.drawWire(startLoc, endLoc, color);
             }

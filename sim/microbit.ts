@@ -147,7 +147,7 @@ namespace pxsim.visuals {
     const pin3Vmid = pins4onMids[13] + bigPinWidth / 2.0;
     const pinGNDmid = pins4onMids[pins4onMids.length - 1] + bigPinWidth / 2.0;
     const pinGND2mid = pinGNDmid + bigPinWidth / 2.0;
-    const pinMids = [pin0mid, pin1mid, pin2mid, pin3mid].concat(pins4onXs).concat([pinGNDmid, pin3Vmid, pinGND2mid]);
+    const pinMids = [pin0mid, pin1mid, pin2mid, pin3mid].concat(pins4onMids).concat([pinGNDmid, pin3Vmid, pinGND2mid]);
     const pinNames = [
         "P0", "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9", "P10",
         "P11", "P12", "P13", "P14", "P15", "P16", "P17", "P18", "P19", "P20",

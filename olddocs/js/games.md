@@ -17,7 +17,6 @@ Overview of Games for the BBC micro:bit.
 * [Lucky 7](/lessons/lucky-7), show a number on the LED screen with show number
 * [Snowflake fall](/lessons/snowflake-fall), repeat an animation with forever
 * [Answering machine](/lessons/answering-machine), show a text message with show string
-* [Bounce image](/lessons/bounce-image), scroll an image across the screen on shake
 * [Magic logo](/lessons/magic-logo), show an image on logo up
 * [Screen wipe](/lessons/screen-wipe), turn off the LEDs with clear screen
 * [Blink](/lessons/blink), turn an LED on and off with plot

@@ -94,8 +94,6 @@ Connect a micro:bit to your computer using your USB cable
 
 Click or tap the **Download** button for the seismograph program to run the program on the micro:bit. 
 
-![](/static/mb/lessons/seismograph22.png)
-
 ## 9. 
 
 A black line should appear directly beneath the colored line. The black line measures the micro:bit acceleration.  And the colored line measures micro:bit simulator acceleration. 

@@ -22,12 +22,6 @@ Overview of Touch Develop lessons for the BBC micro:bit.
 * [Answering Machine](/lessons/answering-machine), show a text message with show string
 * [Snowflake Fall](/lessons/snowflake-fall), repeat an animation with forever
 
-### ~hide
-
-* [Bounce Image](/lessons/bounce-image), scroll an image across the screen on shake
-
-### ~
-
 * [Magic Logo](/lessons/magic-logo), show an image on logo up
 * [Screen Wipe](/lessons/screen-wipe), turn off the LEDs with clear screen
 * [Flashing Heart](/lessons/flashing-heart), display images with a pause

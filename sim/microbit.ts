@@ -1,6 +1,183 @@
-namespace pxsim.micro_bit {
-    const svg = pxsim.svg;
+namespace pxsim.visuals {
+    const MB_STYLE = `
+        svg.sim {
+            margin-bottom:1em;
+        }
+        svg.sim.grayscale {
+            -moz-filter: grayscale(1);
+            -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+        }
+        .sim-button {
+            pointer-events: none;
+        }
 
+        .sim-button-outer:hover {
+            stroke:grey;
+            stroke-width: 3px;
+        }
+        .sim-button-nut {
+            fill:#704A4A;
+            pointer-events:none;
+        }
+        .sim-button-nut:hover {
+            stroke:1px solid #704A4A;
+        }
+        .sim-pin:hover {
+            stroke:#D4AF37;
+            stroke-width:2px;
+        }
+
+        .sim-pin-touch.touched:hover {
+            stroke:darkorange;
+        }
+
+        .sim-led-back:hover {
+            stroke:#a0a0a0;
+            stroke-width:3px;
+        }
+        .sim-led:hover {
+            stroke:#ff7f7f;
+            stroke-width:3px;
+        }
+
+        .sim-systemled {
+            fill:#333;
+            stroke:#555;
+            stroke-width: 1px;
+        }
+
+        .sim-light-level-button {
+            stroke:#fff;
+            stroke-width: 3px;
+        }
+
+        .sim-antenna {
+            stroke:#555;
+            stroke-width: 2px;
+        }
+
+        .sim-text {
+        font-family:"Lucida Console", Monaco, monospace;
+        font-size:25px;
+        fill:#fff;
+        pointer-events: none;
+        }
+
+        .sim-text-pin {
+        font-family:"Lucida Console", Monaco, monospace;
+        font-size:20px;
+        fill:#fff;
+        pointer-events: none;
+        }
+
+        .sim-thermometer {
+            stroke:#aaa;
+            stroke-width: 3px;
+        }
+
+        /* animations */
+        .sim-theme-glow {
+            animation-name: sim-theme-glow-animation;
+            animation-timing-function: ease-in-out;
+            animation-direction: alternate;
+            animation-iteration-count: infinite;
+            animation-duration: 1.25s;
+        }
+        @keyframes sim-theme-glow-animation {
+            from { opacity: 1; }
+            to   { opacity: 0.75; }
+        }
+
+        .sim-flash {
+            animation-name: sim-flash-animation;
+            animation-duration: 0.1s;
+        }
+
+        @keyframes sim-flash-animation {
+            from { fill: yellow; }
+            to   { fill: default; }
+        }
+
+        .sim-flash-stroke {
+            animation-name: sim-flash-stroke-animation;
+            animation-duration: 0.4s;
+            animation-timing-function: ease-in;
+        }
+
+        @keyframes sim-flash-stroke-animation {
+            from { stroke: yellow; }
+            to   { stroke: default; }
+        }
+
+        /* wireframe */
+        .sim-wireframe * {
+            fill: none;
+            stroke: black;
+        }
+        .sim-wireframe .sim-display,
+        .sim-wireframe .sim-led,
+        .sim-wireframe .sim-led-back,
+        .sim-wireframe .sim-head,
+        .sim-wireframe .sim-theme,
+        .sim-wireframe .sim-button-group,
+        .sim-wireframe .sim-button-label,
+        .sim-wireframe .sim-button,
+        .sim-wireframe .sim-text-pin
+        {
+            visibility: hidden;
+        }
+        .sim-wireframe .sim-label
+        {
+            stroke: none;
+            fill: #777;
+        }
+        .sim-wireframe .sim-board {
+            stroke-width: 2px;
+        }
+    `;
+    const pins4onXs = [66.7, 79.1, 91.4, 103.7, 164.3, 176.6, 188.9, 201.3, 213.6, 275.2, 287.5, 299.8, 312.1, 324.5, 385.1, 397.4, 409.7, 422];
+    const pins4onMids = pins4onXs.map(x => x + 5);
+    const littlePinDist = pins4onMids[1] - pins4onMids[0];
+    const bigPinWidth = pins4onMids[4] - pins4onMids[3];
+    const pin0mid = pins4onXs[0] - bigPinWidth / 2.0;
+    const pin3mid = pin0mid - bigPinWidth / 2.0;
+    const pin1mid = pins4onMids[3] + bigPinWidth / 2.0;
+    const pin2mid = pins4onMids[8] + bigPinWidth / 2.0;
+    const pin3Vmid = pins4onMids[13] + bigPinWidth / 2.0;
+    const pinGNDmid = pins4onMids[pins4onMids.length - 1] + bigPinWidth / 2.0;
+    const pinGND2mid = pinGNDmid + bigPinWidth / 2.0;
+    const pinMids = [pin0mid, pin1mid, pin2mid, pin3mid].concat(pins4onXs).concat([pinGNDmid, pin3Vmid, pinGND2mid]);
+    const pinNames = [
+        "P0", "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8", "P9", "P10",
+        "P11", "P12", "P13", "P14", "P15", "P16", "P17", "P18", "P19", "P20",
+        "GND0", "GND", "+3v3", "GND1"];
+    const pinTitles = [
+        "P0, ANALOG IN",
+        "P1, ANALOG IN",
+        "P2, ANALOG IN",
+        "P3, ANALOG IN, LED Col 1",
+        "P4, ANALOG IN, LED Col 2",
+        "P5, BUTTON A",
+        "P6, LED Col 9",
+        "P7, LED Col 8",
+        "P8",
+        "P9, LED Col 7",
+        "P10, ANALOG IN, LED Col 3",
+        "P11, BUTTON B",
+        "P12, RESERVED ACCESSIBILITY",
+        "P13, SPI - SCK",
+        "P14, SPI - MISO",
+        "P15, SPI - MOSI",
+        "P16, SPI - Chip Select",
+        "P17, +3v3",
+        "P18, +3v3",
+        "P19, I2C - SCL",
+        "P20, I2C - SDA",
+        "GND", "GND", "+3v3", "GND"
+    ];
+    const MB_WIDTH = 500;
+    const MB_HEIGHT = 408;
     export interface IBoardTheme {
         accent?: string;
         display?: string;
@@ -43,9 +220,10 @@ namespace pxsim.micro_bit {
     }
 
     export interface IBoardProps {
-        runtime: pxsim.Runtime;
+        runtime?: pxsim.Runtime;
         theme?: IBoardTheme;
         disableTilt?: boolean;
+        wireframe?: boolean;
     }
 
     const pointerEvents = !!(window as any).PointerEvent ? {
@@ -60,11 +238,11 @@ namespace pxsim.micro_bit {
             leave: "mouseleave"
         };
 
-    export class MicrobitBoardSvg {
+    export class MicrobitBoardSvg implements BoardView {
         public element: SVGSVGElement;
         private style: SVGStyleElement;
         private defs: SVGDefsElement;
-        private g: SVGElement;
+        private g: SVGGElement;
 
         private logos: SVGElement[];
         private head: SVGGElement; private headInitialized = false;
@@ -88,15 +266,54 @@ namespace pxsim.micro_bit {
         private thermometerText: SVGTextElement;
         private shakeButton: SVGCircleElement;
         private shakeText: SVGTextElement;
-        public board: pxsim.Board;
+        public board: pxsim.DalBoard;
+        private pinNmToCoord: Map<Coord> = {};
 
         constructor(public props: IBoardProps) {
-            this.board = this.props.runtime.board as pxsim.Board;
-            this.board.updateView = () => this.updateState();
+            this.recordPinCoords();
             this.buildDom();
-            this.updateTheme();
-            this.updateState();
-            this.attachEvents();
+            if (props && props.wireframe)
+                svg.addClass(this.element, "sim-wireframe");
+
+            if (props && props.theme)
+                this.updateTheme();
+
+            if (props && props.runtime) {
+                this.board = this.props.runtime.board as pxsim.DalBoard;
+                this.board.updateSubscribers.push(() => this.updateState());
+                this.updateState();
+                this.attachEvents();
+            }
+        }
+
+        public getView(): SVGAndSize<SVGSVGElement> {
+            return {
+                el: this.element,
+                y: 0,
+                x: 0,
+                w: MB_WIDTH,
+                h: MB_HEIGHT
+            };
+        }
+
+        public getCoord(pinNm: string): Coord {
+            return this.pinNmToCoord[pinNm];
+        }
+
+        public highlightPin(pinNm: string): void {
+            //TODO: for instructions
+        }
+
+        public getPinDist(): number {
+            return littlePinDist * 1.7;
+        }
+
+        public recordPinCoords() {
+            const pinsY = 356.7 + 40;
+            pinNames.forEach((nm, i) => {
+                let x = pinMids[i];
+                this.pinNmToCoord[nm] = [x, pinsY];
+            });
         }
 
         private updateTheme() {
@@ -123,12 +340,14 @@ namespace pxsim.micro_bit {
             if (!state) return;
             let theme = this.props.theme;
 
-            state.buttons.forEach((btn, index) => {
+            let bpState = state.buttonPairState;
+            let buttons = [bpState.aBtn, bpState.bBtn, bpState.abBtn];
+            buttons.forEach((btn, index) => {
                 svg.fill(this.buttons[index], btn.pressed ? theme.buttonDown : theme.buttonUp);
             });
 
-            let bw = state.displayMode == pxsim.DisplayMode.bw
-            let img = state.image;
+            let bw = state.ledMatrixState.displayMode == pxsim.DisplayMode.bw
+            let img = state.ledMatrixState.image;
             this.leds.forEach((led, i) => {
                 let sel = (<SVGStylable><any>led)
                 sel.style.opacity = ((bw ? img.data[i] > 0 ? 255 : 0 : img.data[i]) / 255.0) + "";
@@ -147,7 +366,7 @@ namespace pxsim.micro_bit {
 
         private updateGestures() {
             let state = this.board;
-            if (state.useShake && !this.shakeButton) {
+            if (state.accelerometerState.useShake && !this.shakeButton) {
                 this.shakeButton = svg.child(this.g, "circle", { cx: 380, cy: 100, r: 16.5 }) as SVGCircleElement;
                 svg.fill(this.shakeButton, this.props.theme.virtualButtonUp)
                 this.shakeButton.addEventListener(pointerEvents.down, ev => {
@@ -170,7 +389,7 @@ namespace pxsim.micro_bit {
 
         private updateButtonAB() {
             let state = this.board;
-            if (state.usesButtonAB && !this.buttonABText) {
+            if (state.buttonPairState.usesButtonAB && !this.buttonABText) {
                 (<any>this.buttonsOuter[2]).style.visibility = "visible";
                 (<any>this.buttons[2]).style.visibility = "visible";
                 this.buttonABText = svg.child(this.g, "text", { class: "sim-text", x: 370, y: 272 }) as SVGTextElement;
@@ -203,7 +422,7 @@ namespace pxsim.micro_bit {
 
         private updateTemperature() {
             let state = this.board;
-            if (!state || !state.usesTemperature) return;
+            if (!state || !state.thermometerState.usesTemperature) return;
 
             let tmin = -5;
             let tmax = 50;
@@ -227,13 +446,13 @@ namespace pxsim.micro_bit {
                     (ev) => {
                         let cur = svg.cursorPoint(pt, this.element, ev);
                         let t = Math.max(0, Math.min(1, (260 - cur.y) / 140))
-                        state.temperature = Math.floor(tmin + t * (tmax - tmin));
+                        state.thermometerState.temperature = Math.floor(tmin + t * (tmax - tmin));
                         this.updateTemperature();
                     }, ev => { }, ev => { })
             }
 
-            let t = Math.max(tmin, Math.min(tmax, state.temperature))
-            let per = Math.floor((state.temperature - tmin) / (tmax - tmin) * 100)
+            let t = Math.max(tmin, Math.min(tmax, state.thermometerState.temperature))
+            let per = Math.floor((state.thermometerState.temperature - tmin) / (tmax - tmin) * 100)
             svg.setGradientValue(this.thermometerGradient, 100 - per + "%");
             this.thermometerText.textContent = t + "°C";
         }
@@ -242,7 +461,7 @@ namespace pxsim.micro_bit {
             let xc = 258;
             let yc = 75;
             let state = this.board;
-            if (!state || !state.usesHeading) return;
+            if (!state || !state.compassState.usesHeading) return;
             if (!this.headInitialized) {
                 let p = this.head.firstChild.nextSibling as SVGPathElement;
                 p.setAttribute("d", "m269.9,50.134647l0,0l-39.5,0l0,0c-14.1,0.1 -24.6,10.7 -24.6,24.8c0,13.9 10.4,24.4 24.3,24.7l0,0l39.6,0c14.2,0 40.36034,-22.97069 40.36034,-24.85394c0,-1.88326 -26.06034,-24.54606 -40.16034,-24.64606m-0.2,39l0,0l-39.3,0c-7.7,-0.1 -14,-6.4 -14,-14.2c0,-7.8 6.4,-14.2 14.2,-14.2l39.1,0c7.8,0 14.2,6.4 14.2,14.2c0,7.9 -6.4,14.2 -14.2,14.2l0,0l0,0z");
@@ -252,16 +471,16 @@ namespace pxsim.micro_bit {
                     this.head,
                     (ev: MouseEvent) => {
                         let cur = svg.cursorPoint(pt, this.element, ev);
-                        state.heading = Math.floor(Math.atan2(cur.y - yc, cur.x - xc) * 180 / Math.PI + 90);
-                        if (state.heading < 0) state.heading += 360;
+                        state.compassState.heading = Math.floor(Math.atan2(cur.y - yc, cur.x - xc) * 180 / Math.PI + 90);
+                        if (state.compassState.heading < 0) state.compassState.heading += 360;
                         this.updateHeading();
                     });
                 this.headInitialized = true;
             }
 
-            let txt = state.heading.toString() + "°";
+            let txt = state.compassState.heading.toString() + "°";
             if (txt != this.headText.textContent) {
-                svg.rotateElement(this.head, xc, yc, state.heading + 180);
+                svg.rotateElement(this.head, xc, yc, state.compassState.heading + 180);
                 this.headText.textContent = txt;
             }
         }
@@ -297,12 +516,12 @@ namespace pxsim.micro_bit {
             let state = this.board;
             if (!state) return;
 
-            state.pins.forEach((pin, i) => this.updatePin(pin, i));
+            state.edgeConnectorState.pins.forEach((pin, i) => this.updatePin(pin, i));
         }
 
         private updateLightLevel() {
             let state = this.board;
-            if (!state || !state.usesLightLevel) return;
+            if (!state || !state.lightSensorState.usesLightLevel) return;
 
             if (!this.lightLevelButton) {
                 let gid = "gradient-light-level";
@@ -320,8 +539,8 @@ namespace pxsim.micro_bit {
                         let pos = svg.cursorPoint(pt, this.element, ev);
                         let rs = r / 2;
                         let level = Math.max(0, Math.min(255, Math.floor((pos.y - (cy - rs)) / (2 * rs) * 255)));
-                        if (level != this.board.lightLevel) {
-                            this.board.lightLevel = level;
+                        if (level != this.board.lightSensorState.lightLevel) {
+                            this.board.lightSensorState.lightLevel = level;
                             this.applyLightLevel();
                         }
                     }, ev => { },
@@ -330,12 +549,12 @@ namespace pxsim.micro_bit {
                 this.updateTheme();
             }
 
-            svg.setGradientValue(this.lightLevelGradient, Math.min(100, Math.max(0, Math.floor(state.lightLevel * 100 / 255))) + '%')
-            this.lightLevelText.textContent = state.lightLevel.toString();
+            svg.setGradientValue(this.lightLevelGradient, Math.min(100, Math.max(0, Math.floor(state.lightSensorState.lightLevel * 100 / 255))) + '%')
+            this.lightLevelText.textContent = state.lightSensorState.lightLevel.toString();
         }
 
         private applyLightLevel() {
-            let lv = this.board.lightLevel;
+            let lv = this.board.lightSensorState.lightLevel;
             svg.setGradientValue(this.lightLevelGradient, Math.min(100, Math.max(0, Math.floor(lv * 100 / 255))) + '%')
             this.lightLevelText.textContent = lv.toString();
         }
@@ -343,10 +562,10 @@ namespace pxsim.micro_bit {
         private updateTilt() {
             if (this.props.disableTilt) return;
             let state = this.board;
-            if (!state || !state.accelerometer.isActive) return;
+            if (!state || !state.accelerometerState.accelerometer.isActive) return;
 
-            let x = state.accelerometer.getX();
-            let y = state.accelerometer.getY();
+            let x = state.accelerometerState.accelerometer.getX();
+            let y = state.accelerometerState.accelerometer.getY();
             let af = 8 / 1023;
 
             this.element.style.transform = "perspective(30em) rotateX(" + y * af + "deg) rotateY(" + x * af + "deg)"
@@ -358,129 +577,18 @@ namespace pxsim.micro_bit {
             this.element = <SVGSVGElement>svg.elt("svg")
             svg.hydrate(this.element, {
                 "version": "1.0",
-                "viewBox": "0 0 498 406",
-                "enable-background": "new 0 0 498 406",
+                "viewBox": `0 0 ${MB_WIDTH} ${MB_HEIGHT}`,
                 "class": "sim",
                 "x": "0px",
-                "y": "0px"
+                "y": "0px",
+                "width": MB_WIDTH + "px",
+                "height": MB_HEIGHT + "px",
             });
             this.style = <SVGStyleElement>svg.child(this.element, "style", {});
-            this.style.textContent = `
-svg.sim {
-    margin-bottom:1em;
-}
-svg.sim.grayscale {    
-    -moz-filter: grayscale(1);
-    -webkit-filter: grayscale(1);
-    filter: grayscale(1);
-}
-.sim-button {
-    pointer-events: none;    
-}
-
-.sim-button-outer:hover {
-    stroke:grey;
-    stroke-width: 3px;
-}
-.sim-button-nut {
-    fill:#704A4A;
-    pointer-events:none;
-}
-.sim-button-nut:hover {
-    stroke:1px solid #704A4A; 
-}
-.sim-pin:hover {
-    stroke:#D4AF37;
-    stroke-width:2px;
-}
-
-.sim-pin-touch.touched:hover {
-    stroke:darkorange;
-}
-
-.sim-led-back:hover {
-    stroke:#a0a0a0;
-    stroke-width:3px;
-}
-.sim-led:hover {
-    stroke:#ff7f7f;
-    stroke-width:3px;
-}
-
-.sim-systemled {
-    fill:#333;
-    stroke:#555;
-    stroke-width: 1px;
-}
-
-.sim-light-level-button {
-    stroke:#fff;
-    stroke-width: 3px;
-}
-
-.sim-antenna {
-    stroke:#555;
-    stroke-width: 2px;
-}
-
-.sim-text {
-  font-family:"Lucida Console", Monaco, monospace;
-  font-size:25px;
-  fill:#fff;
-  pointer-events: none;
-}
-
-.sim-text-pin {
-  font-family:"Lucida Console", Monaco, monospace;
-  font-size:20px;
-  fill:#fff;
-  pointer-events: none;
-}
-
-.sim-thermometer {
-    stroke:#aaa;
-    stroke-width: 3px;
-}
-
-/* animations */
-.sim-theme-glow {
-    animation-name: sim-theme-glow-animation;
-    animation-timing-function: ease-in-out;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-duration: 1.25s;
-}
-@keyframes sim-theme-glow-animation {  
-    from { opacity: 1; }
-    to   { opacity: 0.75; }
-}
-
-.sim-flash {
-    animation-name: sim-flash-animation;
-    animation-duration: 0.1s;
-}
-
-@keyframes sim-flash-animation {  
-    from { fill: yellow; }
-    to   { fill: default; }
-}
-
-.sim-flash-stroke {
-    animation-name: sim-flash-stroke-animation;
-    animation-duration: 0.4s;
-    animation-timing-function: ease-in;
-}
-
-@keyframes sim-flash-stroke-animation {  
-    from { stroke: yellow; }
-    to   { stroke: default; }
-}
-
-            `;
-
+            this.style.textContent = MB_STYLE;
 
             this.defs = <SVGDefsElement>svg.child(this.element, "defs", {});
-            this.g = svg.elt("g");
+            this.g = <SVGGElement>svg.elt("g");
             this.element.appendChild(this.g);
 
             // filters
@@ -517,7 +625,7 @@ svg.sim.grayscale {
             }
 
             // head
-            this.head = <SVGGElement>svg.child(this.g, "g", {});
+            this.head = <SVGGElement>svg.child(this.g, "g", {class: "sim-head"});
             svg.child(this.head, "circle", { cx: 258, cy: 75, r: 100, fill: "transparent" })
             this.logos.push(svg.path(this.head, "sim-theme sim-theme-glow", "M269.9,50.2L269.9,50.2l-39.5,0v0c-14.1,0.1-24.6,10.7-24.6,24.8c0,13.9,10.4,24.4,24.3,24.7v0h39.6c14.2,0,24.8-10.6,24.8-24.7C294.5,61,284,50.3,269.9,50.2 M269.7,89.2L269.7,89.2l-39.3,0c-7.7-0.1-14-6.4-14-14.2c0-7.8,6.4-14.2,14.2-14.2h39.1c7.8,0,14.2,6.4,14.2,14.2C283.9,82.9,277.5,89.2,269.7,89.2"));
             this.logos.push(svg.path(this.head, "sim-theme sim-theme-glow", "M230.6,69.7c-2.9,0-5.3,2.4-5.3,5.3c0,2.9,2.4,5.3,5.3,5.3c2.9,0,5.3-2.4,5.3-5.3C235.9,72.1,233.5,69.7,230.6,69.7"));
@@ -530,38 +638,19 @@ svg.sim.grayscale {
                 "M16.5,341.2c0,0.4-0.1,0.9-0.1,1.3v60.7c4.1,1.7,8.6,2.7,12.9,2.7h34.4v-64.7h0.3c0,0,0-0.1,0-0.1c0-13-10.6-23.6-23.7-23.6C27.2,317.6,16.5,328.1,16.5,341.2z M21.2,341.6c0-10.7,8.7-19.3,19.3-19.3c10.7,0,19.3,8.7,19.3,19.3c0,10.7-8.6,19.3-19.3,19.3C29.9,360.9,21.2,352.2,21.2,341.6z",
                 "M139.1,317.3c-12.8,0-22.1,10.3-23.1,23.1V406h46.2v-65.6C162.2,327.7,151.9,317.3,139.1,317.3zM139.3,360.1c-10.7,0-19.3-8.6-19.3-19.3c0-10.7,8.6-19.3,19.3-19.3c10.7,0,19.3,8.7,19.3,19.3C158.6,351.5,150,360.1,139.3,360.1z",
                 "M249,317.3c-12.8,0-22.1,10.3-23.1,23.1V406h46.2v-65.6C272.1,327.7,261.8,317.3,249,317.3z M249.4,360.1c-10.7,0-19.3-8.6-19.3-19.3c0-10.7,8.6-19.3,19.3-19.3c10.7,0,19.3,8.7,19.3,19.3C268.7,351.5,260.1,360.1,249.4,360.1z"
-            ].map((p, pi) => svg.path(this.g, "sim-pin sim-pin-touch", p, `P${pi}, ANALOG IN`));
+            ].map((p, pi) => svg.path(this.g, "sim-pin sim-pin-touch", p));
 
             // P3
-            this.pins.push(svg.path(this.g, "sim-pin", "M0,357.7v19.2c0,10.8,6.2,20.2,14.4,25.2v-44.4H0z", "P3, ANALOG IN, LED Col 1"));
+            this.pins.push(svg.path(this.g, "sim-pin", "M0,357.7v19.2c0,10.8,6.2,20.2,14.4,25.2v-44.4H0z"));
 
-            [66.7, 79.1, 91.4, 103.7, 164.3, 176.6, 188.9, 201.3, 213.6, 275.2, 287.5, 299.8, 312.1, 324.5, 385.1, 397.4, 409.7, 422].forEach(x => {
+            pins4onXs.forEach(x => {
                 this.pins.push(svg.child(this.g, "rect", { x: x, y: 356.7, width: 10, height: 50, class: "sim-pin" }));
             })
-            svg.title(this.pins[4], "P4, ANALOG IN, LED Col 2")
-            svg.title(this.pins[5], "P5, BUTTON A")
-            svg.title(this.pins[6], "P6, LED Col 9")
-            svg.title(this.pins[7], "P7, LED Col 8")
-            svg.title(this.pins[8], "P8")
-            svg.title(this.pins[9], "P9, LED Col 7")
-            svg.title(this.pins[10], "P10, ANALOG IN, LED Col 3")
-            svg.title(this.pins[11], "P11, BUTTON B")
-            svg.title(this.pins[12], "P12, RESERVED ACCESSIBILITY")
-            svg.title(this.pins[13], "P13, SPI - SCK")
-            svg.title(this.pins[14], "P14, SPI - MISO")
-            svg.title(this.pins[15], "P15, SPI - MOSI")
-            svg.title(this.pins[16], "P16, SPI - Chip Select")
-            svg.title(this.pins[17], "P17, +3v3")
-            svg.title(this.pins[18], "P18, +3v3")
-            svg.title(this.pins[19], "P19, I2C - SCL")
-            svg.title(this.pins[20], "P20, I2C - SDA")
-            svg.title(this.pins[21], "GND")
+            this.pins.push(svg.path(this.g, "sim-pin", "M483.6,402c8.2-5,14.4-14.4,14.4-25.1v-19.2h-14.4V402z"));
+            this.pins.push(svg.path(this.g, "sim-pin", "M359.9,317.3c-12.8,0-22.1,10.3-23.1,23.1V406H383v-65.6C383,327.7,372.7,317.3,359.9,317.3z M360,360.1c-10.7,0-19.3-8.6-19.3-19.3c0-10.7,8.6-19.3,19.3-19.3c10.7,0,19.3,8.7,19.3,19.3C379.3,351.5,370.7,360.1,360,360.1z"));
+            this.pins.push(svg.path(this.g, "sim-pin", "M458,317.6c-13,0-23.6,10.6-23.6,23.6c0,0,0,0.1,0,0.1h0V406H469c4.3,0,8.4-1,12.6-2.7v-60.7c0-0.4,0-0.9,0-1.3C481.6,328.1,471,317.6,458,317.6z M457.8,360.9c-10.7,0-19.3-8.6-19.3-19.3c0-10.7,8.6-19.3,19.3-19.3c10.7,0,19.3,8.7,19.3,19.3C477.1,352.2,468.4,360.9,457.8,360.9z"));
 
-            this.pins.push(svg.path(this.g, "sim-pin", "M483.6,402c8.2-5,14.4-14.4,14.4-25.1v-19.2h-14.4V402z", "GND"));
-
-            this.pins.push(svg.path(this.g, "sim-pin", "M359.9,317.3c-12.8,0-22.1,10.3-23.1,23.1V406H383v-65.6C383,327.7,372.7,317.3,359.9,317.3z M360,360.1c-10.7,0-19.3-8.6-19.3-19.3c0-10.7,8.6-19.3,19.3-19.3c10.7,0,19.3,8.7,19.3,19.3C379.3,351.5,370.7,360.1,360,360.1z", "+3v3"));
-            this.pins.push(svg.path(this.g, "sim-pin", "M458,317.6c-13,0-23.6,10.6-23.6,23.6c0,0,0,0.1,0,0.1h0V406H469c4.3,0,8.4-1,12.6-2.7v-60.7c0-0.4,0-0.9,0-1.3C481.6,328.1,471,317.6,458,317.6z M457.8,360.9c-10.7,0-19.3-8.6-19.3-19.3c0-10.7,8.6-19.3,19.3-19.3c10.7,0,19.3,8.7,19.3,19.3C477.1,352.2,468.4,360.9,457.8,360.9z", "GND"));
-
+            this.pins.forEach((p, i) => svg.hydrate(p, {title: pinTitles[i]}));
 
             this.pinGradients = this.pins.map((pin, i) => {
                 let gid = "gradient-pin-" + i
@@ -571,6 +660,7 @@ svg.sim.grayscale {
             })
 
             this.pinTexts = [67, 165, 275].map(x => <SVGTextElement>svg.child(this.g, "text", { class: "sim-text-pin", x: x, y: 345 }));
+
             this.buttonsOuter = []; this.buttons = [];
 
             const outerBtn = (left: number, top: number) => {
@@ -578,7 +668,7 @@ svg.sim.grayscale {
                 const btnw = 56.2;
                 const btnn = 6;
                 const btnnm = 10
-                let btng = svg.child(this.g, "g");
+                let btng = svg.child(this.g, "g", {class: "sim-button-group"});
                 this.buttonsOuter.push(btng);
                 svg.child(btng, "rect", { class: "sim-button-outer", x: left, y: top, rx: btnr, ry: btnr, width: btnw, height: btnw });
                 svg.child(btng, "circle", { class: "sim-button-nut", cx: left + btnnm, cy: top + btnnm, r: btnn });
@@ -620,7 +710,7 @@ svg.sim.grayscale {
             let tiltDecayer = 0;
             this.element.addEventListener(pointerEvents.move, (ev: MouseEvent) => {
                 let state = this.board;
-                if (!state.accelerometer.isActive) return;
+                if (!state.accelerometerState.accelerometer.isActive) return;
 
                 if (tiltDecayer) {
                     clearInterval(tiltDecayer);
@@ -635,18 +725,18 @@ svg.sim.grayscale {
                 let z2 = 1023 * 1023 - x * x - y * y;
                 let z = Math.floor((z2 > 0 ? -1 : 1) * Math.sqrt(Math.abs(z2)));
 
-                state.accelerometer.update(x, y, z);
+                state.accelerometerState.accelerometer.update(x, y, z);
                 this.updateTilt();
             }, false);
             this.element.addEventListener(pointerEvents.leave, (ev: MouseEvent) => {
                 let state = this.board;
-                if (!state.accelerometer.isActive) return;
+                if (!state.accelerometerState.accelerometer.isActive) return;
 
                 if (!tiltDecayer) {
                     tiltDecayer = setInterval(() => {
-                        let accx = state.accelerometer.getX(MicroBitCoordinateSystem.RAW);
+                        let accx = state.accelerometerState.accelerometer.getX(MicroBitCoordinateSystem.RAW);
                         accx = Math.floor(Math.abs(accx) * 0.85) * (accx > 0 ? 1 : -1);
-                        let accy = state.accelerometer.getY(MicroBitCoordinateSystem.RAW);
+                        let accy = state.accelerometerState.accelerometer.getY(MicroBitCoordinateSystem.RAW);
                         accy = Math.floor(Math.abs(accy) * 0.85) * (accy > 0 ? 1 : -1);
                         let accz = -Math.sqrt(Math.max(0, 1023 * 1023 - accx * accx - accy * accy));
                         if (Math.abs(accx) <= 24 && Math.abs(accy) <= 24) {
@@ -656,20 +746,20 @@ svg.sim.grayscale {
                             accy = 0;
                             accz = -1023;
                         }
-                        state.accelerometer.update(accx, accy, accz);
+                        state.accelerometerState.accelerometer.update(accx, accy, accz);
                         this.updateTilt();
                     }, 50)
                 }
             }, false);
 
             this.pins.forEach((pin, index) => {
-                if (!this.board.pins[index]) return;
+                if (!this.board.edgeConnectorState.pins[index]) return;
                 let pt = this.element.createSVGPoint();
                 svg.buttonEvents(pin,
                     // move
                     ev => {
                         let state = this.board;
-                        let pin = state.pins[index];
+                        let pin = state.edgeConnectorState.pins[index];
                         let svgpin = this.pins[index];
                         if (pin.mode & PinFlags.Input) {
                             let cursor = svg.cursorPoint(pt, this.element, ev);
@@ -681,7 +771,7 @@ svg.sim.grayscale {
                     // start
                     ev => {
                         let state = this.board;
-                        let pin = state.pins[index];
+                        let pin = state.edgeConnectorState.pins[index];
                         let svgpin = this.pins[index];
                         svg.addClass(svgpin, "touched");
                         if (pin.mode & PinFlags.Input) {
@@ -694,7 +784,7 @@ svg.sim.grayscale {
                     // stop
                     (ev: MouseEvent) => {
                         let state = this.board;
-                        let pin = state.pins[index];
+                        let pin = state.edgeConnectorState.pins[index];
                         let svgpin = this.pins[index];
                         svg.removeClass(svgpin, "touched");
                         this.updatePin(pin, index);
@@ -704,70 +794,73 @@ svg.sim.grayscale {
             this.pins.slice(0, 3).forEach((btn, index) => {
                 btn.addEventListener(pointerEvents.down, ev => {
                     let state = this.board;
-                    state.pins[index].touched = true;
-                    this.updatePin(state.pins[index], index);
+                    state.edgeConnectorState.pins[index].touched = true;
+                    this.updatePin(state.edgeConnectorState.pins[index], index);
                 })
                 btn.addEventListener(pointerEvents.leave, ev => {
                     let state = this.board;
-                    state.pins[index].touched = false;
-                    this.updatePin(state.pins[index], index);
+                    state.edgeConnectorState.pins[index].touched = false;
+                    this.updatePin(state.edgeConnectorState.pins[index], index);
                 })
                 btn.addEventListener(pointerEvents.up, ev => {
                     let state = this.board;
-                    state.pins[index].touched = false;
-                    this.updatePin(state.pins[index], index);
-                    this.board.bus.queue(state.pins[index].id, DAL.MICROBIT_BUTTON_EVT_UP);
-                    this.board.bus.queue(state.pins[index].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
+                    state.edgeConnectorState.pins[index].touched = false;
+                    this.updatePin(state.edgeConnectorState.pins[index], index);
+                    this.board.bus.queue(state.edgeConnectorState.pins[index].id, DAL.MICROBIT_BUTTON_EVT_UP);
+                    this.board.bus.queue(state.edgeConnectorState.pins[index].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
                 })
             })
+
+            let bpState = this.board.buttonPairState;
+            let stateButtons = [bpState.aBtn, bpState.bBtn, bpState.abBtn];
             this.buttonsOuter.slice(0, 2).forEach((btn, index) => {
                 btn.addEventListener(pointerEvents.down, ev => {
                     let state = this.board;
-                    state.buttons[index].pressed = true;
+                    stateButtons[index].pressed = true;
                     svg.fill(this.buttons[index], this.props.theme.buttonDown);
                 })
                 btn.addEventListener(pointerEvents.leave, ev => {
                     let state = this.board;
-                    state.buttons[index].pressed = false;
+                    stateButtons[index].pressed = false;
                     svg.fill(this.buttons[index], this.props.theme.buttonUp);
                 })
                 btn.addEventListener(pointerEvents.up, ev => {
                     let state = this.board;
-                    state.buttons[index].pressed = false;
+                    stateButtons[index].pressed = false;
                     svg.fill(this.buttons[index], this.props.theme.buttonUp);
-                    this.board.bus.queue(state.buttons[index].id, DAL.MICROBIT_BUTTON_EVT_UP);
-                    this.board.bus.queue(state.buttons[index].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
+                    this.board.bus.queue(stateButtons[index].id, DAL.MICROBIT_BUTTON_EVT_UP);
+                    this.board.bus.queue(stateButtons[index].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
                 })
             })
             this.buttonsOuter[2].addEventListener(pointerEvents.down, ev => {
                 let state = this.board;
-                state.buttons[0].pressed = true;
-                state.buttons[1].pressed = true;
-                state.buttons[2].pressed = true;
+                stateButtons[0].pressed = true;
+                stateButtons[1].pressed = true;
+                stateButtons[2].pressed = true;
                 svg.fill(this.buttons[0], this.props.theme.buttonDown);
                 svg.fill(this.buttons[1], this.props.theme.buttonDown);
                 svg.fill(this.buttons[2], this.props.theme.buttonDown);
             })
             this.buttonsOuter[2].addEventListener(pointerEvents.leave, ev => {
                 let state = this.board;
-                state.buttons[0].pressed = false;
-                state.buttons[1].pressed = false;
-                state.buttons[2].pressed = false;
+                stateButtons[0].pressed = false;
+                stateButtons[1].pressed = false;
+                stateButtons[2].pressed = false;
                 svg.fill(this.buttons[0], this.props.theme.buttonUp);
                 svg.fill(this.buttons[1], this.props.theme.buttonUp);
                 svg.fill(this.buttons[2], this.props.theme.virtualButtonUp);
             })
             this.buttonsOuter[2].addEventListener(pointerEvents.up, ev => {
                 let state = this.board;
-                state.buttons[0].pressed = false;
-                state.buttons[1].pressed = false;
-                state.buttons[2].pressed = false;
+                stateButtons[0].pressed = false;
+                stateButtons[1].pressed = false;
+                stateButtons[2].pressed = false;
                 svg.fill(this.buttons[0], this.props.theme.buttonUp);
                 svg.fill(this.buttons[1], this.props.theme.buttonUp);
                 svg.fill(this.buttons[2], this.props.theme.virtualButtonUp);
 
-                this.board.bus.queue(state.buttons[2].id, DAL.MICROBIT_BUTTON_EVT_UP);
-                this.board.bus.queue(state.buttons[2].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
+                this.board.bus.queue(stateButtons[2].id, DAL.MICROBIT_BUTTON_EVT_UP);
+                this.board.bus.queue(stateButtons[2].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
             })
         }
     }

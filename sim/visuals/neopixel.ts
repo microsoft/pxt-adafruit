@@ -59,16 +59,48 @@ namespace pxsim.visuals {
         const NP_PART_YOFF = -11;
         const NP_PART_WIDTH = 87.5;
         const NP_PART_HEIGHT = 190;
-        const NEOPIXEL_PART_IMG = "neopixel.svg";
+        const NEOPIXEL_PART_IMG = `<svg viewBox="-5 -1 53 112" xmlns="http://www.w3.org/2000/svg" xmlns:bx="https://boxy-svg.com">
+  <rect x="2.5" width="38" height="100" style="fill: rgb(68, 68, 68);"/>
+  <rect x="11.748" y="3.2" width="1.391" height="2.553" style="fill: none; stroke-linejoin: round; stroke-width: 3; stroke: rgb(165, 103, 52);"/>
+  <rect x="20.75" y="3.2" width="1.391" height="2.553" style="fill: none; stroke-linejoin: round; stroke-width: 3; stroke: rgb(165, 103, 52);"/>
+  <rect x="29.75" y="3.2" width="1.391" height="2.553" style="fill: none; stroke-linejoin: round; stroke-width: 3; stroke: rgb(165, 103, 52);"/>
+  <g>
+    <rect x="9" y="16.562" width="25" height="3.238" style="fill: rgb(216, 216, 216);"/>
+    <rect x="9" y="22.562" width="25" height="3.238" style="fill: rgb(216, 216, 216);"/>
+    <rect x="9" y="28.563" width="25" height="3.238" style="fill: rgb(216, 216, 216);"/>
+    <rect x="11.607" y="14.833" width="19.787" height="18.697" style="fill: rgb(0, 0, 0);"/>
+    <ellipse style="fill: rgb(216, 216, 216);" cx="21.5" cy="24.181" rx="7" ry="7"/>
+  </g>
+  <path d="M -7.25 -103.2 L -2.5 -100.003 L -12 -100.003 L -7.25 -103.2 Z" style="fill: rgb(68, 68, 68);" transform="matrix(-1, 0, 0, -1, 0, 0)" bx:shape="triangle -12 -103.2 9.5 3.197 0.5 0 1@ad6f5cac"/>
+  <path d="M -16.75 -103.197 L -12 -100 L -21.5 -100 L -16.75 -103.197 Z" style="fill: rgb(68, 68, 68);" transform="matrix(-1, 0, 0, -1, 0, 0)" bx:shape="triangle -21.5 -103.197 9.5 3.197 0.5 0 1@07d73149"/>
+  <path d="M -26.25 -103.2 L -21.5 -100.003 L -31 -100.003 L -26.25 -103.2 Z" style="fill: rgb(68, 68, 68);" transform="matrix(-1, 0, 0, -1, 0, 0)" bx:shape="triangle -31 -103.2 9.5 3.197 0.5 0 1@54403e2d"/>
+  <path d="M -35.75 -103.197 L -31 -100 L -40.5 -100 L -35.75 -103.197 Z" style="fill: rgb(68, 68, 68);" transform="matrix(-1, 0, 0, -1, 0, 0)" bx:shape="triangle -40.5 -103.197 9.5 3.197 0.5 0 1@21c9b772"/>
+  <g transform="matrix(1, 0, 0, 1, 0.000002, 29.999994)">
+    <rect x="9" y="16.562" width="25" height="3.238" style="fill: rgb(216, 216, 216);"/>
+    <rect x="9" y="22.562" width="25" height="3.238" style="fill: rgb(216, 216, 216);"/>
+    <rect x="9" y="28.563" width="25" height="3.238" style="fill: rgb(216, 216, 216);"/>
+    <rect x="11.607" y="14.833" width="19.787" height="18.697" style="fill: rgb(0, 0, 0);"/>
+    <ellipse style="fill: rgb(216, 216, 216);" cx="21.5" cy="24.181" rx="7" ry="7"/>
+  </g>
+  <g transform="matrix(1, 0, 0, 1, 0.000005, 59.999992)">
+    <rect x="9" y="16.562" width="25" height="3.238" style="fill: rgb(216, 216, 216);"/>
+    <rect x="9" y="22.562" width="25" height="3.238" style="fill: rgb(216, 216, 216);"/>
+    <rect x="9" y="28.563" width="25" height="3.238" style="fill: rgb(216, 216, 216);"/>
+    <rect x="11.607" y="14.833" width="19.787" height="18.697" style="fill: rgb(0, 0, 0);"/>
+    <ellipse style="fill: rgb(216, 216, 216);" cx="21.5" cy="24.181" rx="7" ry="7"/>
+  </g>
+</svg>`;
         let [x, y] = xy;
         let l = x + NP_PART_XOFF;
         let t = y + NP_PART_YOFF;
         let w = NP_PART_WIDTH;
         let h = NP_PART_HEIGHT;
         let img = <SVGImageElement>svg.elt("image");
-        svg.hydrate(img, {class: "sim-neopixel-strip", x: l, y: t, width: w, height: h,
-            href: `/parts/${NEOPIXEL_PART_IMG}`});
-        return {el: img, x: l, y: t, w: w, h: h};
+        svg.hydrate(img, {
+            class: "sim-neopixel-strip", x: l, y: t, width: w, height: h,
+            href: svg.toDataUri(NEOPIXEL_PART_IMG)
+        });
+        return { el: img, x: l, y: t, w: w, h: h };
     }
     export class NeoPixel implements SVGAndSize<SVGCircleElement> {
         public el: SVGCircleElement;
@@ -83,7 +115,7 @@ namespace pxsim.visuals {
             let circle = <SVGCircleElement>svg.elt("circle");
             let r = PIXEL_RADIUS;
             let [cx, cy] = xy;
-            svg.hydrate(circle, {cx: cx, cy: cy, r: r, class: "sim-neopixel"});
+            svg.hydrate(circle, { cx: cx, cy: cy, r: r, class: "sim-neopixel" });
             this.el = circle;
             this.w = r * 2;
             this.h = r * 2;
@@ -121,14 +153,14 @@ namespace pxsim.visuals {
                 "height": `${CANVAS_HEIGHT}px`,
             });
             this.canvas = el;
-            this.background = <SVGRectElement>svg.child(el, "rect", { class: "sim-neopixel-background hidden"});
+            this.background = <SVGRectElement>svg.child(el, "rect", { class: "sim-neopixel-background hidden" });
             this.updateViewBox(-CANVAS_VIEW_WIDTH / 2, 0, CANVAS_VIEW_WIDTH, CANVAS_VIEW_HEIGHT);
         }
 
         private updateViewBox(x: number, y: number, w: number, h: number) {
             this.viewBox = [x, y, w, h];
-            svg.hydrate(this.canvas, {"viewBox": `${x} ${y} ${w} ${h}`});
-            svg.hydrate(this.background, {"x": x, "y": y, "width": w, "height": h});
+            svg.hydrate(this.canvas, { "viewBox": `${x} ${y} ${w} ${h}` });
+            svg.hydrate(this.background, { "x": x, "y": y, "width": w, "height": h });
         }
 
         public update(colors: RGBW[]) {
@@ -144,7 +176,7 @@ namespace pxsim.visuals {
                 }
                 let color = colors[i];
                 pixel.setRgb(color);
-                svg.hydrate(pixel.el, {title: `offset: ${i}`});
+                svg.hydrate(pixel.el, { title: `offset: ${i}` });
             }
 
             //show the canvas if it's hidden
@@ -164,7 +196,7 @@ namespace pxsim.visuals {
 
         public setLoc(xy: Coord) {
             let [x, y] = xy;
-            svg.hydrate(this.canvas, {x: x, y: y});
+            svg.hydrate(this.canvas, { x: x, y: y });
         }
     };
 
@@ -232,7 +264,7 @@ namespace pxsim.visuals {
             this.stripGroup.appendChild(part.el);
             let canvas = new NeoPixelCanvas(this.pin);
             this.canvas = canvas;
-            let canvasG = svg.child(this.stripGroup, "g", {class: "sim-neopixel-canvas-parent"});
+            let canvasG = svg.child(this.stripGroup, "g", { class: "sim-neopixel-canvas-parent" });
             canvasG.appendChild(canvas.canvas);
             this.updateStripLoc();
         }
@@ -245,12 +277,12 @@ namespace pxsim.visuals {
         private updateStripLoc() {
             let [x, y] = this.lastLocation;
             this.canvas.setLoc([x + CANVAS_LEFT, y + CANVAS_TOP]);
-            svg.hydrate(this.part.el, {transform: `translate(${x} ${y})`}); //TODO: update part's l,h, etc.
+            svg.hydrate(this.part.el, { transform: `translate(${x} ${y})` }); //TODO: update part's l,h, etc.
         }
         public updateState(): void {
             let colors = this.state.getColors(this.pin, this.mode);
             this.canvas.update(colors);
         }
-        public updateTheme (): void { }
+        public updateTheme(): void { }
     }
 }

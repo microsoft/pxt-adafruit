@@ -7,7 +7,7 @@ namespace pxsim.input {
             b.useShake = true;
             runtime.queueDisplayUpdate();
         }
-        pxt.registerWithDal(DAL.MICROBIT_ID_GESTURE, gesture, handler);
+        pxtcore.registerWithDal(DAL.MICROBIT_ID_GESTURE, gesture, handler);
     }
 
     export function acceleration(dimension: number): number {

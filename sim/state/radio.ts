@@ -94,7 +94,7 @@ namespace pxsim.radio {
     }
 
     export function onBroadcastMessageReceived(msg: number, handler: RefAction): void {
-        pxt.registerWithDal(DAL.MES_BROADCAST_GENERAL_ID, msg, handler);
+        pxtcore.registerWithDal(DAL.MES_BROADCAST_GENERAL_ID, msg, handler);
     }
 
     export function setGroup(id: number): void {
@@ -152,7 +152,7 @@ namespace pxsim.radio {
     }
 
     export function onDataReceived(handler: RefAction): void {
-        pxt.registerWithDal(DAL.MICROBIT_ID_RADIO, DAL.MICROBIT_RADIO_EVT_DATAGRAM, handler);
+        pxtcore.registerWithDal(DAL.MICROBIT_ID_RADIO, DAL.MICROBIT_RADIO_EVT_DATAGRAM, handler);
         radio.receiveNumber();
     }
 }

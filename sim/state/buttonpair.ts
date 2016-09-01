@@ -5,7 +5,7 @@ namespace pxsim.input {
             b.usesButtonAB = true;
             runtime.queueDisplayUpdate();
         }
-        pxt.registerWithDal(button, DAL.MICROBIT_BUTTON_EVT_CLICK, handler);
+        pxtcore.registerWithDal(button, DAL.MICROBIT_BUTTON_EVT_CLICK, handler);
     }
 
     export function buttonIsPressed(button: number): boolean {

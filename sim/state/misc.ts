@@ -147,7 +147,7 @@ namespace pxsim.control {
     }
 
     export function onEvent(id: number, evid: number, handler: RefAction) {
-        pxt.registerWithDal(id, evid, handler)
+        pxtcore.registerWithDal(id, evid, handler)
     }
 
     export function raiseEvent(id: number, evid: number, mode: number) {
@@ -156,7 +156,7 @@ namespace pxsim.control {
     }
 }
 
-namespace pxsim.pxt {
+namespace pxsim.pxtcore {
     export function registerWithDal(id: number, evid: number, handler: RefAction) {
         board().bus.listen(id, evid, handler);
     }

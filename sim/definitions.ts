@@ -7,10 +7,11 @@ namespace pxsim {
     export interface PinBlockDefinition {
         x: number,
         y: number,
+        labelPosition: "above" | "below";
         labels: string[]
     }
     export interface BoardImageDefinition {
-        image?: string,
+        image: string,
         outlineImage?: string,
         width: number,
         height: number,
@@ -25,6 +26,8 @@ namespace pxsim {
         threeVoltPins: string[],
         attachPowerOnRight?: boolean,
         onboardComponents?: string[]
+        useCrocClips?: boolean,
+        marginWhenBreadboarding?: [number, number, number, number],
     }
     export interface FactoryFunctionPinAlloc {
         type: "factoryfunction",
@@ -44,9 +47,8 @@ namespace pxsim {
         image: string,
         width: number,
         height: number,
-        left: number,
-        top: number,
         pinDist: number,
+        firstPin: [number, number],
     }
     export interface PartDefinition {
         visual: string | PartVisualDefinition,
@@ -100,6 +102,8 @@ namespace pxsim {
         threeVoltPins: ["+3v3"],
         attachPowerOnRight: true,
         onboardComponents: ["buttonpair", "ledmatrix"],
+        useCrocClips: true,
+        marginWhenBreadboarding: [0, 0, 80, 0],
     }
     export const RASPBERRYPI_MODELB: BoardDefinition = {
         visual: {
@@ -109,8 +113,8 @@ namespace pxsim {
             height: 230,
             pinDist: 9,
             pinBlocks: [
-                { x: 5, y: 31, labels: ["3V3", "SDA", "SCL", "#4", "--", "#17", "#21", "#22", "--", "MOSI", "MISO", "SCLK", "--"]},
-                { x: 5, y: 39, labels: ["5V", "--", "GND", "TXD", "RXD", "#18", "--", "#23", "#24", "--", "#25", "CS0", "CS1"]}
+                { x: 5, y: 31, labelPosition: "above", labels: ["3V3", "SDA", "SCL", "#4", "--", "#17", "#21", "#22", "--", "MOSI", "MISO", "SCLK", "--"]},
+                { x: 5, y: 39, labelPosition: "below", labels: ["5V", "--", "GND", "TXD", "RXD", "#18", "--", "#23", "#24", "--", "#25", "CS0", "CS1"]}
             ],
         },
         gpioPinBlocks: [
@@ -139,6 +143,7 @@ namespace pxsim {
         },
         groundPins: ["GND"],
         threeVoltPins: ["3V3"],
+        marginWhenBreadboarding: [20, 0, 40, 0],
     }
     export const SPARKFUN_PHOTON: BoardDefinition = {
         visual: {
@@ -148,10 +153,10 @@ namespace pxsim {
             height: 202.4,
             pinDist: 9.5,
             pinBlocks: [
-                {x: 72, y: 6, labels: ["~SCL/D1", "~SDA/D0", " ", "GND0", "SCK/A3", "~MISO/A4", "~MOSI/A5", "SS/A2", "~WKP", "DAC"]},
-                {x: 174, y: 6, labels: ["D7", "D6", "D5", "D4", "~D3", "~D2", "~TX", "~RX"]},
-                {x: 107, y: 188, labels: [" ", " ", "RESET", "3.3V", "V-USB", "GND1", "GND2", "VIN"]},
-                {x: 193, y: 188, labels: ["A0", "A1", "A2", "A3", "A4", "A5"]},
+                {x: 72, y: 6, labelPosition: "below", labels: ["~SCL/D1", "~SDA/D0", " ", "GND0", "SCK/A3", "~MISO/A4", "~MOSI/A5", "SS/A2", "~WKP", "DAC"]},
+                {x: 174, y: 6, labelPosition: "below", labels: ["D7", "D6", "D5", "D4", "~D3", "~D2", "~TX", "~RX"]},
+                {x: 107, y: 188, labelPosition: "above", labels: [" ", " ", "RESET", "3.3V", "V-USB", "GND1", "GND2", "VIN"]},
+                {x: 193, y: 188, labelPosition: "above", labels: ["A0", "A1", "A2", "A3", "A4", "A5"]},
             ],
         },
         gpioPinBlocks: [
@@ -181,6 +186,7 @@ namespace pxsim {
         },
         groundPins: ["GND0", "GND1", "GND2"],
         threeVoltPins: ["3.3V"],
+        marginWhenBreadboarding: [20, 0, 40, 0],
     }
     export const ARDUINO_ZERO: BoardDefinition = {
         visual: {
@@ -190,10 +196,10 @@ namespace pxsim {
             height: 762,
             pinDist: 35.5,
             pinBlocks: [
-                {x: 276.8, y: 17.8, labels: ["SCL", "SDA", "AREF", "GND0", "~13", "~12", "~11", "~10", "~9", "~8"]},
-                {x: 655.5, y: 17.8, labels: ["7", "~6", "~5", "~4", "~3", "2", "TX->1", "RX<-0"]},
-                {x: 411.7, y: 704.6, labels: ["ATN", "IOREF", "RESET", "3.3V", "5V", "GND1", "GND2", "VIN"]},
-                {x: 732.9, y: 704.6, labels: ["A0", "A1", "A2", "A3", "A4", "A5"]},
+                {x: 276.8, y: 17.8, labelPosition: "below", labels: ["SCL", "SDA", "AREF", "GND0", "~13", "~12", "~11", "~10", "~9", "~8"]},
+                {x: 655.5, y: 17.8, labelPosition: "below", labels: ["7", "~6", "~5", "~4", "~3", "2", "TX->1", "RX<-0"]},
+                {x: 411.7, y: 704.6, labelPosition: "above", labels: ["ATN", "IOREF", "RESET", "3.3V", "5V", "GND1", "GND2", "VIN"]},
+                {x: 732.9, y: 704.6, labelPosition: "above", labels: ["A0", "A1", "A2", "A3", "A4", "A5"]},
             ],
         },
         gpioPinBlocks: [
@@ -224,8 +230,9 @@ namespace pxsim {
         },
         groundPins: ["GND0", "GND1", "GND2"],
         threeVoltPins: ["3.3V"],
+        marginWhenBreadboarding: [20, 0, 40, 0],
     }
-    
+
     export const PART_DEFINITIONS: Map<PartDefinition> = {
         "ledmatrix": {
             visual: "ledmatrix",
@@ -287,8 +294,7 @@ namespace pxsim {
                 image: "/static/hardware/speaker.svg",
                 width: 500,
                 height: 500,
-                left: -180,
-                top: -135,
+                firstPin: [180, 135],
                 pinDist: 70,
             },
             breadboardColumnsNeeded: 5,
@@ -299,8 +305,8 @@ namespace pxsim {
             },
             assemblyStep: 0,
             wires: [
-                {start: ["breadboard", "j", 1], end: ["GPIO", 0], color: "white", assemblyStep: 1},
-                {start: ["breadboard", "j", 3], end: "ground", color: "white", assemblyStep: 1},
+                {start: ["breadboard", "j", 1], end: ["GPIO", 0], color: "#ff80fa", assemblyStep: 1},
+                {start: ["breadboard", "j", 3], end: "ground", color: "blue", assemblyStep: 1},
             ],
         },
     }
@@ -327,4 +333,8 @@ namespace pxsim {
         "ledmatrix": (xy: visuals.Coord) => visuals.mkLedMatrixSvg(xy, 8, 8),
         "neopixel": (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy),
     };
+
+    //TODO: add multiple board support
+    //export const CURRENT_BOARD = MICROBIT_DEF;
+    export const CURRENT_BOARD = ARDUINO_ZERO;
 }

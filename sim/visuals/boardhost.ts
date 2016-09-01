@@ -21,32 +21,43 @@ namespace pxsim.visuals {
         private style: SVGStyleElement;
         private defs: SVGDefsElement;
         private state: DalBoard;
+        private useCrocClips: boolean;
 
         constructor(opts: BoardHostOpts) {
             this.state = opts.state;
             let onboardCmps = opts.boardDef.onboardComponents || [];
             let activeComponents = (opts.cmpsList || []).filter(c => onboardCmps.indexOf(c) < 0);
             activeComponents.sort();
+            this.useCrocClips = opts.boardDef.useCrocClips;
 
-            this.boardView = new visuals.MicrobitBoardSvg({
-                runtime: runtime,
-                theme: visuals.randomTheme(),
-                disableTilt: false,
-                wireframe: opts.wireframe,
-            });
+            if (opts.boardDef.visual === "microbit") {
+                this.boardView = new visuals.MicrobitBoardSvg({
+                    runtime: runtime,
+                    theme: visuals.randomTheme(),
+                    disableTilt: false,
+                    wireframe: opts.wireframe,
+                });
+            } else {
+                let boardVis = opts.boardDef.visual as BoardImageDefinition;
+                this.boardView = new visuals.GenericBoardSvg({
+                    visualDef: boardVis,
+                    wireframe: opts.wireframe,
+                });
+            }
 
             let useBreadboard = 0 < activeComponents.length || opts.forceBreadboard;
             if (useBreadboard) {
                 this.breadboard = new Breadboard({
                     wireframe: opts.wireframe,
                 });
+                let bMarg = opts.boardDef.marginWhenBreadboarding || [0, 0, 40, 0];
                 let composition = composeSVG({
                     el1: this.boardView.getView(),
                     scaleUnit1: this.boardView.getPinDist(),
                     el2: this.breadboard.getSVGAndSize(),
                     scaleUnit2: this.breadboard.getPinDist(),
-                    margin: [0, 0, 20, 0],
-                    middleMargin: 80,
+                    margin: [bMarg[0], bMarg[1], 20, bMarg[3]],
+                    middleMargin: bMarg[2],
                     maxWidth: opts.maxWidth,
                     maxHeight: opts.maxHeight,
                 });
@@ -166,7 +177,7 @@ namespace pxsim.visuals {
             return cmp;
         }
         public addWire(inst: WireInst): Wire {
-            return this.wireFactory.addWire(inst.start, inst.end, inst.color, true);
+            return this.wireFactory.addWire(inst.start, inst.end, inst.color, this.useCrocClips);
         }
         public addAll(basicWiresAndCmpsAndWires: AllocatorResult) {
             let {powerWires, components} = basicWiresAndCmpsAndWires;

@@ -128,10 +128,18 @@ namespace pxsim.instructions {
         cmpHeight?: number,
         cmpScale?: number
     };
-    function mkBoardImgSvg(def: BoardImageDefinition): visuals.SVGElAndSize {
-        return new visuals.MicrobitBoardSvg({
-            theme: visuals.randomTheme()
-        }).getView();
+    function mkBoardImgSvg(def: string | BoardImageDefinition): visuals.SVGElAndSize {
+        let boardView: visuals.BoardView;
+        if (def === "microbit") {
+            boardView = new visuals.MicrobitBoardSvg({
+                theme: visuals.randomTheme()
+            })
+        } else {
+            boardView = new visuals.GenericBoardSvg({
+                visualDef: <BoardImageDefinition>def
+            })
+        }
+        return boardView.getView();
     }
     function mkBBSvg(): visuals.SVGElAndSize {
         let bb = new visuals.Breadboard({});
@@ -432,7 +440,7 @@ namespace pxsim.instructions {
         let panel = mkPanel();
 
         // board and breadboard
-        let boardImg = mkBoardImgSvg(<BoardImageDefinition>props.boardDef.visual);
+        let boardImg = mkBoardImgSvg(props.boardDef.visual);
         let board = wrapSvg(boardImg, {left: QUANT_LBL(1), leftSize: QUANT_LBL_SIZE, cmpScale: PARTS_BOARD_SCALE});
         panel.appendChild(board);
         let bbRaw = mkBBSvg();
@@ -633,7 +641,7 @@ ${tsPackage}
 
         style.textContent += STYLE;
 
-        const boardDef = MICROBIT_DEF;
+        const boardDef = CURRENT_BOARD;
         const cmpDefs = PART_DEFINITIONS;
 
         //props

@@ -183,6 +183,8 @@ namespace pxt {
   //%
   RefRecord* mkRecord(int reflen, int totallen);
   //%
+  RefRecord* mkClassInstance(int offset);
+  //%
   void debugMemLeaks();
   //%
   int incr(uint32_t e);

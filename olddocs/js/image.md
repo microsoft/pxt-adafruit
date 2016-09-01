@@ -62,7 +62,6 @@ Images that you create in the [Touch Develop editor](/js/editor) are [local vari
 
 ### Lessons
 
-* [bounce image ](/lessons/bounce-image)
 * [offset image](/lessons/offset-image)
 
 ### See also

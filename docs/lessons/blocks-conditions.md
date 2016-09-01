@@ -4,9 +4,11 @@ An introduction to conditions for the Block Editor.
 
 ## Introduction to conditions
 
-In the introduction to code, we made the BBC micro:bit automatically shows the message ‘hello, world!’:
+In the introduction to code, we made the BBC micro:bit automatically shows the message ‘hello world!’:
 
-![](/static/mb/blocks/lessons/blocks-conditions-0.png)
+```blocks
+basic.showString("hello world!")
+```
 
 This statement, or code, will happen as soon as the BBC micro:bit is activated. This means it is unconditional. We can add a condition to make code function in certain ways:
 
@@ -16,11 +18,13 @@ This statement, or code, will happen as soon as the BBC micro:bit is activated. 
 
 In programming we use an ‘if’ statement: if this condition is met, do something. Lets add an if statement to the code we had before; the BBC Micro:bit will wait for the user to press a button before showing the image.
 
-### Write the code
-
-Click the **if** category and drag an `if/do` block. Drag the`show string` block we wrote previously into the `do` section of the block. Next click the **input** tab and drag a `button pressed` block, connect it to the open jigsaw of the `if` block. This is our criteria: `if A button is pressed`. We can change which button (button A or B) by clicking the arrow next to ‘A’ and changing the value. This means our BBC micro:bit is waiting for button A (the left button) to be pressed. Finally go to the **basic** tab and drag a `forever` block, and attach all our code inside. We add this block to ensure the BBC micro:bit is always waiting to show us this message, not just once. Your code should look like this:
-
-![](/static/mb/blocks/lessons/blocks-conditions-1.png)
+```blocks
+basic.forever(() => {
+    if (input.buttonIsPressed(Button.A)) {
+        basic.showString("hello world!")
+    }
+})
+```
 
 Again, test the code in the simulator. Try clicking **Button A** to display the "hello, world!" message every time the `button is pressed`.
 
@@ -40,7 +44,15 @@ For example, we could make it so our BBC Micro:bit tells us to press the A butto
 
 We want the message "Press A!" to scroll across the BBC micro:bit, so right-click the `show string` block and select **Duplicate**. Drag this new block into the `else` section and replace the “hello, world!” with "Press A!". Your code should look like this:
 
-![](/static/mb/blocks/lessons/blocks-conditions-2.png)
+```blocks
+basic.forever(() => {
+    if (input.buttonIsPressed(Button.A)) {
+        basic.showString("hello world!")
+    } else {
+        basic.showString("PRESS A")        
+    }
+})
+```
 
 So, to recap: the `forever` block makes sure our code runs forever. The BBC micro:bit checks if the user is pressing the left button, if the user is not then the “Press the button!” message will scroll across the LEDs. If the user is pressing the button then the “hello, world!” message will scroll across the screen. Check this in the simulator or attach the BBC micro:bit to the computer then click **Download** to send the code onto the BBC micro:bit.
 

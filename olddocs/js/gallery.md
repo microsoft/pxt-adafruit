@@ -34,7 +34,6 @@ Overview of Touch Develop lessons for the BBC micro:bit.
 
 ### ~hide
 
-* [Bounce image](/lessons/bounce-image), scroll an image across the screen on shake
 * [Magic logo](/lessons/magic-logo), show an image on logo up
 * [Glowing sword](/lessons/glowing-sword), make a glowing sword with fade in and fade out
 

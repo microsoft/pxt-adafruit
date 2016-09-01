@@ -11,11 +11,16 @@ An *Image* is a matrix of pixels to show on the [LED screen](/device/screen)
 To display an image:
 
 * click `Basic` , `Show LEDs`, and tap on the LEDs`
-* when you're done, return to your code
 
-![](/static/mb/show-leds-1.png)
-
-You should see code similar to this:
+```blocks
+basic.showLeds(`
+    . . . . .
+    . # . # .
+    . . . . .
+    # . . . #
+    . # # # .
+    `)
+```
 
 ### Creating an image
 

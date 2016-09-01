@@ -8,7 +8,6 @@ While you're writing and testing your scripts, you'll mostly be running scripts 
 
 When you click `run main` in the Touch Develop editor, your code executes and the results are simulated on-screen, using an image of the BBC micro:bit device, like this:
 
-![](/static/mb/simulator-0.png)
 
 In the picture above, [plot image](/reference/led/plot-image) create a heart image that appears on the BBC micro:bit simulator.
 

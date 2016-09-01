@@ -20,7 +20,11 @@ led.plot(2, 2)
 led.toggleAll()
 ```
 
-![](/static/mb/toggle-all-0.png)
+```sim
+basic.clearScreen()
+led.plot(2, 2)
+led.toggleAll()
+```
 
 ### See also
 

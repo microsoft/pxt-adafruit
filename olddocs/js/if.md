@@ -9,8 +9,6 @@ Conditionally run code depending on whether a [Boolean](/reference/types/boolean
 
 ### Block Editor
 
-![](/static/mb/hourofcode-0.png)
-
 In the Block Editor, click on the dark blue gear icon (see above) to add an *else* or *if* to the current block.
 
 ### Touch Develop

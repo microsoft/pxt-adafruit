@@ -620,6 +620,9 @@ ${tsPackage}
         let parts = (getQsVal("parts") || "").split(" ");
         parts.sort();
 
+        // parts definitions
+        let partDefinitions = JSON.parse(getQsVal("partdefs") || "{}") as pxsim.Map<PartDefinition>
+
         //fn args
         let fnArgs = JSON.parse((getQsVal("fnArgs") || "{}"));
 
@@ -637,7 +640,7 @@ ${tsPackage}
         style.textContent += STYLE;
 
         const boardDef = CURRENT_BOARD;
-        const cmpDefs = PART_DEFINITIONS;
+        const cmpDefs = partDefinitions;
 
         //props
         let dummyBreadboard = new visuals.Breadboard({});

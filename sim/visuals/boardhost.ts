@@ -21,32 +21,43 @@ namespace pxsim.visuals {
         private style: SVGStyleElement;
         private defs: SVGDefsElement;
         private state: DalBoard;
+        private useCrocClips: boolean;
 
         constructor(opts: BoardHostOpts) {
             this.state = opts.state;
             let onboardCmps = opts.boardDef.onboardComponents || [];
             let activeComponents = (opts.cmpsList || []).filter(c => onboardCmps.indexOf(c) < 0);
             activeComponents.sort();
+            this.useCrocClips = opts.boardDef.useCrocClips;
 
-            this.boardView = new visuals.MicrobitBoardSvg({
-                runtime: runtime,
-                theme: visuals.randomTheme(),
-                disableTilt: false,
-                wireframe: opts.wireframe,
-            });
+            if (opts.boardDef.visual === "microbit") {
+                this.boardView = new visuals.MicrobitBoardSvg({
+                    runtime: runtime,
+                    theme: visuals.randomTheme(),
+                    disableTilt: false,
+                    wireframe: opts.wireframe,
+                });
+            } else {
+                let boardVis = opts.boardDef.visual as BoardImageDefinition;
+                this.boardView = new visuals.GenericBoardSvg({
+                    visualDef: boardVis,
+                    wireframe: opts.wireframe,
+                });
+            }
 
             let useBreadboard = 0 < activeComponents.length || opts.forceBreadboard;
             if (useBreadboard) {
                 this.breadboard = new Breadboard({
                     wireframe: opts.wireframe,
                 });
+                let bMarg = opts.boardDef.marginWhenBreadboarding || [0, 0, 40, 0];
                 let composition = composeSVG({
                     el1: this.boardView.getView(),
                     scaleUnit1: this.boardView.getPinDist(),
                     el2: this.breadboard.getSVGAndSize(),
                     scaleUnit2: this.breadboard.getPinDist(),
-                    margin: [0, 0, 20, 0],
-                    middleMargin: 80,
+                    margin: [bMarg[0], bMarg[1], 20, bMarg[3]],
+                    middleMargin: bMarg[2],
                     maxWidth: opts.maxWidth,
                     maxHeight: opts.maxHeight,
                 });
@@ -138,35 +149,36 @@ namespace pxsim.visuals {
 
         public addComponent(cmpDesc: CmpInst): IBoardComponent<any> {
             let cmp: IBoardComponent<any> = null;
+            let colOffset = 0;
             if (typeof cmpDesc.visual === "string") {
                 let builtinVisual = cmpDesc.visual as string;
                 let cnstr = builtinComponentSimVisual[builtinVisual];
                 let stateFn = builtinComponentSimState[builtinVisual];
                 cmp = cnstr();
                 cmp.init(this.state.bus, stateFn(this.state), this.view, cmpDesc.microbitPins, cmpDesc.otherArgs);
-                this.components.push(cmp);
-                this.view.appendChild(cmp.element);
-                if (cmp.defs)
-                    cmp.defs.forEach(d => this.defs.appendChild(d));
-                this.style.textContent += cmp.style || "";
-                let rowCol = <BBRowCol>[`${cmpDesc.breadboardStartRow}`, `${cmpDesc.breadboardStartColumn}`];
-                let coord = this.getBBCoord(rowCol);
-                cmp.moveToCoord(coord);
-                let getCmpClass = (type: string) => `sim-${type}-cmp`;
-                let cls = getCmpClass(name);
-                svg.addClass(cmp.element, cls);
-                svg.addClass(cmp.element, "sim-cmp");
-                cmp.updateTheme();
-                cmp.updateState();
             } else {
                 let vis = cmpDesc.visual as PartVisualDefinition;
-                console.log("TODO PART: " + vis.image);
-                //TODO: support generic parts
+                cmp = new GenericPart(vis);
+                colOffset = vis.extraColumnOffset || 0;
             }
+            this.components.push(cmp);
+            this.view.appendChild(cmp.element);
+            if (cmp.defs)
+                cmp.defs.forEach(d => this.defs.appendChild(d));
+            this.style.textContent += cmp.style || "";
+            let rowCol = <BBRowCol>[`${cmpDesc.breadboardStartRow}`, `${colOffset + cmpDesc.breadboardStartColumn}`];
+            let coord = this.getBBCoord(rowCol);
+            cmp.moveToCoord(coord);
+            let getCmpClass = (type: string) => `sim-${type}-cmp`;
+            let cls = getCmpClass(name);
+            svg.addClass(cmp.element, cls);
+            svg.addClass(cmp.element, "sim-cmp");
+            cmp.updateTheme();
+            cmp.updateState();
             return cmp;
         }
         public addWire(inst: WireInst): Wire {
-            return this.wireFactory.addWire(inst.start, inst.end, inst.color, true);
+            return this.wireFactory.addWire(inst.start, inst.end, inst.color, this.useCrocClips);
         }
         public addAll(basicWiresAndCmpsAndWires: AllocatorResult) {
             let {powerWires, components} = basicWiresAndCmpsAndWires;

@@ -7,10 +7,11 @@ namespace pxsim {
     export interface PinBlockDefinition {
         x: number,
         y: number,
+        labelPosition: "above" | "below";
         labels: string[]
     }
     export interface BoardImageDefinition {
-        image?: string,
+        image: string,
         outlineImage?: string,
         width: number,
         height: number,
@@ -25,6 +26,8 @@ namespace pxsim {
         threeVoltPins: string[],
         attachPowerOnRight?: boolean,
         onboardComponents?: string[]
+        useCrocClips?: boolean,
+        marginWhenBreadboarding?: [number, number, number, number],
     }
     export interface FactoryFunctionPinAlloc {
         type: "factoryfunction",
@@ -44,9 +47,9 @@ namespace pxsim {
         image: string,
         width: number,
         height: number,
-        left: number,
-        top: number,
         pinDist: number,
+        extraColumnOffset?: number,
+        firstPin: [number, number],
     }
     export interface PartDefinition {
         visual: string | PartVisualDefinition,
@@ -99,8 +102,11 @@ namespace pxsim {
         groundPins: ["GND"],
         threeVoltPins: ["+3v3"],
         attachPowerOnRight: true,
-        onboardComponents: ["buttonpair", "ledmatrix"],
+        onboardComponents: ["buttonpair", "ledmatrix", "speaker"],
+        useCrocClips: true,
+        marginWhenBreadboarding: [0, 0, 80, 0],
     }
+
     export const PART_DEFINITIONS: Map<PartDefinition> = {
         "ledmatrix": {
             visual: "ledmatrix",
@@ -162,9 +168,9 @@ namespace pxsim {
                 image: "/static/hardware/speaker.svg",
                 width: 500,
                 height: 500,
-                left: -180,
-                top: -135,
+                firstPin: [180, 135],
                 pinDist: 70,
+                extraColumnOffset: 1,
             },
             breadboardColumnsNeeded: 5,
             breadboardStartRow: "f",
@@ -174,8 +180,8 @@ namespace pxsim {
             },
             assemblyStep: 0,
             wires: [
-                {start: ["breadboard", "j", 1], end: ["GPIO", 0], color: "white", assemblyStep: 1},
-                {start: ["breadboard", "j", 3], end: "ground", color: "white", assemblyStep: 1},
+                {start: ["breadboard", "j", 1], end: ["GPIO", 0], color: "#ff80fa", assemblyStep: 1},
+                {start: ["breadboard", "j", 3], end: "ground", color: "blue", assemblyStep: 1},
             ],
         },
     }
@@ -202,4 +208,7 @@ namespace pxsim {
         "ledmatrix": (xy: visuals.Coord) => visuals.mkLedMatrixSvg(xy, 8, 8),
         "neopixel": (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy),
     };
+
+    //TODO: add multiple board support
+    export const CURRENT_BOARD = MICROBIT_DEF;
 }

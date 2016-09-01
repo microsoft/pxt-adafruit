@@ -71,11 +71,7 @@ namespace pxsim {
         initAsync(msg: SimulatorRunMessage): Promise<void> {
             let options = (msg.options || {}) as RuntimeOptions;
 
-            //TODO: read from pxt.json/pxttarget.json
-            let boardDef = MICROBIT_DEF;
-            // let boardDef = ARDUINO_ZERO;
-            // let boardDef = SPARKFUN_PHOTON;
-            // let boardDef = RASPBERRYPI_MODELB;
+            let boardDef = CURRENT_BOARD; //TODO: read from pxt.json/pxttarget.json
 
             let cmpsList = msg.parts;
             let cmpDefs = PART_DEFINITIONS; //TODO: read from pxt.json/pxttarget.json

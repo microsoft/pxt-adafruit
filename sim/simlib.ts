@@ -142,6 +142,28 @@ namespace pxsim.visuals {
         };
     }
 
+    export function mkScaleFn(originUnit: number, targetUnit: number): (n: number) => number {
+        return (n: number) => n * (targetUnit / originUnit);
+    }
+    export interface MkImageOpts {
+        image: string,
+        width: number,
+        height: number,
+        imageUnitDist: number,
+        targetUnitDist: number
+    }
+    export function mkImageSVG(opts: MkImageOpts): SVGAndSize<SVGImageElement> {
+        let scaleFn = mkScaleFn(opts.imageUnitDist, opts.targetUnitDist);
+        let w = scaleFn(opts.width);
+        let h = scaleFn(opts.height);
+        let img = <SVGImageElement>svg.elt("image", {
+                width: w,
+                height: h,
+                "href": `${opts.image}`
+            });
+        return {el: img, w: w, h: h, x: 0, y: 0};
+    }
+
     export type Coord = [number, number];
     export function findDistSqrd(a: Coord, b: Coord): number {
         let x = a[0] - b[0];

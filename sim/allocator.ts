@@ -270,7 +270,6 @@ namespace pxsim {
                         });
                     } else {
                         // failed to find pin allocation from callsites
-                        debugger;
                         console.debug("Failed to read pin(s) from callsite for: " + fnNm);
                         let pinsNeeded = fnPinAlloc.pinArgPositions.length;
                         partialCmps.push({

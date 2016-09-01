@@ -79,9 +79,9 @@
         "partsAspectRatio": 0.69,
         "builtinParts": {
             "accelerometer": true,
-            "buttonpair": false,
-            "ledmatrix": false,
-            "speaker": false,
+            "buttonpair": true,
+            "ledmatrix": true,
+            "speaker": true,
             "bluetooth": true,
             "thermometer": true,
             "compass": true

@@ -165,7 +165,7 @@ namespace pxsim {
         },
         "speaker": {
             visual: {
-                image: "/static/hardware/speaker.svg",
+                image: "/parts/speaker.svg",
                 width: 500,
                 height: 500,
                 firstPin: [180, 135],

@@ -211,5 +211,4 @@ namespace pxsim {
 
     //TODO: add multiple board support
     export const CURRENT_BOARD = MICROBIT_DEF;
-    //export const CURRENT_BOARD = ARDUINO_ZERO;
 }

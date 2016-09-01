@@ -92,8 +92,7 @@ namespace pxsim.visuals {
         }
 
         public moveToCoord(xy: Coord) {
-            let [x, y] = xy;
-            translateEl(this.element, [x, y]);
+            translateEl(this.element, xy);
         }
 
         public updateTheme() {

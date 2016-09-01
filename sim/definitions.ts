@@ -101,7 +101,7 @@ namespace pxsim {
         groundPins: ["GND"],
         threeVoltPins: ["+3v3"],
         attachPowerOnRight: true,
-        onboardComponents: ["buttonpair", "ledmatrix"],
+        onboardComponents: ["buttonpair", "ledmatrix", "speaker"],
         useCrocClips: true,
         marginWhenBreadboarding: [0, 0, 80, 0],
     }
@@ -294,7 +294,7 @@ namespace pxsim {
                 image: "/static/hardware/speaker.svg",
                 width: 500,
                 height: 500,
-                firstPin: [180, 135],
+                firstPin: [110, 135],
                 pinDist: 70,
             },
             breadboardColumnsNeeded: 5,

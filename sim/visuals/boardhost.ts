@@ -155,25 +155,24 @@ namespace pxsim.visuals {
                 let stateFn = builtinComponentSimState[builtinVisual];
                 cmp = cnstr();
                 cmp.init(this.state.bus, stateFn(this.state), this.view, cmpDesc.microbitPins, cmpDesc.otherArgs);
-                this.components.push(cmp);
-                this.view.appendChild(cmp.element);
-                if (cmp.defs)
-                    cmp.defs.forEach(d => this.defs.appendChild(d));
-                this.style.textContent += cmp.style || "";
-                let rowCol = <BBRowCol>[`${cmpDesc.breadboardStartRow}`, `${cmpDesc.breadboardStartColumn}`];
-                let coord = this.getBBCoord(rowCol);
-                cmp.moveToCoord(coord);
-                let getCmpClass = (type: string) => `sim-${type}-cmp`;
-                let cls = getCmpClass(name);
-                svg.addClass(cmp.element, cls);
-                svg.addClass(cmp.element, "sim-cmp");
-                cmp.updateTheme();
-                cmp.updateState();
             } else {
                 let vis = cmpDesc.visual as PartVisualDefinition;
-                console.log("TODO PART: " + vis.image);
-                //TODO: support generic parts
+                cmp = new GenericPart(vis);
             }
+            this.components.push(cmp);
+            this.view.appendChild(cmp.element);
+            if (cmp.defs)
+                cmp.defs.forEach(d => this.defs.appendChild(d));
+            this.style.textContent += cmp.style || "";
+            let rowCol = <BBRowCol>[`${cmpDesc.breadboardStartRow}`, `${cmpDesc.breadboardStartColumn}`];
+            let coord = this.getBBCoord(rowCol);
+            cmp.moveToCoord(coord);
+            let getCmpClass = (type: string) => `sim-${type}-cmp`;
+            let cls = getCmpClass(name);
+            svg.addClass(cmp.element, cls);
+            svg.addClass(cmp.element, "sim-cmp");
+            cmp.updateTheme();
+            cmp.updateState();
             return cmp;
         }
         public addWire(inst: WireInst): Wire {

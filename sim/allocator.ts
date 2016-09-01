@@ -148,6 +148,16 @@ namespace pxsim {
                 let idx = <number>location[1];
                 let pin = opts.cmpGPIOPins[idx];
                 return {type: "dalboard", pin: pin};
+            } else if (location === "MOSI" || location === "MISO" || location === "SCK") {
+                if (!this.opts.boardDef.spiPins)
+                    console.debug("No SPI pin mappings found!");
+                let pin = (<any>this.opts.boardDef.spiPins)[location as string] as string;
+                return {type: "dalboard", pin: pin};
+            } else if (location === "SDA" || location === "SCL") {
+                if (!this.opts.boardDef.i2cPins)
+                    console.debug("No I2C pin mappings found!");
+                let pin = (<any>this.opts.boardDef.i2cPins)[location as string] as string;
+                return {type: "dalboard", pin: pin};
             } else {
                 //TODO
                 U.assert(false);
@@ -206,7 +216,7 @@ namespace pxsim {
                 let l = this.allocateLocation(ends[idx], {
                     nearestBBPin: locInst.rowCol,
                     startColumn: opts.startColumn,
-                    cmpGPIOPins: opts.cmpGPIOPins
+                    cmpGPIOPins: opts.cmpGPIOPins,
                 });
                 return l;
             });
@@ -260,6 +270,7 @@ namespace pxsim {
                         });
                     } else {
                         // failed to find pin allocation from callsites
+                        debugger;
                         console.debug("Failed to read pin(s) from callsite for: " + fnNm);
                         let pinsNeeded = fnPinAlloc.pinArgPositions.length;
                         partialCmps.push({

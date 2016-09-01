@@ -1,37 +1,36 @@
 # Math
 
-[Numeric](/reference/types/number) values: 0, 1, 2, ...
+### [Numeric](/reference/types/number) values: 0, 1, 2, ...
 
-```blocks
+```block
 0;
 1;
 2;
 ```
 
-Arithmetic binary operation (+, -, *, /)
+### Arithmetic binary operation (+, -, *, /)
 
-```blocks
+```block
 0+1;
 0-1;
 1*2;
 3/4;
 ```
 
-Absolute value
+### Absolute value
 
-```blocks
+```block
 Math.abs(-5);
 ```
 
-Minimum/maximum of two values
+### Minimum/maximum of two values
 
-```blocks
+```block
 Math.min(0, 1);
-Math.max(0, 1);
 ```
 
-Random value
+### Random value
 
-```blocks
+```block
 Math.random(5);
 ```

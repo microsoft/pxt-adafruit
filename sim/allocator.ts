@@ -195,12 +195,14 @@ namespace pxsim {
             const GROUND_COLOR = "blue";
             const POWER_COLOR = "red";
             const wires: WireInst[] = [];
+            let groundStep = 0;
+            let threeVoltStep = (powerUsage.bottomGround || powerUsage.topGround) ? 1 : 0;
             if (powerUsage.bottomGround && powerUsage.topGround) {
                 //bb top - <==> bb bot -
                 wires.push({
                     start: this.allocateLocation("ground", {nearestBBPin: top}),
                     end: this.allocateLocation("ground", {nearestBBPin: bot}),
-                    color: GROUND_COLOR, assemblyStep: 0
+                    color: GROUND_COLOR, assemblyStep: groundStep
                 });
             }
             if (powerUsage.topGround) {
@@ -208,14 +210,14 @@ namespace pxsim {
                 wires.push({
                     start: this.allocateLocation("ground", {nearestBBPin: top}),
                     end: {type: "dalboard", pin: boardGround},
-                    color: GROUND_COLOR, assemblyStep: 0
+                    color: GROUND_COLOR, assemblyStep: groundStep
                 });
             } else if (powerUsage.bottomGround) {
                 //board - <==> bb bot -
                 wires.push({
                     start: this.allocateLocation("ground", {nearestBBPin: bot}),
                     end: {type: "dalboard", pin: boardGround},
-                    color: GROUND_COLOR, assemblyStep: 0
+                    color: GROUND_COLOR, assemblyStep: groundStep
                 });
             }
             if (powerUsage.bottomThreeVolt && powerUsage.bottomGround) {
@@ -223,7 +225,7 @@ namespace pxsim {
                 wires.push({
                     start: this.allocateLocation("threeVolt", {nearestBBPin: top}),
                     end: this.allocateLocation("threeVolt", {nearestBBPin: bot}),
-                    color: POWER_COLOR, assemblyStep: 1
+                    color: POWER_COLOR, assemblyStep: threeVoltStep
                 });
             }
             if (powerUsage.topThreeVolt) {
@@ -231,14 +233,14 @@ namespace pxsim {
                 wires.push({
                     start: this.allocateLocation("threeVolt", {nearestBBPin: top}),
                     end: {type: "dalboard", pin: threeVoltPin},
-                    color: POWER_COLOR, assemblyStep: 1
+                    color: POWER_COLOR, assemblyStep: threeVoltStep
                 });
             } else if (powerUsage.bottomThreeVolt) {
                 //board + <==> bb bot +
                 wires.push({
                     start: this.allocateLocation("threeVolt", {nearestBBPin: bot}),
                     end: {type: "dalboard", pin: threeVoltPin},
-                    color: POWER_COLOR, assemblyStep: 1
+                    color: POWER_COLOR, assemblyStep: threeVoltStep
                 });
             }
             return wires;

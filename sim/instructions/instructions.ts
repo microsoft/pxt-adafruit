@@ -321,7 +321,7 @@ namespace pxsim.instructions {
             (stepToWires[step] || (stepToWires[step] = [])).push(w)
         });
         let getMaxStep = (ns: {assemblyStep: number}[]) => ns.reduce((m, n) => Math.max(m, n.assemblyStep), 0);
-        let stepOffset = getMaxStep(powerWires) + 2;
+        let stepOffset = powerWires.length > 0 ? getMaxStep(powerWires) + 2 : 1;
         components.forEach(cAndWs => {
             let {component, wires} = cAndWs;
             let cStep = component.assemblyStep + stepOffset;

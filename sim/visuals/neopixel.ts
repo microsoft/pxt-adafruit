@@ -172,11 +172,11 @@ namespace pxsim.visuals {
                 if (!pixel) {
                     let cxy: Coord = [0, CANVAS_VIEW_PADDING + i * PIXEL_SPACING];
                     pixel = this.pixels[i] = new NeoPixel(cxy);
+                    svg.hydrate(pixel.el, { title: `offset: ${i}` });
                     this.canvas.appendChild(pixel.el);
                 }
                 let color = colors[i];
                 pixel.setRgb(color);
-                svg.hydrate(pixel.el, { title: `offset: ${i}` });
             }
 
             //show the canvas if it's hidden

@@ -316,4 +316,9 @@ namespace pxtrt {
   void* getGlobalsPtr() {
     return globals;
   }
+
+  //%
+  void runtimeWarning(StringData *s) {
+    // noop for now
+  }
 }

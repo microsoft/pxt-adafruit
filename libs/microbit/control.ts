@@ -37,4 +37,11 @@ namespace control {
             panic(98)
         }
     }
+
+    /**
+     * Display warning in the simulator.
+     */
+    //% shim=pxtrt::runtimeWarning
+    export function runtimeWarning(message: string) {
+    }
 }

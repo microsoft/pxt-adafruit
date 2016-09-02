@@ -20,34 +20,37 @@ namespace pxsim.instructions {
     const LBL_LEFT_PAD = 5;
     const REQ_WIRE_HEIGHT = 45;
     const REQ_CMP_HEIGHT = 55;
-    const REQ_CMP_SCALE = 0.5;
+    const REQ_CMP_SCALE = 0.5 * 4;
     type Orientation = "landscape" | "portrait";
     const ORIENTATION: Orientation = "portrait";
     const PPI = 96.0;
+    const PAGE_SCALAR = 0.95;
     const [FULL_PAGE_WIDTH, FULL_PAGE_HEIGHT]
-        = (ORIENTATION == "portrait" ? [PPI * 8.5, PPI * 11.0] : [PPI * 11.0, PPI * 8.5]);
+        = (ORIENTATION == "portrait" ? [PPI * 8.5 * PAGE_SCALAR, PPI * 11.0 * PAGE_SCALAR] : [PPI * 11.0 * PAGE_SCALAR, PPI * 8.5 * PAGE_SCALAR]);
     const PAGE_MARGIN = PPI * 0.45;
     const PAGE_WIDTH = FULL_PAGE_WIDTH - PAGE_MARGIN * 2;
     const PAGE_HEIGHT = FULL_PAGE_HEIGHT - PAGE_MARGIN * 2;
     const BORDER_COLOR = "gray";
-    const BORDER_RADIUS = 5;
-    const BORDER_WIDTH = 2;
-    const [PANEL_ROWS, PANEL_COLS] = [2, 2];
+    const BORDER_RADIUS = 5 * 4;
+    const BORDER_WIDTH = 2 * 2;
+    const [PANEL_ROWS, PANEL_COLS] = [1, 1];
     const PANEL_MARGIN = 20;
-    const PANEL_PADDING = 8;
+    const PANEL_PADDING = 8 * 3;
     const PANEL_WIDTH = PAGE_WIDTH / PANEL_COLS - (PANEL_MARGIN + PANEL_PADDING + BORDER_WIDTH) * PANEL_COLS;
     const PANEL_HEIGHT = PAGE_HEIGHT / PANEL_ROWS - (PANEL_MARGIN + PANEL_PADDING + BORDER_WIDTH) * PANEL_ROWS;
-    const BOARD_WIDTH = 240;
+    const BOARD_WIDTH = 465;
     const BOARD_LEFT = (PANEL_WIDTH - BOARD_WIDTH) / 2.0 + PANEL_PADDING;
     const BOARD_BOT = PANEL_PADDING;
-    const NUM_BOX_SIZE = 60;
-    const NUM_FONT = 40;
-    const NUM_MARGIN = 5;
-    const FRONT_PAGE_BOARD_WIDTH = 200;
+    const NUM_BOX_SIZE = 120;
+    const NUM_FONT = 80;
+    const NUM_MARGIN = 10;
+    const FRONT_PAGE_BOARD_WIDTH = 400;
+    const PART_SCALAR = 2.3
     const PARTS_BOARD_SCALE = 0.17;
     const PARTS_BB_SCALE = 0.25;
     const PARTS_CMP_SCALE = 0.3;
     const PARTS_WIRE_SCALE = 0.23;
+    const BACK_PAGE_BOARD_WIDTH = PANEL_WIDTH - PANEL_PADDING * 1.5;
     const STYLE = `
             .instr-panel {
                 margin: ${PANEL_MARGIN}px;
@@ -56,11 +59,12 @@ namespace pxsim.instructions {
                 border-color: ${BORDER_COLOR};
                 border-style: solid;
                 border-radius: ${BORDER_RADIUS}px;
-                display: inline-block;
+                display: block;
                 width: ${PANEL_WIDTH}px;
                 height: ${PANEL_HEIGHT}px;
                 position: relative;
                 overflow: hidden;
+                page-break-inside: avoid;
             }
             .board-svg {
                 margin: 0 auto;
@@ -90,10 +94,11 @@ namespace pxsim.instructions {
             }
             .reqs-div {
                 margin-left: ${PANEL_PADDING + NUM_BOX_SIZE}px;
+                margin-top: 5px;
             }
             .partslist-wire,
             .partslist-cmp {
-                margin: 5px;
+                margin: 10px;
             }
             .partslist-wire {
                 display: inline-block;
@@ -269,8 +274,8 @@ namespace pxsim.instructions {
 
         let svgAtts = {
             "viewBox": `${dims.l} ${dims.t} ${dims.w} ${dims.h}`,
-            "width": dims.w,
-            "height": dims.h,
+            "width": dims.w * PART_SCALAR,
+            "height": dims.h * PART_SCALAR,
             "preserveAspectRatio": "xMidYMid",
         };
         svg.hydrate(svgEl, svgAtts);
@@ -560,7 +565,6 @@ namespace pxsim.instructions {
         return [panel, props];
     }
     function mkFinalPanel(props: BoardProps) {
-        const BACK_PAGE_BOARD_WIDTH = PANEL_WIDTH - 20;
 
         let panel = mkPanel();
         addClass(panel, "back-panel");

@@ -1,3 +1,5 @@
+/// <reference path="../node_modules/pxt-core/built/pxtsim.d.ts"/>
+
 namespace pxsim {
     export class DalBoard extends BaseBoard {
         id: string;
@@ -69,12 +71,14 @@ namespace pxsim {
         }
 
         initAsync(msg: SimulatorRunMessage): Promise<void> {
+            super.initAsync(msg);
+
             let options = (msg.options || {}) as RuntimeOptions;
 
             let boardDef = CURRENT_BOARD; //TODO: read from pxt.json/pxttarget.json
 
             let cmpsList = msg.parts;
-            let cmpDefs = PART_DEFINITIONS; //TODO: read from pxt.json/pxttarget.json
+            let cmpDefs = msg.partDefinitions || {}; //TODO: read from pxt.json/pxttarget.json
             let fnArgs = msg.fnArgs;
 
             let viewHost = new visuals.BoardHost({

@@ -5,6 +5,7 @@
         "README.md",
         "enums.d.ts",
         "shims.d.ts",
+        "bluetooth.ts",
         "bluetooth.cpp"
     ],
     "public": true,

@@ -101,38 +101,18 @@ namespace bluetooth {
         uart = new MicroBitUARTService(*uBit.ble, 61, 60);
     }
     
-    /**
-    *  Writes to the Bluetooth UART service buffer. From there the data is transmitted over Bluetooth to a connected device.
-    */
-    //% help=bluetooth/uart-write
-    //% blockId=bluetooth_uart_write block="bluetooth uart write %data" blockGap=8
-    //% parts="bluetooth"
+    //%
     void uartWrite(StringData *data) {
         startUartService();
     	uart->send(ManagedString(data));
     }    
 
-    /**
-    *  Reads from the Bluetooth UART service buffer, returning its contents when the specified delimiter character is encountered.
-    */
-    //% help=bluetooth/uart-read
-    //% blockId=bluetooth_uart_read block="bluetooth uart read %del=bluetooth_uart_delimiter_conv" blockGap=8
-    //% parts="bluetooth"
+    //%
     StringData* uartRead(StringData *del) {
         startUartService();
         return uart->readUntil(ManagedString(del)).leakData();
     }    
 
-    /**
-    * Returns the delimiter corresponding string
-    */
-    //% blockId="bluetooth_uart_delimiter_conv" block="%del"
-    //% weight=1
-    //% parts="bluetooth"
-    StringData* delimiters(Delimiters del) {  
-        ManagedString c("\n\n,$:.#"[max(0, min(6, (int)del))]);
-        return c.leakData();
-    }
     /**
      * Register code to run when the micro:bit is connected to over Bluetooth
      * @param body Code to run when a Bluetooth connection is established

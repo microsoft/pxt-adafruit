@@ -53,11 +53,6 @@ pxt update
 
 More instructions at https://github.com/Microsoft/pxt#running-a-target-from-localhost 
 
-## Universal Windows App
-
-The Windows 10 app is a [Universal Windows Hosted Web App](https://microsoftedge.github.io/WebAppsDocs/en-US/win10/CreateHWA.htm)
-that wraps ``codethemicrobit.com`` and provides additional features.
-
 ### Building
 
 * Install Visual Studio 2015 Update 2 or higher. Make sure the Windows 10 templates are installed.

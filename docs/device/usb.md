@@ -81,11 +81,15 @@ drop the file onto your `MICROBIT` drive, under Devices:
 
 **Firefox**
 
-A dialogue box will appear, asking whether you would like to open or save your hex file. Select **Save** and **OK** and the file will then appear in your downloads in the top right of your browser.  Click on **Show in Finder** and the file will appear in your downloads folder. Select the file and drag and drop it onto your MICROBIT drive.
+A dialogue box will appear, asking whether you would like to open or save your
+hex file. Select **Save** and **OK** and the file will then appear in your
+downloads in the top right of your browser. Right click on the file and click on
+**Show in Finder** and the file will appear in your downloads folder. Select the
+file and drag and drop it onto your MICROBIT drive.
 
-![](/static/mb/device/usb-5.jpg)
+![](/static/mb/device/usb-osx-firefox-1.png)
 
-![](/static/mb/device/usb-6.jpg)
+![](/static/mb/device/usb-osx-firefox-2.png)
 
 **Chrome**
 

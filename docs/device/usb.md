@@ -73,9 +73,11 @@ Click on **Download**. You will see a message “Do you want to save this .hex f
 
 ** Safari**
 
-When you select **Download** in Safari on Mac, your file will be downloaded to your downloads folder. Go to your downloads folder and open the file. In Safari the file will appear as unknown.txt rather than a named .hex file. Drag and drop it onto your MICROBIT drive.
+When you select **Download** in Safari a file called `Unknown` will be
+downloaded into your Downloads folder. Open your Downloads folder and drag and
+drop the file onto your `MICROBIT` drive, under Devices:
 
-![](/static/mb/device/usb-4.jpg)
+![](/static/mb/device/usb-4.png)
 
 **Firefox**
 

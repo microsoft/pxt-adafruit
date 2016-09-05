@@ -89,9 +89,12 @@ A dialogue box will appear, asking whether you would like to open or save your h
 
 **Chrome**
 
-When you select **Download** in Chrome, the file will be downloaded to the bottom of the browser in .hex format. Click on the small arrow and select **Show in Finder**. This will show the file in your download folder. Drag and drop the file onto your MICROBIT drive.
+When you select **Download** in Chrome, the file will be downloaded to the
+bottom of the browser in .hex format. Click on the small arrow and select **Show
+in Finder**. This will show the file in your download folder. Drag and drop the
+file onto your `MICROBIT` drive.
 
-![](/static/mb/device/usb-7.jpg)
+![](/static/mb/device/usb-osx-chrome.png)
 
 ## Step 3: Transfer the file to your micro:bit
 

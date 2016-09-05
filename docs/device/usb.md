@@ -29,8 +29,9 @@ Windows
 
 ![](/static/mb/device/usb-0.jpg)
 
-Mac (picture bvabdbco)
-WARN: unknown picture: bvabdbco:5x3
+Mac
+
+![](/static/mb/device/usb-osx-device.png)
 
 ## Step 2: Compile your script
 

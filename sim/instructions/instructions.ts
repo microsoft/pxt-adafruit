@@ -154,7 +154,7 @@ namespace pxsim.instructions {
         //TODO: Refactor this function; it is too complicated. There is a lot of error-prone math being done
         // to scale and place all elements which could be simplified with more forethought.
         let svgEl = <SVGSVGElement>document.createElementNS("http://www.w3.org/2000/svg", "svg");
-        let dims = {l: 0, t: 0, w: 0, h: 0};
+        let dims = { l: 0, t: 0, w: 0, h: 0 };
 
         let cmpSvgEl = <SVGSVGElement>document.createElementNS("http://www.w3.org/2000/svg", "svg");
         svgEl.appendChild(cmpSvgEl);
@@ -181,7 +181,7 @@ namespace pxsim.instructions {
             scale(opts.cmpHeight / dims.h)
         }
         svg.hydrate(cmpSvgEl, cmpSvgAtts);
-        let elDims = {l: dims.l, t: dims.t, w: dims.w, h: dims.h};
+        let elDims = { l: dims.l, t: dims.t, w: dims.w, h: dims.h };
 
         let updateL = (newL: number) => {
             if (newL < dims.l) {
@@ -293,7 +293,7 @@ namespace pxsim.instructions {
             let cnstr = builtinComponentPartVisual[builtinVis];
             el = cnstr([0, 0]);
         } else {
-            let partVis = <PartVisualDefinition> cmp;
+            let partVis = <PartVisualDefinition>cmp;
             el = visuals.mkGenericPartSVG(partVis);
         }
         return wrapSvg(el, opts);
@@ -320,7 +320,7 @@ namespace pxsim.instructions {
             let step = w.assemblyStep + 1;
             (stepToWires[step] || (stepToWires[step] = [])).push(w)
         });
-        let getMaxStep = (ns: {assemblyStep: number}[]) => ns.reduce((m, n) => Math.max(m, n.assemblyStep), 0);
+        let getMaxStep = (ns: { assemblyStep: number }[]) => ns.reduce((m, n) => Math.max(m, n.assemblyStep), 0);
         let stepOffset = powerWires.length > 0 ? getMaxStep(powerWires) + 2 : 1;
         components.forEach(cAndWs => {
             let {component, wires} = cAndWs;
@@ -364,10 +364,10 @@ namespace pxsim.instructions {
     function mkBlankBoardAndBreadboard(boardDef: BoardDefinition, cmpDefs: Map<PartDefinition>, fnArgs: any, width: number, buildMode: boolean = false): visuals.BoardHost {
         let state = runtime.board as pxsim.DalBoard;
         let boardHost = new visuals.BoardHost({
-            state: state, 
-            boardDef: boardDef, 
+            state: state,
+            boardDef: boardDef,
             forceBreadboard: true,
-            cmpDefs: cmpDefs, 
+            cmpDefs: cmpDefs,
             maxWidth: `${width}px`,
             fnArgs: fnArgs,
             wireframe: buildMode,
@@ -451,10 +451,10 @@ namespace pxsim.instructions {
 
         // board and breadboard
         let boardImg = mkBoardImgSvg(props.boardDef.visual);
-        let board = wrapSvg(boardImg, {left: QUANT_LBL(1), leftSize: QUANT_LBL_SIZE, cmpScale: PARTS_BOARD_SCALE});
+        let board = wrapSvg(boardImg, { left: QUANT_LBL(1), leftSize: QUANT_LBL_SIZE, cmpScale: PARTS_BOARD_SCALE });
         panel.appendChild(board);
         let bbRaw = mkBBSvg();
-        let bb = wrapSvg(bbRaw, {left: QUANT_LBL(1), leftSize: QUANT_LBL_SIZE, cmpScale: PARTS_BB_SCALE});
+        let bb = wrapSvg(bbRaw, { left: QUANT_LBL(1), leftSize: QUANT_LBL_SIZE, cmpScale: PARTS_BB_SCALE });
         panel.appendChild(bb);
 
         // components
@@ -591,8 +591,8 @@ namespace pxsim.instructions {
         if (tsCode) {
             //we use the docs renderer to decompile the code to blocks and render it
             //TODO: render the blocks code directly
-            let md = 
-`\`\`\`blocks
+            let md =
+                `\`\`\`blocks
 ${tsCode}
 \`\`\`
 \`\`\`package
@@ -600,9 +600,9 @@ ${tsPackage}
 \`\`\`
 `
 
-            pxtdocs.requireMarked = function() { return (<any>window).marked; }
+            pxtdocs.requireMarked = function () { return (<any>window).marked; }
             pxtrunner.renderMarkdownAsync(codeContainerDiv, md)
-                .done(function() {
+                .done(function () {
                     let codeSvg = $("#proj-code-container svg");
                     if (codeSvg.length > 0) {
                         //code rendered successfully as blocks

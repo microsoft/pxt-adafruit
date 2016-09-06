@@ -131,7 +131,8 @@ namespace pxsim.instructions {
         wireClr?: string,
         cmpWidth?: number,
         cmpHeight?: number,
-        cmpScale?: number
+        cmpScale?: number,
+        crocClips?: boolean
     };
     function mkBoardImgSvg(def: string | BoardImageDefinition): visuals.SVGElAndSize {
         let boardView: visuals.BoardView;
@@ -287,7 +288,7 @@ namespace pxsim.instructions {
         let el: visuals.SVGElAndSize;
         if (cmp == "wire") {
             //TODO: support non-croc wire parts
-            el = visuals.mkWirePart([0, 0], opts.wireClr || "red", true);
+            el = visuals.mkWirePart([0, 0], opts.wireClr || "red", opts.crocClips);
         } else if (typeof cmp == "string") {
             let builtinVis = <string>cmp;
             let cnstr = builtinComponentPartVisual[builtinVis];
@@ -481,7 +482,8 @@ namespace pxsim.instructions {
                 left: QUANT_LBL(quant),
                 leftSize: WIRE_QUANT_LBL_SIZE,
                 wireClr: clr,
-                cmpScale: PARTS_WIRE_SCALE
+                cmpScale: PARTS_WIRE_SCALE,
+                crocClips: props.boardDef.useCrocClips
             })
             addClass(cmp, "partslist-wire");
             panel.appendChild(cmp);
@@ -526,7 +528,8 @@ namespace pxsim.instructions {
                 bot: mkLabel(w.start),
                 botSize: LOC_LBL_SIZE,
                 wireClr: w.color,
-                cmpHeight: REQ_WIRE_HEIGHT
+                cmpHeight: REQ_WIRE_HEIGHT,
+                crocClips: props.boardDef.useCrocClips
             })
             addClass(cmp, "cmp-div");
             reqsDiv.appendChild(cmp);

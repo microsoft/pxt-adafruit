@@ -47,31 +47,55 @@ Next, compile your script:
 
 ### Windows
 
-** Chrome**
+**Chrome**
 
-Your .hex file appears as a download at the bottom of the browser. Open up your windows file explorer. Your micro:bit appears as a drive called MICROBIT.
+Your `.hex` file appears as a download at the bottom of the browser. Click on
+the arrow next to the name of the file and then click **Show in folder**.
 
-**Right click** on the download and select **show in folder**. Drag and drop the hex file from the download folder onto the MICROBIT drive.
+![](/static/mb/device/usb-windows-chrome.png)
 
-Alternatively, you can drag and drop the downloaded hex file from the bottom of the browser onto the file explorer and onto the MICROBIT drive.
-
-![](/static/mb/device/usb-1.jpg)
+Drag and drop the hex file from the download folder onto the MICROBIT drive.
 
 **Firefox**
 
-A dialogue box will appear, asking whether you would like to open or save your hex file. Select **Save**, then **OK** and the file will appear in your downloads in the top right of your browser. Select the **blue arrow**, select the relevant file and drag and drop it onto your Windows Explorer and onto your MICROBIT drive.
+A window will appear asking whether you want to save or open the `.hex` file.
+Select **Save File** and then select **OK**.
 
-![](/static/mb/device/usb-2.jpg)
+![](/static/mb/device/usb-windows-firefox-2.png)
 
-![](/static/mb/device/usb-3.jpg)
+The file will then appear in your downloads in the top right of your browser.
+Click the **folder icon** next to the filename to download it and open it in
+Windows Explorer.
 
-**IE10**
+![](/static/mb/device/usb-windows-firefox-2.png)
 
-Click on **Download**. You will see a message “Do you want to save this .hex file.” Select **Save**.
+**Microsoft Edge**
+
+A message will appear at the bottom of the browser asking what you want to do
+with the file. Click **Save**:
+
+![](/static/mb/device/usb-windows-edge-1.png)
+
+Then click **Open folder** and drag and drop the file from your Downloads to
+your `MICROBIT` drive.
+
+![](/static/mb/device/usb-windows-edge-2.png)
+
+**Internet Explorer**
+
+A message will appear at the bottom of the browser asking what you want to do
+with the file. Click **Save**:
+
+![](/static/mb/device/usb-windows-ie11-1.png)
+
+Then click **Open folder** and drag and drop the file from your Downloads to
+your `MICROBIT` drive.
+
+![](/static/mb/device/usb-windows-ie11-2.png)
 
 ### Mac
 
-** Safari**
+**Safari**
 
 When you select **Download** in Safari a file called `Unknown` will be
 downloaded into your Downloads folder. Open your Downloads folder and drag and

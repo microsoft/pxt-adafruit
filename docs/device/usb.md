@@ -105,7 +105,7 @@ When you select **Download** in Safari a file called `Unknown` will be
 downloaded into your Downloads folder. Open your Downloads folder and drag and
 drop the file onto your `MICROBIT` drive, under Devices:
 
-![](/static/mb/device/usb-4.png)
+![](/static/mb/device/usb-osx-dnd.png)
 
 #### Firefox
 
@@ -143,7 +143,7 @@ show the file in your download folder. Drag and drop the file onto your
 
 - In File Explorer, right-click on the hex file (created in Step 2 above), choose **Send to**, and then **MICROBIT**.
 
-![](/static/mb/device/usb-8.jpg)
+![](/static/mb/device/usb-windows-sendto.jpg)
 
 By copying the script onto the `MICROBIT` drive, you have programmed it into the
 flash memory on the micro:bit, which means even after you unplug the micro:bit,
@@ -163,11 +163,11 @@ The errors may look like this:
 
 **Windows**
 
-![](/static/mb/device/usb-9.jpg)
+![](/static/mb/device/usb-windows-copy-file-error.jpg)
 
 **Mac**
 
-![](/static/mb/device/usb-10.png)
+![](/static/mb/device/usb-osx-copy-file-error.png)
 
 Or it may appear that there are two hex files on your micro:bit so the micro:bit
 won’t be able to run multiple files. To rectify this, unplug your micro:bit and

@@ -59,7 +59,7 @@ namespace pxsim.instructions {
                 border-color: ${BORDER_COLOR};
                 border-style: solid;
                 border-radius: ${BORDER_RADIUS}px;
-                display: block;
+                display: inline-block;
                 width: ${PANEL_WIDTH}px;
                 height: ${PANEL_HEIGHT}px;
                 position: relative;

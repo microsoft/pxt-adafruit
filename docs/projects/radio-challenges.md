@@ -58,7 +58,9 @@ After running this simulation several seconds by moving the micro:bit side to si
 ![](/static/mb/acc2.png)
 
 ### ~
-Finally, you must open the Excel CSV file by clicking on the data.xls file that was downloaded to Downloads Folder. 
+
+Finally, you must open the Excel CSV file by clicking on the `data.csv` file
+that was downloaded to Downloads Folder. 
 
 ![](/static/mb/data3.png)
 

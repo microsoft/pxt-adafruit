@@ -93,7 +93,7 @@
         "yottaTarget": "bbc-microbit-classic-gcc",
         "yottaCorePackage": "pxt-microbit-core",
         "githubCorePackage": "microsoft/pxt-microbit-core",
-        "gittag": "v0.4.4",
+        "gittag": "v0.5.0",
         "serviceId": "ws"
     },
     "serial": {

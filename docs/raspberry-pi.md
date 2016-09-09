@@ -25,7 +25,5 @@ The PXT command line also works on Raspbian and allows to run a local server and
 To install all the tools, 
 
 ```
-git clone https://github.com/Microsoft/pxt-rpi.git
-cd pxt-rpi
-sh ./install.sh
+curl -s https://raw.githubusercontent.com/Microsoft/pxt-rpi/master/install.sh | sh -
 ```

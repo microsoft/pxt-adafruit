@@ -1,6 +1,5 @@
 /// <reference path="../../node_modules/pxt-core/typings/bluebird/bluebird.d.ts"/>
 /// <reference path="../../node_modules/pxt-core/built/pxtsim.d.ts"/>
-/// <reference path="../../libs/microbit/dal.d.ts"/>
 
 namespace pxsim.visuals {
     export const BOARD_SYTLE = `

@@ -42,6 +42,5 @@ namespace control {
      * Display warning in the simulator.
      */
     //% shim=pxtrt::runtimeWarning
-    export function runtimeWarning(message: string) {
-    }
+    export function runtimeWarning(message: string) { }
 }

@@ -166,6 +166,7 @@ namespace Array_ {
     int removeElement(RefCollection *c, uint32_t x) { return c->removeElement(x); }
 }
 
+
 // Import some stuff directly
 namespace pxt {
   //%
@@ -181,9 +182,11 @@ namespace pxt {
   //%
   Action mkAction(int reflen, int totallen, int startptr);
   //%
-  RefRecord* mkRecord(int reflen, int totallen);
-  //%
   RefRecord* mkClassInstance(int offset);
+  //%
+  void RefRecord_destroy(RefRecord *r);
+  //%
+  void RefRecord_print(RefRecord *r);
   //%
   void debugMemLeaks();
   //%

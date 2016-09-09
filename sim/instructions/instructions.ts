@@ -1,7 +1,6 @@
 /// <reference path="../../node_modules/pxt-core/typings/bluebird/bluebird.d.ts"/>
 /// <reference path="../../node_modules/pxt-core/built/pxtsim.d.ts"/>
 /// <reference path="../../node_modules/pxt-core/built/pxtrunner.d.ts"/>
-/// <reference path="../../libs/microbit/dal.d.ts"/>
 /// <reference path="../visuals/genericboard.ts"/>
 /// <reference path="../visuals/wiring.ts"/>
 

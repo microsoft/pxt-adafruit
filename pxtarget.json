@@ -76,6 +76,7 @@
     "simulator": {
         "autoRun": true,
         "aspectRatio": 1.22,
+        "parts": true,
         "partsAspectRatio": 0.69,
         "builtinParts": {
             "accelerometer": true,

@@ -2,8 +2,6 @@
 /// <reference path="../../libs/microbit/dal.d.ts"/>
 /// <reference path="../../libs/microbit/shims.d.ts"/>
 /// <reference path="../../libs/microbit/enums.d.ts"/>
-/// <reference path="../state/neopixel.ts"/>
-/// <reference path="../simlib.ts"/>
 
 //TODO move to utils
 namespace pxsim.visuals {

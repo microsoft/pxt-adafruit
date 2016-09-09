@@ -226,7 +226,14 @@ namespace pxsim.visuals {
         wireframe?: boolean;
     }
 
-    const pointerEvents = !!(window as any).PointerEvent ? {
+    export interface IPointerEvents {
+        up: string,
+        down: string,
+        move: string,
+        leave: string
+    }
+
+    export const pointerEvents = !!(window as any).PointerEvent ? {
         up: "pointerup",
         down: "pointerdown",
         move: "pointermove",

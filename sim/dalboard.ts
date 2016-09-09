@@ -5,7 +5,7 @@ namespace pxsim {
         id: string;
 
         // the bus
-        bus: EventBus;
+        bus: pxsim.EventBus;
 
         // state & update logic for component services
         ledMatrixState: LedMatrixState;
@@ -25,7 +25,7 @@ namespace pxsim {
         constructor() {
             super()
             this.id = "b" + Math_.random(2147483647);
-            this.bus = new EventBus(runtime);
+            this.bus = new pxsim.EventBus(runtime);
 
             // components
             this.ledMatrixState = new LedMatrixState(runtime);
@@ -97,4 +97,37 @@ namespace pxsim {
             return Promise.resolve();
         }
     }
+
+    export function initRuntimeWithDalBoard() {
+        U.assert(!runtime.board);
+        let b = new DalBoard();
+        runtime.board = b;
+        runtime.postError = (e) => {
+            led.setBrightness(255);
+            let img = board().ledMatrixState.image;
+            img.clear();
+            img.set(0, 4, 255);
+            img.set(1, 3, 255);
+            img.set(2, 3, 255);
+            img.set(3, 3, 255);
+            img.set(4, 4, 255);
+            img.set(0, 0, 255);
+            img.set(1, 0, 255);
+            img.set(0, 1, 255);
+            img.set(1, 1, 255);
+            img.set(3, 0, 255);
+            img.set(4, 0, 255);
+            img.set(3, 1, 255);
+            img.set(4, 1, 255);
+            runtime.updateDisplay();
+        }
+    }
+
+    if (!pxsim.initCurrentRuntime) {
+        pxsim.initCurrentRuntime = initRuntimeWithDalBoard;
+    }    
+
+    export function board() {
+        return runtime.board as DalBoard;
+    } 
 }

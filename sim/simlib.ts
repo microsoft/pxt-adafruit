@@ -3,10 +3,18 @@
 /// <reference path="../libs/microbit/dal.d.ts"/>
 
 namespace pxsim {
-    export type BBRowCol = [/*row*/string, /*column*/string];
     export type BoardPin = string;
-    export interface BBLoc { type: "breadboard", rowCol: BBRowCol };
-    export interface BoardLoc { type: "dalboard", pin: BoardPin };
+    export interface BBLoc {
+        type: "breadboard",
+        row: string,
+        col: string
+        xOffset?: number,
+        yOffset?: number
+    };
+    export interface BoardLoc {
+        type: "dalboard",
+        pin: BoardPin
+    };
     export type Loc = BBLoc | BoardLoc;
 
     export function initRuntimeWithDalBoard() {
@@ -197,11 +205,12 @@ namespace pxsim.visuals {
         return minIdx;
     }
 
-    export interface IBoardComponent<T> {
+    export interface IBoardPart<T> {
         style: string,
         element: SVGElement,
+        overElement?: SVGElement,
         defs: SVGElement[],
-        init(bus: EventBus, state: T, svgEl: SVGSVGElement, gpioPins: string[], otherArgs: string[]): void, //NOTE: constructors not supported in interfaces
+        init(bus: EventBus, state: T, svgEl: SVGSVGElement, otherParams: Map<string>): void, //NOTE: constructors not supported in interfaces
         moveToCoord(xy: Coord): void,
         updateState(): void,
         updateTheme(): void,
@@ -224,7 +233,8 @@ namespace pxsim.visuals {
     }
 
     export type WireColor =
-        "black" | "white" | "gray" | "purple" | "blue" | "green" | "yellow" | "orange" | "red" | "brown";
+        "black" | "white" | "gray" | "purple" | "blue" | "green" | "yellow" | "orange" | "red" | "brown" | "pink";
+    export const GPIO_WIRE_COLORS = ["pink", "green", "purple", "orange", "yellow"];
     export const WIRE_COLOR_MAP: Map<string> = {
         black: "#514f4d",
         white: "#fcfdfc",
@@ -236,6 +246,7 @@ namespace pxsim.visuals {
         orange: "#fdb262",
         red: "#f44f43",
         brown: "#c89764",
+        pink: "#ff80fa"
     }
     export function mapWireColor(clr: WireColor | string): string {
         return WIRE_COLOR_MAP[clr] || clr;

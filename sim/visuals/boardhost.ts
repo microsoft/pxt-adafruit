@@ -2,8 +2,8 @@ namespace pxsim.visuals {
     export interface BoardHostOpts {
         state: DalBoard,
         boardDef: BoardDefinition,
-        cmpsList?: string[],
-        cmpDefs: Map<PartDefinition>,
+        partsList?: string[],
+        partDefs: Map<PartDefinition>,
         fnArgs: any,
         forceBreadboard?: boolean,
         maxWidth?: string,
@@ -11,13 +11,15 @@ namespace pxsim.visuals {
         wireframe?: boolean
     }
     export class BoardHost {
-        private components: IBoardComponent<any>[] = [];
+        private parts: IBoardPart<any>[] = [];
         private wireFactory: WireFactory;
         private breadboard: Breadboard;
         private fromBBCoord: (xy: Coord) => Coord;
         private fromMBCoord: (xy: Coord) => Coord;
         private boardView: BoardView;
         private view: SVGSVGElement;
+        private partGroup: SVGGElement;
+        private partOverGroup: SVGGElement;
         private style: SVGStyleElement;
         private defs: SVGDefsElement;
         private state: DalBoard;
@@ -26,7 +28,7 @@ namespace pxsim.visuals {
         constructor(opts: BoardHostOpts) {
             this.state = opts.state;
             let onboardCmps = opts.boardDef.onboardComponents || [];
-            let activeComponents = (opts.cmpsList || []).filter(c => onboardCmps.indexOf(c) < 0);
+            let activeComponents = (opts.partsList || []).filter(c => onboardCmps.indexOf(c) < 0);
             activeComponents.sort();
             this.useCrocClips = opts.boardDef.useCrocClips;
 
@@ -68,6 +70,8 @@ namespace pxsim.visuals {
                 this.fromMBCoord = composition.toHostCoord1;
                 this.fromBBCoord = composition.toHostCoord2;
                 let pinDist = composition.scaleUnit;
+                this.partGroup = over;
+                this.partOverGroup = <SVGGElement>svg.child(this.view, "g");
 
                 this.style = <SVGStyleElement>svg.child(this.view, "style", {});
                 this.defs = <SVGDefsElement>svg.child(this.view, "defs", {});
@@ -76,16 +80,18 @@ namespace pxsim.visuals {
 
                 let allocRes = allocateDefinitions({
                     boardDef: opts.boardDef,
-                    cmpDefs: opts.cmpDefs,
+                    partDefs: opts.partDefs,
                     fnArgs: opts.fnArgs,
                     getBBCoord: this.breadboard.getCoord.bind(this.breadboard),
-                    cmpList: activeComponents,
+                    partsList: activeComponents,
                 });
 
                 this.addAll(allocRes);
             } else {
                 let el = this.boardView.getView().el;
                 this.view = el;
+                this.partGroup = <SVGGElement>svg.child(this.view, "g");
+                this.partOverGroup = <SVGGElement>svg.child(this.view, "g");
                 if (opts.maxWidth)
                     svg.hydrate(this.view, { width: opts.maxWidth });
                 if (opts.maxHeight)
@@ -99,7 +105,7 @@ namespace pxsim.visuals {
             this.boardView.highlightPin(pinNm);
         }
 
-        public highlightBreadboardPin(rowCol: BBRowCol) {
+        public highlightBreadboardPin(rowCol: BBLoc) {
             this.breadboard.highlightLoc(rowCol);
         }
 
@@ -120,10 +126,10 @@ namespace pxsim.visuals {
         }
 
         private updateState() {
-            this.components.forEach(c => c.updateState());
+            this.parts.forEach(c => c.updateState());
         }
 
-        private getBBCoord(rowCol: BBRowCol) {
+        private getBBCoord(rowCol: BBLoc) {
             let bbCoord = this.breadboard.getCoord(rowCol);
             return this.fromBBCoord(bbCoord);
         }
@@ -134,7 +140,7 @@ namespace pxsim.visuals {
         public getLocCoord(loc: Loc): Coord {
             let coord: Coord;
             if (loc.type === "breadboard") {
-                let rowCol = (<BBLoc>loc).rowCol;
+                let rowCol = (<BBLoc>loc);
                 coord = this.getBBCoord(rowCol);
             } else {
                 let pinNm = (<BoardLoc>loc).pin;
@@ -147,47 +153,62 @@ namespace pxsim.visuals {
             return coord;
         }
 
-        public addComponent(cmpDesc: CmpInst): IBoardComponent<any> {
-            let cmp: IBoardComponent<any> = null;
+        public addPart(partInst: PartInst): IBoardPart<any> {
+            let part: IBoardPart<any> = null;
             let colOffset = 0;
-            if (typeof cmpDesc.visual === "string") {
-                let builtinVisual = cmpDesc.visual as string;
-                let cnstr = builtinComponentSimVisual[builtinVisual];
-                let stateFn = builtinComponentSimState[builtinVisual];
-                cmp = cnstr();
-                cmp.init(this.state.bus, stateFn(this.state), this.view, cmpDesc.microbitPins, cmpDesc.otherArgs);
+            if (partInst.simulationBehavior) {
+                //TODO: seperate simulation behavior from builtin visual
+                let builtinBehavior = partInst.simulationBehavior;
+                let cnstr = builtinComponentSimVisual[builtinBehavior];
+                let stateFn = builtinComponentSimState[builtinBehavior];
+                part = cnstr();
+                part.init(this.state.bus, stateFn(this.state), this.view, partInst.params);
             } else {
-                let vis = cmpDesc.visual as PartVisualDefinition;
-                cmp = new GenericPart(vis);
-                colOffset = vis.extraColumnOffset || 0;
+                let vis = partInst.visual as PartVisualDefinition;
+                part = new GenericPart(vis);
             }
-            this.components.push(cmp);
-            this.view.appendChild(cmp.element);
-            if (cmp.defs)
-                cmp.defs.forEach(d => this.defs.appendChild(d));
-            this.style.textContent += cmp.style || "";
-            let rowCol = <BBRowCol>[`${cmpDesc.breadboardStartRow}`, `${colOffset + cmpDesc.breadboardStartColumn}`];
+            this.parts.push(part);
+            this.partGroup.appendChild(part.element);
+            if (part.overElement)
+                this.partOverGroup.appendChild(part.overElement);
+            if (part.defs)
+                part.defs.forEach(d => this.defs.appendChild(d));
+            this.style.textContent += part.style || "";
+            let colIdx = partInst.startColumnIdx;
+            let rowIdx = partInst.startRowIdx;
+            let row = getRowName(rowIdx);
+            let col = getColumnName(colIdx);
+            let xOffset = partInst.bbFit.xOffset / partInst.visual.pinDistance;
+            let yOffset = partInst.bbFit.yOffset  / partInst.visual.pinDistance;
+            let rowCol = <BBLoc>{
+                type: "breadboard",
+                row: row,
+                col: col,
+                xOffset: xOffset,
+                yOffset: yOffset
+            };
             let coord = this.getBBCoord(rowCol);
-            cmp.moveToCoord(coord);
+            part.moveToCoord(coord);
             let getCmpClass = (type: string) => `sim-${type}-cmp`;
-            let cls = getCmpClass(name);
-            svg.addClass(cmp.element, cls);
-            svg.addClass(cmp.element, "sim-cmp");
-            cmp.updateTheme();
-            cmp.updateState();
-            return cmp;
+            let cls = getCmpClass(partInst.name);
+            svg.addClass(part.element, cls);
+            svg.addClass(part.element, "sim-cmp");
+            part.updateTheme();
+            part.updateState();
+            return part;
         }
         public addWire(inst: WireInst): Wire {
             return this.wireFactory.addWire(inst.start, inst.end, inst.color, this.useCrocClips);
         }
-        public addAll(basicWiresAndCmpsAndWires: AllocatorResult) {
-            let {powerWires, components} = basicWiresAndCmpsAndWires;
-            powerWires.forEach(w => this.addWire(w));
-            components.forEach((cAndWs, idx) => {
-                let {component, wires} = cAndWs;
-                wires.forEach(w => this.addWire(w));
-                this.addComponent(component);
-            });
+        public addAll(allocRes: AllocatorResult) {
+            allocRes.partsAndWires.forEach(pAndWs => {
+                let part = pAndWs.part;
+                if (part)
+                    this.addPart(part)
+                let wires = pAndWs.wires;
+                if (wires)
+                    wires.forEach(w => this.addWire(w));
+            })
         }
     }
 }

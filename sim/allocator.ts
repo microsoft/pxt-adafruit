@@ -1,60 +1,81 @@
-
 namespace pxsim {
-    export interface AllocatorOpts {
+    const GROUND_COLOR = "blue";
+    const POWER_COLOR = "red";
+
+     export interface AllocatorOpts {
         boardDef: BoardDefinition,
-        cmpDefs: Map<PartDefinition>,
+        partDefs: Map<PartDefinition>,
+        partsList: string[]
         fnArgs: any,
-        getBBCoord: (loc: BBRowCol) => visuals.Coord,
-        cmpList: string[]
+        // Used for finding the nearest available power pins
+        getBBCoord: (loc: BBLoc) => visuals.Coord,
     };
     export interface AllocatorResult {
-        powerWires: WireInst[],
-        components: CmpAndWireInst[]
+        partsAndWires: PartAndWiresInst[],
     }
-
-    export interface CmpAndWireInst {
-        component: CmpInst,
-        wires: WireInst[]
-    }
-    export interface CmpInst {
+    export interface PartInst {
         name: string,
-        breadboardStartColumn: number,
-        breadboardStartRow: string,
-        assemblyStep: number,
-        visual: string | PartVisualDefinition,
-        microbitPins: string[],
-        otherArgs?: string[],
+        simulationBehavior?: string,
+        visual: PartVisualDefinition,
+        bbFit: PartBBFit,
+        startColumnIdx: number,
+        startRowIdx: number,
+        breadboardConnections: BBLoc[],
+        params: Map<string>,
     }
     export interface WireInst {
         start: Loc,
         end: Loc,
         color: string,
-        assemblyStep: number
     };
-    interface PartialCmpAlloc {
+    export interface AssemblyStep {
+        part?: boolean,
+        wireIndices?: number[],
+    }
+    export interface PartAndWiresInst {
+        part?: PartInst,
+        wires?: WireInst[],
+        assembly: AssemblyStep[],
+    }
+    export interface PartBBFit {
+        xOffset: number,
+        yOffset: number,
+        rowCount: number,
+        colCount: number,
+    }
+    interface PinBBFit {
+        partRelativeColIdx: number,
+        partRelativeRowIdx: number,
+        xOffset: number,
+        yOffset: number,
+    }
+    interface PinIR {
+        loc: XY,
+        def: PartPinDefinition,
+        target: PinTarget,
+        bbFit: PinBBFit,
+    }
+    interface PartIR {
         name: string,
         def: PartDefinition,
-        pinsAssigned: string[],
-        pinsNeeded: number | number[],
-        breadboardColumnsNeeded: number,
-        otherArgs?: string[],
-    }
-
-    interface AllocLocOpts {
-        nearestBBPin?: BBRowCol,
-        startColumn?: number,
-        cmpGPIOPins?: string[],
+        partParams: Map<string>,
+        pins: PinIR[],
+        bbFit: PartBBFit,
     };
-    interface AllocWireOpts {
-        startColumn: number,
-        cmpGPIOPins: string[],
+    interface PartPlacement extends PartIR {
+        startColumnIdx: number,
+        startRowIdx: number,
+    };
+    type WireIRLoc = PinTarget | BBLoc;
+    interface WireIR {
+        pinIdx: number,
+        start: WireIRLoc,
+        end: WireIRLoc,
+        color: string,
     }
-    interface AllocBlock {
-        cmpIdx: number,
-        cmpBlkIdx: number,
-        gpioNeeded: number,
-        gpioAssigned: string[]
-    }
+    interface PartIRAndWireIRs extends PartPlacement {
+        wires: WireIR[],
+    };
     interface PowerUsage {
         topGround: boolean,
         topThreeVolt: boolean,
@@ -63,18 +84,27 @@ namespace pxsim {
         singleGround: boolean,
         singleThreeVolt: boolean,
     }
-    function isOnBreadboardBottom(location: WireLocationDefinition) {
+    interface AllocLocOpts {
+        referenceBBPin?: BBLoc,
+    };
+    interface AllocWireOpts {
+        //TODO: port
+        startColumn: number,
+        partGPIOPins: string[],
+    }
+    function isOnBreadboardBottom(location: WireIRLoc) {
         let isBot = false;
-        if (location[0] === "breadboard") {
-            let row = <string>location[1];
+        if (typeof location !== "string" && (<BBLoc>location).type === "breadboard") {
+            let bbLoc = <BBLoc>location;
+            let row = bbLoc.row;
             isBot = 0 <= ["a", "b", "c", "d", "e"].indexOf(row);
         }
         return isBot;
     }
     const arrCount = (a: boolean[]) => a.reduce((p, n) => p + (n ? 1 : 0), 0);
     const arrAny = (a: boolean[]) => arrCount(a) > 0;
-    function computePowerUsage(wireDef: WireDefinition): PowerUsage {
-        let ends = [wireDef.start, wireDef.end];
+    function computePowerUsage(wire: WireIR): PowerUsage {
+        let ends = [wire.start, wire.end];
         let endIsGround = ends.map(e => e === "ground");
         let endIsThreeVolt = ends.map(e => e === "threeVolt");
         let endIsBot = ends.map(e => isOnBreadboardBottom(e));
@@ -115,10 +145,21 @@ namespace pxsim {
     function copyDoubleArray(a: string[][]) {
          return a.map(b => b.map(p => p));
     }
-    function readPin(arg: string): string {
+    function merge2<A, B>(a: A, b: B): A & B {
+        let res: any = {};
+        for (let aKey in a)
+            res[aKey] = (<any>a)[aKey];
+        for (let bKey in b)
+            res[bKey] = (<any>b)[bKey];
+        return <A & B>res;
+    }
+    function merge3<A, B, C>(a: A, b: B, c: C): A & B & C {
+        return merge2(merge2(a, b), c);
+    }
+    function readPin(arg: string): MicrobitPin {
         U.assert(!!arg, "Invalid pin: " + arg);
         let pin = arg.split("DigitalPin.")[1];
-        return pin;
+        return <MicrobitPin>pin;
     }
     function mkReverseMap(map: {[key: string]: string}) {
         let origKeys: string[] = [];
@@ -135,25 +176,239 @@ namespace pxsim {
         }
         return newMap;
     }
+    function isConnectedToBB(pin: PartPinDefinition): boolean {
+        return pin.orientation === "-Z" && pin.style === "male";
+    }
     class Allocator {
+        //TODO: better handling of allocation errors
         private opts: AllocatorOpts;
         private availablePowerPins = {
             top: {
-                threeVolt: mkRange(26, 51).map(n => <BBRowCol>["+", `${n}`]),
-                ground: mkRange(26, 51).map(n => <BBRowCol>["-", `${n}`]),
+                threeVolt: mkRange(26, 51).map(n => <BBLoc>{type: "breadboard", row: "+", col: `${n}`}),
+                ground: mkRange(26, 51).map(n => <BBLoc>{type: "breadboard", row: "-", col: `${n}`}),
             },
             bottom: {
-                threeVolt: mkRange(1, 26).map(n => <BBRowCol>["+", `${n}`]),
-                ground: mkRange(1, 26).map(n => <BBRowCol>["-", `${n}`]),
+                threeVolt: mkRange(1, 26).map(n => <BBLoc>{type: "breadboard", row: "+", col: `${n}`}),
+                ground: mkRange(1, 26).map(n => <BBLoc>{type: "breadboard", row: "-", col: `${n}`}),
             },
         };
         private powerUsage: PowerUsage;
+        private availableWireColors: string[];
 
         constructor(opts: AllocatorOpts) {
             this.opts = opts;
         }
 
-        private allocateLocation(location: WireLocationDefinition, opts: AllocLocOpts): Loc {
+        private allocPartIRs(def: PartDefinition, name: string, bbFit: PartBBFit): PartIR[] {
+            let partIRs: PartIR[] = [];
+            let mkIR = (def: PartDefinition, name: string, instPins?: PinTarget[], partParams?: Map<string>): PartIR => {
+                let pinIRs: PinIR[] = [];
+                for (let i = 0; i < def.numberOfPins; i++) {
+                    let pinDef = def.pinDefinitions[i];
+                    let pinTarget: PinTarget;
+                    if (typeof pinDef.target === "string") {
+                        pinTarget = <PinTarget>pinDef.target;
+                    } else {
+                        let instIdx = (<PinInstantiationIdx>pinDef.target).pinInstantiationIdx;
+                        U.assert(!!instPins && instPins[instIdx] !== undefined,
+                            `No pin found for PinInstantiationIdx: ${instIdx}. (Is the part missing an ArguementRole or "trackArgs=" annotations?)`);
+                        pinTarget = instPins[instIdx];
+                    }
+                    let pinLoc = def.visual.pinLocations[i];
+                    let adjustedY = bbFit.yOffset + pinLoc.y;
+                    let relativeRowIdx = Math.round(adjustedY / def.visual.pinDistance);
+                    let relativeYOffset = adjustedY - relativeRowIdx * def.visual.pinDistance;
+                    let adjustedX = bbFit.xOffset + pinLoc.x;
+                    let relativeColIdx = Math.round(adjustedX / def.visual.pinDistance);
+                    let relativeXOffset = adjustedX - relativeColIdx * def.visual.pinDistance;
+                    let pinBBFit: PinBBFit = {
+                        partRelativeRowIdx: relativeRowIdx,
+                        partRelativeColIdx: relativeColIdx,
+                        xOffset: relativeXOffset,
+                        yOffset: relativeYOffset
+                    };
+                    pinIRs.push({
+                        def: pinDef,
+                        loc: pinLoc,
+                        target: pinTarget,
+                        bbFit: pinBBFit,
+                    });
+                }
+                return {
+                    name: name,
+                    def: def,
+                    pins: pinIRs,
+                    partParams: partParams || {},
+                    bbFit: bbFit
+                };
+            };
+            if (def.instantiation.kind === "singleton") {
+                partIRs.push(mkIR(def, name));
+            } else if (def.instantiation.kind === "function") {
+                let fnAlloc = def.instantiation as PartFunctionDefinition;
+                let fnNm = fnAlloc.fullyQualifiedName;
+                let callsitesTrackedArgs = <string[]>this.opts.fnArgs[fnNm];
+                U.assert(!!callsitesTrackedArgs && !!callsitesTrackedArgs.length, "Failed to read pin(s) from callsite for: " + fnNm);
+                callsitesTrackedArgs.forEach(fnArgsStr => {
+                    let fnArgsSplit = fnArgsStr.split(",");
+                    U.assert(fnArgsSplit.length === fnAlloc.argumentRoles.length,
+                        `Mismatch between number of arguments at callsite (function name: ${fnNm}) vs number of argument roles in part definition (part: ${name}).`);
+                    let instPins: PinTarget[] = [];
+                    let paramArgs: Map<string> = {};
+                    fnArgsSplit.forEach((arg, idx) => {
+                        let role = fnAlloc.argumentRoles[idx];
+                        if (role.partParameter !== undefined) {
+                            paramArgs[role.partParameter] = arg;
+                        }
+                        if (role.pinInstantiationIdx !== undefined) {
+                            let instIdx = role.pinInstantiationIdx;
+                            let pin = readPin(arg);
+                            instPins[instIdx] = pin;
+                        }
+                    });
+                    partIRs.push(mkIR(def, name, instPins, paramArgs));
+                });
+            }
+            return partIRs;
+        }
+        private computePartDimensions(def: PartDefinition, name: string): PartBBFit {
+            let pinLocs = def.visual.pinLocations;
+            let pinDefs = def.pinDefinitions;
+            let numPins = def.numberOfPins;
+            U.assert(pinLocs.length === numPins, `Mismatch between "numberOfPins" and length of "visual.pinLocations" for "${name}"`);
+            U.assert(pinDefs.length === numPins, `Mismatch between "numberOfPins" and length of "pinDefinitions" for "${name}"`);
+            U.assert(numPins > 0, `Part "${name}" has no pins`);
+            let pins = pinLocs.map((loc, idx) => merge3({idx: idx}, loc, pinDefs[idx]));
+            let bbPins = pins.filter(p => p.orientation === "-Z");
+            let hasBBPins = bbPins.length > 0;
+            let pinDist = def.visual.pinDistance;
+            let xOff: number;
+            let yOff: number;
+            let colCount: number;
+            let rowCount: number;
+            if (hasBBPins) {
+                let refPin = bbPins[0];
+                let refPinColIdx = Math.ceil(refPin.x / pinDist);
+                let refPinRowIdx = Math.ceil(refPin.y / pinDist);
+                xOff = refPinColIdx * pinDist - refPin.x;
+                yOff = refPinRowIdx * pinDist - refPin.y;
+                colCount = Math.ceil((xOff + def.visual.width) / pinDist) + 1;
+                rowCount = Math.ceil((yOff + def.visual.height) / pinDist) + 1;
+            } else {
+                colCount = Math.ceil(def.visual.width / pinDist);
+                rowCount = Math.ceil(def.visual.height / pinDist);
+                xOff = colCount * pinDist - def.visual.width;
+                yOff = rowCount * pinDist - def.visual.height;
+            }
+            return {
+                xOffset: xOff,
+                yOffset: yOff,
+                rowCount: rowCount,
+                colCount: colCount
+            };
+        }
+        private allocColumns(colCounts: {colCount: number}[]): number[] {
+            let partsCount = colCounts.length;
+            const totalColumnsCount = visuals.BREADBOARD_MID_COLS; //TODO allow multiple breadboards
+            let totalSpaceNeeded = colCounts.map(d => d.colCount).reduce((p, n) => p + n, 0);
+            let extraSpace = totalColumnsCount - totalSpaceNeeded;
+            if (extraSpace <= 0) {
+                console.log("Not enough breadboard space!");
+                //TODO
+            }
+            let padding = Math.floor(extraSpace / (partsCount - 1 + 2));
+            let partSpacing = padding; //Math.floor(extraSpace/(partsCount-1));
+            let totalPartPadding = extraSpace - partSpacing * (partsCount - 1);
+            let leftPadding = Math.floor(totalPartPadding / 2);
+            let rightPadding = Math.ceil(totalPartPadding / 2);
+            let nextAvailableCol = 1 + leftPadding;
+            let partStartCol = colCounts.map(part => {
+                let col = nextAvailableCol;
+                nextAvailableCol += part.colCount + partSpacing;
+                return col;
+            });
+            return partStartCol;
+        }
+        private placeParts(parts: PartIR[]): PartPlacement[] {
+            const totalRowsCount = visuals.BREADBOARD_MID_ROWS + 2; // 10 letters + 2 for the middle gap
+            let startColumnIndices = this.allocColumns(parts.map(p => p.bbFit));
+            let startRowIndicies = parts.map(p => {
+                let extraRows = totalRowsCount - p.bbFit.rowCount;
+                let topPad = Math.floor(extraRows / 2);
+                let startIdx = topPad;
+                if (startIdx > 4)
+                    startIdx = 4;
+                if (startIdx < 1)
+                    startIdx = 1;
+                return startIdx;
+            });
+            let placements = parts.map((p, idx) => {
+                let row = startRowIndicies[idx];
+                let col = startColumnIndices[idx];
+                return merge2({startColumnIdx: col, startRowIdx: row}, p);
+            });
+            return placements;
+        }
+        private nextColor(): string {
+            if (!this.availableWireColors || this.availableWireColors.length <= 0) {
+                this.availableWireColors = visuals.GPIO_WIRE_COLORS.map(c => c);
+            }
+            return this.availableWireColors.pop();
+        }
+        private allocWireIRs(part: PartPlacement): PartIRAndWireIRs {
+            let groupToColor: string[] = [];
+            let wires: WireIR[] = part.pins.map((pin, pinIdx) => {
+                let end = pin.target;
+                let start: WireIRLoc;
+                let colIdx = part.startColumnIdx + pin.bbFit.partRelativeColIdx;
+                let colName = visuals.getColumnName(colIdx);
+                let pinRowIdx = part.startRowIdx + pin.bbFit.partRelativeRowIdx;
+                if (pinRowIdx >= 7) //account for middle gap
+                    pinRowIdx -= 2;
+                if (isConnectedToBB(pin.def)) {
+                    //make a wire from bb top or bottom to target
+                    let connectedToTop = pinRowIdx < 5;
+                    let rowName = connectedToTop ? "j" : "a";
+                    start = {
+                        type: "breadboard",
+                        row: rowName,
+                        col: colName,
+                    };
+                } else {
+                    //make a wire directly from pin to target
+                    let rowName = visuals.getRowName(pinRowIdx);
+                    start = {
+                        type: "breadboard",
+                        row: rowName,
+                        col: colName,
+                        xOffset: pin.bbFit.xOffset / part.def.visual.pinDistance,
+                        yOffset: pin.bbFit.yOffset / part.def.visual.pinDistance
+                    }
+                }
+                let color: string;
+                if (end === "ground") {
+                    color = GROUND_COLOR;
+                } else if (end === "threeVolt") {
+                    color = POWER_COLOR;
+                } else if (typeof pin.def.colorGroup === "number") {
+                    if (groupToColor[pin.def.colorGroup]) {
+                        color = groupToColor[pin.def.colorGroup];
+                    } else {
+                        color = groupToColor[pin.def.colorGroup] = this.nextColor();
+                    }
+                } else {
+                    color = this.nextColor()
+                }
+                return {
+                    start: start,
+                    end: end,
+                    color: color,
+                    pinIdx: pinIdx,
+                }
+            });
+            return merge2(part, {wires: wires});
+        }
+        private allocLocation(location: WireIRLoc, opts: AllocLocOpts): Loc {
             if (location === "ground" || location === "threeVolt") {
                 //special case if there is only a single ground or three volt pin in the whole build
                 if (location === "ground" && this.powerUsage.singleGround) {
@@ -164,8 +419,8 @@ namespace pxsim {
                     return {type: "dalboard", pin: boardThreeVoltPin};
                 }
 
-                U.assert(!!opts.nearestBBPin);
-                let nearestCoord = this.opts.getBBCoord(opts.nearestBBPin);
+                U.assert(!!opts.referenceBBPin);
+                let nearestCoord = this.opts.getBBCoord(opts.referenceBBPin);
                 let firstTopAndBot = [
                     this.availablePowerPins.top.ground[0] || this.availablePowerPins.top.threeVolt[0],
                     this.availablePowerPins.bottom.ground[0] || this.availablePowerPins.bottom.threeVolt[0]
@@ -177,7 +432,7 @@ namespace pxsim {
                     //TODO
                 }
                 let nearTop = visuals.findClosestCoordIdx(nearestCoord, firstTopAndBot) == 0;
-                let barPins: BBRowCol[];
+                let barPins: BBLoc[];
                 if (nearTop) {
                     if (location === "ground") {
                         barPins = this.availablePowerPins.top.ground;
@@ -203,17 +458,9 @@ namespace pxsim {
                     this.availablePowerPins.bottom.ground.splice(closestPinIdx, 1);
                     this.availablePowerPins.bottom.threeVolt.splice(closestPinIdx, 1);
                 }
-                return {type: "breadboard", rowCol: pin};
-            } else if (location[0] === "breadboard") {
-                U.assert(!!opts.startColumn);
-                let row = <string>location[1];
-                let col = (<number>location[2] + opts.startColumn).toString();
-                return {type: "breadboard", rowCol: [row, col]}
-            } else if (location[0] === "GPIO") {
-                U.assert(!!opts.cmpGPIOPins);
-                let idx = <number>location[1];
-                let pin = opts.cmpGPIOPins[idx];
-                return {type: "dalboard", pin: pin};
+                return pin;
+            } else if ((<BBLoc>location).type === "breadboard") {
+                return <BBLoc>location;
             } else if (location === "MOSI" || location === "MISO" || location === "SCK") {
                 if (!this.opts.boardDef.spiPins)
                     console.debug("No SPI pin mappings found!");
@@ -225,12 +472,15 @@ namespace pxsim {
                 let pin = (<any>this.opts.boardDef.i2cPins)[location as string] as string;
                 return {type: "dalboard", pin: pin};
             } else {
-                //TODO
-                U.assert(false);
-                return null;
+                //it must be a MicrobitPin
+                U.assert(typeof location === "string", "Unknown location type: " + location);
+                let mbPin = <MicrobitPin>location;
+                let boardPin = this.opts.boardDef.gpioPinMap[mbPin];
+                U.assert(!!boardPin, "Unknown pin: " + location);
+                return {type: "dalboard", pin: boardPin};
             }
         }
-        private getBoardGroundPin() {
+        private getBoardGroundPin(): string {
             let boardGround = this.opts.boardDef.groundPins[0] || null;
             if (!boardGround) {
                 console.log("No available ground pin on board!");
@@ -238,7 +488,7 @@ namespace pxsim {
             }
             return boardGround;
         }
-        private getBoardThreeVoltPin() {
+        private getBoardThreeVoltPin(): string {
             let threeVoltPin = this.opts.boardDef.threeVoltPins[0] || null;
             if (!threeVoltPin) {
                 console.log("No available 3.3V pin on board!");
@@ -246,14 +496,14 @@ namespace pxsim {
             }
             return threeVoltPin;
         }
-        private allocatePowerWires(powerUsage: PowerUsage): WireInst[] {
+        private allocPowerWires(powerUsage: PowerUsage): PartAndWiresInst {
             let boardGroundPin = this.getBoardGroundPin();
             let threeVoltPin = this.getBoardThreeVoltPin();
-            let topLeft: BBRowCol = ["-", "26"];
-            let botLeft: BBRowCol = ["-", "1"];
-            let topRight: BBRowCol = ["-", "50"];
-            let botRight: BBRowCol = ["-", "25"];
-            let top: BBRowCol, bot: BBRowCol;
+            const topLeft: BBLoc = {type: "breadboard", row: "-", col: "26"};
+            const botLeft: BBLoc = {type: "breadboard", row: "-", col: "1"};
+            const topRight: BBLoc = {type: "breadboard", row: "-", col: "50"};
+            const botRight: BBLoc = {type: "breadboard", row: "-", col: "25"};
+            let top: BBLoc, bot: BBLoc;
             if (this.opts.boardDef.attachPowerOnRight) {
                 top = topRight;
                 bot = botRight;
@@ -261,296 +511,162 @@ namespace pxsim {
                 top = topLeft;
                 bot = botLeft;
             }
-            const GROUND_COLOR = "blue";
-            const POWER_COLOR = "red";
-            const wires: WireInst[] = [];
-            let groundStep = 0;
-            let threeVoltStep = (powerUsage.bottomGround || powerUsage.topGround) ? 1 : 0;
+            let groundWires: WireInst[] = [];
+            let threeVoltWires: WireInst[] = [];
             if (powerUsage.bottomGround && powerUsage.topGround) {
                 //bb top - <==> bb bot -
-                wires.push({
-                    start: this.allocateLocation("ground", {nearestBBPin: top}),
-                    end: this.allocateLocation("ground", {nearestBBPin: bot}),
-                    color: GROUND_COLOR, assemblyStep: groundStep
+                groundWires.push({
+                    start: this.allocLocation("ground", {referenceBBPin: top}),
+                    end: this.allocLocation("ground", {referenceBBPin: bot}),
+                    color: GROUND_COLOR,
                 });
             }
             if (powerUsage.topGround) {
                 //board - <==> bb top -
-                wires.push({
-                    start: this.allocateLocation("ground", {nearestBBPin: top}),
+                groundWires.push({
+                    start: this.allocLocation("ground", {referenceBBPin: top}),
                     end: {type: "dalboard", pin: boardGroundPin},
-                    color: GROUND_COLOR, assemblyStep: groundStep
+                    color: GROUND_COLOR,
                 });
             } else if (powerUsage.bottomGround) {
                 //board - <==> bb bot -
-                wires.push({
-                    start: this.allocateLocation("ground", {nearestBBPin: bot}),
+                groundWires.push({
+                    start: this.allocLocation("ground", {referenceBBPin: bot}),
                     end: {type: "dalboard", pin: boardGroundPin},
-                    color: GROUND_COLOR, assemblyStep: groundStep
+                    color: GROUND_COLOR,
                 });
             }
             if (powerUsage.bottomThreeVolt && powerUsage.bottomGround) {
                 //bb top + <==> bb bot +
-                wires.push({
-                    start: this.allocateLocation("threeVolt", {nearestBBPin: top}),
-                    end: this.allocateLocation("threeVolt", {nearestBBPin: bot}),
-                    color: POWER_COLOR, assemblyStep: threeVoltStep
+                threeVoltWires.push({
+                    start: this.allocLocation("threeVolt", {referenceBBPin: top}),
+                    end: this.allocLocation("threeVolt", {referenceBBPin: bot}),
+                    color: POWER_COLOR,
                 });
             }
             if (powerUsage.topThreeVolt) {
                 //board + <==> bb top +
-                wires.push({
-                    start: this.allocateLocation("threeVolt", {nearestBBPin: top}),
+                threeVoltWires.push({
+                    start: this.allocLocation("threeVolt", {referenceBBPin: top}),
                     end: {type: "dalboard", pin: threeVoltPin},
-                    color: POWER_COLOR, assemblyStep: threeVoltStep
+                    color: POWER_COLOR,
                 });
             } else if (powerUsage.bottomThreeVolt) {
                 //board + <==> bb bot +
-                wires.push({
-                    start: this.allocateLocation("threeVolt", {nearestBBPin: bot}),
+                threeVoltWires.push({
+                    start: this.allocLocation("threeVolt", {referenceBBPin: bot}),
                     end: {type: "dalboard", pin: threeVoltPin},
-                    color: POWER_COLOR, assemblyStep: threeVoltStep
+                    color: POWER_COLOR,
                 });
             }
-            return wires;
+            let assembly: AssemblyStep[] = [];
+            if (groundWires.length > 0)
+                assembly.push({wireIndices: groundWires.map((w, i) => i)});
+            let numGroundWires = groundWires.length;
+            if (threeVoltWires.length > 0)
+                assembly.push({wireIndices: threeVoltWires.map((w, i) => i + numGroundWires)});
+            return {
+                wires: groundWires.concat(threeVoltWires),
+                assembly: assembly
+            };
         }
-        private allocateWire(wireDef: WireDefinition, opts: AllocWireOpts): WireInst {
-            let ends = [wireDef.start, wireDef.end];
+        private allocWire(wireIR: WireIR): WireInst {
+            let ends = [wireIR.start, wireIR.end];
             let endIsPower = ends.map(e => e === "ground" || e === "threeVolt");
             //allocate non-power first so we know the nearest pin for the power end
-            let endInsts = ends.map((e, idx) => !endIsPower[idx] ? this.allocateLocation(e, opts) : null)
+            let endInsts = ends.map((e, idx) => !endIsPower[idx] ? this.allocLocation(e, {}) : null)
             //allocate power pins closest to the other end of the wire
             endInsts = endInsts.map((e, idx) => {
                 if (e)
                     return e;
                 let locInst = <BBLoc>endInsts[1 - idx]; // non-power end
-                let l = this.allocateLocation(ends[idx], {
-                    nearestBBPin: locInst.rowCol,
-                    startColumn: opts.startColumn,
-                    cmpGPIOPins: opts.cmpGPIOPins,
+                let l = this.allocLocation(ends[idx], {
+                    referenceBBPin: locInst,
                 });
                 return l;
             });
-            return {start: endInsts[0], end: endInsts[1], color: wireDef.color, assemblyStep: wireDef.assemblyStep};
+            return {start: endInsts[0], end: endInsts[1], color: wireIR.color};
         }
-        private allocatePartialCmps(): PartialCmpAlloc[] {
-            let cmpNmAndDefs = this.opts.cmpList.map(cmpName => <[string, PartDefinition]>[cmpName, this.opts.cmpDefs[cmpName]]).filter(d => !!d[1]);
-            let cmpNmsList = cmpNmAndDefs.map(p => p[0]);
-            let cmpDefsList = cmpNmAndDefs.map(p => p[1]);
-            let partialCmps: PartialCmpAlloc[] = [];
-            cmpDefsList.forEach((def, idx) => {
-                let nm = cmpNmsList[idx];
-                if (def.pinAllocation.type === "predefined") {
-                    let mbPins = (<PredefinedPinAlloc>def.pinAllocation).pins;
-                    let pinsAssigned = mbPins.map(p => this.opts.boardDef.gpioPinMap[p]);
-                    partialCmps.push({
-                        name: nm,
-                        def: def,
-                        pinsAssigned: pinsAssigned,
-                        pinsNeeded: 0,
-                        breadboardColumnsNeeded: def.breadboardColumnsNeeded,
-                    });
-                } else if (def.pinAllocation.type === "factoryfunction") {
-                    let fnPinAlloc = (<FactoryFunctionPinAlloc>def.pinAllocation);
-                    let fnNm = fnPinAlloc.functionName;
-                    let fnsAndArgs = <string[]>this.opts.fnArgs[fnNm];
-                    let success = false;
-                    if (fnsAndArgs && fnsAndArgs.length) {
-                        let pinArgPoses = fnPinAlloc.pinArgPositions;
-                        let otherArgPoses = fnPinAlloc.otherArgPositions || [];
-                        fnsAndArgs.forEach(fnArgsStr => {
-                            let fnArgsSplit = fnArgsStr.split(",");
-                            let pinArgs: string[] = [];
-                            pinArgPoses.forEach(i => {
-                                pinArgs.push(fnArgsSplit[i]);
-                            });
-                            let mbPins = pinArgs.map(arg => readPin(arg));
-                            let otherArgs: string[] = [];
-                            otherArgPoses.forEach(i => {
-                                otherArgs.push(fnArgsSplit[i]);
-                            });
-                            let pinsAssigned = mbPins.map(p => this.opts.boardDef.gpioPinMap[p]);
-                            partialCmps.push({
-                                name: nm,
-                                def: def,
-                                pinsAssigned: pinsAssigned,
-                                pinsNeeded: 0,
-                                breadboardColumnsNeeded: def.breadboardColumnsNeeded,
-                                otherArgs: otherArgs.length ? otherArgs : null,
-                            });
-                        });
-                    } else {
-                        // failed to find pin allocation from callsites
-                        console.debug("Failed to read pin(s) from callsite for: " + fnNm);
-                        let pinsNeeded = fnPinAlloc.pinArgPositions.length;
-                        partialCmps.push({
-                            name: nm,
-                            def: def,
-                            pinsAssigned: [],
-                            pinsNeeded: pinsNeeded,
-                            breadboardColumnsNeeded: def.breadboardColumnsNeeded,
-                        });
+        private allocPart(ir: PartPlacement): PartInst {
+            let bbConnections = ir.pins
+                .filter(p => isConnectedToBB(p.def))
+                .map(p => {
+                    let rowIdx = ir.startRowIdx + p.bbFit.partRelativeRowIdx;
+                    if (rowIdx >= 7) //account for middle gap
+                        rowIdx -= 2;
+                    let rowName = visuals.getRowName(rowIdx);
+                    let colIdx = ir.startColumnIdx + p.bbFit.partRelativeColIdx;
+                    let colName = visuals.getColumnName(colIdx);
+                    return <BBLoc>{
+                        type: "breadboard",
+                        row: rowName,
+                        col: colName,
                     }
-                } else if (def.pinAllocation.type === "auto") {
-                    let pinsNeeded = (<AutoPinAlloc>def.pinAllocation).gpioPinsNeeded;
-                    partialCmps.push({
-                        name: nm,
-                        def: def,
-                        pinsAssigned: [],
-                        pinsNeeded: pinsNeeded,
-                        breadboardColumnsNeeded: def.breadboardColumnsNeeded,
-                    });
-                }
-            });
-            return partialCmps;
-        }
-        private allocateGPIOPins(partialCmps: PartialCmpAlloc[]): string[][] {
-            let availableGPIOBlocks = copyDoubleArray(this.opts.boardDef.gpioPinBlocks);
-            let sortAvailableGPIOBlocks = () => availableGPIOBlocks.sort((a, b) => a.length - b.length); //smallest blocks first
-            // determine blocks needed
-            let blockAssignments: AllocBlock[] = [];
-            let preassignedPins: string[] = [];
-            partialCmps.forEach((cmp, idx) => {
-                if (cmp.pinsAssigned && cmp.pinsAssigned.length) {
-                    //already assigned
-                    blockAssignments.push({cmpIdx: idx, cmpBlkIdx: 0, gpioNeeded: 0, gpioAssigned: cmp.pinsAssigned});
-                    preassignedPins = preassignedPins.concat(cmp.pinsAssigned);
-                } else if (cmp.pinsNeeded) {
-                    if (typeof cmp.pinsNeeded === "number") {
-                        //individual pins
-                        for (let i = 0; i < cmp.pinsNeeded; i++) {
-                            blockAssignments.push(
-                                {cmpIdx: idx, cmpBlkIdx: 0, gpioNeeded: 1, gpioAssigned: []});
-                        }
-                    } else {
-                        //blocks of pins
-                        let blocks = <number[]>cmp.pinsNeeded;
-                        blocks.forEach((numNeeded, blkIdx) => {
-                            blockAssignments.push(
-                                {cmpIdx: idx, cmpBlkIdx: blkIdx, gpioNeeded: numNeeded, gpioAssigned: []});
-                        });
-                    }
-                }
-            });
-            // remove assigned blocks
-            availableGPIOBlocks.forEach(blks => {
-                for (let i = blks.length - 1; 0 <= i; i--) {
-                    let pin = blks[i];
-                    if (0 <= preassignedPins.indexOf(pin)) {
-                        blks.splice(i, 1);
-                    }
-                }
-            });
-            // sort by size of blocks
-            let sortBlockAssignments = () => blockAssignments.sort((a, b) => b.gpioNeeded - a.gpioNeeded); //largest blocks first
-            // allocate each block
-            if (0 < blockAssignments.length && 0 < availableGPIOBlocks.length) {
-                do {
-                    sortBlockAssignments();
-                    sortAvailableGPIOBlocks();
-                    let assignment = blockAssignments[0];
-                    let smallestAvailableBlockThatFits: string[];
-                    for (let j = 0; j < availableGPIOBlocks.length; j++) {
-                        smallestAvailableBlockThatFits = availableGPIOBlocks[j];
-                        if (assignment.gpioNeeded <= availableGPIOBlocks[j].length) {
-                            break;
-                        }
-                    }
-                    if (!smallestAvailableBlockThatFits || smallestAvailableBlockThatFits.length <= 0) {
-                        break; // out of pins
-                    }
-                    while (0 < assignment.gpioNeeded && 0 < smallestAvailableBlockThatFits.length) {
-                        assignment.gpioNeeded--;
-                        let pin = smallestAvailableBlockThatFits[0];
-                        smallestAvailableBlockThatFits.splice(0, 1);
-                        assignment.gpioAssigned.push(pin);
-                    }
-                    sortBlockAssignments();
-                } while (0 < blockAssignments[0].gpioNeeded);
-            }
-            if (0 < blockAssignments.length && 0 < blockAssignments[0].gpioNeeded) {
-                console.debug("Not enough GPIO pins!");
-                return null;
-            }
-            let cmpGPIOPinBlocks: string[][][] = partialCmps.map((def, cmpIdx) => {
-                if (!def)
-                    return null;
-                let assignments = blockAssignments.filter(a => a.cmpIdx === cmpIdx);
-                let gpioPins: string[][] = [];
-                for (let i = 0; i < assignments.length; i++) {
-                    let a = assignments[i];
-                    let blk = gpioPins[a.cmpBlkIdx] || (gpioPins[a.cmpBlkIdx] = []);
-                    a.gpioAssigned.forEach(p => blk.push(p));
-                }
-                return gpioPins;
-            });
-            let cmpGPIOPins = cmpGPIOPinBlocks.map(blks => blks.reduce((p, n) => p.concat(n), []));
-            return cmpGPIOPins;
-        }
-        private allocateColumns(partialCmps: PartialCmpAlloc[]): number[] {
-            let componentsCount = partialCmps.length;
-            let totalAvailableSpace = 30; //TODO allow multiple breadboards
-            let totalSpaceNeeded = partialCmps.map(d => d.breadboardColumnsNeeded).reduce((p, n) => p + n, 0);
-            let extraSpace = totalAvailableSpace - totalSpaceNeeded;
-            if (extraSpace <= 0) {
-                console.log("Not enough breadboard space!");
-                //TODO
-            }
-            let padding = Math.floor(extraSpace / (componentsCount - 1 + 2));
-            let componentSpacing = padding; //Math.floor(extraSpace/(componentsCount-1));
-            let totalCmpPadding = extraSpace - componentSpacing * (componentsCount - 1);
-            let leftPadding = Math.floor(totalCmpPadding / 2);
-            let rightPadding = Math.ceil(totalCmpPadding / 2);
-            let nextAvailableCol = 1 + leftPadding;
-            let cmpStartCol = partialCmps.map(cmp => {
-                let col = nextAvailableCol;
-                nextAvailableCol += cmp.breadboardColumnsNeeded + componentSpacing;
-                return col;
-            });
-            return cmpStartCol;
-        }
-        private allocateComponent(partialCmp: PartialCmpAlloc, startColumn: number, microbitPins: string[]): CmpInst {
-            return {
-                name: partialCmp.name,
-                breadboardStartColumn: startColumn,
-                breadboardStartRow: partialCmp.def.breadboardStartRow,
-                assemblyStep: partialCmp.def.assemblyStep,
-                visual: partialCmp.def.visual,
-                microbitPins: microbitPins,
-                otherArgs: partialCmp.otherArgs,
-            };
-        }
-        public allocateAll(): AllocatorResult {
-            let cmpList = this.opts.cmpList;
-            let basicWires: WireInst[] = [];
-            let cmpsAndWires: CmpAndWireInst[] = [];
-            if (cmpList.length > 0) {
-                let partialCmps = this.allocatePartialCmps();
-                let allWireDefs = partialCmps.map(p => p.def.wires).reduce((p, n) => p.concat(n), []);
-                let allPowerUsage = allWireDefs.map(w => computePowerUsage(w));
-                this.powerUsage = mergePowerUsage(allPowerUsage);
-                basicWires = this.allocatePowerWires(this.powerUsage);
-                let cmpGPIOPins = this.allocateGPIOPins(partialCmps);
-                let reverseMap = mkReverseMap(this.opts.boardDef.gpioPinMap);
-                let cmpMicrobitPins = cmpGPIOPins.map(pins => pins.map(p => reverseMap[p]));
-                let cmpStartCol = this.allocateColumns(partialCmps);
-                let cmps = partialCmps.map((c, idx) => this.allocateComponent(c, cmpStartCol[idx], cmpMicrobitPins[idx]));
-                let wires = partialCmps.map((c, idx) => c.def.wires.map(d => this.allocateWire(d, {
-                    cmpGPIOPins: cmpGPIOPins[idx],
-                    startColumn: cmpStartCol[idx],
-                })));
-                cmpsAndWires = cmps.map((c, idx) => {
-                    return {component: c, wires: wires[idx]}
                 });
+            let part: PartInst = {
+                name: ir.name,
+                visual: ir.def.visual,
+                bbFit: ir.bbFit,
+                startColumnIdx: ir.startColumnIdx,
+                startRowIdx: ir.startRowIdx,
+                breadboardConnections: bbConnections,
+                params: ir.partParams,
+                simulationBehavior: ir.def.simulationBehavior
             }
-            return {
-                powerWires: basicWires,
-                components: cmpsAndWires
-            };
+            return part;
+        }
+        public allocAll(): AllocatorResult {
+            let partNmAndDefs = this.opts.partsList
+                .map(partName => {return {name: partName, def: this.opts.partDefs[partName]}})
+                .filter(d => !!d.def);
+            if (partNmAndDefs.length > 0) {
+                let partNmsList = partNmAndDefs.map(p => p.name);
+                let partDefsList = partNmAndDefs.map(p => p.def);
+                let dimensions = partNmAndDefs.map(nmAndPart => this.computePartDimensions(nmAndPart.def, nmAndPart.name));
+                let partIRs: PartIR[] = [];
+                partNmAndDefs.forEach((nmAndDef, idx) => {
+                    let dims = dimensions[idx];
+                    let irs = this.allocPartIRs(nmAndDef.def, nmAndDef.name, dims);
+                    partIRs = partIRs.concat(irs);
+                })
+                let partPlacements = this.placeParts(partIRs);
+                let partsAndWireIRs = partPlacements.map(p => this.allocWireIRs(p));
+                let allWireIRs = partsAndWireIRs.map(p => p.wires).reduce((p, n) => p.concat(n), []);
+                let allPowerUsage = allWireIRs.map(w => computePowerUsage(w));
+                this.powerUsage = mergePowerUsage(allPowerUsage);
+                let basicWires = this.allocPowerWires(this.powerUsage);
+                let partsAndWires: PartAndWiresInst[] = partsAndWireIRs.map((irs, idx) => {
+                    let part = this.allocPart(irs);
+                    let wires = irs.wires.map(w => this.allocWire(w));
+                    let pinIdxToWireIdx: number[] = [];
+                    irs.wires.forEach((wIR, idx) => {
+                        pinIdxToWireIdx[wIR.pinIdx] = idx;
+                    });
+                    let assembly: AssemblyStep[] = irs.def.assembly.map(stepDef => {
+                        return {
+                            part: stepDef.part,
+                            wireIndices: (stepDef.pinIndices || []).map(i => pinIdxToWireIdx[i])
+                        }
+                    });
+                    return {
+                        part: part,
+                        wires: wires,
+                        assembly: assembly
+                    }
+                });
+                let all = [basicWires].concat(partsAndWires);
+                return {
+                    partsAndWires: all
+                }
+            } else {
+                return {
+                    partsAndWires: []
+                }
+            }
         }
     }
 
     export function allocateDefinitions(opts: AllocatorOpts): AllocatorResult {
-        return new Allocator(opts).allocateAll();
+        return new Allocator(opts).allocAll();
     }
 }

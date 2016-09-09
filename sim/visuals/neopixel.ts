@@ -102,26 +102,17 @@ namespace pxsim.visuals {
         });
         return { el: img, x: l, y: t, w: w, h: h };
     }
-    export class NeoPixel implements SVGAndSize<SVGCircleElement> {
-        public el: SVGCircleElement;
-        public w: number;
-        public h: number;
-        public x: number;
-        public y: number;
-        public cx: number;
+    export class NeoPixel {
+        public el: SVGElement;
         public cy: number;
 
         constructor(xy: Coord = [0, 0]) {
-            let circle = <SVGCircleElement>svg.elt("circle");
+            let el = <SVGElement>svg.elt("rect");
             let r = PIXEL_RADIUS;
             let [cx, cy] = xy;
-            svg.hydrate(circle, { cx: cx, cy: cy, r: r, class: "sim-neopixel" });
-            this.el = circle;
-            this.w = r * 2;
-            this.h = r * 2;
-            this.x = cx - r;
-            this.y = cy - r;
-            this.cx = cx;
+            let y = cy - r;
+            svg.hydrate(el, { x: "-50%", y: y, width: "100%", height: r * 2, class: "sim-neopixel" });
+            this.el = el;
             this.cy = cy;
         }
 
@@ -200,9 +191,15 @@ namespace pxsim.visuals {
         }
     };
 
-    function gpioPinToPinNumber(gpioPin: string): number {
-        let pinNumStr = gpioPin.split("P")[1];
-        let pinNum = Number(pinNumStr) + 7 /*MICROBIT_ID_IO_P0; TODO: don't hardcode this, import enums.d.ts*/;
+    function digitalPinToPinNumber(gpioPin: string): number {
+        const MICROBIT_ID_IO_P0 = 7; //TODO: don't hardcode this, import enums.d.ts
+        if (gpioPin == "*") {
+            return MICROBIT_ID_IO_P0;
+        }
+        let pinSplit = gpioPin.split("DigitalPin.P");
+        U.assert(pinSplit.length === 2, "Unknown format for pin (for NeoPixel): " + gpioPin);
+        let pinNumStr = pinSplit[1];
+        let pinNum = Number(pinNumStr) + MICROBIT_ID_IO_P0;
         return pinNum
     }
     function parseNeoPixelMode(modeStr: string): NeoPixelMode {
@@ -222,7 +219,7 @@ namespace pxsim.visuals {
         return mode;
     }
 
-    export class NeoPixelView implements IBoardComponent<NeoPixelState> {
+    export class NeoPixelView implements IBoardPart<NeoPixelState> {
         public style: string = `
             .sim-neopixel-canvas {
             }
@@ -240,6 +237,7 @@ namespace pxsim.visuals {
             }
         `;
         public element: SVGElement;
+        public overElement: SVGElement;
         public defs: SVGElement[];
         private state: NeoPixelState;
         private canvas: NeoPixelCanvas;
@@ -249,22 +247,24 @@ namespace pxsim.visuals {
         private pin: number;
         private mode: NeoPixelMode;
 
-        public init(bus: EventBus, state: NeoPixelState, svgEl: SVGSVGElement, gpioPins: string[], otherArgs: string[]): void {
-            U.assert(otherArgs.length === 1, "NeoPixels assumes a RGB vs RGBW mode is passed to it");
-            let modeStr = otherArgs[0];
+        public init(bus: EventBus, state: NeoPixelState, svgEl: SVGSVGElement, otherParams: Map<string>): void {
+            U.assert(!!otherParams["mode"], "NeoPixels assumes a RGB vs RGBW mode is passed to it");
+            U.assert(!!otherParams["pin"], "NeoPixels assumes a pin is passed to it");
+            let modeStr = otherParams["mode"];
             this.mode = parseNeoPixelMode(modeStr);
             this.state = state;
             this.stripGroup = <SVGGElement>svg.elt("g");
             this.element = this.stripGroup;
-            let pinStr = gpioPins[0];
-            this.pin = gpioPinToPinNumber(pinStr);
+            let pinStr = otherParams["pin"];
+            this.pin = digitalPinToPinNumber(pinStr);
             this.lastLocation = [0, 0];
             let part = mkNeoPixelPart();
             this.part = part;
             this.stripGroup.appendChild(part.el);
             let canvas = new NeoPixelCanvas(this.pin);
             this.canvas = canvas;
-            let canvasG = svg.child(this.stripGroup, "g", { class: "sim-neopixel-canvas-parent" });
+            let canvasG = svg.elt("g", { class: "sim-neopixel-canvas-parent" });
+            this.overElement = canvasG;
             canvasG.appendChild(canvas.canvas);
             this.updateStripLoc();
         }
@@ -276,6 +276,7 @@ namespace pxsim.visuals {
         }
         private updateStripLoc() {
             let [x, y] = this.lastLocation;
+            U.assert(typeof x === "number" && typeof y === "number", "invalid x,y for NeoPixel strip");
             this.canvas.setLoc([x + CANVAS_LEFT, y + CANVAS_TOP]);
             svg.hydrate(this.part.el, { transform: `translate(${x} ${y})` }); //TODO: update part's l,h, etc.
         }

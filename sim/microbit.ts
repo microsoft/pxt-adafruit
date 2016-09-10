@@ -226,25 +226,6 @@ namespace pxsim.visuals {
         wireframe?: boolean;
     }
 
-    export interface IPointerEvents {
-        up: string,
-        down: string,
-        move: string,
-        leave: string
-    }
-
-    export const pointerEvents = !!(window as any).PointerEvent ? {
-        up: "pointerup",
-        down: "pointerdown",
-        move: "pointermove",
-        leave: "pointerleave"
-    } : {
-            up: "mouseup",
-            down: "mousedown",
-            move: "mousemove",
-            leave: "mouseleave"
-        };
-
     export class MicrobitBoardSvg implements BoardView {
         public element: SVGSVGElement;
         private style: SVGStyleElement;

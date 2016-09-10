@@ -29,7 +29,13 @@ namespace pxsim {
 
             // components
             this.ledMatrixState = new LedMatrixState(runtime);
-            this.buttonPairState = new ButtonPairState();
+            this.buttonPairState = new ButtonPairState({
+                ID_BUTTON_A: DAL.MICROBIT_ID_BUTTON_A,
+                ID_BUTTON_B: DAL.MICROBIT_ID_BUTTON_B,
+                ID_BUTTON_AB: DAL.MICROBIT_ID_BUTTON_AB,
+                BUTTON_EVT_UP: DAL.MICROBIT_BUTTON_EVT_UP,
+                BUTTON_EVT_CLICK: DAL.MICROBIT_BUTTON_EVT_CLICK
+            });
             this.edgeConnectorState = new EdgeConnectorState();
             this.radioState = new RadioState(runtime);
             this.accelerometerState = new AccelerometerState(runtime);

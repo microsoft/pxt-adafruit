@@ -117,8 +117,9 @@ namespace pxsim.visuals {
         public setRgb(rgb: [number, number, number]) {
             let hsl = rgbToHsl(rgb);
             let [h, s, l] = hsl;
-            //We ignore luminosity since it doesn't map well to real-life brightness
-            let fill = `hsl(${h}, ${s}%, 70%)`;
+            // at least 70% luminosity
+            l = Math.max(l, 60);
+            let fill = `hsl(${h}, ${s}%, ${l}%)`;
             this.el.setAttribute("fill", fill);
         }
     }
@@ -203,18 +204,9 @@ namespace pxsim.visuals {
     function parseNeoPixelMode(modeStr: string): NeoPixelMode {
         const modeMap: Map<NeoPixelMode> = {
             "NeoPixelMode.RGB": NeoPixelMode.RGB,
-            "NeoPixelMode.RGBW": NeoPixelMode.RGBW,
-            "*": NeoPixelMode.RGB,
+            "NeoPixelMode.RGBW": NeoPixelMode.RGBW
         };
-        let mode: NeoPixelMode = null;
-        for (let key in modeMap) {
-            if (key == modeStr) {
-                mode = modeMap[key];
-                break;
-            }
-        }
-        U.assert(mode != null, "Unknown NeoPixelMode: " + modeStr);
-        return mode;
+        return modeMap[modeStr] || NeoPixelMode.RGB;
     }
 
     export class NeoPixelView implements IBoardPart<NeoPixelState> {

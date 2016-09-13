@@ -1,43 +1,6 @@
 /// <reference path="../node_modules/pxt-core/built/pxtsim.d.ts"/>
 
 namespace pxsim {
-    export class CoreBoard extends BaseBoard {
-        id: string;
-
-        // the bus
-        bus: pxsim.EventBus;
-
-        // updates
-        updateSubscribers: (() => void)[];
-
-        // builtin
-        builtinParts: Map<any>;
-        builtinVisuals: Map<() => visuals.IBoardPart<any>>;        
-        builtinPartVisuals: Map<(xy: visuals.Coord) => visuals.SVGElAndSize>;
-
-        constructor() {
-            super()
-            this.id = "b" + Math_.random(2147483647);
-            this.bus = new pxsim.EventBus(runtime);
-
-            // updates
-            this.updateSubscribers = []
-            this.updateView = () => {
-                this.updateSubscribers.forEach(sub => sub());
-            }
-
-            this.builtinParts = {};
-            this.builtinVisuals = {};
-            this.builtinPartVisuals = {};
-        }
-
-        kill() {
-            super.kill();
-            AudioContextManager.stop();
-        }
-    }
-
-
     export class DalBoard extends CoreBoard {
         // state & update logic for component services
         ledMatrixState: LedMatrixState;
@@ -103,15 +66,15 @@ namespace pxsim {
         initAsync(msg: SimulatorRunMessage): Promise<void> {
             super.initAsync(msg);
 
-            let options = (msg.options || {}) as RuntimeOptions;
+            const options = (msg.options || {}) as RuntimeOptions;
 
-            let boardDef = CURRENT_BOARD; //TODO: read from pxt.json/pxttarget.json
+            const boardDef = CURRENT_BOARD; //TODO: read from pxt.json/pxttarget.json
 
-            let cmpsList = msg.parts;
-            let cmpDefs = msg.partDefinitions || {}; //TODO: read from pxt.json/pxttarget.json
-            let fnArgs = msg.fnArgs;
+            const cmpsList = msg.parts;
+            const cmpDefs = msg.partDefinitions || {}; //TODO: read from pxt.json/pxttarget.json
+            const fnArgs = msg.fnArgs;
 
-            let viewHost = new visuals.BoardHost({
+            const opts : visuals.BoardHostOpts = {
                 state: this,
                 boardDef: boardDef,
                 partsList: cmpsList,
@@ -119,7 +82,8 @@ namespace pxsim {
                 fnArgs: fnArgs,
                 maxWidth: "100%",
                 maxHeight: "100%",
-            });
+            };
+            const viewHost = new visuals.BoardHost(pxsim.visuals.mkBoardView(opts), opts);
 
             document.body.innerHTML = ""; // clear children
             document.body.appendChild(viewHost.getView());

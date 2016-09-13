@@ -354,8 +354,8 @@ namespace pxsim.instructions {
         };
     }
     function mkBlankBoardAndBreadboard(boardDef: BoardDefinition, cmpDefs: Map<PartDefinition>, fnArgs: any, width: number, buildMode: boolean = false): visuals.BoardHost {
-        let state = runtime.board as pxsim.CoreBoard;
-        let boardHost = new visuals.BoardHost({
+        const state = runtime.board as pxsim.CoreBoard;
+        const opts : visuals.BoardHostOpts = {
             state: state,
             boardDef: boardDef,
             forceBreadboard: true,
@@ -363,7 +363,8 @@ namespace pxsim.instructions {
             maxWidth: `${width}px`,
             fnArgs: fnArgs,
             wireframe: buildMode,
-        });
+        };
+        let boardHost = new visuals.BoardHost(pxsim.visuals.mkBoardView(opts), opts);
         let view = boardHost.getView();
         svg.addClass(view, "board-svg");
 

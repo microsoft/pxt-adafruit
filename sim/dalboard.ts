@@ -26,7 +26,31 @@ namespace pxsim {
                 BUTTON_EVT_UP: DAL.MICROBIT_BUTTON_EVT_UP,
                 BUTTON_EVT_CLICK: DAL.MICROBIT_BUTTON_EVT_CLICK
             });
-            this.builtinParts["edgeconnector"] = this.edgeConnectorState = new EdgeConnectorState();
+            this.builtinParts["edgeconnector"] = this.edgeConnectorState = new EdgeConnectorState({
+                pins: [
+                    DAL.MICROBIT_ID_IO_P0,
+                    DAL.MICROBIT_ID_IO_P1,
+                    DAL.MICROBIT_ID_IO_P2,
+                    DAL.MICROBIT_ID_IO_P3,
+                    DAL.MICROBIT_ID_IO_P4,
+                    DAL.MICROBIT_ID_IO_P5,
+                    DAL.MICROBIT_ID_IO_P6,
+                    DAL.MICROBIT_ID_IO_P7,
+                    DAL.MICROBIT_ID_IO_P8,
+                    DAL.MICROBIT_ID_IO_P9,
+                    DAL.MICROBIT_ID_IO_P10,
+                    DAL.MICROBIT_ID_IO_P11,
+                    DAL.MICROBIT_ID_IO_P12,
+                    DAL.MICROBIT_ID_IO_P13,
+                    DAL.MICROBIT_ID_IO_P14,
+                    DAL.MICROBIT_ID_IO_P15,
+                    DAL.MICROBIT_ID_IO_P16,
+                    0,
+                    0,
+                    DAL.MICROBIT_ID_IO_P19,
+                    DAL.MICROBIT_ID_IO_P20                    
+                ]
+            });
             this.builtinParts["radio"] = this.radioState = new RadioState(runtime);
             this.builtinParts["accelerometer"] = this.accelerometerState = new AccelerometerState(runtime);
             this.builtinParts["serial"] = this.serialState = new SerialState();

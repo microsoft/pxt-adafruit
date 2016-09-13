@@ -24,64 +24,6 @@ namespace pxsim {
     export function getPin(id: number) {
         return board().edgeConnectorState.getPin(id);
     }
-
-    export enum PinFlags {
-        Unused = 0,
-        Digital = 0x0001,
-        Analog = 0x0002,
-        Input = 0x0004,
-        Output = 0x0008,
-        Touch = 0x0010
-    }
-
-    export class Pin {
-        constructor(public id: number) { }
-        touched = false;
-        value = 0;
-        period = 0;
-        mode = PinFlags.Unused;
-        pitch = false;
-        pull = 0; // PullDown
-
-        isTouched(): boolean {
-            this.mode = PinFlags.Touch;
-            return this.touched;
-        }
-    }
-
-    export class EdgeConnectorState {
-        pins: Pin[];
-
-        constructor() {
-            this.pins = [
-                new Pin(DAL.MICROBIT_ID_IO_P0),
-                new Pin(DAL.MICROBIT_ID_IO_P1),
-                new Pin(DAL.MICROBIT_ID_IO_P2),
-                new Pin(DAL.MICROBIT_ID_IO_P3),
-                new Pin(DAL.MICROBIT_ID_IO_P4),
-                new Pin(DAL.MICROBIT_ID_IO_P5),
-                new Pin(DAL.MICROBIT_ID_IO_P6),
-                new Pin(DAL.MICROBIT_ID_IO_P7),
-                new Pin(DAL.MICROBIT_ID_IO_P8),
-                new Pin(DAL.MICROBIT_ID_IO_P9),
-                new Pin(DAL.MICROBIT_ID_IO_P10),
-                new Pin(DAL.MICROBIT_ID_IO_P11),
-                new Pin(DAL.MICROBIT_ID_IO_P12),
-                new Pin(DAL.MICROBIT_ID_IO_P13),
-                new Pin(DAL.MICROBIT_ID_IO_P14),
-                new Pin(DAL.MICROBIT_ID_IO_P15),
-                new Pin(DAL.MICROBIT_ID_IO_P16),
-                null,
-                null,
-                new Pin(DAL.MICROBIT_ID_IO_P19),
-                new Pin(DAL.MICROBIT_ID_IO_P20)
-            ];
-        }
-
-        public getPin(id: number) {
-            return this.pins.filter(p => p && p.id == id)[0] || null
-        }
-    }
 }
 
 namespace pxsim.pins {

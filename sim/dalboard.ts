@@ -10,8 +10,10 @@ namespace pxsim {
         // updates
         updateSubscribers: (() => void)[];
 
-        // builtin state
+        // builtin
         builtinParts: Map<any>;
+        builtinVisuals: Map<() => visuals.IBoardPart<any>>;        
+        builtinPartVisuals: Map<(xy: visuals.Coord) => visuals.SVGElAndSize>;
 
         constructor() {
             super()
@@ -25,6 +27,8 @@ namespace pxsim {
             }
 
             this.builtinParts = {};
+            this.builtinVisuals = {};
+            this.builtinPartVisuals = {};
         }
 
         kill() {
@@ -67,6 +71,14 @@ namespace pxsim {
             this.builtinParts["lightsensor"] = this.lightSensorState = new LightSensorState();
             this.builtinParts["compass"] = this.compassState = new CompassState();
             this.builtinParts["neopixel"] = this.neopixelState = new NeoPixelState();
+
+            this.builtinVisuals["buttonpair"] = () => new visuals.ButtonPairView();
+            this.builtinVisuals["ledmatrix"] = () => new visuals.LedMatrixView();
+            this.builtinVisuals["neopixel"] = () => new visuals.NeoPixelView();            
+
+            this.builtinPartVisuals["buttonpair"] = (xy: visuals.Coord) => visuals.mkBtnSvg(xy);
+            this.builtinPartVisuals["ledmatrix"] = (xy: visuals.Coord) => visuals.mkLedMatrixSvg(xy, 8, 8);
+            this.builtinPartVisuals["neopixel"] = (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy);            
         }
 
         receiveMessage(msg: SimulatorMessage) {

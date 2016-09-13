@@ -282,13 +282,14 @@ namespace pxsim.instructions {
         return div;
     }
     function mkCmpDiv(cmp: "wire" | PartVisualDefinition, opts: mkCmpDivOpts): HTMLElement {
+        let state = runtime.board as pxsim.CoreBoard;
         let el: visuals.SVGElAndSize;
         if (cmp == "wire") {
             el = visuals.mkWirePart([0, 0], opts.wireClr || "red", opts.crocClips);
         } else {
             let partVis = <PartVisualDefinition>cmp;
             if (typeof partVis.builtIn == "string") {
-                let cnstr = builtinComponentPartVisual[partVis.builtIn];
+                let cnstr = state.builtinPartVisuals[partVis.builtIn];
                 el = cnstr([0, 0]);
             } else {
                 el = visuals.mkGenericPartSVG(partVis);

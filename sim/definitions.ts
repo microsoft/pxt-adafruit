@@ -53,16 +53,6 @@ namespace pxsim {
         marginWhenBreadboarding: [0, 0, 80, 0],
     }
 
-    export const builtinComponentSimVisual: Map<() => visuals.IBoardPart<any>> = {
-        "buttonpair": () => new visuals.ButtonPairView(),
-        "ledmatrix": () => new visuals.LedMatrixView(),
-        "neopixel": () => new visuals.NeoPixelView(),
-    };
-    export const builtinComponentPartVisual: Map<(xy: visuals.Coord) => visuals.SVGElAndSize> = {
-        "buttonpair": (xy: visuals.Coord) => visuals.mkBtnSvg(xy),
-        "ledmatrix": (xy: visuals.Coord) => visuals.mkLedMatrixSvg(xy, 8, 8),
-        "neopixel": (xy: visuals.Coord) => visuals.mkNeoPixelPart(xy),
-    };
 
     //TODO: add multiple board support
     export const CURRENT_BOARD = MICROBIT_DEF;

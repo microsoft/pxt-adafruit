@@ -159,7 +159,7 @@ namespace pxsim.visuals {
             if (partInst.simulationBehavior) {
                 //TODO: seperate simulation behavior from builtin visual
                 let builtinBehavior = partInst.simulationBehavior;
-                let cnstr = builtinComponentSimVisual[builtinBehavior];
+                let cnstr = this.state.builtinVisuals[builtinBehavior];
                 let stateFn = this.state.builtinParts[builtinBehavior];
                 part = cnstr();
                 part.init(this.state.bus, stateFn, this.view, partInst.params);

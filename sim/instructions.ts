@@ -615,6 +615,9 @@ ${tsPackage}
                 });
         }
 
+        // board def
+        const boardDef = JSON.parse(getQsVal("board")) as pxsim.BoardDefinition;
+
         //parts list
         let parts = (getQsVal("parts") || "").split(" ");
         parts.sort();
@@ -638,7 +641,6 @@ ${tsPackage}
 
         style.textContent += STYLE;
 
-        const boardDef = CURRENT_BOARD;
         const cmpDefs = partDefinitions;
 
         //props

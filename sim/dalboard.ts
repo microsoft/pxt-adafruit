@@ -92,10 +92,9 @@ namespace pxsim {
 
             const options = (msg.options || {}) as RuntimeOptions;
 
-            const boardDef = CURRENT_BOARD; //TODO: read from pxt.json/pxttarget.json
-
+            const boardDef = msg.boardDefinition;
             const cmpsList = msg.parts;
-            const cmpDefs = msg.partDefinitions || {}; //TODO: read from pxt.json/pxttarget.json
+            const cmpDefs = msg.partDefinitions || {};
             const fnArgs = msg.fnArgs;
 
             const opts : visuals.BoardHostOpts = {

@@ -3,43 +3,6 @@
 /// <reference path="../../libs/microbit/shims.d.ts"/>
 /// <reference path="../../libs/microbit/enums.d.ts"/>
 
-//TODO move to utils
-namespace pxsim.visuals {
-    //expects rgb from 0,255, gives h in [0,360], s in [0, 100], l in [0, 100]
-    export function rgbToHsl(rgb: [number, number, number]): [number, number, number] {
-        let [r, g, b] = rgb;
-        let [r$, g$, b$] = [r / 255, g / 255, b / 255];
-        let cMin = Math.min(r$, g$, b$);
-        let cMax = Math.max(r$, g$, b$);
-        let cDelta = cMax - cMin;
-        let h: number, s: number, l: number;
-        let maxAndMin = cMax + cMin;
-
-        //lum
-        l = (maxAndMin / 2) * 100
-
-        if (cDelta === 0)
-            s = h = 0;
-        else {
-            //hue
-            if (cMax === r$)
-                h = 60 * (((g$ - b$) / cDelta) % 6);
-            else if (cMax === g$)
-                h = 60 * (((b$ - r$) / cDelta) + 2);
-            else if (cMax === b$)
-                h = 60 * (((r$ - g$) / cDelta) + 4);
-
-            //sat
-            if (l > 50)
-                s = 100 * (cDelta / (2 - maxAndMin));
-            else
-                s = 100 * (cDelta / maxAndMin);
-        }
-
-        return [Math.floor(h), Math.floor(s), Math.floor(l)];
-    }
-}
-
 namespace pxsim.visuals {
     const PIXEL_SPACING = PIN_DIST * 3;
     const PIXEL_RADIUS = PIN_DIST;
@@ -115,7 +78,7 @@ namespace pxsim.visuals {
         }
 
         public setRgb(rgb: [number, number, number]) {
-            let hsl = rgbToHsl(rgb);
+            let hsl = visuals.rgbToHsl(rgb);
             let [h, s, l] = hsl;
             // at least 70% luminosity
             l = Math.max(l, 60);

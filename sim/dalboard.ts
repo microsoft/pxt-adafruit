@@ -1,12 +1,40 @@
 /// <reference path="../node_modules/pxt-core/built/pxtsim.d.ts"/>
 
 namespace pxsim {
-    export class DalBoard extends BaseBoard {
+    export class CoreBoard extends BaseBoard {
         id: string;
 
         // the bus
         bus: pxsim.EventBus;
 
+        // updates
+        updateSubscribers: (() => void)[];
+
+        // builtin state
+        builtinParts: Map<any>;
+
+        constructor() {
+            super()
+            this.id = "b" + Math_.random(2147483647);
+            this.bus = new pxsim.EventBus(runtime);
+
+            // updates
+            this.updateSubscribers = []
+            this.updateView = () => {
+                this.updateSubscribers.forEach(sub => sub());
+            }
+
+            this.builtinParts = {};
+        }
+
+        kill() {
+            super.kill();
+            AudioContextManager.stop();
+        }
+    }
+
+
+    export class DalBoard extends CoreBoard {
         // state & update logic for component services
         ledMatrixState: LedMatrixState;
         edgeConnectorState: EdgeConnectorState;
@@ -19,37 +47,26 @@ namespace pxsim {
         radioState: RadioState;
         neopixelState: NeoPixelState;
 
-        // updates
-        updateSubscribers: (() => void)[];
-
         constructor() {
             super()
-            this.id = "b" + Math_.random(2147483647);
-            this.bus = new pxsim.EventBus(runtime);
 
             // components
-            this.ledMatrixState = new LedMatrixState(runtime);
-            this.buttonPairState = new ButtonPairState({
+            this.builtinParts["ledmatrix"] = this.ledMatrixState = new LedMatrixState(runtime);
+            this.builtinParts["buttonpair"] = this.buttonPairState = new ButtonPairState({
                 ID_BUTTON_A: DAL.MICROBIT_ID_BUTTON_A,
                 ID_BUTTON_B: DAL.MICROBIT_ID_BUTTON_B,
                 ID_BUTTON_AB: DAL.MICROBIT_ID_BUTTON_AB,
                 BUTTON_EVT_UP: DAL.MICROBIT_BUTTON_EVT_UP,
                 BUTTON_EVT_CLICK: DAL.MICROBIT_BUTTON_EVT_CLICK
             });
-            this.edgeConnectorState = new EdgeConnectorState();
-            this.radioState = new RadioState(runtime);
-            this.accelerometerState = new AccelerometerState(runtime);
-            this.serialState = new SerialState();
-            this.thermometerState = new ThermometerState();
-            this.lightSensorState = new LightSensorState();
-            this.compassState = new CompassState();
-            this.neopixelState = new NeoPixelState();
-
-            // updates
-            this.updateSubscribers = []
-            this.updateView = () => {
-                this.updateSubscribers.forEach(sub => sub());
-            }
+            this.builtinParts["edgeconnector"] = this.edgeConnectorState = new EdgeConnectorState();
+            this.builtinParts["radio"] = this.radioState = new RadioState(runtime);
+            this.builtinParts["accelerometer"] = this.accelerometerState = new AccelerometerState(runtime);
+            this.builtinParts["serial"] = this.serialState = new SerialState();
+            this.builtinParts["thermometer"] = this.thermometerState = new ThermometerState();
+            this.builtinParts["lightsensor"] = this.lightSensorState = new LightSensorState();
+            this.builtinParts["compass"] = this.compassState = new CompassState();
+            this.builtinParts["neopixel"] = this.neopixelState = new NeoPixelState();
         }
 
         receiveMessage(msg: SimulatorMessage) {
@@ -69,11 +86,6 @@ namespace pxsim {
                     this.radioState.recievePacket(packet);
                     break;
             }
-        }
-
-        kill() {
-            super.kill();
-            AudioContextManager.stop();
         }
 
         initAsync(msg: SimulatorRunMessage): Promise<void> {
@@ -131,9 +143,9 @@ namespace pxsim {
 
     if (!pxsim.initCurrentRuntime) {
         pxsim.initCurrentRuntime = initRuntimeWithDalBoard;
-    }    
+    }
 
     export function board() {
         return runtime.board as DalBoard;
-    } 
+    }
 }

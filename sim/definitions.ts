@@ -58,18 +58,6 @@ namespace pxsim {
         "ledmatrix": () => new visuals.LedMatrixView(),
         "neopixel": () => new visuals.NeoPixelView(),
     };
-    export const builtinComponentSimState: Map<(d: DalBoard) => any> = {
-        "buttonpair": (d: DalBoard) => d.buttonPairState,
-        "ledmatrix": (d: DalBoard) => d.ledMatrixState,
-        "edgeconnector": (d: DalBoard) => d.edgeConnectorState,
-        "serial": (d: DalBoard) => d.serialState,
-        "radio": (d: DalBoard) => d.radioState,
-        "thermometer": (d: DalBoard) => d.thermometerState,
-        "accelerometer": (d: DalBoard) => d.accelerometerState,
-        "compass": (d: DalBoard) => d.compassState,
-        "lightsensor": (d: DalBoard) => d.lightSensorState,
-        "neopixel": (d: DalBoard) => d.neopixelState,
-    };
     export const builtinComponentPartVisual: Map<(xy: visuals.Coord) => visuals.SVGElAndSize> = {
         "buttonpair": (xy: visuals.Coord) => visuals.mkBtnSvg(xy),
         "ledmatrix": (xy: visuals.Coord) => visuals.mkLedMatrixSvg(xy, 8, 8),

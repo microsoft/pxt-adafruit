@@ -353,7 +353,7 @@ namespace pxsim.instructions {
         };
     }
     function mkBlankBoardAndBreadboard(boardDef: BoardDefinition, cmpDefs: Map<PartDefinition>, fnArgs: any, width: number, buildMode: boolean = false): visuals.BoardHost {
-        let state = runtime.board as pxsim.DalBoard;
+        let state = runtime.board as pxsim.CoreBoard;
         let boardHost = new visuals.BoardHost({
             state: state,
             boardDef: boardDef,

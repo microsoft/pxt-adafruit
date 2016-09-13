@@ -1,6 +1,6 @@
 namespace pxsim.visuals {
     export interface BoardHostOpts {
-        state: DalBoard,
+        state: CoreBoard,
         boardDef: BoardDefinition,
         partsList?: string[],
         partDefs: Map<PartDefinition>,
@@ -22,7 +22,7 @@ namespace pxsim.visuals {
         private partOverGroup: SVGGElement;
         private style: SVGStyleElement;
         private defs: SVGDefsElement;
-        private state: DalBoard;
+        private state: CoreBoard;
         private useCrocClips: boolean;
 
         constructor(opts: BoardHostOpts) {
@@ -160,9 +160,9 @@ namespace pxsim.visuals {
                 //TODO: seperate simulation behavior from builtin visual
                 let builtinBehavior = partInst.simulationBehavior;
                 let cnstr = builtinComponentSimVisual[builtinBehavior];
-                let stateFn = builtinComponentSimState[builtinBehavior];
+                let stateFn = this.state.builtinParts[builtinBehavior];
                 part = cnstr();
-                part.init(this.state.bus, stateFn(this.state), this.view, partInst.params);
+                part.init(this.state.bus, stateFn, this.view, partInst.params);
             } else {
                 let vis = partInst.visual as PartVisualDefinition;
                 part = new GenericPart(vis);
@@ -179,7 +179,7 @@ namespace pxsim.visuals {
             let row = getRowName(rowIdx);
             let col = getColumnName(colIdx);
             let xOffset = partInst.bbFit.xOffset / partInst.visual.pinDistance;
-            let yOffset = partInst.bbFit.yOffset  / partInst.visual.pinDistance;
+            let yOffset = partInst.bbFit.yOffset / partInst.visual.pinDistance;
             let rowCol = <BBLoc>{
                 type: "breadboard",
                 row: row,

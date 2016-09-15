@@ -1,6 +1,4 @@
-# Running programs on your micro:bit
-
-How to compile, transfer, and run a program on your micro:bit for **Chrome for Mac**.
+# Uploading from Chrome for Mac
 
 While you're writing and testing your programs, you'll mostly be [running them
 in the simulator](/device/simulator), but once you've finished your program you

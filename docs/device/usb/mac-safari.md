@@ -1,6 +1,4 @@
-# Running programs on your micro:bit
-
-How to compile, transfer, and run a program on your micro:bit for **Safari on Mac**.
+# Uploading from Safari for Mac
 
 While you're writing and testing your programs, you'll mostly be [running them
 in the simulator](/device/simulator), but once you've finished your program you

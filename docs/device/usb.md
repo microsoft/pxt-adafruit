@@ -1,4 +1,4 @@
-# Running programs on your micro:bit
+# Uploading programs on your micro:bit
 
 While you're writing and testing your programs, you'll mostly be [running them
 in the simulator](/device/simulator), but once you've finished your program you

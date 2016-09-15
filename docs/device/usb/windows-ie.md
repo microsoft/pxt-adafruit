@@ -1,6 +1,4 @@
-# Running programs on your micro:bit
-
-How to compile, transfer, and run a program on your micro:bit on **Internet Explorer**.
+# Uploading from Internet Explorer on Windows
 
 While you're writing and testing your programs, you'll mostly be [running them
 in the simulator](/device/simulator), but once you've finished your program you

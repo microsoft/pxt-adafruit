@@ -55,14 +55,16 @@ void callback(ConstFSEventStreamRef streamRef, void * info, size_t numEvents, vo
 
 - (void)rescanPathWithEvents:(BOOL)sendEvents {
     NSArray<NSString*>* downloadFiles = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:self.path error:nil];
+    NSMutableSet<NSString*>* fullSet = [NSMutableSet new];
     for (NSString * file in downloadFiles) {
+        [fullSet addObject:file];
         if (![self.knownFiles containsObject:file]) {
             if (sendEvents) {
                 [self.delegate watcher:self observedNewFileAtPath:file];
             }
-            [self.knownFiles addObject:file];
         }
     }
+    self.knownFiles = fullSet;
 }
 
 @end

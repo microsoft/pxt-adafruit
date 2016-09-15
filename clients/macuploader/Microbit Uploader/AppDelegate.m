@@ -4,7 +4,6 @@
 
 @interface AppDelegate ()<DirectoryWatcherDelegate, UploaderDelegate, NSUserNotificationCenterDelegate>
 
-@property (weak) IBOutlet NSWindow *window;
 @property DirectoryWatcher * watcher;
 @property Uploader * uploader;
 @property NSStatusItem * menubarItem;

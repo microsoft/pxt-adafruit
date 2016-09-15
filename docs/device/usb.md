@@ -115,9 +115,9 @@ your downloads in the top right of your browser. Right click on the file and
 click on **Show in Finder** and the file will appear in your downloads folder.
 Select the file and drag and drop it onto your `MICROBIT` drive.
 
-![](/static/mb/device/usb-osx-firefox-1.png)
+![](/static/mb/device/usb-osx-firefox-1.jpg)
 
-![](/static/mb/device/usb-osx-firefox-2.png)
+![](/static/mb/device/usb-osx-firefox-2.jpg)
 
 #### Chrome
 

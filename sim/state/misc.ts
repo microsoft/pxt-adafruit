@@ -135,5 +135,21 @@ namespace pxsim.bluetooth {
     export function startButtonService(): void {
         // TODO
     }
+    export function startUartService(): void {
+        // TODO
+    }
+    export function uartWrite(s : string): void {
+        // TODO
+    }
+    export function uartRead(): string {
+        // TODO
+        return ""
+    }
+    export function onBluetoothConnected(a : RefAction) {
+        // TODO
+    }
+    export function onBluetoothDisconnected(a : RefAction) {
+        // TODO
+    }
 }
 

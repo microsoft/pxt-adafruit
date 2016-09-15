@@ -114,10 +114,17 @@
     microBitCount.enabled = NO;
     [menu addItem:microBitCount];
     
+    NSMenuItem * websiteItem = [[NSMenuItem alloc] initWithTitle:@"Editor" action:@selector(launchEditor:) keyEquivalent:@"e"];
+    [menu addItem:websiteItem];
+    
     NSMenuItem * quitItem = [[NSMenuItem alloc] initWithTitle:@"Quit" action:@selector(terminate:) keyEquivalent:@"q"];
     [menu addItem:quitItem];
     
     self.menubarItem.menu = menu;
+}
+
+- (void)launchEditor:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:@"https://codethemicrobit.com/"]];
 }
 
 @end

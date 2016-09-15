@@ -117,7 +117,7 @@ Select the file and drag and drop it onto your `MICROBIT` drive.
 
 ![](/static/mb/device/usb-osx-firefox-1.jpg)
 
-![](/static/mb/device/usb-osx-firefox-2.jpg)
+![](/static/mb/device/usb-osx-firefox-2.png)
 
 #### Chrome
 

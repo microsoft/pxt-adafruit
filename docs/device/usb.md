@@ -69,7 +69,7 @@ Select **Save File** and then select **OK**.
 The file will then appear in your downloads in the top right of your browser.
 Click the **folder icon** next to the filename to open it in Windows Explorer.
 
-![](/static/mb/device/usb-windows-firefox-2.png)
+![](/static/mb/device/usb-windows-firefox-2.jpg)
 
 Drag and drop the `.hex` file from the download folder onto the `MICROBIT` drive.
 

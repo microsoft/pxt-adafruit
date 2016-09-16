@@ -101,10 +101,32 @@
             {"pinIndices": [5, 6, 7, 8, 9]}
         ]
     },
+    "headphone": {
+        "numberOfPins": 2,
+        "visual": {
+            "image": "parts/headphone.svg",
+            "width": 142,
+            "height": 180,
+            "pinDistance": 20,
+            "pinLocations": [
+                {"x": 17, "y": 11},
+                {"x": 55, "y": 50}
+            ]
+        },
+        "pinDefinitions": [
+            {"target": "P0", "style": "croc", "orientation": "Y"},
+            {"target": "ground", "style": "croc", "orientation": "Y"}
+        ],
+        "instantiation": {"kind": "singleton"},
+        "assembly": [
+            {"part": true, "pinIndices": [0]},
+            {"pinIndices": [1]}
+        ]
+    },
     "speaker": {
         "numberOfPins": 2,
         "visual": {
-            "image": "/parts/speaker.svg",
+            "image": "parts/speaker.svg",
             "width": 500,
             "height": 500,
             "pinDistance": 70,

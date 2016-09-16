@@ -46,8 +46,7 @@ declare namespace radio {
      * @param index index of the number to read from 0 to 3. 1 eg
      */
     //% help=radio/received-number-at
-    //% weight=45 debug=true
-    //% blockId=radio_datagram_received_number_at block="radio receive number|at %VALUE" blockGap=8 shim=radio::receivedNumberAt
+    //% weight=45 debug=true shim=radio::receivedNumberAt
     function receivedNumberAt(index: number): number;
 
     /**

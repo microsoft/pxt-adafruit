@@ -8,6 +8,7 @@ namespace control {
      * Returns the value of a C++ runtime constant
      */
     //% weight=2 weight=19 blockId="control_event_source_id" block="%id" blockGap=8
+    //% shim=TD_ID
     export function eventSourceId(id: EventBusSource): number {
         return id;
     }
@@ -15,6 +16,7 @@ namespace control {
      * Returns the value of a C++ runtime constant
      */
     //% weight=1 weight=19 blockId="control_event_value_id" block="%id"
+    //% shim=TD_ID
     export function eventValueId(id: EventBusValue): number {
         return id;
     }

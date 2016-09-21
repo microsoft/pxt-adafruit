@@ -116,6 +116,28 @@ namespace pxsim.pins {
     }
 }
 
+namespace pxsim.devices {
+    export function tellCameraTo(action: number) {
+        // TODO
+    }
+    export function tellRemoteControlTo(action: number) {
+        // TODO
+    }
+    export function raiseAlertTo(action: number) {
+        // TODO
+    }
+    export function onSignalStrengthChanged(action: number) {
+        // TODO
+    }
+    export function signalStrength() : number {
+        // TODO
+        return 0;
+    }
+    export function onGamepadButton(button: number, body: RefAction) {
+        // TODO
+    }
+}
+
 namespace pxsim.bluetooth {
     export function startIOPinService(): void {
         // TODO

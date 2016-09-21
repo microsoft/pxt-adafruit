@@ -141,7 +141,6 @@ namespace radio {
      */
     //% help=radio/received-number-at
     //% weight=45 debug=true
-    //% blockId=radio_datagram_received_number_at block="radio receive number|at %VALUE" blockGap=8
     int receivedNumberAt(int index) {
         if (radioEnable() != MICROBIT_OK) return 0;
         if (0 <= index && index < packet.length() / 4) {

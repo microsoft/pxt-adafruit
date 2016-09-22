@@ -3,8 +3,6 @@
 As you are using a Mac, it is recommended that you use [Safari][]. Alternatively,
 [Google Chrome][chrome] and [Mozilla Firefox][firefox] are also supported.
 
-You cannot use Safari in private browsing mode when using the editor.
-
 Please see [here][technical] for technical information on which browsers are
 supported, or [here][versions] to check which version you are using.
 

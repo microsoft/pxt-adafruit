@@ -1,4 +1,5 @@
 enum Note {
+    //% blockIdentity=music.noteFrequency
     C = 262,
     //% block=C#
     //% blockIdentity=music.noteFrequency

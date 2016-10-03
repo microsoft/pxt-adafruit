@@ -1,15 +1,12 @@
 # Timing gates
 
-In ths project, we will build a timing gate, a system that can measure the speed of a car.
+### ~avatar
 
-### ~hint
-
-This lesson explains the principles of timing gates using household materials. To build high performance gates, 
-you will need better sensors such as [Hall Effect sensors](https://en.wikipedia.org/wiki/Hall_effect_sensor).
+This project explains the principles of timing gates using household materials.
 
 ### ~
 
-## How does it work?
+## Timing gates
 
 The two gates are connected to the micro:bit and can detect a car passing through.
 

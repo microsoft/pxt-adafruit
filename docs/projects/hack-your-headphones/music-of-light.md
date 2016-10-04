@@ -1,6 +1,4 @@
-# hack your headphones challenges
-
-Control sound with the light level. 
+# hack your headphones - music of light
 
 ### ~avatar avatar
 

@@ -1,4 +1,4 @@
-# banana keyboard blocks challenges
+# banana keyboard - beat box
 
 Have you ever tried to making beat box sounds? Let's try making a beatbox with code!
 

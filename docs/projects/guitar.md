@@ -1,5 +1,7 @@
 # Guitar
+
 ![guitar icon](/static/mb/projects/guitar.png)
+
 ### @description A beginner-intermediate maker activity, building a guitar with the micro:bit  
 
 ### ~avatar avatar
@@ -15,6 +17,7 @@ https://youtu.be/GYmdTFvxz80
 5 Activities, approx 30-45 min each based on familiarity with the coding concepts  
 
 ## Materials
+
 * Cardboard large pieces (recycle!)
 * Tape (masking, duct Tape, and/or packing tape)
 * Markers and/or paint
@@ -25,6 +28,7 @@ https://youtu.be/GYmdTFvxz80
 * Headphones
 
 ## Activities
+
 * [Making the Guitar Body](/projects/guitar/making)  
 * [Buttons, Display & Sound](/projects/guitar/displaybuttons)  
 * [Light Sensor Tone control](/projects/guitar/lightsensor)  

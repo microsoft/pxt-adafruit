@@ -2,7 +2,7 @@
 ### @description micro:bit guitar: using buttons with display and sound
 
 ### ~avatar avatar
-Use Button Events to control LED Display and play Sound  
+Use Button Events to control LED Display and play Sound
 * **Concepts:**
      * Events
      * Tone/Note
@@ -42,8 +42,8 @@ music.rest(music.beat(BeatFraction.Whole))
 music.beat(BeatFraction.Quarter)
 ```
 
-## Step 1: Make a Smiley 
-Open [codethemicrobit.com](https://codethemicrobit.com) in your web browser   
+## Step 1: Make a Smiley
+Open [codethemicrobit.com](https://codethemicrobit.com) in your web browser
 ```blocks
     basic.showLeds(`
         . # . # .
@@ -53,14 +53,14 @@ Open [codethemicrobit.com](https://codethemicrobit.com) in your web browser
         . # # # .
         `);
 ```
-From **Basics**, drag a **show LEDs** block into the coding area  
-  * Create a face with LEDs  
+From **Basics**, drag a **show LEDs** block into the coding area
+  * Create a face with LEDs
 
-![micro:bit USB connection](/static/mb/projects/guitar/connectmicrobit.jpg)  
-Connect your micro:bit to your computer via USB and click **`Download`**. 
-Follow the instructions to move the code to your micro:bit.  
+![micro:bit USB connection](/static/mb/projects/guitar/connectmicrobit.jpg)
+Connect your micro:bit to your computer via USB and click **`Download`**.
+Follow the instructions to move the code to your micro:bit.
 
-## Step 2: Add Smiley LED Button Events 
+## Step 2: Add Smiley LED Button Events
 ```blocks
 input.onButtonPressed(Button.A, () => {
     basic.showLeds(`
@@ -82,36 +82,36 @@ input.onButtonPressed(Button.B, () => {
 })
 ```
 
-From **Input**, drag an **on button 'A' pressed** block into the coding area  
+From **Input**, drag an **on button 'A' pressed** block into the coding area
 
-* Snap the LED face into the block  
+* Snap the LED face into the block
 
-* Create a 'B' button block with a different LED face   
+* Create a 'B' button block with a different LED face
 
-* Download the code to your micro:bit and try the A & B buttons  
+* Download the code to your micro:bit and try the A & B buttons
 
 
 ## Step 3: Add Headphone Speakers using Crocodile clips
 
-![crocodile clips attached to pins 0 and GND](/static/mb/projects/guitar/crocclipintoboard.jpg)  
+![crocodile clips attached to pins 0 and GND](/static/mb/projects/guitar/crocclipintoboard.jpg)
 
-![crocodile clips attached to headphone jack](/static/mb/projects/guitar/jacktocrocs.jpg)  
-Connect **GND** to the **base of the headphone jack** using a second crocodile clip (usually black)  
+![crocodile clips attached to headphone jack](/static/mb/projects/guitar/jacktocrocs.jpg)
+Connect **GND** to the **base of the headphone jack** using a second crocodile clip (usually black)
 
-Connect **pin 0** to the **tip of the headphone jack** with a crocodile clip  
+Connect **pin 0** to the **tip of the headphone jack** with a crocodile clip
 
-*attaching batteries and micro:bit*  
-https://youtu.be/zwRTmpKIaVU  
-Attach the micro:bit & battery-pack to the guitar body  
+*attaching batteries and micro:bit*
+https://youtu.be/zwRTmpKIaVU
+Attach the micro:bit & battery-pack to the guitar body
 
-*connecting headphone speaker*  
-https://youtu.be/ewyEW_U5G9M  
-Connect the headphones with crocodile clips    
-  
+*connecting headphone speaker*
+https://youtu.be/ewyEW_U5G9M
+Connect the headphones with crocodile clips
+
 ### ~hint
 ## The micro:bit can play music
 
-The **play tone** block allows a range letter note tones from **C** to **B5**.   
+The **play tone** block allows a range letter note tones from **C** to **B5**.
 Songs are played using sequences notes.   Like the beginning of a birthday song (C, C, D, C, F, E).
 ```blocks
 input.onButtonPressed(Button.A, () => {
@@ -152,20 +152,20 @@ input.onButtonPressed(Button.B, () => {
         `)
     music.playTone(Note.G, music.beat(BeatFraction.Whole))
 })
-```  
-From **Music**, drag **play tone *C* for *1* beat** block under the **show leds** in **Button A Pressed**  
+```
+From **Music**, drag **play tone *C* for *1* beat** block under the **show leds** in **Button A Pressed**
 
-  * modify **tone** by choosing a note (*letter*) and experiment with high and low pitches  
-  * set **beat** to 1  
-   
-**Repeat** for **Button B** event  
-  
-**Download the code** to the micro:bit  
+  * modify **tone** by choosing a note (*letter*) and experiment with high and low pitches
+  * set **beat** to 1
+
+**Repeat** for **Button B** event
+
+**Download the code** to the micro:bit
 
 **Try the A & B buttons** with headphones and power connected
-  
-## Congratulations on completing the basic guitar!   
-**Challenge:** Create Samples of longer music to play for each button instead of the single tone
+
+## Congratulations on completing the basic guitar!
+**Challenge:** Create samples of longer music to play for each button instead of the single tone
   * *Tip*: Search for "ABC music notation" or "Easy Music Notes" + the name of a song
 
 ## Extra

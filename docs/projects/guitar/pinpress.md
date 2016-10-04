@@ -6,16 +6,16 @@
 Use pin press to switch guitar play on/off
 
 * Concepts:
-    * Circuit  
-    * Conductor 
-    * Variable/Global-Variable  
-    * Conditional: **`if`**, **`else`**  
+    * Circuit
+    * Conductor
+    * Variable/Global-Variable
+    * Conditional: **`if`**, **`else`**
     * Boolean: **`True`/`False`**
-### ~  
+### ~
 
-## Duration: approximately 45 minutes  
+## Duration: approximately 45 minutes
 
-## Materials:  
+## Materials:
 2-3 Crocodile clips
 
 ## Blocks
@@ -31,16 +31,16 @@ input.onPinPressed(TouchPin.P1, () => {})
 
 ### ~hint
 ## Circuits & Switches
-* **Circuits** need a power supply (battery), a resister (like a LED) & a conductor (metal, water, hand)  
-* **Switches** turn electric power on by closing (completing) a circuit with a conductor so power can flow  
+* **Circuits** need a power supply (battery), a resister (like a LED) & a conductor (metal, water, hand)
+* **Switches** turn electric power on by closing (completing) a circuit with a conductor so power can flow
 
-**Metal foil and wires make excellent conductors**  
+**Metal foil and wires make excellent conductors**
 
-**In this activity we use YOU to conduct electricity**  
-**to close the circuit that switches the guitar ON and OFF!**  
+**In this activity we use YOU to conduct electricity**
+**to close the circuit that switches the guitar ON and OFF!**
 ### ~
 
-## Step 1: Pin Press Test  
+## Step 1: Pin Press Test
 
 ```blocks
 input.onPinPressed(TouchPin.P0, () => {
@@ -52,34 +52,34 @@ input.onPinPressed(TouchPin.P1, () => {
 input.onPinPressed(TouchPin.P2, () => {
     basic.showNumber(2)
 })
-```  
-**Create the pin-press code**  
+```
+**Create the pin-press code**
 
-**Download the code** on the micro:bit 
+**Download the code** on the micro:bit
 
-https://youtu.be/PAIU-vHqyGU  
+https://youtu.be/PAIU-vHqyGU
 
-**Hold the micro:bit touching The GND pin with one hand**  
-**with the other hand alternately touch the 0, 1 and 2 pins**  
-  
+**Hold the micro:bit touching The GND pin with one hand**
+**with the other hand alternately touch the 0, 1 and 2 pins**
+
 ### ~hint
-**The electric signal traveled from pins, between your hands to `GND` and the micro:bit detected the electric signal!**  
-### ~  
-  
-## Step 2: Installing conductive foil on the guitar  
-https://youtu.be/NX0ECcpXFes  
-**Add foil to the guitar body where it is easy to touch while playing**   
+**The electric signal traveled from pins, between your hands to `GND` and the micro:bit detected the electric signal!**
+### ~
 
-**Connect the foil to `GND` using a crocodile clip**  
+## Step 2: Installing conductive foil on the guitar
+https://youtu.be/NX0ECcpXFes
+**Add foil to the guitar body where it is easy to touch while playing**
 
-https://youtu.be/YkymZGNmkrE  
-**Add foil to the guitar neck**  
-  
-**Connect the foil to `pin 1` using a crocodile clip**  
+**Connect the foil to `GND` using a crocodile clip**
 
-## Step 3: Add a switch to turn the guitar ON and OFF  
-**Using the `on` global variable we can switch the message on the micro:bit**   
-**between ON and OFF**  
+https://youtu.be/YkymZGNmkrE
+**Add foil to the guitar neck**
+
+**Connect the foil to `pin 1` using a crocodile clip**
+
+## Step 3: Add a switch to turn the guitar ON and OFF
+**Using the `on` global variable we can switch the message on the micro:bit**
+**between ON and OFF**
 ```blocks
 let on = false
 basic.forever(() => {
@@ -96,11 +96,11 @@ input.onPinPressed(TouchPin.P1, () => {
         on = true
     }
 })
-``` 
-**Create the ON/OFF switch code**  
+```
+**Create the ON/OFF switch code**
 
-**Download the code on the micro:bit**   
- 
+**Download the code on the micro:bit**
+
 **Test by touching `P1` to toggle the LED message between ON and OFF**
 
 *Final code*
@@ -123,9 +123,9 @@ basic.forever(() => {
 input.onPinPressed(TouchPin.P1, () => {
     on = !on;
 })
-```  
-## Now Play! 
-**Turn the guitar ON and OFF with a pin press on the connected foil**  
-**touching both pieces of foil at the same time to connect the switches**  
-  
-https://youtu.be/GYmdTFvxz80  
+```
+## Now Play!
+**Turn the guitar ON and OFF with a pin press on the connected foil by**
+**touching both pieces of foil at the same time to connect the switches**
+
+https://youtu.be/GYmdTFvxz80

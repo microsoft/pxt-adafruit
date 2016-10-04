@@ -1,11 +1,5 @@
 # banana keyboard blocks challenges
 
-control images with variables. 
-
-## Before we get started
-
-Control images with variables. 
-
 Have you ever tried to making beat box sounds? Let's try making a beatbox with code!
 
 We will register an event handler on the fruit that will execute when two things occur: first, the alligator clip attaches to GND and the other side of the alligator clip is inserted into a banana. Let's start by adding a variable where you can store data. Then rename the variable to "sound". Then set the value of the variable to the note block `A` from the Music drawer. Modify your code so that your code looks like this.
@@ -35,7 +29,7 @@ input.onPinPressed(TouchPin.P1, () => {
 ```
 
 
-* click *run* to see if the code works as expected.
+* click *Download* to see if the code works as expected.
 
 
 
@@ -57,8 +51,4 @@ input.onPinPressed(TouchPin.P2, () => {
 })
 ```
 
-* click *run* to see if the code works as expected.
-
-### ~button /projects/telegraph
-NEXT: Telegraph
-### ~
+* click *Download* to see if the code works as expected.

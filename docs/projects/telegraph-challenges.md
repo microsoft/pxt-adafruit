@@ -108,7 +108,3 @@ Your telegraph is ready!
 * Connect the first micro:bit to your computer using your USB cable and put the telegraph script on it.
 * Connect the second micro:bit to your computer using your USB cable and run the telegraph script on it.
 * The first person and second person take turns pressing button A to play the telegraph game!
-
-### ~button /projects/radio
-NEXT: Radio
-### ~

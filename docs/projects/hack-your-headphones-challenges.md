@@ -70,7 +70,3 @@ input.onButtonPressed(Button.A, () => {
 ```
 
 * click **Download** and run your code on the micro:bit.
-
-### ~button /projects/banana-keyboard
-NEXT: Banana Keyboard
-### ~

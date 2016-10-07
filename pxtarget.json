@@ -1,5 +1,6 @@
 {
     "id": "microbit",
+    "nickname": "microbit",
     "name": "code the micro:bit",
     "title": "code the micro:bit - Blocks / Javascript editor",
     "description": "A Blocks / JavaScript code editor for the micro:bit.",
@@ -20,7 +21,8 @@
             "Microsoft/pxt-sonar",
             "Microsoft/pxt-max6675",
             "Microsoft/pxt-i2c-fram"
-        ]
+        ],
+        "githubPackages": true
     },
     "blocksprj": {
         "id": "blocksprj",

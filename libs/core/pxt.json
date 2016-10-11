@@ -1,0 +1,47 @@
+{
+    "name": "microbit",
+    "description": "The microbit core library",
+    "installedVersion": "tsmdvf",
+    "files": [
+        "README.md",
+        "dal.d.ts",
+        "enums.d.ts",
+        "shims.d.ts",
+        "pxt-core.d.ts",
+        "ksbit.h",
+        "core.cpp",
+        "pxt-helpers.ts",
+        "helpers.ts",
+        "images.cpp",
+        "basic.cpp",
+        "input.cpp",
+        "input.ts",
+        "control.ts",
+        "control.cpp",
+        "game.ts",
+        "led.cpp",
+        "led.ts",
+        "music.ts",
+        "pins.cpp",
+        "pins.ts",
+        "serial.cpp",
+        "serial.ts",
+        "buffer.cpp",
+        "pxtparts.json",
+        "parts/speaker.svg",
+        "parts/headphone.svg",
+        "_locales/fr/microbit-jsdoc-strings.json"
+    ],
+    "public": true,
+    "dependencies": {},
+    "yotta": {
+        "configIsJustDefaults": true,
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 0
+                }
+            }
+        }
+    }
+}

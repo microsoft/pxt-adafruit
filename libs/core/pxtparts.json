@@ -1,0 +1,148 @@
+{ 
+     "buttonpair": {
+        "simulationBehavior": "buttonpair",
+        "visual": {
+            "builtIn": "buttonpair",
+            "width": 75,
+            "height": 45,
+            "pinDistance": 15,
+            "pinLocations": [
+                {"x": 0, "y": 0},
+                {"x": 30, "y": 45},
+                {"x": 45, "y": 0},
+                {"x": 75, "y": 45}
+            ]
+        },
+        "numberOfPins": 4,
+        "pinDefinitions": [
+            {"target": "P14", "style": "male", "orientation": "-Z"},
+            {"target": "ground", "style": "male", "orientation": "-Z"},
+            {"target": "P15", "style": "male", "orientation": "-Z"},
+            {"target": "ground", "style": "male", "orientation": "-Z"}
+        ],
+        "instantiation": {
+            "kind": "singleton"
+        },
+        "assembly": [
+            {"part": true},
+            {"pinIndices": [0, 1]},
+            {"pinIndices": [2, 3]}
+        ]
+    },
+    "neopixel": {
+        "simulationBehavior": "neopixel",
+        "visual": {
+            "builtIn": "neopixel",
+            "width": 58,
+            "height": 113,
+            "pinDistance": 9,
+            "pinLocations": [
+                {"x": 10, "y": 0},
+                {"x": 19, "y": 0},
+                {"x": 28, "y": 0}
+            ]
+        },
+        "numberOfPins": 3,
+        "pinDefinitions": [
+            {"target": {"pinInstantiationIdx": 0}, "style": "solder", "orientation": "+Z"},
+            {"target": "threeVolt", "style": "solder", "orientation": "+Z"},
+            {"target": "ground", "style": "solder", "orientation": "+Z"}
+        ],
+        "instantiation": {
+            "kind": "function",
+            "fullyQualifiedName": "neopixel.create",
+            "argumentRoles": [
+                {"pinInstantiationIdx": 0, "partParameter": "pin"},
+                {"partParameter": "mode"}
+            ]
+        },
+        "assembly": [
+            {"part": true, "pinIndices": [2]},
+            {"pinIndices": [0, 1]}
+        ]
+    },
+    "ledmatrix": {
+        "visual": {
+            "builtIn": "ledmatrix",
+            "width": 105,
+            "height": 105,
+            "pinDistance": 15,
+            "pinLocations": [
+                {"x": 0, "y": 0},
+                {"x": 15, "y": 0},
+                {"x": 30, "y": 0},
+                {"x": 45, "y": 0},
+                {"x": 105, "y": 105},
+                {"x": 0, "y": 105},
+                {"x": 15, "y": 105},
+                {"x": 30, "y": 105},
+                {"x": 45, "y": 105},
+                {"x": 60, "y": 0}
+            ]
+        },
+        "simulationBehavior": "ledmatrix",
+        "numberOfPins": 10,
+        "instantiation": {"kind": "singleton"},
+        "pinDefinitions": [
+            {"target": "P6", "style": "male", "orientation": "-Z", "colorGroup": 0},
+            {"target": "P7", "style": "male", "orientation": "-Z", "colorGroup": 0},
+            {"target": "P8", "style": "male", "orientation": "-Z", "colorGroup": 0},
+            {"target": "P9", "style": "male", "orientation": "-Z", "colorGroup": 0},
+            {"target": "P10", "style": "male", "orientation": "-Z", "colorGroup": 0},
+            {"target": "P12", "style": "male", "orientation": "-Z", "colorGroup": 1},
+            {"target": "P13", "style": "male", "orientation": "-Z", "colorGroup": 1},
+            {"target": "P16", "style": "male", "orientation": "-Z", "colorGroup": 1},
+            {"target": "P19", "style": "male", "orientation": "-Z", "colorGroup": 1},
+            {"target": "P20", "style": "male", "orientation": "-Z", "colorGroup": 1}
+        ],
+        "assembly": [
+            {"part": true},
+            {"pinIndices": [0, 1, 2, 3, 4]},
+            {"pinIndices": [5, 6, 7, 8, 9]}
+        ]
+    },
+    "headphone": {
+        "numberOfPins": 2,
+        "visual": {
+            "image": "parts/headphone.svg",
+            "width": 142,
+            "height": 180,
+            "pinDistance": 20,
+            "pinLocations": [
+                {"x": 17, "y": 11},
+                {"x": 55, "y": 50}
+            ]
+        },
+        "pinDefinitions": [
+            {"target": "P0", "style": "croc", "orientation": "Y"},
+            {"target": "ground", "style": "croc", "orientation": "Y"}
+        ],
+        "instantiation": {"kind": "singleton"},
+        "assembly": [
+            {"part": true, "pinIndices": [0]},
+            {"pinIndices": [1]}
+        ]
+    },
+    "speaker": {
+        "numberOfPins": 2,
+        "visual": {
+            "image": "parts/speaker.svg",
+            "width": 500,
+            "height": 500,
+            "pinDistance": 70,
+            "pinLocations": [
+                {"x": 180, "y": 135},
+                {"x": 320, "y": 135}
+            ]
+        },
+        "pinDefinitions": [
+            {"target": "P0", "style": "male", "orientation": "-Z"},
+            {"target": "ground", "style": "male", "orientation": "-Z"}
+        ],
+        "instantiation": {"kind": "singleton"},
+        "assembly": [
+            {"part": true, "pinIndices": [0]},
+            {"pinIndices": [1]}
+        ]
+    }
+}

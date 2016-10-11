@@ -1,0 +1,35 @@
+{
+  "name": "pxt-adafruit-circuit-playground",
+  "version": "0.4.0",
+  "description": "Adafruit Circuit Playground for PXT",
+  "private": true,
+  "keywords": [
+    "JavaScript",
+    "education",
+    "microbit"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Microsoft/pxt-adafruit-circuit-playground.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "homepage": "https://github.com/Microsoft/pxt-adafruit-circuit-playground#readme",
+  "files": [
+    "README.md",
+    "pxtarget.json",
+    "built/*.js",
+    "built/*.json",
+    "built/*.d.ts",
+    "sim/public",
+    "docs/*.md",
+    "docs/*/*.md",
+    "docs/*/*/*.md"
+  ],
+  "devDependencies": {
+    "typescript": "^1.8.7"
+  },
+  "dependencies": {
+    "pxt-core": "0.4.48"
+  }
+}

@@ -14,7 +14,7 @@
     "cloud": {
         "workspace": false,
         "packages": true,
-        "sharing": true,
+        "sharing": false,
         "publish": false,
         "preferredPackages": [
             "Microsoft/pxt-neopixel",

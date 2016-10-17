@@ -9,7 +9,8 @@
         "pxt-helpers.ts",
         "buffer.cpp",
         "shims.d.ts",
-        "enums.d.ts"
+        "enums.d.ts",
+        "wrap.cpp"
     ],
     "public": true,
     "dependencies": {}

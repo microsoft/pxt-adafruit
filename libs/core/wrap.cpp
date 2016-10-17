@@ -5,10 +5,13 @@ enum class Button {
     Right = CPLAY_RIGHTBUTTON
 };
 
+/**
+* Sensors
+*/
 //% color=300 weight=99
 namespace sensors {
 
-  // These are not public
+  //%
   uint16_t lightSensor(void) {
       return CircuitPlayground.lightSensor();
   }

@@ -74,11 +74,6 @@
         "gittag": "v0.5.0",
         "serviceId": "ws"
     },
-    "serial": {
-        "manufacturerFilter": "^mbed$",
-        "nameFilter": "^mbed Serial Port",
-        "log": true
-    },
     "appTheme": {
         "accentColor": "#5C005C",
         "logoUrl": "https://www.adafruit.com/products/3000",

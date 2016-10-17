@@ -8,6 +8,12 @@
     "bundleddirs": [
         "libs/core"
     ],
+    "simulator": {
+        "autoRun": true,
+        "streams": true,
+        "aspectRatio": 1.0,
+        "parts": false
+    },    
     "cloud": {
         "workspace": false,
         "packages": true,

@@ -1,28 +1,16 @@
 {
-    "name": "microbit",
-    "description": "The microbit core library",
-    "installedVersion": "tsmdvf",
+    "name": "core",
+    "description": "The core library",
     "files": [
         "README.md",
         "pxt-core.d.ts",
         "ksbit.h",
         "core.cpp",
         "pxt-helpers.ts",
-        "helpers.ts",
         "buffer.cpp",
         "shims.d.ts",
         "enums.d.ts"
     ],
     "public": true,
-    "dependencies": {},
-    "yotta": {
-        "configIsJustDefaults": true,
-        "config": {
-            "microbit-dal": {
-                "bluetooth": {
-                    "enabled": 0
-                }
-            }
-        }
-    }
+    "dependencies": {}
 }

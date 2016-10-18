@@ -10,7 +10,8 @@
         "buffer.cpp",
         "shims.d.ts",
         "enums.d.ts",
-        "wrap.cpp"
+        "wrap.cpp",
+        "wrap.ts"
     ],
     "public": true,
     "dependencies": {}

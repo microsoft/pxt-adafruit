@@ -57,4 +57,98 @@ declare interface Buffer {
     write(dstOffset: number, src: Buffer): void;
 }
 
+
+    /**
+     * Playground
+     */
+    //% color=#FE49C9 weight=99
+declare namespace playground {
+
+    /**
+     * Reads the light level between 0 and 1023.
+     */
+    //% blockId="lightSensor" block="light sensor" shim=playground::lightSensor
+    function lightSensor(): uint16_t;
+
+    /**
+     * Reads the sound level between 0 and 1023.
+     */
+    //% blockId="soundSensor" block="sound sensor" shim=playground::soundSensor
+    function soundSensor(): uint16_t;
+
+    /**
+     * Just turn on/off the red #13 LED
+     * @param on a value to turn on/off the LED, eg: true
+     */
+    //% blockId="redled" block="red led %on" shim=playground::redLED
+    function redLED(on: boolean): void;
+
+    /**
+     * Gets a value indicating if the left button is pressed.
+     */
+    //% blockId="leftButton" block="left button" weight=40 shim=playground::leftButton
+    function leftButton(): boolean;
+
+    /**
+     * Gets a value indicating if the right button is pressed.
+     */
+    //% blockId="rightButton" block="right button" weight=39 shim=playground::rightButton
+    function rightButton(): boolean;
+
+    /**
+     * Gets the frequency of a note.
+     * @param note the note name
+     */
+    //% weight=50
+    //% blockId=noteFrequency block="%note"
+    //% shim=TD_ID shim=playground::noteFrequency
+    function noteFrequency(note: Note): uint16_t;
+
+    /**
+     * Plays a given tone
+     * @param frequency pitch of tone in Hz
+     * @param time duration of tone in ms.
+     */
+    //% blockId="playTone" block="play tone at|freq (Hz) %frequency=noteFrequency|for (ms) %time" shim=playground::playTone
+    function playTone(frequency: uint16_t, time: uint16_t): void;
+}
+
+
+    /**
+     * Functions to manipulate neopixels
+     */
+    //% color=#00a7e9 weight=50
+declare namespace neopixels {
+
+    /**
+     * Clear pixels
+     */
+    //% blockId="clearPixels" block="clear pixels" shim=neopixels::clearPixels
+    function clearPixels(): void;
+
+    /**
+     * Sets the RGB color on a pixel
+     */
+    //% blockId="setPixelColor" block="set pixel %p|to color %c" shim=neopixels::setPixelColor
+    function setPixelColor(p: uint8_t, c: number): void;
+
+    /**
+     * Sets the RGB color on a pixel
+     */
+    //% blockId="setPixelColorRgb" block="set pixel %p|to red %c|green %g|blue %b" shim=neopixels::setPixelColor
+    function setPixelColor(p: uint8_t, r: uint8_t, g: uint8_t, b: uint8_t): void;
+
+    /**
+     * Sets the neopixel brightness
+     */
+    //% blockId="setBrightness" block="set brightness %b" shim=neopixels::setBrightness
+    function setBrightness(b: uint16_t): void;
+
+    /**
+     * Color wheel
+     */
+    //% blockId="colorWheel" block="color wheel %x" shim=neopixels::colorWheel
+    function colorWheel(x: uint8_t): number;
+}
+
 // Auto-generated. Do not edit. Really.

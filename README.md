@@ -8,7 +8,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 - install python 2.7.10
 - pip install -U platformio
 - Windows requires drivers (linux and MacOS don’t) for serial:
-- https://learn.adafruit.com/introducing-circuit-playground/windows-setup 
+  - https://learn.adafruit.com/introducing-circuit-playground/windows-setup 
 - cd to newly created directory
 - platformio init  
   - this creates file platformio.ini

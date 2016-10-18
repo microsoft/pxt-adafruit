@@ -62,6 +62,7 @@
     },
     "compile": {
         "isNative": false,
+        "nativeType": "AVR",  // TODO: need to check this, finally!
         "hasHex": false,
         "deployDrives": "ADAFRUIT",
         "driveName": "ADAFRUIT"
@@ -73,9 +74,10 @@
         "variablesBlocks": true
     },
     "compileService": {
-        "yottaTarget": "bbc-microbit-classic-gcc",
-        "yottaCorePackage": "pxt-microbit-core",
-        "githubCorePackage": "microsoft/pxt-microbit-core",
+        "usePlatformIO": true,
+        "yottaTarget": "Adafruit Circuit Playground@1.6.2", // this is a platformio library reference
+        "yottaCorePackage": "pxt-adafruit-circuit-playground-core", // also a library reference (local for now)
+        "githubCorePackage": "microsoft/pxt-adafruit-circuit-playground-core",
         "gittag": "v0.5.0",
         "serviceId": "ws"
     },

@@ -1,6 +1,6 @@
 // Place your settings in this file to overwrite default and user settings.
 {
-    "file.autoSave": "afterDelay",   
+    "file.autoSave": "afterDelay",
     "files.watcherExclude": {
         "**/.git/objects/**": true,
         "**/built/**": true,
@@ -8,14 +8,15 @@
         "**/yotta_modules/**": true,
         "**/yotta_targets": true,
         "**/pxt_modules/**": true
-    },    
+    },
     "search.exclude": {
         "**/node_modules": true,
         "**/yotta_modules/**": true,
         "**/yotta_targets": true,
         "**/pxt_modules/**": true
-    },    
+    },
     "tslint.enable": true,
     "tslint.rulesDirectory": "node_modules/tslint-microsoft-contrib",
-    "typescript.tsdk": "./node_modules/typescript/lib"
+    "typescript.tsdk": "./node_modules/typescript/lib",
+    "editor.tabSize": 4
 }

@@ -10,7 +10,6 @@ enum class Button {
 */
 //% color=300 weight=99
 namespace sensors {
-
   //%
   uint16_t lightSensor(void) {
       return CircuitPlayground.lightSensor();

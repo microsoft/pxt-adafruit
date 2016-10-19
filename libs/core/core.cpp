@@ -124,6 +124,8 @@ namespace Math_ {
       }
       return r;
     }
+
+    #define microbit_random(x) random(x)
     
     //%
     int random(int max) {
@@ -172,13 +174,13 @@ namespace pxt {
   //%
   void registerWithDal(int id, int event, Action a);
   //%
-  uint32_t runAction3(Action a, int arg0, int arg1, int arg2);
+  uint16_t runAction3(Action a, int arg0, int arg1, int arg2);
   //%
-  uint32_t runAction2(Action a, int arg0, int arg1);
+  uint16_t runAction2(Action a, int arg0, int arg1);
   //%
-  uint32_t runAction1(Action a, int arg0);
+  uint16_t runAction1(Action a, int arg0);
   //%
-  uint32_t runAction0(Action a);
+  uint16_t runAction0(Action a);
   //%
   Action mkAction(int reflen, int totallen, int startptr);
   //%
@@ -194,7 +196,7 @@ namespace pxt {
   //%
   void decr(uint32_t e);
   //%
-  uint32_t *allocate(uint16_t sz);
+  uint16_t *allocate(uint16_t sz);
   //%
   int templateHash();
   //%

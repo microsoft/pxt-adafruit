@@ -6,7 +6,7 @@ namespace bluetooth {
     /**
     *  Writes to the Bluetooth UART service buffer. From there the data is transmitted over Bluetooth to a connected device.
     */
-    //% help=bluetooth/uart-write weight=80
+    //% help=bluetooth/uart-write-string weight=80
     //% blockId=bluetooth_uart_write block="bluetooth uart|write string %data" blockGap=8
     //% parts="bluetooth" shim=bluetooth::uartWriteString advanced=true
     export function uartWriteString(data: string): void {
@@ -17,7 +17,7 @@ namespace bluetooth {
     /**
      * Prints a numeric value to the serial
      */
-    //% help=serial/write-number weight=79
+    //% help=bluetooth/uart-write-number weight=79
     //% weight=89 blockGap=8 advanced=true
     //% blockId=bluetooth_uart_writenumber block="bluetooth uart|write number %value"
     export function uartWriteNumber(value: number): void {

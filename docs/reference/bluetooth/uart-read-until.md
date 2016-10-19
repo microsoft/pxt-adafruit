@@ -1,4 +1,4 @@
-# UART Write 
+# UART Read 
 
 ### ~hint
 ![](/static/bluetooth/Bluetooth_SIG.png)
@@ -9,29 +9,30 @@ For another device like a smartphone to use any of the Bluetooth "services" whic
 
 The [Bluetooth UART service](start-uart-service.md) allows another device such as a smartphone to exchange any data it wants to with the micro:bit, in small chunks. 
 
-With the Bluetooth UART service running, this block allows a micro:bit to send data to a Bluetooth connected device.
+With the Bluetooth UART service running, this block allows a micro:bit to read data which has been received from a Bluetooth connected device, terminating reading and returning the value obtained as soon as a specified delimiter character is encountered. This means that connected devices can send data to the micro:bit and indicate that the complete message has been sent by appending the message with the delimiter character.
 
 ```sig
-bluetooth.uartWrite("");
+bluetooth.uartReadUntil("");
 ```
 
-### Example: Starting the Bluetooth UART service and then sending "HELLO" whenever button A is pressed and another device has connected over Bluetooth
+### Example: Starting the Bluetooth UART service and then reading data received from another device which is terminated by ":" character and then displaying it
 
 ```blocks
+let uartData = "";
 let connected = 0;
+basic.showString("UART");
 bluetooth.onBluetoothConnected(() => {
     basic.showString("C");
     connected = 1;
+    while (connected == 1) {
+        uartData = bluetooth.uartReadUntil(":");
+        basic.showString(uartData);
+    }
 });
 bluetooth.onBluetoothDisconnected(() => {
     basic.showString("D");
-    connected = 0;
 });
-input.onButtonPressed(Button.A, () => {
-    if (connected == 1) {
-        bluetooth.uartWrite("HELLO");
-    }
-});
+
 ```
 
 ### Video - UART service guessing game

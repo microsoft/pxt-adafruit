@@ -29,6 +29,6 @@
     "typescript": "^1.8.7"
   },
   "dependencies": {
-    "pxt-core": "0.4.67"
+    "pxt-core": "0.4.68"
   }
 }

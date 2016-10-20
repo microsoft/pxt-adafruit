@@ -1,6 +1,9 @@
 #include "ksbit.h"
 #include <limits.h>
 
+#include <Adafruit_CircuitPlayground.h>
+
+
 
 namespace String_ {
     //%
@@ -146,7 +149,32 @@ namespace Math_ {
     }
 }
 
+#if 0
+namespace Array_ {
+    //%
+    RefCollection *mk(uint32_t flags)
+    {
+      return new RefCollection(flags);
+    }
+    //%
+    int length(RefCollection *c) { return c->length(); }
+    //%
+    void push(RefCollection *c, uint32_t x) { c->push(x); }
+    //%
+    uint32_t getAt(RefCollection *c, int x) { return c->getAt(x); }
+    //%
+    void removeAt(RefCollection *c, int x) { c->removeAt(x); }
+    //%
+    void setAt(RefCollection *c, int x, uint32_t y) { c->setAt(x, y); }
+    //%
+    int indexOf(RefCollection *c, uint32_t x, int start) { return c->indexOf(x, start); }
+    //%
+    int removeElement(RefCollection *c, uint32_t x) { return c->removeElement(x); }
+}
 
+#endif
+
+#if 0
 // Import some stuff directly
 namespace pxt {
   //%
@@ -160,13 +188,24 @@ namespace pxt {
   //%
   uint16_t runAction0(Action a);
   //%
-  Action mkAction(int reflen, int totallen, int startptr);  
+  Action mkAction(int reflen, int totallen, int startptr);
+  //%
+  RefRecord* mkClassInstance(int offset);
+  //%
+  void RefRecord_destroy(RefRecord *r);
+  //%
+  void RefRecord_print(RefRecord *r);
   //%
   void debugMemLeaks();
+}
+#endif
+
+// Import some stuff directly
+namespace pxt {
   //%
-  int incr(uint32_t e);
+  int incr(uint16_t e);
   //%
-  void decr(uint32_t e);
+  void decr(uint16_t e);
   //%
   uint16_t *allocate(uint16_t sz);
   //%
@@ -179,8 +218,8 @@ namespace pxt {
   int getNumGlobals();
 }
 
+#if 0
 namespace pxtrt {
-  /*
   //%
   uint32_t ldloc(RefLocal *r) {
     return r->v;
@@ -251,12 +290,15 @@ namespace pxtrt {
     a->stCore(idx, v);
     return a;
   }
-*/
+}
+#endif
 
+namespace pxtrt {
+  
   //%
   void panic(int code)
   {
-    microbit_panic(code);
+    pxt::panic(code);
   }
 
   //%
@@ -278,7 +320,7 @@ namespace pxtrt {
   }
 
   //%
-  int ptrToBool(uint16_t p) {
+  int ptrToBool(uint32_t p) {
     if (p) {
       decr(p);
       return 1;
@@ -286,8 +328,11 @@ namespace pxtrt {
       return 0;
     }
   }
+}
 
-/*
+#if 0
+namespace pxtrt {
+
   //%
   RefMap *mkMap() {
     return new RefMap();
@@ -353,7 +398,10 @@ namespace pxtrt {
     }
     map->unref();      
   }
-*/
+}
+#endif
+
+namespace pxtrt {
 
   //
   // Debugger

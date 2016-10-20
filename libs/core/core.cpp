@@ -298,14 +298,7 @@ namespace pxtrt {
   //%
   void panic(int code)
   {
-    for (;;) {
-      for (int i = 0; i < 10; ++i)
-        CircuitPlayground.setPixelColor(i, 255, 0, 0);
-      delay(500);
-      for (int i = 0; i < 10; ++i)
-        CircuitPlayground.setPixelColor(i, 0, 0, 255);
-      delay(500);
-    }
+    pxt::panic(code);
   }
 
   //%

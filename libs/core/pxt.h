@@ -71,6 +71,8 @@ namespace pxt {
   int incr(uint16_t e);
   void decr(uint16_t e);
 
+  void panic(int code);
+
   inline void *ptrOfLiteral(int offset)
   {
     return &bytecode[offset];

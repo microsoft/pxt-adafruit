@@ -1,5 +1,6 @@
 #include "pxt.h"
 #include "RefCounted.h"
+#include <Adafruit_CircuitPlayground.h>
 
 namespace pxt {
   
@@ -42,7 +43,7 @@ namespace pxt {
       RefAction *r = new (ptr) RefAction();
       r->len = totallen;
       r->reflen = reflen;
-      r->func = (ActionCB)((tmp + 4) | 1);
+      r->func = (ActionCB)((tmp + 4));
       memset(r->fields, 0, r->len * sizeof(uint16_t));
 
       return (Action)r;
@@ -55,7 +56,7 @@ namespace pxt {
       //  return ((RefAction*)a)->runCore(arg0, arg1, arg2);
       // else {
         check(*(uint16_t*)a == 0xffff, ERR_INVALID_BINARY_HEADER, 4);
-        return ((ActionCB)((a + 4) | 1))(NULL, arg0, arg1, arg2);
+        return ((ActionCB)((a + 4)))(NULL, arg0, arg1, arg2);
       //}
     }
 
@@ -341,8 +342,12 @@ namespace pxt {
 
   void error(ERROR code, int subcode)
   {
-    // printf("Error: %d [%d]\n", code, subcode);
-    // uBit.panic(42);
+    Serial.print("Error: ");
+    Serial.print(code);
+    Serial.print(" [");
+    Serial.print(subcode);
+    Serial.println("]");
+    panic(42);
   }
 
   uint16_t *bytecode;
@@ -356,24 +361,37 @@ namespace pxt {
     return arr;
   }
 
-  void checkStr(bool cond, const char *msg)
+  void panic(int code)
   {
-    if (!cond) {
-      // while (true) {
-        // uBit.display.scroll(msg, 100);
-        // uBit.sleep(100);
-      // }
+    Serial.print("Panic! Code: ");
+    Serial.println(code);
+    for (;;) {
+      for (int i = 0; i < 10; ++i)
+        CircuitPlayground.setPixelColor(i, 255, 0, 0);
+      delay(500);
+      for (int i = 0; i < 10; ++i)
+        CircuitPlayground.setPixelColor(i, 0, 0, 255);
+      delay(500);
     }
   }
 
-  int templateHash()
+  void checkStr(bool cond, const char *msg)
   {
-    return ((int*)bytecode)[4];
+    if (!cond) {
+      Serial.print("checkStr() failed: ");
+      Serial.println(msg);
+      panic(100);
+    }
   }
 
-  int programHash()
+  int16_t templateHash()
   {
-    return ((int*)bytecode)[6];
+    return ((int16_t*)bytecode)[8];
+  }
+
+  int16_t programHash()
+  {
+    return ((int16_t*)bytecode)[12];
   }
 
   int getNumGlobals()
@@ -392,21 +410,36 @@ namespace pxt {
     
     // repeat error 4 times and restart as needed
     // microbit_panic_timeout(4);
+
+    delay(3000); // delay on start, so we have time to connect serial after flashing
+
+    Serial.begin(9600);
+    CircuitPlayground.begin();
+    Serial.println("Start exec_binary()");
     
-    int16_t ver = *pc++;
+    int16_t ver = pc[0];
     checkStr(ver == 0x4209, ":( Bad runtime version");
 
-    bytecode = *((uint16_t**)pc++);  // the actual bytecode is here
+
+    bytecode = (uint16_t*)pc[2];  // the actual bytecode is here
+    Serial.println((uint32_t)pc, HEX);
+    Serial.println((uint16_t)bytecode, HEX);
+    for (int i = 0; i < 10; ++i)
+      Serial.println(*(uint16_t*)(pc[2] + i * 2), HEX);
+    Serial.println("X");
+    
     globals = allocate(getNumGlobals());
 
+    Serial.println(templateHash(), HEX);
+    Serial.println(pc[4], HEX);
+  
     // just compare the first word
-    checkStr(((uint16_t*)bytecode)[0] == 0x923B8E70 &&
-             templateHash() == *pc,
+    checkStr(((uint16_t*)bytecode)[0] == 0x8E70 &&
+             templateHash() == pc[4],
              ":( Failed partial flash");
 
     uint16_t startptr = (uint16_t)bytecode;
     startptr += 48; // header
-    startptr |= 1; // Thumb state
 
     ((uint16_t (*)())startptr)();
 

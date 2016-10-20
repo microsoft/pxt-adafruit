@@ -23,6 +23,8 @@
 #include "ManagedString.h"
 #include "ManagedBuffer.h"
 
+#include <avr/pgmspace.h>
+
 // extern MicroBit uBit;
 
 namespace pxt {
@@ -37,7 +39,7 @@ namespace pxt {
     ERR_SIZE = 9,
   } ERROR;
 
-  extern const uint16_t functionsAndBytecode[];
+  extern const uint16_t functionsAndBytecode[] PROGMEM;
   extern uint16_t *globals;
   extern uint16_t *bytecode;
   class RefRecord;
@@ -305,7 +307,7 @@ namespace pxt {
   
 #define PXT_SHIMS_BEGIN \
 namespace pxt { \
-  const uint16_t functionsAndBytecode[] __attribute__((aligned(0x20))) = { \
+  const uint16_t functionsAndBytecode[] __attribute__((aligned(0x20))) PROGMEM = { \
     0x0801, 0x0801, 0x4242, 0x4242, 0x0801, 0x0801, 0xd83e, 0x8de9,
 
 #define PXT_SHIMS_END }; }

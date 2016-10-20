@@ -2,6 +2,8 @@
 #include "RefCounted.h"
 #include <Adafruit_CircuitPlayground.h>
 
+#define BYTECODE_WORD(off)  pgm_read_word_near(bytecode + off)
+
 namespace pxt {
   
     int incr(uint16_t e)
@@ -386,17 +388,17 @@ namespace pxt {
 
   int16_t templateHash()
   {
-    return ((int16_t*)bytecode)[8];
+    return BYTECODE_WORD(8);
   }
 
   int16_t programHash()
   {
-    return ((int16_t*)bytecode)[12];
+    return  BYTECODE_WORD(12);
   }
 
   int getNumGlobals()
   {
-    return bytecode[16];
+    return BYTECODE_WORD(16);
   }
 
   void exec_binary(int16_t *pc)
@@ -417,25 +419,24 @@ namespace pxt {
     CircuitPlayground.begin();
     Serial.println("Start exec_binary()");
     
-    int16_t ver = pc[0];
+    #define PC(x)  pgm_read_word_near(pc + x)
+
+    int16_t ver = PC(0);
     checkStr(ver == 0x4209, ":( Bad runtime version");
 
 
-    bytecode = (uint16_t*)pc[2];  // the actual bytecode is here
+    bytecode = (uint16_t*)PC(2);  // the actual bytecode is here
     Serial.println((uint32_t)pc, HEX);
     Serial.println((uint16_t)bytecode, HEX);
-    for (int i = 0; i < 10; ++i)
-      Serial.println(*(uint16_t*)(pc[2] + i * 2), HEX);
-    Serial.println("X");
     
     globals = allocate(getNumGlobals());
 
-    Serial.println(templateHash(), HEX);
-    Serial.println(pc[4], HEX);
+    Serial.println((uint16_t)templateHash(), HEX);
+    Serial.println((uint16_t)PC(4), HEX);
   
     // just compare the first word
-    checkStr(((uint16_t*)bytecode)[0] == 0x8E70 &&
-             templateHash() == pc[4],
+    checkStr(BYTECODE_WORD(0) == 0x8E70 &&
+             (uint16_t)templateHash() == (uint16_t)PC(4),
              ":( Failed partial flash");
 
     uint16_t startptr = (uint16_t)bytecode;

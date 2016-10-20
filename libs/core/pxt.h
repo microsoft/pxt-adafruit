@@ -304,7 +304,7 @@ namespace pxt {
 #define PXT_SHIMS_BEGIN \
 namespace pxt { \
   const uint16_t functionsAndBytecode[] __attribute__((aligned(0x20))) = { \
-    0x08010801, 0x42424242, 0x08010801, 0x8de9d83e,
+    0x0801, 0x0801, 0x4242, 0x4242, 0x0801, 0x0801, 0xd83e, 0x8de9,
 
 #define PXT_SHIMS_END }; }
 

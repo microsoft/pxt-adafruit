@@ -146,28 +146,6 @@ namespace Math_ {
     }
 }
 
-namespace Array_ {
-    //%
-    RefCollection *mk(uint32_t flags)
-    {
-      return new RefCollection(flags);
-    }
-    //%
-    int length(RefCollection *c) { return c->length(); }
-    //%
-    void push(RefCollection *c, uint32_t x) { c->push(x); }
-    //%
-    uint32_t getAt(RefCollection *c, int x) { return c->getAt(x); }
-    //%
-    void removeAt(RefCollection *c, int x) { c->removeAt(x); }
-    //%
-    void setAt(RefCollection *c, int x, uint32_t y) { c->setAt(x, y); }
-    //%
-    int indexOf(RefCollection *c, uint32_t x, int start) { return c->indexOf(x, start); }
-    //%
-    int removeElement(RefCollection *c, uint32_t x) { return c->removeElement(x); }
-}
-
 
 // Import some stuff directly
 namespace pxt {
@@ -182,13 +160,7 @@ namespace pxt {
   //%
   uint16_t runAction0(Action a);
   //%
-  Action mkAction(int reflen, int totallen, int startptr);
-  //%
-  RefRecord* mkClassInstance(int offset);
-  //%
-  void RefRecord_destroy(RefRecord *r);
-  //%
-  void RefRecord_print(RefRecord *r);
+  Action mkAction(int reflen, int totallen, int startptr);  
   //%
   void debugMemLeaks();
   //%
@@ -208,6 +180,7 @@ namespace pxt {
 }
 
 namespace pxtrt {
+  /*
   //%
   uint32_t ldloc(RefLocal *r) {
     return r->v;
@@ -278,6 +251,7 @@ namespace pxtrt {
     a->stCore(idx, v);
     return a;
   }
+*/
 
   //%
   void panic(int code)
@@ -304,7 +278,7 @@ namespace pxtrt {
   }
 
   //%
-  int ptrToBool(uint32_t p) {
+  int ptrToBool(uint16_t p) {
     if (p) {
       decr(p);
       return 1;
@@ -313,6 +287,7 @@ namespace pxtrt {
     }
   }
 
+/*
   //%
   RefMap *mkMap() {
     return new RefMap();
@@ -378,6 +353,7 @@ namespace pxtrt {
     }
     map->unref();      
   }
+*/
 
   //
   // Debugger

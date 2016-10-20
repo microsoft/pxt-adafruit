@@ -135,8 +135,8 @@ declare namespace neopixels {
     /**
      * Sets the RGB color on a pixel
      */
-    //% blockId="setPixelColorRgb" block="set pixel %p|to red %c|green %g|blue %b" shim=neopixels::setPixelColor
-    function setPixelColor(p: uint8, r: uint8, g: uint8, b: uint8): void;
+    //% blockId="setPixelColorRgb" block="set pixel %p|to red %c|green %g|blue %b" shim=neopixels::setPixelColorRgb
+    function setPixelColorRgb(p: uint8, r: uint8, g: uint8, b: uint8): void;
 
     /**
      * Sets the neopixel brightness

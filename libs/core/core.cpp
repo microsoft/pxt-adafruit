@@ -1,6 +1,9 @@
 #include "ksbit.h"
 #include <limits.h>
 
+#include <Adafruit_CircuitPlayground.h>
+
+
 
 namespace String_ {
     //%
@@ -146,6 +149,7 @@ namespace Math_ {
     }
 }
 
+#if 0
 namespace Array_ {
     //%
     RefCollection *mk(uint32_t flags)
@@ -168,7 +172,9 @@ namespace Array_ {
     int removeElement(RefCollection *c, uint32_t x) { return c->removeElement(x); }
 }
 
+#endif
 
+#if 0
 // Import some stuff directly
 namespace pxt {
   //%
@@ -191,10 +197,15 @@ namespace pxt {
   void RefRecord_print(RefRecord *r);
   //%
   void debugMemLeaks();
+}
+#endif
+
+// Import some stuff directly
+namespace pxt {
   //%
-  int incr(uint32_t e);
+  int incr(uint16_t e);
   //%
-  void decr(uint32_t e);
+  void decr(uint16_t e);
   //%
   uint16_t *allocate(uint16_t sz);
   //%
@@ -207,6 +218,7 @@ namespace pxt {
   int getNumGlobals();
 }
 
+#if 0
 namespace pxtrt {
   //%
   uint32_t ldloc(RefLocal *r) {
@@ -278,11 +290,22 @@ namespace pxtrt {
     a->stCore(idx, v);
     return a;
   }
+}
+#endif
 
+namespace pxtrt {
+  
   //%
   void panic(int code)
   {
-    microbit_panic(code);
+    for (;;) {
+      for (int i = 0; i < 10; ++i)
+        CircuitPlayground.setPixelColor(i, 255, 0, 0);
+      delay(500);
+      for (int i = 0; i < 10; ++i)
+        CircuitPlayground.setPixelColor(i, 0, 0, 255);
+      delay(500);
+    }
   }
 
   //%
@@ -312,6 +335,10 @@ namespace pxtrt {
       return 0;
     }
   }
+}
+
+#if 0
+namespace pxtrt {
 
   //%
   RefMap *mkMap() {
@@ -378,6 +405,10 @@ namespace pxtrt {
     }
     map->unref();      
   }
+}
+#endif
+
+namespace pxtrt {
 
   //
   // Debugger

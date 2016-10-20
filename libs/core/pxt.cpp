@@ -417,6 +417,7 @@ namespace pxt {
 
     Serial.begin(9600);
     CircuitPlayground.begin();
+    
     Serial.println("Start exec_binary()");
     
     #define PC(x)  pgm_read_word_near(pc + x)
@@ -424,16 +425,13 @@ namespace pxt {
     int16_t ver = PC(0);
     checkStr(ver == 0x4209, ":( Bad runtime version");
 
-
     bytecode = (uint16_t*)PC(2);  // the actual bytecode is here
-    Serial.println((uint32_t)pc, HEX);
-    Serial.println((uint16_t)bytecode, HEX);
+
+    Serial.print("Allocating globals: ");
+    Serial.println(getNumGlobals());
     
     globals = allocate(getNumGlobals());
 
-    Serial.println((uint16_t)templateHash(), HEX);
-    Serial.println((uint16_t)PC(4), HEX);
-  
     // just compare the first word
     checkStr(BYTECODE_WORD(0) == 0x8E70 &&
              (uint16_t)templateHash() == (uint16_t)PC(4),

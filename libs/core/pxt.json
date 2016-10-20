@@ -18,6 +18,7 @@
         "buffer.cpp",
         "shims.d.ts",
         "enums.d.ts",
+        "control.ts",
         "wrap.cpp",
         "wrap.ts"
     ],

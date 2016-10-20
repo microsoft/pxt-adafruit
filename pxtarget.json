@@ -74,17 +74,12 @@
         "variablesBlocks": true
     },
     "compileService": {
-        "usePlatformIO": true,
-        "yottaTarget": "",
         "platformioIni": [
             "[env:myenv]",
             "platform = atmelavr",
             "framework = arduino",
             "board = feather32u4"
         ],
-        "yottaCorePackage": "pxt-adafruit-circuit-playground-core",
-        "githubCorePackage": "microsoft/pxt-adafruit-circuit-playground-core",
-        "gittag": "master",
         "buildEngine": "platformio",
         "serviceId": "circuitplayground"
     },

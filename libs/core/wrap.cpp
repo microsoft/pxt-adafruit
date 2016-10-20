@@ -138,7 +138,7 @@ void setPixelColor(uint8_t p, uint32_t c)
 * Sets the RGB color on a pixel
 */
 //% blockId="setPixelColorRgb" block="set pixel %p|to red %c|green %g|blue %b"
-void setPixelColor(uint8_t p, uint8_t r, uint8_t g, uint8_t b)
+void setPixelColorRgb(uint8_t p, uint8_t r, uint8_t g, uint8_t b)
 {
     CircuitPlayground.setPixelColor(p, r, g, b);
 }

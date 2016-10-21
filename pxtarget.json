@@ -258,7 +258,7 @@
         "docMenu": [
             {
                 "name": "Support",
-                "path": "http://support.microbit.org/"
+                "path": "https://support.microbit.org/"
             },
             {
                 "name": "Getting Started",

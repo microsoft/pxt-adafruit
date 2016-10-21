@@ -377,11 +377,12 @@ namespace pxt {
     }
   }
 
-  void checkStr(bool cond, const char *msg)
+  void checkStr(bool cond, const char *msg, uint16_t ver)
   {
     if (!cond) {
       Serial.print("checkStr() failed: ");
       Serial.println(msg);
+      Serial.println(ver);
       panic(100);
     }
   }
@@ -423,7 +424,7 @@ namespace pxt {
     #define PC(x)  pgm_read_word_near(pc + x)
 
     int16_t ver = PC(0);
-    checkStr(ver == 0x4209, ":( Bad runtime version");
+    checkStr(ver == 0x4209, ":( Bad runtime version", ver);
 
     bytecode = (uint16_t*)PC(2);  // the actual bytecode is here
 
@@ -435,7 +436,7 @@ namespace pxt {
     // just compare the first word
     checkStr(BYTECODE_WORD(0) == 0x8E70 &&
              (uint16_t)templateHash() == (uint16_t)PC(4),
-             ":( Failed partial flash");
+             ":( Failed partial flash",0);
 
     uint16_t startptr = (uint16_t)bytecode;
     startptr += 48; // header

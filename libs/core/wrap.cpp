@@ -160,26 +160,3 @@ uint32_t colorWheel(uint8_t x)
     return CircuitPlayground.colorWheel(x);
 }
 }
-
-/*
-
-#include <Wire.h>
-#include <SPI.h>
-
-void setup() {
-  Serial.begin(9600);
-  Serial.println("Circuit Playground test!");
-
-  CircuitPlayground.begin();
-}
-
-
-void loop() {
-  // test Red #13 LED
-  CircuitPlayground.redLED(HIGH);
-  delay(100);
-  CircuitPlayground.redLED(LOW);
-  delay(100);
-
-
-*/

@@ -1,3 +1,18 @@
+// here we go!
+
+playground.redLED(true)
+
+/*
+while (true) {
+    if (playground.leftButton()) {
+        playground.redLED(true)
+    }
+    if (playground.rightButton()) {
+        playground.redLED(false)
+    }
+}
+*/
+
 /**
 * Runtime and event utilities.
 */

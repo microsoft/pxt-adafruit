@@ -151,4 +151,18 @@ declare namespace neopixels {
     function colorWheel(x: uint8): number;
 }
 
+
+    /**
+     * Functions to manipulate serial
+     */
+    //% color=#00a700 weight=40
+declare namespace serial {
+
+    /**
+     * Serial print
+     */
+    //% blockId="print" block="print %code" shim=serial::print
+    function print(code: uint16): void;
+}
+
 // Auto-generated. Do not edit. Really.

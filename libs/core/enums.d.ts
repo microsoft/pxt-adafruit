@@ -57,5 +57,7 @@ declare namespace playground {
 }
 declare namespace neopixels {
 }
+declare namespace serial {
+}
 
 // Auto-generated. Do not edit. Really.

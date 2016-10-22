@@ -402,6 +402,10 @@ namespace pxt {
     return BYTECODE_WORD(16);
   }
 
+  void redLED_test(boolean on) {
+    CircuitPlayground.redLED(on);
+  }
+
   void exec_binary(int16_t *pc)
   {
     // XXX re-enable once the calibration code is fixed and [editor/embedded.ts]
@@ -440,6 +444,13 @@ namespace pxt {
 
     uint16_t startptr = (uint16_t)bytecode;
     startptr += 48; // header
+
+    Serial.print("Red LED ON-START");
+    redLED_test(true);
+    delay(1000);
+    redLED_test(false);
+    delay(1000);
+    Serial.print("Red LED ON-END");
 
     ((uint16_t (*)())startptr)();
 

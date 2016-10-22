@@ -1,6 +1,14 @@
 // here we go!
 
-playground.redLED(true)
+//playground.redLED(true)
+
+serial.print(254);
+
+neopixels.setPixelColorRgb(3, 0, 50, 0);
+
+// let x = 1
+
+// x = x + 1
 
 /*
 while (true) {

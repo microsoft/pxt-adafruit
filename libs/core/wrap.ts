@@ -13,3 +13,11 @@ namespace playground
 namespace neopixels
 {
 }
+
+/**
+* Functions to send info back to main computer
+*/
+//% color=#00a700 weight=70
+namespace serial
+{
+}

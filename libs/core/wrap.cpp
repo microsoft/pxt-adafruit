@@ -37,6 +37,7 @@ enum Note
     B = 494
 };
 
+
 /**
 * Playground
 */
@@ -158,5 +159,20 @@ void setBrightness(uint16_t b)
 uint32_t colorWheel(uint8_t x)
 {
     return CircuitPlayground.colorWheel(x);
+}
+}
+
+/**
+* Functions to manipulate serial
+*/
+//% color=#00a700 weight=40
+namespace serial {
+/**
+* Serial print
+*/
+//% blockId="print" block="print %code"
+void print(uint16_t code) {
+    Serial.print(" code = ");
+    Serial.println(code);
 }
 }

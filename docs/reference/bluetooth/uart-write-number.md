@@ -7,7 +7,7 @@ For another device like a smartphone to use any of the Bluetooth "services" whic
 
 ### ~
 
-The [Bluetooth UART service](/reference/bluetooth/start-uart-service.md) allows another device such as a smartphone to exchange any data it wants to with the micro:bit, in small chunks. 
+The [Bluetooth UART service](/reference/bluetooth/start-uart-service) allows another device such as a smartphone to exchange any data it wants to with the micro:bit, in small chunks. 
 
 With the Bluetooth UART service running, this block allows a micro:bit to send data to a Bluetooth connected device.
 

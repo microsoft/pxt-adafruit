@@ -20,7 +20,7 @@ radio.writeValueToSerial();
 ```
 
 ```package
-microbit-radio
+radio
 ```
 
 ### See Also

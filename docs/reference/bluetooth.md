@@ -32,7 +32,7 @@ bluetooth.uartWriteValue("", 0);
 ```
 
 ```package
-microbit-bluetooth
+bluetooth
 ```
 
 ### Advanced

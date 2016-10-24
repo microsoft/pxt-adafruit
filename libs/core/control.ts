@@ -1,8 +1,8 @@
 // here we go!
 
-playground.redLED(true)
+// playground.redLED(true)
 
-// serial.print(254);
+serial.print(254);
 
 //neopixels.setPixelColorRgb(3, 0, 50, 0);
 

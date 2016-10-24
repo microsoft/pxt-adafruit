@@ -444,10 +444,6 @@ namespace pxt {
              (uint16_t)templateHash() == (uint16_t)PC(4),
              ":( Failed partial flash",0);
 
-    uint16_t startptr = (uint16_t)bytecode;
-    startptr += 48; // header
-    Serial.print("startptr = ");
-    Serial.println((uint16_t)startptr);
 
     Serial.print("Red LED ON-START");
     redLED_test(true);
@@ -456,11 +452,20 @@ namespace pxt {
     delay(1000);
     Serial.print("Red LED ON-END");
 
+    // panic(7);
+    uint16_t startptr = (uint16_t)bytecode;
+    startptr += 48; // header
+    
+    Serial.print("startptr = ");
+    Serial.println((uint16_t)startptr);
+
     ((uint16_t (*)())startptr)();
 
 #ifdef DEBUG_MEMLEAKS
     pxt::debugMemLeaks();
 #endif
+
+    Serial.println("done");
 
     return;
   }

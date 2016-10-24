@@ -172,7 +172,6 @@ namespace serial {
 */
 //% blockId="print" block="print %code"
 void print(uint16_t code) {
-    Serial.print(" code = ");
     Serial.println(code);
 }
 }

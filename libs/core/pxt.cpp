@@ -431,6 +431,8 @@ namespace pxt {
     checkStr(ver == 0x4209, ":( Bad runtime version", ver);
 
     bytecode = (uint16_t*)PC(2);  // the actual bytecode is here
+        Serial.print("bytecode = ");
+    Serial.println((uint16_t)bytecode);
 
     Serial.print("Allocating globals: ");
     Serial.println(getNumGlobals());
@@ -444,6 +446,8 @@ namespace pxt {
 
     uint16_t startptr = (uint16_t)bytecode;
     startptr += 48; // header
+    Serial.print("startptr = ");
+    Serial.println((uint16_t)startptr);
 
     Serial.print("Red LED ON-START");
     redLED_test(true);

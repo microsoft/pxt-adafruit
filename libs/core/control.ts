@@ -1,10 +1,19 @@
 // here we go!
 
-//playground.redLED(true)
+playground.redLED(true)
 
-serial.print(254);
+// serial.print(254);
 
-neopixels.setPixelColorRgb(3, 0, 50, 0);
+//neopixels.setPixelColorRgb(3, 0, 50, 0);
+
+/*
+if (playground.leftButton()) {
+    serial.print(1);
+} else {
+    serial.print(2);
+}
+serial.print(0);
+*/
 
 // let x = 1
 

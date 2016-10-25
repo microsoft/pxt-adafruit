@@ -56,33 +56,33 @@ enum class Pin
     A4,
     //% block=A5 (Light Sensor)
     A5
-}
+};
 
 enum class PinMode
 {
-    INPUT = 0,
-    OUTPUT = 1,
-    INPUT_PULLUP = 2
-}
+    PIN_INPUT = 0,
+    PIN_OUTPUT = 1,
+    PIN_INPUT_PULLUP = 2
+};
 
 enum class PulseValue
 {
-    HIGH = 1,
-    LOW = 0
-}
+    PULSE_HIGH = 1,
+    PULSE_LOW = 0
+};
 
 enum class PinType
 {
-    EXTERNAL = 0,
-    DEFAULT = 1,
-    INTERNAL = 3
+    PIN_EXTERNAL = 0,
+    PIN_DEFAULT = 1,
+    PIN_INTERNAL = 3
     /*
     Values are different for each board:
     INTERNAL1V1
     INTERNAL2V56
     INTERNAL2V56_EXTCAP
     */
-}
+};
 
 /**
 * Arduino functions

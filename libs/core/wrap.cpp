@@ -150,7 +150,7 @@ void playTone(uint16_t frequency, uint16_t time = 250)
 //% blockId="readCap" block="read capacity at pin %pin"
 uint16_t readCap(CapacityPin pin, uint16_t samples = 10)
 {
-    return CircuitPlayground.readCap(pin, samples);
+    return CircuitPlayground.readCap((uint8_t)pin, samples);
 }
 
 /**

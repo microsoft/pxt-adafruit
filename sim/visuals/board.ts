@@ -76,7 +76,7 @@ namespace pxsim.visuals {
 
         .sim-thermometer {
             stroke:#aaa;
-            stroke-width: 2px;
+            stroke-width: 1px;
         }
 
         #rgbledcircle:hover {
@@ -265,6 +265,9 @@ namespace pxsim.visuals {
         private lightLevelButton: SVGCircleElement;
         private lightLevelGradient: SVGLinearGradientElement;
         private lightLevelText: SVGTextElement;
+        private thermometerGradient: SVGLinearGradientElement;
+        private thermometer: SVGRectElement;
+        private thermometerText: SVGTextElement;
         private antenna: SVGPolylineElement;
         private shakeButton: SVGCircleElement;
         private shakeText: SVGTextElement;
@@ -326,10 +329,12 @@ namespace pxsim.visuals {
             svg.fills(this.buttonsOuter.slice(0, 2), theme.buttonOuter);
             svg.fill(this.buttons[0], theme.buttonUps[0]);
             svg.fill(this.buttons[1], theme.buttonUps[1]);
-
-            svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
+            if (this.shakeButton) svg.fill(this.shakeButton, theme.virtualButtonUp);
 
             this.pinGradients.forEach(lg => svg.setGradientColors(lg, theme.pin, theme.pinActive));
+            svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
+
+            svg.setGradientColors(this.thermometerGradient, theme.ledOff, theme.ledOn);
         }
 
         public updateState() {
@@ -351,6 +356,7 @@ namespace pxsim.visuals {
             this.updateLightLevel();
             this.updateButtonAB();
             this.updateGestures();
+            this.updateTemperature();
 
             if (!runtime || runtime.dead) svg.addClass(this.element, "grayscale");
             else svg.removeClass(this.element, "grayscale");
@@ -499,6 +505,43 @@ namespace pxsim.visuals {
             let lv = this.board.lightSensorState.lightLevel;
             svg.setGradientValue(this.lightLevelGradient, Math.min(100, Math.max(0, Math.floor(lv * 100 / 255))) + '%')
             this.lightLevelText.textContent = lv.toString();
+        }
+
+        private updateTemperature() {
+            let state = this.board;
+            if (!state || !state.thermometerState.usesTemperature) return;
+
+            let tmin = -5;
+            let tmax = 50;
+            if (!this.thermometer) {
+                let gid = "gradient-thermometer";
+                this.thermometerGradient = svg.linearGradient(this.defs, gid);
+                this.thermometer = <SVGRectElement>svg.child(this.g, "rect", {
+                    class: "sim-thermometer",
+                    x: 135,
+                    y: 3,
+                    width: 7,
+                    height: 32,
+                    rx: 2, ry: 2,
+                    fill: `url(#${gid})`
+                });
+                this.thermometerText = svg.child(this.g, "text", { class: 'sim-text', x: 112, y: 10 }) as SVGTextElement;
+                this.updateTheme();
+
+                let pt = this.element.createSVGPoint();
+                svg.buttonEvents(this.thermometer,
+                    (ev) => {
+                        let cur = svg.cursorPoint(pt, this.element, ev);
+                        let t = Math.max(0, Math.min(1, (35 - cur.y) / 30))
+                        state.thermometerState.temperature = Math.floor(tmin + t * (tmax - tmin));
+                        this.updateTemperature();
+                    }, ev => { }, ev => { })
+            }
+
+            let t = Math.max(tmin, Math.min(tmax, state.thermometerState.temperature))
+            let per = Math.floor((state.thermometerState.temperature - tmin) / (tmax - tmin) * 100)
+            svg.setGradientValue(this.thermometerGradient, 100 - per + "%");
+            this.thermometerText.textContent = t + "°C";
         }
 
         private updateButtonAB() {

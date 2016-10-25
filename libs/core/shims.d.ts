@@ -149,6 +149,12 @@ declare namespace playground {
      */
     //% blockId="motionZ" block="motion Z" shim=playground::motionZ
     function motionZ(): number;
+
+    /**
+     * Reads the temperature.
+     */
+    //% blockId="temperatur" block="temperature" shim=playground::temperature
+    function temperature(): number;
 }
 
 

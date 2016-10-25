@@ -197,6 +197,19 @@ uint8_t getAccelTap() {
     return CircuitPlayground.getAccelTap();
 }
 
+
+/**
+* Reads the temperature.
+*/
+//% blockId="temperatur" block="temperature"
+float temperature() {
+    return CircuitPlayground.temperature();
+}
+
+float temperatureF() {
+    return CircuitPlayground.temperatureF();
+}
+
 }
 
 

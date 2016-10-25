@@ -10,6 +10,7 @@ namespace pxsim {
         slideSwitchState: SlideSwitchState;
         lightSensorState: LightSensorState;
         soundSensorState: SoundSensorState;
+        thermometerState: ThermometerState;
         edgeConnectorState: EdgeConnectorState;
         capacitiveSensorState: CapacitiveSensorState;
         accelerometerState: AccelerometerState;
@@ -34,6 +35,7 @@ namespace pxsim {
             this.builtinParts["audio"] = this.audioState = new AudioState();
             this.builtinParts["lightsensor"] = this.lightSensorState = new LightSensorState();
             this.builtinParts["soundsensor"] = this.soundSensorState = new SoundSensorState();
+            this.builtinParts["thermometer"] = this.thermometerState = new ThermometerState();
             this.builtinParts["capacitivesensor"] = this.capacitiveSensorState = new CapacitiveSensorState({
                 0: 0, 
                 1: 1, 

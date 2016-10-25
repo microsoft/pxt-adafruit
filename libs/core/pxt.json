@@ -20,7 +20,9 @@
         "enums.d.ts",
         "control.ts",
         "wrap.cpp",
-        "wrap.ts"
+        "wrap.ts",
+        "arduino.cpp",
+        "arduino.ts"
     ],
     "public": true,
     "platformio": {

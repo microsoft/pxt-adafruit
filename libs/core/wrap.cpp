@@ -37,6 +37,26 @@ enum Note
     B = 494
 };
 
+enum class CapacityPin
+{
+    //% block="RX #0"
+    P0 = 0,
+    //% block="TX #1"
+    P1 = 1,
+    //% block=SDA #2
+    P2 = 2,
+    //% block=SCL #3
+    P3 = 3,
+    //% block=#6
+    P6 = 6,
+    //% block=#9
+    P9 = 9,
+    //% block=#10
+    P10 = 10,
+    //% block=#12
+    P12 = 12
+};
+
 
 /**
 * Playground
@@ -44,6 +64,24 @@ enum Note
 //% color=#FE49C9 weight=99
 namespace playground
 {
+/**
+* Begins the Circuit playground execution
+*/
+//% blockId="begin" block="begin"
+boolean begin(uint8_t brightness = 20)
+{
+    return CircuitPlayground.begin(brightness);
+}
+
+/**
+* Gets a value indicating if the slide switched is on.
+*/
+//% blockId="slideSwitch" block="slide switch"
+boolean slideSwitch()
+{
+    return CircuitPlayground.slideSwitch();
+}
+
 /**
 * Reads the light level between 0 and 1023.
 */
@@ -106,11 +144,23 @@ uint16_t noteFrequency(Note note)
 * @param frequency pitch of tone in Hz
 * @param time duration of tone in ms.
 */
-//% blockId="playTone" block="play tone at|freq (Hz) %frequency=noteFrequency|for (ms) %time"
-void playTone(uint16_t frequency, uint16_t time)
+//% async blockId="playTone" block="play tone at|freq (Hz) %frequency=noteFrequency|for (ms) %time"
+void playTone(uint16_t frequency, uint16_t time = 250)
 {
     CircuitPlayground.playTone(frequency, time);
 }
+
+/**
+* Reads the capacitiy of a specific pin
+* @param pin the number of the pin
+* @param samples
+*/
+//% blockId="readCap" block="read capacity at pin %pin"
+uint16_t readCap(CapacityPin pin, uint16_t samples = 10)
+{
+    return CircuitPlayground.readCap(pin, samples);
+}
+
 }
 
 /**

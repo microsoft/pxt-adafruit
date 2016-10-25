@@ -1,0 +1,5 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@invertedItemTextColor: #00A7E9;

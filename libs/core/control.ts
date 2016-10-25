@@ -2,7 +2,7 @@
 
 // playground.redLED(true)
 
-serial.print(254);
+//serial.print(254);
 
 //neopixels.setPixelColorRgb(3, 0, 50, 0);
 
@@ -42,4 +42,5 @@ namespace control {
      */
     //% shim=pxtrt::panic
     export function panic(code: number) { }
+
 }

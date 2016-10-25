@@ -1,0 +1,6 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@invertedItemTextColor: @secondaryColor;
+@transparentInvertedColor: @secondaryColor;

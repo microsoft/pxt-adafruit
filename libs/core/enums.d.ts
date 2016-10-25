@@ -53,11 +53,114 @@
     //% blockIdentity=playground.noteFrequency
     B = 494,
     }
+
+
+    declare enum CapacityPin
+    {
+    //% block="RX #0"
+    P0 = 0,
+    //% block="TX #1"
+    P1 = 1,
+    //% block=SDA #2
+    P2 = 2,
+    //% block=SCL #3
+    P3 = 3,
+    //% block=#6
+    P6 = 6,
+    //% block=#9
+    P9 = 9,
+    //% block=#10
+    P10 = 10,
+    //% block=#12
+    P12 = 12,
+    }
 declare namespace playground {
 }
 declare namespace neopixels {
 }
 declare namespace serial {
+}
+
+
+    declare enum Pin
+    {
+    //% block="RX #0"
+    P0 = 0,
+    //% block="TX #1"
+    P1 = 1,
+    //% block=SDA #2
+    P2 = 2,
+    //% block=SCL #3
+    P3 = 3,
+    //% block=#4 (Left Button)
+    P4 = 4,
+    //% block=#5 (Buzzer)
+    P5 = 5,
+    //% block=#6
+    P6 = 6,
+    //% block=X
+    P7 = 7,
+    //% block=X
+    P8 = 8,
+    //% block=#9
+    P9 = 9,
+    //% block=#10
+    P10 = 10,
+    //% block=#X
+    P11 = 11,
+    //% block=#12
+    P12 = 12,
+    //% block=#13
+    P13 = 13,
+    //% block=X
+    P14 = 14,
+    //% block=#17 (Neopixel)
+    P17 = 15,
+    //% block=#19 (Right Button)
+    P19 = 16,
+    //% block=#21 (Slide Switch)
+    P21 = 17,
+    //% block=#21 (Capsense Shared)
+    P30 = 18,
+    //% block=A0 (Thermistro)
+    A0 = 19,
+    //% block=A4 (Sound Sensor)
+    A4 = 20,
+    //% block=A5 (Light Sensor)
+    A5 = 21,
+    }
+
+
+    declare enum PinMode
+    {
+    INPUT = 0,
+    OUTPUT = 1,
+    INPUT_PULLUP = 2,
+    }
+
+
+    declare enum PulseValue
+    {
+    HIGH = 1,
+    LOW = 0,
+    }
+
+
+    declare enum PinType
+    {
+    EXTERNAL = 0,
+    DEFAULT = 1,
+    INTERNAL = 3,
+    /*
+    Values are different for each board:
+    INTERNAL1V1 = 4,
+    INTERNAL2V56 = 5,
+    INTERNAL2V56_EXTCAP = 6,
+     */
+    }
+declare namespace arduino {
+}
+declare namespace time {
 }
 
 // Auto-generated. Do not edit. Really.

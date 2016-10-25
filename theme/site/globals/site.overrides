@@ -1,0 +1,9 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+@importGoogleFonts: false;
+
+
+@blocklySvgColor: #2c3e50; /*#34495e;*/
+@blocklyToolboxColor: transparent;

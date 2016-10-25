@@ -3,8 +3,8 @@
 *******************************/
 @importGoogleFonts: false;
 
-@primaryColor: #FB48C7;
-@secondaryColor: #00A7E9;
+@primaryColor: @blue;
+@secondaryColor: @pink;
 
 @red:#E81123;
 @orange:#FFA702;

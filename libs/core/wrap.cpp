@@ -161,7 +161,44 @@ uint16_t readCap(CapacityPin pin, uint16_t samples = 10)
     return CircuitPlayground.readCap(pin, samples);
 }
 
+/**
+* Reads the accelerometer's Motion X
+*/
+//% blockId="motionX" block="motion X"
+float motionX() {
+    return CircuitPlayground.motionX();
 }
+
+/**
+* Reads the accelerometer's Motion Y
+*/
+//% blockId="motionY" block="motion Y"
+float motionY() {
+    return CircuitPlayground.motionY();
+}
+
+/**
+* Reads the accelerometer's Motion Z
+*/
+//% blockId="motionZ" block="motion Z"
+float motionZ() {
+    return CircuitPlayground.motionZ();
+}
+
+void setAccelRange(lis3dh_range_t range) {
+    CircuitPlayground.setAccelRange(range);
+}
+
+void setAccelTap(uint8_t c, uint8_t clickthresh) {
+    CircuitPlayground.setAccelTap(c, clickthresh);
+}
+
+uint8_t getAccelTap() {
+    return CircuitPlayground.getAccelTap();
+}
+
+}
+
 
 /**
 * Functions to manipulate neopixels

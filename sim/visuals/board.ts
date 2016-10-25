@@ -14,7 +14,7 @@ namespace pxsim.visuals {
 
         .sim-button-outer:hover {
             stroke:grey;
-            stroke-width: 3px;
+            stroke-width: 1px;
         }
         .sim-button-nut {
             fill:#704A4A;
@@ -255,6 +255,7 @@ namespace pxsim.visuals {
 
         private buttons: SVGElement[];
         private buttonsOuter: SVGElement[];
+        private buttonABText: SVGTextElement;
         private pins: SVGElement[];
         private pinGradients: SVGLinearGradientElement[];
         private pinTexts: SVGTextElement[];
@@ -265,6 +266,8 @@ namespace pxsim.visuals {
         private lightLevelGradient: SVGLinearGradientElement;
         private lightLevelText: SVGTextElement;
         private antenna: SVGPolylineElement;
+        private shakeButton: SVGCircleElement;
+        private shakeText: SVGTextElement;
         public board: pxsim.DalBoard;
         private pinNmToCoord: Map<Coord> = {
 		};
@@ -339,12 +342,15 @@ namespace pxsim.visuals {
             svg.fill(this.buttons[0],  buttons[0].pressed ? theme.buttonDown : theme.buttonUps[0]);
             svg.fill(this.buttons[1], buttons[1].pressed ? theme.buttonDown : theme.buttonUps[1]);
 
+            this.updatePins();
+            this.updateTilt();
             this.updateRedLED();
             this.updateNeoPixels();
             this.updateSwitch();
             this.updateSound();
             this.updateLightLevel();
-            this.updatePins();
+            this.updateButtonAB();
+            this.updateGestures();
 
             if (!runtime || runtime.dead) svg.addClass(this.element, "grayscale");
             else svg.removeClass(this.element, "grayscale");
@@ -495,7 +501,40 @@ namespace pxsim.visuals {
             this.lightLevelText.textContent = lv.toString();
         }
 
-        /*
+        private updateButtonAB() {
+            let state = this.board;
+            if (state.buttonPairState.usesButtonAB && !this.buttonABText) {
+                (<any>this.buttonsOuter[2]).style.visibility = "visible";
+                (<any>this.buttons[2]).style.visibility = "visible";
+                this.buttonABText = svg.child(this.g, "text", { class: "sim-text", x: 370, y: 272 }) as SVGTextElement;
+                this.buttonABText.textContent = "A+B";
+                this.updateTheme();
+            }
+        }
+
+        private updateGestures() {
+            let state = this.board;
+            if (state.accelerometerState.useShake && !this.shakeButton) {
+                this.shakeButton = svg.child(this.g, "circle", { cx: 380, cy: 100, r: 16.5 }) as SVGCircleElement;
+                svg.fill(this.shakeButton, this.props.theme.virtualButtonUp)
+                this.shakeButton.addEventListener(pointerEvents.down, ev => {
+                    let state = this.board;
+                    svg.fill(this.shakeButton, this.props.theme.buttonDown);
+                })
+                this.shakeButton.addEventListener(pointerEvents.leave, ev => {
+                    let state = this.board;
+                    svg.fill(this.shakeButton, this.props.theme.virtualButtonUp);
+                })
+                this.shakeButton.addEventListener(pointerEvents.up, ev => {
+                    let state = this.board;
+                    svg.fill(this.shakeButton, this.props.theme.virtualButtonUp);
+                    this.board.bus.queue(CPLAY.ID_GESTURE, 11); // GESTURE_SHAKE
+                })
+                this.shakeText = svg.child(this.g, "text", { x: 400, y: 110, class: "sim-text" }) as SVGTextElement;
+                this.shakeText.textContent = "SHAKE"
+            }
+        }
+
         private updateTilt() {
             if (this.props.disableTilt) return;
             let state = this.board;
@@ -508,7 +547,7 @@ namespace pxsim.visuals {
             this.element.style.transform = "perspective(30em) rotateX(" + y * af + "deg) rotateY(" + x * af + "deg)"
             this.element.style.perspectiveOrigin = "50% 50% 50%";
             this.element.style.perspective = "30em";
-        }*/
+        }
 
         private buildDom() {
 			this.element = new DOMParser().parseFromString(BOARD_SVG, "image/svg+xml").querySelector("svg") as SVGSVGElement;
@@ -568,7 +607,6 @@ namespace pxsim.visuals {
                 return lg;
             })
 
-            /*
             // BTN A+B
             const outerBtn = (left: number, top: number) => {
                 const button = this.mkBtn(left, top);
@@ -583,27 +621,6 @@ namespace pxsim.visuals {
             abtext.textContent = "A+B";
             (<any>this.buttonsOuter[2]).style.visibility = "hidden";
             (<any>this.buttons[2]).style.visibility = "hidden";
-            */
-
-            /*
-            this.pinGradients = this.pins.map((pin, i) => {
-                let gid = "gradient-pin-" + i
-                let lg = svg.linearGradient(this.defs, gid)
-                pin.setAttribute("fill", `url(#${gid})`);
-                return lg;
-            })*/
-
-            /*
-            this.pins.forEach((p, i) => svg.hydrate(p, { title: pinTitles[i] }));
-
-            this.pinGradients = this.pins.map((pin, i) => {
-                let gid = "gradient-pin-" + i
-                let lg = svg.linearGradient(this.defs, gid)
-                pin.setAttribute("fill", `url(#${gid})`);
-                return lg;
-            })
-
-            */
         }
 
         private mkBtn(left: number, top: number): { outer: SVGElement, inner: SVGElement } {
@@ -636,6 +653,51 @@ namespace pxsim.visuals {
                     case "serial": this.flashSystemLed(); break;
                 }
             }
+
+            let tiltDecayer = 0;
+            this.element.addEventListener(pointerEvents.move, (ev: MouseEvent) => {
+                let state = this.board;
+                if (!state.accelerometerState.accelerometer.isActive) return;
+
+                if (tiltDecayer) {
+                    clearInterval(tiltDecayer);
+                    tiltDecayer = 0;
+                }
+
+                let ax = (ev.clientX - this.element.clientWidth / 2) / (this.element.clientWidth / 3);
+                let ay = (ev.clientY - this.element.clientHeight / 2) / (this.element.clientHeight / 3);
+
+                let x = - Math.max(- 1023, Math.min(1023, Math.floor(ax * 1023)));
+                let y = Math.max(- 1023, Math.min(1023, Math.floor(ay * 1023)));
+                let z2 = 1023 * 1023 - x * x - y * y;
+                let z = Math.floor((z2 > 0 ? -1 : 1) * Math.sqrt(Math.abs(z2)));
+
+                state.accelerometerState.accelerometer.update(x, y, z);
+                this.updateTilt();
+            }, false);
+            this.element.addEventListener(pointerEvents.leave, (ev: MouseEvent) => {
+                let state = this.board;
+                if (!state.accelerometerState.accelerometer.isActive) return;
+
+                if (!tiltDecayer) {
+                    tiltDecayer = setInterval(() => {
+                        let accx = state.accelerometerState.accelerometer.getX(MicroBitCoordinateSystem.RAW);
+                        accx = Math.floor(Math.abs(accx) * 0.85) * (accx > 0 ? 1 : -1);
+                        let accy = state.accelerometerState.accelerometer.getY(MicroBitCoordinateSystem.RAW);
+                        accy = Math.floor(Math.abs(accy) * 0.85) * (accy > 0 ? 1 : -1);
+                        let accz = -Math.sqrt(Math.max(0, 1023 * 1023 - accx * accx - accy * accy));
+                        if (Math.abs(accx) <= 24 && Math.abs(accy) <= 24) {
+                            clearInterval(tiltDecayer);
+                            tiltDecayer = 0;
+                            accx = 0;
+                            accy = 0;
+                            accz = -1023;
+                        }
+                        state.accelerometerState.accelerometer.update(accx, accy, accz);
+                        this.updateTilt();
+                    }, 50)
+                }
+            }, false);
 
             this.pins.forEach((pin, index) => {
                 if (!this.board.edgeConnectorState.pins[index]) return;

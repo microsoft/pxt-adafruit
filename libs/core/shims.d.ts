@@ -131,6 +131,24 @@ declare namespace playground {
      */
     //% blockId="readCap" block="read capacity at pin %pin" samples.defl=10 shim=playground::readCap
     function readCap(pin: CapacityPin, samples?: uint16): uint16;
+
+    /**
+     * Reads the accelerometer's Motion X
+     */
+    //% blockId="motionX" block="motion X" shim=playground::motionX
+    function motionX(): number;
+
+    /**
+     * Reads the accelerometer's Motion Y
+     */
+    //% blockId="motionY" block="motion Y" shim=playground::motionY
+    function motionY(): number;
+
+    /**
+     * Reads the accelerometer's Motion Z
+     */
+    //% blockId="motionZ" block="motion Z" shim=playground::motionZ
+    function motionZ(): number;
 }
 
 

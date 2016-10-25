@@ -12,7 +12,7 @@ namespace pxsim {
         soundSensorState: SoundSensorState;
         edgeConnectorState: EdgeConnectorState;
         capacitiveSensorState: CapacitiveSensorState;
-        //accelerometerState: AccelerometerState;
+        accelerometerState: AccelerometerState;
         audioState: AudioState;
 
         constructor() {
@@ -45,7 +45,7 @@ namespace pxsim {
                 12: 7
             });
 
-            //this.builtinParts["accelerometer"] = this.accelerometerState = new AccelerometerState(runtime);
+            this.builtinParts["accelerometer"] = this.accelerometerState = new AccelerometerState(runtime);
             this.builtinParts["edgeconnector"] = this.edgeConnectorState = new EdgeConnectorState({
                 pins: [
                     0,

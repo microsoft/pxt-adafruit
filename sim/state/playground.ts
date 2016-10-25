@@ -81,10 +81,6 @@ namespace pxsim {
 
 namespace pxsim.playground {
 
-    export function begin(brightness: number = 20) {
-
-    }
-
     export function redLED(value: boolean) {
         board().redLEDState.on = value;
         runtime.queueDisplayUpdate()

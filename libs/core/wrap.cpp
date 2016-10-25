@@ -64,14 +64,6 @@ enum class CapacityPin
 //% color=#FE49C9 weight=99
 namespace playground
 {
-/**
-* Begins the Circuit playground execution
-*/
-//% blockId="begin" block="begin"
-boolean begin(uint8_t brightness = 20)
-{
-    return CircuitPlayground.begin(brightness);
-}
 
 /**
 * Gets a value indicating if the slide switched is on.
@@ -165,7 +157,8 @@ uint16_t readCap(CapacityPin pin, uint16_t samples = 10)
 * Reads the accelerometer's Motion X
 */
 //% blockId="motionX" block="motion X"
-float motionX() {
+int motionX() {
+    //TODO: should return float
     return CircuitPlayground.motionX();
 }
 
@@ -173,15 +166,17 @@ float motionX() {
 * Reads the accelerometer's Motion Y
 */
 //% blockId="motionY" block="motion Y"
-float motionY() {
+int motionY() {
+    //TODO: should return float
     return CircuitPlayground.motionY();
 }
 
 /**
-* Reads the accelerometer's Motion Z
+* Reads the accelerometer's Motion Z 
 */
 //% blockId="motionZ" block="motion Z"
-float motionZ() {
+int motionZ() {
+    //TODO: should return float
     return CircuitPlayground.motionZ();
 }
 
@@ -202,11 +197,13 @@ uint8_t getAccelTap() {
 * Reads the temperature.
 */
 //% blockId="temperatur" block="temperature"
-float temperature() {
+int temperature() {
+    //TODO: should return float
     return CircuitPlayground.temperature();
 }
 
-float temperatureF() {
+int temperatureF() {
+    //TODO: should return float
     return CircuitPlayground.temperatureF();
 }
 

@@ -65,12 +65,6 @@ declare interface Buffer {
 declare namespace playground {
 
     /**
-     * Begins the Circuit playground execution
-     */
-    //% blockId="begin" block="begin" brightness.defl=20 shim=playground::begin
-    function begin(brightness?: uint8): boolean;
-
-    /**
      * Gets a value indicating if the slide switched is on.
      */
     //% blockId="slideSwitch" block="slide switch" shim=playground::slideSwitch
@@ -145,7 +139,7 @@ declare namespace playground {
     function motionY(): number;
 
     /**
-     * Reads the accelerometer's Motion Z
+     * Reads the accelerometer's Motion Z 
      */
     //% blockId="motionZ" block="motion Z" shim=playground::motionZ
     function motionZ(): number;

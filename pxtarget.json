@@ -152,7 +152,7 @@
     "compile": {
         "isNative": false,
         "nativeType": "AVR",
-        "hasHex": true,
+        "hasHex": false,
         "deployDrives": "ADAFRUIT",
         "driveName": "ADAFRUIT"
     },

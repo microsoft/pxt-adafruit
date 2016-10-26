@@ -459,6 +459,7 @@ namespace pxt {
     Serial.print("startptr = ");
     Serial.println((uint16_t)startptr);
 
+    startptr >>= 1;
     ((uint16_t (*)())startptr)();
 
 #ifdef DEBUG_MEMLEAKS

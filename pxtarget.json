@@ -191,13 +191,14 @@
         "githubUrl": "https://github.com/Microsoft/pxt-microbit",
         "boardName": "Adafruit Circuit Playground",
         "docMenu": [],
-        "invertedMenu": true, 
-        "downloadClass": "pink",
-        "blockly": {
+        "invertedMenu": true,
+        "invertedToolbox": true,
+        "blocklyOptions": {
+            "media": "./static/blockly/media/",
             "grid": {
                 "spacing": 50,
-                "length": 3,
-                "colour": "#FB48C7",
+                "length": 5,
+                "colour": "#fff",
                 "snap": true
             }
         }

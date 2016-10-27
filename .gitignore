@@ -24,3 +24,6 @@ clients/electron/projects
 *.db
 *.suo
 *.log
+.pioenvs
+.piolibdeps
+lib/

@@ -52,6 +52,11 @@ namespace pxsim.visuals {
             stroke-width: 1px;
         }
 
+        .sim-sound-level-button {
+            stroke:#7f8c8d;
+            stroke-width: 1px;
+        }
+
         .sim-antenna {
             stroke:#555;
             stroke-width: 2px;
@@ -215,6 +220,8 @@ namespace pxsim.visuals {
         virtualButtonDown?: string;
         lightLevelOn?: string;
         lightLevelOff?: string;
+        soundLevelOn?: string;
+        soundLevelOff?: string;
     }
 
     export var themes: IBoardTheme[] = ["#3ADCFE"].map(accent => {
@@ -232,7 +239,9 @@ namespace pxsim.visuals {
             virtualButtonOuter: "#333",
             virtualButtonUp: "#fff",
             lightLevelOn: "yellow",
-            lightLevelOff: "#555"
+            lightLevelOff: "#555",
+            soundLevelOn: "#7f8c8d",
+            soundLevelOff: "#555"
         }
     });
 
@@ -265,6 +274,9 @@ namespace pxsim.visuals {
         private lightLevelButton: SVGCircleElement;
         private lightLevelGradient: SVGLinearGradientElement;
         private lightLevelText: SVGTextElement;
+        private soundLevelButton: SVGCircleElement;
+        private soundLevelGradient: SVGLinearGradientElement;
+        private soundLevelText: SVGTextElement;
         private thermometerGradient: SVGLinearGradientElement;
         private thermometer: SVGRectElement;
         private thermometerText: SVGTextElement;
@@ -335,6 +347,7 @@ namespace pxsim.visuals {
             svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
 
             svg.setGradientColors(this.thermometerGradient, theme.ledOff, theme.ledOn);
+            svg.setGradientColors(this.soundLevelGradient, theme.soundLevelOn, theme.soundLevelOff);
         }
 
         public updateState() {
@@ -354,6 +367,7 @@ namespace pxsim.visuals {
             this.updateSwitch();
             this.updateSound();
             this.updateLightLevel();
+            this.updateSoundLevel();
             this.updateButtonAB();
             this.updateGestures();
             this.updateTemperature();
@@ -507,6 +521,47 @@ namespace pxsim.visuals {
             this.lightLevelText.textContent = lv.toString();
         }
 
+        private updateSoundLevel() {
+            let state = this.board;
+            if (!state || !state.soundSensorState.usesSoundLevel) return;
+
+            if (!this.soundLevelButton) {
+                let gid = "gradient-sound-level";
+                this.soundLevelGradient = svg.linearGradient(this.defs, gid)
+                let cy = 134;
+                let r = 10;
+                this.soundLevelButton = svg.child(this.g, "circle", {
+                    cx: `10px`, cy: `${cy}px`, r: `${r}px`,
+                    class: 'sim-sound-level-button',
+                    fill: `url(#${gid})`
+                }) as SVGCircleElement;
+                
+                let pt = this.element.createSVGPoint();
+                svg.buttonEvents(this.soundLevelButton,
+                    (ev) => {
+                        let pos = svg.cursorPoint(pt, this.element, ev);
+                        let rs = r / 2;
+                        let level = Math.max(0, Math.min(255, Math.floor((pos.y - (cy - rs)) / (2 * rs) * 255)));
+                        if (level != this.board.soundSensorState.soundLevel) {
+                            this.board.soundSensorState.soundLevel = (255 - level);
+                            this.applySoundLevel();
+                        }
+                    }, ev => { },
+                    ev => { })
+                this.soundLevelText = svg.child(this.g, "text", { x: 21, y: cy + r - 3, text: '', class: 'sim-text' }) as SVGTextElement;
+                this.updateTheme();
+            }
+
+            svg.setGradientValue(this.soundLevelGradient, Math.min(100, Math.max(0, Math.floor((255 - state.soundSensorState.soundLevel) * 100 / 255))) + '%')
+            this.soundLevelText.textContent = state.soundSensorState.soundLevel.toString();
+        }
+
+        private applySoundLevel() {
+            let lv = this.board.soundSensorState.soundLevel;
+            svg.setGradientValue(this.soundLevelGradient, Math.min(100, Math.max(0, Math.floor((255 - lv) * 100 / 255))) + '%')
+            this.soundLevelText.textContent = lv.toString();
+        }
+
         private updateTemperature() {
             let state = this.board;
             if (!state || !state.thermometerState.usesTemperature) return;
@@ -621,7 +676,6 @@ namespace pxsim.visuals {
             let neopixelmerge = svg.child(neopixelglow, "feMerge", {});
             svg.child(neopixelmerge, "feMergeNode", { in: "coloredBlur" })
             svg.child(neopixelmerge, "feMergeNode", { in: "SourceGraphic" })
-
 
             const btnids = ["BTN_A", "BTN_B"];
             this.buttonsOuter = btnids.map(n => this.element.getElementById(n + "_OUTER") as SVGElement);

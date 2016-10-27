@@ -17,3 +17,12 @@
 @pink:#FB48C7;
 @brown:#6B5B4C;
 @grey:#999;
+
+
+/*******************************
+         PXT Overrides
+*******************************/
+
+@backgroundColor: #2c3e50;
+@blocklySvgColor: #2c3e50;
+@blocklyToolboxColor: transparent;

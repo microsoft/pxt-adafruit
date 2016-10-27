@@ -1,10 +1,67 @@
 /* Import all components */
 @import 'semantic';
+@import 'themes/default/globals/site.variables';
+@import 'themes/pxt/globals/site.variables';
+@import 'site/globals/site.variables';
 
-#filelist {
+/* Reference import */
+@import (reference) "semantic.less";
+
+/*******************************
+    Add your custom CSS here
+*******************************/
+
+.download-button {
+    &:extend(.ui all);
+    &:extend(.button all);
+    &:extend(.pink all);
+}
+
+/* This removes the margin between the blockly categories to form connected pills */
+.blocklyTreeRow {
+    margin-bottom: 0px !important;
+}
+
+/* This removes any padding at the top of the toolbox */
+.blocklyTreeRoot {
+    padding: 0px !important;
+}
+
+/* Blockly Text */
+.blocklyTreeLabel {
+    font-family: "Gotham SSm A","Gotham SSm B","Montserrat","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif  !important;
+    text-transform: uppercase !important;
+}
+
+.blocklyTreeLabel {
+    font-size:1rem !important;
+}
+
+.blocklySvg {
     background: #34495e; /* For browsers that do not support gradients */
     background: -webkit-linear-gradient(#34495e, #2c3e50); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#34495e, #2c3e50); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#34495e, #2c3e50); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#34495e, #2c3e50); /* Standard syntax (must be last) */
+}
+
+.blocklyFlyoutBackground {
+    fill: #000;
+    fill-opacity: .5;
+}
+
+.blocklyToolboxDiv {
+    /*left:30px !important;*/
+    padding-top:30px;
+}
+
+.blocklyScrollbarHandle {
+    fill: #000 !important;
+    fill-opacity:.8;
+}
+
+@media only screen and (max-width: @largestMobileScreen) {
+    .blocklyTreeLabel {
+        font-size: 0.5rem !important;
+    }
 }

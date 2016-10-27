@@ -82,15 +82,6 @@ uint16_t lightSensor()
 {
     return CircuitPlayground.lightSensor();
 }
-
-/**
-* Reads the sound level between 0 and 1023.
-*/
-//% blockId="soundSensor" block="sound sensor"
-uint16_t soundSensor()
-{
-    return CircuitPlayground.soundSensor();
-}
 /**
 * Just turn on/off the red #13 LED
 * @param on a value to turn on/off the LED, eg: true
@@ -117,29 +108,6 @@ boolean leftButton()
 boolean rightButton()
 {
     return CircuitPlayground.rightButton();
-}
-
-/**
-* Gets the frequency of a note.
-* @param note the note name
-*/
-//% weight=50
-//% blockId=noteFrequency block="%note"
-//% shim=TD_ID
-uint16_t noteFrequency(Note note)
-{
-    return note;
-}
-
-/**
-* Plays a given tone
-* @param frequency pitch of tone in Hz
-* @param time duration of tone in ms.
-*/
-//% async blockId="playTone" block="play tone at|freq (Hz) %frequency=noteFrequency|for (ms) %time"
-void playTone(uint16_t frequency, uint16_t time = 250)
-{
-    CircuitPlayground.playTone(frequency, time);
 }
 
 /**
@@ -211,6 +179,47 @@ int temperatureF() {
 
 
 /**
+* Functions for music / audio
+*/
+//% color=#FFA702 weight=75
+namespace music
+{
+
+/**
+* Gets the frequency of a note.
+* @param note the note name
+*/
+//% weight=50
+//% blockId=noteFrequency block="%note"
+//% shim=TD_ID
+uint16_t noteFrequency(Note note)
+{
+    return note;
+}
+
+/**
+* Plays a given tone
+* @param frequency pitch of tone in Hz
+* @param time duration of tone in ms.
+*/
+//% async blockId="playTone" block="play tone at|freq (Hz) %frequency=noteFrequency|for (ms) %time"
+void playTone(uint16_t frequency, uint16_t time = 250)
+{
+    CircuitPlayground.playTone(frequency, time);
+}
+
+/**
+* Reads the sound level between 0 and 1023.
+*/
+//% blockId="soundSensor" block="sound sensor"
+uint16_t soundSensor()
+{
+    return CircuitPlayground.soundSensor();
+}
+
+}
+
+/**
 * Functions to manipulate neopixels
 */
 //% color=#00a7e9 weight=50
@@ -232,6 +241,7 @@ void setPixelColor(uint8_t p, uint32_t c)
 {
     CircuitPlayground.setPixelColor(p, c);
 }
+
 /**
 * Sets the RGB color on a pixel
 */
@@ -263,6 +273,7 @@ uint32_t colorWheel(uint8_t x)
 * Functions to manipulate serial
 */
 //% color=#00a700 weight=40
+//% advanced=true
 namespace serial {
 /**
 * Serial print

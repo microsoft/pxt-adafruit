@@ -196,7 +196,6 @@
         "simAnimationEnter": "rotate in",
         "simAnimationExit": "rotate out",
         "blocklyOptions": {
-            "media": "./static/blockly/media/",
             "grid": {
                 "spacing": 50,
                 "length": 5,

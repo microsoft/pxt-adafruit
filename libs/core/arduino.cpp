@@ -85,10 +85,10 @@ enum class PinType
 };
 
 /**
-* Arduino functions
+* Arduino pin functions
 */
 //% color=#00979C weight=50
-namespace arduino
+namespace pins
 {
     /**
      * Pin Mode
@@ -125,33 +125,6 @@ namespace arduino
     {
 
     }
-
-    /**
-     * Tone
-     * Generates a square wave of the specified frequency (and 50% duty cycle) on a pin. 
-     * A duration can be specified, otherwise the wave continues until a call to noTone().
-     * The pin can be connected to a piezo buzzer or other speaker to play tones.
-     * @param pin the pin on which to generate the tone
-     * @param frequency the frequency of the tone in hertz
-     * @param the duration of the tone in milliseconds (optional)
-     */
-    //% help=https://www.arduino.cc/en/Reference/Tone weight=90
-    //% blockId="arduino_tone" block="tone on pin %pin| at frequency %frequency" icon="\uf025"
-    void tone(Pin pin, int frequency, int duration = 1000) {
-        
-    }
-
-    /**
-     * No tone
-     * Stops the generation of a square wave triggered by tone(). Has no effect if no tone is being generated.
-     * @param pin the pin on which to stop generating the tone
-     */
-    //% help=https://www.arduino.cc/en/Reference/NoTone weight=91
-    //% blockId="arduino_notone" block="no tone on pin %pin" icon="\uf025"
-    void notone(Pin pin) {
-
-    }
-
 
 
     /**
@@ -190,28 +163,6 @@ namespace arduino
     }
 
     /**
-     * Millis
-     * Returns the number of milliseconds since the Arduino board began running the current program. 
-     * This number will overflow (go back to zero), after approximately 50 days.
-     */
-    //% help=https://www.arduino.cc/en/Reference/Millis weight=91
-    //% blockId="arduino_millis" block="millis" blockGap=8
-    int millis() {
-        return millis();
-    }
-
-    /**
-     * Millis
-     * Returns the number of microseconds since the Arduino board began running the current program.
-     * This number will overflow (go back to zero), after approximately 70 minutes.
-     */
-    //% help=https://www.arduino.cc/en/Reference/Micros weight=91
-    //% blockId="arduino_micros" block="micros" blockGap=8
-    int micros() {
-        return micros();
-    }
-
-    /**
      * Pulse In
      * Reads a pulse (either HIGH or LOW) on a pin.
      * @param pin the number of the pin on which you want to read the pulse. (int)
@@ -225,76 +176,24 @@ namespace arduino
 
     }
 
-    /**
-     * Min
-     * Calculates the minimum of two numbers.
-     * @param x the first number, any data type
-     * @param y the second number, any data type
-     * @returns The smaller of the two numbers.
-     */
-    //% help=https://www.arduino.cc/en/Reference/Min weight=91
-    //% blockId="arduino_min" block="min of %x| and %y" icon="\uf1ec"
-    int min(int x, int y) {
-        return (x < y) ? x : y;
-    }
+    /*
+#define round(x)     ((x)>=0?(int)((x)+0.5):(int)((x)-0.5))
+#define radians(deg) ((deg)*DEG_TO_RAD)
+#define degrees(rad) ((rad)*RAD_TO_DEG)
+#define sq(x) ((x)*(x))
 
-    /**
-     * Max
-     * Calculates the maximum of two numbers.
-     * @param x the first number, any data type
-     * @param y the second number, any data type
-     * @returns The larger of the two numbers.
-     */
-    //% help=https://www.arduino.cc/en/Reference/Max weight=91
-    //% blockId="arduino_max" block="max of %x| and %y" icon="\uf1ec"
-    int max(int x, int y) {
-        return (x > y) ? x : y;
-    }
 
-    /**
-     * Abs
-     * Computes the absolute value of a number.
-     * @param x the number
-     * @returns x: if x is greater than or equal to 0, -x: if x is less than 0.
-     */
-    //% help=https://www.arduino.cc/en/Reference/Abs weight=91
-    //% blockId="arduino_abs" block="abs of %x" icon="\uf1ec"
-    int abs(int x) {
-        return (x > 0) ? x : -x;
-    }
 
-    /**
-     * Constrain
-     * Constrains a number to be within a range.
-     * @param x the number to constrain, all data types
-     * @param y the lower end of the range, all data types
-     * @param z the upper end of the range, all data types
-     * @returns x: if x is between a and b, a: if x is less than a, b: if x is greater than b
-     */
-    //% help=https://www.arduino.cc/en/Reference/Constrain weight=91
-    //% blockId="arduino_constrain" block="constrain %amt| between %low| and %high" icon="\uf1ec"
-    int constrain(int amt, int low, int high) {
-        return (amt)<(low)?(low):((amt)>(high)?(high):(amt));
-    }
+    uint16_t makeWord(uint16_t w);
+uint16_t makeWord(byte h, byte l);
 
-    /**
-     * Map
-     * Re-maps a number from one range to another. 
-     * That is, a value of fromLow would get mapped to toLow, a value of fromHigh to toHigh, 
-     * values in-between to values in-between, etc.
-     * @param value the number to map
-     * @param fromLow the lower bound of the value's current range
-     * @param fromHigh the upper bound of the value's current range
-     * @param toLow the lower bound of the value's target range
-     * @param toHigh the upper bound of the value's target range
-     * @returns The mapped value.
-     */
-    //% help=https://www.arduino.cc/en/Reference/Map weight=91
-    //% blockId="arduino_map" block="map value %value| from range low %fromLow| high %fromHigh| to range low %toLow| high %toHigh|"
-    int map(int value, int fromLow, int fromHigh, int toLow, int toHigh) {
-        return (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
-    }
+#define word(...) makeWord(__VA_ARGS__)
 
+*/
+
+}
+
+namespace math {
     /**
      * Random
      * The random function generates pseudo-random numbers.
@@ -340,29 +239,41 @@ namespace arduino
             srandom(seed);
         }
     }
+}
 
-    /*
-#define round(x)     ((x)>=0?(int)((x)+0.5):(int)((x)-0.5))
-#define radians(deg) ((deg)*DEG_TO_RAD)
-#define degrees(rad) ((rad)*RAD_TO_DEG)
-#define sq(x) ((x)*(x))
+namespace music {
+    /**
+     * Tone
+     * Generates a square wave of the specified frequency (and 50% duty cycle) on a pin. 
+     * A duration can be specified, otherwise the wave continues until a call to noTone().
+     * The pin can be connected to a piezo buzzer or other speaker to play tones.
+     * @param pin the pin on which to generate the tone
+     * @param frequency the frequency of the tone in hertz
+     * @param the duration of the tone in milliseconds (optional)
+     */
+    //% help=https://www.arduino.cc/en/Reference/Tone weight=90
+    //% blockId="arduino_tone" block="tone on pin %pin| at frequency %frequency" icon="\uf025"
+    void tone(Pin pin, int frequency, int duration = 1000) {
+        
+    }
 
+    /**
+     * No tone
+     * Stops the generation of a square wave triggered by tone(). Has no effect if no tone is being generated.
+     * @param pin the pin on which to stop generating the tone
+     */
+    //% help=https://www.arduino.cc/en/Reference/NoTone weight=91
+    //% blockId="arduino_notone" block="no tone on pin %pin" icon="\uf025"
+    void notone(Pin pin) {
 
-
-    uint16_t makeWord(uint16_t w);
-uint16_t makeWord(byte h, byte l);
-
-#define word(...) makeWord(__VA_ARGS__)
-
-*/
-
+    }    
 }
 
 /**
-* Arduino time functions
+* Arduino control functions
 */
-//% color=#00979C weight=10
-namespace time
+//% color=#00f000 weight=10
+namespace control
 {
     /**
      * Delay
@@ -386,5 +297,28 @@ namespace time
     //% async blockId="arduino_delayMicroseconds" block="delay %ms| microseconds"
     void delayMicroseconds(int us) {
         delayMicroseconds(us);
+    }
+
+
+    /**
+     * Millis
+     * Returns the number of milliseconds since the Arduino board began running the current program. 
+     * This number will overflow (go back to zero), after approximately 50 days.
+     */
+    //% help=https://www.arduino.cc/en/Reference/Millis weight=91
+    //% blockId="arduino_millis" block="millis" blockGap=8
+    int millis() {
+        return millis();
+    }
+
+    /**
+     * Millis
+     * Returns the number of microseconds since the Arduino board began running the current program.
+     * This number will overflow (go back to zero), after approximately 70 minutes.
+     */
+    //% help=https://www.arduino.cc/en/Reference/Micros weight=91
+    //% blockId="arduino_micros" block="micros" blockGap=8
+    int micros() {
+        return micros();
     }
 }

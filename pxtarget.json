@@ -199,7 +199,7 @@
             "grid": {
                 "spacing": 50,
                 "length": 5,
-                "colour": "#fff",
+                "colour": "#FB48C7",
                 "snap": true
             }
         }

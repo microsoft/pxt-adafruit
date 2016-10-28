@@ -1,10 +1,19 @@
 #include <Adafruit_CircuitPlayground.h>
 
-enum class Button
+enum Button
 {
+    //% block=left
     Left = 1, //CPLAY_LEFTBUTTON,
+    //% block=right
     Right = 2 //CPLAY_RIGHTBUTTON
 };
+
+enum MotionAxis
+{
+    X,
+    Y,
+    Z   
+}
 
 enum Note
 {
@@ -37,7 +46,7 @@ enum Note
     B = 494
 };
 
-enum class CapacityPin
+enum CapacityPin
 {
     //% block="RX #0"
     P0 = 0,
@@ -57,12 +66,17 @@ enum class CapacityPin
     P12 = 12
 };
 
+enum TemperatureUnit {
+    Clecius,
+    Fahrenheit
+}
+
 
 /**
-* Playground
+* Sensors
 */
 //% color=#FE49C9 weight=99
-namespace playground
+namespace sensors
 {
 
 /**
@@ -77,37 +91,20 @@ boolean slideSwitch()
 /**
 * Reads the light level between 0 and 1023.
 */
-//% blockId="lightSensor" block="light sensor"
-uint16_t lightSensor()
+//% blockId="lightSensor" block="light"
+uint16_t light()
 {
     return CircuitPlayground.lightSensor();
-}
-/**
-* Just turn on/off the red #13 LED
-* @param on a value to turn on/off the LED, eg: true
-*/
-//% blockId="redled" block="red led %on"
-void redLED(boolean on)
-{
-    CircuitPlayground.redLED(on);
 }
 
 /**
 * Gets a value indicating if the left button is pressed.
 */
-//% blockId="leftButton" block="left button" weight=40
-boolean leftButton()
+//% blockId="leftButton" block="%b|button pressed?" weight=40
+boolean button(Button b)
 {
-    return CircuitPlayground.leftButton();
-}
-
-/**
-* Gets a value indicating if the right button is pressed.
-*/
-//% blockId="rightButton" block="right button" weight=39
-boolean rightButton()
-{
-    return CircuitPlayground.rightButton();
+    if (b == Button::Left) return CircuitPlayground.leftButton();
+    else return CircuitPlayground.rightButton();
 }
 
 /**
@@ -122,31 +119,17 @@ uint16_t readCap(CapacityPin pin, uint16_t samples = 10)
 }
 
 /**
-* Reads the accelerometer's Motion X
+* Reads the accelerometer's Motion
 */
-//% blockId="motionX" block="motion X"
-int motionX() {
-    //TODO: should return float
-    return CircuitPlayground.motionX();
+//% blockId="motion" block="motion %axis"
+int motion(MotionAxis axis) {
+    switch(axis) {
+        case Motion::Y: return CircuitPlayground.motionY();
+        case Motion::Z: return CircuitPlayground.motionZ();
+        default: return CircuitPlayground.motionX();
+    }
 }
 
-/**
-* Reads the accelerometer's Motion Y
-*/
-//% blockId="motionY" block="motion Y"
-int motionY() {
-    //TODO: should return float
-    return CircuitPlayground.motionY();
-}
-
-/**
-* Reads the accelerometer's Motion Z 
-*/
-//% blockId="motionZ" block="motion Z"
-int motionZ() {
-    //TODO: should return float
-    return CircuitPlayground.motionZ();
-}
 
 void setAccelRange(lis3dh_range_t range) {
     CircuitPlayground.setAccelRange(range);
@@ -156,6 +139,10 @@ void setAccelTap(uint8_t c, uint8_t clickthresh) {
     CircuitPlayground.setAccelTap(c, clickthresh);
 }
 
+/**
+* Reads the number of taps
+*/
+//% blockId="getAccelTap" block="taps"
 uint8_t getAccelTap() {
     return CircuitPlayground.getAccelTap();
 }
@@ -164,15 +151,21 @@ uint8_t getAccelTap() {
 /**
 * Reads the temperature.
 */
-//% blockId="temperatur" block="temperature"
-int temperature() {
+//% blockId="temperatur" block="temperature %unit"
+int temperature(TemperatureUnit unit) {
+    if (unit == TemperatureUnit::Celcius)
+        return CircuitPlayground.temperature();
+    else return CircuitPlayground.temperatureF();
     //TODO: should return float
-    return CircuitPlayground.temperature();
 }
 
-int temperatureF() {
-    //TODO: should return float
-    return CircuitPlayground.temperatureF();
+/**
+* Reads the sound level between 0 and 1023.
+*/
+//% blockId="soundSensor" block="sound"
+uint16_t sound()
+{
+    return CircuitPlayground.soundSensor();
 }
 
 }
@@ -208,23 +201,24 @@ void playTone(uint16_t frequency, uint16_t time = 250)
     CircuitPlayground.playTone(frequency, time);
 }
 
-/**
-* Reads the sound level between 0 and 1023.
-*/
-//% blockId="soundSensor" block="sound sensor"
-uint16_t soundSensor()
-{
-    return CircuitPlayground.soundSensor();
-}
-
 }
 
 /**
 * Functions to manipulate neopixels
 */
 //% color=#00a7e9 weight=50
-namespace neopixels
+namespace light
 {
+/**
+* Just turn on/off the red #13 LED
+* @param on a value to turn on/off the LED, eg: true
+*/
+//% blockId="redled" block="red led %on"
+void redLED(boolean on)
+{
+    CircuitPlayground.redLED(on);
+}
+
 /**
 * Clear pixels
 */
@@ -278,7 +272,7 @@ namespace serial {
 /**
 * Serial print
 */
-//% blockId="print" block="print %code"
+//% 
 void print(uint16_t code) {
     Serial.println(code);
 }

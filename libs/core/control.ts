@@ -1,34 +1,15 @@
 // here we go!
 
-// playground.redLED(true)
+//playground.redLED(true)
 
 //serial.print(254);
 
 //neopixels.setPixelColorRgb(3, 0, 50, 0);
 
-/*
-if (playground.leftButton()) {
-    serial.print(1);
-} else {
-    serial.print(2);
-}
-serial.print(0);
-*/
+let x = 1
 
-// let x = 1
+x = x + 1
 
-// x = x + 1
-
-/*
-while (true) {
-    if (playground.leftButton()) {
-        playground.redLED(true)
-    }
-    if (playground.rightButton()) {
-        playground.redLED(false)
-    }
-}
-*/
 
 /**
 * Runtime and event utilities.
@@ -43,4 +24,21 @@ namespace control {
     //% shim=pxtrt::panic
     export function panic(code: number) { }
 
+}
+
+
+while (true) {
+    if (playground.leftButton()) {
+        let i = 9;
+        while (i >= 0 ) {
+            serial.print(i)
+            neopixels.setPixelColorRgb(i, 0, 255, 0)
+            serial.print(i)
+            serial.print(255)
+            i = i - 1
+        }
+    }
+    if (playground.rightButton()) {
+        neopixels.clearPixels()
+    }
 }

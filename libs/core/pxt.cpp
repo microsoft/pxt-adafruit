@@ -358,8 +358,8 @@ namespace pxt {
 
   uint16_t *allocate(uint16_t sz)
   {
-    uint16_t *arr = new uint16_t[sz];
-    memset(arr, 0, sz * 4);
+    uint16_t *arr = (uint16_t*)malloc(sizeof(uint16_t)*6);
+    memset(arr, 0, 6 * sizeof(uint16_t));
     return arr;
   }
 
@@ -438,6 +438,8 @@ namespace pxt {
     Serial.println(getNumGlobals());
     
     globals = allocate(getNumGlobals());
+    Serial.print("Globals allocated at =");
+    Serial.println((uint16_t)globals);
 
     // just compare the first word
     checkStr(BYTECODE_WORD(0) == 0x8E70 &&
@@ -445,19 +447,21 @@ namespace pxt {
              ":( Failed partial flash",0);
 
 
+    /*
     Serial.print("Red LED ON-START");
     redLED_test(true);
     delay(1000);
     redLED_test(false);
     delay(1000);
     Serial.print("Red LED ON-END");
+    */
 
     // panic(7);
     uint16_t startptr = (uint16_t)bytecode;
     startptr += 48; // header
     
-    Serial.print("startptr = ");
-    Serial.println((uint16_t)startptr);
+    //Serial.print("startptr = ");
+    //Serial.println((uint16_t)startptr);
 
     startptr >>= 1;
     ((uint16_t (*)())startptr)();
@@ -466,7 +470,7 @@ namespace pxt {
     pxt::debugMemLeaks();
 #endif
 
-    Serial.println("done");
+    //Serial.println("done");
 
     return;
   }

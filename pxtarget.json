@@ -193,6 +193,8 @@
         "docMenu": [],
         "invertedMenu": true,
         "invertedToolbox": true,
+        "simAnimationEnter": "rotate in",
+        "simAnimationExit": "rotate out",
         "blocklyOptions": {
             "media": "./static/blockly/media/",
             "grid": {

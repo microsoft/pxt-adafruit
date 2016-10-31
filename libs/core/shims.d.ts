@@ -81,9 +81,9 @@ declare namespace sensors {
     /**
      * Reads the light level between 0 and 1023.
      */
-    //% blockId="lightSensor" block="light"
-    //% weight=80 shim=sensors::light
-    function light(): uint16;
+    //% blockId="lightSensor" block="light level"
+    //% weight=80 shim=sensors::lightLevel
+    function lightLevel(): uint16;
 
     /**
      * Reads the accelerometer's Motion

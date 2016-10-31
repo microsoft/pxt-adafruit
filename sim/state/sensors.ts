@@ -71,7 +71,7 @@ namespace pxsim {
 
 namespace pxsim.sensors {
 
-    export function soundSensor(): number {
+    export function sound(): number {
         let b = board().soundSensorState;
         if (!b.usesSoundLevel) {
             b.usesSoundLevel = true;
@@ -93,7 +93,7 @@ namespace pxsim.sensors {
         return board().slideSwitchState.on;
     }
 
-    export function lightSensor(): number {
+    export function lightLevel(): number {
         let b = board().lightSensorState;
         if (!b.usesLightLevel) {
             b.usesLightLevel = true;
@@ -107,13 +107,6 @@ namespace pxsim.sensors {
         if (!pin) return;
         pin.mode = PinFlags.Analog | PinFlags.Input;
         return pin.value || 0;
-    }
-
-    export function onPinPressed(pinId: number, handler: RefAction) {
-        let pin = getPin(pinId);
-        if (!pin) return;
-        pin.isTouched();
-        //pxtcore.registerWithDal(pin.id, DAL.MICROBIT_BUTTON_EVT_CLICK, handler);
     }
 
     export function temperature(unit: ThermometerUnit = ThermometerUnit.Celsius): number {

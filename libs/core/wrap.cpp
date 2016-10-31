@@ -10,9 +10,9 @@ enum Button
 
 enum MotionAxis
 {
-    X,
-    Y,
-    Z   
+    X = 0,
+    Y = 1,
+    Z = 2  
 }
 
 enum Note
@@ -126,9 +126,9 @@ uint8_t taps() {
 /**
 * Reads the light level between 0 and 1023.
 */
-//% blockId="lightSensor" block="light"
+//% blockId="lightSensor" block="light level"
 //% weight=80
-uint16_t light()
+uint16_t lightLevel()
 {
     return CircuitPlayground.lightSensor();
 }

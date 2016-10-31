@@ -56,10 +56,10 @@ namespace pxsim.sensors {
         //pxtcore.registerWithDal(CPLAY.ID_GESTURE, gesture, handler);
     }
 
-    export function acceleration(dimension: number): number {
+    export function motion(dimension: number): number {
         let b = board().accelerometerState;
         let acc = b.accelerometer;
-        acc.activate();
+        acc.activate();        
         switch (dimension) {
             case 0: return acc.getX();
             case 1: return acc.getY();
@@ -90,21 +90,6 @@ namespace pxsim.sensors {
     export function setAccelRange(range: number) {
         let b = board().accelerometerState;
         b.accelerometer.setSampleRange(range);
-    }
-
-    export function motionX(): number {
-        let b = board().accelerometerState;
-        return b.accelerometer.getX();
-    }
-
-    export function motionY(): number {
-        let b = board().accelerometerState;
-        return b.accelerometer.getY();
-    }
-
-    export function motionZ(): number {
-        let b = board().accelerometerState;
-        return b.accelerometer.getZ();
     }
 }
 

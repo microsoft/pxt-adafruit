@@ -8,3 +8,7 @@ namespace pxsim.arduino {
         
     }
 }
+
+namespace pxsim.control {
+    export var delayMicroseconds = pxsim.thread.pause;
+}

@@ -191,6 +191,7 @@
         "githubUrl": "https://github.com/Microsoft/pxt-microbit",
         "boardName": "Adafruit Circuit Playground",
         "docMenu": [],
+        "hideSideDocs": true,
         "invertedMenu": true,
         "invertedToolbox": true,
         "simAnimationEnter": "rotate in",

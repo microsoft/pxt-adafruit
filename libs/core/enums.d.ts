@@ -86,6 +86,32 @@
     }
 
 
+    /**
+     * Well known colors
+     */
+
+    declare enum Color {
+    //% block=red blockIdentity=light.color
+    Red = 0xFF0000,
+    //% block=orange blockIdentity=light.color
+    Orange = 0xFFA500,
+    //% block=yellow blockIdentity=light.color
+    Yellow = 0xFFFF00,
+    //% block=green blockIdentity=light.color
+    Green = 0x00FF00,
+    //% block=blue blockIdentity=light.color
+    Blue = 0x0000FF,
+    //% block=indigo blockIdentity=light.color
+    Indigo = 0x4b0082,
+    //% block=violet blockIdentity=light.color
+    Violet = 0x8a2be2,
+    //% block=purple blockIdentity=light.color
+    Purple = 0xFF00FF,
+    //% block=white blockIdentity=light.color
+    White = 0xFFFFFF,
+    }
+
+
     declare enum TemperatureUnit {
     Celsius = 0,
     Fahrenheit = 1,

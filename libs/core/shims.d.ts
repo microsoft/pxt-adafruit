@@ -65,54 +65,62 @@ declare interface Buffer {
 declare namespace sensors {
 
     /**
-     * Gets a value indicating if the slide switched is on.
+     * Gets a value indicating if the left button is pressed.
      */
-    //% blockId="slideSwitch" block="slide switch" shim=sensors::slideSwitch
-    function slideSwitch(): boolean;
+    //% blockId="leftButton" block="%b|button pressed?" weight=40
+    //% weight=85 shim=sensors::button
+    function button(b: Button): boolean;
+
+    /**
+     * Reads the number of taps
+     */
+    //% blockId="getAccelTap" block="taps"
+    //% weight=84 shim=sensors::taps
+    function taps(): uint8;
 
     /**
      * Reads the light level between 0 and 1023.
      */
-    //% blockId="lightSensor" block="light" shim=sensors::light
+    //% blockId="lightSensor" block="light"
+    //% weight=80 shim=sensors::light
     function light(): uint16;
 
     /**
-     * Gets a value indicating if the left button is pressed.
+     * Reads the accelerometer's Motion
+     * @param axis the axis of rotation. X is aligned with the buttons, Y going accross the buttons, Z perpendicular to the board.
      */
-    //% blockId="leftButton" block="%b|button pressed?" weight=40 shim=sensors::button
-    function button(b: Button): boolean;
+    //% blockId="motion" block="motion %axis"
+    //% weight=82 shim=sensors::motion
+    function motion(axis: MotionAxis): number;
+
+    /**
+     * Reads the sound level between 0 and 1023.
+     */
+    //% blockId="soundSensor" block="sound"
+    //% weight=60 shim=sensors::sound
+    function sound(): uint16;
+
+    /**
+     * Gets a value indicating if the slide switched is on.
+     */
+    //% blockId="slideSwitch" block="slide switch"
+    //% weight=55 shim=sensors::slideSwitch
+    function slideSwitch(): boolean;
 
     /**
      * Reads the capacitiy of a specific pin
      * @param pin the number of the pin
      * @param samples
      */
-    //% blockId="readCap" block="read capacity at pin %pin" samples.defl=10 shim=sensors::readCap
+    //% blockId="readCap" block="read capacity at pin %pin"
+    //% weight=50 samples.defl=10 shim=sensors::readCap
     function readCap(pin: CapacityPin, samples?: uint16): uint16;
-
-    /**
-     * Reads the accelerometer's Motion
-     */
-    //% blockId="motion" block="motion %axis" shim=sensors::motion
-    function motion(axis: MotionAxis): number;
-
-    /**
-     * Reads the number of taps
-     */
-    //% blockId="getAccelTap" block="taps" shim=sensors::getAccelTap
-    function getAccelTap(): uint8;
 
     /**
      * Reads the temperature.
      */
     //% blockId="temperatur" block="temperature %unit" shim=sensors::temperature
     function temperature(unit: TemperatureUnit): number;
-
-    /**
-     * Reads the sound level between 0 and 1023.
-     */
-    //% blockId="soundSensor" block="sound" shim=sensors::sound
-    function sound(): uint16;
 }
 
 
@@ -151,38 +159,45 @@ declare namespace light {
      * Just turn on/off the red #13 LED
      * @param on a value to turn on/off the LED, eg: true
      */
+    //% weight=90
     //% blockId="redled" block="red led %on" shim=light::redLED
     function redLED(on: boolean): void;
 
     /**
+     * Sets the RGB color on a pixel
+     */
+    //% weight=85 blockGap=8
+    //% blockId="setPixelColor" block="set pixel %p|to color %c=pixelcolor" shim=light::setPixelColor
+    function setPixelColor(p: uint8, c: number): void;
+
+    /**
      * Clear pixels
      */
+    //% weight=84 blockGap=8
     //% blockId="clearPixels" block="clear pixels" shim=light::clearPixels
     function clearPixels(): void;
 
     /**
-     * Sets the RGB color on a pixel
-     */
-    //% blockId="setPixelColor" block="set pixel %p|to color %c" shim=light::setPixelColor
-    function setPixelColor(p: uint8, c: number): void;
-
-    /**
-     * Sets the RGB color on a pixel
-     */
-    //% blockId="setPixelColorRgb" block="set pixel %p|to red %c|green %g|blue %b" shim=light::setPixelColorRgb
-    function setPixelColorRgb(p: uint8, r: uint8, g: uint8, b: uint8): void;
-
-    /**
      * Sets the neopixel brightness
+     * @param Desired brightness. eg: 255
      */
+    //% weight=80
     //% blockId="setBrightness" block="set brightness %b" shim=light::setBrightness
-    function setBrightness(b: uint16): void;
+    function setBrightness(brightness: uint16): void;
 
     /**
      * Color wheel
      */
-    //% blockId="colorWheel" block="color wheel %x" shim=light::colorWheel
+    //% blockId="colorWheel" block="color wheel %x"
+    //% weight=10 blockGap=8 shim=light::colorWheel
     function colorWheel(x: uint8): number;
+
+    /**
+     * Converts RGB channels into a color
+     */
+    //% blockId="rgb" block="red %r|green %g|blue %b"
+    //% weight=9 shim=light::rgb
+    function rgb(r: uint8, g: uint8, b: uint8): number;
 }
 
 

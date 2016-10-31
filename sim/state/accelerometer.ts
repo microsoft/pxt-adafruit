@@ -44,6 +44,14 @@ const enum CPLAY {
     ACCELEROMETER_SHAKE_COUNT_THRESHOLD = 4
 }
 
+namespace pxsim {
+    export enum MotionAxis {
+        X,
+        Y,
+        Z
+    }
+}
+
 namespace pxsim.sensors {
     export function onGesture(gesture: number, handler: RefAction) {
         let b = board().accelerometerState;
@@ -54,18 +62,6 @@ namespace pxsim.sensors {
             runtime.queueDisplayUpdate();
         }
         //pxtcore.registerWithDal(CPLAY.ID_GESTURE, gesture, handler);
-    }
-
-    export function motion(dimension: number): number {
-        let b = board().accelerometerState;
-        let acc = b.accelerometer;
-        acc.activate();        
-        switch (dimension) {
-            case 0: return acc.getX();
-            case 1: return acc.getY();
-            case 2: return acc.getZ();
-            default: return Math.floor(Math.sqrt(acc.instantaneousAccelerationSquared()));
-        }
     }
 
     export function rotation(kind: number): number {
@@ -90,6 +86,20 @@ namespace pxsim.sensors {
     export function setAccelRange(range: number) {
         let b = board().accelerometerState;
         b.accelerometer.setSampleRange(range);
+    }
+
+    export function motion(axis: MotionAxis): number {
+        let b = board().accelerometerState;
+        switch(axis) {
+            case MotionAxis.X:
+                return b.accelerometer.getX();
+            case MotionAxis.Y:
+                return b.accelerometer.getY();
+            case MotionAxis.Z:
+                return b.accelerometer.getZ();
+            default:
+                return -1;
+        }
     }
 }
 

@@ -1,7 +1,19 @@
 
 namespace pxsim {
-    export class RedLEDState {
-        on: boolean = false;
+    export enum AdaFruit_Button {
+        Left, 
+        Right
+    }
+
+    export enum ThermometerUnit {
+        Celsius, 
+        Fahrenheit
+    }
+
+    export class ThermometerState {
+        usesTemperature = false;
+        unit: ThermometerUnit = ThermometerUnit.Celsius;
+        temperature = 21;
     }
 
     export class SlideSwitchState {
@@ -57,19 +69,24 @@ namespace pxsim {
     }
 }
 
-namespace pxsim.playground {
+namespace pxsim.sensors {
 
-    export function redLED(value: boolean) {
-        board().redLEDState.on = value;
-        runtime.queueDisplayUpdate()
+    export function soundSensor(): number {
+        let b = board().soundSensorState;
+        if (!b.usesSoundLevel) {
+            b.usesSoundLevel = true;
+            runtime.queueDisplayUpdate();
+        }
+        return b.soundLevel;
     }
 
-    export function leftButton(): boolean {
-        return board().buttonPairState.aBtn.pressed;
-    }
-
-    export function rightButton(): boolean {
-        return board().buttonPairState.bBtn.pressed;
+    export function button(button: AdaFruit_Button): boolean {
+        if (button == AdaFruit_Button.Left) {
+            return board().buttonPairState.aBtn.pressed;
+        } else if (button == AdaFruit_Button.Right) {
+            return board().buttonPairState.bBtn.pressed;
+        }
+        return false;
     }
 
     export function slideSwitch(): boolean {
@@ -97,5 +114,15 @@ namespace pxsim.playground {
         if (!pin) return;
         pin.isTouched();
         //pxtcore.registerWithDal(pin.id, DAL.MICROBIT_BUTTON_EVT_CLICK, handler);
+    }
+
+    export function temperature(unit: ThermometerUnit = ThermometerUnit.Celsius): number {
+        let b = board();
+        if (!b.thermometerState.usesTemperature) {
+            b.thermometerState.usesTemperature = true;
+            b.thermometerState.unit = unit;
+            runtime.queueDisplayUpdate();
+        }
+        return b.thermometerState.temperature;
     }
 }

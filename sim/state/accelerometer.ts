@@ -44,7 +44,7 @@ const enum CPLAY {
     ACCELEROMETER_SHAKE_COUNT_THRESHOLD = 4
 }
 
-namespace pxsim.playground {
+namespace pxsim.sensors {
     export function onGesture(gesture: number, handler: RefAction) {
         let b = board().accelerometerState;
         b.accelerometer.activate();

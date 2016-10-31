@@ -26,9 +26,18 @@ namespace pxsim {
             this.neopixels = {};
         }
     }
+
+    export class RedLEDState {
+        on: boolean = false;
+    }
 }
 
-namespace pxsim.neopixels {
+namespace pxsim.light {
+
+    export function redLED(value: boolean) {
+        board().redLEDState.on = value;
+        runtime.queueDisplayUpdate()
+    }
 
     export function setPixelColor(pixel: number, rgb: number) {
         let state = board().neopixelState;

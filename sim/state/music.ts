@@ -24,15 +24,6 @@ namespace pxsim {
 }
 namespace pxsim.music {
 
-    export function soundSensor(): number {
-        let b = board().soundSensorState;
-        if (!b.usesSoundLevel) {
-            b.usesSoundLevel = true;
-            runtime.queueDisplayUpdate();
-        }
-        return b.soundLevel;
-    }
-
     export function noteFrequency(note: number) {
         return note;
     }

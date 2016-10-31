@@ -199,7 +199,7 @@
         "blocklyOptions": {
             "grid": {
                 "spacing": 50,
-                "length": 5,
+                "length": 2,
                 "colour": "#FB48C7",
                 "snap": true
             }

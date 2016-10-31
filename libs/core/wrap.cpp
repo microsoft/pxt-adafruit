@@ -67,7 +67,7 @@ enum CapacityPin
 };
 
 enum TemperatureUnit {
-    Clecius,
+    Celsius,
     Fahrenheit
 }
 
@@ -153,7 +153,7 @@ uint8_t getAccelTap() {
 */
 //% blockId="temperatur" block="temperature %unit"
 int temperature(TemperatureUnit unit) {
-    if (unit == TemperatureUnit::Celcius)
+    if (unit == TemperatureUnit::Celsius)
         return CircuitPlayground.temperature();
     else return CircuitPlayground.temperatureF();
     //TODO: should return float

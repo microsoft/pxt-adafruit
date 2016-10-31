@@ -564,10 +564,10 @@ namespace pxsim.visuals {
 
         private updateTemperature() {
             let state = this.board;
-            if (!state || !state.thermometerState.usesTemperature) return;
+            if (!state || !state.thermometerState || !state.thermometerState.usesTemperature) return;
 
-            let tmin = -5;
-            let tmax = 50;
+            let tmin = state.thermometerState.unit == ThermometerUnit.Celsius ? -5 : 0;
+            let tmax = state.thermometerState.unit == ThermometerUnit.Celsius ? 50 : 120;
             if (!this.thermometer) {
                 let gid = "gradient-thermometer";
                 this.thermometerGradient = svg.linearGradient(this.defs, gid);
@@ -596,7 +596,7 @@ namespace pxsim.visuals {
             let t = Math.max(tmin, Math.min(tmax, state.thermometerState.temperature))
             let per = Math.floor((state.thermometerState.temperature - tmin) / (tmax - tmin) * 100)
             svg.setGradientValue(this.thermometerGradient, 100 - per + "%");
-            this.thermometerText.textContent = t + "°C";
+            this.thermometerText.textContent = t + "°" + (state.thermometerState.unit == ThermometerUnit.Celsius ? 'C' : 'F');
         }
 
         private updateButtonAB() {

@@ -87,7 +87,7 @@
 
 
     declare enum TemperatureUnit {
-    Clecius = 0,
+    Celsius = 0,
     Fahrenheit = 1,
     }
 declare namespace sensors {

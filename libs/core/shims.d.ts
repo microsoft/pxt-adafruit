@@ -156,15 +156,6 @@ declare namespace music {
 declare namespace light {
 
     /**
-     * Animate the pixels using a preset animation.
-     * @param animation animation to play, eg: Rainbow
-     * @param duration time to play the animation for, in seconds, eg: 2
-     */
-    //% async blockId="animate" block="play animation %animation| for %time| seconds"
-    //% weight=100 duration.defl=2 shim=light::animate
-    function animate(animation: Animation, duration?: uint8): void;
-
-    /**
      * Show a preset drawing. eg: Rainbow
      */
     //% blockId="showDrawing" block="show %drawing"
@@ -206,21 +197,24 @@ declare namespace light {
      * @param Desired brightness. eg: 255
      */
     //% weight=80
-    //% blockId="setBrightness" block="set brightness %b" shim=light::setBrightness
+    //% blockId="setBrightness" block="set brightness %b"
+    //% advanced=true shim=light::setBrightness
     function setBrightness(brightness: uint16): void;
 
     /**
      * Color wheel
      */
     //% blockId="colorWheel" block="color wheel %x"
-    //% weight=10 blockGap=8 shim=light::colorWheel
+    //% weight=10 blockGap=8
+    //% advanced=true shim=light::colorWheel
     function colorWheel(x: uint8): number;
 
     /**
      * Converts RGB channels into a color
      */
     //% blockId="rgb" block="red %r|green %g|blue %b"
-    //% weight=9 shim=light::rgb
+    //% weight=9
+    //% advanced=true shim=light::rgb
     function rgb(r: uint8, g: uint8, b: uint8): number;
 }
 

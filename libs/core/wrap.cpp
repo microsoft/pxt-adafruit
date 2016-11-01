@@ -252,18 +252,6 @@ namespace light
 {
 
 /**
-* Animate the pixels using a preset animation.
-* @param animation animation to play, eg: Rainbow
-* @param duration time to play the animation for, in seconds, eg: 2
-*/
-//% async blockId="animate" block="play animation %animation| for %time| seconds"
-//% weight=100
-void animate(Animation animation, uint8_t duration = 2)
-{
-
-}
-
-/**
 * Show a preset drawing. eg: Rainbow
 */
 //% blockId="showDrawing" block="show %drawing"
@@ -321,6 +309,7 @@ void clearPixels()
 */
 //% weight=80
 //% blockId="setBrightness" block="set brightness %b"
+//% advanced=true
 void setBrightness(uint16_t brightness)
 {
     CircuitPlayground.setBrightness(brightness);
@@ -331,6 +320,7 @@ void setBrightness(uint16_t brightness)
 */
 //% blockId="colorWheel" block="color wheel %x"
 //% weight=10 blockGap=8
+//% advanced=true
 uint32_t colorWheel(uint8_t x)
 {
     return CircuitPlayground.colorWheel(x);
@@ -342,6 +332,7 @@ uint32_t colorWheel(uint8_t x)
 */
 //% blockId="rgb" block="red %r|green %g|blue %b"
 //% weight=9
+//% advanced=true
 uint32_t rgb(uint8_t r, uint8_t g, uint8_t b)
 {
     return r >> 16 | g >> 8 | r;

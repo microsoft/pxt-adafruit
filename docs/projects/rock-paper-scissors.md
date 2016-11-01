@@ -35,7 +35,7 @@ input.onGesture(Gesture.Shake, () => {
     }
 })
 ```
-In this project, you will build a Rock Paper Scissors game with the BBC micro:bit.
+In this project, you will build a Rock Paper Scissors game with the @boardname@.
 You can play the game with a friend who has it on a micro:bit.
 You can also play it with friends who are just using their hands.
 
@@ -44,7 +44,7 @@ You can also play it with friends who are just using their hands.
 
 ## Materials needed
 
-* Your BBC micro:bit -- that's it!
+* Your @boardname@ -- that's it!
 
 ## Step 1: Getting started
 

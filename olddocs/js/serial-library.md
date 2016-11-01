@@ -2,9 +2,9 @@
 
 The serial library #docs
 
-The **serial library** supports [serial communication](https://en.wikipedia.org/wiki/Serial_port) between the BBC micro:bit and another computer. Basically, this allows you to send data from the micro:bit to your own computer. This is very useful for debugging purposes: you can add `write line` statements in your code and see them display on your computer as the program executes.
+The **serial library** supports [serial communication](https://en.wikipedia.org/wiki/Serial_port) between the @boardname@ and another computer. Basically, this allows you to send data from the micro:bit to your own computer. This is very useful for debugging purposes: you can add `write line` statements in your code and see them display on your computer as the program executes.
 
-The code below shows a simple script that sends a line when the BBC micro:bit starts and another line each time the button ``A`` is pressed.
+The code below shows a simple script that sends a line when the @boardname@ starts and another line each time the button ``A`` is pressed.
 
 ```
 serial.writeLine("started...")

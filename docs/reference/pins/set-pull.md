@@ -29,4 +29,4 @@ pins.setPull(DigitalPin.P0, PinPullMode.PullUp);
 
 ### See also
 
-[BBC micro:bit | mbed](https://developer.mbed.org/platforms/Microbit/)
+[@boardname@ | mbed](https://developer.mbed.org/platforms/Microbit/)

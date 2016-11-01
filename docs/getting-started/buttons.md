@@ -18,11 +18,11 @@ input.onButtonPressed(Button.A, () => {
 #### ~hint
 
 The ``showString`` block can show letters, numbers, and punctuation
-on the micro:bit screen.
+on the @boardname@ screen.
 
 #### ~
 
-Now try to unscramble these blocks in the editor so that the micro:bit
+Now try to unscramble these blocks in the editor so that the @boardname@
 shows **BANANA** when you press button `B`.
 
 ```shuffle
@@ -37,7 +37,7 @@ You can find the letter `B` by clicking the letter `A` on the
 
 #### ~
 
-Click **Download** to move your program to the BBC micro:bit!
+Click **Download** to move your program to the BBC @boardname@!
 
 #### Your turn!
 
@@ -65,7 +65,7 @@ input.onPinPressed(TouchPin.P0, () => {
 . . # . .`);
 });
 ```
-Click **Download** to move your program to the BBC micro:bit!
+Click **Download** to move your program to the @boardname@!
 
 ## ~hint
 

@@ -66,9 +66,9 @@ Everything described above relates to devices which are connected and communicat
 
 In GAP, one devices advertises, emitting small packets of data periodically. These packets contain information about the device doing the advertising. Other devices looking for devices to connect to perform something called scanning, receiving and processing advertising packets and filtering out those that come from devices of a type that are not of interest. Usually the user is given information about devices which are discovered and they then select one to be connected to. The device which advertises is called a Bluetooth Peripheral whereas the one doing the scanning is a Bluetooth Central device. micro:bit is a Bluetooth peripheral.
 
-Bluetooth on the BBC micro:bit
+Bluetooth on the @boardname@
 
-Full documentation for the BBC micro:bit Bluetooth profile as used by this application can be found at the [Lancaster University documentation](http://lancaster-university.github.io/microbit-docs/ble/profile/) web site.
+Full documentation for the @boardname@ Bluetooth profile as used by this application can be found at the [Lancaster University documentation](http://lancaster-university.github.io/microbit-docs/ble/profile/) web site.
 
 The micro:bit's accelerometer (motion detector), magnetometer (digital compass), two buttons on the front, LED Display, IO pins on the edge connector, internal message bus and internal temperature sensor are all exposed as Services so that applications can exploit these features of the device. In addition: 
 
@@ -82,7 +82,7 @@ Everything you can do with the micro:bit over Bluetooth is achieved through read
 
 The Bluetooth SIG web site at http://www.bluetooth.com is a good place for further information about Bluetooth in general. You'll find all the SIG defined profiles, services, characteristics and descriptors there as well as the core specification for all Bluetooth technology.
 
-That's it! Enjoy using Bluetooth on the BBC micro:bit!
+That's it! Enjoy using Bluetooth on the @boardname@!
 
 Martin Woolley, Bluetooth SIG. Twitter: @bluetooth_mdw
 

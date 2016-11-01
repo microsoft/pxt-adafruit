@@ -31,7 +31,7 @@ Your micro:bit is now ready to be paired with the other device. Read the section
 1. Go into Settings
 2. Select Bluetooth
 3. Switch your micro:bit into 'pairing mode' using the steps above
-4. Wait until 'PAIRING MODE!' has finished scrolling across the micro:bit display. You should see your micro:bit listed on your Windows smartphone with a name something like 'BBC micro:bit [zatig]'. Note that the 5 characters in brackets at the end will vary.
+4. Wait until 'PAIRING MODE!' has finished scrolling across the micro:bit display. You should see your micro:bit listed on your Windows smartphone with a name something like '@boardname@ [zatig]'. Note that the 5 characters in brackets at the end will vary.
 5. On the Windows smartphone, tap the micro:bit named in the device list. This will initiate the pairing process.
 6. The micro:bit will display a left pointing arrow and the Windows smartphone will pop up a box into which you will be invited to enter a "pin" (Personal Identity Number).
 7. Press button A on the micro:bit and watch carefully as the micro:bit displays a sequence of 6 random numbers. You may find it easier to write them down than to remember them.
@@ -47,7 +47,7 @@ https://www.youtube.com/watch?v=AoW3mit7jIg
 1. Go into Settings
 2. Select Bluetooth
 3. Switch your micro:bit into 'pairing mode' using the steps above
-4. Wait until 'PAIRING MODE!' has finished scrolling across the micro:bit display. You should see your micro:bit listed on your Android smartphone under the heading "Available devices" with a name something like 'BBC micro:bit [zatig]'. Note that the 5 characters in brackets at the end will vary.
+4. Wait until 'PAIRING MODE!' has finished scrolling across the micro:bit display. You should see your micro:bit listed on your Android smartphone under the heading "Available devices" with a name something like '@boardname@ [zatig]'. Note that the 5 characters in brackets at the end will vary.
 5. On the Android smartphone, tap the micro:bit named in the Available devices list. This will initiate the pairing process.
 6. The micro:bit will display a left pointing arrow and the Android smartphone will pop up a box into which you will be invited to enter a "pin" (Personal Identity Number).
 7. Press button A on the micro:bit and watch carefully as the micro:bit displays a sequence of 6 random numbers. You may find it easier to write them down than to remember them.

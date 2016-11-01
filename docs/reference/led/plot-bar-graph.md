@@ -11,7 +11,7 @@ led.plotBarGraph(2, 20);
 
 * ``value`` is a [number](/reference/types/number) that means what you
   are measuring or trying to show. For example, if you are measuring
-  the temperature of ice with the BBC micro:bit, ``value`` might be `0`
+  the temperature of ice with the @boardname@, ``value`` might be `0`
   because the temperature might be 0 degrees centigrade.
 * ``high`` is a [number](/reference/types/number) that means the highest
   possible number that the ``value`` parameter can be. This number is

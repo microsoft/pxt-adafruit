@@ -2,7 +2,7 @@
 
 Find the light level (how bright or dark it is) where you are.
 The light level ``0`` means darkness and ``255`` means bright light. 
-The BBC micro:bit measures the light around it by using some of the
+The @boardname@ measures the light around it by using some of the
 LEDs on the [LED screen](/device/screen).
 
 The first time you use it, this function will say ``0``.

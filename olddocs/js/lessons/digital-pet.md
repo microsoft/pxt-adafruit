@@ -1,6 +1,6 @@
 # digital pet lesson
 
-a display of pet images for the BBC micro:bit.
+a display of pet images for the @boardname@.
 
 ## Topic
 

@@ -8,7 +8,7 @@ input.rotation(Rotation.Roll);
 
 ## ~hint
 
-The BBC micro:bit has a part called the **accelerometer** that can
+The @boardname@ has a part called the **accelerometer** that can
 check how the micro:bit is moving.
 
 ## ~
@@ -23,7 +23,7 @@ check how the micro:bit is moving.
 
 ### Example: micro:bit leveler
 
-This program helps you move the BBC micro:bit until it is level.  When
+This program helps you move the @boardname@ until it is level.  When
 it is level, the micro:bit shows a smiley.
 
 If you are running this program in a browser, you can tilt the

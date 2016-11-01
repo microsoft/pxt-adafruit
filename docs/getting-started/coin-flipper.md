@@ -4,7 +4,7 @@
 
 Are you trying to choose whether to play soccer or go to the movies
 instead, or which toppings to have on your pizza?  Build a coin
-flipping machine with the BBC micro:bit to choose for you!
+flipping machine with the @boardname@ to choose for you!
 
 ### ~
 

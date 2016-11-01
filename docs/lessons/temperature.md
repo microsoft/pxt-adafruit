@@ -1,6 +1,6 @@
 # temperature blocks lesson
 
-measure the temperature on the BBC micro:bit.
+measure the temperature on the @boardname@.
 
 ## Topic
 

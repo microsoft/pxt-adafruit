@@ -2,7 +2,7 @@
 
 ### ~avatar avatar
 
-Build a Rock Paper Scissors game with the BBC micro:bit!  You can play
+Build a Rock Paper Scissors game with the @boardname@!  You can play
 the game with a friend who has it on a micro:bit.  You can also play
 it with friends who are just using their hands.  (The game is built
 like a coin flipper, but with three choices instead of two.)
@@ -152,7 +152,7 @@ That's why you can use an ``else`` instead of an ``else if``.
 
 Your game is ready!
 
-Click **Download** to move your program to the BBC micro:bit!
+Click **Download** to move your program to the @boardname@!
 
 Have fun!
 
@@ -198,7 +198,7 @@ input.onButtonPressed(Button.B, () => {
     basic.showNumber(game.score())
 })
 ```
-Click **Download** to move your program to the BBC micro:bit!
+Click **Download** to move your program to the @boardname@!
 
 ### ~button /projects
 NEXT: PROJECTS!

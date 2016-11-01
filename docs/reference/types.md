@@ -1,7 +1,7 @@
 # types
 
 A *type* refers to a class of data and the operations permitted on that class of data. 
-The following built-in types are supported for the BBC micro:bit:
+The following built-in types are supported for the @boardname@:
 
 * **[String](/reference/types/string)**: a sequence of characters
 * **[Number](/reference/types/number)**: an integer number (32-bit signed)

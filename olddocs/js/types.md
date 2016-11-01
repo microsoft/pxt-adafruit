@@ -5,7 +5,7 @@ Touch Develop types.
 ### @parent language
  
 
-A *type* refers to a class of data and the operations permitted on that data. The following types are supported by Touch Develop for the BBC micro:bit:
+A *type* refers to a class of data and the operations permitted on that data. The following types are supported by Touch Develop for the @boardname@:
 
 * **[String](/reference/types/string)**: a sequence of characters
 * **[Number](/reference/types/number)**: an integer number (32-bit signed)

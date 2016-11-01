@@ -19,7 +19,7 @@ input.onPinPressed(TouchPin.P0, () => {
 
 ## ~hint
 
-This function works best when the BBC micro:bit is using batteries for power,
+This function works best when the @boardname@ is using batteries for power,
 instead of the USB cable.
 
 ## ~
@@ -44,5 +44,5 @@ input.onPinPressed(TouchPin.P0, () => {
 
 ### See also
 
-[BBC micro:bit pins](/device/pins), [pin is pressed](/reference/input/pin-is-pressed), [analog read pin](/reference/pins/analog-read-pin), [analog write pin](/reference/pins/analog-write-pin), [digital read pin](/reference/pins/digital-read-pin), [digital write pin](/reference/pins/digital-write-pin)
+[@boardname@ pins](/device/pins), [pin is pressed](/reference/input/pin-is-pressed), [analog read pin](/reference/pins/analog-read-pin), [analog write pin](/reference/pins/analog-write-pin), [digital read pin](/reference/pins/digital-read-pin), [digital write pin](/reference/pins/digital-write-pin)
 

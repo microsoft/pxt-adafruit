@@ -4,7 +4,7 @@
 
 
 
-The *Truth or dare!* game works as follows: a player spins the BBC micro:bit on the table. 
+The *Truth or dare!* game works as follows: a player spins the @boardname@ on the table. 
 When the micro:bit stops spinning, the player pointed by the arrow (displayed on screen) must press the button "A" 
 to see if she has to provide a *truth* or a *dare*.
 

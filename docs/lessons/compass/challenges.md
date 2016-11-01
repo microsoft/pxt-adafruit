@@ -27,7 +27,7 @@ basic.forever(() => {
 
 ### Challenge 1
 
-Instead of displaying `N` when the BBC micro:bit is pointing North, display a star to indicate the north star.
+Instead of displaying `N` when the @boardname@ is pointing North, display a star to indicate the north star.
 
 ```blocks
  let degrees = 0;

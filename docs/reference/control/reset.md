@@ -1,6 +1,6 @@
 # Reset
 
-Reset the BBC micro:bit and start the program again.
+Reset the @boardname@ and start the program again.
 
 This function is like pressing the reset button on the back of the micro:bit.
 

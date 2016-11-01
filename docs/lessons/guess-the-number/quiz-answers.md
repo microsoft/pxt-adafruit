@@ -10,7 +10,7 @@ Answers may vary. Generally, on button pressed run code when an input button is 
 
 ## 2. Consider the following directions
 
-Write the line of code that creates a condition when the BBC micro:bit button A is pressed.
+Write the line of code that creates a condition when the @boardname@ button A is pressed.
 
 
 ```blocks
@@ -28,7 +28,7 @@ let randomNumber = Math.random(10)
 ```
 
 ## 4. 
-If the rectangle below represents the BBC micro:bit, shade the areas that will be displayed. Explain why that particular area is shaded.
+If the rectangle below represents the @boardname@, shade the areas that will be displayed. Explain why that particular area is shaded.
 
 ```blocks
 let randomNumber = Math.random(10)

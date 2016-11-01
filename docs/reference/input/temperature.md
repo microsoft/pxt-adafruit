@@ -13,7 +13,7 @@ input.temperature();
 
 ### How does it work?
 
-The BBC micro:bit checks how hot its CPU (main computer chip) is.
+The @boardname@ checks how hot its CPU (main computer chip) is.
 Because the micro:bit does not usually get very hot, the temperature of the CPU
 is usually close to the temperature of wherever you are.
 The micro:bit might warm up a little if you make it work hard, though!

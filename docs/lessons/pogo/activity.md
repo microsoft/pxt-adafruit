@@ -21,7 +21,7 @@ basic.forever(() => {
 })
 ```
 
-The function `acceleration(y)` gets the acceleration value (milli g-force), in the `y` dimension. If the `acceleration(y)`is greater than 2000 milli g-force, we will change jumps by 1. If jumping is greater than 2000 milli-gravities, then change jumps by 1 and display a smiley on the BBC micro:bit. Finally, we will remove the smiley image from the screen
+The function `acceleration(y)` gets the acceleration value (milli g-force), in the `y` dimension. If the `acceleration(y)`is greater than 2000 milli g-force, we will change jumps by 1. If jumping is greater than 2000 milli-gravities, then change jumps by 1 and display a smiley on the @boardname@. Finally, we will remove the smiley image from the screen
 
 
 ```blocks
@@ -42,7 +42,7 @@ basic.forever(() => {
 })
 ```
 
-Now let's register an event handler that will execute whenever an input button (A) is pressed during program execution. If you press button A, then show the number of jumps greater than 2000 milli-gravities on the BBC micro:bit.
+Now let's register an event handler that will execute whenever an input button (A) is pressed during program execution. If you press button A, then show the number of jumps greater than 2000 milli-gravities on the @boardname@.
 
 ```blocks
 let jumps = 0
@@ -65,7 +65,7 @@ input.onButtonPressed(Button.A, () => {
 })
 ```
 
-If you press button A+B together, then reset the jump counter to 0 on the BBC micro:bit. Finally, we will show the show the jump counter on the micro:bit
+If you press button A+B together, then reset the jump counter to 0 on the @boardname@. Finally, we will show the show the jump counter on the micro:bit
 
 
 ```blocks

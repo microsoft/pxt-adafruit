@@ -1,6 +1,6 @@
 # Shake
 
-You can find when someone is shaking the BBC micro:bit by checking its
+You can find when someone is shaking the @boardname@ by checking its
 **accelerometer** (it finds whether the micro:bit is speeding up or
 slowing down).
 
@@ -17,7 +17,7 @@ input.onGesture(Gesture.Shake, () => {
 # . . . #`);
 });
 ```
-Click **Download** to move your program to the BBC micro:bit!
+Click **Download** to move your program to the @boardname@!
 
 ### ~button /getting-started/coin-flipper
 NEXT: COIN FLIPPER GAME

@@ -108,7 +108,7 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 
 <br/>
 
-## 14. Write the code that displays an "X" on the BBC micro:bit if 'result' is 1. Otherwise, display a "check mark".
+## 14. Write the code that displays an "X" on the @boardname@ if 'result' is 1. Otherwise, display a "check mark".
 
 <br />
 

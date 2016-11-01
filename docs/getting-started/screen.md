@@ -32,7 +32,7 @@ basic.forever(() => {
         `)
 });
 ```
-Click **Download** to move your program to the BBC micro:bit!
+Click **Download** to move your program to the @boardname@!
 
 ### Your turn!
 
@@ -85,7 +85,7 @@ basic.forever(() => {
         `)
 });
 ```
-Click **Download** to move your program to the BBC micro:bit!
+Click **Download** to move your program to the @boardname@!
 
 #### ~hint
 

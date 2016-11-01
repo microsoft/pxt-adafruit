@@ -33,7 +33,7 @@ while (true) {
 /**
 * Runtime and event utilities.
 */
-//% weight=1 color="#333333"
+//% weight=90 color="#FFB600"
 //% advanced=true
 namespace control {
 

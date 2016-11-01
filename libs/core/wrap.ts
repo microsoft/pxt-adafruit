@@ -15,7 +15,7 @@ namespace music {
 /**
 * Functions to manipulate neopixels
 */
-//% color=#00a7e9 weight=80
+//% color=#00a7e9 weight=85
 namespace light {
     /**
     * Gets a wellknown color

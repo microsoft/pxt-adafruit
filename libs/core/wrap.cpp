@@ -15,6 +15,17 @@ enum MotionAxis
     Z = 2  
 }
 
+enum Animation
+{
+    Rainbow,
+    Sparkle
+}
+
+enum Drawing
+{
+    Rainbow
+}
+
 enum Note
 {
     //% blockIdentity=playground.noteFrequency
@@ -204,7 +215,7 @@ int temperature(TemperatureUnit unit) {
 /**
 * Functions for music / audio
 */
-//% color=#FFA702 weight=75
+//% color=#CC2936 weight=75
 namespace music
 {
 
@@ -239,6 +250,40 @@ void playTone(uint16_t frequency, uint16_t time = 250)
 //% color=#00a7e9 weight=50
 namespace light
 {
+
+/**
+* Animate the pixels using a preset animation.
+* @param animation animation to play, eg: Rainbow
+* @param duration time to play the animation for, in seconds, eg: 2
+*/
+//% async blockId="animate" block="play animation %animation| for %time| seconds"
+//% weight=100
+void animate(Animation animation, uint8_t duration = 2)
+{
+
+}
+
+/**
+* Show a preset drawing. eg: Rainbow
+*/
+//% blockId="showDrawing" block="show %drawing"
+//% weight=95
+void showDrawing(Drawing drawing)
+{
+
+}
+
+/**
+* Rotate the pixels forward.
+* @param offset number of pixels to rotate forward, eg: 1
+*/
+//% blockId="rotate" block="rotate pixels by %offset"
+//% weight=95
+void rotate(uint8_t offset = 1)
+{
+
+}
+
 /**
 * Just turn on/off the red #13 LED
 * @param on a value to turn on/off the LED, eg: true

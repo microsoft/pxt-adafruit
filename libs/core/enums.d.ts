@@ -33,6 +33,19 @@
     }
 
 
+    declare enum Animation
+    {
+    Rainbow = 0,
+    Sparkle = 1,
+    }
+
+
+    declare enum Drawing
+    {
+    Rainbow = 0,
+    }
+
+
     declare enum Note
     {
     //% blockIdentity=playground.noteFrequency

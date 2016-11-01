@@ -127,7 +127,7 @@ declare namespace sensors {
     /**
      * Functions for music / audio
      */
-    //% color=#FFA702 weight=75
+    //% color=#CC2936 weight=75
 declare namespace music {
 
     /**
@@ -154,6 +154,30 @@ declare namespace music {
      */
     //% color=#00a7e9 weight=50
 declare namespace light {
+
+    /**
+     * Animate the pixels using a preset animation.
+     * @param animation animation to play, eg: Rainbow
+     * @param duration time to play the animation for, in seconds, eg: 2
+     */
+    //% async blockId="animate" block="play animation %animation| for %time| seconds"
+    //% weight=100 duration.defl=2 shim=light::animate
+    function animate(animation: Animation, duration?: uint8): void;
+
+    /**
+     * Show a preset drawing. eg: Rainbow
+     */
+    //% blockId="showDrawing" block="show %drawing"
+    //% weight=95 shim=light::showDrawing
+    function showDrawing(drawing: Drawing): void;
+
+    /**
+     * Rotate the pixels forward.
+     * @param offset number of pixels to rotate forward, eg: 1
+     */
+    //% blockId="rotate" block="rotate pixels by %offset"
+    //% weight=95 offset.defl=1 shim=light::rotate
+    function rotate(offset?: uint8): void;
 
     /**
      * Just turn on/off the red #13 LED

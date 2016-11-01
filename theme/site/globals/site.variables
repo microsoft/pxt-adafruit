@@ -6,11 +6,11 @@
 @primaryColor: @blue;
 @secondaryColor: @pink;
 
-@red:#E81123;
+@red:#CC2936;
 @orange:#FFA702;
-@yellow:#EEDA47;
+@yellow:#FFB600;
 @green:#00922B;
-@teal:#008272;
+@teal:#08415C;
 @blue:#00A7E9;
 @violet:#C200C0;
 @purple:#8073E5;
@@ -18,11 +18,11 @@
 @brown:#6B5B4C;
 @grey:#999;
 
-@pageBackground: #2c3e50;
+@pageBackground: #3E6680;
 
 /*******************************
          PXT Overrides
 *******************************/
 
-@blocklySvgColor: #2c3e50;
+@blocklySvgColor: #033860;
 @blocklyToolboxColor: transparent;

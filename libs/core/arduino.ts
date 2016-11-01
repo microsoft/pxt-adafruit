@@ -46,7 +46,7 @@ namespace Math {
 /**
 * Arduino control functions
 */
-//% color=#EEDA47 weight=80
+//% color=#FFB600 weight=80
 namespace control {
     export function forever(action: Action) {
         while(true) {

@@ -1,8 +1,8 @@
 
 namespace pxsim {
     export enum AdaFruit_Button {
-        Left, 
-        Right
+        Left = 1, 
+        Right = 2
     }
 
     export enum ThermometerUnit {

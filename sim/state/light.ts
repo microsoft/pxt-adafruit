@@ -142,6 +142,10 @@ namespace pxsim.light {
         return packRGB(WheelPos * 3, 255 - WheelPos * 3, 0);
     }
 
+    export function rgb(r: number, g: number, b: number): number {
+        return packRGB(r, g, b);
+    }
+
     function packRGB(a: number, b: number, c: number): number {
         return ((a & 0xFF) << 16) | ((b & 0xFF) << 8) | (c & 0xFF);
     }

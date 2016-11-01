@@ -403,9 +403,15 @@ namespace pxsim.visuals {
             let neopixels = state.neopixelState.getNeoPixels();
             for (let i = 0; i < state.neopixelState.NUM_PIXELS; i++) {
                 let rgb = neopixels[i];
-                if (!rgb) continue;
 				let p_outer = this.element.getElementById(`LED${i}_OUTER`) as SVGPathElement;
 				let p_inner = this.element.getElementById(`LED${i}`) as SVGPathElement;
+                if (!rgb) {
+                    // Clear the pixel
+                    svg.fill(p_outer, null);
+                    svg.fill(p_inner, null);
+                    svg.filter(p_outer, null);
+                    continue;
+                }
 
                 let hsl = visuals.rgbToHsl(rgb);
                 let [h, s, l] = hsl;

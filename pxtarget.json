@@ -194,6 +194,7 @@
         "hideSideDocs": true,
         "invertedMenu": true,
         "invertedToolbox": true,
+        "invertedMonaco": true,
         "simAnimationEnter": "rotate in",
         "simAnimationExit": "rotate out",
         "blocklyOptions": {

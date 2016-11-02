@@ -1,12 +1,12 @@
 # guess the number quiz answers
 
-Learn how to generate a random number on the micro:bit.
+Learn how to generate a random number on the @boardname@.
 
 This is the answer key for the [guess the number quiz](/lessons/guess-the-number/quiz).
 
 ## 1. What is on button pressed?
 
-Answers may vary. Generally, on button pressed run code when an input button is pressed. The micro:bit has two input buttons: A and B.
+Answers may vary. Generally, on button pressed run code when an input button is pressed. The @boardname@ has two input buttons: A and B.
 
 ## 2. Consider the following directions
 

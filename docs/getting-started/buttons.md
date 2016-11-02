@@ -37,7 +37,7 @@ You can find the letter `B` by clicking the letter `A` on the
 
 #### ~
 
-Click **Download** to move your program to the BBC @boardname@!
+Click **Download** to move your program to the @boardname@!
 
 #### Your turn!
 
@@ -48,9 +48,9 @@ name_ instead of **BANANA** when you press `B`?
 ### Pins
 
 You can also use the pins as buttons.  (The pins are the holes in the
-metal stripe at the bottom of the micro:bit board.)  For example, hold
+metal stripe at the bottom of the @boardname@ board.)  For example, hold
 the ``GND`` button with one hand and touch the ``0`` pin (called
-``P0``) with your other hand to tell the micro:bit you're pressing it.
+``P0``) with your other hand to tell the @boardname@ you're pressing it.
 
 Unscramble the blocks in the editor to show a heart when you touch
 pin ``P0``.

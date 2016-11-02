@@ -28,7 +28,7 @@ The currently available on-line resources from the Quick Start Guide are the
 
 ### How does my program get onto the @boardname@?
 
-For your program to work on the @boardname@, first it has to be compiled. Compiling means to translate a program into a more efficient computer language. When you hit the compile button on the Microsoft Touch Develop Editor interface, your program is compiled into a hex file that contains the machine code in the instruction set used by the ARM processor that is on your @boardname@.  Compiling to ARM machine code actually happens in the web browser, where the code from script is joined with the machine code of the micro:bit runtime.
+For your program to work on the @boardname@, first it has to be compiled. Compiling means to translate a program into a more efficient computer language. When you hit the compile button on the Microsoft Touch Develop Editor interface, your program is compiled into a hex file that contains the machine code in the instruction set used by the ARM processor that is on your @boardname@.  Compiling to ARM machine code actually happens in the web browser, where the code from script is joined with the machine code of the @boardname@ runtime.
 
 ![](/static/mb/quick-start-0.png)
 

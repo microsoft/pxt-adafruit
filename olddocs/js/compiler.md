@@ -16,7 +16,7 @@ The compilation from a script to ARM machine code is now done entirely in the br
 
 ![](/static/mb/offline-2.png)
 
-The C++ compiler now only is used to compile the micro:bit runtime - this is done offline by the micro:bit team and the precompiled runtime linked with your compiled script in the browser.
+The C++ compiler now only is used to compile the @boardname@ runtime - this is done offline by the @boardname@ team and the precompiled runtime linked with your compiled script in the browser.
 
 ## Save and load code using files
 

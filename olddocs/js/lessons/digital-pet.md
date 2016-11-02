@@ -67,10 +67,10 @@ Learn how to create **functions**, `function()` that perform a specific task and
 * learn how to set or change the value of a global variable
 * learn how to repeat code in the background forever
 * learn how to get the state of an input button
-* learn how to show a number on the micro:bit's LED screen
-* learn how to show a string on the micro:bit's LED screen
-* learn how to create an image to show on the micro:bit's LED screen
-* learn how to show an image on the micro:bit's LED screen
+* learn how to show a number on the @boardname@'s LED screen
+* learn how to show a string on the @boardname@'s LED screen
+* learn how to create an image to show on the @boardname@'s LED screen
+* learn how to show an image on the @boardname@'s LED screen
 * learn how to pause your code for the specified number of milliseconds
 
 ## Links to the National Curriculum Programmes of Study for Computing

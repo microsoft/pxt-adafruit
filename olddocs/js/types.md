@@ -10,7 +10,7 @@ A *type* refers to a class of data and the operations permitted on that data. Th
 * **[String](/reference/types/string)**: a sequence of characters
 * **[Number](/reference/types/number)**: an integer number (32-bit signed)
 * **[Boolean](/reference/types/boolean)**: true or false
-* **[Image](/reference/image/image)**: a collection of [micro:bit LED states](/device/screen) (on/off)
+* **[Image](/reference/image/image)**: a collection of [@boardname@ LED states](/device/screen) (on/off)
 * *more types coming!!!*
 
 ### see also

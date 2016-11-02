@@ -52,7 +52,7 @@ input.onButtonPressed(Button.A, () => {
 If different parts of a program are each trying 
 to show something on the LED screen at the same time, 
 you may get unexpected results.
-Try this on your micro:bit:
+Try this on your @boardname@:
 
 ```blocks
 basic.forever(() => {

@@ -1,6 +1,6 @@
 # compass challenges
 
-Display the direction that the micro:bit is facing using the compass 
+Display the direction that the @boardname@ is facing using the compass 
 
 ## Before we get started
 

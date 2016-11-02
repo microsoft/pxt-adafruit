@@ -215,7 +215,7 @@ int temperature(TemperatureUnit unit) {
 /**
 * Functions for music / audio
 */
-//% color=#CC2936 weight=75
+//% color=#FF7D7D weight=75
 namespace music
 {
 

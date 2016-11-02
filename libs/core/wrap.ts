@@ -8,7 +8,7 @@ namespace sensors {
 /**
 * Functions for playing audio / music
 */
-//% color=#FFA702 weight=75
+//% color=#FF7D7D weight=75
 namespace music {
 }
 

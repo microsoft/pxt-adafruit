@@ -17,7 +17,8 @@
         "sharing": false,
         "publish": false,
         "preferredPackages": [
-            "Microsoft/pxt-neopixel"
+            "Microsoft/pxt-neopixel",
+            "Microsoft/pxt-filesystem"
         ],
         "githubPackages": false
     },

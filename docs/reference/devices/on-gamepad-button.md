@@ -1,6 +1,6 @@
 # On Gamepad Button
 
-Register code to run when the micro:bit receives a command from the paired gamepad.
+Register code to run when the @boardname@ receives a command from the paired gamepad.
 
 ### ~hint
 
@@ -16,7 +16,7 @@ devices.onGamepadButton(MesDpadButtonInfo.ADown, () => {})
 
 ### Parameters
 
-* ``body``: Action code to run when the the micro:bit receives a command from the paired gamepad.
+* ``body``: Action code to run when the the @boardname@ receives a command from the paired gamepad.
 
 ### See Also
 

@@ -50,7 +50,7 @@ input.onButtonPressed(Button.AB, () => {
 ```
 
 These blocks mean that if you press button `A`, you will add `1` to
-your score, and if you press `A` and `B` together, the micro:bit will
+your score, and if you press `A` and `B` together, the @boardname@ will
 show your score.
 
 When you're done, your coin flipping program should look like this:

@@ -1,6 +1,6 @@
 # zoomer quiz
 
-Measure the acceleration on the micro:bit in the "z" direction.
+Measure the acceleration on the @boardname@ in the "z" direction.
 
 ## Name
 

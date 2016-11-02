@@ -31,6 +31,6 @@ basic.pause(100)
 
 ## Objectives
 
-* learn how to display an image on the micro:bit's LED screen
+* learn how to display an image on the @boardname@'s LED screen
 * learn how to pause your code for the specified number of milliseconds
 

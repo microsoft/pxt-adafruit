@@ -34,7 +34,7 @@ let salutation = "Hello"
 
 ### The function `show string`
 
-Use [show string](/reference/basic/show-string) to display a string on the [LED screen](/device/screen). If the string is multiple characters, the string scrolls right to left. The following example displays `Hello world!` on the micro:bit screen:
+Use [show string](/reference/basic/show-string) to display a string on the [LED screen](/device/screen). If the string is multiple characters, the string scrolls right to left. The following example displays `Hello world!` on the @boardname@ screen:
 
 ```
 basic.showString("Hello world!", 100)

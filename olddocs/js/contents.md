@@ -1,6 +1,6 @@
-# micro:bit/JavaScript Documentation
+# @boardname@/JavaScript Documentation
 
-JavaScript docs for the micro:bit
+JavaScript docs for the @boardname@
 
 ### @section full
 
@@ -194,7 +194,7 @@ Functions in this category require to be connected to a remote device.
 
 ## Debugging
 
-* use the [serial library](/js/serial-library) to print data from your micro:bit on your computer
+* use the [serial library](/js/serial-library) to print data from your @boardname@ on your computer
 * learn about the [device error codes](/device/errors) that are displayed when sad faces occur
 
 ## Edit/Publish

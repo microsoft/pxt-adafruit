@@ -1,6 +1,6 @@
 # Getting started
 
-### @description An activity for beginners to get started with the micro:bit
+### @description An activity for beginners to get started with the @boardname@
 
 ## ~avatar
 

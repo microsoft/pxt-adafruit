@@ -33,8 +33,8 @@ input.onButtonPressed(Button.B, () => {
 
 ### Example: chart light level
 
-This program shows the light level with a [bar chart](/reference/led/plot-bar-graph) on the micro:bit screen.
-If you carry the micro:bit around to different places with different light levels,
+This program shows the light level with a [bar chart](/reference/led/plot-bar-graph) on the @boardname@ screen.
+If you carry the @boardname@ around to different places with different light levels,
 the bar chart will change.
 
 ```blocks

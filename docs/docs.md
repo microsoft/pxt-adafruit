@@ -28,4 +28,4 @@
 
 * [Command Line Interface](/cli)
 * Learn about [packages](/packages)
-* [Release notes](/release-notes)
+

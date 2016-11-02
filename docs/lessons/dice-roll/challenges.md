@@ -1,6 +1,6 @@
 # dice roll challenges
 
-Create a dice on the micro:bit. 
+Create a dice on the @boardname@. 
 
 ## Before we get started
 

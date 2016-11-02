@@ -88,7 +88,7 @@ queues a `forever` loop for later execution by the scheduler; the body of this l
 
 The function ends after the execution of these three statements, but this is not the end of program execution!  That’s because the function queued the `forever` loop for execution by the scheduler.
 
-The second job of the scheduler is to periodically interrupt execution to read (poll) the various inputs to the micro:bit (the buttons, pins, etc.) and fire off events (such as “button A pressed”). Recall that the firing of an event causes the event handler subprogram associated with that event to be queued for later execution. The scheduler uses a timer built into the micro:bit hardware to interrupt execution every 6 milliseconds and poll the inputs, which is more than fast enough to catch the quickest press of a button.
+The second job of the scheduler is to periodically interrupt execution to read (poll) the various inputs to the @boardname@ (the buttons, pins, etc.) and fire off events (such as “button A pressed”). Recall that the firing of an event causes the event handler subprogram associated with that event to be queued for later execution. The scheduler uses a timer built into the @boardname@ hardware to interrupt execution every 6 milliseconds and poll the inputs, which is more than fast enough to catch the quickest press of a button.
 
 ### Cooperative passing of control
 
@@ -104,7 +104,7 @@ Let’s take a look at the implementation of the `forever` statement to see an e
 
 ![](/static/mb/device/reactive-2.png)
 
-The `forever` loop actually is a function that takes a subprogram (an *Action* in Touch Develop) as a parameter. The function uses the `control -> in background` function of the micro:bit runtime to queue a `while true` loop for execution by the scheduler. The while loop has two statements. The first statement runs the subprogram represented by the `body` parameter. The second statement passes control to the scheduler (requesting to “sleep” for 20 milliseconds).
+The `forever` loop actually is a function that takes a subprogram (an *Action* in Touch Develop) as a parameter. The function uses the `control -> in background` function of the @boardname@ runtime to queue a `while true` loop for execution by the scheduler. The while loop has two statements. The first statement runs the subprogram represented by the `body` parameter. The second statement passes control to the scheduler (requesting to “sleep” for 20 milliseconds).
 
 Though the `while true` loop will repeatedly execute the body subprogram, between each execution of the body it will permit the scheduler to execute other subprograms.  If the while loop did not contain the call to `pause`, then once control passed into the while loop, it would never pass back to the scheduler and no other subprogram would be able to execute (unless the body subprogram contained a call to `pause` itself).
 
@@ -130,7 +130,7 @@ While "Show 0" (the blue sequence) is running, periodic interrupts by the schedu
 
 Through this example, we have seen that the @boardname@ scheduler enables you to create a program that is composed of concurrent subprograms. In essence, the programmer needs to only think about the concurrent subprograms cooperatively passing control back to the scheduler, making sure no subprogram hogs control (or “dribbles the ball without passing”) for too long. While a subprogram runs, the scheduler polls the buttons and other IO peripherals at a high frequency in order to fire off events and queue event handlers for later execution, but this is invisible to the programmer.
 
-As a result, you can easily add a new capability to the micro:bit by just adding a new subprogram. For example, if you want to add a reset feature to the counter program, all you need to do is add a new event handler for a press of button B that sets the global variable "count" to zero, as shown below:
+As a result, you can easily add a new capability to the @boardname@ by just adding a new subprogram. For example, if you want to add a reset feature to the counter program, all you need to do is add a new event handler for a press of button B that sets the global variable "count" to zero, as shown below:
 
 ```
 export function countButtonPressesWithReset() {

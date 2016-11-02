@@ -32,7 +32,7 @@ input.onButtonPressed(Button.A, () => {
 
 ![](/static/mb/lessons/counter-1.png)
 
-We are only pressing on button pressed once. So the number to display on the micro:bit is also one.
+We are only pressing on button pressed once. So the number to display on the @boardname@ is also one.
 
 <br/>
 

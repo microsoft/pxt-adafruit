@@ -112,7 +112,7 @@ declare namespace sensors {
      * @param pin the number of the pin
      * @param samples
      */
-    //% blockId="readCap" block="read capacity at pin %pin"
+    //% blockId="readCap" block="sense touch at pin %pin"
     //% weight=50 samples.defl=10 shim=sensors::readCap
     function readCap(pin: CapacityPin, samples?: uint16): uint16;
 

@@ -183,7 +183,7 @@ boolean slideSwitch()
 * @param pin the number of the pin
 * @param samples
 */
-//% blockId="readCap" block="read capacity at pin %pin"
+//% blockId="readCap" block="sense touch at pin %pin"
 //% weight=50
 uint16_t readCap(CapacityPin pin, uint16_t samples = 10)
 {

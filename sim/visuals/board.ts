@@ -405,20 +405,27 @@ namespace pxsim.visuals {
                 let rgb = neopixels[i];
 				let p_outer = this.element.getElementById(`LED${i}_OUTER`) as SVGPathElement;
 				let p_inner = this.element.getElementById(`LED${i}`) as SVGPathElement;
+                if (p_inner) p_inner.setAttribute('d', `M 2, 5
+        m 0, 0
+        a 3,3 0 1,0 6,0
+        a 3,3 0 1,0 -6,0`);
+
                 if (!rgb) {
                     // Clear the pixel
-                    svg.fill(p_outer, null);
-                    svg.fill(p_inner, null);
+                    svg.fill(p_outer, `rgb(0,0,0)`);
+                    svg.fill(p_inner, `rgb(200,200,200)`);
+                    svg.filter(p_inner, null);
                     svg.filter(p_outer, null);
                     continue;
                 }
 
                 let hsl = visuals.rgbToHsl(rgb);
                 let [h, s, l] = hsl;
-                // at least 70% luminosity
-                l = Math.max(l, 60);
+                // at least 10% luminosity
+                l = Math.max(l, 10);
+                if (p_inner) svg.fill(p_inner, `rgb(255, 255, 255)`);
                 if (p_outer) svg.fill(p_outer, `hsl(${h}, ${s}%, ${l}%)`);
-                if (p_inner) svg.fill(p_inner, `hsl(${h}, ${s}%, ${l}%)`);
+                if (p_inner) svg.filter(p_inner, `url(#neopixelglow)`);
                 if (p_outer) svg.filter(p_outer, `url(#neopixelglow)`);
             }
         }
@@ -677,8 +684,8 @@ namespace pxsim.visuals {
             let merge = svg.child(glow, "feMerge", {});
             for (let i = 0; i < 3; ++i) svg.child(merge, "feMergeNode", { in: "glow" })
             
-            let neopixelglow = svg.child(this.defs, "filter", { id: "neopixelglow", x: "-5%", y: "-5%", width: "120%", height: "120%" });
-            svg.child(neopixelglow, "feGaussianBlur", { stdDeviation: "1", result: "coloredBlur" });
+            let neopixelglow = svg.child(this.defs, "filter", { id: "neopixelglow", x: "-50%", y: "-50%", width: "200%", height: "200%" });
+            svg.child(neopixelglow, "feGaussianBlur", { stdDeviation: "5", result: "coloredBlur" });
             let neopixelmerge = svg.child(neopixelglow, "feMerge", {});
             svg.child(neopixelmerge, "feMergeNode", { in: "coloredBlur" })
             svg.child(neopixelmerge, "feMergeNode", { in: "SourceGraphic" })

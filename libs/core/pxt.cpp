@@ -358,8 +358,8 @@ namespace pxt {
 
   uint16_t *allocate(uint16_t sz)
   {
-    uint16_t *arr = new uint16_t[sz];
-    memset(arr, 0, sz * 4);
+    uint16_t *arr = (uint16_t*)malloc(sz);
+    memset(arr, 0, sz);
     return arr;
   }
 
@@ -421,6 +421,7 @@ namespace pxt {
     delay(3000); // delay on start, so we have time to connect serial after flashing
 
     Serial.begin(9600);
+
     CircuitPlayground.begin();
     
     Serial.println("Start exec_binary()");
@@ -434,23 +435,19 @@ namespace pxt {
         Serial.print("bytecode = ");
     Serial.println((uint16_t)bytecode);
 
-    Serial.print("Allocating globals: ");
-    Serial.println(getNumGlobals());
-    
-    globals = allocate(getNumGlobals());
+    Serial.print("Allocating globals:");
+    Serial.println(numGlobals = getNumGlobals());
+
+    globals = allocate((uint16_t)numGlobals<<2);
+
+    Serial.print("Globals allocated at =");
+    Serial.println((uint16_t)globals);
+
 
     // just compare the first word
     checkStr(BYTECODE_WORD(0) == 0x8E70 &&
              (uint16_t)templateHash() == (uint16_t)PC(4),
              ":( Failed partial flash",0);
-
-
-    Serial.print("Red LED ON-START");
-    redLED_test(true);
-    delay(1000);
-    redLED_test(false);
-    delay(1000);
-    Serial.print("Red LED ON-END");
 
     // panic(7);
     uint16_t startptr = (uint16_t)bytecode;
@@ -465,8 +462,6 @@ namespace pxt {
 #ifdef DEBUG_MEMLEAKS
     pxt::debugMemLeaks();
 #endif
-
-    Serial.println("done");
 
     return;
   }

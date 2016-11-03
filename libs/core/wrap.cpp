@@ -13,18 +13,18 @@ enum MotionAxis
     X = 0,
     Y = 1,
     Z = 2  
-}
+};
 
 enum Animation
 {
     Rainbow,
     Sparkle
-}
+};
 
 enum Drawing
 {
-    Rainbow
-}
+    DrawRainbow
+};
 
 enum Note
 {
@@ -99,12 +99,12 @@ enum Color {
     Purple = 0xFF00FF,
     //% block=white blockIdentity=light.color
     White = 0xFFFFFF
-}
+};
 
 enum TemperatureUnit {
     Celsius,
     Fahrenheit
-}
+};
 
 
 /**
@@ -152,8 +152,8 @@ uint16_t lightLevel()
 //% weight=82
 int motion(MotionAxis axis) {
     switch(axis) {
-        case Motion::Y: return CircuitPlayground.motionY();
-        case Motion::Z: return CircuitPlayground.motionZ();
+        case MotionAxis::Y: return CircuitPlayground.motionY();
+        case MotionAxis::Z: return CircuitPlayground.motionZ();
         default: return CircuitPlayground.motionX();
     }
 }
@@ -291,6 +291,16 @@ void redLED(boolean on)
 void setPixelColor(uint8_t p, uint32_t c)
 {
     CircuitPlayground.setPixelColor(p, c);
+}
+
+/**
+* Sets the RGB color on a pixel
+*/
+//% weight=85 blockGap=8
+//% blockId="setPixelColorRgb" block="set pixel %p|to color %c=pixelcolor"
+void setPixelColorRgb(uint8_t p, uint16_t r, uint16_t g, uint16_t b)
+{
+    CircuitPlayground.setPixelColor(p, r, g, b);
 }
 
 /**

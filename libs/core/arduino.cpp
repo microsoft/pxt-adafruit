@@ -193,6 +193,7 @@ uint16_t makeWord(byte h, byte l);
 
 }
 
+#if 0
 namespace math {
     /**
      * Random
@@ -202,11 +203,13 @@ namespace math {
      */
     //% help=https://www.arduino.cc/en/Reference/RandomSeed weight=91
     //% blockId="arduino_randomMax" block="random with max %max" icon="\uf1ec"
+    /*
     int random(int max) {
-        if (howbig == 0) {
+        if (max == 0) {
             return 0;
         }
-        return random() % howbig;
+        // TODO - FIX THIS
+        return 0 ; // random() % max;
     }
 
     /**
@@ -219,11 +222,12 @@ namespace math {
     //% help=https://www.arduino.cc/en/Reference/RandomSeed weight=91
     //% blockId="arduino_randomMinMax" block="random between %min| and %max" icon="\uf1ec"
     int random(int min, int max) {
-        if (howsmall >= howbig) {
-            return howsmall;
+        if (min >= max) {
+            return min;
         }
-        int diff = howbig - howsmall;
-        return random(diff) + howsmall;
+        int diff = max - min;
+        // TODO: FIX THIS
+        return 0; // random(diff) + min;
     }
 
     /**
@@ -240,6 +244,7 @@ namespace math {
         }
     }
 }
+#endif
 
 namespace music {
     /**

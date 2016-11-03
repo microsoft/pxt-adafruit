@@ -19,7 +19,7 @@ namespace Math {
     //% blockId="arduino_constrain" block="constrain %amt| between %low| and %high" icon="\uf1ec"
     //% advanced=true
     export function constrain(amt: number, low: number, high: number): number {
-        return amt < low ? low : amt > high ? high : amt;
+        return 0; //amt < low ? low : amt > high ? high : amt;
     }
 
 
@@ -39,7 +39,7 @@ namespace Math {
     //% blockId="arduino_map" block="map value %value| from range low %fromLow| high %fromHigh| to range low %toLow| high %toHigh|"
     //% advanced=true
     export function map(value: number, fromLow: number, fromHigh: number, toLow: number, toHigh: number): number {
-        return (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
+        return 0; // (value - fromLow) * (toHigh - toLow) / (fromHigh - fromLow) + toLow;
     }
 }
 

@@ -42,7 +42,7 @@
 
     declare enum Drawing
     {
-    Rainbow = 0,
+    DrawRainbow = 0,
     }
 
 

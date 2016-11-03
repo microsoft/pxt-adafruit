@@ -1,35 +1,3 @@
-// here we go!
-
-// playground.redLED(true)
-
-//serial.print(254);
-
-//neopixels.setPixelColorRgb(3, 0, 50, 0);
-
-/*
-if (playground.leftButton()) {
-    serial.print(1);
-} else {
-    serial.print(2);
-}
-serial.print(0);
-*/
-
-// let x = 1
-
-// x = x + 1
-
-/*
-while (true) {
-    if (playground.leftButton()) {
-        playground.redLED(true)
-    }
-    if (playground.rightButton()) {
-        playground.redLED(false)
-    }
-}
-*/
-
 /**
 * Runtime and event utilities.
 */
@@ -44,3 +12,19 @@ namespace control {
     export function panic(code: number) { }
 
 }
+
+/*
+while (true) {
+    if (sensors.button(Button.Left)) {
+        let i = 9;
+        let v = 255
+        while (i >= 0) {
+            light.setPixelColorRgb(i, v, 255 - v, v)
+            i = i - 1
+            v = v - 25
+        }
+    } else if (sensors.button(Button.Right)) {
+            light.clearPixels()
+    }
+}
+*/

@@ -186,6 +186,13 @@ declare namespace light {
     function setPixelColor(p: uint8, c: number): void;
 
     /**
+     * Sets the RGB color on a pixel
+     */
+    //% weight=85 blockGap=8
+    //% blockId="setPixelColorRgb" block="set pixel %p|to color %c=pixelcolor" shim=light::setPixelColorRgb
+    function setPixelColorRgb(p: uint8, r: uint16, g: uint16, b: uint16): void;
+
+    /**
      * Clear pixels
      */
     //% weight=84 blockGap=8
@@ -307,39 +314,6 @@ declare namespace pins {
     //% help=https://www.arduino.cc/en/Reference/PulseIn weight=91
     //% blockId="arduino_pulseIn" block="pulse in pin %pin| with state %state" timeout.defl=1000000 shim=pins::pulseIn
     function pulseIn(pin: Pin, state: PulseValue, timeout?: number): number;
-}
-declare namespace math {
-
-    /**
-     * Random
-     * The random function generates pseudo-random numbers.
-     * @param max upper bound of the random value, exclusive, eg: 10
-     * @returns a random number between min and max-1
-     */
-    //% help=https://www.arduino.cc/en/Reference/RandomSeed weight=91
-    //% blockId="arduino_randomMax" block="random with max %max" icon="\uf1ec" shim=math::random
-    function random(max: number): number;
-
-    /**
-     * Random
-     * The random function generates pseudo-random numbers.
-     * @param min lower bound of the random value, inclusive, eg: 0
-     * @param max upper bound of the random value, exclusive, eg: 10
-     * @returns a random number between min and max-1
-     */
-    //% help=https://www.arduino.cc/en/Reference/RandomSeed weight=91
-    //% blockId="arduino_randomMinMax" block="random between %min| and %max" icon="\uf1ec" shim=math::random
-    function random(min: number, max: number): number;
-
-    /**
-     * Random Seed
-     * Initializes the pseudo-random number generator, 
-     * causing it to start at an arbitrary point in its random sequence. This sequence, while very int, and random, is always the same.
-     * @param seed a number to generate the seed.
-     */
-    //% help=https://www.arduino.cc/en/Reference/RandomSeed weight=91
-    //% blockId="arduino_randomSeed" block="random seed %seed" icon="\uf1ec" shim=math::randomSeed
-    function randomSeed(seed: number): void;
 }
 declare namespace music {
 

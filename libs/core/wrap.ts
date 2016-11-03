@@ -41,6 +41,7 @@ namespace light {
     //% weight=20
     //% blockId=bargraph block="bar graph of %value |up to %high" icon="\uf080"
     export function bargraph(value: number, high: number): void {
+        /*
         const now = control.millis();
         value = Math.abs(value);
 
@@ -68,5 +69,6 @@ namespace light {
                 else light.setPixelColor(i, 0);
             }
         }
+        */
     }
 }

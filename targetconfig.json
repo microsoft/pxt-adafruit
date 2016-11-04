@@ -3,7 +3,6 @@
         "approvedOrgs": [
             "Microsoft",
             "microbit-foundation"
-        ],
-        "blacklistedOrgs": []
+        ]
     }
 }

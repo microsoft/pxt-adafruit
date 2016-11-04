@@ -150,7 +150,7 @@
         }
     },
     "compile": {
-        "isNative": false,
+        "isNative": true,
         "nativeType": "AVR",
         "hasHex": true,
         "deployDrives": "ADAFRUIT",

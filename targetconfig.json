@@ -1,3 +1,9 @@
 {
-    
+    "packages": {
+        "approvedOrgs": [
+            "Microsoft",
+            "microbit-foundation"
+        ],
+        "blacklistedOrgs": []
+    }
 }

@@ -20,7 +20,7 @@
             "Microsoft/pxt-neopixel",
             "Microsoft/pxt-filesystem"
         ],
-        "githubPackages": false
+        "githubPackages": true
     },
     "compile": {
         "isNative": false,

@@ -74,7 +74,7 @@
   "pins.analogSetPeriod|block": "",
   "pins.analogWritePin|block": "",
   "pins.digitalReadPin|block": "lire en numérique|broche %name",
-  "pins.digitalWritePin|block": "écrire en numérique|la broche %name|%value",
+  "pins.digitalWritePin|block": "écrire en numérique|la broche %name|à %value",
   "pins.i2cReadNumber|block": "i2c lire nombre|à l’adresse %address|de format %format=i2c_sizeof",
   "pins.i2cWriteNumber|block": "i2c écrire nombre|à l’adresse %address|avec value %value|de format %format=i2c_sizeof",
   "pins.map|block": "",

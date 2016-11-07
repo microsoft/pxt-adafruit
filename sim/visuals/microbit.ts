@@ -712,8 +712,9 @@ namespace pxsim.visuals {
                     tiltDecayer = 0;
                 }
 
-                let ax = (ev.clientX - this.element.clientWidth / 2) / (this.element.clientWidth / 3);
-                let ay = (ev.clientY - this.element.clientHeight / 2) / (this.element.clientHeight / 3);
+                let bbox = this.element.getBoundingClientRect();
+                let ax = (ev.clientX - bbox.width / 2) / (bbox.width / 3);
+                let ay = (ev.clientY - bbox.height / 2) / (bbox.height / 3);
 
                 let x = - Math.max(- 1023, Math.min(1023, Math.floor(ax * 1023)));
                 let y = Math.max(- 1023, Math.min(1023, Math.floor(ay * 1023)));

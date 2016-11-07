@@ -6,3 +6,6 @@ MicroBitPin *getPin(int id);
 typedef ImageData* Image;
 typedef BufferData* Buffer;
 
+namespace pxt {
+  uint32_t afterProgramPage();    
+}

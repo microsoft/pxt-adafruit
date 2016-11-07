@@ -713,7 +713,7 @@ namespace pxsim.visuals {
                 }
 
                 let bbox = this.element.getBoundingClientRect();
-                let ax = (ev.clientX - bbox.width / 2) / ( bbox.width / 3);
+                let ax = (ev.clientX - bbox.width / 2) / (bbox.width / 3);
                 let ay = (ev.clientY - bbox.height / 2) / (bbox.height / 3);
 
                 let x = - Math.max(- 1023, Math.min(1023, Math.floor(ax * 1023)));

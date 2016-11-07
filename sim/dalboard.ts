@@ -15,11 +15,13 @@ namespace pxsim {
         // TODO: not singletons
         neopixelState: NeoPixelState;
         microServoState: MicroServoState;
+        fileSystem: FileSystemState;
 
         constructor() {
             super()
 
             // components
+            this.fileSystem = new FileSystemState();
             this.builtinParts["ledmatrix"] = this.ledMatrixState = new LedMatrixState(runtime);
             this.builtinParts["buttonpair"] = this.buttonPairState = new ButtonPairState({
                 ID_BUTTON_A: DAL.MICROBIT_ID_BUTTON_A,

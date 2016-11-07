@@ -4,6 +4,7 @@
 @import 'themes/default/globals/site.variables';
 @import 'themes/pxt/globals/site.variables';
 @import 'site/globals/site.variables';
+@import 'themes/default/collections/menu.variables';
 
 /* Reference import */
 @import (reference) "semantic.less";
@@ -25,6 +26,10 @@ body {
 /* This removes the margin between the blockly categories to form connected pills */
 .blocklyTreeRow {
     margin-bottom: 0px !important;
+}
+
+.blocklyTreeRow:hover {
+    background: @invertedBackground !important;
 }
 
 /* This removes any padding at the top of the toolbox */

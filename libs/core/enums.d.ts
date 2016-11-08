@@ -35,14 +35,18 @@
 
     declare enum Animation
     {
-    Rainbow = 0,
-    Sparkle = 1,
+    ClassicRainbow = 0,
+    RainbowCycle = 1,
+    Sparkle = 2,
+    RunningLights = 3,
+    TheatreChase = 4,
     }
 
 
     declare enum Drawing
     {
-    DrawRainbow = 0,
+    Rainbow = 0,
+    Comet = 1,
     }
 
 

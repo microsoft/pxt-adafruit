@@ -156,21 +156,6 @@ declare namespace music {
 declare namespace light {
 
     /**
-     * Show a preset drawing. eg: Rainbow
-     */
-    //% blockId="showDrawing" block="show %drawing"
-    //% weight=95 shim=light::showDrawing
-    function showDrawing(drawing: Drawing): void;
-
-    /**
-     * Rotate the pixels forward.
-     * @param offset number of pixels to rotate forward, eg: 1
-     */
-    //% blockId="rotate" block="rotate pixels by %offset"
-    //% weight=95 offset.defl=1 shim=light::rotate
-    function rotate(offset?: uint8): void;
-
-    /**
      * Just turn on/off the red #13 LED
      * @param on a value to turn on/off the LED, eg: true
      */
@@ -191,6 +176,22 @@ declare namespace light {
     //% weight=85 blockGap=8
     //% blockId="setPixelColorRgb" block="set pixel %p|to color %c=pixelcolor" shim=light::setPixelColorRgb
     function setPixelColorRgb(p: uint8, r: uint16, g: uint16, b: uint16): void;
+
+    /**
+     * Sets the RGB color on a pixel in the neopixel strip
+     */
+    //% weight=86 blockGap=8
+    //% blockId="setPixel" block="set neopixel %p|to color %c=pixelcolor"
+    //% advanced=true shim=light::setPixel
+    function setPixel(Pixel: number, r: uint16, g: uint16, b: uint16): void;
+
+    /**
+     * Shows the neopixel strip
+     */
+    //% weight=85 blockGap=8
+    //% blockId="show" block="show"
+    //% advanced=true shim=light::showStrip
+    function showStrip(): void;
 
     /**
      * Clear pixels

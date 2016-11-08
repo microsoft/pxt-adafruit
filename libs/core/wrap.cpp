@@ -17,13 +17,17 @@ enum MotionAxis
 
 enum Animation
 {
-    Rainbow,
-    Sparkle
+    ClassicRainbow,
+    RainbowCycle,
+    Sparkle,
+    RunningLights,
+    TheatreChase
 };
 
 enum Drawing
 {
-    DrawRainbow
+    Rainbow,
+    Comet
 };
 
 enum Note
@@ -252,27 +256,6 @@ namespace light
 {
 
 /**
-* Show a preset drawing. eg: Rainbow
-*/
-//% blockId="showDrawing" block="show %drawing"
-//% weight=95
-void showDrawing(Drawing drawing)
-{
-
-}
-
-/**
-* Rotate the pixels forward.
-* @param offset number of pixels to rotate forward, eg: 1
-*/
-//% blockId="rotate" block="rotate pixels by %offset"
-//% weight=95
-void rotate(uint8_t offset = 1)
-{
-
-}
-
-/**
 * Just turn on/off the red #13 LED
 * @param on a value to turn on/off the LED, eg: true
 */
@@ -301,6 +284,28 @@ void setPixelColor(uint8_t p, uint32_t c)
 void setPixelColorRgb(uint8_t p, uint16_t r, uint16_t g, uint16_t b)
 {
     CircuitPlayground.setPixelColor(p, r, g, b);
+}
+
+/**
+* Sets the RGB color on a pixel in the neopixel strip
+*/
+//% weight=86 blockGap=8
+//% blockId="setPixel" block="set neopixel %p|to color %c=pixelcolor"
+//% advanced=true
+void setPixel(int Pixel, uint16_t r, uint16_t g, uint16_t b)
+{
+    CircuitPlayground.strip.setPixelColor(Pixel, CircuitPlayground.strip.Color(r, g, b));
+}
+
+/**
+* Shows the neopixel strip
+*/
+//% weight=85 blockGap=8
+//% blockId="show" block="show"
+//% advanced=true
+void showStrip()
+{
+    CircuitPlayground.strip.show();
 }
 
 /**

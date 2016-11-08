@@ -72,12 +72,12 @@ namespace pxsim.pins {
     }
 
     export function servoWritePin(pinId: number, value: number) {
+        let pin = getPin(pinId);
+        if (!pin) return;
+
         analogSetPeriod(pinId, 20000);
-        // TODO: per pin state
-        if (board().microServoState.angle != value) {
-            board().microServoState.angle = value;
-            runtime.queueDisplayUpdate();
-        }
+        const state = board().servosState.servoState(pinId);
+        state.setAngle(value);
     }
 
     export function servoSetPulse(pinId: number, micros: number) {

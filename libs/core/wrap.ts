@@ -81,9 +81,6 @@ namespace light {
     //% async blockId="showAnimation" block="show Animation %animation"
     //% weight=85
     export function showAnimation(animation: Animation) {
-        animateColorWipe(0x00,0xff,0x00, 50);
-        //TODO: Tom to look into the compilation of switch statments
-        /*
         switch(animation) {
             case Animation.ClassicRainbow: 
                 animateRainbow(350); break;
@@ -99,7 +96,6 @@ namespace light {
                 animateTheatreChase(0xff,0,0,100); break;
             default:
         }
-        */
     }
 
     // the current pixel in a rainbow animation
@@ -199,16 +195,13 @@ namespace light {
     //% weight=95
     export function showDrawing(drawing: Drawing)
     {
-        showRainbow();
-        //TODO: Tom to look into the compilation of switch statments
-        /*
         switch(drawing) {
             case Drawing.Rainbow: 
                 showRainbow(); break;
             case Drawing.Comet: 
                 showComet(); break;
             default:
-        }*/
+        }
     }
 
     function showRainbow() {

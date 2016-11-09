@@ -38,8 +38,9 @@
     ClassicRainbow = 0,
     RainbowCycle = 1,
     Sparkle = 2,
-    RunningLights = 3,
-    TheatreChase = 4,
+    ColorWipe = 3,
+    RunningLights = 4,
+    TheatreChase = 5,
     }
 
 

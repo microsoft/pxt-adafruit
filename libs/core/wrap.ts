@@ -81,8 +81,7 @@ namespace light {
     //% async blockId="showAnimation" block="show Animation %animation"
     //% weight=85
     export function showAnimation(animation: Animation) {
-        animateTheatreChase(0xff,0,0,100);
-        
+        animateColorWipe(0x00,0xff,0x00, 50);
         //TODO: Tom to look into the compilation of switch statments
         /*
         switch(animation) {
@@ -90,8 +89,10 @@ namespace light {
                 animateRainbow(350); break;
             case Animation.RainbowCycle: 
                 animationRainbowCycle(10); break;
-            case Animation.Sparkle: 
+            case Animation.Sparkle:
                 animateSparkle(0xff, 0xff, 0xff, 25); break;
+            case Animation.ColorWipe:
+                animateColorWipe(0x00,0xff,0x00, 50); break;
             case Animation.RunningLights:
                 animateRunningLights(0xff,0xff,0x00, 100); break;
             case Animation.TheatreChase:
@@ -137,6 +138,17 @@ namespace light {
         control.delay(SpeedDelay);
         setStripPixelColorRgb(Pixel,0,0,0);
         showStrip();
+    }
+
+    function animateColorWipe(red: number, green: number, blue: number, SpeedDelay: number) {
+        for(let i=0; i<NUM_PIXELS; i++) {
+            setPixelColorRgb(i, red, green, blue);
+            control.delay(SpeedDelay);
+        }
+        for(let i=0; i<NUM_PIXELS; i++) {
+            setPixelColorRgb(i, 0, 0, 0);
+            control.delay(SpeedDelay);
+        }
     }
 
     //TODO: The following animation requires floating pointer support for Math.sin

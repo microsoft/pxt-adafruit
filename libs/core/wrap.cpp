@@ -20,6 +20,7 @@ enum Animation
     ClassicRainbow,
     RainbowCycle,
     Sparkle,
+    ColorWipe,
     RunningLights,
     TheatreChase
 };

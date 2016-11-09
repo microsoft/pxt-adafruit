@@ -286,22 +286,34 @@ void setPixelColorRgb(uint8_t p, uint16_t r, uint16_t g, uint16_t b)
     CircuitPlayground.setPixelColor(p, r, g, b);
 }
 
+
 /**
-* Sets the RGB color on a pixel in the neopixel strip
+* Sets the RGB color on a pixel without showing
 */
-//% weight=86 blockGap=8
-//% blockId="setPixel" block="set neopixel %p|to color %c=pixelcolor"
+//% weight=8 blockGap=8
+//% blockId="setStripPixelColor" block="set strip pixel %p|to color %c=pixelcolor"
 //% advanced=true
-void setPixel(int Pixel, uint16_t r, uint16_t g, uint16_t b)
+void setStripPixelColor(uint8_t p, uint32_t c)
 {
-    CircuitPlayground.strip.setPixelColor(Pixel, CircuitPlayground.strip.Color(r, g, b));
+    CircuitPlayground.strip.setPixelColor(p, c);
+}
+
+/**
+* Sets the RGB color on a pixel without showing
+*/
+//% weight=7 blockGap=8
+//% blockId="setStripPixelColorRgb" block="set strip pixel %p|to color %c=pixelcolor"
+//% advanced=true
+void setStripPixelColorRgb(int p, uint16_t r, uint16_t g, uint16_t b)
+{
+    CircuitPlayground.strip.setPixelColor(p, CircuitPlayground.strip.Color(r, g, b));
 }
 
 /**
 * Shows the neopixel strip
 */
-//% weight=85 blockGap=8
-//% blockId="show" block="show"
+//% weight=6 blockGap=8
+//% blockId="showStrip" block="show"
 //% advanced=true
 void showStrip()
 {

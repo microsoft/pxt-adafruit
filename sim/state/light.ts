@@ -72,12 +72,12 @@ namespace pxsim.light {
         runtime.queueDisplayUpdate()
     }
 
-    export function setPixel(pixel: number, red: number, green: number, blue: number) {
+    export function setStripPixelColorRgb(pixel: number, red: number, green: number, blue: number) {
         setPixelColorRgb(pixel, red, green, blue);
     }
 
     export function showStrip() {
-        
+        runtime.queueDisplayUpdate()
     }
 
     export function clearPixels() {

@@ -178,18 +178,26 @@ declare namespace light {
     function setPixelColorRgb(p: uint8, r: uint16, g: uint16, b: uint16): void;
 
     /**
-     * Sets the RGB color on a pixel in the neopixel strip
+     * Sets the RGB color on a pixel without showing
      */
-    //% weight=86 blockGap=8
-    //% blockId="setPixel" block="set neopixel %p|to color %c=pixelcolor"
-    //% advanced=true shim=light::setPixel
-    function setPixel(Pixel: number, r: uint16, g: uint16, b: uint16): void;
+    //% weight=8 blockGap=8
+    //% blockId="setStripPixelColor" block="set strip pixel %p|to color %c=pixelcolor"
+    //% advanced=true shim=light::setStripPixelColor
+    function setStripPixelColor(p: uint8, c: number): void;
+
+    /**
+     * Sets the RGB color on a pixel without showing
+     */
+    //% weight=7 blockGap=8
+    //% blockId="setStripPixelColorRgb" block="set strip pixel %p|to color %c=pixelcolor"
+    //% advanced=true shim=light::setStripPixelColorRgb
+    function setStripPixelColorRgb(p: number, r: uint16, g: uint16, b: uint16): void;
 
     /**
      * Shows the neopixel strip
      */
-    //% weight=85 blockGap=8
-    //% blockId="show" block="show"
+    //% weight=6 blockGap=8
+    //% blockId="showStrip" block="show"
     //% advanced=true shim=light::showStrip
     function showStrip(): void;
 

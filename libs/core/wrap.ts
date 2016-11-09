@@ -132,10 +132,10 @@ namespace light {
 
     function animateSparkle(red: number, green: number, blue: number, SpeedDelay: number) {
         let Pixel = Math.random(NUM_PIXELS);
-        setPixel(Pixel,red,green,blue);
+        setStripPixelColorRgb(Pixel,red,green,blue);
         showStrip();
         control.delay(SpeedDelay);
-        setPixel(Pixel,0,0,0);
+        setStripPixelColorRgb(Pixel,0,0,0);
         showStrip();
     }
 
@@ -165,13 +165,13 @@ namespace light {
     let q = 0;
     function animateTheatreChase(red: number, green: number, blue: number, SpeedDelay: number) {
         for (let i=0; i < NUM_PIXELS; i=i+3) {
-            setPixel(i+q, red, green, blue);    //turn every third pixel on
+            setStripPixelColorRgb(i+q, red, green, blue);    //turn every third pixel on
         }
         showStrip();
         control.delay(SpeedDelay);
         
         for (let i=0; i < NUM_PIXELS; i=i+3) {
-            setPixel(i+q, 0,0,0);        //turn every third pixel off
+            setStripPixelColorRgb(i+q, 0,0,0);        //turn every third pixel off
         }
         q++;
         if (q == 3) {

@@ -267,6 +267,7 @@ void redLED(boolean on)
     CircuitPlayground.redLED(on);
 }
 
+#if 0
 /**
 * Sets the RGB color on a pixel
 */
@@ -276,6 +277,7 @@ void setPixelColor(uint8_t p, uint32_t c)
 {
     CircuitPlayground.setPixelColor(p, c);
 }
+#endif
 
 /**
 * Sets the RGB color on a pixel
@@ -288,6 +290,7 @@ void setPixelColorRgb(uint8_t p, uint16_t r, uint16_t g, uint16_t b)
 }
 
 
+#if 0
 /**
 * Sets the RGB color on a pixel without showing
 */
@@ -298,6 +301,7 @@ void setStripPixelColor(uint8_t p, uint32_t c)
 {
     CircuitPlayground.strip.setPixelColor(p, c);
 }
+#endif
 
 /**
 * Sets the RGB color on a pixel without showing
@@ -343,6 +347,20 @@ void setBrightness(uint16_t brightness)
     CircuitPlayground.setBrightness(brightness);
 }
 
+
+/**
+* Sets the color wheel on a pixel
+*/
+//% weight=7 blockGap=8
+//% blockId="setStripPixelColorWheel" block="set pixel %p|to wheel %x=w"
+//% advanced=true
+void setPixelColorWheel(int p, uint8_t w)
+{
+    CircuitPlayground.setPixelColor(p, CircuitPlayground.colorWheel(w));
+}
+
+
+#if 0
 /**
 * Color wheel
 */
@@ -365,6 +383,7 @@ uint32_t rgb(uint8_t r, uint8_t g, uint8_t b)
 {
     return r >> 16 | g >> 8 | r;
 }
+#endif
 }
 
 /**

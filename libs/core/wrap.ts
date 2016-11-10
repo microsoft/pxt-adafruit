@@ -101,7 +101,7 @@ namespace light {
     // the current pixel in a rainbow animation
     let pixeln = 0;
     function animateRainbow(SpeedDelay: number) {
-        setPixelColor(pixeln++, colorWheel(pixeln *25));
+        light.setPixelColorWheel(pixeln++, pixeln *25);
         if (pixeln == NUM_PIXELS + 1) {
             pixeln = 0;
             clearPixels();
@@ -117,7 +117,7 @@ namespace light {
         // Loop through each pixel and set it to an incremental color wheel value.
         for(let i=0; i < NUM_PIXELS; ++i) {   
             //CircuitPlayground.strip.setPixelColor(i, CircuitPlayground.colorWheel(((i * 256 / 10) + offset) & 255));
-            setPixelColor(i, colorWheel(((i * 256 / 10) + offset) & 255));
+            light.setPixelColorWheel(i, (((i * 256 / 10) + offset) & 255));
         }
 
         // Show all the pixels.
@@ -206,7 +206,7 @@ namespace light {
 
     function showRainbow() {
         for (let i = 0; i < NUM_PIXELS; i++) {
-            setPixelColor(i, colorWheel(i * 25));
+            light.setPixelColorWheel(i, i * 25);
         }
     }
 

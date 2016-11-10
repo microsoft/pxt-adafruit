@@ -167,23 +167,8 @@ declare namespace light {
      * Sets the RGB color on a pixel
      */
     //% weight=85 blockGap=8
-    //% blockId="setPixelColor" block="set pixel %p|to color %c=pixelcolor" shim=light::setPixelColor
-    function setPixelColor(p: uint8, c: number): void;
-
-    /**
-     * Sets the RGB color on a pixel
-     */
-    //% weight=85 blockGap=8
     //% blockId="setPixelColorRgb" block="set pixel %p|to color %c=pixelcolor" shim=light::setPixelColorRgb
     function setPixelColorRgb(p: uint8, r: uint16, g: uint16, b: uint16): void;
-
-    /**
-     * Sets the RGB color on a pixel without showing
-     */
-    //% weight=8 blockGap=8
-    //% blockId="setStripPixelColor" block="set strip pixel %p|to color %c=pixelcolor"
-    //% advanced=true shim=light::setStripPixelColor
-    function setStripPixelColor(p: uint8, c: number): void;
 
     /**
      * Sets the RGB color on a pixel without showing
@@ -218,20 +203,12 @@ declare namespace light {
     function setBrightness(brightness: uint16): void;
 
     /**
-     * Color wheel
+     * Sets the color wheel on a pixel
      */
-    //% blockId="colorWheel" block="color wheel %x"
-    //% weight=10 blockGap=8
-    //% advanced=true shim=light::colorWheel
-    function colorWheel(x: uint8): number;
-
-    /**
-     * Converts RGB channels into a color
-     */
-    //% blockId="rgb" block="red %r|green %g|blue %b"
-    //% weight=9
-    //% advanced=true shim=light::rgb
-    function rgb(r: uint8, g: uint8, b: uint8): number;
+    //% weight=7 blockGap=8
+    //% blockId="setStripPixelColorWheel" block="set pixel %p|to wheel %x=w"
+    //% advanced=true shim=light::setPixelColorWheel
+    function setPixelColorWheel(p: number, w: uint8): void;
 }
 
 

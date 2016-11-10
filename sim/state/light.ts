@@ -54,13 +54,17 @@ namespace pxsim.light {
         runtime.queueDisplayUpdate()
     }
 
-    export function setPixelColor(pixel: number, rgb: number) {
+    function setPixelColor(pixel: number, rgb: number) {
         let state = board().neopixelState;
         if (pixel < 0
             || pixel >= state.NUM_PIXELS)
             return;
         state.setPixelColor(pixel, unpackR(rgb), unpackG(rgb), unpackB(rgb));
         runtime.queueDisplayUpdate()
+    }
+
+    export function setPixelColorWheel(pixel: number, WheelPos: number) {
+        setPixelColor(pixel,colorWheel(WheelPos))
     }
 
     export function setPixelColorRgb(pixel: number, red: number, green: number, blue: number) {
@@ -86,7 +90,7 @@ namespace pxsim.light {
         runtime.queueDisplayUpdate()
     }
 
-    export function colorWheel(WheelPos: number): number {
+    function colorWheel(WheelPos: number): number {
         WheelPos = 255 - WheelPos;
         if (WheelPos < 85) {
             return packRGB(255 - WheelPos * 3, 0, WheelPos * 3);
@@ -99,7 +103,7 @@ namespace pxsim.light {
         return packRGB(WheelPos * 3, 255 - WheelPos * 3, 0);
     }
 
-    export function rgb(r: number, g: number, b: number): number {
+    function rgb(r: number, g: number, b: number): number {
         return packRGB(r, g, b);
     }
 

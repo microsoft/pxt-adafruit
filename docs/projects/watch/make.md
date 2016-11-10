@@ -1,12 +1,14 @@
-![](/static/mb/projects/a10-watch.png)
+# the watch - Make
 
-# the watch
+### @description Maker Project for Watch
 
-![](/static/mb/lessons/the-watch-0.png)
+### ~avatar avatar
 
-In this project, you will build your own wearable @boardname@ watch from an old pair of jeans and T-shirt. Project duration: 15 minutes.
+Make a watch for your @boardname@
 
-![](/static/mb/lessons/the-watch-1.png)
+### ~
+
+## Duration: ~30 minutes
 
 ## Materials
 
@@ -147,8 +149,3 @@ Trim any leftover fabric, threads or tape.
 ![](/static/mb/lessons/the-watch-23.png)
 
 Your watch is ready!
-
-### Acknowledgements
-
-Artistic design by Melinda Hoeneisen.
-

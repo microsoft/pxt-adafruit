@@ -1,50 +1,10 @@
 # rock paper scissors
 
-![](/static/mb/projects/a4-motion.png)
-
 ### ~avatar avatar
 
-```sim
-input.onGesture(Gesture.Shake, () => {
-    let img = Math.random(3)
-    if (img == 0) {
-        basic.showLeds(`
-            # # # # #
-            # . . . #
-            # . . . #
-            # . . . #
-            # # # # #
-            `)
-
-    } else if (img == 1) {
-        basic.showLeds(`
-            . . . . .
-            . # # # .
-            . # # # .
-            . # # # .
-            . . . . .
-            `)
-    } else {
-        basic.showLeds(`
-            # # . . #
-            # # . # .
-            . . # . .
-            # # . # .
-            # # . . #
-            `)
-    }
-})
-```
-In this project, you will build a Rock Paper Scissors game with the @boardname@.
-You can play the game with a friend who has it on a @boardname@.
-You can also play it with friends who are just using their hands.
+Build a rock paper scissors game!
 
 ### ~
-
-
-## Materials needed
-
-* Your @boardname@ -- that's it!
 
 ## Step 1: Getting started
 

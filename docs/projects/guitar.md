@@ -1,7 +1,5 @@
 # Guitar
 
-![guitar icon](/static/mb/projects/guitar.png)
-
 ### @description A beginner-intermediate maker activity, building a guitar with the @boardname@  
 
 ### ~avatar avatar
@@ -9,7 +7,7 @@
 Make a @boardname@ guitar with this guided tutorial!
 
 ### ~
-*playing @boardname@ guitar*
+
 https://youtu.be/GYmdTFvxz80
 
 ## Duration

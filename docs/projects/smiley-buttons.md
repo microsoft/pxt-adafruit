@@ -1,8 +1,10 @@
 # smiley buttons
 
-![](/static/mb/projects/a2-buttons.png)
+### ~avatar
 
-Use buttons to show a smiley or frowny face. 
+Use buttons to show a smiley face! 
+
+### ~
 
 ## Step 1
 

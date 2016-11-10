@@ -57,7 +57,7 @@ Fun games to build with your @boardname@.
   "imageUrl":"/static/mb/projects/wallet.png"
 }, {
   "name": "Watch",
-  "url":"/projects/the-watch",
+  "url":"/projects/watch",
   "imageUrl":"/static/mb/projects/a10-watch.png"
 }]
 ```

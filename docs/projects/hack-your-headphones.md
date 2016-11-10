@@ -19,16 +19,16 @@ Build your own music player @boardname@ from headphones.
 * Headphones
 * Crocodile clips
 
-## Activities
-
-* [Connect your headphone](/projects/hack-your-headphones/make)
-* [Play sounds!]()
-
 # ~hint
 
 **No crocodile clips!?!?!** Use wires or Aluminium foil! [Read more...](/device/foil-circuits)
 
 # ~
+
+## Activities
+
+* [Connect your headphone](/projects/hack-your-headphones/make)
+* [Play sounds!]()
 
 ### ~button /projects/hack-your-headphones/make
 

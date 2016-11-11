@@ -190,6 +190,7 @@
         "projectGallery": "projects",
         "boardName": "micro:bit",
         "sideDoc": "getting-started",
+        "gettingStarted": "getting-started",
         "browserSupport": [
             {
                 "name": "unsupported",

@@ -172,7 +172,7 @@ namespace pins
      */
     //% help=https://www.arduino.cc/en/Reference/PulseIn weight=91
     //% blockId="arduino_pulseIn" block="pulse in pin %pin| with state %state"
-    int pulseIn(Pin pin, PulseValue state, int timeout = 1000000) {
+    int pulseIn(Pin pin, PulseValue state, uint16_t timeout = 1000000) {
 
     }
 
@@ -258,7 +258,7 @@ namespace music {
      */
     //% help=https://www.arduino.cc/en/Reference/Tone weight=90
     //% blockId="arduino_tone" block="tone on pin %pin| at frequency %frequency" icon="\uf025"
-    void tone(Pin pin, int frequency, int duration = 1000) {
+    void tone(Pin pin, uint16_t frequency, uint16_t duration = 1000) {
         
     }
 
@@ -288,8 +288,8 @@ namespace control
      */
     //% help=https://www.arduino.cc/en/Reference/Delay weight=91
     //% async blockId="arduino_delay" block="delay %ms| milliseconds"
-    void delay(int ms) {
-        delay(ms);
+    void delay(uint16_t ms) {
+        ::delay(ms);
     }
 
     /**
@@ -300,8 +300,8 @@ namespace control
      */
     //% help=https://www.arduino.cc/en/Reference/DelayMicroseconds weight=91
     //% async blockId="arduino_delayMicroseconds" block="delay %ms| microseconds"
-    void delayMicroseconds(int us) {
-        delayMicroseconds(us);
+    void delayMicroseconds(uint16_t us) {
+        ::delayMicroseconds(us);
     }
 
 
@@ -312,8 +312,8 @@ namespace control
      */
     //% help=https://www.arduino.cc/en/Reference/Millis weight=91
     //% blockId="arduino_millis" block="millis" blockGap=8
-    int millis() {
-        return millis();
+    uint16_t millis() {
+        return ::millis();
     }
 
     /**
@@ -323,7 +323,7 @@ namespace control
      */
     //% help=https://www.arduino.cc/en/Reference/Micros weight=91
     //% blockId="arduino_micros" block="micros" blockGap=8
-    int micros() {
-        return micros();
+    uint16_t micros() {
+        return ::micros();
     }
 }

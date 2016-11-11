@@ -13,6 +13,7 @@ namespace control {
 
 }
 
+/*
 let anim = 0
 while (true) {
     if (sensors.button(Button.Left)) {
@@ -27,6 +28,7 @@ while (true) {
         control.delay(300)
     }
 }
+*/
 
 /*
 while (true) {

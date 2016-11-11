@@ -13,6 +13,21 @@ namespace control {
 
 }
 
+let anim = 0
+while (true) {
+    if (sensors.button(Button.Left)) {
+        light.showAnimation(anim)
+    } else if (sensors.button(Button.Right)) {
+        serial.print(anim)
+        light.clearPixels()
+        if (anim == 5)
+            anim = 0
+        else 
+            anim++
+        control.delay(300)
+    }
+}
+
 /*
 while (true) {
     if (sensors.button(Button.Left)) {
@@ -27,4 +42,55 @@ while (true) {
             light.clearPixels()
     }
 }
+*/
+
+/*
+// procedure call with argument 
+let i = 0
+let k = 0
+serial.print(i)
+function doit(j: number) {
+    serial.print(j)
+    light.clearPixels()
+    for(i=0; i<j; i++) {
+        // serial.print(i)
+        light.setPixelColorRgb(i, 200, 0 , 0)
+    }
+}
+
+while (true) {
+    if (sensors.button(Button.Left)) {
+        doit(k)
+        if (k == 10)
+            k = 0
+        else
+            k++
+    } else if (sensors.button(Button.Right)) {
+        light.clearPixels()
+    }
+}
+
+
+function doit(j: number) {
+    serial.print(j)
+    light.clearPixels()
+    for(let i=0; i<j; i++) {
+        // serial.print(i)
+        light.setPixelColorRgb(i, 200, 0 , 0)
+    }
+}
+
+let k = 0
+while (true) {
+    if (sensors.button(Button.Left)) {
+        doit(k)
+        if (k == 10)
+            k = 0
+        else
+            k++
+    } else if (sensors.button(Button.Right)) {
+        light.clearPixels()
+    }
+}
+
 */

@@ -418,7 +418,7 @@ namespace pxt {
     // repeat error 4 times and restart as needed
     // microbit_panic_timeout(4);
 
-    delay(3000); // delay on start, so we have time to connect serial after flashing
+    // delay(3000); // delay on start, so we have time to connect serial after flashing
 
     Serial.begin(9600);
 

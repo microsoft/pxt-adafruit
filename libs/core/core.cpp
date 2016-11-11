@@ -127,18 +127,16 @@ namespace Math_ {
       return r;
     }
 
-    #define microbit_random(x) random(x)
-    
     //%
     int random(int max) {
       if (max == INT_MIN)
-        return -microbit_random(INT_MAX);
+        return -::random(INT_MAX);
       else if (max < 0)
-        return -microbit_random(-max);
+        return -::random(-max);
       else if (max == 0)
         return 0;
       else
-        return microbit_random(max);
+        return ::random(max);    
     }
     
     //%

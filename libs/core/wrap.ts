@@ -17,7 +17,7 @@ namespace music {
 */
 //% color=#00a7e9 weight=85
 namespace light {
-    let NUM_PIXELS: number = 10;
+    const NUM_PIXELS: number = 10;
 
     /**
     * Gets a wellknown color
@@ -101,8 +101,9 @@ namespace light {
     // the current pixel in a rainbow animation
     let pixeln = 0;
     function animateRainbow(SpeedDelay: number) {
+
         light.setPixelColorWheel(pixeln++, pixeln *25);
-        if (pixeln == NUM_PIXELS + 1) {
+        if (pixeln == 10) {
             pixeln = 0;
             clearPixels();
         }
@@ -110,25 +111,21 @@ namespace light {
     }
 
     function animationRainbowCycle(Speed: number) {
-        
         // Make an offset based on the current millisecond count scaled by the current speed.
         let offset = control.millis() / Speed;
 
         // Loop through each pixel and set it to an incremental color wheel value.
-        for(let i=0; i < NUM_PIXELS; ++i) {   
+        for(let i=0; i < 10; ++i) {   
             //CircuitPlayground.strip.setPixelColor(i, CircuitPlayground.colorWheel(((i * 256 / 10) + offset) & 255));
-            light.setPixelColorWheel(i, (((i * 256 / 10) + offset) & 255));
+            light.setPixelColorWheel(i, (((i * 25) + offset) & 255));
         }
 
         // Show all the pixels.
         showStrip();
-
-        //control.delay(1);
-        
     }
 
     function animateSparkle(red: number, green: number, blue: number, SpeedDelay: number) {
-        let Pixel = Math.random(NUM_PIXELS);
+        let Pixel = math.random(10);
         setStripPixelColorRgb(Pixel,red,green,blue);
         showStrip();
         control.delay(SpeedDelay);
@@ -137,11 +134,11 @@ namespace light {
     }
 
     function animateColorWipe(red: number, green: number, blue: number, SpeedDelay: number) {
-        for(let i=0; i<NUM_PIXELS; i++) {
+        for(let i=0; i<10; i++) {
             setPixelColorRgb(i, red, green, blue);
             control.delay(SpeedDelay);
         }
-        for(let i=0; i<NUM_PIXELS; i++) {
+        for(let i=0; i<10; i++) {
             setPixelColorRgb(i, 0, 0, 0);
             control.delay(SpeedDelay);
         }
@@ -172,13 +169,12 @@ namespace light {
 
     let q = 0;
     function animateTheatreChase(red: number, green: number, blue: number, SpeedDelay: number) {
-        for (let i=0; i < NUM_PIXELS; i=i+3) {
+        for (let i=0; i < 10; i=i+3) {
             setStripPixelColorRgb(i+q, red, green, blue);    //turn every third pixel on
         }
         showStrip();
         control.delay(SpeedDelay);
-        
-        for (let i=0; i < NUM_PIXELS; i=i+3) {
+        for (let i=0; i < 10; i=i+3) {
             setStripPixelColorRgb(i+q, 0,0,0);        //turn every third pixel off
         }
         q++;
@@ -205,13 +201,13 @@ namespace light {
     }
 
     function showRainbow() {
-        for (let i = 0; i < NUM_PIXELS; i++) {
+        for (let i = 0; i < 10; i++) {
             light.setPixelColorWheel(i, i * 25);
         }
     }
 
     function showComet() {
-        for (let i = 0; i < NUM_PIXELS; i++) {
+        for (let i = 0; i < 10; i++) {
             setPixelColorRgb(i, 255-(i*25), 0, 0);
         }
     }

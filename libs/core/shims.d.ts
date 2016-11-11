@@ -299,7 +299,40 @@ declare namespace pins {
      */
     //% help=https://www.arduino.cc/en/Reference/PulseIn weight=91
     //% blockId="arduino_pulseIn" block="pulse in pin %pin| with state %state" timeout.defl=1000000 shim=pins::pulseIn
-    function pulseIn(pin: Pin, state: PulseValue, timeout?: number): number;
+    function pulseIn(pin: Pin, state: PulseValue, timeout?: uint16): number;
+}
+declare namespace math {
+
+    /**
+     * Random
+     * The random function generates pseudo-random numbers.
+     * @param max upper bound of the random value, exclusive, eg: 10
+     * @returns a random number between min and max-1
+     */
+    //% help=https://www.arduino.cc/en/Reference/RandomSeed weight=91
+    //% blockId="arduino_randomMax" block="random with max %max" icon="\uf1ec" shim=math::random
+    function random(max: number): number;
+
+    /**
+     * Random
+     * The random function generates pseudo-random numbers.
+     * @param min lower bound of the random value, inclusive, eg: 0
+     * @param max upper bound of the random value, exclusive, eg: 10
+     * @returns a random number between min and max-1
+     */
+    //% help=https://www.arduino.cc/en/Reference/RandomSeed weight=91
+    //% blockId="arduino_randomMinMax" block="random between %min| and %max" icon="\uf1ec" shim=math::randomMinMax
+    function randomMinMax(min: number, max: number): number;
+
+    /**
+     * Random Seed
+     * Initializes the pseudo-random number generator, 
+     * causing it to start at an arbitrary point in its random sequence. This sequence, while very int, and random, is always the same.
+     * @param seed a number to generate the seed.
+     */
+    //% help=https://www.arduino.cc/en/Reference/RandomSeed weight=91
+    //% blockId="arduino_randomSeed" block="random seed %seed" icon="\uf1ec" shim=math::randomSeed
+    function randomSeed(seed: number): void;
 }
 declare namespace music {
 
@@ -314,7 +347,7 @@ declare namespace music {
      */
     //% help=https://www.arduino.cc/en/Reference/Tone weight=90
     //% blockId="arduino_tone" block="tone on pin %pin| at frequency %frequency" icon="\uf025" duration.defl=1000 shim=music::tone
-    function tone(pin: Pin, frequency: number, duration?: number): void;
+    function tone(pin: Pin, frequency: uint16, duration?: uint16): void;
 
     /**
      * No tone
@@ -341,7 +374,7 @@ declare namespace control {
      */
     //% help=https://www.arduino.cc/en/Reference/Delay weight=91
     //% async blockId="arduino_delay" block="delay %ms| milliseconds" shim=control::delay
-    function delay(ms: number): void;
+    function delay(ms: uint16): void;
 
     /**
      * Delay
@@ -351,7 +384,7 @@ declare namespace control {
      */
     //% help=https://www.arduino.cc/en/Reference/DelayMicroseconds weight=91
     //% async blockId="arduino_delayMicroseconds" block="delay %ms| microseconds" shim=control::delayMicroseconds
-    function delayMicroseconds(us: number): void;
+    function delayMicroseconds(us: uint16): void;
 
     /**
      * Millis
@@ -360,7 +393,7 @@ declare namespace control {
      */
     //% help=https://www.arduino.cc/en/Reference/Millis weight=91
     //% blockId="arduino_millis" block="millis" blockGap=8 shim=control::millis
-    function millis(): number;
+    function millis(): uint16;
 
     /**
      * Millis
@@ -369,7 +402,7 @@ declare namespace control {
      */
     //% help=https://www.arduino.cc/en/Reference/Micros weight=91
     //% blockId="arduino_micros" block="micros" blockGap=8 shim=control::micros
-    function micros(): number;
+    function micros(): uint16;
 }
 
 // Auto-generated. Do not edit. Really.

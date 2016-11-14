@@ -124,7 +124,7 @@ namespace light {
     }
 
     function animateSparkle(red: number, green: number, blue: number, SpeedDelay: number) {
-        let Pixel = math.random(10);
+        let Pixel = Math.random(10);
         setStripPixelColorRgb(Pixel,red,green,blue);
         showStrip();
         control.delay(SpeedDelay);

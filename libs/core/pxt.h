@@ -74,6 +74,7 @@ namespace pxt {
   void decr(uint16_t e);
 
   void panic(int code);
+  void assert(bool cond, uint16_t code);
 
   inline void *ptrOfLiteral(int offset)
   {

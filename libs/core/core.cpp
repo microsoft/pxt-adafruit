@@ -109,6 +109,16 @@ namespace Number_ {
     int div(int x, int y) { return x / y; }
     //%
     int mod(int x, int y) { return x % y; }
+
+    // AVR: more helpers to reduce code size
+    //%
+    int muls(int x, int y) { return x * y; }
+    //%
+    int asrs(int x, int y) { return x >> y; }
+    //%
+    int lsrs(uint16_t x, uint16_t y) { return x >> y; }
+    //%
+    int lsls(int x, int y) { return x << y; }
 }
 
 namespace Math_ {
@@ -291,6 +301,12 @@ namespace pxtrt {
   void panic(int code)
   {
     pxt::panic(code);
+  }
+
+  //%
+  void assert(bool cond, uint16_t code)
+  {
+    pxt::assert(cond, code);
   }
 
   //%

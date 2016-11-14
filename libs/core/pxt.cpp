@@ -363,6 +363,14 @@ namespace pxt {
     return arr;
   }
 
+  void assert(bool cond, uint16_t code) {
+    if (!cond) {
+      Serial.print("assert failed: ");
+      Serial.println(code);
+      panic(100);
+    }
+  }
+
   void panic(int code)
   {
     Serial.print("Panic! Code: ");
@@ -418,7 +426,7 @@ namespace pxt {
     // repeat error 4 times and restart as needed
     // microbit_panic_timeout(4);
 
-    // delay(3000); // delay on start, so we have time to connect serial after flashing
+    delay(3000); // delay on start, so we have time to connect serial after flashing
 
     Serial.begin(9600);
 

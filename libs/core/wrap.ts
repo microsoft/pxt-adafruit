@@ -43,7 +43,6 @@ namespace light {
     //% weight=20
     //% blockId=bargraph block="bar graph of %value |up to %high" icon="\uf080"
     export function bargraph(value: number, high: number): void {
-        /*
         const now = control.millis();
         value = Math.abs(value);
 
@@ -58,20 +57,20 @@ namespace light {
         const n = 10;
         const n1 = n - 1;
         const v = (value * n) / barGraphHigh;
+        serial.print(n)
         if (v == 0) {
-            light.setPixelColor(0, 0x666600);
+            light.setPixelColorRgb(0, 0, 200, 0);
             for (let i = 1; i < n; ++i)
-                light.setPixelColor(i, 0);
+                light.setPixelColorRgb(i, 0, 0, 0);
         } else {
             for (let i = 0; i < n; ++i) {
                 if (i <= v) {
                     const b = i * 255 / n1 & 0xff;
-                    light.setPixelColor(i, (b >> 16) | (255 - b));
+                    light.setPixelColorRgb(i, 0, b, 255 - b);
                 }
-                else light.setPixelColor(i, 0);
+                else light.setPixelColorRgb(i, 0, 0 , 0);
             }
         }
-        */
     }
 
     /**

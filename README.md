@@ -17,7 +17,7 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 - cd ../..
 - pxt serve
 
-## to run via pxt deploy
+## to deploy via command line
 
 - remove cmds/ and built/ directories at top-level
 - cd libs/core

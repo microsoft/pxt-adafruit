@@ -57,7 +57,7 @@ namespace light {
         const n = 10;
         const n1 = n - 1;
         const v = (value * n) / barGraphHigh;
-        serial.print(n)
+        // serial.print(n)
         if (v == 0) {
             light.setPixelColorRgb(0, 0, 200, 0);
             for (let i = 1; i < n; ++i)

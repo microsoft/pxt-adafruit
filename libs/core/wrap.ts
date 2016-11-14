@@ -102,7 +102,7 @@ namespace light {
     function animateRainbow(SpeedDelay: number) {
 
         light.setPixelColorWheel(pixeln++, pixeln *25);
-        if (pixeln == 10) {
+        if (pixeln == 11) {
             pixeln = 0;
             clearPixels();
         }

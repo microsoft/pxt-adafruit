@@ -33,7 +33,7 @@ namespace radio {
      * received packet from the radio queue.
      */
     //% help=radio/on-data-packet-received
-    //% mutate=true
+    //% mutate=objectdestructuring
     //% mutateText=Packet
     //% mutateDefaults="receivedNumber;receivedString:name,receivedNumber:value;receivedString"
     //% blockId=radio_on_packet block="on radio received" blockGap=8

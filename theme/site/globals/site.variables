@@ -3,7 +3,7 @@
 *******************************/
 @importGoogleFonts: true;
 
-@fontName  : 'Josefin Slab Light';
+@fontName  : 'Open Sans';
 
 @emSize      : 14px;
 @fontSize    : 13px;

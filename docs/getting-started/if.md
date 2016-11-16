@@ -1,15 +1,27 @@
-## If Statements
+## If Then Statements
 
-In this challenge, you'll use an **if** block to turn on the red LED if the left button is pressed.
+In this challenge, you'll use an **if** block to turn on the red LED when the left button is pressed.
 
 #### ~hint
 
-An **if** block takes in a **condition**. This condition needs to be true in order for the code inside the **if** block to be run. 
+An **if** block takes in a **condition**. 
+
+This condition needs to be true in order for the code inside the **if** block to run. 
 
 #### ~
 
-Let's show the red LED if the left button is clicked. 
-We will need to place our code inside a **while** block, so that it continiously checks if we have met the condition.
+An **if** block is made up of two parts: 
+- the **if** part, here you can place the check that you'd like to make.
+- the **then** part, code inside the **then** part is only run if the **if** part is true.
+
+Let's show the red LED when the left button is clicked. You'll need the following blocks:
+
+```snippets
+sensors.button(Button.Left)
+light.redLED(true)
+```
+
+We will need to place our code inside a **while** block, so that it continiously checks if we have met our condition.
 
 1. Drag a **while** block from the **Loops** drawer onto the workspace. 
 2. Find the **if** block. Hint: Look inside the **Logic** drawer.

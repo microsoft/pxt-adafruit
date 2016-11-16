@@ -11,7 +11,7 @@ Show different drawings using the Neopixels on the @boardname@!
 Use [show Drawing](/reference/light/show-drawing) and make your code look like this:
 
 ```blocks
-light.show(Drawing.Comet)
+light.showDrawing(Drawing.Comet)
 ```
 
 ## Step 2
@@ -20,13 +20,13 @@ Put a [while loop](/reference/loops/while) around it, so it runs indefinitely.
 
 ```blocks
 while (true) {
-    light.show(Drawing.Comet)
+    light.showDrawing(Drawing.Comet)
 }
 ```
 
 ```sim
 while (true) {
-    light.show(Drawing.Comet)
+    light.showDrawing(Drawing.Comet)
 }
 ```
 
@@ -36,12 +36,12 @@ Try some of the other drawings:
 
 ```blocks
 while (true) {
-    light.show(Drawing.Rainbow)
+    light.showDrawing(Drawing.Rainbow)
 }
 ```
 
 ```sim
 while (true) {
-    light.show(Drawing.Rainbow)
+    light.showDrawing(Drawing.Rainbow)
 }
 ```

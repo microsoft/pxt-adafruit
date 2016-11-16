@@ -422,8 +422,9 @@ namespace pxsim.visuals {
                 let hsl = visuals.rgbToHsl(rgb);
                 let [h, s, l] = hsl;
                 // at least 10% luminosity
+                let lx = Math.max(l*1.4,100);
                 l = Math.max(l, 10);
-                if (p_inner) svg.fill(p_inner, `rgb(255, 255, 255)`);
+                if (p_inner) svg.fill(p_inner, `hsl(${h}, ${s}%, ${lx}%)`);
                 if (p_outer) svg.fill(p_outer, `hsl(${h}, ${s}%, ${l}%)`);
                 if (p_inner) svg.filter(p_inner, `url(#neopixelglow)`);
                 if (p_outer) svg.filter(p_outer, `url(#neopixelglow)`);
@@ -684,8 +685,8 @@ namespace pxsim.visuals {
             let merge = svg.child(glow, "feMerge", {});
             for (let i = 0; i < 3; ++i) svg.child(merge, "feMergeNode", { in: "glow" })
             
-            let neopixelglow = svg.child(this.defs, "filter", { id: "neopixelglow", x: "-50%", y: "-50%", width: "200%", height: "200%" });
-            svg.child(neopixelglow, "feGaussianBlur", { stdDeviation: "5", result: "coloredBlur" });
+            let neopixelglow = svg.child(this.defs, "filter", { id: "neopixelglow", x: "-200%", y: "-200%", width: "400%", height: "400%" });
+            svg.child(neopixelglow, "feGaussianBlur", { stdDeviation: "4.3", result: "coloredBlur" });
             let neopixelmerge = svg.child(neopixelglow, "feMerge", {});
             svg.child(neopixelmerge, "feMergeNode", { in: "coloredBlur" })
             svg.child(neopixelmerge, "feMergeNode", { in: "SourceGraphic" })

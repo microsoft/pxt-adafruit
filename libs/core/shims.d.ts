@@ -209,6 +209,14 @@ declare namespace light {
     //% blockId="setStripPixelColorWheel" block="set pixel %p|to wheel %x=w"
     //% advanced=true shim=light::setPixelColorWheel
     function setPixelColorWheel(p: number, w: uint8): void;
+
+    /**
+     * Rotate the pixels forward.
+     * @param offset number of pixels to rotate forward, eg: 1
+     */
+    //% blockId="rotate" block="rotate pixels by %offset"
+    //% weight=95 number.defl=1 reverse.defl=0 shim=light::rotate
+    function rotate(number?: uint16, reverse?: boolean): void;
 }
 
 

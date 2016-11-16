@@ -360,6 +360,17 @@ void setPixelColorWheel(int p, uint8_t w)
 }
 
 
+/**
+* Rotate the pixels forward.
+* @param offset number of pixels to rotate forward, eg: 1
+*/
+//% blockId="rotate" block="rotate pixels by %offset"
+//% weight=95
+void rotate(uint16_t number = 1, boolean reverse = false) {
+
+}
+
+
 #if 0
 /**
 * Color wheel

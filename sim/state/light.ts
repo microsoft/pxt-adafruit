@@ -90,6 +90,12 @@ namespace pxsim.light {
         runtime.queueDisplayUpdate()
     }
 
+    export function rotate(offset: number = 1, reverse?: boolean) {
+        let state = board().neopixelState;
+        state.rotate(offset, reverse);
+        runtime.queueDisplayUpdate()
+    }
+
     function colorWheel(WheelPos: number): number {
         WheelPos = 255 - WheelPos;
         if (WheelPos < 85) {

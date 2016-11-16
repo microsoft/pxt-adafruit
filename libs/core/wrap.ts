@@ -211,22 +211,6 @@ namespace light {
         }
     }
 
-    /**
-     * Rotate the pixels forward.
-     * @param offset number of pixels to rotate forward, eg: 1
-     */
-    //% blockId="rotate" block="rotate pixels by %offset"
-    //% weight=95
-    export function rotate(offset: number = 1, reverse?: boolean) {
-        /*
-        for (let i = 0; i < offset; i++) {
-            if(reverse)
-                this.neopixels.unshift(this.neopixels.pop());
-            else
-                this.neopixels.push(this.neopixels.shift());
-        }*/
-    }
-
     /*
     function setAll(red: number, green: number, blue: number) {
         for(let i = 0; i < NUM_PIXELS; i++ ) {

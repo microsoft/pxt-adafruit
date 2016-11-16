@@ -50,7 +50,6 @@
   "light.redLED": "Just turn on/off the red #13 LED",
   "light.redLED|param|on": "a value to turn on/off the LED, eg: true",
   "light.rotate": "Rotate the pixels forward.",
-  "light.rotate|param|offset": "number of pixels to rotate forward, eg: 1",
   "light.setBrightness": "Sets the neopixel brightness",
   "light.setPixelColorRgb": "Sets the RGB color on a pixel",
   "light.setPixelColorWheel": "Sets the color wheel on a pixel",

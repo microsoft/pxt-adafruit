@@ -12,7 +12,20 @@ This is what the **else** part of an **if** block is for. If the condition is no
 
 #### ~
 
-Let's show the red LED when the left button is pressed, and hide it when it is not pressed.
+Let's show the red LED when the left button is pressed, and hide it when it is not pressed. You'll need the following blocks: 
+
+```shuffle
+sensors.button(Button.Left)
+light.redLED(true)
+if (true) {
+
+} else {
+    
+}
+while (true) {
+
+}
+```
 
 Just like in the previous challenge, we will need to place our code inside a **while** block, so that it continiously checks if we meet our condition.
 

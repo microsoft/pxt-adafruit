@@ -16,9 +16,15 @@ An **if** block is made up of two parts:
 
 Let's show the red LED when the left button is clicked. You'll need the following blocks:
 
-```snippets
+```shuffle
 sensors.button(Button.Left)
 light.redLED(true)
+if (true) {
+
+}
+while (true) {
+
+}
 ```
 
 We will need to place our code inside a **while** block, so that it continiously checks if we have met our condition.

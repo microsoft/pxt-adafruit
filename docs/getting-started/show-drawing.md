@@ -19,12 +19,12 @@ Let's try show a Rainbow.
 1. Find the [show drawing](/reference/light/show-drawing) block.
 2. Drag the block anywhere in the workspace, and set it to show a **Rainbow**.
 3. Check your result in the simulator.
-4. **Try it for real**, click on **Download** and follow the instructions!
+4. **Try it for real**, click on **Download** and follow the instructions...
 
-We've packed a few other cool animations in the library. Don't forget to try them out.
+We've packed a few other cool drawings in the library. Don't forget to try them out.
 
-### ~button /getting-started/loop
+### ~button /getting-started/show-animation
 
-NEXT: Loop
+NEXT: Animations!
 
 ### ~

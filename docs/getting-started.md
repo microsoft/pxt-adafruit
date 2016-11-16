@@ -15,6 +15,6 @@ Click on the button below when you're ready to start!
 
 ### ~button /getting-started/red-led
 
-NEXT: red LED
+NEXT: turn on the red LED
 
 ### ~

@@ -30,5 +30,5 @@ Use the color to find the block!
 ### ~
 
 ### ~button /getting-started/download
-NEXT: Download
+NEXT: Download to your @boardname@
 ### ~

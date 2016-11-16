@@ -1,29 +1,26 @@
 ## Animations
 
-Previously we learnt about showing pre-made drawings on the @boardname@. 
+### ~avatar
 
-Let's look at how we can show pre-made animations. 
+Good job on the displaying the pre-made drawings. Let's make it even cooler by creating animations.
 
-#### ~hint
+### ~
 
-You can use the [show Animation](/reference/light/show-animation) block to show a pre-made animation.
-
-This block will play a single frame of the animation, so it will need to be placed inside a **while** block to run continiously.
-
-#### ~
+You can use the [show animation](/reference/light/show-animation) block to show a pre-made animation.
 
 ```block
 light.showAnimation(Animation.RainbowCycle)
 ```
 
-Let's show a Rainbow animation.
+1. Find the **show animation** block.
+2. Drag the block into the code area.
+3. Check your result in the simulator. Is it animated???
 
-1. Find the [show Animation](/reference/light/show-animation) block. Hint: Look inside the **Light** drawer.
-2. Drag the block so that it is inside a **while** block, and set it to show the **RainbowCycle** animation.
-3. Check your result in the simulator.
+**Oh noes!** Something wrong, the lights are not moving. That's because the ``show animation`` block only displays one frame of the animation.
+Just like in cartoons, you need to call ``show animation`` many times to create the animation effect.
 
-Try out some of the other pre-made animations. They are super cool!
+### ~button /getting-started/loop
 
-### ~button /getting-started/download
-NEXT: Download
+NEXT: Repeating your animation
+
 ### ~

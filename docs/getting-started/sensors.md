@@ -28,6 +28,6 @@ When you add these sensor blocks into your workspace, a slider for the respectiv
 
 #### ~
 
-### ~button /getting-started/show-animation
-NEXT: Show Animations
+### ~button /projects
+NEXT: PROJECTS
 ### ~

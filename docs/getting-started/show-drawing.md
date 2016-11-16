@@ -8,7 +8,7 @@ Each pixel can be programmed to show a specific color.
 
 #### ~hint
 
-You can use the **show Drawing** block to show a pre-made drawing.
+You can use the [show Drawing](/reference/light/show-drawing) block to show a pre-made drawing.
 
 #### ~
 
@@ -18,7 +18,7 @@ light.showDrawing(Drawing.Rainbow)
 
 Let's show a Rainbow.
 
-1. Find the **show Drawing** block. Hint: Look inside the **Light** drawer.
+1. Find the [show Drawing](/reference/light/show-drawing) block. Hint: Look inside the **Light** drawer.
 2. Drag the block anywhere in the workspace, and set it to show a **Rainbow**.
 3. Check your result in the simulator.
 

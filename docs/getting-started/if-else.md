@@ -31,9 +31,9 @@ Just like in the previous challenge, we will need to place our code inside a **w
 
 1. Drag a **while** block from the **Loops** drawer onto the workspace. 
 2. Find the **if then else** block, and place it inside the **while** block. 
-3. Drag the **left button pressed?** block from the **Sensors** drawer, and place it in the **if** section of the **if then else** block.
-4. Drag a **red LED** block and place it inside the **then** section of the **if** block. Set it to **true**. 
-5. Drag another **red LED** block and place it inside the **else** part of the **if** block. Set this one to **false**. 
+3. Drag the [button pressed?](/reference/sensors/button-pressed) block from the **Sensors** drawer, and place it in the **if** section of the **if then else** block.
+4. Drag a [red LED](/reference/light/red-LED) block and place it inside the **then** section of the **if** block. Set it to **true**. 
+5. Drag another [red LED](/reference/light/red-LED) block and place it inside the **else** part of the **if** block. Set this one to **false**. 
 6. Tap on the left button in the simulator to test your code.
 
 The red LED should turn off when you are no longer pressing the left button.

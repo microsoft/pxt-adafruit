@@ -32,10 +32,11 @@ We will need to place our code inside a **while** block, so that it continiously
 1. Drag a **while** block from the **Loops** drawer onto the workspace. 
 2. Find the **if** block. Hint: Look inside the **Logic** drawer.
 3. Drag an **if** block and place it inside the **while** block.
-4. Find the **left button pressed?** block. Hint: Look inside the **Sensors** drawer.
-5. Drag the **left button pressed?** block and connect it to the if statement, putting it in place of the **true** dropdown. 
-6. Drag the **red LED** block and place it inside the **if** block. 
-7. Tap on the left button in the simulator to test your code.
+4. Find the [button pressed?](/reference/sensors/button-pressed) block. Hint: Look inside the **Sensors** drawer.
+5. Drag the [button pressed?](/reference/sensors/button-pressed) block and connect it to the if statement, putting it in place of the **true** dropdown.
+6. Select **left** in the [button pressed?](/reference/sensors/button-pressed) block.
+7. Drag the [red LED](/reference/light/red-led) block and place it inside the **if** block. 
+8. Tap on the left button in the simulator to test your code.
 
 ### ~button /getting-started/if-else
 NEXT: Else

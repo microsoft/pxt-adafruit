@@ -16,7 +16,7 @@ while (true) {
 }
 ```
 
-Replace the **left button pressed?** block with the **slide switch** block from the **Sensors** drawer. 
+Replace the [button pressed?](/reference/sensors/button-pressed) block with the [slide switch](/reference/sensors/slide-switch) block from the **Sensors** drawer. 
 
 Try this a few times with some of the other sensors in the **Sensors** drawer. 
 

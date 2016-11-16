@@ -173,7 +173,7 @@
         "serviceId": "circuitplayground"
     },
     "appTheme": {
-        "accentColor": "#5C005C",
+        "accentColor": "#000",
         "logoUrl": "https://www.adafruit.com/products/3000",
         "logo": "./static/logo.png",
         "docsLogo": "./static/logo-small.png",
@@ -188,10 +188,16 @@
         "embedUrl": "https://www.adafruit.com/",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
-        "githubUrl": "https://github.com/Microsoft/pxt-microbit",
+        "githubUrl": "https://github.com/Microsoft/pxt-adafruit-circuit-playground",
         "boardName": "Adafruit Circuit Playground",
-        "docMenu": [],
-        "hideSideDocs": true,
+        "projectGallery": "projects",
+        "docMenu": [
+            {
+                "name": "Getting Started",
+                "path": "/getting-started"
+            }
+        ],
+        "sideDoc": "getting-started",
         "invertedMenu": true,
         "invertedToolbox": true,
         "invertedMonaco": true,

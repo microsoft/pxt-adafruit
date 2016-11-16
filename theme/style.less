@@ -19,6 +19,15 @@
     &:extend(.pink all);
 }
 
+/* Simulator background */
+#filelist {
+    background: #007090; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#007090, #084C61); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#007090, #084C61); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#007090, #084C61); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#007090, #084C61); /* Standard syntax (must be last) */
+}
+
 /* This removes the margin between the blockly categories to form connected pills */
 .blocklyTreeRow {
     margin-bottom: 0px !important;
@@ -71,6 +80,9 @@
 @media only screen and (max-width: @largestMobileScreen) {
     .blocklyTreeLabel {
         font-size: 0.5rem !important;
+    }
+    #filelist {
+        background: transparent;
     }
 }
 

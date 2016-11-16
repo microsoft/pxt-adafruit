@@ -1,7 +1,13 @@
 /*******************************
      User Global Variables
 *******************************/
-@importGoogleFonts: false;
+@importGoogleFonts: true;
+
+@fontName  : 'Josefin Slab Light';
+
+@emSize      : 14px;
+@fontSize    : 13px;
+
 
 @primaryColor: @blue;
 @secondaryColor: @pink;
@@ -18,11 +24,12 @@
 @brown:#6B5B4C;
 @grey:#999;
 
-@pageBackground: #007090;
+@pageBackground: #ecf0f1;
 
 /*******************************
          PXT Overrides
 *******************************/
 
+@simulatorBackground: #007090;
 @blocklySvgColor: #033860;
 @blocklyToolboxColor: transparent;

@@ -1,15 +1,21 @@
 ## Download
 
-Once you're happy with your code, you'll want to **Download** your code in order to move it onto a physical @boardname@.
+### ~avatar
 
-#### ~hint
+You are about to run your first program on the @boardname@, are you ready?
 
-Clicking the **Download** button, will move your program on to the @boardname@!
+### ~
 
-#### ~
+You need to follow a few simple steps To get your code from the editor into the @boardname@. 
+Don't worry if it feels complicated, you'll be an expert in no time.
 
-Make sure to follow the Download instructions!
+* Click on the **Download** in the editor.
+* Make sure to follow the Download instructions!
 
-### ~button /projects
-NEXT: PROJECTS!
+If everything goes well, your @boardname@ should restart and the red LED should turn on! Whouhou!
+
+### ~button /getting-started/show-drawing
+
+NEXT: Lights on!
+
 ### ~

@@ -17,17 +17,25 @@ enum MotionAxis
 
 enum Animation
 {
+    //% block="classic rainbow"
     ClassicRainbow,
+    //% block="raindow cycle"
     RainbowCycle,
+    //% block=sparkle
     Sparkle,
+    //% block="color wipe"
     ColorWipe,
+    //% block="running lights"
     RunningLights,
+    //% block="theatre chase"
     TheatreChase
 };
 
 enum Drawing
 {
+    //% block=rainbow
     Rainbow,
+    //% block=comet
     Comet
 };
 

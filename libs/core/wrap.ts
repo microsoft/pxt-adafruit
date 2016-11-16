@@ -77,7 +77,7 @@ namespace light {
      * Show a preset animation. eg: Rainbow
      * @param animation the preset animation to show
      */
-    //% async blockId="showAnimation" block="show Animation %animation"
+    //% async blockId="showAnimation" block="show animation %animation"
     //% weight=85
     export function showAnimation(animation: Animation) {
         switch(animation) {

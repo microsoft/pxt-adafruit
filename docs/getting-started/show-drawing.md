@@ -1,29 +1,30 @@
 ## Show Drawing
 
-This challenge is to show pre-made drawings on the @boardname@!
+### ~avatar
 
-The bright lights you see on the @boardname@ are called Neopixels.
+Well done with the red LED! Let's light up the other lights!
 
-Each pixel can be programmed to show a specific color. 
+### ~
 
-#### ~hint
+The white boxes placed on the inside of the @boardname@ are called **Neopixels**. 
+Each pixel can be programmed to show a specific color and is (awesomly) super bright!
+You can use the [show drawing](/reference/light/show-drawing) block below to show a pre-made drawing.
 
-You can use the [show Drawing](/reference/light/show-drawing) block to show a pre-made drawing.
-
-#### ~
-
-```sig
+```block
 light.showDrawing(Drawing.Rainbow)
 ```
 
-Let's show a Rainbow.
+Let's try show a Rainbow.
 
-1. Find the [show Drawing](/reference/light/show-drawing) block. Hint: Look inside the **Light** drawer.
+1. Find the [show drawing](/reference/light/show-drawing) block.
 2. Drag the block anywhere in the workspace, and set it to show a **Rainbow**.
 3. Check your result in the simulator.
+4. **Try it for real**, click on **Download** and follow the instructions!
 
-Try out some of the other pre-made drawings.
+We've packed a few other cool animations in the library. Don't forget to try them out.
 
 ### ~button /getting-started/loop
+
 NEXT: Loop
+
 ### ~

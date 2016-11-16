@@ -12,7 +12,7 @@ This block will play a single frame of the animation, so it will need to be plac
 
 #### ~
 
-```sig
+```block
 light.showAnimation(Animation.RainbowCycle)
 ```
 

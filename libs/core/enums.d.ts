@@ -35,18 +35,26 @@
 
     declare enum Animation
     {
+    //% block="classic rainbow"
     ClassicRainbow = 0,
+    //% block="raindow cycle"
     RainbowCycle = 1,
+    //% block=sparkle
     Sparkle = 2,
+    //% block="color wipe"
     ColorWipe = 3,
+    //% block="running lights"
     RunningLights = 4,
+    //% block="theatre chase"
     TheatreChase = 5,
     }
 
 
     declare enum Drawing
     {
+    //% block=rainbow
     Rainbow = 0,
+    //% block=comet
     Comet = 1,
     }
 

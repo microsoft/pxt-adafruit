@@ -4,7 +4,7 @@
 
 Welcome to our beginners guide!!
 
-Here we will teach you some basic computing concepts, and how to use our editor to design your next superstar program!
+Here we will teach you some basic computing concepts, and how to use our editor so that you can get started in creating your next superstar program!
 
 Click on the button below when you're ready to start!
 

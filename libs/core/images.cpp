@@ -61,7 +61,7 @@ namespace ImageMethods {
 
     /**
      * Scrolls an image .
-     * @param frameOffset x offset moved on each animation step, eg: 5, 1, -1
+     * @param frameOffset x offset moved on each animation step, eg: 1, 2, 5
      * @param interval time between each animation step in milli seconds, eg: 200
      */
     //% help=images/show-image weight=79 async blockNamespace=images
@@ -69,10 +69,7 @@ namespace ImageMethods {
     //% parts="ledmatrix"
     void scrollImage(Image id, int frameOffset, int interval) {
       MicroBitImage i(id);
-      if (i.getWidth() <= 5)
-        showImage(id, 0);
-      else
-        uBit.display.animate(i, interval, frameOffset, 0);
+      uBit.display.animate(i, interval, frameOffset, MICROBIT_DISPLAY_WIDTH - 1);
     }
 
 

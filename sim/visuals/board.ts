@@ -256,7 +256,7 @@ namespace pxsim.visuals {
         wireframe?: boolean;
     }
 
-    export class MicrobitBoardSvg implements BoardView {
+    export class CircuitPlaygroundBoardSvg implements BoardView {
         public element: SVGSVGElement;
         private style: SVGStyleElement;
         private defs: SVGDefsElement;

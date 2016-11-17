@@ -10,7 +10,7 @@ import pxtdocs = pxt.docs;
 namespace pxsim.instructions {
     export function drawInstructions() {
         pxsim.visuals.mkBoardView = (opts: pxsim.visuals.BoardViewOptions): pxsim.visuals.BoardView => {
-            return new visuals.MicrobitBoardSvg({
+            return new visuals.CircuitPlaygroundBoardSvg({
                 runtime: runtime,
                 theme: visuals.randomTheme(),
                 disableTilt: false,

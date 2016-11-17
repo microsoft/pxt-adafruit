@@ -53,7 +53,7 @@ declare interface Image {
 
     /**
      * Scrolls an image .
-     * @param frameOffset x offset moved on each animation step, eg: 5, 1, -1
+     * @param frameOffset x offset moved on each animation step, eg: 1, 2, 5
      * @param interval time between each animation step in milli seconds, eg: 200
      */
     //% help=images/show-image weight=79 async blockNamespace=images

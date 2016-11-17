@@ -275,7 +275,9 @@ declare namespace led {
 
 
     declare enum PulseValue {
+    //% block=high
     High = 4,  // MICROBIT_PIN_EVT_PULSE_HI
+    //% block=low
     Low = 5,  // MICROBIT_PIN_EVT_PULSE_LO
     }
 

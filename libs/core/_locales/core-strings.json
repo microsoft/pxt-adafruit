@@ -73,6 +73,8 @@
   "PinPullMode.PullDown|block": "down",
   "PinPullMode.PullNone|block": "none",
   "PinPullMode.PullUp|block": "up",
+  "PulseValue.High|block": "high",
+  "PulseValue.Low|block": "low",
   "Rotation.Pitch|block": "pitch",
   "Rotation.Roll|block": "roll",
   "String.charAt|block": "char from %this|at %pos",

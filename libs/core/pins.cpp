@@ -32,7 +32,9 @@ enum class AnalogPin {
 };
 
 enum class PulseValue {
+    //% block=high
     High = MICROBIT_PIN_EVT_PULSE_HI,
+    //% block=low
     Low = MICROBIT_PIN_EVT_PULSE_LO
 };
 

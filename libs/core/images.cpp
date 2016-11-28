@@ -64,7 +64,7 @@ namespace ImageMethods {
      * @param frameOffset x offset moved on each animation step, eg: 1, 2, 5
      * @param interval time between each animation step in milli seconds, eg: 200
      */
-    //% help=images/show-image weight=79 async blockNamespace=images
+    //% help=images/scroll-image weight=79 async blockNamespace=images
     //% blockId=device_scroll_image block="scroll image %sprite|with offset %frameoffset|and interval (ms) %delay" blockGap=8
     //% parts="ledmatrix"
     void scrollImage(Image id, int frameOffset, int interval) {

@@ -248,6 +248,7 @@
                 "path": "/device"
             }
         ],
+        "hasReferenceDocs": true,
         "usbDocs": "/device/usb",
         "usbHelp": [
             {

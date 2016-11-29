@@ -61,6 +61,8 @@ namespace pxt {
   uint32_t *allocate(uint16_t sz);
   int templateHash();
   int programHash();
+  uint32_t programSize();
+  uint32_t afterProgramPage();     
   int getNumGlobals();
   RefRecord* mkClassInstance(int vtableOffset);
 

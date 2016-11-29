@@ -160,10 +160,10 @@
     },
     "compileService": {
         "yottaTarget": "bbc-microbit-classic-gcc",
-        "yottaCorePackage": "pxt-microbit-core",
-        "githubCorePackage": "microsoft/pxt-microbit-core",
-        "gittag": "v0.5.1",
-        "serviceId": "ws"
+        "yottaCorePackage": "microbit",
+        "githubCorePackage": "lancaster-university/microbit",
+        "gittag": "v2.0.0-rc6",
+        "serviceId": "microbit"
     },
     "serial": {
         "manufacturerFilter": "^mbed$",

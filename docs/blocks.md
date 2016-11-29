@@ -1,6 +1,6 @@
 # Blocks language
 
-### @description Langugage constructs for the Block editor.
+### @description Language constructs for the Block editor.
 
 ```namespaces
 for (let i = 0;i<5;++i) {}

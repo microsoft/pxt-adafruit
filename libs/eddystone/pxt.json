@@ -1,0 +1,38 @@
+{
+    "name": "eddystone",
+    "description": "Eddystone beacon support",
+    "dependencies": {
+        "core": "file:../core"
+    },
+    "files": [
+        "eddystone.cpp",
+        "eddystone.ts",
+        "enums.d.ts",
+        "shims.d.ts"
+    ],
+    "yotta": {
+        "config": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "enabled": 1,
+                    "eddystone_url": 1,
+                    "eddystone_uid": 0
+                }
+            }
+        },
+        "optionalConfig": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "pairing_mode": 0,
+                    "private_addressing": 0,
+                    "whitelist": 0,
+                    "advertising_timeout": 0,
+                    "tx_power": 6,
+                    "dfu_service": 0,
+                    "event_service": 0,
+                    "device_info_service": 0
+                }
+            }            
+        }
+    }
+}

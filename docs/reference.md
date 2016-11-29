@@ -29,19 +29,21 @@ control.inBackground(() => {
 });
 ```
 
-## Bluetooth
-  
+## bluetooth and Eddystone
+
 ```namespaces
 devices.tellCameraTo(MesCameraEvent.TakePhoto);
 bluetooth.onBluetoothConnected(() => {});
+eddystone.advertiseUrl("https://pxt.io", 6);
 ```
   
 ```package
 radio
 devices
 bluetooth
+eddystone
 ```
 
 ### See Also
 
-[basic](/reference/basic), [input](/reference/input), [music](/reference/music), [led](/reference/led), [Math (blocks)](/blocks/math), [String](/reference/types/string), [game](/reference/game), [images](/reference/images), [pins](/reference/pins), [serial](/reference/serial), [control](/reference/control), [radio](/reference/radio), [devices](/reference/devices), [bluetooth](/reference/bluetooth)
+[basic](/reference/basic), [input](/reference/input), [music](/reference/music), [led](/reference/led), [Math (blocks)](/blocks/math), [String](/reference/types/string), [game](/reference/game), [images](/reference/images), [pins](/reference/pins), [serial](/reference/serial), [control](/reference/control), [radio](/reference/radio), [devices](/reference/devices), [bluetooth](/reference/bluetooth), [eddystone](/reference/eddystone)

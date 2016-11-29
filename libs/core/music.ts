@@ -138,7 +138,6 @@ namespace music {
     //% blockId=device_play_note block="play|tone %note=device_note|for %duration=device_beat" icon="\uf025" blockGap=8
     //% parts="headphone"
     export function playTone(frequency: number, ms: number): void {
-        pins.analogSetPitchPin(AnalogPin.P0);
         pins.analogPitch(frequency, ms);
     }
 
@@ -150,7 +149,6 @@ namespace music {
     //% blockId=device_ring block="ring tone (Hz)|%note=device_note" icon="\uf025" blockGap=8
     //% parts="headphone"
     export function ringTone(frequency: number): void {
-        pins.analogSetPitchPin(AnalogPin.P0);
         pins.analogPitch(frequency, 0);
     }
 

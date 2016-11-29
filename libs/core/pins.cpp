@@ -147,7 +147,7 @@ namespace pins {
     /**
     * Configures this pin to a digital input, and generates events where the timestamp is the duration that this pin was either ``high`` or ``low``.
     */
-    //% help=pins/on-pulsed weight=22 blockGap=8
+    //% help=pins/on-pulsed weight=22 blockGap=8 advanced=true
     //% blockId=pins_on_pulsed block="on|pin %pin|pulsed %pulse"
     void onPulsed(DigitalPin name, PulseValue pulse, Action body) {
         MicroBitPin* pin = getPin((int)name);
@@ -160,7 +160,7 @@ namespace pins {
     /**
     * Gets the duration of the last pulse in micro-seconds. This function should be called from a ``onPulsed`` handler.
     */
-    //% help=pins/pulse-duration
+    //% help=pins/pulse-duration advanced=true
     //% blockId=pins_pulse_duration block="pulse duration (µs)"
     //% weight=21 blockGap=8
     int pulseDuration() {
@@ -174,7 +174,7 @@ namespace pins {
     * @param maximum duration in micro-seconds
     */    
     //% blockId="pins_pulse_in" block="pulse in (µs)|pin %name|pulsed %value"
-    //% weight=20
+    //% weight=20 advanced=true
     int pulseIn(DigitalPin name, PulseValue value, int maxDuration = 2000000) {
         MicroBitPin* pin = getPin((int)name);
         if (!pin) return 0;
@@ -223,22 +223,25 @@ namespace pins {
     MicroBitPin* pitchPin = NULL;
 
     /**
-     * Sets the pin used when using `pins->analog pitch`.
-     * @param name TODO
+     * Sets the pin used when using `analog pitch` or music.
+     * @param name pin to modulate pitch from
      */
-    //% help=pins/analog-set-pitch weight=12
+    //% blockId=device_analog_set_pitch_pin block="analog set pitch pin %name"
+    //% help=pins/analog-set-pitch weight=3 advanced=true
     void analogSetPitchPin(AnalogPin name) { 
       pitchPin = getPin((int)name);
     }
 
     /**
      * Emits a Pulse-width modulation (PWM) signal to the current pitch pin. Use `analog set pitch pin` to define the pitch pin.
-     * @param frequency TODO
-     * @param ms TODO
+     * @param frequency frequency to modulate in Hz.
+     * @param ms duration of the pitch in milli seconds.
      */
-    //% help=pins/analog-pitch weight=14 async
+    //% blockId=device_analog_pitch block="analog pitch %frequency|for (ms) %ms"
+    //% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
     void analogPitch(int frequency, int ms) { 
-      if (pitchPin == NULL) return;
+      if (pitchPin == NULL) 
+        analogSetPitchPin(AnalogPin::P0);
       if (frequency <= 0) {
         pitchPin->setAnalogValue(0);
       } else {
@@ -260,7 +263,7 @@ namespace pins {
     * @param name pin to set the pull mode on
     * @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone 
     */
-    //% help=pins/set-pull weight=3
+    //% help=pins/set-pull weight=3 advanced=true
     //% blockId=device_set_pull block="set pull|pin %pin|to %pull"
     void setPull(DigitalPin name, PinPullMode pull) {
         PinMode m = pull == PinPullMode::PullDown 
@@ -311,7 +314,7 @@ namespace pins {
     * Write to the SPI slave and return the response
     * @param value Data to be sent to the SPI slave
     */
-    //% help=pins/spi-write weight=5
+    //% help=pins/spi-write weight=5 advanced=true
     //% blockId=spi_write block="spi write %value"
     int spiWrite(int value) {
         auto p = allocSPI();

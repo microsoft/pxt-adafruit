@@ -1,4 +1,5 @@
-/// <reference path="../node_modules/pxt-core/built/pxt.d.ts"/>
+/// <reference path="../node_modules/pxt-core/typings/node/node.d.ts"/>
+/// <reference path="../node_modules/pxt-core/built/pxtlib.d.ts" />
 
 import * as fs from "fs";
 import * as path from "path";

@@ -17,9 +17,7 @@
             "microbit-dal": {
                 "bluetooth": {
                     "enabled": 1,
-                    "pairing_mode": 1,
                     "private_addressing": 0,
-                    "open": 0,
                     "whitelist": 1,
                     "advertising_timeout": 0,
                     "tx_power": 6,
@@ -30,6 +28,15 @@
                     "eddystone_uid": 0
                 },
                 "gatt_table_size": "0x700"
+            }
+        },
+        "optionalConfig": {
+            "microbit-dal": {
+                "bluetooth": {
+                    "pairing_mode": 1,
+                    "open": 0,
+                    "security_level": "SECURITY_MODE_ENCRYPTION_WITH_MITM"
+                }
             }
         }
     },

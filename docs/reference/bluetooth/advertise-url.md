@@ -29,9 +29,13 @@ bluetooth.advertiseUrl("https://pxt.microbit.org/", 7);
 ### Example: Broadcast a secret code
 
 ```blocks
-bluetooth.advertiseUrl("https://pxt.io?secret=42")
+bluetooth.advertiseUrl("https://pxt.io?secret=42", 7);
 ```
 
 ## See Also
 
 [stop-advertising](/reference/bluetooth/stop-advertising)
+
+```package
+bluetooth
+```

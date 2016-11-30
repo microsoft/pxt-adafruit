@@ -18,9 +18,17 @@ Read more at https://lancaster-university.github.io/microbit-docs/ble/eddystone/
 ## ~
 
 ```sig
-bluetooth.stop-advertising();
+bluetooth.stopAdvertising();
 ```
 
 ## See Also
 
 [advertise-url](/reference/bluetooth/advertise-url)
+
+```blocks
+bluetooth.stopAdvertising();
+```
+
+```package
+bluetooth
+```

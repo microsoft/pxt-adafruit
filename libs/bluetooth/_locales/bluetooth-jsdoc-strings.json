@@ -1,5 +1,8 @@
 {
   "bluetooth": "Support for additional Bluetooth services.",
+  "bluetooth.advertiseUrl": "Advertise an Eddystone URL",
+  "bluetooth.advertiseUrl|param|power": "power level between 0 and 7, e.g.: 7",
+  "bluetooth.advertiseUrl|param|url": "the url to transmit. Must be no longer than the supported eddystone url length",
   "bluetooth.onBluetoothConnected": "Register code to run when the micro:bit is connected to over Bluetooth",
   "bluetooth.onBluetoothConnected|param|body": "Code to run when a Bluetooth connection is established",
   "bluetooth.onBluetoothDisconnected": "Register code to run when a bluetooth connection to the micro:bit is lost",
@@ -11,6 +14,7 @@
   "bluetooth.startMagnetometerService": "Starts the Bluetooth magnetometer service",
   "bluetooth.startTemperatureService": "Starts the Bluetooth temperature service",
   "bluetooth.startUartService": "Starts the Bluetooth UART service",
+  "bluetooth.stopAdvertising": "Stops advertising Eddystone end points",
   "bluetooth.uartReadUntil": "Reads from the Bluetooth UART service buffer, returning its contents when the specified delimiter character is encountered.",
   "bluetooth.uartWriteNumber": "Prints a numeric value to the serial",
   "bluetooth.uartWriteString": "Writes to the Bluetooth UART service buffer. From there the data is transmitted over Bluetooth to a connected device.",

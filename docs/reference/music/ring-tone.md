@@ -34,7 +34,7 @@ basic.forever(() => {
 
 ### Using other pins
 
-Use [analogSetPitchPin](/pins/analog-set-pitch-pin) to change that pin used to generate music.
+Use [analogSetPitchPin](/reference/pins/analog-set-pitch-pin) to change that pin used to generate music.
 
 ```blocks
 pins.analogSetPitchPin(AnalogPin.P1);

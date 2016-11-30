@@ -9,9 +9,12 @@ declare namespace eddystone {
 
     /**
      * Advertise an Eddystone URL
+     * @param url the url to transmit. Must be no longer than the supported eddystone url length
+     * @param power power level between 0 and 7, e.g.: 7
+     * @param connectable true to keep bluetooth connectable for other services, false otherwise
      */
     //% blockId=eddystone_advertise_url block="eddystone advertise url %url|power %powerLevel" shim=eddystone::advertiseUrl
-    function advertiseUrl(url: string, powerLevel: number): void;
+    function advertiseUrl(url: string, power: number, connectable: boolean): void;
 
     /**
      * Stops advertising Eddystone end points

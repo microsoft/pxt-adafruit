@@ -1,5 +1,4 @@
 #include "pxt.h"
-#include "Microbit.h"
 #include "MicroBitEddystone.h"
 
 using namespace pxt;
@@ -13,12 +12,14 @@ namespace eddystone {
 
     /**
     * Advertise an Eddystone URL
+	* @param url the url to transmit. Must be no longer than the supported eddystone url length
+	* @param power power level between 0 and 7, e.g.: 7
+    * @param connectable true to keep bluetooth connectable for other services, false otherwise
     */
     //% blockId=eddystone_advertise_url block="eddystone advertise url %url|power %powerLevel"
-    void advertiseUrl(StringData* url, int powerLevel) {
-        int power = CALIBRATED_POWERS[min(7, max(0, powerLevel))];
-        ManagedString murl(url)
-        uBit.bleManager.advertiseEddystoneUrl(murl, power, false);
+    void advertiseUrl(StringData* url, int power, bool connectable) {
+        int8_t level = CALIBRATED_POWERS[min(7, max(0, power))];
+        uBit.bleManager.advertiseEddystoneUrl(ManagedString(url), level, connectable);
     }
 
     /**

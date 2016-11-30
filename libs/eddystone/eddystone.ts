@@ -4,7 +4,7 @@
 //% color=#0082FB weight=19
 namespace eddystone {
     //% shim=eddystone::advertiseUrl
-    export function advertiseUrl(url: string, powerLevel: number) {
+    export function advertiseUrl(url: string, powerLevel: number, connectable: boolean) {
     }
 
     //% shim=eddystone::stopAdvertising

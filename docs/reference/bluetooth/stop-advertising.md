@@ -21,13 +21,17 @@ Read more at https://lancaster-university.github.io/microbit-docs/ble/eddystone/
 bluetooth.stopAdvertising();
 ```
 
+### Example: stop advertising on button pressed
+
+```blocks
+input.onButtonPressed(Button.A, () => {
+    bluetooth.stopAdvertising();
+})
+```
+
 ## See Also
 
 [advertise-url](/reference/bluetooth/advertise-url)
-
-```blocks
-bluetooth.stopAdvertising();
-```
 
 ```package
 bluetooth

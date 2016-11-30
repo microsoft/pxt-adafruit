@@ -1,4 +1,4 @@
-#include "ksbit.h"
+#include "pxt.h"
 
 enum SerialPin {
     P0 = MICROBIT_ID_IO_P0,

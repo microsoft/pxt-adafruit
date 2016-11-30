@@ -12,7 +12,6 @@
         "enums.d.ts",
         "shims.d.ts",
         "pxt-core.d.ts",
-        "ksbit.h",
         "core.cpp",
         "pxt-helpers.ts",
         "helpers.ts",

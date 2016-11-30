@@ -9,6 +9,7 @@
 #include "MicroBitImage.h"
 #include "ManagedString.h"
 #include "ManagedType.h"
+#include "ManagedBuffer.h"
 
 #define printf(...) uBit.serial.printf(__VA_ARGS__)
 // #define printf(...)
@@ -294,6 +295,11 @@ namespace pxt {
     RefRefLocal();
   };
 }
+
+using namespace pxt;
+MicroBitPin *getPin(int id);
+typedef ImageData* Image;
+typedef BufferData* Buffer;
 
 // The ARM Thumb generator in the JavaScript code is parsing
 // the hex file and looks for the magic numbers as present here.

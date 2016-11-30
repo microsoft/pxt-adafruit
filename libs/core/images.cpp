@@ -1,4 +1,4 @@
-#include "ksbit.h"
+#include "pxt.h"
 
 /**
 * Creation, manipulation and display of LED images.

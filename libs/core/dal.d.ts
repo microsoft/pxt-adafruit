@@ -80,13 +80,13 @@ declare const enum DAL {
     MICROBIT_BLE_POWER_LEVELS = 8,
     MICROBIT_BLE_MAXIMUM_BONDS = 4,
     MICROBIT_BLE_EDDYSTONE_ADV_INTERVAL = 400,
+    MICROBIT_BLE_EDDYSTONE_DEFAULT_POWER = 0xF0,
     // built/yt/yotta_modules/microbit-dal/inc/bluetooth/MicroBitButtonService.h
     // built/yt/yotta_modules/microbit-dal/inc/bluetooth/MicroBitDFUService.h
     MICROBIT_DFU_OPCODE_START_DFU = 1,
     MICROBIT_DFU_HISTOGRAM_WIDTH = 5,
     MICROBIT_DFU_HISTOGRAM_HEIGHT = 5,
     // built/yt/yotta_modules/microbit-dal/inc/bluetooth/MicroBitEddystone.h
-    MICROBIT_BLE_EDDYSTONE_URL_ADV_INTERVAL = 400,
     // built/yt/yotta_modules/microbit-dal/inc/bluetooth/MicroBitEventService.h
     // built/yt/yotta_modules/microbit-dal/inc/bluetooth/MicroBitIOPinService.h
     MICROBIT_IO_PIN_SERVICE_PINCOUNT = 19,

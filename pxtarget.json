@@ -9,8 +9,7 @@
         "libs/core",
         "libs/radio",
         "libs/devices",
-        "libs/bluetooth",
-        "libs/eddystone"
+        "libs/bluetooth"
     ],
     "cloud": {
         "workspace": false,
@@ -163,7 +162,7 @@
         "yottaTarget": "bbc-microbit-classic-gcc",
         "yottaCorePackage": "microbit",
         "githubCorePackage": "lancaster-university/microbit",
-        "gittag": "v2.0.0-rc6",
+        "gittag": "v2.0.0-rc7",
         "serviceId": "microbit"
     },
     "serial": {

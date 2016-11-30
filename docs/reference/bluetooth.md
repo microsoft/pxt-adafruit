@@ -31,6 +31,13 @@ bluetooth.uartWriteNumber(0);
 bluetooth.uartWriteValue("", 0);
 ```
 
+## Eddystone
+
+```cards
+bluetooth.advertiseUrl("https://pxt.microbit.org/", 7);
+bluetooth.stopAdvertising();
+```
+
 ```package
 bluetooth
 ```
@@ -47,4 +54,7 @@ For more advanced information on the @boardname@ Bluetooth UART service includin
 [uartWriteString](/reference/bluetooth/uart-write-string), 
 [uartWriteNumber](/reference/bluetooth/uart-write-number), 
 [uartWriteValue](/reference/bluetooth/uart-write-value), 
-[onBluetoothConnected](/reference/bluetooth/on-bluetooth-connected), [onBluetoothDisconnected](/reference/bluetooth/on-bluetooth-disconnected)
+[onBluetoothConnected](/reference/bluetooth/on-bluetooth-connected), 
+[onBluetoothDisconnected](/reference/bluetooth/on-bluetooth-disconnected),
+[advertiseUrl](/reference/bluetooth/advertise-url),
+[stopAdvertising](/reference/bluetooth/stop-advertising)

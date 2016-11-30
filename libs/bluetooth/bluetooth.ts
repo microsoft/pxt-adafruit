@@ -46,4 +46,13 @@ namespace bluetooth {
         // dummy implementation for simulator
         return "???"
     }
+
+    //% shim=bluetooth::advertiseUrl
+    export function advertiseUrl(url: string, powerLevel: number) {
+    }
+
+    //% shim=bluetooth::stopAdvertising
+    export function stopAdvertising() {
+    }
+
 }

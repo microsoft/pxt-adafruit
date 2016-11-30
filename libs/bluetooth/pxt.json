@@ -25,7 +25,9 @@
                     "tx_power": 6,
                     "dfu_service": 1,
                     "event_service": 1,
-                    "device_info_service": 1
+                    "device_info_service": 1,
+                    "eddystone_url": 1,
+                    "eddystone_uid": 0
                 },
                 "gatt_table_size": "0x700"
             }

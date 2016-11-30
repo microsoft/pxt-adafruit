@@ -80,6 +80,24 @@ declare namespace bluetooth {
     //% blockId=bluetooth_on_disconnected block="on bluetooth disconnected"
     //% parts="bluetooth" shim=bluetooth::onBluetoothDisconnected
     function onBluetoothDisconnected(body: () => void): void;
+
+    /**
+     * Advertise an Eddystone URL
+     * @param url the url to transmit. Must be no longer than the supported eddystone url length
+     * @param power power level between 0 and 7, e.g.: 7
+     */
+    //% blockId=eddystone_advertise_url block="eddystone advertise url %url|power %powerLevel"
+    //% parts=bluetooth
+    //% help=bluetooth/advertise-url shim=bluetooth::advertiseUrl
+    function advertiseUrl(url: string, power: number): void;
+
+    /**
+     * Stops advertising Eddystone end points
+     */
+    //% blockId=eddystone_stop_advertising block="eddystone stop advertising"
+    //% parts=bluetooth
+    //% help=bluetooth/stop-advertising shim=bluetooth::stopAdvertising
+    function stopAdvertising(): void;
 }
 
 // Auto-generated. Do not edit. Really.

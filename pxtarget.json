@@ -167,7 +167,8 @@
             "[env:myenv]",
             "platform = atmelsam",
             "framework = arduino",
-            "board = mzeroUSB"
+            "board = mzeroUSB",
+            "build_flags = -Wl,--section-start=.text=0x2000"
         ],
         "buildEngine": "platformio",
         "serviceId": "circuitplayground"

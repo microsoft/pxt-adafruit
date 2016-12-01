@@ -6,6 +6,13 @@ namespace pins {
 
 }
 
+/**
+* Functions for playing audio / music
+*/
+//% color=#FF7D7D weight=75
+namespace music {
+}
+
 namespace Math {
     /**
      * Constrain

@@ -111,7 +111,7 @@ namespace pins
     //% blockId="arduino_digitalWrite" block="digital write %pin| to %state"
     void digitalWrite(Pin pin, int value)
     {
-        // ::digitalWrite(pin, value);
+        ::digitalWrite((uint32_t)pin, value);
     }
 
     /**

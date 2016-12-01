@@ -171,7 +171,7 @@ namespace pins
      */
     //% help=https://www.arduino.cc/en/Reference/PulseIn weight=91
     //% blockId="arduino_pulseIn" block="pulse in pin %pin| with state %state"
-    int pulseIn(Pin pin, int state, uint16_t timeout = 1000000) {
+    int pulseIn(Pin pin, int state, unsigned timeout = 1000000) {
 
     }
 
@@ -183,8 +183,8 @@ namespace pins
 
 
 
-    uint16_t makeWord(uint16_t w);
-uint16_t makeWord(byte h, byte l);
+    unsigned makeWord(unsigned w);
+unsigned makeWord(byte h, byte l);
 
 #define word(...) makeWord(__VA_ARGS__)
 
@@ -223,7 +223,7 @@ namespace music {
      */
     //% help=https://www.arduino.cc/en/Reference/Tone weight=90
     //% blockId="arduino_tone" block="tone on pin %pin| at frequency %frequency" icon="\uf025"
-    void tone(Pin pin, uint16_t frequency, uint16_t duration = 1000) {
+    void tone(Pin pin, unsigned frequency, unsigned duration = 1000) {
         
     }
 
@@ -253,7 +253,7 @@ namespace control
      */
     //% help=https://www.arduino.cc/en/Reference/Delay weight=91
     //% async blockId="arduino_delay" block="delay %ms| milliseconds"
-    void delay(uint16_t ms) {
+    void delay(unsigned ms) {
         ::delay(ms);
     }
 
@@ -265,7 +265,7 @@ namespace control
      */
     //% help=https://www.arduino.cc/en/Reference/DelayMicroseconds weight=91
     //% async blockId="arduino_delayMicroseconds" block="delay %ms| microseconds"
-    void delayMicroseconds(uint16_t us) {
+    void delayMicroseconds(unsigned us) {
         ::delayMicroseconds(us);
     }
 
@@ -277,7 +277,7 @@ namespace control
      */
     //% help=https://www.arduino.cc/en/Reference/Millis weight=91
     //% blockId="arduino_millis" block="millis" blockGap=8
-    uint16_t millis() {
+    unsigned millis() {
         return ::millis();
     }
 
@@ -288,7 +288,7 @@ namespace control
      */
     //% help=https://www.arduino.cc/en/Reference/Micros weight=91
     //% blockId="arduino_micros" block="micros" blockGap=8
-    uint16_t micros() {
+    unsigned micros() {
         return ::micros();
     }
 }

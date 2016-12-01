@@ -152,7 +152,7 @@ uint8_t taps() {
 */
 //% blockId="lightSensor" block="light level"
 //% weight=80
-uint16_t lightLevel()
+unsigned lightLevel()
 {
     return CircuitPlayground.lightSensor();
 }
@@ -176,7 +176,7 @@ int motion(MotionAxis axis) {
 */
 //% blockId="soundSensor" block="sound"
 //% weight=60
-uint16_t sound()
+unsigned sound()
 {
     return CircuitPlayground.soundSensor();
 }
@@ -198,7 +198,7 @@ boolean slideSwitch()
 */
 //% blockId="readCap" block="sense touch at pin %pin"
 //% weight=50
-uint16_t readCap(CapacityPin pin, uint16_t samples = 10)
+unsigned readCap(CapacityPin pin, unsigned samples = 10)
 {
     return CircuitPlayground.readCap((uint8_t)pin, samples);
 }
@@ -239,7 +239,7 @@ namespace music
 //% weight=50
 //% blockId=noteFrequency block="%note"
 //% shim=TD_ID
-uint16_t noteFrequency(Note note)
+unsigned noteFrequency(Note note)
 {
     return note;
 }
@@ -250,7 +250,7 @@ uint16_t noteFrequency(Note note)
 * @param time duration of tone in ms.
 */
 //% async blockId="playTone" block="play tone at|freq (Hz) %frequency=noteFrequency|for (ms) %time"
-void playTone(uint16_t frequency, uint16_t time = 250)
+void playTone(unsigned frequency, unsigned time = 250)
 {
     CircuitPlayground.playTone(frequency, time);
 }
@@ -292,7 +292,7 @@ void setPixelColor(uint8_t p, uint32_t c)
 */
 //% weight=85 blockGap=8
 //% blockId="setPixelColorRgb" block="set pixel %p|to color %c=pixelcolor"
-void setPixelColorRgb(uint8_t p, uint16_t r, uint16_t g, uint16_t b)
+void setPixelColorRgb(uint8_t p, unsigned r, unsigned g, unsigned b)
 {
     CircuitPlayground.setPixelColor(p, r, g, b);
 }
@@ -317,7 +317,7 @@ void setStripPixelColor(uint8_t p, uint32_t c)
 //% weight=7 blockGap=8
 //% blockId="setStripPixelColorRgb" block="set strip pixel %p|to color %c=pixelcolor"
 //% advanced=true
-void setStripPixelColorRgb(int p, uint16_t r, uint16_t g, uint16_t b)
+void setStripPixelColorRgb(int p, unsigned r, unsigned g, unsigned b)
 {
     CircuitPlayground.strip.setPixelColor(p, CircuitPlayground.strip.Color(r, g, b));
 }
@@ -350,7 +350,7 @@ void clearPixels()
 //% weight=80
 //% blockId="setBrightness" block="set brightness %b"
 //% advanced=true
-void setBrightness(uint16_t brightness)
+void setBrightness(unsigned brightness)
 {
     CircuitPlayground.setBrightness(brightness);
 }
@@ -374,7 +374,7 @@ void setPixelColorWheel(int p, uint8_t w)
 */
 //% blockId="rotate" block="rotate pixels by %offset"
 //% weight=95
-void rotate(uint16_t number = 1, boolean reverse = false) {
+void rotate(unsigned number = 1, boolean reverse = false) {
 
 }
 
@@ -415,7 +415,7 @@ namespace serial {
 * Serial print
 */
 //% 
-void print(uint16_t code) {
+void print(unsigned code) {
     Serial.println(code);
 }
 }

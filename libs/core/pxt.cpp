@@ -1,12 +1,10 @@
 #include "pxt.h"
-#include "RefCounted.h"
-#include <Arduino.h>
+#include <map>
 
-#define BYTECODE_WORD(off)  pgm_read_word_near(bytecode + off)
+//MicroBit uBit;
 
 namespace pxt {
-  
-    int incr(uint16_t e)
+    int incr(uint32_t e)
     {
       if (e) {
         if (hasVTable(e))
@@ -17,7 +15,7 @@ namespace pxt {
       return e;
     }
 
-    void decr(uint16_t e)
+    void decr(uint32_t e)
     {
       if (e) {
         if (hasVTable(e))
@@ -27,7 +25,6 @@ namespace pxt {
       }
     }
 
-/*
     Action mkAction(int reflen, int totallen, int startptr)
     {
       check(0 <= reflen && reflen <= totallen, ERR_SIZE, 1);
@@ -35,58 +32,47 @@ namespace pxt {
       check(bytecode[startptr] == 0xffff, ERR_INVALID_BINARY_HEADER, 3);
       check(bytecode[startptr + 1] == 0, ERR_INVALID_BINARY_HEADER, 4);
 
-      uint16_t tmp = (uint16_t)&bytecode[startptr];
+      uint32_t tmp = (uint32_t)&bytecode[startptr];
 
       if (totallen == 0) {
         return tmp; // no closure needed
       }
 
-      void *ptr = ::operator new(sizeof(RefAction) + totallen * sizeof(uint16_t));
+      void *ptr = ::operator new(sizeof(RefAction) + totallen * sizeof(uint32_t));
       RefAction *r = new (ptr) RefAction();
       r->len = totallen;
       r->reflen = reflen;
-      r->func = (ActionCB)((tmp + 4));
-      memset(r->fields, 0, r->len * sizeof(uint16_t));
+      r->func = (ActionCB)((tmp + 4) | 1);
+      memset(r->fields, 0, r->len * sizeof(uint32_t));
 
       return (Action)r;
     }
-*/
 
-    uint16_t runAction3(Action a, int arg0, int arg1, int arg2)
+    uint32_t runAction3(Action a, int arg0, int arg1, int arg2)
     {
-      // if (hasVTable(a))
-      //  return ((RefAction*)a)->runCore(arg0, arg1, arg2);
-      // else {
+      if (hasVTable(a))
+        return ((RefAction*)a)->runCore(arg0, arg1, arg2);
+      else {
         check(*(uint16_t*)a == 0xffff, ERR_INVALID_BINARY_HEADER, 4);
-        return ((ActionCB)((a + 4)))(NULL, arg0, arg1, arg2);
-      //}
+        return ((ActionCB)((a + 4) | 1))(NULL, arg0, arg1, arg2);
+      }
     }
 
-    uint16_t runAction2(Action a, int arg0, int arg1)
+    uint32_t runAction2(Action a, int arg0, int arg1)
     {
       return runAction3(a, arg0, arg1, 0);
     }
 
-    uint16_t runAction1(Action a, int arg0)
+    uint32_t runAction1(Action a, int arg0)
     {
       return runAction3(a, arg0, 0, 0);
     }
 
-    uint16_t runAction0(Action a)
+    uint32_t runAction0(Action a)
     {
       return runAction3(a, 0, 0, 0);
     }
 
-    void RefObject::destroy() {
-      ((RefObjectMethod)getVTable()->methods[0])(this);
-      delete this;
-    }
-
-    void RefObject::print() {
-      ((RefObjectMethod)getVTable()->methods[1])(this);
-    }
-
-/*
     RefRecord* mkClassInstance(int vtableOffset)
     {
       VTable *vtable = (VTable*)&bytecode[vtableOffset];
@@ -100,33 +86,42 @@ namespace pxt {
       return r;
     }
 
-    uint16_t RefRecord::ld(int idx)
+    uint32_t RefRecord::ld(int idx)
     {
       //intcheck((reflen == 255 ? 0 : reflen) <= idx && idx < len, ERR_OUT_OF_BOUNDS, 1);
       return fields[idx];
     }
 
-    uint16_t RefRecord::ldref(int idx)
+    uint32_t RefRecord::ldref(int idx)
     {
       //printf("LD %p len=%d reflen=%d idx=%d\n", this, len, reflen, idx);
       //intcheck(0 <= idx && idx < reflen, ERR_OUT_OF_BOUNDS, 2);
-      uint16_t tmp = fields[idx];
+      uint32_t tmp = fields[idx];
       incr(tmp);
       return tmp;
     }
 
-    void RefRecord::st(int idx, uint16_t v)
+    void RefRecord::st(int idx, uint32_t v)
     {
       //intcheck((reflen == 255 ? 0 : reflen) <= idx && idx < len, ERR_OUT_OF_BOUNDS, 3);
       fields[idx] = v;
     }
 
-    void RefRecord::stref(int idx, uint16_t v)
+    void RefRecord::stref(int idx, uint32_t v)
     {
       //printf("ST %p len=%d reflen=%d idx=%d\n", this, len, reflen, idx);
       //intcheck(0 <= idx && idx < reflen, ERR_OUT_OF_BOUNDS, 4);
       decr(fields[idx]);
       fields[idx] = v;
+    }
+
+    void RefObject::destroy() {
+      ((RefObjectMethod)getVTable()->methods[0])(this);
+      delete this;
+    }
+
+    void RefObject::print() {
+      ((RefObjectMethod)getVTable()->methods[1])(this);
     }
 
     void RefRecord_destroy(RefRecord *r) {
@@ -144,14 +139,14 @@ namespace pxt {
       printf("RefRecord %p r=%d size=%d bytes\n", r, r->refcnt, r->getVTable()->numbytes);
     }
 
-    void RefCollection::push(uint16_t x) {
+    void RefCollection::push(uint32_t x) {
       if (isRef()) incr(x);
       data.push_back(x);
     }
 
-    uint16_t RefCollection::getAt(int x) {
+    uint32_t RefCollection::getAt(int x) {
       if (in_range(x)) {
-        uint16_t tmp = data.at(x);
+        uint32_t tmp = data.at(x);
         if (isRef()) incr(tmp);
         return tmp;
       }
@@ -169,7 +164,7 @@ namespace pxt {
       data.erase(data.begin()+x);
     }
 
-    void RefCollection::setAt(int x, uint16_t y) {
+    void RefCollection::setAt(int x, uint32_t y) {
       if (!in_range(x))
         return;
 
@@ -180,19 +175,19 @@ namespace pxt {
       data.at(x) = y;
     }
 
-    int RefCollection::indexOf(uint16_t x, int start) {
+    int RefCollection::indexOf(uint32_t x, int start) {
       if (!in_range(start))
         return -1;
 
       if (isString()) {
         StringData *xx = (StringData*)x;
-        for (uint16_t i = start; i < data.size(); ++i) {
+        for (uint32_t i = start; i < data.size(); ++i) {
           StringData *ee = (StringData*)data.at(i);
           if (xx->len == ee->len && memcmp(xx->data, ee->data, xx->len) == 0)
             return (int)i;
         }
       } else {
-        for (uint16_t i = start; i < data.size(); ++i)
+        for (uint32_t i = start; i < data.size(); ++i)
           if (data.at(i) == x)
             return (int)i;
       }
@@ -200,7 +195,7 @@ namespace pxt {
       return -1;
     }
 
-    int RefCollection::removeElement(uint16_t x) {
+    int RefCollection::removeElement(uint32_t x) {
       int idx = indexOf(x, 0);
       if (idx >= 0) {
         removeAt(idx);
@@ -242,7 +237,7 @@ namespace pxt {
     void RefCollection::destroy()
     {
       if (this->isRef())
-        for (uint16_t i = 0; i < this->data.size(); ++i) {
+        for (uint32_t i = 0; i < this->data.size(); ++i) {
           decr(this->data[i]);
           this->data[i] = 0;
         }
@@ -311,7 +306,7 @@ namespace pxt {
       data.resize(0);
     }
 
-    int RefMap::findIdx(uint16_t key) {
+    int RefMap::findIdx(uint32_t key) {
       for (unsigned i = 0; i < data.size(); ++i) {
         if (data[i].key >> 1 == key)
           return i;
@@ -340,79 +335,100 @@ namespace pxt {
   void debugMemLeaks() {}
 #endif
 
-*/
+#if 0
+
+    // ---------------------------------------------------------------------------
+    // An adapter for the API expected by the run-time.
+    // ---------------------------------------------------------------------------
+
+    map<pair<int, int>, Action> handlersMap;
+    
+    MicroBitEvent lastEvent;
+
+    // We have the invariant that if [dispatchEvent] is registered against the DAL
+    // for a given event, then [handlersMap] contains a valid entry for that
+    // event.
+    void dispatchEvent(MicroBitEvent e) {
+      
+      lastEvent = e;
+      
+      Action curr = handlersMap[{ e.source, e.value }];
+      if (curr)
+        runAction1(curr, e.value);
+
+      curr = handlersMap[{ e.source, MICROBIT_EVT_ANY }];
+      if (curr)
+        runAction1(curr, e.value);
+    }
+
+    void registerWithDal(int id, int event, Action a) {
+      Action prev = handlersMap[{ id, event }];
+      if (prev)
+        decr(prev);
+      else
+        uBit.messageBus.listen(id, event, dispatchEvent);
+      incr(a);
+      handlersMap[{ id, event }] = a;
+    }
+
+    void fiberDone(void *a)
+    {
+      decr((Action)a);
+      release_fiber();
+    }
+
+
+    void runInBackground(Action a) {
+      if (a != 0) {
+        incr(a);
+        create_fiber((void(*)(void*))runAction0, (void*)a, fiberDone);
+      }
+    }
+  #endif
 
   void error(ERROR code, int subcode)
   {
-    Serial.print("Error: ");
-    Serial.print(code);
-    Serial.print(" [");
-    Serial.print(subcode);
-    Serial.println("]");
-    panic(42);
+    printf("Error: %d [%d]\n", code, subcode);
+    microbit_panic(42);
   }
 
   uint16_t *bytecode;
-  uint16_t *globals;
+  uint32_t *globals;
   int numGlobals;
 
-  uint16_t *allocate(uint16_t sz)
+  uint32_t *allocate(uint16_t sz)
   {
-    uint16_t *arr = (uint16_t*)malloc(sz);
-    memset(arr, 0, sz);
+    uint32_t *arr = new uint32_t[sz];
+    memset(arr, 0, sz * 4);
     return arr;
   }
 
-  void assert(bool cond, uint16_t code) {
-    if (!cond) {
-      Serial.print("assert failed: ");
-      Serial.println(code);
-      panic(100);
-    }
-  }
-
-  void panic(int code)
-  {
-    Serial.print("Panic! Code: ");
-    Serial.println(code);
-    // TODO
-    /*
-    for (;;) {
-      for (int i = 0; i < 10; ++i)
-        CircuitPlayground.setPixelColor(i, 255, 0, 0);
-      delay(500);
-      for (int i = 0; i < 10; ++i)
-        CircuitPlayground.setPixelColor(i, 0, 0, 255);
-      delay(500);
-    }*/
-  }
-
-  void checkStr(bool cond, const char *msg, uint16_t ver)
+  void checkStr(bool cond, const char *msg)
   {
     if (!cond) {
-      Serial.print("checkStr() failed: ");
-      Serial.println(msg);
-      Serial.println(ver);
-      panic(100);
+      while (true) {
+        //uBit.display.scroll(msg, 100);
+        //uBit.sleep(100);
+      }
     }
   }
 
   int templateHash()
   {
-    return BYTECODE_WORD(8);
+    return ((int*)bytecode)[4];
   }
 
   int programHash()
   {
-    return  BYTECODE_WORD(12);
+    return ((int*)bytecode)[6];
   }
 
   int getNumGlobals()
   {
-    return BYTECODE_WORD(16);
+    return bytecode[16];
   }
 
-  void exec_binary(int16_t *pc)
+  void exec_binary(int32_t *pc)
   {
     // XXX re-enable once the calibration code is fixed and [editor/embedded.ts]
     // properly prepends a call to [internal_main].
@@ -422,34 +438,24 @@ namespace pxt {
     // ::touch_develop::micro_bit::radioDefaultGroup = programHash();
     
     // repeat error 4 times and restart as needed
-    // microbit_panic_timeout(4);
-
-    delay(3000); // delay on start, so we have time to connect serial after flashing
-
-    Serial.begin(9600);
-
-    // TODO
-    // CircuitPlayground.begin();
+    //microbit_panic_timeout(4);
     
-    Serial.println("Start exec_binary()");
-    
-    #define PC(x)  pgm_read_word_near(pc + x)
+    int32_t ver = *pc++;
+    checkStr(ver == 0x4209, ":( Bad runtime version");
 
-    int16_t ver = PC(0);
-    checkStr(ver == 0x4209, ":( Bad runtime version", ver);
+    bytecode = *((uint16_t**)pc++);  // the actual bytecode is here
+    globals = allocate(getNumGlobals());
 
-    bytecode = (uint16_t*)PC(2);  // the actual bytecode is here
-    globals = allocate((uint16_t)numGlobals<<2);
     // just compare the first word
-    checkStr(BYTECODE_WORD(0) == 0x8E70 &&
-             (uint16_t)templateHash() == (uint16_t)PC(4),
-             ":( Failed partial flash",0);
+    checkStr(((uint32_t*)bytecode)[0] == 0x923B8E70 &&
+             templateHash() == *pc,
+             ":( Failed partial flash");
 
-    // panic(7);
     uint32_t startptr = (uint32_t)bytecode;
-    startptr += 48; // header    
-    startptr >>= 1;
-    ((uint16_t (*)())startptr)();
+    startptr += 48; // header
+    startptr |= 1; // Thumb state
+
+    ((uint32_t (*)())startptr)();
 
 #ifdef DEBUG_MEMLEAKS
     pxt::debugMemLeaks();
@@ -460,9 +466,13 @@ namespace pxt {
 
   void start()
   {
-    exec_binary((int16_t*)functionsAndBytecode);
+    exec_binary((int32_t*)functionsAndBytecode);
   }
 
 }  
+
+  void microbit_panic(int code) {
+    while(1){}
+  }
 
 // vim: ts=2 sw=2 expandtab

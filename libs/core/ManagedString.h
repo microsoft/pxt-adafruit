@@ -26,7 +26,9 @@ DEALINGS IN THE SOFTWARE.
 #ifndef MANAGED_STRING_H
 #define MANAGED_STRING_H
 
+//#include "MicroBitConfig.h"
 #include "RefCounted.h"
+//#include "PacketBuffer.h"
 
 struct StringData : RefCounted
 {
@@ -125,6 +127,19 @@ class ManagedString
       * @endcode
       */
     ManagedString(const char value);
+
+    /**
+      * Constructor.
+      * Create a ManagedString from a PacketBuffer. All bytes in the
+      * PacketBuffer are added to the ManagedString.
+      *
+      * @param buffer The PacktBuffer from which to create the ManagedString.
+      *
+      * @code
+      * ManagedString s = radio.datagram.recv();
+      * @endcode
+      */
+    //ManagedString(PacketBuffer buffer);
 
     /**
       * Constructor.

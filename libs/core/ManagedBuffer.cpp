@@ -1,9 +1,6 @@
-
+//#include "MicroBit.h"
 #include "ManagedBuffer.h"
 #include <limits.h>
-
-#define MICROBIT_OK 0
-#define MICROBIT_INVALID_PARAMETER -1001
 
 static const char empty[] __attribute__ ((aligned (4))) = "\xff\xff\0\0\0";
 

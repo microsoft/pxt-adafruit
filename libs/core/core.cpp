@@ -1,7 +1,5 @@
-#include "ksbit.h"
+#include "pxt.h"
 #include <limits.h>
-
-#include <Arduino.h>
 
 
 namespace String_ {
@@ -109,16 +107,6 @@ namespace Number_ {
     int div(int x, int y) { return x / y; }
     //%
     int mod(int x, int y) { return x % y; }
-
-    // AVR: more helpers to reduce code size
-    //%
-    int muls(int x, int y) { return x * y; }
-    //%
-    int asrs(int x, int y) { return x >> y; }
-    //%
-    int lsrs(uint16_t x, uint16_t y) { return x >> y; }
-    //%
-    int lsls(int x, int y) { return x << y; }
 }
 
 namespace Math_ {
@@ -136,17 +124,17 @@ namespace Math_ {
       }
       return r;
     }
-
+    
     //%
     int random(int max) {
       if (max == INT_MIN)
-        return -::random(INT_MAX);
+        return -microbit_random(INT_MAX);
       else if (max < 0)
-        return -::random(-max);
+        return -microbit_random(-max);
       else if (max == 0)
         return 0;
       else
-        return ::random(max);    
+        return microbit_random(max);
     }
     
     //%
@@ -160,56 +148,52 @@ namespace Array_ {
     //%
     RefCollection *mk(uint32_t flags)
     {
-      return 0;
+      return new RefCollection(flags);
     }
     //%
-    int length(RefCollection *c) { return 0; }
+    int length(RefCollection *c) { return c->length(); }
     //%
-    void push(RefCollection *c, uint32_t x) { }
+    void push(RefCollection *c, uint32_t x) { c->push(x); }
     //%
-    uint32_t getAt(RefCollection *c, int x) { return 0; }
+    uint32_t getAt(RefCollection *c, int x) { return c->getAt(x); }
     //%
-    void removeAt(RefCollection *c, int x) {  }
+    void removeAt(RefCollection *c, int x) { c->removeAt(x); }
     //%
-    void setAt(RefCollection *c, int x, uint32_t y) {  }
+    void setAt(RefCollection *c, int x, uint32_t y) { c->setAt(x, y); }
     //%
-    int indexOf(RefCollection *c, uint32_t x, int start) { return 0; }
+    int indexOf(RefCollection *c, uint32_t x, int start) { return c->indexOf(x, start); }
     //%
-    int removeElement(RefCollection *c, uint32_t x) { return 0; }
+    int removeElement(RefCollection *c, uint32_t x) { return c->removeElement(x); }
 }
+
 
 // Import some stuff directly
 namespace pxt {
+  
   //%
-  void registerWithDal(int id, int event, Action a) { }
+  uint32_t runAction3(Action a, int arg0, int arg1, int arg2);
   //%
-  uint16_t runAction3(Action a, int arg0, int arg1, int arg2);
+  uint32_t runAction2(Action a, int arg0, int arg1);
   //%
-  uint16_t runAction2(Action a, int arg0, int arg1);
+  uint32_t runAction1(Action a, int arg0);
   //%
-  uint16_t runAction1(Action a, int arg0);
+  uint32_t runAction0(Action a);
   //%
-  uint16_t runAction0(Action a);
+  Action mkAction(int reflen, int totallen, int startptr);
   //%
-  Action mkAction(int reflen, int totallen, int startptr) { panic(51); return 0; }
+  RefRecord* mkClassInstance(int offset);
   //%
-  RefRecord* mkClassInstance(int offset) { panic(51); return 0; }
+  void RefRecord_destroy(RefRecord *r);
   //%
-  void RefRecord_destroy(RefRecord *r) { panic(51); }
+  void RefRecord_print(RefRecord *r);
   //%
-  void RefRecord_print(RefRecord *r) { panic(51); }
+  void debugMemLeaks();
   //%
-  void debugMemLeaks() { panic(51); }
-}
-
-// Import some stuff directly
-namespace pxt {
+  int incr(uint32_t e);
   //%
-  int incr(uint16_t e);
+  void decr(uint32_t e);
   //%
-  void decr(uint16_t e);
-  //%
-  uint16_t *allocate(uint16_t sz);
+  uint32_t *allocate(uint16_t sz);
   //%
   int templateHash();
   //%
@@ -218,9 +202,21 @@ namespace pxt {
   void *ptrOfLiteral(int offset);
   //%
   int getNumGlobals();
+
+  //%
+  uint32_t programSize() {
+    return bytecode[17] * 2;
+  }
+
+  //%
+  uint32_t afterProgramPage() {
+    uint32_t ptr = (uint32_t)&bytecode[0];
+    ptr += programSize();
+    ptr = (ptr + (PAGE_SIZE - 1)) & ~(PAGE_SIZE - 1);
+    return ptr;
+  }
 }
 
-#if 0
 namespace pxtrt {
   //%
   uint32_t ldloc(RefLocal *r) {
@@ -292,21 +288,11 @@ namespace pxtrt {
     a->stCore(idx, v);
     return a;
   }
-}
-#endif
 
-namespace pxtrt {
-  
   //%
   void panic(int code)
   {
-    pxt::panic(code);
-  }
-
-  //%
-  void assert(bool cond, uint16_t code)
-  {
-    pxt::assert(cond, code);
+    microbit_panic(code);
   }
 
   //%
@@ -336,10 +322,6 @@ namespace pxtrt {
       return 0;
     }
   }
-}
-
-#if 0
-namespace pxtrt {
 
   //%
   RefMap *mkMap() {
@@ -406,10 +388,6 @@ namespace pxtrt {
     }
     map->unref();      
   }
-}
-#endif
-
-namespace pxtrt {
 
   //
   // Debugger

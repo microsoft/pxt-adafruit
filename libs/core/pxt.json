@@ -4,6 +4,7 @@
     "files": [
         "README.md",
         "pxt-core.d.ts",
+        "MicroBitGlue.h",
         "ManagedBuffer.cpp",
         "ManagedBuffer.h",
         "ManagedString.cpp",

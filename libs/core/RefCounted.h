@@ -26,7 +26,11 @@ DEALINGS IN THE SOFTWARE.
 #ifndef REF_COUNTED_H
 #define REF_COUNTED_H
 
-#include "Arduino.h"
+//#include "mbed.h"
+//#include "MicroBitConfig.h"
+//#include "MicroBitDevice.h"
+
+#include "MicroBitGlue.h"
 
 /**
   * Base class for payload for ref-counted objects. Used by ManagedString and MicroBitImage.

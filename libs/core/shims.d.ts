@@ -130,7 +130,7 @@ declare namespace pins {
      */
     //% help=https://www.arduino.cc/en/Reference/PulseIn weight=91
     //% blockId="arduino_pulseIn" block="pulse in pin %pin| with state %state" timeout.defl=1000000 shim=pins::pulseIn
-    function pulseIn(pin: Pin, state: number, timeout?: uint16): number;
+    function pulseIn(pin: Pin, state: number, timeout?: unsigned): number;
 }
 declare namespace math {
 
@@ -158,7 +158,7 @@ declare namespace music {
      */
     //% help=https://www.arduino.cc/en/Reference/Tone weight=90
     //% blockId="arduino_tone" block="tone on pin %pin| at frequency %frequency" icon="\uf025" duration.defl=1000 shim=music::tone
-    function tone(pin: Pin, frequency: uint16, duration?: uint16): void;
+    function tone(pin: Pin, frequency: unsigned, duration?: unsigned): void;
 
     /**
      * No tone
@@ -185,7 +185,7 @@ declare namespace control {
      */
     //% help=https://www.arduino.cc/en/Reference/Delay weight=91
     //% async blockId="arduino_delay" block="delay %ms| milliseconds" shim=control::delay
-    function delay(ms: uint16): void;
+    function delay(ms: unsigned): void;
 
     /**
      * Delay
@@ -195,7 +195,7 @@ declare namespace control {
      */
     //% help=https://www.arduino.cc/en/Reference/DelayMicroseconds weight=91
     //% async blockId="arduino_delayMicroseconds" block="delay %ms| microseconds" shim=control::delayMicroseconds
-    function delayMicroseconds(us: uint16): void;
+    function delayMicroseconds(us: unsigned): void;
 
     /**
      * Millis
@@ -204,7 +204,7 @@ declare namespace control {
      */
     //% help=https://www.arduino.cc/en/Reference/Millis weight=91
     //% blockId="arduino_millis" block="millis" blockGap=8 shim=control::millis
-    function millis(): uint16;
+    function millis(): unsigned;
 
     /**
      * Millis
@@ -213,7 +213,7 @@ declare namespace control {
      */
     //% help=https://www.arduino.cc/en/Reference/Micros weight=91
     //% blockId="arduino_micros" block="micros" blockGap=8 shim=control::micros
-    function micros(): uint16;
+    function micros(): unsigned;
 }
 
 // Auto-generated. Do not edit. Really.

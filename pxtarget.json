@@ -154,6 +154,7 @@
         "useUF2": true,
         "hasHex": true,
         "deployDrives": "(ADAFRUIT|METRO)",
+        "deployFileMarker": "INFO_UF2.TXT",
         "driveName": "ADAFRUIT"
     },
     "runtime": {

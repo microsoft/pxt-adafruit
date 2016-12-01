@@ -151,7 +151,6 @@
     },
     "compile": {
         "isNative": true,
-        "nativeType": "AVR",
         "hasHex": true,
         "deployDrives": "ADAFRUIT",
         "driveName": "ADAFRUIT"
@@ -165,9 +164,9 @@
     "compileService": {
         "platformioIni": [
             "[env:myenv]",
-            "platform = atmelavr",
+            "platform = atmelsam",
             "framework = arduino",
-            "board = feather32u4"
+            "board = zero"
         ],
         "buildEngine": "platformio",
         "serviceId": "circuitplayground"

@@ -166,7 +166,7 @@
             "[env:myenv]",
             "platform = atmelsam",
             "framework = arduino",
-            "board = zero"
+            "board = adafruit_feather_m0_usb"
         ],
         "buildEngine": "platformio",
         "serviceId": "circuitplayground"

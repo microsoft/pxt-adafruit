@@ -71,19 +71,6 @@ enum class PulseValue
     PULSE_LOW = 0
 };
 
-enum class PinType
-{
-    PIN_EXTERNAL = 0,
-    PIN_DEFAULT = 1,
-    PIN_INTERNAL = 3
-    /*
-    Values are different for each board:
-    INTERNAL1V1
-    INTERNAL2V56
-    INTERNAL2V56_EXTCAP
-    */
-};
-
 /**
 * Arduino pin functions
 */

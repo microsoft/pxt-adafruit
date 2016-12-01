@@ -395,12 +395,12 @@ namespace pxt {
     }
   }
 
-  int16_t templateHash()
+  int templateHash()
   {
     return BYTECODE_WORD(8);
   }
 
-  int16_t programHash()
+  int programHash()
   {
     return  BYTECODE_WORD(12);
   }
@@ -440,30 +440,15 @@ namespace pxt {
     checkStr(ver == 0x4209, ":( Bad runtime version", ver);
 
     bytecode = (uint16_t*)PC(2);  // the actual bytecode is here
-        Serial.print("bytecode = ");
-    Serial.println((uint16_t)bytecode);
-
-    Serial.print("Allocating globals:");
-    Serial.println(numGlobals = getNumGlobals());
-
     globals = allocate((uint16_t)numGlobals<<2);
-
-    Serial.print("Globals allocated at =");
-    Serial.println((uint16_t)globals);
-
-
     // just compare the first word
     checkStr(BYTECODE_WORD(0) == 0x8E70 &&
              (uint16_t)templateHash() == (uint16_t)PC(4),
              ":( Failed partial flash",0);
 
     // panic(7);
-    uint16_t startptr = (uint16_t)bytecode;
-    startptr += 48; // header
-    
-    Serial.print("startptr = ");
-    Serial.println((uint16_t)startptr);
-
+    uint32_t startptr = (uint32_t)bytecode;
+    startptr += 48; // header    
     startptr >>= 1;
     ((uint16_t (*)())startptr)();
 

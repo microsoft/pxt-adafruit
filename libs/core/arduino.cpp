@@ -109,9 +109,9 @@ namespace pins
     */
     //% help=https://www.arduino.cc/en/Reference/DigitalWrite
     //% blockId="arduino_digitalWrite" block="digital write %pin| to %state"
-    void digitalWrite(Pin pin, PulseValue value)
+    void digitalWrite(Pin pin, int value)
     {
-        //::digitalWrite(pin, value);
+        // ::digitalWrite(pin, value);
     }
 
     /**
@@ -121,9 +121,9 @@ namespace pins
     */
     //% help=https://www.arduino.cc/en/Reference/DigitalRead
     //% blockId="arduino_digitalRead" block="digital read pin %pin"
-    PulseValue digitalRead(Pin pin)
+    int digitalRead(Pin pin)
     {
-
+        // ::digitalRead()
     }
 
 
@@ -147,8 +147,7 @@ namespace pins
      */
     //% help=https://www.arduino.cc/en/Reference/AnalogRead weight=91
     //% blockId="arduino_analogRead" block="analog read pin %pin"
-    PulseValue analogRead(Pin pin) {
-
+    int analogRead(Pin pin) {
     }
 
     /**
@@ -172,7 +171,7 @@ namespace pins
      */
     //% help=https://www.arduino.cc/en/Reference/PulseIn weight=91
     //% blockId="arduino_pulseIn" block="pulse in pin %pin| with state %state"
-    int pulseIn(Pin pin, PulseValue state, uint16_t timeout = 1000000) {
+    int pulseIn(Pin pin, int state, uint16_t timeout = 1000000) {
 
     }
 
@@ -197,21 +196,6 @@ namespace math {
     /**
      * Random
      * The random function generates pseudo-random numbers.
-     * @param max upper bound of the random value, exclusive, eg: 10
-     * @returns a random number between min and max-1
-     */
-    //% help=https://www.arduino.cc/en/Reference/RandomSeed weight=91
-    //% blockId="arduino_randomMax" block="random with max %max" icon="\uf1ec"
-    int random(int max) {
-        if (max == 0) {
-            return 0;
-        }
-        return ::random() % max;
-    }
-
-    /**
-     * Random
-     * The random function generates pseudo-random numbers.
      * @param min lower bound of the random value, inclusive, eg: 0
      * @param max upper bound of the random value, exclusive, eg: 10
      * @returns a random number between min and max-1
@@ -224,20 +208,6 @@ namespace math {
         }
         int diff = max - min;
         return ::random(diff) + min;
-    }
-
-    /**
-     * Random Seed
-     * Initializes the pseudo-random number generator, 
-     * causing it to start at an arbitrary point in its random sequence. This sequence, while very int, and random, is always the same.
-     * @param seed a number to generate the seed.
-     */
-    //% help=https://www.arduino.cc/en/Reference/RandomSeed weight=91
-    //% blockId="arduino_randomSeed" block="random seed %seed" icon="\uf1ec"
-    void randomSeed(int seed) {
-        if (seed != 0) {
-            srandom(seed);
-        }
     }
 }
 

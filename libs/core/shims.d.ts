@@ -257,7 +257,7 @@ declare namespace pins {
      */
     //% help=https://www.arduino.cc/en/Reference/DigitalWrite
     //% blockId="arduino_digitalWrite" block="digital write %pin| to %state" shim=pins::digitalWrite
-    function digitalWrite(pin: Pin, value: PulseValue): void;
+    function digitalWrite(pin: Pin, value: number): void;
 
     /**
      * Digital Read
@@ -266,7 +266,7 @@ declare namespace pins {
      */
     //% help=https://www.arduino.cc/en/Reference/DigitalRead
     //% blockId="arduino_digitalRead" block="digital read pin %pin" shim=pins::digitalRead
-    function digitalRead(pin: Pin): PulseValue;
+    function digitalRead(pin: Pin): number;
 
     /**
      * Analog Write
@@ -286,7 +286,7 @@ declare namespace pins {
      */
     //% help=https://www.arduino.cc/en/Reference/AnalogRead weight=91
     //% blockId="arduino_analogRead" block="analog read pin %pin" shim=pins::analogRead
-    function analogRead(pin: Pin): PulseValue;
+    function analogRead(pin: Pin): number;
 
     /**
      * Analog Reference
@@ -307,19 +307,9 @@ declare namespace pins {
      */
     //% help=https://www.arduino.cc/en/Reference/PulseIn weight=91
     //% blockId="arduino_pulseIn" block="pulse in pin %pin| with state %state" timeout.defl=1000000 shim=pins::pulseIn
-    function pulseIn(pin: Pin, state: PulseValue, timeout?: uint16): number;
+    function pulseIn(pin: Pin, state: number, timeout?: uint16): number;
 }
 declare namespace math {
-
-    /**
-     * Random
-     * The random function generates pseudo-random numbers.
-     * @param max upper bound of the random value, exclusive, eg: 10
-     * @returns a random number between min and max-1
-     */
-    //% help=https://www.arduino.cc/en/Reference/RandomSeed weight=91
-    //% blockId="arduino_randomMax" block="random with max %max" icon="\uf1ec" shim=math::random
-    function random(max: number): number;
 
     /**
      * Random
@@ -331,16 +321,6 @@ declare namespace math {
     //% help=https://www.arduino.cc/en/Reference/RandomSeed weight=91
     //% blockId="arduino_randomMinMax" block="random between %min| and %max" icon="\uf1ec" shim=math::randomMinMax
     function randomMinMax(min: number, max: number): number;
-
-    /**
-     * Random Seed
-     * Initializes the pseudo-random number generator, 
-     * causing it to start at an arbitrary point in its random sequence. This sequence, while very int, and random, is always the same.
-     * @param seed a number to generate the seed.
-     */
-    //% help=https://www.arduino.cc/en/Reference/RandomSeed weight=91
-    //% blockId="arduino_randomSeed" block="random seed %seed" icon="\uf1ec" shim=math::randomSeed
-    function randomSeed(seed: number): void;
 }
 declare namespace music {
 

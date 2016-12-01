@@ -1,7 +1,7 @@
 #include "ksbit.h"
 #include <limits.h>
 
-#include <Adafruit_CircuitPlayground.h>
+#include <Arduino.h>
 
 
 namespace String_ {

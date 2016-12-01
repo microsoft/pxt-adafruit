@@ -1,6 +1,6 @@
 #include "pxt.h"
 #include "RefCounted.h"
-#include <Adafruit_CircuitPlayground.h>
+#include <Arduino.h>
 
 #define BYTECODE_WORD(off)  pgm_read_word_near(bytecode + off)
 
@@ -375,6 +375,8 @@ namespace pxt {
   {
     Serial.print("Panic! Code: ");
     Serial.println(code);
+    // TODO
+    /*
     for (;;) {
       for (int i = 0; i < 10; ++i)
         CircuitPlayground.setPixelColor(i, 255, 0, 0);
@@ -382,7 +384,7 @@ namespace pxt {
       for (int i = 0; i < 10; ++i)
         CircuitPlayground.setPixelColor(i, 0, 0, 255);
       delay(500);
-    }
+    }*/
   }
 
   void checkStr(bool cond, const char *msg, uint16_t ver)
@@ -410,10 +412,6 @@ namespace pxt {
     return BYTECODE_WORD(16);
   }
 
-  void redLED_test(boolean on) {
-    CircuitPlayground.redLED(on);
-  }
-
   void exec_binary(int16_t *pc)
   {
     // XXX re-enable once the calibration code is fixed and [editor/embedded.ts]
@@ -430,7 +428,8 @@ namespace pxt {
 
     Serial.begin(9600);
 
-    CircuitPlayground.begin();
+    // TODO
+    // CircuitPlayground.begin();
     
     Serial.println("Start exec_binary()");
     

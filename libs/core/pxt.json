@@ -19,16 +19,9 @@
         "shims.d.ts",
         "enums.d.ts",
         "control.ts",
-        "wrap.cpp",
-        "wrap.ts",
         "arduino.cpp",
         "arduino.ts"
     ],
     "public": true,
-    "platformio": {
-        "dependencies": {
-            "Adafruit Circuit Playground": "mmoskal/Adafruit_CircuitPlayground#v1.6.2-free"
-        }
-    },
     "dependencies": {}
 }

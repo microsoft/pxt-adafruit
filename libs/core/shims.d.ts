@@ -112,15 +112,6 @@ declare namespace pins {
     function analogRead(pin: Pin): number;
 
     /**
-     * Analog Reference
-     * Configures the reference voltage used for analog input (i.e. the value used as the top of the input range).
-     * @param type which type of reference to use (DEFAULT, INTERNAL, INTERNAL1V1, INTERNAL2V56, or EXTERNAL).
-     */
-    //% help=https://www.arduino.cc/en/Reference/AnalogReference weight=91
-    //% blockId="arduino_analogReference" block="analog reference type %type" shim=pins::analogReference
-    function analogReference(type: PinType): void;
-
-    /**
      * Pulse In
      * Reads a pulse (either HIGH or LOW) on a pin.
      * @param pin the number of the pin on which you want to read the pulse. (int)
@@ -130,7 +121,7 @@ declare namespace pins {
      */
     //% help=https://www.arduino.cc/en/Reference/PulseIn weight=91
     //% blockId="arduino_pulseIn" block="pulse in pin %pin| with state %state" timeout.defl=1000000 shim=pins::pulseIn
-    function pulseIn(pin: Pin, state: number, timeout?: number): number;
+    function pulseIn(pin: Pin, state: uint8, timeout?: number): number;
 }
 declare namespace math {
 
@@ -166,8 +157,8 @@ declare namespace music {
      * @param pin the pin on which to stop generating the tone
      */
     //% help=https://www.arduino.cc/en/Reference/NoTone weight=91
-    //% blockId="arduino_notone" block="no tone on pin %pin" icon="\uf025" shim=music::notone
-    function notone(pin: Pin): void;
+    //% blockId="arduino_notone" block="no tone on pin %pin" icon="\uf025" shim=music::noTone
+    function noTone(pin: Pin): void;
 }
 
 

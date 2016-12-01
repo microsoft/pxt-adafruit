@@ -99,7 +99,7 @@ namespace pins
     //% blockId="arduino_pinMode" block="pin mode pin %pin| to %mode"
     void pinMode(Pin pin, PinMode mode)
     {
-        //::pinMode(pin, mode);
+        ::pinMode((uint8_t)pin, (uint8_t)mode);
     }
 
     /**
@@ -111,7 +111,7 @@ namespace pins
     //% blockId="arduino_digitalWrite" block="digital write %pin| to %state"
     void digitalWrite(Pin pin, int value)
     {
-        ::digitalWrite((uint32_t)pin, value);
+        ::digitalWrite((uint8_t)pin, value);
     }
 
     /**
@@ -123,7 +123,7 @@ namespace pins
     //% blockId="arduino_digitalRead" block="digital read pin %pin"
     int digitalRead(Pin pin)
     {
-        // ::digitalRead()
+        return ::digitalRead((uint8_t)pin);
     }
 
 
@@ -137,7 +137,7 @@ namespace pins
     //% help=https://www.arduino.cc/en/Reference/AnalogWrite weight=91
     //% blockId="arduino_analogWrite" block="analog write pin %pin| to %value"
     void analogWrite(Pin pin, uint8_t value) {
-        
+        ::analogWrite((uint8_t)pin, value);        
     }
 
     /**
@@ -148,17 +148,7 @@ namespace pins
     //% help=https://www.arduino.cc/en/Reference/AnalogRead weight=91
     //% blockId="arduino_analogRead" block="analog read pin %pin"
     int analogRead(Pin pin) {
-    }
-
-    /**
-     * Analog Reference
-     * Configures the reference voltage used for analog input (i.e. the value used as the top of the input range).
-     * @param type which type of reference to use (DEFAULT, INTERNAL, INTERNAL1V1, INTERNAL2V56, or EXTERNAL).
-     */
-    //% help=https://www.arduino.cc/en/Reference/AnalogReference weight=91
-    //% blockId="arduino_analogReference" block="analog reference type %type"
-    void analogReference(PinType type) {
-
+        return ::analogRead((uint8_t)pin);
     }
 
     /**
@@ -171,8 +161,8 @@ namespace pins
      */
     //% help=https://www.arduino.cc/en/Reference/PulseIn weight=91
     //% blockId="arduino_pulseIn" block="pulse in pin %pin| with state %state"
-    int pulseIn(Pin pin, int state, unsigned timeout = 1000000) {
-
+    int pulseIn(Pin pin, uint8_t state, unsigned timeout = 1000000) {
+        return ::pulseIn((uint8_t)pin, state, timeout);
     }
 
     /*
@@ -224,7 +214,7 @@ namespace music {
     //% help=https://www.arduino.cc/en/Reference/Tone weight=90
     //% blockId="arduino_tone" block="tone on pin %pin| at frequency %frequency" icon="\uf025"
     void tone(Pin pin, unsigned frequency, unsigned duration = 1000) {
-        
+        ::tone((uint8_t)pin, frequency, duration);
     }
 
     /**
@@ -234,8 +224,8 @@ namespace music {
      */
     //% help=https://www.arduino.cc/en/Reference/NoTone weight=91
     //% blockId="arduino_notone" block="no tone on pin %pin" icon="\uf025"
-    void notone(Pin pin) {
-
+    void noTone(Pin pin) {
+        ::noTone((uint8_t)pin);
     }    
 }
 

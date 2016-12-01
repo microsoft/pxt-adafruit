@@ -9,6 +9,8 @@
   "AcceleratorRange.TwoG|block": "2g",
   "BaudRate.BaudRate115200|block": "115200",
   "BaudRate.BaudRate9600|block": "9600",
+  "BeatFraction.Breves|block": "4",
+  "BeatFraction.Double|block": "2",
   "BeatFraction.Eighth|block": "1/8",
   "BeatFraction.Half|block": "1/2",
   "BeatFraction.Quarter|block": "1/4",

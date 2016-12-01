@@ -119,7 +119,11 @@ enum BeatFraction {
     //% block="1/8"
     Eighth = 8,
     //% block="1/16"
-    Sixteenth = 16
+    Sixteenth = 16,
+    //% block="2"
+    Double = 32,
+    //% block="4",
+    Breve = 64
 }
 
 /**
@@ -188,11 +192,15 @@ namespace music {
         init();
         if (fraction == null) fraction = BeatFraction.Whole;
         let beat = 60000 / beatsPerMinute;
-        if (fraction == BeatFraction.Whole) return beat;
-        else if (fraction == BeatFraction.Half) return beat / 2;
-        else if (fraction == BeatFraction.Quarter) return beat / 4
-        else if (fraction == BeatFraction.Eighth) return beat / 8;
-        else return beat / 16;
+        switch (fraction) {
+            case BeatFraction.Half: return beat / 2;
+            case BeatFraction.Quarter: return beat / 4;
+            case BeatFraction.Eighth: return beat / 8;
+            case BeatFraction.Sixteenth: return beat / 16;
+            case BeatFraction.Double: return beat * 2;
+            case BeatFraction.Breve: return beat * 4;
+            default: return beat;
+        }
     }
 
     /**

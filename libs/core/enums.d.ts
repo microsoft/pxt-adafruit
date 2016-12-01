@@ -104,20 +104,6 @@
     PULSE_HIGH = 1,
     PULSE_LOW = 0,
     }
-
-
-    declare enum PinType
-    {
-    PIN_EXTERNAL = 0,
-    PIN_DEFAULT = 1,
-    PIN_INTERNAL = 3,
-    /*
-    Values are different for each board:
-    INTERNAL1V1 = 4,
-    INTERNAL2V56 = 5,
-    INTERNAL2V56_EXTCAP = 6,
-     */
-    }
 declare namespace pins {
 }
 declare namespace control {

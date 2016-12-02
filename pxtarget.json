@@ -173,15 +173,16 @@
     "appTheme": {
         "accentColor": "#5C005C",
         "logoUrl": "http://microbit.org/",
-        "logo": "./static/logo.portrait.black.svg",
+        "logo": "./static/logo.portrait.white.svg",
         "docsLogo": "./static/logo.square.white.svg",
-        "portraitLogo": "./static/logo.square.black.svg",
+        "portraitLogo": "./static/logo.square.white.svg",
         "footerLogo": "./static/logo.portrait.black.svg",
         "cardLogo": "./static/icons/apple-touch-icon.png",
         "appLogo": "./static/icons/apple-touch-icon.png",
         "organization": "Microsoft",
         "organizationUrl": "https://pxt.io/",
         "organizationLogo": "./static/Microsoft-logo_rgb_c-gray.png",
+        "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
         "homeUrl": "https://pxt.microbit.org/",
         "embedUrl": "https://pxt.microbit.org/",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
@@ -311,6 +312,16 @@
                 "browser": "*",
                 "path": "/static/mb/device/usb-windows-sendto.jpg"
             }
-        ]
+        ],
+        "invertedMenu": true,
+        "coloredToolbox": true,
+        "blocklyOptions": { 
+            "grid": {
+                "spacing": 45,
+                "length": 7,
+                "colour": "rgba(189, 195, 199, 0.30)",
+                "snap": false
+            }
+        }
     }
 }

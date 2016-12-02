@@ -13,7 +13,107 @@
 *******************************/
 
 .download-button {
-    &:extend(.ui all);
-    &:extend(.button all);
+    &:extend(.ui.button all);
+    &:extend(.purple all);
+}
+
+.download-button.download-button-full {
+    &:extend(.ui.inverted.button all);
+    &:extend(.purple all);
+}
+
+.download-button:hover {
     &:extend(.green all);
+    color: black !important;
+}
+
+.play-button.play-button-full {
+    &:extend(.ui.inverted.button all);
+}
+
+.getting-started-btn {
+    &:extend(.ui.button all);
+    &:extend(.orange all);
+}
+
+#filelist {
+    background: #fff url(https://az742082.vo.msecnd.net/pub/psopafpj) 0 0 repeat !important;
+}
+
+/*******************************
+             Blockly
+*******************************/
+
+.blocklyTreeRow {
+    border-bottom: 1px solid #ecf0f1;
+    margin-bottom: 0px;
+}
+
+/* Blockly toolbox font size same as the page font */
+.blocklyTreeLabel {
+    font-family: @pageFont !important;
+    font-weight: 200;
+}
+
+.blocklyToolboxDiv {
+    /*padding:5px; */
+    background-color: white;
+}
+
+.blocklyFlyoutBackground {
+    fill: #525A67;
+}
+
+/* Remove shadow around blockly blocks */
+.blocklyPathDark, .blocklyPathLight {
+    display: none;
+}
+
+.organization {
+    top: 1.6em;
+}
+
+/*******************************
+             Monaco
+*******************************/
+
+.monaco-editor, .monaco-editor .inputarea {
+    background: #ecf0f1;
+}
+
+.monaco-editor-background {
+    background: #ecf0f1;
+}
+
+
+/* Mobile */
+@media only screen and (max-width: @largestMobileScreen) {
+    #filelist {
+        background: transparent !important;
+    }
+    .organization {
+        top: auto;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
+    .organization {
+        top: auto;
+    }
+}
+
+/* Small Monitor */
+@media only screen and (min-width: @computerBreakpoint) and (max-width: @largestSmallMonitor) {
+    .organization {
+        top: auto;
+    }
+}
+
+/* Large Monitor */
+@media only screen and (min-width: @largeMonitorBreakpoint) {
+    .blocklyTreeRow {
+        width: 230px;
+        padding-left: 1rem;
+    }
 }

@@ -34,7 +34,7 @@
                     "eddystone_uid": 0,
                     "pairing_mode": 1,
                     "open": 0,
-                    "security_level": "SECURITY_MODE_ENCRYPTION_WITH_MITM"
+                    "security_level": "SECURITY_MODE_ENCRYPTION_NO_MITM"
                 }
             },
             "gatt_table_size": "0x700"
@@ -48,6 +48,18 @@
                             "open": 1,
                             "pairing_mode": null,
                             "security_level": null
+                        }
+                    }
+                }
+            },
+            {
+                "description": "JustWorks pairing (default): Button press to pair via Bluetooth.",
+                "config": {
+                    "microbit-dal": {
+                        "bluetooth": {
+                            "open": 0,
+                            "pairing_mode": 1,
+                            "security_level": "SECURITY_MODE_ENCRYPTION_NO_MITM"
                         }
                     }
                 }

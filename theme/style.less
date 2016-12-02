@@ -27,6 +27,10 @@
     color: black !important;
 }
 
+.play-button.play-button-full {
+    &:extend(.ui.inverted.button all);
+}
+
 .getting-started-btn {
     &:extend(.ui.button all);
     &:extend(.orange all);
@@ -43,10 +47,6 @@
 .blocklyTreeRow {
     border-bottom: 1px solid #ecf0f1;
     margin-bottom: 0px;
-}
-
-.blocklyTreeSelected {
-    background-color: #1B1C1D !important;
 }
 
 /* Blockly toolbox font size same as the page font */

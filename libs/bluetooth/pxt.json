@@ -46,7 +46,8 @@
                     "microbit-dal": {
                         "bluetooth": {
                             "open": 1,
-                            "pairing_mode": null,
+                            "pairing_mode": 0,                            
+                            "white_list": 0,
                             "security_level": null
                         }
                     }
@@ -57,9 +58,10 @@
                 "config": {
                     "microbit-dal": {
                         "bluetooth": {
-                            "open": 0,
-                            "pairing_mode": 1,
-                            "security_level": "SECURITY_MODE_ENCRYPTION_NO_MITM"
+                            "open": null,
+                            "pairing_mode": null,
+                            "white_list": null,
+                            "security_level": null
                         }
                     }
                 }
@@ -71,6 +73,7 @@
                         "bluetooth": {
                             "open": 0,
                             "pairing_mode": 1,
+                            "white_list": 1,
                             "security_level": "SECURITY_MODE_ENCRYPTION_WITH_MITM"
                         }
                     }

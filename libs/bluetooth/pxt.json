@@ -41,13 +41,13 @@
         },
         "userConfigs": [
             {
-                "description": "No pairing: Anyone can connect via Bluetooth.",
+                "description": "Unsecure: Anyone can connect via Bluetooth.",
                 "config": {
                     "microbit-dal": {
                         "bluetooth": {
                             "open": 1,
                             "pairing_mode": 0,                            
-                            "white_list": 0,
+                            "whitelist": 0,
                             "security_level": null
                         }
                     }
@@ -60,7 +60,7 @@
                         "bluetooth": {
                             "open": null,
                             "pairing_mode": null,
-                            "white_list": null,
+                            "whitelist": null,
                             "security_level": null
                         }
                     }
@@ -73,8 +73,29 @@
                         "bluetooth": {
                             "open": 0,
                             "pairing_mode": 1,
-                            "white_list": 1,
+                            "whitelist": 1,
                             "security_level": "SECURITY_MODE_ENCRYPTION_WITH_MITM"
+                        }
+                    }
+                }
+            },
+            {
+                "description": "Beacon: No pairing, open and Eddystone advertising only.",
+                "config": {
+                    "microbit-dal": {
+                        "bluetooth": {
+                            "open": 1,
+                            "pairing_mode": 0,
+                            "private_addressing": 0,
+                            "whitelist": 0,
+                            "advertising_timeout": 0,
+                            "tx_power": 6,
+                            "dfu_service": 0,
+                            "event_service": 0,
+                            "device_info_service": 0,
+                            "eddystone_url": 1,
+                            "eddystone_uid": 0,
+                            "security_level": null
                         }
                     }
                 }

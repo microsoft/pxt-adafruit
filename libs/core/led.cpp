@@ -95,7 +95,7 @@ namespace led {
     /**
     * Turns on or off the display    
     */
-    //% help=led/enable blockId=device_led_enable icon="\uf04d"
+    //% help=led/enable blockId=device_led_enable block="led enable %on" icon="\uf04d"
     //% advanced=true parts="ledmatrix"
     void enable(bool on) {
         if (on) uBit.display.enable();

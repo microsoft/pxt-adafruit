@@ -131,6 +131,7 @@
   "input.temperature|block": "temperature (°C)",
   "input|block": "input",
   "led.brightness|block": "brightness",
+  "led.enable|block": "led enable %on",
   "led.plotBarGraph|block": "plot bar graph of %value |up to %high",
   "led.plot|block": "plot|x %x|y %y",
   "led.point|block": "point|x %x|y %y",

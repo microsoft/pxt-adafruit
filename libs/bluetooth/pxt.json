@@ -47,8 +47,7 @@
                         "bluetooth": {
                             "open": 1,
                             "pairing_mode": 0,                            
-                            "whitelist": 0,
-                            "security_level": null
+                            "whitelist": 0
                         }
                     }
                 }
@@ -80,22 +79,13 @@
                 }
             },
             {
-                "description": "Beacon: No pairing, open and Eddystone advertising only.",
+                "description": "Disable Event, Device Info and Device Flashing services.",
                 "config": {
                     "microbit-dal": {
                         "bluetooth": {
-                            "open": 1,
-                            "pairing_mode": 0,
-                            "private_addressing": 0,
-                            "whitelist": 0,
-                            "advertising_timeout": 0,
-                            "tx_power": 6,
                             "dfu_service": 0,
                             "event_service": 0,
-                            "device_info_service": 0,
-                            "eddystone_url": 1,
-                            "eddystone_uid": 0,
-                            "security_level": null
+                            "device_info_service": 0
                         }
                     }
                 }

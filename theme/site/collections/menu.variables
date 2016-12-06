@@ -2,7 +2,7 @@
     User Variable Overrides
 *******************************/
 
-@invertedBackground: #525A67;
+@invertedBackground: #3454D1;
 
 /*******************************
     PXT Theme Overrides

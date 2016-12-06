@@ -9,7 +9,7 @@
 @emSize      : 14px;
 @fontSize    : 13px;
 
-@primaryColor: @teal;
+@primaryColor: @purple;
 
 @teal: #3891A6;
 @blue: #456990;

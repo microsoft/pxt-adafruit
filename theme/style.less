@@ -18,8 +18,7 @@
 }
 
 .download-button.download-button-full {
-    &:extend(.ui.inverted.button all);
-    &:extend(.purple all);
+    &:extend(.ui.inverted.purple.button all);
 }
 
 .download-button:hover {
@@ -71,6 +70,17 @@
 
 .organization {
     top: 1.6em;
+}
+
+/* Blockly Toolbox Buttons */
+#blocklyToolboxButtons .blocklyAddPackageButton {
+    &:extend(.ui.inverted.pink.button all);
+    &:extend(.circular all);
+}
+
+#blocklyToolboxButtons .blocklyUndoButton {
+    &:extend(.ui.inverted.blue.button all);
+    &:extend(.circular all);
 }
 
 /*******************************

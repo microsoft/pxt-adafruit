@@ -33,3 +33,4 @@
 
 @simulatorBackground: #FDFDFF;
 @blocklySvgColor: #ecf0f1;
+@addPackageColor: @pink;

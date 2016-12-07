@@ -79,7 +79,7 @@ namespace pxt {
 
       intcheck(vtable->methods[0] == &RefRecord_destroy, ERR_SIZE, 3);
       intcheck(vtable->methods[1] == &RefRecord_print, ERR_SIZE, 4);
-    
+
       void *ptr = ::operator new(vtable->numbytes);
       RefRecord *r = new (ptr) RefRecord(PXT_VTABLE_TO_INT(vtable));
       memset(r->fields, 0, vtable->numbytes - sizeof(RefRecord));
@@ -117,7 +117,6 @@ namespace pxt {
 
     void RefObject::destroy() {
       ((RefObjectMethod)getVTable()->methods[0])(this);
-      delete this;
     }
 
     void RefObject::print() {
@@ -132,6 +131,7 @@ namespace pxt {
           if (refmask[i]) decr(r->fields[i]);
           r->fields[i] = 0;
         }
+        delete r;
     }
 
     void RefRecord_print(RefRecord *r)
@@ -242,6 +242,7 @@ namespace pxt {
           this->data[i] = 0;
         }
       this->data.resize(0);
+      delete this;
     }
 
     void RefCollection::print()
@@ -258,6 +259,7 @@ namespace pxt {
         decr(fields[i]);
         fields[i] = 0;
       }
+      delete this;
     }
 
     void RefAction::print()
@@ -272,6 +274,7 @@ namespace pxt {
 
     void RefLocal::destroy()
     {
+      delete this;
     }
 
     PXT_VTABLE_CTOR(RefLocal) {
@@ -290,6 +293,7 @@ namespace pxt {
     void RefRefLocal::destroy()
     {
       decr(v);
+      delete this;
     }
 
     PXT_VTABLE_BEGIN(RefMap, 0, RefMapMarker)
@@ -304,6 +308,7 @@ namespace pxt {
         data[i].val = 0;
       }
       data.resize(0);
+      delete this;
     }
 
     int RefMap::findIdx(uint32_t key) {
@@ -328,7 +333,7 @@ namespace pxt {
     for(std::set<RefObject*>::iterator itr = allptrs.begin();itr!=allptrs.end();itr++)
     {
       (*itr)->print();
-    }    
+    }
     printf("\n");
   }
 #else
@@ -341,16 +346,16 @@ namespace pxt {
     // ---------------------------------------------------------------------------
 
     map<pair<int, int>, Action> handlersMap;
-    
+
     MicroBitEvent lastEvent;
 
     // We have the invariant that if [dispatchEvent] is registered against the DAL
     // for a given event, then [handlersMap] contains a valid entry for that
     // event.
     void dispatchEvent(MicroBitEvent e) {
-      
+
       lastEvent = e;
-      
+
       Action curr = handlersMap[{ e.source, e.value }];
       if (curr)
         runAction1(curr, e.value);
@@ -383,7 +388,7 @@ namespace pxt {
         create_fiber((void(*)(void*))runAction0, (void*)a, fiberDone);
       }
     }
-  
+
 
   void error(ERROR code, int subcode)
   {
@@ -435,10 +440,10 @@ namespace pxt {
 
     // unique group for radio based on source hash
     // ::touch_develop::micro_bit::radioDefaultGroup = programHash();
-    
+
     // repeat error 4 times and restart as needed
     microbit_panic_timeout(4);
-    
+
     int32_t ver = *pc++;
     checkStr(ver == 0x4209, ":( Bad runtime version");
 
@@ -467,6 +472,6 @@ namespace pxt {
   {
     exec_binary((int32_t*)functionsAndBytecode);
   }
-}  
+}
 
 // vim: ts=2 sw=2 expandtab

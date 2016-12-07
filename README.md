@@ -7,6 +7,10 @@ PXT ([Microsoft Programming Experience Toolkit](https://github.com/Microsoft/pxt
 
 [![Build Status](https://travis-ci.org/Microsoft/pxt-microbit.svg?branch=master)](https://travis-ci.org/Microsoft/pxt-microbit)
 
+## Issue tracking
+
+All issue tracking for this repo happens at https://github.com/Microsoft/pxt, see you there!
+
 ## Local server
 
 The local server allows to run the editor and the documentation from your computer.

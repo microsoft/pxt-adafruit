@@ -120,19 +120,30 @@ namespace bluetooth {
         registerWithDal(MICROBIT_ID_BLE, MICROBIT_BLE_EVT_DISCONNECTED, body);
     } 
 
-    const int8_t CALIBRATED_POWERS[] = {-49, -37, -33, -28, -25, -20, -15, -10};
-
     /**
     * Advertise an Eddystone URL
-	* @param url the url to transmit. Must be no longer than the supported eddystone url length
+	* @param url the url to transmit. Must be no longer than the supported eddystone url length, eg: "https://pxt.io/"
 	* @param power power level between 0 and 7, e.g.: 7
+    * @param connectable true to keep bluetooth connectable for other services, false otherwise.
     */
-    //% blockId=eddystone_advertise_url block="bluetooth advertise url %url|with power %power"
+    //% blockId=eddystone_advertise_url block="bluetooth advertise url %url|with power %power|connectable %connectable"
     //% parts=bluetooth weight=11 blockGap=8
-    //% help=bluetooth/advertise-url
-    void advertiseUrl(StringData* url, int power) {
-        int8_t level = CALIBRATED_POWERS[min(7, max(0, power))];
-        uBit.bleManager.advertiseEddystoneUrl(ManagedString(url), level);
+    //% help=bluetooth/advertise-url blockExternalInputs=1
+    void advertiseUrl(StringData* url, int power, bool connectable) {
+        power = min(MICROBIT_BLE_POWER_LEVELS-1, max(0, power));
+        int8_t level = MICROBIT_BLE_POWER_LEVEL[power];
+        uBit.bleManager.advertiseEddystoneUrl(ManagedString(url), level, connectable);
+        uBit.bleManager.setTransmitPower(power);
+    }
+
+    /**
+    * Sets the bluetooth transmit power between 0 (minimal) and 7 (maximum).
+    * @param power power level between 0 (minimal) and 7 (maximum), eg: 7.
+    */
+    //% parts=bluetooth weight=5 help=bluetooth/set-transmit-power
+    //% blockId=bluetooth_settransmitpower block="bluetooth set transmit power %power"
+    void setTransmitPower(int power) {
+        uBit.bleManager.setTransmitPower(min(MICROBIT_BLE_POWER_LEVELS-1, max(0, power)));
     }
 
     /**

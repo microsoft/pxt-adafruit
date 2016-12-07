@@ -19,6 +19,7 @@ bluetooth.startMagnetometerService();
 bluetooth.startTemperatureService();
 bluetooth.onBluetoothConnected(() => {});
 bluetooth.onBluetoothDisconnected(() => {});
+bluetooth.setTransmitPower(7);
 ```
 
 ## UART 

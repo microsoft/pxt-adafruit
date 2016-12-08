@@ -146,8 +146,9 @@ namespace game {
 
     /**
      * Sets the current score value
-     * @param value TODO
+     * @param value new score value.
      */
+    //% blockId=game_set_score block="set score %points" blockGap=8
     //% weight=10 help=game/set-score
     export function setScore(value: number): void {
         _score = Math.max(0, value);

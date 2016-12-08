@@ -132,6 +132,9 @@ namespace pxt {
           if (refmask[i]) decr(r->fields[i]);
           r->fields[i] = 0;
         }
+        //RefRecord is allocated using placement new
+        r->~RefRecord();
+        ::operator delete(r);
     }
 
     void RefRecord_print(RefRecord *r)
@@ -258,6 +261,9 @@ namespace pxt {
         decr(fields[i]);
         fields[i] = 0;
       }
+      //RefAction is allocated using placement new
+      this->~RefAction();
+      ::operator delete(this);
     }
 
     void RefAction::print()

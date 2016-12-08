@@ -24,7 +24,6 @@
             "microbit-dal": {
                 "bluetooth": {
                     "private_addressing": 0,
-                    "whitelist": 1,
                     "advertising_timeout": 0,
                     "tx_power": 6,
                     "dfu_service": 1,
@@ -32,8 +31,9 @@
                     "device_info_service": 1,
                     "eddystone_url": 1,
                     "eddystone_uid": 0,
-                    "pairing_mode": 1,
                     "open": 0,
+                    "pairing_mode": 1,
+                    "whitelist": 1,
                     "security_level": "SECURITY_MODE_ENCRYPTION_NO_MITM"
                 }
             },
@@ -47,13 +47,14 @@
                         "bluetooth": {
                             "open": 1,
                             "pairing_mode": 0,                            
-                            "whitelist": 0
+                            "whitelist": 0,
+                            "security_level": null
                         }
                     }
                 }
             },
             {
-                "description": "JustWorks pairing (default): Button press to pair via Bluetooth.",
+                "description": "JustWorks pairing (default): Button press to pair.",
                 "config": {
                     "microbit-dal": {
                         "bluetooth": {
@@ -66,7 +67,7 @@
                 }
             },
             {
-                "description": "Passkey pairing: Button press and 6 digit key to pair via Bluetooth.",
+                "description": "Passkey pairing: Button press and 6 digit key to pair.",
                 "config": {
                     "microbit-dal": {
                         "bluetooth": {
@@ -74,18 +75,6 @@
                             "pairing_mode": 1,
                             "whitelist": 1,
                             "security_level": "SECURITY_MODE_ENCRYPTION_WITH_MITM"
-                        }
-                    }
-                }
-            },
-            {
-                "description": "Disable Event, Device Info and Device Flashing services.",
-                "config": {
-                    "microbit-dal": {
-                        "bluetooth": {
-                            "dfu_service": 0,
-                            "event_service": 0,
-                            "device_info_service": 0
                         }
                     }
                 }

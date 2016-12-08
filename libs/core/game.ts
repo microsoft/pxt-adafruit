@@ -589,7 +589,7 @@ namespace game {
 
         /**
          * Turns on the sprite (on by default)
-         * @param this TODO
+         * @param this the sprite
          */
         public on(): void {
             this.setBrightness(255);
@@ -597,7 +597,7 @@ namespace game {
 
         /**
          * Turns off the sprite (on by default)
-         * @param this TODO
+         * @param this the sprite
          */
         public off(): void {
             this.setBrightness(0);
@@ -605,8 +605,8 @@ namespace game {
 
         /**
          * Set the ``brightness`` of a sprite
-         * @param this TODO
-         * @param brightness TODO
+         * @param this the sprite
+         * @param brightness the brightness from 0 (off) to 255 (on), eg: 255.
          */
         //% parts="ledmatrix"
         public setBrightness(brightness: number): void {
@@ -616,8 +616,9 @@ namespace game {
 
         /**
          * Reports the ``brightness` of a sprite on the LED screen
-         * @param this TODO
+         * @param this the sprite
          */
+        //% parts="ledmatrix"
         public brightness(): number {
             let r: number;
             return this._brightness;
@@ -625,8 +626,8 @@ namespace game {
 
         /**
          * Changes the ``y`` position by the given amount
-         * @param this TODO
-         * @param value TODO
+         * @param this the sprite
+         * @param value the value to change brightness
          */
         public changeBrightnessBy(value: number): void {
             this.setBrightness(this._brightness + value);
@@ -643,10 +644,11 @@ namespace game {
 
         /**
          * Deletes the sprite from the game engine. All further operation of the sprite will not have any effect.
-         * @param sprite TODO
+         * @param this sprite to delete
          */
-        public delete(sprite: LedSprite): void {
-            sprites.removeElement(sprite);
+        //% blockId="game_delete_sprite" block="delete %this"        
+        public delete(): void {
+            sprites.removeElement(this);
         }
 
         /**

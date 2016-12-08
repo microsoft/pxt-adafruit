@@ -177,7 +177,8 @@ namespace pxsim.bluetooth {
     export function onBluetoothDisconnected(a: RefAction) {
         // TODO
     }
-    export function advertiseUrl(url: string, power: number) { }
+    export function advertiseUrl(url: string, power: number, connectable: boolean) { }
     export function stopAdvertising() { }
+    export function setTransmitPower(power: number) {}
 }
 

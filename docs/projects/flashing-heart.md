@@ -2,8 +2,7 @@
 
 ### ~avatar avatar
 
-Use the LEDs to display a flashing heart, and then create
-an animation of a broken heart. :(
+Use the LEDs to display a flashing heart!
 
 ### ~
 
@@ -38,19 +37,19 @@ basic.clearScreen();
 
 ## Step 3
 
-Put a [forever loop](/reference/basic/forever) around it.
+Put a [forever loop](/reference/basic/forever) around it to repeat the animation.
 
 ```blocks
 basic.forever(() => {
-basic.showLeds(`
-    . # . # .
-    # # # # #
-    # # # # #
-    . # # # .
-    . . # . .`
-    );
-basic.pause(500);
-basic.clearScreen();
+    basic.showLeds(`
+        . # . # .
+        # # # # #
+        # # # # #
+        . # # # .
+        . . # . .`
+        );
+    basic.pause(500);
+    basic.clearScreen();
 })
 ```
 
@@ -60,45 +59,50 @@ Add a [pause](/reference/basic/pause) to wait after clearing the screen.
 
 ```blocks
 basic.forever(() => {
-basic.showLeds(`
-    . # . # .
-    # # # # #
-    # # # # #
-    . # # # .
-    . . # . .`
-    );
-basic.pause(500);
-basic.clearScreen();
-basic.pause(500);
+    basic.showLeds(`
+        . # . # .
+        # # # # #
+        # # # # #
+        . # # # .
+        . . # . .`
+        );
+    basic.pause(500);
+    basic.clearScreen();
+    basic.pause(500);
 })
 ```
 
-## Step 5
+## Send your heartbeats over radio!
 
-Add a second image of a broken heart. 
+Do you have a second @boardname@ at hand? You could use radio and send your heartbeats to other
+@boardname@ and show a heart when you receive one.
 
+* move the code in the **forever** inside 
+a [on data packet received](/reference/radio/on-data-packet-received) handler. 
+The handler will run whenever a message is received from another @boardname@.
+* use [send number](/reference/radio/send-number) and [pause](/reference/basic/pause) 
+to broadcast a packet of data every second.
 
 ```blocks
 basic.forever(() => {
-basic.showLeds(`
-    . # . # .
-    # # # # #
-    # # # # #
-    . # # # .
-    . . # . .`
-    );
-basic.pause(500);
-basic.clearScreen();
-basic.pause(500);
-basic.showLeds(`
-    . # . # .
-    # . # # #
-    # . . . #
-    . # # # .
-    . . # . .`
-    );
-basic.pause(500);
-basic.clearScreen();
-basic.pause(500);
+    radio.sendNumber(0)
+    basic.pause(1000)
 })
+radio.onDataPacketReceived(({receivedNumber}) => {
+    basic.showLeds(`
+        . # . # .
+        # # # # #
+        # # # # #
+        . # # # .
+        . . # . .`);
+    basic.pause(500)
+    basic.clearScreen()
+    basic.pause(500)
+})
+```
+
+Download the .hex file onto both @boardname@ and try it out!
+
+```package
+radio
 ```

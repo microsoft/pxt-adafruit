@@ -40,7 +40,7 @@ namespace game {
      * @param x sprite horizontal coordinate, eg: 2
      * @param y sprite vertical coordinate, eg: 2
      */
-    //% weight=60
+    //% weight=60 blockGap=8
     //% blockId=game_create_sprite block="create sprite at|x: %x|y: %y"
     //% parts="ledmatrix"
     export function createSprite(x: number, y: number): LedSprite {
@@ -647,6 +647,7 @@ namespace game {
          * Deletes the sprite from the game engine. All further operation of the sprite will not have any effect.
          * @param this sprite to delete
          */
+        //% weight=59
         //% blockId="game_delete_sprite" block="delete %this"        
         public delete(): void {
             sprites.removeElement(this);

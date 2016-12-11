@@ -18,18 +18,18 @@ Read more at https://lancaster-university.github.io/microbit-docs/ble/eddystone/
 ## ~
 
 ```sig
-bluetooth.advertiseUrl("https://pxt.microbit.org/", 7);
+bluetooth.advertiseUrl("https://pxt.microbit.org/", 7, true);
 ```
 
 ### Parameters
 
-* ``url`` - a [string](/reference/types/string) containing the URL to broadcast, at most 18 characters long
+* ``url`` - a [string](/reference/types/string) containing the URL to broadcast, at most 17 characters long, excluding the protocol (eg: ``https://``) which gets encoded as 1 byte.
 * ``power`` - a [number](/reference/types/number) representing the power level between 0 (short) and 7 (maximum range).
 
 ### Example: Broadcast a secret code
 
 ```blocks
-bluetooth.advertiseUrl("https://pxt.io?secret=42", 7);
+bluetooth.advertiseUrl("https://pxt.io?secret=42", 7, true);
 ```
 
 ## See Also

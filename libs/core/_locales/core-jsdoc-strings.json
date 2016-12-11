@@ -85,7 +85,7 @@
   "game.setLife": "Sets the current life value",
   "game.setLife|param|value": "TODO",
   "game.setScore": "Sets the current score value",
-  "game.setScore|param|value": "TODO",
+  "game.setScore|param|value": "new score value.",
   "game.showScore": "Displays the score on the screen.",
   "game.startCountdown": "Starts a game countdown timer",
   "game.startCountdown|param|ms": "countdown duration in milliseconds, eg: 10000",

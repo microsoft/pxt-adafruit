@@ -10,11 +10,9 @@ Welcome! This guided tutorial will show you how to program a script that display
 
 ### ~
 
-
 ## Step 1
 
 Create a loop that will continuously update the reading of the compass.
-
 
 ```blocks
 basic.forever(() => {

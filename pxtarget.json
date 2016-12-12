@@ -8,6 +8,10 @@
     "bundleddirs": [
         "libs/core"
     ],
+    "serial": {
+        "useHF2": true,
+        "log": true
+    },
     "simulator": {
         "autoRun": true,
         "streams": true,

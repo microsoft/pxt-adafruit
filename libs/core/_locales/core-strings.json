@@ -123,7 +123,7 @@
   "input.magneticForce|block": "magnetic force (µT)|%NAME",
   "input.onButtonPressed|block": "on button|%NAME|pressed",
   "input.onGesture|block": "on |%NAME",
-  "input.onPinPressed|block": "on pin %NAME|pressed",
+  "input.onPinPressed|block": "on pin %name|pressed",
   "input.onPinReleased|block": "on pin %NAME|released",
   "input.pinIsPressed|block": "pin %NAME|is pressed",
   "input.rotation|block": "rotation (°)|%NAME",

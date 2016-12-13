@@ -74,12 +74,12 @@
 }
 
 /* Blockly Toolbox Buttons */
-#blocklyToolboxButtons .blocklyAddPackageButton {
+.blocklyToolboxButtons .blocklyAddPackageButton {
     &:extend(.ui.inverted.pink.button all);
     &:extend(.circular all);
 }
 
-#blocklyToolboxButtons .blocklyUndoButton {
+.blocklyToolboxButtons .blocklyUndoButton {
     &:extend(.ui.inverted.blue.button all);
     &:extend(.circular all);
 }
@@ -92,12 +92,17 @@
     background: #ecf0f1;
 }
 
+.monacoDraggableBlock {
+    background: #ecf0f1;
+    border: solid 3px #ecf0f1;
+}
+
 .monaco-editor-background {
     background: #ecf0f1;
 }
 
 .monacoFlyout {
-    background: rgba(82, 90, 103, 0.8);
+    background: rgba(82, 90, 103, 0.5);
 }
 
 
@@ -117,7 +122,7 @@
         top: auto;
     }
     /* Blockly Toolbox buttons */
-    #blocklyToolboxButtons {
+    #blocklyToolboxButtons, #monacoToolboxButtons {
         margin-right: 0.5rem;
         margin-left: 0.5rem;
     }
@@ -129,7 +134,7 @@
         top: auto;
     }
     /* Blockly Toolbox buttons */
-    #blocklyToolboxButtons {
+    #blocklyToolboxButtons, #monacoToolboxButtons {
         margin-right: 1rem;
         margin-left: 1rem;
     }
@@ -142,7 +147,7 @@
         padding-left: 1rem;
     }
     /* Blockly Toolbox buttons */
-    #blocklyToolboxButtons {
+    #blocklyToolboxButtons, #monacoToolboxButtons {
         margin-right: 2rem;
         margin-left: 2rem;
     }

@@ -216,8 +216,8 @@ declare namespace input {
 
     /**
      * Do something when a button (``A``, ``B`` or both ``A+B``) is pressed
-     * @param button TODO
-     * @param body TODO
+     * @param button the button that needs to be pressed
+     * @param body code to run when event is raised
      */
     //% help=input/on-button-pressed weight=85 blockGap=8
     //% blockId=device_button_event block="on button|%NAME|pressed" icon="\uf192"
@@ -226,7 +226,8 @@ declare namespace input {
 
     /**
      * Do something when when a gesture is done (like shaking the micro:bit).
-     * @param body TODO
+     * @param gesture the type of gesture to track, eg: Gesture.Shake
+     * @param body code to run when gesture is raised
      */
     //% help=input/on-gesture weight=84 blockGap=8
     //% blockId=device_gesture_event block="on |%NAME" icon="\uf135"
@@ -235,16 +236,16 @@ declare namespace input {
 
     /**
      * Do something when a pin is pressed.
-     * @param name the pin that needs to be pressed
+     * @param name the pin that needs to be pressed, eg: TouchPin.P0
      * @param body the code to run when the pin is pressed
      */
     //% help=input/on-pin-pressed weight=83
-    //% blockId=device_pin_event block="on pin %NAME|pressed" icon="\uf094" shim=input::onPinPressed
+    //% blockId=device_pin_event block="on pin %name|pressed" icon="\uf094" shim=input::onPinPressed
     function onPinPressed(name: TouchPin, body: () => void): void;
 
     /**
      * Do something when a pin is released.
-     * @param name the pin that needs to be released
+     * @param name the pin that needs to be released, eg: TouchPin.P0
      * @param body the code to run when the pin is released
      */
     //% help=input/on-pin-released weight=6 blockGap=8
@@ -254,6 +255,7 @@ declare namespace input {
 
     /**
      * Get the button state (pressed or not) for ``A`` and ``B``.
+     * @param button the button to query the request, eg: Button.A
      */
     //% help=input/button-is-pressed weight=60
     //% block="button|%NAME|is pressed"
@@ -264,7 +266,7 @@ declare namespace input {
 
     /**
      * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
-     * @param name pin used to detect the touch
+     * @param name pin used to detect the touch, eg: TouchPin.P0
      */
     //% help=input/pin-is-pressed weight=58
     //% blockId="device_pin_is_pressed" block="pin %NAME|is pressed" icon="\uf094"
@@ -512,7 +514,7 @@ declare namespace pins {
 
     /**
      * Read the specified pin or connector as either 0 or 1
-     * @param name pin to read from
+     * @param name pin to read from, eg: DigitalPin.P0
      */
     //% help=pins/digital-read-pin weight=30
     //% blockId=device_get_digital_pin block="digital read|pin %name" blockGap=8 shim=pins::digitalReadPin
@@ -520,7 +522,7 @@ declare namespace pins {
 
     /**
      * Set a pin or connector value to either 0 or 1.
-     * @param name pin to write to
+     * @param name pin to write to, eg: DigitalPin.P0
      * @param value value to set on the pin, 1 eg,0
      */
     //% help=pins/digital-write-pin weight=29
@@ -529,7 +531,7 @@ declare namespace pins {
 
     /**
      * Read the connector value as analog, that is, as a value comprised between 0 and 1023.
-     * @param name pin to write to
+     * @param name pin to write to, eg: AnalogPin.P0
      */
     //% help=pins/analog-read-pin weight=25
     //% blockId=device_get_analog_pin block="analog read|pin %name" blockGap="8" shim=pins::analogReadPin
@@ -537,7 +539,7 @@ declare namespace pins {
 
     /**
      * Set the connector value as analog. Value must be comprised between 0 and 1023.
-     * @param name pin name to write to
+     * @param name pin name to write to, eg: AnalogPin.P0
      * @param value value to write to the pin between ``0`` and ``1023``. eg:1023,0
      */
     //% help=pins/analog-write-pin weight=24
@@ -547,7 +549,7 @@ declare namespace pins {
     /**
      * Configures the Pulse-width modulation (PWM) of the analog output to the given value in **microseconds** or `1/1000` milliseconds.
      * If this pin is not configured as an analog output (using `analog write pin`), the operation has no effect.
-     * @param name analog pin to set period to
+     * @param name analog pin to set period to, eg: AnalogPin.P0
      * @param micros period in micro seconds. eg:20000
      */
     //% help=pins/analog-set-period weight=23 blockGap=8
@@ -556,6 +558,8 @@ declare namespace pins {
 
     /**
      * Configures this pin to a digital input, and generates events where the timestamp is the duration that this pin was either ``high`` or ``low``.
+     * @param name digital pin to register to, eg: DigitalPin.P0
+     * @param pulse the value of the pulse, eg: PulseValue.High
      */
     //% help=pins/on-pulsed weight=22 blockGap=8 advanced=true
     //% blockId=pins_on_pulsed block="on|pin %pin|pulsed %pulse" shim=pins::onPulsed
@@ -571,8 +575,8 @@ declare namespace pins {
 
     /**
      * Returns the duration of a pulse in microseconds
-     * @param name the pin which measures the pulse
-     * @param value the value of the pulse (default high)
+     * @param name the pin which measures the pulse, eg: DigitalPin.P0
+     * @param value the value of the pulse, eg: PulseValue.High
      * @param maximum duration in micro-seconds
      */
     //% blockId="pins_pulse_in" block="pulse in (µs)|pin %name|pulsed %value"
@@ -581,7 +585,7 @@ declare namespace pins {
 
     /**
      * Writes a value to the servo, controlling the shaft accordingly. On a standard servo, this will set the angle of the shaft (in degrees), moving the shaft to that orientation. On a continuous rotation servo, this will set the speed of the servo (with ``0`` being full-speed in one direction, ``180`` being full speed in the other, and a value near ``90`` being no movement).
-     * @param name pin to write to
+     * @param name pin to write to, eg: AnalogPin.P0
      * @param value angle or rotation speed, eg:180,90,0
      */
     //% help=pins/servo-write-pin weight=20
@@ -617,8 +621,8 @@ declare namespace pins {
 
     /**
      * Configures the pull of this pin.
-     * @param name pin to set the pull mode on
-     * @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone 
+     * @param name pin to set the pull mode on, eg: DigitalPin.P0
+     * @param pull one of the mbed pull configurations, eg: PinPullMode.PullUp
      */
     //% help=pins/set-pull weight=3 advanced=true
     //% blockId=device_set_pull block="set pull|pin %pin|to %pull" shim=pins::setPull
@@ -685,9 +689,9 @@ declare namespace serial {
 
     /**
      * Dynamically configuring the serial instance to use pins other than USBTX and USBRX.
-     * @param tx the new transmission pins
-     * @param rx the new reception pin
-     * @param baud the new baud rate. eg: 115200
+     * @param tx the new transmission pins, eg: SerialPin.P0
+     * @param rx the new reception pin, eg: SerialPin.P1
+     * @param rate the new baud rate. eg: 115200
      */
     //% weight=10
     //% help=serial/redirect-to

@@ -323,6 +323,7 @@
         ],
         "invertedMenu": true,
         "coloredToolbox": true,
+        "monacoToolbox": true,
         "blocklyOptions": { 
             "grid": {
                 "spacing": 45,

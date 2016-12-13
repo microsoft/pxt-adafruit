@@ -111,8 +111,8 @@ enum class Gesture {
 namespace input {
     /**
      * Do something when a button (``A``, ``B`` or both ``A+B``) is pressed
-     * @param button TODO
-     * @param body TODO
+     * @param button the button that needs to be pressed
+     * @param body code to run when event is raised
      */
     //% help=input/on-button-pressed weight=85 blockGap=8
     //% blockId=device_button_event block="on button|%NAME|pressed" icon="\uf192"
@@ -123,7 +123,8 @@ namespace input {
 
     /**
      * Do something when when a gesture is done (like shaking the micro:bit).
-     * @param body TODO
+     * @param gesture the type of gesture to track, eg: Gesture.Shake
+     * @param body code to run when gesture is raised
      */
     //% help=input/on-gesture weight=84 blockGap=8
     //% blockId=device_gesture_event block="on |%NAME" icon="\uf135"
@@ -138,11 +139,11 @@ namespace input {
 
      /**
      * Do something when a pin is pressed.
-     * @param name the pin that needs to be pressed
+     * @param name the pin that needs to be pressed, eg: TouchPin.P0
      * @param body the code to run when the pin is pressed
      */
     //% help=input/on-pin-pressed weight=83
-    //% blockId=device_pin_event block="on pin %NAME|pressed" icon="\uf094"
+    //% blockId=device_pin_event block="on pin %name|pressed" icon="\uf094"
     void onPinPressed(TouchPin name, Action body) {
         auto pin = getPin((int)name);
         if (!pin) return;
@@ -154,7 +155,7 @@ namespace input {
 
     /**
      * Do something when a pin is released.
-     * @param name the pin that needs to be released
+     * @param name the pin that needs to be released, eg: TouchPin.P0
      * @param body the code to run when the pin is released
      */
     //% help=input/on-pin-released weight=6 blockGap=8
@@ -171,6 +172,7 @@ namespace input {
 
     /**
      * Get the button state (pressed or not) for ``A`` and ``B``.
+     * @param button the button to query the request, eg: Button.A
      */
     //% help=input/button-is-pressed weight=60
     //% block="button|%NAME|is pressed"
@@ -189,7 +191,7 @@ namespace input {
 
     /**
      * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
-     * @param name pin used to detect the touch
+     * @param name pin used to detect the touch, eg: TouchPin.P0
      */
     //% help=input/pin-is-pressed weight=58
     //% blockId="device_pin_is_pressed" block="pin %NAME|is pressed" icon="\uf094"

@@ -170,7 +170,7 @@ namespace music {
 
     /**
      * Gets the frequency of a note.
-     * @param name the note name
+     * @param name the note name, eg: Note.C
      */
     //% weight=50 help=music/note-frequency
     //% blockId=device_note block="%note"

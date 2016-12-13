@@ -83,9 +83,9 @@ namespace serial {
 
     /**
     * Dynamically configuring the serial instance to use pins other than USBTX and USBRX.
-    * @param tx the new transmission pins
-    * @param rx the new reception pin
-    * @param baud the new baud rate. eg: 115200
+    * @param tx the new transmission pins, eg: SerialPin.P0
+    * @param rx the new reception pin, eg: SerialPin.P1
+    * @param rate the new baud rate. eg: 115200
     */
     //% weight=10
     //% help=serial/redirect-to

@@ -1,7 +1,7 @@
 #include "pxt.h"
 #include <map>
 
-//MicroBit uBit;
+CodalDevice device;
 
 namespace pxt {
     int incr(uint32_t e)

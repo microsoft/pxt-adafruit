@@ -169,9 +169,10 @@
     },
     "compileService": {
         "yottaTarget": "pxt-atsamd21g18a",
+        "yottaBinary": "pxt-samd.hex",
         "yottaCorePackage": "codal",
         "githubCorePackage": "lancaster-university/codal",
-        "gittag": "samusb",
+        "gittag": "pxt",
         "serviceId": "codalsamd"
     },
     "appTheme": {

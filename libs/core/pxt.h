@@ -334,15 +334,9 @@ const VTable classname ## _vtable \
   classname::classname() : PXT_VTABLE_INIT(classname)
 
 #define PXT_MAIN \
-   void loop() {} \
-   void setup() { pxt::start(); }
+   int main() { pxt::start(); return 0; }
 
 #define PXT_FNPTR(x)  (uint32_t)(void*)(x)
-
-extern "C" {
-   void loop(void);
-   void setup(void);
-}
 
 
 #endif

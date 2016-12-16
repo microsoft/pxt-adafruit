@@ -4,8 +4,6 @@
     "files": [
         "README.md",
         "pxt-core.d.ts",
-        "ManagedBuffer.cpp",
-        "ManagedBuffer.h",
         "pxt.cpp",
         "pxt.h",
         "ksbit.h",

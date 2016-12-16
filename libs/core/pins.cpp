@@ -13,7 +13,14 @@ DevPins::DevPins()
       PIN_D(D9), PIN_D(D10), PIN_D(D11), PIN_D(D12), PIN_D(D13), PIN_D(LED), PIN_D(LEDRX),
       PIN_D(LEDTX), PIN_D(MOSI), PIN_D(MISO), PIN_D(SCK), PIN_D(SDA), PIN_D(SCL) {}
 
-#if 0
+DevicePin *getPin(int id) {
+    if (!(0 <= id && id <= DigitalPin::SCL))
+    return NULL;
+    DevicePin *p = &devPins.pins[id];
+    if (p->isDigital() || p->isAnalog()) return p;
+    return NULL;
+}
+
 enum class PulseValue {
     //% block=high
     High = MICROBIT_PIN_EVT_PULSE_HI,
@@ -30,60 +37,16 @@ enum class PinPullMode {
     PullNone = 2
 };
 
-MicroBitPin *getPin(int id) {
-    switch (id) {
-    case MICROBIT_ID_IO_P0:
-        return &uBit.io.P0;
-    case MICROBIT_ID_IO_P1:
-        return &uBit.io.P1;
-    case MICROBIT_ID_IO_P2:
-        return &uBit.io.P2;
-    case MICROBIT_ID_IO_P3:
-        return &uBit.io.P3;
-    case MICROBIT_ID_IO_P4:
-        return &uBit.io.P4;
-    case MICROBIT_ID_IO_P5:
-        return &uBit.io.P5;
-    case MICROBIT_ID_IO_P6:
-        return &uBit.io.P6;
-    case MICROBIT_ID_IO_P7:
-        return &uBit.io.P7;
-    case MICROBIT_ID_IO_P8:
-        return &uBit.io.P8;
-    case MICROBIT_ID_IO_P9:
-        return &uBit.io.P9;
-    case MICROBIT_ID_IO_P10:
-        return &uBit.io.P10;
-    case MICROBIT_ID_IO_P11:
-        return &uBit.io.P11;
-    case MICROBIT_ID_IO_P12:
-        return &uBit.io.P12;
-    case MICROBIT_ID_IO_P13:
-        return &uBit.io.P13;
-    case MICROBIT_ID_IO_P14:
-        return &uBit.io.P14;
-    case MICROBIT_ID_IO_P15:
-        return &uBit.io.P15;
-    case MICROBIT_ID_IO_P16:
-        return &uBit.io.P16;
-    case MICROBIT_ID_IO_P19:
-        return &uBit.io.P19;
-    case MICROBIT_ID_IO_P20:
-        return &uBit.io.P20;
-    default:
-        return NULL;
-    }
-}
 
 namespace pins {
 #define PINOP(op)                                                                                  \
-    MicroBitPin *pin = getPin((int)name);                                                          \
+    DevicePin *pin = getPin((int)name);                                                          \
     if (!pin)                                                                                      \
         return;                                                                                    \
     pin->op
 
 #define PINREAD(op)                                                                                \
-    MicroBitPin *pin = getPin((int)name);                                                          \
+    DevicePin *pin = getPin((int)name);                                                          \
     if (!pin)                                                                                      \
         return 0;                                                                                  \
     return pin->op
@@ -293,41 +256,4 @@ Buffer createBuffer(int size) {
     return ManagedBuffer(size).leakData();
 }
 
-/**
- * Read `size` bytes from a 7-bit I2C `address`.
- */
-//%
-Buffer i2cReadBuffer(int address, int size, bool repeat = false) {
-    Buffer buf = createBuffer(size);
-    uBit.i2c.read(address << 1, (char *)buf->payload, size, repeat);
-    return buf;
 }
-
-/**
- * Write bytes to a 7-bit I2C `address`.
- */
-//%
-void i2cWriteBuffer(int address, Buffer buf, bool repeat = false) {
-    uBit.i2c.write(address << 1, (char *)buf->payload, buf->length, repeat);
-}
-
-SPI *spi = NULL;
-SPI *allocSPI() {
-    if (spi == NULL)
-        spi = new SPI(MOSI, MISO, SCK);
-    return spi;
-}
-
-/**
-* Write to the SPI slave and return the response
-* @param value Data to be sent to the SPI slave
-*/
-//% help=pins/spi-write weight=5 advanced=true
-//% blockId=spi_write block="spi write %value"
-int spiWrite(int value) {
-    auto p = allocSPI();
-    return p->write(value);
-}
-}
-
-#endif

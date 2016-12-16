@@ -1,6 +1,7 @@
-#ifndef MICROBIT_MANAGED_BUFFER_H
-#define MICROBIT_MANAGED_BUFFER_H
+#ifndef DEVICE_MANAGED_BUFFER_H
+#define DEVICE_MANAGED_BUFFER_H
 
+#include "CodalCompat.h"
 //#include "mbed.h"
 #include "RefCounted.h"
 
@@ -199,7 +200,7 @@ class ManagedBuffer
       * Sets the byte at the given index to value provided.
       * @param position The index of the byte to change.
       * @param value The new value of the byte (0-255).
-      * @return MICROBIT_OK, or MICROBIT_INVALID_PARAMETER.
+      * @return DEVICE_OK, or DEVICE_INVALID_PARAMETER.
       *
       * Example:
       * @code
@@ -213,7 +214,7 @@ class ManagedBuffer
       * Determines the value of the given byte in the buffer.
       *
       * @param position The index of the byte to read.
-      * @return The value of the byte at the given position, or MICROBIT_INVALID_PARAMETER.
+      * @return The value of the byte at the given position, or DEVICE_INVALID_PARAMETER.
       *
       * Example:
       * @code

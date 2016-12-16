@@ -128,13 +128,13 @@ namespace Math_ {
     //%
     int random(int max) {
       if (max == INT_MIN)
-        return -microbit_random(INT_MAX);
+        return -device.random(INT_MAX);
       else if (max < 0)
-        return -microbit_random(-max);
+        return -device.random(-max);
       else if (max == 0)
         return 0;
       else
-        return microbit_random(max);
+        return device.random(max);
     }
     
     //%
@@ -292,7 +292,7 @@ namespace pxtrt {
   //%
   void panic(int code)
   {
-    microbit_panic(code);
+    device.panic(code);
   }
 
   //%

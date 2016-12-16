@@ -4,6 +4,8 @@
 
 static const char empty[] __attribute__ ((aligned (4))) = "\xff\xff\0\0\0";
 
+using namespace std;
+
 /**
   * Internal constructor helper.
   * Configures this ManagedBuffer to refer to the static empty buffer.
@@ -189,7 +191,7 @@ bool ManagedBuffer::operator== (const ManagedBuffer& p)
  * Sets the byte at the given index to value provided.
  * @param position The index of the byte to change.
  * @param value The new value of the byte (0-255).
- * @return MICROBIT_OK, or MICROBIT_INVALID_PARAMETER.
+ * @return DEVICE_OK, or DEVICE_INVALID_PARAMETER.
  *
  * Example:
  * @code
@@ -202,11 +204,11 @@ int ManagedBuffer::setByte(int position, uint8_t value)
     if (0 <= position && position < ptr->length)
     {
         ptr->payload[position] = value;
-        return MICROBIT_OK;
+        return DEVICE_OK;
     }
     else
     {
-        return MICROBIT_INVALID_PARAMETER;
+        return DEVICE_INVALID_PARAMETER;
     }
 }
 
@@ -214,7 +216,7 @@ int ManagedBuffer::setByte(int position, uint8_t value)
  * Determines the value of the given byte in the buffer.
  *
  * @param position The index of the byte to read.
- * @return The value of the byte at the given position, or MICROBIT_INVALID_PARAMETER.
+ * @return The value of the byte at the given position, or DEVICE_INVALID_PARAMETER.
  *
  * Example:
  * @code
@@ -228,7 +230,7 @@ int ManagedBuffer::getByte(int position)
     if (0 <= position && position < ptr->length)
         return ptr->payload[position];
     else
-        return MICROBIT_INVALID_PARAMETER;
+        return DEVICE_INVALID_PARAMETER;
 } 
 
 /**
@@ -246,14 +248,14 @@ BufferData *ManagedBuffer::leakData()
 int ManagedBuffer::fill(uint8_t value, int offset, int length)
 {
     if (offset < 0 || offset > ptr->length)
-        return MICROBIT_INVALID_PARAMETER;
+        return DEVICE_INVALID_PARAMETER;
     if (length < 0)
         length = ptr->length;
     length = min(length, ptr->length - offset);
 
     memset(ptr->payload + offset, value, length);
 
-    return MICROBIT_OK;
+    return DEVICE_OK;
 }
 
 ManagedBuffer ManagedBuffer::slice(int offset, int length) const
@@ -324,12 +326,12 @@ int ManagedBuffer::writeBuffer(int dstOffset, const ManagedBuffer &src, int srcO
         length = src.length();
 
     if (srcOffset < 0 || dstOffset < 0 || dstOffset > ptr->length)
-        return MICROBIT_INVALID_PARAMETER;
+        return DEVICE_INVALID_PARAMETER;
 
     length = min(src.length() - srcOffset, ptr->length - dstOffset);
 
     if (length < 0)
-        return MICROBIT_INVALID_PARAMETER;
+        return DEVICE_INVALID_PARAMETER;
 
     if (ptr == src.ptr) {
         memmove(getBytes() + dstOffset, src.ptr->payload + srcOffset, length);
@@ -337,13 +339,13 @@ int ManagedBuffer::writeBuffer(int dstOffset, const ManagedBuffer &src, int srcO
         memcpy(getBytes() + dstOffset, src.ptr->payload + srcOffset, length);
     }
 
-    return MICROBIT_OK;
+    return DEVICE_OK;
 }
 
 int ManagedBuffer::writeBytes(int offset, uint8_t *src, int length, bool swapBytes)
 {
     if (offset < 0 || length < 0 || offset + length > ptr->length)
-        return MICROBIT_INVALID_PARAMETER;
+        return DEVICE_INVALID_PARAMETER;
 
     if (swapBytes) {
         uint8_t *p = ptr->payload + offset + length;
@@ -353,13 +355,13 @@ int ManagedBuffer::writeBytes(int offset, uint8_t *src, int length, bool swapByt
         memcpy(ptr->payload + offset, src, length);
     }
 
-    return MICROBIT_OK;
+    return DEVICE_OK;
 }
 
 int ManagedBuffer::readBytes(uint8_t *dst, int offset, int length, bool swapBytes) const
 {
     if (offset < 0 || length < 0 || offset + length > ptr->length)
-        return MICROBIT_INVALID_PARAMETER;
+        return DEVICE_INVALID_PARAMETER;
 
     if (swapBytes) {
         uint8_t *p = ptr->payload + offset + length;
@@ -369,5 +371,5 @@ int ManagedBuffer::readBytes(uint8_t *dst, int offset, int length, bool swapByte
         memcpy(dst, ptr->payload + offset, length);
     }
 
-    return MICROBIT_OK;
+    return DEVICE_OK;
 }

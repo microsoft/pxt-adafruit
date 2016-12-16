@@ -4,6 +4,7 @@
 // #define DEBUG_MEMLEAKS 1
 
 #pragma GCC diagnostic ignored "-Wunused-parameter"
+#pragma GCC diagnostic ignored "-Wformat"
 
 //#include "MicroBit.h"
 //#include "MicroBitImage.h"

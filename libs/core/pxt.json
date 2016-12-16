@@ -4,7 +4,6 @@
     "files": [
         "README.md",
         "pxt-core.d.ts",
-        "MicroBitGlue.h",
         "ManagedBuffer.cpp",
         "ManagedBuffer.h",
         "pxt.cpp",
@@ -16,7 +15,6 @@
         "shims.d.ts",
         "enums.d.ts",
         "control.ts",
-        "arduino.cpp",
         "arduino.ts"
     ],
     "public": true,

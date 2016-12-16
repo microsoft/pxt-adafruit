@@ -395,7 +395,7 @@ namespace pxt {
   void error(ERROR code, int subcode)
   {
     printf("Error: %d [%d]\n", code, subcode);
-    microbit_panic(42);
+    device.panic(42);
   }
 
   uint16_t *bytecode;
@@ -477,8 +477,5 @@ namespace pxt {
 
 }  
 
-  void microbit_panic(int code) {
-    while(1){}
-  }
 
 // vim: ts=2 sw=2 expandtab

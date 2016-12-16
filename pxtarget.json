@@ -168,7 +168,7 @@
         "variablesBlocks": true
     },
     "compileService": {
-        "yottaTarget": "genuino-g18a",
+        "yottaTarget": "pxt-atsamd21g18a",
         "yottaCorePackage": "codal",
         "githubCorePackage": "lancaster-university/codal",
         "gittag": "samusb",

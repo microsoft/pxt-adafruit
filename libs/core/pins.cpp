@@ -1,45 +1,19 @@
 #include "pxt.h"
 
-// not all boards have all the pins
-// Zero has most, but doesn't have A6, which MKR1000 has, etc.
+#define DEFPIN(id, name, cap) pin##id(DEVICE_ID_IO_P0 + (int)(DigitalPin::id), name, cap)
+#define PIN_V(id) PIN_##id
+#define PIN_AD(id) DEFPIN(id, PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_AD : (PinCapability)0)
+#define PIN_D(id) DEFPIN(id, PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_DIGITAL : (PinCapability)0)
 
-enum class DigitalPin {
-    A0,
-    A1,
-    A2,
-    A3,
-    A4,
-    A5,
-    A6,
-    D0,
-    D1,
-    D2,
-    D3,
-    D4,
-    D5,
-    D6,
-    D7,
-    D8,
-    D9,
-    D10,
-    D11,
-    D12,
-    D13,
-    LED,
-    LED_RX,
-    LED_TX,
-};
+DevPins devPins;
 
-enum class AnalogPin {
-    A0,
-    A1,
-    A2,
-    A3,
-    A4,
-    A5,
-    A6,
-};
+DevPins::DevPins()
+    : PIN_AD(A0), PIN_AD(A1), PIN_AD(A2), PIN_AD(A3), PIN_AD(A4), PIN_AD(A5), PIN_AD(A6), PIN_D(D0),
+      PIN_D(D1), PIN_D(D2), PIN_D(D3), PIN_D(D4), PIN_D(D5), PIN_D(D6), PIN_D(D7), PIN_D(D8),
+      PIN_D(D9), PIN_D(D10), PIN_D(D11), PIN_D(D12), PIN_D(D13), PIN_D(LED), PIN_D(LEDRX),
+      PIN_D(LEDTX), PIN_D(MOSI), PIN_D(MISO), PIN_D(SCK), PIN_D(SDA), PIN_D(SCL) {}
 
+#if 0
 enum class PulseValue {
     //% block=high
     High = MICROBIT_PIN_EVT_PULSE_HI,
@@ -355,3 +329,5 @@ int spiWrite(int value) {
     return p->write(value);
 }
 }
+
+#endif

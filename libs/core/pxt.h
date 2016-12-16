@@ -11,6 +11,10 @@
 #include "ManagedString.h"
 //#include "ManagedType.h"
 #include "ManagedBuffer.h"
+#include "CodalDevice.h"
+#include "DevicePin.h"
+
+#include "pins.h"
 
 //#define printf(...) uBit.serial.printf(__VA_ARGS__)
 // #define printf(...)
@@ -313,5 +317,6 @@ typedef BufferData *Buffer;
     }
 
 #define PXT_FNPTR(x) (uint32_t)(void *)(x)
+
 
 #endif

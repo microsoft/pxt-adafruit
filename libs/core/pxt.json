@@ -6,7 +6,6 @@
         "pxt-core.d.ts",
         "pxt.cpp",
         "pxt.h",
-        "ksbit.h",
         "core.cpp",
         "pxt-helpers.ts",
         "buffer.cpp",

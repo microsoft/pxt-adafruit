@@ -256,14 +256,14 @@ namespace pxtrt {
  
   //%
   uint32_t ldfld(RefRecord *r, int idx) {
-    auto tmp = r->ld(idx);
+    uint32_t tmp = r->ld(idx);
     r->unref();
     return tmp;
   }
 
   //%
   uint32_t ldfldRef(RefRecord *r, int idx) {
-    auto tmp = r->ldref(idx);
+    uint32_t tmp = r->ldref(idx);
     r->unref();
     return tmp;
   }

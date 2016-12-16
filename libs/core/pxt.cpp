@@ -125,7 +125,7 @@ namespace pxt {
     }
 
     void RefRecord_destroy(RefRecord *r) {
-        auto tbl = r->getVTable();
+        VTable *tbl = r->getVTable();
         uint8_t *refmask = (uint8_t*)&tbl->methods[tbl->userdata & 0xff];
         int len = (tbl->numbytes >> 2) - 1;
         for (int i = 0; i < len; ++i) {

@@ -16,7 +16,7 @@
         "autoRun": true,
         "streams": true,
         "aspectRatio": 1.0,
-        "parts": false, 
+        "parts": false,
         "boardDefinition": {
             "visual": "circuitplayground",
             "gpioPinBlocks": [
@@ -80,8 +80,8 @@
                 "A5"
             ],
             "groundPins": [
-                "GND_0", 
-                "GND_1", 
+                "GND_0",
+                "GND_1",
                 "GND_2"
             ],
             "threeVoltPins": [
@@ -168,15 +168,11 @@
         "variablesBlocks": true
     },
     "compileService": {
-        "platformioIni": [
-            "[env:myenv]",
-            "platform = atmelsam",
-            "framework = arduino",
-            "board = mzeroUSB",
-            "build_flags = -Wl,--section-start=.text=0x2000"
-        ],
-        "buildEngine": "platformio",
-        "serviceId": "circuitplayground"
+        "yottaTarget": "genuino-g18a",
+        "yottaCorePackage": "codal",
+        "githubCorePackage": "lancaster-university/codal",
+        "gittag": "samusb",
+        "serviceId": "codalsamd"
     },
     "appTheme": {
         "accentColor": "#000",

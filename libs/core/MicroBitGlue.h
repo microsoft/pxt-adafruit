@@ -11,7 +11,7 @@
 
 void microbit_panic(int code);
 
-#include "Arduino.h"
+// #include "Arduino.h"
 
 #define microbit_random ::random
 

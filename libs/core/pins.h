@@ -273,6 +273,8 @@ enum class DigitalPin {
     SCL,
 };
 
+const int LastPinID = (int)DigitalPin::SCL;
+
 // must match DigitalPin above!
 enum class AnalogPin {
     A0,

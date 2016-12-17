@@ -47,6 +47,24 @@
     }
 
 
+    declare enum PulseValue {
+    //% block=high
+    High = 1,
+    //% block=low
+    Low = 2,
+    }
+
+
+    declare enum PinPullMode {
+    //% block="down"
+    PullDown = 0,
+    //% block="up"
+    PullUp = 1,
+    //% block="none"
+    PullNone = 2,
+    }
+
+
     declare enum NumberFormat {
     Int8LE = 1,
     UInt8LE = 2,

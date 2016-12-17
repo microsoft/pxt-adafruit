@@ -6,13 +6,23 @@
 #pragma GCC diagnostic ignored "-Wunused-parameter"
 #pragma GCC diagnostic ignored "-Wformat"
 
-//#include "MicroBit.h"
-//#include "MicroBitImage.h"
-#include "ManagedString.h"
-//#include "ManagedType.h"
-#include "ManagedBuffer.h"
+#include "DeviceConfig.h"
+#include "DeviceHeapAllocator.h"
 #include "CodalDevice.h"
+#include "ErrorNo.h"
+#include "DeviceTimer.h"
+#include "Matrix4.h"
+#include "CodalCompat.h"
+#include "DeviceComponent.h"
+#include "ManagedType.h"
+#include "ManagedString.h"
+#include "ManagedBuffer.h"
+#include "DeviceEvent.h"
+#include "NotifyEvents.h"
+#include "DeviceButton.h"
 #include "DevicePin.h"
+#include "DeviceFiber.h"
+#include "DeviceMessageBus.h"
 
 #include "pins.h"
 
@@ -52,7 +62,9 @@ extern uint16_t *bytecode;
 class RefRecord;
 
 // Utility functions
-// extern MicroBitEvent lastEvent;
+extern DeviceEvent lastEvent;
+extern DeviceTimer devTimer;
+extern DeviceMessageBus devMessageBus;
 void registerWithDal(int id, int event, Action a);
 void runInBackground(Action a);
 uint32_t runAction3(Action a, int arg0, int arg1, int arg2);
@@ -317,6 +329,5 @@ typedef BufferData *Buffer;
     }
 
 #define PXT_FNPTR(x) (uint32_t)(void *)(x)
-
 
 #endif

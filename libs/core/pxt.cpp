@@ -321,56 +321,68 @@ void debugMemLeaks() {
 void debugMemLeaks() {}
 #endif
 
-#if 0
+static void initCodal() {
+    devTimer.init();
 
-    // ---------------------------------------------------------------------------
-    // An adapter for the API expected by the run-time.
-    // ---------------------------------------------------------------------------
+    // Bring up fiber scheduler.
+    scheduler_init(devMessageBus);
 
-    map<pair<int, int>, Action> handlersMap;
-    
-    MicroBitEvent lastEvent;
+    // Seed our random number generator
+    // seedRandom();
 
-    // We have the invariant that if [dispatchEvent] is registered against the DAL
-    // for a given event, then [handlersMap] contains a valid entry for that
-    // event.
-    void dispatchEvent(MicroBitEvent e) {
-      
-      lastEvent = e;
-      
-      Action curr = handlersMap[{ e.source, e.value }];
-      if (curr)
+    // Create an event handler to trap any handlers being created for I2C services.
+    // We do this to enable initialisation of those services only when they're used,
+    // which saves processor time, memeory and battery life.
+    // messageBus.listen(MICROBIT_ID_MESSAGE_BUS_LISTENER, MICROBIT_EVT_ANY, this,
+    // &MicroBit::onListenerRegisteredEvent);
+}
+
+// ---------------------------------------------------------------------------
+// An adapter for the API expected by the run-time.
+// ---------------------------------------------------------------------------
+
+map<pair<int, int>, Action> handlersMap;
+
+DeviceEvent lastEvent;
+DeviceTimer devTimer;
+DeviceMessageBus devMessageBus;
+
+// We have the invariant that if [dispatchEvent] is registered against the DAL
+// for a given event, then [handlersMap] contains a valid entry for that
+// event.
+void dispatchEvent(DeviceEvent e) {
+    lastEvent = e;
+
+    Action curr = handlersMap[{e.source, e.value}];
+    if (curr)
         runAction1(curr, e.value);
 
-      curr = handlersMap[{ e.source, MICROBIT_EVT_ANY }];
-      if (curr)
+    curr = handlersMap[{e.source, DEVICE_EVT_ANY}];
+    if (curr)
         runAction1(curr, e.value);
-    }
+}
 
-    void registerWithDal(int id, int event, Action a) {
-      Action prev = handlersMap[{ id, event }];
-      if (prev)
+void registerWithDal(int id, int event, Action a) {
+    Action prev = handlersMap[{id, event}];
+    if (prev)
         decr(prev);
-      else
-        uBit.messageBus.listen(id, event, dispatchEvent);
-      incr(a);
-      handlersMap[{ id, event }] = a;
-    }
+    else
+        devMessageBus.listen(id, event, dispatchEvent);
+    incr(a);
+    handlersMap[{id, event}] = a;
+}
 
-    void fiberDone(void *a)
-    {
-      decr((Action)a);
-      release_fiber();
-    }
+void fiberDone(void *a) {
+    decr((Action)a);
+    release_fiber();
+}
 
-
-    void runInBackground(Action a) {
-      if (a != 0) {
+void runInBackground(Action a) {
+    if (a != 0) {
         incr(a);
-        create_fiber((void(*)(void*))runAction0, (void*)a, fiberDone);
-      }
+        create_fiber((void (*)(void *))runAction0, (void *)a, fiberDone);
     }
-#endif
+}
 
 void error(ERROR code, int subcode) {
     printf("Error: %d [%d]\n", code, subcode);
@@ -433,6 +445,8 @@ void exec_binary(int32_t *pc) {
     startptr += 48; // header
     startptr |= 1;  // Thumb state
 
+    initCodal();
+
     ((uint32_t(*)())startptr)();
 
 #ifdef DEBUG_MEMLEAKS
@@ -445,7 +459,5 @@ void exec_binary(int32_t *pc) {
 void start() {
     exec_binary((int32_t *)functionsAndBytecode);
 }
-
-
 
 } // end namespace

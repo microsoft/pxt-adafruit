@@ -3,6 +3,7 @@
     "description": "The core library",
     "files": [
         "README.md",
+        "dal.d.ts",
         "pxt-core.d.ts",
         "pxt.cpp",
         "pxt.h",

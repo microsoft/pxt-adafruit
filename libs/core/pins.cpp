@@ -1,5 +1,7 @@
 #include "pxt.h"
 
+#include "DeviceSystemTimer.h"
+
 #define DEFPIN(id, name, cap) pin##id(DEVICE_ID_IO_P0 + (int)(DigitalPin::id), name, cap)
 #define PIN_V(id) PIN_##id
 #define PIN_AD(id) DEFPIN(id, PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_AD : (PinCapability)0)
@@ -14,18 +16,18 @@ DevPins::DevPins()
       PIN_D(LEDTX), PIN_D(MOSI), PIN_D(MISO), PIN_D(SCK), PIN_D(SDA), PIN_D(SCL) {}
 
 DevicePin *getPin(int id) {
-    if (!(0 <= id && id <= DigitalPin::SCL))
-    return NULL;
+    if (!(0 <= id && id <= LastPinID))
+        return NULL;
     DevicePin *p = &devPins.pins[id];
     if (p->isDigital() || p->isAnalog()) return p;
-    return NULL;
+        return NULL;
 }
 
 enum class PulseValue {
     //% block=high
-    High = MICROBIT_PIN_EVT_PULSE_HI,
+    High = 1, //DEVICE_PIN_EVT_PULSE_HI,
     //% block=low
-    Low = MICROBIT_PIN_EVT_PULSE_LO
+    Low = 2, // DEVICE_PIN_EVT_PULSE_LO
 };
 
 enum class PinPullMode {
@@ -39,6 +41,7 @@ enum class PinPullMode {
 
 
 namespace pins {
+
 #define PINOP(op)                                                                                  \
     DevicePin *pin = getPin((int)name);                                                          \
     if (!pin)                                                                                      \
@@ -52,7 +55,7 @@ namespace pins {
     return pin->op
 
 //%
-MicroBitPin *getPinAddress(int id) {
+DevicePin *getPinAddress(int id) {
     return getPin(id);
 }
 
@@ -119,11 +122,11 @@ void analogSetPeriod(AnalogPin name, int micros) {
 //% help=pins/on-pulsed weight=22 blockGap=8 advanced=true
 //% blockId=pins_on_pulsed block="on|pin %pin|pulsed %pulse"
 void onPulsed(DigitalPin name, PulseValue pulse, Action body) {
-    MicroBitPin *pin = getPin((int)name);
+    DevicePin *pin = getPin((int)name);
     if (!pin)
         return;
 
-    pin->eventOn(MICROBIT_PIN_EVENT_ON_PULSE);
+    pin->eventOn(DEVICE_PIN_EVENT_ON_PULSE);
     registerWithDal((int)name, (int)pulse, body);
 }
 
@@ -147,7 +150,7 @@ int pulseDuration() {
 //% blockId="pins_pulse_in" block="pulse in (µs)|pin %name|pulsed %value"
 //% weight=20 advanced=true
 int pulseIn(DigitalPin name, PulseValue value, int maxDuration = 2000000) {
-    MicroBitPin *pin = getPin((int)name);
+    DevicePin *pin = getPin((int)name);
     if (!pin)
         return 0;
 
@@ -195,7 +198,7 @@ void servoSetPulse(AnalogPin name, int micros) {
     PINOP(setServoPulseUs(micros));
 }
 
-MicroBitPin *pitchPin = NULL;
+DevicePin *pitchPin = NULL;
 
 /**
  * Sets the pin used when using `analog pitch` or music.
@@ -217,7 +220,7 @@ void analogSetPitchPin(AnalogPin name) {
 //% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
 void analogPitch(int frequency, int ms) {
     if (pitchPin == NULL)
-        analogSetPitchPin(AnalogPin::P0);
+        analogSetPitchPin(AnalogPin::A0);
     if (frequency <= 0) {
         pitchPin->setAnalogValue(0);
     } else {

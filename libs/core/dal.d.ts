@@ -1,1 +1,210 @@
-
+// Auto-generated. Do not edit.
+declare const enum DAL {
+    // built/yt/yotta_modules/codal/inc/core/CodalCompat.h
+    // built/yt/yotta_modules/codal/inc/core/CodalDevice.h
+    // built/yt/yotta_modules/codal/inc/core/CodalDmesg.h
+    // built/yt/yotta_modules/codal/inc/core/CodalUSB.h
+    GET_STATUS = 0,
+    CLEAR_FEATURE = 1,
+    SET_FEATURE = 3,
+    SET_ADDRESS = 5,
+    GET_DESCRIPTOR = 6,
+    SET_DESCRIPTOR = 7,
+    GET_CONFIGURATION = 8,
+    SET_CONFIGURATION = 9,
+    GET_INTERFACE = 10,
+    SET_INTERFACE = 11,
+    SYNCH_FRAME = 12,
+    DIRECTION_OUT = 0,
+    DIRECTION_IN = 1,
+    USB_CONFIG_POWERED_MASK = 0x40,
+    USB_CONFIG_BUS_POWERED = 0x80,
+    USB_CONFIG_SELF_POWERED = 0xC0,
+    USB_CONFIG_REMOTE_WAKEUP = 0x20,
+    USB_DEVICE_DESCRIPTOR_TYPE = 1,
+    USB_CONFIGURATION_DESCRIPTOR_TYPE = 2,
+    USB_STRING_DESCRIPTOR_TYPE = 3,
+    USB_INTERFACE_DESCRIPTOR_TYPE = 4,
+    USB_ENDPOINT_DESCRIPTOR_TYPE = 5,
+    REQUEST_HOSTTODEVICE = 0x00,
+    REQUEST_DEVICETOHOST = 0x80,
+    REQUEST_DIRECTION = 0x80,
+    REQUEST_STANDARD = 0x00,
+    REQUEST_CLASS = 0x20,
+    REQUEST_VENDOR = 0x40,
+    REQUEST_TYPE = 0x60,
+    REQUEST_DESTINATION = 0x1F,
+    REQUEST_DEVICE = 0x00,
+    REQUEST_INTERFACE = 0x01,
+    REQUEST_ENDPOINT = 0x02,
+    REQUEST_OTHER = 0x03,
+    REQUEST_GET_STATUS = 0x00,
+    REQUEST_CLEAR_FEATURE = 0x01,
+    REQUEST_SET_FEATURE = 0x03,
+    REQUEST_SYNCH_FRAME = 0x12,
+    DEVICE_REMOTE_WAKEUP = 1,
+    USB_EP_TYPE_CONTROL = 0x00,
+    USB_EP_TYPE_ISOCHRONOUS = 0x01,
+    USB_EP_TYPE_BULK = 0x02,
+    USB_EP_TYPE_INTERRUPT = 0x03,
+    // built/yt/yotta_modules/codal/inc/core/DeviceComponent.h
+    DEVICE_ID_BUTTON_A = 1,
+    DEVICE_ID_BUTTON_B = 2,
+    DEVICE_ID_BUTTON_AB = 3,
+    DEVICE_ID_BUTTON_RESET = 4,
+    DEVICE_ID_ACCELEROMETER = 5,
+    DEVICE_ID_COMPASS = 6,
+    DEVICE_ID_DISPLAY = 7,
+    DEVICE_ID_THERMOMETER = 8,
+    DEVICE_ID_RADIO = 9,
+    DEVICE_ID_RADIO_DATA_READY = 10,
+    DEVICE_ID_MULTIBUTTON_ATTACH = 11,
+    DEVICE_ID_SERIAL = 12,
+    DEVICE_ID_GESTURE = 13,
+    DEVICE_ID_TIMER_1 = 14,
+    DEVICE_ID_SCHEDULER = 15,
+    DEVICE_ID_IO_P0 = 100,
+    DEVICE_ID_MESSAGE_BUS_LISTENER = 1021,
+    DEVICE_ID_NOTIFY_ONE = 1022,
+    DEVICE_ID_NOTIFY = 1023,
+    DEVICE_COMPONENT_RUNNING = 0x01,
+    // built/yt/yotta_modules/codal/inc/core/DeviceFiber.h
+    DEVICE_SCHEDULER_RUNNING = 0x01,
+    DEVICE_SCHEDULER_IDLE = 0x02,
+    DEVICE_FIBER_FLAG_FOB = 0x01,
+    DEVICE_FIBER_FLAG_PARENT = 0x02,
+    DEVICE_FIBER_FLAG_CHILD = 0x04,
+    DEVICE_FIBER_FLAG_DO_NOT_PAGE = 0x08,
+    DEVICE_SCHEDULER_EVT_IDLE = 1,
+    // built/yt/yotta_modules/codal/inc/core/DeviceHeapAllocator.h
+    DEVICE_MAXIMUM_HEAPS = 2,
+    DEVICE_HEAP_BLOCK_FREE = 0x80000000,
+    // built/yt/yotta_modules/codal/inc/core/DeviceListener.h
+    MESSAGE_BUS_LISTENER_PARAMETERISED = 0x0001,
+    MESSAGE_BUS_LISTENER_METHOD = 0x0002,
+    MESSAGE_BUS_LISTENER_BUSY = 0x0004,
+    MESSAGE_BUS_LISTENER_REENTRANT = 0x0008,
+    MESSAGE_BUS_LISTENER_QUEUE_IF_BUSY = 0x0010,
+    MESSAGE_BUS_LISTENER_DROP_IF_BUSY = 0x0020,
+    MESSAGE_BUS_LISTENER_NONBLOCKING = 0x0040,
+    MESSAGE_BUS_LISTENER_URGENT = 0x0080,
+    MESSAGE_BUS_LISTENER_DELETING = 0x8000,
+    // built/yt/yotta_modules/codal/inc/core/DeviceSystemTimer.h
+    // built/yt/yotta_modules/codal/inc/core/ErrorNo.h
+    DEVICE_OK = 0,
+    DEVICE_INVALID_PARAMETER = -1001,
+    DEVICE_NOT_SUPPORTED = -1002,
+    DEVICE_CALIBRATION_IN_PROGRESS = -1003,
+    DEVICE_CALIBRATION_REQUIRED = -1004,
+    DEVICE_NO_RESOURCES = -1005,
+    DEVICE_BUSY = -1006,
+    DEVICE_CANCELLED = -1007,
+    DEVICE_I2C_ERROR = -1010,
+    DEVICE_SERIAL_IN_USE = -1011,
+    DEVICE_NO_DATA = -1012,
+    DEVICE_OOM = 20,
+    DEVICE_HEAP_ERROR = 30,
+    DEVICE_NULL_DEREFERENCE = 40,
+    // built/yt/yotta_modules/codal/inc/core/EventModel.h
+    // built/yt/yotta_modules/codal/inc/core/MemberFunctionCallback.h
+    // built/yt/yotta_modules/codal/inc/core/NotifyEvents.h
+    DEVICE_DISPLAY_EVT_FREE = 1,
+    DEVICE_SERIAL_EVT_TX_EMPTY = 2,
+    DEVICE_UART_S_EVT_TX_EMPTY = 3,
+    // built/yt/yotta_modules/codal/inc/core/SystemClock.h
+    SYSTEM_CLOCK_INIT = 0x01,
+    // built/yt/yotta_modules/codal/inc/device/SAMD21/DeviceTimer.h
+    TIMER_ONE_DEFAULT_PRECISION_US = 1,
+    TIMER_ONE_PRESCALER_OPTIONS = 5,
+    // built/yt/yotta_modules/codal/inc/device/SAMD21/PinMappings.h
+    DEVICE_PIN_COUNT = 3,
+    PIN_CAPABILITY_DIGITAL = 0x01,
+    PIN_CAPABILITY_ANALOG = 0x02,
+    // built/yt/yotta_modules/codal/inc/device/SAMD21/USB.h
+    USB_MAX_PKT_SIZE = 64,
+    USB_DEFAULT_PID = 0x2402,
+    USB_DEFAULT_VID = 0x03EB,
+    USB_EP_FLAG_NO_AUTO_ZLP = 0x01,
+    // built/yt/yotta_modules/codal/inc/device/SAMD21/common_includes.h
+    // built/yt/yotta_modules/codal/inc/device/SAMD21/device_fiber.h
+    // built/yt/yotta_modules/codal/inc/device/SAMD21/device_types.h
+    // built/yt/yotta_modules/codal/inc/drivers/DeviceButton.h
+    DEVICE_BUTTON_EVT_DOWN = 1,
+    DEVICE_BUTTON_EVT_UP = 2,
+    DEVICE_BUTTON_EVT_CLICK = 3,
+    DEVICE_BUTTON_EVT_LONG_CLICK = 4,
+    DEVICE_BUTTON_EVT_HOLD = 5,
+    DEVICE_BUTTON_EVT_DOUBLE_CLICK = 6,
+    DEVICE_BUTTON_LONG_CLICK_TIME = 1000,
+    DEVICE_BUTTON_HOLD_TIME = 1500,
+    DEVICE_BUTTON_STATE = 1,
+    DEVICE_BUTTON_STATE_HOLD_TRIGGERED = 2,
+    DEVICE_BUTTON_STATE_CLICK = 4,
+    DEVICE_BUTTON_STATE_LONG_CLICK = 8,
+    DEVICE_BUTTON_SIGMA_MIN = 0,
+    DEVICE_BUTTON_SIGMA_MAX = 12,
+    DEVICE_BUTTON_SIGMA_THRESH_HI = 8,
+    DEVICE_BUTTON_SIGMA_THRESH_LO = 2,
+    DEVICE_BUTTON_DOUBLE_CLICK_THRESH = 50,
+    DEVICE_BUTTON_SIMPLE_EVENTS = 0,
+    DEVICE_BUTTON_ALL_EVENTS = 1,
+    // built/yt/yotta_modules/codal/inc/drivers/DeviceMessageBus.h
+    // built/yt/yotta_modules/codal/inc/drivers/DevicePin.h
+    IO_STATUS_DIGITAL_IN = 0x01,
+    IO_STATUS_DIGITAL_OUT = 0x02,
+    IO_STATUS_ANALOG_IN = 0x04,
+    IO_STATUS_ANALOG_OUT = 0x08,
+    IO_STATUS_TOUCH_IN = 0x10,
+    IO_STATUS_EVENT_ON_EDGE = 0x20,
+    IO_STATUS_EVENT_PULSE_ON_EDGE = 0x40,
+    DEVICE_PIN_MAX_OUTPUT = 1023,
+    DEVICE_PIN_MAX_SERVO_RANGE = 180,
+    DEVICE_PIN_DEFAULT_SERVO_RANGE = 2000,
+    DEVICE_PIN_DEFAULT_SERVO_CENTER = 1500,
+    DEVICE_PIN_EVENT_NONE = 0,
+    DEVICE_PIN_EVENT_ON_EDGE = 1,
+    DEVICE_PIN_EVENT_ON_PULSE = 2,
+    DEVICE_PIN_EVENT_ON_TOUCH = 3,
+    DEVICE_PIN_EVT_RISE = 2,
+    DEVICE_PIN_EVT_FALL = 3,
+    DEVICE_PIN_EVT_PULSE_HI = 4,
+    DEVICE_PIN_EVT_PULSE_LO = 5,
+    // built/yt/yotta_modules/codal/inc/drivers/DeviceSerial.h
+    DEVICE_SERIAL_DEFAULT_BAUD_RATE = 115200,
+    DEVICE_SERIAL_DEFAULT_BUFFER_SIZE = 20,
+    DEVICE_SERIAL_EVT_DELIM_MATCH = 1,
+    DEVICE_SERIAL_EVT_HEAD_MATCH = 2,
+    DEVICE_SERIAL_EVT_RX_FULL = 3,
+    DEVICE_SERIAL_RX_IN_USE = 1,
+    DEVICE_SERIAL_TX_IN_USE = 2,
+    DEVICE_SERIAL_RX_BUFF_INIT = 4,
+    DEVICE_SERIAL_TX_BUFF_INIT = 8,
+    ASYNC = 0,
+    SYNC_SPINWAIT = 1,
+    SYNC_SLEEP = 2,
+    // built/yt/yotta_modules/codal/inc/drivers/DynamicPwm.h
+    NO_PWMS = 3,
+    DEVICE_DEFAULT_PWM_PERIOD = 20000,
+    PWM_PERSISTENCE_TRANSIENT = 1,
+    PWM_PERSISTENCE_PERSISTENT = 2,
+    // built/yt/yotta_modules/codal/inc/drivers/Glue.h
+    // built/yt/yotta_modules/codal/inc/drivers/HID.h
+    // built/yt/yotta_modules/codal/inc/drivers/TimedInterruptIn.h
+    // built/yt/yotta_modules/codal/inc/platform/yotta_cfg_mappings.h
+    // built/yt/yotta_modules/codal/inc/types/DeviceCoordinateSystem.h
+    RAW = 0,
+    SIMPLE_CARTESIAN = 1,
+    NORTH_EAST_DOWN = 2,
+    // built/yt/yotta_modules/codal/inc/types/DeviceEvent.h
+    DEVICE_ID_ANY = 0,
+    DEVICE_EVT_ANY = 0,
+    CREATE_ONLY = 0,
+    CREATE_AND_FIRE = 1,
+    // built/yt/yotta_modules/codal/inc/types/DeviceImage.h
+    // built/yt/yotta_modules/codal/inc/types/ManagedBuffer.h
+    // built/yt/yotta_modules/codal/inc/types/ManagedString.h
+    // built/yt/yotta_modules/codal/inc/types/ManagedType.h
+    // built/yt/yotta_modules/codal/inc/types/Matrix4.h
+    // built/yt/yotta_modules/codal/inc/types/RefCounted.h
+    // built/yt/yotta_modules/codal/inc/types/list.h
+}

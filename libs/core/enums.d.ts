@@ -49,9 +49,9 @@
 
     declare enum PulseValue {
     //% block=high
-    High = 1,
+    High = 4,  // DEVICE_PIN_EVT_PULSE_HI
     //% block=low
-    Low = 2,
+    Low = 5,  // DEVICE_PIN_EVT_PULSE_LO
     }
 
 

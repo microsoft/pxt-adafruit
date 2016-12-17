@@ -25,9 +25,9 @@ DevicePin *getPin(int id) {
 
 enum class PulseValue {
     //% block=high
-    High = 1, //DEVICE_PIN_EVT_PULSE_HI,
+    High = DEVICE_PIN_EVT_PULSE_HI,
     //% block=low
-    Low = 2, // DEVICE_PIN_EVT_PULSE_LO
+    Low = DEVICE_PIN_EVT_PULSE_LO
 };
 
 enum class PinPullMode {

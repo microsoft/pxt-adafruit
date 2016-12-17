@@ -9,6 +9,7 @@
         "pxt.h",
         "pins.h",
         "core.cpp",
+        "basic.cpp",
         "pins.cpp",
         "pxt-helpers.ts",
         "buffer.cpp",
@@ -16,6 +17,9 @@
         "enums.d.ts",
         "control.ts",
         "arduino.ts"
+    ],
+    "testFiles": [
+        "test.ts"
     ],
     "public": true,
     "dependencies": {}

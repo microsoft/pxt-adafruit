@@ -45,6 +45,8 @@
     A5 = 5,
     A6 = 6,
     }
+declare namespace basic {
+}
 
 
     declare enum PulseValue {

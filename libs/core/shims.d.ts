@@ -1,4 +1,29 @@
 // Auto-generated. Do not edit.
+
+
+    /**
+     * Provides access to basic device functionality.
+     */
+    //% color=#0078D7 weight=100
+declare namespace basic {
+
+    /**
+     * Repeats the code forever in the background. On each iteration, allows other codes to run.
+     * @param body code to execute
+     */
+    //% help=basic/forever weight=55 blockGap=8
+    //% blockId=device_forever block="forever" icon="\uf01e" shim=basic::forever
+    function forever(a: () => void): void;
+
+    /**
+     * Pause for the specified time in milliseconds
+     * @param ms how long to pause for, eg: 100, 200, 500, 1000, 2000
+     */
+    //% help=basic/pause weight=54
+    //% async block="pause (ms) %pause"
+    //% blockId=device_pause icon="\uf110" shim=basic::pause
+    function pause(ms: number): void;
+}
 declare namespace pins {
 
     /**

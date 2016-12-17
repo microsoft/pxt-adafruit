@@ -112,7 +112,7 @@ namespace basic {
      * Repeats the code forever in the background. On each iteration, allows other codes to run.
      * @param body code to execute
      */
-    //% help=basic/forever weight=55 blockGap=8
+    //% help=basic/forever weight=55 blockGap=8 blockAllowMultiple=1
     //% blockId=device_forever block="forever" icon="\uf01e"
     void forever(Action a) {
       if (a != 0) {

@@ -195,7 +195,7 @@ declare namespace basic {
      * Repeats the code forever in the background. On each iteration, allows other codes to run.
      * @param body code to execute
      */
-    //% help=basic/forever weight=55 blockGap=8
+    //% help=basic/forever weight=55 blockGap=8 blockAllowMultiple=1
     //% blockId=device_forever block="forever" icon="\uf01e" shim=basic::forever
     function forever(a: () => void): void;
 
@@ -362,7 +362,7 @@ declare namespace control {
     /**
      * Schedules code that run in the background.
      */
-    //% help=control/in-background
+    //% help=control/in-background blockAllowMultiple=1
     //% blockId="control_in_background" block="run in background" blockGap=8 shim=control::inBackground
     function inBackground(a: () => void): void;
 

@@ -19,8 +19,9 @@ DevicePin *getPin(int id) {
     if (!(0 <= id && id <= LastPinID))
         return NULL;
     DevicePin *p = &devPins.pins[id];
-    if (p->isDigital() || p->isAnalog()) return p;
+    if (p->name == PA00)
         return NULL;
+    return p;
 }
 
 enum class PulseValue {

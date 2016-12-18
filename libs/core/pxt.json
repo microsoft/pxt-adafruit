@@ -11,6 +11,7 @@
         "core.cpp",
         "basic.cpp",
         "pins.cpp",
+        "pins.ts",
         "pxt-helpers.ts",
         "buffer.cpp",
         "shims.d.ts",

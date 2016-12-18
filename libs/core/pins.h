@@ -202,88 +202,78 @@
 class DevPins {
   public:
     DevicePin pins[0];
-    DevicePin pinA0;
-    DevicePin pinA1;
-    DevicePin pinA2;
-    DevicePin pinA3;
-    DevicePin pinA4;
-    DevicePin pinA5;
-    DevicePin pinA6;
-    DevicePin pinD0;
-    DevicePin pinD1;
-    DevicePin pinD2;
-    DevicePin pinD3;
-    DevicePin pinD4;
-    DevicePin pinD5;
-    DevicePin pinD6;
-    DevicePin pinD7;
-    DevicePin pinD8;
-    DevicePin pinD9;
-    DevicePin pinD10;
-    DevicePin pinD11;
-    DevicePin pinD12;
-    DevicePin pinD13;
-    DevicePin pinLED;
-    DevicePin pinLEDRX;
-    DevicePin pinLEDTX;
-    DevicePin pinMOSI;
-    DevicePin pinMISO;
-    DevicePin pinSCK;
-    DevicePin pinSDA;
-    DevicePin pinSCL;
+#define DigitalPin DevicePin
+#define AnalogPin DevicePin
+    //% indexedInstanceNS=pins indexedInstanceShim=pins::getPin
+    //%
+    AnalogPin A0;
+    //%
+    AnalogPin A1;
+    //%
+    AnalogPin A2;
+    //%
+    AnalogPin A3;
+    //%
+    AnalogPin A4;
+    //%
+    AnalogPin A5;
+    //%
+    AnalogPin A6;
+    //%
+    DigitalPin D0;
+    //%
+    DigitalPin D1;
+    //%
+    DigitalPin D2;
+    //%
+    DigitalPin D3;
+    //%
+    DigitalPin D4;
+    //%
+    DigitalPin D5;
+    //%
+    DigitalPin D6;
+    //%
+    DigitalPin D7;
+    //%
+    DigitalPin D8;
+    //%
+    DigitalPin D9;
+    //%
+    DigitalPin D10;
+    //%
+    DigitalPin D11;
+    //%
+    DigitalPin D12;
+    //%
+    DigitalPin D13;
+    //%
+    DigitalPin LED;
+    //%
+    DigitalPin LEDRX;
+    //%
+    DigitalPin LEDTX;
+    //%
+    DigitalPin MOSI;
+    //%
+    DigitalPin MISO;
+    //%
+    DigitalPin SCK;
+    //%
+    DigitalPin SDA;
+    //%
+    DigitalPin SCL;
+#undef DigitalPin
+#undef AnalogPin
     DevPins();
 };
 
-extern DevPins devPins;
+extern DevPins io;
 
-// not all boards have all the pins
-// Zero has most, but doesn't have A6, which MKR1000 has, etc.
-// This enum must match exactly the DevPins class
-enum class DigitalPin {
-    // all analog pins have to come first
-    A0,
-    A1,
-    A2,
-    A3,
-    A4,
-    A5,
-    A6,
-    // digital pins start here
-    D0,
-    D1,
-    D2,
-    D3,
-    D4,
-    D5,
-    D6,
-    D7,
-    D8,
-    D9,
-    D10,
-    D11,
-    D12,
-    D13,
-    LED,
-    LEDRX,
-    LEDTX,
-    MOSI,
-    MISO,
-    SCK,
-    SDA,
-    SCL,
-};
+// modify if the last field changes
+const int LastPinID = &io.SCL - io.pins;
 
-const int LastPinID = (int)DigitalPin::SCL;
-
-// must match DigitalPin above!
-enum class AnalogPin {
-    A0,
-    A1,
-    A2,
-    A3,
-    A4,
-    A5,
-    A6,
-};
+typedef DevicePin *DigitalPin;
+typedef DevicePin *AnalogPin;
 
 #endif

@@ -2,12 +2,12 @@
 
 #include "DeviceSystemTimer.h"
 
-#define DEFPIN(id, name, cap) pin##id(DEVICE_ID_IO_P0 + (int)(DigitalPin::id), name, cap)
+#define DEFPIN(id, name, cap) id(DEVICE_ID_IO_P0 + (&id - pins), (PinName)(name), cap)
 #define PIN_V(id) PIN_##id
-#define PIN_AD(id) DEFPIN(id, (PinName)PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_AD : (PinCapability)0)
-#define PIN_D(id) DEFPIN(id, (PinName)PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_DIGITAL : (PinCapability)0)
+#define PIN_AD(id) DEFPIN(id, PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_AD : (PinCapability)0)
+#define PIN_D(id) DEFPIN(id, PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_DIGITAL : (PinCapability)0)
 
-DevPins devPins;
+DevPins io;
 
 DevPins::DevPins()
     : PIN_AD(A0), PIN_AD(A1), PIN_AD(A2), PIN_AD(A3), PIN_AD(A4), PIN_AD(A5), PIN_AD(A6), PIN_D(D0),
@@ -15,14 +15,7 @@ DevPins::DevPins()
       PIN_D(D9), PIN_D(D10), PIN_D(D11), PIN_D(D12), PIN_D(D13), PIN_D(LED), PIN_D(LEDRX),
       PIN_D(LEDTX), PIN_D(MOSI), PIN_D(MISO), PIN_D(SCK), PIN_D(SDA), PIN_D(SCL) {}
 
-DevicePin *getPin(int id) {
-    if (!(0 <= id && id <= LastPinID))
-        return NULL;
-    DevicePin *p = &devPins.pins[id];
-    if (p->name == PA00)
-        return NULL;
-    return p;
-}
+static DevicePin *pitchPin = NULL;
 
 enum class PulseValue {
     //% block=high
@@ -40,33 +33,30 @@ enum class PinPullMode {
     PullNone = 2
 };
 
-
 namespace pins {
-
-#define PINOP(op)                                                                                  \
-    DevicePin *pin = getPin((int)name);                                                          \
-    if (!pin)                                                                                      \
-        return;                                                                                    \
-    pin->op
-
-#define PINREAD(op)                                                                                \
-    DevicePin *pin = getPin((int)name);                                                          \
-    if (!pin)                                                                                      \
-        return 0;                                                                                  \
-    return pin->op
-
 //%
-DevicePin *getPinAddress(int id) {
-    return getPin(id);
+DevicePin *getPin(int id) {
+    if (!(0 <= id && id <= LastPinID))
+        device.panic(42);
+    DevicePin *p = &io.pins[id];
+    // if (p->name == PA00)
+    //    return NULL;
+    return p;
+}
 }
 
+#define PINOP(op) name->op
+
+#define PINREAD(op) return name->op
+
+namespace DigitalPinMethods {
 /**
  * Read the specified pin or connector as either 0 or 1
  * @param name pin to read from
  */
 //% help=pins/digital-read-pin weight=30
 //% blockId=device_get_digital_pin block="digital read|pin %name" blockGap=8
-int digitalReadPin(DigitalPin name) {
+int digitalRead(DigitalPin name) {
     PINREAD(getDigitalValue());
 }
 
@@ -77,43 +67,8 @@ int digitalReadPin(DigitalPin name) {
   */
 //% help=pins/digital-write-pin weight=29
 //% blockId=device_set_digital_pin block="digital write|pin %name|to %value"
-void digitalWritePin(DigitalPin name, int value) {
+void digitalWrite(DigitalPin name, int value) {
     PINOP(setDigitalValue(value));
-}
-
-/**
- * Read the connector value as analog, that is, as a value comprised between 0 and 1023.
- * @param name pin to write to
- */
-//% help=pins/analog-read-pin weight=25
-//% blockId=device_get_analog_pin block="analog read|pin %name" blockGap="8"
-int analogReadPin(AnalogPin name) {
-    PINREAD(getAnalogValue());
-}
-
-/**
- * Set the connector value as analog. Value must be comprised between 0 and 1023.
- * @param name pin name to write to
- * @param value value to write to the pin between ``0`` and ``1023``. eg:1023,0
- */
-//% help=pins/analog-write-pin weight=24
-//% blockId=device_set_analog_pin block="analog write|pin %name|to %value" blockGap=8
-void analogWritePin(AnalogPin name, int value) {
-    PINOP(setAnalogValue(value));
-}
-
-/**
- * Configures the Pulse-width modulation (PWM) of the analog output to the given value in
- * **microseconds** or `1/1000` milliseconds.
- * If this pin is not configured as an analog output (using `analog write pin`), the operation has
- * no effect.
- * @param name analog pin to set period to
- * @param micros period in micro seconds. eg:20000
- */
-//% help=pins/analog-set-period weight=23 blockGap=8
-//% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros"
-void analogSetPeriod(AnalogPin name, int micros) {
-    PINOP(setAnalogPeriodUs(micros));
 }
 
 /**
@@ -122,24 +77,9 @@ void analogSetPeriod(AnalogPin name, int micros) {
 */
 //% help=pins/on-pulsed weight=22 blockGap=8 advanced=true
 //% blockId=pins_on_pulsed block="on|pin %pin|pulsed %pulse"
-void onPulsed(DigitalPin name, PulseValue pulse, Action body) {
-    DevicePin *pin = getPin((int)name);
-    if (!pin)
-        return;
-
+void onPulsed(DigitalPin pin, PulseValue pulse, Action body) {
     pin->eventOn(DEVICE_PIN_EVENT_ON_PULSE);
-    registerWithDal((int)name, (int)pulse, body);
-}
-
-/**
-* Gets the duration of the last pulse in micro-seconds. This function should be called from a
-* ``onPulsed`` handler.
-*/
-//% help=pins/pulse-duration advanced=true
-//% blockId=pins_pulse_duration block="pulse duration (µs)"
-//% weight=21 blockGap=8
-int pulseDuration() {
-    return pxt::lastEvent.timestamp;
+    registerWithDal((int)pin->name, (int)pulse, body);
 }
 
 /**
@@ -150,11 +90,7 @@ int pulseDuration() {
 */
 //% blockId="pins_pulse_in" block="pulse in (µs)|pin %name|pulsed %value"
 //% weight=20 advanced=true
-int pulseIn(DigitalPin name, PulseValue value, int maxDuration = 2000000) {
-    DevicePin *pin = getPin((int)name);
-    if (!pin)
-        return 0;
-
+int pulseIn(DigitalPin pin, PulseValue value, int maxDuration = 2000000) {
     int pulse = value == PulseValue::High ? 1 : 0;
     uint64_t tick = system_timer_current_time_us();
     uint64_t maxd = (uint64_t)maxDuration;
@@ -173,6 +109,58 @@ int pulseIn(DigitalPin name, PulseValue value, int maxDuration = 2000000) {
 }
 
 /**
+* Configures the pull of this pin.
+* @param name pin to set the pull mode on
+* @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone
+*/
+//% help=pins/set-pull weight=3 advanced=true
+//% blockId=device_set_pull block="set pull|pin %pin|to %pull"
+void setPull(DigitalPin name, PinPullMode pull) {
+    PinMode m = pull == PinPullMode::PullDown ? PinMode::PullDown : pull == PinPullMode::PullUp
+                                                                        ? PinMode::PullUp
+                                                                        : PinMode::PullNone;
+    PINOP(setPull(m));
+}
+}
+
+namespace AnalogPinMethods {
+
+/**
+ * Read the connector value as analog, that is, as a value comprised between 0 and 1023.
+ * @param name pin to write to
+ */
+//% help=pins/analog-read-pin weight=25
+//% blockId=device_get_analog_pin block="analog read|pin %name" blockGap="8"
+int analogRead(AnalogPin name) {
+    PINREAD(getAnalogValue());
+}
+
+/**
+ * Set the connector value as analog. Value must be comprised between 0 and 1023.
+ * @param name pin name to write to
+ * @param value value to write to the pin between ``0`` and ``1023``. eg:1023,0
+ */
+//% help=pins/analog-write-pin weight=24
+//% blockId=device_set_analog_pin block="analog write|pin %name|to %value" blockGap=8
+void analogWrite(AnalogPin name, int value) {
+    PINOP(setAnalogValue(value));
+}
+
+/**
+ * Configures the Pulse-width modulation (PWM) of the analog output to the given value in
+ * **microseconds** or `1/1000` milliseconds.
+ * If this pin is not configured as an analog output (using `analog write pin`), the operation has
+ * no effect.
+ * @param name analog pin to set period to
+ * @param micros period in micro seconds. eg:20000
+ */
+//% help=pins/analog-set-period weight=23 blockGap=8
+//% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros"
+void analogSetPeriod(AnalogPin name, int micros) {
+    PINOP(setAnalogPeriodUs(micros));
+}
+
+/**
  * Writes a value to the servo, controlling the shaft accordingly. On a standard servo, this will
  * set the angle of the shaft (in degrees), moving the shaft to that orientation. On a continuous
  * rotation servo, this will set the speed of the servo (with ``0`` being full-speed in one
@@ -183,7 +171,7 @@ int pulseIn(DigitalPin name, PulseValue value, int maxDuration = 2000000) {
 //% help=pins/servo-write-pin weight=20
 //% blockId=device_set_servo_pin block="servo write|pin %name|to %value" blockGap=8
 //% parts=microservo trackArgs=0
-void servoWritePin(AnalogPin name, int value) {
+void servoWrite(AnalogPin name, int value) {
     PINOP(setServoValue(value));
 }
 
@@ -199,7 +187,29 @@ void servoSetPulse(AnalogPin name, int micros) {
     PINOP(setServoPulseUs(micros));
 }
 
-DevicePin *pitchPin = NULL;
+}
+
+namespace pins {
+/**
+ * Create a new zero-initialized buffer.
+ * @param size number of bytes in the buffer
+ */
+//%
+Buffer createBuffer(int size) {
+    return ManagedBuffer(size).leakData();
+}
+
+/**
+* Gets the duration of the last pulse in micro-seconds. This function should be called from a
+* ``onPulsed`` handler.
+*/
+//% help=pins/pulse-duration advanced=true
+//% blockId=pins_pulse_duration block="pulse duration (µs)"
+//% weight=21 blockGap=8
+int pulseDuration() {
+    return pxt::lastEvent.timestamp;
+}
+
 
 /**
  * Sets the pin used when using `analog pitch` or music.
@@ -208,7 +218,7 @@ DevicePin *pitchPin = NULL;
 //% blockId=device_analog_set_pitch_pin block="analog set pitch pin %name"
 //% help=pins/analog-set-pitch weight=3 advanced=true
 void analogSetPitchPin(AnalogPin name) {
-    pitchPin = getPin((int)name);
+    pitchPin = name;
 }
 
 /**
@@ -221,7 +231,7 @@ void analogSetPitchPin(AnalogPin name) {
 //% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
 void analogPitch(int frequency, int ms) {
     if (pitchPin == NULL)
-        analogSetPitchPin(AnalogPin::A0);
+        analogSetPitchPin(&io.A0);
     if (frequency <= 0) {
         pitchPin->setAnalogValue(0);
     } else {
@@ -237,27 +247,5 @@ void analogPitch(int frequency, int ms) {
     }
 }
 
-/**
-* Configures the pull of this pin.
-* @param name pin to set the pull mode on
-* @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone
-*/
-//% help=pins/set-pull weight=3 advanced=true
-//% blockId=device_set_pull block="set pull|pin %pin|to %pull"
-void setPull(DigitalPin name, PinPullMode pull) {
-    PinMode m = pull == PinPullMode::PullDown ? PinMode::PullDown : pull == PinPullMode::PullUp
-                                                                        ? PinMode::PullUp
-                                                                        : PinMode::PullNone;
-    PINOP(setPull(m));
-}
-
-/**
- * Create a new zero-initialized buffer.
- * @param size number of bytes in the buffer
- */
-//%
-Buffer createBuffer(int size) {
-    return ManagedBuffer(size).leakData();
-}
 
 }

@@ -286,7 +286,6 @@ class RefRefLocal : public RefObject {
 }
 
 using namespace pxt;
-// MicroBitPin *getPin(int id);
 typedef BufferData *Buffer;
 
 // The ARM Thumb generator in the JavaScript code is parsing

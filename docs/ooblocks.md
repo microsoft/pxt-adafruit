@@ -44,9 +44,12 @@ analog write pin [P0] to [1023]
 on button [A] pressed ...
 ```
 
-Methods like `digitalWrite` would get an annotation with a namespace in which to look
-for instances--we would scan it for all compatible instances. The code would be
-something like this:
+Certain types, like `AnalogPin` and `DigitalPin`, are annotated with
+`//% fixedInstances`. Arguments of such types are replaced with drop-downs in Blocks.
+The contents of drop-downs is all global symbols annotated with `//% fixedInstance`
+(these are two distinct annotations) with compatible return type.
+
+The code would be something like this:
 
 ```
 namespace pins {
@@ -56,16 +59,15 @@ namespace pins {
     public analogWrite(value: number): void { ... }
   }
 
+  //% fixedInstance
   export const P0: AnalogPin
+  //% fixedInstance
   export const P1: AnalogPin
   // ...
+  //% fixedInstance
   export const P12: DigitalPin
 }
 ```
-
-The `blockInstances` annotation would prevent blocks from giving a general purpose
-hole for `this` argument, and instead show a list of options drawn from the namespace.
-
 
 ## Neopixels
 

@@ -15,188 +15,188 @@
 #endif
 
 #if PXT_BOARD_ID == BOARD_ID_ZERO || PXT_BOARD_ID == BOARD_ID_METRO
-#define PIN_A0 PA02
-#define PIN_A1 PB08
-#define PIN_A2 PB09
-#define PIN_A3 PA04
-#define PIN_A4 PA05
-#define PIN_A5 PB02
-#define PIN_D0 PA11
-#define PIN_D1 PA10
-#define PIN_D2 PA14
-#define PIN_D3 PA09
-#define PIN_D4 PA08
-#define PIN_D5 PA15
-#define PIN_D6 PA20
-#define PIN_D7 PA21
-#define PIN_D8 PA06
-#define PIN_D9 PA07
-#define PIN_D10 PA18
-#define PIN_D11 PA16
-#define PIN_D12 PA19
-#define PIN_D13 PA17
-#define PIN_LED PA17
-#define PIN_LEDRX PB03
-#define PIN_LEDTX PA27
-#define PIN_MISO PA12
-#define PIN_MOSI PB10
-#define PIN_SCK PB11
-#define PIN_SCL PA23
-#define PIN_SDA PA22
+#define PIN_A0 PIN_PA02
+#define PIN_A1 PIN_PB08
+#define PIN_A2 PIN_PB09
+#define PIN_A3 PIN_PA04
+#define PIN_A4 PIN_PA05
+#define PIN_A5 PIN_PB02
+#define PIN_D0 PIN_PA11
+#define PIN_D1 PIN_PA10
+#define PIN_D2 PIN_PA14
+#define PIN_D3 PIN_PA09
+#define PIN_D4 PIN_PA08
+#define PIN_D5 PIN_PA15
+#define PIN_D6 PIN_PA20
+#define PIN_D7 PIN_PA21
+#define PIN_D8 PIN_PA06
+#define PIN_D9 PIN_PA07
+#define PIN_D10 PIN_PA18
+#define PIN_D11 PIN_PA16
+#define PIN_D12 PIN_PA19
+#define PIN_D13 PIN_PA17
+#define PIN_LED PIN_PA17
+#define PIN_LEDRX PIN_PB03
+#define PIN_LEDTX PIN_PA27
+#define PIN_MISO PIN_PA12
+#define PIN_MOSI PIN_PB10
+#define PIN_SCK PIN_PB11
+#define PIN_SCL PIN_PA23
+#define PIN_SDA PIN_PA22
 
 #elif PXT_BOARD_ID == BOARD_ID_CPLAY
 // TODO need to map LEFT_BUTTON and friends to D<n>
-#define PIN_ACCELEROMETER_CS PA13
-#define PIN_ACCELEROMETER_INTERRUPT PA14
-#define PIN_D0 PA11
-#define PIN_D1 PA10
-#define PIN_D10 PA06
-#define PIN_D12 PA05
-#define PIN_D13 PA17
-#define PIN_D2 PA22
-#define PIN_D3 PA23
-#define PIN_D6 PA04
-#define PIN_D9 PA07
-#define PIN_LEFT_BUTTON PA28
-#define PIN_LIGHT PB02
-#define PIN_MICROPHONE PA08
-#define PIN_MISO PA12
-#define PIN_MOSI PB10
-#define PIN_NEOPIXEL PB22
-#define PIN_RIGHT_BUTTON PA19
-#define PIN_SCK PB11
-#define PIN_SCL PA23
-#define PIN_SDA PA22
-#define PIN_SLIDE_SWITCH PB09
-#define PIN_SPEAKER PA02
-#define PIN_TEMPERATURE PA09
+#define PIN_ACCELEROMETER_CS PIN_PA13
+#define PIN_ACCELEROMETER_INTERRUPT PIN_PA14
+#define PIN_D0 PIN_PA11
+#define PIN_D1 PIN_PA10
+#define PIN_D10 PIN_PA06
+#define PIN_D12 PIN_PA05
+#define PIN_D13 PIN_PA17
+#define PIN_D2 PIN_PA22
+#define PIN_D3 PIN_PA23
+#define PIN_D6 PIN_PA04
+#define PIN_D9 PIN_PA07
+#define PIN_LEFT_BUTTON PIN_PA28
+#define PIN_LIGHT PIN_PB02
+#define PIN_MICROPHONE PIN_PA08
+#define PIN_MISO PIN_PA12
+#define PIN_MOSI PIN_PB10
+#define PIN_NEOPIXEL PIN_PB22
+#define PIN_RIGHT_BUTTON PIN_PA19
+#define PIN_SCK PIN_PB11
+#define PIN_SCL PIN_PA23
+#define PIN_SDA PIN_PA22
+#define PIN_SLIDE_SWITCH PIN_PB09
+#define PIN_SPEAKER PIN_PA02
+#define PIN_TEMPERATURE PIN_PA09
 
 #elif PXT_BOARD_ID == BOARD_ID_FEATHER
-#define PIN_A0 PA02
-#define PIN_A1 PB08
-#define PIN_A2 PB09
-#define PIN_A3 PA04
-#define PIN_A4 PA05
-#define PIN_A5 PB02
-#define PIN_D0 PA11
-#define PIN_D1 PA10
-#define PIN_D5 PA15
-#define PIN_D6 PA20
-#define PIN_D9 PA07
-#define PIN_D10 PA18
-#define PIN_D11 PA16
-#define PIN_D12 PA19
-#define PIN_D13 PA17
-#define PIN_MISO PA12
-#define PIN_MOSI PB10
-#define PIN_SCK PB11
-#define PIN_SCL PA23
-#define PIN_SD PA08
-#define PIN_SDA PA22
+#define PIN_A0 PIN_PA02
+#define PIN_A1 PIN_PB08
+#define PIN_A2 PIN_PB09
+#define PIN_A3 PIN_PA04
+#define PIN_A4 PIN_PA05
+#define PIN_A5 PIN_PB02
+#define PIN_D0 PIN_PA11
+#define PIN_D1 PIN_PA10
+#define PIN_D5 PIN_PA15
+#define PIN_D6 PIN_PA20
+#define PIN_D9 PIN_PA07
+#define PIN_D10 PIN_PA18
+#define PIN_D11 PIN_PA16
+#define PIN_D12 PIN_PA19
+#define PIN_D13 PIN_PA17
+#define PIN_MISO PIN_PA12
+#define PIN_MOSI PIN_PB10
+#define PIN_SCK PIN_PB11
+#define PIN_SCL PIN_PA23
+#define PIN_SD PIN_PA08
+#define PIN_SDA PIN_PA22
 
 #elif PXT_BOARD_ID == BOARD_ID_GEMMA
-#define PIN_A0 PA02
-#define PIN_D3 PA09
-#define PIN_D4 PA08
-#define PIN_D13 PA17
+#define PIN_A0 PIN_PA02
+#define PIN_D3 PIN_PA09
+#define PIN_D4 PIN_PA08
+#define PIN_D13 PIN_PA17
 
 #elif PXT_BOARD_ID == BOARD_ID_TRINKET
-#define PIN_A0 PA02
-#define PIN_D0 PA11
-#define PIN_D1 PA10
-#define PIN_D3 PA09
-#define PIN_D4 PA08
-#define PIN_D13 PA17
+#define PIN_A0 PIN_PA02
+#define PIN_D0 PIN_PA11
+#define PIN_D1 PIN_PA10
+#define PIN_D3 PIN_PA09
+#define PIN_D4 PIN_PA08
+#define PIN_D13 PIN_PA17
 #else
 #error "Board pinout not defined"
 #endif
 
 #ifndef PIN_A0
-#define PIN_A0 PA00
+#define PIN_A0 PIN_PA00
 #endif
 #ifndef PIN_A1
-#define PIN_A1 PA00
+#define PIN_A1 PIN_PA00
 #endif
 #ifndef PIN_A2
-#define PIN_A2 PA00
+#define PIN_A2 PIN_PA00
 #endif
 #ifndef PIN_A3
-#define PIN_A3 PA00
+#define PIN_A3 PIN_PA00
 #endif
 #ifndef PIN_A4
-#define PIN_A4 PA00
+#define PIN_A4 PIN_PA00
 #endif
 #ifndef PIN_A5
-#define PIN_A5 PA00
+#define PIN_A5 PIN_PA00
 #endif
 #ifndef PIN_A6
-#define PIN_A6 PA00
+#define PIN_A6 PIN_PA00
 #endif
 #ifndef PIN_D0
-#define PIN_D0 PA00
+#define PIN_D0 PIN_PA00
 #endif
 #ifndef PIN_D1
-#define PIN_D1 PA00
+#define PIN_D1 PIN_PA00
 #endif
 #ifndef PIN_D2
-#define PIN_D2 PA00
+#define PIN_D2 PIN_PA00
 #endif
 #ifndef PIN_D3
-#define PIN_D3 PA00
+#define PIN_D3 PIN_PA00
 #endif
 #ifndef PIN_D4
-#define PIN_D4 PA00
+#define PIN_D4 PIN_PA00
 #endif
 #ifndef PIN_D5
-#define PIN_D5 PA00
+#define PIN_D5 PIN_PA00
 #endif
 #ifndef PIN_D6
-#define PIN_D6 PA00
+#define PIN_D6 PIN_PA00
 #endif
 #ifndef PIN_D7
-#define PIN_D7 PA00
+#define PIN_D7 PIN_PA00
 #endif
 #ifndef PIN_D8
-#define PIN_D8 PA00
+#define PIN_D8 PIN_PA00
 #endif
 #ifndef PIN_D9
-#define PIN_D9 PA00
+#define PIN_D9 PIN_PA00
 #endif
 #ifndef PIN_D10
-#define PIN_D10 PA00
+#define PIN_D10 PIN_PA00
 #endif
 #ifndef PIN_D11
-#define PIN_D11 PA00
+#define PIN_D11 PIN_PA00
 #endif
 #ifndef PIN_D12
-#define PIN_D12 PA00
+#define PIN_D12 PIN_PA00
 #endif
 #ifndef PIN_D13
-#define PIN_D13 PA00
+#define PIN_D13 PIN_PA00
 #endif
 #ifndef PIN_LED
-#define PIN_LED PA00
+#define PIN_LED PIN_PA00
 #endif
 #ifndef PIN_LEDRX
-#define PIN_LEDRX PA00
+#define PIN_LEDRX PIN_PA00
 #endif
 #ifndef PIN_LEDTX
-#define PIN_LEDTX PA00
+#define PIN_LEDTX PIN_PA00
 #endif
 #ifndef PIN_MOSI
-#define PIN_MOSI PA00
+#define PIN_MOSI PIN_PA00
 #endif
 #ifndef PIN_MISO
-#define PIN_MISO PA00
+#define PIN_MISO PIN_PA00
 #endif
 #ifndef PIN_SCK
-#define PIN_SCK PA00
+#define PIN_SCK PIN_PA00
 #endif
 #ifndef PIN_SDA
-#define PIN_SDA PA00
+#define PIN_SDA PIN_PA00
 #endif
 #ifndef PIN_SCL
-#define PIN_SCL PA00
+#define PIN_SCL PIN_PA00
 #endif
 
 class DevPins {

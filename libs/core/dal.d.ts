@@ -105,6 +105,7 @@ declare const enum DAL {
     DEVICE_OOM = 20,
     DEVICE_HEAP_ERROR = 30,
     DEVICE_NULL_DEREFERENCE = 40,
+    DEVICE_USB_ERROR = 50,
     // built/yt/yotta_modules/codal/inc/core/EventModel.h
     // built/yt/yotta_modules/codal/inc/core/MemberFunctionCallback.h
     // built/yt/yotta_modules/codal/inc/core/NotifyEvents.h

@@ -4,8 +4,8 @@
 
 #define DEFPIN(id, name, cap) pin##id(DEVICE_ID_IO_P0 + (int)(DigitalPin::id), name, cap)
 #define PIN_V(id) PIN_##id
-#define PIN_AD(id) DEFPIN(id, PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_AD : (PinCapability)0)
-#define PIN_D(id) DEFPIN(id, PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_DIGITAL : (PinCapability)0)
+#define PIN_AD(id) DEFPIN(id, (PinName)PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_AD : (PinCapability)0)
+#define PIN_D(id) DEFPIN(id, (PinName)PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_DIGITAL : (PinCapability)0)
 
 DevPins devPins;
 

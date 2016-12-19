@@ -1,7 +1,7 @@
 {
     "applicationName": "pxt-microbit-oss",
     "dataFolderName": ".pxt-microbit-oss",
-    "darwinBundleIdentifier": "com.microsoft.pxtoss",
+    "darwinBundleIdentifier": "com.microsoft.pxtmicrobitoss",
     "nameShort": "PXT Microbit - OSS",
     "nameLong": "PXT Microbit - OSS",
     "targetId": "pxt-microbit",

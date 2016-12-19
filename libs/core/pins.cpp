@@ -56,6 +56,7 @@ namespace DigitalPinMethods {
  */
 //% help=pins/digital-read-pin weight=30
 //% blockId=device_get_digital_pin block="digital read|pin %name" blockGap=8
+//% blockNamespace=pins
 int digitalRead(DigitalPin name) {
     PINREAD(getDigitalValue());
 }
@@ -67,6 +68,7 @@ int digitalRead(DigitalPin name) {
   */
 //% help=pins/digital-write-pin weight=29
 //% blockId=device_set_digital_pin block="digital write|pin %name|to %value"
+//% blockNamespace=pins
 void digitalWrite(DigitalPin name, int value) {
     PINOP(setDigitalValue(value));
 }
@@ -77,6 +79,7 @@ void digitalWrite(DigitalPin name, int value) {
 */
 //% help=pins/on-pulsed weight=22 blockGap=8 advanced=true
 //% blockId=pins_on_pulsed block="on|pin %pin|pulsed %pulse"
+//% blockNamespace=pins
 void onPulsed(DigitalPin pin, PulseValue pulse, Action body) {
     pin->eventOn(DEVICE_PIN_EVENT_ON_PULSE);
     registerWithDal((int)pin->name, (int)pulse, body);
@@ -90,6 +93,7 @@ void onPulsed(DigitalPin pin, PulseValue pulse, Action body) {
 */
 //% blockId="pins_pulse_in" block="pulse in (µs)|pin %name|pulsed %value"
 //% weight=20 advanced=true
+//% blockNamespace=pins
 int pulseIn(DigitalPin pin, PulseValue value, int maxDuration = 2000000) {
     int pulse = value == PulseValue::High ? 1 : 0;
     uint64_t tick = system_timer_current_time_us();
@@ -115,6 +119,7 @@ int pulseIn(DigitalPin pin, PulseValue value, int maxDuration = 2000000) {
 */
 //% help=pins/set-pull weight=3 advanced=true
 //% blockId=device_set_pull block="set pull|pin %pin|to %pull"
+//% blockNamespace=pins
 void setPull(DigitalPin name, PinPullMode pull) {
     PinMode m = pull == PinPullMode::PullDown ? PinMode::PullDown : pull == PinPullMode::PullUp
                                                                         ? PinMode::PullUp
@@ -131,6 +136,7 @@ namespace AnalogPinMethods {
  */
 //% help=pins/analog-read-pin weight=25
 //% blockId=device_get_analog_pin block="analog read|pin %name" blockGap="8"
+//% blockNamespace=pins
 int analogRead(AnalogPin name) {
     PINREAD(getAnalogValue());
 }
@@ -142,6 +148,7 @@ int analogRead(AnalogPin name) {
  */
 //% help=pins/analog-write-pin weight=24
 //% blockId=device_set_analog_pin block="analog write|pin %name|to %value" blockGap=8
+//% blockNamespace=pins
 void analogWrite(AnalogPin name, int value) {
     PINOP(setAnalogValue(value));
 }
@@ -156,6 +163,7 @@ void analogWrite(AnalogPin name, int value) {
  */
 //% help=pins/analog-set-period weight=23 blockGap=8
 //% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros"
+//% blockNamespace=pins
 void analogSetPeriod(AnalogPin name, int micros) {
     PINOP(setAnalogPeriodUs(micros));
 }
@@ -171,6 +179,7 @@ void analogSetPeriod(AnalogPin name, int micros) {
 //% help=pins/servo-write-pin weight=20
 //% blockId=device_set_servo_pin block="servo write|pin %name|to %value" blockGap=8
 //% parts=microservo trackArgs=0
+//% blockNamespace=pins
 void servoWrite(AnalogPin name, int value) {
     PINOP(setServoValue(value));
 }
@@ -183,6 +192,7 @@ void servoWrite(AnalogPin name, int value) {
  */
 //% help=pins/servo-set-pulse weight=19
 //% blockId=device_set_servo_pulse block="servo set pulse|pin %value|to (µs) %micros"
+//% blockNamespace=pins
 void servoSetPulse(AnalogPin name, int micros) {
     PINOP(setServoPulseUs(micros));
 }

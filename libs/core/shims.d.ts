@@ -1,4 +1,123 @@
 // Auto-generated. Do not edit.
+declare namespace pins {
+
+
+    //% indexedInstanceNS=pins indexedInstanceShim=pins::getPin
+    //% fixedInstance shim=pins::getPin(0)
+    const A0: AnalogPin;
+
+
+    //% fixedInstance shim=pins::getPin(1)
+    const A1: AnalogPin;
+
+
+    //% fixedInstance shim=pins::getPin(2)
+    const A2: AnalogPin;
+
+
+    //% fixedInstance shim=pins::getPin(3)
+    const A3: AnalogPin;
+
+
+    //% fixedInstance shim=pins::getPin(4)
+    const A4: AnalogPin;
+
+
+    //% fixedInstance shim=pins::getPin(5)
+    const A5: AnalogPin;
+
+
+    //% fixedInstance shim=pins::getPin(6)
+    const A6: AnalogPin;
+
+
+    //% fixedInstance shim=pins::getPin(7)
+    const D0: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(8)
+    const D1: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(9)
+    const D2: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(10)
+    const D3: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(11)
+    const D4: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(12)
+    const D5: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(13)
+    const D6: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(14)
+    const D7: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(15)
+    const D8: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(16)
+    const D9: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(17)
+    const D10: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(18)
+    const D11: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(19)
+    const D12: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(20)
+    const D13: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(21)
+    const LED: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(22)
+    const LEDRX: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(23)
+    const LEDTX: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(24)
+    const MOSI: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(25)
+    const MISO: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(26)
+    const SCK: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(27)
+    const SDA: DigitalPin;
+
+
+    //% fixedInstance shim=pins::getPin(28)
+    const SCL: DigitalPin;
+}
 
 
     /**
@@ -32,7 +151,8 @@ declare interface DigitalPin {
      * @param name pin to read from
      */
     //% help=pins/digital-read-pin weight=30
-    //% blockId=device_get_digital_pin block="digital read|pin %name" blockGap=8 shim=DigitalPinMethods::digitalRead
+    //% blockId=device_get_digital_pin block="digital read|pin %name" blockGap=8
+    //% blockNamespace=pins shim=DigitalPinMethods::digitalRead
     digitalRead(): number;
 
     /**
@@ -41,7 +161,8 @@ declare interface DigitalPin {
      * @param value value to set on the pin, 1 eg,0
      */
     //% help=pins/digital-write-pin weight=29
-    //% blockId=device_set_digital_pin block="digital write|pin %name|to %value" shim=DigitalPinMethods::digitalWrite
+    //% blockId=device_set_digital_pin block="digital write|pin %name|to %value"
+    //% blockNamespace=pins shim=DigitalPinMethods::digitalWrite
     digitalWrite(value: number): void;
 
     /**
@@ -49,7 +170,8 @@ declare interface DigitalPin {
      * that this pin was either ``high`` or ``low``.
      */
     //% help=pins/on-pulsed weight=22 blockGap=8 advanced=true
-    //% blockId=pins_on_pulsed block="on|pin %pin|pulsed %pulse" shim=DigitalPinMethods::onPulsed
+    //% blockId=pins_on_pulsed block="on|pin %pin|pulsed %pulse"
+    //% blockNamespace=pins shim=DigitalPinMethods::onPulsed
     onPulsed(pulse: PulseValue, body: () => void): void;
 
     /**
@@ -59,7 +181,8 @@ declare interface DigitalPin {
      * @param maximum duration in micro-seconds
      */
     //% blockId="pins_pulse_in" block="pulse in (µs)|pin %name|pulsed %value"
-    //% weight=20 advanced=true maxDuration.defl=2000000 shim=DigitalPinMethods::pulseIn
+    //% weight=20 advanced=true
+    //% blockNamespace=pins maxDuration.defl=2000000 shim=DigitalPinMethods::pulseIn
     pulseIn(value: PulseValue, maxDuration?: number): number;
 
     /**
@@ -68,7 +191,8 @@ declare interface DigitalPin {
      * @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone
      */
     //% help=pins/set-pull weight=3 advanced=true
-    //% blockId=device_set_pull block="set pull|pin %pin|to %pull" shim=DigitalPinMethods::setPull
+    //% blockId=device_set_pull block="set pull|pin %pin|to %pull"
+    //% blockNamespace=pins shim=DigitalPinMethods::setPull
     setPull(pull: PinPullMode): void;
 }
 
@@ -79,7 +203,8 @@ declare interface AnalogPin {
      * @param name pin to write to
      */
     //% help=pins/analog-read-pin weight=25
-    //% blockId=device_get_analog_pin block="analog read|pin %name" blockGap="8" shim=AnalogPinMethods::analogRead
+    //% blockId=device_get_analog_pin block="analog read|pin %name" blockGap="8"
+    //% blockNamespace=pins shim=AnalogPinMethods::analogRead
     analogRead(): number;
 
     /**
@@ -88,7 +213,8 @@ declare interface AnalogPin {
      * @param value value to write to the pin between ``0`` and ``1023``. eg:1023,0
      */
     //% help=pins/analog-write-pin weight=24
-    //% blockId=device_set_analog_pin block="analog write|pin %name|to %value" blockGap=8 shim=AnalogPinMethods::analogWrite
+    //% blockId=device_set_analog_pin block="analog write|pin %name|to %value" blockGap=8
+    //% blockNamespace=pins shim=AnalogPinMethods::analogWrite
     analogWrite(value: number): void;
 
     /**
@@ -100,7 +226,8 @@ declare interface AnalogPin {
      * @param micros period in micro seconds. eg:20000
      */
     //% help=pins/analog-set-period weight=23 blockGap=8
-    //% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros" shim=AnalogPinMethods::analogSetPeriod
+    //% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros"
+    //% blockNamespace=pins shim=AnalogPinMethods::analogSetPeriod
     analogSetPeriod(micros: number): void;
 
     /**
@@ -113,7 +240,8 @@ declare interface AnalogPin {
      */
     //% help=pins/servo-write-pin weight=20
     //% blockId=device_set_servo_pin block="servo write|pin %name|to %value" blockGap=8
-    //% parts=microservo trackArgs=0 shim=AnalogPinMethods::servoWrite
+    //% parts=microservo trackArgs=0
+    //% blockNamespace=pins shim=AnalogPinMethods::servoWrite
     servoWrite(value: number): void;
 
     /**
@@ -123,7 +251,8 @@ declare interface AnalogPin {
      * @param micros pulse duration in micro seconds, eg:1500
      */
     //% help=pins/servo-set-pulse weight=19
-    //% blockId=device_set_servo_pulse block="servo set pulse|pin %value|to (µs) %micros" shim=AnalogPinMethods::servoSetPulse
+    //% blockId=device_set_servo_pulse block="servo set pulse|pin %value|to (µs) %micros"
+    //% blockNamespace=pins shim=AnalogPinMethods::servoSetPulse
     servoSetPulse(micros: number): void;
 }
 declare namespace pins {

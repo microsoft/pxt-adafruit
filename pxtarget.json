@@ -57,6 +57,12 @@
                     "bluetooth\\s*\\.uartRead\\s*\\((.*?)\\)": "bluetooth.uartReadUntil($1)",
                     "bluetooth\\s*\\.uartWrite\\s*\\((.*?)\\)": "bluetooth.uartWriteUntil($1)"
                 }
+            },
+            {
+                "type": "blockId",
+                "map": {
+                    "device_get_acceleration": "device_acceleration"
+                }
             }
         ]
     },
@@ -64,7 +70,9 @@
         "mathBlocks": true,
         "loopsBlocks": true,
         "logicBlocks": true,
-        "variablesBlocks": true
+        "variablesBlocks": true,
+        "onStartColor": "#0078D7",
+        "onStartNamespace": "basic"
     },
     "simulator": {
         "autoRun": true,

@@ -17,7 +17,7 @@ input.onButtonPressed(Button.A, () => {
 
 #### ~hint
 
-The ``showString`` block can show letters, numbers, and punctuation
+The `[basic.showString("HI")]` block can show letters, numbers, and punctuation
 on the @boardname@ screen.
 
 #### ~
@@ -33,7 +33,7 @@ input.onButtonPressed(Button.B, () => {
 #### ~hint
 
 You can find the letter `B` by clicking the letter `A` on the
-``onButtonPressed`` block.
+`[input.onButtonPressed(Button.A, () => {})]` block.
 
 #### ~
 

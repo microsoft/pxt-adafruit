@@ -23,8 +23,8 @@ input.onButtonPressed(Button.B, () => {
 ```
 ### ~hint
 
-The ``pick random true or false`` block randomly tells the ``if``
-block `true` or `false`.  If the ``pick`` block picked `true`, the
+The `[Math.randomBoolean()]` block randomly tells the ``if``
+block `true` or `false`.  If value picked is `true`, the
 ``if`` block shows the letter `H`. Otherwise, it shows the letter `T`.
 
 That's it!

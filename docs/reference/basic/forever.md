@@ -18,15 +18,15 @@ and updates the screen with the direction.
 basic.forever(() => {
     let heading = input.compassHeading()
     if (heading < 45) {
-        basic.showString("N", 100)
+        basic.showString("N")
     } else if (heading < 135) {
-        basic.showString("E", 100)
+        basic.showString("E")
     }
     else if (heading < 225) {
-        basic.showString("S", 100)
+        basic.showString("S")
     }
     else {
-        basic.showString("W", 100)
+        basic.showString("W")
     }
 })
 ```
@@ -40,7 +40,7 @@ You can use a program like this to count things with your @boardname@.
 ```blocks
 let num = 0
 basic.forever(() => {
-    basic.showNumber(num, 150)
+    basic.showNumber(num)
 })
 input.onButtonPressed(Button.A, () => {
     num = num + 1
@@ -56,10 +56,10 @@ Try this on your @boardname@:
 
 ```blocks
 basic.forever(() => {
-    basic.showNumber(6789, 150)
+    basic.showNumber(6789)
 })
 input.onButtonPressed(Button.A, () => {
-    basic.showNumber(2, 150)
+    basic.showNumber(2)
 })
 ```
 

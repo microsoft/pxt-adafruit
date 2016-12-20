@@ -33,6 +33,8 @@
   "DisplayMode.Greyscale|block": "greyscale",
   "EventCreationMode.CreateAndFire": "MicroBitEvent is initialised, and its event handlers are immediately fired (not suitable for use in interrupts!).",
   "EventCreationMode.CreateOnly": "MicroBitEvent is initialised, and no further processing takes place.",
+  "Gesture.EightG": "Raised when a 8G shock is detected",
+  "Gesture.EightG|block": "8g",
   "Gesture.FreeFall": "Raised when the board is falling!",
   "Gesture.FreeFall|block": "free fall",
   "Gesture.LogoDown": "Raised when the logo is downward and the screen is vertical",

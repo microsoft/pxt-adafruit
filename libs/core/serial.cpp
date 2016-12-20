@@ -92,7 +92,10 @@ namespace serial {
     //% blockId=serial_redirect block="serial|redirect to|TX %tx|RX %rx|at baud rate %rate"
     //% blockExternalInputs=1
     void redirect(SerialPin tx, SerialPin rx, BaudRate rate) {
-      uBit.serial.redirect((PinName)tx, (PinName)rx);
+      MicroBitPin* txp = getPin(tx); if (!tx) return;
+      MicroBitPin* rxp = getPin(rx); if (!rx) return;
+
+      uBit.serial.redirect(txp->name, rxp->name);
       uBit.serial.baud((int)rate);
     }
 }

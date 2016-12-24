@@ -131,72 +131,297 @@ void RefRecord_print(RefRecord *r) {
     DMESG("RefRecord %p r=%d size=%d bytes", r, r->refcnt, r->getVTable()->numbytes);
 }
 
-void RefCollection::push(uint32_t x) {
-    if (isRef())
-        incr(x);
-    data.push_back(x);
-}
+    uint32_t Segment::get(uint32_t i)
+    {
+#ifdef DEBUG_BUILD
+      printf("In Segment::get index:%u\n", i);
+      this->print();
+#endif            
+      
+      if (i < length)
+      {
+        if (data[i] != Segment::MissingValue)
+        {
+          return data[i];          
+        }
+        error(ERR_MISSING_VALUE);
+        return 0;
+      }
+      error(ERR_OUT_OF_BOUNDS);
+      return 0;
+    }
 
-uint32_t RefCollection::getAt(int x) {
-    if (in_range(x)) {
-        uint32_t tmp = data.at(x);
+    void Segment::set(uint32_t i, uint32_t value) 
+    {
+        if (i < size)
+        {
+          data[i] = value;
+        }
+        else if (i < Segment::MaxSize)
+        {
+          growByMin(i + 1);
+          data[i] = value;
+        }
+        if (length <= i)
+        {
+           length = i + 1; 
+        }        
+
+#ifdef DEBUG_BUILD
+        printf("In Segment::set\n");
+        this->print();
+#endif            
+        
+        return;
+    }      
+
+    uint16_t Segment::growthFactor(uint16_t size)
+    {
+      if (size == 0)
+      {
+        return 4;
+      }
+      if (size < 64)
+      {
+        return size * 2; // Double
+      }
+      if (size < 512)
+      {
+        return size * 5/3; //Grow by 1.66 rate
+      }
+      return size + 256; //Grow by constant rate
+    }
+
+    void Segment::growByMin(uint16_t minSize)
+    {
+      growBy(max(minSize, growthFactor(size)));
+    }
+
+    void Segment::growBy(uint16_t newSize) 
+    {
+#ifdef DEBUG_BUILD
+         printf("growBy: %d\n", newSize);
+         this->print();
+#endif      
+      if (size < newSize)
+      {
+         //this will throw if unable to allocate
+         uint32_t *tmp = (uint32_t*)(::operator new(newSize * sizeof(uint32_t)));
+
+         //Copy existing data
+         if (size)
+         {
+           memcpy(tmp, data, size * sizeof(uint32_t));
+         }
+
+         //fill the rest with missing values;
+         for(uint16_t i = size; i < newSize; i++)
+         {
+           tmp[i] = Segment::MissingValue;
+         }
+
+         //free older segment;
+         ::operator delete(data); 
+
+         data = tmp; 
+         size = newSize;
+
+#ifdef DEBUG_BUILD
+         printf("growBy - after reallocation\n");
+         this->print();
+#endif         
+         
+      }
+      //else { no shrinking yet; }
+      return;
+    }
+
+    void Segment::push(uint32_t value) 
+    { 
+      this->set(length, value);
+    }
+    
+    uint32_t Segment::pop() 
+    {
+#ifdef DEBUG_BUILD
+      printf("In Segment::pop\n");
+      this->print();
+#endif            
+      
+      if (length > 0)
+      {
+        uint32_t value = data[length];
+        data[length] = Segment::MissingValue;
+        --length;
+        return value;
+      }
+      error(ERR_OUT_OF_BOUNDS);      
+      return 0;
+    }
+
+    void Segment::remove(uint32_t i) 
+    {
+#ifdef DEBUG_BUILD
+      printf("In Segment::remove\n");
+      this->print();
+#endif                  
+      if (i < length)
+      {
+        data[i] = Segment::MissingValue;
+      }
+      return;
+    }
+
+    void Segment::print()
+    {
+      printf("Segment: %x, length: %u, size: %u\n", data, (uint)length, (uint)size);
+      for(uint i = 0; i < size; i++)
+      {
+        printf("%d ",(uint)data[i]);
+      }
+      printf("\n");
+    }
+
+    bool Segment::isValidIndex(uint32_t i)
+    {
+      if (i > length || data[i] == Segment::MissingValue)
+      {
+        return false;
+      }
+      return true;
+    }
+
+    bool Segment::getNextValidIndex(uint32_t i, uint32_t *result)
+    {
+      while (i < length)
+      {
+        if (data[i] != Segment::MissingValue)
+        {
+           *result = i;
+
+#ifdef DEBUG_BUILD
+           printf("In Segment::getNextValidIndex result=%u\n",i);
+           this->print();
+#endif                  
+           return true;
+        }
+        i++;
+      }
+      return false;
+    }
+
+    void Segment::destroy()
+    {
+#ifdef DEBUG_BUILD
+      printf("In Segment::destroy\n");
+      this->print();
+#endif          
+      length = size = 0;
+      ::operator delete(data);
+      data = nullptr;
+    }
+
+    void RefCollection::push(uint32_t x) 
+    {
+      if (isRef()) incr(x);
+      head.push(x);
+    }
+
+    uint32_t RefCollection::pop() 
+    {
+      uint32_t ret = head.pop();
+      if (isRef())
+      {
+        incr(ret);  
+      } 
+      return ret;
+    }
+
+    uint32_t RefCollection::getAt(int i) 
+    {
+      if (head.isValidIndex(i)) 
+      {
+        uint32_t tmp = head.get(i);
         if (isRef())
-            incr(tmp);
+        {
+          incr(tmp);
+        }
         return tmp;
-    } else {
+      }
+      else 
+      {
         error(ERR_OUT_OF_BOUNDS);
         return 0;
+      }
     }
-}
 
-void RefCollection::removeAt(int x) {
-    if (!in_range(x))
+    void RefCollection::removeAt(int i) 
+    {
+      if (!head.isValidIndex((uint32_t)i))
+      {
         return;
-
-    if (isRef())
-        decr(data.at(x));
-    data.erase(data.begin() + x);
-}
-
-void RefCollection::setAt(int x, uint32_t y) {
-    if (!in_range(x))
-        return;
-
-    if (isRef()) {
-        decr(data.at(x));
-        incr(y);
+      }
+      if (isRef())
+      {
+        decr(head.get(i));
+      } 
+      head.remove(i);
     }
-    data.at(x) = y;
-}
 
-int RefCollection::indexOf(uint32_t x, int start) {
-    if (!in_range(start))
-        return -1;
-
-    if (isString()) {
-        StringData *xx = (StringData *)x;
-        for (uint32_t i = start; i < data.size(); ++i) {
-            StringData *ee = (StringData *)data.at(i);
-            if (xx->len == ee->len && memcmp(xx->data, ee->data, xx->len) == 0)
-                return (int)i;
+    void RefCollection::setAt(int i, uint32_t value) 
+    {
+      if (isRef()) 
+      {
+        if (head.isValidIndex((uint32_t)i))
+        {
+          decr(head.get(i));
         }
-    } else {
-        for (uint32_t i = start; i < data.size(); ++i)
-            if (data.at(i) == x)
-                return (int)i;
+        incr(value);
+      }
+      head.set(i, value);
     }
 
-    return -1;
-}
+    int RefCollection::indexOf(uint32_t x, int start) 
+    {
+      if (isString()) 
+      {
+        StringData *xx = (StringData*)x;
+        uint32_t i = start;
+        while(head.getNextValidIndex(start, &i))
+        {
+          StringData *ee = (StringData*)head.get(i);
+          if (xx->len == ee->len && memcmp(xx->data, ee->data, xx->len) == 0)
+          {
+            return (int)i;
+          }
+          start = i;
+        }
+      } 
+      else 
+      {
+        uint32_t i = start;
+        while(head.getNextValidIndex(start, &i))
+        {
+          if (head.get(i) == x)
+          {
+            return (int)i;
+          }
+          start = i;
+        }
+      }
 
-int RefCollection::removeElement(uint32_t x) {
-    int idx = indexOf(x, 0);
-    if (idx >= 0) {
+      return -1;
+    }
+
+    int RefCollection::removeElement(uint32_t x) 
+    {
+      int idx = indexOf(x, 0);
+      if (idx >= 0) {
         removeAt(idx);
         return 1;
+       }
+       return 0;
     }
-    return 0;
-}
 
 namespace Coll0 {
 PXT_VTABLE_BEGIN(RefCollection, 0, 0)
@@ -228,19 +453,27 @@ RefCollection::RefCollection(uint16_t flags) : RefObject(0) {
     }
 }
 
-void RefCollection::destroy() {
-    if (this->isRef())
-        for (uint32_t i = 0; i < this->data.size(); ++i) {
-            decr(this->data[i]);
-            this->data[i] = 0;
+    void RefCollection::destroy()
+    {
+      if (this->isRef())
+      {
+        uint32_t start = 0;
+        uint32_t i = 0;
+        while(head.getNextValidIndex(start, &i))
+        {
+          decr(this->head.get(i));
+          start = i;
         }
-    this->data.resize(0);
-}
+      }
+      this->head.destroy();
+      delete this;
+    }
 
-void RefCollection::print() {
-    DMESG("RefCollection %p r=%d flags=%d size=%d [%p, ...]", this, refcnt, getFlags(),
-           data.size(), data.size() > 0 ? data[0] : 0);
-}
+    void RefCollection::print()
+    {
+      printf("RefCollection %p r=%d flags=%d size=%d\n", this, refcnt, getFlags(), head.getLength());
+      head.print();
+    }
 
 PXT_VTABLE_CTOR(RefAction) {}
 

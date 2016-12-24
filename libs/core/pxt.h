@@ -1,7 +1,7 @@
 #ifndef __PXT_H
 #define __PXT_H
 
-// #define DEBUG_MEMLEAKS 1
+//#define DEBUG_MEMLEAKS 1
 
 #pragma GCC diagnostic ignored "-Wunused-parameter"
 #pragma GCC diagnostic ignored "-Wformat"
@@ -55,6 +55,7 @@ typedef enum {
     ERR_OUT_OF_BOUNDS = 8,
     ERR_REF_DELETED = 7,
     ERR_SIZE = 9,
+    ERR_MISSING_VALUE = 10,
 } ERROR;
 
 extern const uint32_t functionsAndBytecode[];
@@ -172,9 +173,50 @@ class RefObject {
     }
 };
 
-// A ref-counted collection of either primitive or ref-counted objects (String, Image,
-// user-defined record, another collection)
-class RefCollection : public RefObject {
+  class Segment {
+  private:    
+      uint32_t* data;
+      uint16_t length;
+      uint16_t size;
+
+      static const uint16_t MaxSize = 0xFFFF;
+      static const uint32_t MissingValue = 0x80000000;
+
+      static uint16_t growthFactor(uint16_t size);      
+      void growByMin(uint16_t minSize);
+      void growBy(uint16_t newSize);
+
+  public:
+      Segment() : data (nullptr), length(0), size(0) {};
+
+      uint32_t get(uint32_t i);
+      void set(uint32_t i, uint32_t value);      
+
+      uint32_t getLength() { return length;};
+
+      void push(uint32_t value);
+      uint32_t pop();
+
+      void remove(uint32_t i);
+
+      //Returns true if there is a valid index greater than or equal to 'i', returns false otherwise
+      //If 'i' is valid returns it in 'result', if not tries to find the next valid
+      //index < length which is valid.
+      bool getNextValidIndex(uint32_t i, uint32_t *result);
+      bool isValidIndex(uint32_t i);
+
+      void destroy();
+
+      void print();
+  };
+
+  // A ref-counted collection of either primitive or ref-counted objects (String, Image,
+  // user-defined record, another collection)
+  class RefCollection
+    : public RefObject
+  {
+  private:
+    Segment head;
   public:
     // 1 - collection of refs (need decr)
     // 2 - collection of strings (in fact we always have 3, never 2 alone)
@@ -182,18 +224,14 @@ class RefCollection : public RefObject {
     inline bool isRef() { return getFlags() & 1; }
     inline bool isString() { return getFlags() & 2; }
 
-    std::vector<uint32_t> data;
-
     RefCollection(uint16_t f);
-
-    inline bool in_range(int x) { return (0 <= x && x < (int)data.size()); }
-
-    inline int length() { return data.size(); }
 
     void destroy();
     void print();
 
+    uint32_t length() { return head.getLength();}
     void push(uint32_t x);
+    uint32_t pop();
     uint32_t getAt(int x);
     void removeAt(int x);
     void setAt(int x, uint32_t y);

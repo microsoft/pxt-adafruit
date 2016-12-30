@@ -155,6 +155,8 @@ namespace Array_ {
     //%
     void push(RefCollection *c, uint32_t x) { c->push(x); }
     //%
+    uint32_t pop(RefCollection *c) { return c->pop(); }    
+    //%
     uint32_t getAt(RefCollection *c, int x) { return c->getAt(x); }
     //%
     void removeAt(RefCollection *c, int x) { c->removeAt(x); }

@@ -35,16 +35,6 @@
     &:extend(.orange all);
 }
 
-.ui.menu .item.editor-menuitem {
-    background: @primaryColor !important;
-    margin: 0.5rem;
-    padding: 0.7rem;
-    border-radius: 0.5rem;
-}
-.ui.menu.fixed .item.blocks-menuitem, .ui.menu.fixed .item.javascript-menuitem {
-    border-radius: 0.2rem !important;
-}
-
 #filelist {
     background: #fff url(https://az742082.vo.msecnd.net/pub/psopafpj) 0 0 repeat !important;
 }
@@ -117,7 +107,7 @@
 
 
 /* Mobile */
-@media only screen and (max-width: @largestMobileEditorBreakpoint) {
+@media only screen and (max-width: @largestMobileScreen) {
     #filelist {
         background: transparent !important;
     }
@@ -127,7 +117,7 @@
 }
 
 /* Tablet */
-@media only screen and (min-width: @tabletEditorBreakpoint) and (max-width: @largestTabletEditorBreakpoint) {
+@media only screen and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
     .organization {
         top: auto;
     }
@@ -139,7 +129,7 @@
 }
 
 /* Small Monitor */
-@media only screen and (min-width: @computerEditorBreakpoint) and (max-width: @largestSmallMonitorEditorBreakpoint) {
+@media only screen and (min-width: @computerBreakpoint) and (max-width: @largestSmallMonitor) {
     .organization {
         top: auto;
     }
@@ -151,7 +141,7 @@
 }
 
 /* Large Monitor */
-@media only screen and (min-width: @largeMonitorEditorBreakpoint) {
+@media only screen and (min-width: @largeMonitorBreakpoint) {
     .blocklyTreeRow {
         width: 230px;
         padding-left: 1rem;

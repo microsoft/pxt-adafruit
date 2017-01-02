@@ -207,7 +207,7 @@
         "projectGallery": "projects",
         "crowdinProject": "kindscript",
         "boardName": "micro:bit",
-        "sideDoc": "getting-started",
+        "sideDoc": "tutorials/getting-started",
         "browserSupport": [
             {
                 "name": "unsupported",

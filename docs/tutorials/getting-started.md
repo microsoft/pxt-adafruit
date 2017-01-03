@@ -30,11 +30,19 @@ basic.showString("Hello world")
 Use the **Basic** drawer in the editor
 to drag out and arrange three blocks to create this program:
 
+```blocks
+basic.forever(() => {
+    basic.showNumber(0)
+})
+```
+
 ### Step 5
 
 Use the **Basic** drawer in the editor
 to drag out and arrange three blocks to create this program:
 
 ```blocks
-basic.showString("Hello world")
+input.onButtonPressed(Button.A, () => {
+    basic.showString("Hello!")
+})
 ```

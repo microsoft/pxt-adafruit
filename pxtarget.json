@@ -172,7 +172,7 @@
         "yottaBinary": "pxt-samd.hex",
         "yottaCorePackage": "codal",
         "githubCorePackage": "lancaster-university/codal",
-        "gittag": "pxt",
+        "gittag": "master",
         "serviceId": "codalsamd"
     },
     "appTheme": {

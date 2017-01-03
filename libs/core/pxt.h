@@ -25,6 +25,7 @@
 #include "DeviceMessageBus.h"
 
 #include "pins.h"
+#include "hf2.h"
 
 //#define printf(...) uBit.serial.printf(__VA_ARGS__)
 // #define printf(...)
@@ -48,6 +49,9 @@
 namespace pxt {
 typedef uint32_t Action;
 typedef uint32_t ImageLiteral;
+
+extern CodalUSB usb;
+extern HF2 hf2;
 
 typedef enum {
     ERR_INVALID_BINARY_HEADER = 5,

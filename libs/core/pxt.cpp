@@ -321,6 +321,16 @@ void debugMemLeaks() {
 void debugMemLeaks() {}
 #endif
 
+CodalUSB usb;
+HF2 hf2;
+
+// TODO extract these from uf2_info()?
+static const char *string_descriptors[] = {
+    "Example Corp.",
+    "PXT Device",
+    "42424242",
+};
+
 static void initCodal() {
     devTimer.init();
 
@@ -335,6 +345,10 @@ static void initCodal() {
     // which saves processor time, memeory and battery life.
     // messageBus.listen(MICROBIT_ID_MESSAGE_BUS_LISTENER, MICROBIT_EVT_ANY, this,
     // &MicroBit::onListenerRegisteredEvent);
+
+    usb.stringDescriptors = string_descriptors;
+    usb.add(hf2);
+    usb.start();
 }
 
 // ---------------------------------------------------------------------------

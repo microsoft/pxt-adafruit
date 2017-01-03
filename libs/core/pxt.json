@@ -17,7 +17,11 @@
         "shims.d.ts",
         "enums.d.ts",
         "control.ts",
-        "arduino.ts"
+        "arduino.ts",
+        "hf2.cpp",
+        "hf2.h",
+        "uf2format.h",
+        "uf2hid.h"
     ],
     "testFiles": [
         "test.ts"

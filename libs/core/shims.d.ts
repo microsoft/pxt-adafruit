@@ -349,4 +349,19 @@ declare interface Buffer {
     write(dstOffset: number, src: Buffer): void;
 }
 
+
+
+    //% weight=2 color=30
+    //% advanced=true
+declare namespace serial {
+
+    /**
+     * Sends a piece of text through Serial connection.
+     */
+    //% help=serial/write-string
+    //% weight=87
+    //% blockId=serial_writestring block="serial|write string %text" shim=serial::writeString
+    function writeString(text: string): void;
+}
+
 // Auto-generated. Do not edit. Really.

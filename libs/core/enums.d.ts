@@ -34,5 +34,7 @@ declare namespace basic {
     Int32BE = 10,
     // UInt32,
     }
+declare namespace serial {
+}
 
 // Auto-generated. Do not edit. Really.

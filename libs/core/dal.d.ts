@@ -189,8 +189,42 @@ declare const enum DAL {
     PWM_PERSISTENCE_TRANSIENT = 1,
     PWM_PERSISTENCE_PERSISTENT = 2,
     // built/yt/yotta_modules/codal/inc/drivers/Glue.h
+    // built/yt/yotta_modules/codal/inc/drivers/HF2.h
+    HF2_BUF_SIZE = 256,
     // built/yt/yotta_modules/codal/inc/drivers/HID.h
+    HID_REQUEST_GET_REPORT = 0x01,
+    HID_REQUEST_GET_IDLE = 0x02,
+    HID_REQUEST_GET_PROTOCOL = 0x03,
+    HID_REQUEST_SET_REPORT = 0x09,
+    HID_REQUEST_SET_IDLE = 0x0A,
+    HID_REQUEST_SET_PROTOCOL = 0x0B,
     // built/yt/yotta_modules/codal/inc/drivers/TimedInterruptIn.h
+    // built/yt/yotta_modules/codal/inc/drivers/uf2format.h
+    UF2FORMAT_H = 1,
+    APP_START_ADDRESS = 0x00002000,
+    UF2_FLAG_NOFLASH = 0x00000001,
+    // built/yt/yotta_modules/codal/inc/drivers/uf2hid.h
+    UF2_HID_H = 1,
+    HF2_CMD_BININFO = 0x0001,
+    HF2_MODE_BOOTLOADER = 0x01,
+    HF2_MODE_USERSPACE = 0x02,
+    HF2_CMD_INFO = 0x0002,
+    HF2_CMD_RESET_INTO_APP = 0x0003,
+    HF2_CMD_RESET_INTO_BOOTLOADER = 0x0004,
+    HF2_CMD_START_FLASH = 0x0005,
+    HF2_CMD_WRITE_FLASH_PAGE = 0x0006,
+    HF2_CMD_CHKSUM_PAGES = 0x0007,
+    HF2_CMD_READ_WORDS = 0x0008,
+    HF2_CMD_WRITE_WORDS = 0x0009,
+    HF2_CMD_DMESG = 0x0010,
+    HF2_FLAG_SERIAL_OUT = 0x80,
+    HF2_FLAG_SERIAL_ERR = 0xC0,
+    HF2_FLAG_CMDPKT_LAST = 0x40,
+    HF2_FLAG_CMDPKT_BODY = 0x00,
+    HF2_FLAG_MASK = 0xC0,
+    HF2_SIZE_MASK = 63,
+    HF2_STATUS_OK = 0x00,
+    HF2_STATUS_INVALID_CMD = 0x01,
     // built/yt/yotta_modules/codal/inc/platform/yotta_cfg_mappings.h
     // built/yt/yotta_modules/codal/inc/types/DeviceCoordinateSystem.h
     RAW = 0,

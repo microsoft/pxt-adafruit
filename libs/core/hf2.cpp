@@ -1,5 +1,5 @@
 #define UF2_DEFINE_HANDOVER 1
-#include "HF2.h"
+#include "hf2.h"
 #include "uf2format.h"
 #include "CodalDmesg.h"
 

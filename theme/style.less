@@ -96,6 +96,19 @@
     &:extend(.circular all);
 }
 
+/* Editor menu toggle */
+.ui.menu .item.editor-menuitem {
+    background: fade(@primaryColor, 20%) !important;
+}
+
+/* Search box */
+#blocklySearchArea {
+    margin: 0.5rem;
+}
+.blocklySearchInputField {
+    border-radius: 0.2rem !important;
+}
+
 /* Mobile */
 @media only screen and (max-width: @largestMobileScreen) {
     .blocklyTreeLabel {
@@ -104,23 +117,20 @@
     #filelist {
         background: transparent;
     }
+    /* Blockly */
+    .blocklyTreeRow {
+        width: 100px;
+    }
 }
 
 /* Tablet */
 @media only screen and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
-
 }
 
 /* Small Monitor */
 @media only screen and (min-width: @computerBreakpoint) and (max-width: @largestSmallMonitor) {
-    .blocklyTreeRow {
-        width: 150px;
-    }
 }
 
 /* Large Monitor */
 @media only screen and (min-width: @largeMonitorBreakpoint) {
-    .blocklyTreeRow {
-        width: 150px;
-    }
 }

@@ -1,6 +1,6 @@
 {
   "name": "pxt-adafruit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Adafruit Circuit Playground for PXT",
   "private": true,
   "keywords": [
@@ -34,6 +34,6 @@
     "semantic-ui-less": "^2.2.4"
   },
   "dependencies": {
-    "pxt-core": "0.5.99"
+    "pxt-core": "0.8.1"
   }
 }

@@ -1,5 +1,5 @@
 /// <reference path="../node_modules/pxt-core/built/pxtsim.d.ts"/>
-/// <reference path="../node_modules/pxt-core/built/pxtarget.d.ts"/>
+/// <reference path="../node_modules/pxt-core/localtypings/pxtarget.d.ts"/>
 
 namespace pxsim {
     export class DalBoard extends CoreBoard {

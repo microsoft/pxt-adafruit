@@ -27,15 +27,12 @@
 #include "pins.h"
 #include "hf2.h"
 
-//#define printf(...) uBit.serial.printf(__VA_ARGS__)
-// #define printf(...)
 
 #define intcheck(...) check(__VA_ARGS__)
 //#define intcheck(...) do {} while (0)
 
 #define PAGE_SIZE 256
 
-#include <stdio.h>
 #include <string.h>
 #include <vector>
 #include <stdint.h>
@@ -162,12 +159,12 @@ class RefObject {
     // Increment/decrement the ref-count. Decrementing to zero deletes the current object.
     inline void ref() {
         check(refcnt > 0, ERR_REF_DELETED);
-        // printf("INCR "); this->print();
+        // DMESG("INCR "); this->print();
         refcnt += 2;
     }
 
     inline void unref() {
-        // printf("DECR "); this->print();
+        // DMESG("DECR "); this->print();
         refcnt -= 2;
         if (refcnt == 0) {
             destroy();
@@ -256,7 +253,7 @@ class RefAction : public RefObject {
     RefAction();
 
     inline void stCore(int idx, uint32_t v) {
-        // printf("ST [%d] = %d ", idx, v); this->print();
+        // DMESG("ST [%d] = %d ", idx, v); this->print();
         intcheck(0 <= idx && idx < len, ERR_OUT_OF_BOUNDS, 10);
         intcheck(fields[idx] == 0, ERR_OUT_OF_BOUNDS, 11); // only one assignment permitted
         fields[idx] = v;

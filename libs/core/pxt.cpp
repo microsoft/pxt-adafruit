@@ -85,7 +85,7 @@ uint32_t RefRecord::ld(int idx) {
 }
 
 uint32_t RefRecord::ldref(int idx) {
-    // printf("LD %p len=%d reflen=%d idx=%d\n", this, len, reflen, idx);
+    // DMESG("LD %p len=%d reflen=%d idx=%d", this, len, reflen, idx);
     // intcheck(0 <= idx && idx < reflen, ERR_OUT_OF_BOUNDS, 2);
     uint32_t tmp = fields[idx];
     incr(tmp);
@@ -98,7 +98,7 @@ void RefRecord::st(int idx, uint32_t v) {
 }
 
 void RefRecord::stref(int idx, uint32_t v) {
-    // printf("ST %p len=%d reflen=%d idx=%d\n", this, len, reflen, idx);
+    // DMESG("ST %p len=%d reflen=%d idx=%d", this, len, reflen, idx);
     // intcheck(0 <= idx && idx < reflen, ERR_OUT_OF_BOUNDS, 4);
     decr(fields[idx]);
     fields[idx] = v;
@@ -128,7 +128,7 @@ void RefRecord_destroy(RefRecord *r) {
 }
 
 void RefRecord_print(RefRecord *r) {
-    printf("RefRecord %p r=%d size=%d bytes\n", r, r->refcnt, r->getVTable()->numbytes);
+    DMESG("RefRecord %p r=%d size=%d bytes", r, r->refcnt, r->getVTable()->numbytes);
 }
 
 void RefCollection::push(uint32_t x) {
@@ -238,7 +238,7 @@ void RefCollection::destroy() {
 }
 
 void RefCollection::print() {
-    printf("RefCollection %p r=%d flags=%d size=%d [%p, ...]\n", this, refcnt, getFlags(),
+    DMESG("RefCollection %p r=%d flags=%d size=%d [%p, ...]", this, refcnt, getFlags(),
            data.size(), data.size() > 0 ? data[0] : 0);
 }
 
@@ -256,12 +256,12 @@ void RefAction::destroy() {
 }
 
 void RefAction::print() {
-    printf("RefAction %p r=%d pc=0x%lx size=%d (%d refs)\n", this, refcnt,
+    DMESG("RefAction %p r=%d pc=%X size=%d (%d refs)", this, refcnt,
            (const uint8_t *)func - (const uint8_t *)bytecode, len, reflen);
 }
 
 void RefLocal::print() {
-    printf("RefLocal %p r=%d v=%d\n", this, refcnt, v);
+    DMESG("RefLocal %p r=%d v=%d", this, refcnt, v);
 }
 
 void RefLocal::destroy() {}
@@ -275,7 +275,7 @@ PXT_VTABLE_CTOR(RefRefLocal) {
 }
 
 void RefRefLocal::print() {
-    printf("RefRefLocal %p r=%d v=%p\n", this, refcnt, (void *)v);
+    DMESG("RefRefLocal %p r=%d v=%p", this, refcnt, (void *)v);
 }
 
 void RefRefLocal::destroy() {
@@ -305,17 +305,17 @@ int RefMap::findIdx(uint32_t key) {
 }
 
 void RefMap::print() {
-    printf("RefMap %p r=%d size=%d\n", this, refcnt, data.size());
+    DMESG("RefMap %p r=%d size=%d", this, refcnt, data.size());
 }
 
 #ifdef DEBUG_MEMLEAKS
 std::set<RefObject *> allptrs;
 void debugMemLeaks() {
-    printf("LIVE POINTERS:\n");
+    DMESG("LIVE POINTERS:");
     for (std::set<RefObject *>::iterator itr = allptrs.begin(); itr != allptrs.end(); itr++) {
         (*itr)->print();
     }
-    printf("\n");
+    DMESG("");
 }
 #else
 void debugMemLeaks() {}
@@ -399,7 +399,7 @@ void runInBackground(Action a) {
 }
 
 void error(ERROR code, int subcode) {
-    printf("Error: %d [%d]\n", code, subcode);
+    DMESG("Error: %d [%d]", code, subcode);
     device.panic(42);
 }
 

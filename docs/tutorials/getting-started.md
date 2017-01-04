@@ -1,13 +1,13 @@
 # Getting started
 
-<begin>basic.showString("Hello world")</begin>
+# begin: basic.showString("Hello world")
 
 ### Step 1
 
 Use the **Basic** drawer in the editor
 to drag out and arrange three blocks to create this program:
 
-```blocks
+```block
 basic.showString("Hello world")
 ```
 
@@ -21,18 +21,25 @@ to drag out and arrange three blocks to create this program:
 Use the **Basic** drawer in the editor
 to drag out and arrange three blocks to create this program:
 
-```blocks
-basic.showString("Hello world")
+```block
+basic.forever(() => {
+    basic.showNumber(0)
+})
 ```
-
 ### Step 4
 
 Use the **Basic** drawer in the editor
 to drag out and arrange three blocks to create this program:
 
-```blocks
-basic.forever(() => {
-    basic.showNumber(0)
+```block
+input.onButtonPressed(Button.B, () => {
+    basic.showLeds(`
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    . . . . .
+    `)
 })
 ```
 
@@ -41,7 +48,7 @@ basic.forever(() => {
 Use the **Basic** drawer in the editor
 to drag out and arrange three blocks to create this program:
 
-```blocks
+```block
 input.onButtonPressed(Button.A, () => {
     basic.showString("Hello!")
 })

@@ -1,7 +1,5 @@
 # Getting started
 
-# begin: basic.showString("Hello world")
-
 ### Step 1
 
 Use the **Basic** drawer in the editor

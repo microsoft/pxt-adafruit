@@ -7,7 +7,7 @@ Add code to make the inchworm move.
 
 ### ~
 
-## Duration: ~15 minutes
+## Duration: ~30 minutes
 
 ## Step 2: walk forever
 
@@ -21,6 +21,7 @@ input.onButtonPressed(Button.A, () => {
     pins.servoWritePin(AnalogPin.P0, 180)
     basic.pause(500)
 });
+```
 
 ### ~ hint
 

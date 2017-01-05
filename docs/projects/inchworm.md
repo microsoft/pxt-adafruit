@@ -31,7 +31,7 @@ https://youtu.be/BiZLjugXMbM
 
 * [Servo](/projects/inchworm/servo)  
 * [Chassis](/projects/inchworm/chassis)  
-* [Circuit](/projects/inchworm/circuit)  
+* [Code](/projects/inchworm/code)  
 
 ### ~button /projects/inchworm/circuit
 

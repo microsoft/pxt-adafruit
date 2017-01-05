@@ -27,7 +27,7 @@ If you are running a class or activity, you should consider preparing all servos
 ### ~ hint
 
 Kitronik wrote an excellent in-depth guide about using servos with the @boardname@. 
-Check it out at 
+Check it out at https://www.kitronik.co.uk/blog/using-bbc-microbit-control-servo/ .
 
 ### ~
 

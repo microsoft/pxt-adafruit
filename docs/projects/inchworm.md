@@ -33,7 +33,7 @@ https://youtu.be/BiZLjugXMbM
 * [Chassis](/projects/inchworm/chassis)  
 * [Code](/projects/inchworm/code)  
 
-### ~button /projects/inchworm/circuit
+### ~button /projects/inchworm/servo
 
 Let's get started!
 

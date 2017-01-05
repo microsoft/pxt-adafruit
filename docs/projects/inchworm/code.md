@@ -9,7 +9,7 @@ Add code to make the inchworm move.
 
 ## Duration: ~30 minutes
 
-## Step 2: walk forever
+## Step 1: walk forever
 
 In order for the inchworm to move, the @boardname@ needs to command the servo to go between ``0`` and ``180`` degrees
 at a certain pace. In the code below, the user pressed button ``A`` to launch the inchworm.
@@ -30,7 +30,7 @@ so that the inchworm goes as fast as possible. Trying it on carpet also great he
 
 ### ~
 
-## Step 3: radio controlled inchworm
+## Step 2: radio controlled inchworm
 
 You will need 2 @boardname@ for this part. By using the radio, we can make the inchworm controlled by another @boardname@.
 Download the code below to the @boardname@ on the inchworm and another "controller" @boardname@. Whenere A is pressed, the inchworm will move once.

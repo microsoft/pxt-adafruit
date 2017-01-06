@@ -241,10 +241,6 @@
                 "path": "https://support.microbit.org/"
             },
             {
-                "name": "Getting Started",
-                "path": "/getting-started"
-            },
-            {
                 "name": "Projects",
                 "path": "/projects"
             },

@@ -16,10 +16,10 @@ at a certain pace. In the code below, the user pressed button ``A`` to launch th
 
 ```blocks
 input.onButtonPressed(Button.A, () => {
-    pins.servoWritePin(AnalogPin.P0, 0)
-    basic.pause(500)
-    pins.servoWritePin(AnalogPin.P0, 180)
-    basic.pause(500)
+    pins.servoWritePin(AnalogPin.P0, 0);
+    basic.pause(500);
+    pins.servoWritePin(AnalogPin.P0, 180);
+    basic.pause(500);
 });
 ```
 
@@ -45,4 +45,8 @@ radio.onDataPacketReceived(({receivedNumber}) => {
 input.onButtonPressed(Button.A, () => {
     radio.sendNumber(0)
 })
+```
+
+```package
+radio
 ```

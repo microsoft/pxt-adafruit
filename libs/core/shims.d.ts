@@ -395,4 +395,46 @@ declare namespace serial {
     function writeString(text: string): void;
 }
 
+
+
+    //% color=300 weight=99 icon="\uf192"
+declare namespace input {
+}
+
+
+declare interface Button {
+    /**
+     * Do something when a button (``A``, ``B`` or both ``A+B``) is pressed
+     * @param button the button that needs to be pressed
+     * @param body code to run when event is raised
+     */
+    //% help=input/on-button-pressed weight=85 blockGap=8
+    //% blockId=device_button_event block="on button|%NAME|pressed"
+    //% parts="buttonpair"
+    //% blockNamespace=input shim=ButtonMethods::onPressed
+    onPressed(body: () => void): void;
+
+    /**
+     * Get the button state (pressed or not) for ``A`` and ``B``.
+     * @param button the button to query the request, eg: Button.A
+     */
+    //% help=input/button-is-pressed weight=60
+    //% block="button|%NAME|is pressed"
+    //% blockId=device_get_button2
+    //% icon="\uf192" blockGap=8
+    //% parts="buttonpair"
+    //% blockNamespace=input shim=ButtonMethods::isPressed
+    isPressed(): boolean;
+}
+declare namespace input {
+
+    /**
+     * Gets the number of milliseconds elapsed since power on.
+     */
+    //% help=input/running-time weight=50
+    //% blockId=device_get_running_time block="running time (ms)"
+    //% advanced=true shim=input::runningTime
+    function runningTime(): number;
+}
+
 // Auto-generated. Do not edit. Really.

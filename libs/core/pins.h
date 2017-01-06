@@ -44,6 +44,9 @@
 #define PIN_SCL PIN_PA23
 #define PIN_SDA PIN_PA22
 
+#define PIN_BTN_A PIN_D0
+#define PIN_BTN_B PIN_D1
+
 #elif PXT_BOARD_ID == BOARD_ID_CPLAY
 // TODO need to map LEFT_BUTTON and friends to D<n>
 #define PIN_ACCELEROMETER_CS PIN_PA13
@@ -57,19 +60,20 @@
 #define PIN_D3 PIN_PA23
 #define PIN_D6 PIN_PA04
 #define PIN_D9 PIN_PA07
-#define PIN_LEFT_BUTTON PIN_PA28
 #define PIN_LIGHT PIN_PB02
 #define PIN_MICROPHONE PIN_PA08
 #define PIN_MISO PIN_PA12
 #define PIN_MOSI PIN_PB10
 #define PIN_NEOPIXEL PIN_PB22
-#define PIN_RIGHT_BUTTON PIN_PA19
 #define PIN_SCK PIN_PB11
 #define PIN_SCL PIN_PA23
 #define PIN_SDA PIN_PA22
 #define PIN_SLIDE_SWITCH PIN_PB09
 #define PIN_SPEAKER PIN_PA02
 #define PIN_TEMPERATURE PIN_PA09
+
+#define PIN_BTN_A PIN_PA28 // left
+#define PIN_BTN_B PIN_PA19 // right
 
 #elif PXT_BOARD_ID == BOARD_ID_FEATHER
 #define PIN_A0 PIN_PA02
@@ -275,5 +279,6 @@ const int LastPinID = &io.SCL - io.pins;
 
 typedef DevicePin *DigitalPin;
 typedef DevicePin *AnalogPin;
+typedef DeviceButton *Button;
 
 #endif

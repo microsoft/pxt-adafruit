@@ -37,4 +37,50 @@ declare namespace basic {
 declare namespace serial {
 }
 
+
+    declare enum Dimension {
+    //% block=x
+    X = 0,
+    //% block=y
+    Y = 1,
+    //% block=z
+    Z = 2,
+    //% block=strength
+    Strength = 3,
+    }
+
+
+    declare enum Rotation {
+    //% block=pitch
+    Pitch = 0,
+    //% block=roll
+    Roll = 1,
+    }
+
+
+    declare enum AcceleratorRange {
+    /**
+     * The accelerator measures forces up to 1 gravity
+     */
+    //%  block="1g"
+    OneG = 1,
+    /**
+     * The accelerator measures forces up to 2 gravity
+     */
+    //%  block="2g"
+    TwoG = 2,
+    /**
+     * The accelerator measures forces up to 4 gravity
+     */
+    //% block="4g"
+    FourG = 4,
+    /**
+     * The accelerator measures forces up to 8 gravity
+     */
+    //% block="8g"
+    EightG = 8,
+    }
+declare namespace input {
+}
+
 // Auto-generated. Do not edit. Really.

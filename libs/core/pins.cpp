@@ -126,6 +126,49 @@ void setPull(DigitalPin name, PinPullMode pull) {
                                                                         : PinMode::PullNone;
     PINOP(setPull(m));
 }
+
+/**
+* Do something when a pin is pressed.
+* @param name the pin that needs to be pressed, eg: TouchPin.P0
+* @param body the code to run when the pin is pressed
+*/
+//% help=input/on-pin-pressed weight=83
+//% blockId=device_pin_event block="on pin %name|pressed"
+//% blockNamespace=input
+void onPressed(DigitalPin pin, Action body) {
+    // Forces the PIN to switch to makey-makey style detection.
+    pin->isTouched();
+    registerWithDal((int)pin->name, DEVICE_BUTTON_EVT_CLICK, body);
+}
+
+/**
+ * Do something when a pin is released.
+ * @param name the pin that needs to be released, eg: TouchPin.P0
+ * @param body the code to run when the pin is released
+ */
+//% help=input/on-pin-released weight=6 blockGap=8
+//% blockId=device_pin_released block="on pin %NAME|released"
+//% advanced=true
+//% blockNamespace=input
+void onReleased(DigitalPin pin, Action body) {
+    // Forces the PIN to switch to makey-makey style detection.
+    pin->isTouched();
+    registerWithDal((int)pin->name, DEVICE_BUTTON_EVT_UP, body);
+}
+
+
+/**
+ * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
+ * @param name pin used to detect the touch, eg: TouchPin.P0
+ */
+//% help=input/pin-is-pressed weight=58
+//% blockId="device_pin_is_pressed" block="pin %NAME|is pressed"
+//% blockGap=8
+//% blockNamespace=input
+bool isPressed(DigitalPin pin) {
+    return pin->isTouched();
+}
+
 }
 
 namespace AnalogPinMethods {

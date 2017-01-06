@@ -41,7 +41,7 @@ Using the cutting pliers, cut out the dark plastic connector.
 
 Using the plier or a wire stripper, strip the plastic from the cables.
 
-![](/static/mb/projects/inchworm/servo2.jpg)
+![](/static/mb/projects/inchworm/servotrim.jpg)
 
 ## Step 3: threading the servo cablers
 

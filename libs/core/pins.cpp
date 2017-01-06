@@ -82,7 +82,7 @@ void digitalWrite(DigitalPin name, int value) {
 //% blockNamespace=pins
 void onPulsed(DigitalPin pin, PulseValue pulse, Action body) {
     pin->eventOn(DEVICE_PIN_EVENT_ON_PULSE);
-    registerWithDal((int)pin->name, (int)pulse, body);
+    registerWithDal(pin->id, (int)pulse, body);
 }
 
 /**
@@ -138,7 +138,7 @@ void setPull(DigitalPin name, PinPullMode pull) {
 void onPressed(DigitalPin pin, Action body) {
     // Forces the PIN to switch to makey-makey style detection.
     pin->isTouched();
-    registerWithDal((int)pin->name, DEVICE_BUTTON_EVT_CLICK, body);
+    registerWithDal(pin->id, DEVICE_BUTTON_EVT_CLICK, body);
 }
 
 /**
@@ -153,7 +153,7 @@ void onPressed(DigitalPin pin, Action body) {
 void onReleased(DigitalPin pin, Action body) {
     // Forces the PIN to switch to makey-makey style detection.
     pin->isTouched();
-    registerWithDal((int)pin->name, DEVICE_BUTTON_EVT_UP, body);
+    registerWithDal(pin->id, DEVICE_BUTTON_EVT_UP, body);
 }
 
 

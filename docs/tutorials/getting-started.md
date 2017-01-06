@@ -2,52 +2,66 @@
 
 ### Step 1
 
-Use the **Basic** drawer in the editor
-to drag out and arrange three blocks to create this program:
+Place blocks in the workspace to scroll text on the screen.
 
-```block
-basic.showString("Hello world")
+```blocks
+basic.showString("Hi!")
 ```
 
 ### Step 2
 
-Use the **Basic** drawer in the editor
-to drag out and arrange three blocks to create this program:
+Transfer your code in your @boardname@! Click the **Download** button
+and follow the instructions.
+
+ANIMATEDGIF
 
 ### Step 3
 
-Use the **Basic** drawer in the editor
-to drag out and arrange three blocks to create this program:
+Great, the text scrolled! But then it stopped.
+Let's make it scroll when button **A** is pressed.
 
 ```block
-basic.forever(() => {
-    basic.showNumber(0)
-})
+input.onButtonPressed(Button.A, () => {
+    basic.showString("Hi!")
+});
 ```
+
 ### Step 4
 
-Use the **Basic** drawer in the editor
-to drag out and arrange three blocks to create this program:
+Transfer your code in your @boardname@ and try pressing **A**.
+
+ANIMATEDGIF
+
+### Step 5
+
+Place more blocks to display a smiley when button **B** is pressed.
+Download your code and try it!
 
 ```block
 input.onButtonPressed(Button.B, () => {
     basic.showLeds(`
+    # # . # #
+    # # . # #
     . . . . .
-    . . . . .
-    . . . . .
-    . . . . .
-    . . . . .
+    # . . . #
+    . # # # .
     `)
 })
 ```
 
-### Step 5
+### Step 6
 
-Use the **Basic** drawer in the editor
-to drag out and arrange three blocks to create this program:
+Drag more blocks to display a frownie when @boardname@ is shaken.
+Download your code and try it!
 
 ```block
-input.onButtonPressed(Button.A, () => {
-    basic.showString("Hello!")
+input.onGesture(Gesture.Shake, () => {
+    basic.showLeds(`
+    # # . # #
+    # # . # #
+    . . . . .
+    . # # # .
+    # . . . #
+    `)
 })
 ```

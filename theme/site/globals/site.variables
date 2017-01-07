@@ -1,13 +1,13 @@
 /*******************************
      User Global Variables
 *******************************/
+
 @importGoogleFonts: true;
 
 @fontName  : 'Open Sans';
 
 @emSize      : 14px;
 @fontSize    : 13px;
-
 
 @primaryColor: @blue;
 @secondaryColor: @pink;
@@ -30,6 +30,43 @@
          PXT Overrides
 *******************************/
 
+/*-------------------
+   Menu
+--------------------*/
+
+@mainMenuInvertedBackground: @black;
+@mainMenuTutorialBackground: @orange;
+
+@mainMenuBlocksJsToggleColor: @primaryColor;
+
+@tutorialSelectedMenuColor: @blue;
+
+/*-------------------
+   Layout
+--------------------*/
+
+@sideBarWidth: 22rem;
+@simulatorWidth: 27rem;
+@simulatorWidthSmall: 20rem;
+
+/*-------------------
+   Background
+--------------------*/
+
 @simulatorBackground: #007090;
+@editorToolsBackground: @simulatorBackground;
 @blocklySvgColor: #033860;
+
+/*-------------------
+   Side Docs
+--------------------*/
+
+@sidedocsButtonsTop: (@mainMenuHeight + 1rem);
+@sidedocsButtonsRight: 4.25rem;
+
+/*-------------------
+   Editor
+--------------------*/
+
 @blocklyToolboxColor: transparent;
+@trashIconColor: @primaryColor;

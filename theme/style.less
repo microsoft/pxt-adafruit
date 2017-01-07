@@ -27,20 +27,10 @@
     background: linear-gradient(#007090, #084C61); /* Standard syntax (must be last) */
 }
 
-/* This removes the margin between the blockly categories to form connected pills */
+/* Specifying rounded toolbox borders. */
 .blocklyTreeRow {
-    margin-bottom: 0px !important;
-}
-
-/* Specifying top and bottom rounded toolbox borders. */
-.blocklyTreeRow.blocklyTreeRowTop {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.blocklyTreeRow.blocklyTreeRowBottom {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 5px;
+    margin-bottom: 3px !important;
 }
 
 .blocklyTreeRow:hover {
@@ -75,9 +65,13 @@
     fill-opacity: .5;
 }
 
-.blocklyToolboxDiv {
-    /*left:30px !important;*/
+.blocklyToolboxDiv, .monacoToolboxDiv {
     padding:1rem;
+}
+
+.monacoToolboxDiv {
+    /* Inverted monaco color */
+    background-color: #1e1e1e;
 }
 
 .blocklyScrollbarHandle {

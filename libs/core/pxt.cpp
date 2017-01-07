@@ -274,10 +274,10 @@ void RefRecord_print(RefRecord *r) {
 
     void Segment::print()
     {
-      printf("Segment: %x, length: %u, size: %u\n", data, (uint)length, (uint)size);
-      for(uint i = 0; i < size; i++)
+      printf("Segment: %x, length: %u, size: %u\n", data, (uint32_t)length, (uint32_t)size);
+      for(uint32_t i = 0; i < size; i++)
       {
-        printf("%d ",(uint)data[i]);
+        printf("%d ",(uint32_t)data[i]);
       }
       printf("\n");
     }

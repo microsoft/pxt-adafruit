@@ -15,7 +15,7 @@
     "simulator": {
         "autoRun": true,
         "streams": true,
-        "aspectRatio": 1.0,
+        "aspectRatio": 1.4,
         "parts": false,
         "boardDefinition": {
             "visual": "circuitplayground",
@@ -186,7 +186,7 @@
         "appLogo": "https://az851932.vo.msecnd.net/pub/tbhemtig",
         "organization": "Microsoft",
         "organizationUrl": "https://pxt.io/",
-        "organizationLogo": "./static/Microsoft-logo_rgb_c-gray.png",
+        "organizationLogo": "./static/Microsoft-logo_rgb_c-white.png",
         "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
         "homeUrl": "https://www.adafruit.com/",
         "embedUrl": "https://adafruit.pxt.io/",

@@ -91,11 +91,6 @@
     &:extend(.circular all);
 }
 
-#blocklyToolboxButtons .blocklyUndoButton {
-    &:extend(.ui.inverted.blue.button all);
-    &:extend(.circular all);
-}
-
 /* Editor menu toggle */
 .ui.menu .item.editor-menuitem {
     background: fade(@primaryColor, 20%) !important;
@@ -111,15 +106,8 @@
 
 /* Mobile */
 @media only screen and (max-width: @largestMobileScreen) {
-    .blocklyTreeLabel {
-        font-size: 0.5rem !important;
-    }
     #filelist {
         background: transparent;
-    }
-    /* Blockly */
-    .blocklyTreeRow {
-        width: 100px;
     }
 }
 

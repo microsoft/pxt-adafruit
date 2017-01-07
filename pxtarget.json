@@ -15,7 +15,7 @@
     "simulator": {
         "autoRun": true,
         "streams": true,
-        "aspectRatio": 1.4,
+        "aspectRatio": 1.0,
         "parts": false,
         "boardDefinition": {
             "visual": "circuitplayground",

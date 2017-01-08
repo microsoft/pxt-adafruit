@@ -397,7 +397,7 @@ declare namespace serial {
 
 
 
-    //% color=300 weight=99 icon="\uf192"
+    //% color="#FB48C7" weight=99 icon="\uf192"
 declare namespace input {
 }
 

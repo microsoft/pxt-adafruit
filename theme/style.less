@@ -13,37 +13,39 @@
     Add your custom CSS here
 *******************************/
 
-.download-button {
-    &:extend(.ui.button all);
-    &:extend(.pink all);
+.ui.button.download-button {
+    &:extend(.yellow all);
+}
+
+.ui.button.editortools-btn {
+    &:extend(.blue all);
+}
+
+.projectname-input {
+    &:extend(.inverted all);
+}
+
+.ui.button.getting-started-btn {
+    &:extend(.green all);
 }
 
 /* Simulator background */
 #filelist {
-    background: #007090; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#007090, #084C61); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#007090, #084C61); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#007090, #084C61); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#007090, #084C61); /* Standard syntax (must be last) */
+    background: @blue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(@blue, #00487C); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@blue, #00487C); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@blue, #00487C); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(@blue, #00487C); /* Standard syntax (must be last) */
 }
 
-/* This removes the margin between the blockly categories to form connected pills */
+/* Specifying rounded toolbox borders. */
 .blocklyTreeRow {
-    margin-bottom: 0px !important;
+    border-radius: 5px;
+    margin-bottom: 3px !important;
 }
 
-/* Specifying top and bottom rounded toolbox borders. */
-.blocklyTreeRow.blocklyTreeRowTop {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.blocklyTreeRow.blocklyTreeRowBottom {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-}
-
-.blocklyTreeRow:hover {
+.blocklyTreeRow:hover, 
+.blocklyTreeSelected {
     background: @invertedBackground !important;
 }
 
@@ -63,11 +65,7 @@
 }
 
 .blocklySvg {
-    background: #033860; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#033860, #084C61); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#033860, #084C61); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#033860, #084C61); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#033860, #084C61); /* Standard syntax (must be last) */
+    background: #00487C; /* For browsers that do not support gradients */
 }
 
 .blocklyFlyoutBackground {
@@ -75,9 +73,13 @@
     fill-opacity: .5;
 }
 
-.blocklyToolboxDiv {
-    /*left:30px !important;*/
+.blocklyToolboxDiv, .monacoToolboxDiv {
     padding:1rem;
+}
+
+.monacoToolboxDiv {
+    /* Inverted monaco color */
+    background-color: #1e1e1e;
 }
 
 .blocklyScrollbarHandle {
@@ -86,19 +88,13 @@
 }
 
 /* Blockly Toolbox Buttons */
-#blocklyToolboxButtons .blocklyAddPackageButton {
-    &:extend(.ui.inverted.pink.button all);
-    &:extend(.circular all);
-}
-
-#blocklyToolboxButtons .blocklyUndoButton {
-    &:extend(.ui.inverted.blue.button all);
-    &:extend(.circular all);
+.ui.button.blocklyAddPackageButton {
+    &:extend(.pink all);
 }
 
 /* Editor menu toggle */
 .ui.menu .item.editor-menuitem {
-    background: fade(@primaryColor, 20%) !important;
+    background: fade(@black, 20%) !important;
 }
 
 /* Search box */
@@ -111,15 +107,8 @@
 
 /* Mobile */
 @media only screen and (max-width: @largestMobileScreen) {
-    .blocklyTreeLabel {
-        font-size: 0.5rem !important;
-    }
     #filelist {
         background: transparent;
-    }
-    /* Blockly */
-    .blocklyTreeRow {
-        width: 100px;
     }
 }
 

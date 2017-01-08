@@ -61,13 +61,18 @@ declare const enum DAL {
     DEVICE_ID_MULTIBUTTON_ATTACH = 11,
     DEVICE_ID_SERIAL = 12,
     DEVICE_ID_GESTURE = 13,
-    DEVICE_ID_TIMER_1 = 14,
+    DEVICE_ID_SYSTEM_TIMER = 14,
     DEVICE_ID_SCHEDULER = 15,
+    DEVICE_ID_COMPONENT = 16,
     DEVICE_ID_IO_P0 = 100,
     DEVICE_ID_MESSAGE_BUS_LISTENER = 1021,
     DEVICE_ID_NOTIFY_ONE = 1022,
     DEVICE_ID_NOTIFY = 1023,
-    DEVICE_COMPONENT_RUNNING = 0x01,
+    DEVICE_COMPONENT_RUNNING = 0x1000,
+    DEVICE_COMPONENT_STATUS_SYSTEM_TICK = 0x2000,
+    DEVICE_COMPONENT_STATUS_IDLE_TICK = 0x4000,
+    DEVICE_COMPONENT_LISTENERS_CONFIGURED = 0x01,
+    DEVICE_COMPONENT_EVT_SYSTEM_TICK = 1,
     // built/yt/yotta_modules/codal/inc/core/DeviceFiber.h
     DEVICE_SCHEDULER_RUNNING = 0x01,
     DEVICE_SCHEDULER_IDLE = 0x02,
@@ -75,7 +80,8 @@ declare const enum DAL {
     DEVICE_FIBER_FLAG_PARENT = 0x02,
     DEVICE_FIBER_FLAG_CHILD = 0x04,
     DEVICE_FIBER_FLAG_DO_NOT_PAGE = 0x08,
-    DEVICE_SCHEDULER_EVT_IDLE = 1,
+    DEVICE_SCHEDULER_EVT_TICK = 1,
+    DEVICE_SCHEDULER_EVT_IDLE = 2,
     // built/yt/yotta_modules/codal/inc/core/DeviceHeapAllocator.h
     DEVICE_MAXIMUM_HEAPS = 2,
     DEVICE_HEAP_BLOCK_FREE = 0x80000000,
@@ -117,10 +123,6 @@ declare const enum DAL {
     // built/yt/yotta_modules/codal/inc/device/SAMD21/DeviceTimer.h
     TIMER_ONE_DEFAULT_PRECISION_US = 1,
     TIMER_ONE_PRESCALER_OPTIONS = 5,
-    // built/yt/yotta_modules/codal/inc/device/SAMD21/PinMappings.h
-    DEVICE_PIN_COUNT = 3,
-    PIN_CAPABILITY_DIGITAL = 0x01,
-    PIN_CAPABILITY_ANALOG = 0x02,
     // built/yt/yotta_modules/codal/inc/device/SAMD21/USB.h
     USB_MAX_PKT_SIZE = 64,
     USB_DEFAULT_PID = 0x2402,
@@ -149,6 +151,8 @@ declare const enum DAL {
     DEVICE_BUTTON_DOUBLE_CLICK_THRESH = 50,
     DEVICE_BUTTON_SIMPLE_EVENTS = 0,
     DEVICE_BUTTON_ALL_EVENTS = 1,
+    ACTIVE_LOW = 0,
+    ACTIVE_HIGH = 1,
     // built/yt/yotta_modules/codal/inc/drivers/DeviceMessageBus.h
     // built/yt/yotta_modules/codal/inc/drivers/DevicePin.h
     IO_STATUS_DIGITAL_IN = 0x01,
@@ -170,6 +174,8 @@ declare const enum DAL {
     DEVICE_PIN_EVT_FALL = 3,
     DEVICE_PIN_EVT_PULSE_HI = 4,
     DEVICE_PIN_EVT_PULSE_LO = 5,
+    PIN_CAPABILITY_DIGITAL = 0x01,
+    PIN_CAPABILITY_ANALOG = 0x02,
     // built/yt/yotta_modules/codal/inc/drivers/DeviceSerial.h
     DEVICE_SERIAL_DEFAULT_BAUD_RATE = 115200,
     DEVICE_SERIAL_DEFAULT_BUFFER_SIZE = 20,
@@ -189,8 +195,6 @@ declare const enum DAL {
     PWM_PERSISTENCE_TRANSIENT = 1,
     PWM_PERSISTENCE_PERSISTENT = 2,
     // built/yt/yotta_modules/codal/inc/drivers/Glue.h
-    // built/yt/yotta_modules/codal/inc/drivers/HF2.h
-    HF2_BUF_SIZE = 256,
     // built/yt/yotta_modules/codal/inc/drivers/HID.h
     HID_REQUEST_GET_REPORT = 0x01,
     HID_REQUEST_GET_IDLE = 0x02,
@@ -199,32 +203,6 @@ declare const enum DAL {
     HID_REQUEST_SET_IDLE = 0x0A,
     HID_REQUEST_SET_PROTOCOL = 0x0B,
     // built/yt/yotta_modules/codal/inc/drivers/TimedInterruptIn.h
-    // built/yt/yotta_modules/codal/inc/drivers/uf2format.h
-    UF2FORMAT_H = 1,
-    APP_START_ADDRESS = 0x00002000,
-    UF2_FLAG_NOFLASH = 0x00000001,
-    // built/yt/yotta_modules/codal/inc/drivers/uf2hid.h
-    UF2_HID_H = 1,
-    HF2_CMD_BININFO = 0x0001,
-    HF2_MODE_BOOTLOADER = 0x01,
-    HF2_MODE_USERSPACE = 0x02,
-    HF2_CMD_INFO = 0x0002,
-    HF2_CMD_RESET_INTO_APP = 0x0003,
-    HF2_CMD_RESET_INTO_BOOTLOADER = 0x0004,
-    HF2_CMD_START_FLASH = 0x0005,
-    HF2_CMD_WRITE_FLASH_PAGE = 0x0006,
-    HF2_CMD_CHKSUM_PAGES = 0x0007,
-    HF2_CMD_READ_WORDS = 0x0008,
-    HF2_CMD_WRITE_WORDS = 0x0009,
-    HF2_CMD_DMESG = 0x0010,
-    HF2_FLAG_SERIAL_OUT = 0x80,
-    HF2_FLAG_SERIAL_ERR = 0xC0,
-    HF2_FLAG_CMDPKT_LAST = 0x40,
-    HF2_FLAG_CMDPKT_BODY = 0x00,
-    HF2_FLAG_MASK = 0xC0,
-    HF2_SIZE_MASK = 63,
-    HF2_STATUS_OK = 0x00,
-    HF2_STATUS_INVALID_CMD = 0x01,
     // built/yt/yotta_modules/codal/inc/platform/yotta_cfg_mappings.h
     // built/yt/yotta_modules/codal/inc/types/DeviceCoordinateSystem.h
     RAW = 0,

@@ -102,7 +102,7 @@ enum class Gesture {
 };
 #endif
 
-//% color=300 weight=99 icon="\uf192"
+//% color="#FB48C7" weight=99 icon="\uf192"
 namespace input {
 
 DeviceButton buttonA((PinName)PIN_BTN_A, DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,

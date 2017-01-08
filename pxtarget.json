@@ -186,7 +186,8 @@
         "appLogo": "https://az851932.vo.msecnd.net/pub/tbhemtig",
         "organization": "Microsoft",
         "organizationUrl": "https://pxt.io/",
-        "organizationLogo": "./static/Microsoft-logo_rgb_c-gray.png",
+        "organizationLogo": "./static/Microsoft-logo_rgb_c-white.png",
+        "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
         "homeUrl": "https://www.adafruit.com/",
         "embedUrl": "https://adafruit.pxt.io/",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
@@ -204,13 +205,14 @@
         "invertedMenu": true,
         "invertedToolbox": true,
         "invertedMonaco": true,
+        "monacoToolbox": true,
         "simAnimationEnter": "rotate in",
         "simAnimationExit": "rotate out",
         "blocklyOptions": {
             "grid": {
-                "spacing": 50,
-                "length": 2,
-                "colour": "#FB48C7",
+                "spacing": 45,
+                "length": 1,
+                "colour": "#00A7E9",
                 "snap": true
             }
         }

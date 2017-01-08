@@ -16,6 +16,7 @@
 @red: #EF767A;
 @pink: #F46197;
 @yellow: #FDE74C;
+@grey:#95a5a6;
 
 /* Microbit.org colors */
 @orange: #ff8b27;
@@ -35,9 +36,6 @@
 @mainMenuInvertedBackground: @blue;
 @mainMenuTutorialBackground: @orange;
 
-@mainMenuHeight: 5rem;
-@mobileMenuHeight: 4.4rem;
-
 @mainMenuBlocksJsToggleColor: @primaryColor;
 
 @tutorialSelectedMenuColor: @blue;
@@ -55,6 +53,7 @@
 --------------------*/
 
 @simulatorBackground: #FDFDFF;
+@editorToolsBackground: @simulatorBackground;
 @blocklySvgColor: #ecf0f1;
 
 /*-------------------

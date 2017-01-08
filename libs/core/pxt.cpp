@@ -437,7 +437,7 @@ void RefRecord_print(RefRecord *r) {
 
     void RefCollection::insertAt(int i, uint32_t value) 
     {
-      if (i < length())
+      if (i < (int)length())
       {
         head.insert(i, value);
         if (isRef())

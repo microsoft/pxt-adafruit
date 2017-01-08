@@ -13,18 +13,29 @@
     Add your custom CSS here
 *******************************/
 
-.download-button {
-    &:extend(.ui.button all);
-    &:extend(.pink all);
+.ui.button.download-button {
+    &:extend(.yellow all);
+}
+
+.ui.button.editortools-btn {
+    &:extend(.blue all);
+}
+
+.projectname-input {
+    &:extend(.inverted all);
+}
+
+.ui.button.getting-started-btn {
+    &:extend(.green all);
 }
 
 /* Simulator background */
 #filelist {
-    background: #007090; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#007090, #084C61); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#007090, #084C61); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#007090, #084C61); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#007090, #084C61); /* Standard syntax (must be last) */
+    background: @blue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(@blue, #00487C); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(@blue, #00487C); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(@blue, #00487C); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(@blue, #00487C); /* Standard syntax (must be last) */
 }
 
 /* Specifying rounded toolbox borders. */
@@ -33,7 +44,8 @@
     margin-bottom: 3px !important;
 }
 
-.blocklyTreeRow:hover {
+.blocklyTreeRow:hover, 
+.blocklyTreeSelected {
     background: @invertedBackground !important;
 }
 
@@ -53,11 +65,7 @@
 }
 
 .blocklySvg {
-    background: #033860; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#033860, #084C61); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#033860, #084C61); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#033860, #084C61); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#033860, #084C61); /* Standard syntax (must be last) */
+    background: #00487C; /* For browsers that do not support gradients */
 }
 
 .blocklyFlyoutBackground {
@@ -80,14 +88,13 @@
 }
 
 /* Blockly Toolbox Buttons */
-#blocklyToolboxButtons .blocklyAddPackageButton {
-    &:extend(.ui.pink.button all);
-    &:extend(.circular all);
+.ui.button.blocklyAddPackageButton {
+    &:extend(.pink all);
 }
 
 /* Editor menu toggle */
 .ui.menu .item.editor-menuitem {
-    background: fade(@primaryColor, 20%) !important;
+    background: fade(@black, 20%) !important;
 }
 
 /* Search box */

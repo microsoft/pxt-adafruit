@@ -210,9 +210,9 @@
         "simAnimationExit": "rotate out",
         "blocklyOptions": {
             "grid": {
-                "spacing": 50,
-                "length": 2,
-                "colour": "#FB48C7",
+                "spacing": 45,
+                "length": 1,
+                "colour": "#00A7E9",
                 "snap": true
             }
         }

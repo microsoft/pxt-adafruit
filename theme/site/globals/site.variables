@@ -13,16 +13,19 @@
 @secondaryColor: @pink;
 
 @red:#CC2936;
-@orange:#FFA702;
-@yellow:#FFB600;
-@green:#00922B;
+@yellow:#FFC914;
 @teal:#08415C;
-@blue:#00A7E9;
 @violet:#C200C0;
-@purple:#8073E5;
-@pink:#FB48C7;
-@brown:#6B5B4C;
+@brown:#2E282A;
 @grey:#999;
+
+/* Adafruit colors */
+@blue:#0089BF;
+@pink:#FB48C7;
+
+@green:#00922B;
+@purple:#8073E5;
+@orange:#FFA702;
 
 @pageBackground: #ecf0f1;
 
@@ -34,10 +37,10 @@
    Menu
 --------------------*/
 
-@mainMenuInvertedBackground: @black;
+@mainMenuInvertedBackground: @blue;
 @mainMenuTutorialBackground: @orange;
 
-@mainMenuBlocksJsToggleColor: @primaryColor;
+@mainMenuBlocksJsToggleColor: @black;
 
 @tutorialSelectedMenuColor: @blue;
 
@@ -53,9 +56,9 @@
    Background
 --------------------*/
 
-@simulatorBackground: #007090;
-@editorToolsBackground: @simulatorBackground;
-@blocklySvgColor: #033860;
+@simulatorBackground: @blue;
+@editorToolsBackground: #1e1e1e;
+@blocklySvgColor: #1e1e1e;
 
 /*-------------------
    Side Docs

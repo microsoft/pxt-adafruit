@@ -33,7 +33,7 @@ enum class PinPullMode {
     PullNone = 2
 };
 
-namespace pins {
+namespace pxt {
 //%
 DevicePin *getPin(int id) {
     if (!(0 <= id && id <= LastPinID))
@@ -43,6 +43,16 @@ DevicePin *getPin(int id) {
     //    return NULL;
     return p;
 }
+
+//%
+DevicePin *lookupPin(int pinName) {
+    for (int i = 0; i <= LastPinID; ++i) {
+        if (io.pins[i].name == pinName)
+            return &io.pins[i];
+    }
+    return NULL;
+}
+
 }
 
 #define PINOP(op) name->op

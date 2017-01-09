@@ -9,18 +9,20 @@
 #define BOARD_ID_TRINKET 5
 #define BOARD_ID_CPLAY 6
 #define BOARD_ID_GEMMA 7
+#define BOARD_ID_M0 8
 
 #ifndef PXT_BOARD_ID
 #define PXT_BOARD_ID BOARD_ID_ZERO
 #endif
 
-#if PXT_BOARD_ID == BOARD_ID_ZERO || PXT_BOARD_ID == BOARD_ID_METRO
+#if PXT_BOARD_ID == BOARD_ID_ZERO || PXT_BOARD_ID == BOARD_ID_METRO || PXT_BOARD_ID == BOARD_ID_M0
 #define PIN_A0 PIN_PA02
 #define PIN_A1 PIN_PB08
 #define PIN_A2 PIN_PB09
 #define PIN_A3 PIN_PA04
 #define PIN_A4 PIN_PA05
 #define PIN_A5 PIN_PB02
+
 #define PIN_D0 PIN_PA11
 #define PIN_D1 PIN_PA10
 #define PIN_D2 PIN_PA14
@@ -29,6 +31,7 @@
 #define PIN_D5 PIN_PA15
 #define PIN_D6 PIN_PA20
 #define PIN_D7 PIN_PA21
+
 #define PIN_D8 PIN_PA06
 #define PIN_D9 PIN_PA07
 #define PIN_D10 PIN_PA18
@@ -44,8 +47,17 @@
 #define PIN_SCL PIN_PA23
 #define PIN_SDA PIN_PA22
 
+#if PXT_BOARD_ID == BOARD_ID_M0
+// M0 has D2 and D4 swapped...
+#undef PIN_D2
+#undef PIN_D4
+#define PIN_D2 PIN_PA08
+#define PIN_D4 PIN_PA14
+#endif
+
 #define PIN_BTN_A PIN_D0
 #define PIN_BTN_B PIN_D1
+#define PIN_NEOPIXEL PIN_D3
 
 #elif PXT_BOARD_ID == BOARD_ID_CPLAY
 // TODO need to map LEFT_BUTTON and friends to D<n>
@@ -64,7 +76,6 @@
 #define PIN_MICROPHONE PIN_PA08
 #define PIN_MISO PIN_PA12
 #define PIN_MOSI PIN_PB10
-#define PIN_NEOPIXEL PIN_PB22
 #define PIN_SCK PIN_PB11
 #define PIN_SCL PIN_PA23
 #define PIN_SDA PIN_PA22
@@ -74,6 +85,7 @@
 
 #define PIN_BTN_A PIN_PA28 // left
 #define PIN_BTN_B PIN_PA19 // right
+#define PIN_NEOPIXEL PIN_PB22
 
 #elif PXT_BOARD_ID == BOARD_ID_FEATHER
 #define PIN_A0 PIN_PA02
@@ -208,7 +220,7 @@ class DevPins {
     DevicePin pins[0];
 #define DigitalPin DevicePin
 #define AnalogPin DevicePin
-    //% indexedInstanceNS=pins indexedInstanceShim=pins::getPin
+    //% indexedInstanceNS=pins indexedInstanceShim=pxt::getPin
     //%
     AnalogPin A0;
     //%
@@ -280,5 +292,10 @@ const int LastPinID = &io.SCL - io.pins;
 typedef DevicePin *DigitalPin;
 typedef DevicePin *AnalogPin;
 typedef DeviceButton *Button;
+
+namespace pxt {
+DevicePin *getPin(int id);
+DevicePin *lookupPin(int pinName);
+}
 
 #endif

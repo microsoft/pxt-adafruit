@@ -76,7 +76,7 @@ namespace Boolean_ {
     }
 
     //%
-    bool bang(bool v) { return !v; }
+    bool bang(int v) { return v == 0; }
 }
 
 namespace Number_ {

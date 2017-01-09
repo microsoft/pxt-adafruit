@@ -17,7 +17,6 @@
         "shims.d.ts",
         "enums.d.ts",
         "control.ts",
-        "arduino.ts",
         "serial.cpp",
         "serial.ts",
         "neopixel.cpp",

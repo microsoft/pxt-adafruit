@@ -54,6 +54,9 @@ int HF2::send(const void *data, int size, int flag0)
     uint8_t buf[64];
     const uint8_t *ptr = (const uint8_t *)data;
 
+    if (!CodalUSB::usbInstance->isInitialised())
+        return -1;
+
     for (;;)
     {
         int s = 63;

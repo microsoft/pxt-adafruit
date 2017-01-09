@@ -6,3 +6,9 @@ input.buttonB.onPressed(() => {
 })
 
 pins.LED.digitalWrite(1)
+
+let i = 0
+while (true) {
+     serial.writeValue("X", i++);
+     basic.pause(500);
+}

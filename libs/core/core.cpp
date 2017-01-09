@@ -75,8 +75,8 @@ StringData *toString(bool v) {
 }
 
 //%
-bool bang(bool v) {
-    return !v;
+bool bang(int v) {
+    return v == 0;
 }
 }
 

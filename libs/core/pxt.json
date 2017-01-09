@@ -20,6 +20,8 @@
         "arduino.ts",
         "serial.cpp",
         "serial.ts",
+        "neopixel.cpp",
+        "neopixel.ts",
         "input.cpp",
         "hf2.cpp",
         "hf2.h",

@@ -2,120 +2,120 @@
 declare namespace pins {
 
 
-    //% indexedInstanceNS=pins indexedInstanceShim=pins::getPin
-    //% fixedInstance shim=pins::getPin(0)
+    //% indexedInstanceNS=pins indexedInstanceShim=pxt::getPin
+    //% fixedInstance shim=pxt::getPin(0)
     const A0: AnalogPin;
 
 
-    //% fixedInstance shim=pins::getPin(1)
+    //% fixedInstance shim=pxt::getPin(1)
     const A1: AnalogPin;
 
 
-    //% fixedInstance shim=pins::getPin(2)
+    //% fixedInstance shim=pxt::getPin(2)
     const A2: AnalogPin;
 
 
-    //% fixedInstance shim=pins::getPin(3)
+    //% fixedInstance shim=pxt::getPin(3)
     const A3: AnalogPin;
 
 
-    //% fixedInstance shim=pins::getPin(4)
+    //% fixedInstance shim=pxt::getPin(4)
     const A4: AnalogPin;
 
 
-    //% fixedInstance shim=pins::getPin(5)
+    //% fixedInstance shim=pxt::getPin(5)
     const A5: AnalogPin;
 
 
-    //% fixedInstance shim=pins::getPin(6)
+    //% fixedInstance shim=pxt::getPin(6)
     const A6: AnalogPin;
 
 
-    //% fixedInstance shim=pins::getPin(7)
+    //% fixedInstance shim=pxt::getPin(7)
     const D0: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(8)
+    //% fixedInstance shim=pxt::getPin(8)
     const D1: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(9)
+    //% fixedInstance shim=pxt::getPin(9)
     const D2: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(10)
+    //% fixedInstance shim=pxt::getPin(10)
     const D3: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(11)
+    //% fixedInstance shim=pxt::getPin(11)
     const D4: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(12)
+    //% fixedInstance shim=pxt::getPin(12)
     const D5: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(13)
+    //% fixedInstance shim=pxt::getPin(13)
     const D6: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(14)
+    //% fixedInstance shim=pxt::getPin(14)
     const D7: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(15)
+    //% fixedInstance shim=pxt::getPin(15)
     const D8: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(16)
+    //% fixedInstance shim=pxt::getPin(16)
     const D9: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(17)
+    //% fixedInstance shim=pxt::getPin(17)
     const D10: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(18)
+    //% fixedInstance shim=pxt::getPin(18)
     const D11: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(19)
+    //% fixedInstance shim=pxt::getPin(19)
     const D12: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(20)
+    //% fixedInstance shim=pxt::getPin(20)
     const D13: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(21)
+    //% fixedInstance shim=pxt::getPin(21)
     const LED: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(22)
+    //% fixedInstance shim=pxt::getPin(22)
     const LEDRX: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(23)
+    //% fixedInstance shim=pxt::getPin(23)
     const LEDTX: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(24)
+    //% fixedInstance shim=pxt::getPin(24)
     const MOSI: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(25)
+    //% fixedInstance shim=pxt::getPin(25)
     const MISO: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(26)
+    //% fixedInstance shim=pxt::getPin(26)
     const SCK: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(27)
+    //% fixedInstance shim=pxt::getPin(27)
     const SDA: DigitalPin;
 
 
-    //% fixedInstance shim=pins::getPin(28)
+    //% fixedInstance shim=pxt::getPin(28)
     const SCL: DigitalPin;
 }
 

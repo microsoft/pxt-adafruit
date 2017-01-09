@@ -142,7 +142,6 @@ void RefRecord_print(RefRecord *r) {
       {
           return data[i];          
       }
-      error(ERR_OUT_OF_BOUNDS);
       return Segment::DefaultValue;
     }
 
@@ -265,7 +264,6 @@ void RefRecord_print(RefRecord *r) {
         --length;
         return value;
       }
-      error(ERR_OUT_OF_BOUNDS);      
       return Segment::DefaultValue;
     }
 
@@ -294,7 +292,6 @@ void RefRecord_print(RefRecord *r) {
 #endif  
         return ret;
       }
-      error(ERR_OUT_OF_BOUNDS);
       return Segment::DefaultValue;
     }
 
@@ -377,29 +374,16 @@ void RefRecord_print(RefRecord *r) {
 
     uint32_t RefCollection::getAt(int i) 
     {
-      if (head.isValidIndex(i)) 
+      uint32_t tmp = head.get(i);
+      if (isRef())
       {
-        uint32_t tmp = head.get(i);
-        if (isRef())
-        {
-          incr(tmp);
-        }
-        return tmp;
+        incr(tmp);
       }
-      else 
-      {
-        error(ERR_OUT_OF_BOUNDS);
-        return 0;
-      }
+      return tmp;
     }
 
     uint32_t RefCollection::removeAt(int i) 
     {
-      if (!head.isValidIndex((uint32_t)i))
-      {
-        error(ERR_OUT_OF_BOUNDS);
-        return 0;
-      }
       if (isRef())
       {
         decr(head.get(i));
@@ -409,18 +393,11 @@ void RefRecord_print(RefRecord *r) {
 
     void RefCollection::insertAt(int i, uint32_t value) 
     {
-      if (((uint32_t)i) < length())
+      head.insert(i, value);
+      if (isRef())
       {
-        head.insert(i, value);
-        if (isRef())
-        {
-          incr(value);
-        } 
-      }
-      else
-      {
-        error(ERR_OUT_OF_BOUNDS);
-      }
+        incr(value);
+      } 
     }
 
     void RefCollection::setAt(int i, uint32_t value) 

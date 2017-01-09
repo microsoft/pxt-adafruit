@@ -1,6 +1,9 @@
 #ifndef __PXT_PINS_H
 #define __PXT_PINS_H
 
+// Analog Pins, SAMD21G CPU: PA02-PA11 PB02-PB03 PB08-PB09
+// Analog Pins, SAMD21E CPU: PA02-PA11
+
 // for pinouts
 #define BOARD_ID_ZERO 1
 #define BOARD_ID_MKR1000 2
@@ -65,8 +68,8 @@
 #define PIN_A4 PIN_PA05
 #define PIN_D8 PIN_PA06
 #define PIN_D9 PIN_PA07
-#define PIN_D0 PIN_PB09 // RX
-#define PIN_D1 PIN_PB08 // TX
+#define PIN_A2 PIN_PB09 // RX
+#define PIN_A1 PIN_PB08 // TX
 #define PIN_SDA PIN_PB02
 #define PIN_SCL PIN_PB03
 

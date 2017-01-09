@@ -102,15 +102,7 @@ enum class Gesture {
 };
 #endif
 
-//% color="#FB48C7" weight=99 icon="\uf192"
-namespace input {
-
-DeviceButton buttonA((PinName)PIN_BTN_A, DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
-                     PullDown);
-DeviceButton buttonB((PinName)PIN_BTN_A, DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
-                     PullDown);
-}
-
+//% noRefCounting fixedInstances
 namespace ButtonMethods {
 /**
  * Do something when a button (``A``, ``B`` or both ``A+B``) is pressed
@@ -140,6 +132,7 @@ bool isPressed(Button button) {
 }
 }
 
+//% color="#FB48C7" weight=99 icon="\uf192"
 namespace input {
 #if 0
 /**

@@ -118,6 +118,17 @@ declare namespace pins {
     //% fixedInstance shim=pxt::getPin(28)
     const SCL: DigitalPin;
 }
+declare namespace input {
+
+
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
+    //% fixedInstance shim=pxt::getButton(0)
+    const buttonA: Button;
+
+
+    //% fixedInstance shim=pxt::getButton(1)
+    const buttonB: Button;
+}
 
 
     /**
@@ -397,11 +408,7 @@ declare namespace serial {
 
 
 
-    //% color="#FB48C7" weight=99 icon="\uf192"
-declare namespace input {
-}
-
-
+    //% noRefCounting fixedInstances
 declare interface Button {
     /**
      * Do something when a button (``A``, ``B`` or both ``A+B``) is pressed
@@ -426,6 +433,10 @@ declare interface Button {
     //% blockNamespace=input shim=ButtonMethods::isPressed
     isPressed(): boolean;
 }
+
+
+
+    //% color="#FB48C7" weight=99 icon="\uf192"
 declare namespace input {
 
     /**

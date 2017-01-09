@@ -13,7 +13,11 @@ DevPins::DevPins()
     : PIN_AD(A0), PIN_AD(A1), PIN_AD(A2), PIN_AD(A3), PIN_AD(A4), PIN_AD(A5), PIN_AD(A6), PIN_D(D0),
       PIN_D(D1), PIN_D(D2), PIN_D(D3), PIN_D(D4), PIN_D(D5), PIN_D(D6), PIN_D(D7), PIN_D(D8),
       PIN_D(D9), PIN_D(D10), PIN_D(D11), PIN_D(D12), PIN_D(D13), PIN_D(LED), PIN_D(LEDRX),
-      PIN_D(LEDTX), PIN_D(MOSI), PIN_D(MISO), PIN_D(SCK), PIN_D(SDA), PIN_D(SCL) {}
+      PIN_D(LEDTX), PIN_D(MOSI), PIN_D(MISO), PIN_D(SCK), PIN_D(SDA), PIN_D(SCL),
+      buttonA((PinName)PIN_BTN_A, DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
+              PullDown),
+      buttonB((PinName)PIN_BTN_A, DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
+              PullDown) {}
 
 static DevicePin *pitchPin = NULL;
 
@@ -35,6 +39,13 @@ enum class PinPullMode {
 
 namespace pxt {
 //%
+DeviceButton *getButton(int id) {
+    if (!(0 <= id && id <= LastButtonID))
+        device.panic(42);
+    return &io.buttons[id];
+}
+
+//%
 DevicePin *getPin(int id) {
     if (!(0 <= id && id <= LastPinID))
         device.panic(42);
@@ -44,6 +55,8 @@ DevicePin *getPin(int id) {
     return p;
 }
 
+#pragma GCC diagnostic ignored "-Warray-bounds"
+
 //%
 DevicePin *lookupPin(int pinName) {
     for (int i = 0; i <= LastPinID; ++i) {
@@ -52,7 +65,6 @@ DevicePin *lookupPin(int pinName) {
     }
     return NULL;
 }
-
 }
 
 #define PINOP(op) name->op
@@ -166,7 +178,6 @@ void onReleased(DigitalPin pin, Action body) {
     registerWithDal(pin->id, DEVICE_BUTTON_EVT_UP, body);
 }
 
-
 /**
  * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
  * @param name pin used to detect the touch, eg: TouchPin.P0
@@ -178,7 +189,6 @@ void onReleased(DigitalPin pin, Action body) {
 bool isPressed(DigitalPin pin) {
     return pin->isTouched();
 }
-
 }
 
 namespace AnalogPinMethods {
@@ -249,7 +259,6 @@ void servoWrite(AnalogPin name, int value) {
 void servoSetPulse(AnalogPin name, int micros) {
     PINOP(setServoPulseUs(micros));
 }
-
 }
 
 namespace pins {
@@ -272,7 +281,6 @@ Buffer createBuffer(int size) {
 int pulseDuration() {
     return pxt::lastEvent.timestamp;
 }
-
 
 /**
  * Sets the pin used when using `analog pitch` or music.
@@ -309,6 +317,4 @@ void analogPitch(int frequency, int ms) {
         wait_ms(5);
     }
 }
-
-
 }

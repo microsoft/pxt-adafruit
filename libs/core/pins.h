@@ -281,6 +281,16 @@ class DevPins {
     DigitalPin SCL;
 #undef DigitalPin
 #undef AnalogPin
+
+#define Button DeviceButton
+    Button buttons[0];
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
+    //%
+    Button buttonA;
+    //%
+    Button buttonB;
+#undef Button
+
     DevPins();
 };
 
@@ -288,6 +298,7 @@ extern DevPins io;
 
 // modify if the last field changes
 const int LastPinID = &io.SCL - io.pins;
+const int LastButtonID = &io.buttonB - io.buttons;
 
 typedef DevicePin *DigitalPin;
 typedef DevicePin *AnalogPin;
@@ -296,6 +307,7 @@ typedef DeviceButton *Button;
 namespace pxt {
 DevicePin *getPin(int id);
 DevicePin *lookupPin(int pinName);
+DeviceButton *getButton(int id);
 }
 
 #endif

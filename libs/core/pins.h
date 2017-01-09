@@ -294,11 +294,11 @@ class DevPins {
     DevPins();
 };
 
-extern DevPins io;
+extern DevPins *io;
 
 // modify if the last field changes
-const int LastPinID = &io.SCL - io.pins;
-const int LastButtonID = &io.buttonB - io.buttons;
+const int LastPinID = &io->SCL - io->pins;
+const int LastButtonID = &io->buttonB - io->buttons;
 
 typedef DevicePin *DigitalPin;
 typedef DevicePin *AnalogPin;

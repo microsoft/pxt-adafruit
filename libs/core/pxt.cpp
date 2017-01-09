@@ -663,6 +663,8 @@ static void initCodal() {
     // messageBus.listen(MICROBIT_ID_MESSAGE_BUS_LISTENER, MICROBIT_EVT_ANY, this,
     // &MicroBit::onListenerRegisteredEvent);
 
+    io = new DevPins();
+
     usb.stringDescriptors = string_descriptors;
     usb.add(hf2);
     usb.start();

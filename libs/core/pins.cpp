@@ -7,7 +7,7 @@
 #define PIN_AD(id) DEFPIN(id, PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_AD : (PinCapability)0)
 #define PIN_D(id) DEFPIN(id, PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_DIGITAL : (PinCapability)0)
 
-DevPins io;
+DevPins *io;
 
 DevPins::DevPins()
     : PIN_AD(A0), PIN_AD(A1), PIN_AD(A2), PIN_AD(A3), PIN_AD(A4), PIN_AD(A5), PIN_AD(A6), PIN_D(D0),
@@ -16,7 +16,7 @@ DevPins::DevPins()
       PIN_D(LEDTX), PIN_D(MOSI), PIN_D(MISO), PIN_D(SCK), PIN_D(SDA), PIN_D(SCL),
       buttonA((PinName)PIN_BTN_A, DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
               PullDown),
-      buttonB((PinName)PIN_BTN_A, DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
+      buttonB((PinName)PIN_BTN_B, DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
               PullDown) {}
 
 static DevicePin *pitchPin = NULL;
@@ -42,14 +42,14 @@ namespace pxt {
 DeviceButton *getButton(int id) {
     if (!(0 <= id && id <= LastButtonID))
         device.panic(42);
-    return &io.buttons[id];
+    return &io->buttons[id];
 }
 
 //%
 DevicePin *getPin(int id) {
     if (!(0 <= id && id <= LastPinID))
         device.panic(42);
-    DevicePin *p = &io.pins[id];
+    DevicePin *p = &io->pins[id];
     // if (p->name == PA00)
     //    return NULL;
     return p;
@@ -60,8 +60,8 @@ DevicePin *getPin(int id) {
 //%
 DevicePin *lookupPin(int pinName) {
     for (int i = 0; i <= LastPinID; ++i) {
-        if (io.pins[i].name == pinName)
-            return &io.pins[i];
+        if (io->pins[i].name == pinName)
+            return &io->pins[i];
     }
     return NULL;
 }
@@ -302,7 +302,7 @@ void analogSetPitchPin(AnalogPin name) {
 //% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
 void analogPitch(int frequency, int ms) {
     if (pitchPin == NULL)
-        analogSetPitchPin(&io.A0);
+        analogSetPitchPin(&io->A0);
     if (frequency <= 0) {
         pitchPin->setAnalogValue(0);
     } else {

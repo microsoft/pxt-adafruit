@@ -31,6 +31,13 @@
     "testFiles": [
         "test.ts"
     ],
+    "yotta": {
+        "config": {
+            "codal": {
+                "component_count": 64
+            }
+        }
+    },
     "public": true,
     "dependencies": {}
 }

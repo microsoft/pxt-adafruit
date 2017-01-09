@@ -359,6 +359,7 @@ void RefRecord_print(RefRecord *r) {
 
     bool Segment::getNextValidIndex(uint32_t i, uint32_t *result)
     {
+      i++;
       while (i < length)
       {
         if (data[i] != Segment::MissingValue)

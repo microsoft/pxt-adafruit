@@ -11,8 +11,6 @@
   "Dimension.X|block": "x",
   "Dimension.Y|block": "y",
   "Dimension.Z|block": "z",
-  "Math.constrain|block": "constrain %amt| between %low| and %high",
-  "Math.map|block": "map value %value| from range low %fromLow| high %fromHigh| to range low %toLow| high %toHigh|",
   "Math|block": "Math",
   "NeoPixelColors.Blue|block": "blue",
   "NeoPixelColors.Green|block": "green",

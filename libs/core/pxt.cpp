@@ -786,7 +786,9 @@ void exec_binary(int32_t *pc) {
     pxt::debugMemLeaks();
 #endif
 
-    return;
+    while (1) {
+        fiber_sleep(10000);
+    }
 }
 
 void start() {

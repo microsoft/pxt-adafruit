@@ -140,15 +140,10 @@ void RefRecord_print(RefRecord *r) {
       
       if (i < length)
       {
-        if (data[i] != Segment::MissingValue)
-        {
           return data[i];          
-        }
-        error(ERR_MISSING_VALUE);
-        return 0;
       }
       error(ERR_OUT_OF_BOUNDS);
-      return 0;
+      return Segment::DefaultValue;
     }
 
     void Segment::set(uint32_t i, uint32_t value) 
@@ -213,12 +208,8 @@ void RefRecord_print(RefRecord *r) {
          {
            memcpy(tmp, data, size * sizeof(uint32_t));
          }
-
-         //fill the rest with missing values;
-         for(uint16_t i = size; i < newSize; i++)
-         {
-           tmp[i] = Segment::MissingValue;
-         }
+        //fill the rest with default value
+         memset(tmp + size, Segment::DefaultValue, (newSize - size) * sizeof(uint32_t));
 
          //free older segment;
          ::operator delete(data); 
@@ -270,12 +261,12 @@ void RefRecord_print(RefRecord *r) {
       if (length > 0)
       {
         uint32_t value = data[length];
-        data[length] = Segment::MissingValue;
+        data[length] = Segment::DefaultValue;
         --length;
         return value;
       }
       error(ERR_OUT_OF_BOUNDS);      
-      return 0;
+      return Segment::DefaultValue;
     }
 
     //this function removes an element at index i and shifts the rest of the elements to
@@ -296,7 +287,7 @@ void RefRecord_print(RefRecord *r) {
           memmove(data + i, data + i + 1, (length - i - 1) * sizeof(uint32_t));
         }
         length--;        
-        data[length] = Segment::MissingValue;        
+        data[length] = Segment::DefaultValue;        
 #ifdef DEBUG_BUILD
         printf("After Segment::remove index:%u\n", i);
         this->print();
@@ -304,7 +295,7 @@ void RefRecord_print(RefRecord *r) {
         return ret;
       }
       error(ERR_OUT_OF_BOUNDS);
-      return 0;
+      return Segment::DefaultValue;
     }
 
     //this function inserts element value at index i by shifting the rest of the elements right.     
@@ -350,31 +341,11 @@ void RefRecord_print(RefRecord *r) {
 
     bool Segment::isValidIndex(uint32_t i)
     {
-      if (i > length || data[i] == Segment::MissingValue)
+      if (i > length)
       {
         return false;
       }
       return true;
-    }
-
-    bool Segment::getNextValidIndex(uint32_t i, uint32_t *result)
-    {
-      i++;
-      while (i < length)
-      {
-        if (data[i] != Segment::MissingValue)
-        {
-           *result = i;
-
-#ifdef DEBUG_BUILD
-           printf("In Segment::getNextValidIndex result=%u\n",i);
-           this->print();
-#endif                  
-           return true;
-        }
-        i++;
-      }
-      return false;
     }
 
     void Segment::destroy()
@@ -438,7 +409,7 @@ void RefRecord_print(RefRecord *r) {
 
     void RefCollection::insertAt(int i, uint32_t value) 
     {
-      if (i < (int)length())
+      if (((uint32_t)i) < length())
       {
         head.insert(i, value);
         if (isRef())
@@ -471,26 +442,31 @@ void RefRecord_print(RefRecord *r) {
       {
         StringData *xx = (StringData*)x;
         uint32_t i = start;
-        while(head.getNextValidIndex(start, &i))
+        while(head.isValidIndex(i))
         {
           StringData *ee = (StringData*)head.get(i);
-          if (xx->len == ee->len && memcmp(xx->data, ee->data, xx->len) == 0)
+          if (ee == xx)
+          {
+            //handles ee being null
+            return (int) i;
+          }
+          if (ee && xx->len == ee->len && memcmp(xx->data, ee->data, xx->len) == 0)
           {
             return (int)i;
           }
-          start = i;
+          i++;
         }
       } 
       else 
       {
         uint32_t i = start;
-        while(head.getNextValidIndex(start, &i))
+        while(head.isValidIndex(i))
         {
           if (head.get(i) == x)
           {
             return (int)i;
           }
-          start = i;
+          i++;
         }
       }
 
@@ -541,12 +517,9 @@ RefCollection::RefCollection(uint16_t flags) : RefObject(0) {
     {
       if (this->isRef())
       {
-        uint32_t start = 0;
-        uint32_t i = 0;
-        while(head.getNextValidIndex(start, &i))
+        for(uint32_t i = 0; i < this->head.getLength(); i++)
         {
           decr(this->head.get(i));
-          start = i;
         }
       }
       this->head.destroy();

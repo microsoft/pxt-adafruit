@@ -55,7 +55,6 @@ typedef enum {
     ERR_OUT_OF_BOUNDS = 8,
     ERR_REF_DELETED = 7,
     ERR_SIZE = 9,
-    ERR_MISSING_VALUE = 10,
 } ERROR;
 
 extern const uint32_t functionsAndBytecode[];
@@ -180,7 +179,7 @@ class RefObject {
       uint16_t size;
 
       static const uint16_t MaxSize = 0xFFFF;
-      static const uint32_t MissingValue = 0x80000000;
+      static const uint32_t DefaultValue = 0x0;
 
       static uint16_t growthFactor(uint16_t size);      
       void growByMin(uint16_t minSize);
@@ -202,10 +201,6 @@ class RefObject {
       uint32_t remove(uint32_t i);
       void insert(uint32_t i, uint32_t value);
 
-      //Returns true if there is a valid index greater than or equal to 'i', returns false otherwise
-      //If 'i' is valid returns it in 'result', if not tries to find the next valid
-      //index < length which is valid.
-      bool getNextValidIndex(uint32_t i, uint32_t *result);
       bool isValidIndex(uint32_t i);
 
       void destroy();

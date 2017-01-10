@@ -53,9 +53,9 @@ namespace pxsim {
         }
 
         public shiftRight(cols: number) {
-            for (let x = this.width - 1; x <= 0; --x)
+            for (let x = this.width - 1; x >= 0; --x)
                 for (let y = 0; y < 5; ++y)
-                    this.set(x, y, x > cols ? this.get(x - cols, y) : 0);
+                    this.set(x, y, x >= cols ? this.get(x - cols, y) : 0);
         }
 
         public clear(): void {
@@ -195,11 +195,16 @@ namespace pxsim.ImageMethods {
         board().ledMatrixState.animationQ.enqueue({
             interval: interval,
             frame: () => {
-                //TODO: support right to left.
                 if (off >= leds.width || off < 0) return false;
-                stride > 0 ? display.shiftLeft(stride) : display.shiftRight(-stride);
-                let c = Math.min(stride, leds.width - off);
-                leds.copyTo(off, c, display, 5 - stride)
+                if (stride > 0) {
+                    display.shiftLeft(stride);
+                    const c = Math.min(stride, leds.width - off);
+                    leds.copyTo(off, c, display, 5 - stride)
+                } else {
+                    display.shiftRight(-stride);
+                    const c = Math.min(-stride, leds.width - off);
+                    leds.copyTo(off, c, display, 0)
+                }
                 off += stride;
                 return true;
             },

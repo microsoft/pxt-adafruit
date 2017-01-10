@@ -80,6 +80,65 @@ declare namespace serial {
     //% block="8g"
     EightG = 8,
     }
+
+
+    declare enum Gesture {
+    /**
+     * Raised when shaken
+     */
+    //% block=shake
+    Shake = 0,
+    /**
+     * Raised when the device tilts up
+     */
+    //% block="tilt up"
+    TiltUp = 1,
+    /**
+     * Raised when the device tilts down
+     */
+    //% block="tilt down"
+    TiltDown = 1,
+    /**
+     * Raised when the screen is pointing left
+     */
+    //% block="tilt left"
+    TiltLeft = 1,
+    /**
+     * Raised when the screen is pointing right
+     */
+    //% block="tilt right"
+    TiltRight = 1,
+    /**
+     * Raised when the screen faces up
+     */
+    //% block="face up"
+    FaceUp = 1,
+    /**
+     * Raised when the screen is pointing up and the board is horizontal
+     */
+    //% block="face down"
+    FaceDown = 1,
+    /**
+     * Raised when the board is falling!
+     */
+    //% block="free fall"
+    FreeFall = 1,
+    /**
+     * Raised when a 3G shock is detected
+     */
+    //% block="3g"
+    ThreeG = 1,
+    /**
+     * Raised when a 6G shock is detected
+     */
+    //% block="6g"
+    SixG = 1,
+    /**
+     * Raised when a 8G shock is detected
+     */
+    //% block="8g"
+    EightG = 1,
+    }
 declare namespace input {
 }
 

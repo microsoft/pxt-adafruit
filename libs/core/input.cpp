@@ -1,5 +1,6 @@
 #include "pxt.h"
 #include "DeviceSystemTimer.h"
+#include "LIS3DH.h"
 
 enum class Dimension {
     //% block=x
@@ -42,65 +43,63 @@ enum class AcceleratorRange {
     EightG = 8
 };
 
-#if 0
 enum class Gesture {
     /**
      * Raised when shaken
      */
     //% block=shake
-    Shake = MICROBIT_ACCELEROMETER_EVT_SHAKE,
+    Shake = 0, // ACCELEROMETER_EVT_SHAKE,
     /**
-     * Raised when the logo is upward and the screen is vertical
+     * Raised when the device tilts up
      */
-    //% block="logo up"
-    LogoUp = MICROBIT_ACCELEROMETER_EVT_TILT_UP,
+    //% block="tilt up"
+    TiltUp = 1,//ACCELEROMETER_EVT_TILT_UP,
     /**
-     * Raised when the logo is downward and the screen is vertical
+     * Raised when the device tilts down
      */
-    //% block="logo down"
-    LogoDown = MICROBIT_ACCELEROMETER_EVT_TILT_DOWN,
-    /**
-     * Raised when the screen is pointing down and the board is horizontal
-     */
-    //% block="screen up"
-    ScreenUp = MICROBIT_ACCELEROMETER_EVT_FACE_UP,
-    /**
-     * Raised when the screen is pointing up and the board is horizontal
-     */
-    //% block="screen down"
-    ScreenDown = MICROBIT_ACCELEROMETER_EVT_FACE_DOWN,
+    //% block="tilt down"
+    TiltDown = 1,//ACCELEROMETER_EVT_TILT_DOWN,
     /**
      * Raised when the screen is pointing left
      */
     //% block="tilt left"
-    TiltLeft = MICROBIT_ACCELEROMETER_EVT_TILT_LEFT,
+    TiltLeft = 1,//ACCELEROMETER_EVT_TILT_LEFT,
     /**
      * Raised when the screen is pointing right
      */
     //% block="tilt right"
-    TiltRight = MICROBIT_ACCELEROMETER_EVT_TILT_RIGHT,
+    TiltRight = 1,//ACCELEROMETER_EVT_TILT_RIGHT,
+    /**
+     * Raised when the screen faces up
+     */
+    //% block="face up"
+    FaceUp = 1,//ACCELEROMETER_EVT_FACE_UP,
+    /**
+     * Raised when the screen is pointing up and the board is horizontal
+     */
+    //% block="face down"
+    FaceDown = 1,//ACCELEROMETER_EVT_FACE_DOWN,
     /**
      * Raised when the board is falling!
      */
     //% block="free fall"
-    FreeFall = MICROBIT_ACCELEROMETER_EVT_FREEFALL,
+    FreeFall = 1,//ACCELEROMETER_EVT_FREEFALL,
     /**
     * Raised when a 3G shock is detected
     */
     //% block="3g"
-    ThreeG = MICROBIT_ACCELEROMETER_EVT_3G,
+    ThreeG = 1,//ACCELEROMETER_EVT_3G,
     /**
     * Raised when a 6G shock is detected
     */
     //% block="6g"
-    SixG = MICROBIT_ACCELEROMETER_EVT_6G,
+    SixG = 1,//ACCELEROMETER_EVT_6G,
     /**
     * Raised when a 8G shock is detected
     */
     //% block="8g"
-    EightG = MICROBIT_ACCELEROMETER_EVT_8G
+    EightG = 1//ACCELEROMETER_EVT_8G
 };
-#endif
 
 //% noRefCounting fixedInstances
 namespace ButtonMethods {
@@ -132,9 +131,7 @@ bool isPressed(Button button) {
 }
 }
 
-//% color="#FB48C7" weight=99 icon="\uf192"
-namespace input {
-#if 0
+namespace AccelerometerMethods {
 /**
  * Do something when when a gesture is done (like shaking the micro:bit).
  * @param gesture the type of gesture to track, eg: Gesture.Shake
@@ -143,16 +140,20 @@ namespace input {
 //% help=input/on-gesture weight=84 blockGap=8
 //% blockId=device_gesture_event block="on |%NAME"
 //% parts="accelerometer"
-void onGesture(Gesture gesture, Action body) {
+void onGesture(Accelerometer accelerometer, Gesture gesture, Action body) {
     int gi = (int)gesture;
-    if (gi == MICROBIT_ACCELEROMETER_EVT_3G && uBit.accelerometer.getRange() < 3)
-        uBit.accelerometer.setRange(4);
-    else if ((gi == MICROBIT_ACCELEROMETER_EVT_6G || gi == MICROBIT_ACCELEROMETER_EVT_8G) &&
+    if (gi == ACCELEROMETER_EVT_3G && uBit.accelerometer.getRange() < 3)
+        device.accelerometer.setRange(4);
+    else if ((gi == ACCELEROMETER_EVT_6G || gi == ACCELEROMETER_EVT_8G) &&
              uBit.accelerometer.getRange() < 6)
-        uBit.accelerometer.setRange(8);
-    registerWithDal(MICROBIT_ID_GESTURE, gi, body);
+        device.accelerometer.setRange(8);
+    registerWithDal(DEVICE_ID_GESTURE, gi, body);
+}
 }
 
+//% color="#FB48C7" weight=99 icon="\uf192"
+namespace input {
+/*
 int getAccelerationStrength() {
     double x = uBit.accelerometer.getX();
     double y = uBit.accelerometer.getY();
@@ -233,6 +234,8 @@ void setAccelerometerRange(AcceleratorRange range) {
     uBit.accelerometer.setRange((int)range);
 }
 #endif
+
+void on
 
 /**
   * Gets the number of milliseconds elapsed since power on.

@@ -128,6 +128,16 @@ declare namespace input {
 
     //% fixedInstance shim=pxt::getButton(1)
     const buttonB: Button;
+
+
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getI2C
+    //% fixedInstance shim=pxt::getI2C(0)
+    const i2c: I2C;
+
+
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getAccelerometer
+    //% fixedInstance shim=pxt::getAccelerometer(0)
+    const accelerometer: Accelerometer;
 }
 
 
@@ -435,9 +445,69 @@ declare interface Button {
 }
 
 
+declare interface Accelerometer {
+    /**
+     * Do something when when a gesture is done (like shaking the micro:bit).
+     * @param gesture the type of gesture to track, eg: Gesture.Shake
+     * @param body code to run when gesture is raised
+     */
+    //% help=input/on-gesture weight=84 blockGap=8
+    //% blockId=device_gesture_event block="on |%NAME"
+    //% parts="accelerometer" shim=AccelerometerMethods::onGesture
+    onGesture(gesture: Gesture, body: () => void): void;
+}
+
+
 
     //% color="#FB48C7" weight=99 icon="\uf192"
 declare namespace input {
+
+    /**
+     * Get the acceleration value in milli-gravitys (when the board is laying flat with the screen up,
+     * x=0, y=0 and z=-1024)
+     * @param dimension TODO
+     */
+    //% help=input/acceleration weight=58
+    //% blockId=device_acceleration block="acceleration (mg)|%NAME" blockGap=8
+    //% parts="accelerometer" shim=input::acceleration
+    function acceleration(dimension: Dimension): number;
+
+    /**
+     * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` bright.
+     */
+    //% help=input/light-level weight=57
+    //% blockId=device_get_light_level block="light level" blockGap=8
+    //% parts="ledmatrix" shim=input::lightLevel
+    function lightLevel(): number;
+
+    /**
+     * Gets the temperature in Celsius degrees (°C).
+     */
+    //% weight=55
+    //% help=input/temperature
+    //% blockId=device_temperature block="temperature (°C)" blockGap=8
+    //% parts="thermometer" shim=input::temperature
+    function temperature(): number;
+
+    /**
+     * The pitch or roll of the device, rotation along the ``x-axis`` or ``y-axis``, in degrees.
+     * @param kind TODO
+     */
+    //% help=input/rotation weight=52
+    //% blockId=device_get_rotation block="rotation (°)|%NAME" blockGap=8
+    //% parts="accelerometer" advanced=true shim=input::rotation
+    function rotation(kind: Rotation): number;
+
+    /**
+     * Sets the accelerometer sample range in gravities.
+     * @param range a value describe the maximum strengh of acceleration measured
+     */
+    //% help=input/set-accelerometer-range
+    //% blockId=device_set_accelerometer_range block="set accelerometer|range %range"
+    //% weight=5
+    //% parts="accelerometer"
+    //% advanced=true shim=input::setAccelerometerRange
+    function setAccelerometerRange(range: AcceleratorRange): void;
 
     /**
      * Gets the number of milliseconds elapsed since power on.

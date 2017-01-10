@@ -51,24 +51,27 @@ namespace serial {
     }
 
     /**
-     * Reads a line of text from the serial port.
-     */
-    //% help=serial/read-line
-    //% blockId=serial_read_line block="serial|read line"
-    //% weight=20 blockGap=8
-    StringData* readLine() {
-      return readUntil(ManagedString("\n").leakData());
+    * Reads the buffered received data as a string
+    */
+    //% blockId=serial_read_buffer block="serial|read string"
+    //% weight=18
+    StringData* readString() {
+      int n = uBit.serial.getRxBufferSize();
+      if (n == 0) return ManagedString("").leakData();
+      return ManagedString(uBit.serial.read(n, MicroBitSerialMode::ASYNC)).leakData();
     }
 
     /**
-    * Registers an event to be fired when one of the delimiter is matched
-    * @param delimiters the characters to match received characters against. eg:"\n"
+    * Registers an event to be fired when one of the delimiter is matched.
+    * @param delimiters the characters to match received characters against.
     */
-    // help=serial/on-data-received
-    // weight=18
+    //% help=serial/on-data-received
+    //% weight=18 blockId=serial_on_data_received block="serial|on data received %delimiters=serial_delimiter_conv"
     void onDataReceived(StringData* delimiters, Action body) {
       uBit.serial.eventOn(ManagedString(delimiters));
       registerWithDal(MICROBIT_ID_SERIAL, MICROBIT_SERIAL_EVT_DELIM_MATCH, body);
+      // lazy initialization of serial buffers
+      uBit.serial.read(MicroBitSerialMode::ASYNC);
     }
 
     /**

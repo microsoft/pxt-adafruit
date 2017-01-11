@@ -58,8 +58,8 @@
 #define PIN_D4 PIN_PA14
 #endif
 
-#define PIN_BTN_A PIN_D0
-#define PIN_BTN_B PIN_D1
+#define PIN_BTN_LEFT PIN_D0
+#define PIN_BTN_RIGHT PIN_D1
 #define PIN_NEOPIXEL PIN_D3
 
 #elif PXT_BOARD_ID == BOARD_ID_CPLAY
@@ -80,8 +80,8 @@
 #define PIN_FLASH_CS PIN_PB22
 
 // devices
-#define PIN_BTN_A PIN_PA28 // left
-#define PIN_BTN_B PIN_PA14 // right
+#define PIN_BTN_LEFT PIN_PA28 
+#define PIN_BTN_RIGHT PIN_PA14 // right
 #define PIN_BTN_SLIDE PIN_PA15
 #define PIN_NEOPIXEL PIN_PB23
 #define PIN_SPEAKER PIN_PA02
@@ -288,15 +288,6 @@ class DevPins {
 #undef DigitalPin
 #undef AnalogPin
 
-#define Button DeviceButton
-    Button buttons[0];
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
-    //%
-    Button buttonA;
-    //%
-    Button buttonB;
-#undef Button
-
     I2C i2c;
 
     DevPins();
@@ -306,7 +297,6 @@ extern DevPins *io;
 
 // modify if the last field changes
 const int LastPinID = &io->SCL - io->pins;
-const int LastButtonID = &io->buttonB - io->buttons;
 
 #define INIT_PIN(name, PIN) name((DEVICE_ID_IO_P0 + 100) + (int)PIN, (PinName)PIN, PIN_CAPABILITY_AD)
 
@@ -319,5 +309,7 @@ DevicePin *getPin(int id);
 DevicePin *lookupPin(int pinName);
 DeviceButton *getButton(int id);
 }
+
+#define DEVICE_ID_BUTTON_SLIDE 3000
 
 #endif

@@ -118,17 +118,6 @@ declare namespace pins {
     //% fixedInstance shim=pxt::getPin(28)
     const SCL: DigitalPin;
 }
-declare namespace input {
-
-
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
-    //% fixedInstance shim=pxt::getButton(0)
-    const buttonA: Button;
-
-
-    //% fixedInstance shim=pxt::getButton(1)
-    const buttonB: Button;
-}
 
 
     /**
@@ -408,6 +397,50 @@ declare namespace serial {
 
 
 
+    //% color="#FB48C7" weight=99 icon="\uf192"
+declare namespace input {
+
+    /**
+     * Gets the temperature in Celsius degrees (°C).
+     */
+    //% weight=55
+    //% help=input/temperature
+    //% blockId=device_temperature block="temperature (°C)" blockGap=8
+    //% parts="thermometer" shim=input::temperature
+    function temperature(): number;
+
+    /**
+     * Gets the number of milliseconds elapsed since power on.
+     */
+    //% help=input/running-time weight=50
+    //% blockId=device_get_running_time block="running time (ms)"
+    //% advanced=true shim=input::runningTime
+    function runningTime(): number;
+}
+declare namespace buttons {
+
+    /**
+     * Left push button.
+     */
+    //% indexedInstanceNS=buttons indexedInstanceShim=pxt::getButton
+    //% fixedInstance shim=pxt::getButton(0)
+    const left: Button;
+
+    /**
+     * Right push button.
+     */
+    //% fixedInstance shim=pxt::getButton(1)
+    const right: Button;
+
+    /**
+     * Slide switch.
+     */
+    //% fixedInstance shim=pxt::getButton(2)
+    const slide: Button;
+}
+
+
+
     //% noRefCounting fixedInstances
 declare interface Button {
     /**
@@ -432,29 +465,6 @@ declare interface Button {
     //% parts="buttonpair"
     //% blockNamespace=input shim=ButtonMethods::isPressed
     isPressed(): boolean;
-}
-
-
-
-    //% color="#FB48C7" weight=99 icon="\uf192"
-declare namespace input {
-
-    /**
-     * Gets the temperature in Celsius degrees (°C).
-     */
-    //% weight=55
-    //% help=input/temperature
-    //% blockId=device_temperature block="temperature (°C)" blockGap=8
-    //% parts="thermometer" shim=input::temperature
-    function temperature(): number;
-
-    /**
-     * Gets the number of milliseconds elapsed since power on.
-     */
-    //% help=input/running-time weight=50
-    //% blockId=device_get_running_time block="running time (ms)"
-    //% advanced=true shim=input::runningTime
-    function runningTime(): number;
 }
 declare namespace input {
 

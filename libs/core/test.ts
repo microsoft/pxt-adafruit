@@ -1,7 +1,7 @@
-input.buttonA.onPressed(() => {
+buttons.left.onPressed(() => {
         pins.LEDRX.digitalWrite(0)
 })
-input.buttonB.onPressed(() => {
+buttons.right.onPressed(() => {
         pins.LEDTX.digitalWrite(0)
 })
 

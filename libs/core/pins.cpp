@@ -14,10 +14,6 @@ DevPins::DevPins()
       PIN_D(D1), PIN_D(D2), PIN_D(D3), PIN_D(D4), PIN_D(D5), PIN_D(D6), PIN_D(D7), PIN_D(D8),
       PIN_D(D9), PIN_D(D10), PIN_D(D11), PIN_D(D12), PIN_D(D13), PIN_D(LED), PIN_D(LEDRX),
       PIN_D(LEDTX), PIN_D(MOSI), PIN_D(MISO), PIN_D(SCK), PIN_D(SDA), PIN_D(SCL),
-      buttonA((PinName)PIN_BTN_A, DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
-              PullDown),
-      buttonB((PinName)PIN_BTN_B, DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
-              PullDown),
       i2c((PinName)PIN_SDA, (PinName)PIN_SCL) {}
 
 static DevicePin *pitchPin = NULL;
@@ -39,13 +35,6 @@ enum class PinPullMode {
 };
 
 namespace pxt {
-//%
-DeviceButton *getButton(int id) {
-    if (!(0 <= id && id <= LastButtonID))
-        device.panic(42);
-    return &io->buttons[id];
-}
-
 //%
 DevicePin *getPin(int id) {
     if (!(0 <= id && id <= LastPinID))

@@ -1,6 +1,7 @@
 #include "pxt.h"
 #include "DeviceSystemTimer.h"
 #include "AnalogSensor.h"
+#include "NonLinearAnalogSensor.h"
 
 namespace pxt {
 
@@ -8,30 +9,41 @@ namespace pxt {
 
 class WTemp {
   public:
-    DevicePin temperature;
-    AnalogSensor thermometer;
+    DevicePin pin;
+    NonLinearAnalogSensor sensor;
     WTemp()
-        : INIT_PIN(temperature, PIN_TEMPERATURE),
-          thermometer(temperature, DEVICE_ID_THERMOMETER, 25, 10000, 3380, 10000, 273.5) //
+        : INIT_PIN(pin, PIN_TEMPERATURE),
+          sensor(pin, DEVICE_ID_THERMOMETER, 25, 10000, 3380, 10000, 273.5) //
     {}
 };
 SINGLETON(WTemp);
+
+class WLight {
+  public:
+    DevicePin pin;
+    AnalogSensor sensor;
+    WLight()
+        : INIT_PIN(pin, PIN_LIGHT),
+          sensor(pin, DEVICE_ID_LIGHT_SENSOR) //
+    {
+        sensor.setSensitivity(0.9f);
+    }
+};
+SINGLETON(WLight);
 }
 
 //% color="#FB48C7" weight=99 icon="\uf192"
 namespace input {
 
-#if 0
 /**
- * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` bright.
+ * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``1024`` bright.
  */
 //% help=input/light-level weight=57
 //% blockId=device_get_light_level block="light level" blockGap=8
-//% parts="ledmatrix"
+//% parts="lightsensor"
 int lightLevel() {
-    return getWLight()->light.getAnalogValue();
+    return getWLight()->sensor.getValue();
 }
-#endif
 
 /**
  * Gets the temperature in Celsius degrees (°C).
@@ -41,7 +53,7 @@ int lightLevel() {
 //% blockId=device_temperature block="temperature (°C)" blockGap=8
 //% parts="thermometer"
 int temperature() {
-    return getWTemp()->thermometer.getValue();
+    return getWTemp()->sensor.getValue();
 }
 
 /**

@@ -401,6 +401,14 @@ declare namespace serial {
 declare namespace input {
 
     /**
+     * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``1024`` bright.
+     */
+    //% help=input/light-level weight=57
+    //% blockId=device_get_light_level block="light level" blockGap=8
+    //% parts="lightsensor" shim=input::lightLevel
+    function lightLevel(): number;
+
+    /**
      * Gets the temperature in Celsius degrees (°C).
      */
     //% weight=55

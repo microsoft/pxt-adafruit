@@ -17,6 +17,7 @@ while (true) {
                 pins.LED.digitalWrite(1)
         else
                 pins.LED.digitalWrite(0)
-        serial.writeValue("T", input.temperature());
+        serial.writeLine(`T: ${input.temperature()}, L: ${input.lightLevel()}`);
+        //serial.writeLine(`A1: ${pins.A1.analogRead()}, L: ${pins.A2.analogRead()}`);
         basic.pause(500);
 }

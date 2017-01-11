@@ -440,6 +440,25 @@ declare interface Button {
 declare namespace input {
 
     /**
+     * Gets the temperature in Celsius degrees (°C).
+     */
+    //% weight=55
+    //% help=input/temperature
+    //% blockId=device_temperature block="temperature (°C)" blockGap=8
+    //% parts="thermometer" shim=input::temperature
+    function temperature(): number;
+
+    /**
+     * Gets the number of milliseconds elapsed since power on.
+     */
+    //% help=input/running-time weight=50
+    //% blockId=device_get_running_time block="running time (ms)"
+    //% advanced=true shim=input::runningTime
+    function runningTime(): number;
+}
+declare namespace input {
+
+    /**
      * Do something when when a gesture is done (like shaking the micro:bit).
      * @param gesture the type of gesture to track, eg: Gesture.Shake
      * @param body code to run when gesture is raised
@@ -460,15 +479,6 @@ declare namespace input {
     function acceleration(dimension: Dimension): number;
 
     /**
-     * Gets the temperature in Celsius degrees (°C).
-     */
-    //% weight=55
-    //% help=input/temperature
-    //% blockId=device_temperature block="temperature (°C)" blockGap=8
-    //% parts="thermometer" shim=input::temperature
-    function temperature(): number;
-
-    /**
      * The pitch or roll of the device, rotation along the ``x-axis`` or ``y-axis``, in degrees.
      * @param kind TODO
      */
@@ -487,14 +497,6 @@ declare namespace input {
     //% parts="accelerometer"
     //% advanced=true shim=input::setAccelerometerRange
     function setAccelerometerRange(range: AcceleratorRange): void;
-
-    /**
-     * Gets the number of milliseconds elapsed since power on.
-     */
-    //% help=input/running-time weight=50
-    //% blockId=device_get_running_time block="running time (ms)"
-    //% advanced=true shim=input::runningTime
-    function runningTime(): number;
 }
 
 // Auto-generated. Do not edit. Really.

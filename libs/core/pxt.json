@@ -22,6 +22,7 @@
         "neopixel.cpp",
         "neopixel.ts",
         "input.cpp",
+        "accelerometer.cpp",
         "hf2.cpp",
         "hf2.h",
         "uf2format.h",

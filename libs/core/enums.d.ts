@@ -36,6 +36,8 @@ declare namespace basic {
     }
 declare namespace serial {
 }
+declare namespace input {
+}
 
 
     declare enum Dimension {
@@ -139,7 +141,5 @@ declare namespace serial {
     //% block="8g"
     EightG = 10,  // ACCELEROMETER_EVT_8G
     }
-declare namespace input {
-}
 
 // Auto-generated. Do not edit. Really.

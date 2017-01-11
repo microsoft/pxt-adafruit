@@ -36,6 +36,22 @@ declare namespace basic {
     }
 declare namespace serial {
 }
+
+
+    declare enum LightCondition {
+    //% block="dark"
+    Dark = 1,  // ANALOG_THRESHOLD_LOW
+    //% block="bright"
+    Bright = 2,  // ANALOG_THRESHOLD_HIGH
+    }
+
+
+    declare enum TemperatureCondition {
+    //% block="cold"
+    Cold = 1,  // ANALOG_THRESHOLD_LOW
+    //% block="hot"
+    Hot = 2,  // ANALOG_THRESHOLD_HIGH
+    }
 declare namespace input {
 }
 

@@ -128,16 +128,6 @@ declare namespace input {
 
     //% fixedInstance shim=pxt::getButton(1)
     const buttonB: Button;
-
-
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getI2C
-    //% fixedInstance shim=pxt::getI2C(0)
-    const i2c: I2C;
-
-
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getAccelerometer
-    //% fixedInstance shim=pxt::getAccelerometer(0)
-    const accelerometer: Accelerometer;
 }
 
 
@@ -445,7 +435,10 @@ declare interface Button {
 }
 
 
-declare interface Accelerometer {
+
+    //% color="#FB48C7" weight=99 icon="\uf192"
+declare namespace input {
+
     /**
      * Do something when when a gesture is done (like shaking the micro:bit).
      * @param gesture the type of gesture to track, eg: Gesture.Shake
@@ -453,14 +446,8 @@ declare interface Accelerometer {
      */
     //% help=input/on-gesture weight=84 blockGap=8
     //% blockId=device_gesture_event block="on |%NAME"
-    //% parts="accelerometer" shim=AccelerometerMethods::onGesture
-    onGesture(gesture: Gesture, body: () => void): void;
-}
-
-
-
-    //% color="#FB48C7" weight=99 icon="\uf192"
-declare namespace input {
+    //% parts="accelerometer" shim=input::onGesture
+    function onGesture(gesture: Gesture, body: () => void): void;
 
     /**
      * Get the acceleration value in milli-gravitys (when the board is laying flat with the screen up,
@@ -471,14 +458,6 @@ declare namespace input {
     //% blockId=device_acceleration block="acceleration (mg)|%NAME" blockGap=8
     //% parts="accelerometer" shim=input::acceleration
     function acceleration(dimension: Dimension): number;
-
-    /**
-     * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` bright.
-     */
-    //% help=input/light-level weight=57
-    //% blockId=device_get_light_level block="light level" blockGap=8
-    //% parts="ledmatrix" shim=input::lightLevel
-    function lightLevel(): number;
 
     /**
      * Gets the temperature in Celsius degrees (°C).

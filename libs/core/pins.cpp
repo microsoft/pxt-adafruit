@@ -18,7 +18,7 @@ DevPins::DevPins()
               PullDown),
       buttonB((PinName)PIN_BTN_B, DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
               PullDown),
-      i2c(PIN_SDA, PIN_SCL) {}
+      i2c((PinName)PIN_SDA, (PinName)PIN_SCL) {}
 
 static DevicePin *pitchPin = NULL;
 

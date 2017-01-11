@@ -1,41 +1,7 @@
 #include "pxt.h"
 #include "DeviceSystemTimer.h"
 #include "LIS3DH.h"
-
-namespace pxt {
-    
-class Input {
-
-  public:
-    DeviceI2C i2c;
-    DevicePin int1;
-    LIS3DH acc;
-
-    DevicePin temperature;
-    AnalogSensor thermometer;
-
-    DevicePin light;
-
-    static Input *_instance;
-    Input();
-};
-
-Input::Input()
-    : // accelerometer
-      i2c(PIN_ACCELEROMETER_SDA, PIN_ACCELEROMETER_SCL),
-      INIT_PIN(int1, PIN_ACCELEROMETER_INT), //
-      acc(i2c, int1),
-      // temp.
-      INIT_PIN(temperature, PIN_TEMPERATURE),
-      thermometer(io.temperature, DEVICE_ID_THERMOMETER, 25, 10000, 3380, 10000, 273.5), //
-      INIT_PIN(light, PIN_PIN_LIGHT) {}
-
-Input *inp() {
-    if (!Input::_instance)
-        Input::_instance = new Input();
-    return Input::_instance;
-}
-}
+#include "AnalogSensor.h"
 
 enum class Dimension {
     //% block=x
@@ -136,6 +102,35 @@ enum class Gesture {
     EightG = ACCELEROMETER_EVT_8G
 };
 
+namespace pxt {
+
+// Wrapper classes
+
+class WAccel {
+  public:
+    DeviceI2C i2c; // note that this is different pins than io->i2c
+    DevicePin int1;
+    LIS3DH acc;
+    WAccel()
+        : i2c(PIN_ACCELEROMETER_SDA, PIN_ACCELEROMETER_SCL),
+          INIT_PIN(int1, PIN_ACCELEROMETER_INT), //
+          acc(i2c, int1)                         //
+    {}
+};
+SINGLETON(WAccel);
+
+class WTemp {
+  public:
+    DevicePin temperature;
+    AnalogSensor thermometer;
+    WTemp()
+        : INIT_PIN(temperature, PIN_TEMPERATURE),
+          thermometer(temperature, DEVICE_ID_THERMOMETER, 25, 10000, 3380, 10000, 273.5) //
+    {}
+};
+SINGLETON(WTemp);
+}
+
 //% noRefCounting fixedInstances
 namespace ButtonMethods {
 /**
@@ -176,14 +171,22 @@ namespace input {
 //% help=input/on-gesture weight=84 blockGap=8
 //% blockId=device_gesture_event block="on |%NAME"
 //% parts="accelerometer"
-void onGesture(Accelerometer accelerometer, Gesture gesture, Action body) {
-    auto acc = &inp()->acc;
+void onGesture(Gesture gesture, Action body) {
+    auto acc = &getWAccel()->acc;
     int gi = (int)gesture;
     if (gi == ACCELEROMETER_EVT_3G && acc->getRange() < 3)
         acc->setRange(4);
     else if ((gi == ACCELEROMETER_EVT_6G || gi == ACCELEROMETER_EVT_8G) && acc->getRange() < 6)
         acc->setRange(8);
     registerWithDal(DEVICE_ID_GESTURE, gi, body);
+}
+
+int getAccelerationStrength() {
+    auto acc = &getWAccel()->acc;
+    float x = acc->getX();
+    float y = acc->getY();
+    float z = acc->getZ();
+    return (int)sqrtf(x * x + y * y + z * z);
 }
 
 /**
@@ -197,17 +200,18 @@ void onGesture(Accelerometer accelerometer, Gesture gesture, Action body) {
 int acceleration(Dimension dimension) {
     switch (dimension) {
     case Dimension::X:
-        return inp()->acc.getX();
+        return getWAccel()->acc.getX();
     case Dimension::Y:
-        return inp()->acc.getY();
+        return getWAccel()->acc.getY();
     case Dimension::Z:
-        return inp()->acc.getZ();
+        return getWAccel()->acc.getZ();
     case Dimension::Strength:
-        return (int)sqrtf(inp()->acc.instantaneousAccelerationSquared());
+        return getAccelerationStrength();
     }
     return 0;
 }
 
+#if 0
 /**
  * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` bright.
  */
@@ -215,9 +219,9 @@ int acceleration(Dimension dimension) {
 //% blockId=device_get_light_level block="light level" blockGap=8
 //% parts="ledmatrix"
 int lightLevel() {
-    // TODO fix up the range
-    return inp()->light.getAnalogValue();
+    return getWLight()->light.getAnalogValue();
 }
+#endif
 
 /**
  * Gets the temperature in Celsius degrees (°C).
@@ -227,7 +231,7 @@ int lightLevel() {
 //% blockId=device_temperature block="temperature (°C)" blockGap=8
 //% parts="thermometer"
 int temperature() {
-    return inp()->thermometer.getTemperature();
+    return getWTemp()->thermometer.getValue();
 }
 
 /**
@@ -240,9 +244,9 @@ int temperature() {
 int rotation(Rotation kind) {
     switch (kind) {
     case Rotation::Pitch:
-        return inp()->acc.getPitch();
+        return getWAccel()->acc.getPitch();
     case Rotation::Roll:
-        return inp()->acc.getRoll();
+        return getWAccel()->acc.getRoll();
     }
     return 0;
 }
@@ -257,7 +261,7 @@ int rotation(Rotation kind) {
 //% parts="accelerometer"
 //% advanced=true
 void setAccelerometerRange(AcceleratorRange range) {
-    inp()->acc.setRange((int)range);
+    getWAccel()->acc.setRange((int)range);
 }
 
 /**
@@ -269,5 +273,4 @@ void setAccelerometerRange(AcceleratorRange range) {
 int runningTime() {
     return system_timer_current_time();
 }
-
 }

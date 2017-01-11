@@ -15,7 +15,7 @@
 #define BOARD_ID_M0 8
 
 #ifndef PXT_BOARD_ID
-#define PXT_BOARD_ID BOARD_ID_ZERO
+#define PXT_BOARD_ID BOARD_ID_CPLAY
 #endif
 
 #if PXT_BOARD_ID == BOARD_ID_ZERO || PXT_BOARD_ID == BOARD_ID_METRO || PXT_BOARD_ID == BOARD_ID_M0
@@ -308,12 +308,11 @@ extern DevPins *io;
 const int LastPinID = &io->SCL - io->pins;
 const int LastButtonID = &io->buttonB - io->buttons;
 
-#define INIT_PIN(name, PIN) name((DEVICE_ID_IO_P0 + 100) + (int)PIN, PIN, PIN_CAPABILITY_AD)
+#define INIT_PIN(name, PIN) name((DEVICE_ID_IO_P0 + 100) + (int)PIN, (PinName)PIN, PIN_CAPABILITY_AD)
 
 typedef DevicePin *DigitalPin;
 typedef DevicePin *AnalogPin;
 typedef DeviceButton *Button;
-typedef DeviceAccelerometer *Accelerometer;
 
 namespace pxt {
 DevicePin *getPin(int id);

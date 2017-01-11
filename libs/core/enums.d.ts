@@ -87,57 +87,57 @@ declare namespace serial {
      * Raised when shaken
      */
     //% block=shake
-    Shake = 0,
+    Shake = 11,  // ACCELEROMETER_EVT_SHAKE
     /**
      * Raised when the device tilts up
      */
     //% block="tilt up"
-    TiltUp = 1,
+    TiltUp = 1,  // ACCELEROMETER_EVT_TILT_UP
     /**
      * Raised when the device tilts down
      */
     //% block="tilt down"
-    TiltDown = 1,
+    TiltDown = 2,  // ACCELEROMETER_EVT_TILT_DOWN
     /**
      * Raised when the screen is pointing left
      */
     //% block="tilt left"
-    TiltLeft = 1,
+    TiltLeft = 3,  // ACCELEROMETER_EVT_TILT_LEFT
     /**
      * Raised when the screen is pointing right
      */
     //% block="tilt right"
-    TiltRight = 1,
+    TiltRight = 4,  // ACCELEROMETER_EVT_TILT_RIGHT
     /**
      * Raised when the screen faces up
      */
     //% block="face up"
-    FaceUp = 1,
+    FaceUp = 5,  // ACCELEROMETER_EVT_FACE_UP
     /**
      * Raised when the screen is pointing up and the board is horizontal
      */
     //% block="face down"
-    FaceDown = 1,
+    FaceDown = 6,  // ACCELEROMETER_EVT_FACE_DOWN
     /**
      * Raised when the board is falling!
      */
     //% block="free fall"
-    FreeFall = 1,
+    FreeFall = 7,  // ACCELEROMETER_EVT_FREEFALL
     /**
      * Raised when a 3G shock is detected
      */
     //% block="3g"
-    ThreeG = 1,
+    ThreeG = 8,  // ACCELEROMETER_EVT_3G
     /**
      * Raised when a 6G shock is detected
      */
     //% block="6g"
-    SixG = 1,
+    SixG = 9,  // ACCELEROMETER_EVT_6G
     /**
      * Raised when a 8G shock is detected
      */
     //% block="8g"
-    EightG = 1,
+    EightG = 10,  // ACCELEROMETER_EVT_8G
     }
 declare namespace input {
 }

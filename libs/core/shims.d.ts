@@ -32,102 +32,91 @@ declare namespace pins {
 
 
     //% fixedInstance shim=pxt::getPin(7)
-    const D0: DigitalPin;
+    const A7: AnalogPin;
 
 
     //% fixedInstance shim=pxt::getPin(8)
-    const D1: DigitalPin;
+    const A8: AnalogPin;
 
 
     //% fixedInstance shim=pxt::getPin(9)
-    const D2: DigitalPin;
+    const A9: AnalogPin;
 
 
     //% fixedInstance shim=pxt::getPin(10)
-    const D3: DigitalPin;
+    const A10: AnalogPin;
 
 
     //% fixedInstance shim=pxt::getPin(11)
-    const D4: DigitalPin;
+    const A11: AnalogPin;
 
 
     //% fixedInstance shim=pxt::getPin(12)
-    const D5: DigitalPin;
+    const D0: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(13)
-    const D6: DigitalPin;
+    const D1: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(14)
-    const D7: DigitalPin;
+    const D2: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(15)
-    const D8: DigitalPin;
+    const D3: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(16)
-    const D9: DigitalPin;
+    const D4: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(17)
-    const D10: DigitalPin;
+    const D5: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(18)
-    const D11: DigitalPin;
+    const D6: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(19)
-    const D12: DigitalPin;
+    const D7: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(20)
-    const D13: DigitalPin;
+    const D8: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(21)
-    const LED: DigitalPin;
+    const D9: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(22)
-    const LEDRX: DigitalPin;
+    const D10: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(23)
-    const LEDTX: DigitalPin;
+    const D11: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(24)
-    const MOSI: DigitalPin;
+    const D12: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(25)
-    const MISO: DigitalPin;
+    const D13: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(26)
-    const SCK: DigitalPin;
+    const LED: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(27)
-    const SDA: DigitalPin;
+    const LEDRX: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(28)
-    const SCL: DigitalPin;
-}
-declare namespace input {
-
-
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
-    //% fixedInstance shim=pxt::getButton(0)
-    const buttonA: Button;
-
-
-    //% fixedInstance shim=pxt::getButton(1)
-    const buttonB: Button;
+    const LEDTX: DigitalPin;
 }
 
 
@@ -316,14 +305,6 @@ declare namespace pins {
     function pulseDuration(): number;
 
     /**
-     * Sets the pin used when using `analog pitch` or music.
-     * @param name pin to modulate pitch from
-     */
-    //% blockId=device_analog_set_pitch_pin block="analog set pitch pin %name"
-    //% help=pins/analog-set-pitch weight=3 advanced=true shim=pins::analogSetPitchPin
-    function analogSetPitchPin(name: AnalogPin): void;
-
-    /**
      * Emits a Pulse-width modulation (PWM) signal to the current pitch pin. Use `analog set pitch pin`
      * to define the pitch pin.
      * @param frequency frequency to modulate in Hz.
@@ -428,6 +409,77 @@ declare namespace neopixel {
 
 
 
+    //% color="#FB48C7" weight=99 icon="\uf192"
+declare namespace input {
+
+    /**
+     * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``1024`` bright.
+     */
+    //% help=input/light-level weight=57
+    //% blockId=device_get_light_level block="light level" blockGap=8
+    //% parts="lightsensor" shim=input::lightLevel
+    function lightLevel(): number;
+
+    /**
+     * Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
+     * @param condition the condition that event triggers on
+     */
+    //% help=input/on-light-condition-changed
+    //% blockId=input_on_light_condition_changed block="on %condition"
+    //% parts="lightsensor" shim=input::onLightConditionChanged
+    function onLightConditionChanged(condition: LightCondition, handler: () => void): void;
+
+    /**
+     * Gets the temperature in Celsius degrees (°C).
+     */
+    //% weight=55
+    //% help=input/temperature
+    //% blockId=device_temperature block="temperature (°C)" blockGap=8
+    //% parts="thermometer" shim=input::temperature
+    function temperature(): number;
+
+    /**
+     * Registers an event raised when the temperature condition (hold, cold) changes.
+     * @param condition the condition, hot or cold, the event triggers on
+     * @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
+     */
+    //% blockId=input_on_temperature_condition_changed block="on %condition|at (°C)%temperature"
+    //% parts="thermometer"
+    //% help=input/on-temperature-condition-changed shim=input::onTemperateConditionChanged
+    function onTemperateConditionChanged(condition: TemperatureCondition, temperature: number, handler: () => void): void;
+
+    /**
+     * Gets the number of milliseconds elapsed since power on.
+     */
+    //% help=input/running-time weight=50
+    //% blockId=device_get_running_time block="running time (ms)"
+    //% advanced=true shim=input::runningTime
+    function runningTime(): number;
+}
+declare namespace buttons {
+
+    /**
+     * Left push button.
+     */
+    //% indexedInstanceNS=buttons indexedInstanceShim=pxt::getButton
+    //% fixedInstance shim=pxt::getButton(0)
+    const left: Button;
+
+    /**
+     * Right push button.
+     */
+    //% fixedInstance shim=pxt::getButton(1)
+    const right: Button;
+
+    /**
+     * Slide switch.
+     */
+    //% fixedInstance shim=pxt::getButton(2)
+    const slide: Button;
+}
+
+
+
     //% noRefCounting fixedInstances
 declare interface Button {
     /**
@@ -453,19 +505,47 @@ declare interface Button {
     //% blockNamespace=input shim=ButtonMethods::isPressed
     isPressed(): boolean;
 }
-
-
-
-    //% color="#FB48C7" weight=99 icon="\uf192"
 declare namespace input {
 
     /**
-     * Gets the number of milliseconds elapsed since power on.
+     * Do something when when a gesture is done (like shaking the micro:bit).
+     * @param gesture the type of gesture to track, eg: Gesture.Shake
+     * @param body code to run when gesture is raised
      */
-    //% help=input/running-time weight=50
-    //% blockId=device_get_running_time block="running time (ms)"
-    //% advanced=true shim=input::runningTime
-    function runningTime(): number;
+    //% help=input/on-gesture weight=84 blockGap=8
+    //% blockId=device_gesture_event block="on |%NAME"
+    //% parts="accelerometer" shim=input::onGesture
+    function onGesture(gesture: Gesture, body: () => void): void;
+
+    /**
+     * Get the acceleration value in milli-gravitys (when the board is laying flat with the screen up,
+     * x=0, y=0 and z=-1024)
+     * @param dimension TODO
+     */
+    //% help=input/acceleration weight=58
+    //% blockId=device_acceleration block="acceleration (mg)|%NAME" blockGap=8
+    //% parts="accelerometer" shim=input::acceleration
+    function acceleration(dimension: Dimension): number;
+
+    /**
+     * The pitch or roll of the device, rotation along the ``x-axis`` or ``y-axis``, in degrees.
+     * @param kind TODO
+     */
+    //% help=input/rotation weight=52
+    //% blockId=device_get_rotation block="rotation (°)|%NAME" blockGap=8
+    //% parts="accelerometer" advanced=true shim=input::rotation
+    function rotation(kind: Rotation): number;
+
+    /**
+     * Sets the accelerometer sample range in gravities.
+     * @param range a value describe the maximum strengh of acceleration measured
+     */
+    //% help=input/set-accelerometer-range
+    //% blockId=device_set_accelerometer_range block="set accelerometer|range %range"
+    //% weight=5
+    //% parts="accelerometer"
+    //% advanced=true shim=input::setAccelerometerRange
+    function setAccelerometerRange(range: AcceleratorRange): void;
 }
 
 // Auto-generated. Do not edit. Really.

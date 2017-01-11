@@ -64,6 +64,7 @@ declare const enum DAL {
     DEVICE_ID_SYSTEM_TIMER = 14,
     DEVICE_ID_SCHEDULER = 15,
     DEVICE_ID_COMPONENT = 16,
+    DEVICE_ID_LIGHT_SENSOR = 17,
     DEVICE_ID_IO_P0 = 100,
     DEVICE_ID_MESSAGE_BUS_LISTENER = 1021,
     DEVICE_ID_NOTIFY_ONE = 1022,
@@ -265,6 +266,16 @@ declare const enum DAL {
     ACCELEROMETER_SHAKE_DAMPING = 10,
     ACCELEROMETER_SHAKE_RTX = 30,
     ACCELEROMETER_SHAKE_COUNT_THRESHOLD = 4,
+    // built/yt/yotta_modules/codal/inc/drivers/LinearAnalogSensor.h
+    // built/yt/yotta_modules/codal/inc/drivers/MultiButton.h
+    MULTI_BUTTON_STATE_1 = 0x01,
+    MULTI_BUTTON_STATE_2 = 0x02,
+    MULTI_BUTTON_HOLD_TRIGGERED_1 = 0x04,
+    MULTI_BUTTON_HOLD_TRIGGERED_2 = 0x08,
+    MULTI_BUTTON_SUPRESSED_1 = 0X10,
+    MULTI_BUTTON_SUPRESSED_2 = 0x20,
+    MULTI_BUTTON_ATTACHED = 0x40,
+    // built/yt/yotta_modules/codal/inc/drivers/NonLinearAnalogSensor.h
     // built/yt/yotta_modules/codal/inc/drivers/TimedInterruptIn.h
     // built/yt/yotta_modules/codal/inc/platform/yotta_cfg_mappings.h
     // built/yt/yotta_modules/codal/inc/types/CoordinateSystem.h

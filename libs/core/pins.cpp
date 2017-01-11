@@ -4,22 +4,17 @@
 
 #define DEFPIN(id, name, cap) id(DEVICE_ID_IO_P0 + (&id - pins), (PinName)(name), cap)
 #define PIN_V(id) PIN_##id
-#define PIN_AD(id) DEFPIN(id, PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_AD : (PinCapability)0)
-#define PIN_D(id) DEFPIN(id, PIN_V(id), PIN_V(id) ? PIN_CAPABILITY_DIGITAL : (PinCapability)0)
+#define PIN_AD(id) DEFPIN(id, PIN_V(id), PIN_V(id) != NC ? PIN_CAPABILITY_AD : (PinCapability)0)
+#define PIN_D(id) DEFPIN(id, PIN_V(id), PIN_V(id) != NC ? PIN_CAPABILITY_DIGITAL : (PinCapability)0)
 
 DevPins *io;
 
 DevPins::DevPins()
-    : PIN_AD(A0), PIN_AD(A1), PIN_AD(A2), PIN_AD(A3), PIN_AD(A4), PIN_AD(A5), PIN_AD(A6), PIN_D(D0),
-      PIN_D(D1), PIN_D(D2), PIN_D(D3), PIN_D(D4), PIN_D(D5), PIN_D(D6), PIN_D(D7), PIN_D(D8),
-      PIN_D(D9), PIN_D(D10), PIN_D(D11), PIN_D(D12), PIN_D(D13), PIN_D(LED), PIN_D(LEDRX),
-      PIN_D(LEDTX), PIN_D(MOSI), PIN_D(MISO), PIN_D(SCK), PIN_D(SDA), PIN_D(SCL),
-      buttonA((PinName)PIN_BTN_A, DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
-              PullDown),
-      buttonB((PinName)PIN_BTN_B, DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
-              PullDown) {}
-
-static DevicePin *pitchPin = NULL;
+    : PIN_AD(A0), PIN_AD(A1), PIN_AD(A2), PIN_AD(A3), PIN_AD(A4), PIN_AD(A5), PIN_AD(A6),
+      PIN_AD(A7), PIN_AD(A8), PIN_AD(A9), PIN_AD(A10), PIN_AD(A11), PIN_D(D0), PIN_D(D1), PIN_D(D2),
+      PIN_D(D3), PIN_D(D4), PIN_D(D5), PIN_D(D6), PIN_D(D7), PIN_D(D8), PIN_D(D9), PIN_D(D10),
+      PIN_D(D11), PIN_D(D12), PIN_D(D13), PIN_D(LED), PIN_D(LEDRX), PIN_D(LEDTX),
+      i2c((PinName)PIN_SDA, (PinName)PIN_SCL) {}
 
 enum class PulseValue {
     //% block=high
@@ -39,18 +34,11 @@ enum class PinPullMode {
 
 namespace pxt {
 //%
-DeviceButton *getButton(int id) {
-    if (!(0 <= id && id <= LastButtonID))
-        device.panic(42);
-    return &io->buttons[id];
-}
-
-//%
 DevicePin *getPin(int id) {
     if (!(0 <= id && id <= LastPinID))
         device.panic(42);
     DevicePin *p = &io->pins[id];
-    // if (p->name == PA00)
+    // if (p->name == NC)
     //    return NULL;
     return p;
 }
@@ -283,16 +271,6 @@ int pulseDuration() {
 }
 
 /**
- * Sets the pin used when using `analog pitch` or music.
- * @param name pin to modulate pitch from
- */
-//% blockId=device_analog_set_pitch_pin block="analog set pitch pin %name"
-//% help=pins/analog-set-pitch weight=3 advanced=true
-void analogSetPitchPin(AnalogPin name) {
-    pitchPin = name;
-}
-
-/**
  * Emits a Pulse-width modulation (PWM) signal to the current pitch pin. Use `analog set pitch pin`
  * to define the pitch pin.
  * @param frequency frequency to modulate in Hz.
@@ -301,8 +279,7 @@ void analogSetPitchPin(AnalogPin name) {
 //% blockId=device_analog_pitch block="analog pitch %frequency|for (ms) %ms"
 //% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
 void analogPitch(int frequency, int ms) {
-    if (pitchPin == NULL)
-        analogSetPitchPin(&io->A0);
+    auto pitchPin = &io->A0;
     if (frequency <= 0) {
         pitchPin->setAnalogValue(0);
     } else {
@@ -313,8 +290,7 @@ void analogPitch(int frequency, int ms) {
     if (ms > 0) {
         fiber_sleep(ms);
         pitchPin->setAnalogValue(0);
-        // TODO why do we use wait_ms() here? it's a busy wait I think
-        wait_ms(5);
     }
 }
+
 }

@@ -27,7 +27,6 @@
 #include "pins.h"
 #include "hf2.h"
 
-
 #define intcheck(...) check(__VA_ARGS__)
 //#define intcheck(...) do {} while (0)
 
@@ -172,49 +171,48 @@ class RefObject {
     }
 };
 
-  class Segment {
-  private:    
-      uint32_t* data;
-      uint16_t length;
-      uint16_t size;
+class Segment {
+  private:
+    uint32_t *data;
+    uint16_t length;
+    uint16_t size;
 
-      static const uint16_t MaxSize = 0xFFFF;
-      static const uint32_t DefaultValue = 0x0;
+    static const uint16_t MaxSize = 0xFFFF;
+    static const uint32_t DefaultValue = 0x0;
 
-      static uint16_t growthFactor(uint16_t size);      
-      void growByMin(uint16_t minSize);
-      void growBy(uint16_t newSize);
-      void ensure(uint16_t newSize);
+    static uint16_t growthFactor(uint16_t size);
+    void growByMin(uint16_t minSize);
+    void growBy(uint16_t newSize);
+    void ensure(uint16_t newSize);
 
   public:
-      Segment() : data (nullptr), length(0), size(0) {};
+    Segment() : data(nullptr), length(0), size(0){};
 
-      uint32_t get(uint32_t i);
-      void set(uint32_t i, uint32_t value);      
+    uint32_t get(uint32_t i);
+    void set(uint32_t i, uint32_t value);
 
-      uint32_t getLength() { return length;};
-      void setLength(uint32_t newLength);
+    uint32_t getLength() { return length; };
+    void setLength(uint32_t newLength);
 
-      void push(uint32_t value);
-      uint32_t pop();
+    void push(uint32_t value);
+    uint32_t pop();
 
-      uint32_t remove(uint32_t i);
-      void insert(uint32_t i, uint32_t value);
+    uint32_t remove(uint32_t i);
+    void insert(uint32_t i, uint32_t value);
 
-      bool isValidIndex(uint32_t i);
+    bool isValidIndex(uint32_t i);
 
-      void destroy();
+    void destroy();
 
-      void print();
-  };
+    void print();
+};
 
-  // A ref-counted collection of either primitive or ref-counted objects (String, Image,
-  // user-defined record, another collection)
-  class RefCollection
-    : public RefObject
-  {
+// A ref-counted collection of either primitive or ref-counted objects (String, Image,
+// user-defined record, another collection)
+class RefCollection : public RefObject {
   private:
     Segment head;
+
   public:
     // 1 - collection of refs (need decr)
     // 2 - collection of strings (in fact we always have 3, never 2 alone)
@@ -227,17 +225,17 @@ class RefObject {
     void destroy();
     void print();
 
-    uint32_t length() { return head.getLength();}
+    uint32_t length() { return head.getLength(); }
     void setLength(uint32_t newLength) { head.setLength(newLength); }
 
     void push(uint32_t x);
     uint32_t pop();
     uint32_t getAt(int i);
     void setAt(int i, uint32_t x);
-    //removes the element at index i and shifts the other elements left
+    // removes the element at index i and shifts the other elements left
     uint32_t removeAt(int i);
-    //inserts the element at index i and moves the other elements right.
-    void insertAt(int i, uint32_t x); 
+    // inserts the element at index i and moves the other elements right.
+    void insertAt(int i, uint32_t x);
 
     int indexOf(uint32_t x, int start);
     int removeElement(uint32_t x);
@@ -371,5 +369,15 @@ typedef BufferData *Buffer;
     }
 
 #define PXT_FNPTR(x) (uint32_t)(void *)(x)
+
+#define JOIN(a, b) a##b
+/// Defines getClassName() function to fetch the singleton
+#define SINGLETON(ClassName)                                                                       \
+    static ClassName *JOIN(inst, ClassName);                                                       \
+    ClassName *JOIN(get, ClassName)() {                                                            \
+        if (!JOIN(inst, ClassName))                                                                \
+            JOIN(inst, ClassName) = new ClassName();                                               \
+        return JOIN(inst, ClassName);                                                              \
+    }
 
 #endif

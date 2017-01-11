@@ -110,7 +110,7 @@ class WAccel {
     DevicePin int1;
     LIS3DH acc;
     WAccel()
-        : i2c(PIN_ACCELEROMETER_SDA, PIN_ACCELEROMETER_SCL),
+        : i2c((PinName)PIN_ACCELEROMETER_SDA, (PinName)PIN_ACCELEROMETER_SCL),
           INIT_PIN(int1, PIN_ACCELEROMETER_INT), //
           acc(i2c, int1)                         //
     {}

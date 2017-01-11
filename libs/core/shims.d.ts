@@ -32,91 +32,91 @@ declare namespace pins {
 
 
     //% fixedInstance shim=pxt::getPin(7)
-    const D0: DigitalPin;
+    const A7: AnalogPin;
 
 
     //% fixedInstance shim=pxt::getPin(8)
-    const D1: DigitalPin;
+    const A8: AnalogPin;
 
 
     //% fixedInstance shim=pxt::getPin(9)
-    const D2: DigitalPin;
+    const A9: AnalogPin;
 
 
     //% fixedInstance shim=pxt::getPin(10)
-    const D3: DigitalPin;
+    const A10: AnalogPin;
 
 
     //% fixedInstance shim=pxt::getPin(11)
-    const D4: DigitalPin;
+    const A11: AnalogPin;
 
 
     //% fixedInstance shim=pxt::getPin(12)
-    const D5: DigitalPin;
+    const D0: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(13)
-    const D6: DigitalPin;
+    const D1: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(14)
-    const D7: DigitalPin;
+    const D2: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(15)
-    const D8: DigitalPin;
+    const D3: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(16)
-    const D9: DigitalPin;
+    const D4: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(17)
-    const D10: DigitalPin;
+    const D5: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(18)
-    const D11: DigitalPin;
+    const D6: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(19)
-    const D12: DigitalPin;
+    const D7: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(20)
-    const D13: DigitalPin;
+    const D8: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(21)
-    const LED: DigitalPin;
+    const D9: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(22)
-    const LEDRX: DigitalPin;
+    const D10: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(23)
-    const LEDTX: DigitalPin;
+    const D11: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(24)
-    const MOSI: DigitalPin;
+    const D12: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(25)
-    const MISO: DigitalPin;
+    const D13: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(26)
-    const SCK: DigitalPin;
+    const LED: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(27)
-    const SDA: DigitalPin;
+    const LEDRX: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(28)
-    const SCL: DigitalPin;
+    const LEDTX: DigitalPin;
 }
 
 
@@ -303,14 +303,6 @@ declare namespace pins {
     //% blockId=pins_pulse_duration block="pulse duration (µs)"
     //% weight=21 blockGap=8 shim=pins::pulseDuration
     function pulseDuration(): number;
-
-    /**
-     * Sets the pin used when using `analog pitch` or music.
-     * @param name pin to modulate pitch from
-     */
-    //% blockId=device_analog_set_pitch_pin block="analog set pitch pin %name"
-    //% help=pins/analog-set-pitch weight=3 advanced=true shim=pins::analogSetPitchPin
-    function analogSetPitchPin(name: AnalogPin): void;
 
     /**
      * Emits a Pulse-width modulation (PWM) signal to the current pitch pin. Use `analog set pitch pin`

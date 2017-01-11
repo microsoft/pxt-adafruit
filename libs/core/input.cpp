@@ -9,22 +9,19 @@ namespace pxt {
 
 class WTemp {
   public:
-    DevicePin pin;
     NonLinearAnalogSensor sensor;
     WTemp()
-        : INIT_PIN(pin, PIN_TEMPERATURE),
-          sensor(pin, DEVICE_ID_THERMOMETER, 25, 10000, 3380, 10000, 273.5) //
+        : sensor(*lookupPin(PIN_TEMPERATURE), DEVICE_ID_THERMOMETER, 25, 10000, 3380, 10000,
+                 273.5) //
     {}
 };
 SINGLETON(WTemp);
 
 class WLight {
   public:
-    DevicePin pin;
     AnalogSensor sensor;
     WLight()
-        : INIT_PIN(pin, PIN_LIGHT),
-          sensor(pin, DEVICE_ID_LIGHT_SENSOR) //
+        : sensor(*lookupPin(PIN_LIGHT), DEVICE_ID_LIGHT_SENSOR) //
     {
         sensor.setSensitivity(0.9f);
     }

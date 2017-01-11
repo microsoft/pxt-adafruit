@@ -130,7 +130,7 @@ declare namespace loops {
      * Repeats the code forever in the background. On each iteration, allows other codes to run.
      * @param body code to execute
      */
-    //% help=loops/forever weight=55 blockGap=8
+    //% help=loops/forever weight=100 blockGap=8
     //% blockId=forever block="forever" icon="\uf01e" shim=loops::forever
     function forever(a: () => void): void;
 }

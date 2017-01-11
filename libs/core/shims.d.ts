@@ -121,27 +121,18 @@ declare namespace pins {
 
 
     /**
-     * Provides access to basic device functionality.
+     * Repeat code constructs
      */
-    //% color=#0078D7 weight=100
-declare namespace basic {
+    //% color=120
+declare namespace loops {
 
     /**
      * Repeats the code forever in the background. On each iteration, allows other codes to run.
      * @param body code to execute
      */
-    //% help=basic/forever weight=55 blockGap=8
-    //% blockId=device_forever block="forever" icon="\uf01e" shim=basic::forever
+    //% help=loops/forever weight=55 blockGap=8
+    //% blockId=forever block="forever" icon="\uf01e" shim=loops::forever
     function forever(a: () => void): void;
-
-    /**
-     * Pause for the specified time in milliseconds
-     * @param ms how long to pause for, eg: 100, 200, 500, 1000, 2000
-     */
-    //% help=basic/pause weight=54
-    //% async block="pause (ms) %pause"
-    //% blockId=device_pause icon="\uf110" shim=basic::pause
-    function pause(ms: number): void;
 }
 
 
@@ -370,6 +361,23 @@ declare interface Buffer {
      */
     //% shim=BufferMethods::write
     write(dstOffset: number, src: Buffer): void;
+}
+
+
+    /**
+     * Runtime and event utilities.
+     */
+    //% weight=70 color="#BEAA07"
+declare namespace control {
+
+    /**
+     * Pause for the specified time in milliseconds
+     * @param ms how long to pause for, eg: 100, 200, 500, 1000, 2000
+     */
+    //% help=basic/pause weight=54
+    //% async block="pause (ms) %pause"
+    //% blockId=device_pause icon="\uf110" shim=control::pause
+    function pause(ms: number): void;
 }
 
 

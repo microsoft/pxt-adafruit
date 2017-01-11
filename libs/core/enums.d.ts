@@ -1,5 +1,5 @@
 // Auto-generated. Do not edit.
-declare namespace basic {
+declare namespace loops {
 }
 
 
@@ -34,6 +34,8 @@ declare namespace basic {
     Int32BE = 10,
     // UInt32,
     }
+declare namespace control {
+}
 declare namespace serial {
 }
 

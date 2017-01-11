@@ -1,8 +1,7 @@
 /**
 * Runtime and event utilities.
 */
-//% weight=90 color="#BEAA07"
-//% advanced=true
+//% weight=70 color="#BEAA07"
 namespace control {
 
     /**

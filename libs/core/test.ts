@@ -1,11 +1,11 @@
 let v0 = 0
 let v1 = 0
-buttons.right.onPressed(() => {
+input.rightButton.onEvent(ButtonEvent.Click, () => {
         pins.LED.digitalWrite(v0)
         v0 = v0 ? 0 : 1
 })
 
-buttons.left.onPressed(() => {
+input.leftButton.onEvent(ButtonEvent.Click, () => {
         pins.LEDTX.digitalWrite(v1)
         v1 = v1 ? 0 : 1
 })
@@ -14,7 +14,7 @@ pins.LED.digitalWrite(1)
 
 let i = 0
 while (true) {
-        if (buttons.right.isPressed())
+        if (input.rightButton.isPressed())
                 pins.LEDTX.digitalWrite(1)
         else
                 pins.LEDTX.digitalWrite(0)

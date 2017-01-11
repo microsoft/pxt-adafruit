@@ -417,26 +417,26 @@ declare namespace input {
     //% advanced=true shim=input::runningTime
     function runningTime(): number;
 }
-declare namespace buttons {
+declare namespace input {
 
     /**
      * Left push button.
      */
-    //% indexedInstanceNS=buttons indexedInstanceShim=pxt::getButton
-    //% fixedInstance shim=pxt::getButton(0)
-    const left: Button;
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
+    //% block="left button" fixedInstance shim=pxt::getButton(0)
+    const leftButton: Button;
 
     /**
      * Right push button.
      */
-    //% fixedInstance shim=pxt::getButton(1)
-    const right: Button;
+    //% block="right button" fixedInstance shim=pxt::getButton(1)
+    const rightButton: Button;
 
     /**
      * Slide switch.
      */
-    //% fixedInstance shim=pxt::getButton(2)
-    const slide: Button;
+    //% block="slide switch" fixedInstance shim=pxt::getButton(2)
+    const slideSwitch: Button;
 }
 
 
@@ -444,23 +444,24 @@ declare namespace buttons {
     //% noRefCounting fixedInstances
 declare interface Button {
     /**
-     * Do something when a button (``A``, ``B`` or both ``A+B``) is pressed
-     * @param button the button that needs to be pressed
+     * Do something when a button (``A``, ``B`` or both ``A+B``) is clicked, double clicked, etc...
+     * @param button the button that needs to be clicked or used
+     * @param event the kind of button gesture that needs to be detected
      * @param body code to run when event is raised
      */
-    //% help=input/on-button-pressed weight=85 blockGap=8
-    //% blockId=device_button_event block="on button|%NAME|pressed"
+    //% help=input/on-button-event weight=85 blockGap=8
+    //% blockId=buttonEvent block="on %button|%event"
     //% parts="buttonpair"
-    //% blockNamespace=input shim=ButtonMethods::onPressed
-    onPressed(body: () => void): void;
+    //% blockNamespace=input shim=ButtonMethods::onEvent
+    onEvent(ev: ButtonEvent, body: () => void): void;
 
     /**
-     * Get the button state (pressed or not) for ``A`` and ``B``.
+     * Get the button state (pressed or not) for ```` and ``B``.
      * @param button the button to query the request, eg: Button.A
      */
     //% help=input/button-is-pressed weight=60
-    //% block="button|%NAME|is pressed"
-    //% blockId=device_get_button2
+    //% block="%NAME|is pressed"
+    //% blockId=buttonIsPressed
     //% icon="\uf192" blockGap=8
     //% parts="buttonpair"
     //% blockNamespace=input shim=ButtonMethods::isPressed

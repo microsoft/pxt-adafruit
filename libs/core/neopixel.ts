@@ -39,18 +39,6 @@ enum NeoPixelMode {
  */
 //% weight=5 color=#2699BF
 namespace neopixel {
-
-    //% shim=neopixel::sendBuffer
-    //% parts="neopixel"
-    function sendBuffer(pin: DigitalPin, buf: Buffer) {
-    }
-
-
-    //% shim=neopixel::defaultPin
-    function defaultPin(): DigitalPin {
-        return null;
-    }
-
     /**
      * A NeoPixel strip
      */
@@ -65,10 +53,10 @@ namespace neopixel {
         _mode: NeoPixelMode;
 
         /**
-         * Shows all LEDs to a given color (range 0-255 for r, g, b). 
+         * Shows all LEDs to a given color (range 0-255 for r, g, b).
          * @param rgb RGB color of the LED
          */
-        //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors" 
+        //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors"
         //% weight=85 blockGap=8
         //% parts="neopixel"
         showColor(rgb: number) {
@@ -77,11 +65,11 @@ namespace neopixel {
         }
 
         /**
-         * Shows a rainbow pattern on all LEDs. 
+         * Shows a rainbow pattern on all LEDs.
          * @param startHue the start hue value for the rainbow, eg: 1
          * @param endHue the end hue value for the rainbow, eg: 360
          */
-        //% blockId="neopixel_set_strip_rainbow" block="%strip|show rainbow from %startHue|to %endHue" 
+        //% blockId="neopixel_set_strip_rainbow" block="%strip|show rainbow from %startHue|to %endHue"
         //% weight=85 blockGap=8
         //% parts="neopixel"
         showRainbow(startHue: number = 1, endHue: number = 360) {
@@ -134,12 +122,12 @@ namespace neopixel {
         }
 
         /**
-         * Set LED to a given color (range 0-255 for r, g, b). 
+         * Set LED to a given color (range 0-255 for r, g, b).
          * You need to call ``show`` to make the changes visible.
          * @param pixeloffset position of the NeoPixel in the strip
          * @param rgb RGB color of the LED
          */
-        //% blockId="neopixel_set_pixel_color" block="%strip|set pixel color at %pixeloffset|to %rgb=neopixel_colors" 
+        //% blockId="neopixel_set_pixel_color" block="%strip|set pixel color at %pixeloffset|to %rgb=neopixel_colors"
         //% blockGap=8
         //% weight=80
         //% parts="neopixel" advanced=true
@@ -152,7 +140,7 @@ namespace neopixel {
          * @param pixeloffset position of the LED in the strip
          * @param white brightness of the white LED
          */
-        //% blockId="neopixel_set_pixel_white" block="%strip|set pixel white LED at %pixeloffset|to %white" 
+        //% blockId="neopixel_set_pixel_white" block="%strip|set pixel white LED at %pixeloffset|to %white"
         //% blockGap=8
         //% weight=80
         //% parts="neopixel" advanced=true
@@ -231,7 +219,7 @@ namespace neopixel {
             }
         }
 
-        /** 
+        /**
          * Create a range of LEDs.
          * @param start offset in the LED strip to start the range
          * @param length number of LEDs in the range. eg: 4
@@ -480,8 +468,8 @@ namespace neopixel {
         }
 
         /**
-         * Converts from an HSL (hue, saturation, luminosity) format color to an RGB (red, 
-         * green, blue) format color. Input ranges h between [0,360], s between 
+         * Converts from an HSL (hue, saturation, luminosity) format color to an RGB (red,
+         * green, blue) format color. Input ranges h between [0,360], s between
          * [0, 100], and l between [0, 100], and output r, g, b ranges between [0,255]
         */
         //% weight=2 blockGap=8
@@ -544,7 +532,7 @@ namespace neopixel {
      * Interpolates between two HSL colors
      * @param startColor the start HSL color
      * @param endColor the end HSL color
-     * @param steps the number of steps to interpolate for. Note that if steps 
+     * @param steps the number of steps to interpolate for. Note that if steps
      *  is 1, the color midway between the start and end color will be returned.
      * @param direction the direction around the color wheel the hue should be interpolated.
      */

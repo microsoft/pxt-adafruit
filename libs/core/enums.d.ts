@@ -36,6 +36,8 @@ declare namespace basic {
     }
 declare namespace serial {
 }
+declare namespace neopixel {
+}
 
 
     declare enum Dimension {

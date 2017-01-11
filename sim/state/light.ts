@@ -13,7 +13,7 @@ namespace pxsim {
         public setBrightness(brightness: number) {
             this.brightness = brightness;
         }
-        
+
         public getBrightness(): number{
             return this.brightness;
         }
@@ -38,6 +38,30 @@ namespace pxsim {
 
     export class RedLEDState {
         on: boolean = false;
+    }
+}
+
+namespace pxsim.neopixel {
+    export function sendBuffer(pin: pins.DigitalPin, b: RefBuffer) {
+        const state = board().neopixelState;
+        const stride = 3;
+        const numberOfPixels = b.data.length / stride;
+
+        for (let i = 0; i < numberOfPixels; i++) {
+            const offset = stride * i;
+
+            const green = b.data[offset];
+            const red = b.data[offset + 1];
+            const blue = b.data[offset + 2];
+
+            state.setPixelColor(i, red, green, blue);
+        }
+
+        runtime.queueDisplayUpdate();
+    }
+
+    export function defaultPin() {
+        return pins.D3;
     }
 }
 

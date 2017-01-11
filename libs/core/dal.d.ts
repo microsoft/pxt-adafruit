@@ -131,6 +131,15 @@ declare const enum DAL {
     // built/yt/yotta_modules/codal/inc/device/SAMD21/common_includes.h
     // built/yt/yotta_modules/codal/inc/device/SAMD21/device_fiber.h
     // built/yt/yotta_modules/codal/inc/device/SAMD21/device_types.h
+    // built/yt/yotta_modules/codal/inc/device/SAMD21/neopixel.h
+    // built/yt/yotta_modules/codal/inc/drivers/AnalogSensor.h
+    ANALOG_THRESHOLD_LOW = 1,
+    ANALOG_THRESHOLD_HIGH = 2,
+    ANALOG_SENSOR_UPDATE_NEEDED = 3,
+    ANALOG_SENSOR_INITIALISED = 0x01,
+    ANALOG_SENSOR_HIGH_THRESHOLD_PASSED = 0x02,
+    ANALOG_SENSOR_LOW_THRESHOLD_PASSED = 0x04,
+    ANALOG_SENSOR_THRESHOLD_ENABLED = 0x08,
     // built/yt/yotta_modules/codal/inc/drivers/DeviceButton.h
     DEVICE_BUTTON_EVT_DOWN = 1,
     DEVICE_BUTTON_EVT_UP = 2,
@@ -153,6 +162,7 @@ declare const enum DAL {
     DEVICE_BUTTON_ALL_EVENTS = 1,
     ACTIVE_LOW = 0,
     ACTIVE_HIGH = 1,
+    // built/yt/yotta_modules/codal/inc/drivers/DeviceI2C.h
     // built/yt/yotta_modules/codal/inc/drivers/DeviceMessageBus.h
     // built/yt/yotta_modules/codal/inc/drivers/DevicePin.h
     IO_STATUS_DIGITAL_IN = 0x01,
@@ -190,10 +200,7 @@ declare const enum DAL {
     SYNC_SPINWAIT = 1,
     SYNC_SLEEP = 2,
     // built/yt/yotta_modules/codal/inc/drivers/DynamicPwm.h
-    NO_PWMS = 3,
     DEVICE_DEFAULT_PWM_PERIOD = 20000,
-    PWM_PERSISTENCE_TRANSIENT = 1,
-    PWM_PERSISTENCE_PERSISTENT = 2,
     // built/yt/yotta_modules/codal/inc/drivers/Glue.h
     // built/yt/yotta_modules/codal/inc/drivers/HID.h
     HID_REQUEST_GET_REPORT = 0x01,
@@ -202,9 +209,65 @@ declare const enum DAL {
     HID_REQUEST_SET_REPORT = 0x09,
     HID_REQUEST_SET_IDLE = 0x0A,
     HID_REQUEST_SET_PROTOCOL = 0x0B,
+    // built/yt/yotta_modules/codal/inc/drivers/LIS3DH.h
+    ACCELEROMETER_IMU_DATA_VALID = 0x02,
+    LIS3DH_DEFAULT_ADDR = 0x32,
+    LIS3DH_STATUS_REG = 0x27,
+    LIS3DH_STATUS_REG_AUX = 0x07,
+    LIS3DH_OUT_X_L = 0x28,
+    LIS3DH_OUT_X_H = 0x29,
+    LIS3DH_OUT_Y_L = 0x2A,
+    LIS3DH_OUT_Y_H = 0x2B,
+    LIS3DH_OUT_Z_L = 0x2C,
+    LIS3DH_OUT_Z_H = 0x2D,
+    LIS3DH_WHOAMI = 0x0F,
+    LIS3DH_CTRL_REG0 = 0x1E,
+    LIS3DH_CTRL_REG1 = 0x20,
+    LIS3DH_CTRL_REG2 = 0x21,
+    LIS3DH_CTRL_REG3 = 0x22,
+    LIS3DH_CTRL_REG4 = 0x23,
+    LIS3DH_CTRL_REG5 = 0x24,
+    LIS3DH_CTRL_REG6 = 0x25,
+    LIS3DH_FIFO_CTRL_REG = 0x2E,
+    LIS3DH_FIFO_SRC_REG = 0x2F,
+    LIS3DH_INT1_CFG = 0x30,
+    LIS3DH_INT1_SRC = 0x31,
+    LIS3DH_INT1_THS = 0x32,
+    LIS3DH_INT1_DURATION = 0x33,
+    LIS3DH_INT2_CFG = 0x34,
+    LIS3DH_INT2_SRC = 0x35,
+    LIS3DH_INT2_THS = 0x36,
+    LIS3DH_INT2_DURATION = 0x37,
+    LIS3DH_WHOAMI_VAL = 0x33,
+    LIS3DH_SAMPLE_RANGES = 4,
+    LIS3DH_SAMPLE_RATES = 7,
+    ACCELEROMETER_EVT_DATA_UPDATE = 1,
+    ACCELEROMETER_EVT_NONE = 0,
+    ACCELEROMETER_EVT_TILT_UP = 1,
+    ACCELEROMETER_EVT_TILT_DOWN = 2,
+    ACCELEROMETER_EVT_TILT_LEFT = 3,
+    ACCELEROMETER_EVT_TILT_RIGHT = 4,
+    ACCELEROMETER_EVT_FACE_UP = 5,
+    ACCELEROMETER_EVT_FACE_DOWN = 6,
+    ACCELEROMETER_EVT_FREEFALL = 7,
+    ACCELEROMETER_EVT_3G = 8,
+    ACCELEROMETER_EVT_6G = 9,
+    ACCELEROMETER_EVT_8G = 10,
+    ACCELEROMETER_EVT_SHAKE = 11,
+    ACCELEROMETER_REST_TOLERANCE = 200,
+    ACCELEROMETER_TILT_TOLERANCE = 200,
+    ACCELEROMETER_FREEFALL_TOLERANCE = 400,
+    ACCELEROMETER_SHAKE_TOLERANCE = 400,
+    ACCELEROMETER_3G_TOLERANCE = 3072,
+    ACCELEROMETER_6G_TOLERANCE = 6144,
+    ACCELEROMETER_8G_TOLERANCE = 8192,
+    ACCELEROMETER_GESTURE_DAMPING = 5,
+    ACCELEROMETER_SHAKE_DAMPING = 10,
+    ACCELEROMETER_SHAKE_RTX = 30,
+    ACCELEROMETER_SHAKE_COUNT_THRESHOLD = 4,
     // built/yt/yotta_modules/codal/inc/drivers/TimedInterruptIn.h
     // built/yt/yotta_modules/codal/inc/platform/yotta_cfg_mappings.h
-    // built/yt/yotta_modules/codal/inc/types/DeviceCoordinateSystem.h
+    // built/yt/yotta_modules/codal/inc/types/CoordinateSystem.h
     RAW = 0,
     SIMPLE_CARTESIAN = 1,
     NORTH_EAST_DOWN = 2,

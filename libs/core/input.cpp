@@ -2,6 +2,41 @@
 #include "DeviceSystemTimer.h"
 #include "LIS3DH.h"
 
+namespace pxt {
+    
+class Input {
+
+  public:
+    DeviceI2C i2c;
+    DevicePin int1;
+    LIS3DH acc;
+
+    DevicePin temperature;
+    AnalogSensor thermometer;
+
+    DevicePin light;
+
+    static Input *_instance;
+    Input();
+};
+
+Input::Input()
+    : // accelerometer
+      i2c(PIN_ACCELEROMETER_SDA, PIN_ACCELEROMETER_SCL),
+      INIT_PIN(int1, PIN_ACCELEROMETER_INT), //
+      acc(i2c, int1),
+      // temp.
+      INIT_PIN(temperature, PIN_TEMPERATURE),
+      thermometer(io.temperature, DEVICE_ID_THERMOMETER, 25, 10000, 3380, 10000, 273.5), //
+      INIT_PIN(light, PIN_PIN_LIGHT) {}
+
+Input *inp() {
+    if (!Input::_instance)
+        Input::_instance = new Input();
+    return Input::_instance;
+}
+}
+
 enum class Dimension {
     //% block=x
     X = 0,
@@ -131,7 +166,8 @@ bool isPressed(Button button) {
 }
 }
 
-namespace AccelerometerMethods {
+//% color="#FB48C7" weight=99 icon="\uf192"
+namespace input {
 /**
  * Do something when when a gesture is done (like shaking the micro:bit).
  * @param gesture the type of gesture to track, eg: Gesture.Shake
@@ -141,24 +177,13 @@ namespace AccelerometerMethods {
 //% blockId=device_gesture_event block="on |%NAME"
 //% parts="accelerometer"
 void onGesture(Accelerometer accelerometer, Gesture gesture, Action body) {
+    auto acc = &inp()->acc;
     int gi = (int)gesture;
-    if (gi == ACCELEROMETER_EVT_3G && uBit.accelerometer.getRange() < 3)
-        device.accelerometer.setRange(4);
-    else if ((gi == ACCELEROMETER_EVT_6G || gi == ACCELEROMETER_EVT_8G) &&
-             uBit.accelerometer.getRange() < 6)
-        device.accelerometer.setRange(8);
+    if (gi == ACCELEROMETER_EVT_3G && acc->getRange() < 3)
+        acc->setRange(4);
+    else if ((gi == ACCELEROMETER_EVT_6G || gi == ACCELEROMETER_EVT_8G) && acc->getRange() < 6)
+        acc->setRange(8);
     registerWithDal(DEVICE_ID_GESTURE, gi, body);
-}
-}
-
-//% color="#FB48C7" weight=99 icon="\uf192"
-namespace input {
-/*
-int getAccelerationStrength() {
-    double x = uBit.accelerometer.getX();
-    double y = uBit.accelerometer.getY();
-    double z = uBit.accelerometer.getZ();
-    return (int)sqrt(x * x + y * y + z * z);
 }
 
 /**
@@ -172,13 +197,13 @@ int getAccelerationStrength() {
 int acceleration(Dimension dimension) {
     switch (dimension) {
     case Dimension::X:
-        return uBit.accelerometer.getX();
+        return inp()->acc.getX();
     case Dimension::Y:
-        return uBit.accelerometer.getY();
+        return inp()->acc.getY();
     case Dimension::Z:
-        return uBit.accelerometer.getZ();
+        return inp()->acc.getZ();
     case Dimension::Strength:
-        return getAccelerationStrength();
+        return (int)sqrtf(inp()->acc.instantaneousAccelerationSquared());
     }
     return 0;
 }
@@ -190,7 +215,8 @@ int acceleration(Dimension dimension) {
 //% blockId=device_get_light_level block="light level" blockGap=8
 //% parts="ledmatrix"
 int lightLevel() {
-    return uBit.display.readLightLevel();
+    // TODO fix up the range
+    return inp()->light.getAnalogValue();
 }
 
 /**
@@ -201,7 +227,7 @@ int lightLevel() {
 //% blockId=device_temperature block="temperature (°C)" blockGap=8
 //% parts="thermometer"
 int temperature() {
-    return uBit.thermometer.getTemperature();
+    return inp()->thermometer.getTemperature();
 }
 
 /**
@@ -214,9 +240,9 @@ int temperature() {
 int rotation(Rotation kind) {
     switch (kind) {
     case Rotation::Pitch:
-        return uBit.accelerometer.getPitch();
+        return inp()->acc.getPitch();
     case Rotation::Roll:
-        return uBit.accelerometer.getRoll();
+        return inp()->acc.getRoll();
     }
     return 0;
 }
@@ -231,11 +257,8 @@ int rotation(Rotation kind) {
 //% parts="accelerometer"
 //% advanced=true
 void setAccelerometerRange(AcceleratorRange range) {
-    uBit.accelerometer.setRange((int)range);
+    inp()->acc.setRange((int)range);
 }
-#endif
-
-void on
 
 /**
   * Gets the number of milliseconds elapsed since power on.
@@ -246,4 +269,5 @@ void on
 int runningTime() {
     return system_timer_current_time();
 }
+
 }

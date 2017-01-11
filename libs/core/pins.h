@@ -297,17 +297,7 @@ class DevPins {
     Button buttonB;
 #undef Button
 
-#define I2C DeviceI2C
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getI2C
-    //%
     I2C i2c;
-#endif
-
-#define Accelerometer DeviceAccelerometer
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getAccelerometer
-    //%
-    Accelerometer accelerometer;
-#undef Accelerometer
 
     DevPins();
 };
@@ -318,6 +308,8 @@ extern DevPins *io;
 const int LastPinID = &io->SCL - io->pins;
 const int LastButtonID = &io->buttonB - io->buttons;
 
+#define INIT_PIN(name, PIN) name((DEVICE_ID_IO_P0 + 100) + (int)PIN, PIN, PIN_CAPABILITY_AD)
+
 typedef DevicePin *DigitalPin;
 typedef DevicePin *AnalogPin;
 typedef DeviceButton *Button;
@@ -327,8 +319,6 @@ namespace pxt {
 DevicePin *getPin(int id);
 DevicePin *lookupPin(int pinName);
 DeviceButton *getButton(int id);
-DeviceI2C *getI2C();
-DeviceAccelerometer *getAccelerometer();
 }
 
 #endif

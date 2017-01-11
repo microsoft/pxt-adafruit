@@ -3,6 +3,21 @@
 #include "AnalogSensor.h"
 #include "NonLinearAnalogSensor.h"
 
+
+enum class LightCondition {
+    //% block="dark"
+    Dark = ANALOG_THRESHOLD_LOW,
+    //% block="bright"
+    Bright = ANALOG_THRESHOLD_HIGH
+};
+
+enum class TemperatureCondition {
+    //% block="cold"
+    Cold = ANALOG_THRESHOLD_LOW,
+    //% block="hot"
+    Hot = ANALOG_THRESHOLD_HIGH
+};
+
 namespace pxt {
 
 // Wrapper classes
@@ -43,6 +58,17 @@ int lightLevel() {
 }
 
 /**
+* Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
+* @param condition the condition that event triggers on
+*/
+//% help=input/on-light-condition-changed
+//% blockId=input_on_light_condition_changed block="on %condition"
+//% parts="lightsensor"
+void onLightConditionChanged(LightCondition condition, Action handler) {
+    registerWithDal(getWLight()->sensor.id, (int)condition, handler);
+}
+
+/**
  * Gets the temperature in Celsius degrees (°C).
  */
 //% weight=55
@@ -51,6 +77,20 @@ int lightLevel() {
 //% parts="thermometer"
 int temperature() {
     return getWTemp()->sensor.getValue();
+}
+
+/**
+* Registers an event raised when the temperature condition (hold, cold) changes.
+* @param condition the condition, hot or cold, the event triggers on
+* @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
+*/
+//% blockId=input_on_temperature_condition_changed block="on %condition|at (°C)%temperature"
+//% parts="thermometer"
+//% help=input/on-temperature-condition-changed
+void onTemperateConditionChanged(TemperatureCondition condition, int temperature, Action handler) {
+    // TODO: set threshold
+    //getWTemp()->sensor.getValue();
+    registerWithDal(getWTemp()->sensor.id, (int)condition, handler);
 }
 
 /**

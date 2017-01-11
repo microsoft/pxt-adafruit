@@ -401,6 +401,15 @@ declare namespace input {
     function lightLevel(): number;
 
     /**
+     * Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
+     * @param condition the condition that event triggers on
+     */
+    //% help=input/on-light-condition-changed
+    //% blockId=input_on_light_condition_changed block="on %condition"
+    //% parts="lightsensor" shim=input::onLightConditionChanged
+    function onLightConditionChanged(condition: LightCondition, handler: () => void): void;
+
+    /**
      * Gets the temperature in Celsius degrees (°C).
      */
     //% weight=55
@@ -408,6 +417,16 @@ declare namespace input {
     //% blockId=device_temperature block="temperature (°C)" blockGap=8
     //% parts="thermometer" shim=input::temperature
     function temperature(): number;
+
+    /**
+     * Registers an event raised when the temperature condition (hold, cold) changes.
+     * @param condition the condition, hot or cold, the event triggers on
+     * @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
+     */
+    //% blockId=input_on_temperature_condition_changed block="on %condition|at (°C)%temperature"
+    //% parts="thermometer"
+    //% help=input/on-temperature-condition-changed shim=input::onTemperateConditionChanged
+    function onTemperateConditionChanged(condition: TemperatureCondition, temperature: number, handler: () => void): void;
 
     /**
      * Gets the number of milliseconds elapsed since power on.

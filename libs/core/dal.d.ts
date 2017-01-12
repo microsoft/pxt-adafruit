@@ -162,7 +162,8 @@ declare const enum DAL {
     ANALOG_SENSOR_INITIALISED = 0x01,
     ANALOG_SENSOR_HIGH_THRESHOLD_PASSED = 0x02,
     ANALOG_SENSOR_LOW_THRESHOLD_PASSED = 0x04,
-    ANALOG_SENSOR_THRESHOLD_ENABLED = 0x08,
+    ANALOG_SENSOR_LOW_THRESHOLD_ENABLED = 0x08,
+    ANALOG_SENSOR_HIGH_THRESHOLD_ENABLED = 0x10,
     // built/yt/yotta_modules/codal/inc/drivers/DeviceButton.h
     // built/yt/yotta_modules/codal/inc/drivers/DeviceI2C.h
     // built/yt/yotta_modules/codal/inc/drivers/DeviceMessageBus.h

@@ -1,5 +1,5 @@
 // Auto-generated. Do not edit.
-declare namespace basic {
+declare namespace loops {
 }
 
 
@@ -34,6 +34,24 @@ declare namespace basic {
     Int32BE = 10,
     // UInt32,
     }
+
+
+    /**
+     * How to create the event.
+     */
+
+    declare enum EventCreationMode {
+    /**
+     * Event is initialised, and its event handlers are immediately fired (not suitable for use in interrupts!).
+     */
+    CreateAndFire = 1,  // CREATE_AND_FIRE
+    /**
+     * Event is initialised, and no further processing takes place.
+     */
+    CreateOnly = 0,  // CREATE_ONLY
+    }
+declare namespace control {
+}
 declare namespace serial {
 }
 

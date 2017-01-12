@@ -169,7 +169,7 @@ namespace neopixel {
         //% weight=79
         //% parts="neopixel"
         show() {
-            basic.pause(1)
+            control.pause(1)
             sendBuffer(this.pin, this.buf);
         }
 
@@ -283,7 +283,7 @@ namespace neopixel {
         setPin(pin: DigitalPin): void {
             this.pin = pin;
             this.pin.digitalWrite(0)
-            basic.pause(50)
+            control.pause(50)
         }
 
         /**

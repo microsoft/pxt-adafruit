@@ -93,14 +93,6 @@ namespace pxsim.sensors {
         return board().slideSwitchState.on;
     }
 
-    export function lightLevel(): number {
-        let b = board().lightSensorState;
-        if (!b.usesLightLevel) {
-            b.usesLightLevel = true;
-            runtime.queueDisplayUpdate();
-        }
-        return b.lightLevel;
-    }
     
     export function readCap(pinId: number, samples: number = 10): number {
         let pin = getPin(pinId);

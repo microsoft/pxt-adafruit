@@ -22,5 +22,5 @@ def branch = GithubBranchName
     }
 
     Utilities.setMachineAffinity(newJob, 'Ubuntu', '20161020')
-    InternalUtilities.standardJobSetup(newJob, isPR, "")
+    InternalUtilities.standardJobSetup(newJob, isPR, "*/*")
 }

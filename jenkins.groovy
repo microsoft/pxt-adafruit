@@ -8,7 +8,7 @@ def branch = GithubBranchName
     def newJobName = InternalUtilities.getFullJobName(project, "Default", isPR)
     def newJob = job(newJobName) {
         steps {
-            shell("jenkins/jenkins.sh ${isPR}")
+            shell("./jenkins.sh ${isPR}")
         }
 
         // if (!isPR) {

@@ -18,7 +18,7 @@ def branch = GithubBranchName
         //             string('PXT_RELEASE_REPO', 'pxt_release_repo_adafruit')
         //         }
         //     }
-        // }
+        // } //
     }
 
     Utilities.setMachineAffinity(newJob, 'Ubuntu', '20161020')

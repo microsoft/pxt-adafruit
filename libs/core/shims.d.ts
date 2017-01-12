@@ -120,22 +120,6 @@ declare namespace pins {
 }
 
 
-    /**
-     * Repeat code constructs
-     */
-    //% color=120
-declare namespace loops {
-
-    /**
-     * Repeats the code forever in the background. On each iteration, allows other codes to run.
-     * @param body code to execute
-     */
-    //% help=loops/forever weight=100 blockGap=8
-    //% blockId=forever block="forever" icon="\uf01e" shim=loops::forever
-    function forever(a: () => void): void;
-}
-
-
 declare interface DigitalPin {
     /**
      * Read the specified pin or connector as either 0 or 1
@@ -356,14 +340,22 @@ declare interface Buffer {
     /**
      * Runtime and event utilities.
      */
-    //% weight=50 color="#BEAA07" icon="\uf110"
+    //% weight=70 color="#BEAA07" icon="\uf110"
 declare namespace control {
+
+    /**
+     * Repeats the code forever in the background. On each iteration, allows other codes to run.
+     * @param body code to execute
+     */
+    //% help=loops/forever weight=100 blockGap=8
+    //% blockId=forever block="forever" shim=control::forever
+    function forever(a: () => void): void;
 
     /**
      * Pause for the specified time in milliseconds
      * @param ms how long to pause for, eg: 100, 200, 500, 1000, 2000
      */
-    //% help=basic/pause weight=54
+    //% help=basic/pause weight=99
     //% async block="pause (ms) %pause"
     //% blockId=device_pause shim=control::pause
     function pause(ms: number): void;
@@ -412,7 +404,7 @@ declare namespace control {
     /**
      * Schedules code that run in the background.
      */
-    //% help=control/run-in-background blockAllowMultiple=1
+    //% help=control/run-in-background blockAllowMultiple=1 advanced=true
     //% blockId="control_run_in_background" block="run in background" blockGap=8 shim=control::runInBackground
     function runInBackground(a: () => void): void;
 

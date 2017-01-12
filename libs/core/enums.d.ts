@@ -19,8 +19,6 @@
     //% block="hold"
     Hold = 5,  // DEVICE_BUTTON_EVT_HOLD
     }
-declare namespace loops {
-}
 
 
     declare enum PulseValue {

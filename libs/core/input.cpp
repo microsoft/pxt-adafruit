@@ -88,8 +88,11 @@ int temperature() {
 //% parts="thermometer"
 //% help=input/on-temperature-condition-changed
 void onTemperateConditionChanged(TemperatureCondition condition, int temperature, Action handler) {
-    // TODO: set threshold
-    //getWTemp()->sensor.getValue();
-    registerWithDal(getWTemp()->sensor.id, (int)condition, handler);
+    NonLinearAnalogSensor& sensor = getWTemp()->sensor;
+    if (condition == TemperatureCondition::Cold)
+        sensor.setLowThreshold(temperature);
+    else
+        sensor.setHighThreshold(temperature);        
+    registerWithDal(sensor.id, (int)condition, handler);
 }
 }

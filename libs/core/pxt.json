@@ -9,7 +9,6 @@
         "pxt.h",
         "pins.h",
         "core.cpp",
-        "loops.cpp",
         "pins.cpp",
         "pins.ts",
         "pxt-helpers.ts",

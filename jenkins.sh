@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 # Set up NVM
 export NVM_DIR="/home/dotnet-bot/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" 

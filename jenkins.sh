@@ -9,6 +9,7 @@ export NVM_DIR="/home/dotnet-bot/.nvm"
 nvm install 5
 
 echo Git branch: $GIT_BRANCH
+echo isPR: $1
 
 if [[ "$GIT_BRANCH" =~ ^v([0-9]+\.){2}[0-9]+$ ]]; then
     echo Setting TRAVIS_TAG to $GIT_BRANCH

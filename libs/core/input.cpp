@@ -62,7 +62,7 @@ int lightLevel() {
 * @param condition the condition that event triggers on
 */
 //% help=input/on-light-condition-changed
-//% blockId=input_on_light_condition_changed block="on %condition"
+//% blockId=input_on_light_condition_changed block="on light %condition"
 //% parts="lightsensor"
 void onLightConditionChanged(LightCondition condition, Action handler) {
     registerWithDal(getWLight()->sensor.id, (int)condition, handler);
@@ -84,7 +84,7 @@ int temperature() {
 * @param condition the condition, hot or cold, the event triggers on
 * @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
 */
-//% blockId=input_on_temperature_condition_changed block="on %condition|at (°C)%temperature"
+//% blockId=input_on_temperature_condition_changed block="on temperature %condition|at (°C)%temperature"
 //% parts="thermometer"
 //% help=input/on-temperature-condition-changed
 void onTemperateConditionChanged(TemperatureCondition condition, int temperature, Action handler) {

@@ -326,6 +326,25 @@ typedef DevicePin *DigitalPin;
 typedef DevicePin *AnalogPin;
 typedef DeviceButton *Button;
 
+
+/**
+* User interaction on buttons
+*/
+enum class ButtonEvent {
+    //% block="click"
+    Click = DEVICE_BUTTON_EVT_CLICK,
+    //% block="double click"
+    DoubleClick = DEVICE_BUTTON_EVT_DOUBLE_CLICK,
+    //% block="long click"
+    LongClick = DEVICE_BUTTON_EVT_LONG_CLICK,
+    //% block="up"
+    Up = DEVICE_BUTTON_EVT_UP,
+    //% block="down"
+    Down = DEVICE_BUTTON_EVT_DOWN,
+    //% block="hold"
+    Hold = DEVICE_BUTTON_EVT_HOLD
+};
+
 namespace pxt {
 DevicePin *getPin(int id);
 DevicePin *lookupPin(int pinName);

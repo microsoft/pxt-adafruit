@@ -138,40 +138,25 @@ void setPull(DigitalPin name, PinPullMode pull) {
 }
 
 /**
-* Do something when a pin is pressed.
+* Do something when a pin is clicked
 * @param name the pin that needs to be pressed, eg: TouchPin.P0
 * @param body the code to run when the pin is pressed
 */
 //% help=input/on-pin-pressed weight=83
-//% blockId=device_pin_event block="on pin %name|pressed"
+//% blockId=device_pin_event block="on pin %pin|%event"
 //% blockNamespace=input
-void onPressed(DigitalPin pin, Action body) {
+void onEvent(DigitalPin pin, ButtonEvent event, Action body) {
     // Forces the PIN to switch to makey-makey style detection.
     pin->isTouched();
-    registerWithDal(pin->id, DEVICE_BUTTON_EVT_CLICK, body);
+    registerWithDal(pin->id, (int)event, body);
 }
 
 /**
- * Do something when a pin is released.
- * @param name the pin that needs to be released, eg: TouchPin.P0
- * @param body the code to run when the pin is released
- */
-//% help=input/on-pin-released weight=6 blockGap=8
-//% blockId=device_pin_released block="on pin %NAME|released"
-//% advanced=true
-//% blockNamespace=input
-void onReleased(DigitalPin pin, Action body) {
-    // Forces the PIN to switch to makey-makey style detection.
-    pin->isTouched();
-    registerWithDal(pin->id, DEVICE_BUTTON_EVT_UP, body);
-}
-
-/**
- * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
+ * Get the pin state (touched or not). Requires to hold the ground to close the circuit.
  * @param name pin used to detect the touch, eg: TouchPin.P0
  */
 //% help=input/pin-is-touched weight=58
-//% blockId="pin_is_touched" block="pin %NAME|is touched"
+//% blockId="pin_is_touched" block="pin %pin|is touched"
 //% blockGap=8
 //% blockNamespace=input
 bool isTouched(DigitalPin pin) {

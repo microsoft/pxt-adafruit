@@ -187,32 +187,21 @@ declare interface DigitalPin {
     setPull(pull: PinPullMode): void;
 
     /**
-     * Do something when a pin is pressed.
+     * Do something when a pin is clicked
      * @param name the pin that needs to be pressed, eg: TouchPin.P0
      * @param body the code to run when the pin is pressed
      */
     //% help=input/on-pin-pressed weight=83
-    //% blockId=device_pin_event block="on pin %name|pressed"
-    //% blockNamespace=input shim=DigitalPinMethods::onPressed
-    onPressed(body: () => void): void;
+    //% blockId=device_pin_event block="on pin %pin|%event"
+    //% blockNamespace=input shim=DigitalPinMethods::onEvent
+    onEvent(event: ButtonEvent, body: () => void): void;
 
     /**
-     * Do something when a pin is released.
-     * @param name the pin that needs to be released, eg: TouchPin.P0
-     * @param body the code to run when the pin is released
-     */
-    //% help=input/on-pin-released weight=6 blockGap=8
-    //% blockId=device_pin_released block="on pin %NAME|released"
-    //% advanced=true
-    //% blockNamespace=input shim=DigitalPinMethods::onReleased
-    onReleased(body: () => void): void;
-
-    /**
-     * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
+     * Get the pin state (touched or not). Requires to hold the ground to close the circuit.
      * @param name pin used to detect the touch, eg: TouchPin.P0
      */
     //% help=input/pin-is-touched weight=58
-    //% blockId="pin_is_touched" block="pin %NAME|is touched"
+    //% blockId="pin_is_touched" block="pin %pin|is touched"
     //% blockGap=8
     //% blockNamespace=input shim=DigitalPinMethods::isTouched
     isTouched(): boolean;
@@ -474,7 +463,7 @@ declare namespace input {
      * @param condition the condition that event triggers on
      */
     //% help=input/on-light-condition-changed
-    //% blockId=input_on_light_condition_changed block="on %condition"
+    //% blockId=input_on_light_condition_changed block="on light %condition"
     //% parts="lightsensor" shim=input::onLightConditionChanged
     function onLightConditionChanged(condition: LightCondition, handler: () => void): void;
 
@@ -492,7 +481,7 @@ declare namespace input {
      * @param condition the condition, hot or cold, the event triggers on
      * @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
      */
-    //% blockId=input_on_temperature_condition_changed block="on %condition|at (°C)%temperature"
+    //% blockId=input_on_temperature_condition_changed block="on temperature %condition|at (°C)%temperature"
     //% parts="thermometer"
     //% help=input/on-temperature-condition-changed shim=input::onTemperateConditionChanged
     function onTemperateConditionChanged(condition: TemperatureCondition, temperature: number, handler: () => void): void;

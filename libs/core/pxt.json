@@ -25,6 +25,7 @@
         "input.cpp",
         "buttons.cpp",
         "accelerometer.cpp",
+        "math.ts",
         "hf2.cpp",
         "hf2.h",
         "uf2format.h",

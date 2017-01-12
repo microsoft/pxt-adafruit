@@ -367,7 +367,7 @@ declare interface Buffer {
     /**
      * Runtime and event utilities.
      */
-    //% weight=70 color="#BEAA07" icon="\uf110"
+    //% weight=50 color="#BEAA07" icon="\uf110"
 declare namespace control {
 
     /**
@@ -443,7 +443,7 @@ declare namespace control {
 
 
 
-    //% weight=2 color=30
+    //% weight=2 color=30 icon="\uf287"
     //% advanced=true
 declare namespace serial {
 

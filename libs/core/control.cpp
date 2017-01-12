@@ -18,7 +18,7 @@ enum class EventCreationMode {
 /**
 * Runtime and event utilities.
 */
-//% weight=70 color="#BEAA07" icon="\uf110"
+//% weight=50 color="#BEAA07" icon="\uf110"
 namespace control {
     /**
      * Pause for the specified time in milliseconds

@@ -59,6 +59,7 @@ namespace neopixel {
         //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors"
         //% weight=85 blockGap=8
         //% parts="neopixel"
+        //% defaultInstance=neopixel.builtin
         showColor(rgb: number) {
             this.setAllRGB(rgb);
             this.show();
@@ -72,6 +73,7 @@ namespace neopixel {
         //% blockId="neopixel_set_strip_rainbow" block="%strip|show rainbow from %startHue|to %endHue"
         //% weight=85 blockGap=8
         //% parts="neopixel"
+        //% defaultInstance=neopixel.builtin
         showRainbow(startHue: number = 1, endHue: number = 360) {
             let start = neopixel.hsl(startHue, 100, 50);
             let end = neopixel.hsl(endHue, 100, 50);
@@ -93,6 +95,7 @@ namespace neopixel {
         //% weight=84
         //% blockId=neopixel_show_bar_graph block="%strip|show bar graph of %value |up to %high" icon="\uf080" blockExternalInputs=true
         //% parts="neopixel"
+        //% defaultInstance=neopixel.builtin
         showBarGraph(value: number, high: number): void {
             if (high <= 0) {
                 this.clear();
@@ -131,6 +134,7 @@ namespace neopixel {
         //% blockGap=8
         //% weight=80
         //% parts="neopixel" advanced=true
+        //% defaultInstance=neopixel.builtin
         setPixelColor(pixeloffset: number, rgb: number): void {
             this.setPixelRGB(pixeloffset, rgb);
         }
@@ -144,6 +148,7 @@ namespace neopixel {
         //% blockGap=8
         //% weight=80
         //% parts="neopixel" advanced=true
+        //% defaultInstance=neopixel.builtin
         setPixelWhiteLED(pixeloffset: number, white: number): void {
             if (this._mode === NeoPixelMode.RGBW) {
                 this.setPixelW(pixeloffset, white);
@@ -156,6 +161,7 @@ namespace neopixel {
         //% blockId="neopixel_show" block="%strip|show" blockGap=8
         //% weight=79
         //% parts="neopixel"
+        //% defaultInstance=neopixel.builtin
         show() {
             basic.pause(1)
             sendBuffer(this.pin, this.buf);
@@ -168,6 +174,7 @@ namespace neopixel {
         //% blockId="neopixel_clear" block="%strip|clear"
         //% weight=76
         //% parts="neopixel"
+        //% defaultInstance=neopixel.builtin
         clear(): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
             this.buf.fill(0, this.start * stride, this._length * stride);
@@ -178,6 +185,7 @@ namespace neopixel {
          */
         //% blockId="neopixel_length" block="%strip|length" blockGap=8
         //% weight=60 advanced=true
+        //% defaultInstance=neopixel.builtin
         length() {
             return this._length;
         }
@@ -189,6 +197,7 @@ namespace neopixel {
         //% blockId="neopixel_set_brightness" block="%strip|set brightness %brightness" blockGap=8
         //% weight=59
         //% parts="neopixel" advanced=true
+        //% defaultInstance=neopixel.builtin
         setBrigthness(brightness: number): void {
             this.brightness = brightness & 0xff;
         }
@@ -199,6 +208,7 @@ namespace neopixel {
         //% blockId="neopixel_each_brightness" block="%strip|ease brightness" blockGap=8
         //% weight=58
         //% parts="neopixel" advanced=true
+        //% defaultInstance=neopixel.builtin
         easeBrightness(): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
             const br = this.brightness;
@@ -227,6 +237,7 @@ namespace neopixel {
         //% weight=89
         //% blockId="neopixel_range" block="%strip|range from %start|with %length|leds"
         //% parts="neopixel"
+        //% defaultInstance=neopixel.builtin
         range(start: number, length: number): Strip {
             let strip = new Strip();
             strip.buf = this.buf;
@@ -245,6 +256,7 @@ namespace neopixel {
         //% blockId="neopixel_shift" block="%strip|shift pixels by %offset" blockGap=8
         //% weight=40
         //% parts="neopixel"
+        //% defaultInstance=neopixel.builtin
         shift(offset: number = 1): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
             this.buf.shift(-offset * stride, this.start * stride, this._length * stride)
@@ -258,6 +270,7 @@ namespace neopixel {
         //% blockId="neopixel_rotate" block="%strip|rotate pixels by %offset" blockGap=8
         //% weight=39
         //% parts="neopixel"
+        //% defaultInstance=neopixel.builtin
         rotate(offset: number = 1): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
             this.buf.rotate(-offset * stride, this.start * stride, this._length * stride)
@@ -268,6 +281,7 @@ namespace neopixel {
          */
         //% weight=10
         //% parts="neopixel" advanced=true
+        //% defaultInstance=neopixel.builtin
         setPin(pin: DigitalPin): void {
             this.pin = pin;
             this.pin.digitalWrite(0)
@@ -279,6 +293,7 @@ namespace neopixel {
          */
         //% weight=10
         //% parts="neopixel" advanced=true
+        //% defaultInstance=neopixel.builtin
         setLength(numleds: number): void {
             this._length = numleds;
             let stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
@@ -290,6 +305,7 @@ namespace neopixel {
          */
         //% weight=10
         //% parts="neopixel" advanced=true
+        //% defaultInstance=neopixel.builtin
         setMode(mode: NeoPixelMode): void {
             this._mode = mode;
         }
@@ -589,4 +605,6 @@ namespace neopixel {
         }
         return colors;
     }
+
+    export const builtin = neopixel.create();
 }

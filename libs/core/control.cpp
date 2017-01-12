@@ -1,4 +1,5 @@
 #include "pxt.h"
+#include "DeviceSystemTimer.h"
 
 /**
  * How to create the event.
@@ -28,6 +29,16 @@ namespace control {
     //% blockId=device_pause
     void pause(int ms) {
       fiber_sleep(ms);
+    }
+
+
+    /**
+    * Gets the number of milliseconds elapsed since power on.
+    */
+    //% help=control/running-time weight=50
+    //% blockId=control_running_time block="running time (ms)"
+    int runningTime() {
+        return system_timer_current_time();
     }
 
     /**
@@ -80,4 +91,21 @@ namespace control {
     void runInBackground(Action a) {
       pxt::runInBackground(a);
     }      
+
+    /**
+    * Derive a unique, consistent serial number of this device from internal data.
+    */
+    //% blockId="control_device_serial_number" block="device serial number" weight=9
+    //% advanced=true
+    int deviceSerialNumber() {
+        return device.getSerialNumber();
+    }
+
+    /**
+    * Determine the version of system software currently running.
+    */
+    //%
+    StringData* deviceDalVersion() {
+        return ManagedString(device.device_dal_version()).leakData();
+    }
 }

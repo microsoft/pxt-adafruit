@@ -92,14 +92,4 @@ void onTemperateConditionChanged(TemperatureCondition condition, int temperature
     //getWTemp()->sensor.getValue();
     registerWithDal(getWTemp()->sensor.id, (int)condition, handler);
 }
-
-/**
-  * Gets the number of milliseconds elapsed since power on.
-  */
-//% help=input/running-time weight=50
-//% blockId=device_get_running_time block="running time (ms)"
-//% advanced=true
-int runningTime() {
-    return system_timer_current_time();
-}
 }

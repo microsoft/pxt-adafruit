@@ -380,6 +380,13 @@ declare namespace control {
     function pause(ms: number): void;
 
     /**
+     * Gets the number of milliseconds elapsed since power on.
+     */
+    //% help=control/running-time weight=50
+    //% blockId=control_running_time block="running time (ms)" shim=control::runningTime
+    function runningTime(): number;
+
+    /**
      * Raises an event in the event bus.
      * @param src ID of the MicroBit Component that generated the event
      * @param value Component specific code indicating the cause of the event.
@@ -419,6 +426,19 @@ declare namespace control {
     //% help=control/run-in-background blockAllowMultiple=1
     //% blockId="control_run_in_background" block="run in background" blockGap=8 shim=control::runInBackground
     function runInBackground(a: () => void): void;
+
+    /**
+     * Derive a unique, consistent serial number of this device from internal data.
+     */
+    //% blockId="control_device_serial_number" block="device serial number" weight=9
+    //% advanced=true shim=control::deviceSerialNumber
+    function deviceSerialNumber(): number;
+
+    /**
+     * Determine the version of system software currently running.
+     */
+    //% shim=control::deviceDalVersion
+    function deviceDalVersion(): string;
 }
 
 
@@ -476,14 +496,6 @@ declare namespace input {
     //% parts="thermometer"
     //% help=input/on-temperature-condition-changed shim=input::onTemperateConditionChanged
     function onTemperateConditionChanged(condition: TemperatureCondition, temperature: number, handler: () => void): void;
-
-    /**
-     * Gets the number of milliseconds elapsed since power on.
-     */
-    //% help=input/running-time weight=50
-    //% blockId=device_get_running_time block="running time (ms)"
-    //% advanced=true shim=input::runningTime
-    function runningTime(): number;
 }
 declare namespace input {
 

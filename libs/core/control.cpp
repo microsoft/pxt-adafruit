@@ -18,13 +18,34 @@ enum class EventCreationMode {
 /**
 * Runtime and event utilities.
 */
-//% weight=50 color="#BEAA07" icon="\uf110"
+//% weight=70 color="#BEAA07" icon="\uf110"
 namespace control {
+
+    void forever_stub(void *a) {
+      while (true) {
+        runAction0((Action)a);
+        fiber_sleep(20);
+      }
+    }
+
+    /**
+     * Repeats the code forever in the background. On each iteration, allows other codes to run.
+     * @param body code to execute
+     */
+    //% help=loops/forever weight=100 blockGap=8
+    //% blockId=forever block="forever"
+    void forever(Action a) {
+      if (a != 0) {
+        incr(a);
+        create_fiber(forever_stub, (void*)a);
+      }
+    }
+    
     /**
      * Pause for the specified time in milliseconds
      * @param ms how long to pause for, eg: 100, 200, 500, 1000, 2000
      */
-    //% help=basic/pause weight=54
+    //% help=basic/pause weight=99
     //% async block="pause (ms) %pause"
     //% blockId=device_pause
     void pause(int ms) {
@@ -86,7 +107,7 @@ namespace control {
     /**
      * Schedules code that run in the background.
      */
-    //% help=control/run-in-background blockAllowMultiple=1
+    //% help=control/run-in-background blockAllowMultiple=1 advanced=true
     //% blockId="control_run_in_background" block="run in background" blockGap=8
     void runInBackground(Action a) {
       pxt::runInBackground(a);

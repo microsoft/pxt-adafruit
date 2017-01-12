@@ -1,6 +1,5 @@
 let v0 = 0
 let v1 = 0
-/*
 input.rightButton.onEvent(ButtonEvent.Click, () => {
         pins.LED.digitalWrite(v0)
         v0 = v0 ? 0 : 1
@@ -14,7 +13,7 @@ input.leftButton.onEvent(ButtonEvent.Click, () => {
 pins.LED.digitalWrite(1)
 
 let i = 0
-loops.forever(() => {
+control.forever(() => {
         if (input.rightButton.isPressed())
                 pins.LEDTX.digitalWrite(1)
         else
@@ -24,4 +23,4 @@ loops.forever(() => {
         //serial.writeLine(`T: ${temp}, L: ${light}`);
         control.pause(100)
         //serial.writeLine(`A1: ${pins.A1.analogRead()}, L: ${pins.A2.analogRead()}`);
-})*/
+})

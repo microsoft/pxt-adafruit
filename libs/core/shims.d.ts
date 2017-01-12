@@ -367,7 +367,7 @@ declare interface Buffer {
     /**
      * Runtime and event utilities.
      */
-    //% weight=70 color="#BEAA07"
+    //% weight=70 color="#BEAA07" icon="\uf110"
 declare namespace control {
 
     /**
@@ -376,8 +376,49 @@ declare namespace control {
      */
     //% help=basic/pause weight=54
     //% async block="pause (ms) %pause"
-    //% blockId=device_pause icon="\uf110" shim=control::pause
+    //% blockId=device_pause shim=control::pause
     function pause(ms: number): void;
+
+    /**
+     * Raises an event in the event bus.
+     * @param src ID of the MicroBit Component that generated the event
+     * @param value Component specific code indicating the cause of the event.
+     * @param mode optional definition of how the event should be processed after construction.
+     */
+    //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from %src|with value %value" blockExternalInputs=1
+    //% advanced=true mode.defl=1 shim=control::raiseEvent
+    function raiseEvent(src: number, value: number, mode?: EventCreationMode): void;
+
+    /**
+     * Raises an event in the event bus.
+     * @param id the event compoent id
+     * @param value the event value to match
+     */
+    //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src|with value %value"
+    //% blockExternalInputs=1 advanced=true shim=control::onEvent
+    function onEvent(id: number, value: number, handler: () => void): void;
+
+    /**
+     * Resets the device.
+     */
+    //% weight=30 async help=control/reset blockGap=8
+    //% blockId="control_reset" block="reset" shim=control::reset
+    function reset(): void;
+
+    /**
+     * Blocks the current fiber for the given microseconds
+     * @param micros number of micro-seconds to wait. eg: 4
+     */
+    //% help=control/wait-micros weight=29
+    //% blockId="control_wait_us" block="wait (µs)%micros" advanced=true shim=control::waitMicros
+    function waitMicros(micros: number): void;
+
+    /**
+     * Schedules code that run in the background.
+     */
+    //% help=control/run-in-background blockAllowMultiple=1
+    //% blockId="control_run_in_background" block="run in background" blockGap=8 shim=control::runInBackground
+    function runInBackground(a: () => void): void;
 }
 
 

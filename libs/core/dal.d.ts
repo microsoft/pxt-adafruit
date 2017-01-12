@@ -133,15 +133,7 @@ declare const enum DAL {
     // built/yt/yotta_modules/codal/inc/device/SAMD21/device_fiber.h
     // built/yt/yotta_modules/codal/inc/device/SAMD21/device_types.h
     // built/yt/yotta_modules/codal/inc/device/SAMD21/neopixel.h
-    // built/yt/yotta_modules/codal/inc/drivers/AnalogSensor.h
-    ANALOG_THRESHOLD_LOW = 1,
-    ANALOG_THRESHOLD_HIGH = 2,
-    ANALOG_SENSOR_UPDATE_NEEDED = 3,
-    ANALOG_SENSOR_INITIALISED = 0x01,
-    ANALOG_SENSOR_HIGH_THRESHOLD_PASSED = 0x02,
-    ANALOG_SENSOR_LOW_THRESHOLD_PASSED = 0x04,
-    ANALOG_SENSOR_THRESHOLD_ENABLED = 0x08,
-    // built/yt/yotta_modules/codal/inc/drivers/DeviceButton.h
+    // built/yt/yotta_modules/codal/inc/drivers/AbstractButton.h
     DEVICE_BUTTON_EVT_DOWN = 1,
     DEVICE_BUTTON_EVT_UP = 2,
     DEVICE_BUTTON_EVT_CLICK = 3,
@@ -163,6 +155,15 @@ declare const enum DAL {
     DEVICE_BUTTON_ALL_EVENTS = 1,
     ACTIVE_LOW = 0,
     ACTIVE_HIGH = 1,
+    // built/yt/yotta_modules/codal/inc/drivers/AnalogSensor.h
+    ANALOG_THRESHOLD_LOW = 1,
+    ANALOG_THRESHOLD_HIGH = 2,
+    ANALOG_SENSOR_UPDATE_NEEDED = 3,
+    ANALOG_SENSOR_INITIALISED = 0x01,
+    ANALOG_SENSOR_HIGH_THRESHOLD_PASSED = 0x02,
+    ANALOG_SENSOR_LOW_THRESHOLD_PASSED = 0x04,
+    ANALOG_SENSOR_THRESHOLD_ENABLED = 0x08,
+    // built/yt/yotta_modules/codal/inc/drivers/DeviceButton.h
     // built/yt/yotta_modules/codal/inc/drivers/DeviceI2C.h
     // built/yt/yotta_modules/codal/inc/drivers/DeviceMessageBus.h
     // built/yt/yotta_modules/codal/inc/drivers/DevicePin.h

@@ -211,11 +211,11 @@ declare interface DigitalPin {
      * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
      * @param name pin used to detect the touch, eg: TouchPin.P0
      */
-    //% help=input/pin-is-pressed weight=58
-    //% blockId="device_pin_is_pressed" block="pin %NAME|is pressed"
+    //% help=input/pin-is-touched weight=58
+    //% blockId="pin_is_touched" block="pin %NAME|is touched"
     //% blockGap=8
-    //% blockNamespace=input shim=DigitalPinMethods::isPressed
-    isPressed(): boolean;
+    //% blockNamespace=input shim=DigitalPinMethods::isTouched
+    isTouched(): boolean;
 }
 
 
@@ -524,16 +524,28 @@ declare interface Button {
     onEvent(ev: ButtonEvent, body: () => void): void;
 
     /**
-     * Get the button state (pressed or not) for ```` and ``B``.
-     * @param button the button to query the request, eg: Button.A
+     * Get the button state (pressed or not).
+     * @param button the button to query the request
      */
     //% help=input/button-is-pressed weight=60
     //% block="%NAME|is pressed"
     //% blockId=buttonIsPressed
-    //% icon="\uf192" blockGap=8
+    //% blockGap=8
     //% parts="buttonpair"
     //% blockNamespace=input shim=ButtonMethods::isPressed
     isPressed(): boolean;
+
+    /**
+     * Indicates if the button was pressed since this function was last called.
+     * @param button the button to query the request
+     */
+    //% help=input/button-was-pressed weight=60
+    //% block="%NAME|was pressed"
+    //% blockId=buttonWasPressed
+    //% blockGap=8
+    //% parts="buttonpair"
+    //% blockNamespace=input shim=ButtonMethods::wasPressed
+    wasPressed(): boolean;
 }
 declare namespace input {
 

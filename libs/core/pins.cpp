@@ -170,11 +170,11 @@ void onReleased(DigitalPin pin, Action body) {
  * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
  * @param name pin used to detect the touch, eg: TouchPin.P0
  */
-//% help=input/pin-is-pressed weight=58
-//% blockId="device_pin_is_pressed" block="pin %NAME|is pressed"
+//% help=input/pin-is-touched weight=58
+//% blockId="pin_is_touched" block="pin %NAME|is touched"
 //% blockGap=8
 //% blockNamespace=input
-bool isPressed(DigitalPin pin) {
+bool isTouched(DigitalPin pin) {
     return pin->isTouched();
 }
 }

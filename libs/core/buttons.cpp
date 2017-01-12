@@ -47,13 +47,13 @@ class WButtons {
 #undef Button
 
     WButtons()
-        : leftButton((PinName)PIN_BTN_LEFT, DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
+        : leftButton(*pxt::lookupPin(PIN_BTN_LEFT), DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
                PullDown),
-          rightButton((PinName)PIN_BTN_RIGHT, DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
+          rightButton(*pxt::lookupPin(PIN_BTN_RIGHT), DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
                 PullDown),
-          slideSwitch((PinName)PIN_BTN_SLIDE, DEVICE_ID_BUTTON_SLIDE, DEVICE_BUTTON_ALL_EVENTS,
+          slideSwitch(*pxt::lookupPin(PIN_BTN_SLIDE), DEVICE_ID_BUTTON_SLIDE, DEVICE_BUTTON_ALL_EVENTS,
                 ACTIVE_LOW, PullUp)
-    {}
+    { }
 };
 SINGLETON(WButtons);
 
@@ -85,16 +85,30 @@ void onEvent(Button button, ButtonEvent ev, Action body) {
 }
 
 /**
- * Get the button state (pressed or not) for ```` and ``B``.
- * @param button the button to query the request, eg: Button.A
+ * Get the button state (pressed or not).
+ * @param button the button to query the request
  */
 //% help=input/button-is-pressed weight=60
 //% block="%NAME|is pressed"
 //% blockId=buttonIsPressed
-//% icon="\uf192" blockGap=8
+//% blockGap=8
 //% parts="buttonpair"
 //% blockNamespace=input
 bool isPressed(Button button) {
     return button->isPressed();
+}
+
+/**
+ * Indicates if the button was pressed since this function was last called.
+ * @param button the button to query the request
+ */
+//% help=input/button-was-pressed weight=60
+//% block="%NAME|was pressed"
+//% blockId=buttonWasPressed
+//% blockGap=8
+//% parts="buttonpair"
+//% blockNamespace=input
+bool wasPressed(Button button) {
+    return button->wasPressed();
 }
 }

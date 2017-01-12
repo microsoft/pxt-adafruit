@@ -22,6 +22,6 @@ def branch = GithubBranchName
     }
 
     Utilities.setMachineAffinity(newJob, 'Ubuntu', '20161020')
-    InternalUtilities.standardJobSetup(newJob, isPR, "*/*")
+    InternalUtilities.standardJobSetup(newJob, project, isPR, "*/*")
     Utilities.addGithubPRTrigger(newJob, "Default Testing")
 }

@@ -6,13 +6,12 @@ namespace pxsim {
         private _pressedTime: number = -1;
         private _clickedTime: number = -1;
         private _wasPressed: boolean;
-        private _pressed: boolean;
 
-        set pressed(p: boolean) {
-            if (this._pressed === p) {
+        setPressed(p: boolean) {
+            if (this.pressed === p) {
                 return;
             }
-            this._pressed = p;
+            this.pressed = p;
 
             if (p) {
                 this._wasPressed = true;
@@ -42,10 +41,6 @@ namespace pxsim {
 
         }
 
-        get pressed() {
-            return this._pressed
-        }
-
         public wasPressed() {
             const temp = this._wasPressed;
             this._wasPressed = false;
@@ -59,9 +54,9 @@ namespace pxsim {
 
     export class CPButtonPairState {
         usesButtonAB: boolean = false;
-        aBtn: Button;
-        bBtn: Button;
-        abBtn: Button;
+        aBtn: CPButton;
+        bBtn: CPButton;
+        abBtn: CPButton;
 
         constructor(public props: ButtonPairProps) {
             this.aBtn = new CPButton(this.props.ID_BUTTON_A);

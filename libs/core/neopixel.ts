@@ -35,6 +35,20 @@ enum NeoPixelMode {
 }
 
 /**
+ * Animations to be shown
+ */
+enum NeoPixelAnimationType {
+    RainbowCycle,
+    RunningLights,
+    Comet
+}
+
+enum MoveKind {
+    Rotate,
+    Shift
+}
+
+/**
  * Functions to operate NeoPixel strips.
  */
 //% weight=5 color=#2699BF icon="\uf00a"
@@ -51,6 +65,7 @@ namespace neopixel {
         start: number; // start offset in LED strip
         _length: number; // number of LEDs
         _mode: NeoPixelMode;
+        _animation: NeoPixelAnimation;
 
         /**
          * Shows all LEDs to a given color (range 0-255 for r, g, b).
@@ -92,7 +107,7 @@ namespace neopixel {
          * @param value current value to plot
          * @param high maximum value, eg: 255
          */
-        //% weight=84
+        //% weight=84 blockGap=8
         //% blockId=neopixel_show_bar_graph block="show bar graph of %value |up to %high" icon="\uf080" blockExternalInputs=true
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
@@ -132,8 +147,8 @@ namespace neopixel {
          */
         //% blockId="neopixel_set_pixel_color" block="set pixel color at %pixeloffset|to %rgb=neopixel_colors"
         //% blockGap=8
-        //% weight=80
-        //% parts="neopixel" advanced=true
+        //% weight=5
+        //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
         setPixelColor(pixeloffset: number, rgb: number): void {
             this.setPixelRGB(pixeloffset, rgb);
@@ -159,7 +174,7 @@ namespace neopixel {
          * Send all the changes to the strip.
          */
         //% blockId="neopixel_show" block="show" blockGap=8
-        //% weight=79
+        //% weight=4
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
         show() {
@@ -172,7 +187,7 @@ namespace neopixel {
          * You need to call ``show`` to make the changes visible.
          */
         //% blockId="neopixel_clear" block="clear"
-        //% weight=76
+        //% weight=3
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
         clear(): void {
@@ -184,7 +199,7 @@ namespace neopixel {
          * Gets the number of pixels declared on the strip
          */
         //% blockId="neopixel_length" block="length" blockGap=8
-        //% weight=60 advanced=true
+        //% weight=88 advanced=true
         //% defaultInstance=neopixel.builtin
         length() {
             return this._length;
@@ -196,7 +211,7 @@ namespace neopixel {
          */
         //% blockId="neopixel_set_brightness" block="set brightness %brightness" blockGap=8
         //% weight=59
-        //% parts="neopixel" advanced=true
+        //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
         setBrigthness(brightness: number): void {
             this.brightness = brightness & 0xff;
@@ -236,7 +251,7 @@ namespace neopixel {
          */
         //% weight=89
         //% blockId="neopixel_range" block="range from %start|with %length|leds"
-        //% parts="neopixel"
+        //% parts="neopixel" advanced=true
         //% defaultInstance=neopixel.builtin
         range(start: number, length: number): Strip {
             let strip = new Strip();
@@ -253,27 +268,18 @@ namespace neopixel {
          * You need to call ``show`` to make the changes visible.
          * @param offset number of pixels to shift forward, eg: 1
          */
-        //% blockId="neopixel_shift" block="shift pixels by %offset" blockGap=8
+        //% blockId="neopixel_move_pixels" block="%kind=MoveKind |pixels by %offset" blockGap=8
         //% weight=40
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
-        shift(offset: number = 1): void {
+        movePixels(kind: MoveKind, offset: number = 1): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
-            this.buf.shift(-offset * stride, this.start * stride, this._length * stride)
-        }
-
-        /**
-         * Rotate LEDs forward.
-         * You need to call ``show`` to make the changes visible.
-         * @param offset number of pixels to rotate forward, eg: 1
-         */
-        //% blockId="neopixel_rotate" block="rotate pixels by %offset" blockGap=8
-        //% weight=39
-        //% parts="neopixel"
-        //% defaultInstance=neopixel.builtin
-        rotate(offset: number = 1): void {
-            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
-            this.buf.rotate(-offset * stride, this.start * stride, this._length * stride)
+            if (kind === MoveKind.Shift) {
+                this.buf.shift(-offset * stride, this.start * stride, this._length * stride)
+            }
+            else {
+                this.buf.rotate(-offset * stride, this.start * stride, this._length * stride)
+            }
         }
 
         /**
@@ -301,13 +307,53 @@ namespace neopixel {
         }
 
         /**
-         * Set the lenth of the strip.
+         * Set the mode of the strip.
          */
         //% weight=10
         //% parts="neopixel" advanced=true
         //% defaultInstance=neopixel.builtin
         setMode(mode: NeoPixelMode): void {
             this._mode = mode;
+        }
+
+        /**
+         * Set the current animation
+         */
+        //% blockId="neopixel_draw_animation_frame" block="show frame of %type=NeoPixelAnimationType |animation"
+        //% weight=59
+        //% parts="neopixel"
+        //% defaultInstance=neopixel.builtin
+        drawAnimationFrame(type: NeoPixelAnimationType): void {
+            if (!this._animation || this._animation.getType() !== type) {
+                switch (type) {
+                    case NeoPixelAnimationType.RainbowCycle:
+                        this._animation = new RainbowCycleAnimation(this);
+                        break;
+                    case NeoPixelAnimationType.RunningLights:
+                        this._animation = new RunningLightsAnimation(this, 0xff, 0xff, 0x00);
+                        break;
+                    case NeoPixelAnimationType.Comet:
+                        this._animation = new CometAnimation(this, 0, 0, 40);
+                        break;
+                }
+                this._animation.init();
+            }
+            this._animation.draw();
+            this.show();
+        }
+
+        /**
+         * Restart the current animation
+         */
+        //% blockId="neopixel_restart_animation" block="restart animation"
+        //% weight=57
+        //% parts="neopixel" advanced=true
+        //% defaultInstance=neopixel.builtin
+        restartAnimation(): void {
+            if (this._animation) {
+                this._animation.init();
+                this.show();
+            }
         }
 
         private setBufferRGB(offset: number, red: number, green: number, blue: number): void {
@@ -397,8 +443,8 @@ namespace neopixel {
      * @param pin the pin where the neopixel is connected.
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      */
-    //% blockId="neopixel_create" block="NeoPixel at pin %pin|with %numleds|leds as %mode"
-    //% weight=90 blockGap=8 advanced
+    //% blockId="neopixel_create" block="create NeoPixel at pin %pin|with %numleds|leds as %mode"
+    //% weight=90 blockGap=8 advanced=true
     //% parts="neopixel"
     //% trackArgs=0,2
     export function create(
@@ -425,7 +471,7 @@ namespace neopixel {
      * @param green value of the green channel between 0 and 255. eg: 255
      * @param blue value of the blue channel between 0 and 255. eg: 255
      */
-    //% weight=1
+    //% weight=4
     //% blockId="neopixel_rgb" block="red %red|green %green|blue %blue"
     //% advanced=true
     export function rgb(red: number, green: number, blue: number): number {
@@ -437,9 +483,18 @@ namespace neopixel {
     */
     //% weight=2 blockGap=8
     //% blockId="neopixel_colors" block="%color"
-    //% advanced=true
     export function colors(color: NeoPixelColors): number {
         return color;
+    }
+
+    /**
+     * Gets an RGB color given the value of an angle between 0 and 360. Useful
+     * for performing math with colors.
+    */
+    //% weight=1 blockGap=8
+    //% blockId="neopixel_hue" block="hue %angle"
+    export function getHue(angle: number): number {
+        return new HSL(angle, 100, 50).toRGB();
     }
 
     function packRGB(a: number, b: number, c: number): number {
@@ -476,7 +531,7 @@ namespace neopixel {
          * @param hsl the HSL (hue, saturation, lightness) color
          * @param offset value to shift the hue channel by; hue is between 0 and 360. eg: 10
          */
-        //% weight=1
+        //% weight=1 blockGap=8
         //% blockId="neopixel_rotate_hue" block="shift %hsl| hue by %offset"
         //% advanced=true
         rotateHue(offset: number): void {
@@ -531,8 +586,8 @@ namespace neopixel {
      * @param sat value of the saturation channel between 0 and 100. eg: 100
      * @param lum value of the luminosity channel between 0 and 100. eg: 50
      */
-    //% weight=1
-    //% blockId="neopixel_hsl" block="hue %hue|sat %sat|lum %lum"
+    //% weight=3 blockGap=8
+    //% blockId="neopixel_hsl" block="create hue %hue|sat %sat|lum %lum"
     //% advanced=true
     export function hsl(hue: number, sat: number, lum: number): HSL {
         return new HSL(hue, sat, lum);
@@ -607,4 +662,118 @@ namespace neopixel {
     }
 
     export const builtin = neopixel.create();
+
+    export class NeoPixelAnimation {
+        public strip: Strip
+
+        constructor(strip: Strip) {
+            this.strip = strip;
+        }
+
+        getType(): NeoPixelAnimationType { return -1 }
+
+        init(): void {}
+
+        draw(): void {}
+    }
+
+    export class RainbowCycleAnimation extends NeoPixelAnimation {
+        public pixels: HSL[];
+
+        constructor(strip: Strip) {
+            super(strip);
+            this.pixels = [];
+        }
+
+        public getType() {
+            return NeoPixelAnimationType.RainbowCycle;
+        }
+
+        public init() {
+            const l = this.strip.length();
+            const spacing = 360 / l;
+            for (let i = 0; i < l; i++) {
+                this.pixels[i] = new HSL(spacing * i, 100, 50);
+            }
+        }
+
+        public draw() {
+            const l = this.strip.length();
+            for (let i = 0; i < l; i++) {
+                this.pixels[i].rotateHue(1);
+                this.strip.setPixelColor(i, this.pixels[i].toRGB());
+            }
+        }
+    }
+
+    export class RunningLightsAnimation extends NeoPixelAnimation {
+        public levels: number[];
+        public step: number;
+
+        public red: number;
+        public green: number;
+        public blue: number;
+
+        constructor(strip: Strip, red: number, green: number, blue: number) {
+            super(strip);
+            // precomputed Math.sin(x) * 127 + 128 for x in [0,NUM_PIXELS*2]
+            this.levels = [128, 33, 2, 57, 160, 242, 246, 170, 66, 4, 26, 118, 216, 255, 207, 106, 19, 7, 77, 181, 250, 235, 148, 47, 1, 41, 140, 231, 252, 188];
+            this.red = red;
+            this.green = green;
+            this.blue = blue;
+        }
+
+        public getType() {
+            return NeoPixelAnimationType.RunningLights;
+        }
+
+        public init() {
+            this.step = 0
+        }
+
+        public draw() {
+            const l = this.strip.length();
+            for (let i = 0; i < l; i++) {
+                const level = this.levels[(i + this.step) % this.levels.length];
+                this.strip.setPixelColor(i, rgb(level * this.red / 255, level * this.green / 255, level * this.blue / 255));
+            }
+            this.step ++;
+        }
+    }
+
+    export class CometAnimation extends NeoPixelAnimation {
+        public offsets: number[];
+
+        public red: number;
+        public green: number;
+        public blue: number;
+
+        constructor(strip: Strip, red: number, green: number, blue: number) {
+            super(strip);
+            this.red = red;
+            this.green = green;
+            this.blue = blue;
+            this.offsets = [];
+        }
+
+        public getType() {
+            return NeoPixelAnimationType.Comet;
+        }
+
+        public init() {
+            const l = this.strip.length();
+            const spacing = 255 / l;
+            for (let i = 0; i < l; i++) {
+                this.offsets[i] = spacing * i;
+            }
+        }
+
+        public draw() {
+            const l = this.strip.length();
+            for (let i = 0; i < l; i++) {
+                this.offsets[i] = (this.offsets[i] + 1) % 255
+                this.strip.setPixelColor(i, rgb(255 - this.offsets[i], this.green, this.blue));
+            }
+        }
+    }
 }

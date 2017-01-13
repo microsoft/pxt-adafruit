@@ -174,7 +174,7 @@ namespace pxsim.visuals {
         {'name': "RX", 'touch': 1, 'text': { 'x': 40, 'y': 45}},
         {'name': "TX", 'touch': 1, 'text': { 'x': 6, 'y': 125}},
         {'name': "SDA", 'touch': 1, 'text': { 'x': 40, 'y': 45}},
-        {'name': "SCL", 'touch': 1, 'text': { 'x': 40, 'y': 45}}, 
+        {'name': "SCL", 'touch': 1, 'text': { 'x': 40, 'y': 45}},
         {'name': "GND_0", 'touch': 0, 'text': null },
         {'name': "GND_1", 'touch': 0, 'text': null },
         {'name': "PIN_6", 'touch': 1, 'text': { 'x': 40, 'y': 45}},
@@ -497,7 +497,7 @@ namespace pxsim.visuals {
 
         private updateLightLevel() {
             let state = this.board;
-            if (!state || !state.lightSensorState.usesLightLevel) return;
+            if (!state || !state.lightSensorState.sensorUsed) return;
 
             if (!this.lightLevelButton) {
                 let gid = "gradient-light-level";
@@ -515,8 +515,8 @@ namespace pxsim.visuals {
                         let pos = svg.cursorPoint(pt, this.element, ev);
                         let rs = r / 2;
                         let level = Math.max(0, Math.min(255, Math.floor((pos.y - (cy - rs)) / (2 * rs) * 255)));
-                        if (level != this.board.lightSensorState.lightLevel) {
-                            this.board.lightSensorState.lightLevel = level;
+                        if (level != this.board.lightSensorState.getLevel()) {
+                            this.board.lightSensorState.setLevel(level);
                             this.applyLightLevel();
                         }
                     }, ev => { },
@@ -525,12 +525,12 @@ namespace pxsim.visuals {
                 this.updateTheme();
             }
 
-            svg.setGradientValue(this.lightLevelGradient, Math.min(100, Math.max(0, Math.floor(state.lightSensorState.lightLevel * 100 / 255))) + '%')
-            this.lightLevelText.textContent = state.lightSensorState.lightLevel.toString();
+            svg.setGradientValue(this.lightLevelGradient, Math.min(100, Math.max(0, Math.floor(state.lightSensorState.getLevel() * 100 / 255))) + '%')
+            this.lightLevelText.textContent = state.lightSensorState.getLevel().toString();
         }
 
         private applyLightLevel() {
-            let lv = this.board.lightSensorState.lightLevel;
+            let lv = this.board.lightSensorState.getLevel();
             svg.setGradientValue(this.lightLevelGradient, Math.min(100, Math.max(0, Math.floor(lv * 100 / 255))) + '%')
             this.lightLevelText.textContent = lv.toString();
         }
@@ -549,7 +549,7 @@ namespace pxsim.visuals {
                     class: 'sim-sound-level-button',
                     fill: `url(#${gid})`
                 }) as SVGCircleElement;
-                
+
                 let pt = this.element.createSVGPoint();
                 svg.buttonEvents(this.soundLevelButton,
                     (ev) => {
@@ -578,10 +578,11 @@ namespace pxsim.visuals {
 
         private updateTemperature() {
             let state = this.board;
-            if (!state || !state.thermometerState || !state.thermometerState.usesTemperature) return;
+            if (!state || !state.thermometerState || !state.thermometerState.sensorUsed) return;
 
-            let tmin = state.thermometerState.unit == ThermometerUnit.Celsius ? -5 : 0;
-            let tmax = state.thermometerState.unit == ThermometerUnit.Celsius ? 50 : 120;
+            // Celsius
+            let tmin = -5;
+            let tmax = 50;
             if (!this.thermometer) {
                 let gid = "gradient-thermometer";
                 this.thermometerGradient = svg.linearGradient(this.defs, gid);
@@ -602,15 +603,15 @@ namespace pxsim.visuals {
                     (ev) => {
                         let cur = svg.cursorPoint(pt, this.element, ev);
                         let t = Math.max(0, Math.min(1, (35 - cur.y) / 30))
-                        state.thermometerState.temperature = Math.floor(tmin + t * (tmax - tmin));
+                        state.thermometerState.setLevel(Math.floor(tmin + t * (tmax - tmin)));
                         this.updateTemperature();
                     }, ev => { }, ev => { })
             }
 
-            let t = Math.max(tmin, Math.min(tmax, state.thermometerState.temperature))
-            let per = Math.floor((state.thermometerState.temperature - tmin) / (tmax - tmin) * 100)
+            let t = Math.max(tmin, Math.min(tmax, state.thermometerState.getLevel() ))
+            let per = Math.floor((state.thermometerState.getLevel() - tmin) / (tmax - tmin) * 100)
             svg.setGradientValue(this.thermometerGradient, 100 - per + "%");
-            this.thermometerText.textContent = t + "°" + (state.thermometerState.unit == ThermometerUnit.Celsius ? 'C' : 'F');
+            this.thermometerText.textContent = t + "°C";
         }
 
         private updateButtonAB() {
@@ -684,7 +685,7 @@ namespace pxsim.visuals {
             svg.child(glow, "feGaussianBlur", { stdDeviation: "5", result: "glow" });
             let merge = svg.child(glow, "feMerge", {});
             for (let i = 0; i < 3; ++i) svg.child(merge, "feMergeNode", { in: "glow" })
-            
+
             let neopixelglow = svg.child(this.defs, "filter", { id: "neopixelglow", x: "-200%", y: "-200%", width: "400%", height: "400%" });
             svg.child(neopixelglow, "feGaussianBlur", { stdDeviation: "4.3", result: "coloredBlur" });
             let neopixelmerge = svg.child(neopixelglow, "feMerge", {});
@@ -708,7 +709,7 @@ namespace pxsim.visuals {
                     this.pinTexts[i] = <SVGTextElement>svg.child(this.g, "text", { class: "sim-text-pin", x: pin.text.x, y: pin.text.y })
 				return p;
 			});
-            
+
             this.pins.forEach((p, i) => svg.hydrate(p, {title: pinTitles[i]}));
 
             this.pinGradients = this.pins.map((pin, i) => {

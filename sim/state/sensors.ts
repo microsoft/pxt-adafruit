@@ -1,12 +1,12 @@
 
 namespace pxsim {
     export enum AdaFruit_Button {
-        Left = 1, 
+        Left = 1,
         Right = 2
     }
 
     export enum ThermometerUnit {
-        Celsius, 
+        Celsius,
         Fahrenheit
     }
 
@@ -93,21 +93,11 @@ namespace pxsim.sensors {
         return board().slideSwitchState.on;
     }
 
-    
+
     export function readCap(pinId: number, samples: number = 10): number {
         let pin = getPin(pinId);
         if (!pin) return;
         pin.mode = PinFlags.Analog | PinFlags.Input;
         return pin.value || 0;
-    }
-
-    export function temperature(unit: ThermometerUnit = ThermometerUnit.Celsius): number {
-        let b = board();
-        if (!b.thermometerState.usesTemperature) {
-            b.thermometerState.usesTemperature = true;
-            b.thermometerState.unit = unit;
-            runtime.queueDisplayUpdate();
-        }
-        return b.thermometerState.temperature;
     }
 }

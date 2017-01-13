@@ -1,6 +1,5 @@
 
-namespace pxsim.pins {
-  
+namespace pxsim.pins {  
     export function onPulsed(name: number, pulse: number, body: RefAction) {
     }
 
@@ -31,10 +30,5 @@ namespace pxsim.pins {
 
     export function i2cWriteBuffer(address: number, buf: RefBuffer, repeat?: boolean): void {
         // fake - noop
-    }
-
-    // this likely shouldn't be called
-    export function getPinAddress(name: number) {
-        return getPin(name)
     }
 }

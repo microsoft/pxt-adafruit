@@ -65,6 +65,10 @@ namespace pxsim {
                     12                
                 ]
             });
+            this.builtinParts["microservo"] = this.edgeConnectorState;
+
+            this.builtinVisuals["microservo"] = () => new visuals.MicroServoView();
+            this.builtinPartVisuals["microservo"] = (xy: visuals.Coord) => visuals.mkMicroServoPart(xy);            
         }
 
         receiveMessage(msg: SimulatorMessage) {

@@ -14,12 +14,6 @@ namespace pxsim.basic {
     export var forever = thread.forever;
 }
 
-namespace pxsim.pxtcore {
-    export function getPin(id: number) {
-        return board().edgeConnectorState.getPin(id);
-    }
-}
-
 namespace pxsim.DigitalPinMethods {
     export function digitalRead(): number {
         return 0;
@@ -129,34 +123,4 @@ namespace pxsim.pins {
     export class AnalogPin extends Pin {
 
     }
-
-    export const A0: AnalogPin = new AnalogPin(0);
-    export const A1: AnalogPin = new AnalogPin(0);
-    export const A2: AnalogPin = new AnalogPin(0);
-    export const A3: AnalogPin = new AnalogPin(0);
-    export const A4: AnalogPin = new AnalogPin(0);
-    export const A5: AnalogPin = new AnalogPin(0);
-    export const A6: AnalogPin = new AnalogPin(0);
-    export const D0: DigitalPin = new DigitalPin(0);
-    export const D1: DigitalPin = new DigitalPin(0);
-    export const D2: DigitalPin = new DigitalPin(0);
-    export const D3: DigitalPin = new DigitalPin(0);
-    export const D4: DigitalPin = new DigitalPin(0);
-    export const D5: DigitalPin = new DigitalPin(0);
-    export const D6: DigitalPin = new DigitalPin(0);
-    export const D7: DigitalPin = new DigitalPin(0);
-    export const D8: DigitalPin = new DigitalPin(0);
-    export const D9: DigitalPin = new DigitalPin(0);
-    export const D10: DigitalPin = new DigitalPin(0);
-    export const D11: DigitalPin = new DigitalPin(0);
-    export const D12: DigitalPin = new DigitalPin(0);
-    export const D13: DigitalPin = new DigitalPin(0);
-    export const LED: DigitalPin = new DigitalPin(0);
-    export const LEDRX: DigitalPin = new DigitalPin(0);
-    export const LEDTX: DigitalPin = new DigitalPin(0);
-    export const MOSI: DigitalPin = new DigitalPin(0);
-    export const MISO: DigitalPin = new DigitalPin(0);
-    export const SCK: DigitalPin = new DigitalPin(0);
-    export const SDA: DigitalPin = new DigitalPin(0);
-    export const SCL: DigitalPin = new DigitalPin(0);
 }

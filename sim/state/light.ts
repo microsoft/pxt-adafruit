@@ -42,6 +42,7 @@ namespace pxsim {
 }
 
 namespace pxsim.neopixel {
+    // Currently only modifies the builtin pixels
     export function sendBuffer(pin: pins.DigitalPin, b: RefBuffer) {
         const state = board().neopixelState;
         const stride = 3;
@@ -61,7 +62,7 @@ namespace pxsim.neopixel {
     }
 
     export function defaultPin() {
-        return pins.D3;
+        return getPin(3);
     }
 }
 

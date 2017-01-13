@@ -174,7 +174,7 @@ namespace pxsim.visuals {
         {'name': "RX", 'touch': 1, 'text': { 'x': 40, 'y': 45}},
         {'name': "TX", 'touch': 1, 'text': { 'x': 6, 'y': 125}},
         {'name': "SDA", 'touch': 1, 'text': { 'x': 40, 'y': 45}},
-        {'name': "SCL", 'touch': 1, 'text': { 'x': 40, 'y': 45}}, 
+        {'name': "SCL", 'touch': 1, 'text': { 'x': 40, 'y': 45}},
         {'name': "GND_0", 'touch': 0, 'text': null },
         {'name': "GND_1", 'touch': 0, 'text': null },
         {'name': "PIN_6", 'touch': 1, 'text': { 'x': 40, 'y': 45}},
@@ -549,7 +549,7 @@ namespace pxsim.visuals {
                     class: 'sim-sound-level-button',
                     fill: `url(#${gid})`
                 }) as SVGCircleElement;
-                
+
                 let pt = this.element.createSVGPoint();
                 svg.buttonEvents(this.soundLevelButton,
                     (ev) => {
@@ -684,7 +684,7 @@ namespace pxsim.visuals {
             svg.child(glow, "feGaussianBlur", { stdDeviation: "5", result: "glow" });
             let merge = svg.child(glow, "feMerge", {});
             for (let i = 0; i < 3; ++i) svg.child(merge, "feMergeNode", { in: "glow" })
-            
+
             let neopixelglow = svg.child(this.defs, "filter", { id: "neopixelglow", x: "-200%", y: "-200%", width: "400%", height: "400%" });
             svg.child(neopixelglow, "feGaussianBlur", { stdDeviation: "4.3", result: "coloredBlur" });
             let neopixelmerge = svg.child(neopixelglow, "feMerge", {});
@@ -708,7 +708,7 @@ namespace pxsim.visuals {
                     this.pinTexts[i] = <SVGTextElement>svg.child(this.g, "text", { class: "sim-text-pin", x: pin.text.x, y: pin.text.y })
 				return p;
 			});
-            
+
             this.pins.forEach((p, i) => svg.hydrate(p, {title: pinTitles[i]}));
 
             this.pinGradients = this.pins.map((pin, i) => {
@@ -887,8 +887,6 @@ namespace pxsim.visuals {
                     let state = this.board;
                     stateButtons[index].pressed = false;
                     svg.fill(this.buttons[index], this.props.theme.buttonUps[index]);
-                    //this.board.bus.queue(stateButtons[index].id, DAL.MICROBIT_BUTTON_EVT_UP);
-                    //this.board.bus.queue(stateButtons[index].id, DAL.MICROBIT_BUTTON_EVT_CLICK);
                 })
             })
             /*

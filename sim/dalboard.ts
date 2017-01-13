@@ -6,7 +6,7 @@ namespace pxsim {
         // state & update logic for component services
         redLEDState: RedLEDState;
         neopixelState: CPNeoPixelState;
-        buttonPairState: ButtonPairState;
+        buttonPairState: CPButtonPairState;
         slideSwitchState: SlideSwitchState;
         lightSensorState: LightSensorState;
         soundSensorState: SoundSensorState;
@@ -23,27 +23,27 @@ namespace pxsim {
             this.builtinParts["redLED"] = this.redLEDState = new RedLEDState();
             this.builtinParts["neopixel"] = this.neopixelState = new CPNeoPixelState();
 
-            this.builtinParts["buttonpair"] = this.buttonPairState = new ButtonPairState({
+            this.builtinParts["buttonpair"] = this.buttonPairState = new CPButtonPairState({
                 ID_BUTTON_A: 0,
                 ID_BUTTON_B: 1,
                 ID_BUTTON_AB: 2,
                 BUTTON_EVT_UP: 3,
                 BUTTON_EVT_CLICK: 4
             });
-            
+
             this.builtinParts["switch"] = this.slideSwitchState = new SlideSwitchState();
             this.builtinParts["audio"] = this.audioState = new AudioState();
             this.builtinParts["lightsensor"] = this.lightSensorState = new LightSensorState();
             this.builtinParts["soundsensor"] = this.soundSensorState = new SoundSensorState();
             this.builtinParts["thermometer"] = this.thermometerState = new ThermometerState();
             this.builtinParts["capacitivesensor"] = this.capacitiveSensorState = new CapacitiveSensorState({
-                0: 0, 
-                1: 1, 
-                2: 2, 
+                0: 0,
+                1: 1,
+                2: 2,
                 3: 3,
                 6: 4,
-                9: 5, 
-                10: 6, 
+                9: 5,
+                10: 6,
                 12: 7
             });
 
@@ -62,13 +62,13 @@ namespace pxsim {
                     9,
                     10,
                     11,
-                    12                
+                    12
                 ]
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;
 
             this.builtinVisuals["microservo"] = () => new visuals.MicroServoView();
-            this.builtinPartVisuals["microservo"] = (xy: visuals.Coord) => visuals.mkMicroServoPart(xy);            
+            this.builtinPartVisuals["microservo"] = (xy: visuals.Coord) => visuals.mkMicroServoPart(xy);
         }
 
         receiveMessage(msg: SimulatorMessage) {

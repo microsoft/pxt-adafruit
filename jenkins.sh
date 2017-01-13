@@ -37,7 +37,7 @@ if [ "$1" == "false" ]; then
             echo Current tag: $gitTag
             echo Built tag: $builtTag
 
-            if [[ ! -z $gitTag && -z builtTag ]]; then
+            if [[ ! -z $gitTag && -z $builtTag ]]; then
                 echo Built tag not found; building tag
                 echo Setting TRAVIS_BRANCH to $gitTag
                 export TRAVIS_BRANCH=$gitTag

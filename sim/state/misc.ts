@@ -123,10 +123,6 @@ namespace pxsim.AnalogPinMethods {
 }
 
 namespace pxsim.pins {
-    export function createBuffer(sz: number) {
-        return pxsim.BufferMethods.createBuffer(sz);
-    }
-
     export class DigitalPin extends Pin {
     }
 

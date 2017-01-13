@@ -37,7 +37,7 @@ enum NeoPixelMode {
 /**
  * Functions to operate NeoPixel strips.
  */
-//% weight=5 color=#2699BF
+//% weight=5 color=#2699BF icon="\uf00a"
 namespace neopixel {
     /**
      * A NeoPixel strip
@@ -56,7 +56,7 @@ namespace neopixel {
          * Shows all LEDs to a given color (range 0-255 for r, g, b).
          * @param rgb RGB color of the LED
          */
-        //% blockId="neopixel_set_strip_color" block="%strip|show color %rgb=neopixel_colors"
+        //% blockId="neopixel_set_strip_color" block="show color %rgb=neopixel_colors"
         //% weight=85 blockGap=8
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
@@ -70,7 +70,7 @@ namespace neopixel {
          * @param startHue the start hue value for the rainbow, eg: 1
          * @param endHue the end hue value for the rainbow, eg: 360
          */
-        //% blockId="neopixel_set_strip_rainbow" block="%strip|show rainbow from %startHue|to %endHue"
+        //% blockId="neopixel_set_strip_rainbow" block="show rainbow from %startHue|to %endHue"
         //% weight=85 blockGap=8
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
@@ -93,7 +93,7 @@ namespace neopixel {
          * @param high maximum value, eg: 255
          */
         //% weight=84
-        //% blockId=neopixel_show_bar_graph block="%strip|show bar graph of %value |up to %high" icon="\uf080" blockExternalInputs=true
+        //% blockId=neopixel_show_bar_graph block="show bar graph of %value |up to %high" icon="\uf080" blockExternalInputs=true
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
         showBarGraph(value: number, high: number): void {
@@ -130,7 +130,7 @@ namespace neopixel {
          * @param pixeloffset position of the NeoPixel in the strip
          * @param rgb RGB color of the LED
          */
-        //% blockId="neopixel_set_pixel_color" block="%strip|set pixel color at %pixeloffset|to %rgb=neopixel_colors"
+        //% blockId="neopixel_set_pixel_color" block="set pixel color at %pixeloffset|to %rgb=neopixel_colors"
         //% blockGap=8
         //% weight=80
         //% parts="neopixel" advanced=true
@@ -144,7 +144,7 @@ namespace neopixel {
          * @param pixeloffset position of the LED in the strip
          * @param white brightness of the white LED
          */
-        //% blockId="neopixel_set_pixel_white" block="%strip|set pixel white LED at %pixeloffset|to %white"
+        //% blockId="neopixel_set_pixel_white" block="set pixel white LED at %pixeloffset|to %white"
         //% blockGap=8
         //% weight=80
         //% parts="neopixel" advanced=true
@@ -158,12 +158,12 @@ namespace neopixel {
         /**
          * Send all the changes to the strip.
          */
-        //% blockId="neopixel_show" block="%strip|show" blockGap=8
+        //% blockId="neopixel_show" block="show" blockGap=8
         //% weight=79
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
         show() {
-            basic.pause(1)
+            control.pause(1)
             sendBuffer(this.pin, this.buf);
         }
 
@@ -171,7 +171,7 @@ namespace neopixel {
          * Turn off all LEDs.
          * You need to call ``show`` to make the changes visible.
          */
-        //% blockId="neopixel_clear" block="%strip|clear"
+        //% blockId="neopixel_clear" block="clear"
         //% weight=76
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
@@ -183,7 +183,7 @@ namespace neopixel {
         /**
          * Gets the number of pixels declared on the strip
          */
-        //% blockId="neopixel_length" block="%strip|length" blockGap=8
+        //% blockId="neopixel_length" block="length" blockGap=8
         //% weight=60 advanced=true
         //% defaultInstance=neopixel.builtin
         length() {
@@ -194,7 +194,7 @@ namespace neopixel {
          * Set the brightness of the strip. This flag only applies to future operation.
          * @param brightness a measure of LED brightness in 0-255. eg: 255
          */
-        //% blockId="neopixel_set_brightness" block="%strip|set brightness %brightness" blockGap=8
+        //% blockId="neopixel_set_brightness" block="set brightness %brightness" blockGap=8
         //% weight=59
         //% parts="neopixel" advanced=true
         //% defaultInstance=neopixel.builtin
@@ -205,7 +205,7 @@ namespace neopixel {
         /**
          * Apply brightness to current colors using a quadratic easing function.
          **/
-        //% blockId="neopixel_each_brightness" block="%strip|ease brightness" blockGap=8
+        //% blockId="neopixel_each_brightness" block="ease brightness" blockGap=8
         //% weight=58
         //% parts="neopixel" advanced=true
         //% defaultInstance=neopixel.builtin
@@ -235,7 +235,7 @@ namespace neopixel {
          * @param length number of LEDs in the range. eg: 4
          */
         //% weight=89
-        //% blockId="neopixel_range" block="%strip|range from %start|with %length|leds"
+        //% blockId="neopixel_range" block="range from %start|with %length|leds"
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
         range(start: number, length: number): Strip {
@@ -253,7 +253,7 @@ namespace neopixel {
          * You need to call ``show`` to make the changes visible.
          * @param offset number of pixels to shift forward, eg: 1
          */
-        //% blockId="neopixel_shift" block="%strip|shift pixels by %offset" blockGap=8
+        //% blockId="neopixel_shift" block="shift pixels by %offset" blockGap=8
         //% weight=40
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
@@ -267,7 +267,7 @@ namespace neopixel {
          * You need to call ``show`` to make the changes visible.
          * @param offset number of pixels to rotate forward, eg: 1
          */
-        //% blockId="neopixel_rotate" block="%strip|rotate pixels by %offset" blockGap=8
+        //% blockId="neopixel_rotate" block="rotate pixels by %offset" blockGap=8
         //% weight=39
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
@@ -285,7 +285,7 @@ namespace neopixel {
         setPin(pin: DigitalPin): void {
             this.pin = pin;
             this.pin.digitalWrite(0)
-            basic.pause(50)
+            control.pause(50)
         }
 
         /**

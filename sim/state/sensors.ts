@@ -63,6 +63,10 @@ namespace pxsim {
             this.reading[capId] = false;
         }
     }
+
+    export function getPin(id: number) {
+        return board().edgeConnectorState.getPin(id);
+    }
 }
 
 namespace pxsim.sensors {

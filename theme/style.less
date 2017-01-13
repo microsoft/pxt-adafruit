@@ -29,24 +29,14 @@
     &:extend(.green all);
 }
 
-/* Simulator background */
-#filelist {
-    background: @blue; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(@blue, #00487C); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(@blue, #00487C); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(@blue, #00487C); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(@blue, #00487C); /* Standard syntax (must be last) */
-}
-
 /* Specifying rounded toolbox borders. */
 .blocklyTreeRow {
     border-radius: 5px;
     margin-bottom: 3px !important;
 }
 
-.blocklyTreeRow:hover, 
-.blocklyTreeSelected {
-    background: @invertedBackground !important;
+.blocklyTreeRow:hover {
+    background: @blue !important;
 }
 
 /* This removes any padding at the top of the toolbox */

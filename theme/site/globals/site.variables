@@ -56,7 +56,7 @@
    Background
 --------------------*/
 
-@simulatorBackground: @blue;
+@simulatorBackground: #313638;
 @editorToolsBackground: #1e1e1e;
 @blocklySvgColor: #1e1e1e;
 

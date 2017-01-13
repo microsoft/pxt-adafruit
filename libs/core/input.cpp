@@ -62,7 +62,7 @@ int lightLevel() {
 * @param condition the condition that event triggers on
 */
 //% help=input/on-light-condition-changed
-//% blockId=input_on_light_condition_changed block="on %condition"
+//% blockId=input_on_light_condition_changed block="on light %condition"
 //% parts="lightsensor"
 void onLightConditionChanged(LightCondition condition, Action handler) {
     registerWithDal(getWLight()->sensor.id, (int)condition, handler);
@@ -84,22 +84,15 @@ int temperature() {
 * @param condition the condition, hot or cold, the event triggers on
 * @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
 */
-//% blockId=input_on_temperature_condition_changed block="on %condition|at (°C)%temperature"
+//% blockId=input_on_temperature_condition_changed block="on temperature %condition|at (°C)%temperature"
 //% parts="thermometer"
 //% help=input/on-temperature-condition-changed
 void onTemperateConditionChanged(TemperatureCondition condition, int temperature, Action handler) {
-    // TODO: set threshold
-    //getWTemp()->sensor.getValue();
-    registerWithDal(getWTemp()->sensor.id, (int)condition, handler);
-}
-
-/**
-  * Gets the number of milliseconds elapsed since power on.
-  */
-//% help=input/running-time weight=50
-//% blockId=device_get_running_time block="running time (ms)"
-//% advanced=true
-int runningTime() {
-    return system_timer_current_time();
+    NonLinearAnalogSensor& sensor = getWTemp()->sensor;
+    if (condition == TemperatureCondition::Cold)
+        sensor.setLowThreshold(temperature);
+    else
+        sensor.setHighThreshold(temperature);        
+    registerWithDal(sensor.id, (int)condition, handler);
 }
 }

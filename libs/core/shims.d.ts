@@ -120,31 +120,6 @@ declare namespace pins {
 }
 
 
-    /**
-     * Provides access to basic device functionality.
-     */
-    //% color=#0078D7 weight=100
-declare namespace basic {
-
-    /**
-     * Repeats the code forever in the background. On each iteration, allows other codes to run.
-     * @param body code to execute
-     */
-    //% help=basic/forever weight=55 blockGap=8
-    //% blockId=device_forever block="forever" icon="\uf01e" shim=basic::forever
-    function forever(a: () => void): void;
-
-    /**
-     * Pause for the specified time in milliseconds
-     * @param ms how long to pause for, eg: 100, 200, 500, 1000, 2000
-     */
-    //% help=basic/pause weight=54
-    //% async block="pause (ms) %pause"
-    //% blockId=device_pause icon="\uf110" shim=basic::pause
-    function pause(ms: number): void;
-}
-
-
 declare interface DigitalPin {
     /**
      * Read the specified pin or connector as either 0 or 1
@@ -196,35 +171,24 @@ declare interface DigitalPin {
     setPull(pull: PinPullMode): void;
 
     /**
-     * Do something when a pin is pressed.
+     * Do something when a pin is clicked
      * @param name the pin that needs to be pressed, eg: TouchPin.P0
      * @param body the code to run when the pin is pressed
      */
     //% help=input/on-pin-pressed weight=83
-    //% blockId=device_pin_event block="on pin %name|pressed"
-    //% blockNamespace=input shim=DigitalPinMethods::onPressed
-    onPressed(body: () => void): void;
+    //% blockId=device_pin_event block="on pin %pin|%event"
+    //% blockNamespace=input shim=DigitalPinMethods::onEvent
+    onEvent(event: ButtonEvent, body: () => void): void;
 
     /**
-     * Do something when a pin is released.
-     * @param name the pin that needs to be released, eg: TouchPin.P0
-     * @param body the code to run when the pin is released
-     */
-    //% help=input/on-pin-released weight=6 blockGap=8
-    //% blockId=device_pin_released block="on pin %NAME|released"
-    //% advanced=true
-    //% blockNamespace=input shim=DigitalPinMethods::onReleased
-    onReleased(body: () => void): void;
-
-    /**
-     * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
+     * Get the pin state (touched or not). Requires to hold the ground to close the circuit.
      * @param name pin used to detect the touch, eg: TouchPin.P0
      */
-    //% help=input/pin-is-pressed weight=58
-    //% blockId="device_pin_is_pressed" block="pin %NAME|is pressed"
+    //% help=input/pin-is-touched weight=58
+    //% blockId="pin_is_touched" block="pin %pin|is touched"
     //% blockGap=8
-    //% blockNamespace=input shim=DigitalPinMethods::isPressed
-    isPressed(): boolean;
+    //% blockNamespace=input shim=DigitalPinMethods::isTouched
+    isTouched(): boolean;
 }
 
 
@@ -373,8 +337,94 @@ declare interface Buffer {
 }
 
 
+    /**
+     * Runtime and event utilities.
+     */
+    //% weight=70 color="#BEAA07" icon="\uf110"
+declare namespace control {
 
-    //% weight=2 color=30
+    /**
+     * Repeats the code forever in the background. On each iteration, allows other codes to run.
+     * @param body code to execute
+     */
+    //% help=loops/forever weight=100 blockGap=8
+    //% blockId=forever block="forever" shim=control::forever
+    function forever(a: () => void): void;
+
+    /**
+     * Pause for the specified time in milliseconds
+     * @param ms how long to pause for, eg: 100, 200, 500, 1000, 2000
+     */
+    //% help=basic/pause weight=99
+    //% async block="pause (ms) %pause"
+    //% blockId=device_pause shim=control::pause
+    function pause(ms: number): void;
+
+    /**
+     * Gets the number of milliseconds elapsed since power on.
+     */
+    //% help=control/running-time weight=50
+    //% blockId=control_running_time block="running time (ms)" shim=control::runningTime
+    function runningTime(): number;
+
+    /**
+     * Raises an event in the event bus.
+     * @param src ID of the MicroBit Component that generated the event
+     * @param value Component specific code indicating the cause of the event.
+     * @param mode optional definition of how the event should be processed after construction.
+     */
+    //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from %src|with value %value" blockExternalInputs=1
+    //% advanced=true mode.defl=1 shim=control::raiseEvent
+    function raiseEvent(src: number, value: number, mode?: EventCreationMode): void;
+
+    /**
+     * Raises an event in the event bus.
+     * @param id the event compoent id
+     * @param value the event value to match
+     */
+    //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src|with value %value"
+    //% blockExternalInputs=1 advanced=true shim=control::onEvent
+    function onEvent(id: number, value: number, handler: () => void): void;
+
+    /**
+     * Resets the device.
+     */
+    //% weight=30 async help=control/reset blockGap=8
+    //% blockId="control_reset" block="reset" shim=control::reset
+    function reset(): void;
+
+    /**
+     * Blocks the current fiber for the given microseconds
+     * @param micros number of micro-seconds to wait. eg: 4
+     */
+    //% help=control/wait-micros weight=29
+    //% blockId="control_wait_us" block="wait (µs)%micros" advanced=true shim=control::waitMicros
+    function waitMicros(micros: number): void;
+
+    /**
+     * Schedules code that run in the background.
+     */
+    //% help=control/run-in-background blockAllowMultiple=1 advanced=true
+    //% blockId="control_run_in_background" block="run in background" blockGap=8 shim=control::runInBackground
+    function runInBackground(a: () => void): void;
+
+    /**
+     * Derive a unique, consistent serial number of this device from internal data.
+     */
+    //% blockId="control_device_serial_number" block="device serial number" weight=9
+    //% advanced=true shim=control::deviceSerialNumber
+    function deviceSerialNumber(): number;
+
+    /**
+     * Determine the version of system software currently running.
+     */
+    //% shim=control::deviceDalVersion
+    function deviceDalVersion(): string;
+}
+
+
+
+    //% weight=2 color=30 icon="\uf287"
     //% advanced=true
 declare namespace serial {
 
@@ -425,7 +475,7 @@ declare namespace input {
      * @param condition the condition that event triggers on
      */
     //% help=input/on-light-condition-changed
-    //% blockId=input_on_light_condition_changed block="on %condition"
+    //% blockId=input_on_light_condition_changed block="on light %condition"
     //% parts="lightsensor" shim=input::onLightConditionChanged
     function onLightConditionChanged(condition: LightCondition, handler: () => void): void;
 
@@ -443,39 +493,31 @@ declare namespace input {
      * @param condition the condition, hot or cold, the event triggers on
      * @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
      */
-    //% blockId=input_on_temperature_condition_changed block="on %condition|at (°C)%temperature"
+    //% blockId=input_on_temperature_condition_changed block="on temperature %condition|at (°C)%temperature"
     //% parts="thermometer"
     //% help=input/on-temperature-condition-changed shim=input::onTemperateConditionChanged
     function onTemperateConditionChanged(condition: TemperatureCondition, temperature: number, handler: () => void): void;
-
-    /**
-     * Gets the number of milliseconds elapsed since power on.
-     */
-    //% help=input/running-time weight=50
-    //% blockId=device_get_running_time block="running time (ms)"
-    //% advanced=true shim=input::runningTime
-    function runningTime(): number;
 }
-declare namespace buttons {
+declare namespace input {
 
     /**
      * Left push button.
      */
-    //% indexedInstanceNS=buttons indexedInstanceShim=pxt::getButton
-    //% fixedInstance shim=pxt::getButton(0)
-    const left: Button;
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
+    //% block="left button" fixedInstance shim=pxt::getButton(0)
+    const leftButton: Button;
 
     /**
      * Right push button.
      */
-    //% fixedInstance shim=pxt::getButton(1)
-    const right: Button;
+    //% block="right button" fixedInstance shim=pxt::getButton(1)
+    const rightButton: Button;
 
     /**
      * Slide switch.
      */
-    //% fixedInstance shim=pxt::getButton(2)
-    const slide: Button;
+    //% block="slide switch" fixedInstance shim=pxt::getButton(2)
+    const slideSwitch: Button;
 }
 
 
@@ -483,27 +525,40 @@ declare namespace buttons {
     //% noRefCounting fixedInstances
 declare interface Button {
     /**
-     * Do something when a button (``A``, ``B`` or both ``A+B``) is pressed
-     * @param button the button that needs to be pressed
+     * Do something when a button (``A``, ``B`` or both ``A+B``) is clicked, double clicked, etc...
+     * @param button the button that needs to be clicked or used
+     * @param event the kind of button gesture that needs to be detected
      * @param body code to run when event is raised
      */
-    //% help=input/on-button-pressed weight=85 blockGap=8
-    //% blockId=device_button_event block="on button|%NAME|pressed"
+    //% help=input/on-button-event weight=85 blockGap=8
+    //% blockId=buttonEvent block="on %button|%event"
     //% parts="buttonpair"
-    //% blockNamespace=input shim=ButtonMethods::onPressed
-    onPressed(body: () => void): void;
+    //% blockNamespace=input shim=ButtonMethods::onEvent
+    onEvent(ev: ButtonEvent, body: () => void): void;
 
     /**
-     * Get the button state (pressed or not) for ``A`` and ``B``.
-     * @param button the button to query the request, eg: Button.A
+     * Get the button state (pressed or not).
+     * @param button the button to query the request
      */
     //% help=input/button-is-pressed weight=60
-    //% block="button|%NAME|is pressed"
-    //% blockId=device_get_button2
-    //% icon="\uf192" blockGap=8
+    //% block="%NAME|is pressed"
+    //% blockId=buttonIsPressed
+    //% blockGap=8
     //% parts="buttonpair"
     //% blockNamespace=input shim=ButtonMethods::isPressed
     isPressed(): boolean;
+
+    /**
+     * Indicates if the button was pressed since this function was last called.
+     * @param button the button to query the request
+     */
+    //% help=input/button-was-pressed weight=60
+    //% block="%NAME|was pressed"
+    //% blockId=buttonWasPressed
+    //% blockGap=8
+    //% parts="buttonpair"
+    //% blockNamespace=input shim=ButtonMethods::wasPressed
+    wasPressed(): boolean;
 }
 declare namespace input {
 

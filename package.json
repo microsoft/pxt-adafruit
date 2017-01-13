@@ -1,6 +1,6 @@
 {
   "name": "pxt-microbit",
-  "version": "0.7.29",
+  "version": "0.7.30",
   "description": "micro:bit target for PXT",
   "keywords": [
     "JavaScript",

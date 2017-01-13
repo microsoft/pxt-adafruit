@@ -207,8 +207,8 @@
         "invertedToolbox": true,
         "invertedMonaco": true,
         "monacoToolbox": true,
-        "simAnimationEnter": "rotate in",
-        "simAnimationExit": "rotate out",
+        "simAnimationEnter": "roll in",
+        "simAnimationExit": "roll out",
         "blocklyOptions": {
             "grid": {
                 "spacing": 45,

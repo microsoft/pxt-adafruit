@@ -8,7 +8,7 @@ def branch = GithubBranchName
     def newJobName = InternalUtilities.getFullJobName(project, "Default", isPR)
     def newJob = job(newJobName) {
         steps {
-            shell("./jenkins.sh")
+            shell("./jenkins.sh ${isPR}")
         }
 
         // if (!isPR) {
@@ -23,6 +23,7 @@ def branch = GithubBranchName
 
     Utilities.setMachineAffinity(newJob, 'Ubuntu', '20161020')
     InternalUtilities.standardJobSetup(newJob, project, isPR, "*/*")
+
     if (isPR) {
         Utilities.addGithubPRTrigger(newJob, "Default Testing")
     } else {

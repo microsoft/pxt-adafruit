@@ -72,6 +72,8 @@ declare namespace control {
 }
 declare namespace serial {
 }
+declare namespace neopixel {
+}
 
 
     declare enum LightCondition {

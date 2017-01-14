@@ -1,6 +1,6 @@
 {
   "name": "pxt-adafruit",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Adafruit Circuit Playground for PXT",
   "private": true,
   "keywords": [

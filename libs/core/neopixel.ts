@@ -38,20 +38,25 @@ enum NeoPixelMode {
  * Animations to be shown
  */
 enum NeoPixelAnimationType {
+    //% block="rainbow cycle"
     RainbowCycle,
+    //% block="running lights"
     RunningLights,
+    //% block="comet"
     Comet
 }
 
 enum MoveKind {
+    //% block="rotate"
     Rotate,
+    //% block="shift"
     Shift
 }
 
 /**
  * Functions to operate NeoPixel strips.
  */
-//% weight=5 color=#2699BF icon="\uf00a"
+//% weight=98 color=#2699BF icon="\uf00a"
 namespace neopixel {
     /**
      * A NeoPixel strip

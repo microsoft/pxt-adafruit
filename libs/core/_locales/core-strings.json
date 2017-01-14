@@ -100,6 +100,7 @@
   "input.slideSwitch|block": "slide switch",
   "input.temperature|block": "temperature (°C)",
   "input|block": "input",
+  "math.constrain|block": "constrain %value|between %low|and %high",
   "math.map|block": "map %value|from low %fromLow|from high %fromHigh|to low %toLow|to high %toHigh",
   "math|block": "math",
   "neopixel.colors|block": "%color",

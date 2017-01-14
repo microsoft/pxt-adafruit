@@ -6,7 +6,7 @@ namespace pxsim {
         // state & update logic for component services
         redLEDState: RedLEDState;
         neopixelState: CPNeoPixelState;
-        buttonPairState: ButtonPairState;
+        buttonPairState: CPButtonPairState;
         slideSwitchState: SlideSwitchState;
         lightSensorState: AnalogSensorState;
         thermometerState: AnalogSensorState;
@@ -23,7 +23,7 @@ namespace pxsim {
             this.builtinParts["redLED"] = this.redLEDState = new RedLEDState();
             this.builtinParts["neopixel"] = this.neopixelState = new CPNeoPixelState();
 
-            this.builtinParts["buttonpair"] = this.buttonPairState = new ButtonPairState({
+            this.builtinParts["buttonpair"] = this.buttonPairState = new CPButtonPairState({
                 ID_BUTTON_A: 0,
                 ID_BUTTON_B: 1,
                 ID_BUTTON_AB: 2,

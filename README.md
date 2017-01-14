@@ -22,3 +22,8 @@ This project has adopted the [Microsoft Open Source Code of Conduct](https://ope
 - remove cmds/ and built/ directories at top-level
 - cd libs/core
 - pxt deploy
+
+## Misc
+
+* Art and logos  https://www.dropbox.com/sh/qvasw5uozbja9l1/AACear3H1X9QmX4ZU_2zCB-Xa?dl=0 
+* Fonts https://www.dropbox.com/sh/xo03b1yhzj56q3g/AAAkKR3waKWTJbANfl5bftDKa?dl=0

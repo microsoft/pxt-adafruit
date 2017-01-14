@@ -15,8 +15,8 @@ namespace pxsim.basic {
 }
 
 namespace pxsim.DigitalPinMethods {
-    export function digitalRead(): number {
-        return 0;
+    export function digitalRead(name: pins.DigitalPin): number {
+        return name.digitalReadPin();
     }
 
     /**
@@ -24,6 +24,7 @@ namespace pxsim.DigitalPinMethods {
     * @param value value to set on the pin, 1 eg,0
     */
     export function digitalWrite(name: pins.DigitalPin, value: number): void {
+        name.digitalWritePin(value);
     }
 
     /**
@@ -31,6 +32,7 @@ namespace pxsim.DigitalPinMethods {
     * that this pin was either ``high`` or ``low``.
     */
     export function onPulsed(name: pins.DigitalPin, pulse: number, body: RefAction): void {
+        // TODO
     }
 
     /**
@@ -39,7 +41,8 @@ namespace pxsim.DigitalPinMethods {
     * @param maximum duration in micro-seconds
     */
     export function pulseIn(name: pins.DigitalPin, pulse: number, maxDuration = 2000000): number {
-        return 0;
+        // TODO
+        return 500;
     }
 
     /**
@@ -47,6 +50,7 @@ namespace pxsim.DigitalPinMethods {
     * @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone
     */
     export function setPull(name: pins.DigitalPin, pull: number): void {
+        name.setPull(pull);
     }
 
     /**
@@ -65,10 +69,10 @@ namespace pxsim.DigitalPinMethods {
 
     /**
      * Get the pin state (pressed or not). Requires to hold the ground to close the circuit.
-     * @param name pin used to detect the touch, eg: TouchPin.P0
+     * @param name pin used to detect the touch
      */
     export function isPressed(name: pins.DigitalPin): boolean {
-        return false;
+        return name.isTouched();
     }
 }
 
@@ -77,7 +81,7 @@ namespace pxsim.AnalogPinMethods {
      * Read the connector value as analog, that is, as a value comprised between 0 and 1023.
      */
     export function analogRead(name: pins.AnalogPin): number {
-        return 0;
+        return name.analogReadPin();
     }
 
     /**
@@ -85,6 +89,7 @@ namespace pxsim.AnalogPinMethods {
      * @param value value to write to the pin between ``0`` and ``1023``. eg:1023,0
      */
     export function analogWrite(name: pins.AnalogPin, value: number): void {
+        name.analogWritePin(value);
     }
 
     /**
@@ -95,6 +100,7 @@ namespace pxsim.AnalogPinMethods {
      * @param micros period in micro seconds. eg:20000
      */
     export function analogSetPeriod(name: pins.AnalogPin, micros: number): void {
+        name.analogSetPeriod(micros);
     }
 
     /**
@@ -105,6 +111,7 @@ namespace pxsim.AnalogPinMethods {
      * @param value angle or rotation speed, eg:180,90,0
      */
     export function servoWrite(name: pins.AnalogPin, value: number): void {
+        name.servoWritePin(value);
     }
 
     /**
@@ -113,6 +120,8 @@ namespace pxsim.AnalogPinMethods {
      * @param micros pulse duration in micro seconds, eg:1500
      */
     export function servoSetPulse(name: pins.AnalogPin, micros: number): void {
+        // TODO fix pxt
+        // name.servoSetPulse(micros);
     }
 }
 

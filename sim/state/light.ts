@@ -63,7 +63,6 @@ namespace pxsim.neopixel {
 }
 
 namespace pxsim.light {
-    export const CPLAY_STATUSLED_PIN = 25; // TODO: remove magic number
 
     function getRandomInt(min: number, max: number): number {
         min = Math.ceil(min);
@@ -72,7 +71,7 @@ namespace pxsim.light {
     }
 
     export function redLED(value: boolean) {
-        board().edgeConnectorState.getPin(CPLAY_STATUSLED_PIN).digitalWritePin(value ? 1 : 0);
+        board().edgeConnectorState.getPin(pxsim.CPlayPinName.LED).digitalWritePin(value ? 1 : 0);
         runtime.queueDisplayUpdate()
     }
 

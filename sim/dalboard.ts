@@ -2,6 +2,38 @@
 /// <reference path="../node_modules/pxt-core/localtypings/pxtarget.d.ts"/>
 
 namespace pxsim {
+    export enum CPlayPinName {
+        A0,
+        A1,
+        A2,
+        A3,
+        A4,
+        A5,
+        A6,
+        A7,
+        A8,
+        A9,
+        A10,
+        A11,
+        D0,
+        D1,
+        D2,
+        D3,
+        D4,
+        D5,
+        D6,
+        D7,
+        D8,
+        D9,
+        D10,
+        D11,
+        D12,
+        D13,
+        LED,
+        LEDRX,
+        LEDTX
+    }
+    
     export class DalBoard extends CoreBoard {
         // state & update logic for component services
         neopixelState: CPNeoPixelState;
@@ -48,19 +80,35 @@ namespace pxsim {
             this.builtinParts["accelerometer"] = this.accelerometerState = new AccelerometerState(runtime);
             this.builtinParts["edgeconnector"] = this.edgeConnectorState = new EdgeConnectorState({
                 pins: [
-                    0,
-                    1,
-                    2,
-                    3,
-                    4,
-                    5,
-                    6,
-                    7,
-                    8,
-                    9,
-                    10,
-                    11,
-                    12                    
+                    pxsim.CPlayPinName.A0,
+                    pxsim.CPlayPinName.A1,
+                    pxsim.CPlayPinName.A2,
+                    pxsim.CPlayPinName.A3,
+                    pxsim.CPlayPinName.A4,
+                    pxsim.CPlayPinName.A5,
+                    pxsim.CPlayPinName.A6,
+                    pxsim.CPlayPinName.A7,
+                    pxsim.CPlayPinName.A8,
+                    pxsim.CPlayPinName.A9,
+                    pxsim.CPlayPinName.A10,
+                    pxsim.CPlayPinName.A11,
+                    pxsim.CPlayPinName.D0,
+                    pxsim.CPlayPinName.D1,
+                    pxsim.CPlayPinName.D2,
+                    pxsim.CPlayPinName.D3,
+                    pxsim.CPlayPinName.D4,
+                    pxsim.CPlayPinName.D5,
+                    pxsim.CPlayPinName.D6,
+                    pxsim.CPlayPinName.D7,
+                    pxsim.CPlayPinName.D8,
+                    pxsim.CPlayPinName.D9,
+                    pxsim.CPlayPinName.D10,
+                    pxsim.CPlayPinName.D11,
+                    pxsim.CPlayPinName.D12,
+                    pxsim.CPlayPinName.D13,
+                    pxsim.CPlayPinName.LED,
+                    pxsim.CPlayPinName.LEDRX,
+                    pxsim.CPlayPinName.LEDTX
                 ]
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;
@@ -94,7 +142,7 @@ namespace pxsim {
             const cmpDefs = msg.partDefinitions || {};
             const fnArgs = msg.fnArgs;
 
-            const opts : visuals.BoardHostOpts = {
+            const opts: visuals.BoardHostOpts = {
                 state: this,
                 boardDef: boardDef,
                 partsList: cmpsList,

@@ -1,16 +1,25 @@
 #include "pxt.h"
 #include "neopixel.h"
 
+//% color=300 weight=100
 namespace neopixel {
 
-//%
-DigitalPin defaultPin() {
-    return lookupPin(PIN_NEOPIXEL);
-}
+    /**
+     * Gets the default pin for built in neopixels
+     */
+    //% parts="neopixel"
+    DigitalPin defaultPin() {
+        return lookupPin(PIN_NEOPIXEL);
+    }
 
-//% parts="neopixel"
-void sendBuffer(DigitalPin pin, Buffer buf) {
-    neopixel_send_buffer(*pin, buf->payload, buf->length);
-}
+    /**
+     * Sends a neopixel buffer to the specified digital pin
+     * @param pin The pin that the neopixels are connected to
+     * @param buf The buffer to send to the pin
+     */
+    //% parts="neopixel"
+    void sendBuffer(DigitalPin pin, Buffer buf) {
+        neopixel_send_buffer(*pin, buf->payload, buf->length);
+    }
 
 }

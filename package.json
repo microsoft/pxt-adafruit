@@ -1,6 +1,6 @@
 {
   "name": "pxt-adafruit",
-  "version": "0.1.11",
+  "version": "0.1.15",
   "description": "Adafruit Circuit Playground for PXT",
   "private": true,
   "keywords": [
@@ -34,7 +34,7 @@
     "semantic-ui-less": "^2.2.4"
   },
   "dependencies": {
-    "pxt-core": "0.10.1"
+    "pxt-core": "0.10.5"
   },
   "scripts": {
     "test": "node node_modules/pxt-core/built/pxt.js travis"

@@ -439,6 +439,26 @@ declare namespace serial {
 
 
 
+    //% color=300 weight=100
+declare namespace neopixel {
+
+    /**
+     * Gets the default pin for built in neopixels
+     */
+    //% parts="neopixel" shim=neopixel::defaultPin
+    function defaultPin(): DigitalPin;
+
+    /**
+     * Sends a neopixel buffer to the specified digital pin
+     * @param pin The pin that the neopixels are connected to
+     * @param buf The buffer to send to the pin
+     */
+    //% parts="neopixel" shim=neopixel::sendBuffer
+    function sendBuffer(pin: DigitalPin, buf: Buffer): void;
+}
+
+
+
     //% color="#FB48C7" weight=99 icon="\uf192"
 declare namespace input {
 

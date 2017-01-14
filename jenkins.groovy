@@ -11,14 +11,14 @@ def branch = GithubBranchName
             shell("./jenkins.sh ${isPR}")
         }
 
-        // if (!isPR) {
-        //     wrappers {
-        //         credentialsBinding {
-        //             string('PXT_ACCESS_TOKEN', 'pxt_access_token')
-        //             string('PXT_RELEASE_REPO', 'pxt_release_repo_adafruit')
-        //         }
-        //     }
-        // }
+        if (!isPR) {
+            wrappers {
+                credentialsBinding {
+                    string('PXT_ACCESS_TOKEN', 'pxt_access_token')
+                    string('PXT_RELEASE_REPO', 'pxt_release_repo_adafruit')
+                }
+            }
+        }
     }
 
     Utilities.setMachineAffinity(newJob, 'Ubuntu', '20161020')

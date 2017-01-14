@@ -8,9 +8,9 @@ namespace pxsim {
         neopixelState: CPNeoPixelState;
         buttonPairState: CPButtonPairState;
         slideSwitchState: SlideSwitchState;
-        lightSensorState: LightSensorState;
+        lightSensorState: AnalogSensorState;
+        thermometerState: AnalogSensorState;
         soundSensorState: SoundSensorState;
-        thermometerState: ThermometerState;
         edgeConnectorState: EdgeConnectorState;
         capacitiveSensorState: CapacitiveSensorState;
         accelerometerState: AccelerometerState;
@@ -33,9 +33,9 @@ namespace pxsim {
 
             this.builtinParts["switch"] = this.slideSwitchState = new SlideSwitchState();
             this.builtinParts["audio"] = this.audioState = new AudioState();
-            this.builtinParts["lightsensor"] = this.lightSensorState = new LightSensorState();
+            this.builtinParts["lightsensor"] = this.lightSensorState = new AnalogSensorState(DAL.DEVICE_ID_LIGHT_SENSOR);
+            this.builtinParts["thermometer"] = this.thermometerState = new AnalogSensorState(DAL.DEVICE_ID_THERMOMETER, -5, 50);
             this.builtinParts["soundsensor"] = this.soundSensorState = new SoundSensorState();
-            this.builtinParts["thermometer"] = this.thermometerState = new ThermometerState();
             this.builtinParts["capacitivesensor"] = this.capacitiveSensorState = new CapacitiveSensorState({
                 0: 0,
                 1: 1,

@@ -100,14 +100,4 @@ namespace pxsim.sensors {
         pin.mode = PinFlags.Analog | PinFlags.Input;
         return pin.value || 0;
     }
-
-    export function temperature(unit: ThermometerUnit = ThermometerUnit.Celsius): number {
-        let b = board();
-        if (!b.thermometerState.usesTemperature) {
-            b.thermometerState.usesTemperature = true;
-            b.thermometerState.unit = unit;
-            runtime.queueDisplayUpdate();
-        }
-        return b.thermometerState.temperature;
-    }
 }

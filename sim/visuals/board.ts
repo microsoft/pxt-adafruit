@@ -390,7 +390,7 @@ namespace pxsim.visuals {
         private updateRedLED() {
             let state = this.board;
             if (!state) return;
-            let ledOn = state.redLEDState.on || false;
+            let ledOn = state.edgeConnectorState.getPin(pxsim.light.CPLAY_STATUSLED_PIN).value > 0;
             if (!this.redLED)
                 this.redLED = this.element.querySelector("#SERIAL_LED") as SVGRectElement;
             let fillColor = ledOn ? "#FF0000" : "#000000";

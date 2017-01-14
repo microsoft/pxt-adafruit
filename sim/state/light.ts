@@ -35,10 +35,6 @@ namespace pxsim {
             this.neopixels = [];
         }
     }
-
-    export class RedLEDState {
-        on: boolean = false;
-    }
 }
 
 namespace pxsim.neopixel {
@@ -67,6 +63,7 @@ namespace pxsim.neopixel {
 }
 
 namespace pxsim.light {
+    export const CPLAY_STATUSLED_PIN = 25; // TODO: remove magic number
 
     function getRandomInt(min: number, max: number): number {
         min = Math.ceil(min);
@@ -75,7 +72,7 @@ namespace pxsim.light {
     }
 
     export function redLED(value: boolean) {
-        board().redLEDState.on = value;
+        board().edgeConnectorState.getPin(CPLAY_STATUSLED_PIN).digitalWritePin(value ? 1 : 0);
         runtime.queueDisplayUpdate()
     }
 

@@ -4,7 +4,6 @@
 namespace pxsim {
     export class DalBoard extends CoreBoard {
         // state & update logic for component services
-        redLEDState: RedLEDState;
         neopixelState: CPNeoPixelState;
         buttonPairState: CPButtonPairState;
         slideSwitchState: SlideSwitchState;
@@ -20,7 +19,6 @@ namespace pxsim {
             super()
 
             //components
-            this.builtinParts["redLED"] = this.redLEDState = new RedLEDState();
             this.builtinParts["neopixel"] = this.neopixelState = new CPNeoPixelState();
 
             this.builtinParts["buttonpair"] = this.buttonPairState = new CPButtonPairState({
@@ -62,7 +60,7 @@ namespace pxsim {
                     9,
                     10,
                     11,
-                    12
+                    12                    
                 ]
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;

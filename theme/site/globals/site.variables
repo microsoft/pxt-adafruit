@@ -61,6 +61,13 @@
 @blocklySvgColor: #1e1e1e;
 
 /*-------------------
+   Full screen
+--------------------*/
+
+@fullscreenBackgroundGradientStart: @mainMenuInvertedBackground;
+@fullscreenBackgroundGradientEnd: #fff;
+
+/*-------------------
    Side Docs
 --------------------*/
 

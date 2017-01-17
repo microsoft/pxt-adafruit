@@ -63,7 +63,6 @@ namespace neopixel {
      */
     //% autoCreate=neopixel.create
     export class Strip {
-        buf: Buffer;
         pin: DigitalPin;
         // TODO: encode as bytes instead of 32bit
         brightness: number;
@@ -71,6 +70,19 @@ namespace neopixel {
         _length: number; // number of LEDs
         _mode: NeoPixelMode;
         _animation: NeoPixelAnimation;
+        _buf: Buffer;
+
+        get buf(): Buffer {
+            // Lazily allocate to conserve memory
+            if (!this._buf) {
+                this.reallocateBuffer();
+            }
+            return this._buf;
+        }
+
+        set buf(b: Buffer) {
+            this._buf = b;
+        }
 
         /**
          * Shows all LEDs to a given color (range 0-255 for r, g, b).
@@ -95,12 +107,9 @@ namespace neopixel {
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
         showRainbow(startHue: number = 1, endHue: number = 360) {
-            let start = neopixel.hsl(startHue, 100, 50);
-            let end = neopixel.hsl(endHue, 100, 50);
-            let colors = neopixel.interpolateHSL(start, end, this._length, HueInterpolationDirection.Clockwise);
+            let colors = neopixel.interpolateHSL(startHue, 100, 50, endHue, 100, 50, this._length, HueInterpolationDirection.Clockwise);
             for (let i = 0; i < colors.length; i++) {
-                let hsl = colors[i];
-                let rgb = hsl.toRGB();
+                let rgb = colors[i];
                 this.setPixelColor(i, rgb)
             }
             this.show();
@@ -307,8 +316,10 @@ namespace neopixel {
         //% defaultInstance=neopixel.builtin
         setLength(numleds: number): void {
             this._length = numleds;
-            let stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
-            this.buf = pins.createBuffer(numleds * stride);
+
+            if (this._buf) {
+                this.reallocateBuffer();
+            }
         }
 
         /**
@@ -441,6 +452,11 @@ namespace neopixel {
             let buf = this.buf;
             buf[pixeloffset + 3] = white;
         }
+
+        private reallocateBuffer(): void {
+            let stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            this._buf = pins.createBuffer(this._length * stride);
+        }
     }
 
     /**
@@ -497,9 +513,9 @@ namespace neopixel {
      * for performing math with colors.
     */
     //% weight=1 blockGap=8
-    //% blockId="neopixel_hue" block="hue %angle"
-    export function getHue(angle: number): number {
-        return new HSL(angle, 100, 50).toRGB();
+    //% blockId="neopixel_color_wheel" block="color wheel %angle"
+    export function colorWheel(angle: number): number {
+        return hsl(angle, 100, 50);
     }
 
     function packRGB(a: number, b: number, c: number): number {
@@ -519,83 +535,46 @@ namespace neopixel {
     }
 
     /**
-     * A HSL (hue, saturation, luminosity) format color
-     */
-    export class HSL {
-        h: number;
-        s: number;
-        l: number;
-        constructor(h: number, s: number, l: number) {
-            this.h = h % 360;
-            this.s = Math.clamp(0, 99, s);
-            this.l = Math.clamp(0, 99, l);
-        }
-
-        /**
-         * Shifts the hue of a HSL color
-         * @param hsl the HSL (hue, saturation, lightness) color
-         * @param offset value to shift the hue channel by; hue is between 0 and 360. eg: 10
-         */
-        //% weight=1 blockGap=8
-        //% blockId="neopixel_rotate_hue" block="shift %hsl| hue by %offset"
-        //% advanced=true
-        rotateHue(offset: number): void {
-            this.h = (this.h + offset) % 360;
-        }
-
-        /**
-         * Converts from an HSL (hue, saturation, luminosity) format color to an RGB (red,
-         * green, blue) format color. Input ranges h between [0,360], s between
-         * [0, 100], and l between [0, 100], and output r, g, b ranges between [0,255]
-        */
-        //% weight=2 blockGap=8
-        //% blockId="neopixel_hsl_to_rgb" block="%hsl| to RGB"
-        //% advanced=true
-        toRGB(): number {
-            //reference: https://en.wikipedia.org/wiki/HSL_and_HSV#From_HSL
-            let h = this.h;
-            let s = this.s;
-            let l = this.l;
-            let c = (((100 - Math.abs(2 * l - 100)) * s) << 8) / 10000; //chroma, [0,255]
-            let h1 = h / 60;//[0,6]
-            let h2 = (h - h1 * 60) * 256 / 60;//[0,255]
-            let temp = Math.abs((((h1 % 2) << 8) + h2) - 256);
-            let x = (c * (256 - (temp))) >> 8;//[0,255], second largest component of this color
-            let r$: number;
-            let g$: number;
-            let b$: number;
-            if (h1 == 0) {
-                r$ = c; g$ = x; b$ = 0;
-            } else if (h1 == 1) {
-                r$ = x; g$ = c; b$ = 0;
-            } else if (h1 == 2) {
-                r$ = 0; g$ = c; b$ = x;
-            } else if (h1 == 3) {
-                r$ = 0; g$ = x; b$ = c;
-            } else if (h1 == 4) {
-                r$ = x; g$ = 0; b$ = c;
-            } else if (h1 == 5) {
-                r$ = c; g$ = 0; b$ = x;
-            }
-            let m = ((l * 2 << 8) / 100 - c) / 2;
-            let r = r$ + m;
-            let g = g$ + m;
-            let b = b$ + m;
-            return packRGB(r, g, b);
-        }
-    }
-
-    /**
-     * Creates a HSL (hue, saturation, luminosity) color
+     * Converts an HSL (hue, saturation, luminosity) color to RGB
      * @param hue value of the hue channel between 0 and 360. eg: 360
      * @param sat value of the saturation channel between 0 and 100. eg: 100
      * @param lum value of the luminosity channel between 0 and 100. eg: 50
      */
     //% weight=3 blockGap=8
-    //% blockId="neopixel_hsl" block="create hue %hue|sat %sat|lum %lum"
+    //% blockId="neopixel_hsl" block="hue %hue|sat %sat|lum %lum"
     //% advanced=true
-    export function hsl(hue: number, sat: number, lum: number): HSL {
-        return new HSL(hue, sat, lum);
+    export function hsl(hue: number, sat: number, lum: number): number {
+        let h = hue % 360;
+        let s = Math.clamp(0, 99, sat);
+        let l = Math.clamp(0, 99, lum);
+
+        //reference: https://en.wikipedia.org/wiki/HSL_and_HSV#From_HSL
+        let c = (((100 - Math.abs(2 * l - 100)) * s) << 8) / 10000; //chroma, [0,255]
+        let h1 = h / 60;//[0,6]
+        let h2 = (h - h1 * 60) * 256 / 60;//[0,255]
+        let temp = Math.abs((((h1 % 2) << 8) + h2) - 256);
+        let x = (c * (256 - (temp))) >> 8;//[0,255], second largest component of this color
+        let r$: number;
+        let g$: number;
+        let b$: number;
+        if (h1 == 0) {
+            r$ = c; g$ = x; b$ = 0;
+        } else if (h1 == 1) {
+            r$ = x; g$ = c; b$ = 0;
+        } else if (h1 == 2) {
+            r$ = 0; g$ = c; b$ = x;
+        } else if (h1 == 3) {
+            r$ = 0; g$ = x; b$ = c;
+        } else if (h1 == 4) {
+            r$ = x; g$ = 0; b$ = c;
+        } else if (h1 == 5) {
+            r$ = c; g$ = 0; b$ = x;
+        }
+        let m = ((l * 2 << 8) / 100 - c) / 2;
+        let r = r$ + m;
+        let g = g$ + m;
+        let b = b$ + m;
+        return packRGB(r, g, b);
     }
 
     export enum HueInterpolationDirection {
@@ -606,21 +585,23 @@ namespace neopixel {
 
     /**
      * Interpolates between two HSL colors
-     * @param startColor the start HSL color
-     * @param endColor the end HSL color
+     * @param h1 the start hue
+     * @param s1 the start saturation
+     * @param l1 the start luminosity
+     * @param h2 the end hue
+     * @param s2 the end saturation
+     * @param l2 the end luminosity
      * @param steps the number of steps to interpolate for. Note that if steps
      *  is 1, the color midway between the start and end color will be returned.
      * @param direction the direction around the color wheel the hue should be interpolated.
      */
     //% parts="neopixel"
     //% advanced=true
-    export function interpolateHSL(startColor: HSL, endColor: HSL, steps: number, direction: HueInterpolationDirection): HSL[] {
+    export function interpolateHSL(h1: number, s1: number, l1: number, h2: number, s2: number, l2: number, steps: number, direction: HueInterpolationDirection): number[] {
         if (steps <= 0)
             steps = 1;
 
         //hue
-        let h1 = startColor.h;
-        let h2 = endColor.h;
         let hDistCW = ((h2 + 360) - h1) % 360;
         let hStepCW = (hDistCW * 100) / steps;
         let hDistCCW = ((h1 + 360) - h2) % 360;
@@ -636,32 +617,28 @@ namespace neopixel {
         let h1_100 = h1 * 100; //we multiply by 100 so we keep more accurate results while doing interpolation
 
         //sat
-        let s1 = startColor.s;
-        let s2 = endColor.s;
         let sDist = s2 - s1;
         let sStep = sDist / steps;
         let s1_100 = s1 * 100;
 
         //lum
-        let l1 = startColor.l;
-        let l2 = endColor.l;
         let lDist = l2 - l1;
         let lStep = lDist / steps;
         let l1_100 = l1 * 100
 
         //interpolate
-        let colors: HSL[] = [];
+        let colors: number[] = [];
         if (steps === 1) {
             colors.push(hsl(h1 + hStep, s1 + sStep, l1 + lStep));
         } else {
-            colors.push(startColor);
+            colors.push(hsl(h1, s1, l1));
             for (let i = 1; i < steps - 1; i++) {
                 let h = (h1_100 + i * hStep) / 100 + 360;
                 let s = (s1_100 + i * sStep) / 100;
                 let l = (l1_100 + i * lStep) / 100;
                 colors.push(hsl(h, s, l));
             }
-            colors.push(endColor);
+            colors.push(hsl(h2, s2, l2));
         }
         return colors;
     }
@@ -683,7 +660,7 @@ namespace neopixel {
     }
 
     export class RainbowCycleAnimation extends NeoPixelAnimation {
-        public pixels: HSL[];
+        public pixels: number[];
 
         constructor(strip: Strip) {
             super(strip);
@@ -698,15 +675,15 @@ namespace neopixel {
             const l = this.strip.length();
             const spacing = 360 / l;
             for (let i = 0; i < l; i++) {
-                this.pixels[i] = new HSL(spacing * i, 100, 50);
+                this.pixels[i] = spacing * i;
             }
         }
 
         public draw() {
             const l = this.strip.length();
             for (let i = 0; i < l; i++) {
-                this.pixels[i].rotateHue(1);
-                this.strip.setPixelColor(i, this.pixels[i].toRGB());
+                this.pixels[i]++;
+                this.strip.setPixelColor(i, colorWheel(this.pixels[i]));
             }
         }
     }

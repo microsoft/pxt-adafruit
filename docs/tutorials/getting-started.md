@@ -31,6 +31,7 @@ and press **A** to scroll your text.
 ### Step 5
 
 Place more blocks to display a smiley when button **B** is pressed.
+Use the dropdown to find ``B``!
 
 ```block
 input.onButtonPressed(Button.B, () => {
@@ -57,5 +58,17 @@ input.onGesture(Gesture.Shake, () => {
     . # # # .
     # . . . #
     `)
+})
+```
+
+### Step 7
+
+Drag more blocks to display a random number when pin ``P0`` is touched.
+Hold your right thumb on the ``GND`` metal pin 
+at press the ``0`` pin with your right hand to trigger this event.
+
+```block
+input.onPinPressed(TouchPin.P0, () => {
+    basic.showNumber(Math.random(7))
 })
 ```

@@ -58,20 +58,20 @@ namespace pxsim {
         bBtn: CPButton;
         abBtn: CPButton;
 
-        constructor(public props: ButtonPairProps) {
-            this.aBtn = new CPButton(this.props.ID_BUTTON_A);
-            this.bBtn = new CPButton(this.props.ID_BUTTON_B);
-            this.abBtn = new CPButton(this.props.ID_BUTTON_AB);
+        constructor() {
+            this.aBtn = new CPButton(DAL.DEVICE_ID_BUTTON_A);
+            this.bBtn = new CPButton(DAL.DEVICE_ID_BUTTON_B);
+            this.abBtn = new CPButton(DAL.DEVICE_ID_BUTTON_AB);
             this.abBtn.virtual = true;
         }
     }
 }
 namespace pxsim.pxtcore {
-    export function getButton(buttonId: AdaFruit_Button): Button {
+    export function getButton(buttonId: number): Button {
         switch (buttonId) {
-            case AdaFruit_Button.Left:
+            case 0:
                 return board().buttonPairState.aBtn;
-            case AdaFruit_Button.Right:
+            case 1:
                 return board().buttonPairState.bBtn;
         }
         return undefined;

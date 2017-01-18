@@ -226,6 +226,17 @@ declare interface AnalogPin {
     analogSetPeriod(micros: number): void;
 
     /**
+     * Emits a Pulse-width modulation (PWM) signal for a given duration.
+     * @param name the pin that modulate
+     * @param frequency frequency to modulate in Hz.
+     * @param ms duration of the pitch in milli seconds.
+     */
+    //% blockId=device_analog_pitch block="analog pitch|pin %pin|at (Hz)%frequency|for (ms) %ms"
+    //% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
+    //% blockNamespace=pins shim=AnalogPinMethods::analogPitch
+    analogPitch(frequency: number, ms: number): void;
+
+    /**
      * Writes a value to the servo, controlling the shaft accordingly. On a standard servo, this will
      * set the angle of the shaft (in degrees), moving the shaft to that orientation. On a continuous
      * rotation servo, this will set the speed of the servo (with ``0`` being full-speed in one

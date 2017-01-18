@@ -205,6 +205,30 @@ void analogSetPeriod(AnalogPin name, int micros) {
 }
 
 /**
+* Emits a Pulse-width modulation (PWM) signal for a given duration.
+* @param name the pin that modulate
+* @param frequency frequency to modulate in Hz.
+* @param ms duration of the pitch in milli seconds.
+*/
+//% blockId=device_analog_pitch block="analog pitch|pin %pin|at (Hz)%frequency|for (ms) %ms"
+//% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
+//% blockNamespace=pins
+void analogPitch(AnalogPin pin, int frequency, int ms) { 
+    if (frequency <= 0) {
+        pin->setAnalogValue(0);
+    } else {
+        pin->setAnalogValue(512);
+        pin->setAnalogPeriodUs(1000000/frequency);
+    }
+      
+    if (ms > 0) {
+        fiber_sleep(ms);
+        pin->setAnalogValue(0);
+        wait_ms(5);
+    }
+}
+
+/**
  * Writes a value to the servo, controlling the shaft accordingly. On a standard servo, this will
  * set the angle of the shaft (in degrees), moving the shaft to that orientation. On a continuous
  * rotation servo, this will set the speed of the servo (with ``0`` being full-speed in one

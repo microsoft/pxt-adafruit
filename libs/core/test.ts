@@ -8,7 +8,7 @@ input.rightButton.onEvent(ButtonEvent.Click, () => {
 
 
 let strip = neopixel.create()
-strip.setBrigthness(20)
+strip.setBrightness(20)
 strip.show()
 
 function flash(n: number) {

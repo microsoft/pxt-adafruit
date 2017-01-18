@@ -312,8 +312,6 @@ class DevPins {
 
     I2C i2c;
 
-    DevicePin touchDrive;
-
     DevPins();
 };
 
@@ -322,7 +320,7 @@ extern DevPins *io;
 // modify if the last field changes
 const int LastPinID = &io->LEDTX - io->pins;
 
-#define INIT_PIN(name, PIN) name((DEVICE_ID_IO_P0 + 100) + (int)PIN, (PinName)PIN, PIN_CAPABILITY_AD)
+#define INIT_PIN(name, PIN) name((DEVICE_ID_IO_P0 + 100) + (int)PIN, (PinName)PIN, PIN_CAPABILITY_DIGITAL)
 
 typedef DevicePin *DigitalPin;
 typedef DevicePin *AnalogPin;
@@ -355,6 +353,5 @@ TouchSensor *getTouchSensor();
 }
 
 #define DEVICE_ID_BUTTON_SLIDE 3000
-#define CAPPUSH 3001
 
 #endif

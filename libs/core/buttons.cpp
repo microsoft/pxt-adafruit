@@ -5,52 +5,15 @@
 namespace pxt {
 
 // Wrapper classes
-class WTouch {
-    public:
-    TouchSensor touchSensor;
-    
-    WTouch()
-        :touchSensor(io->touchDrive) {}    
-};
-SINGLETON(WTouch);
 
-class WButtons {
+class WTouch {
   public:
-#define Button DeviceButton
-    Button buttons[0];
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
-    /**
-     * Left push button.
-     */
-    //% block="left button"
-    Button leftButton;
-    /**
-     * Right push button.
-     */
-    //% block="right button"
-    Button rightButton;
-#undef Button
+    DevicePin touchDrive;
+    TouchSensor touchSensor;
+
 #define Button TouchButton
-    /**
-    * Capacitive pin A0
-    */
-    //% block="pin A0"
-    Button pinA0;
-    /**
-    * Capacitive pin A1
-    */
-    //% block="pin A1"
-    Button pinA1;
-    /**
-    * Capacitive pin A2
-    */
-    //% block="pin A2"
-    Button pinA2;
-    /**
-    * Capacitive pin A3
-    */
-    //% block="pin A3"
-    Button pinA3;
+    Button buttons[0];
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getTouchButton
     /**
     * Capacitive pin A4
     */
@@ -86,8 +49,38 @@ class WButtons {
     */
     //% block="pin A10"
     Button pinA10;
+    /**
+    * Capacitive pin A11
+    */
+    //% block="pin A11"
+    Button pinA11;
 #undef Button
+
+    WTouch()
+        : INIT_PIN(touchDrive, PIN_CAPSENSE), touchSensor(touchDrive),
+          pinA4(*pxt::lookupPin(PIN_A4), touchSensor), pinA5(*pxt::lookupPin(PIN_A5), touchSensor),
+          pinA6(*pxt::lookupPin(PIN_A6), touchSensor), pinA7(*pxt::lookupPin(PIN_A7), touchSensor),
+          pinA8(*pxt::lookupPin(PIN_A8), touchSensor), pinA9(*pxt::lookupPin(PIN_A9), touchSensor),
+          pinA10(*pxt::lookupPin(PIN_A10), touchSensor),
+          pinA11(*pxt::lookupPin(PIN_A11), touchSensor) {}
+};
+SINGLETON(WTouch);
+
+class WButtons {
+  public:
 #define Button DeviceButton
+    Button buttons[0];
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
+    /**
+     * Left push button.
+     */
+    //% block="left button"
+    Button leftButton;
+    /**
+     * Right push button.
+     */
+    //% block="right button"
+    Button rightButton;
     /**
      * Slide switch.
      */
@@ -96,28 +89,17 @@ class WButtons {
 #undef Button
 
     WButtons()
-        : leftButton(*pxt::lookupPin(PIN_BTN_LEFT), DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
-               PullDown),
-          rightButton(*pxt::lookupPin(PIN_BTN_RIGHT), DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
-                PullDown),
-          pinA0(*pxt::lookupPin(PIN_A0), getWTouch()->touchSensor),
-          pinA1(*pxt::lookupPin(PIN_A1), getWTouch()->touchSensor),
-          pinA2(*pxt::lookupPin(PIN_A2), getWTouch()->touchSensor),
-          pinA3(*pxt::lookupPin(PIN_A3), getWTouch()->touchSensor),
-          pinA4(*pxt::lookupPin(PIN_A4), getWTouch()->touchSensor),
-          pinA5(*pxt::lookupPin(PIN_A5), getWTouch()->touchSensor),
-          pinA6(*pxt::lookupPin(PIN_A6), getWTouch()->touchSensor),
-          pinA7(*pxt::lookupPin(PIN_A7), getWTouch()->touchSensor),
-          pinA8(*pxt::lookupPin(PIN_A8), getWTouch()->touchSensor),
-          pinA9(*pxt::lookupPin(PIN_A9), getWTouch()->touchSensor),
-          pinA10(*pxt::lookupPin(PIN_A10), getWTouch()->touchSensor),
-          slideSwitch(*pxt::lookupPin(PIN_BTN_SLIDE), DEVICE_ID_BUTTON_SLIDE, DEVICE_BUTTON_ALL_EVENTS,
-                ACTIVE_LOW, PullUp)
-    { }
+        : leftButton(*pxt::lookupPin(PIN_BTN_LEFT), DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS,
+                     ACTIVE_HIGH, PullDown),
+          rightButton(*pxt::lookupPin(PIN_BTN_RIGHT), DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS,
+                      ACTIVE_HIGH, PullDown),
+          slideSwitch(*pxt::lookupPin(PIN_BTN_SLIDE), DEVICE_ID_BUTTON_SLIDE,
+                      DEVICE_BUTTON_ALL_EVENTS, ACTIVE_LOW, PullUp) {}
 };
 SINGLETON(WButtons);
 
-const int LastButtonID = &((WButtons*)0)->slideSwitch - ((WButtons*)0)->buttons;
+const int LastButtonID = &((WButtons *)0)->slideSwitch - ((WButtons *)0)->buttons;
+const int LastTouchButtonID = &((WTouch *)0)->pinA11 - ((WTouch *)0)->buttons;
 
 //%
 DeviceButton *getButton(int id) {
@@ -126,6 +108,12 @@ DeviceButton *getButton(int id) {
     return &getWButtons()->buttons[id];
 }
 
+//%
+TouchButton *getTouchButton(int id) {
+    if (!(0 <= id && id <= LastTouchButtonID))
+        device.panic(42);
+    return &getWTouch()->buttons[id];
+}
 }
 
 //% noRefCounting fixedInstances

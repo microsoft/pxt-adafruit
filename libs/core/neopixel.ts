@@ -225,13 +225,13 @@ namespace neopixel {
 
         /**
          * Set the brightness of the strip. This flag only applies to future operation.
-         * @param brightness a measure of LED brightness in 0-255. eg: 255
+         * @param brightness a measure of LED brightness in 0-255. eg: 20
          */
         //% blockId="neopixel_set_brightness" block="set brightness %brightness" blockGap=8
         //% weight=59
         //% parts="neopixel"
         //% defaultInstance=neopixel.builtin
-        setBrigthness(brightness: number): void {
+        setBrightness(brightness: number): void {
             this.brightness = brightness & 0xff;
         }
 
@@ -355,10 +355,10 @@ namespace neopixel {
                     case NeoPixelAnimationType.Comet:
                         this._animation = new CometAnimation(this, 0, 0, 40);
                         break;
-                    case NeoPixelAnimationType.Sparkle: 
+                    case NeoPixelAnimationType.Sparkle:
                         this._animation = new SparkleAnimation(this, 0xff, 0xff, 0xff, 0);
                         break;
-                    case NeoPixelAnimationType.ColorWipe: 
+                    case NeoPixelAnimationType.ColorWipe:
                         this._animation = new ColorWipeAnimation(this, 0x00,0xff,0x00, 50);
                         break;
                 }
@@ -490,7 +490,7 @@ namespace neopixel {
         let strip = new Strip();
         strip.setMode(mode)
         strip.setLength(numleds)
-        strip.setBrigthness(255)
+        strip.setBrightness(20)
         strip.setPin(pin)
         strip.start = 0;
         return strip;

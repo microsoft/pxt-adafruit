@@ -36,19 +36,19 @@ declare namespace pins {
 
 
     //% fixedInstance shim=pxt::getPin(8)
-    const A8: AnalogPin;
+    const A8: PwmPin;
 
 
     //% fixedInstance shim=pxt::getPin(9)
-    const A9: AnalogPin;
+    const A9: PwmPin;
 
 
     //% fixedInstance shim=pxt::getPin(10)
-    const A10: AnalogPin;
+    const A10: PwmPin;
 
 
     //% fixedInstance shim=pxt::getPin(11)
-    const A11: AnalogPin;
+    const A11: PwmPin;
 
 
     //% fixedInstance shim=pxt::getPin(12)
@@ -191,6 +191,20 @@ declare interface AnalogPin {
     //% blockId=device_set_analog_pin block="analog write|pin %name|to %value" blockGap=8
     //% blockNamespace=pins shim=AnalogPinMethods::analogWrite
     analogWrite(value: number): void;
+}
+
+
+declare interface PwmPin {
+    /**
+     * Emits a Pulse-width modulation (PWM) signal for a given duration.
+     * @param name the pin that modulate
+     * @param frequency frequency to modulate in Hz.
+     * @param ms duration of the pitch in milli seconds.
+     */
+    //% blockId=pin_analog_pitch block="analog pitch|pin %pin|at (Hz)%frequency|for (ms) %ms"
+    //% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
+    //% blockNamespace=pins shim=PwmPinMethods::analogPitch
+    analogPitch(frequency: number, ms: number): void;
 
     /**
      * Configures the Pulse-width modulation (PWM) of the analog output to the given value in
@@ -202,19 +216,8 @@ declare interface AnalogPin {
      */
     //% help=pins/analog-set-period weight=23 blockGap=8
     //% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros"
-    //% blockNamespace=pins shim=AnalogPinMethods::analogSetPeriod
+    //% blockNamespace=pins shim=PwmPinMethods::analogSetPeriod
     analogSetPeriod(micros: number): void;
-
-    /**
-     * Emits a Pulse-width modulation (PWM) signal for a given duration.
-     * @param name the pin that modulate
-     * @param frequency frequency to modulate in Hz.
-     * @param ms duration of the pitch in milli seconds.
-     */
-    //% blockId=pin_analog_pitch block="analog pitch|pin %pin|at (Hz)%frequency|for (ms) %ms"
-    //% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
-    //% blockNamespace=pins shim=AnalogPinMethods::analogPitch
-    analogPitch(frequency: number, ms: number): void;
 
     /**
      * Writes a value to the servo, controlling the shaft accordingly. On a standard servo, this will
@@ -227,7 +230,7 @@ declare interface AnalogPin {
     //% help=pins/servo-write-pin weight=20
     //% blockId=device_set_servo_pin block="servo write|pin %name|to %value" blockGap=8
     //% parts=microservo trackArgs=0
-    //% blockNamespace=pins shim=AnalogPinMethods::servoWrite
+    //% blockNamespace=pins shim=PwmPinMethods::servoWrite
     servoWrite(value: number): void;
 
     /**
@@ -238,7 +241,7 @@ declare interface AnalogPin {
      */
     //% help=pins/servo-set-pulse weight=19
     //% blockId=device_set_servo_pulse block="servo set pulse|pin %value|to (µs) %micros"
-    //% blockNamespace=pins shim=AnalogPinMethods::servoSetPulse
+    //% blockNamespace=pins shim=PwmPinMethods::servoSetPulse
     servoSetPulse(micros: number): void;
 }
 declare namespace pins {

@@ -38,6 +38,11 @@ interface AnalogPin extends DigitalPin {
     // methods filled from C++
 }
 
+//% noRefCounting fixedInstances
+interface PwmPin extends AnalogPin {
+    // methods filled from C++
+}
+
 interface Buffer {
     [index: number]: number;
     // rest defined in buffer.cpp

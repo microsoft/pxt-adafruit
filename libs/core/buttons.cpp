@@ -12,15 +12,24 @@ class WButtons {
     Button buttons[0];
     //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
     /**
-     * Left push button.
+     * Left button.
      */
     //% block="left button"
     Button leftButton;
     /**
-     * Right push button.
+     * Right button.
      */
     //% block="right button"
     Button rightButton;
+#undef Button
+#define Button MultiButton
+    /**
+     * Left and Right button.
+     */
+    //% block="left+right buttons"
+    Button leftAndRightButtons;
+#undef Button
+#define Button DeviceButton
     /**
      * Slide switch.
      */
@@ -33,6 +42,7 @@ class WButtons {
                PullDown),
           rightButton(*pxt::lookupPin(PIN_BTN_RIGHT), DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
                 PullDown),
+          leftAndRightButtons(PIN_BTN_LEFT, PIN_BTN_RIGHT, DEVICE_ID_BUTTON_AB),
           slideSwitch(*pxt::lookupPin(PIN_BTN_SLIDE), DEVICE_ID_BUTTON_SLIDE, DEVICE_BUTTON_ALL_EVENTS,
                 ACTIVE_LOW, PullUp)
     { }

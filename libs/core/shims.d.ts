@@ -501,22 +501,28 @@ declare namespace input {
 declare namespace input {
 
     /**
-     * Left push button.
+     * Left button.
      */
     //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
     //% block="left button" fixedInstance shim=pxt::getButton(0)
     const leftButton: Button;
 
     /**
-     * Right push button.
+     * Right button.
      */
     //% block="right button" fixedInstance shim=pxt::getButton(1)
     const rightButton: Button;
 
     /**
+     * Left and Right button.
+     */
+    //% block="left+right buttons" fixedInstance shim=pxt::getButton(2)
+    const leftAndRightButtons: Button;
+
+    /**
      * Slide switch.
      */
-    //% block="slide switch" fixedInstance shim=pxt::getButton(2)
+    //% block="slide switch" fixedInstance shim=pxt::getButton(3)
     const slideSwitch: Button;
 }
 

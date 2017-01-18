@@ -6,6 +6,11 @@ namespace pxt {
 
 // Wrapper classes
 
+static const int touchPins[] = {
+    PIN_A4, PIN_A5, PIN_A6, PIN_A7, PIN_A8, PIN_A9, PIN_A10, PIN_A11,
+};
+
+
 class WTouch {
   public:
     DevicePin touchDrive;
@@ -56,14 +61,12 @@ class WTouch {
     Button pinA11;
 #undef Button
 
-    WTouch() : INIT_PIN(touchDrive, PIN_CAPSENSE), touchSensor(touchDrive) {}
+    WTouch() : INIT_PIN(touchDrive, PIN_CAPSENSE), touchSensor(touchDrive) {
+        memclr(buttons, sizeof(touchPins));
+    }
 };
 SINGLETON(WTouch);
 const int LastTouchButtonID = &((WTouch *)0)->pinA11 - ((WTouch *)0)->buttons;
-
-static const int touchPins[] = {
-    PIN_A4, PIN_A5, PIN_A6, PIN_A7, PIN_A8, PIN_A9, PIN_A10, PIN_A11,
-};
 
 //%
 TouchButton *getTouchButton(int id) {

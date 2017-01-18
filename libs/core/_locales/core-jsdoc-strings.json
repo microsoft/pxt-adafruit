@@ -73,7 +73,7 @@
   "input.setAccelerometerRange|param|range": "a value describe the maximum strengh of acceleration measured",
   "input.slideSwitch": "Slide switch.",
   "input.temperature": "Gets the temperature in Celsius degrees (°C).",
-  "math.constrain": "Constrains a number to be within a range.\n\n\n\n@returns x: if x is between a and b, a: if x is less than a, b: if x is greater than b",
+  "math.constrain": "Constrains a number to be within a range\r\r\r\r\n@returns x: if x is between a and b, a: if x is less than a, b: if x is greater than b",
   "math.map": "Re-maps a number from one range to another. That is, a value of ``from low`` would get mapped to ``to low``, a value of ``from high`` to ``to high``, values in-between to values in-between, etc.",
   "math.map|param|fromHigh": "the upper bound of the value's current range, eg: 1023",
   "math.map|param|fromLow": "the lower bound of the value's current range",

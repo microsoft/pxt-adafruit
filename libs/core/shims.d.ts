@@ -207,6 +207,40 @@ declare interface PwmPin {
     analogPitch(frequency: number, ms: number): void;
 
     /**
+     * Plays a tone through the pin for the given duration.
+     * @param pin to play tone through
+     * @param frequency pitch of the tone to play in Hertz (Hz)
+     * @param ms tone duration in milliseconds (ms)
+     */
+    //% help=music/play-tone weight=90
+    //% blockId=music_play_note block="play tone|on %pin|at %note=device_note|for %duration=device_beat" blockGap=8
+    //% parts="headphone"
+    //% blockNamespace=music shim=PwmPinMethods::playTone
+    playTone(frequency: number, ms: number): void;
+
+    /**
+     * Plays a tone through pin ``P0``.
+     * @param pin to ring tone
+     * @param frequency pitch of the tone to play in Hertz (Hz)
+     */
+    //% help=music/ring-tone weight=80
+    //% blockId=music_ring block="ring tone|on %pin|at %note=device_note" blockGap=8
+    //% parts="headphone"
+    //% blockNamespace=music shim=PwmPinMethods::ringTone
+    ringTone(frequency: number): void;
+
+    /**
+     * Rests (plays nothing) for a specified time through pin ``P0``.
+     * @param pin to rest
+     * @param ms rest duration in milliseconds (ms)
+     */
+    //% help=music/rest weight=79
+    //% blockId=music_rest block="rest|on %pin|for %duration=device_beat"
+    //% parts="headphone"
+    //% blockNamespace=music shim=PwmPinMethods::rest
+    rest(ms: number): void;
+
+    /**
      * Configures the Pulse-width modulation (PWM) of the analog output to the given value in
      * **microseconds** or `1/1000` milliseconds.
      * If this pin is not configured as an analog output (using `analog write pin`), the operation has

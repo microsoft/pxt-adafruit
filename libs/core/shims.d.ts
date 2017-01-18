@@ -530,14 +530,14 @@ declare namespace input {
     const pinA11: Button;
 
     /**
-     * Left push button.
+     * Left button.
      */
     //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
     //% block="left button" fixedInstance shim=pxt::getButton(0)
     const leftButton: Button;
 
     /**
-     * Right push button.
+     * Right button.
      */
     //% block="right button" fixedInstance shim=pxt::getButton(1)
     const rightButton: Button;
@@ -547,6 +547,12 @@ declare namespace input {
      */
     //% block="slide switch" fixedInstance shim=pxt::getButton(2)
     const slideSwitch: Button;
+
+    /**
+     * Left and Right button.
+     */
+    //% block="left+right buttons" fixedInstance shim=pxt::getButton(3)
+    const leftAndRightButtons: Button;
 }
 
 

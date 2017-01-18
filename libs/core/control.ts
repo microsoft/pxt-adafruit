@@ -1,7 +1,7 @@
 /**
 * Runtime and event utilities.
 */
-//% weight=70 color="#BEAA07"
+//% weight=70 color="#BEAA07" icon="\uf110"
 namespace control {
 
     /**

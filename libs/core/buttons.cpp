@@ -5,6 +5,14 @@
 namespace pxt {
 
 // Wrapper classes
+class WTouch {
+    public:
+    TouchSensor touchSensor;
+    
+    WTouch()
+        :touchSensor(io->touchDrive) {}    
+};
+SINGLETON(WTouch);
 
 class WButtons {
   public:
@@ -21,6 +29,15 @@ class WButtons {
      */
     //% block="right button"
     Button rightButton;
+#undef Button
+#define Button TouchButton
+    /**
+    * Capacitive pin A0
+    */
+    //% block="pin A0"
+    Button pinA0;
+#undef Button
+#define Button DeviceButton
     /**
      * Slide switch.
      */
@@ -33,6 +50,7 @@ class WButtons {
                PullDown),
           rightButton(*pxt::lookupPin(PIN_BTN_RIGHT), DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
                 PullDown),
+          pinA0(*pxt::lookupPin(PIN_A0), getWTouch()->touchSensor),
           slideSwitch(*pxt::lookupPin(PIN_BTN_SLIDE), DEVICE_ID_BUTTON_SLIDE, DEVICE_BUTTON_ALL_EVENTS,
                 ACTIVE_LOW, PullUp)
     { }

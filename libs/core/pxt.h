@@ -23,6 +23,7 @@
 #include "DevicePin.h"
 #include "DeviceFiber.h"
 #include "DeviceMessageBus.h"
+#include "TouchSensor.h"
 
 #include "pins.h"
 #include "hf2.h"

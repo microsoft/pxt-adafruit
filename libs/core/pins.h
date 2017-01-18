@@ -312,6 +312,8 @@ class DevPins {
 
     I2C i2c;
 
+    DevicePin touchDrive;
+
     DevPins();
 };
 
@@ -349,8 +351,10 @@ namespace pxt {
 DevicePin *getPin(int id);
 DevicePin *lookupPin(int pinName);
 DeviceButton *getButton(int id);
+TouchSensor *getTouchSensor();
 }
 
 #define DEVICE_ID_BUTTON_SLIDE 3000
+#define CAPPUSH 3001
 
 #endif

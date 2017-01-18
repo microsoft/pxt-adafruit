@@ -96,6 +96,7 @@
   "input.onGesture|block": "on |%NAME",
   "input.onLightConditionChanged|block": "on light %condition",
   "input.onTemperateConditionChanged|block": "on temperature %condition|at (°C)%temperature",
+  "input.pinA0|block": "pin A0",
   "input.rightButton|block": "right button",
   "input.rotation|block": "rotation (°)|%NAME",
   "input.setAccelerometerRange|block": "set accelerometer|range %range",

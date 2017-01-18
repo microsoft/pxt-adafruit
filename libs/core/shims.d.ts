@@ -514,9 +514,15 @@ declare namespace input {
     const rightButton: Button;
 
     /**
+     * Capacitive pin A0
+     */
+    //% block="pin A0" fixedInstance shim=pxt::getButton(2)
+    const pinA0: Button;
+
+    /**
      * Slide switch.
      */
-    //% block="slide switch" fixedInstance shim=pxt::getButton(2)
+    //% block="slide switch" fixedInstance shim=pxt::getButton(3)
     const slideSwitch: Button;
 }
 

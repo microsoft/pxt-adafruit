@@ -43,7 +43,11 @@ enum NeoPixelAnimationType {
     //% block="running lights"
     RunningLights,
     //% block="comet"
-    Comet
+    Comet,
+    //% block="sparkle"
+    Sparkle,
+    //% block="color wipe"
+    ColorWipe
 }
 
 enum MoveKind {
@@ -350,6 +354,12 @@ namespace neopixel {
                         break;
                     case NeoPixelAnimationType.Comet:
                         this._animation = new CometAnimation(this, 0, 0, 40);
+                        break;
+                    case NeoPixelAnimationType.Sparkle: 
+                        this._animation = new SparkleAnimation(this, 0xff, 0xff, 0xff, 0);
+                        break;
+                    case NeoPixelAnimationType.ColorWipe: 
+                        this._animation = new ColorWipeAnimation(this, 0x00,0xff,0x00, 50);
                         break;
                 }
                 this._animation.init();
@@ -754,6 +764,73 @@ namespace neopixel {
             for (let i = 0; i < l; i++) {
                 this.offsets[i] = (this.offsets[i] + 1) % 255
                 this.strip.setPixelColor(i, rgb(255 - this.offsets[i], this.green, this.blue));
+            }
+        }
+    }
+
+    export class SparkleAnimation extends NeoPixelAnimation {
+
+        public red: number;
+        public green: number;
+        public blue: number;
+        public delay: number;
+
+        constructor(strip: Strip, red: number, green: number, blue: number, delay: number) {
+            super(strip);
+            this.red = red;
+            this.green = green;
+            this.blue = blue;
+            this.delay = delay;
+        }
+
+        public getType() {
+            return NeoPixelAnimationType.Sparkle;
+        }
+
+        public init() { }
+
+        public draw() {
+            const l = this.strip.length();
+            let pixel = Math.random(l);
+            this.strip.setPixelColor(pixel, rgb(this.red, this.green, this.blue));
+            this.strip.show();
+            control.pause(this.delay);
+            this.strip.setPixelColor(pixel, rgb(0, 0, 0));
+        }
+    }
+
+    export class ColorWipeAnimation extends NeoPixelAnimation {
+
+        public red: number;
+        public green: number;
+        public blue: number;
+        public delay: number;
+
+        constructor(strip: Strip, red: number, green: number, blue: number, delay: number) {
+            super(strip);
+            this.red = red;
+            this.green = green;
+            this.blue = blue;
+            this.delay = delay;
+        }
+
+        public getType() {
+            return NeoPixelAnimationType.ColorWipe;
+        }
+
+        public init() { }
+
+        public draw() {
+            const l = this.strip.length();
+            for (let i = 0; i < l; i++) {
+                this.strip.setPixelColor(i, rgb(this.red, this.green, this.blue));
+                this.strip.show();
+                control.pause(this.delay);
+            }
+            for (let i = 0; i < l; i++) {
+                this.strip.setPixelColor(i, rgb(0, 0, 0));
+                this.strip.show();
+                control.pause(this.delay);
             }
         }
     }

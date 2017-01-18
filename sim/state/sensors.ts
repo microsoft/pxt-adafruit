@@ -1,10 +1,5 @@
 
 namespace pxsim {
-    export enum AdaFruit_Button {
-        Left = 1,
-        Right = 2
-    }
-
     export enum ThermometerUnit {
         Celsius,
         Fahrenheit
@@ -78,15 +73,6 @@ namespace pxsim.sensors {
             runtime.queueDisplayUpdate();
         }
         return b.soundLevel;
-    }
-
-    export function button(button: AdaFruit_Button): boolean {
-        if (button == AdaFruit_Button.Left) {
-            return board().buttonPairState.aBtn.pressed;
-        } else if (button == AdaFruit_Button.Right) {
-            return board().buttonPairState.bBtn.pressed;
-        }
-        return false;
     }
 
     export function slideSwitch(): boolean {

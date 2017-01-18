@@ -33,7 +33,7 @@ namespace pxsim {
         LEDRX,
         LEDTX
     }
-    
+
     export class DalBoard extends CoreBoard {
         // state & update logic for component services
         neopixelState: CPNeoPixelState;
@@ -52,14 +52,7 @@ namespace pxsim {
 
             //components
             this.builtinParts["neopixel"] = this.neopixelState = new CPNeoPixelState();
-
-            this.builtinParts["buttonpair"] = this.buttonPairState = new CPButtonPairState({
-                ID_BUTTON_A: 0,
-                ID_BUTTON_B: 1,
-                ID_BUTTON_AB: 2,
-                BUTTON_EVT_UP: 3,
-                BUTTON_EVT_CLICK: 4
-            });
+            this.builtinParts["buttonpair"] = this.buttonPairState = new CPButtonPairState();
 
             this.builtinParts["switch"] = this.slideSwitchState = new SlideSwitchState();
             this.builtinParts["audio"] = this.audioState = new AudioState();

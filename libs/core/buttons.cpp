@@ -1,6 +1,7 @@
 #include "pxt.h"
 #include "DeviceSystemTimer.h"
 #include "AnalogSensor.h"
+#include "MultiButton.h"
 
 namespace pxt {
 
@@ -12,12 +13,12 @@ class WButtons {
     Button buttons[0];
     //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
     /**
-     * Left push button.
+     * Left button.
      */
     //% block="left button"
     Button leftButton;
     /**
-     * Right push button.
+     * Right button.
      */
     //% block="right button"
     Button rightButton;
@@ -27,19 +28,27 @@ class WButtons {
     //% block="slide switch"
     Button slideSwitch;
 #undef Button
+// MultiButton has to be last, as it has different size
+#define Button MultiButton
+    /**
+     * Left and Right button.
+     */
+    //% block="left+right buttons"
+    Button leftAndRightButtons;
+#undef Button
 
     WButtons()
-        : leftButton(*pxt::lookupPin(PIN_BTN_LEFT), DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
-               PullDown),
-          rightButton(*pxt::lookupPin(PIN_BTN_RIGHT), DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS, ACTIVE_HIGH,
-                PullDown),
-          slideSwitch(*pxt::lookupPin(PIN_BTN_SLIDE), DEVICE_ID_BUTTON_SLIDE, DEVICE_BUTTON_ALL_EVENTS,
-                ACTIVE_LOW, PullUp)
-    { }
+        : leftButton(*pxt::lookupPin(PIN_BTN_LEFT), DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS,
+                     ACTIVE_HIGH, PullDown),
+          rightButton(*pxt::lookupPin(PIN_BTN_RIGHT), DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS,
+                      ACTIVE_HIGH, PullDown),
+          slideSwitch(*pxt::lookupPin(PIN_BTN_SLIDE), DEVICE_ID_BUTTON_SLIDE,
+                      DEVICE_BUTTON_ALL_EVENTS, ACTIVE_LOW, PullUp),
+          leftAndRightButtons(PIN_BTN_LEFT, PIN_BTN_RIGHT, DEVICE_ID_BUTTON_AB) {}
 };
 SINGLETON(WButtons);
 
-const int LastButtonID = &((WButtons*)0)->slideSwitch - ((WButtons*)0)->buttons;
+const int LastButtonID = (DeviceButton*)&((WButtons *)0)->leftAndRightButtons - ((WButtons *)0)->buttons;
 
 //%
 DeviceButton *getButton(int id) {
@@ -47,7 +56,6 @@ DeviceButton *getButton(int id) {
         device.panic(42);
     return &getWButtons()->buttons[id];
 }
-
 }
 
 //% noRefCounting fixedInstances

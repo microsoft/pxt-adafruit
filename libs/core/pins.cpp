@@ -164,21 +164,9 @@ int analogRead(AnalogPin name) {
 void analogWrite(AnalogPin name, int value) {
     PINOP(setAnalogValue(value));
 }
-
-/**
- * Configures the Pulse-width modulation (PWM) of the analog output to the given value in
- * **microseconds** or `1/1000` milliseconds.
- * If this pin is not configured as an analog output (using `analog write pin`), the operation has
- * no effect.
- * @param name analog pin to set period to
- * @param micros period in micro seconds. eg:20000
- */
-//% help=pins/analog-set-period weight=23 blockGap=8
-//% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros"
-//% blockNamespace=pins
-void analogSetPeriod(AnalogPin name, int micros) {
-    PINOP(setAnalogPeriodUs(micros));
 }
+
+namespace PwmPinMethods {
 
 /**
 * Emits a Pulse-width modulation (PWM) signal for a given duration.
@@ -189,7 +177,7 @@ void analogSetPeriod(AnalogPin name, int micros) {
 //% blockId=pin_analog_pitch block="analog pitch|pin %pin|at (Hz)%frequency|for (ms) %ms"
 //% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
 //% blockNamespace=pins
-void analogPitch(AnalogPin pin, int frequency, int ms) { 
+void analogPitch(PwmPin pin, int frequency, int ms) { 
     if (frequency <= 0) {
         pin->setAnalogValue(0);
     } else {
@@ -205,6 +193,21 @@ void analogPitch(AnalogPin pin, int frequency, int ms) {
 }
 
 /**
+ * Configures the Pulse-width modulation (PWM) of the analog output to the given value in
+ * **microseconds** or `1/1000` milliseconds.
+ * If this pin is not configured as an analog output (using `analog write pin`), the operation has
+ * no effect.
+ * @param name analog pin to set period to
+ * @param micros period in micro seconds. eg:20000
+ */
+//% help=pins/analog-set-period weight=23 blockGap=8
+//% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros"
+//% blockNamespace=pins
+void analogSetPeriod(PwmPin name, int micros) {
+    PINOP(setAnalogPeriodUs(micros));
+}
+
+/**
  * Writes a value to the servo, controlling the shaft accordingly. On a standard servo, this will
  * set the angle of the shaft (in degrees), moving the shaft to that orientation. On a continuous
  * rotation servo, this will set the speed of the servo (with ``0`` being full-speed in one
@@ -216,7 +219,7 @@ void analogPitch(AnalogPin pin, int frequency, int ms) {
 //% blockId=device_set_servo_pin block="servo write|pin %name|to %value" blockGap=8
 //% parts=microservo trackArgs=0
 //% blockNamespace=pins
-void servoWrite(AnalogPin name, int value) {
+void servoWrite(PwmPin name, int value) {
     PINOP(setServoValue(value));
 }
 
@@ -229,9 +232,10 @@ void servoWrite(AnalogPin name, int value) {
 //% help=pins/servo-set-pulse weight=19
 //% blockId=device_set_servo_pulse block="servo set pulse|pin %value|to (µs) %micros"
 //% blockNamespace=pins
-void servoSetPulse(AnalogPin name, int micros) {
+void servoSetPulse(PwmPin name, int micros) {
     PINOP(setServoPulseUs(micros));
 }
+
 }
 
 namespace pins {

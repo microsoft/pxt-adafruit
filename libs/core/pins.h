@@ -248,6 +248,7 @@ class DevPins {
     DevicePin pins[0];
 #define DigitalPin DevicePin
 #define AnalogPin DevicePin
+#define PwmPin DevicePin
     //% indexedInstanceNS=pins indexedInstanceShim=pxt::getPin
     //%
     AnalogPin A0;
@@ -266,13 +267,13 @@ class DevPins {
     //%
     AnalogPin A7;
     //%
-    AnalogPin A8;
+    PwmPin A8;
     //%
-    AnalogPin A9;
+    PwmPin A9;
     //%
-    AnalogPin A10;
+    PwmPin A10;
     //%
-    AnalogPin A11;
+    PwmPin A11;
     //%
     DigitalPin D0;
     //%
@@ -309,6 +310,7 @@ class DevPins {
     DigitalPin LEDTX;
 #undef DigitalPin
 #undef AnalogPin
+#undef PwmPin
 
     I2C i2c;
 
@@ -324,6 +326,7 @@ const int LastPinID = &io->LEDTX - io->pins;
 
 typedef DevicePin *DigitalPin;
 typedef DevicePin *AnalogPin;
+typedef DevicePin *PwmPin;
 typedef DeviceButton *Button;
 
 

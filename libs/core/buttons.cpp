@@ -7,6 +7,80 @@ namespace pxt {
 
 // Wrapper classes
 
+static const int touchPins[] = {
+    PIN_A4, PIN_A5, PIN_A6, PIN_A7, PIN_A8, PIN_A9, PIN_A10, PIN_A11,
+};
+
+
+class WTouch {
+  public:
+    DevicePin touchDrive;
+    TouchSensor touchSensor;
+
+#define Button TouchButton *
+    Button buttons[0];
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getTouchButton
+    /**
+    * Capacitive pin A4
+    */
+    //% block="pin A4"
+    Button pinA4;
+    /**
+    * Capacitive pin A5
+    */
+    //% block="pin A5"
+    Button pinA5;
+    /**
+    * Capacitive pin A6
+    */
+    //% block="pin A6"
+    Button pinA6;
+    /**
+    * Capacitive pin A7
+    */
+    //% block="pin A7"
+    Button pinA7;
+    /**
+    * Capacitive pin A8
+    */
+    //% block="pin A8"
+    Button pinA8;
+    /**
+    * Capacitive pin A9
+    */
+    //% block="pin A9"
+    Button pinA9;
+    /**
+    * Capacitive pin A10
+    */
+    //% block="pin A10"
+    Button pinA10;
+    /**
+    * Capacitive pin A11
+    */
+    //% block="pin A11"
+    Button pinA11;
+#undef Button
+
+    WTouch() : INIT_PIN(touchDrive, PIN_CAPSENSE), touchSensor(touchDrive) {
+        memclr(buttons, sizeof(touchPins));
+    }
+};
+SINGLETON(WTouch);
+const int LastTouchButtonID = &((WTouch *)0)->pinA11 - ((WTouch *)0)->buttons;
+
+//%
+TouchButton *getTouchButton(int id) {
+    if (!(0 <= id && id <= LastTouchButtonID))
+        device.panic(42);
+    if (sizeof(touchPins) / sizeof(touchPins[0]) != LastTouchButtonID + 1)
+        device.panic(42);
+    auto w = getWTouch();
+    if (!w->buttons[id])
+        w->buttons[id] = new TouchButton(*pxt::lookupPin(touchPins[id]), w->touchSensor);
+    return w->buttons[id];
+}
+
 class WButtons {
   public:
 #define Button DeviceButton

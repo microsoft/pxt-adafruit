@@ -320,7 +320,7 @@ extern DevPins *io;
 // modify if the last field changes
 const int LastPinID = &io->LEDTX - io->pins;
 
-#define INIT_PIN(name, PIN) name((DEVICE_ID_IO_P0 + 100) + (int)PIN, (PinName)PIN, PIN_CAPABILITY_AD)
+#define INIT_PIN(name, PIN) name((DEVICE_ID_IO_P0 + 100) + (int)PIN, (PinName)PIN, PIN_CAPABILITY_DIGITAL)
 
 typedef DevicePin *DigitalPin;
 typedef DevicePin *AnalogPin;
@@ -349,6 +349,7 @@ namespace pxt {
 DevicePin *getPin(int id);
 DevicePin *lookupPin(int pinName);
 DeviceButton *getButton(int id);
+TouchSensor *getTouchSensor();
 }
 
 #define DEVICE_ID_BUTTON_SLIDE 3000

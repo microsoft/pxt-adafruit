@@ -14,7 +14,8 @@ DevPins::DevPins()
       PIN_AD(A7), PIN_AD(A8), PIN_AD(A9), PIN_AD(A10), PIN_AD(A11), PIN_D(D0), PIN_D(D1), PIN_D(D2),
       PIN_D(D3), PIN_D(D4), PIN_D(D5), PIN_D(D6), PIN_D(D7), PIN_D(D8), PIN_D(D9), PIN_D(D10),
       PIN_D(D11), PIN_D(D12), PIN_D(D13), PIN_D(LED), PIN_D(LEDRX), PIN_D(LEDTX),
-      i2c((PinName)PIN_SDA, (PinName)PIN_SCL) {}
+      i2c((PinName)PIN_SDA, (PinName)PIN_SCL)
+      {}
 
 enum class PulseValue {
     //% block=high
@@ -137,31 +138,6 @@ void setPull(DigitalPin name, PinPullMode pull) {
     PINOP(setPull(m));
 }
 
-/**
-* Do something when a pin is clicked
-* @param name the pin that needs to be pressed, eg: TouchPin.P0
-* @param body the code to run when the pin is pressed
-*/
-//% help=input/on-pin-pressed weight=83
-//% blockId=device_pin_event block="on pin %pin|%event"
-//% blockNamespace=input
-void onEvent(DigitalPin pin, ButtonEvent event, Action body) {
-    // Forces the PIN to switch to makey-makey style detection.
-    pin->isTouched();
-    registerWithDal(pin->id, (int)event, body);
-}
-
-/**
- * Get the pin state (touched or not). Requires to hold the ground to close the circuit.
- * @param name pin used to detect the touch, eg: TouchPin.P0
- */
-//% help=input/pin-is-touched weight=58
-//% blockId="pin_is_touched" block="pin %pin|is touched"
-//% blockGap=8
-//% blockNamespace=input
-bool isTouched(DigitalPin pin) {
-    return pin->isTouched();
-}
 }
 
 namespace AnalogPinMethods {

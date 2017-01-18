@@ -169,26 +169,6 @@ declare interface DigitalPin {
     //% blockId=device_set_pull block="set pull|pin %pin|to %pull"
     //% blockNamespace=pins shim=DigitalPinMethods::setPull
     setPull(pull: PinPullMode): void;
-
-    /**
-     * Do something when a pin is clicked
-     * @param name the pin that needs to be pressed, eg: TouchPin.P0
-     * @param body the code to run when the pin is pressed
-     */
-    //% help=input/on-pin-pressed weight=83
-    //% blockId=device_pin_event block="on pin %pin|%event"
-    //% blockNamespace=input shim=DigitalPinMethods::onEvent
-    onEvent(event: ButtonEvent, body: () => void): void;
-
-    /**
-     * Get the pin state (touched or not). Requires to hold the ground to close the circuit.
-     * @param name pin used to detect the touch, eg: TouchPin.P0
-     */
-    //% help=input/pin-is-touched weight=58
-    //% blockId="pin_is_touched" block="pin %pin|is touched"
-    //% blockGap=8
-    //% blockNamespace=input shim=DigitalPinMethods::isTouched
-    isTouched(): boolean;
 }
 
 
@@ -510,6 +490,55 @@ declare namespace input {
     function onTemperateConditionChanged(condition: TemperatureCondition, temperature: number, handler: () => void): void;
 }
 declare namespace input {
+
+    /**
+     * Capacitive pin A4
+     */
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getTouchButton
+    //% block="pin A4" fixedInstance shim=pxt::getTouchButton(0)
+    const pinA4: Button;
+
+    /**
+     * Capacitive pin A5
+     */
+    //% block="pin A5" fixedInstance shim=pxt::getTouchButton(1)
+    const pinA5: Button;
+
+    /**
+     * Capacitive pin A6
+     */
+    //% block="pin A6" fixedInstance shim=pxt::getTouchButton(2)
+    const pinA6: Button;
+
+    /**
+     * Capacitive pin A7
+     */
+    //% block="pin A7" fixedInstance shim=pxt::getTouchButton(3)
+    const pinA7: Button;
+
+    /**
+     * Capacitive pin A8
+     */
+    //% block="pin A8" fixedInstance shim=pxt::getTouchButton(4)
+    const pinA8: Button;
+
+    /**
+     * Capacitive pin A9
+     */
+    //% block="pin A9" fixedInstance shim=pxt::getTouchButton(5)
+    const pinA9: Button;
+
+    /**
+     * Capacitive pin A10
+     */
+    //% block="pin A10" fixedInstance shim=pxt::getTouchButton(6)
+    const pinA10: Button;
+
+    /**
+     * Capacitive pin A11
+     */
+    //% block="pin A11" fixedInstance shim=pxt::getTouchButton(7)
+    const pinA11: Button;
 
     /**
      * Left button.

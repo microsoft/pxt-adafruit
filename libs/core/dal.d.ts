@@ -65,6 +65,7 @@ declare const enum DAL {
     DEVICE_ID_SCHEDULER = 15,
     DEVICE_ID_COMPONENT = 16,
     DEVICE_ID_LIGHT_SENSOR = 17,
+    DEVICE_ID_TOUCH_SENSOR = 18,
     DEVICE_ID_IO_P0 = 100,
     DEVICE_ID_MESSAGE_BUS_LISTENER = 1021,
     DEVICE_ID_NOTIFY_ONE = 1022,
@@ -142,10 +143,10 @@ declare const enum DAL {
     DEVICE_BUTTON_EVT_DOUBLE_CLICK = 6,
     DEVICE_BUTTON_LONG_CLICK_TIME = 1000,
     DEVICE_BUTTON_HOLD_TIME = 1500,
-    DEVICE_BUTTON_STATE = 1,
-    DEVICE_BUTTON_STATE_HOLD_TRIGGERED = 2,
-    DEVICE_BUTTON_STATE_CLICK = 4,
-    DEVICE_BUTTON_STATE_LONG_CLICK = 8,
+    DEVICE_BUTTON_STATE = 0x01,
+    DEVICE_BUTTON_STATE_HOLD_TRIGGERED = 0x02,
+    DEVICE_BUTTON_STATE_CLICK = 0x04,
+    DEVICE_BUTTON_STATE_LONG_CLICK = 0x08,
     DEVICE_BUTTON_SIGMA_MIN = 0,
     DEVICE_BUTTON_SIGMA_MAX = 12,
     DEVICE_BUTTON_SIGMA_THRESH_HI = 8,
@@ -279,6 +280,16 @@ declare const enum DAL {
     MULTI_BUTTON_ATTACHED = 0x40,
     // built/yt/yotta_modules/codal/inc/drivers/NonLinearAnalogSensor.h
     // built/yt/yotta_modules/codal/inc/drivers/TimedInterruptIn.h
+    // built/yt/yotta_modules/codal/inc/drivers/TouchButton.h
+    TOUCH_BUTTON_CALIBRATION_PERIOD = 10,
+    TOUCH_BUTTON_CALIBRATION_LINEAR_OFFSET = 2,
+    TOUCH_BUTTON_CALIBRATION_PERCENTAGE_OFFSET = 5,
+    TOUCH_BUTTON_CALIBRATING = 0x10,
+    // built/yt/yotta_modules/codal/inc/drivers/TouchSensor.h
+    TOUCH_SENSOR_MAX_BUTTONS = 10,
+    TOUCH_SENSOR_SAMPLE_PERIOD = 50,
+    TOUCH_SENSE_SAMPLE_MAX = 1000,
+    TOUCH_SENSOR_UPDATE_NEEDED = 1,
     // built/yt/yotta_modules/codal/inc/platform/yotta_cfg_mappings.h
     // built/yt/yotta_modules/codal/inc/types/CoordinateSystem.h
     RAW = 0,

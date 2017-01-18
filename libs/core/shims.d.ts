@@ -169,26 +169,6 @@ declare interface DigitalPin {
     //% blockId=device_set_pull block="set pull|pin %pin|to %pull"
     //% blockNamespace=pins shim=DigitalPinMethods::setPull
     setPull(pull: PinPullMode): void;
-
-    /**
-     * Do something when a pin is clicked
-     * @param name the pin that needs to be pressed, eg: TouchPin.P0
-     * @param body the code to run when the pin is pressed
-     */
-    //% help=input/on-pin-pressed weight=83
-    //% blockId=device_pin_event block="on pin %pin|%event"
-    //% blockNamespace=input shim=DigitalPinMethods::onEvent
-    onEvent(event: ButtonEvent, body: () => void): void;
-
-    /**
-     * Get the pin state (touched or not). Requires to hold the ground to close the circuit.
-     * @param name pin used to detect the touch, eg: TouchPin.P0
-     */
-    //% help=input/pin-is-touched weight=58
-    //% blockId="pin_is_touched" block="pin %pin|is touched"
-    //% blockGap=8
-    //% blockNamespace=input shim=DigitalPinMethods::isTouched
-    isTouched(): boolean;
 }
 
 

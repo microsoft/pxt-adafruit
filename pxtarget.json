@@ -115,44 +115,6 @@
         "preferredPackages": [],
         "githubPackages": true
     },
-    "blocksprj": {
-        "id": "blocksprj",
-        "config": {
-            "name": "{0} project",
-            "dependencies": {
-                "core": "*"
-            },
-            "description": "",
-            "files": [
-                "main.blocks",
-                "main.ts",
-                "README.md"
-            ]
-        },
-        "files": {
-            "main.blocks": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"></xml>",
-            "main.ts": "\r\n",
-            "README.md": ""
-        }
-    },
-    "tsprj": {
-        "id": "tsprj",
-        "config": {
-            "name": "{0} project",
-            "dependencies": {
-                "core": "*"
-            },
-            "description": "",
-            "files": [
-                "main.ts",
-                "README.md"
-            ]
-        },
-        "files": {
-            "main.ts": "\r\n",
-            "README.md": ""
-        }
-    },
     "compile": {
         "isNative": true,
         "useUF2": true,

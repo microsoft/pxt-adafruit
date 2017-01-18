@@ -14,14 +14,13 @@ namespace math {
     }    
 
     /**
-     * Constrain
      * Constrains a number to be within a range.
      * @param x the number to constrain, all data types
      * @param y the lower end of the range, all data types
      * @param z the upper end of the range, all data types
      * @returns x: if x is between a and b, a: if x is less than a, b: if x is greater than b
      */
-    //% help=math/constraint weight=22 advanced=true
+    //% help=math/constrain weight=22 advanced=true
     //% blockId="arduino_constrain" block="constrain %value|between %low|and %high"
     export function constrain(value: number, low: number, high: number): number {
         return value < low ? low : value > high ? high : value;

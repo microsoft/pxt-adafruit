@@ -73,6 +73,9 @@ namespace pxsim.pxtcore {
                 return board().buttonPairState.aBtn;
             case 1:
                 return board().buttonPairState.bBtn;
+            case 2:
+                return board().buttonPairState.abBtn;
+            // TODO: slideswitch
         }
         return undefined;
     }
@@ -88,6 +91,6 @@ namespace pxsim.ButtonMethods {
     }
 
     export function wasPressed(button: pxsim.Button): boolean {
-        return false;
+        return (<CPButton>button).wasPressed();
     }
 }

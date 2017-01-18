@@ -11,7 +11,7 @@ class WTouch {
     DevicePin touchDrive;
     TouchSensor touchSensor;
 
-#define Button TouchButton
+#define Button TouchButton *
     Button buttons[0];
     //% indexedInstanceNS=input indexedInstanceShim=pxt::getTouchButton
     /**
@@ -56,15 +56,26 @@ class WTouch {
     Button pinA11;
 #undef Button
 
-    WTouch()
-        : INIT_PIN(touchDrive, PIN_CAPSENSE), touchSensor(touchDrive),
-          pinA4(*pxt::lookupPin(PIN_A4), touchSensor), pinA5(*pxt::lookupPin(PIN_A5), touchSensor),
-          pinA6(*pxt::lookupPin(PIN_A6), touchSensor), pinA7(*pxt::lookupPin(PIN_A7), touchSensor),
-          pinA8(*pxt::lookupPin(PIN_A8), touchSensor), pinA9(*pxt::lookupPin(PIN_A9), touchSensor),
-          pinA10(*pxt::lookupPin(PIN_A10), touchSensor),
-          pinA11(*pxt::lookupPin(PIN_A11), touchSensor) {}
+    WTouch() : INIT_PIN(touchDrive, PIN_CAPSENSE), touchSensor(touchDrive) {}
 };
 SINGLETON(WTouch);
+const int LastTouchButtonID = &((WTouch *)0)->pinA11 - ((WTouch *)0)->buttons;
+
+static const int touchPins[] = {
+    PIN_A4, PIN_A5, PIN_A6, PIN_A7, PIN_A8, PIN_A9, PIN_A10, PIN_A11,
+};
+
+//%
+TouchButton *getTouchButton(int id) {
+    if (!(0 <= id && id <= LastTouchButtonID))
+        device.panic(42);
+    if (sizeof(touchPins) / sizeof(touchPins[0]) != LastTouchButtonID + 1)
+        device.panic(42);
+    auto w = getWTouch();
+    if (!w->buttons[id])
+        w->buttons[id] = new TouchButton(*pxt::lookupPin(touchPins[id]), w->touchSensor);
+    return w->buttons[id];
+}
 
 class WButtons {
   public:
@@ -99,20 +110,12 @@ class WButtons {
 SINGLETON(WButtons);
 
 const int LastButtonID = &((WButtons *)0)->slideSwitch - ((WButtons *)0)->buttons;
-const int LastTouchButtonID = &((WTouch *)0)->pinA11 - ((WTouch *)0)->buttons;
 
 //%
 DeviceButton *getButton(int id) {
     if (!(0 <= id && id <= LastButtonID))
         device.panic(42);
     return &getWButtons()->buttons[id];
-}
-
-//%
-TouchButton *getTouchButton(int id) {
-    if (!(0 <= id && id <= LastTouchButtonID))
-        device.panic(42);
-    return &getWTouch()->buttons[id];
 }
 }
 

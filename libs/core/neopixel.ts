@@ -591,8 +591,7 @@ namespace neopixel {
      * @param h2 the end hue
      * @param s2 the end saturation
      * @param l2 the end luminosity
-     * @param steps the number of steps to interpolate for. Note that if steps
-     *  is 1, the color midway between the start and end color will be returned.
+     * @param steps the number of steps to interpolate for. Note that if steps is 1, the color midway between the start and end color will be returned.
      * @param direction the direction around the color wheel the hue should be interpolated.
      */
     //% parts="neopixel"

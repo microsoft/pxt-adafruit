@@ -166,7 +166,10 @@
         "mathBlocks": true,
         "loopsBlocks": true,
         "logicBlocks": true,
-        "variablesBlocks": true
+        "variablesBlocks": true,
+        "onStartNamespace": "control",
+        "onStartColor": "#BEAA07"
+
     },
     "compileService": {
         "yottaTarget": "pxt-atsamd21g18a",

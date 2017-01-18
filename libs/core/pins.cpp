@@ -186,7 +186,7 @@ void analogSetPeriod(AnalogPin name, int micros) {
 * @param frequency frequency to modulate in Hz.
 * @param ms duration of the pitch in milli seconds.
 */
-//% blockId=device_analog_pitch block="analog pitch|pin %pin|at (Hz)%frequency|for (ms) %ms"
+//% blockId=pin_analog_pitch block="analog pitch|pin %pin|at (Hz)%frequency|for (ms) %ms"
 //% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
 //% blockNamespace=pins
 void analogPitch(AnalogPin pin, int frequency, int ms) { 
@@ -254,28 +254,4 @@ Buffer createBuffer(int size) {
 int pulseDuration() {
     return pxt::lastEvent.timestamp;
 }
-
-/**
- * Emits a Pulse-width modulation (PWM) signal to the current pitch pin. Use `analog set pitch pin`
- * to define the pitch pin.
- * @param frequency frequency to modulate in Hz.
- * @param ms duration of the pitch in milli seconds.
- */
-//% blockId=device_analog_pitch block="analog pitch %frequency|for (ms) %ms"
-//% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
-void analogPitch(int frequency, int ms) {
-    auto pitchPin = &io->A0;
-    if (frequency <= 0) {
-        pitchPin->setAnalogValue(0);
-    } else {
-        pitchPin->setAnalogValue(512);
-        pitchPin->setAnalogPeriodUs(1000000 / frequency);
-    }
-
-    if (ms > 0) {
-        fiber_sleep(ms);
-        pitchPin->setAnalogValue(0);
-    }
-}
-
 }

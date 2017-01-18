@@ -120,7 +120,6 @@
   "neopixel.hsl|block": "hue %hue|sat %sat|lum %lum",
   "neopixel.rgb|block": "red %red|green %green|blue %blue",
   "neopixel|block": "neopixel",
-  "pins.analogPitch|block": "analog pitch %frequency|for (ms) %ms",
   "pins.pulseDuration|block": "pulse duration (µs)",
   "pins|block": "pins",
   "serial.writeLine|block": "serial|write line %text",

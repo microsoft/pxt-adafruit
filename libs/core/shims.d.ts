@@ -211,7 +211,7 @@ declare interface AnalogPin {
      * @param frequency frequency to modulate in Hz.
      * @param ms duration of the pitch in milli seconds.
      */
-    //% blockId=device_analog_pitch block="analog pitch|pin %pin|at (Hz)%frequency|for (ms) %ms"
+    //% blockId=pin_analog_pitch block="analog pitch|pin %pin|at (Hz)%frequency|for (ms) %ms"
     //% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
     //% blockNamespace=pins shim=AnalogPinMethods::analogPitch
     analogPitch(frequency: number, ms: number): void;
@@ -258,16 +258,6 @@ declare namespace pins {
     //% blockId=pins_pulse_duration block="pulse duration (µs)"
     //% weight=21 blockGap=8 shim=pins::pulseDuration
     function pulseDuration(): number;
-
-    /**
-     * Emits a Pulse-width modulation (PWM) signal to the current pitch pin. Use `analog set pitch pin`
-     * to define the pitch pin.
-     * @param frequency frequency to modulate in Hz.
-     * @param ms duration of the pitch in milli seconds.
-     */
-    //% blockId=device_analog_pitch block="analog pitch %frequency|for (ms) %ms"
-    //% help=pins/analog-pitch weight=4 async advanced=true blockGap=8 shim=pins::analogPitch
-    function analogPitch(frequency: number, ms: number): void;
 }
 
 

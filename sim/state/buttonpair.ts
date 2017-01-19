@@ -52,31 +52,52 @@ namespace pxsim {
         }
     }
 
-    export class CPButtonPairState {
+    export class CPButtonState {
         usesButtonAB: boolean = false;
-        aBtn: CPButton;
-        bBtn: CPButton;
-        abBtn: CPButton;
+        buttons: CPButton[];
+        touchButtons: CPButton[];
 
         constructor() {
-            this.aBtn = new CPButton(DAL.DEVICE_ID_BUTTON_A);
-            this.bBtn = new CPButton(DAL.DEVICE_ID_BUTTON_B);
-            this.abBtn = new CPButton(DAL.DEVICE_ID_BUTTON_AB);
-            this.abBtn.virtual = true;
+            this.buttons = [
+                new CPButton(DAL.DEVICE_ID_BUTTON_A),
+                new CPButton(DAL.DEVICE_ID_BUTTON_B),
+                new CPButton(3000), // DEVICE_ID_BUTTON_SLIDE
+                new CPButton(DAL.DEVICE_ID_BUTTON_AB)
+            ];
+
+            this.touchButtons = [
+                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A4),
+                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A5),
+                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A6),
+                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A7),
+                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A8),
+                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A9),
+                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A10),
+                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A11),
+            ];
         }
     }
 }
 namespace pxsim.pxtcore {
     export function getButton(buttonId: number): Button {
-        switch (buttonId) {
-            case 0:
-                return board().buttonPairState.aBtn;
-            case 1:
-                return board().buttonPairState.bBtn;
-            case 2:
-                return board().buttonPairState.abBtn;
-            // TODO: slideswitch
+        const buttons = board().buttonPairState.buttons;
+        if (buttonId === 3) {
+            board().buttonPairState.usesButtonAB = true;
+            runtime.queueDisplayUpdate();
         }
+        if (buttonId < buttons.length && buttonId >= 0) {
+            return buttons[buttonId];
+        }
+        // panic
+        return undefined;
+    }
+
+    export function getTouchButton(buttonId: number): Button {
+        const buttons = board().buttonPairState.touchButtons;
+        if (buttonId < buttons.length && buttonId >= 0) {
+            return buttons[buttonId];
+        }
+        // panic
         return undefined;
     }
 }

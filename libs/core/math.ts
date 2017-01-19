@@ -18,10 +18,9 @@ namespace math {
      * @param x the number to constrain, all data types
      * @param y the lower end of the range, all data types
      * @param z the upper end of the range, all data types
-     * @returns x: if x is between a and b, a: if x is less than a, b: if x is greater than b
      */
     //% help=math/constrain weight=22 advanced=true
-    //% blockId="math_constrain" block="constrain %value|between %low|and %high"
+    //% blockId="math_constrain_value" block="constrain %value|between %low|and %high"
     export function constrain(value: number, low: number, high: number): number {
         return value < low ? low : value > high ? high : value;
     }

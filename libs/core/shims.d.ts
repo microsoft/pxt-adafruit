@@ -519,6 +519,31 @@ declare namespace input {
 declare namespace input {
 
     /**
+     * Left button.
+     */
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
+    //% block="left button" weight=95 fixedInstance shim=pxt::getButton(0)
+    const leftButton: Button;
+
+    /**
+     * Right button.
+     */
+    //% block="right button" weight=94 fixedInstance shim=pxt::getButton(1)
+    const rightButton: Button;
+
+    /**
+     * Slide switch.
+     */
+    //% block="slide switch" weight=90 fixedInstance shim=pxt::getButton(2)
+    const slideSwitch: Button;
+
+    /**
+     * Left and Right button.
+     */
+    //% block="left+right buttons" weight=93 fixedInstance shim=pxt::getButton(3)
+    const leftAndRightButtons: Button;
+
+    /**
      * Capacitive pin A4
      */
     //% indexedInstanceNS=input indexedInstanceShim=pxt::getTouchButton
@@ -566,31 +591,6 @@ declare namespace input {
      */
     //% block="pin A11" fixedInstance shim=pxt::getTouchButton(7)
     const pinA11: Button;
-
-    /**
-     * Left button.
-     */
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
-    //% block="left button" fixedInstance shim=pxt::getButton(0)
-    const leftButton: Button;
-
-    /**
-     * Right button.
-     */
-    //% block="right button" fixedInstance shim=pxt::getButton(1)
-    const rightButton: Button;
-
-    /**
-     * Slide switch.
-     */
-    //% block="slide switch" fixedInstance shim=pxt::getButton(2)
-    const slideSwitch: Button;
-
-    /**
-     * Left and Right button.
-     */
-    //% block="left+right buttons" fixedInstance shim=pxt::getButton(3)
-    const leftAndRightButtons: Button;
 }
 
 

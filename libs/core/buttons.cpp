@@ -7,6 +7,56 @@ namespace pxt {
 
 // Wrapper classes
 
+class WButtons {
+  public:
+#define Button DeviceButton
+    Button buttons[0];
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
+    /**
+     * Left button.
+     */
+    //% block="left button" weight=95
+    Button leftButton;
+    /**
+     * Right button.
+     */
+    //% block="right button" weight=94
+    Button rightButton;
+    /**
+     * Slide switch.
+     */
+    //% block="slide switch" weight=90
+    Button slideSwitch;
+#undef Button
+// MultiButton has to be last, as it has different size
+#define Button MultiButton
+    /**
+     * Left and Right button.
+     */
+    //% block="left+right buttons" weight=93
+    Button leftAndRightButtons;
+#undef Button
+
+    WButtons()
+        : leftButton(*pxt::lookupPin(PIN_BTN_LEFT), DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS,
+                     ACTIVE_HIGH, PullDown),
+          rightButton(*pxt::lookupPin(PIN_BTN_RIGHT), DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS,
+                      ACTIVE_HIGH, PullDown),
+          slideSwitch(*pxt::lookupPin(PIN_BTN_SLIDE), DEVICE_ID_BUTTON_SLIDE,
+                      DEVICE_BUTTON_ALL_EVENTS, ACTIVE_LOW, PullUp),
+          leftAndRightButtons(PIN_BTN_LEFT, PIN_BTN_RIGHT, DEVICE_ID_BUTTON_AB) {}
+};
+SINGLETON(WButtons);
+
+const int LastButtonID = (DeviceButton*)&((WButtons *)0)->leftAndRightButtons - ((WButtons *)0)->buttons;
+
+//%
+DeviceButton *getButton(int id) {
+    if (!(0 <= id && id <= LastButtonID))
+        device.panic(42);
+    return &getWButtons()->buttons[id];
+}
+
 static const int touchPins[] = {
     PIN_A4, PIN_A5, PIN_A6, PIN_A7, PIN_A8, PIN_A9, PIN_A10, PIN_A11,
 };
@@ -79,56 +129,6 @@ TouchButton *getTouchButton(int id) {
     if (!w->buttons[id])
         w->buttons[id] = new TouchButton(*pxt::lookupPin(touchPins[id]), w->touchSensor);
     return w->buttons[id];
-}
-
-class WButtons {
-  public:
-#define Button DeviceButton
-    Button buttons[0];
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
-    /**
-     * Left button.
-     */
-    //% block="left button"
-    Button leftButton;
-    /**
-     * Right button.
-     */
-    //% block="right button"
-    Button rightButton;
-    /**
-     * Slide switch.
-     */
-    //% block="slide switch"
-    Button slideSwitch;
-#undef Button
-// MultiButton has to be last, as it has different size
-#define Button MultiButton
-    /**
-     * Left and Right button.
-     */
-    //% block="left+right buttons"
-    Button leftAndRightButtons;
-#undef Button
-
-    WButtons()
-        : leftButton(*pxt::lookupPin(PIN_BTN_LEFT), DEVICE_ID_BUTTON_A, DEVICE_BUTTON_ALL_EVENTS,
-                     ACTIVE_HIGH, PullDown),
-          rightButton(*pxt::lookupPin(PIN_BTN_RIGHT), DEVICE_ID_BUTTON_B, DEVICE_BUTTON_ALL_EVENTS,
-                      ACTIVE_HIGH, PullDown),
-          slideSwitch(*pxt::lookupPin(PIN_BTN_SLIDE), DEVICE_ID_BUTTON_SLIDE,
-                      DEVICE_BUTTON_ALL_EVENTS, ACTIVE_LOW, PullUp),
-          leftAndRightButtons(PIN_BTN_LEFT, PIN_BTN_RIGHT, DEVICE_ID_BUTTON_AB) {}
-};
-SINGLETON(WButtons);
-
-const int LastButtonID = (DeviceButton*)&((WButtons *)0)->leftAndRightButtons - ((WButtons *)0)->buttons;
-
-//%
-DeviceButton *getButton(int id) {
-    if (!(0 <= id && id <= LastButtonID))
-        device.panic(42);
-    return &getWButtons()->buttons[id];
 }
 }
 

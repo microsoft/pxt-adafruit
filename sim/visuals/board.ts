@@ -426,7 +426,7 @@ namespace pxsim.visuals {
                 let lx = Math.max(l * 1.4, 100);
                 l = Math.max(l, 10);
                 if (p_inner) svg.fill(p_inner, `hsl(${h}, ${s}%, ${lx}%)`);
-                if (p_outer) svg.fill(p_outer, `hsl(${h}, ${s}%, ${l}%)`);
+                if (p_outer) svg.fill(p_outer, `hsl(${h}, ${s}%, ${Math.min(l * 3, 75)}%)`);
                 if (p_inner) svg.filter(p_inner, `url(#neopixelglow)`);
                 if (p_outer) svg.filter(p_outer, `url(#neopixelglow)`);
             }

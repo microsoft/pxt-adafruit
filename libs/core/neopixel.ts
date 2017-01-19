@@ -300,16 +300,9 @@ namespace neopixel {
             }
         }
 
-        /**
-         * Set the pin where the neopixel is connected.
-         */
-        //% weight=10
-        //% parts="neopixel" advanced=true
-        //% defaultInstance=neopixel.builtin
-        setPin(pin: DigitalPin): void {
+        private setPin(pin: DigitalPin): void {
             this.pin = pin;
-            this.pin.digitalWrite(0)
-            control.pause(50)
+            this.pin.digitalWrite(0);
         }
 
         /**

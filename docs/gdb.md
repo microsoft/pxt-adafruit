@@ -1,5 +1,10 @@
 # GDB debugging
 
+You can run GDB on PXT target boards that support OpenOCD. This can be either with an on-board
+interface chip (Arduino Zero or the micro:bit), or with an external programmer like the IBDAP.
+
+Currently, you will only be able to debug the C++ code, and not TypeScript code.
+
 ## Connecting IBDAP
 
 IBDAP is a cheap programmer that happens to work.
@@ -38,9 +43,11 @@ For reference, the 20 pin connector:
 
 You can also find pin outs in the [IBDAP user manual](https://cdn-shop.adafruit.com/product-files/2764/2764+user+manual.pdf).
 
-## Running GDB
+After you connect everything, make sure to reset IBDAP (using `RESET` button), especially if you're
+seeing a `CRP DISABLD` drive. Reset should make it go away. You may need to reset every time you
+connect IBDAP.
 
-First, reset the IBDAP, using the `RESET` button. This should make the `CRP DISABLD` drive disappear.
+## Running GDB
 
 Now, go to directory where you want to debug. It can be a library with a test TypeScript file.
 Run `pxt`. Make sure it uses local `yotta` build. It should start running on the board.

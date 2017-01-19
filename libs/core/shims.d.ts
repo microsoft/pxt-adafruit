@@ -481,30 +481,21 @@ declare namespace neopixel {
 declare namespace input {
 
     /**
-     * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` (bright).
-     */
-    //% help=input/light-level weight=57
-    //% blockId=device_get_light_level block="light level" blockGap=8
-    //% parts="lightsensor" shim=input::lightLevel
-    function lightLevel(): number;
-
-    /**
      * Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
      * @param condition the condition that event triggers on
      */
-    //% help=input/on-light-condition-changed
+    //% help=input/on-light-condition-changed weight=79
     //% blockId=input_on_light_condition_changed block="on light %condition"
-    //% parts="lightsensor" shim=input::onLightConditionChanged
+    //% parts="lightsensor" blockGap=8 shim=input::onLightConditionChanged
     function onLightConditionChanged(condition: LightCondition, handler: () => void): void;
 
     /**
-     * Gets the temperature in Celsius or Fahrenheit degrees.
+     * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` (bright).
      */
-    //% weight=55
-    //% help=input/temperature
-    //% blockId=device_temperature block="temperature in %unit" blockGap=8
-    //% parts="thermometer" shim=input::temperature
-    function temperature(unit: TemperatureUnit): number;
+    //% help=input/light-level weight=78
+    //% blockId=device_get_light_level block="light level" blockGap=8
+    //% parts="lightsensor" shim=input::lightLevel
+    function lightLevel(): number;
 
     /**
      * Registers an event raised when the temperature condition (hold, cold) changes.
@@ -512,9 +503,18 @@ declare namespace input {
      * @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
      */
     //% blockId=input_on_temperature_condition_changed block="on temperature %condition|at (°C)%temperature"
-    //% parts="thermometer"
+    //% parts="thermometer" weight=68 blockGap=8
     //% help=input/on-temperature-condition-changed shim=input::onTemperateConditionChanged
     function onTemperateConditionChanged(condition: TemperatureCondition, temperature: number, handler: () => void): void;
+
+    /**
+     * Gets the temperature in Celsius or Fahrenheit degrees.
+     */
+    //% weight=68
+    //% help=input/temperature
+    //% blockId=device_temperature block="temperature in %unit" blockGap=8
+    //% parts="thermometer" shim=input::temperature
+    function temperature(unit: TemperatureUnit): number;
 }
 declare namespace input {
 
@@ -603,17 +603,18 @@ declare interface Button {
      * @param event the kind of button gesture that needs to be detected
      * @param body code to run when event is raised
      */
-    //% help=input/on-button-event weight=85 blockGap=8
+    //% help=input/on-button-event weight=99 blockGap=8
     //% blockId=buttonEvent block="on %button|%event"
     //% parts="buttonpair"
-    //% blockNamespace=input shim=ButtonMethods::onEvent
+    //% blockNamespace=input
+    //% blockGap=8 shim=ButtonMethods::onEvent
     onEvent(ev: ButtonEvent, body: () => void): void;
 
     /**
      * Get the button state (pressed or not).
      * @param button the button to query the request
      */
-    //% help=input/button-is-pressed weight=60
+    //% help=input/button-is-pressed weight=98
     //% block="%NAME|is pressed"
     //% blockId=buttonIsPressed
     //% blockGap=8
@@ -625,10 +626,9 @@ declare interface Button {
      * Indicates if the button was pressed since this function was last called.
      * @param button the button to query the request
      */
-    //% help=input/button-was-pressed weight=60
+    //% help=input/button-was-pressed weight=97
     //% block="%NAME|was pressed"
     //% blockId=buttonWasPressed
-    //% blockGap=8
     //% parts="buttonpair"
     //% blockNamespace=input shim=ButtonMethods::wasPressed
     wasPressed(): boolean;
@@ -640,7 +640,7 @@ declare namespace input {
      * @param gesture the type of gesture to track, eg: Gesture.Shake
      * @param body code to run when gesture is raised
      */
-    //% help=input/on-gesture weight=84 blockGap=8
+    //% help=input/on-gesture weight=89 blockGap=8
     //% blockId=device_gesture_event block="on |%NAME"
     //% parts="accelerometer" shim=input::onGesture
     function onGesture(gesture: Gesture, body: () => void): void;
@@ -650,7 +650,7 @@ declare namespace input {
      * x=0, y=0 and z=-1024)
      * @param dimension TODO
      */
-    //% help=input/acceleration weight=58
+    //% help=input/acceleration weight=88
     //% blockId=device_acceleration block="acceleration (mg)|%NAME" blockGap=8
     //% parts="accelerometer" shim=input::acceleration
     function acceleration(dimension: Dimension): number;
@@ -659,7 +659,7 @@ declare namespace input {
      * The pitch or roll of the device, rotation along the ``x-axis`` or ``y-axis``, in degrees.
      * @param kind TODO
      */
-    //% help=input/rotation weight=52
+    //% help=input/rotation weight=87
     //% blockId=device_get_rotation block="rotation (°)|%NAME" blockGap=8
     //% parts="accelerometer" advanced=true shim=input::rotation
     function rotation(kind: Rotation): number;

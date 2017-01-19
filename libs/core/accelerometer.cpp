@@ -124,7 +124,7 @@ namespace input {
  * @param gesture the type of gesture to track, eg: Gesture.Shake
  * @param body code to run when gesture is raised
  */
-//% help=input/on-gesture weight=84 blockGap=8
+//% help=input/on-gesture weight=89 blockGap=8
 //% blockId=device_gesture_event block="on |%NAME"
 //% parts="accelerometer"
 void onGesture(Gesture gesture, Action body) {
@@ -150,7 +150,7 @@ int getAccelerationStrength() {
  * x=0, y=0 and z=-1024)
  * @param dimension TODO
  */
-//% help=input/acceleration weight=58
+//% help=input/acceleration weight=88
 //% blockId=device_acceleration block="acceleration (mg)|%NAME" blockGap=8
 //% parts="accelerometer"
 int acceleration(Dimension dimension) {
@@ -171,7 +171,7 @@ int acceleration(Dimension dimension) {
  * The pitch or roll of the device, rotation along the ``x-axis`` or ``y-axis``, in degrees.
  * @param kind TODO
  */
-//% help=input/rotation weight=52
+//% help=input/rotation weight=87
 //% blockId=device_get_rotation block="rotation (°)|%NAME" blockGap=8
 //% parts="accelerometer" advanced=true
 int rotation(Rotation kind) {

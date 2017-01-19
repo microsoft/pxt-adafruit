@@ -140,10 +140,11 @@ namespace ButtonMethods {
  * @param event the kind of button gesture that needs to be detected
  * @param body code to run when event is raised
  */
-//% help=input/on-button-event weight=85 blockGap=8
+//% help=input/on-button-event weight=99 blockGap=8
 //% blockId=buttonEvent block="on %button|%event"
 //% parts="buttonpair"
 //% blockNamespace=input
+//% blockGap=8
 void onEvent(Button button, ButtonEvent ev, Action body) {
     registerWithDal(button->id, (int)ev, body);
 }
@@ -152,7 +153,7 @@ void onEvent(Button button, ButtonEvent ev, Action body) {
  * Get the button state (pressed or not).
  * @param button the button to query the request
  */
-//% help=input/button-is-pressed weight=60
+//% help=input/button-is-pressed weight=98
 //% block="%NAME|is pressed"
 //% blockId=buttonIsPressed
 //% blockGap=8
@@ -166,10 +167,9 @@ bool isPressed(Button button) {
  * Indicates if the button was pressed since this function was last called.
  * @param button the button to query the request
  */
-//% help=input/button-was-pressed weight=60
+//% help=input/button-was-pressed weight=97
 //% block="%NAME|was pressed"
 //% blockId=buttonWasPressed
-//% blockGap=8
 //% parts="buttonpair"
 //% blockNamespace=input
 bool wasPressed(Button button) {

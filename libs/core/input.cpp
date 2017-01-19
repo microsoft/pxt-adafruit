@@ -32,6 +32,14 @@ class WTemp {
 };
 SINGLETON(WTemp);
 
+enum TemperatureUnit {
+    //% block="°C"
+    Celcius,
+    //% block="°F"
+    Fahrenheit
+};
+
+
 class WLight {
   public:
     AnalogSensor sensor;
@@ -69,14 +77,16 @@ void onLightConditionChanged(LightCondition condition, Action handler) {
 }
 
 /**
- * Gets the temperature in Celsius degrees (°C).
+ * Gets the temperature in Celsius or Fahrenheit degrees.
  */
 //% weight=55
 //% help=input/temperature
-//% blockId=device_temperature block="temperature (°C)" blockGap=8
+//% blockId=device_temperature block="temperature in %unit" blockGap=8
 //% parts="thermometer"
-int temperature() {
-    return getWTemp()->sensor.getValue();
+int temperature(TemperatureUnit unit) {
+    int value = getWTemp()->sensor.getValue();
+    if (unit == TemperatureUnit::Celcius) return value;
+    else return (value * 18) / 10 + 32;
 }
 
 /**

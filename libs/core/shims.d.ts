@@ -498,13 +498,13 @@ declare namespace input {
     function onLightConditionChanged(condition: LightCondition, handler: () => void): void;
 
     /**
-     * Gets the temperature in Celsius degrees (°C).
+     * Gets the temperature in Celsius or Fahrenheit degrees.
      */
     //% weight=55
     //% help=input/temperature
-    //% blockId=device_temperature block="temperature (°C)" blockGap=8
+    //% blockId=device_temperature block="temperature in %unit" blockGap=8
     //% parts="thermometer" shim=input::temperature
-    function temperature(): number;
+    function temperature(unit: TemperatureUnit): number;
 
     /**
      * Registers an event raised when the temperature condition (hold, cold) changes.

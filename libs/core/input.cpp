@@ -63,7 +63,9 @@ namespace input {
 //% blockId=input_on_light_condition_changed block="on light %condition"
 //% parts="lightsensor" blockGap=8
 void onLightConditionChanged(LightCondition condition, Action handler) {
-    registerWithDal(getWLight()->sensor.id, (int)condition, handler);
+    auto sensor = &getWLight()->sensor;
+    sensor->updateSample();
+    registerWithDal(sensor->id, (int)condition, handler);
 }
 
 /**
@@ -87,12 +89,13 @@ int lightLevel() {
 //% parts="thermometer" weight=95 blockGap=8
 //% help=input/on-temperature-condition-changed
 void onTemperateConditionChanged(TemperatureCondition condition, int temperature, Action handler) {
-    NonLinearAnalogSensor& sensor = getWTemp()->sensor;
+    auto sensor = &getWTemp()->sensor;
+    sensor->updateSample();
     if (condition == TemperatureCondition::Cold)
-        sensor.setLowThreshold(temperature);
+        sensor->setLowThreshold(temperature);
     else
-        sensor.setHighThreshold(temperature);        
-    registerWithDal(sensor.id, (int)condition, handler);
+        sensor->setHighThreshold(temperature);        
+    registerWithDal(sensor->id, (int)condition, handler);
 }
 
 /**

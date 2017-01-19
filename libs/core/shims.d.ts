@@ -484,7 +484,7 @@ declare namespace input {
      * Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
      * @param condition the condition that event triggers on
      */
-    //% help=input/on-light-condition-changed weight=79
+    //% help=input/on-light-condition-changed weight=97
     //% blockId=input_on_light_condition_changed block="on light %condition"
     //% parts="lightsensor" blockGap=8 shim=input::onLightConditionChanged
     function onLightConditionChanged(condition: LightCondition, handler: () => void): void;
@@ -492,7 +492,7 @@ declare namespace input {
     /**
      * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` (bright).
      */
-    //% help=input/light-level weight=78
+    //% help=input/light-level weight=76
     //% blockId=device_get_light_level block="light level" blockGap=8
     //% parts="lightsensor" shim=input::lightLevel
     function lightLevel(): number;
@@ -503,14 +503,14 @@ declare namespace input {
      * @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
      */
     //% blockId=input_on_temperature_condition_changed block="on temperature %condition|at (°C)%temperature"
-    //% parts="thermometer" weight=68 blockGap=8
+    //% parts="thermometer" weight=95 blockGap=8
     //% help=input/on-temperature-condition-changed shim=input::onTemperateConditionChanged
     function onTemperateConditionChanged(condition: TemperatureCondition, temperature: number, handler: () => void): void;
 
     /**
      * Gets the temperature in Celsius or Fahrenheit degrees.
      */
-    //% weight=68
+    //% weight=75
     //% help=input/temperature
     //% blockId=device_temperature block="temperature in %unit" blockGap=8
     //% parts="thermometer" shim=input::temperature
@@ -614,7 +614,7 @@ declare interface Button {
      * Get the button state (pressed or not).
      * @param button the button to query the request
      */
-    //% help=input/button-is-pressed weight=98
+    //% help=input/button-is-pressed weight=79
     //% block="%NAME|is pressed"
     //% blockId=buttonIsPressed
     //% blockGap=8
@@ -626,7 +626,7 @@ declare interface Button {
      * Indicates if the button was pressed since this function was last called.
      * @param button the button to query the request
      */
-    //% help=input/button-was-pressed weight=97
+    //% help=input/button-was-pressed weight=78
     //% block="%NAME|was pressed"
     //% blockId=buttonWasPressed
     //% parts="buttonpair"
@@ -640,7 +640,7 @@ declare namespace input {
      * @param gesture the type of gesture to track, eg: Gesture.Shake
      * @param body code to run when gesture is raised
      */
-    //% help=input/on-gesture weight=89 blockGap=8
+    //% help=input/on-gesture weight=98 blockGap=8
     //% blockId=device_gesture_event block="on |%NAME"
     //% parts="accelerometer" shim=input::onGesture
     function onGesture(gesture: Gesture, body: () => void): void;
@@ -650,7 +650,7 @@ declare namespace input {
      * x=0, y=0 and z=-1024)
      * @param dimension TODO
      */
-    //% help=input/acceleration weight=88
+    //% help=input/acceleration weight=76
     //% blockId=device_acceleration block="acceleration (mg)|%NAME" blockGap=8
     //% parts="accelerometer" shim=input::acceleration
     function acceleration(dimension: Dimension): number;

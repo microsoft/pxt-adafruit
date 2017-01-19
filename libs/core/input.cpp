@@ -59,7 +59,7 @@ namespace input {
 * Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
 * @param condition the condition that event triggers on
 */
-//% help=input/on-light-condition-changed weight=79
+//% help=input/on-light-condition-changed weight=97
 //% blockId=input_on_light_condition_changed block="on light %condition"
 //% parts="lightsensor" blockGap=8
 void onLightConditionChanged(LightCondition condition, Action handler) {
@@ -69,7 +69,7 @@ void onLightConditionChanged(LightCondition condition, Action handler) {
 /**
  * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` (bright).
  */
-//% help=input/light-level weight=78
+//% help=input/light-level weight=76
 //% blockId=device_get_light_level block="light level" blockGap=8
 //% parts="lightsensor"
 int lightLevel() {
@@ -84,7 +84,7 @@ int lightLevel() {
 * @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
 */
 //% blockId=input_on_temperature_condition_changed block="on temperature %condition|at (°C)%temperature"
-//% parts="thermometer" weight=68 blockGap=8
+//% parts="thermometer" weight=95 blockGap=8
 //% help=input/on-temperature-condition-changed
 void onTemperateConditionChanged(TemperatureCondition condition, int temperature, Action handler) {
     NonLinearAnalogSensor& sensor = getWTemp()->sensor;
@@ -98,7 +98,7 @@ void onTemperateConditionChanged(TemperatureCondition condition, int temperature
 /**
  * Gets the temperature in Celsius or Fahrenheit degrees.
  */
-//% weight=68
+//% weight=75
 //% help=input/temperature
 //% blockId=device_temperature block="temperature in %unit" blockGap=8
 //% parts="thermometer"

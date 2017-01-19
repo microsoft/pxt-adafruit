@@ -153,7 +153,7 @@ void onEvent(Button button, ButtonEvent ev, Action body) {
  * Get the button state (pressed or not).
  * @param button the button to query the request
  */
-//% help=input/button-is-pressed weight=98
+//% help=input/button-is-pressed weight=79
 //% block="%NAME|is pressed"
 //% blockId=buttonIsPressed
 //% blockGap=8
@@ -167,7 +167,7 @@ bool isPressed(Button button) {
  * Indicates if the button was pressed since this function was last called.
  * @param button the button to query the request
  */
-//% help=input/button-was-pressed weight=97
+//% help=input/button-was-pressed weight=78
 //% block="%NAME|was pressed"
 //% blockId=buttonWasPressed
 //% parts="buttonpair"

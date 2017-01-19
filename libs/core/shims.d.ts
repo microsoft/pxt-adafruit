@@ -481,7 +481,7 @@ declare namespace neopixel {
 declare namespace input {
 
     /**
-     * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``1024`` bright.
+     * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` (bright).
      */
     //% help=input/light-level weight=57
     //% blockId=device_get_light_level block="light level" blockGap=8

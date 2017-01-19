@@ -49,7 +49,7 @@
   "input.acceleration|param|dimension": "TODO",
   "input.leftAndRightButtons": "Left and Right button.",
   "input.leftButton": "Left button.",
-  "input.lightLevel": "Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``1024`` bright.",
+  "input.lightLevel": "Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` (bright).",
   "input.onGesture": "Do something when when a gesture is done (like shaking the micro:bit).",
   "input.onGesture|param|body": "code to run when gesture is raised",
   "input.onGesture|param|gesture": "the type of gesture to track, eg: Gesture.Shake",

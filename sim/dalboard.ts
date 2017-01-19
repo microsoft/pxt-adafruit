@@ -37,7 +37,7 @@ namespace pxsim {
     export class DalBoard extends CoreBoard {
         // state & update logic for component services
         neopixelState: CPNeoPixelState;
-        buttonPairState: CPButtonPairState;
+        buttonPairState: CPButtonState;
         slideSwitchState: SlideSwitchState;
         lightSensorState: AnalogSensorState;
         thermometerState: AnalogSensorState;
@@ -52,7 +52,7 @@ namespace pxsim {
 
             //components
             this.builtinParts["neopixel"] = this.neopixelState = new CPNeoPixelState();
-            this.builtinParts["buttonpair"] = this.buttonPairState = new CPButtonPairState();
+            this.builtinParts["buttonpair"] = this.buttonPairState = new CPButtonState();
 
             this.builtinParts["switch"] = this.slideSwitchState = new SlideSwitchState();
             this.builtinParts["audio"] = this.audioState = new AudioState();

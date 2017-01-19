@@ -1,4 +1,5 @@
 #include "pxt.h"
+#include "neopixel.h"
 #include <map>
 
 CodalDevice device;
@@ -729,6 +730,7 @@ void exec_binary(int32_t *pc) {
     startptr |= 1;  // Thumb state
 
     initCodal();
+
 
     ((uint32_t(*)())startptr)();
 

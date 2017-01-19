@@ -129,6 +129,7 @@ namespace input {
 //% parts="accelerometer"
 void onGesture(Gesture gesture, Action body) {
     auto acc = &getWAccel()->acc;
+    acc->updateSample();
     int gi = (int)gesture;
     if (gi == ACCELEROMETER_EVT_3G && acc->getRange() < 3)
         acc->setRange(4);

@@ -300,35 +300,6 @@ namespace neopixel {
             }
         }
 
-        private setPin(pin: DigitalPin): void {
-            this.pin = pin;
-            this.pin.digitalWrite(0);
-        }
-
-        /**
-         * Set the lenth of the strip.
-         */
-        //% weight=10
-        //% parts="neopixel" advanced=true
-        //% defaultInstance=neopixel.builtin
-        setLength(numleds: number): void {
-            this._length = numleds;
-
-            if (this._buf) {
-                this.reallocateBuffer();
-            }
-        }
-
-        /**
-         * Set the mode of the strip.
-         */
-        //% weight=10
-        //% parts="neopixel" advanced=true
-        //% defaultInstance=neopixel.builtin
-        setMode(mode: NeoPixelMode): void {
-            this._mode = mode;
-        }
-
         /**
          * Set the current animation
          */
@@ -480,12 +451,13 @@ namespace neopixel {
             mode = NeoPixelMode.RGB
         if (!pin)
             pin = defaultPin() || pins.D0
-        let strip = new Strip();
-        strip.setMode(mode)
-        strip.setLength(numleds)
-        strip.setBrightness(20)
-        strip.setPin(pin)
+        const strip = new Strip();
+        strip._mode = mode;
+        strip._length = Math.max(0, numleds);
         strip.start = 0;
+        strip.pin = pin;
+        strip.pin.digitalWrite(0)
+        strip.setBrightness(20)
         return strip;
     }
 
@@ -495,7 +467,7 @@ namespace neopixel {
      * @param green value of the green channel between 0 and 255. eg: 255
      * @param blue value of the blue channel between 0 and 255. eg: 255
      */
-    //% weight=4
+    //% weight=4 blockGap=8
     //% blockId="neopixel_rgb" block="red %red|green %green|blue %blue"
     //% advanced=true
     export function rgb(red: number, green: number, blue: number): number {
@@ -505,7 +477,7 @@ namespace neopixel {
     /**
      * Gets the RGB value of a known color
     */
-    //% weight=2 blockGap=8
+    //% weight=2 blockGap=8 advanced=true
     //% blockId="neopixel_colors" block="%color"
     export function colors(color: NeoPixelColors): number {
         return color;
@@ -515,7 +487,7 @@ namespace neopixel {
      * Gets an RGB color given the value of an angle between 0 and 360. Useful
      * for performing math with colors.
     */
-    //% weight=1 blockGap=8
+    //% weight=1 blockGap=8 advanced=true
     //% blockId="neopixel_color_wheel" block="color wheel %angle"
     export function colorWheel(angle: number): number {
         return hsl(angle, 100, 50);

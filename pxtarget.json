@@ -28,6 +28,7 @@
         "deployDrives": "(MICROBIT|MBED)",
         "driveName": "MICROBIT",
         "hexMimeType": "application/x-microbit-hex",
+        "openocdScript": "source [find interface/cmsis-dap.cfg]; source [find target/nrf51.cfg]",
         "upgrades": [
             {
                 "type": "package",

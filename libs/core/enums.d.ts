@@ -90,6 +90,14 @@ declare namespace neopixel {
     //% block="hot"
     Hot = 2,  // ANALOG_THRESHOLD_HIGH
     }
+
+
+    declare enum TemperatureUnit {
+    //% block="°C"
+    Celcius = 0,
+    //% block="°F"
+    Fahrenheit = 1,
+    }
 declare namespace input {
 }
 

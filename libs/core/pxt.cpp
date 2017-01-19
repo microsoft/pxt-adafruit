@@ -1,4 +1,5 @@
 #include "pxt.h"
+#include "neopixel.h"
 #include <map>
 
 CodalDevice device;
@@ -729,6 +730,11 @@ void exec_binary(int32_t *pc) {
     startptr |= 1;  // Thumb state
 
     initCodal();
+
+    // TODO: remove clearning neopixel on start
+    uint8_t neoBuf[30];
+    memset(neoBuf, 0, 30);
+    neopixel_send_buffer(*lookupPin(PIN_NEOPIXEL), neoBuf, 30);       
 
     ((uint32_t(*)())startptr)();
 

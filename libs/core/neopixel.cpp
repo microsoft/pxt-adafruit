@@ -2,7 +2,7 @@
 #include "neopixel.h"
 
 //% color=300 weight=100
-namespace neopixel {
+namespace light {
 
     /**
      * Gets the default pin for built in neopixels

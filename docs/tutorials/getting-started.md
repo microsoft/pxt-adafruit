@@ -5,7 +5,7 @@
 Place blocks in the workspace to show a rainbow.
 
 ```blocks
-neopixel.builtin.showRainbow(1, 360)
+light.builtin.showRainbow(1, 360)
 ```
 
 ### Step 2
@@ -19,7 +19,7 @@ Let's make it animate when the **left button** is clicked.
 
 ```block
 input.leftButton.onEvent(ButtonEvent.Click, () => {
-    neopixel.builtin.drawAnimationFrame(NeoPixelAnimationType.RainbowCycle)
+    light.builtin.drawAnimationFrame(NeoPixelAnimationType.RainbowCycle)
 })
 ```
 

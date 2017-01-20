@@ -72,7 +72,7 @@ declare namespace control {
 }
 declare namespace serial {
 }
-declare namespace neopixel {
+declare namespace light {
 }
 
 

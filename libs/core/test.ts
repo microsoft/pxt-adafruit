@@ -7,7 +7,7 @@ input.rightButton.onEvent(ButtonEvent.Click, () => {
 
 
 
-let strip = neopixel.create()
+let strip = light.createNeoPixelStrip()
 strip.setBrightness(20)
 strip.show()
 

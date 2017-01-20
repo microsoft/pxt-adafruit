@@ -382,8 +382,8 @@ declare namespace control {
      * Gets the number of milliseconds elapsed since power on.
      */
     //% help=control/running-time weight=50
-    //% blockId=control_running_time block="running time (ms)" shim=control::runningTime
-    function runningTime(): number;
+    //% blockId=control_running_time block="running time (ms)" shim=control::millis
+    function millis(): number;
 
     /**
      * Raises an event in the event bus.
@@ -458,12 +458,12 @@ declare namespace serial {
 
 
     //% color=300 weight=100
-declare namespace neopixel {
+declare namespace light {
 
     /**
      * Gets the default pin for built in neopixels
      */
-    //% parts="neopixel" shim=neopixel::defaultPin
+    //% parts="neopixel" shim=light::defaultPin
     function defaultPin(): DigitalPin;
 
     /**
@@ -471,7 +471,7 @@ declare namespace neopixel {
      * @param pin The pin that the neopixels are connected to
      * @param buf The buffer to send to the pin
      */
-    //% parts="neopixel" shim=neopixel::sendBuffer
+    //% parts="neopixel" shim=light::sendBuffer
     function sendBuffer(pin: DigitalPin, buf: Buffer): void;
 }
 

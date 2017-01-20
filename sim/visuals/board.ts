@@ -395,7 +395,7 @@ namespace pxsim.visuals {
         a 3,3 0 1,0 6,0
         a 3,3 0 1,0 -6,0`);
 
-                if (!rgb) {
+                if (!rgb || (rgb.length == 3 && rgb[0] == 0 && rgb[1] == 0 && rgb[2] == 0)) {
                     // Clear the pixel
                     svg.fill(p_outer, `rgb(0,0,0)`);
                     svg.fill(p_inner, `rgb(200,200,200)`);

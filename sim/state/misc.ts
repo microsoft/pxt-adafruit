@@ -4,9 +4,6 @@ namespace pxsim.control {
     export function delayMicroseconds(us: number) {
         delay(us / 0.001);
     }
-    export function millis(): number {
-        return runtime.runningTime();
-    }
 }
 
 namespace pxsim.basic {

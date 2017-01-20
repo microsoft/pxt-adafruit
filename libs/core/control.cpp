@@ -58,7 +58,7 @@ namespace control {
     */
     //% help=control/running-time weight=50
     //% blockId=control_running_time block="running time (ms)"
-    int runningTime() {
+    int millis() {
         return system_timer_current_time();
     }
 

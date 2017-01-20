@@ -54,7 +54,7 @@ namespace pxsim.neopixel {
             state.setPixelColor(i, red, green, blue);
         }
 
-        runtime.queueDisplayUpdate();
+        runtime.updateDisplay();
     }
 
     export function defaultPin() {

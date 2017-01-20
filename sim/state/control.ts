@@ -30,7 +30,7 @@ namespace pxsim.control {
         board().bus.queue(id, evid)
     }    
 
-    export function runningTime(): number {
+    export function millis(): number {
         return runtime.runningTime();
     }    
 }

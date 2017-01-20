@@ -75,7 +75,7 @@ namespace pxsim.input {
         return Math.floor(r / Math.PI * 180);
     }
 
-    export function setAccelRange(range: number) {
+    export function setAccelerometerRange(range: number) {
         let b = board().accelerometerState;
         b.accelerometer.setSampleRange(range);
     }

@@ -41,6 +41,11 @@ enum MoveKind {
     Shift
 }
 
+enum Easing {
+    //% linear
+    Linear
+}
+
 /**
  * Functions to operate NeoPixel strips.
  */
@@ -90,6 +95,33 @@ namespace light {
             this.show();
         }
 
+        /**
+         * Shows a color gradient between LEDs
+         * @param start RGB color to start the gradient
+         * @param end RGB color to start the gradient, eg: NeoPixelColors.Blue
+         * @param easing how 
+         */
+        //% blockId="neopixel_show_gradient" block="show gradient|from %start=neopixel_colors|to %end=neopixel_colors"
+        //% weight=84 blockGap=8
+        //% parts="neopixel"
+        //% defaultInstance=light.builtin
+        showGradient(start: number, end: number, easing?: Easing) {
+            const sr = unpackR(start);
+            const sg = unpackG(start);
+            const sb = unpackB(start);
+            const er = unpackR(end);
+            const eg = unpackG(end);
+            const eb = unpackB(end);
+            const l = this._length;
+            const l1 = l - 1;
+            for(let i = 0; i < l; i++) {
+                const r = (i * sr + (l1 - i) * er) / (l1);
+                const g = (i * sg + (l1 - i) * eg) / (l1);
+                const b = (i * sb + (l1 - i) * eb) / (l1);
+                this.setPixelRGB(i, rgb(r,g,b))
+            }
+            this.show();
+        }
         /**
          * Displays a vertical bar graph based on the `value` and `high` value.
          * If `high` is 0, the chart gets adjusted automatically.
@@ -415,7 +447,7 @@ namespace light {
     //% blockId="neopixel_rgb" block="red %red|green %green|blue %blue"
     //% advanced=true
     export function rgb(red: number, green: number, blue: number): number {
-        return packRGB(red, green, blue);
+        return ((red & 0xFF) << 16) | ((green & 0xFF) << 8) | (blue & 0xFF);
     }
 
     /**
@@ -437,9 +469,6 @@ namespace light {
         return hsl(angle, 100, 50);
     }
 
-    function packRGB(a: number, b: number, c: number): number {
-        return ((a & 0xFF) << 16) | ((b & 0xFF) << 8) | (c & 0xFF);
-    }
     function unpackR(rgb: number): number {
         let r = (rgb >> 16) & 0xFF;
         return r;
@@ -493,10 +522,10 @@ namespace light {
         let r = r$ + m;
         let g = g$ + m;
         let b = b$ + m;
-        return packRGB(r, g, b);
+        return rgb(r, g, b);
     }
 
-    export enum HueInterpolationDirection {
+    enum HueInterpolationDirection {
         Clockwise,
         CounterClockwise,
         Shortest

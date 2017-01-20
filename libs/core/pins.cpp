@@ -177,14 +177,14 @@ namespace PwmPinMethods {
 //% blockId=pin_analog_pitch block="analog pitch|pin %pin|at (Hz)%frequency|for (ms) %ms"
 //% help=pins/analog-pitch weight=4 async advanced=true blockGap=8
 //% blockNamespace=pins
-void analogPitch(PwmPin pin, int frequency, int ms) { 
+void analogPitch(PwmPin pin, int frequency, int ms) {
     if (frequency <= 0) {
         pin->setAnalogValue(0);
     } else {
         pin->setAnalogValue(512);
         pin->setAnalogPeriodUs(1000000/frequency);
     }
-      
+
     if (ms > 0) {
         fiber_sleep(ms);
         pin->setAnalogValue(0);
@@ -200,7 +200,7 @@ void analogPitch(PwmPin pin, int frequency, int ms) {
 */
 //% help=music/play-tone weight=90
 //% blockId=music_play_note block="play tone|on %pin|at %note=device_note|for %duration=device_beat" blockGap=8
-//% parts="headphone"
+//% parts="headphone" async
 //% blockNamespace=music
 void playTone(PwmPin pin, int frequency, int ms) {
     analogPitch(pin, frequency, ms);
@@ -213,7 +213,7 @@ void playTone(PwmPin pin, int frequency, int ms) {
 */
 //% help=music/ring-tone weight=80
 //% blockId=music_ring block="ring tone|on %pin|at %note=device_note" blockGap=8
-//% parts="headphone"
+//% parts="headphone" async
 //% blockNamespace=music
 void ringTone(PwmPin pin, int frequency) {
     analogPitch(pin, frequency, 0);
@@ -226,7 +226,7 @@ void ringTone(PwmPin pin, int frequency) {
 */
 //% help=music/rest weight=79
 //% blockId=music_rest block="rest|on %pin|for %duration=device_beat"
-//% parts="headphone"
+//% parts="headphone" async
 //% blockNamespace=music
 void rest(PwmPin pin, int ms) {
     analogPitch(pin, 0, ms);

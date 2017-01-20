@@ -119,7 +119,38 @@ namespace pxsim.AnalogPinMethods {
     }
 }
 
-namespace pxsim.pins {  
+namespace pxsim.PwmPinMethods {
+    export function analogPitch(name: pins.AnalogPin, frequency: number, ms: number) {
+        music.playTone(frequency, ms);
+    }
+
+    export function playTone(name: pins.AnalogPin, frequency: number, ms: number) {
+        analogPitch(name, frequency, ms);
+    }
+
+    export function ringTone(name: pins.AnalogPin, frequency: number) {
+        analogPitch(name, frequency, 0);
+    }
+
+    export function rest(name: pins.AnalogPin, ms: number) {
+        analogPitch(name, 0, ms);
+    }
+
+    export function analogSetPeriod(name: pins.AnalogPin, micros: number): void {
+        name.analogSetPeriod(micros);
+    }
+
+    export function servoWrite(name: pins.AnalogPin, value: number): void {
+        name.servoWritePin(value);
+    }
+
+    export function servoSetPulse(name: pins.AnalogPin, micros: number): void {
+        // TODO fix pxt
+        // name.servoSetPulse(micros);
+    }
+}
+
+namespace pxsim.pins {
     export function createBuffer(sz: number) {
         return pxsim.BufferMethods.createBuffer(sz)
     }

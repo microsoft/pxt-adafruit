@@ -27,23 +27,4 @@ namespace pxsim.music {
     export function noteFrequency(note: number) {
         return note;
     }
-
-    export function playTone(frequency: number, ms: number = 250) {
-        let audioState = board().audioState;
-        audioState.startPlaying();
-
-        runtime.queueDisplayUpdate();
-
-        AudioContextManager.tone(frequency, 1);
-        let cb = getResume();
-        if (ms <= 0) cb();
-        else {
-            setTimeout(() => {
-                AudioContextManager.stop();
-                audioState.stopPlaying();
-                runtime.queueDisplayUpdate();
-                cb()
-            }, ms);
-        }
-    }
 }

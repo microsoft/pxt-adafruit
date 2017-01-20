@@ -736,6 +736,8 @@ void exec_binary(int32_t *pc) {
     if (neoPin) {
         uint8_t neobuf[30];
         memset(neobuf, 0, 30);
+        neoPin->setDigitalValue(0);
+        fiber_sleep(1);
         neopixel_send_buffer(*neoPin, neobuf, 30);
     }
 

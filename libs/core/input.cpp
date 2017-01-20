@@ -80,7 +80,7 @@ void onLightConditionChanged(LightCondition condition, Action handler) {
 int lightLevel() {
     // 0...1023
     int value = getWLight()->sensor.getValue();
-    return value;
+    return value / 4;
 }
 
 /**

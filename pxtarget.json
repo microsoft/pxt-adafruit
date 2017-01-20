@@ -134,12 +134,12 @@
 
     },
     "compileService": {
-        "yottaTarget": "pxt-atsamd21g18a",
+        "yottaTarget": "adafruit-cp-g18a",
         "yottaBinary": "pxt-samd.hex",
         "yottaCorePackage": "codal",
         "githubCorePackage": "lancaster-university/codal",
         "gittag": "master",
-        "serviceId": "codalsamd"
+        "serviceId": "codalcp"
     },
     "appTheme": {
         "accentColor": "#000",

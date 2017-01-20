@@ -181,6 +181,7 @@
                 "colour": "#FB48C7",
                 "snap": true
             }
-        }
+        },
+        "usbHelp": []
     }
 }

@@ -113,7 +113,9 @@ class WAccel {
         : i2c((PinName)PIN_ACCELEROMETER_SDA, (PinName)PIN_ACCELEROMETER_SCL),
           INIT_PIN(int1, PIN_ACCELEROMETER_INT), //
           acc(i2c, int1)                         //
-    {}
+    {
+        acc.init();        
+    }
 };
 SINGLETON(WAccel);
 }

@@ -28,7 +28,9 @@ class WTemp {
     WTemp()
         : sensor(*lookupPin(PIN_TEMPERATURE), DEVICE_ID_THERMOMETER, 25, 10000, 3380, 10000,
                  273.5) //
-    {}
+    {
+        sensor.init();        
+    }
 };
 SINGLETON(WTemp);
 
@@ -46,6 +48,7 @@ class WLight {
     WLight()
         : sensor(*lookupPin(PIN_LIGHT), DEVICE_ID_LIGHT_SENSOR) //
     {
+        sensor.init();
         sensor.setSensitivity(0.9f);
     }
 };
@@ -77,7 +80,7 @@ void onLightConditionChanged(LightCondition condition, Action handler) {
 int lightLevel() {
     // 0...1023
     int value = getWLight()->sensor.getValue();
-    return value / 4;
+    return value;
 }
 
 /**

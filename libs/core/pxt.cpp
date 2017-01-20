@@ -731,6 +731,13 @@ void exec_binary(int32_t *pc) {
 
     initCodal();
 
+    // clear on-board neopixels
+    auto neoPin = lookupPin(PIN_NEOPIXEL);
+    if (neoPin) {
+        uint8_t neobuf[30];
+        memset(neobuf, 0, 30);
+        neopixel_send_buffer(*neoPin, neobuf, 30);
+    }
 
     ((uint32_t(*)())startptr)();
 

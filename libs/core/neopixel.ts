@@ -312,7 +312,7 @@ namespace light {
         //% weight=95
         //% parts="neopixel"
         //% defaultInstance=light.builtin
-        drawAnimationFrame(animation: NeoPixelAnimation): void {
+        showAnimationFrame(animation: NeoPixelAnimation): void {
             if (!this._animation || this._animationType != animation.type) {
                 this.clear();
                 this._animationType = animation.type;
@@ -642,8 +642,7 @@ namespace light {
 
     export const builtin = light.createNeoPixelStrip();
 
-    export class NeopixelAnimatonFactory {
-
+    class NeopixelAnimatonFactory {
         private static rainbowSingleton: RainbowCycleAnimation;
         static getRainbow(): RainbowCycleAnimation {
             if (!NeopixelAnimatonFactory.rainbowSingleton) NeopixelAnimatonFactory.rainbowSingleton = new RainbowCycleAnimation();
@@ -687,7 +686,7 @@ namespace light {
     class RainbowCycleAnimation extends NeoPixelAnimation {
         private _speed: number;
 
-        constructor(speed: number = 50) {
+        constructor(speed: number = 100) {
             super(1001);
             this._speed = speed;
         }

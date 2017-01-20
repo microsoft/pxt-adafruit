@@ -121,7 +121,32 @@ namespace pxsim.AnalogPinMethods {
 
 namespace pxsim.PwmPinMethods {
     export function analogPitch(name: pins.AnalogPin, frequency: number, ms: number) {
-        music.playTone(frequency, ms);
+        name.mode = PinFlags.Analog | PinFlags.Output;
+        if (frequency <= 0) {
+            name.value = 0;
+            name.period = 0;
+        } else {
+            name.value = 512;
+            name.period = 1000000 / frequency;
+        }
+        
+        const audioState = board().audioState;
+        audioState.startPlaying();
+        runtime.queueDisplayUpdate();
+        AudioContextManager.tone(frequency, 1);
+        let cb = getResume();
+        if (ms <= 0) cb();
+        else {
+            setTimeout(() => {
+                AudioContextManager.stop();
+                audioState.stopPlaying();
+                name.value = 0;
+                name.period = 0;
+                name.mode = PinFlags.Unused;
+                runtime.queueDisplayUpdate();
+                cb()
+            }, ms);
+        }
     }
 
     export function playTone(name: pins.AnalogPin, frequency: number, ms: number) {
@@ -145,12 +170,16 @@ namespace pxsim.PwmPinMethods {
     }
 
     export function servoSetPulse(name: pins.AnalogPin, micros: number): void {
-        // TODO fix pxt
-        // name.servoSetPulse(micros);
+        name.servoSetPulse(name.id, micros);
     }
 }
 
 namespace pxsim.pins {
+    export function pulseDuration(): number {
+        // bus last event timestamp
+        return 500;
+    }
+    
     export function createBuffer(sz: number) {
         return pxsim.BufferMethods.createBuffer(sz)
     }

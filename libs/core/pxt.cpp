@@ -6,6 +6,18 @@ CodalDevice device;
 
 namespace pxt {
 
+// This is used to tell the bootloader that a single reset should start the bootloader and 
+// the MSD device, not us.
+__attribute__ ((section(".binmeta")))
+__attribute__ ((used))
+const uint32_t pxt_binmeta[] = {
+    0x87eeb07c,
+    0x0,
+    0x0,
+    0x0
+};
+
+
 int incr(uint32_t e) {
     if (e) {
         if (hasVTable(e))
@@ -731,6 +743,15 @@ void exec_binary(int32_t *pc) {
 
     initCodal();
 
+    // clear on-board neopixels
+    auto neoPin = lookupPin(PIN_NEOPIXEL);
+    if (neoPin) {
+        uint8_t neobuf[30];
+        memset(neobuf, 0, 30);
+        neoPin->setDigitalValue(0);
+        fiber_sleep(1);
+        neopixel_send_buffer(*neoPin, neobuf, 30);
+    }
 
     ((uint32_t(*)())startptr)();
 

@@ -654,7 +654,7 @@ namespace light {
 
         private static cometSingleton: CometAnimation;
         static getComet(): CometAnimation {
-            if (!NeopixelAnimatonFactory.cometSingleton) NeopixelAnimatonFactory.cometSingleton = new CometAnimation(0, 0, 0);
+            if (!NeopixelAnimatonFactory.cometSingleton) NeopixelAnimatonFactory.cometSingleton = new CometAnimation(0, 0, 40);
             return NeopixelAnimatonFactory.cometSingleton;
         }
 

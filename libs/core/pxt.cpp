@@ -727,6 +727,9 @@ void exec_binary(int32_t *pc) {
     // repeat error 4 times and restart as needed
     // microbit_panic_timeout(4);
 
+    // TODO: fix this in CODAL
+    device.random_value = device.seedRandom();
+
     int32_t ver = *pc++;
     checkStr(ver == 0x4209, ":( Bad runtime version");
 

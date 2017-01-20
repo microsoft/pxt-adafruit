@@ -697,7 +697,7 @@ namespace light {
     class RainbowCycleAnimation extends NeoPixelAnimation {
         private _speed: number;
 
-        constructor(speed: number = 100) {
+        constructor(speed: number = 10) {
             super(1001);
             this._speed = speed;
         }
@@ -708,7 +708,7 @@ namespace light {
             return () => {
                 const offset = control.millis() / speed;
                 for (let i = 0; i < l; i++) {
-                    strip.setPixelColor(i, colorWheel(((i * 256 / 10) + offset) & 255));
+                    strip.setPixelColor(i, colorWheel(((i * 361 / l) + offset) & 360));
                 }
             }
         }

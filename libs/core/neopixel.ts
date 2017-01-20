@@ -136,7 +136,7 @@ namespace neopixel {
                 this.show();
                 return;
             }
-
+            serial.writeString(value + "\n"); // auto chart
             value = Math.abs(value);
             const n = this._length;
             const n1 = n - 1;

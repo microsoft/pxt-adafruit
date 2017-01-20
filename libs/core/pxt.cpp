@@ -6,6 +6,18 @@ CodalDevice device;
 
 namespace pxt {
 
+// This is used to tell the bootloader that a single reset should start the bootloader and 
+// the MSD device, not us.
+__attribute__ ((section(".binmeta")))
+__attribute__ ((used))
+const uint32_t pxt_binmeta[] = {
+    0x87eeb07c,
+    0x0,
+    0x0,
+    0x0
+};
+
+
 int incr(uint32_t e) {
     if (e) {
         if (hasVTable(e))

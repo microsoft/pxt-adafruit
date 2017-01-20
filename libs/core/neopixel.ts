@@ -50,7 +50,7 @@ namespace light {
      * A NeoPixel strip
      */
     //% autoCreate=neopixel.create
-    export class Strip {
+    export class NeoPixelStrip {
         pin: DigitalPin;
         // TODO: encode as bytes instead of 32bit
         brightness: number;
@@ -60,6 +60,10 @@ namespace light {
         _animation: () => void;
         _animationType: number;
         _buf: Buffer;
+        // what's the current high value
+        _barGraphHigh: number;
+        // when was the current high value recorded
+        _barGraphHighLast: number;
 
         get buf(): Buffer {
             // Lazily allocate to conserve memory
@@ -108,24 +112,26 @@ namespace light {
          * Displays a vertical bar graph based on the `value` and `high` value.
          * If `high` is 0, the chart gets adjusted automatically.
          * @param value current value to plot
-         * @param high maximum value, eg: 255
+         * @param high maximum value, 0 to autoscale
          */
         //% weight=84 blockGap=8
         //% blockId=neopixel_show_bar_graph block="show bar graph of %value |up to %high" icon="\uf080" blockExternalInputs=true
         //% parts="neopixel"
         //% defaultInstance=light.builtin
         showBarGraph(value: number, high: number): void {
-            if (high <= 0) {
-                this.clear();
-                this.setPixelColor(0, NeoPixelColors.Yellow);
-                this.show();
-                return;
-            }
+            const now = control.millis();
             serial.writeString(value + "\n"); // auto chart
             value = Math.abs(value);
+
+            if (high > 0) this._barGraphHigh = high;
+            else if (value > this._barGraphHigh || now - this._barGraphHighLast > 10000) {
+                this._barGraphHigh = value;
+                this._barGraphHighLast = now;
+            }
+
             const n = this._length;
             const n1 = n - 1;
-            let v = (value * n) / high;
+            const v = (value * n) / this._barGraphHigh;
             if (v == 0) {
                 this.setPixelColor(0, 0x666600);
                 for (let i = 1; i < n; ++i)
@@ -256,8 +262,8 @@ namespace light {
         //% blockId="neopixel_range" block="range from %start|with %length|leds"
         //% parts="neopixel" advanced=true
         //% defaultInstance=light.builtin
-        range(start: number, length: number): Strip {
-            let strip = new Strip();
+        range(start: number, length: number): NeoPixelStrip {
+            let strip = new NeoPixelStrip();
             strip.buf = this.buf;
             strip.pin = this.pin;
             strip.brightness = this.brightness;
@@ -402,12 +408,12 @@ namespace light {
         pin: DigitalPin = null,
         numleds: number = 10,
         mode?: NeoPixelMode
-    ): Strip {
+    ): NeoPixelStrip {
         if (!mode)
             mode = NeoPixelMode.RGB
         if (!pin)
             pin = defaultPin() || pins.D0
-        const strip = new Strip();
+        const strip = new NeoPixelStrip();
         strip._mode = mode;
         strip._length = Math.max(0, numleds);
         strip.start = 0;
@@ -662,7 +668,7 @@ namespace light {
         constructor(type: number) {
             this.type = type;
         }
-        public create(strip: Strip): () => void {
+        public create(strip: NeoPixelStrip): () => void {
             return null;
         }
     }
@@ -675,7 +681,7 @@ namespace light {
             this._speed = speed;
         }
 
-        public create(strip: Strip): () => void {
+        public create(strip: NeoPixelStrip): () => void {
             const l = strip.length();
             const speed = this._speed;
             return () => {
@@ -703,7 +709,7 @@ namespace light {
         }
 
 
-        public create(strip: Strip): () => void {
+        public create(strip: NeoPixelStrip): () => void {
             let step = 0;
             const l = strip.length();
             return () => {
@@ -728,7 +734,7 @@ namespace light {
             this.blue = blue;
         }
 
-        public create(strip: Strip): () => void {
+        public create(strip: NeoPixelStrip): () => void {
             const offsets: number[] = [];
             const l = strip.length();
             const spacing = 255 / l;
@@ -761,7 +767,7 @@ namespace light {
             this.delay = delay;
         }
 
-        public create(strip: Strip): () => void {
+        public create(strip: NeoPixelStrip): () => void {
             const l = strip.length();
             return () => {
                 const pixel = Math.random(l);
@@ -788,7 +794,7 @@ namespace light {
             this.delay = delay;
         }
 
-        public create(strip: Strip): () => void {
+        public create(strip: NeoPixelStrip): () => void {
             const l = strip.length();
             return () => {
                 for (let i = 0; i < l; i++) {

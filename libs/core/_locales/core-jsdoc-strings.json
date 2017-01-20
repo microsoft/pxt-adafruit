@@ -74,7 +74,7 @@
   "input.slideSwitch": "Slide switch.",
   "input.temperature": "Gets the temperature in Celsius or Fahrenheit degrees.",
   "light": "Functions to operate NeoPixel strips.",
-  "light.Strip": "A NeoPixel strip",
+  "light.NeoPixelStrip": "A NeoPixel strip",
   "light.colorWheel": "Gets an RGB color given the value of an angle between 0 and 360. Useful\nfor performing math with colors.",
   "light.colorWipeAnimation": "Return a new instance of the color wipe animation",
   "light.colors": "Gets the RGB value of a known color",

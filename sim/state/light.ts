@@ -37,7 +37,7 @@ namespace pxsim {
     }
 }
 
-namespace pxsim.neopixel {
+namespace pxsim.light {
     // Currently only modifies the builtin pixels
     export function sendBuffer(pin: pins.DigitalPin, b: RefBuffer) {
         const state = board().neopixelState;

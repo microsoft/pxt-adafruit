@@ -704,9 +704,9 @@ namespace light {
 
 
         public create(strip: Strip): () => void {
+            let step = 0;
+            const l = strip.length();
             return () => {
-                let step = 0;
-                const l = strip.length();
                 for (let i = 0; i < l; i++) {
                     const level = this.levels[(i + step) % this.levels.length];
                     strip.setPixelColor(i, rgb(level * this.red / 255, level * this.green / 255, level * this.blue / 255));

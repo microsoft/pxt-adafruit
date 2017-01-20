@@ -120,10 +120,6 @@ namespace pxsim.AnalogPinMethods {
 }
 
 namespace pxsim.PwmPinMethods {
-    export function pulseDuration() {
-        return 500;
-    }
-
     export function analogPitch(name: pins.AnalogPin, frequency: number, ms: number) {
         name.mode = PinFlags.Analog | PinFlags.Output;
         if (frequency <= 0) {
@@ -179,6 +175,11 @@ namespace pxsim.PwmPinMethods {
 }
 
 namespace pxsim.pins {
+    export function pulseDuration(): number {
+        // bus last event timestamp
+        return 500;
+    }
+    
     export function createBuffer(sz: number) {
         return pxsim.BufferMethods.createBuffer(sz)
     }

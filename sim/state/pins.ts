@@ -120,6 +120,10 @@ namespace pxsim.AnalogPinMethods {
 }
 
 namespace pxsim.PwmPinMethods {
+    export function pulseDuration() {
+        return 500;
+    }
+
     export function analogPitch(name: pins.AnalogPin, frequency: number, ms: number) {
         name.mode = PinFlags.Analog | PinFlags.Output;
         if (frequency <= 0) {
@@ -170,8 +174,7 @@ namespace pxsim.PwmPinMethods {
     }
 
     export function servoSetPulse(name: pins.AnalogPin, micros: number): void {
-        // TODO fix pxt
-        // name.servoSetPulse(micros);
+        name.servoSetPulse(name.id, micros);
     }
 }
 

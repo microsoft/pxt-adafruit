@@ -52,6 +52,17 @@ enum Easing {
 //% weight=98 color=#2699BF icon="\uf00a"
 namespace light {
     /**
+     * Turns the status LED on or off.
+     * @param on a value indicating if the LED is on
+     */
+    //% weight=1
+    //% blockId=light_status_led block="status led %on"
+    export function statusLED(on: boolean) {
+        if (on) pins.LED.digitalWrite(1);
+        else pins.LED.digitalWrite(0);
+    }
+
+    /**
      * A NeoPixel strip
      */
     //% autoCreate=neopixel.create

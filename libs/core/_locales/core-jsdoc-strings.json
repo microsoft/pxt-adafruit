@@ -97,6 +97,8 @@
   "light.sendBuffer|param|buf": "The buffer to send to the pin",
   "light.sendBuffer|param|pin": "The pin that the neopixels are connected to",
   "light.sparkleAnimation": "Return a new instance of the sparkle animation",
+  "light.statusLED": "Turns the status LED on or off.",
+  "light.statusLED|param|on": "a value indicating if the LED is on",
   "math.constrain": "Constrains a number to be within a range",
   "math.map": "Re-maps a number from one range to another. That is, a value of ``from low`` would get mapped to ``to low``, a value of ``from high`` to ``to high``, values in-between to values in-between, etc.",
   "math.map|param|fromHigh": "the upper bound of the value's current range, eg: 1023",

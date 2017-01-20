@@ -137,6 +137,7 @@
   "light.rgb|block": "red %red|green %green|blue %blue",
   "light.runningLightsAnimation|block": "running lights",
   "light.sparkleAnimation|block": "sparkle",
+  "light.statusLED|block": "status led %on",
   "light|block": "light",
   "math.constrain|block": "constrain %value|between %low|and %high",
   "math.map|block": "map %value|from low %fromLow|from high %fromHigh|to low %toLow|to high %toHigh",

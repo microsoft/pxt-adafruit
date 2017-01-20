@@ -91,24 +91,6 @@ namespace light {
         }
 
         /**
-         * Shows a rainbow pattern on all LEDs.
-         * @param startHue the start hue value for the rainbow, eg: 1
-         * @param endHue the end hue value for the rainbow, eg: 360
-         */
-        //% blockId="neopixel_set_strip_rainbow" block="show rainbow from %startHue|to %endHue"
-        //% weight=85 blockGap=8
-        //% parts="neopixel"
-        //% defaultInstance=light.builtin
-        showRainbow(startHue: number = 1, endHue: number = 360) {
-            let colors = interpolateHSL(startHue, 100, 50, endHue, 100, 50, this._length, HueInterpolationDirection.Clockwise);
-            for (let i = 0; i < colors.length; i++) {
-                let rgb = colors[i];
-                this.setPixelColor(i, rgb)
-            }
-            this.show();
-        }
-
-        /**
          * Displays a vertical bar graph based on the `value` and `high` value.
          * If `high` is 0, the chart gets adjusted automatically.
          * @param value current value to plot

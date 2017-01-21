@@ -24,4 +24,36 @@ namespace Math {
     export function constrain(value: number, low: number, high: number): number {
         return value < low ? low : value > high ? high : value;
     }
+    
+    /**
+     * Returns the sine of an input angle. This is an approximation. 
+     * @param theta input angle from 0-65535
+     */
+    export function sin(theta: number) {
+        //reference: based on FASTLed's sin approximation method: [https://github.com/FastLED/FastLED](MIT)
+        const base: number[] = [0, 6393, 12539, 18204, 23170, 27245, 30273, 32137];
+        const slope: number[] = [49, 48, 44, 38, 31, 23, 14, 4];
+        let offset = (theta & 0x3FFF) >> 3; // 0..2047
+        if( theta & 0x4000 ) offset = 2047 - offset;
+
+        let section = offset / 256; //0..7
+        let b = base[section];
+        let m = slope[section];
+
+        let sectionoff8 = offset / 2;
+        let mx = m * sectionoff8;
+        let y = mx + b;
+
+        if (theta & 0x8000) y = -y;
+
+        return y;
+    }
+
+    /**
+     * Returns the cosine of an input angle. This is an approximation. 
+     * @param theta input angle from 0-65535
+     */
+    export function cos(theta: number) {
+        return sin(theta + 16384);
+    }
 }

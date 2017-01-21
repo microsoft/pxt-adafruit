@@ -752,11 +752,11 @@ namespace light {
             const l = strip.length();
             return () => {
                 if (j < l * 2) {
+                    step++;
                     for (let i = 0; i < l; i++) {
-                        const level = Math.sin((i + step) * 127 + 128);
+                        const level = (Math.sin(i + step) * 127) + 128;
                         strip.setPixelColor(i, rgb(level * this.red / 255, level * this.green / 255, level * this.blue / 255));
                     }
-                    step++;
                     strip.show();
                     control.pause(this.delay);
                     j++;

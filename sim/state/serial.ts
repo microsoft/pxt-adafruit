@@ -4,6 +4,7 @@ namespace pxsim.serial {
     }
 
     export function writeString(str: string) {
+        console.log(str);
         board().writeSerial(str);
     }
 

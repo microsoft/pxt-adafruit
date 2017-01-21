@@ -509,7 +509,7 @@ namespace light {
 
         //reference: based on FastLED's hsv2rgb algorithm [https://github.com/FastLED/FastLED](MIT)
         let invsat = 255 - s;
-        let brightness_floor = (v * i) / 256;
+        let brightness_floor = (v * invsat) / 256;
         let color_amplitude = v - brightness_floor;
         let section = h / 0x40; // [0..2]
         let offset = h % 0x40; // [0..63]
@@ -571,9 +571,9 @@ namespace light {
             steps = 1;
 
         //hue
-        let hDistCW = ((h2 + 360) - h1) % 360;
+        let hDistCW = ((h2 + 255) - h1) % 255;
         let hStepCW = (hDistCW * 100) / steps;
-        let hDistCCW = ((h1 + 360) - h2) % 360;
+        let hDistCCW = ((h1 + 255) - h2) % 255;
         let hStepCCW = -(hDistCCW * 100) / steps
         let hStep: number;
         if (direction === HueInterpolationDirection.Clockwise) {
@@ -602,7 +602,7 @@ namespace light {
         } else {
             colors.push(hsv(h1, s1, v1));
             for (let i = 1; i < steps - 1; i++) {
-                let h = (h1_100 + i * hStep) / 100 + 360;
+                let h = (h1_100 + i * hStep) / 100 + 255;
                 let s = (s1_100 + i * sStep) / 100;
                 let l = (v1_100 + i * vStep) / 100;
                 colors.push(hsv(h, s, l));

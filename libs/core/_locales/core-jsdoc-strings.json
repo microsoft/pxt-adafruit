@@ -85,7 +85,7 @@
   "light.defaultPin": "Gets the default pin for built in neopixels",
   "light.hsv": "Converts an HSV (hue, saturation, value) color to RGB",
   "light.hsv|param|hue": "value of the hue channel between 0 and 255. eg: 255",
-  "light.hsv|param|sat": "value of the saturation channel between 0 and 100. eg: 100",
+  "light.hsv|param|sat": "value of the saturation channel between 0 and 255. eg: 255",
   "light.hsv|param|val": "value of the value channel between 0 and 100. eg: 50",
   "light.rainbowCycleAnimation": "Return a new instance of the rainbow animation",
   "light.rgb": "Converts red, green, blue channels into a RGB color",

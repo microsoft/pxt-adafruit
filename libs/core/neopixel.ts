@@ -670,7 +670,7 @@ namespace light {
         }
         private static runningLightsSingleton: RunningLightsAnimation;
         static getRunningLights(): RunningLightsAnimation {
-            if (!NeopixelAnimatonFactory.runningLightsSingleton) NeopixelAnimatonFactory.runningLightsSingleton = new RunningLightsAnimation(0xff, 0xff, 0x00);
+            if (!NeopixelAnimatonFactory.runningLightsSingleton) NeopixelAnimatonFactory.runningLightsSingleton = new RunningLightsAnimation(0xff, 0xff, 0x00, 50);
             return NeopixelAnimatonFactory.runningLightsSingleton;
         }
 

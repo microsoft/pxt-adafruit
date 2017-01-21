@@ -471,13 +471,13 @@ namespace light {
     }
 
     /**
-     * Gets an RGB color given the value of an angle between 0 and 360. Useful
+     * Gets an RGB color given the value of an angle between 0 and 255. Useful
      * for performing math with colors.
     */
     //% weight=1 blockGap=8 advanced=true
     //% blockId="neopixel_color_wheel" block="color wheel %angle"
     export function colorWheel(angle: number): number {
-        return hsl(angle, 100, 50);
+        return hsv(angle, 100, 50);
     }
 
     function unpackR(rgb: number): number {
@@ -494,45 +494,56 @@ namespace light {
     }
 
     /**
-     * Converts an HSL (hue, saturation, luminosity) color to RGB
-     * @param hue value of the hue channel between 0 and 360. eg: 360
+     * Converts an HSV (hue, saturation, value) color to RGB
+     * @param hue value of the hue channel between 0 and 255. eg: 255
      * @param sat value of the saturation channel between 0 and 100. eg: 100
-     * @param lum value of the luminosity channel between 0 and 100. eg: 50
+     * @param val value of the value channel between 0 and 100. eg: 50
      */
     //% weight=3 blockGap=8
-    //% blockId="neopixel_hsl" block="hue %hue|sat %sat|lum %lum"
+    //% blockId="neopixel_hsv" block="hue %hue|sat %sat|val %val"
     //% advanced=true
-    export function hsl(hue: number, sat: number, lum: number): number {
-        let h = hue % 360;
+    export function hsv(hue: number, sat: number, val: number): number {        
+        let h = hue % 255;
         let s = Math.clamp(0, 99, sat);
-        let l = Math.clamp(0, 99, lum);
+        let v = Math.clamp(0, 99, val);
 
-        //reference: https://en.wikipedia.org/wiki/HSL_and_HSV#From_HSL
-        let c = (((100 - Math.abs(2 * l - 100)) * s) << 8) / 10000; //chroma, [0,255]
-        let h1 = h / 60;//[0,6]
-        let h2 = (h - h1 * 60) * 256 / 60;//[0,255]
-        let temp = Math.abs((((h1 % 2) << 8) + h2) - 256);
-        let x = (c * (256 - (temp))) >> 8;//[0,255], second largest component of this color
-        let r$: number;
-        let g$: number;
-        let b$: number;
-        if (h1 == 0) {
-            r$ = c; g$ = x; b$ = 0;
-        } else if (h1 == 1) {
-            r$ = x; g$ = c; b$ = 0;
-        } else if (h1 == 2) {
-            r$ = 0; g$ = c; b$ = x;
-        } else if (h1 == 3) {
-            r$ = 0; g$ = x; b$ = c;
-        } else if (h1 == 4) {
-            r$ = x; g$ = 0; b$ = c;
-        } else if (h1 == 5) {
-            r$ = c; g$ = 0; b$ = x;
+        //reference: based on FastLED's hsv2rgb algorithm [https://github.com/FastLED/FastLED](MIT)
+        let invsat = 255 - s;
+        let brightness_floor = (v * i) / 256;
+        let color_amplitude = v - brightness_floor;
+        let section = h / 0x40; // [0..2]
+        let offset = h % 0x40; // [0..63]
+
+        let rampup = offset;
+        let rampdown = (0x40 - 1) - offset;
+
+        let rampup_amp_adj = (rampup * color_amplitude) / (256/4);
+        let rampdown_amp_adj = (rampdown * color_amplitude) / (256/4);
+        
+        let rampup_adj_with_floor = (rampup_amp_adj + brightness_floor);
+        let rampdown_adj_with_floor = (rampdown_amp_adj + brightness_floor);
+        
+        let r: number;
+        let g: number;
+        let b: number;
+        if (section) {
+            if (section == 1) {
+                // section 1: 0x40..0x7F
+                r = brightness_floor;
+                g = rampdown_adj_with_floor;
+                b = rampup_adj_with_floor;
+            } else {
+                // section 2; 0x80..0xBF
+                r = rampup_adj_with_floor;
+                g = brightness_floor;
+                b = rampdown_adj_with_floor;
+            }
+        } else {
+            // section 0: 0x00..0x3F
+            r = rampdown_adj_with_floor;
+            g = rampup_adj_with_floor;
+            b = brightness_floor;
         }
-        let m = ((l * 2 << 8) / 100 - c) / 2;
-        let r = r$ + m;
-        let g = g$ + m;
-        let b = b$ + m;
         return rgb(r, g, b);
     }
 
@@ -543,19 +554,19 @@ namespace light {
     }
 
     /**
-     * Interpolates between two HSL colors
+     * Interpolates between two HSV colors
      * @param h1 the start hue
      * @param s1 the start saturation
-     * @param l1 the start luminosity
+     * @param v1 the start value
      * @param h2 the end hue
      * @param s2 the end saturation
-     * @param l2 the end luminosity
+     * @param v2 the end value
      * @param steps the number of steps to interpolate for. Note that if steps is 1, the color midway between the start and end color will be returned.
      * @param direction the direction around the color wheel the hue should be interpolated.
      */
     //% parts="neopixel"
     //% advanced=true
-    function interpolateHSL(h1: number, s1: number, l1: number, h2: number, s2: number, l2: number, steps: number, direction: HueInterpolationDirection): number[] {
+    function interpolateHSV(h1: number, s1: number, v1: number, h2: number, s2: number, v2: number, steps: number, direction: HueInterpolationDirection): number[] {
         if (steps <= 0)
             steps = 1;
 
@@ -579,24 +590,24 @@ namespace light {
         let sStep = sDist / steps;
         let s1_100 = s1 * 100;
 
-        //lum
-        let lDist = l2 - l1;
-        let lStep = lDist / steps;
-        let l1_100 = l1 * 100
+        //val
+        let vDist = v2 - v1;
+        let vStep = vDist / steps;
+        let v1_100 = v1 * 100
 
         //interpolate
         let colors: number[] = [];
         if (steps === 1) {
-            colors.push(hsl(h1 + hStep, s1 + sStep, l1 + lStep));
+            colors.push(hsv(h1 + hStep, s1 + sStep, v1 + vStep));
         } else {
-            colors.push(hsl(h1, s1, l1));
+            colors.push(hsv(h1, s1, v1));
             for (let i = 1; i < steps - 1; i++) {
                 let h = (h1_100 + i * hStep) / 100 + 360;
                 let s = (s1_100 + i * sStep) / 100;
-                let l = (l1_100 + i * lStep) / 100;
-                colors.push(hsl(h, s, l));
+                let l = (v1_100 + i * vStep) / 100;
+                colors.push(hsv(h, s, l));
             }
-            colors.push(hsl(h2, s2, l2));
+            colors.push(hsv(h2, s2, v2));
         }
         return colors;
     }
@@ -708,7 +719,7 @@ namespace light {
             return () => {
                 const offset = control.millis() / speed;
                 for (let i = 0; i < l; i++) {
-                    strip.setPixelColor(i, colorWheel(((i * 361 / l) + offset) & 360));
+                    strip.setPixelColor(i, colorWheel(((i * 256 / l) + offset) & 255));
                 }
             }
         }

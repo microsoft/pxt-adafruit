@@ -508,7 +508,7 @@ namespace light {
         let v = Math.clamp(0, 99, val);
 
         //reference: based on FastLED's hsv2rgb algorithm [https://github.com/FastLED/FastLED](MIT)
-        let invsat = 255 - s;
+        let invsat = 100 - s;
         let brightness_floor = (v * invsat) / 256;
         let color_amplitude = v - brightness_floor;
         let section = h / 0x40; // [0..2]

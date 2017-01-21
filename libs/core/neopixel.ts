@@ -320,7 +320,7 @@ namespace light {
          * Set the current animation
          */
         //% blockId="neopixel_draw_animation_frame" block="show frame of %animation=neopixel_animation_rainbow |animation"
-        //% weight=95
+        //% weight=90
         //% parts="neopixel"
         //% defaultInstance=light.builtin
         showAnimationFrame(animation: NeoPixelAnimation): void {
@@ -330,7 +330,6 @@ namespace light {
                 this._animation = animation.create(this);
             }
             this._animation();
-            this.show();
         }
 
         private setBufferRGB(offset: number, red: number, green: number, blue: number): void {
@@ -620,6 +619,16 @@ namespace light {
     export function runningLightsAnimation(): NeoPixelAnimation {
         return NeopixelAnimatonFactory.getRunningLights();
     }
+    
+    /**
+     * Return a new instance of the theatre chase animation
+     */
+    //% blockId="neopixel_animation_theatrechase" block="theatre chase"
+    //% weight=99 blockGap=8
+    //% parts="neopixel"
+    export function theatreChaseAnimation(): NeoPixelAnimation {
+        return NeopixelAnimatonFactory.getTheatreChase();
+    }
 
     /**
      * Return a new instance of the comet animation
@@ -644,11 +653,11 @@ namespace light {
     /**
      * Return a new instance of the color wipe animation
      */
-    //% blockId="neopixel_animation_colorwipe" block="color wipe"
+    //% blockId="neopixel_animation_colorwipe" block="%rgb=neopixel_colors| color wipe "
     //% weight=96 blockGap=8
     //% parts="neopixel"
-    export function colorWipeAnimation(): NeoPixelAnimation {
-        return NeopixelAnimatonFactory.getColorWipe();
+    export function colorWipeAnimation(rgb: number): NeoPixelAnimation {
+        return NeopixelAnimatonFactory.getColorWipe(rgb);
     }
 
     export const builtin = light.createNeoPixelStrip();
@@ -678,9 +687,15 @@ namespace light {
         }
 
         private static colorWipeSingleton: ColorWipeAnimation;
-        static getColorWipe(): ColorWipeAnimation {
-            if (!NeopixelAnimatonFactory.colorWipeSingleton) NeopixelAnimatonFactory.colorWipeSingleton = new ColorWipeAnimation(0x00, 0xff, 0x00, 50);
+        static getColorWipe(rgb: number): ColorWipeAnimation {
+            if (!NeopixelAnimatonFactory.colorWipeSingleton) NeopixelAnimatonFactory.colorWipeSingleton = new ColorWipeAnimation(unpackR(rgb), unpackG(rgb), unpackB(rgb), 50);
             return NeopixelAnimatonFactory.colorWipeSingleton;
+        }
+
+        private static theatreChaseSingleton: TheatreChaseAnimation;
+        static getTheatreChase(): TheatreChaseAnimation {
+            if (!NeopixelAnimatonFactory.theatreChaseSingleton) NeopixelAnimatonFactory.theatreChaseSingleton = new TheatreChaseAnimation(0xff, 0, 0, 50);
+            return NeopixelAnimatonFactory.theatreChaseSingleton;
         }
     }
 
@@ -710,6 +725,7 @@ namespace light {
                 for (let i = 0; i < l; i++) {
                     strip.setPixelColor(i, colorWheel(((i * 361 / l) + offset) & 360));
                 }
+                strip.show();
             }
         }
     }
@@ -719,26 +735,38 @@ namespace light {
         public red: number;
         public green: number;
         public blue: number;
+        public delay: number;
 
-        constructor(red: number, green: number, blue: number) {
+        constructor(red: number, green: number, blue: number, delay: number) {
             super(1002);
             // precomputed Math.sin(x) * 127 + 128 for x in [0,NUM_PIXELS*2]
-            this.levels = [128, 33, 2, 57, 160, 242, 246, 170, 66, 4, 26, 118, 216, 255, 207, 106, 19, 7, 77, 181, 250, 235, 148, 47, 1, 41, 140, 231, 252, 188];
+            this.levels = [128, 234, 243, 32, 6, 211, 253, 180, 59, 1, 60, 181, 254, 211, 91, 6, 33, 147, 244, 234, 250, 235, 127, 21, 13, 112, 225, 250, 163, 44];
             this.red = red;
             this.green = green;
             this.blue = blue;
+
+            this.delay = delay;
         }
 
 
         public create(strip: NeoPixelStrip): () => void {
+            let j = 0;
             let step = 0;
             const l = strip.length();
             return () => {
-                for (let i = 0; i < l; i++) {
-                    const level = this.levels[(i + step) % this.levels.length];
-                    strip.setPixelColor(i, rgb(level * this.red / 255, level * this.green / 255, level * this.blue / 255));
+                if (j < l * 2) {
+                    for (let i = 0; i < l; i++) {
+                        const level = this.levels[(i + step) % this.levels.length];
+                        strip.setPixelColor(i, rgb(level * this.red / 255, level * this.green / 255, level * this.blue / 255));
+                    }
+                    step++;
+                    strip.show();
+                    control.pause(this.delay);
+                    j++;
+                } else {
+                    step = 0;
+                    j = 0;
                 }
-                step++;
             }
         }
     }
@@ -770,21 +798,18 @@ namespace light {
                     strip.setPixelColor(i, rgb(255 - offsets[i], this.green, this.blue));
                 }
                 step++;
+                strip.show();
             }
         }
     }
 
     class SparkleAnimation extends NeoPixelAnimation {
-        public red: number;
-        public green: number;
-        public blue: number;
+        public rgb: number;
         public delay: number;
 
         constructor(red: number, green: number, blue: number, delay: number) {
             super(1004);
-            this.red = red;
-            this.green = green;
-            this.blue = blue;
+            this.rgb = rgb(red, green, blue);
             this.delay = delay;
         }
 
@@ -792,7 +817,7 @@ namespace light {
             const l = strip.length();
             return () => {
                 const pixel = Math.random(l);
-                strip.setPixelColor(pixel, rgb(this.red, this.green, this.blue));
+                strip.setPixelColor(pixel, this.rgb);
                 strip.show();
                 control.pause(this.delay);
                 strip.setPixelColor(pixel, 0);
@@ -801,32 +826,69 @@ namespace light {
     }
 
     class ColorWipeAnimation extends NeoPixelAnimation {
-
-        public red: number;
-        public green: number;
-        public blue: number;
+        public rgb: number;
         public delay: number;
 
         constructor(red: number, green: number, blue: number, delay: number) {
             super(1005);
-            this.red = red;
-            this.green = green;
-            this.blue = blue;
+            this.rgb = rgb(red, green, blue);
             this.delay = delay;
         }
 
         public create(strip: NeoPixelStrip): () => void {
             const l = strip.length();
+            let i = 0;
+            let reveal = true;
             return () => {
-                for (let i = 0; i < l; i++) {
-                    strip.setPixelColor(i, rgb(this.red, this.green, this.blue));
+                if (i < l) {
+                    if (reveal) {
+                        strip.setPixelColor(i, this.rgb);
+                    } else {
+                        strip.setPixelColor(i, rgb(0, 0, 0));
+                    }
                     strip.show();
                     control.pause(this.delay);
+                    i++;
+                } else {
+                    reveal = !reveal;
+                    i = 0;
                 }
-                for (let i = 0; i < l; i++) {
-                    strip.setPixelColor(i, rgb(0, 0, 0));
-                    strip.show();
-                    control.pause(this.delay);
+            }
+        }
+    }
+
+    class TheatreChaseAnimation extends NeoPixelAnimation {
+        public rgb: number;
+        public delay: number;
+
+        constructor(red: number, green: number, blue: number, delay: number) {
+            super(1005);
+            this.rgb = rgb(red, green, blue);
+            this.delay = delay;
+        }
+
+        public create(strip: NeoPixelStrip): () => void {
+            const l = strip.length();
+            let j = 0;
+            let q = 0;
+            return () => {
+                if (j < 10) { // 10 cycles of chasing
+                    if (q < 3) {
+                        for (let i = 0; i < l; i=i+3) {
+                             strip.setPixelColor(i+q, this.rgb); // every third pixel on
+                        }
+                        strip.show();
+                        control.pause(this.delay);
+                        for (let i = 0; i < l; i=i+3) {
+                             strip.setPixelColor(i+q, 0); // every third pixel off
+                        }
+                        q++;
+                    } else {
+                        q = 0;
+                    }
+                    j++;
+                } else {
+                    j = 0;
                 }
             }
         }

@@ -407,9 +407,9 @@ namespace pxsim.visuals {
                 let hsl = visuals.rgbToHsl(rgb);
                 let [h, s, l] = hsl;
                 // at least 10% luminosity
-                let lx = Math.max(l * 1.4, 100);
+                let lx = Math.max(l * 1.3, 100);
                 l = Math.max(l, 10);
-                if (p_inner) svg.fill(p_inner, `hsl(${h}, ${s}%, ${lx}%)`);
+                if (p_inner) svg.fill(p_inner, `hsla(${h}, ${s}%, ${lx}%, 0.6)`);
                 if (p_outer) svg.fill(p_outer, `hsl(${h}, ${s}%, ${Math.min(l * 3, 75)}%)`);
                 if (p_inner) svg.filter(p_inner, `url(#neopixelglow)`);
                 if (p_outer) svg.filter(p_outer, `url(#neopixelglow)`);

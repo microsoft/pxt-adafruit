@@ -477,7 +477,7 @@ namespace light {
     //% weight=1 blockGap=8 advanced=true
     //% blockId="neopixel_color_wheel" block="color wheel %angle"
     export function colorWheel(angle: number): number {
-        return hsv(angle, 100, 50);
+        return hsv(angle, 255, 255);
     }
 
     function unpackR(rgb: number): number {
@@ -496,21 +496,21 @@ namespace light {
     /**
      * Converts an HSV (hue, saturation, value) color to RGB
      * @param hue value of the hue channel between 0 and 255. eg: 255
-     * @param sat value of the saturation channel between 0 and 100. eg: 100
-     * @param val value of the value channel between 0 and 100. eg: 50
+     * @param sat value of the saturation channel between 0 and 255. eg: 255
+     * @param val value of the value channel between 0 and 255. eg: 255
      */
     //% weight=3 blockGap=8
     //% blockId="neopixel_hsv" block="hue %hue|sat %sat|val %val"
     //% advanced=true
     export function hsv(hue: number, sat: number, val: number): number {        
         let h = hue % 255;
-        let s = Math.clamp(0, 99, sat);
-        let v = Math.clamp(0, 99, val);
+        // scale down to 0..192
+        h = h * 192 / 255;
 
-        //reference: based on FastLED's hsv2rgb algorithm [https://github.com/FastLED/FastLED](MIT)
-        let invsat = 100 - s;
-        let brightness_floor = (v * invsat) / 256;
-        let color_amplitude = v - brightness_floor;
+        //reference: based on FastLED's hsv2rgb rainbow algorithm [https://github.com/FastLED/FastLED](MIT)
+        let invsat = 255 - sat;
+        let brightness_floor = (val * invsat) / 256;
+        let color_amplitude = val - brightness_floor;
         let section = h / 0x40; // [0..2]
         let offset = h % 0x40; // [0..63]
 
@@ -537,7 +537,7 @@ namespace light {
                 r = rampup_adj_with_floor;
                 g = brightness_floor;
                 b = rampdown_adj_with_floor;
-            }
+            } 
         } else {
             // section 0: 0x00..0x3F
             r = rampdown_adj_with_floor;
@@ -545,71 +545,6 @@ namespace light {
             b = brightness_floor;
         }
         return rgb(r, g, b);
-    }
-
-    enum HueInterpolationDirection {
-        Clockwise,
-        CounterClockwise,
-        Shortest
-    }
-
-    /**
-     * Interpolates between two HSV colors
-     * @param h1 the start hue
-     * @param s1 the start saturation
-     * @param v1 the start value
-     * @param h2 the end hue
-     * @param s2 the end saturation
-     * @param v2 the end value
-     * @param steps the number of steps to interpolate for. Note that if steps is 1, the color midway between the start and end color will be returned.
-     * @param direction the direction around the color wheel the hue should be interpolated.
-     */
-    //% parts="neopixel"
-    //% advanced=true
-    function interpolateHSV(h1: number, s1: number, v1: number, h2: number, s2: number, v2: number, steps: number, direction: HueInterpolationDirection): number[] {
-        if (steps <= 0)
-            steps = 1;
-
-        //hue
-        let hDistCW = ((h2 + 255) - h1) % 255;
-        let hStepCW = (hDistCW * 100) / steps;
-        let hDistCCW = ((h1 + 255) - h2) % 255;
-        let hStepCCW = -(hDistCCW * 100) / steps
-        let hStep: number;
-        if (direction === HueInterpolationDirection.Clockwise) {
-            hStep = hStepCW;
-        } else if (direction === HueInterpolationDirection.CounterClockwise) {
-            hStep = hStepCCW;
-        } else {
-            hStep = hDistCW < hDistCCW ? hStepCW : hStepCCW;
-        }
-        let h1_100 = h1 * 100; //we multiply by 100 so we keep more accurate results while doing interpolation
-
-        //sat
-        let sDist = s2 - s1;
-        let sStep = sDist / steps;
-        let s1_100 = s1 * 100;
-
-        //val
-        let vDist = v2 - v1;
-        let vStep = vDist / steps;
-        let v1_100 = v1 * 100
-
-        //interpolate
-        let colors: number[] = [];
-        if (steps === 1) {
-            colors.push(hsv(h1 + hStep, s1 + sStep, v1 + vStep));
-        } else {
-            colors.push(hsv(h1, s1, v1));
-            for (let i = 1; i < steps - 1; i++) {
-                let h = (h1_100 + i * hStep) / 100 + 255;
-                let s = (s1_100 + i * sStep) / 100;
-                let l = (v1_100 + i * vStep) / 100;
-                colors.push(hsv(h, s, l));
-            }
-            colors.push(hsv(h2, s2, v2));
-        }
-        return colors;
     }
 
     /**

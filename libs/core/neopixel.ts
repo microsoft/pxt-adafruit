@@ -677,7 +677,6 @@ namespace light {
     }
 
     class RunningLightsAnimation extends NeoPixelAnimation {
-        public levels: number[];
         public red: number;
         public green: number;
         public blue: number;
@@ -685,8 +684,6 @@ namespace light {
 
         constructor(red: number, green: number, blue: number, delay: number) {
             super(1002);
-            // precomputed Math.sin(x) * 127 + 128 for x in [0,NUM_PIXELS*2]
-            this.levels = [128, 234, 243, 32, 6, 211, 253, 180, 59, 1, 60, 181, 254, 211, 91, 6, 33, 147, 244, 234, 250, 235, 127, 21, 13, 112, 225, 250, 163, 44];
             this.red = red;
             this.green = green;
             this.blue = blue;
@@ -701,11 +698,11 @@ namespace light {
             const l = strip.length();
             return () => {
                 if (j < l * 2) {
+                    step++;
                     for (let i = 0; i < l; i++) {
-                        const level = this.levels[(i + step) % this.levels.length];
+                        const level = (Math.sin(i + step) * 127) + 128;
                         strip.setPixelColor(i, rgb(level * this.red / 255, level * this.green / 255, level * this.blue / 255));
                     }
-                    step++;
                     strip.show();
                     control.pause(this.delay);
                     j++;

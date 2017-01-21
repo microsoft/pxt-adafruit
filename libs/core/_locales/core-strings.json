@@ -132,7 +132,7 @@
   "light.colors|block": "%color",
   "light.cometAnimation|block": "comet",
   "light.createNeoPixelStrip|block": "create NeoPixel at pin %pin|with %numleds|leds as %mode",
-  "light.hsl|block": "hue %hue|sat %sat|lum %lum",
+  "light.hsv|block": "hue %hue|sat %sat|val %val",
   "light.rainbowCycleAnimation|block": "rainbow",
   "light.rgb|block": "red %red|green %green|blue %blue",
   "light.runningLightsAnimation|block": "running lights",

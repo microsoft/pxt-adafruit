@@ -279,12 +279,12 @@ namespace light {
         }
 
         /**
-         * Create a range of LEDs.
-         * @param start offset in the LED strip to start the range
-         * @param length number of LEDs in the range. eg: 4
+         * Create a range of pixels.
+         * @param start offset in the NeoPixel strip to start the range
+         * @param length number of pixels in the range. eg: 4
          */
         //% weight=89
-        //% blockId="neopixel_range" block="range from %start|with %length|leds"
+        //% blockId="neopixel_range" block="range from %start|with %length|pixels"
         //% parts="neopixel" advanced=true
         //% defaultInstance=light.builtin
         range(start: number, length: number): NeoPixelStrip {
@@ -424,8 +424,8 @@ namespace light {
      * @param pin the pin where the neopixel is connected.
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      */
-    //% blockId="neopixel_create" block="create NeoPixel at pin %pin|with %numleds|leds as %mode"
-    //% weight=90 blockGap=8 advanced=true
+    //% blockId="neopixel_create" block="create NeoPixel strip|pin %pin|pixels %numleds|mode %mode"
+    //% weight=90 blockGap=8 advanced=true blockExternalInputs=1
     //% parts="neopixel"
     //% trackArgs=0,2
     export function createNeoPixelStrip(

@@ -135,7 +135,7 @@
   "light.colorWipeAnimation|block": "%rgb=neopixel_colors| color wipe ",
   "light.colors|block": "%color",
   "light.cometAnimation|block": "comet",
-  "light.createNeoPixelStrip|block": "create NeoPixel at pin %pin|with %numleds|leds as %mode",
+  "light.createNeoPixelStrip|block": "create NeoPixel strip|pin %pin|pixels %numleds|mode %mode",
   "light.hsv|block": "hue %hue|sat %sat|val %val",
   "light.rainbowCycleAnimation|block": "rainbow",
   "light.rgb|block": "red %red|green %green|blue %blue",

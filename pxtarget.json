@@ -143,7 +143,7 @@
     },
     "appTheme": {
         "accentColor": "#000",
-        "logoUrl": "https://www.adafruit.com/products/3000",
+        "logoUrl": "http://adafruit.com/circuitplaygroundpxt",
         "logo": "./static/logo.svg",
         "docsLogo": "./static/logo.square.svg",
         "portraitLogo": "./static/logo.square.svg",
@@ -154,12 +154,12 @@
         "organizationUrl": "https://pxt.io/",
         "organizationLogo": "./static/Microsoft-logo_rgb_c-white.png",
         "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
-        "homeUrl": "https://www.adafruit.com/",
+        "homeUrl": "http://adafruit.com/circuitplaygroundpxt",
         "embedUrl": "https://adafruit.pxt.io/",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
         "githubUrl": "https://github.com/Microsoft/pxt-adafruit-circuit-playground",
-        "boardName": "Adafruit Circuit Playground",
+        "boardName": "Adafruit Circuit Playground Express",
         "projectGallery": "projects",
         "docMenu": [
             {

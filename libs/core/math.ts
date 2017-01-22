@@ -1,3 +1,4 @@
+//% color=230
 namespace Math {    
     /**
      * Re-maps a number from one range to another. That is, a value of ``from low`` would get mapped to ``to low``, a value of ``from high`` to ``to high``, values in-between to values in-between, etc.
@@ -19,7 +20,7 @@ namespace Math {
      * @param y the lower end of the range, all data types
      * @param z the upper end of the range, all data types
      */
-    //% help=math/constrain weight=22 advanced=true
+    //% help=math/constrain weight=22 advanced=true blockGap=8
     //% blockId="math_constrain_value" block="constrain %value|between %low|and %high"
     export function constrain(value: number, low: number, high: number): number {
         return value < low ? low : value > high ? high : value;
@@ -30,7 +31,7 @@ namespace Math {
      * Returns the sine of an input angle. This is an 8-bit approximation.
      * @param theta input angle from 0-255
      */
-    //% help=math/sin weight=11 advanced=true
+    //% help=math/sin weight=11 advanced=true blockGap=8
     //% blockId="math_trig_sin" block="sin %theta"
     export function sin(theta: number) {
         //reference: based on FASTLed's sin approximation method: [https://github.com/FastLED/FastLED](MIT)
@@ -62,7 +63,7 @@ namespace Math {
      * Returns the cosine of an input angle. This is an 8-bit approximation. 
      * @param theta input angle from 0-255
      */
-    //% help=math/cos weight=10 advanced=true
+    //% help=math/cos weight=10 advanced=true blockGap=8
     //% blockId="math_trig_cos" block="cos %theta"
     export function cos(theta: number) {
         return sin(theta + 16384);

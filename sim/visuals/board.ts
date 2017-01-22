@@ -696,7 +696,7 @@ namespace pxsim.visuals {
                     if (pin.text)
                         this.pinTexts[i] = <SVGTextElement>svg.child(this.g, "text", { class: "sim-text-pin", x: pin.text.x, y: pin.text.y })
                     if (pin.tooltip)
-                        svg.hydrate(p, { title: pin.touch })
+                        svg.hydrate(p, { title: pin.tooltip })
                 }
                 return p;
             });

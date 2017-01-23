@@ -129,7 +129,7 @@ namespace light {
                 const r = (i * sr + (l1 - i) * er) / (l1);
                 const g = (i * sg + (l1 - i) * eg) / (l1);
                 const b = (i * sb + (l1 - i) * eb) / (l1);
-                this.setPixelRGB(i, rgb(r,g,b))
+                this.setPixelColor(i, rgb(r,g,b))
             }
             this.show();
         }
@@ -174,7 +174,7 @@ namespace light {
         }
 
         /**
-         * Set LED to a given color (range 0-255 for r, g, b).
+         * Set the pixel to a given color.
          * You need to call ``show`` to make the changes visible.
          * @param pixeloffset position of the NeoPixel in the strip
          * @param rgb RGB color of the LED
@@ -185,7 +185,54 @@ namespace light {
         //% parts="neopixel"
         //% defaultInstance=light.builtin
         setPixelColor(pixeloffset: number, rgb: number): void {
-            this.setPixelRGB(pixeloffset, rgb);
+            if (pixeloffset < 0
+                || pixeloffset >= this._length)
+                return;
+
+            let stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            pixeloffset = (pixeloffset + this.start) * stride;
+
+            let red = unpackR(rgb);
+            let green = unpackG(rgb);
+            let blue = unpackB(rgb);
+
+            let br = this.brightness;
+            if (br < 255) {
+                red = (red * br) >> 8;
+                green = (green * br) >> 8;
+                blue = (blue * br) >> 8;
+            }
+            this.setBufferRGB(pixeloffset, red, green, blue)
+        }
+
+        /**
+         * Gets the pixel color.
+         * @param pixeloffset position of the NeoPixel in the strip
+         */
+        //% blockId="neopixel_get_pixel_color" block="pixel color at %pixeloffset"
+        //% blockGap=8
+        //% weight=4 advanced=true
+        //% parts="neopixel"
+        //% defaultInstance=light.builtin
+        pixelColor(pixeloffset: number): number {
+            if (pixeloffset < 0
+                || pixeloffset >= this._length)
+                return 0;
+            
+            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            const offset = (pixeloffset + this.start) * stride;
+            const b = this.buf;
+            let red = 0, green = 0,blue = 0;
+            if (this._mode === NeoPixelMode.RGB_RGB) {
+                red = this.buf[offset + 0];
+                green = this.buf[offset + 1];
+            } else {
+                green = this.buf[offset + 0];
+                red = this.buf[offset + 1];
+            }
+            blue = this.buf[offset + 2];
+
+            return rgb(red, green, blue);            
         }
 
         /**
@@ -374,26 +421,6 @@ namespace light {
                 let ledoffset = i * 4;
                 buf[ledoffset + 3] = white;
             }
-        }
-        private setPixelRGB(pixeloffset: number, rgb: number): void {
-            if (pixeloffset < 0
-                || pixeloffset >= this._length)
-                return;
-
-            let stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
-            pixeloffset = (pixeloffset + this.start) * stride;
-
-            let red = unpackR(rgb);
-            let green = unpackG(rgb);
-            let blue = unpackB(rgb);
-
-            let br = this.brightness;
-            if (br < 255) {
-                red = (red * br) >> 8;
-                green = (green * br) >> 8;
-                blue = (blue * br) >> 8;
-            }
-            this.setBufferRGB(pixeloffset, red, green, blue)
         }
         private setPixelW(pixeloffset: number, white: number): void {
             if (this._mode !== NeoPixelMode.RGBW)
@@ -606,6 +633,7 @@ namespace light {
         return NeopixelAnimatonFactory.getColorWipe(rgb);
     }
 
+    //%
     export const builtin = light.createNeoPixelStrip();
 
     class NeopixelAnimatonFactory {

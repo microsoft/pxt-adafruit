@@ -143,7 +143,7 @@
     },
     "appTheme": {
         "accentColor": "#000",
-        "logoUrl": "http://adafruit.com/circuitplaygroundpxt",
+        "logoUrl": "https://adafruit.com/circuitplaygroundpxt",
         "logo": "./static/logo.svg",
         "docsLogo": "./static/logo.square.svg",
         "portraitLogo": "./static/logo.square.svg",
@@ -154,7 +154,7 @@
         "organizationUrl": "https://pxt.io/",
         "organizationLogo": "./static/Microsoft-logo_rgb_c-white.png",
         "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
-        "homeUrl": "http://adafruit.com/circuitplaygroundpxt",
+        "homeUrl": "https://adafruit.pxt.io",
         "embedUrl": "https://adafruit.pxt.io/",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
@@ -163,8 +163,16 @@
         "projectGallery": "projects",
         "docMenu": [
             {
-                "name": "Getting Started",
-                "path": "/getting-started"
+                "name": "About",
+                "path": "/about"
+            },
+            {
+                "name": "Blocks",
+                "path": "/blocks"
+            },
+            {
+                "name": "JavaScript",
+                "path": "/javascript"
             }
         ],
         "sideDoc": "tutorials/getting-started",

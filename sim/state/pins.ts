@@ -1,9 +1,13 @@
 
 namespace pxsim.pins {
-    export class DigitalPin extends Pin {
+    export class CPPin extends Pin {
+        used: boolean;
     }
 
-    export class AnalogPin extends Pin {
+    export class DigitalPin extends CPPin {
+    }
+
+    export class AnalogPin extends CPPin {
 
     }
 }
@@ -75,6 +79,10 @@ namespace pxsim.AnalogPinMethods {
      * Read the connector value as analog, that is, as a value comprised between 0 and 1023.
      */
     export function analogRead(name: pins.AnalogPin): number {
+        if (!name.used) {
+            name.used = true;
+            runtime.queueDisplayUpdate();
+        }
         return name.analogReadPin();
     }
 
@@ -84,6 +92,11 @@ namespace pxsim.AnalogPinMethods {
      */
     export function analogWrite(name: pins.AnalogPin, value: number): void {
         name.analogWritePin(value);
+
+        if (!name.used) {
+            name.used = true;
+            runtime.queueDisplayUpdate();
+        }
     }
 
     /**
@@ -129,7 +142,7 @@ namespace pxsim.PwmPinMethods {
             name.value = 512;
             name.period = 1000000 / frequency;
         }
-        
+
         const audioState = board().audioState;
         audioState.startPlaying();
         runtime.queueDisplayUpdate();
@@ -179,7 +192,7 @@ namespace pxsim.pins {
         // bus last event timestamp
         return 500;
     }
-    
+
     export function createBuffer(sz: number) {
         return pxsim.BufferMethods.createBuffer(sz)
     }

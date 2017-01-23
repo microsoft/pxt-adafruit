@@ -52,6 +52,11 @@ namespace pxsim.visuals {
             stroke-width: 1px;
         }
 
+        .sim-pin-level-button {
+            stroke:darkorange;
+            stroke-width: 1px;
+        }
+
         .sim-sound-level-button {
             stroke:#7f8c8d;
             stroke-width: 1px;
@@ -249,7 +254,7 @@ namespace pxsim.visuals {
         private buttonsOuter: SVGElement[];
         private buttonABText: SVGTextElement;
         private pins: SVGElement[];
-        private pinGradients: SVGLinearGradientElement[];
+        private pinControls: {[index: number]: AnalogPinControl};
         private pinTexts: SVGTextElement[];
         private systemLed: SVGCircleElement;
         private redLED: SVGRectElement;
@@ -327,7 +332,6 @@ namespace pxsim.visuals {
             svg.fill(this.buttons[2], theme.buttonUps[2]);
             if (this.shakeButton) svg.fill(this.shakeButton, theme.virtualButtonUp);
 
-            this.pinGradients.forEach(lg => svg.setGradientColors(lg, theme.pin, theme.pinActive));
             svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
 
             svg.setGradientColors(this.thermometerGradient, theme.ledOff, theme.ledOn);
@@ -466,7 +470,12 @@ namespace pxsim.visuals {
             let v = "";
 
             if (pin.mode & PinFlags.Analog) {
-                v = Math.floor(100 - (pin.value || 0) / 1023 * 100) + "%";
+                if ((pin as pins.CPPin).used) {
+                    if (!this.pinControls[pin.id]) {
+                        this.pinControls[pin.id] = new AnalogPinControl(this, this.defs, pin.id);
+                    }
+                    this.pinControls[pin.id].updateValue();
+                }
                 if (text) text.textContent = (pin.period ? "~" : "") + (pin.value || 0) + "";
             }
             else if (pin.mode & PinFlags.Digital) {
@@ -480,7 +489,6 @@ namespace pxsim.visuals {
                 v = "100%";
                 if (text) text.textContent = "";
             }
-            if (v) svg.setGradientValue(this.pinGradients[index], v);
         }
 
         private updateLightLevel() {
@@ -700,14 +708,7 @@ namespace pxsim.visuals {
                 return p;
             });
 
-            this.pinGradients = this.pins.map((pin, i) => {
-                if (!pin) return undefined;
-
-                let gid = "gradient-pin-" + i
-                let lg = svg.linearGradient(this.defs, gid)
-                pin.setAttribute("fill", `url(#${gid})`);
-                return lg;
-            })
+            this.pinControls = {};
 
             // BTN A+B
             const outerBtn = (left: number, top: number) => {

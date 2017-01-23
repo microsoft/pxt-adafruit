@@ -127,7 +127,7 @@ enum BeatFraction {
 }
 
 /**
- * Generation of music tones through pin ``P0``.
+ * Generation of music tones.
  */
 //% color=#D83B01 weight=98 icon="\uf025"
 namespace music {

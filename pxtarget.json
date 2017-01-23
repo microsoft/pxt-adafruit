@@ -160,7 +160,6 @@
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
         "githubUrl": "https://github.com/Microsoft/pxt-adafruit-circuit-playground",
         "boardName": "Adafruit Circuit Playground Express",
-        "projectGallery": "projects",
         "docMenu": [
             {
                 "name": "About",
@@ -173,6 +172,10 @@
             {
                 "name": "JavaScript",
                 "path": "/javascript"
+            },
+            {
+                "name": "Reference",
+                "path": "/reference"
             }
         ],
         "sideDoc": "tutorials/getting-started",

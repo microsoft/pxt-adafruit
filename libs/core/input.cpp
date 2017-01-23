@@ -120,7 +120,7 @@ void onSoundConditionChanged(LoudnessCondition condition, Action handler) {
 * Reads the loudness through the microphone from 0 (silent) to 255 (very loud)
 */
 //% help=input/loudness weight=75
-//% blockId=device_get_sound_level block="loudness" blockGap=8
+//% blockId=device_get_sound_level block="sound level" blockGap=8
 //% parts="microphone"
 int soundLevel() {
     int value = getWMicrophone()->sensor.getValue();

@@ -526,7 +526,7 @@ namespace pxsim.visuals {
 
         private updateSoundLevel() {
             let state = this.board;
-            if (!state || !state.soundSensorState.usesSoundLevel) return;
+            if (!state || !state.soundSensorState.sensorUsed) return;
 
             if (!this.soundLevelButton) {
                 let gid = "gradient-sound-level";
@@ -545,8 +545,8 @@ namespace pxsim.visuals {
                         let pos = svg.cursorPoint(pt, this.element, ev);
                         let rs = r / 2;
                         let level = Math.max(0, Math.min(255, Math.floor((pos.y - (cy - rs)) / (2 * rs) * 255)));
-                        if (level != this.board.soundSensorState.soundLevel) {
-                            this.board.soundSensorState.soundLevel = (255 - level);
+                        if (level != this.board.soundSensorState.getLevel()) {
+                            this.board.soundSensorState.setLevel(255 - level);
                             this.applySoundLevel();
                         }
                     }, ev => { },
@@ -555,12 +555,12 @@ namespace pxsim.visuals {
                 this.updateTheme();
             }
 
-            svg.setGradientValue(this.soundLevelGradient, Math.min(100, Math.max(0, Math.floor((255 - state.soundSensorState.soundLevel) * 100 / 255))) + '%')
-            this.soundLevelText.textContent = state.soundSensorState.soundLevel.toString();
+            svg.setGradientValue(this.soundLevelGradient, Math.min(100, Math.max(0, Math.floor((255 - state.soundSensorState.getLevel()) * 100 / 255))) + '%')
+            this.soundLevelText.textContent = state.soundSensorState.getLevel().toString();
         }
 
         private applySoundLevel() {
-            let lv = this.board.soundSensorState.soundLevel;
+            let lv = this.board.soundSensorState.getLevel();
             svg.setGradientValue(this.soundLevelGradient, Math.min(100, Math.max(0, Math.floor((255 - lv) * 100 / 255))) + '%')
             this.soundLevelText.textContent = lv.toString();
         }

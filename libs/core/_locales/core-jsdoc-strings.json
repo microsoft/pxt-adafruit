@@ -111,7 +111,7 @@
   "light.statusLED": "Turns the status LED on or off.",
   "light.statusLED|param|on": "a value indicating if the LED is on",
   "light.theatreChaseAnimation": "Return a new instance of the theatre chase animation",
-  "music": "Generation of music tones through pin ``P0``.",
+  "music": "Generation of music tones.",
   "music.beat": "Returns the duration of a beat in milli-seconds",
   "music.changeTempoBy": "Change the tempo by the specified amount",
   "music.changeTempoBy|param|bpm": "The change in beats per minute to the tempo, eg: 20",

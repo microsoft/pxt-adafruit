@@ -102,7 +102,7 @@
   "TemperatureUnit.Fahrenheit|block": "°F",
   "control.deviceSerialNumber|block": "device serial number",
   "control.forever|block": "forever",
-  "control.millis|block": "running time (ms)",
+  "control.millis|block": "millis (ms)",
   "control.onEvent|block": "on event|from %src|with value %value",
   "control.pause|block": "pause (ms) %pause",
   "control.raiseEvent|block": "raise event|from %src|with value %value",

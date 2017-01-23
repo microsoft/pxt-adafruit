@@ -32,7 +32,7 @@ namespace control {
      * Repeats the code forever in the background. On each iteration, allows other codes to run.
      * @param body code to execute
      */
-    //% help=loops/forever weight=100 blockGap=8
+    //% help=control/forever weight=100 blockGap=8
     //% blockId=forever block="forever"
     void forever(Action a) {
       if (a != 0) {
@@ -45,7 +45,7 @@ namespace control {
      * Pause for the specified time in milliseconds
      * @param ms how long to pause for, eg: 100, 200, 500, 1000, 2000
      */
-    //% help=basic/pause weight=99
+    //% help=control/pause weight=99
     //% async block="pause (ms) %pause"
     //% blockId=device_pause
     void pause(int ms) {
@@ -56,8 +56,8 @@ namespace control {
     /**
     * Gets the number of milliseconds elapsed since power on.
     */
-    //% help=control/running-time weight=50
-    //% blockId=control_running_time block="running time (ms)"
+    //% help=control/millis weight=50
+    //% blockId=control_running_time block="millis (ms)"
     int millis() {
         return system_timer_current_time();
     }

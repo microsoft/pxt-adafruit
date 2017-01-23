@@ -1,4 +1,4 @@
-# core Reference
+# Reference
 
 ```namespaces
 input.onGesture(Gesture.Shake, () => {
@@ -13,5 +13,5 @@ serial.writeLine("");
 
 ### See Also
 
-[input](/reference/input), [light](/reference/light), [music](/reference/music), [control](/reference/control), 
-[pins](/reference/pins), [serial](/reference/serial)
+[blocks](/blocks), [JavaScript](/javascript), [input](/reference/input), [light](/reference/light), [music](/reference/music), 
+[control](/reference/control), [pins](/reference/pins), [serial](/reference/serial)

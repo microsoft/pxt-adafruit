@@ -60,7 +60,7 @@ class WLight {
     WLight()
         : sensor(*lookupPin(PIN_LIGHT), DEVICE_ID_LIGHT_SENSOR) //
     {
-        memclr(buttons, 1);
+        memclr(buttons, 4);
         sensor.init();
         sensor.setSensitivity(0.9f);
     }
@@ -89,7 +89,7 @@ class WMicrophone {
     WMicrophone()
         : sensor(*lookupPin(PIN_MICROPHONE), DEVICE_ID_TOUCH_SENSOR + 1) //
     {
-        memclr(buttons, 1);
+        memclr(buttons, 4);
         sensor.init();
         sensor.setSensitivity(0.9f);
     }

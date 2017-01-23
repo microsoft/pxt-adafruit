@@ -7,13 +7,13 @@ Use this event to initialize your program.
 
 ## Example
 
-In this example, ``on start`` sets a dimmer brightness on the screen and the button handler shows a string.
+In this example, ``on start`` shows a rainbow, and clicking the left button show the running light.
 
 ```blocks
-input.onButtonPressed(Button.A, () => {
-    basic.showString("Hello!")
+input.leftButton.onEvent(ButtonEvent.Click, () => {
+    light.builtin.showAnimationFrame(light.rainbowCycleAnimation())
 })
-led.setBrightness(50)
+light.builtin.showAnimationFrame(light.rainbowCycleAnimation())
 ```
 
 ## What about JavaScript?

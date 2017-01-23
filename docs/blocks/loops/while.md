@@ -13,13 +13,13 @@ The condition is tested before any code runs. Which means that if the condition 
 
 ### Example: diagonal line
 
-The following example uses a while loop to make a diagonal line on the LED screen (points `0, 0`, `1, 1`, `2, 2`, `3, 3`, `4, 4`).
+The following example uses a while loop to set pixels to red in backward order.
 
 ```blocks
-input.onButtonPressed(Button.A, () => {
-    let index = 4;
+input.leftButton.onEvent(ButtonEvent.Click, () => {
+    let index = 9;
     while(index >= 0) {
-        led.plot(index, index);
+        light.builtin.setPixelColor(index, light.colors(NeoPixelColors.Red))
         index--;
     }
 })
@@ -27,5 +27,5 @@ input.onButtonPressed(Button.A, () => {
 
 ### See also
 
-[on button pressed](/reference/input/on-button-pressed), [for](/blocks/loops/for), [if](/blocks/logic/if), [forever](/reference/basic/forever)
+[for](/blocks/loops/for)
 

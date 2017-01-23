@@ -69,7 +69,7 @@ namespace light {
     export class NeoPixelStrip {
         pin: DigitalPin;
         // TODO: encode as bytes instead of 32bit
-        brightness: number;
+        _brightness: number;
         start: number; // start offset in LED strip
         _length: number; // number of LEDs
         _mode: NeoPixelMode;
@@ -125,11 +125,11 @@ namespace light {
             const eb = unpackB(end);
             const l = this._length;
             const l1 = l - 1;
-            for(let i = 0; i < l; i++) {
+            for (let i = 0; i < l; i++) {
                 const r = (i * sr + (l1 - i) * er) / (l1);
                 const g = (i * sg + (l1 - i) * eg) / (l1);
                 const b = (i * sb + (l1 - i) * eb) / (l1);
-                this.setPixelRGB(i, rgb(r,g,b))
+                this.setPixelColor(i, rgb(r, g, b))
             }
             this.show();
         }
@@ -174,7 +174,7 @@ namespace light {
         }
 
         /**
-         * Set LED to a given color (range 0-255 for r, g, b).
+         * Set the pixel to a given color.
          * You need to call ``show`` to make the changes visible.
          * @param pixeloffset position of the NeoPixel in the strip
          * @param rgb RGB color of the LED
@@ -185,7 +185,54 @@ namespace light {
         //% parts="neopixel"
         //% defaultInstance=light.builtin
         setPixelColor(pixeloffset: number, rgb: number): void {
-            this.setPixelRGB(pixeloffset, rgb);
+            if (pixeloffset < 0
+                || pixeloffset >= this._length)
+                return;
+
+            let stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            pixeloffset = (pixeloffset + this.start) * stride;
+
+            let red = unpackR(rgb);
+            let green = unpackG(rgb);
+            let blue = unpackB(rgb);
+
+            const br = this._brightness;
+            if (br < 255) {
+                red = (red * br) >> 8;
+                green = (green * br) >> 8;
+                blue = (blue * br) >> 8;
+            }
+            this.setBufferRGB(pixeloffset, red, green, blue)
+        }
+
+        /**
+         * Gets the pixel color.
+         * @param pixeloffset position of the NeoPixel in the strip
+         */
+        //% blockId="neopixel_get_pixel_color" block="pixel color at %pixeloffset"
+        //% blockGap=8
+        //% weight=4 advanced=true
+        //% parts="neopixel"
+        //% defaultInstance=light.builtin
+        pixelColor(pixeloffset: number): number {
+            if (pixeloffset < 0
+                || pixeloffset >= this._length)
+                return 0;
+
+            const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
+            const offset = (pixeloffset + this.start) * stride;
+            const b = this.buf;
+            let red = 0, green = 0, blue = 0;
+            if (this._mode === NeoPixelMode.RGB_RGB) {
+                red = this.buf[offset + 0];
+                green = this.buf[offset + 1];
+            } else {
+                green = this.buf[offset + 0];
+                red = this.buf[offset + 1];
+            }
+            blue = this.buf[offset + 2];
+
+            return rgb(red, green, blue);
         }
 
         /**
@@ -248,7 +295,18 @@ namespace light {
         //% parts="neopixel"
         //% defaultInstance=light.builtin
         setBrightness(brightness: number): void {
-            this.brightness = brightness & 0xff;
+            this._brightness = brightness & 0xff;
+        }
+
+        /**
+         * Gets the brightness of the strip.
+         */
+        //% blockId="neopixel_get_brightness" block="brightness"
+        //% weight=58 advanced=true
+        //% parts=neopixel
+        //% defaultInstance=light.builtin        
+        brightness(): number {
+            return this._brightness;
         }
 
         /**
@@ -260,7 +318,7 @@ namespace light {
         //% defaultInstance=light.builtin
         easeBrightness(): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
-            const br = this.brightness;
+            const br = this._brightness;
             const buf = this.buf;
             const end = this.start + this._length;
             const mid = this._length / 2;
@@ -291,7 +349,7 @@ namespace light {
             let strip = new NeoPixelStrip();
             strip.buf = this.buf;
             strip.pin = this.pin;
-            strip.brightness = this.brightness;
+            strip._brightness = this._brightness;
             strip.start = this.start + Math.clamp(0, this._length - 1, start);
             strip._length = Math.clamp(0, this._length - (strip.start - this.start), length);
             return strip;
@@ -348,7 +406,7 @@ namespace light {
             let green = unpackG(rgb);
             let blue = unpackB(rgb);
 
-            const br = this.brightness;
+            const br = this._brightness;
             if (br < 255) {
                 red = (red * br) >> 8;
                 green = (green * br) >> 8;
@@ -364,7 +422,7 @@ namespace light {
             if (this._mode !== NeoPixelMode.RGBW)
                 return;
 
-            let br = this.brightness;
+            const br = this._brightness;
             if (br < 255) {
                 white = (white * br) >> 8;
             }
@@ -374,26 +432,6 @@ namespace light {
                 let ledoffset = i * 4;
                 buf[ledoffset + 3] = white;
             }
-        }
-        private setPixelRGB(pixeloffset: number, rgb: number): void {
-            if (pixeloffset < 0
-                || pixeloffset >= this._length)
-                return;
-
-            let stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
-            pixeloffset = (pixeloffset + this.start) * stride;
-
-            let red = unpackR(rgb);
-            let green = unpackG(rgb);
-            let blue = unpackB(rgb);
-
-            let br = this.brightness;
-            if (br < 255) {
-                red = (red * br) >> 8;
-                green = (green * br) >> 8;
-                blue = (blue * br) >> 8;
-            }
-            this.setBufferRGB(pixeloffset, red, green, blue)
         }
         private setPixelW(pixeloffset: number, white: number): void {
             if (this._mode !== NeoPixelMode.RGBW)
@@ -405,7 +443,7 @@ namespace light {
 
             pixeloffset = (pixeloffset + this.start) * 4;
 
-            let br = this.brightness;
+            const br = this._brightness;
             if (br < 255) {
                 white = (white * br) >> 8;
             }
@@ -501,7 +539,7 @@ namespace light {
     //% weight=3 blockGap=8
     //% blockId="neopixel_hsv" block="hue %hue|sat %sat|val %val"
     //% advanced=true
-    export function hsv(hue: number, sat: number, val: number): number {        
+    export function hsv(hue: number, sat: number, val: number): number {
         let h = hue % 255;
         // scale down to 0..192
         h = h * 192 / 255;
@@ -516,12 +554,12 @@ namespace light {
         let rampup = offset;
         let rampdown = (0x40 - 1) - offset;
 
-        let rampup_amp_adj = (rampup * color_amplitude) / (256/4);
-        let rampdown_amp_adj = (rampdown * color_amplitude) / (256/4);
-        
+        let rampup_amp_adj = (rampup * color_amplitude) / (256 / 4);
+        let rampdown_amp_adj = (rampdown * color_amplitude) / (256 / 4);
+
         let rampup_adj_with_floor = (rampup_amp_adj + brightness_floor);
         let rampdown_adj_with_floor = (rampdown_amp_adj + brightness_floor);
-        
+
         let r: number;
         let g: number;
         let b: number;
@@ -536,7 +574,7 @@ namespace light {
                 r = rampup_adj_with_floor;
                 g = brightness_floor;
                 b = rampdown_adj_with_floor;
-            } 
+            }
         } else {
             // section 0: 0x00..0x3F
             r = rampdown_adj_with_floor;
@@ -565,7 +603,7 @@ namespace light {
     export function runningLightsAnimation(): NeoPixelAnimation {
         return NeopixelAnimatonFactory.getRunningLights();
     }
-    
+
     /**
      * Return a new instance of the theatre chase animation
      */
@@ -606,6 +644,7 @@ namespace light {
         return NeopixelAnimatonFactory.getColorWipe(rgb);
     }
 
+    //%
     export const builtin = light.createNeoPixelStrip();
 
     class NeopixelAnimatonFactory {
@@ -817,13 +856,13 @@ namespace light {
             return () => {
                 if (j < 10) { // 10 cycles of chasing
                     if (q < 3) {
-                        for (let i = 0; i < l; i=i+3) {
-                             strip.setPixelColor(i+q, this.rgb); // every third pixel on
+                        for (let i = 0; i < l; i = i + 3) {
+                            strip.setPixelColor(i + q, this.rgb); // every third pixel on
                         }
                         strip.show();
                         control.pause(this.delay);
-                        for (let i = 0; i < l; i=i+3) {
-                             strip.setPixelColor(i+q, 0); // every third pixel off
+                        for (let i = 0; i < l; i = i + 3) {
+                            strip.setPixelColor(i + q, 0); // every third pixel off
                         }
                         q++;
                     } else {

@@ -29,7 +29,7 @@ Here's how to define a variable in the Block Editor:
 
 3. Drag a block type on the right-side of the [assignment operator](/blocks/variables/assign) and click the down arrow to change the variable name.
 
-A variable is created for the number returned by the [brightness](/reference/led/brightness) function.
+A variable is created for the number returned by the **light level** function.
 
 ```blocks
 let b = led.brightness();
@@ -37,19 +37,20 @@ let b = led.brightness();
 
 ### Using variables
 
-Once you've defined a variable, just use the variable's name whenever you need what's stored in the variable. For example, the following code shows the value stored in `counter` on the LED screen:
+Once you've defined a variable, just use the variable's name whenever you need what's stored in the variable. 
+For example, the following code turn on the pixel at position ``counter``.
 
 ```blocks
 let counter = 1;
-basic.showNumber(counter);
+light.builtin.setPixelColor(counter, light.colors(NeoPixelColors.Red))
 ```
 
-To change the contents of a variable use the assignment operator. The following code sets `counter` to 1 and then increments `counter` by 10:
+To change the contents of a variable use the assignment operator. The following code sets `counter` to 1 and then increments `counter` by 1:
 
 ```blocks
 let counter = 1;
-counter = counter + 10;
-basic.showNumber(counter);
+counter = counter + 1;
+light.builtin.setPixelColor(counter, light.colors(NeoPixelColors.Red))
 ```
 
 ### Why use variables?
@@ -59,9 +60,9 @@ A counter is a great example:
 
 ```blocks
 let counter = 0;
-input.onButtonPressed(Button.A, () => { 
+input.leftButton.onEvent(ButtonEvent.Click, () => {
   counter = counter + 1;
-  basic.showNumber(counter);
+  light.builtin.setPixelColor(counter, light.colors(NeoPixelColors.Red))
 });
 ```
 
@@ -71,7 +72,7 @@ Local variables exist only within the function or block of code where they're de
 
 ```blocks
 // x does NOT exist here.
-if (led.brightness() > 128) {
+if (input.lightLevel() > 128) {
   // x exists here
   let x = 0;
 }

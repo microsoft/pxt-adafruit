@@ -8,20 +8,19 @@ an *assignment operator*, and what you store is called a *value*.
 
 ### Storing numbers in variables
 
-This program makes the variable `item` equal `5` and then shows it on the [LED screen](/device/screen).
+This program makes the variable `index` equal `5` and sets the pixel at that index to red.
 
 ````blocks
-let item = 5
-basic.showNumber(item)
+let index = 5
+light.builtin.setPixelColor(index, light.colors(NeoPixelColors.Red))
 ````
 
 ### Storing strings in variables
 
-This program makes the variable `name` equal `Joe` and then shows it on the [LED screen](/device/screen).
+This program makes the variable `name` equal `Joe`.
 
 ````blocks
 let name = "Joe"
-basic.showString(name);
 ````
 
 ### Notes

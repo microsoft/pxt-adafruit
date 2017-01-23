@@ -1,9 +1,9 @@
 {
     "id": "adafruit",
     "nickname": "circuitplayground",
-    "name": "Adafruit Circuit Playground",
-    "title": "Adafruit Circuit Playground - Blocks / Javascript editor",
-    "description": "A Blocks / JavaScript code editor for the Adafruit Circuit Playground.",
+    "name": "Adafruit Circuit Playground Express",
+    "title": "Adafruit Circuit Playground Express - Blocks / Javascript editor",
+    "description": "A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express.",
     "corepkg": "core",
     "bundleddirs": [
         "libs/core"

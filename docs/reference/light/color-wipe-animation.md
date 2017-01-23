@@ -2,8 +2,8 @@
 
 Return a new instance of the color wipe animation.
 
-```sig
-light.colorWipeAnimation(0);
+```
+light.colorWipeAnimation(0xff000)
 ```
 
 ## Parameters

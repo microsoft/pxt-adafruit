@@ -502,7 +502,7 @@ declare namespace input {
      * @param condition the condition that event triggers on
      */
     //% help=input/on-loudness-condition-changed weight=97
-    //% blockId=input_on_loudness_condition_changed block="on light %condition"
+    //% blockId=input_on_loudness_condition_changed block="on sound %condition"
     //% parts="lightsensor" blockGap=8 shim=input::onLoudnessConditionChanged
     function onLoudnessConditionChanged(condition: LoudnessCondition, handler: () => void): void;
 

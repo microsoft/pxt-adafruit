@@ -119,7 +119,7 @@
   "input.loudness|block": "loudness",
   "input.onGesture|block": "on |%NAME",
   "input.onLightConditionChanged|block": "on light %condition",
-  "input.onLoudnessConditionChanged|block": "on light %condition",
+  "input.onLoudnessConditionChanged|block": "on %condition",
   "input.onTemperateConditionChanged|block": "on temperature %condition|at (°C)%temperature",
   "input.pinA10|block": "pin A10",
   "input.pinA11|block": "pin A11",

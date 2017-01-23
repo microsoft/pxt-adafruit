@@ -108,21 +108,21 @@ int lightLevel() {
 * @param condition the condition that event triggers on
 */
 //% help=input/on-loudness-condition-changed weight=97
-//% blockId=input_on_loudness_condition_changed block="on light %condition"
-//% parts="lightsensor" blockGap=8
-void onLoudnessConditionChanged(LoudnessCondition condition, Action handler) {
+//% blockId=input_on_loudness_condition_changed block="on sound %condition"
+//% parts="microphone" blockGap=8
+void onSoundConditionChanged(LoudnessCondition condition, Action handler) {
     auto sensor = &getWMicrophone()->sensor;
     sensor->updateSample();
     registerWithDal(sensor->id, (int)condition, handler);
 }
 
 /**
-* Reads the sound loudness through the microphone from 0 (silent) to 255 (very loud)
+* Reads the loudness through the microphone from 0 (silent) to 255 (very loud)
 */
 //% help=input/loudness weight=75
-//% blockId=device_get_loudness block="loudness" blockGap=8
+//% blockId=device_get_sound_level block="loudness" blockGap=8
 //% parts="microphone"
-int loudness() {
+int soundLevel() {
     int value = getWMicrophone()->sensor.getValue();
     return value / 4;
 }

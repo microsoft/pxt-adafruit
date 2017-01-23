@@ -52,14 +52,30 @@ enum TemperatureUnit {
 class WLight {
   public:
     AnalogSensor sensor;
+#define Button DeviceButton *
+    Button buttons[0];
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getLightButton
+    //% block="light sensor"
+    Button lightSensor;
     WLight()
         : sensor(*lookupPin(PIN_LIGHT), DEVICE_ID_LIGHT_SENSOR) //
     {
+        memclr(buttons, 1);
         sensor.init();
         sensor.setSensitivity(0.9f);
     }
 };
 SINGLETON(WLight);
+const int LastLightButtonID = &((WLight *)0)->lightSensor - ((WLight *)0)->buttons;
+//%
+DeviceButton *getLightButton(int id) {
+    if (id != 0)
+        device.panic(42);
+    auto w = getWLight();
+    if (!w->buttons[id])
+        w->buttons[id] = new DeviceButton(*lookupPin(PIN_LIGHT), w->sensor.id);
+    return w->buttons[id];
+}
 
 class WMicrophone {
   public:
@@ -86,7 +102,7 @@ DeviceButton *getMicrophoneButton(int id) {
         device.panic(42);
     auto w = getWMicrophone();
     if (!w->buttons[id])
-        w->buttons[id] = new DeviceButton(*pxt::lookupPin(PIN_MICROPHONE), DEVICE_ID_TOUCH_SENSOR + 1);
+        w->buttons[id] = new DeviceButton(*lookupPin(PIN_LIGHT), w->sensor.id);
     return w->buttons[id];
 }
 

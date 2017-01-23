@@ -474,6 +474,13 @@ declare namespace light {
     //% parts="neopixel" shim=light::sendBuffer
     function sendBuffer(pin: DigitalPin, buf: Buffer): void;
 }
+declare namespace input {
+
+
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getMicrophoneButton
+    //% block="microphone" fixedInstance shim=pxt::getMicrophoneButton(0)
+    const microphone: Button;
+}
 
 
 

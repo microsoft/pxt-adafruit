@@ -5,7 +5,8 @@
             "microbit-foundation"
         ],
         "approvedRepos": [
-            "CoderDojoOlney/pxt-olney"
+            "CoderDojoOlney/pxt-olney",
+            "PaulDFoster/pxt-microbit-GY521"
         ]
     }
 }

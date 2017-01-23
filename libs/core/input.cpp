@@ -11,6 +11,13 @@ enum class LightCondition {
     Bright = ANALOG_THRESHOLD_HIGH
 };
 
+enum class LoudnessCondition {
+    //% block="quiet"
+    Quiet = ANALOG_THRESHOLD_LOW,
+    //% block="loud"
+    Loud = ANALOG_THRESHOLD_HIGH
+};
+
 enum class TemperatureCondition {
     //% block="cold"
     Cold = ANALOG_THRESHOLD_LOW,
@@ -53,6 +60,19 @@ class WLight {
     }
 };
 SINGLETON(WLight);
+
+class WMicrophone {
+  public:
+    AnalogSensor sensor;
+    WMicrophone()
+        : sensor(*lookupPin(PIN_MICROPHONE), DEVICE_ID_TOUCH_SENSOR + 1) //
+    {
+        sensor.init();
+        sensor.setSensitivity(0.9f);
+    }
+};
+SINGLETON(WMicrophone);
+
 }
 
 //% color="#FB48C7" weight=99 icon="\uf192"
@@ -72,7 +92,7 @@ void onLightConditionChanged(LightCondition condition, Action handler) {
 }
 
 /**
- * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` (bright).
+ * Reads the light level applied to the LED screen in a range from 0 (dark) to 255 (bright).
  */
 //% help=input/light-level weight=76
 //% blockId=device_get_light_level block="light level" blockGap=8
@@ -80,6 +100,30 @@ void onLightConditionChanged(LightCondition condition, Action handler) {
 int lightLevel() {
     // 0...1023
     int value = getWLight()->sensor.getValue();
+    return value / 4;
+}
+
+/**
+* Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
+* @param condition the condition that event triggers on
+*/
+//% help=input/on-loudness-condition-changed weight=97
+//% blockId=input_on_loudness_condition_changed block="on sound %condition"
+//% parts="microphone" blockGap=8
+void onSoundConditionChanged(LoudnessCondition condition, Action handler) {
+    auto sensor = &getWMicrophone()->sensor;
+    sensor->updateSample();
+    registerWithDal(sensor->id, (int)condition, handler);
+}
+
+/**
+* Reads the loudness through the microphone from 0 (silent) to 255 (very loud)
+*/
+//% help=input/loudness weight=75
+//% blockId=device_get_sound_level block="sound level" blockGap=8
+//% parts="microphone"
+int soundLevel() {
+    int value = getWMicrophone()->sensor.getValue();
     return value / 4;
 }
 

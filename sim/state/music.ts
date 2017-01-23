@@ -16,11 +16,6 @@ namespace pxsim {
             return this.playing;
         }
     }
-
-    export class SoundSensorState {
-        usesSoundLevel = false;
-        soundLevel = 128;
-    }
 }
 namespace pxsim.music {
 

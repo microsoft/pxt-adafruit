@@ -38,11 +38,10 @@ The following relational operators work on numbers and return a [Boolean](/block
 ### Functions that return a number
 
 Some functions return a number, which you can store in a variable. 
-For example the following code gets the display brightness 
-(using the [brightness function](/reference/led/brightness)) and stores the value in a variable named `brightness`:
+For example the following code gets the light level and stores the value in a variable named `level`:
 
 ```blocks
-let brightness = input.lightLevel()
+let level = input.lightLevel()
 ```
 
 ### Math functions
@@ -56,5 +55,5 @@ let abs = Math.abs(-42);
 
 ### See also
 
-[math](/blocks/math), [var](/blocks/variables/var), [Boolean](/blocks/logic/boolean), [show number](/reference/basic/show-number)
+[math](/blocks/math), [var](/blocks/variables/var), [Boolean](/blocks/logic/boolean)
 

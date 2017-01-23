@@ -330,6 +330,7 @@
         "invertedMenu": true,
         "coloredToolbox": true,
         "monacoToolbox": true,
+        "hasAudio": true,
         "blocklyOptions": { 
             "grid": {
                 "spacing": 45,

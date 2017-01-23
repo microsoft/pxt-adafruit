@@ -109,7 +109,7 @@ namespace pxsim.pxtcore {
     }
 
     export function getMicrophoneButton(buttonId: number): Button {
-        board().lightSensorState.setUsed();
+        board().soundSensorState.setUsed();
         if (buttonId == 0) return board().soundSensorState.button;
         // panic
         return undefined;

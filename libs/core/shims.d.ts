@@ -490,12 +490,20 @@ declare namespace input {
     function onLightConditionChanged(condition: LightCondition, handler: () => void): void;
 
     /**
-     * Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` (bright).
+     * Reads the light level applied to the LED screen in a range from 0 (dark) to 255 (bright).
      */
     //% help=input/light-level weight=76
     //% blockId=device_get_light_level block="light level" blockGap=8
     //% parts="lightsensor" shim=input::lightLevel
     function lightLevel(): number;
+
+    /**
+     * Reads the sound loudness through the microphone from 0 (silent) to 255 (very loud)
+     */
+    //% help=input/loudness weight=75
+    //% blockId=device_get_loudness block="loudness" blockGap=8
+    //% parts="microphone" shim=input::loudness
+    function loudness(): number;
 
     /**
      * Registers an event raised when the temperature condition (hold, cold) changes.

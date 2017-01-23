@@ -114,6 +114,7 @@
   "input.leftAndRightButtons|block": "left+right buttons",
   "input.leftButton|block": "left button",
   "input.lightLevel|block": "light level",
+  "input.loudness|block": "loudness",
   "input.onGesture|block": "on |%NAME",
   "input.onLightConditionChanged|block": "on light %condition",
   "input.onTemperateConditionChanged|block": "on temperature %condition|at (°C)%temperature",

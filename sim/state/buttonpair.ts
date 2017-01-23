@@ -100,6 +100,21 @@ namespace pxsim.pxtcore {
         // panic
         return undefined;
     }
+
+    export function getLightButton(buttonId: number): Button {
+        board().lightSensorState.setUsed();
+        if (buttonId == 0) return board().lightSensorState.button;
+        // panic
+        return undefined;
+    }
+
+    export function getMicrophoneButton(buttonId: number): Button {
+        board().lightSensorState.setUsed();
+        if (buttonId == 0) return board().soundSensorState.button;
+        // panic
+        return undefined;
+    }
+    
 }
 
 namespace pxsim.ButtonMethods {

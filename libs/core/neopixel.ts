@@ -110,7 +110,7 @@ namespace light {
          * Shows a color gradient between LEDs
          * @param start RGB color to start the gradient
          * @param end RGB color to start the gradient, eg: NeoPixelColors.Blue
-         * @param easing how 
+         * @param easing how
          */
         //% blockId="neopixel_show_gradient" block="show gradient|from %start=neopixel_colors|to %end=neopixel_colors"
         //% weight=84 blockGap=8
@@ -304,7 +304,7 @@ namespace light {
         //% blockId="neopixel_get_brightness" block="brightness"
         //% weight=58 advanced=true
         //% parts=neopixel
-        //% defaultInstance=light.builtin        
+        //% defaultInstance=light.builtin
         brightness(): number {
             return this._brightness;
         }
@@ -673,7 +673,8 @@ namespace light {
 
         private static colorWipeSingleton: ColorWipeAnimation;
         static getColorWipe(rgb: number): ColorWipeAnimation {
-            if (!NeopixelAnimatonFactory.colorWipeSingleton) NeopixelAnimatonFactory.colorWipeSingleton = new ColorWipeAnimation(unpackR(rgb), unpackG(rgb), unpackB(rgb), 50);
+            if (!NeopixelAnimatonFactory.colorWipeSingleton) NeopixelAnimatonFactory.colorWipeSingleton = new ColorWipeAnimation(rgb, 50);
+            NeopixelAnimatonFactory.colorWipeSingleton.rgb = rgb;
             return NeopixelAnimatonFactory.colorWipeSingleton;
         }
 
@@ -811,9 +812,9 @@ namespace light {
         public rgb: number;
         public delay: number;
 
-        constructor(red: number, green: number, blue: number, delay: number) {
+        constructor(rgb: number, delay: number) {
             super(1005);
-            this.rgb = rgb(red, green, blue);
+            this.rgb = rgb;
             this.delay = delay;
         }
 

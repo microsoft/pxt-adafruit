@@ -111,6 +111,7 @@
   "control.waitMicros|block": "wait (µs)%micros",
   "control|block": "control",
   "input.acceleration|block": "acceleration (mg)|%NAME",
+  "input.ambientColor|block": "ambient color",
   "input.leftAndRightButtons|block": "left+right buttons",
   "input.leftButton|block": "left button",
   "input.lightLevel|block": "light level",

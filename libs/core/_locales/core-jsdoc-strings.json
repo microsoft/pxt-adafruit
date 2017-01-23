@@ -58,6 +58,7 @@
   "control.waitMicros|param|micros": "number of micro-seconds to wait. eg: 4",
   "input.acceleration": "Get the acceleration value in milli-gravitys (when the board is laying flat with the screen up,\nx=0, y=0 and z=-1024)",
   "input.acceleration|param|dimension": "TODO",
+  "input.ambientColor": "Senses the ambient color using the LED pixel next to the LED sensor.",
   "input.leftAndRightButtons": "Left and Right button.",
   "input.leftButton": "Left button.",
   "input.lightLevel": "Reads the light level applied to the LED screen in a range from ``0`` (dark) to ``255`` (bright).",

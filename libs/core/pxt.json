@@ -23,6 +23,7 @@
         "neopixel.cpp",
         "neopixel.ts",
         "input.cpp",
+        "input.ts",
         "buttons.cpp",
         "accelerometer.cpp",
         "math.ts",

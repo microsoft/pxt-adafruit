@@ -10,12 +10,21 @@ namespace pxsim {
 
     export class AnalogSensorState {
         public sensorUsed: boolean = false;
+        public button: CPButton;
 
         private level: number;
         private state = ThresholdState.Normal;
 
         constructor(public id: number, private min = 0, private max = 255, private lowThreshold = 64, private highThreshold = 192) {
             this.level = Math.ceil((max - min) / 2);
+            this.button = new CPButton(this.id);
+        }
+
+        public setUsed() {
+            if (!this.sensorUsed) {
+                this.sensorUsed = true;
+                runtime.queueDisplayUpdate();
+            }
         }
 
         public setLevel(level: number) {
@@ -30,6 +39,7 @@ namespace pxsim {
             else {
                 this.setState(ThresholdState.Normal);
             }
+            this.button.setPressed(this.state == ThresholdState.Low);
         }
 
         public getLevel(): number {
@@ -80,41 +90,39 @@ namespace pxsim {
 namespace pxsim.input {
     export function lightLevel(): number {
         let b = board().lightSensorState;
-        setSensorUsed(b);
+        b.setUsed();
 
         return b.getLevel();
     }
 
     export function onLightConditionChanged(condition: number, body: RefAction) {
         let b = board().lightSensorState;
-        setSensorUsed(b);
+        b.setUsed();
 
         pxtcore.registerWithDal(b.id, condition, body);
     }
 
     export function soundLevel(): number {
         let b = board().soundSensorState;
-        setSensorUsed(b);
-
+        b.setUsed();
         return b.getLevel();
     }
 
     export function onSoundConditionChanged(condition: number, body: RefAction) {
         let b = board().soundSensorState;
-        setSensorUsed(b);
-
+        b.setUsed();
         pxtcore.registerWithDal(b.id, condition, body);
     }
 
     export function temperature(): number {
         let b = board().thermometerState;
-        setSensorUsed(b);
+        b.setUsed();
         return b.getLevel();
     }
 
     export function onTemperateConditionChanged(condition: number, temperature: number, body: RefAction) {
         let b = board().thermometerState;
-        setSensorUsed(b);
+        b.setUsed();
 
         if (condition === DAL.ANALOG_THRESHOLD_HIGH) {
             b.setHighThreshold(temperature);
@@ -124,12 +132,5 @@ namespace pxsim.input {
         }
 
         pxtcore.registerWithDal(b.id, condition, body);
-    }
-
-    function setSensorUsed(b: AnalogSensorState) {
-        if (!b.sensorUsed) {
-            b.sensorUsed = true;
-            runtime.queueDisplayUpdate();
-        }
     }
 }

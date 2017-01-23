@@ -474,65 +474,6 @@ declare namespace light {
     //% parts="neopixel" shim=light::sendBuffer
     function sendBuffer(pin: DigitalPin, buf: Buffer): void;
 }
-
-
-
-    //% color="#FB48C7" weight=99 icon="\uf192"
-declare namespace input {
-
-    /**
-     * Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
-     * @param condition the condition that event triggers on
-     */
-    //% help=input/on-light-condition-changed weight=97
-    //% blockId=input_on_light_condition_changed block="on light %condition"
-    //% parts="lightsensor" blockGap=8 shim=input::onLightConditionChanged
-    function onLightConditionChanged(condition: LightCondition, handler: () => void): void;
-
-    /**
-     * Reads the light level applied to the LED screen in a range from 0 (dark) to 255 (bright).
-     */
-    //% help=input/light-level weight=76
-    //% blockId=device_get_light_level block="light level" blockGap=8
-    //% parts="lightsensor" shim=input::lightLevel
-    function lightLevel(): number;
-
-    /**
-     * Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
-     * @param condition the condition that event triggers on
-     */
-    //% help=input/on-loudness-condition-changed weight=97
-    //% blockId=input_on_loudness_condition_changed block="on sound %condition"
-    //% parts="microphone" blockGap=8 shim=input::onSoundConditionChanged
-    function onSoundConditionChanged(condition: LoudnessCondition, handler: () => void): void;
-
-    /**
-     * Reads the loudness through the microphone from 0 (silent) to 255 (very loud)
-     */
-    //% help=input/loudness weight=75
-    //% blockId=device_get_sound_level block="sound level" blockGap=8
-    //% parts="microphone" shim=input::soundLevel
-    function soundLevel(): number;
-
-    /**
-     * Registers an event raised when the temperature condition (hold, cold) changes.
-     * @param condition the condition, hot or cold, the event triggers on
-     * @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
-     */
-    //% blockId=input_on_temperature_condition_changed block="on temperature %condition|at (°C)%temperature"
-    //% parts="thermometer" weight=95 blockGap=8
-    //% help=input/on-temperature-condition-changed shim=input::onTemperateConditionChanged
-    function onTemperateConditionChanged(condition: TemperatureCondition, temperature: number, handler: () => void): void;
-
-    /**
-     * Gets the temperature in Celsius or Fahrenheit degrees.
-     */
-    //% weight=75
-    //% help=input/temperature
-    //% blockId=device_temperature block="temperature in %unit" blockGap=8
-    //% parts="thermometer" shim=input::temperature
-    function temperature(unit: TemperatureUnit): number;
-}
 declare namespace input {
 
     /**
@@ -649,6 +590,77 @@ declare interface Button {
     //% parts="buttonpair"
     //% blockNamespace=input shim=ButtonMethods::wasPressed
     wasPressed(): boolean;
+}
+declare namespace input {
+
+
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getLightButton
+    //% block="light sensor" fixedInstance shim=pxt::getLightButton(0)
+    const lightSensor: Button;
+
+
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getMicrophoneButton
+    //% block="microphone" fixedInstance shim=pxt::getMicrophoneButton(0)
+    const microphone: Button;
+}
+
+
+
+    //% color="#FB48C7" weight=99 icon="\uf192"
+declare namespace input {
+
+    /**
+     * Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
+     * @param condition the condition that event triggers on
+     */
+    //% help=input/on-light-condition-changed weight=97
+    //% blockId=input_on_light_condition_changed block="on light %condition"
+    //% parts="lightsensor" blockGap=8 shim=input::onLightConditionChanged
+    function onLightConditionChanged(condition: LightCondition, handler: () => void): void;
+
+    /**
+     * Reads the light level applied to the LED screen in a range from 0 (dark) to 255 (bright).
+     */
+    //% help=input/light-level weight=76
+    //% blockId=device_get_light_level block="light level" blockGap=8
+    //% parts="lightsensor" shim=input::lightLevel
+    function lightLevel(): number;
+
+    /**
+     * Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
+     * @param condition the condition that event triggers on
+     */
+    //% help=input/on-loudness-condition-changed weight=97
+    //% blockId=input_on_loudness_condition_changed block="on sound %condition"
+    //% parts="microphone" blockGap=8 shim=input::onSoundConditionChanged
+    function onSoundConditionChanged(condition: LoudnessCondition, handler: () => void): void;
+
+    /**
+     * Reads the loudness through the microphone from 0 (silent) to 255 (very loud)
+     */
+    //% help=input/loudness weight=75
+    //% blockId=device_get_sound_level block="sound level" blockGap=8
+    //% parts="microphone" shim=input::soundLevel
+    function soundLevel(): number;
+
+    /**
+     * Registers an event raised when the temperature condition (hold, cold) changes.
+     * @param condition the condition, hot or cold, the event triggers on
+     * @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
+     */
+    //% blockId=input_on_temperature_condition_changed block="on temperature %condition|at (°C)%temperature"
+    //% parts="thermometer" weight=95 blockGap=8
+    //% help=input/on-temperature-condition-changed shim=input::onTemperateConditionChanged
+    function onTemperateConditionChanged(condition: TemperatureCondition, temperature: number, handler: () => void): void;
+
+    /**
+     * Gets the temperature in Celsius or Fahrenheit degrees.
+     */
+    //% weight=75
+    //% help=input/temperature
+    //% blockId=device_temperature block="temperature in %unit" blockGap=8
+    //% parts="thermometer" shim=input::temperature
+    function temperature(unit: TemperatureUnit): number;
 }
 declare namespace input {
 

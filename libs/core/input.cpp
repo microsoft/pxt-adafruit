@@ -11,6 +11,13 @@ enum class LightCondition {
     Bright = ANALOG_THRESHOLD_HIGH
 };
 
+enum class LoudnessCondition {
+    //% block="quiet"
+    Quiet = ANALOG_THRESHOLD_LOW,
+    //% block="loud"
+    Loud = ANALOG_THRESHOLD_HIGH
+};
+
 enum class TemperatureCondition {
     //% block="cold"
     Cold = ANALOG_THRESHOLD_LOW,
@@ -94,6 +101,19 @@ int lightLevel() {
     // 0...1023
     int value = getWLight()->sensor.getValue();
     return value / 4;
+}
+
+/**
+* Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
+* @param condition the condition that event triggers on
+*/
+//% help=input/on-loudness-condition-changed weight=97
+//% blockId=input_on_loudness_condition_changed block="on light %condition"
+//% parts="lightsensor" blockGap=8
+void onLoudnessConditionChanged(LoudnessCondition condition, Action handler) {
+    auto sensor = &getWMicrophone()->sensor;
+    sensor->updateSample();
+    registerWithDal(sensor->id, (int)condition, handler);
 }
 
 /**

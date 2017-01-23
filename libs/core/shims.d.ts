@@ -498,6 +498,15 @@ declare namespace input {
     function lightLevel(): number;
 
     /**
+     * Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
+     * @param condition the condition that event triggers on
+     */
+    //% help=input/on-loudness-condition-changed weight=97
+    //% blockId=input_on_loudness_condition_changed block="on light %condition"
+    //% parts="lightsensor" blockGap=8 shim=input::onLoudnessConditionChanged
+    function onLoudnessConditionChanged(condition: LoudnessCondition, handler: () => void): void;
+
+    /**
      * Reads the sound loudness through the microphone from 0 (silent) to 255 (very loud)
      */
     //% help=input/loudness weight=75

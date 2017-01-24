@@ -92,6 +92,7 @@ class WMicrophone {
     {
         memclr(buttons, 4);
         sensor.init();
+        sensor.setPeriod(50);
         sensor.setSensitivity(0.9f);
     }
 };

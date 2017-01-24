@@ -102,7 +102,7 @@ DeviceButton *getMicrophoneButton(int id) {
         device.panic(42);
     auto w = getWMicrophone();
     if (!w->buttons[id])
-        w->buttons[id] = new DeviceButton(*lookupPin(PIN_LIGHT), w->sensor.id);
+        w->buttons[id] = new DeviceButton(*lookupPin(PIN_MICROPHONE), w->sensor.id);
     return w->buttons[id];
 }
 

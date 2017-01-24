@@ -6,7 +6,7 @@ namespace input {
     //% blockId=device_get_ambient_color block="ambient color" blockGap=8
     //% parts="lightsensor"
     export function ambientColor() : number {
-        const LIGHT_SETTLE_MS = 100;
+        const LIGHT_SETTLE_MS = 200;
         const PIXEL = 1;
         // Save the current pixel color so it can later be restored.  Then bump
         // the brightness to max to make sure the LED is as bright as possible for
@@ -19,27 +19,24 @@ namespace input {
         // color and grab a light sensor reading.  Make sure to wait a bit
         // after changing pixel colors to let the light sensor change
         // resistance!
-        strip.setPixelColor(1, 0xff0000);  // Red
+        strip.setPixelColor(PIXEL, NeoPixelColors.Red);  // Red
+        strip.show();
         control.pause(LIGHT_SETTLE_MS);
-        const raw_red = input.lightLevel();
-        strip.setPixelColor(1, 0x00ff00);  // Green
+        const red = input.lightLevel();
+
+        strip.setPixelColor(PIXEL, NeoPixelColors.Green);  // Green
+        strip.show();
         control.pause(LIGHT_SETTLE_MS);
-        const raw_green = input.lightLevel();
-        strip.setPixelColor(1, 0x00000ff);  // Blue
+        const green = input.lightLevel();
+
+        strip.setPixelColor(PIXEL, NeoPixelColors.Blue);  // Blue
+        strip.show();
         control.pause(LIGHT_SETTLE_MS);
-        const raw_blue = input.lightLevel();
+        const blue = input.lightLevel();
+
         // Turn off the pixel and restore brightness, we're done with readings.
-        strip.setPixelColor(PIXEL, 0);
+        strip.setPixelColor(PIXEL, oldColor);
         strip.setBrightness(old_brightness);
-        // Now scale down each of the raw readings to be within
-        // 0 to 255.  Remember each sensor reading is from the ADC
-        // which has 10 bits of resolution (0 to 1023), so dividing
-        // by 4 will change the range from 0-1023 to 0-255.  Also
-        // use the min function to clamp the value to 255 at most (just
-        // to prevent overflow from 255.xx to 0).
-        const red = Math.min(255, raw_red / 4);
-        const green = Math.min(255, raw_green/4);
-        const blue = Math.min(255, raw_blue/4);
 
         return light.rgb(red, green, blue);
     }

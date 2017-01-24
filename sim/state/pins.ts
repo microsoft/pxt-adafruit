@@ -10,6 +10,13 @@ namespace pxsim.pins {
     export class AnalogPin extends CPPin {
 
     }
+
+    export function markUsed(name: CPPin) {
+        if (!name.used) {
+            name.used = true;
+            runtime.queueDisplayUpdate();
+        }
+    }
 }
 
 namespace pxsim.DigitalPinMethods {
@@ -79,10 +86,7 @@ namespace pxsim.AnalogPinMethods {
      * Read the connector value as analog, that is, as a value comprised between 0 and 1023.
      */
     export function analogRead(name: pins.AnalogPin): number {
-        if (!name.used) {
-            name.used = true;
-            runtime.queueDisplayUpdate();
-        }
+        pins.markUsed(name);
         return name.analogReadPin();
     }
 
@@ -91,12 +95,9 @@ namespace pxsim.AnalogPinMethods {
      * @param value value to write to the pin between ``0`` and ``1023``. eg:1023,0
      */
     export function analogWrite(name: pins.AnalogPin, value: number): void {
+        pins.markUsed(name);
         name.analogWritePin(value);
 
-        if (!name.used) {
-            name.used = true;
-            runtime.queueDisplayUpdate();
-        }
     }
 
     /**
@@ -107,6 +108,7 @@ namespace pxsim.AnalogPinMethods {
      * @param micros period in micro seconds. eg:20000
      */
     export function analogSetPeriod(name: pins.AnalogPin, micros: number): void {
+        pins.markUsed(name);
         name.analogSetPeriod(micros);
     }
 
@@ -118,6 +120,7 @@ namespace pxsim.AnalogPinMethods {
      * @param value angle or rotation speed, eg:180,90,0
      */
     export function servoWrite(name: pins.AnalogPin, value: number): void {
+        pins.markUsed(name);
         name.servoWritePin(value);
     }
 
@@ -127,6 +130,7 @@ namespace pxsim.AnalogPinMethods {
      * @param micros pulse duration in micro seconds, eg:1500
      */
     export function servoSetPulse(name: pins.AnalogPin, micros: number): void {
+        pins.markUsed(name);
         // TODO fix pxt
         // name.servoSetPulse(micros);
     }

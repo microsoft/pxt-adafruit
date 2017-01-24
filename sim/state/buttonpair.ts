@@ -55,6 +55,8 @@ namespace pxsim {
     export class CPButtonState {
         usesButtonAB: boolean = false;
         buttons: CPButton[];
+
+        touchPins: CPlayPinName[];
         touchButtons: CPButton[];
 
         constructor() {
@@ -65,16 +67,18 @@ namespace pxsim {
                 new CPButton(DAL.DEVICE_ID_BUTTON_AB)
             ];
 
-            this.touchButtons = [
-                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A4),
-                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A5),
-                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A6),
-                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A7),
-                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A8),
-                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A9),
-                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A10),
-                new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + pxsim.CPlayPinName.A11),
+            this.touchPins =[
+                CPlayPinName.A4,
+                CPlayPinName.A5,
+                CPlayPinName.A6,
+                CPlayPinName.A7,
+                CPlayPinName.A8,
+                CPlayPinName.A9,
+                CPlayPinName.A10,
+                CPlayPinName.A11,
             ];
+
+            this.touchButtons = this.touchPins.map(id => new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + id));
         }
     }
 }
@@ -93,9 +97,12 @@ namespace pxsim.pxtcore {
     }
 
     export function getTouchButton(buttonId: number): Button {
-        const buttons = board().buttonPairState.touchButtons;
-        if (buttonId < buttons.length && buttonId >= 0) {
-            return buttons[buttonId];
+        const state = board().buttonPairState;
+        if (buttonId < state.touchButtons.length && buttonId >= 0) {
+            const pin = board().edgeConnectorState.getPin(state.touchPins[buttonId]) as pins.CPPin;
+            pin.mode |= PinFlags.Analog;
+            pins.markUsed(pin);
+            return state.touchButtons[buttonId];
         }
         // panic
         return undefined;
@@ -114,7 +121,7 @@ namespace pxsim.pxtcore {
         // panic
         return undefined;
     }
-    
+
 }
 
 namespace pxsim.ButtonMethods {

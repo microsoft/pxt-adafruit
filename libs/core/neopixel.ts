@@ -158,7 +158,7 @@ namespace light {
             const n1 = n - 1;
             const v = (value * n) / this._barGraphHigh;
             if (v == 0) {
-                this.setPixelColor(0, 0x666600);
+                this.setPixelColor(0, 0x000033);
                 for (let i = 1; i < n; ++i)
                     this.setPixelColor(i, 0);
             } else {

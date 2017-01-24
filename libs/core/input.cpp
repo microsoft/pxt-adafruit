@@ -62,7 +62,8 @@ class WLight {
     {
         memclr(buttons, 4);
         sensor.init();
-        sensor.setSensitivity(0.9f);
+        sensor.setPeriod(50);
+        sensor.setSensitivity(0.85f);        
     }
 };
 SINGLETON(WLight);

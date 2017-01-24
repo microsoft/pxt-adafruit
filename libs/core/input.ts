@@ -6,7 +6,7 @@ namespace input {
     //% blockId=device_get_ambient_color block="ambient color" blockGap=8
     //% parts="lightsensor"
     export function ambientColor() : number {
-        const LIGHT_SETTLE_MS = 200;
+        const LIGHT_SETTLE_MS = 100;
         const PIXEL = 1;
         // Save the current pixel color so it can later be restored.  Then bump
         // the brightness to max to make sure the LED is as bright as possible for

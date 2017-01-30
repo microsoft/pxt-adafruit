@@ -1,31 +1,22 @@
 // this doesn't work//% block=happy enumval=0 blockImage=1
+namespace images {
 
-enum IconNames {
-    //% enumval=0 block="heart" blockImage=1
+export enum IconNames {
     Heart = 0,
-    //% enumval=1 block="smallheart" blockImage=1
     SmallHeart,
-    //% enumval=2 block="happy" blockImage=1
-    Happy,
-    //% enumval=3 block="sad" blockImage=1
-    Sad,
-    //% enumval=4 block="confused" blockImage=1
-    Confused,
-    //% enumval=5 block="angry" blockImage=1
-    Angry,
-    //% enumval=6 block="asleep" blockImage=1
-    Asleep,
-    //% enumval=7 block="surprised" blockImage=1
-    Surprised,
-    //% enumval=8 block="silly" blockImage=1
-    Silly,
-    //% enumval=5 block="fabulous" blockImage=1
-    Fabulous,
-    //% enumval=5 block="meh" blockImage=1
-    Meh,
 
     Yes,
     No,
+
+    Happy,
+    Sad,
+    Confused,
+    Angry,
+    Asleep,
+    Surprised,
+    Silly,
+    Fabulous,
+    Meh,
 
     TShirt,
     Rollerskate,
@@ -41,24 +32,24 @@ enum IconNames {
     Umbrella,
     Snake,
 
-    Triangle,
-    LeftTriangle,
-    Chessboard,
-    Diamond,
-    SmallDiamond,
-    Square,
-    SmallSquare,
-
     Rabbit,
     Cow,
     QuarterNote,
     EigthNote,
     Pitchfork,
     Pacman,
-    Target
+    Target,
+
+    Triangle,
+    LeftTriangle,
+    Chessboard,
+    Diamond,
+    SmallDiamond,
+    Square,
+    SmallSquare
 }
 
-enum ArrowNames {
+export enum ArrowNames {
     North = 0,
     NorthEast,
     East,
@@ -69,7 +60,7 @@ enum ArrowNames {
     NorthWest,
 }
 
-enum HourNames {
+export enum HourNames {
     Hour12 = 0,
     Hour1,
     Hour2,
@@ -83,33 +74,6 @@ enum HourNames {
     Hour10,
     Hour11
 }
-
-
-namespace basic {
-
-    //% weight=50
-    //% blockId=basic_show_arrow block="show arrow %i=device_arrow"
-    export function showArrow(i: number) {
-        let res = images.arrowImage(i)
-        res.showImage(0)
-    }
-
-    //% weight=50
-    //% blockId=basic_show_hour block="show hour %i=device_hour"
-    export function showHour(i: number) {
-        let res = images.hourImage(i)
-        res.showImage(0)
-    }
-
-    //% weight=90
-    //% blockId=basic_show_icon block="show icon %i"
-    export function showIcon(i: IconNames) {
-        let res = images.iconImage(i)
-        res.showImage(0)
-    }
-}
-
-namespace images {
 
 
     const heart = `
@@ -662,6 +626,14 @@ namespace images {
             case IconNames.Pitchfork: return set(res, pitchfork)
             case IconNames.Pacman: return set(res, pacman)
             case IconNames.Target: return set(res, target)
+
+            case IconNames.Triangle: return set(res, triangle)
+            case IconNames.LeftTriangle: return set(res, left_triangle)
+            case IconNames.Chessboard: return set(res, chessboard)
+            case IconNames.Diamond: return set(res, diamond)
+            case IconNames.SmallDiamond: return set(res, small_diamond)
+            case IconNames.Square: return set(res, square)
+            case IconNames.SmallSquare: return set(res, small_square)
         }
         return res;
     }
@@ -675,5 +647,29 @@ namespace images {
             }
         }
         return res
+    }
+}
+
+namespace basic {
+
+    //% weight=50
+    //% blockId=basic_show_arrow block="show arrow %i=device_arrow"
+    export function showArrow(i: number) {
+        let res = images.arrowImage(i)
+        res.showImage(0)
+    }
+
+    //% weight=50
+    //% blockId=basic_show_hour block="show hour %i=device_hour"
+    export function showHour(i: number) {
+        let res = images.hourImage(i)
+        res.showImage(0)
+    }
+
+    //% weight=90
+    //% blockId=basic_show_icon block="show icon %i"
+    export function showIcon(i: images.IconNames) {
+        let res = images.iconImage(i)
+        res.showImage(0)
     }
 }

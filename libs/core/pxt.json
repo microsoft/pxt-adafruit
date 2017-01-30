@@ -17,6 +17,7 @@
         "helpers.ts",
         "images.cpp",
         "basic.cpp",
+        "icons.ts",
         "input.cpp",
         "input.ts",
         "control.ts",

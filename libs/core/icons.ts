@@ -637,7 +637,7 @@ export enum HourNames {
     }
 
     //% weight=50
-    //% blockId=builtin_image block="icon %i"
+    //% blockId=builtin_image block="icon image %i"
     export function iconImage(i: IconNames): Image {
         let res = images.createImage(`
                 . . . . .

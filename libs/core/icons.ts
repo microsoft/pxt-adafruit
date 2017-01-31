@@ -1,7 +1,5 @@
-// this doesn't work//% block=happy enumval=0 blockImage=1
-namespace images {
-
-export enum IconNames {
+enum IconNames {
+    //% enumval=0 block="heart" blockImage=1
     Heart = 0,
     SmallHeart,
 
@@ -48,6 +46,32 @@ export enum IconNames {
     Square,
     SmallSquare
 }
+
+namespace basic {
+
+    //% weight=50
+    //% blockId=basic_show_arrow block="show arrow %i=device_arrow"
+    export function showArrow(i: number) {
+        let res = images.arrowImage(i)
+        res.showImage(0)
+    }
+
+    //% weight=50
+    //% blockId=basic_show_hour block="show hour %i=device_hour"
+    export function showHour(i: number) {
+        let res = images.hourImage(i)
+        res.showImage(0)
+    }
+
+    //% weight=90
+    //% blockId=basic_show_icon block="show icon %i"
+    export function showIcon(i: IconNames) {
+        let res = images.iconImage(i)
+        res.showImage(0)
+    }
+}
+
+namespace images {
 
 export enum ArrowNames {
     North = 0,
@@ -647,29 +671,5 @@ export enum HourNames {
             }
         }
         return res
-    }
-}
-
-namespace basic {
-
-    //% weight=50
-    //% blockId=basic_show_arrow block="show arrow %i=device_arrow"
-    export function showArrow(i: number) {
-        let res = images.arrowImage(i)
-        res.showImage(0)
-    }
-
-    //% weight=50
-    //% blockId=basic_show_hour block="show hour %i=device_hour"
-    export function showHour(i: number) {
-        let res = images.hourImage(i)
-        res.showImage(0)
-    }
-
-    //% weight=90
-    //% blockId=basic_show_icon block="show icon %i"
-    export function showIcon(i: images.IconNames) {
-        let res = images.iconImage(i)
-        res.showImage(0)
     }
 }

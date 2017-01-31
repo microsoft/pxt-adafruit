@@ -28,49 +28,83 @@ THE SOFTWARE.
 enum IconNames {
     //% enumval=0 block="heart" blockImage=1
     Heart = 0,
+    //% block="small heart"
     SmallHeart,
-
+    //% block="yes"
     Yes,
+    //% block="no"
     No,
-
+    //% block="happy"
     Happy,
+    //% block="sad"
     Sad,
+    //% block="confused"
     Confused,
+    //% block="angry"
     Angry,
+    //% block="asleep"
     Asleep,
+    //% block="surprised"
     Surprised,
+    //% block="silly"
     Silly,
+    //% block="fabulous"
     Fabulous,
+    //% block="meh"
     Meh,
-
+    //% block="t-shirt"
     TShirt,
+    //% block="roller skate"
     Rollerskate,
+    //% block="duck"
     Duck,
+    //% block="house"
     House,
+    //% block="tortoise"
     Tortoise,
+    //% block="butterfly"
     Butterfly,
+    //% block="stick figure"
     StickFigure,
+    //% block="ghost"
     Ghost,
+    //% block="sword"
     Sword,
+    //% block="giraffe"
     Giraffe,
+    //% block="skull"
     Skull,
+    //% block="umbrella"
     Umbrella,
+    //% block="snake"
     Snake,
-
+    //% block="rabbit"
     Rabbit,
+    //% block="cow"
     Cow,
+    //% block="quarter note"
     QuarterNote,
+    //% block="eigth note"
     EigthNote,
+    //% block="pitchfork"
     Pitchfork,
+    //% block="pac man"
     Pacman,
+    //% block="target"
     Target,
-
+    //% block="triangle"
     Triangle,
+    //% block="left triangle"
     LeftTriangle,
+    //% block="chess board"
     Chessboard,
+    //% block="diamond"
     Diamond,
+    //% block="small diamond"
     SmallDiamond,
+    //% block="square"
     Square,
+    //% block="small square"
     SmallSquare
 }
 
@@ -88,49 +122,37 @@ namespace basic {
         res.showImage(0)
     }
 
-    //% weight=50
-    //% blockId=basic_show_arrow block="show arrow %i=device_arrow"
+    //% weight=50 blockGap=8
+    //% blockId=basic_show_arrow 
+    //% block="show arrow %i=device_arrow"
+    //% parts="ledmatrix"
+    //% advanced=true
     export function showArrow(i: number) {
         let res = images.arrowImage(i)
         res.showImage(0)
     }
-
-    //% weight=50
-    //% blockId=basic_show_hour block="show hour %i=device_hour"
-    export function showHour(i: number) {
-        let res = images.hourImage(i)
-        res.showImage(0)
-    }
-
 }
 
 
 namespace images {
 
 export enum ArrowNames {
+    //% blockIdentity=images.arrowNumber
     North = 0,
+    //% blockIdentity=images.arrowNumber
     NorthEast,
+    //% blockIdentity=images.arrowNumber
     East,
+    //% blockIdentity=images.arrowNumber
     SouthEast,
+    //% blockIdentity=images.arrowNumber
     South,
+    //% blockIdentity=images.arrowNumber 
     SouthWest,
+    //% blockIdentity=images.arrowNumber
     West,
+    //% blockIdentity=images.arrowNumber
     NorthWest,
-}
-
-export enum HourNames {
-    Hour12 = 0,
-    Hour1,
-    Hour2,
-    Hour3,
-    Hour4,
-    Hour5,
-    Hour6,
-    Hour7,
-    Hour8,
-    Hour9,
-    Hour10,
-    Hour11
 }
 
 
@@ -226,94 +248,6 @@ export enum HourNames {
 . . # . .
 . # . # .
 # . . . #`
-
-    // clock hands
-
-    const hour12 = `
-. . # . .
-. . # . .
-. . # . .
-. . . . .
-. . . . .`
-
-    const hour1 = `
-. . . # .
-. . . # .
-. . # . .
-. . . . .
-. . . . .`
-
-    const hour2 = `
-. . . . .
-. . . # #
-. . # . .
-. . . . .
-. . . . .`
-
-
-    const hour3 = `
-. . . . .
-. . . . .
-. . # # #
-. . . . .
-. . . . .`
-
-    const hour4 = `
-. . . . .
-. . . . .
-. . # . .
-. . . # #
-. . . . .`
-
-    const hour5 = `
-. . . . .
-. . . . .
-. . # . .
-. . . # .
-. . . # .`
-
-    const hour6 = `
-. . . . .
-. . . . .
-. . # . .
-. . # . .
-. . # . .`
-
-
-    const hour7 = `
-. . . . .
-. . . . .
-. . # . .
-. # . . .
-. # . . .`
-
-    const hour8 = `
-. . . . .
-. . . . .
-. . # . .
-# # . . .
-. . . . .`
-
-    const hour9 = `
-. . . . .
-. . . . .
-# # # . .
-. . . . .
-. . . . .`
-
-    const hour10 = `
-. . . . .
-# # . . .
-. . # . .
-. . . . .
-. . . . .`
-
-    const hour11 = `
-. # . . .
-. # . . .
-. . # . .
-. . . . .
-. . . . .`
 
     // compass directions
 
@@ -572,21 +506,14 @@ export enum HourNames {
 . # # # .
 . . # . .`
 
-    //% weight=50
+    //% weight=50 blockGap=8
     //% blockId=device_arrow block="%arrow"
     //% shim=TD_ID
     export function arrowNumber(arrow: ArrowNames): number {
         return arrow;
     }
 
-    //% weight=50
-    //% blockId=device_hour block="%hour"
-    //% shim=TD_ID
-    export function hourNumber(hour: HourNames): number {
-        return hour;
-    }
-
-    //% weight=50
+    //% weight=50 blockGap=8
     //% blockId=builtin_arrow_image block="arrow image %i=device_arrow"
     export function arrowImage(i: ArrowNames): Image {
         let res = images.createImage(`
@@ -609,40 +536,13 @@ export enum HourNames {
         return res;
     }
 
-    //% weight=50
-    //% blockId=builtin_hour_image block="hour image %i=device_hour"
-    export function hourImage(i: HourNames): Image {
-        let res = images.createImage(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
-        switch (i) {
-            case HourNames.Hour12: return set(res, hour12)
-            case HourNames.Hour1: return set(res, hour1)
-            case HourNames.Hour2: return set(res, hour2)
-            case HourNames.Hour3: return set(res, hour3)
-            case HourNames.Hour4: return set(res, hour4)
-            case HourNames.Hour5: return set(res, hour5)
-            case HourNames.Hour6: return set(res, hour6)
-            case HourNames.Hour7: return set(res, hour7)
-            case HourNames.Hour8: return set(res, hour8)
-            case HourNames.Hour9: return set(res, hour9)
-            case HourNames.Hour10: return set(res, hour10)
-            case HourNames.Hour11: return set(res, hour11)
-        }
-        return res;
-    }
-
-    //% weight=50
+    //% weight=50 blockGap=8
     //% blockId=builtin_image block="icon image %i"
     export function iconImage(i: IconNames): Image {
         let res = images.createImage(`
                 . . . . .
                 . . . . .
-                . . # . .
+                . . . . .
                 . . . . .
                 . . . . .
                 `)

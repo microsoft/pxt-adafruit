@@ -49,7 +49,7 @@ enum Easing {
 /**
  * Functions to operate NeoPixel strips.
  */
-//% weight=98 color=#2699BF icon="\uf00a"
+//% weight=98 color=#2699BF icon="\uf00a" subcategories=["Animations"]
 namespace light {
     /**
      * Turns the status LED on or off.
@@ -379,7 +379,7 @@ namespace light {
          */
         //% blockId="neopixel_draw_animation_frame" block="show frame of %animation=neopixel_animation_rainbow |animation"
         //% weight=90
-        //% parts="neopixel"
+        //% parts="neopixel" subcategory="Animations"
         //% defaultInstance=light.builtin
         showAnimationFrame(animation: NeoPixelAnimation): void {
             if (!this._animation || this._animationType != animation.type) {
@@ -588,7 +588,7 @@ namespace light {
      * Return a new instance of the rainbow animation
      */
     //% blockId="neopixel_animation_rainbow" block="rainbow"
-    //% weight=100 blockGap=8
+    //% weight=100 blockGap=8 subcategory="Animations"
     //% parts="neopixel"
     export function rainbowCycleAnimation(): NeoPixelAnimation {
         return NeopixelAnimatonFactory.getRainbow();
@@ -598,7 +598,7 @@ namespace light {
      * Return a new instance of the running lights animation
      */
     //% blockId="neopixel_animation_runninglights" block="running lights"
-    //% weight=99 blockGap=8
+    //% weight=99 blockGap=8 subcategory="Animations"
     //% parts="neopixel"
     export function runningLightsAnimation(): NeoPixelAnimation {
         return NeopixelAnimatonFactory.getRunningLights();
@@ -608,7 +608,7 @@ namespace light {
      * Return a new instance of the theatre chase animation
      */
     //% blockId="neopixel_animation_theatrechase" block="theatre chase"
-    //% weight=99 blockGap=8
+    //% weight=99 blockGap=8 subcategory="Animations"
     //% parts="neopixel"
     export function theatreChaseAnimation(): NeoPixelAnimation {
         return NeopixelAnimatonFactory.getTheatreChase();
@@ -618,7 +618,7 @@ namespace light {
      * Return a new instance of the comet animation
      */
     //% blockId="neopixel_animation_comet" block="comet"
-    //% weight=98 blockGap=8
+    //% weight=98 blockGap=8 subcategory="Animations"
     //% parts="neopixel"
     export function cometAnimation(): NeoPixelAnimation {
         return NeopixelAnimatonFactory.getComet();
@@ -628,7 +628,7 @@ namespace light {
      * Return a new instance of the sparkle animation
      */
     //% blockId="neopixel_animation_sparkle" block="sparkle"
-    //% weight=97 blockGap=8
+    //% weight=97 blockGap=8 subcategory="Animations"
     //% parts="neopixel"
     export function sparkleAnimation(): NeoPixelAnimation {
         return NeopixelAnimatonFactory.getSparkle();
@@ -638,7 +638,7 @@ namespace light {
      * Return a new instance of the color wipe animation
      */
     //% blockId="neopixel_animation_colorwipe" block="%rgb=neopixel_colors| color wipe "
-    //% weight=96 blockGap=8
+    //% weight=96 blockGap=8 subcategory="Animations"
     //% parts="neopixel"
     export function colorWipeAnimation(rgb: number): NeoPixelAnimation {
         return NeopixelAnimatonFactory.getColorWipe(rgb);

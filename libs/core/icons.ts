@@ -76,6 +76,18 @@ enum IconNames {
 
 namespace basic {
 
+    /**
+     * Draws the selected icon on the LED screen
+     */
+    //% weight=90 blockGap=8
+    //% blockId=basic_show_icon 
+    //% block="show icon %i" icon="\uf00a"
+    //% parts="ledmatrix"
+    export function showIcon(icon: IconNames) {
+        let res = images.iconImage(icon)
+        res.showImage(0)
+    }
+
     //% weight=50
     //% blockId=basic_show_arrow block="show arrow %i=device_arrow"
     export function showArrow(i: number) {
@@ -90,13 +102,8 @@ namespace basic {
         res.showImage(0)
     }
 
-    //% weight=90
-    //% blockId=basic_show_icon block="show icon %i"
-    export function showIcon(i: IconNames) {
-        let res = images.iconImage(i)
-        res.showImage(0)
-    }
 }
+
 
 namespace images {
 

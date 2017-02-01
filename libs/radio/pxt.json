@@ -8,7 +8,12 @@
         "radio.cpp",
         "radio.ts",
         "_locales/de/radio-strings.json",
-        "_locales/de/radio-jsdoc-strings.json"
+        "_locales/de/radio-jsdoc-strings.json",
+        "_locales/si-LK/radio-strings.json",
+        "_locales/sv-SE/radio-strings.json",
+        "_locales/no/radio-strings.json",
+        "_locales/si-LK/radio-jsdoc-strings.json",
+        "_locales/no/radio-jsdoc-strings.json"
     ],
     "public": true,
     "dependencies": {

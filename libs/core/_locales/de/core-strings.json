@@ -115,6 +115,7 @@
   "input.magneticForce|block": "Magnetkraft (µT) |%NAME",
   "input.onButtonPressed|block": "wenn Knopf|%NAME|gedrückt",
   "input.onGesture|block": "wenn |%NAME",
+  "input.onPinPressed|block": "wenn Pin|%NAME|gedrückt",
   "input.onPinReleased|block": "wenn Pin %NAME|losgelassen",
   "input.pinIsPressed|block": "Pin %NAME|ist gedrückt",
   "input.rotation|block": "Rotation (°)|%NAME",

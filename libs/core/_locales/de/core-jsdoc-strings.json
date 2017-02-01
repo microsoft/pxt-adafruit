@@ -186,7 +186,6 @@
   "pins.spiWrite|param|value": "Daten, die an den SPI-Slave geschickt werden sollen",
   "serial": "Lesen und Schreiben von Daten über eine serielle Verbindung.",
   "serial.delimiters": "Gibt die mit dem Begrenzer korrespondierende Zeichenfolge aus.",
-  "serial.onLineReceived": "Registriert ein Event, das ausgeführt wird, wenn eine Zeile empfangen wurde",
   "serial.readLine": "Liest eine Textzeile aus der seriellen Schnittstelle.",
   "serial.readUntil": "Liest aus eine Textzeile aus dem seriellen Anschluss und gibt den Puffer aus, wenn die Begrenzung erreicht wurde.",
   "serial.readUntil|param|delimiter": "Text-Begrenzung, die die Textblöcke voneinander trennt",

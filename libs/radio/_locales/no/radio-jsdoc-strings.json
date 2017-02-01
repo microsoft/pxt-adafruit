@@ -1,0 +1,3 @@
+{
+  "radio.onDataPacketReceived": "Setter opp kode som skal kjøres når radioen mottar data. Henter mottatte data inn i en variabel."
+}

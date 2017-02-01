@@ -5,5 +5,10 @@
   "Math.randomBoolean": "Gir en tilfeldig logisk verdi, \"sann\" eller \"usann\".",
   "String.fromCharCode": "Lag en tekst som består av tegnet med den angitte ASCII-koden.",
   "basic": "Blokker for grunnleggende mikro:bit-funksjonalitet.",
-  "basic.clearScreen": "Slå av alle lysene på skjermen"
+  "basic.clearScreen": "Slå av alle lysene på skjermen",
+  "basic.showLeds|param|interval": "pause i millisekunder etter visning",
+  "basic.showLeds|param|leds": "mønsteret som skal vises med lysdiodene",
+  "basic.showString": "Vis en tekst rullende over skjermen. Hvis strengen har bare ett tegn ruller den ikke.",
+  "basic.showString|param|interval": "hvor fort teksten skal rulle, f.eks: 150, 100, 200, -100",
+  "basic.showString|param|text": "teksten som ruller over skjermen, f.eks: \"Hallo!\""
 }

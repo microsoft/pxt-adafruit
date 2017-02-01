@@ -1,3 +1,9 @@
 {
+  "String.charAt|block": "tegn fra %this|på plass %pos",
+  "String.concat|block": "sett sammen %this|%other",
+  "String.isEmpty|block": "%this| er tom",
+  "basic.clearScreen|block": "tøm skjermen",
+  "basic.showLeds|block": "vis bilde",
+  "basic.showString|block": "vis|tekst %text",
   "serial|block": "føljetong"
 }

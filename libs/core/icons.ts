@@ -26,7 +26,7 @@ THE SOFTWARE.
 // Images from file microbitconstimage.cpp https://github.com/bbcmicrobit/micropython
 
 enum IconNames {
-    //% enumval=0 block="heart" blockImage=1
+    //% block="heart"
     Heart = 0,
     //% block="small heart"
     SmallHeart,
@@ -108,6 +108,25 @@ enum IconNames {
     SmallSquare
 }
 
+enum ArrowNames {
+    //% blockIdentity=images.arrowNumber
+    North = 0,
+    //% blockIdentity=images.arrowNumber
+    NorthEast,
+    //% blockIdentity=images.arrowNumber
+    East,
+    //% blockIdentity=images.arrowNumber
+    SouthEast,
+    //% blockIdentity=images.arrowNumber
+    South,
+    //% blockIdentity=images.arrowNumber 
+    SouthWest,
+    //% blockIdentity=images.arrowNumber
+    West,
+    //% blockIdentity=images.arrowNumber
+    NorthWest,
+}
+
 namespace basic {
 
     /**
@@ -135,26 +154,6 @@ namespace basic {
 
 
 namespace images {
-
-export enum ArrowNames {
-    //% blockIdentity=images.arrowNumber
-    North = 0,
-    //% blockIdentity=images.arrowNumber
-    NorthEast,
-    //% blockIdentity=images.arrowNumber
-    East,
-    //% blockIdentity=images.arrowNumber
-    SouthEast,
-    //% blockIdentity=images.arrowNumber
-    South,
-    //% blockIdentity=images.arrowNumber 
-    SouthWest,
-    //% blockIdentity=images.arrowNumber
-    West,
-    //% blockIdentity=images.arrowNumber
-    NorthWest,
-}
-
 
     const heart = `
 . # . # .

@@ -142,7 +142,7 @@
         "serviceId": "codalcp"
     },
     "appTheme": {
-        "accentColor": "#000",
+        "accentColor": "#0089BF",
         "logoUrl": "https://adafruit.com/circuitplaygroundpxt",
         "logo": "./static/logo.svg",
         "docsLogo": "./static/logo.square.svg",

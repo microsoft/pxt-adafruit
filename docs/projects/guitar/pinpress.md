@@ -21,7 +21,7 @@ Use pin press to switch guitar play on/off
 ## Blocks
 
 ```cards
-var on = false
+let on = false
 on;
 if (on) { } else {}
 input.onPinPressed(TouchPin.P1, () => {})
@@ -106,7 +106,7 @@ input.onPinPressed(TouchPin.P1, () => {
 *Final code*
 TODO: do we want to use `on = !on;` or be more direct in flipping the switch? `on = true; on = false;`
 ```blocks
-var on = false
+let on = false
 basic.forever(() => {
     if (on) {
         music.setTempo(pins.map(Math.abs(input.acceleration(Dimension.Y)),

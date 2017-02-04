@@ -92,12 +92,11 @@
             "onboardComponents": [
                 "accelerometer",
                 "buttonpair",
-                "ledmatrix",
                 "speaker",
-                "bluetooth",
                 "thermometer",
-                "compass",
-                "rgbsensor"
+                "rgbsensor",
+                "lightsensor",
+                "microphone"
             ],
             "useCrocClips": true,
             "marginWhenBreadboarding": [

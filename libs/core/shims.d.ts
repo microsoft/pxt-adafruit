@@ -40,8 +40,8 @@ declare interface Image {
      */
     //% help=images/show-image weight=80 blockNamespace=images
     //% blockId=device_show_image_offset block="show image %sprite|at offset %offset" blockGap=8
-    //% parts="ledmatrix" shim=ImageMethods::showImage
-    showImage(xOffset: number): void;
+    //% parts="ledmatrix" async interval.defl=400 shim=ImageMethods::showImage
+    showImage(xOffset: number, interval?: number): void;
 
     /**
      * Draws the ``index``-th frame of the image on the screen.
@@ -118,8 +118,8 @@ declare interface Image {
      * @param frame TODO
      */
     //% weight=70 help=images/show-frame
-    //% parts="ledmatrix" shim=ImageMethods::showFrame
-    showFrame(frame: number): void;
+    //% parts="ledmatrix" interval.defl=400 shim=ImageMethods::showFrame
+    showFrame(frame: number, interval?: number): void;
 }
 
 

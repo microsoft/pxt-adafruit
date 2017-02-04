@@ -100,7 +100,7 @@ namespace light {
         //% blockId="neopixel_set_strip_color" block="show color %rgb=neopixel_colors"
         //% weight=85 blockGap=8
         //% parts="neopixel"
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         showColor(rgb: number) {
             this.setAllRGB(rgb);
             this.show();
@@ -115,7 +115,7 @@ namespace light {
         //% blockId="neopixel_show_gradient" block="show gradient|from %start=neopixel_colors|to %end=neopixel_colors"
         //% weight=84 blockGap=8
         //% parts="neopixel"
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         showGradient(start: number, end: number, easing?: Easing) {
             const sr = unpackR(start);
             const sg = unpackG(start);
@@ -142,7 +142,7 @@ namespace light {
         //% weight=84 blockGap=8
         //% blockId=neopixel_show_bar_graph block="show bar graph of %value |up to %high" icon="\uf080" blockExternalInputs=true
         //% parts="neopixel"
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         showBarGraph(value: number, high: number): void {
             const now = control.millis();
             serial.writeString(value + "\n"); // auto chart
@@ -183,7 +183,7 @@ namespace light {
         //% blockGap=8
         //% weight=5
         //% parts="neopixel"
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         setPixelColor(pixeloffset: number, rgb: number): void {
             if (pixeloffset < 0
                 || pixeloffset >= this._length)
@@ -213,7 +213,7 @@ namespace light {
         //% blockGap=8
         //% weight=4 advanced=true
         //% parts="neopixel"
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         pixelColor(pixeloffset: number): number {
             if (pixeloffset < 0
                 || pixeloffset >= this._length)
@@ -244,7 +244,7 @@ namespace light {
         //% blockGap=8
         //% weight=80
         //% parts="neopixel" advanced=true
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         setPixelWhiteLED(pixeloffset: number, white: number): void {
             if (this._mode === NeoPixelMode.RGBW) {
                 this.setPixelW(pixeloffset, white);
@@ -257,7 +257,7 @@ namespace light {
         //% blockId="neopixel_show" block="show" blockGap=8
         //% weight=4
         //% parts="neopixel"
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         show() {
             control.pause(1)
             sendBuffer(this.pin, this.buf);
@@ -270,7 +270,7 @@ namespace light {
         //% blockId="neopixel_clear" block="clear"
         //% weight=3
         //% parts="neopixel"
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         clear(): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
             this.buf.fill(0, this.start * stride, this._length * stride);
@@ -281,7 +281,7 @@ namespace light {
          */
         //% blockId="neopixel_length" block="length" blockGap=8
         //% weight=88 advanced=true
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         length() {
             return this._length;
         }
@@ -293,7 +293,7 @@ namespace light {
         //% blockId="neopixel_set_brightness" block="set brightness %brightness" blockGap=8
         //% weight=59
         //% parts="neopixel"
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         setBrightness(brightness: number): void {
             this._brightness = brightness & 0xff;
         }
@@ -304,7 +304,7 @@ namespace light {
         //% blockId="neopixel_get_brightness" block="brightness"
         //% weight=58 advanced=true
         //% parts=neopixel
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         brightness(): number {
             return this._brightness;
         }
@@ -315,7 +315,7 @@ namespace light {
         //% blockId="neopixel_each_brightness" block="ease brightness" blockGap=8
         //% weight=58
         //% parts="neopixel" advanced=true
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         easeBrightness(): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
             const br = this._brightness;
@@ -344,7 +344,7 @@ namespace light {
         //% weight=89
         //% blockId="neopixel_range" block="range from %start|with %length|pixels"
         //% parts="neopixel" advanced=true
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         range(start: number, length: number): NeoPixelStrip {
             let strip = new NeoPixelStrip();
             strip.buf = this.buf;
@@ -363,7 +363,7 @@ namespace light {
         //% blockId="neopixel_move_pixels" block="%kind=MoveKind |pixels by %offset" blockGap=8
         //% weight=40
         //% parts="neopixel"
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         movePixels(kind: MoveKind, offset: number = 1): void {
             const stride = this._mode === NeoPixelMode.RGBW ? 4 : 3;
             if (kind === MoveKind.Shift) {
@@ -380,7 +380,7 @@ namespace light {
         //% blockId="neopixel_draw_animation_frame" block="show frame of %animation=neopixel_animation_rainbow |animation"
         //% weight=90
         //% parts="neopixel"
-        //% defaultInstance=light.builtin
+        //% defaultInstance=light.pixels
         showAnimationFrame(animation: NeoPixelAnimation): void {
             if (!this._animation || this._animationType != animation.type) {
                 this.clear();
@@ -645,7 +645,7 @@ namespace light {
     }
 
     //%
-    export const builtin = light.createNeoPixelStrip();
+    export const pixels = light.createNeoPixelStrip();
 
     class NeopixelAnimatonFactory {
         private static rainbowSingleton: RainbowCycleAnimation;

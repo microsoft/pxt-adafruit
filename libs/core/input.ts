@@ -11,7 +11,7 @@ namespace input {
         // Save the current pixel color so it can later be restored.  Then bump
         // the brightness to max to make sure the LED is as bright as possible for
         // the color readings.
-        const strip : light.NeoPixelStrip = light.builtin;
+        const strip : light.NeoPixelStrip = light.pixels;
         const old_brightness = strip.brightness();
         const oldColor = strip.pixelColor(PIXEL);
         strip.setBrightness(255);

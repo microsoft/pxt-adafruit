@@ -96,7 +96,8 @@
                 "speaker",
                 "bluetooth",
                 "thermometer",
-                "compass"
+                "compass",
+                "rgbsensor"
             ],
             "useCrocClips": true,
             "marginWhenBreadboarding": [

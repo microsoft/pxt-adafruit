@@ -52,6 +52,11 @@ namespace pxsim.visuals {
             stroke-width: 1px;
         }
 
+        .sim-pin-level-button {
+            stroke:darkorange;
+            stroke-width: 1px;
+        }
+
         .sim-sound-level-button {
             stroke:#7f8c8d;
             stroke-width: 1px;
@@ -249,8 +254,7 @@ namespace pxsim.visuals {
         private buttonsOuter: SVGElement[];
         private buttonABText: SVGTextElement;
         private pins: SVGElement[];
-        private pinGradients: SVGLinearGradientElement[];
-        private pinTexts: SVGTextElement[];
+        private pinControls: {[index: number]: AnalogPinControl};
         private systemLed: SVGCircleElement;
         private redLED: SVGRectElement;
         private slideSwitch: SVGGElement;
@@ -327,11 +331,14 @@ namespace pxsim.visuals {
             svg.fill(this.buttons[2], theme.buttonUps[2]);
             if (this.shakeButton) svg.fill(this.shakeButton, theme.virtualButtonUp);
 
-            this.pinGradients.forEach(lg => svg.setGradientColors(lg, theme.pin, theme.pinActive));
             svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
 
             svg.setGradientColors(this.thermometerGradient, theme.ledOff, theme.ledOn);
             svg.setGradientColors(this.soundLevelGradient, theme.soundLevelOn, theme.soundLevelOff);
+
+            for (const id in this.pinControls) {
+                this.pinControls[id].updateTheme();
+            }
         }
 
         public updateState() {
@@ -462,25 +469,15 @@ namespace pxsim.visuals {
 
         private updatePin(pin: Pin, index: number) {
             if (!pin || !this.pins[index]) return;
-            let text = this.pinTexts[index];
-            let v = "";
 
             if (pin.mode & PinFlags.Analog) {
-                v = Math.floor(100 - (pin.value || 0) / 1023 * 100) + "%";
-                if (text) text.textContent = (pin.period ? "~" : "") + (pin.value || 0) + "";
+                if ((pin as pins.CPPin).used) {
+                    if (!this.pinControls[pin.id]) {
+                        this.pinControls[pin.id] = new AnalogPinControl(this, this.defs, pin.id, pinNames.filter((a) => a.id === pin.id)[0].name);
+                    }
+                    this.pinControls[pin.id].updateValue();
+                }
             }
-            else if (pin.mode & PinFlags.Digital) {
-                v = pin.value > 0 ? "0%" : "100%";
-                if (text) text.textContent = pin.value > 0 ? "1" : "0";
-            }
-            else if (pin.mode & PinFlags.Touch) {
-                v = pin.touched ? "0%" : "100%";
-                if (text) text.textContent = "";
-            } else {
-                v = "100%";
-                if (text) text.textContent = "";
-            }
-            if (v) svg.setGradientValue(this.pinGradients[index], v);
         }
 
         private updateLightLevel() {
@@ -684,30 +681,18 @@ namespace pxsim.visuals {
             this.buttons = btnids.map(n => this.element.getElementById(n + "_INNER") as SVGElement);
             this.buttons.forEach(b => svg.addClass(b, "sim-button"));
 
-            this.pinTexts = [];
             this.pins = pinNames.map((pin, i) => {
                 const n = pin.name;
                 let p = this.element.getElementById(n) as SVGElement;
                 if (p) {
                     svg.addClass(p, "sim-pin");
-                    if (pin.touch)
-                        svg.addClass(p, "sim-pin-touch");
-                    if (pin.text)
-                        this.pinTexts[i] = <SVGTextElement>svg.child(this.g, "text", { class: "sim-text-pin", x: pin.text.x, y: pin.text.y })
                     if (pin.tooltip)
                         svg.hydrate(p, { title: pin.tooltip })
                 }
                 return p;
             });
 
-            this.pinGradients = this.pins.map((pin, i) => {
-                if (!pin) return undefined;
-
-                let gid = "gradient-pin-" + i
-                let lg = svg.linearGradient(this.defs, gid)
-                pin.setAttribute("fill", `url(#${gid})`);
-                return lg;
-            })
+            this.pinControls = {};
 
             // BTN A+B
             const outerBtn = (left: number, top: number) => {
@@ -797,83 +782,6 @@ namespace pxsim.visuals {
                     }, 50)
                 }
             }, false);
-
-            this.pins.forEach((pin, index) => {
-                if (!pin || !this.board.edgeConnectorState.pins[index]) return;
-                let pt = this.element.createSVGPoint();
-
-                if (!pinNames[index].touch) {
-                    return;
-                }
-
-                svg.buttonEvents(pin,
-                    // move
-                    ev => {
-                        let state = this.board;
-                        let pin = state.edgeConnectorState.pins[index];
-                        let svgpin = this.pins[index];
-                        if (pin.mode & PinFlags.Input) {
-                            let cursor = svg.cursorPoint(pt, this.element, ev);
-                            let v = (400 - cursor.y) / 40 * 1023
-                            pin.value = Math.max(0, Math.min(1023, Math.floor(v)));
-                        }
-                        this.updatePin(pin, index);
-                    },
-                    // start
-                    ev => {
-                        let state = this.board;
-                        let pin = state.edgeConnectorState.pins[index];
-                        let svgpin = this.pins[index];
-                        svg.addClass(svgpin, "touched");
-                        if (pin.mode & PinFlags.Input) {
-                            let cursor = svg.cursorPoint(pt, this.element, ev);
-                            let v = (400 - cursor.y) / 40 * 1023
-                            pin.value = Math.max(0, Math.min(1023, Math.floor(v)));
-                        }
-                        this.updatePin(pin, index);
-                    },
-                    // stop
-                    (ev: MouseEvent) => {
-                        let state = this.board;
-                        let pin = state.edgeConnectorState.pins[index];
-                        let svgpin = this.pins[index];
-                        svg.removeClass(svgpin, "touched");
-                        this.updatePin(pin, index);
-                        return false;
-                    });
-            })
-            this.pins.forEach((btn, index) => {
-                if (!pinNames[index].touch) {
-                    return;
-                }
-                btn.addEventListener(pointerEvents.down, ev => {
-                    let state = this.board;
-
-                    const pin = state.edgeConnectorState.getPin(pinNames[index].id);
-                    pin.touched = true;
-                    this.updatePin(pin, index);
-
-                    (pxtcore.getTouchButton(index) as CPButton).setPressed(true);
-                })
-                btn.addEventListener(pointerEvents.leave, ev => {
-                    let state = this.board;
-
-                    const pin = state.edgeConnectorState.getPin(pinNames[index].id);
-                    pin.touched = false;
-                    this.updatePin(pin, index);
-
-                    (pxtcore.getTouchButton(index) as CPButton).setPressed(false);
-                })
-                btn.addEventListener(pointerEvents.up, ev => {
-                    let state = this.board;
-
-                    const pin = state.edgeConnectorState.getPin(pinNames[index].id);
-                    pin.touched = false;
-                    this.updatePin(pin, index);
-
-                    (pxtcore.getTouchButton(index) as CPButton).setPressed(false);
-                })
-            })
 
             let bpState = this.board.buttonPairState;
             let stateButtons = bpState.buttons;

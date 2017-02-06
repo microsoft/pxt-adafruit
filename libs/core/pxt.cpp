@@ -6,17 +6,13 @@ CodalDevice device;
 
 namespace pxt {
 
-// This is used to tell the bootloader that a single reset should start the bootloader and 
-// the MSD device, not us.
-__attribute__ ((section(".binmeta")))
-__attribute__ ((used))
-const uint32_t pxt_binmeta[] = {
-    0x87eeb07c,
-    0x0,
-    0x0,
-    0x0
+// The first word is used to tell the bootloader that a single reset should start the
+// bootloader and the MSD device, not us.
+// The rest is reserved for partial flashing checksums.
+__attribute__((section(".binmeta"))) __attribute__((used)) const uint32_t pxt_binmeta[] = {
+    0x87eeb07c, 0x00ff00ff, 0x00ff00ff, 0x00ff00ff, 0x00ff00ff, 0x00ff00ff,
+    0x00ff00ff, 0x00ff00ff, 0x00ff00ff, 0x00ff00ff, 0x00ff00ff, 0x00ff00ff,
 };
-
 
 int incr(uint32_t e) {
     if (e) {
@@ -144,334 +140,277 @@ void RefRecord_print(RefRecord *r) {
     DMESG("RefRecord %p r=%d size=%d bytes", r, r->refcnt, r->getVTable()->numbytes);
 }
 
-    uint32_t Segment::get(uint32_t i)
-    {
+uint32_t Segment::get(uint32_t i) {
 #ifdef DEBUG_BUILD
-      printf("In Segment::get index:%u\n", i);
-      this->print();
-#endif            
-      
-      if (i < length)
-      {
-          return data[i];          
-      }
-      return Segment::DefaultValue;
+    printf("In Segment::get index:%u\n", i);
+    this->print();
+#endif
+
+    if (i < length) {
+        return data[i];
+    }
+    return Segment::DefaultValue;
+}
+
+void Segment::set(uint32_t i, uint32_t value) {
+    if (i < size) {
+        data[i] = value;
+    } else if (i < Segment::MaxSize) {
+        growByMin(i + 1);
+        data[i] = value;
+    }
+    if (length <= i) {
+        length = i + 1;
     }
 
-    void Segment::set(uint32_t i, uint32_t value) 
-    {
-        if (i < size)
-        {
-          data[i] = value;
-        }
-        else if (i < Segment::MaxSize)
-        {
-          growByMin(i + 1);
-          data[i] = value;
-        }
-        if (length <= i)
-        {
-           length = i + 1; 
-        }        
-
 #ifdef DEBUG_BUILD
-        printf("In Segment::set\n");
-        this->print();
-#endif            
-        
-        return;
-    }      
+    printf("In Segment::set\n");
+    this->print();
+#endif
 
-    uint16_t Segment::growthFactor(uint16_t size)
-    {
-      if (size == 0)
-      {
+    return;
+}
+
+uint16_t Segment::growthFactor(uint16_t size) {
+    if (size == 0) {
         return 4;
-      }
-      if (size < 64)
-      {
+    }
+    if (size < 64) {
         return size * 2; // Double
-      }
-      if (size < 512)
-      {
-        return size * 5/3; //Grow by 1.66 rate
-      }
-      return size + 256; //Grow by constant rate
     }
-
-    void Segment::growByMin(uint16_t minSize)
-    {
-      growBy(max(minSize, growthFactor(size)));
+    if (size < 512) {
+        return size * 5 / 3; // Grow by 1.66 rate
     }
+    return size + 256; // Grow by constant rate
+}
 
-    void Segment::growBy(uint16_t newSize) 
-    {
+void Segment::growByMin(uint16_t minSize) {
+    growBy(max(minSize, growthFactor(size)));
+}
+
+void Segment::growBy(uint16_t newSize) {
 #ifdef DEBUG_BUILD
-         printf("growBy: %d\n", newSize);
-         this->print();
-#endif      
-      if (size < newSize)
-      {
-         //this will throw if unable to allocate
-         uint32_t *tmp = (uint32_t*)(::operator new(newSize * sizeof(uint32_t)));
+    printf("growBy: %d\n", newSize);
+    this->print();
+#endif
+    if (size < newSize) {
+        // this will throw if unable to allocate
+        uint32_t *tmp = (uint32_t *)(::operator new(newSize * sizeof(uint32_t)));
 
-         //Copy existing data
-         if (size)
-         {
-           memcpy(tmp, data, size * sizeof(uint32_t));
-         }
-        //fill the rest with default value
-         memset(tmp + size, Segment::DefaultValue, (newSize - size) * sizeof(uint32_t));
+        // Copy existing data
+        if (size) {
+            memcpy(tmp, data, size * sizeof(uint32_t));
+        }
+        // fill the rest with default value
+        memset(tmp + size, Segment::DefaultValue, (newSize - size) * sizeof(uint32_t));
 
-         //free older segment;
-         ::operator delete(data); 
+        // free older segment;
+        ::operator delete(data);
 
-         data = tmp; 
-         size = newSize;
+        data = tmp;
+        size = newSize;
 
 #ifdef DEBUG_BUILD
-         printf("growBy - after reallocation\n");
-         this->print();
-#endif         
-         
-      }
-      //else { no shrinking yet; }
-      return;
+        printf("growBy - after reallocation\n");
+        this->print();
+#endif
     }
+    // else { no shrinking yet; }
+    return;
+}
 
-    void Segment::ensure(uint16_t newSize)
-    {
-      if (newSize < size)
-      {
+void Segment::ensure(uint16_t newSize) {
+    if (newSize < size) {
         return;
-      }
-      growByMin(newSize);
     }
+    growByMin(newSize);
+}
 
-    void Segment::setLength(uint32_t newLength)
-    {
-      if (newLength > size)
-      {
-        ensure(length);        
-      }
-      length = newLength;
-      return;
+void Segment::setLength(uint32_t newLength) {
+    if (newLength > size) {
+        ensure(length);
     }
+    length = newLength;
+    return;
+}
 
-    void Segment::push(uint32_t value) 
-    { 
-      this->set(length, value);
-    }
-    
-    uint32_t Segment::pop() 
-    {
+void Segment::push(uint32_t value) {
+    this->set(length, value);
+}
+
+uint32_t Segment::pop() {
 #ifdef DEBUG_BUILD
-      printf("In Segment::pop\n");
-      this->print();
-#endif            
-      
-      if (length > 0)
-      {
+    printf("In Segment::pop\n");
+    this->print();
+#endif
+
+    if (length > 0) {
         uint32_t value = data[length];
         data[length] = Segment::DefaultValue;
         --length;
         return value;
-      }
-      return Segment::DefaultValue;
     }
+    return Segment::DefaultValue;
+}
 
-    //this function removes an element at index i and shifts the rest of the elements to
-    //left to fill the gap   
-    uint32_t Segment::remove(uint32_t i) 
-    {
+// this function removes an element at index i and shifts the rest of the elements to
+// left to fill the gap
+uint32_t Segment::remove(uint32_t i) {
 #ifdef DEBUG_BUILD
-      printf("In Segment::remove index:%u\n", i);
-      this->print();
-#endif                  
-      if (i < length)
-      {
-        //value to return
+    printf("In Segment::remove index:%u\n", i);
+    this->print();
+#endif
+    if (i < length) {
+        // value to return
         uint32_t ret = data[i];
-        if (i + 1 < length)
-        {
-          //Move the rest of the elements to fill in the gap.
-          memmove(data + i, data + i + 1, (length - i - 1) * sizeof(uint32_t));
+        if (i + 1 < length) {
+            // Move the rest of the elements to fill in the gap.
+            memmove(data + i, data + i + 1, (length - i - 1) * sizeof(uint32_t));
         }
-        length--;        
-        data[length] = Segment::DefaultValue;        
+        length--;
+        data[length] = Segment::DefaultValue;
 #ifdef DEBUG_BUILD
         printf("After Segment::remove index:%u\n", i);
         this->print();
-#endif  
+#endif
         return ret;
-      }
-      return Segment::DefaultValue;
     }
+    return Segment::DefaultValue;
+}
 
-    //this function inserts element value at index i by shifting the rest of the elements right.     
-    void Segment::insert(uint32_t i, uint32_t value) 
-    {
+// this function inserts element value at index i by shifting the rest of the elements right.
+void Segment::insert(uint32_t i, uint32_t value) {
 #ifdef DEBUG_BUILD
-      printf("In Segment::insert index:%u value:%u\n", i, value);
-      this->print();
-#endif                  
+    printf("In Segment::insert index:%u value:%u\n", i, value);
+    this->print();
+#endif
 
-      if (i < length)
-      {
+    if (i < length) {
         ensure(length + 1);
-        if (i + 1 < length)
-        {
-          //Move the rest of the elements to fill in the gap.
-          memmove(data + i + 1, data + i, (length - i) * sizeof(uint32_t));
+        if (i + 1 < length) {
+            // Move the rest of the elements to fill in the gap.
+            memmove(data + i + 1, data + i, (length - i) * sizeof(uint32_t));
         }
 
-        data[i] = value;        
+        data[i] = value;
         length++;
-      }
-      else
-      {
-        //This is insert beyond the length, just call set which will adjust the length
+    } else {
+        // This is insert beyond the length, just call set which will adjust the length
         set(i, value);
-      }
+    }
 #ifdef DEBUG_BUILD
-      printf("After Segment::insert index:%u\n", i);
-      this->print();
-#endif                   
-    }
+    printf("After Segment::insert index:%u\n", i);
+    this->print();
+#endif
+}
 
-    void Segment::print()
-    {
-      printf("Segment: %x, length: %u, size: %u\n", data, (uint32_t)length, (uint32_t)size);
-      for(uint32_t i = 0; i < size; i++)
-      {
-        printf("%d ",(uint32_t)data[i]);
-      }
-      printf("\n");
+void Segment::print() {
+    printf("Segment: %x, length: %u, size: %u\n", data, (uint32_t)length, (uint32_t)size);
+    for (uint32_t i = 0; i < size; i++) {
+        printf("%d ", (uint32_t)data[i]);
     }
+    printf("\n");
+}
 
-    bool Segment::isValidIndex(uint32_t i)
-    {
-      if (i > length)
-      {
+bool Segment::isValidIndex(uint32_t i) {
+    if (i > length) {
         return false;
-      }
-      return true;
     }
+    return true;
+}
 
-    void Segment::destroy()
-    {
+void Segment::destroy() {
 #ifdef DEBUG_BUILD
-      printf("In Segment::destroy\n");
-      this->print();
-#endif          
-      length = size = 0;
-      ::operator delete(data);
-      data = nullptr;
-    }
+    printf("In Segment::destroy\n");
+    this->print();
+#endif
+    length = size = 0;
+    ::operator delete(data);
+    data = nullptr;
+}
 
-    void RefCollection::push(uint32_t x) 
-    {
-      if (isRef()) incr(x);
-      head.push(x);
-    }
+void RefCollection::push(uint32_t x) {
+    if (isRef())
+        incr(x);
+    head.push(x);
+}
 
-    uint32_t RefCollection::pop() 
-    {
-      uint32_t ret = head.pop();
-      if (isRef())
-      {
-        incr(ret);  
-      } 
-      return ret;
+uint32_t RefCollection::pop() {
+    uint32_t ret = head.pop();
+    if (isRef()) {
+        incr(ret);
     }
+    return ret;
+}
 
-    uint32_t RefCollection::getAt(int i) 
-    {
-      uint32_t tmp = head.get(i);
-      if (isRef())
-      {
+uint32_t RefCollection::getAt(int i) {
+    uint32_t tmp = head.get(i);
+    if (isRef()) {
         incr(tmp);
-      }
-      return tmp;
     }
+    return tmp;
+}
 
-    uint32_t RefCollection::removeAt(int i) 
-    {
-      if (isRef())
-      {
+uint32_t RefCollection::removeAt(int i) {
+    if (isRef()) {
         decr(head.get(i));
-      } 
-      return head.remove(i);
     }
+    return head.remove(i);
+}
 
-    void RefCollection::insertAt(int i, uint32_t value) 
-    {
-      head.insert(i, value);
-      if (isRef())
-      {
+void RefCollection::insertAt(int i, uint32_t value) {
+    head.insert(i, value);
+    if (isRef()) {
         incr(value);
-      } 
     }
+}
 
-    void RefCollection::setAt(int i, uint32_t value) 
-    {
-      if (isRef()) 
-      {
-        if (head.isValidIndex((uint32_t)i))
-        {
-          decr(head.get(i));
+void RefCollection::setAt(int i, uint32_t value) {
+    if (isRef()) {
+        if (head.isValidIndex((uint32_t)i)) {
+            decr(head.get(i));
         }
         incr(value);
-      }
-      head.set(i, value);
+    }
+    head.set(i, value);
+}
+
+int RefCollection::indexOf(uint32_t x, int start) {
+    if (isString()) {
+        StringData *xx = (StringData *)x;
+        uint32_t i = start;
+        while (head.isValidIndex(i)) {
+            StringData *ee = (StringData *)head.get(i);
+            if (ee == xx) {
+                // handles ee being null
+                return (int)i;
+            }
+            if (ee && xx->len == ee->len && memcmp(xx->data, ee->data, xx->len) == 0) {
+                return (int)i;
+            }
+            i++;
+        }
+    } else {
+        uint32_t i = start;
+        while (head.isValidIndex(i)) {
+            if (head.get(i) == x) {
+                return (int)i;
+            }
+            i++;
+        }
     }
 
-    int RefCollection::indexOf(uint32_t x, int start) 
-    {
-      if (isString()) 
-      {
-        StringData *xx = (StringData*)x;
-        uint32_t i = start;
-        while(head.isValidIndex(i))
-        {
-          StringData *ee = (StringData*)head.get(i);
-          if (ee == xx)
-          {
-            //handles ee being null
-            return (int) i;
-          }
-          if (ee && xx->len == ee->len && memcmp(xx->data, ee->data, xx->len) == 0)
-          {
-            return (int)i;
-          }
-          i++;
-        }
-      } 
-      else 
-      {
-        uint32_t i = start;
-        while(head.isValidIndex(i))
-        {
-          if (head.get(i) == x)
-          {
-            return (int)i;
-          }
-          i++;
-        }
-      }
+    return -1;
+}
 
-      return -1;
-    }
-
-    int RefCollection::removeElement(uint32_t x) 
-    {
-      int idx = indexOf(x, 0);
-      if (idx >= 0) {
+int RefCollection::removeElement(uint32_t x) {
+    int idx = indexOf(x, 0);
+    if (idx >= 0) {
         removeAt(idx);
         return 1;
-       }
-       return 0;
     }
+    return 0;
+}
 
 namespace Coll0 {
 PXT_VTABLE_BEGIN(RefCollection, 0, 0)
@@ -503,24 +442,20 @@ RefCollection::RefCollection(uint16_t flags) : RefObject(0) {
     }
 }
 
-    void RefCollection::destroy()
-    {
-      if (this->isRef())
-      {
-        for(uint32_t i = 0; i < this->head.getLength(); i++)
-        {
-          decr(this->head.get(i));
+void RefCollection::destroy() {
+    if (this->isRef()) {
+        for (uint32_t i = 0; i < this->head.getLength(); i++) {
+            decr(this->head.get(i));
         }
-      }
-      this->head.destroy();
-      delete this;
     }
+    this->head.destroy();
+    delete this;
+}
 
-    void RefCollection::print()
-    {
-      printf("RefCollection %p r=%d flags=%d size=%d\n", this, refcnt, getFlags(), head.getLength());
-      head.print();
-    }
+void RefCollection::print() {
+    printf("RefCollection %p r=%d flags=%d size=%d\n", this, refcnt, getFlags(), head.getLength());
+    head.print();
+}
 
 PXT_VTABLE_CTOR(RefAction) {}
 
@@ -537,7 +472,7 @@ void RefAction::destroy() {
 
 void RefAction::print() {
     DMESG("RefAction %p r=%d pc=%X size=%d (%d refs)", this, refcnt,
-           (const uint8_t *)func - (const uint8_t *)bytecode, len, reflen);
+          (const uint8_t *)func - (const uint8_t *)bytecode, len, reflen);
 }
 
 void RefLocal::print() {
@@ -606,9 +541,7 @@ HF2 hf2;
 
 // TODO extract these from uf2_info()?
 static const char *string_descriptors[] = {
-    "Example Corp.",
-    "PXT Device",
-    "42424242",
+    "Example Corp.", "PXT Device", "42424242",
 };
 
 static void initCodal() {

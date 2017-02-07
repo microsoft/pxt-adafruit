@@ -131,6 +131,7 @@
         "loopsBlocks": true,
         "logicBlocks": true,
         "variablesBlocks": true,
+        "textBlocks": true,
         "onStartNamespace": "control",
         "onStartColor": "#BEAA07"
 

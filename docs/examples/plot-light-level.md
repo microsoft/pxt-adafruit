@@ -1,4 +1,4 @@
-## Plot Light level
+# Plot Light level
 
 ```blocks
 basic.forever(() => {

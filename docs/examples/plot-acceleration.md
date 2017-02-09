@@ -1,4 +1,4 @@
-## Plot Acceleration
+# Plot Acceleration
 
 ```blocks
 basic.forever(() => {

@@ -208,6 +208,7 @@
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
         "githubUrl": "https://github.com/Microsoft/pxt-microbit",
         "projectGallery": "projects",
+        "exampleGallery": "examples",
         "crowdinProject": "kindscript",
         "boardName": "micro:bit",
         "sideDoc": "tutorials/getting-started",

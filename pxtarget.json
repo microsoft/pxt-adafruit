@@ -188,6 +188,7 @@
         "monacoToolbox": true,
         "simAnimationEnter": "roll in",
         "simAnimationExit": "roll out",
+        "exampleGallery": "examples",
         "hasAudio": true,
         "blocklyOptions": {
             "grid": {

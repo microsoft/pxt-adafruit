@@ -502,7 +502,7 @@ namespace light {
      * Gets the RGB value of a known color
     */
     //% weight=2 blockGap=8 advanced=true
-    //% blockId="neopixel_colors" block="%color"
+    //% blockId=neopixel_colors block="%color"
     export function colors(color: NeoPixelColors): number {
         return color;
     }

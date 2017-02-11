@@ -105,7 +105,7 @@ enum IconNames {
     //% block="square"
     Square,
     //% block="small square"
-    SmallSquare
+    SmallSquare, 
 }
 
 enum ArrowNames {
@@ -155,355 +155,325 @@ namespace basic {
 
 namespace images {
 
-    const heart = `
-. # . # .
-# # # # #
-# # # # #
-. # # # .
-. . # . .`
+    function getArrow(i : ArrowNames): string {
+            switch(i) {
+            // compass directions
+            case ArrowNames.North: return `    
+                                        . . # . .
+                                        . # # # .
+                                        # . # . #
+                                        . . # . .
+                                        . . # . .`;
+            case ArrowNames.NorthEast: return ` 
+                                        . . # # #
+                                        . . . # #
+                                        . . # . #
+                                        . # . . .
+                                        # . . . .`;
+            case  ArrowNames.East: return ` 
+                                        . . # . .
+                                        . . . # .
+                                        # # # # #
+                                        . . . # .
+                                        . . # . .`;
+            case ArrowNames.SouthEast: return ` 
+                                        # . . . .
+                                        . # . . .
+                                        . . # . #
+                                        . . . # #
+                                        . . # # #`;
+            case ArrowNames.South: return ` 
+                                        . . # . .
+                                        . . # . .
+                                        # . # . #
+                                        . # # # .
+                                        . . # . .`;
+            case ArrowNames.SouthWest: return ` 
+                                        . . . . #
+                                        . . . # .
+                                        # . # . .
+                                        # # . . .
+                                        # # # . .`;
+            case ArrowNames.West: return ` 
+                                        . . # . .
+                                        . # . . .
+                                        # # # # #
+                                        . # . . .
+                                        . . # . .`;
+            case ArrowNames.NorthWest: return ` 
+                                        # # # . .
+                                        # # . . .
+                                        # . # . .
+                                        . . . # .
+                                        . . . . #`;
+            default:                return `
+                                        . . . . .
+                                        . . . . .
+                                        . . . . .
+                                        . . . . .
+                                        . . . . .
+                                        `;
+       }
+    }
+    
+    function getIcon(i: IconNames): string {
 
-    const small_heart = `
-. . . . .
-. # . # .
-. # # # .
-. . # . .
-. . . . .`
+            switch (i) {
+            case IconNames.Heart : return `
+                                        . # . # .
+                                        # # # # #
+                                        # # # # #
+                                        . # # # .
+                                        . . # . .`;
 
-    //faces
-
-    const happy_face = `
-. . . . .
-. # . # .
-. . . . .
-# . . . #
-. # # # .`
-
-    const sad_face = `
-. . . . .
-. # . # .
-. . . . .
-. # # # .
-# . . . #`
-
-    const confused_face = `
-. . . . .
-. # . # .
-. . . . .
-. # . # .
-# . # . #`
-
-    const angry_face = `
-# . . . #
-. # . # .
-. . . . .
-# # # # #
-# . # . #`
-
-    const asleep_face = `
-. . . . .
-# # . # #
-. . . . .
-. # # # .
-. . . . .`
-
-    const surprised_face = `
-. # . # .
-. . . . .
-. . # . .
-. # . # .
-. . # . .`
-
-    const silly_face = `
-# . . . #
-. . . . .
-# # # # #
-. . . # #
-. . . # #`
-
-    const fabulous_face = `
-# # # # #
-# # . # #
-. . . . .
-. # . # .
-. # # # .`
-
-    const meh_face = `
-# # . # #
-. . . . .
-. . . # .
-. . # . .
-. # . . .`
-
-    const yes = `
-. . . . .
-. . . . #
-. . . # .
-# . # . .
-. # . . .`
-
-    const no = `
-# . . . #
-. # . # .
-. . # . .
-. # . # .
-# . . . #`
-
-    // compass directions
-
-    const arrow_n = `
-. . # . .
-. # # # .
-# . # . #
-. . # . .
-. . # . .`
-
-    const arrow_ne = `
-. . # # #
-. . . # #
-. . # . #
-. # . . .
-# . . . .`
-
-    const arrow_e = `
-. . # . .
-. . . # .
-# # # # #
-. . . # .
-. . # . .`
-
-    const arrow_se = `
-# . . . .
-. # . . .
-. . # . #
-. . . # #
-. . # # #`
-
-    const arrow_s = `
-. . # . .
-. . # . .
-# . # . #
-. # # # .
-. . # . .`
-
-    const arrow_sw = `
-. . . . #
-. . . # .
-# . # . .
-# # . . .
-# # # . .`
-
-    const arrow_w = `
-. . # . .
-. # . . .
-# # # # #
-. # . . .
-. . # . .`
-
-    const arrow_nw = `
-# # # . .
-# # . . .
-# . # . .
-. . . # .
-. . . . #`
-
-    // geometry
-
-    const triangle = `
-. . . . .
-. . # . .
-. # . # .
-# # # # #
-. . . . .`
-
-    const left_triangle = `
-# . . . .
-# # . . .
-# . # . .
-# . . # .
-# # # # #`
-
-    const chessboard = `
-. # . # .
-# . # . #
-. # . # .
-# . # . #
-. # . # .`
-
-    const diamond = `
-. . # . .
-. # . # .
-# . . . #
-. # . # .
-. . # . .`
-
-    const small_diamond = `
-. . . . .
-. . # . .
-. # . # .
-. . # . .
-. . . . .`
-
-    const square = `
-# # # # #
-# . . . #
-# . . . #
-# . . . #
-# # # # #`
-
-    const small_square = `
-. . . . .
-. # # # .
-. # . # .
-. # # # .
-. . . . .`
-
-    // The following images were designed by Abbie Brooks.
-
-    const tshirt = `
-# # . # #
-# # # # #
-. # # # .
-. # # # .
-. # # # .`
-
-    const rollerskate = `
-. . . # #
-. . . # #
-# # # # #
-# # # # #
-. # . # .`
-
-    const duck = `
-. # # . .
-# # # . .
-. # # # #
-. # # # .
-. .. . .`
-
-    const house = `
-. . # . .
-. # # # .
-# # # # #
-. # # # .
-. # . # .`
-
-    const tortoise = `
-. . . . .
-. # # # .
-# # # # #
-. # . # .
-. . . . .`
-
-    const butterfly = `
-# # . # #
-# # # # #
-. . # . .
-# # # # #
-# # . # #`
-
-    const stick_figure = `
-. . # . .
-# # # # #
-. . # . .
-. # . # .
-# . . . #`
-
-    const ghost = `
-. # # # .
-# . # . #
-# # # # #
-# # # # #
-# . # . #`
-
-    const sword = `
-. . # . .
-. . # . .
-. . # . .
-. # # # .
-. . # . .`
-
-    const giraffe = `
-# # . . .
-. # . . .
-. # . . .
-. # # # .
-. # . # .`
-
-    const skull = `
-. # # # .
-# . # . #
-# # # # #
-. # # # .
-. # # # .`
-
-    const umbrella = `
-. # # # .
-# # # # #
-. . # . .
-# . # . .
-# # # . .`
-
-    const snake = `
-# # . . .
-# # . # #
-. # . # .
-. # # # .
-. . . . .`
-
-// animals    
-
-    const rabbit = `
-# . # . .
-# . # . .
-# # # # .
-# # . # .
-# # # # .`
-
-    const cow = `
-# . . . #
-# . . . #
-# # # # #
-. # # # .
-. . # . .`
-
-// musical notes
-
-    const quarter_note = `
-. . # . .
-. . # . .
-. . # . .
-# # # . .
-# # # . .`
-
-    const eigth_note = `
-. . # . .
-. . # # .
-. . # . #
-# # # . .
-# # # . .`
-
-// other icons
-
-    const pitchfork = `
-# . # . #
-# . # . #
-# # # # #
-. . # . .
-. . # . .`
-
-    const pacman = `
-. # # # #
-# # # # .
-# # # . .
-# # # # .
-. # # # #`
-
-    const target = `
-. . # . .
-. # # # .
-# # . # #
-. # # # .
-. . # . .`
+            case IconNames.SmallHeart : return `
+                                        . . . . .
+                                        . # . # .
+                                        . # # # .
+                                        . . # . .
+                                        . . . . .`;
+                                            //faces
+            case IconNames.Happy: return `
+                                        . . . . .
+                                        . # . # .
+                                        . . . . .
+                                        # . . . #
+                                        . # # # .`;
+            case IconNames.Sad: return `
+                                        . . . . .
+                                        . # . # .
+                                        . . . . .
+                                        . # # # .
+                                        # . . . #`;
+            case IconNames.Confused: return `
+                                        . . . . .
+                                        . # . # .
+                                        . . . . .
+                                        . # . # .
+                                        # . # . #`;
+            case IconNames.Angry: return `
+                                        # . . . #
+                                        . # . # .
+                                        . . . . .
+                                        # # # # #
+                                        # . # . #`;
+            case IconNames.Asleep: return `
+                                        . . . . .
+                                        # # . # #
+                                        . . . . .
+                                        . # # # .
+                                        . . . . .`;
+            case IconNames.Surprised: return `
+                                        . # . # .
+                                        . . . . .
+                                        . . # . .
+                                        . # . # .
+                                        . . # . .`;
+            case IconNames.Silly: return `
+                                        # . . . #
+                                        . . . . .
+                                        # # # # #
+                                        . . . # #
+                                        . . . # #`;
+            case IconNames.Fabulous: return `
+                                        # # # # #
+                                        # # . # #
+                                        . . . . .
+                                        . # . # .
+                                        . # # # .`;
+            case IconNames.Meh: return `
+                                        # # . # #
+                                        . . . . .
+                                        . . . # .
+                                        . . # . .
+                                        . # . . .`;
+            case IconNames.Yes: return `
+                                        . . . . .
+                                        . . . . #
+                                        . . . # .
+                                        # . # . .
+                                        . # . . .`;
+            case IconNames.No: return `
+                                        # . . . #
+                                        . # . # .
+                                        . . # . .
+                                        . # . # .
+                                        # . . . #`;
+            case IconNames.Triangle: return `
+                                        . . . . .
+                                        . . # . .
+                                        . # . # .
+                                        # # # # #
+                                        . . . . .`;
+            case IconNames.LeftTriangle: return `
+                                        # . . . .
+                                        # # . . .
+                                        # . # . .
+                                        # . . # .
+                                        # # # # #`;
+            case IconNames.Chessboard: return `
+                                        . # . # .
+                                        # . # . #
+                                        . # . # .
+                                        # . # . #
+                                        . # . # .`;
+            case IconNames.Diamond: return `
+                                        . . # . .
+                                        . # . # .
+                                        # . . . #
+                                        . # . # .
+                                        . . # . .`;
+            case IconNames.SmallDiamond: return `
+                                        . . . . .
+                                        . . # . .
+                                        . # . # .
+                                        . . # . .
+                                        . . . . .`;
+            case IconNames.Square: return `
+                                        # # # # #
+                                        # . . . #
+                                        # . . . #
+                                        # . . . #
+                                        # # # # #`;
+            case IconNames.SmallSquare: return `
+                                        . . . . .
+                                        . # # # .
+                                        . # . # .
+                                        . # # # .
+                                        . . . . .`;
+                                            // The following images were designed by Abbie Brooks.
+            case IconNames.TShirt: return `
+                                        # # . # #
+                                        # # # # #
+                                        . # # # .
+                                        . # # # .
+                                        . # # # .`;
+            case IconNames.Rollerskate: return `
+                                        . . . # #
+                                        . . . # #
+                                        # # # # #
+                                        # # # # #
+                                        . # . # .`;
+            case IconNames.Duck: return `
+                                        . # # . .
+                                        # # # . .
+                                        . # # # #
+                                        . # # # .
+                                        . .. . .`;
+            case IconNames.House: return `
+                                        . . # . .
+                                        . # # # .
+                                        # # # # #
+                                        . # # # .
+                                        . # . # .`;
+            case IconNames.Tortoise: return `
+                                        . . . . .
+                                        . # # # .
+                                        # # # # #
+                                        . # . # .
+                                        . . . . .`;
+            case IconNames.Butterfly: return `
+                                        # # . # #
+                                        # # # # #
+                                        . . # . .
+                                        # # # # #
+                                        # # . # #`;
+            case IconNames.StickFigure: return `
+                                        . . # . .
+                                        # # # # #
+                                        . . # . .
+                                        . # . # .
+                                        # . . . #`;
+            case IconNames.Ghost: return `
+                                        . # # # .
+                                        # . # . #
+                                        # # # # #
+                                        # # # # #
+                                        # . # . #`;
+            case IconNames.Sword: return `
+                                        . . # . .
+                                        . . # . .
+                                        . . # . .
+                                        . # # # .
+                                        . . # . .`;
+            case IconNames.Giraffe: return `
+                                        # # . . .
+                                        . # . . .
+                                        . # . . .
+                                        . # # # .
+                                        . # . # .`;
+            case IconNames.Skull: return `
+                                        . # # # .
+                                        # . # . #
+                                        # # # # #
+                                        . # # # .
+                                        . # # # .`;
+            case IconNames.Umbrella: return `
+                                        . # # # .
+                                        # # # # #
+                                        . . # . .
+                                        # . # . .
+                                        # # # . .`;
+            case IconNames.Snake: return `
+                                        # # . . .
+                                        # # . # #
+                                        . # . # .
+                                        . # # # .
+                                        . . . . .`;
+                                        // animals    
+            case IconNames.Rabbit: return `
+                                        # . # . .
+                                        # . # . .
+                                        # # # # .
+                                        # # . # .
+                                        # # # # .`;
+            case IconNames.Cow: return `
+                                        # . . . #
+                                        # . . . #
+                                        # # # # #
+                                        . # # # .
+                                        . . # . .`;
+                                        // musical notes
+            case IconNames.QuarterNote: return `
+                                        . . # . .
+                                        . . # . .
+                                        . . # . .
+                                        # # # . .
+                                        # # # . .`;
+            case IconNames.EigthNote: return `
+                                        . . # . .
+                                        . . # # .
+                                        . . # . #
+                                        # # # . .
+                                        # # # . .`;
+                                        // other icons
+            case IconNames.Pitchfork: return `
+                                        # . # . #
+                                        # . # . #
+                                        # # # # #
+                                        . . # . .
+                                        . . # . .`;
+            case IconNames.Pacman: return `
+                                        . # # # #
+                                        # # # # .
+                                        # # # . .
+                                        # # # # .
+                                        . # # # #`;
+            case IconNames.Target: return `
+                                        . . # . .
+                                        . # # # .
+                                        # # . # #
+                                        . # # # .
+                                        . . # . .`;
+            default:                return `
+                                        . . . . .
+                                        . . . . .
+                                        . . . . .
+                                        . . . . .
+                                        . . . . .
+                                        `;
+        }
+    }
 
     //% weight=50 blockGap=8
     //% blockId=device_arrow block="%arrow"
@@ -522,17 +492,7 @@ namespace images {
             . . . . .
             . . . . .
             `)
-        switch (i) {
-            case ArrowNames.North: return set(res, arrow_n)
-            case ArrowNames.NorthEast: return set(res, arrow_ne)
-            case ArrowNames.East: return set(res, arrow_e)
-            case ArrowNames.SouthEast: return set(res, arrow_se)
-            case ArrowNames.South: return set(res, arrow_s)
-            case ArrowNames.SouthWest: return set(res, arrow_sw)
-            case ArrowNames.West: return set(res, arrow_w)
-            case ArrowNames.NorthWest: return set(res, arrow_nw)
-        }
-        return res;
+        return set(res, getArrow(i));
     }
 
     //% weight=50 blockGap=8
@@ -545,54 +505,7 @@ namespace images {
                 . . . . .
                 . . . . .
                 `)
-        switch (i) {
-            case IconNames.Heart: return set(res, heart)
-            case IconNames.SmallHeart: return set(res, small_heart)
-
-            case IconNames.Yes: return set(res, yes)
-            case IconNames.No: return set(res, no)
-
-            case IconNames.Happy: return set(res, happy_face)
-            case IconNames.Sad: return set(res, sad_face)
-            case IconNames.Confused: return set(res, confused_face)
-            case IconNames.Angry: return set(res, angry_face)
-            case IconNames.Asleep: return set(res, asleep_face)
-            case IconNames.Surprised: return set(res, surprised_face)
-            case IconNames.Silly: return set(res, silly_face)
-            case IconNames.Fabulous: return set(res, fabulous_face)
-            case IconNames.Meh: return set(res, meh_face)
-
-            case IconNames.TShirt: return set(res, tshirt)
-            case IconNames.Rollerskate: return set(res, rollerskate)
-            case IconNames.Duck: return set(res, duck)
-            case IconNames.House: return set(res, house)
-            case IconNames.Tortoise: return set(res, tortoise)
-            case IconNames.Butterfly: return set(res, butterfly)
-            case IconNames.StickFigure: return set(res, stick_figure)
-            case IconNames.Ghost: return set(res, ghost)
-            case IconNames.Sword: return set(res, sword)
-            case IconNames.Giraffe: return set(res, giraffe)
-            case IconNames.Skull: return set(res, skull)
-            case IconNames.Umbrella: return set(res, umbrella)
-            case IconNames.Snake: return set(res, snake)
-
-            case IconNames.Rabbit: return set(res, rabbit)
-            case IconNames.Cow: return set(res, cow)
-            case IconNames.QuarterNote: return set(res, quarter_note)
-            case IconNames.EigthNote: return set(res, eigth_note)
-            case IconNames.Pitchfork: return set(res, pitchfork)
-            case IconNames.Pacman: return set(res, pacman)
-            case IconNames.Target: return set(res, target)
-
-            case IconNames.Triangle: return set(res, triangle)
-            case IconNames.LeftTriangle: return set(res, left_triangle)
-            case IconNames.Chessboard: return set(res, chessboard)
-            case IconNames.Diamond: return set(res, diamond)
-            case IconNames.SmallDiamond: return set(res, small_diamond)
-            case IconNames.Square: return set(res, square)
-            case IconNames.SmallSquare: return set(res, small_square)
-        }
-        return res;
+        return set(res, getIcon(i));
     }
 
     function set(res: Image, s: string) {

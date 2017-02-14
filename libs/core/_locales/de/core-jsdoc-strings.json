@@ -47,6 +47,7 @@
   "control": "Laufzeit- und Event-Dienstprogramme.",
   "control.assert": "Wenn die Bedingung falsch ist, zeige eine Nachricht auf der seriellen Konsole und gebe Panic-Code 098 aus",
   "control.deviceName": "Erzeugt einen Namen für das Gerät, basierend auf der Seriennummer",
+  "control.deviceSerialNumber": "Leite eine einzigartige, einheitliche Seriennummer dieses Gerätes aus den internen Daten ab.",
   "control.eventSourceId": "Gibt den Wert einer C++-Laufzeitkonstanten aus",
   "control.eventTimestamp": "Holt den Zeitstempel des letzten Events auf dem Bus",
   "control.eventValue": "Holt den Wert des letzten ausgeführten Events auf dem Bus",

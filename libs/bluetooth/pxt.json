@@ -7,7 +7,8 @@
         "shims.d.ts",
         "bluetooth.ts",
         "bluetooth.cpp",
-        "_locales/de/bluetooth-jsdoc-strings.json"
+        "_locales/de/bluetooth-jsdoc-strings.json",
+        "_locales/no/bluetooth-strings.json"
     ],
     "public": true,
     "dependencies": {

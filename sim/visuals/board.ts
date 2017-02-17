@@ -472,10 +472,20 @@ namespace pxsim.visuals {
 
             if (pin.mode & PinFlags.Analog) {
                 if ((pin as pins.CPPin).used) {
-                    if (!this.pinControls[pin.id]) {
-                        this.pinControls[pin.id] = new AnalogPinControl(this, this.defs, pin.id, pinNames.filter((a) => a.id === pin.id)[0].name);
+                    if (this.pinControls[pin.id] === undefined) {
+                        const pinName =  pinNames.filter((a) => a.id === pin.id)[0];
+                        if (pinName) {
+                            this.pinControls[pin.id] = new AnalogPinControl(this, this.defs, pin.id, pinName.name);
+                        }
+                        else {
+                            // TODO: Surface pin controls for sensor pins in some way?
+                            this.pinControls[pin.id] = null;
+                        }
                     }
-                    this.pinControls[pin.id].updateValue();
+
+                    if (this.pinControls[pin.id]) {
+                        this.pinControls[pin.id].updateValue();
+                    }
                 }
             }
         }

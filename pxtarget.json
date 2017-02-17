@@ -200,7 +200,7 @@
         "appLogo": "./static/icons/apple-touch-icon.png",
         "organization": "Microsoft",
         "organizationUrl": "https://pxt.io/",
-        "organizationLogo": "./static/Microsoft-logo_rgb_c-gray.png",
+        "organizationLogo": "./static/Microsoft-logo_rgb_c-gray-square.png",
         "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
         "homeUrl": "https://pxt.microbit.org/",
         "embedUrl": "https://pxt.microbit.org/",

@@ -155,7 +155,7 @@
         "appLogo": "./static/icons/android-chrome-192x192.png",
         "organization": "Microsoft",
         "organizationUrl": "https://pxt.io/",
-        "organizationLogo": "./static/Microsoft-logo_rgb_c-white.png",
+        "organizationLogo": "./static/Microsoft-logo_rgb_c-gray-square.png",
         "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
         "homeUrl": "https://adafruit.pxt.io",
         "embedUrl": "https://adafruit.pxt.io/",

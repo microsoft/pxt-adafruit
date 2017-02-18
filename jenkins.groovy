@@ -8,6 +8,7 @@ def branch = GithubBranchName
     def newJobName = InternalUtilities.getFullJobName(project, "Default", isPR)
     def newJob = job(newJobName) {
         steps {
+            shell("chmod +x ./jenkins.sh")
             shell("./jenkins.sh ${isPR}")
         }
 

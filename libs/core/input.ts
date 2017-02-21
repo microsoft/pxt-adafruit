@@ -1,8 +1,4 @@
-enum SwitchDirection {
-    left = ButtonEvent.Up as number,
-    right = ButtonEvent.Down as number
-}
-
+//% color="#FB48C7" weight=99 icon="\uf192"
 namespace input {
     /**
      * Senses the ambient color using the LED pixel next to the LED sensor.
@@ -44,18 +40,5 @@ namespace input {
         strip.setBrightness(old_brightness);
 
         return light.rgb(red, green, blue);
-    }
-
-    /**
-     * Do something when the slide switch is moved left or right.
-     *
-     * @param direction the direction the switch must be moved to trigget the event
-     * @param body code to run when the switch is moved
-     */
-    //% help=input/on-switch-moved weight=93
-    //% blockId=device_on_switch_moved block="on switch moved %direction" blockGap=8
-    //% parts="switch"
-    export function onSwitchMoved(direction: SwitchDirection, body: () => void) {
-        slideSwitch.onEvent(direction as number, body);
     }
 }

@@ -36,14 +36,14 @@ class WTemp {
         : sensor(*lookupPin(PIN_TEMPERATURE), DEVICE_ID_THERMOMETER, 25, 10000, 3380, 10000,
                  273.5) //
     {
-        sensor.init();        
+        sensor.init();
     }
 };
 SINGLETON(WTemp);
 
 enum TemperatureUnit {
     //% block="°C"
-    Celcius,
+    Celsius,
     //% block="°F"
     Fahrenheit
 };
@@ -63,7 +63,7 @@ class WLight {
         memclr(buttons, 4);
         sensor.init();
         sensor.setPeriod(50);
-        sensor.setSensitivity(0.85f);        
+        sensor.setSensitivity(0.85f);
     }
 };
 SINGLETON(WLight);
@@ -86,7 +86,7 @@ class WMicrophone {
     //% indexedInstanceNS=input indexedInstanceShim=pxt::getMicrophoneButton
     //% block="microphone"
     Button microphone;
-#undef Button    
+#undef Button
     WMicrophone()
         : sensor(*lookupPin(PIN_MICROPHONE), DEVICE_ID_TOUCH_SENSOR + 1) //
     {
@@ -165,7 +165,7 @@ int soundLevel() {
 /**
 * Registers an event raised when the temperature condition (hold, cold) changes.
 * @param condition the condition, hot or cold, the event triggers on
-* @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
+* @param temperature the temperature, in degree Celsius, at which this event happens, eg: 15
 */
 //% blockId=input_on_temperature_condition_changed block="on temperature %condition|at (°C)%temperature"
 //% parts="thermometer" weight=95 blockGap=8
@@ -176,7 +176,7 @@ void onTemperateConditionChanged(TemperatureCondition condition, int temperature
     if (condition == TemperatureCondition::Cold)
         sensor->setLowThreshold(temperature);
     else
-        sensor->setHighThreshold(temperature);        
+        sensor->setHighThreshold(temperature);
     registerWithDal(sensor->id, (int)condition, handler);
 }
 
@@ -189,7 +189,7 @@ void onTemperateConditionChanged(TemperatureCondition condition, int temperature
 //% parts="thermometer"
 int temperature(TemperatureUnit unit) {
     int value = getWTemp()->sensor.getValue();
-    if (unit == TemperatureUnit::Celcius) return value;
+    if (unit == TemperatureUnit::Celsius) return value;
     else return (value * 18) / 10 + 32;
 }
 }

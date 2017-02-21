@@ -593,6 +593,18 @@ declare interface Button {
 }
 declare namespace input {
 
+    /**
+     * Do something when the slide switch is moved left or right.
+     *
+     * @param direction the direction the switch must be moved to trigget the event
+     */
+    //% help=input/on-switch-moved weight=93
+    //% blockId=device_on_switch_moved block="on switch moved %direction" blockGap=8
+    //% parts="switch" shim=input::onSwitchMoved
+    function onSwitchMoved(direction: SwitchDirection, handler: () => void): void;
+}
+declare namespace input {
+
 
     //% indexedInstanceNS=input indexedInstanceShim=pxt::getLightButton
     //% block="light sensor" fixedInstance shim=pxt::getLightButton(0)
@@ -646,7 +658,7 @@ declare namespace input {
     /**
      * Registers an event raised when the temperature condition (hold, cold) changes.
      * @param condition the condition, hot or cold, the event triggers on
-     * @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
+     * @param temperature the temperature, in degree Celsius, at which this event happens, eg: 15
      */
     //% blockId=input_on_temperature_condition_changed block="on temperature %condition|at (°C)%temperature"
     //% parts="thermometer" weight=95 blockGap=8

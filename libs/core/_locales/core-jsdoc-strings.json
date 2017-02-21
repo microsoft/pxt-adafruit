@@ -69,6 +69,8 @@
   "input.onLightConditionChanged|param|condition": "the condition that event triggers on",
   "input.onSoundConditionChanged": "Registers an event that runs when particular lighting conditions (dark, bright) are encountered.",
   "input.onSoundConditionChanged|param|condition": "the condition that event triggers on",
+  "input.onSwitchMoved": "Do something when the slide switch is moved left or right.\n* @param direction the direction the switch must be moved to trigget the event",
+  "input.onSwitchMoved|param|body": "code to run when the switch is moved",
   "input.onTemperateConditionChanged": "Registers an event raised when the temperature condition (hold, cold) changes.",
   "input.onTemperateConditionChanged|param|condition": "the condition, hot or cold, the event triggers on",
   "input.onTemperateConditionChanged|param|temperature": "the temperature, in degree Celcius, at which this event happens, eg: 15",

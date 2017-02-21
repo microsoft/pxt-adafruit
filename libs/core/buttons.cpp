@@ -138,7 +138,7 @@ namespace ButtonMethods {
  * Do something when a button (``A``, ``B`` or both ``A+B``) is clicked, double clicked, etc...
  * @param button the button that needs to be clicked or used
  * @param event the kind of button gesture that needs to be detected
- * @param body code to run when event is raised
+ * @param body code to run when the event is raised
  */
 //% help=input/on-button-event weight=99 blockGap=8
 //% blockId=buttonEvent block="on %button|%event"

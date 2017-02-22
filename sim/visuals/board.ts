@@ -675,6 +675,14 @@ namespace pxsim.visuals {
             svg.child(neopixelmerge, "feMergeNode", { in: "coloredBlur" })
             svg.child(neopixelmerge, "feMergeNode", { in: "SourceGraphic" })
 
+            const neopixelState = board().neopixelState;
+            if (neopixelState) {
+                for (let i = 0; i < neopixelState.NUM_PIXELS; i++) {
+                    let p_outer = svg.title(this.element.getElementById(`LED${i}_OUTER`) as SVGPathElement, "NeoPixel " + i);
+                    let p_inner = svg.title(this.element.getElementById(`LED${i}`) as SVGPathElement, "NeoPixel " + i);
+                }
+            }
+
             const btnids = ["BTN_A", "BTN_B"];
             this.buttonsOuter = btnids.map(n => this.element.getElementById(n + "_OUTER") as SVGElement);
             this.buttonsOuter.forEach(b => svg.addClass(b, "sim-button-outer"));

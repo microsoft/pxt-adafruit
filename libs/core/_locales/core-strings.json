@@ -17,7 +17,7 @@
   "AnalogPin.P20|block": "P20 (write only)",
   "AnalogPin.P5|block": "P5 (write only)",
   "AnalogPin.P6|block": "P6 (write only)",
-  "AnalogPin.P7|block": "P5 (write only)",
+  "AnalogPin.P7|block": "P7 (write only)",
   "AnalogPin.P8|block": "P8 (write only)",
   "AnalogPin.P9|block": "P9 (write only)",
   "BaudRate.BaudRate115200|block": "115200",

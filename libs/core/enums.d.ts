@@ -284,7 +284,7 @@ declare namespace led {
     P5 = 12,  // MICROBIT_ID_IO_P5
     //% block="P6 (write only)"
     P6 = 13,  // MICROBIT_ID_IO_P6
-    //% block="P5 (write only)"
+    //% block="P7 (write only)"
     P7 = 14,  // MICROBIT_ID_IO_P7
     //% block="P8 (write only)"
     P8 = 15,  // MICROBIT_ID_IO_P8

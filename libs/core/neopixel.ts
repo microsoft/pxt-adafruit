@@ -65,7 +65,7 @@ namespace light {
     /**
      * A NeoPixel strip
      */
-    //% autoCreate=neopixel.create
+    //% autoCreate=light.createNeoPixelStrip
     export class NeoPixelStrip {
         pin: DigitalPin;
         // TODO: encode as bytes instead of 32bit
@@ -467,19 +467,18 @@ namespace light {
     //% parts="neopixel"
     //% trackArgs=0,2
     export function createNeoPixelStrip(
-        pin: DigitalPin = null,
+        pin: AnalogPin = null,
         numleds: number = 10,
         mode?: NeoPixelMode
     ): NeoPixelStrip {
         if (!mode)
             mode = NeoPixelMode.RGB
-        if (!pin)
-            pin = defaultPin() || pins.D0
+
         const strip = new NeoPixelStrip();
         strip._mode = mode;
         strip._length = Math.max(0, numleds);
         strip.start = 0;
-        strip.pin = pin;
+        strip.pin = pin ? pin : (defaultPin() || pins.D0);
         strip.pin.digitalWrite(0)
         strip.setBrightness(20)
         return strip;

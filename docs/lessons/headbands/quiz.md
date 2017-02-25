@@ -39,8 +39,8 @@ coll.push("cat")
 
 ## 4. Write the five (5) lines of code that will add the following five words to `data->coll`: puppy, clock, night, cat, cow.
 
-```ts
-let coll = (<string[]>[])
+```typescript
+let coll : string[] = [];
 ```
 
 <br/>

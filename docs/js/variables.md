@@ -1,8 +1,16 @@
 # Variable Declarations
 
-Declaring a variable in JavaScript has always traditionally been done with the `var` keyword.
+Declaring a variable should be done using the ``let`` keyworld:
 
 ```typescript
+let a = 10;
+```
+
+## ``var`` vs ``let``
+
+Declaring a variable in JavaScript has always traditionally been done with the `var` keyword.
+
+```typescript-ignore
 var a = 10;
 ```
 

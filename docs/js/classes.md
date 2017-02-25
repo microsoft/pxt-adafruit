@@ -10,7 +10,7 @@ down to JavaScript that works across all major browsers and platforms, without h
 
 Let's take a look at a simple class-based example:
 
-```ts
+```typescript
 class Greeter {
     greeting: string;
     constructor(message: string) {
@@ -43,7 +43,7 @@ Of course, one of the most fundamental patterns in class-based programming is be
 
 Let's take a look at an example:
 
-```ts-ignore
+```typescript-ignore
 class Animal {
     name: string;
     constructor(theName: string) { this.name = theName; }
@@ -105,7 +105,7 @@ In TypeScript, each member is `public` by default.
 You may still mark a member `public` explicitly.
 We could have written the `Animal` class from the previous section in the following way:
 
-```ts-ignore
+```typescript-ignore
 class Animal {
     public name: string;
     public constructor(theName: string) { this.name = theName; }
@@ -119,7 +119,7 @@ class Animal {
 
 When a member is marked `private`, it cannot be accessed from outside of its containing class. For example:
 
-```ts-ignore
+```typescript-ignore
 class Animal {
     private name: string;
     constructor(theName: string) { this.name = theName; }
@@ -138,7 +138,7 @@ The same applies to `protected` members.
 
 Let's look at an example to better see how this plays out in practice:
 
-```ts-ignore
+```typescript-ignore
 class Animal {
     private name: string;
     constructor(theName: string) { this.name = theName; }
@@ -174,7 +174,7 @@ Even though `Employee` also has a `private` member called `name`, it's not the o
 The `protected` modifier acts much like the `private` modifier with the exception that members 
 declared `protected` can also be accessed by instances of deriving classes. For example,
 
-```ts-ignore
+```typescript-ignore
 class Person {
     protected name: string;
     constructor(name: string) { this.name = name; }
@@ -204,7 +204,7 @@ we can still use it from within an instance method of `Employee` because `Employ
 A constructor may also be marked `protected`.
 This means that the class cannot be instantiated outside of its containing class, but can be extended. For example,
 
-```ts-ignore
+```typescript-ignore
 class Person {
     protected name: string;
     protected constructor(theName: string) { this.name = theName; }
@@ -233,7 +233,7 @@ let john = new Person("John"); // Error: The 'Person' constructor is protected
 You can make properties readonly by using the `readonly` keyword.
 Readonly properties must be initialized at their declaration or in the constructor.
 
-```ts-ignore
+```typescript-ignore
 class Octopus {
     readonly name: string;
     readonly numberOfLegs: number = 8;
@@ -252,7 +252,7 @@ This turns out to be a very common practice.
 *Parameter properties* let you create and initialize a member in one place.
 Here's a further revision of the previous `Octopus` class using a parameter property:
 
-```ts-ignore
+```typescript-ignore
 class Octopus {
     readonly numberOfLegs: number = 8;
     constructor(readonly name: string) {

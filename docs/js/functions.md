@@ -3,7 +3,7 @@
 Functions are the fundamental building block of programs. Here is the simplest
 way to make a function that adds two numbers:
 
-```ts
+```typescript
 // Named function
 function add(x : number, y : number) {
     return x + y;
@@ -19,7 +19,7 @@ For the @boardname@, you must specify a [type](/js/types) for each function para
 Functions can refer to variables outside of the function body.
 When they do so, they're said to `capture` these variables.
 
-```ts
+```typescript
 let z = 100;
 
 function addToZ(x: number, y: number) {
@@ -33,7 +33,7 @@ basic.showNumber(addToZ(1, 2))
 
 Let's add a return type to our add function:
 
-```ts
+```typescript
 function add(x: number, y: number): number {
     return x + y;
 }
@@ -45,7 +45,7 @@ TypeScript can figure the return type out by looking at the return statements, s
 
 In TypeScript, the number of arguments given to a function has to match the number of parameters the function expects.
 
-```ts-ignore
+```typescript-ignore
 function buildName(firstName: string, lastName: string) {
     return firstName + " " + lastName;
 }
@@ -60,7 +60,7 @@ When they do, their value is `undefined`.
 We can get this functionality in TypeScript by adding a `?` to the end of parameters we want to be optional.
 For example, let's say we want the last name parameter from above to be optional:
 
-```ts-ignore
+```typescript-ignore
 function buildName(firstName: string, lastName?: string) {
     if (lastName)
         return firstName + " " + lastName;
@@ -80,7 +80,7 @@ In TypeScript, we can also set a value that a parameter will be assigned if the 
 These are called default-initialized parameters.
 Let's take the previous example and default the last name to `"Smith"`.
 
-```ts-ignore
+```typescript-ignore
 function buildName(firstName: string, lastName = "Smith") {
     return firstName + " " + lastName;
 }
@@ -94,7 +94,7 @@ let result4 = buildName("Bob", "Adams");         // ah, just right
 Default-initialized parameters that come after all required parameters are treated as optional, and just like optional parameters, can be omitted when calling their respective function.
 This means optional parameters and trailing default parameters will share commonality in their types, so both
 
-```ts
+```typescript
 function buildName(firstName: string, lastName?: string) {
     // ...
 }
@@ -102,7 +102,7 @@ function buildName(firstName: string, lastName?: string) {
 
 and
 
-```ts
+```typescript
 function buildName(firstName: string, lastName = "Smith") {
     // ...
 }
@@ -115,7 +115,7 @@ Unlike plain optional parameters, default-initialized parameters don't *need* to
 If a default-initialized parameter comes before a required parameter, users need to explicitly pass `undefined` to get the default initialized value.
 For example, we could write our last example with only a default initializer on `firstName`:
 
-```ts-ignore
+```typescript-ignore
 function buildName(firstName = "Will", lastName: string) {
     return firstName + " " + lastName;
 }
@@ -134,7 +134,7 @@ In JavaScript, you can work with the arguments directly using the `arguments` va
 
 In TypeScript, you can gather these arguments together into a variable:
 
-```ts-ignore
+```typescript-ignore
 function buildName(firstName: string, ...restOfName: string[]) {
     return firstName + " " + restOfName.join(" ");
 }
@@ -148,7 +148,7 @@ The compiler will build an array of the arguments passed in with the name given 
 
 The ellipsis is also used in the type of the function with rest parameters:
 
-```ts-ignore
+```typescript-ignore
 function buildName(firstName: string, ...restOfName: string[]) {
     return firstName + " " + restOfName.join(" ");
 }

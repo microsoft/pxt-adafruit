@@ -133,4 +133,8 @@ namespace pxsim.input {
 
         pxtcore.registerWithDal(b.id, condition, body);
     }
+
+    export function onSwitchMoved(direction: number, body: RefAction) {
+        pxtcore.registerWithDal(3000, direction, body);
+    }
 }

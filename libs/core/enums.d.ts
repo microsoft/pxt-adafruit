@@ -76,6 +76,14 @@ declare namespace light {
 }
 
 
+    declare enum SwitchDirection {
+    //% block="left"
+    Left = 2,  // DEVICE_BUTTON_EVT_UP
+    //% block="right"
+    Right = 1,  // DEVICE_BUTTON_EVT_DOWN
+    }
+
+
     declare enum LightCondition {
     //% block="dark"
     Dark = 1,  // ANALOG_THRESHOLD_LOW
@@ -102,7 +110,7 @@ declare namespace light {
 
     declare enum TemperatureUnit {
     //% block="°C"
-    Celcius = 0,
+    Celsius = 0,
     //% block="°F"
     Fahrenheit = 1,
     }

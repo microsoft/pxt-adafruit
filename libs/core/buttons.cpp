@@ -3,6 +3,14 @@
 #include "AnalogSensor.h"
 #include "MultiButton.h"
 
+
+enum class SwitchDirection {
+    //% block="left"
+    Left = DEVICE_BUTTON_EVT_UP,
+    //% block="right"
+    Right = DEVICE_BUTTON_EVT_DOWN
+};
+
 namespace pxt {
 
 // Wrapper classes
@@ -138,7 +146,7 @@ namespace ButtonMethods {
  * Do something when a button (``A``, ``B`` or both ``A+B``) is clicked, double clicked, etc...
  * @param button the button that needs to be clicked or used
  * @param event the kind of button gesture that needs to be detected
- * @param body code to run when event is raised
+ * @param body code to run when the event is raised
  */
 //% help=input/on-button-event weight=99 blockGap=8
 //% blockId=buttonEvent block="on %button|%event"
@@ -174,5 +182,20 @@ bool isPressed(Button button) {
 //% blockNamespace=input
 bool wasPressed(Button button) {
     return button->wasPressed();
+}
+}
+
+
+namespace input {
+/**
+* Do something when the slide switch is moved left or right.
+*
+* @param direction the direction the switch must be moved to trigget the event
+*/
+//% help=input/on-switch-moved weight=93
+//% blockId=device_on_switch_moved block="on switch moved %direction" blockGap=8
+//% parts="switch"
+void onSwitchMoved(SwitchDirection direction, Action handler) {
+    ButtonMethods::onEvent(&getWButtons()->slideSwitch, (ButtonEvent)direction, handler);
 }
 }

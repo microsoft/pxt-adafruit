@@ -559,7 +559,7 @@ declare interface Button {
      * Do something when a button (``A``, ``B`` or both ``A+B``) is clicked, double clicked, etc...
      * @param button the button that needs to be clicked or used
      * @param event the kind of button gesture that needs to be detected
-     * @param body code to run when event is raised
+     * @param body code to run when the event is raised
      */
     //% help=input/on-button-event weight=99 blockGap=8
     //% blockId=buttonEvent block="on %button|%event"
@@ -590,6 +590,18 @@ declare interface Button {
     //% parts="buttonpair"
     //% blockNamespace=input shim=ButtonMethods::wasPressed
     wasPressed(): boolean;
+}
+declare namespace input {
+
+    /**
+     * Do something when the slide switch is moved left or right.
+     *
+     * @param direction the direction the switch must be moved to trigget the event
+     */
+    //% help=input/on-switch-moved weight=93
+    //% blockId=device_on_switch_moved block="on switch moved %direction" blockGap=8
+    //% parts="switch" shim=input::onSwitchMoved
+    function onSwitchMoved(direction: SwitchDirection, handler: () => void): void;
 }
 declare namespace input {
 
@@ -646,7 +658,7 @@ declare namespace input {
     /**
      * Registers an event raised when the temperature condition (hold, cold) changes.
      * @param condition the condition, hot or cold, the event triggers on
-     * @param temperature the temperature, in degree Celcius, at which this event happens, eg: 15
+     * @param temperature the temperature, in degree Celsius, at which this event happens, eg: 15
      */
     //% blockId=input_on_temperature_condition_changed block="on temperature %condition|at (°C)%temperature"
     //% parts="thermometer" weight=95 blockGap=8

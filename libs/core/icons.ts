@@ -27,6 +27,7 @@ THE SOFTWARE.
 
 enum IconNames {
     //% block="heart"
+    //% blockImage=1
     Heart = 0,
     //% block="small heart"
     SmallHeart,

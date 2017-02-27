@@ -18,5 +18,4 @@ basic.showIcon(IconNames.Sad)
 
 ### See also
 
-[show leds](/reference/led/show-leds)
-
+[showLeds](/reference/basic/show-leds)

@@ -25,6 +25,7 @@ basic.plotLeds(`
 . . . . .
 . . . . .
 `);
+basic.showArrow(ArrowNames.North);
 basic.showAnimation(`
 . . . . .
 . . . . .

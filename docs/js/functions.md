@@ -29,8 +29,6 @@ function addToZ(x: number, y: number) {
 basic.showNumber(addToZ(1, 2))
 ```
 
-## Typing the function
-
 Let's add a return type to our add function:
 
 ```typescript
@@ -40,6 +38,19 @@ function add(x: number, y: number): number {
 ```
 
 TypeScript can figure the return type out by looking at the return statements, so you can optionally leave this off in many cases.
+
+# Arrow Functions
+
+Arrow functions (also known as "lamba" functions) are used extensively to provide event handlers for
+many APIs. For example:
+
+```typescript
+input.onButtonPressed(Button.A, () => {
+    
+})
+```
+
+[Read more about arrow functions...](http://devdocs.io/javascript/functions/arrow_functions)
 
 # Optional and Default Parameters
 

@@ -3,6 +3,22 @@
 For programs to be useful, we need to be able to work with some of the simplest units of data: 
 numbers, strings, structures, boolean values, and the like.
 
+# Type Inference
+
+In TypeScript, there are several places where type inference is used to provide type information when there is
+no explicit type annotation. For example, in this code
+
+```typescript
+let x = 3;
+let y = x + 3
+```
+
+The type of the `x` variable is inferred to be `number`. Similarly, the type of `y` variable also is inferred to be `number`.
+This kind of inference takes place when initializing variables and members, 
+setting parameter default values, and determining function return types.
+
+All the examples below give an example type annotation, but will work just the same without the annotation.
+
 # Boolean
 
 The most basic datatype is the simple true/false value, which is called a `boolean` value.
@@ -77,7 +93,6 @@ let list: Array<number> = [1, 2, 3];
 For the @boardname@, all elements of an array must have the same type.
 ### ~
 
-
 # Enum
 
 A helpful addition to the standard set of datatypes from JavaScript is the `enum`.
@@ -108,7 +123,6 @@ let c: Color = Color.Green;
 
 The TypeScript type `any` is not supported in the @boardname@.
 
-
 # Void
 
 `void` is the absence of having any type at all.
@@ -121,21 +135,6 @@ function warnUser(): void {
 ```
 
 Declaring variables of type `void` is not useful.
-
-# Type Inference
-
-In TypeScript, there are several places where type inference is used to provide type information when there is
-no explicit type annotation. For example, in this code
-
-```typescript
-let x = 3;
-let y = x + 3
-```
-
-The type of the `x` variable is inferred to be `number`. Similarly, the type of `y` variable also is inferred to be `number`.
-This kind of inference takes place when initializing variables and members, 
-setting parameter default values, and determining function return types.
-
 
 ### ~button /js/classes
 NEXT: Classes

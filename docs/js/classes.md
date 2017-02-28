@@ -34,10 +34,6 @@ This calls into the constructor we defined earlier, creating a new object with t
 
 # Inheritance
 
-### ~hint
-### Inheritance is not supported yet for the @boardname@. Coming soon...
-### ~
-
 In TypeScript, we can use common object-oriented patterns.
 Of course, one of the most fundamental patterns in class-based programming is being able to extend existing classes to create new ones using inheritance.
 

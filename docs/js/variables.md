@@ -1,6 +1,6 @@
 # Variable Declarations
 
-Declaring a variable should be done using the ``let`` keyworld:
+Declaring a variable should be done using the ``let`` keyword:
 
 ```typescript
 let a = 10;
@@ -23,6 +23,10 @@ let a = 10;
 ```
 
 The key difference is not in the syntax, but in the semantics, which we'll now dive into.
+
+### ~hint
+### Use `let` instead of `var` to introduce a new variable.
+### ~
 
 ## Block-scoping
 

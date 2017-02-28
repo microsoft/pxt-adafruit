@@ -18,13 +18,6 @@ This also is true when simulating in the browser.
 * comparison operators - [read more](http://devdocs.io/javascript/operators/comparison_operators)
 * conditional operator - [read more](http://devdocs.io/javascript/operators/conditional_operator)
 
-## More
-
-* lambda functions `() => { ... }`
-* array literals `[1, 2, 3]`
-* strings, with a few common methods
-* [string templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) (`` `x is ${x}` ``)
-
 ### ~button /js/statements
 NEXT: Statements
 ### ~

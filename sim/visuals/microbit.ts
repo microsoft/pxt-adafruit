@@ -562,8 +562,9 @@ namespace pxsim.visuals {
             const x = state.accelerometerState.accelerometer.getX();
             const y = -state.accelerometerState.accelerometer.getY();
             const af = 8 / 1023;
+            const s = 1 - Math.min(0.1, Math.pow(Math.max(Math.abs(x), Math.abs(y)) / 1023, 2) / 35);
 
-            this.element.style.transform = "perspective(30em) rotateX(" + y * af + "deg) rotateY(" + x * af + "deg)"
+            this.element.style.transform = `perspective(30em) rotateX(${y * af}deg) rotateY(${x * af}deg) scale(${s}, ${s})`
             this.element.style.perspectiveOrigin = "50% 50% 50%";
             this.element.style.perspective = "30em";
         }

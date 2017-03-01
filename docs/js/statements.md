@@ -5,7 +5,6 @@ The following JavaScript statements are supported for the @boardname@:
 ## Variable declarations
 * `const` statement - [read more](http://devdocs.io/javascript/statements/const)
 * `let` statement - [read more](http://devdocs.io/javascript/statements/let)
-* `var` statement - [read more](http://devdocs.io/javascript/statements/var)
 
 ## Block-structured statements
 

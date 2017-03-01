@@ -7,7 +7,7 @@ Play a built in musical melody through pin ``P0`` of the @boardname@.
 This function only works on the @boardname@ and in some browsers.
 
 ```sig
-music.playBuiltinMelody(Melodies.Entertainer)
+music.beginMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
 ```
 
 ### Parameters
@@ -19,7 +19,7 @@ music.playBuiltinMelody(Melodies.Entertainer)
 This example plays the ``Entertainer`` melody.
 
 ```blocks
-music.playBuiltinMelody(Melodies.Entertainer)
+music.beginMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
 ```
 
 ### See also

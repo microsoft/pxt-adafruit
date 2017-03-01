@@ -5,8 +5,7 @@ but this may feel a bit awkward to programmers more comfortable with an object-o
 and objects are built from these classes.
 
 Starting with ECMAScript 2015, also known as ECMAScript 6, JavaScript programmers will be able to build their applications using 
-this object-oriented class-based approach. TypeScript, allows you to use these techniques now, compiling them 
-down to JavaScript that works across all major browsers and platforms, without having to wait for the next version of JavaScript.
+this object-oriented class-based approach. TypeScript, allows you to use these techniques.
 
 Let's take a look at a simple class-based example:
 

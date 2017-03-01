@@ -274,7 +274,7 @@ namespace music {
      * @param melody the melody array to play, eg: ['g5:1']
      * @param options melody options, once / forever, in the foreground / background
      */
-    //% help=music/start-melody weight=60
+    //% help=music/begin-melody weight=60
     //% blockId=device_start_melody block="start|melody %melody=device_builtin_melody| repeating %options"
     //% parts="headphone"
     export function beginMelody(melodyArray: string[], options: MelodyOptions = MelodyOptions.Once) {

@@ -1,6 +1,6 @@
-# Play Built-in Melody
+# Begin Melody
 
-Play a built in musical melody through pin ``P0`` of the @boardname@.
+Begin playing a musical melody through pin ``P0`` of the @boardname@.
 
 ## Simulator
 
@@ -12,11 +12,11 @@ music.beginMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)
 
 ### Parameters
 
-* ``melody`` is the kind of built-in melody you want to play
+* ``melody`` is the array representation of a melody you wish to play
 
 ## Example
 
-This example plays the ``Entertainer`` melody.
+This example plays the ``Entertainer`` built-in melody.
 
 ```blocks
 music.beginMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once)

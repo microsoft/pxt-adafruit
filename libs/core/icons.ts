@@ -30,83 +30,119 @@ enum IconNames {
     //% blockImage=1
     Heart = 0,
     //% block="small heart"
+    //% blockImage=1
     SmallHeart,
     //% block="yes"
+    //% blockImage=1
     Yes,
     //% block="no"
+    //% blockImage=1
     No,
     //% block="happy"
+    //% blockImage=1
     Happy,
     //% block="sad"
+    //% blockImage=1
     Sad,
     //% block="confused"
+    //% blockImage=1
     Confused,
     //% block="angry"
+    //% blockImage=1
     Angry,
     //% block="asleep"
+    //% blockImage=1
     Asleep,
     //% block="surprised"
+    //% blockImage=1
     Surprised,
     //% block="silly"
+    //% blockImage=1
     Silly,
     //% block="fabulous"
+    //% blockImage=1
     Fabulous,
     //% block="meh"
+    //% blockImage=1
     Meh,
     //% block="t-shirt"
+    //% blockImage=1
     TShirt,
     //% block="roller skate"
+    //% blockImage=1
     Rollerskate,
     //% block="duck"
+    //% blockImage=1
     Duck,
     //% block="house"
+    //% blockImage=1
     House,
     //% block="tortoise"
+    //% blockImage=1
     Tortoise,
     //% block="butterfly"
+    //% blockImage=1
     Butterfly,
     //% block="stick figure"
+    //% blockImage=1
     StickFigure,
     //% block="ghost"
+    //% blockImage=1
     Ghost,
     //% block="sword"
+    //% blockImage=1
     Sword,
     //% block="giraffe"
+    //% blockImage=1
     Giraffe,
     //% block="skull"
+    //% blockImage=1
     Skull,
     //% block="umbrella"
+    //% blockImage=1
     Umbrella,
     //% block="snake"
+    //% blockImage=1
     Snake,
     //% block="rabbit"
+    //% blockImage=1
     Rabbit,
     //% block="cow"
+    //% blockImage=1
     Cow,
     //% block="quarter note"
+    //% blockImage=1
     QuarterNote,
     //% block="eigth note"
+    //% blockImage=1
     EigthNote,
     //% block="pitchfork"
+    //% blockImage=1
     Pitchfork,
-    //% block="pac man"
-    Pacman,
     //% block="target"
+    //% blockImage=1
     Target,
     //% block="triangle"
+    //% blockImage=1
     Triangle,
     //% block="left triangle"
+    //% blockImage=1
     LeftTriangle,
     //% block="chess board"
+    //% blockImage=1
     Chessboard,
     //% block="diamond"
+    //% blockImage=1
     Diamond,
     //% block="small diamond"
+    //% blockImage=1
     SmallDiamond,
     //% block="square"
+    //% blockImage=1
     Square,
     //% block="small square"
-    SmallSquare, 
+    //% blockImage=1
+    SmallSquare
 }
 
 enum ArrowNames {
@@ -456,12 +492,6 @@ namespace images {
                                         # # # # #
                                         . . # . .
                                         . . # . .`;
-            case IconNames.Pacman: return `
-                                        . # # # #
-                                        # # # # .
-                                        # # # . .
-                                        # # # # .
-                                        . # # # #`;
             case IconNames.Target: return `
                                         . . # . .
                                         . # # # .

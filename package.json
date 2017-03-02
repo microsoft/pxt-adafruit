@@ -10,11 +10,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Microsoft/pxt-adafruit-circuit-playground.git"
+    "url": "git+https://github.com/Microsoft/pxt-adafruit.git"
   },
   "author": "",
   "license": "MIT",
-  "homepage": "https://github.com/Microsoft/pxt-adafruit-circuit-playground#readme",
+  "homepage": "https://github.com/Microsoft/pxt-adafruit#readme",
   "files": [
     "README.md",
     "pxtarget.json",
@@ -34,6 +34,7 @@
     "semantic-ui-less": "^2.2.4"
   },
   "dependencies": {
+    "pxt-common-packages": "0.0.7",
     "pxt-core": "1.0.1"
   },
   "scripts": {

@@ -1,4 +1,4 @@
-/// <reference path="../../libs/core/dal.d.ts" />
+/// <reference path="../../node_modules/pxt-common-packages/libs/core/dal.d.ts" />
 
 
 namespace pxsim {

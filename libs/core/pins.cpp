@@ -166,6 +166,7 @@ namespace pins {
      */
     //% help=pins/analog-write-pin weight=24
     //% blockId=device_set_analog_pin block="analog write|pin %name|to %value" blockGap=8
+    //% value.min=0 value.max=1023
     void analogWritePin(AnalogPin name, int value) {
         PINOP(setAnalogValue(value));
     }

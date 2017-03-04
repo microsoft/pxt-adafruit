@@ -140,6 +140,13 @@
         "yottaTarget": "adafruit-cp-g18a",
         "yottaBinary": "pxt-samd.hex",
         "yottaCorePackage": "codal",
+        "yottaConfig": {
+            "pxt": {
+                "board": {
+                    "id": "BOARD_ID_CPLAY"
+                }
+            }
+        },        
         "githubCorePackage": "lancaster-university/codal",
         "gittag": "master",
         "serviceId": "codalcp"

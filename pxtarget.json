@@ -6,7 +6,8 @@
     "description": "A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express.",
     "corepkg": "core",
     "bundleddirs": [
-        "node_modules/pxt-common-packages/libs/core"
+        "node_modules/pxt-common-packages/libs/core",
+        "node_modules/pxt-common-packages/libs/neopixel"
     ],
     "serial": {
         "useHF2": true,

@@ -178,7 +178,7 @@ namespace basic {
     //% parts="ledmatrix"
     //% help=basic/show-icon
     //% blockFieldEditor="FieldGridPicker"
-    //% blockFieldEditorParams.width=500 blockFieldEditorParams.columns=5
+    //% blockFieldEditorParams.width=400 blockFieldEditorParams.columns=5
     //% blockFieldEditorParams.itemColour=black blockFieldEditorParams.tooltips=true
     export function showIcon(icon: IconNames) {
         let res = images.iconImage(icon)

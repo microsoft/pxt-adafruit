@@ -212,6 +212,7 @@
         "crowdinProject": "kindscript",
         "boardName": "micro:bit",
         "sideDoc": "tutorials/getting-started",
+        "feedbackUrl": "https://www.research.net/r/MCmicro",
         "browserSupport": [
             {
                 "name": "unsupported",
@@ -243,6 +244,11 @@
             {
                 "name": "Support",
                 "path": "https://support.microbit.org/"
+            },
+            {
+                "name": "Getting started",
+                "tutorial": true,
+                "path": "/tutorials/getting-started"
             },
             {
                 "name": "Projects",

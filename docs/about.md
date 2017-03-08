@@ -4,8 +4,7 @@
 
 ### @description A Blocks / Javascript code editor for the micro:bit, a pocket-size computer with 5x5 display, sensors and Bluetooth.
 
-The [BBC micro:bit](https://www.microbit.co.uk) is a [pocket-size computer](/device) with a 5x5 display of 25 LEDs, Bluetooth and sensors that can be programmed by anyone.
-The BBC micro:bit was made possible by many [partners](https://www.microbit.co.uk/partners).
+The [BBC micro:bit](https://microbit.org) is a [pocket-size computer](/device) with a 5x5 display of 25 LEDs, Bluetooth and sensors that can be programmed by anyone. The BBC micro:bit was made possible by many [partners](https://www.microbit.co.uk/partners).
 
 The micro:bit provides an easy and fun introduction to programming and making – switch on, program it to do something fun – wear it, customize it.
 Just like Arduino, the micro:bit can be connected to and interact with sensors, displays, and other devices. 
@@ -15,6 +14,12 @@ Just like Arduino, the micro:bit can be connected to and interact with sensors, 
 ## [Hardware: The Device](/device)
 
 The BBC micro:bit is packaged with sensors, radio and other goodies. Learn about the [hardware components](/device) of the micro:bit to make the most of it!
+
+### ~ hint
+
+**Looking to buy a micro:bit?** See the [list of resellers](https://microbit.org/resellers).
+
+### ~
 
 ## Programming: [Blocks](/blocks) or [JavaScript](/javascript)
 

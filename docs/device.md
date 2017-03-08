@@ -1,8 +1,16 @@
 # Device
 
+
+### ~ hint
+
+**Looking to buy a micro:bit?** See the [list of resellers](https://microbit.org/resellers).
+
+### ~
+
 All the bits and pieces that make up the BBC micro:bit
 
 ![](/static/mb/device-0.png)
+
 
 ### LED Screen and Status LED
 
@@ -23,18 +31,23 @@ When you have downloaded and run your code onto your micro:bit, press Button R t
 
 ### USB connection
 
-When you plug in your micro:bit, it should appear as ``MICROBIT``. 
+When you plug in your micro:bit via [USB](/device/usb), it should appear as  a ``MICROBIT`` drive. 
+
 If you accidentally hold down the reset button as you’re plugging in your micro:bit, 
-the micro:bit will appear as a MAINTENANCE drive instead of ``MICROBIT``. This is known as maintenance mode.**
+the micro:bit will appear as a MAINTENANCE drive instead of ``MICROBIT``. This is known as maintenance mode.
 
 To continue programming your micro:bit YOU MUST unplug your USB and reconnect it. Check that the drive now shows as ``MICROBIT``.
 
-**Use with caution. If you click on the drive while it shows as ``MAINTENANCE``, 
+### ~ hint
+
+Use with caution. If you click on the drive while it shows as ``MAINTENANCE``, 
 you can see which version of firmware you have running on your micro:bit. 
 Firmware on your micro:bit should be up-to-date already. 
 You can find the version of firmware in the 'version.txt' file on the micro:bit. Further information on the firmware can be found here:
 
 https://developer.mbed.org/platforms/Microbit/#firmware
+
+### ~
 
 ### Compass
 
@@ -51,13 +64,21 @@ Output is in milli-g. The device will also detect a small number of standard act
 
 ### Pins
 
-The pins can be a form of input or output. 
-There are labels for the input/output pins P0, P1, P2, which you can attach external sensors to such as thermometers or moisture detectors. 
-You can read more about large and small pins [here](/device/pins).
+The [pins](/device/pins) can be a form of electrical input or output. 
+There are labels for the input/output pins ``P0``, ``P1``, ``P2``, which you can attach external sensors to such as thermometers or moisture detectors.
 
 ### Light level
 
 The screen can also be used a light level sensor (it's a really cool trick).
+
+### Runtime
+
+The micro:bit embodies many fundamental concepts in computer science. To learn more, read [the micro:bit - a reactive system](/device/reactive).
+
+
+Sometimes, your micro:bit may display an error code. For more information, see:
+
+* [the error codes](/device/error-codes)
 
 ### How do I connect the micro:bit to my computer?
 
@@ -90,4 +111,4 @@ control the micro:bit or the micro:bit can control another BLE device.
 ### Technical Information
 
 The micro:bit has been designed to be a bare-board micro controller for use by children aged 11-12. 
-More information is available at the [BBC web site](http://www.microbit.co.uk/device).
+More information is available at the [Microbit Foundation web site](https://microbit.org/device).

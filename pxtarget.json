@@ -269,6 +269,10 @@
             {
                 "name": "Hardware",
                 "path": "/device"
+            },
+            {
+                "name": "Shop",
+                "path": "https://microbit.org/resellers"
             }
         ],
         "hasReferenceDocs": true,

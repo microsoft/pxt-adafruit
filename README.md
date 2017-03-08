@@ -1,6 +1,6 @@
 # micro:bit target for PXT
 
-This target allow to program a [BBC micro:bit](https://www.microbit.co.uk/) using 
+This target allow to program a [BBC micro:bit](https://microbit.org/) using 
 PXT ([Microsoft Programming Experience Toolkit](https://github.com/Microsoft/pxt)).
 
 * [Try it live](https://pxt.microbit.org)

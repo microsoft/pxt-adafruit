@@ -191,7 +191,7 @@
     },
     "appTheme": {
         "accentColor": "#5C005C",
-        "logoUrl": "http://microbit.org/",
+        "logoUrl": "https://microbit.org/",
         "logo": "./static/logo.portrait.white.svg",
         "docsLogo": "./static/logo.square.white.svg",
         "portraitLogo": "./static/logo.square.white.svg",

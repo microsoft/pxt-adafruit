@@ -271,7 +271,7 @@
                 "path": "/device"
             },
             {
-                "name": "Shop",
+                "name": "Buy",
                 "path": "https://microbit.org/resellers"
             }
         ],

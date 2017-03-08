@@ -36,7 +36,6 @@
     "semantic-ui-less": "^2.2.4"
   },
   "dependencies": {
-    "gitbook-cli": "^2.3.0",
-    "pxt-core": "0.11.65"
+    "pxt-core": "0.11.66"
   }
 }

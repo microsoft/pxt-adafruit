@@ -4,10 +4,11 @@
     "name": "Adafruit Circuit Playground Express",
     "title": "Adafruit Circuit Playground Express - Blocks / Javascript editor",
     "description": "A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express.",
-    "corepkg": "core",
+    "corepkg": "adafruit",
     "bundleddirs": [
         "node_modules/pxt-common-packages/libs/core",
-        "node_modules/pxt-common-packages/libs/neopixel"
+        "node_modules/pxt-common-packages/libs/neopixel",
+        "libs/adafruit"
     ],
     "serial": {
         "useHF2": true,

@@ -2,9 +2,9 @@
 
 Show a number on the [LED screen](/device/screen). It will slide left if it has more than one digit.
 
-~~~~sig
-basic.showNumber(2, 150)
-~~~~
+```sig
+basic.showNumber(2)
+```
 
 ### Parameters
 
@@ -15,27 +15,27 @@ basic.showNumber(2, 150)
 
 To show the number 10:
 
-~~~~blocks
+```blocks
 basic.showNumber(10)
-~~~~
+```
 
 To show the number stored in a variable:
 
-~~~~blocks
+```blocks
 let x = 1
 basic.showNumber(x)
-~~~~
+```
 
 ### Example: count to 5
 
 This example uses a [for](/blocks/loops/for) loop to show numbers ``0`` through ``5`` on the screen:
 
-~~~~blocks
+```blocks
 for (let i = 0; i < 6; i++) {
     basic.showNumber(i)
     basic.pause(200)
 }
-~~~~
+```
 
 ### Other show functions
 

@@ -43,5 +43,5 @@ on and `.` means an LED that is turned off.
 
 ### See also
 
-[plot leds](/reference/led/plot-leds), [show animation](/reference/basic/show-animation)
+[plot leds](/reference/basic/plot-leds), [show animation](/reference/basic/show-animation)
 

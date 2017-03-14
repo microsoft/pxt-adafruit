@@ -1,15 +1,17 @@
-# Summary
+# @extends
+
+## #support
 
 * [Support](https://support.microbit.org/)
 
-### Projects
+## #projects
 
 * [Projects](/docs)
     * [Make](/projects)
         * [Flashing heart](/projects/flashing-heart)
         * [Smiley buttons](/projects/smiley-buttons)
         * [Love meter](/projects/love-meter)
-        * [Rock raper scissors](/projects/rock-paper-scissors)
+        * [Rock paper scissors](/projects/rock-paper-scissors)
         * [Magic button trick](/projects/magic-button-trick)
         * [Hack your headphones](/projects/hack-your-headphones)
         * [Banana keyboard](/projects/banana-keyboard)
@@ -29,7 +31,7 @@
         * [Plot light level](/examples/plot-light-level)
         * [Plot analog pin](/examples/plot-analog-pin)
 
-### Reference
+## #reference
 
 * [Reference](/reference)
     * [Basic](/reference/basic)
@@ -85,36 +87,6 @@
         * [set transmit serial number](/reference/radio/set-transmit-serial-number)
         * [write received packet to serial](/reference/radio/write-received-packet-to-serial)
 
-### Blocks
-
-* [Blocks](/blocks)
-    * [Loops](/blocks/loops)
-        * [for](/blocks/loops/for)
-        * [while](/blocks/loops/while)
-    * [Logic](/blocks/logic)
-        * [if](/blocks/logic/if)
-        * [Boolean](/blocks/logic/boolean)
-    * [Variables](/blocks/variables)
-        * [assign](/blocks/variables/assign)
-        * [change var](/blocks/variables/change-var)
-        * [var](/blocks/variables/var)
-
-### JavaScript
-
-* [JavaScript](/javascript)
-    * [Calling](/javascript/call)
-    * [Sequencing](/javascript/sequence)
-    * [Variables](/javascript/variables)
-    * [Operators](/javascript/operators)
-    * [Statements](/javascript/statements)
-    * [Functions](/javascript/functions)
-    * [Types](/javascript/types)
-    * [Classes](/javascript/classes)
-
-### Other
+## #other
 
 * [Hardware](/device)
-
-* [FAQ](/faq)
-* [Help Translate](/translate)
-

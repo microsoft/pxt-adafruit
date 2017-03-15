@@ -11,7 +11,7 @@ The set of supported events will depend on the remote device and the @boardname@
 ### ~
 
 ```sig
-devices.tellRemoteControlTo(event: string)
+devices.tellRemoteControlTo(MesRemoteControlEvent.play)
 ```
 
 ### Parameters
@@ -35,49 +35,49 @@ devices.tellRemoteControlTo(event: string)
 To tell the connected device to start playing:
 
 ```blocks
-devices.tellRemoteControlTo("play")
+devices.tellRemoteControlTo(MesRemoteControlEvent.play)
 ```
 
 To tell the connected device to stop playing
 
 ```blocks
-devices.tellRemoteControlTo("stop")
+devices.tellRemoteControlTo(MesRemoteControlEvent.stop)
 ```
 
 To tell the connected device to go to next track
 
 ```blocks
-devices.tellRemoteControlTo("next track")
+devices.tellRemoteControlTo(MesRemoteControlEvent.nextTrack)
 ```
 
 To tell the connected device to go to previous track
 
 ```blocks
-devices.tellRemoteControlTo("previous track")
+devices.tellRemoteControlTo(MesRemoteControlEvent.previousTrack)
 ```
 
 To tell the connected device to go forward
 
 ```blocks
-devices.tellRemoteControlTo("forward")
+devices.tellRemoteControlTo(MesRemoteControlEvent.forward)
 ```
 
 To tell the connected device to rewind
 
 ```blocks
-devices.tellRemoteControlTo("rewind")
+devices.tellRemoteControlTo(MesRemoteControlEvent.rewind)
 ```
 
 To tell the connected device volume up
 
 ```blocks
-devices.tellRemoteControlTo("volume up")
+devices.tellRemoteControlTo(MesRemoteControlEvent.volumeUp)
 ```
 
 To tell the connected device volume down
 
 ```blocks
-devices.tellRemoteControlTo("volume down")
+devices.tellRemoteControlTo(MesRemoteControlEvent.volumeDown)
 ```
 
 ### See also

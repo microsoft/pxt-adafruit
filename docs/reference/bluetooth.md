@@ -40,10 +40,6 @@ bluetooth.advertiseUrl("https://pxt.microbit.org/", 7, true);
 bluetooth.stopAdvertising();
 ```
 
-```package
-bluetooth
-```
-
 ### Advanced
  
 For more advanced information on the @boardname@ Bluetooth UART service including information on using a smartphone, see the [Lancaster University @boardname@ runtime technical documentation](http://lancaster-university.github.io/microbit-docs/ble/uart-service/)
@@ -60,3 +56,7 @@ For more advanced information on the @boardname@ Bluetooth UART service includin
 [onBluetoothDisconnected](/reference/bluetooth/on-bluetooth-disconnected),
 [advertiseUrl](/reference/bluetooth/advertise-url),
 [stopAdvertising](/reference/bluetooth/stop-advertising)
+
+```package
+bluetooth
+```

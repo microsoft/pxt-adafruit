@@ -34,3 +34,7 @@ radio.sendNumber(0)
 * learn how to register code to run when a packet is received over radio
 * learn how to broadcast a number data packet to other @boardname@s connected via radio
 * learn how to read the next radio packet as a number data packet
+
+```package
+radio
+```

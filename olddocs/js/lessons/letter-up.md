@@ -38,8 +38,8 @@ Learn how to create a guessing game with **global variables** `var str: "this is
 
 ## Documentation
 
-* **string** : [read more...](/reference/types/string)
-* **string functions** : [read more...](/reference/types/string-functions)
+* **string** : [read more...](/types/string)
+* **string functions** : [read more...](/types/string-functions)
 * **show string** : [read more...](/reference/basic/show-string)
 * **local variables** : [read more...](/reference/variables/var)
 * **assignment operator** : [read more...](/reference/variables/assign)

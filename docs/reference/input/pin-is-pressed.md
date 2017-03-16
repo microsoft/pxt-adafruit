@@ -19,7 +19,7 @@ instead of the USB cable.
 
 ### Parameters
 
-* a [string](/reference/types/string) that holds the pin name (**P0**, **P1**, or **P2**)
+* a [string](/types/string) that holds the pin name (**P0**, **P1**, or **P2**)
 
 ### returns
 

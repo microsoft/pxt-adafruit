@@ -15,7 +15,7 @@ bluetooth.setTransmitPower(7);
 
 ### Parameters
 
-* `power`: a [number](/reference/types/number) in the range ``0..7``, where ``0`` is the lowest power and ``7`` is the highest.
+* `power`: a [number](/types/number) in the range ``0..7``, where ``0`` is the lowest power and ``7`` is the highest.
 
 ### See also
 

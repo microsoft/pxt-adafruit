@@ -8,7 +8,7 @@ input.runningTime();
 
 ### Returns
 
-* the [Number](/reference/types/number) of milliseconds since the program started.
+* the [Number](/types/number) of milliseconds since the program started.
 (One second is 1000 milliseconds.)
 
 ### Example: elapsed time

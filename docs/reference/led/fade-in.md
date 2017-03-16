@@ -8,7 +8,7 @@ led.fadeIn(700);
 
 ### Parameters
 
-* ms - [Number](/reference/types/number); the speed by which the screen brightness is increased, expressed in milliseconds (1,000 milliseconds = 1 second). The smaller the number the faster the screen brightness increased.
+* ms - [Number](/types/number); the speed by which the screen brightness is increased, expressed in milliseconds (1,000 milliseconds = 1 second). The smaller the number the faster the screen brightness increased.
 
 ### Example: fading dot
 

@@ -5,7 +5,7 @@ Run code based on a condition.
 ### @parent javascript/language
  
 
-Conditionally run code depending on whether a [Boolean](/reference/types/boolean) condition is true or false.
+Conditionally run code depending on whether a [Boolean](/types/boolean) condition is true or false.
 
 ### Block Editor
 
@@ -95,5 +95,5 @@ You can move an entire ``if`` block by clicking the ``if`` keyword and dragging 
 
 ### See also
 
-[while loop](/js/while), [for](/reference/loops/for), [boolean](/reference/types/boolean)
+[while loop](/js/while), [for](/reference/loops/for), [boolean](/types/boolean)
 

@@ -20,7 +20,7 @@ can reach as far as 70 meters (about 230 feet).
 
 ### Parameters
 
-* ``power`` is a [number](/reference/types/number) between ``0`` and ``7`` that
+* ``power`` is a [number](/types/number) between ``0`` and ``7`` that
 means how strong the signal is.
 
 ### Simulator

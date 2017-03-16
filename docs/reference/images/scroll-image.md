@@ -10,7 +10,7 @@ item.scrollImage(5, 200);
 
 ### Parameters
 
-* a [number](/reference/types/number) that means
+* a [number](/types/number) that means
   how many LEDs to scroll at a time, from right to left or
   left to right. If you use a positive number like `2`, the image
   will scroll from the right side of the screen to the left.
@@ -20,7 +20,7 @@ item.scrollImage(5, 200);
   image. It is a square with five LEDs on a side). This is
   useful for **animation**.
 
-* a [number](/reference/types/number) that means
+* a [number](/types/number) that means
   how many milliseconds to wait before scrolling the amount that
   ``offset`` says. (1000 milliseconds is one second.) The bigger you
   make this number, the slower the image will scroll.

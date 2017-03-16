@@ -35,7 +35,7 @@ Overview of TouchDevelop lessons for the @boardname@.
 
 * [global variables ](/nkecii) `guided tutorial`
 * [local variable - create image, show image](/dcvnwv)
-* data types: [number](/reference/types/number), [boolean](/reference/types/boolean), [string](/reference/types/string), [image](/reference/image/image)
+* data types: [number](/types/number), [boolean](/types/boolean), [string](/types/string), [image](/reference/image/image)
 
 ### Statements and control structures
 
@@ -52,18 +52,18 @@ Overview of TouchDevelop lessons for the @boardname@.
 
 ### Maths
 
-* arithmetic operators (`+`, `-`, `*`, `/`, mod)  on [numbers](/reference/types/number)
-* comparison operators (such as `>`, `=`) on [numbers](/reference/types/number)
+* arithmetic operators (`+`, `-`, `*`, `/`, mod)  on [numbers](/types/number)
+* comparison operators (such as `>`, `=`) on [numbers](/types/number)
 * the [math](/js/math) library
 * the [bits](/js/bits) library
 
 ### Logical
 
-* boolean operators (`not`, `or`, `and`) on [booleans](/reference/types/boolean)
+* boolean operators (`not`, `or`, `and`) on [booleans](/types/boolean)
 
 ### Strings
 
-* concat operator combines [strings](/reference/types/string)
+* concat operator combines [strings](/types/string)
 
 ### ~
 

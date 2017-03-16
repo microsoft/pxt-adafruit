@@ -104,5 +104,5 @@ Use **global variables** when you need to access a variable in nested code block
 
 ### See also
 
-[types](/reference/types), [assignment operator](/reference/variables/assign)
+[types](/types), [assignment operator](/reference/variables/assign)
 

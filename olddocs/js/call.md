@@ -19,7 +19,7 @@ Type a function name in your code to call an existing [function](/javascript/fun
 
 ### Example: the square function
 
-Here's a function called `square`, with a [Number](/reference/types/number) input parameter:
+Here's a function called `square`, with a [Number](/types/number) input parameter:
 
 ```
 /**

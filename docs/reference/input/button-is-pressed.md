@@ -8,7 +8,7 @@ input.buttonIsPressed(Button.A);
 
 ### Parameters
 
-* ``button`` is a [String](/reference/types/string). You should store `A` in it to check the left button, `B` to check the right button, or `A+B` to check both at the same time.
+* ``button`` is a [String](/types/string). You should store `A` in it to check the left button, `B` to check the right button, or `A+B` to check both at the same time.
 
 ### Returns
 

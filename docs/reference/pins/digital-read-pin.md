@@ -16,11 +16,11 @@ Please read the [page about pins](/device/pins) carefully.
 
 ### Parameters
 
-* ``name`` is a [string](/reference/types/string) that stores the name of the pin (``P0``, ``P1``, or ``P2``, up through ``P20``)
+* ``name`` is a [string](/types/string) that stores the name of the pin (``P0``, ``P1``, or ``P2``, up through ``P20``)
 
 ### Returns
 
-* a [number](/reference/types/number) that can be `0` or `1`
+* a [number](/types/number) that can be `0` or `1`
 
 ### Example: football score keeper
 

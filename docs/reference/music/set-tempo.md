@@ -11,7 +11,7 @@ This function only works on the @boardname@ and in some browsers.
 
 ### Parameters
 
-* ``bpm`` is a [number](/reference/types/number) that means the beats per minute you want (the number of beats in a minute of the music that the @boardname@ is playing).
+* ``bpm`` is a [number](/types/number) that means the beats per minute you want (the number of beats in a minute of the music that the @boardname@ is playing).
 
 ### See also
 

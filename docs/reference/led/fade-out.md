@@ -8,7 +8,7 @@ led.fadeOut(700);
 
 ### Parameters
 
-* ms - [Number](/reference/types/number); the speed that the screen brightness is decreased, expressed in milliseconds (1,000 milliseconds = 1 second). The smaller the number the faster the screen brightness decreased.
+* ms - [Number](/types/number); the speed that the screen brightness is decreased, expressed in milliseconds (1,000 milliseconds = 1 second). The smaller the number the faster the screen brightness decreased.
 
 ### Example: fade away letter A
 

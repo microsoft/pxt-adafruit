@@ -8,8 +8,8 @@ serial.writeValue("x", 0);
 
 ### Parameters
 
-* `name` is the [string](/reference/types/string) to write to the serial port
-* `value` is the [number](/reference/types/number) to write to the serial port
+* `name` is the [string](/types/string) to write to the serial port
+* `value` is the [number](/types/number) to write to the serial port
 
 
 

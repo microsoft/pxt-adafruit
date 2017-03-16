@@ -12,7 +12,7 @@ pins.spiWrite(0);
 
 ### Returns
 
-* a [number](/reference/types/number) Response from the SPI slave
+* a [number](/types/number) Response from the SPI slave
 
 ### See also
 

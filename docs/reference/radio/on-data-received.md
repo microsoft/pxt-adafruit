@@ -3,7 +3,7 @@
 > Note: This API has been deprecated! Use [on data packet received](/reference/radio/on-data-packet-received) instead.
 
 Run part of a program when the @boardname@ receives a
-[number](/reference/types/number) or [string](/reference/types/string) over ``radio``.
+[number](/types/number) or [string](/types/string) over ``radio``.
 
 
 ```sig

@@ -23,7 +23,7 @@ A **g** is as much acceleration as you get from Earth's gravity.
 
 ### Returns
 
-* a [number](/reference/types/number) that means the amount of acceleration. When the @boardname@ is lying flat on a surface with the screen pointing up, `x` is `0`, `y` is `0`, and `z` is `-1023`.
+* a [number](/types/number) that means the amount of acceleration. When the @boardname@ is lying flat on a surface with the screen pointing up, `x` is `0`, `y` is `0`, and `z` is `-1023`.
 
 ### Example: bar chart
 

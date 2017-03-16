@@ -61,8 +61,8 @@ export function square(x: number) : number {
 
 In the above code...
 
-* ``x `` is the [input parameter](/js/functionparameters) ([Number](/reference/types/number) type)
-* ``result`` is the [output parameter](/js/functionparameters) ([Number](/reference/types/number) type)
+* ``x `` is the [input parameter](/js/functionparameters) ([Number](/types/number) type)
+* ``result`` is the [output parameter](/js/functionparameters) ([Number](/types/number) type)
 * `return x * x` is the function body (which returns the value of the expression `x * x`)
 
 ### Add function parameters

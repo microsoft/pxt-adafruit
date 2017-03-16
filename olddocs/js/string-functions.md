@@ -34,11 +34,11 @@ find out if two strings are the same
 
 #### Syntax
 
-[String](/reference/types/string) `->` **equals** (other : [String](/reference/types/string)) *returns* [Boolean](/reference/types/boolean)
+[String](/types/string) `->` **equals** (other : [String](/types/string)) *returns* [Boolean](/types/boolean)
 
 #### Parameters
 
-* other - [String](/reference/types/string); a string
+* other - [String](/types/string); a string
 
 #### Example
 
@@ -56,11 +56,11 @@ get a character within a string, using the specified index
 
 #### Syntax
 
-[String](/reference/types/string) `->` **at** (index: [Number](/reference/types/number)) *returns* [String](/reference/types/string)
+[String](/types/string) `->` **at** (index: [Number](/types/number)) *returns* [String](/types/string)
 
 #### Parameters
 
-* index- [Number](/reference/types/number); the character number within a string (0 returns the first character)
+* index- [Number](/types/number); the character number within a string (0 returns the first character)
 
 #### Example
 
@@ -87,11 +87,11 @@ combine two strings; like the concat operator (`||`)
 
 #### Syntax
 
-[String](/reference/types/string) `->` **concat** (other : [String](/reference/types/string)) *returns* [String](/reference/types/string)
+[String](/types/string) `->` **concat** (other : [String](/types/string)) *returns* [String](/types/string)
 
 #### Parameters
 
-* other- [String](/reference/types/string); a string
+* other- [String](/types/string); a string
 
 #### Example
 
@@ -109,7 +109,7 @@ get the number of characters in a string
 
 #### Syntax
 
-[String](/reference/types/string) `->` **count** *returns* [Number](/reference/types/number)
+[String](/types/string) `->` **count** *returns* [Number](/types/number)
 
 #### Example
 
@@ -125,12 +125,12 @@ get a portion of a string, using a starting point and length
 
 #### Syntax
 
-[String](/reference/types/string) `->` **substring** (start : [Number](/reference/types/number), length : [Number](/reference/types/number)) *returns* [String](/reference/types/string)
+[String](/types/string) `->` **substring** (start : [Number](/types/number), length : [Number](/types/number)) *returns* [String](/types/string)
 
 #### Parameters
 
-* start - [Number](/reference/types/number); the starting character number (0 is the first character number in a string)
-* length - [Number](/reference/types/number); the string length
+* start - [Number](/types/number); the starting character number (0 is the first character number in a string)
+* length - [Number](/types/number); the string length
 
 #### Example
 
@@ -146,7 +146,7 @@ converts the first character of a string into a character code number (unicode)
 
 #### Syntax
 
-[String](/reference/types/string) `->` **to character code** *returns* [Number](/reference/types/number)
+[String](/types/string) `->` **to character code** *returns* [Number](/types/number)
 
 #### Example
 
@@ -162,7 +162,7 @@ converts a string into a number
 
 #### Syntax
 
-[String](/reference/types/string) `->` **to number** *returns* [Number](/reference/types/number)
+[String](/types/string) `->` **to number** *returns* [Number](/types/number)
 
 #### Example
 
@@ -174,5 +174,5 @@ x = parseFloat(str)
 
 ### See also
 
-[string](/reference/types/string), [number](/reference/types/number), [show string](/reference/basic/show-string)
+[string](/types/string), [number](/types/number), [show string](/reference/basic/show-string)
 

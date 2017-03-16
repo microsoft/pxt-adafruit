@@ -12,12 +12,12 @@ The Bits library includes functions for bit-level manipulation of integers. In t
 
 #### Syntax
 
-bits `->` *and/or/xor* uint32 (x : [Number](/reference/types/number), y : [Number](/reference/types/number)) *returns* [Number](/reference/types/number)
+bits `->` *and/or/xor* uint32 (x : [Number](/types/number), y : [Number](/types/number)) *returns* [Number](/types/number)
 
 #### Parameters
 
-* x - an unsigned 32 bit integer [Number](/reference/types/number)
-* y - another unsigned 32 bit integer [Number](/reference/types/number)
+* x - an unsigned 32 bit integer [Number](/types/number)
+* y - another unsigned 32 bit integer [Number](/types/number)
 
 ### and uint32
 
@@ -37,14 +37,14 @@ Rotate bits to the left or the right, by the specified number of positions.
 
 #### Syntax
 
-bits `->` rotate left unint32 (x : [Number](/reference/types/number), bits : [Number](/reference/types/number)) *returns* [Number](/reference/types/number)
+bits `->` rotate left unint32 (x : [Number](/types/number), bits : [Number](/types/number)) *returns* [Number](/types/number)
 
-bits `->` rotate right unint32 (x : [Number](/reference/types/number), bits : [Number](/reference/types/number)) *returns* [Number](/reference/types/number)
+bits `->` rotate right unint32 (x : [Number](/types/number), bits : [Number](/types/number)) *returns* [Number](/types/number)
 
 #### Parameters
 
-* x - [Number](/reference/types/number);
-* bits - [Number](/reference/types/number);
+* x - [Number](/types/number);
+* bits - [Number](/types/number);
 
 ## Shift left and shift  right
 
@@ -52,16 +52,16 @@ Shift bits to the left or the right, by the specified number of positions.
 
 #### Syntax
 
-bits `->` shift left unint32 (x : [Number](/reference/types/number), bits : [Number](/reference/types/number)) *returns* [Number](/reference/types/number)
+bits `->` shift left unint32 (x : [Number](/types/number), bits : [Number](/types/number)) *returns* [Number](/types/number)
 
-bits `->` shift right unint32 (x : [Number](/reference/types/number), bits : [Number](/reference/types/number)) *returns* [Number](/reference/types/number)
+bits `->` shift right unint32 (x : [Number](/types/number), bits : [Number](/types/number)) *returns* [Number](/types/number)
 
 #### Parameters
 
-* x - [Number](/reference/types/number);
-* bits - [Number](/reference/types/number);
+* x - [Number](/types/number);
+* bits - [Number](/types/number);
 
 ### See also
 
-[statements and operators](/javascript/statements), [math functions](/javascript/math), [Number](/reference/types/number)
+[statements and operators](/javascript/statements), [math functions](/javascript/math), [Number](/types/number)
 

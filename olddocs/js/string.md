@@ -44,7 +44,7 @@ The first parameter of `show string` specifies the string, and the second parame
 
 ### More string functions
 
-Want to compare or concatenate strings? Check out the [string functions](/reference/types/string-functions).
+Want to compare or concatenate strings? Check out the [string functions](/types/string-functions).
 
 ### Global string variables
 
@@ -56,5 +56,5 @@ Unlike [local variables](/reference/variables/var), global variables are accessi
 
 ### See also
 
-[local variables](/reference/variables/var), [global variables](/js/data), [string functions](/reference/types/string-functions), [Number](/reference/types/number), [show string](/reference/basic/show-string)
+[local variables](/reference/variables/var), [global variables](/js/data), [string functions](/types/string-functions), [Number](/types/number), [show string](/reference/basic/show-string)
 

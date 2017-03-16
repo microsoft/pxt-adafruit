@@ -4,7 +4,7 @@ How to define and use local variables.
 
 ### @parent language
 
-A variable is a place where you can store and retrieve data. Variables have a name, a [type](/reference/types), and value:
+A variable is a place where you can store and retrieve data. Variables have a name, a [type](/types), and value:
 
 * *name* is how you'll refer to the variable
 * *type* refers to the kind of data a variable can store
@@ -83,5 +83,5 @@ if (led.brightness() > 128) {
 
 ### See also
 
-[types](/reference/types), [assignment operator](/blocks/variables/assign)
+[types](/types), [assignment operator](/blocks/variables/assign)
 

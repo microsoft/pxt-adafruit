@@ -1,6 +1,6 @@
 # Send Number
 
-Broadcast a [number](/reference/types/number) to other @boardname@s connected via ``radio``.
+Broadcast a [number](/types/number) to other @boardname@s connected via ``radio``.
 
 ```sig
 radio.sendNumber(0);
@@ -8,7 +8,7 @@ radio.sendNumber(0);
 
 ### Parameters
 
-* ``value`` - a [number](/reference/types/number) to send.
+* ``value`` - a [number](/types/number) to send.
 
 
 ### Example: Broadcasting acceleration

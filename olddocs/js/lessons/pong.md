@@ -44,7 +44,7 @@ Learn how to create **functions**, `function()` that perform a specific task and
 * **return** : [read more...](/js/return)
 * **call** : [read more...](/js/call)
 * **global variable** : [read more...](/js/data)
-* **arithmetic operator** : [read more...](/reference/types/number)
+* **arithmetic operator** : [read more...](/types/number)
 * **Boolean** : [/td/Boolean]()
 * **forever** : [read more...](/reference/basic/forever)
 * **on button pressed** : [read more...](/reference/input/on-button-pressed)

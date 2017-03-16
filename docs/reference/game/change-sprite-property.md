@@ -1,6 +1,6 @@
 # Get Sprite Property
 
-Change the kind of [number](/reference/types/number) you say for a [sprite](/reference/game/create-sprite).
+Change the kind of [number](/types/number) you say for a [sprite](/reference/game/create-sprite).
 
 ```sig
 let item: game.LedSprite = null;
@@ -10,7 +10,7 @@ item.set(LedSpriteProperty.X, 0);
 ### Parameters
 
 * the **sprite** you want to change
-* the kind of [number](/reference/types/number) you want to change for the sprite, like
+* the kind of [number](/types/number) you want to change for the sprite, like
     * ``x``, how far up or down the sprite is on the screen (`0`-`4`)
     * ``y``, how far left or right the sprite is on the screen (`0`-`4`)
     * ``direction``, which way the sprite is pointing (this works the same way as the [turn](/reference/game/turn) function)

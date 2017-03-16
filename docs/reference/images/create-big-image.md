@@ -16,7 +16,7 @@ images.createBigImage(`
 
 ### Parameters
 
-* ``leds`` is a [string](/reference/types/string) that says which LEDs
+* ``leds`` is a [string](/types/string) that says which LEDs
 on the screen should be on and which should be off.
 
 

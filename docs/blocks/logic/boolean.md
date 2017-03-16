@@ -27,4 +27,4 @@ input.onButtonPressed(Button.A, () => {
 })
 ```
 
-See the documentation on [Numbers](/reference/types/number) for more information on comparing two Numbers. You can also [compare strings](/reference/types/string-functions) using the `equals` function.
+See the documentation on [Numbers](/types/number) for more information on comparing two Numbers.

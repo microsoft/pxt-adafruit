@@ -35,7 +35,7 @@ basic.showLeds(`
 ```
 
 * **variable**: [read more...](/blocks/variables)
-* **arithmetic operators**: [read more...](/reference/types/number)
+* **arithmetic operators**: [read more...](/types/number)
 * **on button pressed** : [read more...](/reference/input/on-button-pressed)
 * **show number** : [read more...](/reference/basic/show-number)
 

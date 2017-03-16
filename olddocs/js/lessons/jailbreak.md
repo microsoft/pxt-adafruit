@@ -24,7 +24,7 @@ Learn how to create a **break**, `break` to exit a while or for loop before the 
 ## Documentation
 
 * **Global Variable** : [read more...](/js/data)
-* **Boolean** : [read more...](/reference/types/boolean)
+* **Boolean** : [read more...](/types/boolean)
 * **On Button Pressed** : [read more...](/reference/input/on-button-pressed)
 * **While Loop** : [read more...](/js/while)
 * **Break** : [read more...](/js/break)

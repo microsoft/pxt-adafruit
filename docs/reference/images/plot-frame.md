@@ -12,7 +12,7 @@ export function plotFrame(_this: micro_bit.Image, index: number)
 
 ### Parameters
 
-* index - [Number](/reference/types/number); which frame of the image to display
+* index - [Number](/types/number); which frame of the image to display
 
 ### Difference from `plot image`
 

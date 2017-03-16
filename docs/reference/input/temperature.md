@@ -9,7 +9,7 @@ input.temperature();
 
 ### Returns
 
-* a [Number](/reference/types/number) that means the Celsius temperature.
+* a [Number](/types/number) that means the Celsius temperature.
 
 ### How does it work?
 

@@ -12,8 +12,8 @@ export function setPixel(_this: micro_bit.Image, x: number, y: number, value: bo
 
 ### Parameters
 
-* x - [Number](/reference/types/number); the *x coordinate* or horizontal position of a pixel in an [image](/reference/images/image)
-* x - [Number](/reference/types/number); the *y coordinate* or vertical position of a pixel in an [image](/reference/images/image)
+* x - [Number](/types/number); the *x coordinate* or horizontal position of a pixel in an [image](/reference/images/image)
+* x - [Number](/types/number); the *y coordinate* or vertical position of a pixel in an [image](/reference/images/image)
 * value -[Boolean](/blocks/logic/boolean); the on/off state of a pixel; `true` for on, `false` for off
 
 ### x, y coordinates?

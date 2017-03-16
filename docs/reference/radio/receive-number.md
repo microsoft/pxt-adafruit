@@ -10,7 +10,7 @@ radio.receiveNumber();
 
 ### Returns
 
-* the first  [number](/reference/types/number) that the @boardname@ received. If it did not receive any numbers, this function will return `0`.
+* the first  [number](/types/number) that the @boardname@ received. If it did not receive any numbers, this function will return `0`.
 
 ### Example: Simple number receiver
 

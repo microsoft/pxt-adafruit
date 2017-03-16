@@ -8,7 +8,7 @@ radio.setTransmitSerialNumber(true);
 
 ### Parameters
 
-* ``transmit`` is a [boolean](/reference/types/boolean) that represents whether the serial number needs to be transmitted.
+* ``transmit`` is a [boolean](/types/boolean) that represents whether the serial number needs to be transmitted.
 
 ### Example
 

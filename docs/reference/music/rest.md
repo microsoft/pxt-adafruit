@@ -12,7 +12,7 @@ music.rest(400)
 
 ### Parameters
 
-* ``ms`` is a [number](/reference/types/number) saying how many
+* ``ms`` is a [number](/types/number) saying how many
   milliseconds the @boardname@ should rest. One second is 1000
   milliseconds.
 

@@ -9,8 +9,8 @@ pins.analogPitch(440, 300)
 
 ### Parameters
 
-* `frequency` : [Number](/reference/types/number)
-* `ms`: [Number](/reference/types/number)
+* `frequency` : [Number](/types/number)
+* `ms`: [Number](/types/number)
 
 ### Example
 

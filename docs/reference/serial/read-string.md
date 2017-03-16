@@ -8,7 +8,7 @@ serial.readString();
 
 ### Returns
 
-* a [string](/reference/types/string) containing input from the serial port. Empty if no data available.
+* a [string](/types/string) containing input from the serial port. Empty if no data available.
 
 ### Example
 

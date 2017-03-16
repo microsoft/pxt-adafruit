@@ -8,8 +8,8 @@ basic.showString("Hello!")
 
 ### Parameters
 
-* `text` is a [String](/reference/types/string). It can contain letters, numbers, and punctuation.
-* `interval` is an optional [Number](/reference/types/number). It means the number of milliseconds before sliding the [String](/reference/types/string) left by one LED each time. Bigger intervals make the sliding slower.
+* `text` is a [String](/types/string). It can contain letters, numbers, and punctuation.
+* `interval` is an optional [Number](/types/number). It means the number of milliseconds before sliding the [String](/types/string) left by one LED each time. Bigger intervals make the sliding slower.
 
 ### Examples:
 
@@ -19,7 +19,7 @@ To show the word **Hello**:
 basic.showString("Hello")
 ```
 
-To show what is stored in a [String](/reference/types/string) variable:
+To show what is stored in a [String](/types/string) variable:
 
 ```blocks
 let s = "Hi"
@@ -33,5 +33,5 @@ basic.showString(s)
 
 ### See also
 
-[String](/reference/types/string), [show number](/reference/basic/show-number), [show animation](/reference/basic/show-animation)
+[String](/types/string), [show number](/reference/basic/show-number), [show animation](/reference/basic/show-animation)
 

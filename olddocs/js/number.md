@@ -19,7 +19,7 @@ To declare a *global* number variable, see [global variables](/js/data).
 
 ### Arithmetic operators
 
-The following arithmetic operators work on numbers and return a [Number](/reference/types/number):
+The following arithmetic operators work on numbers and return a [Number](/types/number):
 
 *  addition: `1 + 3`
 * subtraction: `1 - 3 `
@@ -29,7 +29,7 @@ The following arithmetic operators work on numbers and return a [Number](/refere
 
 ### Relational operators
 
-The following relational operators work on numbers and return a [Boolean](/reference/types/boolean):
+The following relational operators work on numbers and return a [Boolean](/types/boolean):
 
 * equality: `(3 + 1) = 4`
 * inequality: `3 != 4`
@@ -64,7 +64,7 @@ number1 = math.mod(4, 3)
 
 ### Convert a number to a string
 
-The `to string` function converts a Number into a [String](/reference/types/string). The following code converts `number1` to a string and stores the string in the `str` variable:
+The `to string` function converts a Number into a [String](/types/string). The following code converts `number1` to a string and stores the string in the `str` variable:
 
 ```
 let str = number1.toString()
@@ -80,5 +80,5 @@ The [bits library](/js/bits) includes functions for bit-level manipulation of in
 
 ### See also
 
-[math library](/js/math), [var](/reference/variables/var), [bits library](/js/bits), [Boolean](/reference/types/boolean), [show number](/reference/basic/show-number)
+[math library](/js/math), [var](/reference/variables/var), [bits library](/js/bits), [Boolean](/types/boolean), [show number](/reference/basic/show-number)
 

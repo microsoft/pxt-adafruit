@@ -33,7 +33,7 @@ basic.forever(() => {
 
 ### Example: counter
 
-The following example keeps showing the [number](/reference/types/number) stored in a global variable.
+The following example keeps showing the [number](/types/number) stored in a global variable.
 When you press button `A`, the number gets bigger.
 You can use a program like this to count things with your @boardname@.
 

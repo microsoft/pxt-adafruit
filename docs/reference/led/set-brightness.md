@@ -9,7 +9,7 @@ led.setBrightness(121)
 
 ### Parameters
 
-* ``value`` is a [number](/reference/types/number) that means how
+* ``value`` is a [number](/types/number) that means how
   bright the screen is when it is turned on, from `0` (darkest) to
   `255` (brightest). For example, the number `127` means the screen is
   halfway bright when it is turned on.

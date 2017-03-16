@@ -14,8 +14,8 @@ basic.showAnimation(`
 
 ### Parameters
 
-* `leds` is a [String](/reference/types/string) that shows which LEDs are on and off, in groups one after another.
-* `interval` is an optional [Number](/reference/types/number). It means the number of milliseconds to pause after each image frame.
+* `leds` is a [String](/types/string) that shows which LEDs are on and off, in groups one after another.
+* `interval` is an optional [Number](/types/number). It means the number of milliseconds to pause after each image frame.
 
 ### Example: Animating a group of image frames
 

@@ -10,7 +10,7 @@ item.turn(Direction.Right, 45);
 ### Parameters
 
 * a choice whether the sprite should turn **left** or **right**
-* a [number](/reference/types/number) that means how much the sprite should turn.
+* a [number](/types/number) that means how much the sprite should turn.
   This number is in **degrees**, so a straight left or right turn is 90 degrees.
 
 ### Example

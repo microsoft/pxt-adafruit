@@ -16,7 +16,7 @@ input.lightLevel();
 
 ### Returns
 
-* a [Number](/reference/types/number) that means a light level from ``0`` (dark) to ``255`` (bright).
+* a [Number](/types/number) that means a light level from ``0`` (dark) to ``255`` (bright).
 
 ### Example: show light level
 

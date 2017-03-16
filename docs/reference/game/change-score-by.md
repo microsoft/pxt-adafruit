@@ -7,7 +7,7 @@ game.addScore(1)
 ```
 ### Parameters
 
-* a [number](/reference/types/number) that means how much to add to the score. A negative number means to subtract from the score.
+* a [number](/types/number) that means how much to add to the score. A negative number means to subtract from the score.
 
 ### Examples
 

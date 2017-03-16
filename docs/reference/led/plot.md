@@ -14,10 +14,10 @@ Use [unplot](/reference/led/unplot) to turn **off** an LED.
 
 ### Parameters
 
-* ``x`` is a [number](/reference/types/number) that means the
+* ``x`` is a [number](/types/number) that means the
   horizontal spot on the LED screen (from left to right: 0, 1, 2, 3,
   or 4)
-* ``y`` is a [number](/reference/types/number) that means the vertical
+* ``y`` is a [number](/types/number) that means the vertical
   spot on the LED screen (from top to bottom: 0, 1, 2, 3, or 4)
 
 If a parameter is [out of bounds](/reference/out-of-bounds) (a value

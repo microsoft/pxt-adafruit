@@ -8,7 +8,7 @@ serial.writeNumber(0);
 
 ### Parameters
 
-* `value` is the [number](/reference/types/number) to write to the serial port
+* `value` is the [number](/types/number) to write to the serial port
 
 ### Example: one through ten
 

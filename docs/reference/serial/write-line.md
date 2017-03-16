@@ -9,7 +9,7 @@ serial.writeLine("");
 
 ### Parameters
 
-* `text` is the [string](/reference/types/string) to write to the serial port
+* `text` is the [string](/types/string) to write to the serial port
 
 ### Example: simple serial
 

@@ -16,7 +16,7 @@ music.beat(BeatFraction.Whole)
 
 ### Returns
 
-* a [number](/reference/types/number) that means the amount of milli-seconds a beat fraction represents.
+* a [number](/types/number) that means the amount of milli-seconds a beat fraction represents.
 
 
 ## Example

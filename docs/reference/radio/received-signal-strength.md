@@ -16,7 +16,7 @@ radio.receivedSignalStrength();
 
 ### Returns
 
-* a [number](/reference/types/number) between `-128` and `-42` that means
+* a [number](/types/number) between `-128` and `-42` that means
 how strong the signal is.
 
 ### Simulator

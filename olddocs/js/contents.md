@@ -31,9 +31,9 @@ Welcome to the Touch Develop home page for the @boardname@. Below you will find 
 
 ### Types
 
-* [Number](/reference/types/number)
-* [Boolean](/reference/types/boolean)
-* [String](/reference/types/string)
+* [Number](/types/number)
+* [Boolean](/types/boolean)
+* [String](/types/string)
 * [Image](/reference/images/image)
 
 ### Statements and control structures
@@ -50,19 +50,19 @@ Welcome to the Touch Develop home page for the @boardname@. Below you will find 
 
 ### Maths
 
-* arithmetic operators (`+`, `-`, `*`, `/`, mod) on [Numbers](/reference/types/number)
-* comparison operators (such as `>`, `=`) on [Numbers](/reference/types/number)
+* arithmetic operators (`+`, `-`, `*`, `/`, mod) on [Numbers](/types/number)
+* comparison operators (such as `>`, `=`) on [Numbers](/types/number)
 * the [math](/js/math) library
 * the [bits](/js/bits) library
 
 ### Logical
 
-* [Boolean](/reference/types/boolean) values `true` and `false`
-* Operations (`not`, `or`, `and`) on [Booleans](/reference/types/boolean)
+* [Boolean](/types/boolean) values `true` and `false`
+* Operations (`not`, `or`, `and`) on [Booleans](/types/boolean)
 
 ### Strings
 
-* [string functions](/reference/types/string-functions)
+* [string functions](/types/string-functions)
 
 ### Functions
 

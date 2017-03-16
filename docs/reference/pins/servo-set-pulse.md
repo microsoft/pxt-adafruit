@@ -9,8 +9,8 @@ pins.servoSetPulse(AnalogPin.P1, 1500)
 
 ### Parameters
 
-* ``name``: a [string](/reference/types/string) that specifies the pin to configure (`P0` through `P4`, or `P10`)
-* ``micros``: a [number](/reference/types/number) that specifies the analog period in microseconds.
+* ``name``: a [string](/types/string) that specifies the pin to configure (`P0` through `P4`, or `P10`)
+* ``micros``: a [number](/types/number) that specifies the analog period in microseconds.
 
 ### Example
 

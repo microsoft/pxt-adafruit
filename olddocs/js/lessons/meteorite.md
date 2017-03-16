@@ -25,7 +25,7 @@ Learn how to create **functions**, `function()` that perform a specific task and
 * **function** : [read more...](/js/function)
 * **call** : [read more...](/js/call)
 * **global variable** : [read more...](/js/data)
-* **arithmetic operators** : [read more...](/reference/types/number)
+* **arithmetic operators** : [read more...](/types/number)
 * **math random** : [read more...](/js/math)
 * **forever** : [read more...](/reference/basic/forever)
 * **for** : [read more...](/reference/loops/for)

@@ -22,7 +22,7 @@ The @boardname@ measures magnetic force with **microteslas**.
 
 ### Returns
 
-* a [number](/reference/types/number) of microteslas that means the strength of the magnet
+* a [number](/types/number) of microteslas that means the strength of the magnet
 
 ### Example: metal detector
 

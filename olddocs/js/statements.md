@@ -23,10 +23,10 @@ TouchDevelop statements include:
 TouchDevelop operators include:
 
 * [assignment operator](/reference/variables/assign) `:=` (to update variables)
-* arithmetic operators (`+`, `-`, `*`, `/`, mod) operate on [Numbers](/reference/types/number)
-* comparison operators (such as `>`, `=`) operate on [Numbers](/reference/types/number)
-* boolean operators (`not`, `or`, `and`) operate on [Booleans](/reference/types/boolean)
-* concat operator combines [Strings](/reference/types/string)
+* arithmetic operators (`+`, `-`, `*`, `/`, mod) operate on [Numbers](/types/number)
+* comparison operators (such as `>`, `=`) operate on [Numbers](/types/number)
+* boolean operators (`not`, `or`, `and`) operate on [Booleans](/types/boolean)
+* concat operator combines [Strings](/types/string)
 
 ### Libraries
 

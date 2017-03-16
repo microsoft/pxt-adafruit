@@ -9,7 +9,7 @@ serial.onDataReceived(",", () => {})
 
 ### Parameters
 
-* `delimiters` is a [string](/reference/types/string) containing any of the character to match
+* `delimiters` is a [string](/types/string) containing any of the character to match
 
 ### Example
 

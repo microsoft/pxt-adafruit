@@ -13,7 +13,7 @@ music.changeTempoBy(20)
 
 ### Parameters
 
-* ``bpm`` is a [number](/reference/types/number) that says how much to
+* ``bpm`` is a [number](/types/number) that says how much to
   change the bpm (beats per minute, or number of beats in a minute of
   the music that the @boardname@ is playing).
 

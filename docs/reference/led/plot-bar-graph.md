@@ -9,11 +9,11 @@ led.plotBarGraph(2, 20);
 
 ### Parameters
 
-* ``value`` is a [number](/reference/types/number) that means what you
+* ``value`` is a [number](/types/number) that means what you
   are measuring or trying to show. For example, if you are measuring
   the temperature of ice with the @boardname@, ``value`` might be `0`
   because the temperature might be 0 degrees centigrade.
-* ``high`` is a [number](/reference/types/number) that means the highest
+* ``high`` is a [number](/types/number) that means the highest
   possible number that the ``value`` parameter can be. This number is
   also the tallest that the lines in the bar chart can be.
 

@@ -10,7 +10,7 @@ radio.receiveString()
 
 ### Returns
 
-* the first [string](/reference/types/string) that was sent. If no
+* the first [string](/types/string) that was sent. If no
   string was sent, then this function returns an empty (blank) string.
 
 ### Example: Simple receiver

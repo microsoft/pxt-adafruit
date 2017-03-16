@@ -12,7 +12,7 @@ input.compassHeading();
 
 ### Returns
 
-* a [number](/reference/types/number) from `0` to `360` degrees, which means the compass heading. If the compass isn't ready, it returns `-1003`.
+* a [number](/types/number) from `0` to `360` degrees, which means the compass heading. If the compass isn't ready, it returns `-1003`.
 
 ### Example
 

@@ -16,7 +16,7 @@ radio.setGroup(0);
 
 ### Parameters
 
-* ``id`` is a [number](/reference/types/number) from ``0`` to ``255``.
+* ``id`` is a [number](/types/number) from ``0`` to ``255``.
 
 ### Simulator
 

@@ -12,7 +12,7 @@ export function plotImage(_this: micro_bit.Image, xOffset: number)
 
 ### Parameters
 
-* x offset - [Number](/reference/types/number); the horizontal starting point of an image; use 0 for the first frame of the image, 5 for the second frame of the image, 10 for the third frame and so on.
+* x offset - [Number](/types/number); the horizontal starting point of an image; use 0 for the first frame of the image, 5 for the second frame of the image, 10 for the third frame and so on.
 
 ### Difference from `show image`
 

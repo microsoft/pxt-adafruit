@@ -25,18 +25,18 @@ export function doStuff() {
 
 #### Input parameters
 
-The default type for an input parameter is [Number](/reference/types/number):
+The default type for an input parameter is [Number](/types/number):
 
 ```
 export function oneInput(p: number) {
 }
 ```
 
-To change the default type, click the type ([Number](/reference/types/number) in this case) and change it to [String](/reference/types/string), [Boolean](/reference/types/boolean), or [Image](/reference/image/image). You can add multiple input parameters to a function.
+To change the default type, click the type ([Number](/types/number) in this case) and change it to [String](/types/string), [Boolean](/types/boolean), or [Image](/reference/image/image). You can add multiple input parameters to a function.
 
 #### Output parameter
 
-the default type for an output parameter is [Number](/reference/types/number):
+the default type for an output parameter is [Number](/types/number):
 
 ```
 export function output() : number {
@@ -46,7 +46,7 @@ export function output() : number {
 }
 ```
 
-To change the default type, click the type ([Number](/reference/types/number) in this case) and change it to [String](/reference/types/string), [Boolean](/reference/types/boolean), or [Image](/reference/image/image).
+To change the default type, click the type ([Number](/types/number) in this case) and change it to [String](/types/string), [Boolean](/types/boolean), or [Image](/reference/image/image).
 
 ### Inputs and output function
 

@@ -9,7 +9,7 @@ radio.sendString("Hello!")
 
 ### Parameters
 
-* `msg` is a [string](/reference/types/string) to send by radio.
+* `msg` is a [string](/types/string) to send by radio.
 
 
 ### Example: Two-way radio

@@ -12,8 +12,8 @@ export function pixel(_this: micro_bit.Image, x: number, y: number) : boolean
 
 ### Parameters
 
-* x - [Number](/reference/types/number); the *x coordinate* or horizontal position of a pixel in an [image](/reference/images/image)
-* y - [Number](/reference/types/number); the *y coordinate* or vertical position of a pixel in an [image](/reference/images/image)
+* x - [Number](/types/number); the *x coordinate* or horizontal position of a pixel in an [image](/reference/images/image)
+* y - [Number](/types/number); the *y coordinate* or vertical position of a pixel in an [image](/reference/images/image)
 
 ### x, y coordinates?
 

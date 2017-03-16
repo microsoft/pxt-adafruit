@@ -7,7 +7,7 @@ game.setScore(1)
 ```
 ### Parameters
 
-* a [number](/reference/types/number) that represents the new score.
+* a [number](/types/number) that represents the new score.
 
 ### Examples
 

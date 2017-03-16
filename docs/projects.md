@@ -12,10 +12,6 @@ Fun things to light up your @boardname@.
   "url":"/projects/flashing-light",
   "imageUrl": "/static/cp/projects/a1-redled.gif"
 },{
-  "name": "Drawings",
-  "url":"/projects/drawings",
-  "imageUrl": "/static/cp/projects/a2-drawings.gif"
-},{
   "name": "Animations",
   "url":"/projects/animations",
   "imageUrl":"/static/cp/projects/a3-animations.gif"

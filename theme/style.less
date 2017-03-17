@@ -91,7 +91,7 @@ svg.blocklySvg {
     border-radius: 0.2rem !important;
 }
 
-.sandboxfooter a {
+.sandboxfooter a:not(.thin) {
     color:white !important;
 }
 
@@ -120,4 +120,10 @@ svg.blocklySvg {
 
 /* Large Monitor */
 @media only screen and (min-width: @largeMonitorBreakpoint) {
+}
+/* Mobile, Tablet AND thin screen */
+@media only screen and (max-width: @largestTabletScreen) and (max-height: @thinEditorBreakpoint) {
+    .sandboxfooter a:not(.thin) {
+        color: @black !important;
+    }
 }

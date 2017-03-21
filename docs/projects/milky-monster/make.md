@@ -5,6 +5,8 @@
 
 Turn a piece of cardboard into an milky-monster!
 
+![](/static/mb/projects/milky-monster/monsters.jpg)
+
 ### ~
 
 ## Duration: ~45 minutes
@@ -55,7 +57,6 @@ https://youtu.be/Yyk1zW4sFoM
 
 Use tape to extend the mouth approx 1 cm. Fold one after the other.
 
-
 https://youtu.be/RWJbqI03wPE
 
 ## Step 6: connect cord
@@ -104,11 +105,12 @@ Connect the crocodile clips to the servo.
 
 https://youtu.be/RiQE-9z9LrI
 
-## Step 11: it's ready!
 
-Your milky-monster is ready!
+## It's ready!
 
-![](/static/mb/projects/milky-monster/ready.jpg)
+Your milky-monster is ready, it is time to decorate it! Customize the milky monster to your taste!
+
+![](/static/mb/projects/milky-monster/monsters.jpg)
 
 ### ~button /projects/milky-monster/code
 NEXT: Code

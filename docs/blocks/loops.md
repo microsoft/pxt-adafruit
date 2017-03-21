@@ -1,0 +1,7 @@
+# @extends
+
+### #specific
+
+```
+basic.forever(() => {});
+```

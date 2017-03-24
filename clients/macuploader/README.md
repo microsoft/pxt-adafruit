@@ -1,11 +1,11 @@
-# micro:bit uploader for OS X
+# @boardname@ uploader for OS X
 
 ![](Microbit Uploader/Assets.xcassets/AppIcon.appiconset/icon_256x256.png)
 
 This project is a clone of the [Windows
 uploader](https://pxt.microbit.org/uploader), but for OS X. Once launched,
 the app runs in your menu bar and will automatically deploy any HEX files to
-your `micro:bit`. Like the Windows version, it is compatible with any browser
+your `@boardname@`. Like the Windows version, it is compatible with any browser
 that can run [pxt.microbit.org](http://pxt.microbit.org).
 
 ## Install the built version

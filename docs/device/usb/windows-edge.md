@@ -8,16 +8,9 @@ can **compile** it and run it on your micro:bit.
 
 The basic steps are:
 
-1. Connect your micro:bit to your computer via USB
-2. Click **Download** and download the `.hex` file
-3. Copy the `.hex` file from your computer onto the micro:bit drive
-
-### ~hint
-
-You can use the [micro:bit uploader](/uploader) to automatically deploy ``.hex`` files to your micro:bit!
-![](/static/uploader/tooltip.png)
-
-### ~
+1. Connect your @boardname@ to your computer via USB
+2. Click **Download** to download the `.hex` file
+3. Click the **Save As** button in the bottom bar and save the `.hex` file into the MICROBIT drive
 
 ## Requirements
 
@@ -50,37 +43,22 @@ it appears as a new drive under Devices.
    whether you are using a Windows computer or a Mac
 
 A message will appear at the bottom of the browser asking what you want to do
-with the file. Click **Save**:
+with the file. 
 
-![](/static/mb/device/usb-windows-edge-1.png)
-
-Then click **Open folder** and drag and drop the file from your Downloads to
-your `MICROBIT` drive.
-
-![](/static/mb/device/usb-windows-edge-2.png)
+4. Click **Save As**
+5. Save the ``.hex`` file into the **MICROBIT** drive
 
 ## Step 3: Transfer the file to your micro:bit
 
-* Once you've found the folder containing your `.hex` file, drag and drop it
-    onto your `MICROBIT` drive
-* If you're using Windows, you can use **Send to** as described below 
 * The LED on the back of your micro:bit flashes during the transfer (which 
     should only take a few seconds).
-* Once transferred, the code will run automatically on your micro:bit. To rerun
-   your program, press the reset button on the back of your micro:bit. The reset 
+* Once transferred, the code will run automatically on your @boardname@. To rerun
+   your program, press the reset button on the back of your @boardname@. The reset 
    button automatically runs the newest file on the micro:bit.
-
-In File Explorer, right-click on the hex file (created in Step 2 above), choose **Send to**, and then **MICROBIT**.
-
-![](/static/mb/device/usb-windows-sendto.jpg)
 
 By copying the script onto the `MICROBIT` drive, you have programmed it into the
 flash memory on the micro:bit, which means even after you unplug the micro:bit,
 your program will still run if the micro:bit is powered by battery.
-
-If you want to save time, you can use the [micro:bit uploader](/uploader) to
-automatically deploy hex files to your micro:bit. It works on Windows and is
-compatible with any browser.
 
 ### ~hint
 

@@ -6,9 +6,16 @@ can **compile** it and run it on your micro:bit.
 
 The basic steps are:
 
-1. Connect your micro:bit to your computer via USB
-2. Click **Download** and download the `.hex` file
-3. Copy the `.hex` file from your computer onto the micro:bit drive
+1. Connect your @boardname@ to your computer via USB
+2. Click **Download** to download the `.hex` file
+3. Move the `.hex` file from your computer onto the MICROBIT drive
+
+### ~ hint
+
+In Edge, Internet Explorer and Firefox, you can click on the **Save As** button on the bottom bar and save the ``.hex`` file
+directly into the MICROBIT drive!
+
+### ~
 
 ![](/static/mb/device/usb-thin.jpg)
 

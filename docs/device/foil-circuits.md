@@ -4,20 +4,20 @@ The large holes at the bottom of the board are designed to attach alligator/croc
 to create electrical circuit with other components.
 
 If you do not have crocodile clips at hand, dyou can use wires or even Aluminium foil to acheive the same result.
-We will show you how to connect the micro:bit to headphones using Alumunium foil and tape.
+We will show you how to connect the @boardname@ to headphones using Alumunium foil and tape.
 
 https://youtu.be/mhXYyPuvpz0
 
 ### Materials
 
-* micro:bit and battery pack (you can also power it via USB)
+* @boardname@ and battery pack (you can also power it via USB)
 * a small piece of cardboard
 * Aluminium foil
 * tape
 
 ### Assembly instructions
 
-Tape the micro:bit and battery pack to the card board. Make sure to remove the batteries while you are building your circuit.
+Tape the @boardname@ and battery pack to the card board. Make sure to remove the batteries while you are building your circuit.
 
 ![](/static/mb/device/croc-clips/microbitattached.jpg)
 
@@ -49,4 +49,4 @@ Tape the second wire on the head of the jack connector.
 
 ## See also
 
-[micro:bit pins](/device/pins)
+[@boardname@ pins](/device/pins)

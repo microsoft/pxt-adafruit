@@ -34,7 +34,8 @@ Adding a little tape helps keeping the crocodile clips in place.
 ## Example: on pin pressed with random numbers
 
 This example displays a random number every time the crocodile clip holds  `GND` then connects and disconnects the `P0` pin. 
-Each time the crocodile clip is firmly connected and disconnected from pin `P0`, the micro:bit will return a random Number between 0 and the parameter limit.
+Each time the crocodile clip is firmly connected and disconnected from pin `P0`, 
+the @boardname@ will return a random Number between 0 and the parameter limit.
 
 ```blocks
 input.onPinPressed(TouchPin.P0, () => {

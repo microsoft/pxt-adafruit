@@ -217,6 +217,7 @@
         "exampleGallery": "examples",
         "crowdinProject": "kindscript",
         "boardName": "micro:bit",
+        "driveDisplayName": "MICROBIT",
         "sideDoc": "tutorials/getting-started",
         "feedbackUrl": "https://www.research.net/r/MCmicro",
         "browserSupport": [

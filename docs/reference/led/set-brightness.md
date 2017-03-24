@@ -14,6 +14,12 @@ led.setBrightness(121)
   `255` (brightest). For example, the number `127` means the screen is
   halfway bright when it is turned on.
 
+### ~ hint
+
+The brightness is not supported in the simulator. You will need to try it on the @boardname@ itself!
+
+###
+
 ### Example: change brightness
 
 This program makes the screen brightness 100% (`255`).  Then it turns on

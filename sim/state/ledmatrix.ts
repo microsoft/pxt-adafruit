@@ -272,7 +272,7 @@ namespace pxsim.led {
     }
 
     export function setBrightness(value: number): void {
-        board().ledMatrixState.brigthness = value;
+        board().ledMatrixState.brigthness = Math.max(0, Math.min(255, value));
         runtime.queueDisplayUpdate()
     }
 

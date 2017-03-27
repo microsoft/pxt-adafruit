@@ -3,16 +3,16 @@
 Raise an alert on a remote device.
 
 ### ~hint
+![](/static/bluetooth/Bluetooth_SIG.png)
 
-The functions in the ``devices`` namespace allow the @boardname@ to communicate with a separate (remote) device, 
-such as a smartphone, over Bluetooth (Smart).
-The set of supported events will depend on the remote device and the @boardname@ apps available for the remote device.
+For another device like a smartphone to use any of the Bluetooth "services" which the @boardname@ has, it must first be [paired with the @boardname@](/reference/bluetooth/bluetooth-pairing). Once paired, the other device may connect to the @boardname@ and exchange data relating to many of the @boardname@'s features.
 
 ### ~
 
 
+
 ```sig
-export function raiseAlertTo(event: string)
+devices.raiseAlertTo(MesAlertEvent.Vibrate)
 ```
 
 ### Parameters
@@ -24,37 +24,37 @@ export function raiseAlertTo(event: string)
 To tell the connected device to display toast
 
 ```blocks
-devices.raiseAlertTo("display toast")
+devices.raiseAlertTo(MesAlertEvent.DisplayToast)
 ```
 
 To tell the connected device to vibrate
 
 ```blocks
-devices.raiseAlertTo("vibrate")
+devices.raiseAlertTo(MesAlertEvent.Vibrate)
 ```
 
 To tell the connected device to play a sound
 
 ```blocks
-devices.raiseAlertTo("play sound")
+devices.raiseAlertTo(MesAlertEvent.PlaySound)
 ```
 
 To tell the connected device to play a ringtone
 
 ```blocks
-devices.raiseAlertTo("play ringtone")
+devices.raiseAlertTo(MesAlertEvent.PlayRingtone)
 ```
 
 To tell the connected device to find my phone
 
 ```blocks
-devices.raiseAlertTo("find my phone")
+devices.raiseAlertTo(MesAlertEvent.FindMyPhone)
 ```
 
 To tell the connected device to ring alarm
 
 ```blocks
-devices.raiseAlertTo("ring alarm")
+devices.raiseAlertTo(MesAlertEvent.RingAlarm)
 ```
 
 ### See also

@@ -3,12 +3,12 @@
 Access the photo/video-taking functionality of a remote device using the ``tell camera to`` function.
 
 ### ~hint
+![](/static/bluetooth/Bluetooth_SIG.png)
 
-The functions in the ``devices`` namespace allow the @boardname@ to communicate with a separate (remote) device, 
-such as a smartphone, over Bluetooth (Smart).
-The set of supported events will depend on the remote device and the @boardname@ apps available for the remote device.
+For another device like a smartphone to use any of the Bluetooth "services" which the @boardname@ has, it must first be [paired with the @boardname@](/reference/bluetooth/bluetooth-pairing). Once paired, the other device may connect to the @boardname@ and exchange data relating to many of the @boardname@'s features.
 
 ### ~
+
 
 ```sig
 devices.tellCameraTo(MesCameraEvent.TakePhoto)

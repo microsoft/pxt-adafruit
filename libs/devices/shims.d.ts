@@ -4,7 +4,7 @@
     /**
      * Control a phone with the BBC micro:bit via Bluetooth.
      */
-    //% color=156 weight=80
+    //% color=#008272 weight=80 icon="\uf10b"
 declare namespace devices {
 
     /**

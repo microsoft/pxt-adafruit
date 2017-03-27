@@ -7,6 +7,7 @@
     "corepkg": "adafruit",
     "bundleddirs": [
         "node_modules/pxt-common-packages/libs/core",
+        "node_modules/pxt-common-packages/libs/microphone",
         "node_modules/pxt-common-packages/libs/neopixel",
         "libs/adafruit"
     ],

@@ -49,3 +49,13 @@ Here are some fun programs for your @boardname@!
   "url":"/examples/servo-calibrator"
 }]
 ```
+
+## Bluetooth
+
+```codecard
+[{
+  "name": "Eddystone Beacon",
+  "description": "Beacon that beams a URL",
+  "url": "/examples/eddystone-beacon"
+}]
+```

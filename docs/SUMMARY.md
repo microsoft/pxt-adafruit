@@ -33,6 +33,18 @@
         * [Plot analog pin](/examples/plot-analog-pin)
         * [Servo Calibrator](/examples/servo-calibrator)
 
+## Examples #examples
+
+* [Examples](/examples)
+    * [blinky](/examples/blinky)
+    * [name tag](/examples/name-tag)
+    * [rando](/examples/rando)
+    * [plot acceleration](/examples/plot-acceleration)
+    * [plot light level](/examples/plot-light-level)
+    * [plot analog pin](/examples/plot-analog-pin)
+    * [servo calibrator](/examples/servo-calibrator)
+    * [Eddystone beacon](/examples/eddystone-beacon)
+
 ## #reference
 
 * [Reference](/reference)

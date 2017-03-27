@@ -19,7 +19,7 @@
         * [Duct tape wallet](/projects/wallet)
         * [Watch](/projects/watch)
         * [Inchworm](/projects/inchworm)
-        * [Milk Jar Robot](/projects/milk-jar-robot)
+        * [Milk Carton Robot](/projects/milk-carton-robot)
         * [Milk monster](/projects/milky-monster)
         * [Timing gates](/projects/timing-gates)
         * [Compass](/projects/compass)

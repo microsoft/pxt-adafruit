@@ -1,11 +1,11 @@
 # Make
-### @description Building the cardboard Milky Monster
+### @description Building the cardboard Milk Carton Robot
 
 ### ~avatar avatar
 
-Turn a piece of cardboard into an milky-monster!
+Turn a piece of cardboard into an milk carton robot!
 
-![Make](/static/mb/projects/milk-jar-robot/make.jpg)
+![Make](/static/mb/projects/milk-carton-robot/make.jpg)
 
 ### ~
 
@@ -43,6 +43,6 @@ https://youtu.be/pRAC2Ritgtk
 
 Well done! Let's move to programming the @boardname@ to move the mouth.
 
-### ~button /projects/milk-jar-robot/code
+### ~button /projects/milk-carton-robot/code
 NEXT: Code
 ### ~

@@ -1,9 +1,9 @@
 # Code
-### @description code to make the Milk Jar Robot alive
+### @description code to make the Milk Carton Robot alive
 
 ### ~avatar avatar
 
-Add code to make the Milk Jar Robot move.
+Add code to make the Milk Carton Robot move.
 
 ### ~
 

@@ -123,7 +123,7 @@ namespace bluetooth {
     const int8_t CALIBRATED_POWERS[] = {-49, -37, -33, -28, -25, -20, -15, -10};
     /**
     * Advertise an Eddystone URL
-	* @param url the url to transmit. Must be no longer than the supported eddystone url length, eg: "https://pxt.io/"
+	* @param url the url to transmit. Must be no longer than the supported eddystone url length, eg: "https://makecode.com"
 	* @param power power level between 0 and 7, eg: 7
     * @param connectable true to keep bluetooth connectable for other services, false otherwise.
     */

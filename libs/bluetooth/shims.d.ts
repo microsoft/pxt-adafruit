@@ -83,7 +83,7 @@ declare namespace bluetooth {
 
     /**
      * Advertise an Eddystone URL
-     * @param url the url to transmit. Must be no longer than the supported eddystone url length, eg: "https://pxt.io/"
+     * @param url the url to transmit. Must be no longer than the supported eddystone url length, eg: "https://makecode.com"
      * @param power power level between 0 and 7, eg: 7
      * @param connectable true to keep bluetooth connectable for other services, false otherwise.
      */

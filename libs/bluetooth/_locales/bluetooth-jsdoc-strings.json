@@ -12,7 +12,7 @@
   "bluetooth.advertiseUrl": "Advertise an Eddystone URL",
   "bluetooth.advertiseUrl|param|connectable": "true to keep bluetooth connectable for other services, false otherwise.",
   "bluetooth.advertiseUrl|param|power": "power level between 0 and 7, eg: 7",
-  "bluetooth.advertiseUrl|param|url": "the url to transmit. Must be no longer than the supported eddystone url length, eg: \"https://pxt.io/\"",
+  "bluetooth.advertiseUrl|param|url": "the url to transmit. Must be no longer than the supported eddystone url length, eg: \"https://makecode.com\"",
   "bluetooth.onBluetoothConnected": "Register code to run when the micro:bit is connected to over Bluetooth",
   "bluetooth.onBluetoothConnected|param|body": "Code to run when a Bluetooth connection is established",
   "bluetooth.onBluetoothDisconnected": "Register code to run when a bluetooth connection to the micro:bit is lost",

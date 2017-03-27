@@ -19,7 +19,13 @@ Here are some fun programs for your @boardname@!
   "name": "Rando",
   "description": "Randomly blinking LEDs",
   "url":"/examples/rando"
-}]
+},
+{
+  "name": "Game of Life",
+  "description": "Simulation in LEDs (javascript)",
+  "url":"/examples/gameofLife"
+}
+]
 ```
 
 ## Sensors

@@ -68,6 +68,6 @@ closed = 175
 ```
 
 
-### ~button /projects/milk-jar-robot/connect
+### ~button /projects/milk-carton-robot/connect
 NEXT: Connect
 ### ~

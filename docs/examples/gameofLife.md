@@ -1,6 +1,6 @@
 # Game of Life simulation in LEDs
 
-```blocks
+```javascript
 //https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
 let lifeChart: Image = null
 

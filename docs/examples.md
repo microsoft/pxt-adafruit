@@ -22,7 +22,7 @@ Here are some fun programs for your @boardname@!
 },
 {
   "name": "Game of Life",
-  "description": "Simulation in LEDs (javascript)",
+  "description": "Game simulation in LEDs (javascript). Use button A for next stage. Button B for reset.",
   "url":"/examples/gameofLife"
 }
 ]

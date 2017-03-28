@@ -1,13 +1,13 @@
 const enum CPLAY {
     REDLED = 13,
-    NEOPIXEL_PIN = 17, 
-    SLIDE_SWITCH_PIN = 21, 
-    LEFT_BUTTON = 4, 
-    RIGHT_BUTTON = 19, 
-    //LIGHT_SENSOR = A5, 
-    LIS3DH_CS = 8, 
+    NEOPIXEL_PIN = 17,
+    SLIDE_SWITCH_PIN = 21,
+    LEFT_BUTTON = 4,
+    RIGHT_BUTTON = 19,
+    //LIGHT_SENSOR = A5,
+    LIS3DH_CS = 8,
     //THERMISTOR_PIN = A0,
-    BUZZER = 5, 
+    BUZZER = 5,
 
     ID_BUTTON_A = 1,
     ID_BUTTON_B = 2,
@@ -61,8 +61,8 @@ namespace pxsim.input {
         let acc = b.accelerometer;
         acc.activate();
         let x = acc.getX(MicroBitCoordinateSystem.NORTH_EAST_DOWN);
-        let y = acc.getX(MicroBitCoordinateSystem.NORTH_EAST_DOWN);
-        let z = acc.getX(MicroBitCoordinateSystem.NORTH_EAST_DOWN);
+        let y = acc.getY(MicroBitCoordinateSystem.NORTH_EAST_DOWN);
+        let z = acc.getZ(MicroBitCoordinateSystem.NORTH_EAST_DOWN);
 
         let roll = Math.atan2(y, z);
         let pitch = Math.atan(-x / (y * Math.sin(roll) + z * Math.cos(roll)));
@@ -112,10 +112,10 @@ namespace pxsim {
     /**
       * Co-ordinate systems that can be used.
       * RAW: Unaltered data. Data will be returned directly from the accelerometer.
-      * 
+      *
       * SIMPLE_CARTESIAN: Data will be returned based on an easy to understand alignment, consistent with the cartesian system taught in schools.
       * When held upright, facing the user:
-      * 
+      *
       *                            /
       *    +--------------------+ z
       *    |                    |
@@ -128,7 +128,7 @@ namespace pxsim {
       *
       * NORTH_EAST_DOWN: Data will be returned based on the industry convention of the North East Down (NED) system.
       * When held upright, facing the user:
-      * 
+      *
       *                            z
       *    +--------------------+ /
       *    |                    |

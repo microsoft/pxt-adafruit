@@ -41,7 +41,7 @@ Try pressing button A!
 
 ## Step 3
 
-Now add blocks so that when [button B is pressed](/reference/input/on-button-pressed), 
+Add blocks so that when [button B is pressed](/reference/input/on-button-pressed), 
 a frowney appears:
 
 ```blocks
@@ -66,6 +66,58 @@ input.onButtonPressed(Button.B, () => {
 ```
 
 Try pressing ``A`` or ``B``!
+
+## Step 4
+
+You can also have a secret mode where ``A`` and ``B`` are pressed together. 
+In that case, add multiple ``||show leds||`` blocks to create an animation...
+
+```blocks
+input.onButtonPressed(Button.AB, () => {
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        # . . . #
+        . # # # .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        # # # # #
+        . . . . .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        . # # # .
+        # . . . #
+        `)
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . . . . .
+        # # # # #
+        . . . # #
+        `)
+    basic.showLeds(`
+        . . . . .
+        # . # . .
+        . . . . .
+        # . . . #
+        . # # # .
+        `)
+    basic.showLeds(`
+        . . . . .
+        . . # . #
+        . . . . .
+        # . . . #
+        . # # # .
+        `)    
+})
+```
 
 ## Send your smileys over radio
 

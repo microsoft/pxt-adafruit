@@ -27,6 +27,10 @@ Fun games to build with your @boardname@.
   "name": "Magic Button Trick",
   "url":"/projects/magic-button-trick",
   "imageUrl":"/static/mb/projects/magic-button-trick.png"
+}, {
+  "name": "Coin Flipper",
+  "url":"/projects/coin-flipper",
+  "imageUrl": "/static/mb/projects/coin-flipper.png"
 }]
 ```
 

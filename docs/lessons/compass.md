@@ -1,6 +1,6 @@
 # compass lesson
 
-create a die on the @boardname@.
+Create a compass on the @boardname@.
 
 ## Topic
 

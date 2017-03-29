@@ -220,6 +220,7 @@
         "driveDisplayName": "MICROBIT",
         "sideDoc": "tutorials/getting-started",
         "feedbackUrl": "https://www.research.net/r/MCmicro",
+        "appStoreID": "1092687276",
         "browserSupport": [
             {
                 "name": "unsupported",

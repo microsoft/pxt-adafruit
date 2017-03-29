@@ -27,28 +27,7 @@ let degrees = input.compassHeading()
 
 ```blocks
 let degrees = input.compassHeading()
-if (degrees < 45) {
+if (degrees < 45 || degrees > 315) {
     basic.showString("N", 150)
 }
 ```
-
-## 4. Write the 'If statement' that will check if the device is mostly pointing East. Display 'E' on the @boardname@ 
-
-
-```blocks
-let degrees = input.compassHeading()
-if (degrees < 135) {
-    basic.showString("E", 150)
-}
-```
-
-## 5. Write the 'If statement' that will check if the device is mostly pointing South. Display 'S' on the @boardname@ 
-
-
-```blocks
-let degrees = input.compassHeading()
-if (degrees < 225) {
-    basic.showString("S", 150)
-}
-```
-

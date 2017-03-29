@@ -7,10 +7,9 @@ Display the direction that the @boardname@ is facing using the compass
 Complete the following [guided tutorial](/lessons/compass/activity), your code should look like this:
 
 ```blocks
- let degrees = 0;
 basic.forever(() => {
-    degrees = input.compassHeading();
-    if (degrees < 45) {
+    let degrees = input.compassHeading();
+    if (degrees < 45 || degrees > 315) {
         basic.showString("N");
     }
     else if (degrees < 135) {
@@ -30,10 +29,9 @@ basic.forever(() => {
 Instead of displaying `N` when the @boardname@ is pointing North, display a star to indicate the north star.
 
 ```blocks
- let degrees = 0;
 basic.forever(() => {
-    degrees = input.compassHeading();
-    if (degrees < 45) {
+    let degrees = input.compassHeading();
+    if (degrees < 45 || degrees > 315) {
         basic.showLeds(`
 # . # . #
 . # # # .
@@ -61,10 +59,9 @@ basic.forever(() => {
 Instead of displaying just `N`, `W`, `S`, or `E`, display the full word.
 
 ```blocks
- let degrees = 0;
 basic.forever(() => {
-    degrees = input.compassHeading();
-    if (degrees < 45) {
+    let degrees = input.compassHeading();
+    if (degrees < 45 || degrees > 315) {
         basic.showString("NORTH");
     }
     else if (degrees < 135) {

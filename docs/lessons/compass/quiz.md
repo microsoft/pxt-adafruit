@@ -18,9 +18,4 @@ Answer the questions while completing the tutorial. Pay attention to the dialogu
 ## 3. Write the 'If statement' that will check if the device is mostly pointing North. Display 'N' on the @boardname@ 
 
 
-## 4. Write the 'If statement' that will check if the device is mostly pointing East. Display 'E' on the @boardname@ 
-
-
-## 5. Write the 'If statement' that will check if the device is mostly pointing South. Display 'S' on the @boardname@ 
-
 

@@ -1,6 +1,13 @@
 {
     "name": "{0}",
     "dependencies": {
+        "core": "file:../../node_modules/pxt-common-packages/libs/core",
+        "lightsensor": "file:../../node_modules/pxt-common-packages/libs/lightsensor",
+        "temperature": "file:../../node_modules/pxt-common-packages/libs/temperature",
+        "accelerometer": "file:../../node_modules/pxt-common-packages/libs/accelerometer",
+        "music": "file:../../node_modules/pxt-common-packages/libs/music",
+        "microphone": "file:../../node_modules/pxt-common-packages/libs/microphone",
+        "neopixel": "file:../../node_modules/pxt-common-packages/libs/neopixel",
         "adafruit": "file:../adafruit"
     },
     "description": "",

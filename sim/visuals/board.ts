@@ -72,6 +72,9 @@ namespace pxsim.visuals {
         font-size:8px;
         fill:#fff;
         pointer-events: none; user-select: none;
+    }
+        .sim-text.small {
+            font-size:6px;
         }
         .sim-text.inverted {
             fill:#000;
@@ -210,6 +213,8 @@ namespace pxsim.visuals {
         lightLevelOff?: string;
         soundLevelOn?: string;
         soundLevelOff?: string;
+        gestureButtonOn?: string;
+        gestureButtonOff?: string;
     }
 
     export var themes: IBoardTheme[] = ["#3ADCFE"].map(accent => {
@@ -225,11 +230,13 @@ namespace pxsim.visuals {
             buttonDown: "#FFA500",
             virtualButtonDown: "#FFA500",
             virtualButtonOuter: "#333",
-            virtualButtonUp: "#fff",
+            virtualButtonUp: "#FFF",
             lightLevelOn: "yellow",
             lightLevelOff: "#555",
             soundLevelOn: "#7f8c8d",
-            soundLevelOff: "#555"
+            soundLevelOff: "#555",
+            gestureButtonOn: "#FFA500",
+            gestureButtonOff: "#B4009E"
         }
     });
 
@@ -268,7 +275,7 @@ namespace pxsim.visuals {
         private thermometer: SVGRectElement;
         private thermometerText: SVGTextElement;
         private antenna: SVGPolylineElement;
-        private shakeButton: SVGCircleElement;
+        private shakeButtonGroup: SVGElement;
         private shakeText: SVGTextElement;
         public board: pxsim.DalBoard;
         private pinNmToCoord: Map<Coord> = {
@@ -329,7 +336,10 @@ namespace pxsim.visuals {
             svg.fill(this.buttons[0], theme.buttonUps[0]);
             svg.fill(this.buttons[1], theme.buttonUps[1]);
             svg.fill(this.buttons[2], theme.buttonUps[2]);
-            if (this.shakeButton) svg.fill(this.shakeButton, theme.virtualButtonUp);
+
+            if (this.shakeButtonGroup) {
+                svg.fill(this.shakeButtonGroup, this.props.theme.gestureButtonOff);
+            }
 
             svg.setGradientColors(this.lightLevelGradient, theme.lightLevelOn, theme.lightLevelOff);
 
@@ -620,24 +630,34 @@ namespace pxsim.visuals {
 
         private updateGestures() {
             let state = this.board;
-            if (state.accelerometerState.useShake && !this.shakeButton) {
-                this.shakeButton = svg.child(this.g, "circle", { cx: 380, cy: 100, r: 16.5 }) as SVGCircleElement;
-                svg.fill(this.shakeButton, this.props.theme.virtualButtonUp)
-                this.shakeButton.addEventListener(pointerEvents.down, ev => {
-                    let state = this.board;
-                    svg.fill(this.shakeButton, this.props.theme.buttonDown);
-                })
-                this.shakeButton.addEventListener(pointerEvents.leave, ev => {
-                    let state = this.board;
-                    svg.fill(this.shakeButton, this.props.theme.virtualButtonUp);
-                })
-                this.shakeButton.addEventListener(pointerEvents.up, ev => {
-                    let state = this.board;
-                    svg.fill(this.shakeButton, this.props.theme.virtualButtonUp);
-                    this.board.bus.queue(CPLAY.ID_GESTURE, 11); // GESTURE_SHAKE
-                })
-                this.shakeText = svg.child(this.g, "text", { x: 400, y: 110, class: "sim-text" }) as SVGTextElement;
+            if (state.accelerometerState.useShake && !this.shakeButtonGroup) {
+                const btnr = 2;
+                const width = 22;
+                const height = 10;
+
+                let btng = svg.child(this.g, "g", { class: "sim-button-group" });
+                this.shakeButtonGroup = btng;
+                this.shakeText = svg.child(this.g, "text", { x: 63, y: 29, class: "sim-text small" }) as SVGTextElement;
                 this.shakeText.textContent = "SHAKE"
+
+                svg.child(btng, "rect", { class: "sim-button-outer", x: 61, y: 22, rx: btnr, ry: btnr, width, height });
+                svg.fill(btng, this.props.theme.gestureButtonOff);
+                this.shakeButtonGroup.addEventListener(pointerEvents.down, ev => {
+                    let state = this.board;
+                    svg.fill(btng, this.props.theme.gestureButtonOn);
+                    svg.addClass(this.shakeText, "inverted");
+                })
+                this.shakeButtonGroup.addEventListener(pointerEvents.leave, ev => {
+                    let state = this.board;
+                    svg.fill(btng, this.props.theme.gestureButtonOff);
+                    svg.removeClass(this.shakeText, "inverted");
+                })
+                this.shakeButtonGroup.addEventListener(pointerEvents.up, ev => {
+                    let state = this.board;
+                    svg.fill(btng, this.props.theme.gestureButtonOff);
+                    this.board.bus.queue(CPLAY.ID_GESTURE, 11); // GESTURE_SHAKE
+                    svg.removeClass(this.shakeText, "inverted");
+                })
             }
         }
 
@@ -722,8 +742,8 @@ namespace pxsim.visuals {
                 return button;
             }
 
-            let ab = outerBtn(132, MB_HEIGHT - 20);
-            let abtext = svg.child(ab.outer, "text", { x: 131, y: MB_HEIGHT - 23, class: "sim-text inverted" }) as SVGTextElement;
+            let ab = outerBtn(132, MB_HEIGHT - 15);
+            let abtext = svg.child(ab.outer, "text", { x: 131, y: MB_HEIGHT - 18, class: "sim-text" }) as SVGTextElement;
             abtext.textContent = "L+R";
             (<any>this.buttonsOuter[2]).style.visibility = "hidden";
             (<any>this.buttons[2]).style.visibility = "hidden";

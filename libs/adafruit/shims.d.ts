@@ -2,6 +2,13 @@
 declare namespace input {
 
     /**
+     * Slide switch.
+     */
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getSwitchButton
+    //% block="slide switch" weight=90 fixedInstance shim=pxt::getSwitchButton(0)
+    const slideSwitch: Button;
+
+    /**
      * Do something when the slide switch is moved left or right.
      *
      * @param direction the direction the switch must be moved to trigget the event

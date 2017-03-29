@@ -1,5 +1,6 @@
 #include "pxt.h"
 #include "DeviceButton.h"
+#include "pins.h"
 
 enum class SwitchDirection {
     //% block="left"
@@ -13,17 +14,27 @@ namespace pxt {
 // Wrapper classes
 class WSlide {
   public:
+#define Button DeviceButton
     /**
      * Slide switch.
      */
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getSwitchButton
     //% block="slide switch" weight=90
-    DeviceButton slideSwitch;
+    Button slideSwitch;
+#undef Button
 
     WSlide()
         : slideSwitch(*pxt::lookupPin(PIN_BTN_SLIDE), DEVICE_ID_BUTTON_SLIDE,
                       DEVICE_BUTTON_ALL_EVENTS, ACTIVE_LOW, PullUp) {}
 };
 SINGLETON(WSlide);
+
+//%
+DeviceButton *getSwitchButton(int id) {
+    if (id != PIN_BTN_SLIDE)
+        device.panic(42);
+    return &getWSlide()->slideSwitch;
+}
 
 }
 
@@ -37,6 +48,6 @@ namespace input {
 //% blockId=device_on_switch_moved block="on switch moved %direction" blockGap=8
 //% parts="switch"
 void onSwitchMoved(SwitchDirection direction, Action handler) {
-    ButtonMethods::onEvent(&getWSlide()->slideSwitch, (ButtonEvent)direction, handler);
+    registerWithDal(getWSlide()->slideSwitch.id, (int)direction, handler);
 }
 }

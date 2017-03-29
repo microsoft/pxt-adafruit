@@ -221,6 +221,7 @@
         "sideDoc": "tutorials/getting-started",
         "feedbackUrl": "https://www.research.net/r/MCmicro",
         "appStoreID": "1092687276",
+        "mobileSafariDownloadProtocol": "microbithex://?data",
         "browserSupport": [
             {
                 "name": "unsupported",

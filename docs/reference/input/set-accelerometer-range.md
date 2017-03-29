@@ -18,8 +18,8 @@ input.setAccelerometerRange(AcceleratorRange.OneG);
 
 ### Example
 
-This program says the highest acceleration that your @boardname@
-will measure is 4G. Then it measures acceleration from side to side
+This program sets the highest acceleration that your @boardname@
+will measure is 4G. Then it shows acceleration from side to side
 until you stop the program.
 
 ```blocks

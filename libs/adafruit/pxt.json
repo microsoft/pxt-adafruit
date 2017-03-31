@@ -2,6 +2,11 @@
     "name": "adafruit",
     "description": "The adafruit library",
     "files": [
+        "README.md",
+        "switch.cpp",
+        "ns.ts",
+        "shims.d.ts",
+        "enums.d.ts"
     ],
     "yotta": {
         "config": {
@@ -12,6 +17,10 @@
     },
     "dependencies": {
         "core": "file:../../node_modules/pxt-common-packages/libs/core",
+        "accelerometer": "file:../../node_modules/pxt-common-packages/libs/accelerometer",
+        "lightsensor": "file:../../node_modules/pxt-common-packages/libs/lightsensor",
+        "temperature": "file:../../node_modules/pxt-common-packages/libs/temperature",
+        "music": "file:../../node_modules/pxt-common-packages/libs/music",
         "microphone": "file:../../node_modules/pxt-common-packages/libs/microphone",
         "neopixel": "file:../../node_modules/pxt-common-packages/libs/neopixel"
     },

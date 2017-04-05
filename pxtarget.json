@@ -213,6 +213,10 @@
         "privacyUrl": "https://makecode.com/privacy",
         "termsOfUseUrl": "https://makecode.com/termsofuse",
         "githubUrl": "https://github.com/Microsoft/pxt-microbit",
+        "galleries": {
+            "Projects": "projects",
+            "Examples": "examples"
+        },
         "projectGallery": "projects",
         "exampleGallery": "examples",
         "crowdinProject": "kindscript",

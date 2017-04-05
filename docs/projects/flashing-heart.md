@@ -1,16 +1,10 @@
-# flashing heart
-
-### ~avatar avatar
-
-Use the LEDs to display a flashing heart!
-
-### ~
+# Flashing Heart
 
 ## Step 1
 
-Use [show leds](/reference/basic/show-leds) and make your code look like this:
+Place the ``||show leds||`` block and paint a heart.
 
-```blocks
+```block
 basic.showLeds(`
     . # . # .
     # # # # #
@@ -22,42 +16,33 @@ basic.showLeds(`
 
 ## Step 2
 
-Add a [pause](/reference/basic/pause) to wait and [clear screen](/reference/basic/clear-screen) to turn off the LEDs.
+Click ``|Download|`` to transfer your code in your @boardname@!
 
-```blocks
+## Step 3
+
+Place another ``||show leds||`` block under the heart to make it blink.
+
+```block
 basic.showLeds(`
     . # . # .
     # # # # #
     # # # # #
     . # # # .
     . . # . .`);
-basic.pause(500);
-basic.clearScreen();
-```
-
-## Step 3
-
-Put a [forever loop](/reference/basic/forever) around it to repeat the animation.
-
-```blocks
-basic.forever(() => {
-    basic.showLeds(`
-        . # . # .
-        # # # # #
-        # # # # #
-        . # # # .
-        . . # . .`
-        );
-    basic.pause(500);
-    basic.clearScreen();
-})
+basic.showLeds(`
+    . # . # .
+    # . # . #
+    # . . . #
+    . # . # .
+    . . # . .`);
 ```
 
 ## Step 4
 
-Add a [pause](/reference/basic/pause) to wait after clearing the screen.
+Place the blocks inside the ``||forever||``
+to repeat the animation.
 
-```blocks
+```block
 basic.forever(() => {
     basic.showLeds(`
         . # . # .
@@ -66,43 +51,47 @@ basic.forever(() => {
         . # # # .
         . . # . .`
         );
-    basic.pause(500);
-    basic.clearScreen();
-    basic.pause(500);
+    basic.showLeds(`
+        . # . # .
+        # . # . #
+        # . . . #
+        . # . # .
+        . . # . .`);
 })
 ```
 
-## Send your heartbeats over radio!
+## Step 5
 
-Do you have a second @boardname@ at hand? You could use radio and send your heartbeats to other
-@boardname@ and show a heart when you receive one.
+Click ``|Download|`` to transfer your code in your @boardname@!
 
-* move the code in the **forever** inside 
-a [on data packet received](/reference/radio/on-data-packet-received) handler. 
-The handler will run whenever a message is received from another @boardname@.
-* use [send number](/reference/radio/send-number) and [pause](/reference/basic/pause) 
-to broadcast a packet of data every second.
+## Step 6
 
-```blocks
+Place more ``||show leds||`` blocks to create your own animation.
+
+```block
 basic.forever(() => {
-    radio.sendNumber(0)
-    basic.pause(1000)
-})
-radio.onDataPacketReceived(({receivedNumber}) => {
     basic.showLeds(`
         . # . # .
         # # # # #
         # # # # #
         . # # # .
+        . . # . .`
+        );
+    basic.showLeds(`
+        . # . # .
+        # . # . #
+        # . . . #
+        . # . # .
         . . # . .`);
-    basic.pause(500)
-    basic.clearScreen()
-    basic.pause(500)
+    basic.showLeds(`
+        . . . . .
+        . # . # .
+        . # # # .
+        . . # . .
+        . . . . .`);
 })
 ```
 
-Download the .hex file onto both @boardname@ and try it out!
+## Step 7
 
-```package
-radio
-```
+Click ``|Download|`` to transfer your code in your @boardname@!

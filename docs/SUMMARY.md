@@ -130,7 +130,11 @@
         * [on gamepad button](/reference/devices/on-gamepad-button)
         * [signal strength](/reference/devices/signal-strength)
         * [on signal strength changed](/reference/devices/on-signal-strength-changed)
-        
+
+## #packages
+
+* [Packages](/packages)
+    * [NeoPixel](/pkg/microsoft/pxt-neopixel)
 
 ## #other
 

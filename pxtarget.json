@@ -1,5 +1,6 @@
 {
     "id": "adafruit",
+    "platformid": "codal",
     "nickname": "circuitplayground",
     "name": "Adafruit Circuit Playground Express",
     "title": "Adafruit Circuit Playground Express - Blocks / Javascript editor",

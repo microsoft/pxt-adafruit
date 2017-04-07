@@ -135,6 +135,10 @@
 
 * [Packages](/packages)
     * [NeoPixel](/pkg/microsoft/pxt-neopixel)
+    * [Sonar](/pkg/microsoft/pxt-sonar)
+    * [Bluetooth Temperature Sensor](/pkg/microsoft/pxt-bluetooth-temperature-sensor)
+    * [MAX6675](/pkg/microsoft/pxt-max6675)
+    * [Bluetooth MAX6675](/pkg/microsoft/pxt-bluetooth-max6675)
 
 ## #other
 

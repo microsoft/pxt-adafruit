@@ -11,8 +11,26 @@ Contact the Microbit Foundation support to get your package approved.
 
 ## Samples #samples
 
-* [pxt-neopixel](https://github.com/Microsoft/pxt-neopixel) -- TypeScript + ARM Thumb assembly package
-* [pxt-max6675](https://github.com/Microsoft/pxt-max6675) -- TypeScript
-* [pxt-sonar](https://github.com/microsoft/pxt-sonar) -- TypeScript
-* [pxt-bluetooth-temperature-sensor](https://github.com/Microsoft/pxt-bluetooth-temperature-sensor) -- C++, custom BLE service
-* [pxt-bluetooth-max6675](https://github.com/Microsoft/pxt-bluetooth-max6675) -- TypeScript using other packages
+```codecard
+[{
+  "name": "NeoPixel",
+  "url":"/pkg/microsoft/pxt-neopixel",
+  "cardType": "package"
+},{
+  "name": "MAX6675",
+  "url":"/pkg/microsoft/pxt-max6675",
+  "cardType": "package"
+},{
+  "name": "Sonar",
+  "url":"/pkg/microsoft/pxt-sonar",
+  "cardType": "package"
+},{
+  "name": "Bluetooth Temperature Sensor",
+  "url":"/pkg/microsoft/pxt-bluetooth-temperature-sensor",
+  "cardType": "package"
+},{
+  "name": "Bluetooth MAX6675",
+  "url":"/pkg/microsoft/pxt-bluetooth-max6675",
+  "cardType": "package"
+}]
+```

@@ -139,6 +139,10 @@
     * [Bluetooth Temperature Sensor](/pkg/microsoft/pxt-bluetooth-temperature-sensor)
     * [MAX6675](/pkg/microsoft/pxt-max6675)
     * [Bluetooth MAX6675](/pkg/microsoft/pxt-bluetooth-max6675)
+    * [Code Dojo Olney](/pkg/CoderDojoOlney/pxt-olney)
+    * [UCL Junk Robot](/pkg/chevyng/pxt-ucl-junkrobot)
+    * [SRS BitBot](/pkg/srs/pxt-bitbot)
+}
 
 ## #other
 

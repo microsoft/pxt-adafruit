@@ -1,15 +1,6 @@
 # @extends
 
-## #approval
-
-### ~ hint
-
-All packages need to be approved by the Micro:bit Foundation before being available in the web editor.
-Contact the Microbit Foundation support to get your package approved.
-
-### ~
-
-## Samples #samples
+## Gallery #gallery
 
 ```codecard
 [{
@@ -31,6 +22,18 @@ Contact the Microbit Foundation support to get your package approved.
 },{
   "name": "Bluetooth MAX6675",
   "url":"/pkg/microsoft/pxt-bluetooth-max6675",
+  "cardType": "package"
+}, {
+  "name": "Code Dojo Olney",
+  "url":"/pkg/CoderDojoOlney/pxt-olney",
+  "cardType": "package"
+}, {
+  "name": "UCL Junk Robot",
+  "url":"/pkg/chevyng/pxt-ucl-junkrobot",
+  "cardType": "package"
+}, {
+  "name": "SRS BitBot",
+  "url":"/pkg/srs/pxt-bitbot",
   "cardType": "package"
 }]
 ```

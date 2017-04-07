@@ -143,3 +143,12 @@
 ## #other
 
 * [Hardware](/device)
+     * [Error codes](/device/error-codes)
+     * [Foil circuits](/device/foil-circuits)
+     * [Pins](/device/pins)
+     * [Reactive](/device/reactive)
+     * [Screen](/device/screen)
+     * [Serial](/device/serial)
+     * [Servo](/device/servo)
+     * [Simulator](/device/simulator)
+     * [Usb](/device/usb)

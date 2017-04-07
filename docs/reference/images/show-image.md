@@ -41,7 +41,7 @@ input.onButtonPressed(Button.B, () => {
 
 ### See also
 
-[Getting Started](/getting-started), [image](/reference/images/image),
+[image](/reference/images/image),
 [create image](/reference/images/create-image),
 [create big image](/reference/images/create-big-image),
 [scroll image](/reference/images/scroll-image), [show animation](/reference/basic/show-animation)

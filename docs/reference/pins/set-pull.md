@@ -14,6 +14,8 @@ button press.
 pins.setPull(DigitalPin.P9, PinPullMode.PullDown);
 ```
 
+The pull-up and -down resistors are about 13kOhm.
+
 ### Parameters
 
 * ``name``: The @boardname@ hardware pin to configure (``P0``-``P20``)

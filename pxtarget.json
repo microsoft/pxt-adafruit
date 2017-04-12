@@ -209,6 +209,7 @@
         "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
         "homeUrl": "https://pxt.microbit.org/",
         "embedUrl": "https://pxt.microbit.org/",
+        "shareUrl": "https://pxt.microbit.org/",
         "legacyDomain": "pxt.microbit.org",
         "privacyUrl": "https://makecode.com/privacy",
         "termsOfUseUrl": "https://makecode.com/termsofuse",

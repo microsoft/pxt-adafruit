@@ -20,12 +20,12 @@ You can program the micro:bit using [Blocks](/blocks) or [JavaScript](/javascrip
 
 ```block
 input.leftButton.onEvent(ButtonEvent.Click, () => {
-    light.builtin.showAnimationFrame(light.rainbowCycleAnimation())
+    light.pixels.showAnimationFrame(light.rainbowCycleAnimation())
 })
 ```
 ```typescript
 input.leftButton.onEvent(ButtonEvent.Click, () => {
-    light.builtin.showAnimationFrame(light.rainbowCycleAnimation())
+    light.pixels.showAnimationFrame(light.rainbowCycleAnimation())
 })
 ```
 
@@ -46,6 +46,10 @@ The simulator has support for the LED screen, buttons, as well as compass, accel
 
 ```sim
 control.forever(() => {
-    light.builtin.showAnimationFrame(light.rainbowCycleAnimation())
+    light.pixels.showAnimationFrame(light.rainbowCycleAnimation())
 })
+```
+
+```package
+light
 ```

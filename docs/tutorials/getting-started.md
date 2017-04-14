@@ -5,7 +5,7 @@
 Place blocks in the workspace to show a rainbow.
 
 ```blocks
-light.builtin.showAnimationFrame(light.rainbowCycleAnimation())
+light.pixels.showAnimationFrame(light.rainbowCycleAnimation())
 ```
 
 ### Step 2
@@ -19,7 +19,7 @@ Let's make it animate when the **left button** is clicked.
 
 ```block
 input.leftButton.onEvent(ButtonEvent.Click, () => {
-    light.builtin.showAnimationFrame(light.rainbowCycleAnimation())
+    light.pixels.showAnimationFrame(light.rainbowCycleAnimation())
 })
 ```
 
@@ -34,6 +34,6 @@ Awesome! Finally, let's add more blocks to show a random color when you shake th
 
 ```block
 input.onGesture(Gesture.Shake, () => {
-    light.builtin.showColor(light.colorWheel(Math.random(361)))
+    light.pixels.showColor(light.colorWheel(Math.random(361)))
 })
 ```

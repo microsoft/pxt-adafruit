@@ -26,7 +26,7 @@ light.statusLED(false)
 
 ## Step 3
 
-Add a [delay](/reference/control/pause) to wait after turning on / off the red LED.
+Add a **pause** to wait after turning on / off the red LED.
 
 ```blocks
 light.statusLED(true)
@@ -37,7 +37,7 @@ control.pause(500)
 
 ## Step 4
 
-Put a [while loop](/reference/loops/while) around it.
+Put a [while loop](/blocks/loops/while) around it.
 
 ```blocks
 while (true) {

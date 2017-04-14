@@ -25,6 +25,7 @@
         "streams": true,
         "aspectRatio": 1.0,
         "parts": false,
+        "enableTrace": true,
         "boardDefinition": {
             "visual": "circuitplayground",
             "gpioPinBlocks": [
@@ -120,6 +121,7 @@
         "packages": true,
         "sharing": true,
         "publishing": true,
+        "importing": true,
         "preferredPackages": [],
         "githubPackages": true
     },

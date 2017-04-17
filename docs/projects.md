@@ -10,8 +10,7 @@ Fun games to build with your @boardname@.
 [{
   "name": "Flashing Heart",
   "url":"/projects/flashing-heart",
-  "imageUrl": "/static/mb/projects/a1-display.png",
-  "cardType": "tutorial"
+  "imageUrl": "/static/mb/projects/a1-display.png"
 },{
   "name": "Smiley Buttons",
   "url":"/projects/smiley-buttons",

@@ -186,7 +186,7 @@ namespace pxsim.radio {
     }
 
     export function receivedString(): string {
-        return board().radioState.bus.datagram.lastReceived.payload.stringData || "";
+        return initString(board().radioState.bus.datagram.lastReceived.payload.stringData || "");
     }
 
     export function receivedTime(): number {

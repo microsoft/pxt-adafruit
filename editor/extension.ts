@@ -13,15 +13,16 @@ namespace pxt.editor {
                     }, name: data.meta.name
                 })
             }, {
-                    id: "td",
-                    canImport: data => data.meta.cloudId == "microbit.co.uk" && data.meta.editor == "touchdevelop",
-                    importAsync: (project, data) =>
-                        project.createProjectAsync({
-                            filesOverride: { "main.blocks": "", "main.ts": "  " },
-                            name: data.meta.name
-                        }).then(() => project.convertTouchDevelopToTypeScriptAsync(data.source))
-                        .then(text => this.textEditor.overrideFile(text))
-                }]
+                id: "td",
+                canImport: data => data.meta.cloudId == "microbit.co.uk" && data.meta.editor == "touchdevelop",
+                importAsync: (project, data) =>
+                    project.createProjectAsync({
+                        filesOverride: { "main.blocks": "", "main.ts": "  " },
+                        name: data.meta.name
+                    })
+                    .then(() => project.convertTouchDevelopToTypeScriptAsync(data.source))
+                    .then(text => project.overrideTypescriptFile(text))
+            }]
         };
         return Promise.resolve<pxt.editor.ExtensionResult>(res);
     }

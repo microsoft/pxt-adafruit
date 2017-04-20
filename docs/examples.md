@@ -14,5 +14,11 @@ Here are some fun programs for your @boardname@!
 },{
   "name": "tilt-light-show",
   "url":"/examples/tilt-light-show"
+},{
+  "name": "juggle-counter",
+  "url":"/examples/juggle-counter"
+},{
+  "name": "power-glove",
+  "url":"/examples/power-glove"
 }]
 ```

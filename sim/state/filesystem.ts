@@ -15,4 +15,10 @@ namespace pxsim.files {
         const b = board();
         b.fileSystem.remove(filename);
     }
+    export function readToSerial(filename: string) {
+        const b = board();
+        let f = b.fileSystem.files[filename];
+        if (f)
+            b.serialState.writeSerial(f);
+    }
 }

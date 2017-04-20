@@ -1,5 +1,14 @@
 # @extends
 
+## Examples #examples
+
+* [Examples](/examples)
+    * [Blinky](/examples/blinky)
+    * [Animatoin Shacker](/animation/shacker)
+    * [Tilt Light Show](/examples/tilt-light-show)
+    * [Juggle Counter](/examples/juggle-counter)
+    * [Power Glove](/examples/power-glove)
+
 ## Projects #projects
 
 * [Projects](/projects)

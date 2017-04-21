@@ -18,7 +18,7 @@ led.setBrightness(121)
 
 The brightness is not supported in the simulator. You will need to try it on the @boardname@ itself!
 
-###
+### ~
 
 ### Example: change brightness
 

@@ -46,8 +46,6 @@ namespace game {
     export function createSprite(x: number, y: number): LedSprite {
         init();
         let p = new LedSprite(x, y);
-        sprites.push(p);
-        plot();
         return p;
     }
 
@@ -648,9 +646,10 @@ namespace game {
          * @param this sprite to delete
          */
         //% weight=59
-        //% blockId="game_delete_sprite" block="delete %this"        
+        //% blockId="game_delete_sprite" block="delete %this"
         public delete(): void {
-            sprites.removeElement(this);
+            if (sprites.removeElement(this))
+                plot();
         }
 
         /**

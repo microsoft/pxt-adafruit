@@ -313,8 +313,11 @@ namespace input {
     /**
      * Obsolete, compass calibration is automatic.
      */
-    //% help=input/calibrate weight=0
-    void calibrate() { }
+    //% help=input/calibrate-compass advanced=true
+    //% blockId="input_compass_calibrate" block="calibrate compass"
+    void calibrateCompass() { 
+        uBit.compass.calibrate();        
+    }
 
     /**
      * Sets the accelerometer sample range in gravities.

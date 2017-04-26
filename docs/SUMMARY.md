@@ -4,7 +4,7 @@
 
 * [Examples](/examples)
     * [Blinky](/examples/blinky)
-    * [Animatoin Shacker](/animation/shacker)
+    * [Animation Shacker](/examples/animation-shaker)
     * [Tilt Light Show](/examples/tilt-light-show)
     * [Juggle Counter](/examples/juggle-counter)
     * [Power Glove](/examples/power-glove)

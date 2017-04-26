@@ -12,7 +12,7 @@ input.onGesture(Gesture.TiltUp, () => {
         light.pixels.setBrightness(light.pixels.brightness() + 1)
         light.pixels.showColor(NeoPixelColors.Blue)
         pins.A8.ringTone(item)
-        item += 50
+        item += 15
         control.pause(10)
     }
     control.pause(500)
@@ -21,8 +21,13 @@ input.onGesture(Gesture.TiltUp, () => {
 // tilt arm left and shoot
 input.onGesture(Gesture.TiltLeft, () => {
     if (ready) {
-        light.pixels.showColor(NeoPixelColors.Red)
-        pins.A8.playTone(988, music.beat(BeatFraction.Double))
+        for (let i = 0; i < 25; i++) {
+            light.pixels.showColor(NeoPixelColors.Red)
+            pins.A8.playTone(2000, music.beat(BeatFraction.Sixteenth))
+            light.pixels.clear()
+            light.pixels.show()
+            control.pause(music.beat(BeatFraction.Sixteenth))
+        }
         ready = false
     }
 })

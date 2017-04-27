@@ -178,7 +178,7 @@ namespace music {
     //% help=music/play-tone weight=90
     //% blockId=device_play_note block="play|tone %note=device_note|for %duration=device_beat" blockGap=8
     //% parts="headphone"
-    //% useEnumVal = 1
+    //% useEnumVal=1
     export function playTone(frequency: number, ms: number): void {
         if (_playTone) _playTone(frequency, ms);
         else pins.analogPitch(frequency, ms);
@@ -191,7 +191,7 @@ namespace music {
     //% help=music/ring-tone weight=80
     //% blockId=device_ring block="ring tone (Hz)|%note=device_note" blockGap=8
     //% parts="headphone"
-    //% useEnumVal = 1
+    //% useEnumVal=1
     export function ringTone(frequency: number): void {
         playTone(frequency, 0);
     }
@@ -215,8 +215,8 @@ namespace music {
     //% weight=50 help=music/note-frequency
     //% blockId=device_note block="%note"
     //% shim=TD_ID
-    //% blockFieldEditor="note_editor"
-    //% useEnumVal = 1
+    //% note.fieldEditor="note" note.defl="262"
+    //% useEnumVal=1
     export function noteFrequency(name: Note): number {
         return name;
     }

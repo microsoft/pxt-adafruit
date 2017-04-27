@@ -173,13 +173,13 @@ namespace basic {
      * Draws the selected icon on the LED screen
      */
     //% weight=90 blockGap=8
-    //% blockId=basic_show_icon 
+    //% blockId=basic_show_icon
     //% block="show icon %i" icon="\uf00a"
     //% parts="ledmatrix"
     //% help=basic/show-icon
-    //% blockFieldEditor="FieldGridPicker"
-    //% blockFieldEditorParams.width=400 blockFieldEditorParams.columns=5
-    //% blockFieldEditorParams.itemColour=black blockFieldEditorParams.tooltips=true
+    //% i.fieldEditor="gridpicker"
+    //% i.fieldOptions.width="400" i.fieldOptions.columns="5"
+    //% i.fieldOptions.itemColour="black" i.fieldOptions.tooltips="true"
     export function showIcon(icon: IconNames) {
         let res = images.iconImage(icon)
         res.showImage(0)

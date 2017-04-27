@@ -37,7 +37,6 @@
   "input": "Événements et des données provenant de capteurs",
   "input.acceleration": "Donne la valeur de l'accélération en milli-g (quand la carte est à plat avec l'écran vers le haut, x=0, y=0 et z=-1024)",
   "input.buttonIsPressed": "Donne l'état du bouton (appuyé ou non) pour ``A`` et ``B``.",
-  "input.calibrate": "Obsolète, le calibrage de la boussole est automatique.",
   "input.compassHeading": "Obtient la direction actuelle du compas en degrés.",
   "input.lightLevel": "Lit le niveau de lumière appliqué à l'écran LED de ``0`` (sombre) à ``255`` lumineux.",
   "input.magneticForce": "Obtenir la valeur de la force magnétique en ``micro-Teslas`` (``µT``). Cette fonction n’est pas supportée par le simulateur.",
@@ -58,5 +57,6 @@
   "music.rest": "Repose (joue rien) pendant une durée spécifiée via broche '' P0''.",
   "pins.analogPitch|param|frequency": "TODO",
   "pins.analogPitch|param|ms": "TODO",
-  "pins.analogSetPitchPin|param|name": "TODO"
+  "pins.analogSetPitchPin|param|name": "TODO",
+  "serial.writeString": "Envoie du texte via la connexion série."
 }

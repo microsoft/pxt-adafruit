@@ -14,7 +14,6 @@
   "radio.sendValue": "Sendet ein Name / Wert-Paar zusammen mit der Seriennummer des Geräts und die Laufzeit auf alle angeschlossenen minis in der Gruppe.",
   "radio.sendValue|param|name": "die Feldnamen (max. 12 Zeichen), z.B.: \"Daten\"",
   "radio.sendValue|param|value": "der numerische Wert",
-  "radio.setGroup": "Setzt die Gruppen-ID für Funkverbindungen. Ein mini kann nur ein Gruppen-ID hören.\nDie Gruppen-ID zwischen liegt zwischen 0 und 255, z.B. 1",
   "radio.setTransmitPower": "Ändere die Ausgabeleistung des Senders auf den angegebenen Wert.",
   "radio.setTransmitPower|param|power": "ein Wert im Bereich 0.. 7, wo 0 die niedrigste Leistung und 7 ist ist die höchste. z.B. 7",
   "radio.setTransmitSerialNumber": "Stelle den Dunk so ein, dass die Seriennummer in jeder Nachricht übertragen wird.",

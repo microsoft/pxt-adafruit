@@ -1,5 +1,7 @@
 {
 	"name": "pxt.microbit.org",
+	"display": "fullscreen",
+	"orientation": "portrait",
 	"icons": [
 		{
 			"src": "./static/icons/android-chrome-36x36.png",

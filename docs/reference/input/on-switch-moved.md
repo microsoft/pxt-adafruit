@@ -15,7 +15,7 @@ input.onSwitchMoved(SwitchDirection.left, () => {})
 
 ```blocks
 input.onSwitchMoved(SwitchDirection.left, () => {
-    light.pixels.showColor(light.colors(NeoPixelColors.Yellow))
+    light.pixels.showColor(light.colors(Colors.Yellow))
 })
 ```
 

@@ -10,7 +10,7 @@ input.onGesture(Gesture.TiltUp, () => {
     light.pixels.setBrightness(0)
     for (let i = 0; i < 100; i++) {
         light.pixels.setBrightness(light.pixels.brightness() + 1)
-        light.pixels.showColor(NeoPixelColors.Blue)
+        light.pixels.showColor(Colors.Blue)
         pins.A8.ringTone(item)
         item += 15
         control.pause(10)
@@ -22,7 +22,7 @@ input.onGesture(Gesture.TiltUp, () => {
 input.onGesture(Gesture.TiltLeft, () => {
     if (ready) {
         for (let i = 0; i < 25; i++) {
-            light.pixels.showColor(NeoPixelColors.Red)
+            light.pixels.showColor(Colors.Red)
             pins.A8.playTone(2000, music.beat(BeatFraction.Sixteenth))
             light.pixels.clear()
             light.pixels.show()

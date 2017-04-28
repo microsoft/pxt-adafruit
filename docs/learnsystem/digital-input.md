@@ -22,9 +22,9 @@ let initialValue = 0
 control.forever(() => {
     serial.writeLine("D3: " + pins.D3.digitalRead());
     if (initialValue != pins.D3.digitalRead()) {
-        light.pixels.showColor(NeoPixelColors.Blue)
+        light.pixels.showColor(Colors.Blue)
     }
 })
 initialValue = pins.D3.digitalRead()
-light.pixels.showColor(NeoPixelColors.Red)
+light.pixels.showColor(Colors.Red)
 ```

@@ -13,7 +13,7 @@
         "node_modules/pxt-common-packages/libs/microphone",
         "node_modules/pxt-common-packages/libs/lightsensor",
         "node_modules/pxt-common-packages/libs/temperature",
-        "node_modules/pxt-common-packages/libs/neopixel",
+        "node_modules/pxt-common-packages/libs/light",
         "node_modules/pxt-common-packages/libs/photon",
         "libs/adafruit"
     ],

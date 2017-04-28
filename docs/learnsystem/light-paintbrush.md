@@ -32,7 +32,7 @@ let brightVal = 20;
 let X = 0;
 let Y = 0;
 
-let c = NeoPixelColors.Green;
+let c = Colors.Green;
 
 control.forever(() => {
     sensorValue = pins.A10.analogRead();
@@ -42,16 +42,16 @@ control.forever(() => {
     Y = input.acceleration(Dimension.Y);
 
     if ((X >= 1023) && (Y < 1023)) {      //+x, -y = GREEN
-        c = NeoPixelColors.Green;
+        c = Colors.Green;
     }
     else if ((X < 1023) && (Y < 1023)) { //-x, -y = BLUE
-        c = NeoPixelColors.Blue;
+        c = Colors.Blue;
     }
     else if ((X >= 1023) && (Y >= 1023)) { //+x, +y = RED
-        c = NeoPixelColors.Red;
+        c = Colors.Red;
     }
     else if ((X < 1023) && (Y >= 1023)) {  //-x, +y = YELLOW
-        c = NeoPixelColors.Yellow;
+        c = Colors.Yellow;
     }
     light.pixels.setBrightness(brightVal);
     light.pixels.showColor(c);

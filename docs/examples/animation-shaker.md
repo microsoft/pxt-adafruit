@@ -12,7 +12,7 @@ input.onGesture(Gesture.Shake, () => {
     } else if (r == 1) {
         animation = light.rainbowCycleAnimation()
     } else if (r == 2) {
-        animation = light.colorWipeAnimation(NeoPixelColors.Red)
+        animation = light.colorWipeAnimation(Colors.Red)
     } else {
         animation = light.sparkleAnimation()
     }

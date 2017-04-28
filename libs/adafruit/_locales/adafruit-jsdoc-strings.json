@@ -1,4 +1,5 @@
 {
+  "input.ambientColor": "Senses the ambient color using the LED pixel next to the LED sensor.",
   "input.onSwitchMoved": "Do something when the slide switch is moved left or right.\n* @param direction the direction the switch must be moved to trigget the event",
   "input.slideSwitch": "Slide switch."
 }

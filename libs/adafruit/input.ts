@@ -20,17 +20,17 @@ namespace input {
         // color and grab a light sensor reading.  Make sure to wait a bit
         // after changing pixel colors to let the light sensor change
         // resistance!
-        strip.setPixelColor(PIXEL, LightColors.Red);  // Red
+        strip.setPixelColor(PIXEL, Colors.Red);  // Red
         strip.show();
         control.pause(LIGHT_SETTLE_MS);
         const red = input.lightLevel();
 
-        strip.setPixelColor(PIXEL, LightColors.Green);  // Green
+        strip.setPixelColor(PIXEL, Colors.Green);  // Green
         strip.show();
         control.pause(LIGHT_SETTLE_MS);
         const green = input.lightLevel();
 
-        strip.setPixelColor(PIXEL, LightColors.Blue);  // Blue
+        strip.setPixelColor(PIXEL, Colors.Blue);  // Blue
         strip.show();
         control.pause(LIGHT_SETTLE_MS);
         const blue = input.lightLevel();

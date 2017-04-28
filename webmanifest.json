@@ -50,5 +50,10 @@
 		}
 	],
 	"theme_color": "#ffffff",
-	"display": "standalone"
+	"related_applications": [
+		{
+			"platform": "play",
+			"id": "com.samsung.microbit"
+		}
+	]
 }

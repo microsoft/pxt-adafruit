@@ -19,6 +19,7 @@
 
 * [Reference](/reference)
     * [input](/reference/input)
+    * [photon](/reference/photon)
     * [light](/reference/light)
     * [music](/reference/music)
     * [pins](/reference/pins)

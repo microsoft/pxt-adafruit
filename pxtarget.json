@@ -188,6 +188,14 @@
                 "path": "/about"
             },
             {
+                "name": "Projects",
+                "path": "/projects"
+            },
+            {
+                "name": "Examples",
+                "path": "/examples"
+            },
+            {
                 "name": "Blocks",
                 "path": "/blocks"
             },
@@ -200,6 +208,10 @@
                 "path": "/reference"
             }
         ],
+        "galleries": {
+            "Projects": "projects",
+            "Examples": "examples"
+        },        
         "sideDoc": "tutorials/getting-started",
         "invertedMenu": true,
         "invertedToolbox": true,

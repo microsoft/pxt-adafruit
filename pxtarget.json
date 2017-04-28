@@ -135,7 +135,15 @@
         "driveName": "CPLAYBOOT",
         "openocdScript": "source [find interface/cmsis-dap.cfg]; set CHIPNAME at91samd21g18; source [find target/at91samdXX.cfg]",
         "flashChecksumAddr": 8368,
-        "flashCodeAlign": 256
+        "flashCodeAlign": 256,
+        "upgrades": [
+            {
+                "type": "package",
+                "map": {
+                    "neopixel": "light"
+                }
+            }
+        ]
     },
     "runtime": {
         "mathBlocks": true,

@@ -238,5 +238,7 @@
             }
         },
         "usbHelp": []
+    },
+    "juniorAppTheme": {
     }
 }

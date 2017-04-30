@@ -240,5 +240,21 @@
         "usbHelp": []
     },
     "juniorAppTheme": {
+        "invertedToolbox": false,
+        "coloredToolbox": true,
+        "invertedMonaco": false,
+        "blocklyOptions": {
+            "trashcan": true,
+            "scrollbars": true,
+            "zoom": {
+                "controls": true
+            },
+            "grid": {
+                "spacing": 0,
+                "length": 0,
+                "colour": "#fff",
+                "snap": false
+            }
+        }
     }
 }

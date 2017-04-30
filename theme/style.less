@@ -14,7 +14,10 @@
 *******************************/
 
 .ui.button.download-button {
-    &:extend(.ui.pink.button all);
+    background: @pink;
+}
+.junior .ui.button.download-button {
+    background: #F7DF07;
 }
 
 .ui.button.editortools-btn {
@@ -51,10 +54,6 @@ svg.blocklySvg {
     background: #00487C; /* For browsers that do not support gradients */
 }
 
-.blocklyFlyoutBackground {
-    fill: #000;
-    fill-opacity: .5;
-}
 .monacoFlyout {
     background: rgba(0,0,0,0.5);
 }
@@ -66,11 +65,6 @@ svg.blocklySvg {
 .monacoToolboxDiv {
     /* Inverted monaco color */
     background-color: #1e1e1e !important;
-}
-
-.blocklyScrollbarHandle {
-    fill: #000 !important;
-    fill-opacity:.8;
 }
 
 /* Editor menu toggle */
@@ -91,6 +85,15 @@ svg.blocklySvg {
 }
 
 /* Scrollbars */
+.blocklyScrollbarHandle {
+    fill: #000 !important;
+    fill-opacity:.8;
+}
+
+.junior .blocklyScrollbarHandle {
+    fill: #F0F0F0 !important;
+}
+
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.8);

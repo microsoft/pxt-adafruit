@@ -59,6 +59,8 @@
 @simulatorBackground: #313638;
 @editorToolsBackground: #1e1e1e;
 @blocklySvgColor: #1e1e1e;
+@blocklyFlyoutColor: #000;
+@blocklyFlyoutOpacity: 0.5;
 
 /*-------------------
    Full screen
@@ -80,3 +82,16 @@
 
 @blocklyToolboxColor: transparent;
 @trashIconColor: @primaryColor;
+
+/*-------------------
+   Junior mode
+--------------------*/
+
+@juniorSimulatorWidth: 30rem;
+@juniorSimulatorWidthSmall: 23rem;
+@juniorSimulatorBackground: lighten(@blue, 20%);
+@juniorEditorToolsBackground: @juniorSimulatorBackground;
+@juniorBlocklySvgColor: #F9F9F9;
+@juniorBlocklyFlyoutColor: #F0F0F0;
+@juniorBlocklyFlyoutOpacity: 0.8;
+@juniorBlocklyToolboxColor: white;

@@ -237,7 +237,20 @@
                 "snap": true
             }
         },
-        "usbHelp": []
+        "usbHelp": [],
+        "juniorView": {
+            "filters": {
+                "namespaces": {
+                    "input": 1,
+                    "photon": 1,
+                    "control": 1,
+                    "loops": 1,
+                    "logic": 1,
+                    "math": 1
+                },
+                "defaultState": 1
+            }
+        }
     },
     "juniorAppTheme": {
         "invertedToolbox": false,

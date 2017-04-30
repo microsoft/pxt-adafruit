@@ -152,7 +152,7 @@
         "variablesBlocks": true,
         "textBlocks": true,
         "onStartNamespace": "control",
-        "onStartColor": "#BEAA07"
+        "onStartColor": "#FFBF00"
 
     },
     "compileService": {

@@ -246,7 +246,7 @@
             "trashcan": true,
             "scrollbars": true,
             "zoom": {
-                "controls": true
+                "controls": false
             },
             "grid": {
                 "spacing": 0,

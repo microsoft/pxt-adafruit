@@ -32,12 +32,6 @@
     &:extend(.ui.green.button all);
 }
 
-/* Specifying rounded toolbox borders. */
-div.blocklyTreeRow {
-    border-radius: 5px;
-    margin-bottom: 3px !important;
-}
-
 /* This removes any padding at the top of the toolbox */
 div.blocklyTreeRoot {
     padding: 0px !important;
@@ -54,17 +48,35 @@ svg.blocklySvg {
     background: #00487C; /* For browsers that do not support gradients */
 }
 
-.monacoFlyout {
-    background: rgba(0,0,0,0.5);
-}
-
+/* Blockly toolbox */
 .blocklyToolboxDiv, .monacoToolboxDiv {
     padding:1rem;
 }
+.junior .blocklyToolboxDiv, .junior .monacoToolboxDiv {
+    padding:0rem;
+}
 
+/* Specifying rounded toolbox borders. */
+div.blocklyTreeRow {
+    border-radius: 5px;
+    margin-bottom: 3px !important;
+}
+
+.junior div.blocklyTreeRow,
+    .junior div.blocklyTreeRoot div div div div div.blocklyTreeRow{
+    border-radius: 0px;
+    border-left-width: 2px !important;
+    margin-bottom: 0px !important;
+}
+
+/* Monaco toolbox */
 .monacoToolboxDiv {
     /* Inverted monaco color */
     background-color: #1e1e1e !important;
+}
+
+.monacoFlyout {
+    background: rgba(0,0,0,0.5);
 }
 
 /* Editor menu toggle */

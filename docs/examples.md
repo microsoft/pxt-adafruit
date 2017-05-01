@@ -63,14 +63,3 @@ Here are some fun programs for your @boardname@!
   "cardType": "example"
 }]
 ```
-
-## Bluetooth
-
-```codecard
-[{
-  "name": "Eddystone Beacon",
-  "description": "Beacon that beams a URL",
-  "url": "/examples/eddystone-beacon",
-  "cardType": "example"
-}]
-```

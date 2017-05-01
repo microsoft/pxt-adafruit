@@ -1,0 +1,19 @@
+{
+    "name": "temperature",
+    "description": "The temperature library",
+    "files": [
+        "README.md",
+        "temperature.cpp",
+        "shims.d.ts",
+        "enums.d.ts",
+        "ns.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/temperature",
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
+}

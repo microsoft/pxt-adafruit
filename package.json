@@ -1,6 +1,6 @@
 {
   "name": "pxt-adafruit",
-  "version": "0.1.93",
+  "version": "0.1.96",
   "description": "Adafruit Circuit Playground Express for PXT",
   "private": true,
   "keywords": [
@@ -36,8 +36,8 @@
     "semantic-ui-less": "^2.2.4"
   },
   "dependencies": {
-    "pxt-common-packages": "0.1.1",
-    "pxt-core": "1.2.1"
+    "pxt-common-packages": "0.1.4",
+    "pxt-core": "1.2.5"
   },
   "scripts": {
     "test": "node node_modules/pxt-core/built/pxt.js travis"

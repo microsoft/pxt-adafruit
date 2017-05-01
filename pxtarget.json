@@ -7,14 +7,14 @@
     "description": "A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express.",
     "corepkg": "adafruit",
     "bundleddirs": [
-        "node_modules/pxt-common-packages/libs/core",
-        "node_modules/pxt-common-packages/libs/accelerometer",
-        "node_modules/pxt-common-packages/libs/music",
-        "node_modules/pxt-common-packages/libs/microphone",
-        "node_modules/pxt-common-packages/libs/lightsensor",
-        "node_modules/pxt-common-packages/libs/temperature",
-        "node_modules/pxt-common-packages/libs/light",
-        "node_modules/pxt-common-packages/libs/photon",
+        "libs/core",
+        "libs/accelerometer",
+        "libs/music",
+        "libs/microphone",
+        "libs/lightsensor",
+        "libs/temperature",
+        "libs/light",
+        "libs/photon",
         "libs/adafruit"
     ],
     "serial": {

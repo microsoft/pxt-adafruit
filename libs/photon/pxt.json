@@ -1,0 +1,17 @@
+{
+    "name": "photon",
+    "description": "A Turtle made of light based on LightLogo",
+    "files": [
+        "README.md",
+        "photon.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/photon",
+    "public": true,
+    "dependencies": {
+        "core": "file:../core",
+        "light": "file:../light"
+    }
+}

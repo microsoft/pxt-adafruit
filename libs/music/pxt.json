@@ -1,0 +1,20 @@
+{
+    "name": "music",
+    "description": "The music library",
+    "files": [
+        "README.md",
+        "pins.cpp",
+        "shims.d.ts",
+        "melodies.ts",
+        "music.ts",
+        "ns.ts"
+    ],
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/music",
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
+}

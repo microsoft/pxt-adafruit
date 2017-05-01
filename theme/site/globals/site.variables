@@ -91,7 +91,9 @@
 @juniorSimulatorWidthSmall: 23rem;
 @juniorSimulatorBackground: lighten(@blue, 20%);
 @juniorEditorToolsBackground: @juniorSimulatorBackground;
-@juniorBlocklySvgColor: #F9F9F9;
-@juniorBlocklyFlyoutColor: #F0F0F0;
+@juniorBlocklySvgColor: #E5E5E5;
+@juniorBlocklyFlyoutColor: #FFF;
 @juniorBlocklyFlyoutOpacity: 0.8;
 @juniorBlocklyToolboxColor: white;
+
+@juniorDialogColor: #3498db;

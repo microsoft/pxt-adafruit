@@ -1,0 +1,19 @@
+{
+    "name": "microphone",
+    "description": "The microphone library",
+    "files": [
+        "README.md",
+        "microphone.cpp",
+        "ns.ts",
+        "enums.d.ts",
+        "shims.d.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/microphone",
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
+}

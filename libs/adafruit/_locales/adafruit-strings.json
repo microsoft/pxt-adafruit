@@ -1,9 +1,13 @@
 {
   "SwitchDirection.Left|block": "left",
   "SwitchDirection.Right|block": "right",
+  "cp.onEvent|block": "on %event",
+  "cp.sense|block": "sense %sensor",
+  "cp|block": "cp",
   "input.ambientColor|block": "ambient color",
   "input.onSwitchMoved|block": "on switch moved %direction",
   "input.slideSwitch|block": "slide switch",
   "input|block": "input",
+  "{id:category}Cp": "Cp",
   "{id:category}Input": "Input"
 }

@@ -256,13 +256,13 @@
             }
         },
         "filters": {
-            "namespaces": {
-                "input": 1,
-                "photon": 1,
-                "control": 1,
-                "loops": 1,
-                "logic": 1,
-                "math": 1
+            "blocks": {
+                "cp_on_event": 1,
+                "cp_sense": 1,
+                "photon_forward": 1,
+                "photon_set_color": 1,
+                "forever": 1,
+                "device_pause": 1
             },
             "defaultState": 0
         }

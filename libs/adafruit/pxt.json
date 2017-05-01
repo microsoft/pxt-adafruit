@@ -3,6 +3,7 @@
     "description": "The adafruit library",
     "files": [
         "README.md",
+        "cp.ts",
         "switch.cpp",
         "input.ts",
         "ns.ts",

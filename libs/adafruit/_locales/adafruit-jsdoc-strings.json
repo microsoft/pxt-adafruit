@@ -1,7 +1,11 @@
 {
-  "cp": "Circuit Playground Junior blocks",
-  "cp.onEvent": "Register code for an event on the Circuit Playground",
-  "cp.sense": "Reads sensor data from one of the sensors",
+  "circuitPlayground": "Circuit Playground blocks",
+  "circuitPlayground.paint": "Controls the painter photon",
+  "circuitPlayground.playTone": "Plays a tone at the given frequency",
+  "circuitPlayground.read": "Reads sensor data from one of the sensors",
+  "circuitPlayground.setPenColor": "Changes the pen color used in paint",
+  "circuitPlayground.show": "Shows an animation on the LED screen",
+  "circuitPlayground.when": "Register code for an event on the Circuit Playground",
   "input.ambientColor": "Senses the ambient color using the LED pixel next to the LED sensor.",
   "input.onSwitchMoved": "Do something when the slide switch is moved left or right.\n* @param direction the direction the switch must be moved to trigget the event",
   "input.slideSwitch": "Slide switch."

@@ -252,17 +252,21 @@
                 "spacing": 0,
                 "length": 0,
                 "colour": "#fff",
-                "snap": false
+                "snap": true
             }
         },
         "filters": {
             "blocks": {
                 "cp_on_event": 1,
-                "cp_sense": 1,
-                "photon_forward": 1,
-                "photon_set_color": 1,
+                "cp_read": 1,
+                "cp_show": 1,
+                "cp_paint": 1,
+                "cp_set_pen_color": 1,
+                "cp_play_note": 1,
+                "controls_repeat_ext": 1,
                 "forever": 1,
-                "device_pause": 1
+                "device_pause": 1,
+                "math_arithmetic": 1
             },
             "defaultState": 0
         }

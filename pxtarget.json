@@ -153,7 +153,6 @@
         "textBlocks": true,
         "onStartNamespace": "control",
         "onStartColor": "#FFBF00"
-
     },
     "compileService": {
         "yottaTarget": "adafruit-cp-g18a",
@@ -165,7 +164,7 @@
                     "id": "BOARD_ID_CPLAY"
                 }
             }
-        },        
+        },
         "githubCorePackage": "lancaster-university/codal",
         "gittag": "master",
         "serviceId": "codalcp"
@@ -219,7 +218,7 @@
         "galleries": {
             "Projects": "projects",
             "Examples": "examples"
-        },        
+        },
         "sideDoc": "tutorials/getting-started",
         "invertedMenu": true,
         "invertedToolbox": true,
@@ -237,20 +236,7 @@
                 "snap": true
             }
         },
-        "usbHelp": [],
-        "juniorView": {
-            "filters": {
-                "namespaces": {
-                    "input": 1,
-                    "photon": 1,
-                    "control": 1,
-                    "loops": 1,
-                    "logic": 1,
-                    "math": 1
-                },
-                "defaultState": 1
-            }
-        }
+        "usbHelp": []
     },
     "juniorAppTheme": {
         "invertedToolbox": false,
@@ -268,6 +254,17 @@
                 "colour": "#fff",
                 "snap": false
             }
+        },
+        "filters": {
+            "namespaces": {
+                "input": 1,
+                "photon": 1,
+                "control": 1,
+                "loops": 1,
+                "logic": 1,
+                "math": 1
+            },
+            "defaultState": 1
         }
     }
 }

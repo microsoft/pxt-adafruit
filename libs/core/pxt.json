@@ -34,6 +34,15 @@
     "testFiles": [
         "test.ts"
     ],
+    "yotta": {
+        "config": {
+            "codal": {
+                "component_count": 64,
+                "dmesg_buffer_size": 4096,
+                "tag": 1
+            }
+        }
+    },
     "additionalFilePath": "../../node_modules/pxt-common-packages/libs/core",
     "public": true,
     "dependencies": {}

@@ -240,37 +240,39 @@
         },
         "usbHelp": []
     },
-    "juniorAppTheme": {
-        "invertedToolbox": false,
-        "coloredToolbox": true,
-        "invertedMonaco": false,
-        "blocklyOptions": {
-            "trashcan": true,
-            "scrollbars": true,
-            "zoom": {
-                "controls": false
+    "views": {
+        "junior": {
+            "invertedToolbox": false,
+            "coloredToolbox": true,
+            "invertedMonaco": false,
+            "blocklyOptions": {
+                "trashcan": true,
+                "scrollbars": true,
+                "zoom": {
+                    "controls": false
+                },
+                "grid": {
+                    "spacing": 0,
+                    "length": 0,
+                    "colour": "#fff",
+                    "snap": true
+                }
             },
-            "grid": {
-                "spacing": 0,
-                "length": 0,
-                "colour": "#fff",
-                "snap": true
+            "filters": {
+                "blocks": {
+                    "cp_on_event": 1,
+                    "cp_read": 1,
+                    "cp_show": 1,
+                    "cp_paint": 1,
+                    "cp_set_pen_color": 1,
+                    "cp_play_note": 1,
+                    "controls_repeat_ext": 1,
+                    "forever": 1,
+                    "device_pause": 1,
+                    "math_arithmetic": 1
+                },
+                "defaultState": 0
             }
-        },
-        "filters": {
-            "blocks": {
-                "cp_on_event": 1,
-                "cp_read": 1,
-                "cp_show": 1,
-                "cp_paint": 1,
-                "cp_set_pen_color": 1,
-                "cp_play_note": 1,
-                "controls_repeat_ext": 1,
-                "forever": 1,
-                "device_pause": 1,
-                "math_arithmetic": 1
-            },
-            "defaultState": 0
         }
     }
 }

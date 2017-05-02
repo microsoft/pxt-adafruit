@@ -136,6 +136,7 @@
         "openocdScript": "source [find interface/cmsis-dap.cfg]; set CHIPNAME at91samd21g18; source [find target/at91samdXX.cfg]",
         "flashChecksumAddr": 8368,
         "flashCodeAlign": 256,
+        "taggedInts": true,
         "upgrades": [
             {
                 "type": "package",

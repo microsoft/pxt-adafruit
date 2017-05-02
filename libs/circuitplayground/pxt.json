@@ -1,0 +1,12 @@
+{
+    "name": "circuitplayground",
+    "description": "The Circuit Playground",
+    "files": [
+        "README.md",
+        "cp.ts"
+    ],
+    "dependencies": {
+        "adafruit": "file:../adafruit"
+    },
+    "public": true
+}

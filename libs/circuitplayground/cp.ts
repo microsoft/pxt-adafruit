@@ -51,7 +51,7 @@ enum CircuitPlaygroundPaint {
  * 
  */
 //% color=#E2008C icon="\uf0a3"
-namespace circuitPlayground {
+namespace cp {
     /**
      * Register code for an event on the Circuit Playground
      */
@@ -77,9 +77,11 @@ namespace circuitPlayground {
     //% blockId=cp_read block="read %sensor" weight=98 blockGap=8
     export function read(sensor: CircuitPlaygroundInput): number {
         switch (sensor) {
-            case CircuitPlaygroundInput.AccelerationX: return input.acceleration(Dimension.X);
-            case CircuitPlaygroundInput.AccelerationY: return input.acceleration(Dimension.Y);
-            case CircuitPlaygroundInput.AccelerationZ: return input.acceleration(Dimension.Z);
+            case CircuitPlaygroundInput.AccelerationX: return input.acceleration(Dimension.X) / 1024;
+            case CircuitPlaygroundInput.AccelerationY: return input.acceleration(Dimension.Y) / 1024;
+            case CircuitPlaygroundInput.AccelerationZ: return input.acceleration(Dimension.Z) / 1024;
+            case CircuitPlaygroundInput.Light: return (input.lightLevel() * 100) / 255;
+            case CircuitPlaygroundInput.Loudness: return (input.soundLevel() * 100) / 255;
             default: return 0;
         }
     }
@@ -98,6 +100,7 @@ namespace circuitPlayground {
      */
     //% blockId=cp_set_pen_color block="set pen color %color" blockGap=8
     export function setPenColor(color: number) {
+        photon.setPenColor(color);
     }
 
     /**

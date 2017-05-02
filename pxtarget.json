@@ -15,7 +15,8 @@
         "libs/temperature",
         "libs/light",
         "libs/photon",
-        "libs/adafruit"
+        "libs/adafruit",
+        "libs/circuitplayground"
     ],
     "serial": {
         "useHF2": true,

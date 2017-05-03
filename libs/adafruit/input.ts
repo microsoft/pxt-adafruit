@@ -14,31 +14,34 @@ namespace input {
         // the color readings.
         const strip : light.NeoPixelStrip = light.pixels;
         const old_brightness = strip.brightness();
-        const oldColor = strip.pixelColor(PIXEL);
+        const oldColor = strip.color(PIXEL);
+        const bfr = strip.buffered();
+        strip.setBuffered(true);
         strip.setBrightness(255);
         // Set pixel 1 (next to the light sensor) to full red, green, blue
         // color and grab a light sensor reading.  Make sure to wait a bit
         // after changing pixel colors to let the light sensor change
         // resistance!
-        strip.setPixelColor(PIXEL, Colors.Red);  // Red
+        strip.setColor(PIXEL, Colors.Red);  // Red
         strip.show();
         loops.pause(LIGHT_SETTLE_MS);
         const red = input.lightLevel();
 
-        strip.setPixelColor(PIXEL, Colors.Green);  // Green
+        strip.setColor(PIXEL, Colors.Green);  // Green
         strip.show();
         loops.pause(LIGHT_SETTLE_MS);
         const green = input.lightLevel();
 
-        strip.setPixelColor(PIXEL, Colors.Blue);  // Blue
+        strip.setColor(PIXEL, Colors.Blue);  // Blue
         strip.show();
         loops.pause(LIGHT_SETTLE_MS);
         const blue = input.lightLevel();
 
         // Turn off the pixel and restore brightness, we're done with readings.
-        strip.setPixelColor(PIXEL, oldColor);
+        strip.setColor(PIXEL, oldColor);
         strip.setBrightness(old_brightness);
 
+        strip.setBuffered(bfr);
         return light.rgb(red, green, blue);
     }
 }

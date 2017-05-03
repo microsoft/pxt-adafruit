@@ -85,7 +85,7 @@ namespace pxsim {
 namespace pxsim.pxtcore {
     export function getButton(buttonId: number): Button {
         const buttons = board().buttonPairState.buttons;
-        if (buttonId === 3) {
+        if (buttonId === 2) {
             board().buttonPairState.usesButtonAB = true;
             runtime.queueDisplayUpdate();
         }

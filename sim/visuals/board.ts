@@ -13,8 +13,8 @@ namespace pxsim.visuals {
         }
 
         .sim-button-outer:hover {
-            stroke:grey;
             stroke-width: 1px;
+            stroke: orange !important;
         }
         .sim-button-nut {
             fill:#704A4A;
@@ -97,12 +97,12 @@ namespace pxsim.visuals {
         }
 
         .sim-slide-switch:hover #SLIDE_HOVER {
-            stroke:grey;
-            stroke-width: 2px;
+            stroke:orange !important;
+            stroke-width: 1px;
         }
 
         .sim-slide-switch-inner.on {
-            fill:#ff0000;
+            fill:#ff0000 !important;
         }
 
         /* animations */
@@ -193,8 +193,8 @@ namespace pxsim.visuals {
         { 'name': "PWR_0", 'touch': 0, 'text': null, tooltip: "3.3V, +3v3" },
         { 'name': "PWR_2", 'touch': 0, 'text': null, tooltip: "3.3V, +3v3" }
     ];
-    const MB_WIDTH = 144.058;
-    const MB_HEIGHT = 145.025;
+    const MB_WIDTH = 180.09375;
+    const MB_HEIGHT = 179.22874;
     export interface IBoardTheme {
         accent?: string;
         display?: string;
@@ -391,9 +391,9 @@ namespace pxsim.visuals {
         private updateRedLED() {
             let state = this.board;
             if (!state) return;
-            let ledOn = state.edgeConnectorState.getPin(pxsim.CPlayPinName.LED).value > 0;
+            let ledOn = state.edgeConnectorState.getPin(pxsim.CPlayPinName.LED).value > 0 || state.edgeConnectorState.getPin(pxsim.CPlayPinName.D13).value > 0;
             if (!this.redLED)
-                this.redLED = this.element.querySelector("#SERIAL_LED") as SVGRectElement;
+                this.redLED = this.element.getElementById("SERIAL_LED") as SVGRectElement;
             let fillColor = ledOn ? "#FF0000" : "#000000";
             svg.fill(this.redLED, fillColor);
         }
@@ -404,31 +404,26 @@ namespace pxsim.visuals {
             let neopixels = state.neopixelState.getNeoPixels();
             for (let i = 0; i < state.neopixelState.NUM_PIXELS; i++) {
                 let rgb = neopixels[i];
-                let p_outer = this.element.getElementById(`LED${i}_OUTER`) as SVGPathElement;
                 let p_inner = this.element.getElementById(`LED${i}`) as SVGPathElement;
-                if (p_inner) p_inner.setAttribute('d', `M 2, 5
-        m 0, 0
-        a 3,3 0 1,0 6,0
-        a 3,3 0 1,0 -6,0`);
 
                 if (!rgb || (rgb.length == 3 && rgb[0] == 0 && rgb[1] == 0 && rgb[2] == 0)) {
                     // Clear the pixel
-                    svg.fill(p_outer, `rgb(0,0,0)`);
                     svg.fill(p_inner, `rgb(200,200,200)`);
                     svg.filter(p_inner, null);
-                    svg.filter(p_outer, null);
                     continue;
                 }
 
                 let hsl = visuals.rgbToHsl(rgb);
                 let [h, s, l] = hsl;
-                let lx = Math.max(l * 1.3, 100);
+                let lx = Math.max(l * 1.3, 85);
                 // at least 10% luminosity
                 l = l * 90 / 100 + 10;
-                if (p_inner) svg.fill(p_inner, `hsla(${h}, ${s}%, ${lx}%, 0.6)`);
-                if (p_outer) svg.fill(p_outer, `hsl(${h}, ${s}%, ${Math.min(l * 3, 75)}%)`);
+                if (p_inner) {
+                    p_inner.style.stroke = `hsl(${h}, ${s}%, ${Math.min(l * 3, 75)}%)`
+                    p_inner.style.strokeWidth = "1.5";
+                    svg.fill(p_inner, `hsl(${h}, ${s}%, ${lx}%)`)
+                }
                 if (p_inner) svg.filter(p_inner, `url(#neopixelglow)`);
-                if (p_outer) svg.filter(p_outer, `url(#neopixelglow)`);
             }
         }
 
@@ -439,21 +434,26 @@ namespace pxsim.visuals {
             if (!this.slideSwitch) {
                 this.slideSwitch = this.element.getElementById(`SLIDE`) as SVGGElement;
                 svg.addClass(this.slideSwitch, "sim-slide-switch")
-                this.slideSwitch.addEventListener(pointerEvents.up, ev => {
-                    let state = this.board;
-                    slideSwitchState.on = !slideSwitchState.on;
-                    let switchSlide = this.element.getElementById(`SLIDE_INNER`) as SVGGElement;
-                    svg.addClass(switchSlide, "sim-slide-switch-inner")
-                    if (slideSwitchState.on) {
-                        svg.addClass(switchSlide, "on");
-                        switchSlide.setAttribute("x", "10");
-                        state.buttonPairState.buttons[2].setPressed(true);
-                    } else {
-                        svg.removeClass(switchSlide, "on");
-                        state.buttonPairState.buttons[2].setPressed(false);
-                        switchSlide.setAttribute("x", "5.67");
-                    }
-                })
+                this.slideSwitch.addEventListener(pointerEvents.up, ev => this.slideSwitchHandler())
+                this.element.getElementById(`SLIDE_HOUSING`).addEventListener(pointerEvents.up, ev => this.slideSwitchHandler())
+                this.element.getElementById(`SLIDE_INNER`).addEventListener(pointerEvents.up, ev => this.slideSwitchHandler())
+            }
+        }
+
+        private slideSwitchHandler() {
+            let state = this.board;
+            let slideSwitchState = state.slideSwitchState;
+            slideSwitchState.on = !slideSwitchState.on;
+            let switchSlide = this.element.getElementById(`SLIDE_INNER`) as SVGGElement;
+            svg.addClass(switchSlide, "sim-slide-switch-inner")
+            if (slideSwitchState.on) {
+                svg.addClass(switchSlide, "on");
+                switchSlide.setAttribute("x", "10");
+                state.buttonPairState.buttons[2].setPressed(true);
+            } else {
+                svg.removeClass(switchSlide, "on");
+                state.buttonPairState.buttons[2].setPressed(false);
+                switchSlide.setAttribute("x", "5.67");
             }
         }
 
@@ -510,7 +510,7 @@ namespace pxsim.visuals {
                 let cy = 15;
                 let r = 10;
                 this.lightLevelButton = svg.child(this.g, "circle", {
-                    cx: `10px`, cy: `${cy}px`, r: `${r}px`,
+                    cx: `12px`, cy: `${cy}px`, r: `${r}px`,
                     class: 'sim-light-level-button',
                     fill: `url(#${gid})`
                 }) as SVGCircleElement;
@@ -526,7 +526,7 @@ namespace pxsim.visuals {
                         }
                     }, ev => { },
                     ev => { })
-                this.lightLevelText = svg.child(this.g, "text", { x: 21, y: cy + r - 15, text: '', class: 'sim-text' }) as SVGTextElement;
+                this.lightLevelText = svg.child(this.g, "text", { x: 23, y: cy + r - 15, text: '', class: 'sim-text' }) as SVGTextElement;
                 this.updateTheme();
             }
 
@@ -547,10 +547,10 @@ namespace pxsim.visuals {
             if (!this.soundLevelButton) {
                 let gid = "gradient-sound-level";
                 this.soundLevelGradient = svg.linearGradient(this.defs, gid)
-                let cy = 134;
+                let cy = 165;
                 let r = 10;
                 this.soundLevelButton = svg.child(this.g, "circle", {
-                    cx: `10px`, cy: `${cy}px`, r: `${r}px`,
+                    cx: `12px`, cy: `${cy}px`, r: `${r}px`,
                     class: 'sim-sound-level-button',
                     fill: `url(#${gid})`
                 }) as SVGCircleElement;
@@ -567,7 +567,7 @@ namespace pxsim.visuals {
                         }
                     }, ev => { },
                     ev => { })
-                this.soundLevelText = svg.child(this.g, "text", { x: 21, y: cy + r - 3, text: '', class: 'sim-text' }) as SVGTextElement;
+                this.soundLevelText = svg.child(this.g, "text", { x: 23, y: cy + r - 3, text: '', class: 'sim-text' }) as SVGTextElement;
                 this.updateTheme();
             }
 
@@ -593,14 +593,14 @@ namespace pxsim.visuals {
                 this.thermometerGradient = svg.linearGradient(this.defs, gid);
                 this.thermometer = <SVGRectElement>svg.child(this.g, "rect", {
                     class: "sim-thermometer",
-                    x: 135,
+                    x: 170,
                     y: 3,
                     width: 7,
                     height: 32,
                     rx: 2, ry: 2,
                     fill: `url(#${gid})`
                 });
-                this.thermometerText = svg.child(this.g, "text", { class: 'sim-text', x: 112, y: 10 }) as SVGTextElement;
+                this.thermometerText = svg.child(this.g, "text", { class: 'sim-text', x: 148, y: 10 }) as SVGTextElement;
                 this.updateTheme();
 
                 let pt = this.element.createSVGPoint();
@@ -637,10 +637,10 @@ namespace pxsim.visuals {
 
                 let btng = svg.child(this.g, "g", { class: "sim-button-group" });
                 this.shakeButtonGroup = btng;
-                this.shakeText = svg.child(this.g, "text", { x: 63, y: 29, class: "sim-text small" }) as SVGTextElement;
+                this.shakeText = svg.child(this.g, "text", { x: 81, y: 32, class: "sim-text small" }) as SVGTextElement;
                 this.shakeText.textContent = "SHAKE"
 
-                svg.child(btng, "rect", { class: "sim-button-outer", x: 61, y: 22, rx: btnr, ry: btnr, width, height });
+                svg.child(btng, "rect", { class: "sim-button-outer", x: 79, y: 25, rx: btnr, ry: btnr, width, height });
                 svg.fill(btng, this.props.theme.gestureButtonOff);
                 this.shakeButtonGroup.addEventListener(pointerEvents.down, ev => {
                     let state = this.board;
@@ -709,7 +709,7 @@ namespace pxsim.visuals {
             const neopixelState = board().neopixelState;
             if (neopixelState) {
                 for (let i = 0; i < neopixelState.NUM_PIXELS; i++) {
-                    let p_outer = svg.title(this.element.getElementById(`LED${i}_OUTER`) as SVGPathElement, "NeoPixel " + i);
+                    // let p_outer = svg.title(this.element.getElementById(`LED${i}_OUTER`) as SVGPathElement, "NeoPixel " + i);
                     let p_inner = svg.title(this.element.getElementById(`LED${i}`) as SVGPathElement, "NeoPixel " + i);
                 }
             }
@@ -742,9 +742,9 @@ namespace pxsim.visuals {
                 return button;
             }
 
-            let ab = outerBtn(132, MB_HEIGHT - 15);
-            let abtext = svg.child(ab.outer, "text", { x: 131, y: MB_HEIGHT - 18, class: "sim-text" }) as SVGTextElement;
-            abtext.textContent = "L+R";
+            let ab = outerBtn(165, MB_HEIGHT - 15);
+            let abtext = svg.child(ab.outer, "text", { x: 163, y: MB_HEIGHT - 18, class: "sim-text" }) as SVGTextElement;
+            abtext.textContent = "A+B";
             (<any>this.buttonsOuter[2]).style.visibility = "hidden";
             (<any>this.buttons[2]).style.visibility = "hidden";
         }

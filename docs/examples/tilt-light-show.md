@@ -11,7 +11,7 @@ control.forever(() => {
     2,
     255
     ))
-    control.pause(Math.map(
+    loops.pause(Math.map(
     Math.abs(input.acceleration(Dimension.Y)),
     0,
     1023,

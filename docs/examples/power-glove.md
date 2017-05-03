@@ -13,9 +13,9 @@ input.onGesture(Gesture.TiltUp, () => {
         light.pixels.showColor(Colors.Blue)
         pins.A8.ringTone(item)
         item += 15
-        control.pause(10)
+        loops.pause(10)
     }
-    control.pause(500)
+    loops.pause(500)
     ready = true
 })
 // tilt arm left and shoot
@@ -26,7 +26,7 @@ input.onGesture(Gesture.TiltLeft, () => {
             pins.A8.playTone(2000, music.beat(BeatFraction.Sixteenth))
             light.pixels.clear()
             light.pixels.show()
-            control.pause(music.beat(BeatFraction.Sixteenth))
+            loops.pause(music.beat(BeatFraction.Sixteenth))
         }
         ready = false
     }

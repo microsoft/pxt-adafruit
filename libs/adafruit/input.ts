@@ -22,17 +22,17 @@ namespace input {
         // resistance!
         strip.setPixelColor(PIXEL, Colors.Red);  // Red
         strip.show();
-        control.pause(LIGHT_SETTLE_MS);
+        loops.pause(LIGHT_SETTLE_MS);
         const red = input.lightLevel();
 
         strip.setPixelColor(PIXEL, Colors.Green);  // Green
         strip.show();
-        control.pause(LIGHT_SETTLE_MS);
+        loops.pause(LIGHT_SETTLE_MS);
         const green = input.lightLevel();
 
         strip.setPixelColor(PIXEL, Colors.Blue);  // Blue
         strip.show();
-        control.pause(LIGHT_SETTLE_MS);
+        loops.pause(LIGHT_SETTLE_MS);
         const blue = input.lightLevel();
 
         // Turn off the pixel and restore brightness, we're done with readings.

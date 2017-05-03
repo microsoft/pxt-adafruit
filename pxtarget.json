@@ -152,8 +152,8 @@
         "logicBlocks": true,
         "variablesBlocks": true,
         "textBlocks": true,
-        "onStartNamespace": "control",
-        "onStartColor": "#FFBF00"
+        "onStartNamespace": "loops",
+        "onStartColor": "#107c10"
 
     },
     "compileService": {

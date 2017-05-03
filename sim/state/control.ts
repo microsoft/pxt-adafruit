@@ -1,7 +1,5 @@
 
 namespace pxsim.control {
-    export var pause = thread.pause;
-    export var forever = thread.forever;
     export var runInBackground = thread.runInBackground;    
     export function reset() {
         U.userError("reset not implemented in simulator yet")

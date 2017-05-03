@@ -340,7 +340,7 @@ declare namespace control {
      * @param mode optional definition of how the event should be processed after construction.
      */
     //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from %src|with value %value" blockExternalInputs=1
-    //% advanced=true mode.defl=1 shim=control::raiseEvent
+    //% mode.defl=1 shim=control::raiseEvent
     function raiseEvent(src: number, value: number, mode?: EventCreationMode): void;
 
     /**
@@ -349,7 +349,7 @@ declare namespace control {
      * @param value the event value to match
      */
     //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src|with value %value"
-    //% blockExternalInputs=1 advanced=true shim=control::onEvent
+    //% blockExternalInputs=1 shim=control::onEvent
     function onEvent(id: number, value: number, handler: () => void): void;
 
     /**
@@ -364,21 +364,20 @@ declare namespace control {
      * @param micros number of micro-seconds to wait. eg: 4
      */
     //% help=control/wait-micros weight=29
-    //% blockId="control_wait_us" block="wait (µs)%micros" advanced=true shim=control::waitMicros
+    //% blockId="control_wait_us" block="wait (µs)%micros" shim=control::waitMicros
     function waitMicros(micros: number): void;
 
     /**
      * Schedules code that run in the background.
      */
-    //% help=control/run-in-background blockAllowMultiple=1 advanced=true
+    //% help=control/run-in-background blockAllowMultiple=1
     //% blockId="control_run_in_background" block="run in background" blockGap=8 shim=control::runInBackground
     function runInBackground(a: () => void): void;
 
     /**
      * Derive a unique, consistent serial number of this device from internal data.
      */
-    //% blockId="control_device_serial_number" block="device serial number" weight=9
-    //% advanced=true shim=control::deviceSerialNumber
+    //% blockId="control_device_serial_number" block="device serial number" weight=9 shim=control::deviceSerialNumber
     function deviceSerialNumber(): number;
 
     /**
@@ -433,20 +432,20 @@ declare namespace input {
      * Left button.
      */
     //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
-    //% block="left button" weight=95 fixedInstance shim=pxt::getButton(0)
-    const leftButton: Button;
+    //% block="button A" weight=95 fixedInstance shim=pxt::getButton(0)
+    const buttonA: Button;
 
     /**
      * Right button.
      */
-    //% block="right button" weight=94 fixedInstance shim=pxt::getButton(1)
-    const rightButton: Button;
+    //% block="button B" weight=94 fixedInstance shim=pxt::getButton(1)
+    const buttonB: Button;
 
     /**
      * Left and Right button.
      */
-    //% block="left+right buttons" weight=93 fixedInstance shim=pxt::getButton(2)
-    const leftAndRightButtons: Button;
+    //% block="buttons A+B" weight=93 fixedInstance shim=pxt::getButton(2)
+    const buttonsAB: Button;
 
     /**
      * Capacitive pin A4

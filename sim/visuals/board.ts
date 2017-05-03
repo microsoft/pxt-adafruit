@@ -193,8 +193,8 @@ namespace pxsim.visuals {
         { 'name': "PWR_0", 'touch': 0, 'text': null, tooltip: "3.3V, +3v3" },
         { 'name': "PWR_2", 'touch': 0, 'text': null, tooltip: "3.3V, +3v3" }
     ];
-    const MB_WIDTH = 144.058;
-    const MB_HEIGHT = 145.025;
+    const MB_WIDTH = 180.09375;
+    const MB_HEIGHT = 179.22874;
     export interface IBoardTheme {
         accent?: string;
         display?: string;
@@ -393,7 +393,7 @@ namespace pxsim.visuals {
             if (!state) return;
             let ledOn = state.edgeConnectorState.getPin(pxsim.CPlayPinName.LED).value > 0;
             if (!this.redLED)
-                this.redLED = this.element.querySelector("#SERIAL_LED") as SVGRectElement;
+                this.redLED = this.element.getElementById("SERIAL_LED") as SVGRectElement;
             let fillColor = ledOn ? "#FF0000" : "#000000";
             svg.fill(this.redLED, fillColor);
         }
@@ -404,31 +404,26 @@ namespace pxsim.visuals {
             let neopixels = state.neopixelState.getNeoPixels();
             for (let i = 0; i < state.neopixelState.NUM_PIXELS; i++) {
                 let rgb = neopixels[i];
-                let p_outer = this.element.getElementById(`LED${i}_OUTER`) as SVGPathElement;
                 let p_inner = this.element.getElementById(`LED${i}`) as SVGPathElement;
-                if (p_inner) p_inner.setAttribute('d', `M 2, 5
-        m 0, 0
-        a 3,3 0 1,0 6,0
-        a 3,3 0 1,0 -6,0`);
 
                 if (!rgb || (rgb.length == 3 && rgb[0] == 0 && rgb[1] == 0 && rgb[2] == 0)) {
                     // Clear the pixel
-                    svg.fill(p_outer, `rgb(0,0,0)`);
                     svg.fill(p_inner, `rgb(200,200,200)`);
                     svg.filter(p_inner, null);
-                    svg.filter(p_outer, null);
                     continue;
                 }
 
                 let hsl = visuals.rgbToHsl(rgb);
                 let [h, s, l] = hsl;
-                let lx = Math.max(l * 1.3, 100);
+                let lx = Math.max(l * 1.3, 85);
                 // at least 10% luminosity
                 l = l * 90 / 100 + 10;
-                if (p_inner) svg.fill(p_inner, `hsla(${h}, ${s}%, ${lx}%, 0.6)`);
-                if (p_outer) svg.fill(p_outer, `hsl(${h}, ${s}%, ${Math.min(l * 3, 75)}%)`);
+                if (p_inner) {
+                    p_inner.style.stroke = `hsl(${h}, ${s}%, ${Math.min(l * 3, 75)}%)`
+                    p_inner.style.strokeWidth = "1.5";
+                    svg.fill(p_inner, `hsl(${h}, ${s}%, ${lx}%)`)
+                }
                 if (p_inner) svg.filter(p_inner, `url(#neopixelglow)`);
-                if (p_outer) svg.filter(p_outer, `url(#neopixelglow)`);
             }
         }
 
@@ -709,7 +704,7 @@ namespace pxsim.visuals {
             const neopixelState = board().neopixelState;
             if (neopixelState) {
                 for (let i = 0; i < neopixelState.NUM_PIXELS; i++) {
-                    let p_outer = svg.title(this.element.getElementById(`LED${i}_OUTER`) as SVGPathElement, "NeoPixel " + i);
+                    // let p_outer = svg.title(this.element.getElementById(`LED${i}_OUTER`) as SVGPathElement, "NeoPixel " + i);
                     let p_inner = svg.title(this.element.getElementById(`LED${i}`) as SVGPathElement, "NeoPixel " + i);
                 }
             }

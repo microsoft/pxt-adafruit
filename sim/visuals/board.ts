@@ -13,8 +13,8 @@ namespace pxsim.visuals {
         }
 
         .sim-button-outer:hover {
-            stroke:grey;
             stroke-width: 1px;
+            stroke: orange !important;
         }
         .sim-button-nut {
             fill:#704A4A;
@@ -97,12 +97,12 @@ namespace pxsim.visuals {
         }
 
         .sim-slide-switch:hover #SLIDE_HOVER {
-            stroke:grey;
-            stroke-width: 2px;
+            stroke:orange !important;
+            stroke-width: 1px;
         }
 
         .sim-slide-switch-inner.on {
-            fill:#ff0000;
+            fill:#ff0000 !important;
         }
 
         /* animations */
@@ -391,7 +391,7 @@ namespace pxsim.visuals {
         private updateRedLED() {
             let state = this.board;
             if (!state) return;
-            let ledOn = state.edgeConnectorState.getPin(pxsim.CPlayPinName.LED).value > 0;
+            let ledOn = state.edgeConnectorState.getPin(pxsim.CPlayPinName.LED).value > 0 || state.edgeConnectorState.getPin(pxsim.CPlayPinName.D13).value > 0;
             if (!this.redLED)
                 this.redLED = this.element.getElementById("SERIAL_LED") as SVGRectElement;
             let fillColor = ledOn ? "#FF0000" : "#000000";
@@ -434,21 +434,26 @@ namespace pxsim.visuals {
             if (!this.slideSwitch) {
                 this.slideSwitch = this.element.getElementById(`SLIDE`) as SVGGElement;
                 svg.addClass(this.slideSwitch, "sim-slide-switch")
-                this.slideSwitch.addEventListener(pointerEvents.up, ev => {
-                    let state = this.board;
-                    slideSwitchState.on = !slideSwitchState.on;
-                    let switchSlide = this.element.getElementById(`SLIDE_INNER`) as SVGGElement;
-                    svg.addClass(switchSlide, "sim-slide-switch-inner")
-                    if (slideSwitchState.on) {
-                        svg.addClass(switchSlide, "on");
-                        switchSlide.setAttribute("x", "10");
-                        state.buttonPairState.buttons[2].setPressed(true);
-                    } else {
-                        svg.removeClass(switchSlide, "on");
-                        state.buttonPairState.buttons[2].setPressed(false);
-                        switchSlide.setAttribute("x", "5.67");
-                    }
-                })
+                this.slideSwitch.addEventListener(pointerEvents.up, ev => this.slideSwitchHandler())
+                this.element.getElementById(`SLIDE_HOUSING`).addEventListener(pointerEvents.up, ev => this.slideSwitchHandler())
+                this.element.getElementById(`SLIDE_INNER`).addEventListener(pointerEvents.up, ev => this.slideSwitchHandler())
+            }
+        }
+
+        private slideSwitchHandler() {
+            let state = this.board;
+            let slideSwitchState = state.slideSwitchState;
+            slideSwitchState.on = !slideSwitchState.on;
+            let switchSlide = this.element.getElementById(`SLIDE_INNER`) as SVGGElement;
+            svg.addClass(switchSlide, "sim-slide-switch-inner")
+            if (slideSwitchState.on) {
+                svg.addClass(switchSlide, "on");
+                switchSlide.setAttribute("x", "10");
+                state.buttonPairState.buttons[2].setPressed(true);
+            } else {
+                svg.removeClass(switchSlide, "on");
+                state.buttonPairState.buttons[2].setPressed(false);
+                switchSlide.setAttribute("x", "5.67");
             }
         }
 
@@ -505,7 +510,7 @@ namespace pxsim.visuals {
                 let cy = 15;
                 let r = 10;
                 this.lightLevelButton = svg.child(this.g, "circle", {
-                    cx: `10px`, cy: `${cy}px`, r: `${r}px`,
+                    cx: `12px`, cy: `${cy}px`, r: `${r}px`,
                     class: 'sim-light-level-button',
                     fill: `url(#${gid})`
                 }) as SVGCircleElement;
@@ -521,7 +526,7 @@ namespace pxsim.visuals {
                         }
                     }, ev => { },
                     ev => { })
-                this.lightLevelText = svg.child(this.g, "text", { x: 21, y: cy + r - 15, text: '', class: 'sim-text' }) as SVGTextElement;
+                this.lightLevelText = svg.child(this.g, "text", { x: 23, y: cy + r - 15, text: '', class: 'sim-text' }) as SVGTextElement;
                 this.updateTheme();
             }
 
@@ -542,10 +547,10 @@ namespace pxsim.visuals {
             if (!this.soundLevelButton) {
                 let gid = "gradient-sound-level";
                 this.soundLevelGradient = svg.linearGradient(this.defs, gid)
-                let cy = 134;
+                let cy = 165;
                 let r = 10;
                 this.soundLevelButton = svg.child(this.g, "circle", {
-                    cx: `10px`, cy: `${cy}px`, r: `${r}px`,
+                    cx: `12px`, cy: `${cy}px`, r: `${r}px`,
                     class: 'sim-sound-level-button',
                     fill: `url(#${gid})`
                 }) as SVGCircleElement;
@@ -562,7 +567,7 @@ namespace pxsim.visuals {
                         }
                     }, ev => { },
                     ev => { })
-                this.soundLevelText = svg.child(this.g, "text", { x: 21, y: cy + r - 3, text: '', class: 'sim-text' }) as SVGTextElement;
+                this.soundLevelText = svg.child(this.g, "text", { x: 23, y: cy + r - 3, text: '', class: 'sim-text' }) as SVGTextElement;
                 this.updateTheme();
             }
 
@@ -588,14 +593,14 @@ namespace pxsim.visuals {
                 this.thermometerGradient = svg.linearGradient(this.defs, gid);
                 this.thermometer = <SVGRectElement>svg.child(this.g, "rect", {
                     class: "sim-thermometer",
-                    x: 135,
+                    x: 170,
                     y: 3,
                     width: 7,
                     height: 32,
                     rx: 2, ry: 2,
                     fill: `url(#${gid})`
                 });
-                this.thermometerText = svg.child(this.g, "text", { class: 'sim-text', x: 112, y: 10 }) as SVGTextElement;
+                this.thermometerText = svg.child(this.g, "text", { class: 'sim-text', x: 148, y: 10 }) as SVGTextElement;
                 this.updateTheme();
 
                 let pt = this.element.createSVGPoint();
@@ -632,10 +637,10 @@ namespace pxsim.visuals {
 
                 let btng = svg.child(this.g, "g", { class: "sim-button-group" });
                 this.shakeButtonGroup = btng;
-                this.shakeText = svg.child(this.g, "text", { x: 63, y: 29, class: "sim-text small" }) as SVGTextElement;
+                this.shakeText = svg.child(this.g, "text", { x: 81, y: 32, class: "sim-text small" }) as SVGTextElement;
                 this.shakeText.textContent = "SHAKE"
 
-                svg.child(btng, "rect", { class: "sim-button-outer", x: 61, y: 22, rx: btnr, ry: btnr, width, height });
+                svg.child(btng, "rect", { class: "sim-button-outer", x: 79, y: 25, rx: btnr, ry: btnr, width, height });
                 svg.fill(btng, this.props.theme.gestureButtonOff);
                 this.shakeButtonGroup.addEventListener(pointerEvents.down, ev => {
                     let state = this.board;
@@ -737,9 +742,9 @@ namespace pxsim.visuals {
                 return button;
             }
 
-            let ab = outerBtn(132, MB_HEIGHT - 15);
-            let abtext = svg.child(ab.outer, "text", { x: 131, y: MB_HEIGHT - 18, class: "sim-text" }) as SVGTextElement;
-            abtext.textContent = "L+R";
+            let ab = outerBtn(165, MB_HEIGHT - 15);
+            let abtext = svg.child(ab.outer, "text", { x: 163, y: MB_HEIGHT - 18, class: "sim-text" }) as SVGTextElement;
+            abtext.textContent = "A+B";
             (<any>this.buttonsOuter[2]).style.visibility = "hidden";
             (<any>this.buttons[2]).style.visibility = "hidden";
         }

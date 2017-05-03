@@ -18,7 +18,7 @@ input.onGesture(Gesture.Shake, () => {
     }
     for (let i = 0; i < 60; i++) {
         light.pixels.showAnimationFrame(animation)
-        control.pause(20)
+        loops.pause(20)
     }
     light.pixels.clear()
     light.pixels.show()

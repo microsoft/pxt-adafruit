@@ -23,8 +23,7 @@
         "temperature": "file:../../node_modules/pxt-common-packages/libs/temperature",
         "music": "file:../../node_modules/pxt-common-packages/libs/music",
         "microphone": "file:../../node_modules/pxt-common-packages/libs/microphone",
-        "light": "file:../../node_modules/pxt-common-packages/libs/light",
-        "photon": "file:../../node_modules/pxt-common-packages/libs/photon"
+        "light": "file:../../node_modules/pxt-common-packages/libs/light"
     },
     "public": true
 }

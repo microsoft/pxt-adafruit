@@ -16,7 +16,7 @@ input.rightButton.onEvent(ButtonEvent.Down, () => {
     pins.A8.playTone(700, 750)
     light.pixels.clear()
     light.pixels.show()
-    control.pause(250)
+    loops.pause(250)
     light.pixels.showColor(16737792)
     pins.A8.playTone(700, 750)
     light.pixels.clear()
@@ -43,7 +43,7 @@ function lightsBeeps(repeats: number, note: number, duration: number, color: num
         pins.A8.playTone(note, duration);
         light.pixels.clear();
         light.pixels.show();
-        if (repeats > 1) control.pause(duration / 2);
+        if (repeats > 1) loops.pause(duration / 2);
     }
 }
 

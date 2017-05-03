@@ -30,9 +30,9 @@ Add a **pause** to wait after turning on / off the red LED.
 
 ```blocks
 light.statusLED(true)
-control.pause(500)
+loops.pause(500)
 light.statusLED(false)
-control.pause(500)
+loops.pause(500)
 ```
 
 ## Step 4
@@ -42,8 +42,8 @@ Put a [while loop](/blocks/loops/while) around it.
 ```blocks
 while (true) {
     light.statusLED(true)
-    control.pause(500)
+    loops.pause(500)
     light.statusLED(false)
-    control.pause(500)
+    loops.pause(500)
 }
 ```

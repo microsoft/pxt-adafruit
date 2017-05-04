@@ -1,5 +1,5 @@
 {
-  "light": "Functions to operate NeoPixel strips.",
+  "light": "Functions to operate colored LEDs.\n\nFunctions to operate colored LEDs.",
   "light.NeoPixelStrip": "A NeoPixel strip",
   "light.colorWheel": "Gets an RGB color given the value of an angle between 0 and 255. Useful\nfor performing math with colors.",
   "light.colors": "Gets the RGB value of a known color",

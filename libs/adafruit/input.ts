@@ -5,7 +5,7 @@ namespace input {
      */
     //% help=input/ambient-color weight=75
     //% blockId=device_get_ambient_color block="ambient color" blockGap=8
-    //% parts="rgbsensor"
+    //% parts="rgbsensor" advanced=true
     export function ambientColor() : number {
         const LIGHT_SETTLE_MS = 100;
         const PIXEL = 1;

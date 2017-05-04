@@ -410,6 +410,7 @@ namespace pxsim.visuals {
                     // Clear the pixel
                     svg.fill(p_inner, `rgb(200,200,200)`);
                     svg.filter(p_inner, null);
+                    p_inner.style.stroke = `none`
                     continue;
                 }
 

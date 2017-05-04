@@ -510,8 +510,7 @@ declare interface Button {
     //% help=input/on-button-event weight=99 blockGap=8
     //% blockId=buttonEvent block="on %button|%event"
     //% parts="buttonpair"
-    //% blockNamespace=input
-    //% blockGap=8 shim=ButtonMethods::onEvent
+    //% blockNamespace=input shim=ButtonMethods::onEvent
     onEvent(ev: ButtonEvent, body: () => void): void;
 
     /**
@@ -533,8 +532,8 @@ declare interface Button {
     //% help=input/button-was-pressed weight=78
     //% block="%NAME|was pressed"
     //% blockId=buttonWasPressed
-    //% parts="buttonpair"
-    //% blockNamespace=input shim=ButtonMethods::wasPressed
+    //% parts="buttonpair" blockGap=8
+    //% blockNamespace=input advanced=true shim=ButtonMethods::wasPressed
     wasPressed(): boolean;
 }
 

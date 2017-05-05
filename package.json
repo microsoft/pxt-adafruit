@@ -1,12 +1,15 @@
 {
   "name": "pxt-adafruit",
-  "version": "0.10.13",
-  "description": "Adafruit Circuit Playground Express for PXT",
+  "version": "0.11.0",
+  "description": "Adafruit Circuit Playground Express for Microsoft MakeCode",
   "private": true,
   "keywords": [
     "JavaScript",
     "education",
-    "adafruit"
+    "adafruit",
+    "pxt",
+    "MakeCode",
+    "Microsoft"
   ],
   "repository": {
     "type": "git",

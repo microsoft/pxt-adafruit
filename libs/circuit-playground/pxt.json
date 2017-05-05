@@ -1,6 +1,6 @@
 {
-    "name": "adafruit",
-    "description": "The adafruit library",
+    "name": "circuit-playground",
+    "description": "The Adafruit Circuit Playground Express library",
     "files": [
         "README.md",
         "switch.cpp",

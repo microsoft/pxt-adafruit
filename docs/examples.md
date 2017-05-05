@@ -6,7 +6,7 @@ Here are some fun programs for your @boardname@!
 
 ```codecard
 [{
-  "name": "Blinky",
+  "name": "blinky",
   "url":"/examples/blinky",
   "cardType": "example"  
 },{

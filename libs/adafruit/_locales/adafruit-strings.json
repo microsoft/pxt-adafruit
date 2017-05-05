@@ -3,7 +3,6 @@
   "SwitchDirection.Right|block": "right",
   "input.ambientColor|block": "ambient color",
   "input.onSwitchMoved|block": "on switch moved %direction",
-  "input.slideSwitch|block": "slide switch",
   "input|block": "input",
   "{id:category}Input": "Input"
 }

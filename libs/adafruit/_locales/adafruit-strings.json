@@ -5,5 +5,8 @@
   "input.onSwitchMoved|block": "on switch moved %direction",
   "input.slideSwitch|block": "slide switch",
   "input|block": "input",
-  "{id:category}Input": "Input"
+  "light.showRing|block": "show ring |%array",
+  "light|block": "light",
+  "{id:category}Input": "Input",
+  "{id:category}Light": "Light"
 }

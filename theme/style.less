@@ -14,7 +14,7 @@
 *******************************/
 
 .ui.button.download-button {
-    &:extend(.ui.pink.button all);
+    &:extend(.ui.secondary.button all);
 }
 
 .ui.button.editortools-btn {
@@ -29,9 +29,15 @@
     &:extend(.ui.green.button all);
 }
 
+
+/* Remove shadow around blockly blocks */
+.blocklyPathDark, .blocklyPathLight {
+    display: none;
+}
+
 /* Specifying rounded toolbox borders. */
 div.blocklyTreeRow {
-    border-radius: 5px;
+    border-radius: 3px;
     margin-bottom: 3px !important;
 }
 
@@ -60,7 +66,7 @@ svg.blocklySvg {
 }
 
 .blocklyToolboxDiv, .monacoToolboxDiv {
-    padding:1rem;
+    padding: 0.5rem;
 }
 
 .monacoToolboxDiv {

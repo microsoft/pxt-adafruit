@@ -1,7 +1,7 @@
 {
     "name": "{0}",
     "dependencies": {
-        "adafruit": "file:../adafruit"
+        "adafruit": "file:../circuit-playground"
     },
     "description": "",
     "files": [

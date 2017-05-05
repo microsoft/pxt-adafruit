@@ -1,4 +1,4 @@
-# Spin the bottle
+# Spin It
 
 ```blocks
 let item = 0

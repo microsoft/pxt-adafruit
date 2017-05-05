@@ -1,4 +1,4 @@
-# Stable Hand
+# Level Game
 
 Try to move the longest distance and keep the @boardname@ level!
 

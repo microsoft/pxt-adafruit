@@ -238,6 +238,7 @@
                 "snap": true
             }
         },
-        "usbHelp": []
+        "usbHelp": [],
+        "disableBlockIcons": true
     }
 }

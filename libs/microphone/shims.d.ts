@@ -1,11 +1,6 @@
 // Auto-generated. Do not edit.
 declare namespace input {
 
-
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getMicrophoneButton
-    //% block="microphone" fixedInstance shim=pxt::getMicrophoneButton(0)
-    const microphone: Button;
-
     /**
      * Registers an event that runs when particular lighting conditions (dark, bright) are encountered.
      * @param condition the condition that event triggers on

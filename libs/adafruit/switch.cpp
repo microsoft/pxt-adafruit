@@ -14,27 +14,13 @@ namespace pxt {
 // Wrapper classes
 class WSlide {
   public:
-#define Button DeviceButton
-    /**
-     * Slide switch.
-     */
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getSwitchButton
-    //% block="slide switch" weight=90
-    Button slideSwitch;
-#undef Button
+    DeviceButton slideSwitch;
 
     WSlide()
         : slideSwitch(*pxt::lookupPin(PIN_BTN_SLIDE), DEVICE_ID_BUTTON_SLIDE,
                       DEVICE_BUTTON_ALL_EVENTS, ACTIVE_LOW, PullUp) {}
 };
 SINGLETON(WSlide);
-
-//%
-DeviceButton *getSwitchButton(int id) {
-    if (id != PIN_BTN_SLIDE)
-        device.panic(42);
-    return &getWSlide()->slideSwitch;
-}
 
 }
 

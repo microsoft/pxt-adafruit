@@ -7,6 +7,8 @@
   "light.createNeoPixelStrip|param|numleds": "number of leds in the strip, eg: 24,30,60,64",
   "light.createNeoPixelStrip|param|pin": "the pin where the neopixel is connected.",
   "light.defaultPin": "Gets the default pin for built in neopixels",
+  "light.fade": "Fades the color by the brightness",
+  "light.fade|param|brightness": "the amount of brightness to apply to the color, eg: 128",
   "light.hsv": "Converts an HSV (hue, saturation, value) color to RGB",
   "light.hsv|param|hue": "value of the hue channel between 0 and 255. eg: 255",
   "light.hsv|param|sat": "value of the saturation channel between 0 and 255. eg: 255",

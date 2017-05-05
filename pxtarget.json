@@ -14,7 +14,6 @@
         "libs/lightsensor",
         "libs/temperature",
         "libs/light",
-        "libs/photon",
         "libs/adafruit"
     ],
     "serial": {
@@ -239,6 +238,7 @@
             }
         },
         "usbHelp": [],
-        "extendEditor": true
+        "extendEditor": true,
+        "disableBlockIcons": true
     }
 }

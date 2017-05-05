@@ -1,4 +1,5 @@
 {
+  "Colors.Black|block": "black",
   "Colors.Blue|block": "blue",
   "Colors.Green|block": "green",
   "Colors.Indigo|block": "indigo",
@@ -25,6 +26,7 @@
   "light.colorWheel|block": "color wheel %angle",
   "light.colors|block": "%color",
   "light.createNeoPixelStrip|block": "create NeoPixel strip|pin %pin|pixels %numleds|mode %mode",
+  "light.fade|block": "fade %color=neopixel_colors|by %brightness",
   "light.hsv|block": "hue %hue|sat %sat|val %val",
   "light.rgb|block": "red %red|green %green|blue %blue",
   "light.statusLED|block": "status led %on",

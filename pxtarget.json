@@ -140,7 +140,8 @@
             {
                 "type": "package",
                 "map": {
-                    "neopixel": "light"
+                    "neopixel": "light",
+                    "adafruit": "circuit-playground"
                 }
             }
         ]

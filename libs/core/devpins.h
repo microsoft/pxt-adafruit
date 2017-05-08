@@ -27,6 +27,20 @@ class DevPins {
     //%
     AnalogPin A7;
     //%
+    AnalogPin A8;
+    //%
+    AnalogPin A9;
+    //%
+    AnalogPin A10;
+    //%
+    DigitalPin D4;
+    //%
+    DigitalPin D5;
+    //%
+    DigitalPin D7;
+    //%
+    DigitalPin D8;
+    //%
     DigitalPin LED;
 #undef DigitalPin
 #undef AnalogPin

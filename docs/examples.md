@@ -34,8 +34,8 @@ Here are some fun programs for your @boardname@!
   "url":"/examples/level",
   "cardType": "example"
 },{
-  "name": "level game",
-  "url":"/examples/level-game",
+  "name": "egg game",
+  "url":"/examples/egg-game",
   "cardType": "example"
 },{
   "name": "photon beatbox",

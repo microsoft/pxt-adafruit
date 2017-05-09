@@ -185,12 +185,16 @@ namespace pxsim.visuals {
         { 'name': "PIN_8", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A8, tooltip: "A8 - PMW" },
         { 'name': "PIN_9", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A9, tooltip: "A9 - PMW" },
         { 'name': "PIN_10", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A10, tooltip: "A10 - PMW" },
-        { 'name': "PIN_11", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A11, tooltip: "A11 - PMW" },
+        { 'name': "PIN_0", 'touch': 0, 'text': null, 'id': pxsim.CPlayPinName.A0, tooltip: "A0 - Speaker" },
+        { 'name': "PIN_1", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A1, tooltip: "A1" },
+        { 'name': "PIN_2", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "A2" },
+        { 'name': "PIN_3", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "A3" },
         { 'name': "GND_0", 'touch': 0, 'text': null, tooltip: "Ground" },
         { 'name': "GND_1", 'touch': 0, 'text': null, tooltip: "Ground" },
-        { 'name': "VBATT", 'touch': 0, 'text': null, tooltip: "Battery power" },
         { 'name': "GND_2", 'touch': 0, 'text': null, tooltip: "Ground" },
+        { 'name': "VBATT", 'touch': 0, 'text': null, tooltip: "Battery power" },
         { 'name': "PWR_0", 'touch': 0, 'text': null, tooltip: "3.3V, +3v3" },
+        { 'name': "PWR_1", 'touch': 0, 'text': null, tooltip: "3.3V, +3v3" },
         { 'name': "PWR_2", 'touch': 0, 'text': null, tooltip: "3.3V, +3v3" }
     ];
     const MB_WIDTH = 180.09375;

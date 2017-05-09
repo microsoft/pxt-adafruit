@@ -37,6 +37,8 @@ class DevPins {
     //%
     DigitalPin D5;
     //%
+    DigitalPin D6;
+    //%
     DigitalPin D7;
     //%
     DigitalPin D8;

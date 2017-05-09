@@ -191,14 +191,18 @@ declare namespace pins {
 
 
     //% fixedInstance shim=pxt::getPin(13)
-    const D7: DigitalPin;
+    const D6: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(14)
-    const D8: DigitalPin;
+    const D7: DigitalPin;
 
 
     //% fixedInstance shim=pxt::getPin(15)
+    const D8: DigitalPin;
+
+
+    //% fixedInstance shim=pxt::getPin(16)
     const D13: DigitalPin;
 }
 declare namespace pins {

@@ -16,6 +16,7 @@ namespace pxsim {
         A10,
         D4,
         D5,
+        D6,
         D7,
         D8,
         D13
@@ -75,6 +76,7 @@ namespace pxsim {
                     pxsim.CPlayPinName.A10,
                     pxsim.CPlayPinName.D4,
                     pxsim.CPlayPinName.D5,
+                    pxsim.CPlayPinName.D6,
                     pxsim.CPlayPinName.D7,
                     pxsim.CPlayPinName.D8,
                     pxsim.CPlayPinName.D13

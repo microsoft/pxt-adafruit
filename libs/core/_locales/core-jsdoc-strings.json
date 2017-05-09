@@ -69,6 +69,8 @@
   "loops.pause|param|ms": "how long to pause for, eg: 100, 200, 500, 1000, 2000",
   "pins": "Control currents in Pins for analog/digital signals, servos, i2c, ...",
   "pins.createBuffer": "Create a new zero-initialized buffer.",
+  "pins.createBufferFromArray": "Create a new buffer initalized to bytes from given array.",
+  "pins.createBufferFromArray|param|bytes": "data to initalize with",
   "pins.createBuffer|param|size": "number of bytes in the buffer",
   "pins.i2cReadBuffer": "Read `size` bytes from a 7-bit I2C `address`.",
   "pins.i2cReadNumber": "Read one number from 7-bit I2C address.",

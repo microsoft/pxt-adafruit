@@ -59,6 +59,7 @@
   "music.changeTempoBy|block": "change tempo by (bpm)|%value",
   "music.noteFrequency|block": "%note",
   "music.onEvent|block": "on %value",
+  "music.playMelody|block": "play melody %melody=device_builtin_melody",
   "music.playTone|block": "play tone|at %note=device_note|for %duration=device_beat",
   "music.rest|block": "rest|for %duration=device_beat",
   "music.ringTone|block": "ring tone|at %note=device_note",
@@ -66,7 +67,7 @@
   "music.setPitchPin|block": "set pitch pin %pin",
   "music.setSpeakerVolume|block": "set speaker volume %volume",
   "music.setTempo|block": "set tempo to (bpm)|%value",
-  "music.startMelody|block": "start|melody %melody=device_builtin_melody| repeating %options",
+  "music.startMelody|block": "start melody %melody=device_builtin_melody| repeating %options",
   "music.tempo|block": "tempo (bpm)",
   "music|block": "music",
   "{id:category}Music": "Music"

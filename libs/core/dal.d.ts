@@ -129,6 +129,7 @@ declare const enum DAL {
     TIMER_ONE_PRESCALER_OPTIONS = 5,
     // built/yt/yotta_modules/codal/inc/device/SAMD21/SAMD21DAC.h
     // built/yt/yotta_modules/codal/inc/device/SAMD21/SAMD21DMAC.h
+    DMA_DESCRIPTOR_ALIGNMENT = 16,
     DMA_DESCRIPTOR_COUNT = 2,
     // built/yt/yotta_modules/codal/inc/device/SAMD21/USB.h
     USB_MAX_PKT_SIZE = 64,

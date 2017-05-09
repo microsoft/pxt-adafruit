@@ -45,5 +45,13 @@ Here are some fun programs for your @boardname@!
   "name": "spin it",
   "url":"/examples/spin-it",
   "cardType": "example"
+},{
+  "name": "metrenome",
+  "url":"/examples/metrenome",
+  "cardType": "example"
+},{
+  "name": "beat visualizer",
+  "url":"/examples/beat-visualizer",
+  "cardType": "example"
 }]
 ```

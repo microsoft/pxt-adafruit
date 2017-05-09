@@ -37,11 +37,13 @@ class DevPins {
     //%
     DigitalPin D5;
     //%
+    DigitalPin D6;
+    //%
     DigitalPin D7;
     //%
     DigitalPin D8;
     //%
-    DigitalPin LED;
+    DigitalPin D13;
 #undef DigitalPin
 #undef AnalogPin
 #undef PwmPin
@@ -54,6 +56,6 @@ class DevPins {
 extern DevPins *io;
 
 // modify if the last field changes
-const int LastPinID = &io->LED - io->pins;
+const int LastPinID = &io->D13 - io->pins;
 
 #endif

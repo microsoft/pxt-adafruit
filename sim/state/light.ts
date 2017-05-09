@@ -58,22 +58,11 @@ namespace pxsim.light {
     }
 
     export function defaultPin() {
-        return getPin(3);
+        return pxsim.pxtcore.getPin(CPlayPinName.A3);
     }
 }
 
 namespace pxsim.light {
-
-    function getRandomInt(min: number, max: number): number {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
-
-    export function redLED(value: boolean) {
-        board().edgeConnectorState.getPin(pxsim.CPlayPinName.LED).digitalWritePin(value ? 1 : 0);
-        runtime.queueDisplayUpdate()
-    }
 
     function setPixelColor(pixel: number, rgb: number) {
         let state = board().neopixelState;

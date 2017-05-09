@@ -63,7 +63,6 @@ namespace pxsim {
             this.buttons = [
                 new CPButton(DAL.DEVICE_ID_BUTTON_A),
                 new CPButton(DAL.DEVICE_ID_BUTTON_B),
-                new CPButton(3000), // DEVICE_ID_BUTTON_SLIDE
                 new CPButton(DAL.DEVICE_ID_BUTTON_AB)
             ];
 
@@ -74,8 +73,7 @@ namespace pxsim {
                 CPlayPinName.A7,
                 CPlayPinName.A8,
                 CPlayPinName.A9,
-                CPlayPinName.A10,
-                CPlayPinName.A11,
+                CPlayPinName.A10
             ];
 
             this.touchButtons = this.touchPins.map(id => new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + id));

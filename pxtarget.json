@@ -5,7 +5,7 @@
     "name": "Adafruit Circuit Playground Express",
     "title": "Adafruit Circuit Playground Express - Blocks / Javascript editor",
     "description": "A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express.",
-    "corepkg": "adafruit",
+    "corepkg": "circuit-playground",
     "bundleddirs": [
         "libs/core",
         "libs/accelerometer",
@@ -14,7 +14,7 @@
         "libs/lightsensor",
         "libs/temperature",
         "libs/light",
-        "libs/adafruit"
+        "libs/circuit-playground"
     ],
     "serial": {
         "useHF2": true,
@@ -140,7 +140,8 @@
             {
                 "type": "package",
                 "map": {
-                    "neopixel": "light"
+                    "neopixel": "light",
+                    "adafruit": "circuit-playground"
                 }
             }
         ]

@@ -185,12 +185,16 @@ namespace pxsim.visuals {
         { 'name': "PIN_8", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A8, tooltip: "A8 - PMW" },
         { 'name': "PIN_9", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A9, tooltip: "A9 - PMW" },
         { 'name': "PIN_10", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A10, tooltip: "A10 - PMW" },
-        { 'name': "PIN_11", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A11, tooltip: "A11 - PMW" },
+        { 'name': "PIN_0", 'touch': 0, 'text': null, 'id': pxsim.CPlayPinName.A0, tooltip: "A0 - Speaker" },
+        { 'name': "PIN_1", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A1, tooltip: "A1" },
+        { 'name': "PIN_2", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "A2" },
+        { 'name': "PIN_3", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "A3" },
         { 'name': "GND_0", 'touch': 0, 'text': null, tooltip: "Ground" },
         { 'name': "GND_1", 'touch': 0, 'text': null, tooltip: "Ground" },
-        { 'name': "VBATT", 'touch': 0, 'text': null, tooltip: "Battery power" },
         { 'name': "GND_2", 'touch': 0, 'text': null, tooltip: "Ground" },
+        { 'name': "VBATT", 'touch': 0, 'text': null, tooltip: "Battery power" },
         { 'name': "PWR_0", 'touch': 0, 'text': null, tooltip: "3.3V, +3v3" },
+        { 'name': "PWR_1", 'touch': 0, 'text': null, tooltip: "3.3V, +3v3" },
         { 'name': "PWR_2", 'touch': 0, 'text': null, tooltip: "3.3V, +3v3" }
     ];
     const MB_WIDTH = 180.09375;
@@ -391,7 +395,8 @@ namespace pxsim.visuals {
         private updateRedLED() {
             let state = this.board;
             if (!state) return;
-            let ledOn = state.edgeConnectorState.getPin(pxsim.CPlayPinName.LED).value > 0 || state.edgeConnectorState.getPin(pxsim.CPlayPinName.D13).value > 0;
+            const ledPin = state.edgeConnectorState.getPin(pxsim.CPlayPinName.D13);
+            let ledOn = ledPin.value > 0;
             if (!this.redLED)
                 this.redLED = this.element.getElementById("SERIAL_LED") as SVGRectElement;
             let fillColor = ledOn ? "#FF0000" : "#000000";
@@ -444,10 +449,11 @@ namespace pxsim.visuals {
         private slideSwitchHandler() {
             let state = this.board;
             let slideSwitchState = state.slideSwitchState;
-            slideSwitchState.on = !slideSwitchState.on;
+
+            slideSwitchState.setState(!slideSwitchState.isLeft());
             let switchSlide = this.element.getElementById(`SLIDE_INNER`) as SVGGElement;
             svg.addClass(switchSlide, "sim-slide-switch-inner")
-            if (slideSwitchState.on) {
+            if (slideSwitchState.isLeft()) {
                 svg.addClass(switchSlide, "on");
                 switchSlide.setAttribute("x", "10");
                 state.buttonPairState.buttons[2].setPressed(true);
@@ -826,7 +832,7 @@ namespace pxsim.visuals {
             let bpState = this.board.buttonPairState;
             let stateButtons = bpState.buttons;
             this.buttonsOuter.forEach((btn, index) => {
-                let button = stateButtons[index === 2 ? 3 : index];
+                let button = stateButtons[index];
 
                 btn.addEventListener(pointerEvents.down, ev => {
                     button.setPressed(true);

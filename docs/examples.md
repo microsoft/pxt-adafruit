@@ -6,7 +6,7 @@ Here are some fun programs for your @boardname@!
 
 ```codecard
 [{
-  "name": "Blinky",
+  "name": "blinky",
   "url":"/examples/blinky",
   "cardType": "example"  
 },{
@@ -34,8 +34,8 @@ Here are some fun programs for your @boardname@!
   "url":"/examples/level",
   "cardType": "example"
 },{
-  "name": "level game",
-  "url":"/examples/level-game",
+  "name": "egg game",
+  "url":"/examples/egg-game",
   "cardType": "example"
 },{
   "name": "photon beatbox",
@@ -44,6 +44,14 @@ Here are some fun programs for your @boardname@!
 },{
   "name": "spin it",
   "url":"/examples/spin-it",
+  "cardType": "example"
+},{
+  "name": "metrenome",
+  "url":"/examples/metrenome",
+  "cardType": "example"
+},{
+  "name": "beat visualizer",
+  "url":"/examples/beat-visualizer",
   "cardType": "example"
 }]
 ```

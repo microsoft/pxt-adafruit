@@ -14,24 +14,12 @@ namespace pxsim {
         A8,
         A9,
         A10,
-        A11,
-        D0,
-        D1,
-        D2,
-        D3,
         D4,
         D5,
         D6,
         D7,
         D8,
-        D9,
-        D10,
-        D11,
-        D12,
-        D13,
-        LED,
-        LEDRX,
-        LEDTX
+        D13
     }
 
     export class DalBoard extends CoreBoard {
@@ -86,24 +74,12 @@ namespace pxsim {
                     pxsim.CPlayPinName.A8,
                     pxsim.CPlayPinName.A9,
                     pxsim.CPlayPinName.A10,
-                    pxsim.CPlayPinName.A11,
-                    pxsim.CPlayPinName.D0,
-                    pxsim.CPlayPinName.D1,
-                    pxsim.CPlayPinName.D2,
-                    pxsim.CPlayPinName.D3,
                     pxsim.CPlayPinName.D4,
                     pxsim.CPlayPinName.D5,
                     pxsim.CPlayPinName.D6,
                     pxsim.CPlayPinName.D7,
                     pxsim.CPlayPinName.D8,
-                    pxsim.CPlayPinName.D9,
-                    pxsim.CPlayPinName.D10,
-                    pxsim.CPlayPinName.D11,
-                    pxsim.CPlayPinName.D12,
-                    pxsim.CPlayPinName.D13,
-                    pxsim.CPlayPinName.LED,
-                    pxsim.CPlayPinName.LEDRX,
-                    pxsim.CPlayPinName.LEDTX
+                    pxsim.CPlayPinName.D13
                 ]
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;

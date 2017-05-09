@@ -12,7 +12,25 @@ namespace pxsim {
     }
 
     export class SlideSwitchState {
-        on: boolean = false;
+        public static id = 3000 /*DEVICE_ID_BUTTON_SLIDE*/;
+        private left: boolean = false;
+
+        setState(left: boolean) {
+            if (this.left === left) {
+                return;
+            }
+            else if (left) {
+                board().bus.queue(SlideSwitchState.id, DAL.DEVICE_BUTTON_EVT_UP);
+            }
+            else {
+                board().bus.queue(SlideSwitchState.id, DAL.DEVICE_BUTTON_EVT_DOWN);
+            }
+            this.left = left;
+        }
+
+        isLeft(): boolean {
+            return this.left;
+        }
     }
 
     export class CapacitiveSensorState {
@@ -57,9 +75,5 @@ namespace pxsim {
             this.capacity[capId] = 0;
             this.reading[capId] = false;
         }
-    }
-
-    export function getPin(id: number) {
-        return board().edgeConnectorState.getPin(id);
     }
 }

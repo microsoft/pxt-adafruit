@@ -2,6 +2,8 @@ namespace pxsim {
 
     export class AudioState {
         private playing: boolean;
+        public outputDestination_ = 0;
+        public pitchPin_: Pin;
         constructor() {
             this.playing = false;
         }
@@ -17,16 +19,16 @@ namespace pxsim {
         }
     }
 }
+
 namespace pxsim.music {
-    let outputDestination_ = 0;
-    let pitchPin_: Pin;
 
     export function noteFrequency(note: number) {
         return note;
     }
 
     export function setOutput(mode: number) {
-        outputDestination_ = mode;
+        const audioState = board().audioState;
+        audioState.outputDestination_ = mode;
     }
 
     export function setSpeakerVolume(volume: number) {
@@ -34,12 +36,18 @@ namespace pxsim.music {
     }
 
     export function setPitchPin(pin: Pin) {
-        pitchPin_ = pin;
+        const audioState = board().audioState;
+        audioState.pitchPin_ = pin;
     }
 
     export function playTone(frequency: number, ms: number) {
+        const b = board();
+        if (!b) return;
+
+        const audioState = b.audioState;
+
         const pitchPin = getPitchPin();
-        const currentOutput = outputDestination_;
+        const currentOutput = audioState.outputDestination_;
         if (currentOutput === 1) {
             pitchPin.mode = PinFlags.Analog | PinFlags.Output;
             if (frequency <= 0) {
@@ -51,7 +59,6 @@ namespace pxsim.music {
             }
         }
 
-        const audioState = board().audioState;
         audioState.startPlaying();
         runtime.queueDisplayUpdate();
         AudioContextManager.tone(frequency, 1);
@@ -75,9 +82,10 @@ namespace pxsim.music {
     }
 
     function getPitchPin() {
-        if (!pitchPin_) {
-            pitchPin_ = board().edgeConnectorState.getPin(CPlayPinName.A10);
+        const audioState = board().audioState;        
+        if (!audioState.pitchPin_) {
+            audioState.pitchPin_ = board().edgeConnectorState.getPin(CPlayPinName.D6);
         }
-        return pitchPin_;
+        return audioState.pitchPin_;
     }
 }

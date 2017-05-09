@@ -19,7 +19,7 @@ input.buttonA.onEvent(ButtonEvent.Click, () => {
     music.playTone(988, music.beat(BeatFraction.Whole) * 3)
     light.pixels.clear()
     light.pixels.setPhotonMode(PhotonMode.Eraser)
-    while (Math.abs(input.acceleration(Dimension.X)) + Math.abs(input.acceleration(Dimension.Y)) < 32) {
+    while (Math.abs(input.acceleration(Dimension.X)) + Math.abs(input.acceleration(Dimension.Y)) < 256) {
         score += 2
         light.pixels.photonForward(1)
         music.playTone(262 + score, music.beat(BeatFraction.Sixteenth))

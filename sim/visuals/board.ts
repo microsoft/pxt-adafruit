@@ -444,10 +444,11 @@ namespace pxsim.visuals {
         private slideSwitchHandler() {
             let state = this.board;
             let slideSwitchState = state.slideSwitchState;
-            slideSwitchState.on = !slideSwitchState.on;
+
+            slideSwitchState.setState(!slideSwitchState.isLeft());
             let switchSlide = this.element.getElementById(`SLIDE_INNER`) as SVGGElement;
             svg.addClass(switchSlide, "sim-slide-switch-inner")
-            if (slideSwitchState.on) {
+            if (slideSwitchState.isLeft()) {
                 svg.addClass(switchSlide, "on");
                 switchSlide.setAttribute("x", "10");
                 state.buttonPairState.buttons[2].setPressed(true);
@@ -826,7 +827,7 @@ namespace pxsim.visuals {
             let bpState = this.board.buttonPairState;
             let stateButtons = bpState.buttons;
             this.buttonsOuter.forEach((btn, index) => {
-                let button = stateButtons[index === 2 ? 3 : index];
+                let button = stateButtons[index];
 
                 btn.addEventListener(pointerEvents.down, ev => {
                     button.setPressed(true);

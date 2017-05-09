@@ -63,7 +63,6 @@ namespace pxsim {
             this.buttons = [
                 new CPButton(DAL.DEVICE_ID_BUTTON_A),
                 new CPButton(DAL.DEVICE_ID_BUTTON_B),
-                new CPButton(3000), // DEVICE_ID_BUTTON_SLIDE
                 new CPButton(DAL.DEVICE_ID_BUTTON_AB)
             ];
 

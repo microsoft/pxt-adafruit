@@ -8,6 +8,7 @@ declare interface DigitalPin {
      */
     //% help=pins/digital-read-pin weight=30
     //% blockId=device_get_digital_pin block="digital read|pin %name" blockGap=8
+    //% parts="slideswitch" trackArgs=0
     //% blockNamespace=pins shim=DigitalPinMethods::digitalRead
     digitalRead(): number;
 
@@ -198,7 +199,7 @@ declare namespace pins {
 
 
     //% fixedInstance shim=pxt::getPin(15)
-    const LED: DigitalPin;
+    const D13: DigitalPin;
 }
 declare namespace pins {
 

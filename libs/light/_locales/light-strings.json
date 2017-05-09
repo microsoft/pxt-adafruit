@@ -28,7 +28,6 @@
   "light.fade|block": "fade %color=neopixel_colors|by %brightness",
   "light.hsv|block": "hue %hue|sat %sat|val %val",
   "light.rgb|block": "red %red|green %green|blue %blue",
-  "light.statusLED|block": "status led %on",
   "light|block": "light",
   "{id:category}Light": "Light"
 }

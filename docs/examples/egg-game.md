@@ -1,4 +1,4 @@
-# Level Game
+# Egg game
 
 Try to move the longest distance and keep the @boardname@ level!
 

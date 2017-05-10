@@ -1,4 +1,6 @@
-# Power Glove
+# Power glove
+
+Track you hand motions with the @boardname@.
 
 ```blocks
 let item = 0

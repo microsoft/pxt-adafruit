@@ -1,5 +1,7 @@
 # Photon beat box
 
+Shake it or press the buttons for a lighted surprise.
+
 ```blocks
 let item = 0
 input.onGesture(Gesture.Shake, () => {

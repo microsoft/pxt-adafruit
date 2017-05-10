@@ -1,4 +1,8 @@
 
+# Dice
+
+Shake and see which number comes up.
+
 ```blocks
 let tone = 0
 let item = 0

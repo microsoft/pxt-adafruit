@@ -1,4 +1,4 @@
-# Animaton Shacker
+# Animaton Shaker
 
 Shake your @boardname@ to play a random animation.
 

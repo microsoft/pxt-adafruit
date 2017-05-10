@@ -1,6 +1,6 @@
 # Beat Visualizer
 
-Use the A button on your @boardname@ to follow a beat.
+Use the ``A`` button on your @boardname@ to follow a beat.
 
 ```blocks
 let item = 0

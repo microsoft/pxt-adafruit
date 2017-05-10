@@ -1,4 +1,6 @@
-# Spin It
+# Spin it
+
+Spin the lights!
 
 ```blocks
 light.statusLED(false)

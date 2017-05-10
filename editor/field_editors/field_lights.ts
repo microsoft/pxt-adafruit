@@ -75,9 +75,8 @@ namespace pxt.editor {
 			const imageWidth = 200;
 			const imageHeight = 200;
 
-			const BOARD_SVG = `<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+			const BOARD_SVG = `<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
 	xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" id="field-neopixels" version="1.1" xml:space="preserve"
 	width="180.09375" height="179.22874" viewBox="0 0 180.09375 179.22874">
 	<g id="g10" transform="matrix(1.25,0,0,-1.25,0,179.22875)">
@@ -271,9 +270,11 @@ namespace pxt.editor {
 	</g>
 </svg>`;
 
-			const boardElement = new DOMParser().parseFromString(BOARD_SVG, "image/svg+xml").querySelector("svg") as SVGSVGElement;
+			const boardElement = new DOMParser().parseFromString(BOARD_SVG, "image/svg+xml").querySelector('svg') as SVGSVGElement;
 			
 			pxsim.svg.hydrate(boardElement, {
+                "version": "1.0",
+                "viewBox": `0 0 ${imageWidth} ${imageHeight}`,
 				'height': imageHeight, 
 				'width': imageWidth,
 				'padding': '2px'
@@ -281,12 +282,10 @@ namespace pxt.editor {
 
 			const defs = <SVGDefsElement>pxsim.svg.child(boardElement, "defs", {});
 
-			this.fieldGroup_.appendChild(boardElement);
-
 			const colors = this.getValue().replace(/\"/g, "").split(' ');
 
 			for (let i = 0; i < 10; i++) {
-				let neopixel = boardElement.getElementById("LED" + i) as SVGGElement;
+				let neopixel = boardElement.getElementById(`LED${i}`) as SVGPathElement;
 				pxsim.svg.addClass(neopixel, 'neopixel');
 				function callback(e: any) {
 					this.onPixelClicked(neopixel, i);
@@ -299,6 +298,8 @@ namespace pxt.editor {
 
 				this.neopixels_.push(neopixel);
 			}
+
+			this.fieldGroup_.appendChild(boardElement);
 
 			this.size_.height = Number(imageHeight) + 19;
 			this.size_.width = Number(imageWidth);

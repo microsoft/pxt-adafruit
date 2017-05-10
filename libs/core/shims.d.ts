@@ -10,18 +10,18 @@ declare interface DigitalPin {
     //% blockId=device_get_digital_pin block="digital read|pin %name" blockGap=8
     //% parts="slideswitch" trackArgs=0
     //% blockNamespace=pins shim=DigitalPinMethods::digitalRead
-    digitalRead(): number;
+    digitalRead(): boolean;
 
     /**
      * Set a pin or connector value to either 0 or 1.
      * @param name pin to write to
-     * @param value value to set on the pin, 1 eg,0
+     * @param value value to set on the pin
      */
     //% help=pins/digital-write-pin weight=29
     //% blockId=device_set_digital_pin block="digital write|pin %name|to %value"
     //% parts="led" trackArgs=0
     //% blockNamespace=pins shim=DigitalPinMethods::digitalWrite
-    digitalWrite(value: number): void;
+    digitalWrite(value: boolean): void;
 
     /**
      * Configures this pin to a digital input, and generates events where the timestamp is the duration

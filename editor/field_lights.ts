@@ -1,5 +1,5 @@
-/// <reference path="../../node_modules/pxt-core/localtypings/blockly.d.ts" />
-/// <reference path="../../node_modules/pxt-core/built/pxtsim.d.ts"/>
+/// <reference path="../node_modules/pxt-core/localtypings/blockly.d.ts" />
+/// <reference path="../node_modules/pxt-core/built/pxtsim.d.ts"/>
 
 namespace pxt.editor {
 
@@ -198,7 +198,7 @@ namespace pxt.editor {
           pxsim.svg.onClick(btn, ev => this.onColorClicked(btn));
           this.paletteButtons.push(btn);
         })
-        
+
       this.fieldGroup_.appendChild(this.boardElement);
     }
 
@@ -213,7 +213,10 @@ namespace pxt.editor {
       const colors = this.getValue().replace(/\"/g, "").split(' ') || [];
       for (let i = 0; i < FieldLights.NUM_PIXELS; i++) {
         const neopixel = this.neopixels_[i];
-        pxsim.svg.fill(neopixel, colors[i] || "0xff")
+        let c = colors[i] || "0xff";
+        if (c == 'black' || c == '0')
+          c = 'grey';
+        pxsim.svg.fill(neopixel, c)
         neopixel.setAttribute("data-color", colors[i] || "0xff");
       }
 
@@ -231,7 +234,6 @@ namespace pxt.editor {
     onPixelClicked(neopixel: SVGElement, id: number) {
       let btn = this.paletteButtons.filter(btn => pxsim.svg.hasClass(btn, 'active'))[0];
       if (btn) {
-        pxsim.svg.fill(neopixel, btn.getAttribute('fill'));
         neopixel.setAttribute("data-color", btn.getAttribute("data-color"));
         this.setValue(this.getValueArray())
       }

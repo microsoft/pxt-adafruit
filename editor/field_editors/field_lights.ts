@@ -8,10 +8,14 @@ namespace pxt.editor {
 
     private params: any;
 
+    private boardElement: SVGSVGElement;
     private paletteElement_: SVGGElement;
     private neopixels_: SVGElement[];
     private paletteButtons: SVGElement[];
+
     static NUM_PIXELS = 10;
+    static imageWidth = 200;
+    static imageHeight = 200;
 
     constructor(text: string, params: any, validator?: Function) {
       super(text, validator);
@@ -26,15 +30,7 @@ namespace pxt.editor {
 
     }
 
-    render_() {
-      if (!this.visible_) {
-        this.size_.width = 0;
-        return;
-      }
-
-      const imageWidth = 200;
-      const imageHeight = 200;
-
+    initRing() {
       const BOARD_SVG = `
 <svg xmlns="http://www.w3.org/2000/svg" id="field-neopixels" viewBox="0 0 180.09375 179.22874">
   <g id="g28">
@@ -174,28 +170,21 @@ namespace pxt.editor {
 </svg>
 `;
 
-      const boardElement = pxsim.svg.parseString(BOARD_SVG);
-      pxsim.svg.hydrate(boardElement, {
-        'height': imageHeight,
-        'width': imageWidth,
+      this.boardElement = pxsim.svg.parseString(BOARD_SVG);
+      pxsim.svg.hydrate(this.boardElement, {
+        'height': FieldLights.imageHeight,
+        'width': FieldLights.imageWidth,
         'padding': '2px'
       })
 
-      const defs = <SVGDefsElement>pxsim.svg.child(boardElement, "defs", {});
-      this.paletteElement_ = boardElement.getElementById("palette") as SVGGElement;
+      this.paletteElement_ = this.boardElement.getElementById("palette") as SVGGElement;
       pxsim.svg.addClass(this.paletteElement_, 'hidden');
-
-      this.fieldGroup_.appendChild(boardElement);
-
-      const colors = this.getValue().replace(/\"/g, "").split(' ') || [];
 
       this.neopixels_ = [];
       for (let i = 0; i < FieldLights.NUM_PIXELS; i++) {
-        let neopixel = boardElement.getElementById("LED" + i) as SVGGElement;
+        let neopixel = this.boardElement.getElementById("LED" + i) as SVGGElement;
         pxsim.svg.addClass(neopixel, 'neopixel');
         pxsim.svg.onClick(neopixel, ev => this.onPixelClicked(neopixel, i));
-        pxsim.svg.fill(neopixel, colors[i] || "0xff")
-        neopixel.setAttribute("data-color", colors[i] || "0xff");
         this.neopixels_.push(neopixel);
       }
 
@@ -203,15 +192,33 @@ namespace pxt.editor {
       ['paletteslice0', 'paletteslice1', 'paletteslice2', 'paletteslice3',
         'paletteslice4', 'paletteslice5', 'paletteslice6', 'paletteslice7', 'palettecenter']
         .forEach((id, i) => {
-          let btn = boardElement.getElementById(id) as SVGGElement;
+          let btn = this.boardElement.getElementById(id) as SVGGElement;
           pxsim.svg.addClass(btn, 'colorbutton');
           if (i == 1) pxsim.svg.addClass(btn, 'active');
           pxsim.svg.onClick(btn, ev => this.onColorClicked(btn));
           this.paletteButtons.push(btn);
         })
+        
+      this.fieldGroup_.appendChild(this.boardElement);
+    }
 
-      this.size_.height = Number(imageHeight) + 19;
-      this.size_.width = Number(imageWidth);
+    render_() {
+      if (!this.visible_) {
+        this.size_.width = 0;
+        return;
+      }
+
+      if (!this.neopixels_) this.initRing();
+
+      const colors = this.getValue().replace(/\"/g, "").split(' ') || [];
+      for (let i = 0; i < FieldLights.NUM_PIXELS; i++) {
+        const neopixel = this.neopixels_[i];
+        pxsim.svg.fill(neopixel, colors[i] || "0xff")
+        neopixel.setAttribute("data-color", colors[i] || "0xff");
+      }
+
+      this.size_.height = Number(FieldLights.imageHeight) + 19;
+      this.size_.width = Number(FieldLights.imageWidth);      
     }
 
     onColorClicked(btn: SVGElement) {

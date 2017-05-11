@@ -178,7 +178,6 @@ namespace pxt.editor {
       })
 
       this.paletteElement_ = this.boardElement.getElementById("palette") as SVGGElement;
-      pxsim.svg.addClass(this.paletteElement_, 'hidden');
 
       this.neopixels_ = [];
       for (let i = 0; i < FieldLights.NUM_PIXELS; i++) {

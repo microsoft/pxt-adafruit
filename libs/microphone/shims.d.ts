@@ -16,7 +16,7 @@ declare namespace input {
     //% help=input/sound-level weight=75
     //% blockId=device_get_sound_level block="sound level" blockGap=8
     //% parts="microphone" shim=input::soundLevel
-    function soundLevel(): number;
+    function soundLevel(): int32;
 }
 
 // Auto-generated. Do not edit. Really.

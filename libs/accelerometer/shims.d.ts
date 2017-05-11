@@ -25,7 +25,7 @@ declare namespace input {
     //% dimension.fieldEditor="gridpicker"
     //% dimension.fieldOptions.width=180
     //% dimension.fieldOptions.columns=2 shim=input::acceleration
-    function acceleration(dimension: Dimension): number;
+    function acceleration(dimension: Dimension): int32;
 
     /**
      * The pitch or roll of the device, rotation along the ``x-axis`` or ``y-axis``, in degrees.
@@ -34,7 +34,7 @@ declare namespace input {
     //% help=input/rotation weight=87
     //% blockId=device_get_rotation block="rotation (°)|%NAME" blockGap=8
     //% parts="accelerometer" advanced=true shim=input::rotation
-    function rotation(kind: Rotation): number;
+    function rotation(kind: Rotation): int32;
 
     /**
      * Sets the accelerometer sample range in gravities.

@@ -53,7 +53,7 @@ declare interface DigitalPin {
     //% pin.fieldEditor="gridpicker"
     //% pin.fieldOptions.width=220
     //% pin.fieldOptions.columns=4 maxDuration.defl=2000000 shim=DigitalPinMethods::pulseIn
-    pulseIn(value: PulseValue, maxDuration?: number): number;
+    pulseIn(value: PulseValue, maxDuration?: int32): int32;
 
     /**
      * Configures the pull of this pin.
@@ -81,7 +81,7 @@ declare interface AnalogPin {
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
     //% name.fieldOptions.columns=4 shim=AnalogPinMethods::analogRead
-    analogRead(): number;
+    analogRead(): int32;
 
     /**
      * Set the connector value as analog. Value must be comprised between 0 and 1023.
@@ -94,7 +94,7 @@ declare interface AnalogPin {
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
     //% name.fieldOptions.columns=4 shim=AnalogPinMethods::analogWrite
-    analogWrite(value: number): void;
+    analogWrite(value: int32): void;
 }
 
 
@@ -113,7 +113,7 @@ declare interface PwmPin {
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
     //% name.fieldOptions.columns=4 shim=PwmPinMethods::analogSetPeriod
-    analogSetPeriod(micros: number): void;
+    analogSetPeriod(micros: int32): void;
 
     /**
      * Writes a value to the servo, controlling the shaft accordingly. On a standard servo, this will
@@ -130,7 +130,7 @@ declare interface PwmPin {
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
     //% name.fieldOptions.columns=4 shim=PwmPinMethods::servoWrite
-    servoWrite(value: number): void;
+    servoWrite(value: int32): void;
 
     /**
      * Configures this IO pin as an analog/pwm output, configures the period to be 20 ms, and sets the
@@ -144,7 +144,7 @@ declare interface PwmPin {
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
     //% name.fieldOptions.columns=4 shim=PwmPinMethods::servoSetPulse
-    servoSetPulse(micros: number): void;
+    servoSetPulse(micros: int32): void;
 }
 declare namespace pins {
 
@@ -153,7 +153,7 @@ declare namespace pins {
      * @param size number of bytes in the buffer
      */
     //% shim=pins::createBuffer
-    function createBuffer(size: number): Buffer;
+    function createBuffer(size: int32): Buffer;
 
     /**
      * Gets the duration of the last pulse in micro-seconds. This function should be called from a
@@ -162,7 +162,7 @@ declare namespace pins {
     //% help=pins/pulse-duration advanced=true
     //% blockId=pins_pulse_duration block="pulse duration (µs)"
     //% weight=21 blockGap=8 shim=pins::pulseDuration
-    function pulseDuration(): number;
+    function pulseDuration(): int32;
 }
 declare namespace pins {
 
@@ -229,13 +229,13 @@ declare namespace pins {
      * Read `size` bytes from a 7-bit I2C `address`.
      */
     //% repeat.defl=0 shim=pins::i2cReadBuffer
-    function i2cReadBuffer(address: number, size: number, repeat?: boolean): Buffer;
+    function i2cReadBuffer(address: int32, size: int32, repeat?: boolean): Buffer;
 
     /**
      * Write bytes to a 7-bit I2C `address`.
      */
     //% repeat.defl=0 shim=pins::i2cWriteBuffer
-    function i2cWriteBuffer(address: number, buf: Buffer, repeat?: boolean): number;
+    function i2cWriteBuffer(address: int32, buf: Buffer, repeat?: boolean): int32;
 }
 
 
@@ -246,29 +246,29 @@ declare interface Buffer {
      * Write a number in specified format in the buffer.
      */
     //% shim=BufferMethods::setNumber
-    setNumber(format: NumberFormat, offset: number, value: number): void;
+    setNumber(format: NumberFormat, offset: int32, value: number): void;
 
     /**
      * Read a number in specified format from the buffer.
      */
     //% shim=BufferMethods::getNumber
-    getNumber(format: NumberFormat, offset: number): number;
+    getNumber(format: NumberFormat, offset: int32): number;
 
     /** Returns the length of a Buffer object. */
     //% property shim=BufferMethods::length
-    length: number;
+    length: int32;
 
     /**
      * Fill (a fragment) of the buffer with given value.
      */
     //% offset.defl=0 length.defl=-1 shim=BufferMethods::fill
-    fill(value: number, offset?: number, length?: number): void;
+    fill(value: int32, offset?: int32, length?: int32): void;
 
     /**
      * Return a copy of a fragment of a buffer.
      */
     //% offset.defl=0 length.defl=-1 shim=BufferMethods::slice
-    slice(offset?: number, length?: number): Buffer;
+    slice(offset?: int32, length?: int32): Buffer;
 
     /**
      * Shift buffer left in place, with zero padding.
@@ -278,7 +278,7 @@ declare interface Buffer {
      * start. eg: -1
      */
     //% start.defl=0 length.defl=-1 shim=BufferMethods::shift
-    shift(offset: number, start?: number, length?: number): void;
+    shift(offset: int32, start?: int32, length?: int32): void;
 
     /**
      * Rotate buffer left in place.
@@ -288,13 +288,13 @@ declare interface Buffer {
      * start. eg: -1
      */
     //% start.defl=0 length.defl=-1 shim=BufferMethods::rotate
-    rotate(offset: number, start?: number, length?: number): void;
+    rotate(offset: int32, start?: int32, length?: int32): void;
 
     /**
      * Write contents of `src` at `dstOffset` in current buffer.
      */
     //% shim=BufferMethods::write
-    write(dstOffset: number, src: Buffer): void;
+    write(dstOffset: int32, src: Buffer): void;
 }
 declare namespace control {
 
@@ -303,7 +303,7 @@ declare namespace control {
      */
     //% help=control/millis weight=50
     //% blockId=control_running_time block="millis (ms)" shim=control::millis
-    function millis(): number;
+    function millis(): int32;
 
     /**
      * Raises an event in the event bus.
@@ -313,7 +313,7 @@ declare namespace control {
      */
     //% weight=21 blockGap=12 blockId="control_raise_event" block="raise event|from %src|with value %value" blockExternalInputs=1
     //% mode.defl=1 shim=control::raiseEvent
-    function raiseEvent(src: number, value: number, mode?: EventCreationMode): void;
+    function raiseEvent(src: int32, value: int32, mode?: EventCreationMode): void;
 
     /**
      * Raises an event in the event bus.
@@ -322,7 +322,7 @@ declare namespace control {
      */
     //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src|with value %value"
     //% blockExternalInputs=1 shim=control::onEvent
-    function onEvent(id: number, value: number, handler: () => void): void;
+    function onEvent(id: int32, value: int32, handler: () => void): void;
 
     /**
      * Resets the device.
@@ -337,7 +337,7 @@ declare namespace control {
      */
     //% help=control/wait-micros weight=29
     //% blockId="control_wait_us" block="wait (µs)%micros" shim=control::waitMicros
-    function waitMicros(micros: number): void;
+    function waitMicros(micros: int32): void;
 
     /**
      * Schedules code that run in the background.
@@ -350,7 +350,7 @@ declare namespace control {
      * Derive a unique, consistent serial number of this device from internal data.
      */
     //% blockId="control_device_serial_number" block="device serial number" weight=9 shim=control::deviceSerialNumber
-    function deviceSerialNumber(): number;
+    function deviceSerialNumber(): int32;
 
     /**
      * Determine the version of system software currently running.
@@ -375,7 +375,7 @@ declare namespace loops {
     //% help=loops/pause weight=99
     //% async block="pause (ms) %pause"
     //% blockId=device_pause shim=loops::pause
-    function pause(ms: number): void;
+    function pause(ms: int32): void;
 }
 
 

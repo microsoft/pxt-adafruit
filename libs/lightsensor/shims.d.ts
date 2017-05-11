@@ -16,7 +16,7 @@ declare namespace input {
     //% help=input/light-level weight=76
     //% blockId=device_get_light_level block="light level" blockGap=8
     //% parts="lightsensor" shim=input::lightLevel
-    function lightLevel(): number;
+    function lightLevel(): int32;
 }
 
 // Auto-generated. Do not edit. Really.

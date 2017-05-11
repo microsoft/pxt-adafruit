@@ -26,7 +26,7 @@ declare namespace music {
     //% weight=96
     //% blockId=synth_set_volume block="set speaker volume %volume"
     //% parts="speaker" blockGap=8 advanced=true shim=music::setSpeakerVolume
-    function setSpeakerVolume(volume: number): void;
+    function setSpeakerVolume(volume: int32): void;
 
     /**
      * Plays a tone through the pin for the given duration.
@@ -37,7 +37,7 @@ declare namespace music {
     //% blockId=music_play_note block="play tone|at %note=device_note|for %duration=device_beat"
     //% parts="headphone" async
     //% blockNamespace=music shim=music::playTone
-    function playTone(frequency: number, ms: number): void;
+    function playTone(frequency: int32, ms: int32): void;
 }
 
 // Auto-generated. Do not edit. Really.

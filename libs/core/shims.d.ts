@@ -9,7 +9,10 @@ declare interface DigitalPin {
     //% help=pins/digital-read-pin weight=30
     //% blockId=device_get_digital_pin block="digital read|pin %name" blockGap=8
     //% parts="slideswitch" trackArgs=0
-    //% blockNamespace=pins shim=DigitalPinMethods::digitalRead
+    //% blockNamespace=pins
+    //% name.fieldEditor="gridpicker"
+    //% name.fieldOptions.width=220
+    //% name.fieldOptions.columns=4 shim=DigitalPinMethods::digitalRead
     digitalRead(): boolean;
 
     /**
@@ -20,7 +23,10 @@ declare interface DigitalPin {
     //% help=pins/digital-write-pin weight=29
     //% blockId=device_set_digital_pin block="digital write|pin %name|to %value"
     //% parts="led" trackArgs=0
-    //% blockNamespace=pins shim=DigitalPinMethods::digitalWrite
+    //% blockNamespace=pins
+    //% name.fieldEditor="gridpicker"
+    //% name.fieldOptions.width=220 
+    //% name.fieldOptions.columns=4 shim=DigitalPinMethods::digitalWrite
     digitalWrite(value: boolean): void;
 
     /**
@@ -29,7 +35,10 @@ declare interface DigitalPin {
      */
     //% help=pins/on-pulsed weight=22 blockGap=8 advanced=true
     //% blockId=pins_on_pulsed block="on|pin %pin|pulsed %pulse"
-    //% blockNamespace=pins shim=DigitalPinMethods::onPulsed
+    //% blockNamespace=pins
+    //% pin.fieldEditor="gridpicker"
+    //% pin.fieldOptions.width=220
+    //% pin.fieldOptions.columns=4 shim=DigitalPinMethods::onPulsed
     onPulsed(pulse: PulseValue, body: () => void): void;
 
     /**
@@ -40,7 +49,10 @@ declare interface DigitalPin {
      */
     //% blockId="pins_pulse_in" block="pulse in (µs)|pin %name|pulsed %value"
     //% weight=20 advanced=true
-    //% blockNamespace=pins maxDuration.defl=2000000 shim=DigitalPinMethods::pulseIn
+    //% blockNamespace=pins
+    //% pin.fieldEditor="gridpicker"
+    //% pin.fieldOptions.width=220
+    //% pin.fieldOptions.columns=4 maxDuration.defl=2000000 shim=DigitalPinMethods::pulseIn
     pulseIn(value: PulseValue, maxDuration?: number): number;
 
     /**
@@ -50,7 +62,10 @@ declare interface DigitalPin {
      */
     //% help=pins/set-pull weight=3 advanced=true
     //% blockId=device_set_pull block="set pull|pin %pin|to %pull"
-    //% blockNamespace=pins shim=DigitalPinMethods::setPull
+    //% blockNamespace=pins
+    //% name.fieldEditor="gridpicker"
+    //% name.fieldOptions.width=220
+    //% name.fieldOptions.columns=4 shim=DigitalPinMethods::setPull
     setPull(pull: PinPullMode): void;
 }
 
@@ -62,7 +77,10 @@ declare interface AnalogPin {
      */
     //% help=pins/analog-read-pin weight=25
     //% blockId=device_get_analog_pin block="analog read|pin %name" blockGap="8"
-    //% blockNamespace=pins shim=AnalogPinMethods::analogRead
+    //% blockNamespace=pins
+    //% name.fieldEditor="gridpicker"
+    //% name.fieldOptions.width=220
+    //% name.fieldOptions.columns=4 shim=AnalogPinMethods::analogRead
     analogRead(): number;
 
     /**
@@ -72,7 +90,10 @@ declare interface AnalogPin {
      */
     //% help=pins/analog-write-pin weight=24
     //% blockId=device_set_analog_pin block="analog write|pin %name|to %value" blockGap=8
-    //% blockNamespace=pins shim=AnalogPinMethods::analogWrite
+    //% blockNamespace=pins
+    //% name.fieldEditor="gridpicker"
+    //% name.fieldOptions.width=220
+    //% name.fieldOptions.columns=4 shim=AnalogPinMethods::analogWrite
     analogWrite(value: number): void;
 }
 
@@ -88,7 +109,10 @@ declare interface PwmPin {
      */
     //% help=pins/analog-set-period weight=23 blockGap=8
     //% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros"
-    //% blockNamespace=pins shim=PwmPinMethods::analogSetPeriod
+    //% blockNamespace=pins
+    //% name.fieldEditor="gridpicker"
+    //% name.fieldOptions.width=220
+    //% name.fieldOptions.columns=4 shim=PwmPinMethods::analogSetPeriod
     analogSetPeriod(micros: number): void;
 
     /**
@@ -102,7 +126,10 @@ declare interface PwmPin {
     //% help=pins/servo-write-pin weight=20
     //% blockId=device_set_servo_pin block="servo write|pin %name|to %value" blockGap=8
     //% parts=microservo trackArgs=0
-    //% blockNamespace=pins shim=PwmPinMethods::servoWrite
+    //% blockNamespace=pins
+    //% name.fieldEditor="gridpicker"
+    //% name.fieldOptions.width=220
+    //% name.fieldOptions.columns=4 shim=PwmPinMethods::servoWrite
     servoWrite(value: number): void;
 
     /**
@@ -113,7 +140,10 @@ declare interface PwmPin {
      */
     //% help=pins/servo-set-pulse weight=19
     //% blockId=device_set_servo_pulse block="servo set pulse|pin %value|to (µs) %micros"
-    //% blockNamespace=pins shim=PwmPinMethods::servoSetPulse
+    //% blockNamespace=pins
+    //% name.fieldEditor="gridpicker"
+    //% name.fieldOptions.width=220
+    //% name.fieldOptions.columns=4 shim=PwmPinMethods::servoSetPulse
     servoSetPulse(micros: number): void;
 }
 declare namespace pins {

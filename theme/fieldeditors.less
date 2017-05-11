@@ -4,8 +4,17 @@
 /*******************************
     Field Light
 *******************************/
+#field-neopixels {
+    cursor: none;
+}
+
 #field-neopixels .neopixel, #field-neopixels .colorbutton {
     cursor:pointer;    
+}
+
+#field-neopixels .neopixel {
+    stroke: #fff;
+    stroke-width:2px;
 }
 
 #field-neopixels .neopixel:hover {
@@ -13,8 +22,17 @@
     stroke:yellow;
 }
 
-#field-neopixels .active {
-    stroke:yellow;
+#field-neopixels .colorbutton {
+    stroke:black;
+    stroke-width: 2px;
     stroke-opacity: 1;
+}
+
+#field-neopixels .colorbutton:hover {
+    stroke-width: 3px;
+}
+
+#field-neopixels .colorbutton.active {
+    stroke:black;
     stroke-width: 4px !important;
 }

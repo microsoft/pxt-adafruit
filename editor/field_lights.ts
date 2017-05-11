@@ -203,7 +203,7 @@ namespace pxt.editor {
 
       if (!this.neopixels_) this.initRing();
 
-      const colors = this.getValue().replace(/\"/g, "").split(' ') || [];
+      const colors = this.getValue().replace(/\"`'/g, "").split(' ') || [];
       for (let i = 0; i < FieldLights.NUM_PIXELS; i++) {
         const neopixel = this.neopixels_[i];
         let c = colors[i] || "0xff";
@@ -233,11 +233,11 @@ namespace pxt.editor {
     };
 
     getValue() {
-      return this.getText() || '"red red red red red red red red red red"';
+      return this.getText() || '`red red red red red red red red red red`';
     }
 
     getValueArray(): string {
-      return '"' + this.neopixels_.map(neo => neo.getAttribute("data-color")).join(' ') + '"';
+      return '`' + this.neopixels_.map(neo => neo.getAttribute("data-color")).join(' ') + '`';
     }
   }
 }

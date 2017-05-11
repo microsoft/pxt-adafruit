@@ -178,24 +178,21 @@ namespace pxsim.visuals {
     `;
 
     const pinNames: {'name': string, 'touch': number, 'text': any, 'id'?: number, tooltip?: string}[] = [
-        { 'name': "SCL", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A4, tooltip: "A4 - SCL" },
-        { 'name': "SDA", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A5, tooltip: "A5 - SDA" },
-        { 'name': "RX", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A6, tooltip: "A6 - RX" },
-        { 'name': "TX", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A7, tooltip: "A7 - TX" },
-        { 'name': "PIN_8", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A8, tooltip: "A8 - PMW" },
-        { 'name': "PIN_9", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A9, tooltip: "A9 - PMW" },
-        { 'name': "PIN_10", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A10, tooltip: "A10 - PMW" },
-        { 'name': "PIN_0", 'touch': 0, 'text': null, 'id': pxsim.CPlayPinName.A0, tooltip: "A0 - Speaker" },
-        { 'name': "PIN_1", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A1, tooltip: "A1" },
-        { 'name': "PIN_2", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "A2" },
-        { 'name': "PIN_3", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "A3" },
+        { 'name': "PIN_A0", 'touch': 0, 'text': null, 'id': pxsim.CPlayPinName.A0, tooltip: "A0 - Speaker" },
+        { 'name': "PIN_A1", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A1, tooltip: "~A1" },
+        { 'name': "PIN_A2", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "~A2" },
+        { 'name': "PIN_A3", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "~A3" },
+        { 'name': "PIN_A4", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A4, tooltip: "A4 - SCL" },
+        { 'name': "PIN_A5", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A5, tooltip: "A5 - SDA" },
+        { 'name': "PIN_A6", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A6, tooltip: "A6 - RX" },
+        { 'name': "PIN_A7", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A7, tooltip: "A7 - TX" },
         { 'name': "GND_0", 'touch': 0, 'text': null, tooltip: "Ground" },
         { 'name': "GND_1", 'touch': 0, 'text': null, tooltip: "Ground" },
         { 'name': "GND_2", 'touch': 0, 'text': null, tooltip: "Ground" },
         { 'name': "VBATT", 'touch': 0, 'text': null, tooltip: "Battery power" },
-        { 'name': "PWR_0", 'touch': 0, 'text': null, tooltip: "3.3V, +3v3" },
-        { 'name': "PWR_1", 'touch': 0, 'text': null, tooltip: "3.3V, +3v3" },
-        { 'name': "PWR_2", 'touch': 0, 'text': null, tooltip: "3.3V, +3v3" }
+        { 'name': "PWR_0", 'touch': 0, 'text': null, tooltip: "+3.3V" },
+        { 'name': "PWR_1", 'touch': 0, 'text': null, tooltip: "+3.3V" },
+        { 'name': "PWR_2", 'touch': 0, 'text': null, tooltip: "+3.3V" }
     ];
     const MB_WIDTH = 180.09375;
     const MB_HEIGHT = 179.22874;

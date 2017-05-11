@@ -201,38 +201,26 @@ declare namespace pins {
 
 
     //% fixedInstance shim=pxt::getPin(8)
-    const A8: AnalogPin;
-
-
-    //% fixedInstance shim=pxt::getPin(9)
-    const A9: AnalogPin;
-
-
-    //% fixedInstance shim=pxt::getPin(10)
-    const A10: AnalogPin;
-
-
-    //% fixedInstance shim=pxt::getPin(11)
     const D4: DigitalPin;
 
 
-    //% fixedInstance shim=pxt::getPin(12)
+    //% fixedInstance shim=pxt::getPin(9)
     const D5: DigitalPin;
 
 
-    //% fixedInstance shim=pxt::getPin(13)
+    //% fixedInstance shim=pxt::getPin(10)
     const D6: DigitalPin;
 
 
-    //% fixedInstance shim=pxt::getPin(14)
+    //% fixedInstance shim=pxt::getPin(11)
     const D7: DigitalPin;
 
 
-    //% fixedInstance shim=pxt::getPin(15)
+    //% fixedInstance shim=pxt::getPin(12)
     const D8: DigitalPin;
 
 
-    //% fixedInstance shim=pxt::getPin(16)
+    //% fixedInstance shim=pxt::getPin(13)
     const D13: DigitalPin;
 }
 declare namespace pins {
@@ -430,55 +418,6 @@ declare namespace input {
      */
     //% block="buttons A+B" weight=93 fixedInstance shim=pxt::getButton(2)
     const buttonsAB: Button;
-
-    /**
-     * Capacitive pin A4
-     */
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getTouchButton
-    //% block="pin A4" fixedInstance shim=pxt::getTouchButton(0)
-    const pinA4: Button;
-
-    /**
-     * Capacitive pin A5
-     */
-    //% block="pin A5" fixedInstance shim=pxt::getTouchButton(1)
-    const pinA5: Button;
-
-    /**
-     * Capacitive pin A6
-     */
-    //% block="pin A6" fixedInstance shim=pxt::getTouchButton(2)
-    const pinA6: Button;
-
-    /**
-     * Capacitive pin A7
-     */
-    //% block="pin A7" fixedInstance shim=pxt::getTouchButton(3)
-    const pinA7: Button;
-
-    /**
-     * Capacitive pin A8
-     */
-    //% block="pin A8" fixedInstance shim=pxt::getTouchButton(4)
-    const pinA8: Button;
-
-    /**
-     * Capacitive pin A9
-     */
-    //% block="pin A9" fixedInstance shim=pxt::getTouchButton(5)
-    const pinA9: Button;
-
-    /**
-     * Capacitive pin A10
-     */
-    //% block="pin A10" fixedInstance shim=pxt::getTouchButton(6)
-    const pinA10: Button;
-
-    /**
-     * Capacitive pin A11
-     */
-    //% block="pin A11" fixedInstance shim=pxt::getTouchButton(7)
-    const pinA11: Button;
 }
 
 
@@ -494,7 +433,10 @@ declare interface Button {
     //% help=input/on-button-event weight=99 blockGap=8
     //% blockId=buttonEvent block="on %button|%event"
     //% parts="buttonpair"
-    //% blockNamespace=input shim=ButtonMethods::onEvent
+    //% blockNamespace=input
+    //% button.fieldEditor="gridpicker"
+    //% button.fieldOptions.width=220
+    //% button.fieldOptions.columns=3 shim=ButtonMethods::onEvent
     onEvent(ev: ButtonEvent, body: () => void): void;
 
     /**
@@ -506,7 +448,10 @@ declare interface Button {
     //% blockId=buttonIsPressed
     //% blockGap=8
     //% parts="buttonpair"
-    //% blockNamespace=input shim=ButtonMethods::isPressed
+    //% blockNamespace=input
+    //% button.fieldEditor="gridpicker"
+    //% button.fieldOptions.width=220
+    //% button.fieldOptions.columns=3 shim=ButtonMethods::isPressed
     isPressed(): boolean;
 
     /**
@@ -517,8 +462,56 @@ declare interface Button {
     //% block="%NAME|was pressed"
     //% blockId=buttonWasPressed
     //% parts="buttonpair" blockGap=8
-    //% blockNamespace=input advanced=true shim=ButtonMethods::wasPressed
+    //% blockNamespace=input advanced=true
+    //% button.fieldEditor="gridpicker"
+    //% button.fieldOptions.width=220
+    //% button.fieldOptions.columns=3 shim=ButtonMethods::wasPressed
     wasPressed(): boolean;
+}
+declare namespace input {
+
+    /**
+     * Capacitive pin A1
+     */
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getTouchButton
+    //% block="pin A1" fixedInstance shim=pxt::getTouchButton(0)
+    const pinA1: Button;
+
+    /**
+     * Capacitive pin A2
+     */
+    //% block="pin A2" fixedInstance shim=pxt::getTouchButton(1)
+    const pinA2: Button;
+
+    /**
+     * Capacitive pin A3
+     */
+    //% block="pin A3" fixedInstance shim=pxt::getTouchButton(2)
+    const pinA3: Button;
+
+    /**
+     * Capacitive pin A4
+     */
+    //% block="pin A4" fixedInstance shim=pxt::getTouchButton(3)
+    const pinA4: Button;
+
+    /**
+     * Capacitive pin A5
+     */
+    //% block="pin A5" fixedInstance shim=pxt::getTouchButton(4)
+    const pinA5: Button;
+
+    /**
+     * Capacitive pin A6
+     */
+    //% block="pin A6" fixedInstance shim=pxt::getTouchButton(5)
+    const pinA6: Button;
+
+    /**
+     * Capacitive pin A7
+     */
+    //% block="pin A7" fixedInstance shim=pxt::getTouchButton(6)
+    const pinA7: Button;
 }
 
 // Auto-generated. Do not edit. Really.

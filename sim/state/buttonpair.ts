@@ -67,13 +67,13 @@ namespace pxsim {
             ];
 
             this.touchPins =[
+                CPlayPinName.A1,
+                CPlayPinName.A2,
+                CPlayPinName.A3,
                 CPlayPinName.A4,
                 CPlayPinName.A5,
                 CPlayPinName.A6,
-                CPlayPinName.A7,
-                CPlayPinName.A8,
-                CPlayPinName.A9,
-                CPlayPinName.A10
+                CPlayPinName.A7
             ];
 
             this.touchButtons = this.touchPins.map(id => new CPButton(DAL.DEVICE_ID_IO_P0 + 100 + id));

@@ -11,9 +11,6 @@ namespace pxsim {
         A5,
         A6,
         A7,
-        A8,
-        A9,
-        A10,
         D4,
         D5,
         D6,
@@ -35,7 +32,7 @@ namespace pxsim {
         accelerometerState: AccelerometerState;
         audioState: AudioState;
 
-        view: SVGElement;
+        view: SVGSVGElement;
 
         constructor() {
             super()
@@ -71,9 +68,6 @@ namespace pxsim {
                     pxsim.CPlayPinName.A5,
                     pxsim.CPlayPinName.A6,
                     pxsim.CPlayPinName.A7,
-                    pxsim.CPlayPinName.A8,
-                    pxsim.CPlayPinName.A9,
-                    pxsim.CPlayPinName.A10,
                     pxsim.CPlayPinName.D4,
                     pxsim.CPlayPinName.D5,
                     pxsim.CPlayPinName.D6,
@@ -127,7 +121,7 @@ namespace pxsim {
             }), opts);
 
             document.body.innerHTML = ""; // clear children
-            document.body.appendChild(this.view = viewHost.getView());
+            document.body.appendChild(this.view = viewHost.getView() as SVGSVGElement);
 
             return Promise.resolve();
         }

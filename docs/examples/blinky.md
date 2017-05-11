@@ -1,5 +1,7 @@
 # Blinky
 
+Flash red and blue every half second.
+
 ```blocks
 loops.forever(() => {
     light.pixels.setAll(light.colors(Colors.Red))

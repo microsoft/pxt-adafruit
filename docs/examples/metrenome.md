@@ -1,6 +1,6 @@
-# Metrenome
+# Metronome
 
-Use your @boardname@ as a metrenome.
+Use your @boardname@ as a metronome.
 Use the A and B to decrease / increase the tempo.
 
 ```blocks

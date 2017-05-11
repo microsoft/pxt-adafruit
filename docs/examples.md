@@ -6,51 +6,51 @@ Here are some fun programs for your @boardname@!
 
 ```codecard
 [{
-  "name": "blinky",
+  "name": "Blinky",
   "url":"/examples/blinky",
   "cardType": "example"  
 },{
-  "name": "Animation Shacker",
-  "url":"/examples/animation-shacker",
+  "name": "Animation shaker",
+  "url":"/examples/animation-shaker",
   "cardType": "example"
 },{
-  "name": "tilt light show",
+  "name": "Tilt light show",
   "url":"/examples/tilt-light-show",
   "cardType": "example"
 },{
-  "name": "juggle counter",
+  "name": "Juggle counter",
   "url":"/examples/juggle-counter",
   "cardType": "example"
 },{
-  "name": "power glove",
+  "name": "Power glove",
   "url":"/examples/power-glove",
   "cardType": "example"
 },{
-  "name": "dice",
+  "name": "Dice",
   "url":"/examples/dice",
   "cardType": "example"
 },{
-  "name": "level",
+  "name": "Level",
   "url":"/examples/level",
   "cardType": "example"
 },{
-  "name": "egg game",
+  "name": "Egg game",
   "url":"/examples/egg-game",
   "cardType": "example"
 },{
-  "name": "photon beatbox",
+  "name": "Photon beatbox",
   "url":"/examples/photon-beatbox",
   "cardType": "example"
 },{
-  "name": "spin it",
+  "name": "Spin it",
   "url":"/examples/spin-it",
   "cardType": "example"
 },{
-  "name": "metrenome",
+  "name": "Metronome",
   "url":"/examples/metrenome",
   "cardType": "example"
 },{
-  "name": "beat visualizer",
+  "name": "Beat visualizer",
   "url":"/examples/beat-visualizer",
   "cardType": "example"
 }]

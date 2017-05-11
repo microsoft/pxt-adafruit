@@ -8,17 +8,23 @@ declare namespace input {
      */
     //% help=input/on-gesture weight=98 blockGap=8
     //% blockId=device_gesture_event block="on |%NAME"
-    //% parts="accelerometer" shim=input::onGesture
+    //% parts="accelerometer"
+    //% gesture.fieldEditor="gridpicker"
+    //% gesture.fieldOptions.width=220
+    //% gesture.fieldOptions.columns=3 shim=input::onGesture
     function onGesture(gesture: Gesture, body: () => void): void;
 
     /**
      * Get the acceleration value in milli-gravitys (when the board is laying flat with the screen up,
-     * x=0, y=0 and z=-1024)
+     * x=0, y=0 and z=-1023)
      * @param dimension TODO
      */
     //% help=input/acceleration weight=76
     //% blockId=device_acceleration block="acceleration (mg)|%NAME" blockGap=8
-    //% parts="accelerometer" shim=input::acceleration
+    //% parts="accelerometer"
+    //% dimension.fieldEditor="gridpicker"
+    //% dimension.fieldOptions.width=180
+    //% dimension.fieldOptions.columns=2 shim=input::acceleration
     function acceleration(dimension: Dimension): number;
 
     /**

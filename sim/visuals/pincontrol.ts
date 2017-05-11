@@ -17,7 +17,7 @@ namespace pxsim.visuals {
 
             // Init the gradient controls
             const gid = `gradient-${CPlayPinName[id]}-level`;
-            this.innerCircle = parent.element.getElementById("PIN_CONNECTOR_" + CPlayPinName[id]) as SVGCircleElement;
+            this.innerCircle = parent.element.getElementById("PIN_" + CPlayPinName[id]) as SVGCircleElement;
             this.gradient = svg.linearGradient(this.defs, gid);
             this.innerCircle.setAttribute("fill", `url(#${gid})`);
             this.innerCircle.setAttribute("class", "sim-light-level-button")

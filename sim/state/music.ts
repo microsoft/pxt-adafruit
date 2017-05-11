@@ -59,6 +59,10 @@ namespace pxsim.music {
             }
         }
 
+        ["SPEAKER", "PIN_A0"]
+            .map(id => b.view.getElementById(id) as SVGElement)
+            .forEach(el => pxsim.svg.animate(el, 'sim-flash-stroke'));
+
         audioState.startPlaying();
         runtime.queueDisplayUpdate();
         AudioContextManager.tone(frequency, 1);
@@ -82,7 +86,7 @@ namespace pxsim.music {
     }
 
     function getPitchPin() {
-        const audioState = board().audioState;        
+        const audioState = board().audioState;
         if (!audioState.pitchPin_) {
             audioState.pitchPin_ = board().edgeConnectorState.getPin(CPlayPinName.D6);
         }

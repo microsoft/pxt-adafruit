@@ -32,7 +32,7 @@ namespace pxsim {
         accelerometerState: AccelerometerState;
         audioState: AudioState;
 
-        view: SVGElement;
+        view: SVGSVGElement;
 
         constructor() {
             super()
@@ -121,7 +121,7 @@ namespace pxsim {
             }), opts);
 
             document.body.innerHTML = ""; // clear children
-            document.body.appendChild(this.view = viewHost.getView());
+            document.body.appendChild(this.view = viewHost.getView() as SVGSVGElement);
 
             return Promise.resolve();
         }

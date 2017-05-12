@@ -186,7 +186,7 @@ namespace pxsim.bluetooth {
         // TODO
     }
     export function advertiseUrl(url: string, power: number, connectable: boolean) { }
-    export function advertiseUidBuffer(nsAndInstance: Buffer, power: number, connectable: boolean) { }
+    export function advertiseUidBuffer(nsAndInstance: RefBuffer, power: number, connectable: boolean) { }
     export function stopAdvertising() { }
     export function setTransmitPower(power: number) {}
 }

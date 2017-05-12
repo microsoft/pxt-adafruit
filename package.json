@@ -39,8 +39,8 @@
     "semantic-ui-less": "^2.2.4"
   },
   "dependencies": {
-    "pxt-common-packages": "0.2.1",
-    "pxt-core": "1.5.3"
+    "pxt-common-packages": "0.2.2",
+    "pxt-core": "1.5.4"
   },
   "scripts": {
     "test": "node node_modules/pxt-core/built/pxt.js travis"

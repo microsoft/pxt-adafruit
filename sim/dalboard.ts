@@ -37,6 +37,8 @@ namespace pxsim {
         constructor() {
             super()
 
+            this.bus.setNotify(DAL.DEVICE_ID_NOTIFY, DAL.DEVICE_ID_NOTIFY_ONE);
+
             //components
             this.builtinParts["neopixel"] = this.neopixelState = new CPNeoPixelState();
             this.builtinParts["buttonpair"] = this.buttonPairState = new CPButtonState();

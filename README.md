@@ -1,6 +1,6 @@
 # Adafruit Circuit Playground target for PXT
 
-https://ci2.dot.net/buildStatus/icon?job=Private/pxt_project_pink/master/pxt-adafruit_Push
+[![Build Status](https://ci2.dot.net/buildStatus/icon?job=Private/pxt_project_pink/master/pxt-adafruit_Push)](https://ci2.dot.net/job/Private/job/pxt_project_pink/job/master/job/pxt-adafruit_Push/)
 
 ## Code of Conduct
 

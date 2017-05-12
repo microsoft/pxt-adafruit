@@ -5,7 +5,7 @@ namespace pxsim.control {
         U.userError("reset not implemented in simulator yet")
     }
     export function waitMicros(micros: number) {
-        // TODO
+        thread.pause(micros / 1000); // it prempts not much we can do here.
     }
     export function deviceName(): string {
         let b = board();
@@ -24,6 +24,11 @@ namespace pxsim.control {
     }
     export function onEvent(id: number, evid: number, handler: RefAction) {
         pxtcore.registerWithDal(id, evid, handler)
+    }
+
+    export function waitForEvent(id: number, evid: number) {
+        const cb = getResume();
+        board().bus.wait(id, evid, cb);
     }
 
     export function raiseEvent(id: number, evid: number, mode: number) {

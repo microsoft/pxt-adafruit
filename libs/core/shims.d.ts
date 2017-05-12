@@ -349,7 +349,7 @@ declare namespace control {
     /**
      * Blocks the calling thread until the specified event is raised.
      */
-    //% help=control/wait-for-event
+    //% help=control/wait-for-event async
     //% blockId=control_wait_for_event block="wait for event|from %src|with value %value" shim=control::waitForEvent
     function waitForEvent(id: int32, value: int32): void;
 

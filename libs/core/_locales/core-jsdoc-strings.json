@@ -65,6 +65,7 @@
   "control.raiseEvent|param|value": "Component specific code indicating the cause of the event.",
   "control.reset": "Resets the device.",
   "control.runInBackground": "Schedules code that run in the background.",
+  "control.waitForEvent": "Blocks the calling thread until the specified event is raised.",
   "control.waitMicros": "Blocks the current fiber for the given microseconds",
   "control.waitMicros|param|micros": "number of micro-seconds to wait. eg: 4",
   "input.buttonA": "Left button.",

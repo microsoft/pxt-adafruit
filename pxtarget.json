@@ -153,7 +153,7 @@
         "variablesBlocks": true,
         "textBlocks": true,
         "onStartNamespace": "loops",
-        "onStartColor": "#107c10"
+        "onStartColor": "#40bf4a"
 
     },
     "compileService": {
@@ -230,16 +230,24 @@
         "simAnimationExit": "roll out",
         "exampleGallery": "examples",
         "hasAudio": true,
+        "usbHelp": [],
+        "extendEditor": true,
+        "disableBlockIcons": true,
         "blocklyOptions": {
             "grid": {
-                "spacing": 45,
+                "spacing": 20,
                 "length": 2,
-                "colour": "#FB48C7",
+                "colour": "rgba(189, 195, 199, 0.20)",
                 "snap": true
             }
         },
-        "usbHelp": [],
-        "extendEditor": true,
-        "disableBlockIcons": true
+        "blockColors": {
+            "loops": "#40bf4a",
+            "logic": "#4cbfe6",
+            "math": "#9966ff",
+            "variables": "#FF6680",
+            "text": "#ffab19",
+            "advanced": "#00272B"
+        }
     }
 }

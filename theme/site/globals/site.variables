@@ -20,10 +20,10 @@
 @grey:#999;
 
 /* Adafruit colors */
-@blue:#0089BF;
+@blue:#2EB7ED;
 @pink:#FB48C7;
 
-@green:#00922B;
+@green: #40bf4a; /*#00922B;*/
 @purple:#8073E5;
 @orange:#FFA702;
 
@@ -56,9 +56,9 @@
    Background
 --------------------*/
 
-@simulatorBackground: #313638;
-@editorToolsBackground: #1e1e1e;
-@blocklySvgColor: #1e1e1e;
+@simulatorBackground: #2F2F2F; /*#313638;*/
+@editorToolsBackground: #2F2F2F; /*#1e1e1e;*/
+@blocklySvgColor: #4c4b4d; /*#1e1e1e;*/
 
 /*-------------------
    Full screen

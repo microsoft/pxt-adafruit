@@ -29,7 +29,6 @@
   "control.raiseEvent|block": "raise event|from %src|with value %value",
   "control.reset|block": "reset",
   "control.runInBackground|block": "run in background",
-  "control.waitForEvent|block": "wait for event|from %src|with value %value",
   "control.waitMicros|block": "wait (µs)%micros",
   "control|block": "control",
   "input.buttonA|block": "button A",

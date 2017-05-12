@@ -41,6 +41,11 @@
 div.blocklyTreeRow {
     border-radius: 3px;
     margin-bottom: 3px !important;
+    border: 1px solid #1e1e1e;
+    border-left-width: 1px !important;
+}
+div.blocklyTreeRoot div div div div div.blocklyTreeRow {
+    border-left-width: 1px !important;
 }
 
 /* This removes any padding at the top of the toolbox */
@@ -60,20 +65,16 @@ svg.blocklySvg {
 }
 
 .blocklyFlyoutBackground {
-    fill: #000;
-    fill-opacity: .5;
+    fill: #282828;
 }
 .monacoFlyout {
-    background: rgba(0,0,0,0.5);
+    background: rgba(40, 40, 40, 0.9);
 }
 
 .blocklyToolboxDiv, .monacoToolboxDiv {
     padding: 0.5rem;
-}
-
-.monacoToolboxDiv {
-    /* Inverted monaco color */
-    background-color: #1e1e1e !important;
+    border-right: solid 1px #282828;
+    background-color: #383838 !important;
 }
 
 .blocklyScrollbarHandle {
@@ -111,10 +112,18 @@ svg.blocklySvg {
     #filelist {
         background: transparent;
     }
+
+    div.blocklyTreeRow {
+        padding-bottom: 2rem !important;
+    }
 }
 
 /* Tablet */
 @media only screen and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
+
+    div.blocklyTreeRow {
+        padding-bottom: 1.75rem !important;
+    }
 }
 
 /* Small Monitor */

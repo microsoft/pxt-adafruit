@@ -347,13 +347,6 @@ declare namespace control {
     function runInBackground(a: () => void): void;
 
     /**
-     * Blocks the calling thread until the specified event is raised.
-     */
-    //% help=control/wait-for-event async
-    //% blockId=control_wait_for_event block="wait for event|from %src|with value %value" shim=control::waitForEvent
-    function waitForEvent(id: int32, value: int32): void;
-
-    /**
      * Derive a unique, consistent serial number of this device from internal data.
      */
     //% blockId="control_device_serial_number" block="device serial number" weight=9 shim=control::deviceSerialNumber

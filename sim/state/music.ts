@@ -4,6 +4,7 @@ namespace pxsim {
         private playing: boolean;
         public outputDestination_ = 0;
         public pitchPin_: Pin;
+        public volume = 100;
         constructor() {
             this.playing = false;
         }
@@ -32,7 +33,8 @@ namespace pxsim.music {
     }
 
     export function setSpeakerVolume(volume: number) {
-        // Nothing to do
+        const audioState = board().audioState;
+        audioState.volume = volume;
     }
 
     export function setPitchPin(pin: Pin) {

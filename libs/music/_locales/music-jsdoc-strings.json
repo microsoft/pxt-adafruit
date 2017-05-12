@@ -21,7 +21,7 @@
   "music.setPitchPin": "Sets the pin to output sound to when the sound output is set to \"pin\"",
   "music.setPitchPin|param|pin": "the pin to generate sound on",
   "music.setSpeakerVolume": "Sets the output volume of the on board speaker (if available)",
-  "music.setSpeakerVolume|param|volume": "the volume 0...100, eg: 50",
+  "music.setSpeakerVolume|param|volume": "the volume 0...255, eg: 128",
   "music.setTempo": "Sets the tempo to the specified amount",
   "music.setTempo|param|bpm": "The new tempo in beats per minute, eg: 120",
   "music.startMelody": "Starts playing a melody through.\nNotes are expressed as a string of characters with this format: NOTE[octave][:duration]",

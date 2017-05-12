@@ -21,12 +21,12 @@ declare namespace music {
 
     /**
      * Sets the output volume of the on board speaker (if available)
-     * @param volume the volume 0...100, eg: 50
+     * @param volume the volume 0...255, eg: 128
      */
     //% weight=96
     //% blockId=synth_set_volume block="set speaker volume %volume"
     //% parts="speaker" blockGap=8
-    //% volume.min=0 volume.max=100
+    //% volume.min=0 volume.max=255
     //% weight=1 shim=music::setSpeakerVolume
     function setSpeakerVolume(volume: int32): void;
 

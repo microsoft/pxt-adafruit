@@ -31,6 +31,11 @@ namespace pxsim.control {
         board().bus.wait(id, evid, cb);
     }
 
+    export function allocateNotifyEvent() : number {
+        let b = board();
+        return b.bus.nextNotifyEvent++;
+    }
+
     export function raiseEvent(id: number, evid: number, mode: number) {
         // TODO mode?
         board().bus.queue(id, evid)

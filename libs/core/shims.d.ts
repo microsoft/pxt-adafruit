@@ -354,6 +354,13 @@ declare namespace control {
     function waitForEvent(id: int32, value: int32): void;
 
     /**
+     * Allocates the next user notification event
+     */
+    //% help=control/allocate-notify-event
+    //% shim=control::allocateNotifyEvent
+    function allocateNotifyEvent(): int32;
+
+    /**
      * Derive a unique, consistent serial number of this device from internal data.
      */
     //% blockId="control_device_serial_number" block="device serial number" weight=9 shim=control::deviceSerialNumber

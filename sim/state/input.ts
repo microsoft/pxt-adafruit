@@ -134,7 +134,13 @@ namespace pxsim.input {
         pxtcore.registerWithDal(b.id, condition, body);
     }
 
+    const SWITCH_ID = 3000;
     export function onSwitchMoved(direction: number, body: RefAction) {
-        pxtcore.registerWithDal(3000, direction, body);
+        pxtcore.registerWithDal(SWITCH_ID, direction, body);
+
+        const b = board();
+        const sw = b.slideSwitchState;
+        if (sw.isLeft() == (direction == DAL.DEVICE_BUTTON_EVT_UP))
+            b.bus.queue(SWITCH_ID, direction);
     }
 }

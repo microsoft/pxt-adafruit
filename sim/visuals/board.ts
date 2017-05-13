@@ -452,12 +452,10 @@ namespace pxsim.visuals {
             svg.addClass(switchSlide, "sim-slide-switch-inner")
             if (slideSwitchState.isLeft()) {
                 svg.addClass(switchSlide, "on");
-                switchSlide.setAttribute("x", "10");
-                state.buttonPairState.buttons[2].setPressed(true);
+                switchSlide.setAttribute("transform", "translate(-5,0)");
             } else {
                 svg.removeClass(switchSlide, "on");
-                state.buttonPairState.buttons[2].setPressed(false);
-                switchSlide.setAttribute("x", "5.67");
+                switchSlide.removeAttribute("transform");
             }
         }
 

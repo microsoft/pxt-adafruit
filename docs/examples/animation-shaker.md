@@ -3,24 +3,21 @@
 Shake your @boardname@ to play a random animation.
 
 ```blocks
-let animation: light.NeoPixelAnimation = null
 let r = 0
 input.onGesture(Gesture.Shake, () => {
     r = Math.random(4)
     if (r == 0) {
-        animation = light.cometAnimation()
+        light.pixels.showAnimation(LightAnimation.RunningLights, 2000)
     } else if (r == 1) {
-        animation = light.rainbowCycleAnimation()
+        light.pixels.showAnimation(LightAnimation.Rainbow, 2000)
     } else if (r == 2) {
-        animation = light.colorWipeAnimation(Colors.Red)
+        light.pixels.showAnimation(LightAnimation.Comet, 2000)
     } else {
-        animation = light.sparkleAnimation()
+        light.pixels.showAnimation(LightAnimation.TheaterChase, 2000)
     }
-    for (let i = 0; i < 60; i++) {
-        light.pixels.showAnimationFrame(animation)
-        loops.pause(20)
-    }
-    light.pixels.clear()
-    light.pixels.show()
 })
+```
+
+```package
+light
 ```

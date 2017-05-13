@@ -38,7 +38,7 @@ namespace light {
     //% weight=100
     //% array.fieldEditor="lights" 
     //% array.fieldOptions.onParentBlock=true
-    //% blockExternalInputs="true"
+    //% blockExternalInputs="true" blockGap=8
     export function showRing(array: string, interval: number = 400) {        
         const strip = light.pixels;
         return strip.showColors(array, interval);

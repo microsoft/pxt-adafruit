@@ -2,24 +2,28 @@
 
 Do something when the slide switch is moved left or right.
 
-```
-input.onSwitchMoved(SwitchDirection.left, () => {})
+```sig
+input.onSwitchMoved(SwitchDirection.Left, () => {
+    music.playMelody(Melodies.BaDing)
+})
 ```
 
 ## Parameters
 
-* **direction**: the direction the switch must be moved to trigget the event (look for the labels on the buttons to see which direction is which).
-* **body**: code to run when the switch is moved.
+* **direction**: the direction the switch must be moved to trigger the event (look for the labels on the buttons to see which direction is which).
+* **handler**: code to run when the switch is moved.
 
 ## Example
 
+Set all the pixels to red when the switched is moved to the left.
+
 ```blocks
-input.onSwitchMoved(SwitchDirection.left, () => {
-    light.pixels.showColor(light.colors(Colors.Yellow))
-})
+input.onSwitchMoved(SwitchDirection.Left, () => {
+    light.pixels.setAll(Colors.Red);
+});
 ```
 
-## See Also
+## See also
 
 
 

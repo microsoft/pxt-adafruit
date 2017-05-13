@@ -1,14 +1,13 @@
 # Reference
 
 ```namespaces
-input.onGesture(Gesture.Shake, () => {
-    
+light.pixels.photonForward(1);
+input.onGesture(Gesture.Shake, () => {})
+music.startMelody([], MelodyOptions.Once)
+control.runInBackground(() => {
+music.playTone(0, 0)
 });
-photon.forward(1);
-light.statusLED(true);
-music.noteFrequency(Note.C);
-control.forever(() => {});
-pins.pulseDuration();
+pins.A1.servoWrite(0)
 serial.writeLine("");
 ```
 

@@ -1,7 +1,7 @@
 //% color="#B4009E" weight=99 icon="\uf192"
 namespace input {
     /**
-     * Senses the ambient color using the LED pixel next to the LED sensor.
+     * Sense the ambient color using the LED pixel next to the LED sensor.
      */
     //% help=input/ambient-color weight=75
     //% blockId=device_get_ambient_color block="ambient color" blockGap=8

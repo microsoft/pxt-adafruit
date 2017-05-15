@@ -3,7 +3,6 @@
     "description": "The Adafruit Circuit Playground Express library",
     "files": [
         "README.md",
-        "switch.cpp",
         "input.ts",
         "ns.ts",
         "shims.d.ts",
@@ -23,7 +22,8 @@
         "temperature": "file:../temperature",
         "music": "file:../music",
         "microphone": "file:../microphone",
-        "light": "file:../light"
+        "light": "file:../light",
+        "switch": "file:../switch"
     },
     "public": true
 }

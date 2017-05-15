@@ -33,14 +33,16 @@ namespace light {
 
     /**
      * Shows a pattern of colors on the pixel ring
+     * @param colors a string describing the colors
+     * @param interval the duration in milliseconds between frames, eg: 20
      */
-    //% blockId="neopixel_show_ring_colors" block="show ring |%array"
+    //% blockId="neopixel_show_ring_colors" block="show ring |%colors"
     //% weight=100
-    //% array.fieldEditor="lights" 
-    //% array.fieldOptions.onParentBlock=true
+    //% colors.fieldEditor="lights" 
+    //% colors.fieldOptions.onParentBlock=true
     //% blockExternalInputs="true" blockGap=8
-    export function showRing(array: string, interval: number = 400) {        
+    export function showRing(colors: string, interval: number = 20) {        
         const strip = light.pixels;
-        return strip.showColors(array, interval);
+        return strip.showColors(colors, interval);
     }
 }

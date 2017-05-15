@@ -457,7 +457,7 @@ declare interface Button {
      * Get the button state (pressed or not).
      * @param button the button to query the request
      */
-    //% help=input/button-is-pressed weight=79
+    //% help=input/is-pressed weight=79
     //% block="%NAME|is pressed"
     //% blockId=buttonIsPressed
     //% blockGap=8
@@ -472,7 +472,7 @@ declare interface Button {
      * Indicates if the button was pressed since this function was last called.
      * @param button the button to query the request
      */
-    //% help=input/button-was-pressed weight=78
+    //% help=input/was-pressed weight=78
     //% block="%NAME|was pressed"
     //% blockId=buttonWasPressed
     //% parts="buttonpair" blockGap=8
@@ -481,51 +481,6 @@ declare interface Button {
     //% button.fieldOptions.width=220
     //% button.fieldOptions.columns=3 shim=ButtonMethods::wasPressed
     wasPressed(): boolean;
-}
-declare namespace input {
-
-    /**
-     * Capacitive pin A1
-     */
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getTouchButton
-    //% block="pin A1" fixedInstance shim=pxt::getTouchButton(0)
-    const pinA1: Button;
-
-    /**
-     * Capacitive pin A2
-     */
-    //% block="pin A2" fixedInstance shim=pxt::getTouchButton(1)
-    const pinA2: Button;
-
-    /**
-     * Capacitive pin A3
-     */
-    //% block="pin A3" fixedInstance shim=pxt::getTouchButton(2)
-    const pinA3: Button;
-
-    /**
-     * Capacitive pin A4
-     */
-    //% block="pin A4" fixedInstance shim=pxt::getTouchButton(3)
-    const pinA4: Button;
-
-    /**
-     * Capacitive pin A5
-     */
-    //% block="pin A5" fixedInstance shim=pxt::getTouchButton(4)
-    const pinA5: Button;
-
-    /**
-     * Capacitive pin A6
-     */
-    //% block="pin A6" fixedInstance shim=pxt::getTouchButton(5)
-    const pinA6: Button;
-
-    /**
-     * Capacitive pin A7
-     */
-    //% block="pin A7" fixedInstance shim=pxt::getTouchButton(6)
-    const pinA7: Button;
 }
 
 // Auto-generated. Do not edit. Really.

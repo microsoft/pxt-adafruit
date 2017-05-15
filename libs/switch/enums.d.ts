@@ -1,11 +1,11 @@
 // Auto-generated. Do not edit.
 
 
-    declare enum SoundOutputDestination {
-    //% block="speaker"
-    Speaker = 0,
-    //% block="pin"
-    Pin = 1,
+    declare enum SwitchDirection {
+    //% block="left"
+    Left = 2,  // DEVICE_BUTTON_EVT_UP
+    //% block="right"
+    Right = 1,  // DEVICE_BUTTON_EVT_DOWN
     }
 
 // Auto-generated. Do not edit. Really.

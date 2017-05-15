@@ -21,7 +21,6 @@
         "lightsensor": "file:../lightsensor",
         "temperature": "file:../temperature",
         "music": "file:../music",
-        "microphone": "file:../microphone",
         "light": "file:../light",
         "switch": "file:../switch"
     },

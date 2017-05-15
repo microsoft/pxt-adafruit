@@ -160,7 +160,12 @@ namespace pxt.editor {
     onPixelClicked(neopixel: SVGElement, id: number) {
       let btn = this.paletteButtons.filter(btn => pxsim.svg.hasClass(btn, 'active'))[0];
       if (btn) {
-        neopixel.setAttribute("data-color", btn.getAttribute("data-color"));
+        const current = neopixel.getAttribute("data-color");
+        const btncol = btn.getAttribute("data-color");
+        if (current == btncol)
+          neopixel.setAttribute("data-color", "black");
+        else
+          neopixel.setAttribute("data-color", btn.getAttribute("data-color"));
         this.setValue(this.getValueArray())
         if (this.sourceBlock_ && this.sourceBlock_.workspace) this.sourceBlock_.workspace.playAudio('click');
       }

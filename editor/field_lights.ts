@@ -165,7 +165,7 @@ namespace pxt.editor {
         if (current == btncol)
           neopixel.setAttribute("data-color", "black");
         else
-          neopixel.setAttribute("data-color", btn.getAttribute("data-color"));
+          neopixel.setAttribute("data-color", btncol);
         this.setValue(this.getValueArray())
         if (this.sourceBlock_ && this.sourceBlock_.workspace) this.sourceBlock_.workspace.playAudio('click');
       }

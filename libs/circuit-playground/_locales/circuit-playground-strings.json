@@ -1,8 +1,5 @@
 {
-  "SwitchDirection.Left|block": "left",
-  "SwitchDirection.Right|block": "right",
   "input.ambientColor|block": "ambient color",
-  "input.onSwitchMoved|block": "on switch moved %direction",
   "input|block": "input",
   "light.showRing|block": "show ring |%array",
   "light|block": "light",

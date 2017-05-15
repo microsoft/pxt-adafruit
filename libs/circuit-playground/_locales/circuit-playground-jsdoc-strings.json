@@ -1,6 +1,6 @@
 {
   "input.ambientColor": "Sense the ambient color using the LED pixel next to the LED sensor.",
-  "input.onSwitchMoved": "Do something when the slide switch is moved left or right.\n* @param direction the direction the switch must be moved to trigget the event",
+  "input.onSwitchMoved": "Do something when the slide switch is moved left or right.\n* @param direction the direction the switch must be moved to trigget the event\n\nDo something when the slide switch is moved left or right.\n* @param direction the direction the switch must be moved to trigget the event",
   "light": "Functions to operate colored LEDs.\n\nFunctions to operate colored LEDs.",
   "light.showRing": "Shows a pattern of colors on the pixel ring"
 }

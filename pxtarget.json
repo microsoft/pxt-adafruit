@@ -14,6 +14,8 @@
         "libs/lightsensor",
         "libs/temperature",
         "libs/light",
+        "libs/touch",
+        "libs/switch",
         "libs/circuit-playground"
     ],
     "serial": {

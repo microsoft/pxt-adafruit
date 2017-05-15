@@ -11,7 +11,7 @@ declare namespace radio {
     //% help=radio/send-number
     //% weight=60
     //% blockId=radio_datagram_send block="radio send number %value" blockGap=8 shim=radio::sendNumber
-    function sendNumber(value: int32): void;
+    function sendNumber(value: number): void;
 
     /**
      * Broadcasts a name / value pair along with the device serial number
@@ -22,7 +22,7 @@ declare namespace radio {
     //% help=radio/send-value
     //% weight=59
     //% blockId=radio_datagram_send_value block="radio send|value %name|= %value" blockGap=8 shim=radio::sendValue
-    function sendValue(name: string, value: int32): void;
+    function sendValue(name: string, value: number): void;
 
     /**
      * Broadcasts a string along with the device serial number
@@ -61,7 +61,7 @@ declare namespace radio {
     //% weight=46
     //% blockId=radio_datagram_receive block="radio receive number" blockGap=8
     //% deprecated=true shim=radio::receiveNumber
-    function receiveNumber(): int32;
+    function receiveNumber(): number;
 
     /**
      * Registers code to run when a packet is received over radio.
@@ -91,7 +91,7 @@ declare namespace radio {
     //% weight=40
     //% blockId=radio_datagram_rssi block="radio received signal strength"
     //% deprecated=true shim=radio::receivedSignalStrength
-    function receivedSignalStrength(): int32;
+    function receivedSignalStrength(): number;
 
     /**
      * Sets the group id for radio communications. A micro:bit can only listen to one group ID at any time.
@@ -101,7 +101,7 @@ declare namespace radio {
     //% weight=10 blockGap=8
     //% blockId=radio_set_group block="radio set group %ID"
     //% id.min=0 id.max=255 shim=radio::setGroup
-    function setGroup(id: int32): void;
+    function setGroup(id: number): void;
 
     /**
      * Change the output power level of the transmitter to the given value.
@@ -112,7 +112,7 @@ declare namespace radio {
     //% blockId=radio_set_transmit_power block="radio set transmit power %power"
     //% power.min=0 power.max=7
     //% advanced=true shim=radio::setTransmitPower
-    function setTransmitPower(power: int32): void;
+    function setTransmitPower(power: number): void;
 
     /**
      * Set the radio to transmit the serial number in each message.
@@ -130,7 +130,7 @@ declare namespace radio {
      * contain a number.
      */
     //% help=radio/received-number shim=radio::receivedNumber
-    function receivedNumber(): int32;
+    function receivedNumber(): number;
 
     /**
      * Returns the serial number of the sender micro:bit from the last packet taken
@@ -138,7 +138,7 @@ declare namespace radio {
      * that packet did not send a serial number.
      */
     //% help=radio/received-serial shim=radio::receivedSerial
-    function receivedSerial(): uint32;
+    function receivedSerial(): number;
 
     /**
      * Returns the string payload from the last packet taken from the radio queue
@@ -154,7 +154,7 @@ declare namespace radio {
      * ``receiveString``, etc).
      */
     //% help=radio/received-time shim=radio::receivedTime
-    function receivedTime(): uint32;
+    function receivedTime(): number;
 }
 
 // Auto-generated. Do not edit. Really.

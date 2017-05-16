@@ -114,15 +114,17 @@ namespace pxsim.input {
         pxtcore.registerWithDal(b.id, condition, body);
     }
 
-    export function temperature(): number {
+    export function temperature(unit: number): number {
         let b = board().thermometerState;
         b.setUsed();
+        board().thermometerUnitState = unit;
         return b.getLevel();
     }
 
     export function onTemperateConditionChanged(condition: number, temperature: number, body: RefAction) {
         let b = board().thermometerState;
         b.setUsed();
+        board().thermometerUnitState = pxsim.ThermometerUnit.Celsius;
 
         if (condition === DAL.ANALOG_THRESHOLD_HIGH) {
             b.setHighThreshold(temperature);

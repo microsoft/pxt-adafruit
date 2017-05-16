@@ -5,12 +5,6 @@ namespace pxsim {
         Fahrenheit
     }
 
-    export class ThermometerState {
-        usesTemperature = false;
-        unit: ThermometerUnit = ThermometerUnit.Celsius;
-        temperature = 21;
-    }
-
     export class SlideSwitchState {
         public static id = 3000 /*DEVICE_ID_BUTTON_SLIDE*/;
         private left: boolean = false;

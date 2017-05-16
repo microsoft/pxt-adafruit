@@ -154,6 +154,7 @@
         "logicBlocks": true,
         "variablesBlocks": true,
         "textBlocks": true,
+        "listBlocks": true,
         "onStartNamespace": "loops",
         "onStartColor": "#40bf4a"
 
@@ -170,7 +171,7 @@
             }
         },        
         "githubCorePackage": "lancaster-university/codal",
-        "gittag": "v0.1.1",
+        "gittag": "v0.1.2",
         "serviceId": "codalcp"
     },
     "appTheme": {

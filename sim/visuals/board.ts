@@ -618,7 +618,13 @@ namespace pxsim.visuals {
             let t = Math.max(tmin, Math.min(tmax, state.thermometerState.getLevel()))
             let per = Math.floor((state.thermometerState.getLevel() - tmin) / (tmax - tmin) * 100)
             svg.setGradientValue(this.thermometerGradient, 100 - per + "%");
-            this.thermometerText.textContent = t + "°C";
+
+            let unit = "°C";
+            if (state.thermometerUnitState == pxsim.ThermometerUnit.Fahrenheit) {
+                unit = "°F";
+                t = ((t * 18) / 10 + 32) >> 0;
+            }
+            this.thermometerText.textContent = t + unit;
         }
 
         private updateButtonAB() {

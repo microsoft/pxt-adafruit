@@ -1,7 +1,7 @@
 # Reference
 
 ```namespaces
-light.pixels.photonForward(1);
+light.showLeds(`red red red red red red red red red red red`);
 input.onGesture(Gesture.Shake, () => {})
 music.startMelody([], MelodyOptions.Once)
 control.runInBackground(() => {
@@ -13,4 +13,4 @@ serial.writeLine("");
 
 ### See Also
 
-[blocks](/blocks), [JavaScript](/javascript), [input](/reference/input), [photon](/reference/photon), [light](/reference/light), [music](/reference/music), [control](/reference/control), [pins](/reference/pins), [serial](/reference/serial)
+[blocks](/blocks), [JavaScript](/javascript), [input](/reference/input), [light](/reference/light), [music](/reference/music), [control](/reference/control), [pins](/reference/pins), [serial](/reference/serial)

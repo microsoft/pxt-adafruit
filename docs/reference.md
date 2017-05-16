@@ -1,16 +1,14 @@
 # Reference
 
 ```namespaces
-light.pixels.photonForward(1);
 input.onGesture(Gesture.Shake, () => {})
-music.startMelody([], MelodyOptions.Once)
-control.runInBackground(() => {
+light.pixels.setPixelColor(1, Colors.Blue);
 music.playTone(0, 0)
-});
 pins.A1.servoWrite(0)
+control.runInBackground(() => {})
 serial.writeLine("");
 ```
 
-### See Also
+## See Also
 
-[blocks](/blocks), [JavaScript](/javascript), [input](/reference/input), [photon](/reference/photon), [light](/reference/light), [music](/reference/music), [control](/reference/control), [pins](/reference/pins), [serial](/reference/serial)
+[blocks](/blocks), [JavaScript](/javascript)

@@ -1,5 +1,5 @@
 {
-  "Math.abs": "Returns the absolute value of a number (the value without regard to whether it is positive or negative). \nFor example, the absolute value of -5 is the same as the absolute value of 5.",
+  "Math.abs": "Returns the absolute value of a number (the value without regard to whether it is positive or negative).\nFor example, the absolute value of -5 is the same as the absolute value of 5.",
   "Math.abs|param|x": "A numeric expression for which the absolute value is needed.",
   "Math.ceil": "Returns the smallest number greater than or equal to its numeric argument.",
   "Math.ceil|param|x": "A numeric expression.",

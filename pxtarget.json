@@ -154,6 +154,7 @@
         "logicBlocks": true,
         "variablesBlocks": true,
         "textBlocks": true,
+        "listBlocks": true,
         "onStartNamespace": "loops",
         "onStartColor": "#40bf4a"
 

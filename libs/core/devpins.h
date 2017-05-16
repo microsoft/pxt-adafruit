@@ -42,6 +42,9 @@ class DevPins {
 #undef AnalogPin
 #undef PwmPin
 
+    // not surface in user code
+    DevicePin MIC_DATA;
+    DevicePin MIC_CLOCK;
     I2C i2c;
 
     DevPins();
@@ -50,6 +53,6 @@ class DevPins {
 extern DevPins *io;
 
 // modify if the last field changes
-const int LastPinID = &io->D13 - io->pins;
+const int LastPinID = &io->MIC_CLOCK - io->pins;
 
 #endif

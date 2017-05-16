@@ -26,6 +26,7 @@ namespace pxsim {
         slideSwitchState: SlideSwitchState;
         lightSensorState: AnalogSensorState;
         thermometerState: AnalogSensorState;
+        thermometerUnitState: number;
         soundSensorState: AnalogSensorState;
         edgeConnectorState: EdgeConnectorState;
         capacitiveSensorState: CapacitiveSensorState;

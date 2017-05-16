@@ -114,9 +114,10 @@ namespace pxsim.input {
         pxtcore.registerWithDal(b.id, condition, body);
     }
 
-    export function temperature(): number {
+    export function temperature(unit: number): number {
         let b = board().thermometerState;
         b.setUsed();
+        board().thermometerUnitState = unit;
         return b.getLevel();
     }
 

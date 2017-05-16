@@ -4,9 +4,17 @@ Flash red and blue every half second.
 
 ```blocks
 loops.forever(() => {
-    light.pixels.setAll(light.colors(Colors.Red))
+    light.showRing(
+    `red red red red red red red red red red`
+    )
     loops.pause(500)
-    light.pixels.setAll(light.colors(Colors.Blue))
+    light.showRing(
+    `black black black black black black black black black black`
+    )
     loops.pause(500)
 })
+```
+
+```packages
+light
 ```

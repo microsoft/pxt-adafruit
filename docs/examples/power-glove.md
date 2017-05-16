@@ -5,37 +5,44 @@ Track you hand motions with the @boardname@.
 ```blocks
 let item = 0
 let ready = false
-// charging mode
-input.onGesture(Gesture.TiltUp, () => {
-    ready = false
-    item = 262
-    light.pixels.setBrightness(0)
-    for (let i = 0; i < 100; i++) {
-        light.pixels.setBrightness(light.pixels.brightness() + 1)
-        light.pixels.showColor(Colors.Blue)
-        pins.A8.ringTone(item)
-        item += 15
-        loops.pause(10)
-    }
-    loops.pause(500)
-    ready = true
-})
 // tilt arm left and shoot
 input.onGesture(Gesture.TiltLeft, () => {
     if (ready) {
+        item = 2000
         for (let i = 0; i < 25; i++) {
-            light.pixels.showColor(Colors.Red)
-            pins.A8.playTone(2000, music.beat(BeatFraction.Sixteenth))
-            light.pixels.clear()
-            light.pixels.show()
-            loops.pause(music.beat(BeatFraction.Sixteenth))
+            light.showRing(
+            `red red red red red red red red red red`
+            )
+            music.playTone(item, music.beat(BeatFraction.Sixteenth))
+            item += 30
         }
         ready = false
     }
 })
+// charging mode
+input.onGesture(Gesture.TiltUp, () => {
+    ready = false
+    item = 262
+    for (let i = 0; i < 30; i++) {
+        light.showRing(
+        `blue blue blue blue blue blue blue blue blue blue`
+        )
+        music.playTone(item, music.beat(BeatFraction.Sixteenth))
+        item += 15
+    }
+    loops.pause(500)
+    ready = true
+    music.playTone(item, music.beat(BeatFraction.Whole))
+})
 // reset the glove
 input.onGesture(Gesture.TiltDown, () => {
-    light.pixels.clear()
-    light.pixels.show()
+    light.showRing(
+    `yellow black yellow black yellow yellow black yellow black yellow`
+    )
 })
+```
+
+```package
+light
+music
 ```

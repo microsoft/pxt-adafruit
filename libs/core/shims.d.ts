@@ -379,7 +379,7 @@ declare namespace loops {
      * @param body code to execute
      */
     //% help=loops/forever weight=100 blockGap=8
-    //% blockId=forever block="forever" shim=loops::forever
+    //% blockId=forever block="forever" blockAllowMultiple=1 shim=loops::forever
     function forever(a: () => void): void;
 
     /**

@@ -124,6 +124,7 @@ namespace pxsim.input {
     export function onTemperateConditionChanged(condition: number, temperature: number, body: RefAction) {
         let b = board().thermometerState;
         b.setUsed();
+        board().thermometerUnitState = pxsim.ThermometerUnit.Celsius;
 
         if (condition === DAL.ANALOG_THRESHOLD_HIGH) {
             b.setHighThreshold(temperature);

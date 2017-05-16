@@ -622,7 +622,7 @@ namespace pxsim.visuals {
             let unit = "°C";
             if (state.thermometerUnitState == pxsim.ThermometerUnit.Fahrenheit) {
                 unit = "°F";
-                t = ((t * 9) / 5 + 32) >> 0;
+                t = ((t * 18) / 10 + 32) >> 0;
             }
             this.thermometerText.textContent = t + unit;
         }

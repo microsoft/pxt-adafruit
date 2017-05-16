@@ -22,7 +22,8 @@
         "temperature": "file:../temperature",
         "music": "file:../music",
         "light": "file:../light",
-        "switch": "file:../switch"
+        "switch": "file:../switch",
+        "microphone": "file:../microphone"
     },
     "public": true
 }

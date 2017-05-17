@@ -122,7 +122,7 @@ namespace pxt.editor {
             let btn = this.boardElement.getElementById(id) as SVGGElement;
             pxsim.svg.addClass(btn, 'colorbutton');
             if (this.isEditable()) {
-                if (i == 1) pxsim.svg.addClass(btn, 'active');
+                if (i == 4) pxsim.svg.addClass(btn, 'active');
                 pxsim.svg.onClick(btn, ev => this.onColorClicked(btn));
             }
             this.paletteButtons.push(btn);

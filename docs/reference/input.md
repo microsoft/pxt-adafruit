@@ -8,3 +8,7 @@ input.onLightConditionChanged(LightCondition.Dark, () => {
 input.lightLevel()
 input.ambientColor()
 ```
+
+```package
+lightsensor
+```

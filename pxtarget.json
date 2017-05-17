@@ -189,6 +189,7 @@
         "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
         "homeUrl": "https://makecode.adafruit.com/",
         "embedUrl": "https://makecode.adafruit.com/",
+        "betaUrl": "https://makecode.adafruit.com/",
         "legacyDomain": "pxt.adafruit.com",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",

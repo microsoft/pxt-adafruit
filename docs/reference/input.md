@@ -9,6 +9,6 @@ input.lightLevel()
 input.ambientColor()
 ```
 
-## #microphone
-```cards
+```package
+lightsensor
 ```

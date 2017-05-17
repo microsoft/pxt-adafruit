@@ -108,10 +108,10 @@ namespace pxsim.input {
         return b.getLevel();
     }
 
-    export function onSoundConditionChanged(condition: number, body: RefAction) {
+    export function onLoudSound(body: RefAction) {
         let b = board().soundSensorState;
         b.setUsed();
-        pxtcore.registerWithDal(b.id, condition, body);
+        pxtcore.registerWithDal(b.id, DAL.LEVEL_THRESHOLD_HIGH, body);
     }
 
     export function temperature(unit: number): number {

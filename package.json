@@ -1,6 +1,6 @@
 {
   "name": "pxt-adafruit",
-  "version": "0.12.2",
+  "version": "0.14.0",
   "description": "Adafruit Circuit Playground Express for Microsoft MakeCode",
   "private": true,
   "keywords": [
@@ -39,7 +39,7 @@
     "semantic-ui-less": "^2.2.4"
   },
   "dependencies": {
-    "pxt-common-packages": "0.4.8",
+    "pxt-common-packages": "0.4.9",
     "pxt-core": "1.5.9"
   },
   "scripts": {

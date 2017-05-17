@@ -39,6 +39,7 @@
   "music.setPitchPin|block": "set pitch pin %pin",
   "music.setSpeakerVolume|block": "set speaker volume %volume",
   "music.setTempo|block": "set tempo to (bpm)|%value",
+  "music.setTone|block": "set tone %buffer",
   "music.sounds|block": "%name",
   "music.stopAllSounds|block": "stop all sounds",
   "music.tempo|block": "tempo (bpm)",

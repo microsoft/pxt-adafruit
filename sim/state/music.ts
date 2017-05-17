@@ -42,6 +42,14 @@ namespace pxsim.music {
         audioState.pitchPin_ = pin;
     }
 
+    export function setTone(buffer: RefBuffer) {
+        const b = board();
+        if (!b) return;
+
+        const audioState = b.audioState;
+        // TODO
+    }
+
     export function playTone(frequency: number, ms: number) {
         const b = board();
         if (!b) return;

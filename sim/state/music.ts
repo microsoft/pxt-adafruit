@@ -32,9 +32,9 @@ namespace pxsim.music {
         audioState.outputDestination_ = mode;
     }
 
-    export function setSpeakerVolume(volume: number) {
+    export function setVolume(volume: number) {
         const audioState = board().audioState;
-        audioState.volume = volume;
+        audioState.volume = Math.max(0, 1024, volume * 4);
     }
 
     export function setPitchPin(pin: Pin) {
@@ -56,22 +56,10 @@ namespace pxsim.music {
 
         const audioState = b.audioState;
 
-        const pitchPin = getPitchPin();
         const currentOutput = audioState.outputDestination_;
-        if (currentOutput === 1) {
-            pitchPin.mode = PinFlags.Analog | PinFlags.Output;
-            if (frequency <= 0) {
-                pitchPin.value = 0;
-                pitchPin.period = 0;
-            } else {
-                pitchPin.value = 512;
-                pitchPin.period = 1000000 / frequency;
-            }
-        }
-
-        ["SPEAKER", "PIN_A0"]
-            .map(id => b.view.getElementById(id) as SVGElement)
-            .forEach(el => pxsim.svg.animate(el, 'sim-flash-stroke'));
+        const flashPin = 1 /* pin mode */ == currentOutput ? "PIN_A0" : "SPEAKER";
+        const flashPinEl = b.view.getElementById(flashPin) as SVGElement;
+        pxsim.svg.animate(flashPinEl, 'sim-flash-stroke');
 
         audioState.startPlaying();
         runtime.queueDisplayUpdate();
@@ -82,13 +70,7 @@ namespace pxsim.music {
             setTimeout(() => {
                 AudioContextManager.stop();
                 audioState.stopPlaying();
-
-                if (currentOutput === 1) {
-                    pitchPin.value = 0;
-                    pitchPin.period = 0;
-                    pitchPin.mode = PinFlags.Unused;
-                }
-
+                
                 runtime.queueDisplayUpdate();
                 cb()
             }, ms);

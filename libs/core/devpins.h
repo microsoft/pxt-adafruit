@@ -46,7 +46,6 @@ class DevPins {
     DevicePin MIC_DATA;
     DevicePin MIC_CLOCK;
     DevicePin SPEAKER_AMP;
-    DevicePin PITCH_PIN;
 
     I2C i2c;
 
@@ -56,6 +55,6 @@ class DevPins {
 extern DevPins *io;
 
 // modify if the last field changes
-const int LastPinID = &io->PITCH_PIN - io->pins;
+const int LastPinID = &io->SPEAKER_AMP - io->pins;
 
 #endif

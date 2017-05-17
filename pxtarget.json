@@ -200,12 +200,8 @@
                 "path": "/about"
             },
             {
-                "name": "Projects",
-                "path": "/projects"
-            },
-            {
                 "name": "Examples",
-                "path": "/examples"
+                "path": "#projects:Examples"
             },
             {
                 "name": "Blocks",
@@ -221,7 +217,6 @@
             }
         ],
         "galleries": {
-            "Projects": "projects",
             "Examples": "examples"
         },        
         "sideDoc": "tutorials/getting-started",

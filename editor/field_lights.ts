@@ -108,8 +108,10 @@ namespace pxt.editor {
       this.neopixels_ = [];
       for (let i = 0; i < FieldLights.NUM_PIXELS; i++) {
         let neopixel = this.boardElement.getElementById("LED" + i) as SVGGElement;
-        pxsim.svg.addClass(neopixel, 'neopixel');
-        pxsim.svg.onClick(neopixel, ev => this.onPixelClicked(neopixel, i));
+        if (this.isEditable()) {
+            pxsim.svg.addClass(neopixel, 'neopixel');
+            pxsim.svg.onClick(neopixel, ev => this.onPixelClicked(neopixel, i));
+        }
         this.neopixels_.push(neopixel);
       }
 
@@ -117,14 +119,20 @@ namespace pxt.editor {
       ['paletteslice0', 'paletteslice1', 'paletteslice2', 'paletteslice3',
         'paletteslice4', 'paletteslice5', 'paletteslice6', 'paletteslice7', 'palettecenter']
         .forEach((id, i) => {
-          let btn = this.boardElement.getElementById(id) as SVGGElement;
-          pxsim.svg.addClass(btn, 'colorbutton');
-          if (i == 1) pxsim.svg.addClass(btn, 'active');
-          pxsim.svg.onClick(btn, ev => this.onColorClicked(btn));
-          this.paletteButtons.push(btn);
+            let btn = this.boardElement.getElementById(id) as SVGGElement;
+            pxsim.svg.addClass(btn, 'colorbutton');
+            if (this.isEditable()) {
+                if (i == 1) pxsim.svg.addClass(btn, 'active');
+                pxsim.svg.onClick(btn, ev => this.onColorClicked(btn));
+            }
+            this.paletteButtons.push(btn);
         })
 
       this.fieldGroup_.appendChild(this.boardElement);
+    }
+
+    private isEditable() {
+        return !this.sourceBlock_.workspace.isDragging() && this.sourceBlock_.isEditable();
     }
 
     render_() {

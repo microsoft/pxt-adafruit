@@ -11,22 +11,22 @@ light is from the LED pixel near the light sensor. Ambient light (and its color)
 glow of a lamp shining in a dark room. Your eyes can detect the ambient light if you turn
 on an light in a dark place.
 
-### Returns
+## Returns
 
-* a [Number](/types/number) that is the ambient color level from ``0`` (black) to ``255`` (white).
+* a [number](/types/number) that is the ambient color level from ``0`` (black) to ``255`` (white).
 
-### Example: show light level
+## Example
 
 When you press button `A` on the @boardname@, this
-program sets all the pixels to the measured ambient color.
+program plays a tone with a pitch that matches the current ambient color.
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, () => {
-    light.pixels.setAll(input.ambientColor())
+    music.playTone(input.ambientColor(), 2000)
 })
 ```
 
-### See also
+## See also
 
 [``||light level||``](/reference/input/light-level)
 

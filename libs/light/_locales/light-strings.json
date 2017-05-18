@@ -24,6 +24,7 @@
   "PhotonMode.Eraser|block": "eraser",
   "PhotonMode.PenDown|block": "pen down",
   "PhotonMode.PenUp|block": "pen up",
+  "light.animation|block": "%kind",
   "light.colors|block": "%color",
   "light.createNeoPixelStrip|block": "create NeoPixel strip|pin %pin|pixels %numleds|mode %mode",
   "light.fade|block": "fade %color=neopixel_colors|by %brightness",

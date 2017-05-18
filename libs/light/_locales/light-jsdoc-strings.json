@@ -1,6 +1,9 @@
 {
   "light": "Functions to operate colored LEDs.\n\nFunctions to operate colored LEDs.",
+  "light.NeoPixelAnimation": "An animation of a NeoPixel",
   "light.NeoPixelStrip": "A NeoPixel strip",
+  "light.animation": "Creates a builtin animation",
+  "light.animation|param|kind": "the type of animation",
   "light.colors": "Gets the RGB value of a known color",
   "light.createNeoPixelStrip": "Create a new NeoPixel driver for `numleds` LEDs.",
   "light.createNeoPixelStrip|param|numleds": "number of leds in the strip, eg: 24,30,60,64",

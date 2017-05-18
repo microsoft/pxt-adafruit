@@ -43,7 +43,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### Step 3
 
-Hey, let's make it play a wand sound whenever we shake board. In the Music drawer, you'll see ``||play sound||``.
+Hey, let's make it play a wand sound whenever we shake the board. In the Music drawer, you'll see ``||play sound||``.
 Drag out one of those and place it inside the ``||on shake||`` block, just before the ``||show animation||`` block.
 
 ```blocks

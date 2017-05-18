@@ -9,7 +9,7 @@ Hint: You can find the ``||show animation||`` block in the Light drawer.
 
 ```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(LightAnimation.Rainbow, 500)
+    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
 })
 ```
 
@@ -22,7 +22,7 @@ Next, in the Input drawer, find the ``||on shake||`` block. Drag one of those ou
 
 ```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(LightAnimation.Rainbow, 500)
+    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
 })
 input.onGesture(Gesture.Shake, () => {
 
@@ -37,10 +37,10 @@ Now, everytime you shake the @boardname@, a sparkle animation will play. Pretty 
 
 ```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(LightAnimation.Rainbow, 500)
+    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
 })
 input.onGesture(Gesture.Shake, () => {
-    light.pixels.showAnimation(LightAnimation.Sparkle, 1500)
+    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
 })
 ```
 
@@ -53,11 +53,11 @@ Drag out one of those and place it inside the ``||on shake||`` block, just befor
 
 ```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(LightAnimation.Rainbow, 500)
+    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
 })
 input.onGesture(Gesture.Shake, () => {
     music.playSound(music.sounds(Sounds.PowerUp))
-    light.pixels.showAnimation(LightAnimation.Sparkle, 1500)
+    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
 })
 ```
 
@@ -67,11 +67,11 @@ Change the sound effect to ``Magic Wand``. Do this by selecting the list of soun
 
 ```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(LightAnimation.Rainbow, 500)
+    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
 })
 input.onGesture(Gesture.Shake, () => {
     music.playSound(music.sounds(Sounds.MagicWand))
-    light.pixels.showAnimation(LightAnimation.Sparkle, 1500)
+    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
 })
 ```
 

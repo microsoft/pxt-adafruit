@@ -58,7 +58,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### Step 4
 
-Change the sound effect to ``Magic Wand``. Do this by selecting the list of sounds, then pick the one you're you want, ``Magic Wand``.
+Change the sound effect to ``Magic Wand``. Do this by selecting the list of sounds, then pick the one you want, ``Magic Wand``.
 
 ```blocks
 loops.forever(() => {

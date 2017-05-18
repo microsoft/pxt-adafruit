@@ -13,6 +13,9 @@ loops.forever(() => {
 })
 ```
 
+![rainbow image](/static/cp/tutorials/getting-started/rainbow.gif)
+
+
 ### Step 2
 
 Next, in the Input drawer, find the ``||on shake||`` block. Drag one of those out and place it in the workspace.
@@ -40,6 +43,8 @@ input.onGesture(Gesture.Shake, () => {
     light.pixels.showAnimation(LightAnimation.Sparkle, 1500)
 })
 ```
+
+![shake image](/static/cp/tutorials/getting-started/shake.gif)
 
 ### Step 3
 

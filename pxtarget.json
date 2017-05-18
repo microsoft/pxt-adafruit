@@ -123,7 +123,7 @@
         "packages": true,
         "sharing": true,
         "publishing": true,
-        "importing": true,
+        "importing": false,
         "preferredPackages": [],
         "githubPackages": true
     },

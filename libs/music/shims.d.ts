@@ -2,9 +2,10 @@
 declare namespace music {
 
     /**
-     * Sets the PCM sample (1024 x 10bit unsigned samples) used to generate the tones.
+     * Set a source of digital sound data (PCM) for making tones.
+     * Samples are 1020 x 10bit unsigned PCM.
      * A reference to the buffer is kept to avoid the memory overhead, so changes to the buffer
-     * values will be reflected live in the sound output. 
+     * values are reflected immediately to the sound output. 
      */
     //% help=music/set-tone
     //% weight=1 advanced=true
@@ -12,18 +13,19 @@ declare namespace music {
     function setTone(buffer: Buffer): void;
 
     /**
-     * Sets the output volume of the synthesizer
+     * Set the output volume of the sound synthesizer.
      * @param volume the volume 0...256, eg: 128
      */
     //% weight=96
     //% blockId=synth_set_volume block="set volume %volume"
     //% parts="speaker" blockGap=8
     //% volume.min=0 volume.max=256
+    //% help=music/set-volume
     //% weight=1 shim=music::setVolume
     function setVolume(volume: int32): void;
 
     /**
-     * Plays a tone through the pin for the given duration.
+     * Play a tone through the speaker for some amount of time.
      * @param frequency pitch of the tone to play in Hertz (Hz)
      * @param ms tone duration in milliseconds (ms)
      */

@@ -2,7 +2,8 @@
 
 ### Step 1
 
-Welcome, let's get started by making something everyone will notice! Place the ``||show animation||`` block in the ``||forever||`` slot to show a rainbow animation on the board.
+Welcome, let's get started by making something magical! Place a ``||show animation||`` block in the
+``||forever||`` slot to show a rainbow animation on the board.
 
 Hint: You can find the ``||show animation||`` block in the Light drawer.
 
@@ -14,7 +15,7 @@ loops.forever(() => {
 
 ### Step 2
 
-Next, in the Input drawer you'll find the ``||on shake||`` block. Drag one of those out and place it in the workspace.
+Next, in the Input drawer, find the ``||on shake||`` block. Drag one of those out and place it in the workspace.
 
 ```blocks
 loops.forever(() => {
@@ -27,9 +28,9 @@ input.onGesture(Gesture.Shake, () => {
 
 ### Step 3
 
-Drag a ``||show animation||`` block and place it inside the ``||on shake||`` block. Change the animation to the sparkle animation, and the duration to 1500 ms.
+Drag out another ``||show animation||`` block but this time place it inside the ``||on shake||`` block. Change the animation to the ``sparkle`` and the duration to ``1500`` ms.
 
-Now, everytime you shake the @boardname@, a sparkle animation will play.
+Now, everytime you shake the @boardname@, a sparkle animation will play. Pretty cool!
 
 ```blocks
 loops.forever(() => {
@@ -42,8 +43,8 @@ input.onGesture(Gesture.Shake, () => {
 
 ### Step 3
 
-Now, let's make it play a wand sound whenever we shake. In the Music drawer, you'll find the ``||play sound||``.
-Drag one of those and place it inside the ``||on shake||`` block, just before the ``||show animation||`` block.
+Hey, let's make it play a wand sound whenever we shake board. In the Music drawer, you'll see ``||play sound||``.
+Drag out one of those and place it inside the ``||on shake||`` block, just before the ``||show animation||`` block.
 
 ```blocks
 loops.forever(() => {
@@ -57,7 +58,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### Step 4
 
-Change the sound effect to the Magic Wand sound effect. Do so by selecting the list of sounds, and finding the one you're after. 
+Change the sound effect to ``Magic Wand``. Do this by selecting the list of sounds, then pick the one you're you want, ``Magic Wand``.
 
 ```blocks
 loops.forever(() => {

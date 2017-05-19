@@ -38,6 +38,7 @@ namespace light {
      */
     //% blockId="neopixel_show_ring_colors" block="show ring |%colors"
     //% weight=100
+    //% help="light/show-ring"
     //% colors.fieldEditor="lights" 
     //% colors.fieldOptions.onParentBlock=true
     //% blockExternalInputs="true" blockGap=8

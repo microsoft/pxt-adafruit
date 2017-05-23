@@ -110,7 +110,7 @@ namespace pxt.editor {
         let neopixel = this.boardElement.getElementById("LED" + i) as SVGGElement;
         if (this.isEditable()) {
             pxsim.svg.addClass(neopixel, 'neopixel');
-            pxsim.svg.onClick(neopixel, ev => this.onPixelClicked(neopixel, i));
+            pxsim.svg.onClick(neopixel, ev => this.onPixelClicked(ev, neopixel, i));
         }
         this.neopixels_.push(neopixel);
       }
@@ -123,7 +123,7 @@ namespace pxt.editor {
             pxsim.svg.addClass(btn, 'colorbutton');
             if (this.isEditable()) {
                 if (i == 4) pxsim.svg.addClass(btn, 'active');
-                pxsim.svg.onClick(btn, ev => this.onColorClicked(btn));
+                pxsim.svg.onClick(btn, ev => this.onColorClicked(ev, btn));
             }
             this.paletteButtons.push(btn);
         })
@@ -132,7 +132,7 @@ namespace pxt.editor {
     }
 
     private isEditable() {
-        return !this.sourceBlock_.workspace.isDragging() && this.sourceBlock_.isEditable();
+      return this.EDITABLE && !!this.sourceBlock_ && this.sourceBlock_.isEditable();
     }
 
     render_() {
@@ -157,7 +157,8 @@ namespace pxt.editor {
       this.size_.width = Number(FieldLights.imageWidth);
     }
 
-    onColorClicked(btn: SVGElement) {
+    onColorClicked(e: Event, btn: SVGElement) {
+      if (Blockly.utils.isRightButton(e)) return;
       let previous = this.paletteButtons.filter(btn => pxsim.svg.hasClass(btn, 'active'))[0];
       if (previous) pxsim.svg.removeClass(previous, 'active');
 
@@ -165,7 +166,8 @@ namespace pxt.editor {
       if (this.sourceBlock_ && this.sourceBlock_.workspace) this.sourceBlock_.workspace.playAudio('click');
     }
 
-    onPixelClicked(neopixel: SVGElement, id: number) {
+    onPixelClicked(e: Event, neopixel: SVGElement, id: number) {
+      if (Blockly.utils.isRightButton(e)) return;
       let btn = this.paletteButtons.filter(btn => pxsim.svg.hasClass(btn, 'active'))[0];
       if (btn) {
         const current = neopixel.getAttribute("data-color");

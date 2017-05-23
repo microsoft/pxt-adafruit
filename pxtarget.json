@@ -172,7 +172,7 @@
             }
         },        
         "githubCorePackage": "lancaster-university/codal",
-        "gittag": "v0.1.3",
+        "gittag": "v0.1.4",
         "serviceId": "codalcp"
     },
     "appTheme": {

@@ -48,6 +48,12 @@ div.blocklyTreeRoot div div div div div.blocklyTreeRow {
     border-left-width: 1px !important;
 }
 
+/* Highlight category item */
+div.blocklyTreeRow.blocklyTreeSelected, div.blocklyTreeRoot div div div div div.blocklyTreeRow.blocklyTreeSelected {
+    border: 2px solid #fc3;
+    border-left-width: 2px !important;
+}
+
 /* This removes any padding at the top of the toolbox */
 div.blocklyTreeRoot {
     padding: 0px !important;
@@ -120,7 +126,6 @@ svg.blocklySvg {
 
 /* Tablet */
 @media only screen and (min-width: @tabletBreakpoint) and (max-width: @largestTabletScreen) {
-
     div.blocklyTreeRow {
         padding-bottom: 1.75rem !important;
     }

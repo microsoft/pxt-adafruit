@@ -4,7 +4,7 @@
 input.onGesture(Gesture.Shake, () => {})
 light.showRing('red red red red red red red red red red')
 music.playTone(0, 0)
-pins.A1.servoWrite(0)
+pins.pulseDuration()
 control.runInBackground(() => {})
 serial.writeLine("");
 ```

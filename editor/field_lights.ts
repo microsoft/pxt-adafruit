@@ -129,6 +129,9 @@ namespace pxt.editor {
         })
 
       this.fieldGroup_.appendChild(this.boardElement);
+
+      // Hide the borderRect since we're not using it.
+      (this.borderRect_ as HTMLElement).style.display = 'none';
     }
 
     private isEditable() {

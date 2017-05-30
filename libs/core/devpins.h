@@ -3,6 +3,9 @@
 
 #include "pins.h"
 
+#define PIN_IR_IN PA12
+#define PIN_IR_OUT PA23
+
 class DevPins {
   public:
     DevicePin pins[0];
@@ -38,6 +41,10 @@ class DevPins {
     DigitalPin D8;
     //%
     DigitalPin D13;
+    //%
+    DigitalPin IR_IN;
+    //%
+    PwmPin IR_OUT;
 #undef DigitalPin
 #undef AnalogPin
 #undef PwmPin

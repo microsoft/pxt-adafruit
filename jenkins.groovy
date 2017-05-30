@@ -23,7 +23,7 @@ def projectName = "pxt-adafruit"
             wrappers {
                 credentialsBinding {
                     string("PXT_ACCESS_TOKEN", "pxt_access_token")
-                    string("PXT_RELEASE_REPO", "pxt_release_repo_adafruit")
+                    string("PXT_RELEASE_REPO", "pxt_release_repo")
                 }
             }
         }

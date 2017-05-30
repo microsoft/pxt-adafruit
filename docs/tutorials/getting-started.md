@@ -6,9 +6,7 @@ Welcome, let's get started by making something magical! Start by placing a ``||s
 
 ![rainbow toolbox](/static/cp/tutorials/getting-started/rainbow-toolbox.gif)
 
-Hint:
-
-```blocks
+```filterblocks
 loops.forever(() => {
     light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
 })
@@ -21,7 +19,7 @@ Click the Hint button if you need help!
 
 ![onshake toolbox](/static/cp/tutorials/getting-started/onshake-toolbox.gif)
 
-```blocks
+```filterblocks
 loops.forever(() => {
     light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
 })
@@ -38,7 +36,7 @@ Now, every time you shake the @boardname@, a sparkle animation will play. Pretty
 
 ![sparkle toolbox](/static/cp/tutorials/getting-started/sparkle-toolbox.gif)
 
-```blocks
+```filterblocks
 loops.forever(() => {
     light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
 })
@@ -53,7 +51,7 @@ Hey, let's make it play a wand sound whenever we shake the board. From the ``Mus
 
 ![magic-wand toolbox](/static/cp/tutorials/getting-started/wandsound-toolbox.gif)
 
-```blocks
+```filterblocks
 loops.forever(() => {
     light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
 })
@@ -63,11 +61,11 @@ input.onGesture(Gesture.Shake, () => {
 })
 ```
 
-### Step 4
+### Step 4 @nohint
 
 Change the sound effect to ``Magic Wand``. Do this by selecting the list of sounds, then pick the one you want, ``Magic Wand``.
 
-```blocks
+```filterblocks
 loops.forever(() => {
     light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
 })
@@ -91,6 +89,5 @@ Now click Download and follow the rest of the download instructions.
 ### Step 6
 
 Awesome! Congratulations on completing your first challenge on the @boardname@.
-
 
 ![shake image](/static/cp/tutorials/getting-started/shake.gif)

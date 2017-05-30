@@ -12,6 +12,9 @@ namespace pxsim.visuals {
             pointer-events: none;
         }
 
+        .sim-button-outer {
+            cursor: pointer;
+        }
         .sim-button-outer:hover {
             stroke-width: 1px;
             stroke: orange !important;
@@ -96,6 +99,9 @@ namespace pxsim.visuals {
             r:8px;
         }
 
+        #SLIDE_HOVER {
+            cursor: pointer;
+        }
         .sim-slide-switch:hover #SLIDE_HOVER {
             stroke:orange !important;
             stroke-width: 1px;

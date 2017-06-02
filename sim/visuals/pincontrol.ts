@@ -55,19 +55,19 @@ namespace pxsim.visuals {
                 this.pin.touched = true;
                 svg.addClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id - 1) as CPButton).setPressed(true);
+                // (pxtcore.getTouchButton(this.id - 1) as CPButton).setPressed(true);
             })
             this.outerElement.addEventListener(pointerEvents.leave, ev => {
                 this.pin.touched = false;
                 svg.removeClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id - 1) as CPButton).setPressed(false);
+                // (pxtcore.getTouchButton(this.id - 1) as CPButton).setPressed(false);
             })
             this.outerElement.addEventListener(pointerEvents.up, ev => {
                 this.pin.touched = false;
                 svg.removeClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id - 1) as CPButton).setPressed(false);
+                // (pxtcore.getTouchButton(this.id - 1) as CPButton).setPressed(false);
             })
         }
 

@@ -108,7 +108,7 @@ namespace pxt.editor {
       this.neopixels_ = [];
       for (let i = 0; i < FieldLights.NUM_PIXELS; i++) {
         let neopixel = this.boardElement.getElementById("LED" + i) as SVGGElement;
-        if (this.isEditable()) {
+        if (this.isCurrentlyEditable() && !this.isInFlyout()) {
             pxsim.svg.addClass(neopixel, 'neopixel');
             pxsim.svg.onClick(neopixel, ev => this.onPixelClicked(ev, neopixel, i));
         }
@@ -121,7 +121,7 @@ namespace pxt.editor {
         .forEach((id, i) => {
             let btn = this.boardElement.getElementById(id) as SVGGElement;
             pxsim.svg.addClass(btn, 'colorbutton');
-            if (this.isEditable()) {
+            if (this.isCurrentlyEditable() && !this.isInFlyout()) {
                 if (i == 4) pxsim.svg.addClass(btn, 'active');
                 pxsim.svg.onClick(btn, ev => this.onColorClicked(ev, btn));
             }
@@ -134,8 +134,8 @@ namespace pxt.editor {
       (this.borderRect_ as HTMLElement).style.display = 'none';
     }
 
-    private isEditable() {
-      return this.EDITABLE && !!this.sourceBlock_ && this.sourceBlock_.isEditable();
+    private isInFlyout() {
+        return this.sourceBlock_.workspace.getParentSvg().classList[0] == 'blocklyFlyout';
     }
 
     render_() {

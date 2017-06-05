@@ -187,7 +187,7 @@ namespace pxsim.visuals {
         { 'name': "PIN_A0", 'touch': 0, 'text': null, 'id': pxsim.CPlayPinName.A0, tooltip: "A0 - Speaker" },
         { 'name': "PIN_A1", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A1, tooltip: "~A1" },
         { 'name': "PIN_A2", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "~A2" },
-        { 'name': "PIN_A3", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "~A3" },
+        { 'name': "PIN_A3", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A3, tooltip: "~A3" },
         { 'name': "PIN_A4", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A4, tooltip: "A4 - SCL" },
         { 'name': "PIN_A5", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A5, tooltip: "A5 - SDA" },
         { 'name': "PIN_A6", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A6, tooltip: "A6 - RX" },
@@ -488,22 +488,20 @@ namespace pxsim.visuals {
         private updatePin(pin: Pin, index: number) {
             if (!pin || !this.pins[index]) return;
 
-            if (pin.mode & PinFlags.Analog) {
-                if ((pin as pins.CommonPin).used) {
-                    if (this.pinControls[pin.id] === undefined) {
-                        const pinName =  pinNames.filter((a) => a.id === pin.id)[0];
-                        if (pinName) {
-                            this.pinControls[pin.id] = new AnalogPinControl(this, this.defs, pin.id, pinName.name);
-                        }
-                        else {
-                            // TODO: Surface pin controls for sensor pins in some way?
-                            this.pinControls[pin.id] = null;
-                        }
+            if ((pin as pins.CommonPin).used) {
+                if (this.pinControls[pin.id] === undefined) {
+                    const pinName =  pinNames.filter((a) => a.id === pin.id)[0];
+                    if (pinName) {
+                        this.pinControls[pin.id] = new AnalogPinControl(this, this.defs, pin.id, pinName.name);
                     }
+                    else {
+                        // TODO: Surface pin controls for sensor pins in some way?
+                        this.pinControls[pin.id] = null;
+                    }
+                }
 
-                    if (this.pinControls[pin.id]) {
-                        this.pinControls[pin.id].updateValue();
-                    }
+                if (this.pinControls[pin.id]) {
+                    this.pinControls[pin.id].updateValue();
                 }
             }
         }

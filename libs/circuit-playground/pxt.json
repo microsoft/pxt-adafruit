@@ -23,7 +23,8 @@
         "music": "file:../music",
         "light": "file:../light",
         "switch": "file:../switch",
-        "microphone": "file:../microphone"
+        "microphone": "file:../microphone",
+        "touch": "file:../touch"
     },
     "public": true
 }

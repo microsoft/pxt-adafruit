@@ -17,6 +17,14 @@ declare namespace input {
     //% blockId=device_get_light_level block="light level" blockGap=8
     //% parts="lightsensor" shim=input::lightLevel
     function lightLevel(): int32;
+
+    /**
+     * Sets the light threshold value for the event
+     */
+    //% blockId=lightsensor_set_threshold block="light set threshold %condition|to %value"
+    //% parts="lightsensor" advanced=true
+    //% weight=2 shim=input::setLightThreshold
+    function setLightThreshold(condition: LightCondition, value: int32): void;
 }
 
 // Auto-generated. Do not edit. Really.

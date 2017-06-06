@@ -59,5 +59,9 @@ Here are some fun programs for your @boardname@!
   "name": "Beat visualizer",
   "url":"/examples/beat-visualizer",
   "cardType": "example"
+},{
+  "name": "Fireflies",
+  "url":"/examples/fireflies",
+  "cardType": "example"
 }]
 ```

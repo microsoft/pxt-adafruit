@@ -23,7 +23,7 @@ namespace pxsim {
     }
 
     export class DalBoard extends CoreBoard implements
-    AccelerometerBoard, CommonBoard, LightBoard, LightSensorBoard, MicrophoneBoard, MusicBoard, SlideSwitchBoard, TemperatureBoard
+    AccelerometerBoard, CommonBoard, LightBoard, LightSensorBoard, MicrophoneBoard, MusicBoard, SlideSwitchBoard, TemperatureBoard, CapTouchBoard
     {
         // state & update logic for component services
         neopixelState: CommonNeoPixelState;
@@ -37,6 +37,7 @@ namespace pxsim {
         capacitiveSensorState: CapacitiveSensorState;
         accelerometerState: AccelerometerState;
         audioState: AudioState;
+        touchButtonState: TouchButtonState;
 
         view: SVGSVGElement;
 
@@ -90,6 +91,15 @@ namespace pxsim {
 
             this.builtinVisuals["microservo"] = () => new visuals.MicroServoView();
             this.builtinPartVisuals["microservo"] = (xy: visuals.Coord) => visuals.mkMicroServoPart(xy);
+            this.touchButtonState = new TouchButtonState([
+                pxsim.CPlayPinName.A1,
+                pxsim.CPlayPinName.A2,
+                pxsim.CPlayPinName.A3,
+                pxsim.CPlayPinName.A4,
+                pxsim.CPlayPinName.A5,
+                pxsim.CPlayPinName.A6,
+                pxsim.CPlayPinName.A7
+            ]);
         }
 
         receiveMessage(msg: SimulatorMessage) {

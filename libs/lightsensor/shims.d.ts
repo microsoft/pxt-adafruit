@@ -23,7 +23,8 @@ declare namespace input {
      */
     //% blockId=lightsensor_set_threshold block="light set threshold %condition|to %value"
     //% parts="lightsensor" advanced=true
-    //% weight=2 shim=input::setLightThreshold
+    //% weight=2
+    //% value.min=1 value.max=255 shim=input::setLightThreshold
     function setLightThreshold(condition: LightCondition, value: int32): void;
 }
 

@@ -1,4 +1,5 @@
 {
   "input.onLoudSound": "Registers an event that runs when a lound sound is detected",
+  "input.setLoudSoundThreshold": "Sets the minimum threshold for a loud sound",
   "input.soundLevel": "Reads the loudness through the microphone from 0 (silent) to 100 (very loud)"
 }

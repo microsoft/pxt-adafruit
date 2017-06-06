@@ -39,6 +39,10 @@ Here are some fun programs for your @boardname@!
   "url":"/examples/egg-game",
   "cardType": "example"
 },{
+  "name": "Reaction",
+  "url":"/examples/reaction",
+  "cardType": "example"
+},{
   "name": "Photon beatbox",
   "url":"/examples/photon-beatbox",
   "cardType": "example"

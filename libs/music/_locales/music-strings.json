@@ -26,6 +26,7 @@
   "Sounds.MagicWand|block": "magic wand",
   "Sounds.PowerDown|block": "power down",
   "Sounds.PowerUp|block": "power up",
+  "Sounds.Siren|block": "siren",
   "Sounds.Wawawawaa|block": "wawawawaa",
   "music.beat|block": "%fraction|beat",
   "music.changeTempoBy|block": "change tempo by (bpm)|%value",

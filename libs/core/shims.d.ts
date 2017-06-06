@@ -3,7 +3,7 @@
 
 declare interface DigitalPin {
     /**
-     * Read the specified pin or connector as either 0 or 1
+     * Read a pin or connector as either 0 or 1
      * @param name pin to read from
      */
     //% help=pins/digital-read weight=30
@@ -30,7 +30,7 @@ declare interface DigitalPin {
     digitalWrite(value: boolean): void;
 
     /**
-     * Configures this pin to a digital input, and generates events where the timestamp is the duration
+     * Make this pin a digital input, and create events where the timestamp is the duration
      * that this pin was either ``high`` or ``low``.
      */
     //% help=pins/on-pulsed weight=22 blockGap=8 advanced=true
@@ -42,7 +42,7 @@ declare interface DigitalPin {
     onPulsed(pulse: PulseValue, body: () => void): void;
 
     /**
-     * Returns the duration of a pulse in microseconds
+     * Return the duration of a pulse in microseconds
      * @param name the pin which measures the pulse
      * @param value the value of the pulse (default high)
      * @param maximum duration in micro-seconds
@@ -57,7 +57,7 @@ declare interface DigitalPin {
     pulseIn(value: PulseValue, maxDuration?: int32): int32;
 
     /**
-     * Configures the pull of this pin.
+     * Set the pull direction of this pin.
      * @param name pin to set the pull mode on
      * @param pull one of the mbed pull configurations: PullUp, PullDown, PullNone
      */
@@ -101,7 +101,7 @@ declare interface AnalogPin {
 
 declare interface PwmPin {
     /**
-     * Configures the Pulse-width modulation (PWM) of the analog output to the given value in
+     * Set the Pulse-width modulation (PWM) period of the analog output. The period is in
      * **microseconds** or `1/1000` milliseconds.
      * If this pin is not configured as an analog output (using `analog write pin`), the operation has
      * no effect.
@@ -109,15 +109,15 @@ declare interface PwmPin {
      * @param micros period in micro seconds. eg:20000
      */
     //% help=pins/analog-set-period weight=23 blockGap=8
-    //% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%micros"
+    //% blockId=device_set_analog_period block="analog set period|pin %pin|to (µs)%period"
     //% blockNamespace=pins
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
     //% name.fieldOptions.columns=4 shim=PwmPinMethods::analogSetPeriod
-    analogSetPeriod(micros: int32): void;
+    analogSetPeriod(period: int32): void;
 
     /**
-     * Write a value to the servo, controlling the shaft accordingly. On a standard servo, this will
+     * Write a value to the servo to control the rotation of the shaft. On a standard servo, this will
      * set the angle of the shaft (in degrees), moving the shaft to that orientation. On a continuous
      * rotation servo, this will set the speed of the servo (with ``0`` being full-speed in one
      * direction, ``180`` being full speed in the other, and a value near ``90`` being no movement).
@@ -134,18 +134,18 @@ declare interface PwmPin {
     servoWrite(value: int32): void;
 
     /**
-     * Configure this IO pin as an analog/pwm output, configures the period to be 20 ms, and sets the
-     * pulse width, based on the value it is given **microseconds** or `1/1000` milliseconds.
+     * Set the pin for PWM analog output, make the period be 20 ms, and set the pulse width.
+     * The pulse width is based on the value it is given **microseconds** or `1/1000` milliseconds.
      * @param name pin name
-     * @param micros pulse duration in micro seconds, eg:1500
+     * @param duration pulse duration in micro seconds, eg:1500
      */
     //% help=pins/servo-set-pulse weight=19
-    //% blockId=device_set_servo_pulse block="servo set pulse|pin %value|to (µs) %micros"
+    //% blockId=device_set_servo_pulse block="servo set pulse|pin %value|to (µs) %duration"
     //% blockNamespace=pins
     //% name.fieldEditor="gridpicker"
     //% name.fieldOptions.width=220
     //% name.fieldOptions.columns=4 shim=PwmPinMethods::servoSetPulse
-    servoSetPulse(micros: int32): void;
+    servoSetPulse(duration: int32): void;
 }
 declare namespace pins {
 
@@ -157,7 +157,7 @@ declare namespace pins {
     function createBuffer(size: int32): Buffer;
 
     /**
-     * Gets the duration of the last pulse in micro-seconds. This function should be called from a
+     * Get the duration of the last pulse in microseconds. This function should be called from a
      * ``onPulsed`` handler.
      */
     //% help=pins/pulse-duration advanced=true

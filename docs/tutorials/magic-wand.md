@@ -2,7 +2,7 @@
 
 ### Step 1 @fullscreen
 
-Welcome, let's get started by making something magical! Start by placing a ``||show animation||`` block in the ``||forever||`` slot to show a rainbow animation on the board.
+Welcome, let's get started by making something magical! Start by placing a ``||show animation||`` block in a ``||forever||`` slot to show a rainbow animation on the board.
 
 ![rainbow toolbox](/static/cp/tutorials/getting-started/rainbow-toolbox.gif)
 
@@ -15,7 +15,7 @@ loops.forever(() => {
 ### Step 2
 
 Next, in the ``Input`` drawer, find the ``||on shake||`` block. Drag one of those out and place it anywhere in the workspace.
-Click the Hint button if you need help!
+Click the **Hint** button if you need help!
 
 ![onshake toolbox](/static/cp/tutorials/getting-started/onshake-toolbox.gif)
 
@@ -30,7 +30,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ### Step 3
 
-Drag out another ``||show animation||`` block but this time place it inside the ``||on shake||`` block. Change the animation to the ``sparkle`` and the duration to ``1500`` ms.
+Drag out another ``||show animation||`` block but this time place it inside the ``||on shake||`` block. Change the animation to ``sparkle`` and the duration to ``1500`` ms.
 
 Now, every time you shake the @boardname@, a sparkle animation will play. Pretty cool!
 
@@ -77,14 +77,14 @@ input.onGesture(Gesture.Shake, () => {
 
 ### Step 5
 
-Click ``|Download|`` to transfer your code to the @boardname@.
+Transfer your code to the @boardname@.
 
-To load your code on the real device, we'll have to first put it in "Programming mode".
+To load your code on the real device, you have to first put it in "Programming mode".
 Do this by clicking the reset button once, and wait for the all green lights.
 
 ![programming mode](/static/cp/tutorials/getting-started/programming-mode.gif)
 
-Now click Download and follow the rest of the download instructions.
+Now click ``|Download|`` and follow the rest of the download instructions.
 
 ### Step 6
 

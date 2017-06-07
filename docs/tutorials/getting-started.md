@@ -31,10 +31,10 @@ Ok, we'll add another ring to make an animation. Drag another ``||show ring||`` 
 ```blocks
 loops.forever(() => {
     light.showRing(
-        `blue blue blue blue blue red red red red red`
+        `blue blue blue blue blue blue blue blue blue blue`
     )
     light.showRing(
-        `red red red red red blue blue blue blue blue`
+        `red red red red red red red red red red`
     )
 })
 ```
@@ -46,10 +46,10 @@ Now, let's make a police siren from our animation! From the `Loops` drawer, plac
 ```blocks
 loops.forever(() => {
     light.showRing(
-        `blue blue blue blue blue red red red red red`
+        `blue blue blue blue blue blue blue blue blue blue`
     )
     light.showRing(
-        `red red red red red blue blue blue blue blue`
+        `red red red red red red red red red red`
     )
 })
 loops.forever(() => {
@@ -63,10 +63,10 @@ From the `Music` drawer, drag out a ``||play sound until done||`` block and plac
 ```blocks
 loops.forever(() => {
     light.showRing(
-        `blue blue blue blue blue red red red red red`
+        `blue blue blue blue blue blue blue blue blue blue`
     )
     light.showRing(
-        `red red red red red blue blue blue blue blue`
+        `red red red red red red red red red red`
     )
 })
 loops.forever(() => {

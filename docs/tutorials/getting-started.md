@@ -14,15 +14,12 @@ loops.forever(() => {
 
 ### Step 2
 
-Use the color palette to select a color. Go around the ring and change each pixel to this color. To do this, pick a color you want from the palette (we'll choose `blue` here).
-Then, select a pixel in the ring and it will change to this color.
-
-Change half of the pixels to `blue`.
+Use the color palette to select a color. You pick one of the colors from the middle of the ring. Go around the ring and touch each pixel to change them to this color. Let's use `blue` for now.
 
 ```blocks
 loops.forever(() => {
     light.showRing(
-    `blue blue blue blue blue red red red red red`
+    `blue blue blue blue blue blue blue blue blue blue`
     )
 })
 ```

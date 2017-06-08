@@ -10,5 +10,5 @@ input.ambientColor()
 ```
 
 ```package
-lightsensor
+circuit-playground
 ```

@@ -43,6 +43,5 @@ input.onGesture(Gesture.TiltDown, () => {
 ```
 
 ```package
-light
-music
+circuit-playground
 ```

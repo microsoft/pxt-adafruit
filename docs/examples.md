@@ -15,10 +15,6 @@ Here are some fun programs for your @boardname@!
   "url":"/examples/animation-shaker",
   "cardType": "example"
 },{
-  "name": "Tilt light show",
-  "url":"/examples/tilt-light-show",
-  "cardType": "example"
-},{
   "name": "Juggle counter",
   "url":"/examples/juggle-counter",
   "cardType": "example"

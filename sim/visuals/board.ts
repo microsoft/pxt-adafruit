@@ -624,7 +624,7 @@ namespace pxsim.visuals {
             svg.setGradientValue(this.thermometerGradient, 100 - per + "%");
 
             let unit = "°C";
-            if (state.thermometerUnitState == pxsim.ThermometerUnit.Fahrenheit) {
+            if (state.thermometerUnitState == pxsim.TemperatureUnit.Fahrenheit) {
                 unit = "°F";
                 t = ((t * 18) / 10 + 32) >> 0;
             }

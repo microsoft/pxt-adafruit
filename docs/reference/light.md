@@ -11,5 +11,5 @@ light.pixels.move(0, 0)
 ```
 
 ```package
-light
+circuit-playground
 ```

@@ -19,5 +19,5 @@ input.onGesture(Gesture.Shake, () => {
 ```
 
 ```package
-light
+circuit-playground
 ```

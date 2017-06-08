@@ -16,4 +16,6 @@ input.onGesture(Gesture.Shake, () => {
 
 ```package
 light
+music
+accelerometer
 ```

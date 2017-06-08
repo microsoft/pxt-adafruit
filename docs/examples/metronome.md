@@ -24,3 +24,7 @@ loops.forever(() => {
     music.rest(music.beat(BeatFraction.Half))
 })
 ```
+
+```package
+music
+```

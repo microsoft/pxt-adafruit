@@ -17,6 +17,6 @@ loops.forever(() => {
 })
 ```
 
-```packages
-light
+```package
+circuit-playground
 ```

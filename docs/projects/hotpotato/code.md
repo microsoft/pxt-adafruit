@@ -81,6 +81,8 @@ input.buttonA.onEvent(ButtonEvent.Click, () => {
 If you need to raise the volume of the speaker add the following block to your project
 
 ```blocks
+=======
+```
 music.setVolume(100);
 ```
 

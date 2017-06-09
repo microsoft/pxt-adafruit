@@ -78,7 +78,7 @@ input.buttonA.onEvent(ButtonEvent.Click, () => {
 
 ```
 
-Hot potato game is ready to be played. Download this code to your @boardname@ and try it out with your friends in a circle.
+Hot potato game is ready to be played. Download this code to your hot potato built from @boardname@ (See Make) and try it out with your friends in a circle.
 
 ### ~button /projects/hotpotato/make
 Make

@@ -2,7 +2,7 @@
 
 ## Projects #projects
 
-* [Projects] (/projects)
+* [Projects](/projects)
     * [Hot Potato](/projects/hotpotato)
 
 ## Examples #examples

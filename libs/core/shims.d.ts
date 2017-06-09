@@ -345,7 +345,7 @@ declare namespace control {
      * Block the current fiber for the given microseconds
      * @param micros number of micro-seconds to wait. eg: 4
      */
-    //% help=control/wait-micros weight=29
+    //% help=control/wait-micros weight=29 async
     //% blockId="control_wait_us" block="wait (µs)%micros" shim=control::waitMicros
     function waitMicros(micros: int32): void;
 

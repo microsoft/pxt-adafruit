@@ -224,6 +224,7 @@
             }
         ],
         "galleries": {
+            "Make": "projects",            
             "Examples": "examples"
         },        
         "sideDoc": "tutorials/getting-started",

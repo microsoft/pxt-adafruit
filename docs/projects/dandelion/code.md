@@ -3,12 +3,12 @@
 
 ### ~avatar avatar
 Use the sound sensor to change the brightness of the pixels when you blow on it
-* **Concepts:**
-     * Sensors (Sound)
-     * Pixels
-     * Brightness
-
 ### ~
+
+**Concepts:**
+  * Sensors (Sound)
+  * Pixels
+  * Brightness
 
 ## Duration: 20 minutes
 
@@ -66,9 +66,15 @@ The **set brightness block** sets the brightness of pixels, and takes as a input
 
 Let's try and set the brightness of the pixels to the current sound level.
 
+```blocks
+loops.forever(() => {
+    light.pixels.setBrightness(255)
+    light.pixels.setAll(Colors.Yellow)
+})
+```
+
 **Build the  blocks**
-  * From **LOOPS** drag a **forever loop** into the coding area
-  * From **LIGHT** drag a **set brightness** block into the **forever loop**
+  * From **LIGHT** drag a **set brightness** block and place it at the top of the **forever loop**
   * From **INPUT** drag a **sound level** block and place it as the input of the **set brightness** block
 
 Download the code to your @boardname@ and try to blow on it.

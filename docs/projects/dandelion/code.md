@@ -79,7 +79,7 @@ loops.forever(() => {
 
 Download the code to your @boardname@ and try to blow on it.
 
-https://youtu.be/wSf_MmR2TsA
+https://youtu.be/tC1LOeh2jzs
 
 ## Good work!
 **Challenge:** Use some of the other sensor blocks (under **INPUT**) to change the brightness based on these sensor values (optional).

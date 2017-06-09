@@ -8,7 +8,7 @@ Make a @boardname@ dandelion with this guided tutorial!
 
 ### ~
 
-https://youtu.be/wSf_MmR2TsA
+https://youtu.be/tC1LOeh2jzs
 
 ## Duration
 

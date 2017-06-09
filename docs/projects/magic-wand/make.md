@@ -49,7 +49,7 @@ Place a group of pipe cleaners over the craft stick and use some tape to attach 
 
 ## Step 4: Attach your board
 
-Use a small piece of tape and roll it inside out so that the sticky side on the outside.
+Use a small piece of tape and roll it inside out so that the sticky side is on the outside.
 
 Place the tape at the top of the wooden stick and use it to stick the @boardname@ onto your magic wand. 
 
@@ -83,13 +83,11 @@ Place it around the middle of the stick so there's enough room for the cable to 
 
 ![Battery pack 5.5](/static/cp/projects/magic-wand/step5.5.jpg)
 
-## Complete
+## Complete!
 
 Congratulations! You have completed the magic wand make challenge. 
 
-Ready to do some coding?
-
-Connect the @boardname@ to your computer to get started.
+Ready to do some coding? OK, good...connect the @boardname@ to your computer to get started.
 
 ![Connect your computer](/static/cp/projects/magic-wand/connect.jpg)
 

@@ -39,19 +39,19 @@ Follow the instructions to move the code to your @boardname@.
 
 ## Step 2: Set the brightness
 ```blocks
-loops.forever(() => {
-    light.pixels.setAll(Colors.Yellow)
-})
 input.buttonA.onEvent(ButtonEvent.Click, () => {
     light.pixels.setBrightness(100)
+    light.pixels.setAll(Colors.Yellow)
 })
 input.buttonB.onEvent(ButtonEvent.Click, () => {
     light.pixels.setBrightness(255)
+    light.pixels.setAll(Colors.Yellow)
 })
 ```
-**Build the  blocks**
+**Build the blocks**
   * From **INPUT** drag an **on button click** block into the coding area
   * From **LIGHT** drag a **set brightness** block into the **on button click** block
+  * Move the **set all** block so it's just after the **set brightness** block in the **on button click** block
   * Set the brightness to 100
 
 Do the same for the `B` button, and set the brightness to 255 when the `B` button is clicked
@@ -68,12 +68,12 @@ Let's try and set the brightness of the pixels to the current sound level.
 
 ```blocks
 loops.forever(() => {
-    light.pixels.setBrightness(255)
+    light.pixels.setBrightness(input.soundLevel())
     light.pixels.setAll(Colors.Yellow)
 })
 ```
 
-**Build the  blocks**
+**Build the blocks**
   * From **LIGHT** drag a **set brightness** block and place it at the top of the **forever loop**
   * From **INPUT** drag a **sound level** block and place it as the input of the **set brightness** block
 

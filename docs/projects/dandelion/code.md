@@ -49,7 +49,7 @@ input.buttonB.onEvent(ButtonEvent.Click, () => {
     light.pixels.setBrightness(255)
 })
 ```
-**Build the  blocks**
+**Build the blocks**
   * From **INPUT** drag an **on button click** block into the coding area
   * From **LIGHT** drag a **set brightness** block into the **on button click** block
   * Set the brightness to 100
@@ -73,7 +73,7 @@ loops.forever(() => {
 })
 ```
 
-**Build the  blocks**
+**Build the blocks**
   * From **LIGHT** drag a **set brightness** block and place it at the top of the **forever loop**
   * From **INPUT** drag a **sound level** block and place it as the input of the **set brightness** block
 

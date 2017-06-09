@@ -20,9 +20,9 @@ Make the Dandelion for your @boardname@
 
 Place a group of green pipe cleaners over a wooden craft stick and use some tape to attach them to the bottom of the stick. 
 
-![Stem 2.1](/static/cp/projects/dandelion/step1.1.jpg)
+![Stem 1.1](/static/cp/projects/dandelion/step1.1.jpg)
 
-![Stem 2.2](/static/cp/projects/dandelion/step1.2.jpg)
+![Stem 1.2](/static/cp/projects/dandelion/step1.2.jpg)
 
 ## Step 2: Make the petals
 
@@ -42,13 +42,13 @@ You might need more then one to complete the full circle.
 Use a small piece of tape and roll it inside out so that the sticky side on the outside.
 Place the tape at the top of the wooden stick and use it to stick the @boardname@ onto your dandelion. 
 
-![Stick 3.1](/static/cp/projects/dandelion/step3.1.jpg)
+![Put together 3.1](/static/cp/projects/dandelion/step3.1.jpg)
 
-![Stick 3.2](/static/cp/projects/dandelion/step3.2.jpg)
+![Put together 3.2](/static/cp/projects/dandelion/step3.2.jpg)
 
-![Stick 3.3](/static/cp/projects/dandelion/step3.3.jpg)
+![Put together 3.3](/static/cp/projects/dandelion/step3.3.jpg)
 
-![Stick 3.4](/static/cp/projects/dandelion/step3.4.jpg)
+![Put together 3.4](/static/cp/projects/dandelion/step3.4.jpg)
 
 ### ~hint
 **Important**
@@ -62,25 +62,25 @@ Make sure the @boardname@ is placed so that the battery connector is at the top,
 Cut a piece of tape to attach the battery pack to the back of the dandelion.
 Place it around the middle of the stick so there's enough room for the cable to reach the @boardname@.
 
-![Stick 4.1](/static/cp/projects/dandelion/step4.1.jpg)
+![Battery pack 4.1](/static/cp/projects/dandelion/step4.1.jpg)
 
-![Stick 4.2](/static/cp/projects/dandelion/step4.2.jpg)
+![Battery pack 4.2](/static/cp/projects/dandelion/step4.2.jpg)
 
-![Stick 4.3](/static/cp/projects/dandelion/step4.3.jpg)
+![Battery pack 4.3](/static/cp/projects/dandelion/step4.3.jpg)
 
-![Stick 4.4](/static/cp/projects/dandelion/step4.4.jpg)
+![Battery pack 4.4](/static/cp/projects/dandelion/step4.4.jpg)
 
 ## Step 4: Connect the battery
 
 Connect the battery pack to your @boardname@ using the cable. 
 
-![Stick 5.1](/static/cp/projects/dandelion/step5.1.jpg)
+![Connect 5.1](/static/cp/projects/dandelion/step5.1.jpg)
 
-![Stick 5.2](/static/cp/projects/dandelion/step5.2.jpg)
+![Connect 5.2](/static/cp/projects/dandelion/step5.2.jpg)
 
 ## Complete
 
-Congratulations! You have completed the dandelion challenge. 
+Congratulations! You have completed the dandelion make challenge. 
 
 ![Complete](/static/cp/projects/dandelion/complete.jpg)
 

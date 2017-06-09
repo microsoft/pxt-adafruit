@@ -13,3 +13,15 @@ Fun things to light up your @boardname@.
   "imageUrl":"/static/cp/projects/a3-animations.gif"
 }]
 ```
+
+## Games
+
+Fun games to build with your @boardname@.
+
+```codecard
+[{
+  "name": "Hot Potato",
+  "url":"/projects/hotpotato",
+  "imageUrl":"/static/cp/projects/a3-animations.gif"
+}]
+```

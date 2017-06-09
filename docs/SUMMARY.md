@@ -1,5 +1,11 @@
 # @extends
 
+## #projects
+
+* [Projects](/docs)
+    * [Make](/projects)
+        * [Hot Potato](/projects/hotpotato)
+
 ## Examples #examples
 
 * [Examples](/examples)

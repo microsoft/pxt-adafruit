@@ -1,6 +1,8 @@
 # Blinky
 
-Flash red and blue every half second.
+Flash the LEDs every half second.
+
+https://youtu.be/ByuLe_lMHUU
 
 ```blocks
 loops.forever(() => {
@@ -15,6 +17,6 @@ loops.forever(() => {
 })
 ```
 
-```packages
-light
+```package
+circuit-playground
 ```

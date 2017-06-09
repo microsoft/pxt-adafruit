@@ -3,5 +3,5 @@
   "light": "Functions to operate colored LEDs.\n\nFunctions to operate colored LEDs.",
   "light.showRing": "Shows a pattern of colors on the pixel ring",
   "light.showRing|param|colors": "a string describing the colors",
-  "light.showRing|param|interval": "the duration in milliseconds between frames, eg: 20"
+  "light.showRing|param|interval": "the duration in milliseconds between frames, eg: 400"
 }

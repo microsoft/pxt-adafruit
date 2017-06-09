@@ -8,14 +8,11 @@ Here are some fun programs for your @boardname@!
 [{
   "name": "Blinky",
   "url":"/examples/blinky",
-  "cardType": "example"  
+  "cardType": "example",
+  "youTubeId": "ByuLe_lMHUU"
 },{
   "name": "Animation shaker",
   "url":"/examples/animation-shaker",
-  "cardType": "example"
-},{
-  "name": "Tilt light show",
-  "url":"/examples/tilt-light-show",
   "cardType": "example"
 },{
   "name": "Juggle counter",
@@ -38,13 +35,18 @@ Here are some fun programs for your @boardname@!
   "url":"/examples/egg-game",
   "cardType": "example"
 },{
+  "name": "Reaction",
+  "url":"/examples/reaction",
+  "cardType": "example"
+},{
   "name": "Photon beatbox",
   "url":"/examples/photon-beatbox",
   "cardType": "example"
 },{
   "name": "Spin it",
   "url":"/examples/spin-it",
-  "cardType": "example"
+  "cardType": "example",
+  "youTubeId": "DVE5uJ3m5Kg"
 },{
   "name": "Metronome",
   "url":"/examples/metrenome",
@@ -52,6 +54,10 @@ Here are some fun programs for your @boardname@!
 },{
   "name": "Beat visualizer",
   "url":"/examples/beat-visualizer",
+  "cardType": "example"
+},{
+  "name": "Fireflies",
+  "url":"/examples/fireflies",
   "cardType": "example"
 }]
 ```

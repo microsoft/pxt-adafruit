@@ -1,73 +1,93 @@
 # Getting started
 
-### Step 1
+### Step 1 @fullscreen
 
-Welcome, let's get started by making something everyone will notice! Place the ``||show ring||`` block in the ``||forever||`` slot to show a ring of pixels on the board.
+Welcome, let's get started by making something magical! Start by placing a ``||show animation||`` block in the ``||forever||`` slot to show a rainbow animation on the board.
 
-```blocks
+![rainbow toolbox](/static/cp/tutorials/getting-started/rainbow-toolbox.gif)
+
+```filterblocks
 loops.forever(() => {
-    light.showRing(
-    `red red red red red red red red red red`
-    )
+    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
 })
 ```
 
 ### Step 2
 
-Use the color palette to select a color for each pixel. To do this, first pick a color you want from the
-palette (we'll choose `blue` here).
-Then, then select a pixel in the ring and it will change to this color.
+Next, in the ``Input`` drawer, find the ``||on shake||`` block. Drag one of those out and place it anywhere in the workspace.
+Click the Hint button if you need help!
 
-Change half of the pixels to `blue`.
+![onshake toolbox](/static/cp/tutorials/getting-started/onshake-toolbox.gif)
 
-```blocks
+```filterblocks
 loops.forever(() => {
-    light.showRing(
-    `blue blue blue blue blue red red red red red`
-    )
+    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+})
+input.onGesture(Gesture.Shake, () => {
+
 })
 ```
 
 ### Step 3
 
-Ok, we'll add another ring to make an animation. Drag another ``||show ring||`` block and place it just beneath the first one.
+Drag out another ``||show animation||`` block but this time place it inside the ``||on shake||`` block. Change the animation to the ``sparkle`` and the duration to ``1500`` ms.
 
-```blocks
+Now, every time you shake the @boardname@, a sparkle animation will play. Pretty cool!
+
+![sparkle toolbox](/static/cp/tutorials/getting-started/sparkle-toolbox.gif)
+
+```filterblocks
 loops.forever(() => {
-    light.showRing(
-        `blue blue blue blue blue red red red red red`
-    )
-    light.showRing(
-        `red red red red red blue blue blue blue blue`
-    )
+    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+})
+input.onGesture(Gesture.Shake, () => {
+    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
 })
 ```
 
 ### Step 3
 
-Now, let's make a police siren from our animation! Add a ``||play tone||`` block after every ``||show ring||`` block.
+Hey, let's make it play a wand sound whenever we shake the board. From the ``Music`` drawer, drag a ``||play sound||`` block and place it inside the ``||on shake||`` block, just before the ``||show animation||`` block.
 
-```blocks
+![magic-wand toolbox](/static/cp/tutorials/getting-started/wandsound-toolbox.gif)
+
+```filterblocks
 loops.forever(() => {
-    light.showRing(
-        `blue blue blue blue blue red red red red red`
-    )
-    music.playTone(262, music.beat(BeatFraction.Half))
-    light.showRing(
-        `red red red red red blue blue blue blue blue`
-    )
-    music.playTone(262, music.beat(BeatFraction.Half))
+    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+})
+input.onGesture(Gesture.Shake, () => {
+    music.playSound(music.sounds(Sounds.PowerUp))
+    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
 })
 ```
 
-### Step 4
+### Step 4 @nohint
 
-Click on the ``Middle C`` block to adjust the tone to play. Change the first one to ``Middle A`` and the second one to ``High D``.
+Change the sound effect to ``Magic Wand``. Do this by selecting the list of sounds, then pick the one you want, ``Magic Wand``.
+
+```filterblocks
+loops.forever(() => {
+    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+})
+input.onGesture(Gesture.Shake, () => {
+    music.playSound(music.sounds(Sounds.MagicWand))
+    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
+})
+```
 
 ### Step 5
 
 Click ``|Download|`` to transfer your code to the @boardname@.
 
+To load your code on the real device, we'll have to first put it in "Programming mode".
+Do this by clicking the reset button once, and wait for the all green lights.
+
+![programming mode](/static/cp/tutorials/getting-started/programming-mode.gif)
+
+Now click Download and follow the rest of the download instructions.
+
 ### Step 6
 
 Awesome! Congratulations on completing your first challenge on the @boardname@.
+
+![shake image](/static/cp/tutorials/getting-started/shake.gif)

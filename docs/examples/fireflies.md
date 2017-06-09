@@ -1,0 +1,32 @@
+# Fireflies
+
+```blocks
+let clock = 0
+loops.forever(() => {
+    // if clock hits noon, flash the screen
+    if (clock >= 8) {
+        // notify neighbors
+        light.pixels.setAll(Colors.White)
+        loops.pause(200)
+        light.pixels.clear()
+        // reset the clock
+        clock = 0
+    } else {
+        // just wait a bit
+        loops.pause(100)
+        // increment the clock
+        clock += 1
+    }
+})
+input.onLightConditionChanged(LightCondition.Bright, () => {
+    // don't play sound while flashing
+    if (clock < 8) {
+        music.playSound('g5:1 g5:1')
+        // advance clock to catch up neighbors
+        clock += 1
+    }
+})
+// setup flash detection
+input.setLightThreshold(LightCondition.Bright, 40)
+light.pixels.setBrightness(255)
+```

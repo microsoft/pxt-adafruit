@@ -2,6 +2,8 @@
 
 Spin the lights!
 
+https://youtu.be/DVE5uJ3m5Kg
+
 ```blocks
 music.setTempo(125);
 let item = 0

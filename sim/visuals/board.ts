@@ -12,6 +12,9 @@ namespace pxsim.visuals {
             pointer-events: none;
         }
 
+        .sim-button-outer {
+            cursor: pointer;
+        }
         .sim-button-outer:hover {
             stroke-width: 1px;
             stroke: orange !important;
@@ -96,6 +99,9 @@ namespace pxsim.visuals {
             r:8px;
         }
 
+        #SLIDE_HOVER {
+            cursor: pointer;
+        }
         .sim-slide-switch:hover #SLIDE_HOVER {
             stroke:orange !important;
             stroke-width: 1px;
@@ -181,7 +187,7 @@ namespace pxsim.visuals {
         { 'name': "PIN_A0", 'touch': 0, 'text': null, 'id': pxsim.CPlayPinName.A0, tooltip: "A0 - Speaker" },
         { 'name': "PIN_A1", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A1, tooltip: "~A1" },
         { 'name': "PIN_A2", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "~A2" },
-        { 'name': "PIN_A3", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "~A3" },
+        { 'name': "PIN_A3", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A3, tooltip: "~A3" },
         { 'name': "PIN_A4", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A4, tooltip: "A4 - SCL" },
         { 'name': "PIN_A5", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A5, tooltip: "A5 - SDA" },
         { 'name': "PIN_A6", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A6, tooltip: "A6 - RX" },
@@ -357,7 +363,7 @@ namespace pxsim.visuals {
             if (!state) return;
             let theme = this.props.theme;
 
-            let bpState = state.buttonPairState;
+            let bpState = state.buttonState;
             let buttons = bpState.buttons;
             svg.fill(this.buttons[0], buttons[0].pressed ? theme.buttonDown : theme.buttonUps[0]);
             svg.fill(this.buttons[1], buttons[1].pressed ? theme.buttonDown : theme.buttonUps[1]);
@@ -482,22 +488,20 @@ namespace pxsim.visuals {
         private updatePin(pin: Pin, index: number) {
             if (!pin || !this.pins[index]) return;
 
-            if (pin.mode & PinFlags.Analog) {
-                if ((pin as pins.CPPin).used) {
-                    if (this.pinControls[pin.id] === undefined) {
-                        const pinName =  pinNames.filter((a) => a.id === pin.id)[0];
-                        if (pinName) {
-                            this.pinControls[pin.id] = new AnalogPinControl(this, this.defs, pin.id, pinName.name);
-                        }
-                        else {
-                            // TODO: Surface pin controls for sensor pins in some way?
-                            this.pinControls[pin.id] = null;
-                        }
+            if ((pin as pins.CommonPin).used) {
+                if (this.pinControls[pin.id] === undefined) {
+                    const pinName =  pinNames.filter((a) => a.id === pin.id)[0];
+                    if (pinName) {
+                        this.pinControls[pin.id] = new AnalogPinControl(this, this.defs, pin.id, pinName.name);
                     }
+                    else {
+                        // TODO: Surface pin controls for sensor pins in some way?
+                        this.pinControls[pin.id] = null;
+                    }
+                }
 
-                    if (this.pinControls[pin.id]) {
-                        this.pinControls[pin.id].updateValue();
-                    }
+                if (this.pinControls[pin.id]) {
+                    this.pinControls[pin.id].updateValue();
                 }
             }
         }
@@ -544,7 +548,7 @@ namespace pxsim.visuals {
 
         private updateSoundLevel() {
             let state = this.board;
-            if (!state || !state.soundSensorState.sensorUsed) return;
+            if (!state || !state.microphoneState.sensorUsed) return;
 
             if (!this.soundLevelButton) {
                 let gid = "gradient-sound-level";
@@ -563,8 +567,8 @@ namespace pxsim.visuals {
                         let pos = svg.cursorPoint(pt, this.element, ev);
                         let rs = r / 2;
                         let level = Math.max(0, Math.min(255, Math.floor((pos.y - (cy - rs)) / (2 * rs) * 255)));
-                        if (level != this.board.soundSensorState.getLevel()) {
-                            this.board.soundSensorState.setLevel(255 - level);
+                        if (level != this.board.microphoneState.getLevel()) {
+                            this.board.microphoneState.setLevel(255 - level);
                             this.applySoundLevel();
                         }
                     }, ev => { },
@@ -573,12 +577,12 @@ namespace pxsim.visuals {
                 this.updateTheme();
             }
 
-            svg.setGradientValue(this.soundLevelGradient, Math.min(100, Math.max(0, Math.floor((255 - state.soundSensorState.getLevel()) * 100 / 255))) + '%')
-            this.soundLevelText.textContent = state.soundSensorState.getLevel().toString();
+            svg.setGradientValue(this.soundLevelGradient, Math.min(100, Math.max(0, Math.floor((255 - state.microphoneState.getLevel()) * 100 / 255))) + '%')
+            this.soundLevelText.textContent = state.microphoneState.getLevel().toString();
         }
 
         private applySoundLevel() {
-            let lv = this.board.soundSensorState.getLevel();
+            let lv = this.board.microphoneState.getLevel();
             svg.setGradientValue(this.soundLevelGradient, Math.min(100, Math.max(0, Math.floor((255 - lv) * 100 / 255))) + '%')
             this.soundLevelText.textContent = lv.toString();
         }
@@ -620,7 +624,7 @@ namespace pxsim.visuals {
             svg.setGradientValue(this.thermometerGradient, 100 - per + "%");
 
             let unit = "°C";
-            if (state.thermometerUnitState == pxsim.ThermometerUnit.Fahrenheit) {
+            if (state.thermometerUnitState == pxsim.TemperatureUnit.Fahrenheit) {
                 unit = "°F";
                 t = ((t * 18) / 10 + 32) >> 0;
             }
@@ -629,7 +633,7 @@ namespace pxsim.visuals {
 
         private updateButtonAB() {
             let state = this.board;
-            if (state.buttonPairState.usesButtonAB) {
+            if (state.buttonState.usesButtonAB) {
                 (<any>this.buttonsOuter[2]).style.visibility = "visible";
                 (<any>this.buttons[2]).style.visibility = "visible";
                 this.updateTheme();
@@ -663,7 +667,7 @@ namespace pxsim.visuals {
                 this.shakeButtonGroup.addEventListener(pointerEvents.up, ev => {
                     let state = this.board;
                     svg.fill(btng, this.props.theme.gestureButtonOff);
-                    this.board.bus.queue(CPLAY.ID_GESTURE, 11); // GESTURE_SHAKE
+                    this.board.bus.queue(DAL.DEVICE_ID_GESTURE, 11); // GESTURE_SHAKE
                     svg.removeClass(this.shakeText, "inverted");
                 })
             }
@@ -714,7 +718,7 @@ namespace pxsim.visuals {
             svg.child(neopixelmerge, "feMergeNode", { in: "coloredBlur" })
             svg.child(neopixelmerge, "feMergeNode", { in: "SourceGraphic" })
 
-            const neopixelState = board().neopixelState;
+            const neopixelState = (board() as LightBoard).neopixelState;
             if (neopixelState) {
                 for (let i = 0; i < neopixelState.NUM_PIXELS; i++) {
                     // let p_outer = svg.title(this.element.getElementById(`LED${i}_OUTER`) as SVGPathElement, "NeoPixel " + i);
@@ -830,7 +834,7 @@ namespace pxsim.visuals {
                 }
             }, false);
 
-            let bpState = this.board.buttonPairState;
+            let bpState = this.board.buttonState;
             let stateButtons = bpState.buttons;
             this.buttonsOuter.forEach((btn, index) => {
                 let button = stateButtons[index];

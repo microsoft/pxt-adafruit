@@ -13,7 +13,7 @@ echo isPR: $1
 
 originRegex="^origin/.*"
 branchRegex="^origin/\K.*(?=$)"
-releaseBranchRegex = "^(master|v\d+)$"
+releaseBranchRegex="^(master|v\d+)$"
 
 if [[ "$GIT_BRANCH" =~ $originRegex ]]; then
     branchName=$(echo ${GIT_BRANCH} | grep -oP $branchRegex)

@@ -17,6 +17,8 @@ clients/**/bin/**
 clients/**/obj/**
 clients/electron/projects
 
+videos/**
+
 *.user
 *.sw?
 *.ts.new

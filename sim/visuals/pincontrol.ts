@@ -17,21 +17,19 @@ namespace pxsim.visuals {
 
 
             // Init the gradient controls
-            /*
-            const gid = `gradient-${CPlayPinName[id]}-level`;
-            this.innerCircle = parent.element.getElementById("PIN_CONNECTOR_" + CPlayPinName[id]) as SVGCircleElement;
-            this.gradient = svg.linearGradient(this.defs, gid);
-            this.innerCircle.setAttribute("fill", `url(#${gid})`);
-            this.innerCircle.setAttribute("class", "sim-light-level-button")
-            this.addLevelControlEvents()
+            // const gid = `gradient-${CPlayPinName[id]}-level`;
+            // this.innerCircle = parent.element.getElementById("PIN_CONNECTOR_" + CPlayPinName[id]) as SVGCircleElement;
+            // this.gradient = svg.linearGradient(this.defs, gid);
+            // this.innerCircle.setAttribute("fill", `url(#${gid})`);
+            // this.innerCircle.setAttribute("class", "sim-light-level-button")
+            // this.addLevelControlEvents()
 
             this.updateTheme();
-            */
         }
 
         public updateTheme() {
-            //const theme = this.parent.props.theme;
-            //svg.setGradientColors(this.gradient, theme.lightLevelOff, 'darkorange');
+            const theme = this.parent.props.theme;
+            svg.setGradientColors(this.gradient, theme.lightLevelOff, 'darkorange');
         }
 
         public updateValue() {
@@ -43,10 +41,11 @@ namespace pxsim.visuals {
 
             this.currentValue = value;
 
-            //svg.setGradientValue(this.gradient, 100 - Math.min(100, Math.max(0, Math.floor(value * 100 / 1023))) + '%')
-            //if (this.innerCircle.childNodes.length) {
+            // svg.setGradientValue(this.gradient, 100 - Math.min(100, Math.max(0, Math.floor(value * 100 / 1023))) + '%')
+            // if (this.innerCircle.childNodes.length) {
             //    this.innerCircle.removeChild(this.innerCircle.childNodes[0])
-            //}
+            // }
+
             svg.title(this.outerElement, value.toString());
         }
 
@@ -55,19 +54,19 @@ namespace pxsim.visuals {
                 this.pin.touched = true;
                 svg.addClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id - 1) as CPButton).setPressed(true);
+                (pxtcore.getTouchButton(this.id - 1) as CommonButton).setPressed(true);
             })
             this.outerElement.addEventListener(pointerEvents.leave, ev => {
                 this.pin.touched = false;
                 svg.removeClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id - 1) as CPButton).setPressed(false);
+                (pxtcore.getTouchButton(this.id - 1) as CommonButton).setPressed(false);
             })
             this.outerElement.addEventListener(pointerEvents.up, ev => {
                 this.pin.touched = false;
                 svg.removeClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id - 1) as CPButton).setPressed(false);
+                (pxtcore.getTouchButton(this.id - 1) as CommonButton).setPressed(false);
             })
         }
 

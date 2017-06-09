@@ -1,5 +1,6 @@
 /// <reference path="../node_modules/pxt-core/built/pxtsim.d.ts"/>
 /// <reference path="../node_modules/pxt-core/localtypings/pxtarget.d.ts"/>
+/// <reference path="../built/common-sim.d.ts"/>
 
 namespace pxsim {
     export enum CPlayPinName {
@@ -11,6 +12,8 @@ namespace pxsim {
         A5,
         A6,
         A7,
+        A8,
+        A9,
         D4,
         D5,
         D6,
@@ -19,19 +22,22 @@ namespace pxsim {
         D13
     }
 
-    export class DalBoard extends CoreBoard {
+    export class DalBoard extends CoreBoard implements
+    AccelerometerBoard, CommonBoard, LightBoard, LightSensorBoard, MicrophoneBoard, MusicBoard, SlideSwitchBoard, TemperatureBoard, CapTouchBoard
+    {
         // state & update logic for component services
-        neopixelState: CPNeoPixelState;
-        buttonPairState: CPButtonState;
+        neopixelState: CommonNeoPixelState;
+        buttonState: CommonButtonState;
         slideSwitchState: SlideSwitchState;
         lightSensorState: AnalogSensorState;
         thermometerState: AnalogSensorState;
         thermometerUnitState: number;
-        soundSensorState: AnalogSensorState;
+        microphoneState: AnalogSensorState;
         edgeConnectorState: EdgeConnectorState;
         capacitiveSensorState: CapacitiveSensorState;
         accelerometerState: AccelerometerState;
         audioState: AudioState;
+        touchButtonState: TouchButtonState;
 
         view: SVGSVGElement;
 
@@ -41,14 +47,14 @@ namespace pxsim {
             this.bus.setNotify(DAL.DEVICE_ID_NOTIFY, DAL.DEVICE_ID_NOTIFY_ONE);
 
             //components
-            this.builtinParts["neopixel"] = this.neopixelState = new CPNeoPixelState();
-            this.builtinParts["buttonpair"] = this.buttonPairState = new CPButtonState();
+            this.builtinParts["neopixel"] = this.neopixelState = new CommonNeoPixelState();
+            this.builtinParts["buttonpair"] = this.buttonState = new CommonButtonState();
 
             this.builtinParts["switch"] = this.slideSwitchState = new SlideSwitchState();
             this.builtinParts["audio"] = this.audioState = new AudioState();
             this.builtinParts["lightsensor"] = this.lightSensorState = new AnalogSensorState(DAL.DEVICE_ID_LIGHT_SENSOR, 0, 255);
             this.builtinParts["thermometer"] = this.thermometerState = new AnalogSensorState(DAL.DEVICE_ID_THERMOMETER, -5, 50);
-            this.builtinParts["soundsensor"] = this.soundSensorState = new AnalogSensorState(DAL.DEVICE_ID_TOUCH_SENSOR + 1, 0, 255);
+            this.builtinParts["soundsensor"] = this.microphoneState = new AnalogSensorState(DAL.DEVICE_ID_TOUCH_SENSOR + 1, 0, 255);
             this.builtinParts["capacitivesensor"] = this.capacitiveSensorState = new CapacitiveSensorState({
                 0: 0,
                 1: 1,
@@ -71,6 +77,8 @@ namespace pxsim {
                     pxsim.CPlayPinName.A5,
                     pxsim.CPlayPinName.A6,
                     pxsim.CPlayPinName.A7,
+                    pxsim.CPlayPinName.A8,
+                    pxsim.CPlayPinName.A9,
                     pxsim.CPlayPinName.D4,
                     pxsim.CPlayPinName.D5,
                     pxsim.CPlayPinName.D6,
@@ -83,6 +91,15 @@ namespace pxsim {
 
             this.builtinVisuals["microservo"] = () => new visuals.MicroServoView();
             this.builtinPartVisuals["microservo"] = (xy: visuals.Coord) => visuals.mkMicroServoPart(xy);
+            this.touchButtonState = new TouchButtonState([
+                pxsim.CPlayPinName.A1,
+                pxsim.CPlayPinName.A2,
+                pxsim.CPlayPinName.A3,
+                pxsim.CPlayPinName.A4,
+                pxsim.CPlayPinName.A5,
+                pxsim.CPlayPinName.A6,
+                pxsim.CPlayPinName.A7
+            ]);
         }
 
         receiveMessage(msg: SimulatorMessage) {
@@ -132,6 +149,14 @@ namespace pxsim {
         screenshot(): string {
             return svg.toDataUri(new XMLSerializer().serializeToString(this.view));
         }
+
+        defaultNeopixelPin() {
+            return this.edgeConnectorState.getPin(CPlayPinName.D8);
+        }
+
+        getDefaultPitchPin() {
+            return this.edgeConnectorState.getPin(CPlayPinName.D6);
+        }
     }
 
     export function initRuntimeWithDalBoard() {
@@ -146,9 +171,5 @@ namespace pxsim {
 
     if (!pxsim.initCurrentRuntime) {
         pxsim.initCurrentRuntime = initRuntimeWithDalBoard;
-    }
-
-    export function board() {
-        return runtime.board as DalBoard;
     }
 }

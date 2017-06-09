@@ -30,6 +30,10 @@ class DevPins {
     //%
     AnalogPin A7;
     //%
+    AnalogPin A8;
+    //%
+    AnalogPin A9;
+    //%
     DigitalPin D4;
     //%
     DigitalPin D5;
@@ -52,6 +56,8 @@ class DevPins {
     // not surface in user code
     DevicePin MIC_DATA;
     DevicePin MIC_CLOCK;
+    DevicePin SPEAKER_AMP;
+
     I2C i2c;
 
     DevPins();
@@ -60,6 +66,6 @@ class DevPins {
 extern DevPins *io;
 
 // modify if the last field changes
-const int LastPinID = &io->MIC_CLOCK - io->pins;
+const int LastPinID = &io->SPEAKER_AMP - io->pins;
 
 #endif

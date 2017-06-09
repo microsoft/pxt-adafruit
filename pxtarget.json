@@ -123,7 +123,7 @@
         "packages": true,
         "sharing": true,
         "publishing": true,
-        "importing": true,
+        "importing": false,
         "preferredPackages": [],
         "githubPackages": true
     },
@@ -135,8 +135,9 @@
         "deployFileMarker": "INFO_UF2.TXT",
         "driveName": "CPLAYBOOT",
         "openocdScript": "source [find interface/cmsis-dap.cfg]; set CHIPNAME at91samd21g18; source [find target/at91samdXX.cfg]",
-        "flashChecksumAddr": 8368,
+        "flashChecksumAddr": 8372,
         "flashCodeAlign": 256,
+        "floatingPoint": true,
         "taggedInts": true,
         "upgrades": [
             {
@@ -171,7 +172,7 @@
             }
         },        
         "githubCorePackage": "lancaster-university/codal",
-        "gittag": "v0.1.2",
+        "gittag": "v0.1.5",
         "serviceId": "codalcp"
     },
     "appTheme": {
@@ -193,6 +194,8 @@
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
         "githubUrl": "https://github.com/Microsoft/pxt-adafruit",
+        "feedbackUrl": "https://www.research.net/r/MCcplay",
+        "betaUrl": "https://www.research.net/r/MCcplay",
         "boardName": "Adafruit Circuit Playground Express",
         "docMenu": [
             {
@@ -200,12 +203,8 @@
                 "path": "/about"
             },
             {
-                "name": "Projects",
-                "path": "/projects"
-            },
-            {
                 "name": "Examples",
-                "path": "/examples"
+                "path": "#projects:Examples"
             },
             {
                 "name": "Blocks",
@@ -218,10 +217,13 @@
             {
                 "name": "Reference",
                 "path": "/reference"
+            },
+            {
+                "name": "Buy",
+                "path": "https://www.adafruit.com/products/3333"
             }
         ],
         "galleries": {
-            "Projects": "projects",
             "Examples": "examples"
         },        
         "sideDoc": "tutorials/getting-started",

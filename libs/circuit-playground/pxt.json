@@ -17,9 +17,10 @@
     },
     "dependencies": {
         "core": "file:../core",
+        "buttons": "file:../buttons",
         "accelerometer": "file:../accelerometer",
         "lightsensor": "file:../lightsensor",
-        "temperature": "file:../temperature",
+        "thermometer": "file:../thermometer",
         "music": "file:../music",
         "light": "file:../light",
         "switch": "file:../switch",

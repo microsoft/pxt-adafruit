@@ -61,7 +61,7 @@ Try this out in the simulator.
 
 ## Last step
 
-Now add a `theater chase` animation and `wawawawaa` playsound once the game ends (completes the while loop). You can change the animation and playsound using the drop down selection in these blocks.
+Now add a `theater chase` animation and `wawawawaa` playSound once the game ends (completes the while loop). You can change the animation and playSound using the drop down selection in these blocks.
 
 ```blocks
 let delay = 0
@@ -72,13 +72,21 @@ input.buttonA.onEvent(ButtonEvent.Click, () => {
         light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), delay)
         delay += -50
     }
-    light.pixels.showAnimation(light.animation(LightAnimation.TheaterChase), 500)
-    music.playSoundUntilDone(music.sounds(Sounds.Wawawawaa))
+    music.playSound(music.sounds(Sounds.Wawawawaa))    
+    light.pixels.showAnimation(light.animation(LightAnimation.TheaterChase), 2500)
 })
 
 ```
 
+If you need to raise the volume of the speaker add the following block to your project
+
+```
+music.setVolume(100);
+```
+
 Hot potato game is ready to be played. Download this code to your hot potato built from @boardname@ (See Make) and try it out with your friends in a circle.
+
+
 
 ### ~button /projects/hotpotato/make
 Make

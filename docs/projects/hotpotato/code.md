@@ -85,10 +85,3 @@ music.setVolume(100);
 ```
 
 Hot potato game is ready to be played. Download this code to your hot potato built from @boardname@ (See Make) and try it out with your friends in a circle.
-
-
-
-### ~button /projects/hotpotato/make
-Make
-
-### ~

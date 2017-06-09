@@ -18,9 +18,4 @@ Make a @boardname@ hot potato with this guided tutorial!
 
 Make
 
-### ~button /projects/hotpotato/code
-
-Code
-
 ### ~
-

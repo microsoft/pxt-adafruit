@@ -1,5 +1,5 @@
 {
-    "name": "temperature",
+    "name": "thermometer",
     "description": "The temperature library",
     "files": [
         "README.md",
@@ -11,7 +11,7 @@
     "testFiles": [
         "test.ts"
     ],
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/temperature",
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/thermometer",
     "public": true,
     "dependencies": {
         "core": "file:../core"

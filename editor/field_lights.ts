@@ -135,7 +135,7 @@ namespace pxt.editor {
     }
 
     private isInFlyout() {
-        return this.sourceBlock_.workspace.getParentSvg().classList[0] == 'blocklyFlyout';
+        return (this.sourceBlock_.workspace.getParentSvg() as SVGElement).className.baseVal == "blocklyFlyout";
     }
 
     render_() {

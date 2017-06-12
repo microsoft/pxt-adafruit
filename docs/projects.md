@@ -20,6 +20,13 @@ Basic projects to build with your @boardname@.
 {
   "name": "Fidget Spinner",
   "url":"/projects/fidget-spinner",
+
+  "imageUrl":"/static/cp/projects/a3-animations.gif"
+},
+{
+  "name": "Watch Timer",
+  "url":"/projects/watchtimer",
+
   "imageUrl":"/static/cp/projects/a3-animations.gif"
 }]
 ```

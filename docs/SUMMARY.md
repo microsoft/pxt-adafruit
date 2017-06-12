@@ -6,6 +6,7 @@
     * [Dandelion](/projects/dandelion)
     * [Hot Potato](/projects/hotpotato)
     * [Magic Wand](/projects/magic-wand)
+    * [Fidget Spinner](/projects/fidget-spinner)
     * [Number Wheel](/projects/number-wheel)
 
 ## Examples #examples

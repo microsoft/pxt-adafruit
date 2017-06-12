@@ -18,6 +18,11 @@ Basic projects to build with your @boardname@.
   "imageUrl":"/static/cp/projects/a3-animations.gif"
 },
 {
+  "name": "Fidget Spinner",
+  "url":"/projects/fidget-spinner",
+  "imageUrl":"/static/cp/projects/a3-animations.gif"
+},
+{
   "name": "Number Wheel",
   "url":"/projects/number-wheel",
   "imageUrl":"/static/cp/projects/a3-animations.gif"

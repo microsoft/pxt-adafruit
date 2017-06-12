@@ -20,6 +20,7 @@ Basic projects to build with your @boardname@.
 {
   "name": "Stopwatch",
   "url":"/projects/stopwatch",
+
   "imageUrl":"/static/cp/projects/a3-animations.gif"
 }]
 ```

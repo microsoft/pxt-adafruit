@@ -23,8 +23,8 @@ Basic projects to build with your @boardname@.
   "imageUrl":"/static/cp/projects/a3-animations.gif"
 },
 {
-  "name": "Number Wheel",
-  "url":"/projects/number-wheel",
+  "name": "Lucky Wheel",
+  "url":"/projects/lucky-wheel",
   "imageUrl":"/static/cp/projects/a3-animations.gif"
 }]
 ```

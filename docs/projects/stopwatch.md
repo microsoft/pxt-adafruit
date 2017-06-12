@@ -1,10 +1,10 @@
 # Stopwatch
 
-### @description An advanced maker activity where you turn your @boardname@ into a convenient stopwatch
+### @description An advanced maker activity where you turn your @boardname@ into a simple stopwatch
 
 ### ~avatar avatar
 
-Make a stopwatch out of your @boardname@
+Make a stopwatch with your @boardname@
 
 ### ~
 
@@ -12,7 +12,7 @@ Make a stopwatch out of your @boardname@
 
 ## Duration
 
-2 Activities, approximately 40 minutes total
+2 Activities, about 40 minutes to do both.
 
 ## Materials
 * Tape (masking, duct tape, and/or packing tape)
@@ -23,9 +23,10 @@ Make a stopwatch out of your @boardname@
 
 ### What is a stopwatch?
 
-This project will let you start a short countdown timer on your @boardname@, which will sound a small alarm when it expires.
+This project makes your @boardname@ work like a stopwatch (_countdown timer_). It makes an alarm sound when the
+stopwatch timer runs out of time.
 
-Make a stopwatch with your @boardname@ in this guided tutorial!
+Ready to make a stopwatch with your @boardname@? This tutorial will guide through all the steps!
 
 ## Activities
 

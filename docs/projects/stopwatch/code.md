@@ -8,7 +8,7 @@ Make a stopwatch out of your @boardname@
 
 We'll now code the logic for your stopwatch.
 
-## Duration: ~45 minutes
+## Duration: ~25 minutes
 
 ## Step 1
 

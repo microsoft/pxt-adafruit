@@ -64,7 +64,7 @@ Make sure the on / off switch is facing up, and that it extends from the tape so
 ![](/static/cp/projects/stopwatch/step10.jpg)
 
 Put tape over the battery holder to hold it in place. Try to align the tape with the wristband so no sticky bit extends from it,
-otherwise it might hurt your skin when you put it on!
+otherwise it might hurt your skin when you wear it!
 
 ![](/static/cp/projects/stopwatch/step11.jpg)
 
@@ -73,8 +73,7 @@ otherwise it might hurt your skin when you put it on!
 The last step is to attach the board to the top of the wristband.
 Put on your wristband, while making sure the battery holder is on the bottom of your arm, as shown in the picture above.
 
-
-Then, take a small piece of tape, and fold it onto itself as to expose its sticky side all over.
+Then, take a small piece of tape, and fold it onto itself as to expose its sticky side all around.
 
 ![](/static/cp/projects/stopwatch/step12.jpg)
 
@@ -82,7 +81,7 @@ Place the piece of tape on the bottom face of your @boardname@, and stick the bo
 
 ![](/static/cp/projects/stopwatch/step13.jpg)
 
-Your stopwatch is ready! You can reuse this wristwatch to code many different projects. For now, we'll go code the stopwatch.
+Your stopwatch is ready! You can reuse this wristwatch to code many different projects. For now, let's code the stopwatch.
 
 ![](/static/cp/projects/stopwatch/step14.jpg)
 ![](/static/cp/projects/stopwatch/step15.jpg)

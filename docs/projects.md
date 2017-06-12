@@ -16,6 +16,11 @@ Basic projects to build with your @boardname@.
   "name": "Dandelion",
   "url":"/projects/dandelion",
   "imageUrl":"/static/cp/projects/a3-animations.gif"
+}],
+{
+  "name": "Stopwatch",
+  "url":"/projects/stopwatch",
+  "imageUrl":"/static/cp/projects/a3-animations.gif"
 }]
 ```
 

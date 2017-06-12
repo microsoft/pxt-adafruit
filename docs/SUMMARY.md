@@ -2,8 +2,10 @@
 
 ## Projects #projects
 
-* [Projects] (/projects)
+* [Projects](/projects)
+    * [Dandelion](/projects/dandelion)
     * [Hot Potato](/projects/hotpotato)
+    * [Magic Wand](/projects/magic-wand)
 
 ## Examples #examples
 

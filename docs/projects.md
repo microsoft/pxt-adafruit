@@ -2,14 +2,19 @@
 
 Here are some cool projects that you can build with your @boardname@!
 
-## Lights
+## Basic
 
-Fun things to light up your @boardname@.
+Basic projects to build with your @boardname@.
 
 ```codecard
 [{
-  "name": "Animations",
-  "url":"/projects/animations",
+  "name": "Magic Wand",
+  "url":"/projects/magic-wand",
+  "imageUrl":"/static/cp/projects/a3-animations.gif"
+},
+{
+  "name": "Dandelion",
+  "url":"/projects/dandelion",
   "imageUrl":"/static/cp/projects/a3-animations.gif"
 }]
 ```

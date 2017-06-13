@@ -29,7 +29,7 @@ timer runs out of time.
 
 Ready to make a timer with your @boardname@? This tutorial will guide through all the steps!
 
-### ~button /projects/timer/make
+### ~button /projects/watchtimer/make
 
 Make
 

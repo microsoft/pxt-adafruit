@@ -21,8 +21,8 @@ Make a watch timer with your @boardname@
 
 ## Activities
 
-* [Make](/projects/timer/make)
-* [Code](/projects/timer/code)
+* [Make](/projects/watchtimer/make)
+* [Code](/projects/watchtimer/code)
 
 This project makes your @boardname@ work like a watch timer. It makes an alarm sound when the
 timer runs out of time.

@@ -42,7 +42,7 @@ Each triangle should be a little bit longer than half the width of the wheel.
 
 Glue the triangles down one by one. For each triangle, place the @boardname@ down as a guide to make sure that it lines up up with one light on the board.
 
-Next, cut off the excess paper from the bases of the triangles around the wheel.
+Next, cut off the excess paper from the bases of the triangles so they are even with edge of the wheel.
 
 ![Glue 4.1](/static/cp/projects/lucky-wheel/step4.1.jpg)
 ![Glue 4.2](/static/cp/projects/lucky-wheel/step4.2.jpg)
@@ -56,7 +56,7 @@ Mark a number for each light using a marker, paint, or glitter glue.
 
 ## Step 6: Finishing Touches
 
-Tape the @boardname@ down on the center of the wheel by rolling the tape into a cylinder on the back of the baord.
+Tape the @boardname@ down on the center of the wheel by rolling the tape into a cylinder (sticky side out) on the back of the board.
 
 Clip the battery pack onto the back of the wheel for power.
 

@@ -1,4 +1,4 @@
-# Number Wheel
+# Lucky Wheel
 
 ### @description A beginner maker activity, building a wheel for picking random numbers with the @boardname@
 
@@ -26,10 +26,10 @@ https://youtu.be/SItmAn_AtdY
 
 ## Activities
 
-* [Make](/projects/number-wheel/make)
-* [Code](/projects/number-wheel/code)
+* [Make](/projects/lucky-wheel/make)
+* [Code](/projects/lucky-wheel/code)
 
-### ~button /projects/number-wheel/make
+### ~button /projects/lucky-wheel/make
 
 Let's get started!
 

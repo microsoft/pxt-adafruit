@@ -1,11 +1,11 @@
-# Coding the number wheel
+# Coding the Lucky Wheel
 ### ~avatar avatar
 
 Make your @boardname@ into a tool for choosing a random number
 
 ### ~
 
-Let's create a number wheel for choosing a random number between 1 and 10!
+Feeling lucky? Let's create a spinning wheel that chooses a random number between 1 and 10!
 
 ## Duration: ~20 minutes
 
@@ -20,7 +20,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Step 2
 
-Next, create a variable named "delay" and set it equal to 0. This variable will control the delay at each step of the animation.
+Next, create a variable named `delay` and set it equal to 0. This variable will control the delay at each step of the animation.
 
 ```blocks
 let delay = 0
@@ -31,7 +31,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Step 3
 
-Create another variable named "times" and drag it below the delay block. This variable will control how long the number wheel spins.
+Create another variable named `times` and drag it below the delay block. This variable will control how long the wheel spins.
 
 ```blocks
 let delay = 0
@@ -44,7 +44,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Step 4
 
-Use the ``||random||`` and ``||+||`` blocks to set "times" to a random number between 50 and 59
+Use the ``||random||`` and ``||+||`` blocks to set `times` to a random number between `50` and `59`
 
 ```blocks
 let delay = 0
@@ -57,7 +57,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Step 5
 
-Now add a ``||repeat||`` block and use the "times" variable to set how many times it runs.
+Now add a ``||repeat||`` block and use the `times` variable to set how many times it runs.
 
 ```blocks
 let delay = 0
@@ -74,7 +74,8 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Step 6
 
-Within the ``||repeat||`` block, drag a ``||photon forward||`` block to add the spin effect. Pass it -1 so that the photon moves clockwise.
+Inside the ``||repeat||`` block, drag a ``||photon forward||`` block to add the spin effect. Make it move by `-1`
+so that the photon goes clockwise.
 
 ```blocks
 let delay = 0
@@ -107,7 +108,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Step 8
 
-Drag the "delay" variable into the "beat" section of the ``||play tone||`` block to control how long the note plays.
+Drag the `delay` variable into the "beat" section of the ``||play tone||`` block to control how long the note plays.
 
 ```blocks
 let delay = 0
@@ -124,7 +125,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Step 9
 
-To make the spinning animation slow down over time, use a ``||variable change||`` block to change the "delay" variable by 5.
+To make the spinning animation slow down over time, use a ``||variable change||`` block to change the `delay` variable by `5`.
 
 ```blocks
 let delay = 0
@@ -142,4 +143,4 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Complete!
 
-You now have a working number wheel. Have fun!
+Now you have a working lucky number wheel. Have fun!

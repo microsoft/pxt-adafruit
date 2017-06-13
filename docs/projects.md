@@ -16,6 +16,23 @@ Basic projects to build with your @boardname@.
   "name": "Dandelion",
   "url":"/projects/dandelion",
   "imageUrl":"/static/cp/projects/a3-animations.gif"
+},
+{
+  "name": "Fidget Spinner",
+  "url":"/projects/fidget-spinner",
+
+  "imageUrl":"/static/cp/projects/a3-animations.gif"
+},
+{
+  "name": "Watch Timer",
+  "url":"/projects/watchtimer",
+
+  "imageUrl":"/static/cp/projects/a3-animations.gif"
+},
+{
+  "name": "Lucky Wheel",
+  "url":"/projects/lucky-wheel",
+  "imageUrl":"/static/cp/projects/a3-animations.gif"
 }]
 ```
 

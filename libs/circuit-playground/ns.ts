@@ -39,10 +39,11 @@ namespace light {
     //% blockId="neopixel_show_ring_colors" block="show ring |%colors"
     //% weight=100
     //% help="light/show-ring"
-    //% colors.fieldEditor="lights" 
+    //% colors.fieldEditor="lights"
     //% colors.fieldOptions.onParentBlock=true
+    //% colors.fieldOptions.decompileLiterals=true
     //% blockExternalInputs="true" blockGap=8
-    export function showRing(colors: string, interval: number = 400) {        
+    export function showRing(colors: string, interval: number = 400) {
         const strip = light.pixels;
         return strip.showColors(colors, interval);
     }

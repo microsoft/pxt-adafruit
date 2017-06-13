@@ -28,6 +28,11 @@ Basic projects to build with your @boardname@.
   "url":"/projects/watchtimer",
 
   "imageUrl":"/static/cp/projects/a3-animations.gif"
+},
+{
+  "name": "Lucky Wheel",
+  "url":"/projects/lucky-wheel",
+  "imageUrl":"/static/cp/projects/a3-animations.gif"
 }]
 ```
 

@@ -2,11 +2,9 @@
 
 [![Build Status](https://ci2.dot.net/buildStatus/icon?job=Private/pxt_project_pink/master/pxt-adafruit_Push)](https://ci2.dot.net/job/Private/job/pxt_project_pink/job/master/job/pxt-adafruit_Push/)
 
-## Code of Conduct
+This repo contains the editor target hosted at https://makecode.adafruit.com .
 
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
-
-## Local Installation Requirements
+## Local Dev setup
 
 These instructions assume familiarity with dev tools and languages.
 
@@ -44,16 +42,18 @@ npm link ../pxt-common-packages
 ## to run the local server
 
 From root github folder,
+
 ```
 cd pxt-adafruit
-pxt serve
+pxt serve --cloud
 ```
 
-## to deploy via command line
+## to build and deploy a single package via command line
 
-- remove cmds/ and built/ directories at top-level
-- cd libs/core
-- pxt deploy
+```
+cd libs/core
+pxt deploy
+```
 
 ## Misc
 

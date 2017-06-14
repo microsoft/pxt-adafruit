@@ -4,10 +4,11 @@
 
 * [Projects](/projects)
     * [Dandelion](/projects/dandelion)
-    * [Hot Potato](/projects/hotpotato)
+    * [Hot Potato](/projects/hot-potato)
     * [Magic Wand](/projects/magic-wand)
     * [Fidget Spinner](/projects/fidget-spinner)
     * [Lucky Wheel](/projects/lucky-wheel)
+    * [Watch Timer](/projects/watch-timer)
 
 ## Examples #examples
 

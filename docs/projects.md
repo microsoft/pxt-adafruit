@@ -10,29 +10,29 @@ Basic projects to build with your @boardname@.
 [{
   "name": "Magic Wand",
   "url":"/projects/magic-wand",
-  "imageUrl":"/static/cp/projects/a3-animations.gif"
+  "imageUrl":"/static/cp/projects/magic-wand.jpg"
 },
 {
   "name": "Dandelion",
   "url":"/projects/dandelion",
-  "imageUrl":"/static/cp/projects/a3-animations.gif"
+  "imageUrl":"/static/cp/projects/dandelion.jpg"
 },
 {
   "name": "Fidget Spinner",
   "url":"/projects/fidget-spinner",
 
-  "imageUrl":"/static/cp/projects/a3-animations.gif"
+  "imageUrl":"/static/cp/projects/fidget-spinner.jpg"
 },
 {
   "name": "Watch Timer",
-  "url":"/projects/watchtimer",
+  "url":"/projects/watch-timer",
 
-  "imageUrl":"/static/cp/projects/a3-animations.gif"
+  "imageUrl":"/static/cp/projects/watch-timer.jpg"
 },
 {
   "name": "Lucky Wheel",
   "url":"/projects/lucky-wheel",
-  "imageUrl":"/static/cp/projects/a3-animations.gif"
+  "imageUrl":"/static/cp/projects/lucky-wheel.jpg"
 }]
 ```
 
@@ -43,7 +43,7 @@ Fun games to build with your @boardname@.
 ```codecard
 [{
   "name": "Hot Potato",
-  "url":"/projects/hotpotato",
-  "imageUrl":"/static/cp/projects/a3-animations.gif"
+  "url":"/projects/hot-potato",
+  "imageUrl":"/static/cp/projects/hot-potato.jpg"
 }]
 ```

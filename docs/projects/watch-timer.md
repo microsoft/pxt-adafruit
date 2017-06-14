@@ -21,15 +21,15 @@ Make a watch timer with your @boardname@
 
 ## Activities
 
-* [Make](/projects/watchtimer/make)
-* [Code](/projects/watchtimer/code)
+* [Make](/projects/watch-timer/make)
+* [Code](/projects/watch-timer/code)
 
 This project makes your @boardname@ work like a watch timer. It makes an alarm sound when the
 timer runs out of time.
 
 Ready to make a timer with your @boardname@? This tutorial will guide through all the steps!
 
-### ~button /projects/watchtimer/make
+### ~button /projects/watch-timer/make
 
 Make
 

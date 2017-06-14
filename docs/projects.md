@@ -33,6 +33,11 @@ Basic projects to build with your @boardname@.
   "name": "Lucky Wheel",
   "url":"/projects/lucky-wheel",
   "imageUrl":"/static/cp/projects/lucky-wheel.jpg"
+},
+{
+  "name": "Headlamp",
+  "url":"/projects/headlamp",
+  "imageUrl":"/static/cp/projects/a3-animations.gif"
 }]
 ```
 

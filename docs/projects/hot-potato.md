@@ -14,7 +14,7 @@ Hot potato is a party game that involves players gathering in a circle and tossi
 
 Make a @boardname@ hot potato with this guided tutorial!
 
-### ~button /projects/hotpotato/make
+### ~button /projects/hot-potato/make
 
 Make
 

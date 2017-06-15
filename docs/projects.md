@@ -37,7 +37,7 @@ Basic projects to build with your @boardname@.
 {
   "name": "Headlamp",
   "url":"/projects/headlamp",
-  "imageUrl":"/static/cp/projects/a3-animations.gif"
+  "imageUrl":"/static/cp/projects/headlamp.jpg"
 }]
 ```
 

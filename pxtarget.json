@@ -8,11 +8,12 @@
     "corepkg": "circuit-playground",
     "bundleddirs": [
         "libs/core",
+        "libs/buttons",
         "libs/accelerometer",
         "libs/music",
         "libs/microphone",
         "libs/lightsensor",
-        "libs/temperature",
+        "libs/thermometer",
         "libs/light",
         "libs/touch",
         "libs/switch",
@@ -224,6 +225,7 @@
             }
         ],
         "galleries": {
+            "Make": "projects",            
             "Examples": "examples"
         },        
         "sideDoc": "tutorials/getting-started",

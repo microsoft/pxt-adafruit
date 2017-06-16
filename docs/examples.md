@@ -49,7 +49,7 @@ Here are some fun programs for your @boardname@!
   "youTubeId": "DVE5uJ3m5Kg"
 },{
   "name": "Metronome",
-  "url":"/examples/metrenome",
+  "url":"/examples/metronome",
   "cardType": "example"
 },{
   "name": "Beat visualizer",

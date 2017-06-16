@@ -24,7 +24,7 @@ input.buttonA.onEvent(ButtonEvent.Click, () => {
         light.pixels.photonForward(1)
         music.playTone(262 + score, music.beat(BeatFraction.Sixteenth))
     }
-    music.startMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.Once)
+    music.playSound(music.sounds(Sounds.PowerDown))
 })
 ```
 

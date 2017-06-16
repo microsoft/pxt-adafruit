@@ -1,93 +1,87 @@
 # Getting started
 
-### Step 1 @fullscreen
+### Step 1
 
-Welcome, let's get started by making something magical! Start by placing a ``||show animation||`` block in the ``||forever||`` slot to show a rainbow animation on the board.
+Welcome, let's get started by making something everyone will notice! Place the ``||show ring||`` block inside a ``||forever||`` block to show a ring of pixels on the board.
 
-![rainbow toolbox](/static/cp/tutorials/getting-started/rainbow-toolbox.gif)
-
-```filterblocks
+```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+    light.showRing(
+    `red red red red red red red red red red`
+    )
 })
 ```
 
 ### Step 2
 
-Next, in the ``Input`` drawer, find the ``||on shake||`` block. Drag one of those out and place it anywhere in the workspace.
-Click the Hint button if you need help!
+Use the color palette to select a color. You pick one of the colors from the middle of the ring. Go around the ring and touch each pixel to change them to this color. Let's use `blue` for now.
 
-![onshake toolbox](/static/cp/tutorials/getting-started/onshake-toolbox.gif)
-
-```filterblocks
+```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
-})
-input.onGesture(Gesture.Shake, () => {
-
+    light.showRing(
+    `blue blue blue blue blue blue blue blue blue blue`
+    )
 })
 ```
 
 ### Step 3
 
-Drag out another ``||show animation||`` block but this time place it inside the ``||on shake||`` block. Change the animation to the ``sparkle`` and the duration to ``1500`` ms.
+Ok, we'll add another ring to make an animation. Drag another ``||show ring||`` block and place it right under the first one.
 
-Now, every time you shake the @boardname@, a sparkle animation will play. Pretty cool!
-
-![sparkle toolbox](/static/cp/tutorials/getting-started/sparkle-toolbox.gif)
-
-```filterblocks
+```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
-})
-input.onGesture(Gesture.Shake, () => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
+    light.showRing(
+        `blue blue blue blue blue blue blue blue blue blue`
+    )
+    light.showRing(
+        `red red red red red red red red red red`
+    )
 })
 ```
 
 ### Step 3
 
-Hey, let's make it play a wand sound whenever we shake the board. From the ``Music`` drawer, drag a ``||play sound||`` block and place it inside the ``||on shake||`` block, just before the ``||show animation||`` block.
+Now, let's make a police siren from our animation! From the `Loops` drawer, place a ``||forever||`` block anywhere in the workspace.
 
-![magic-wand toolbox](/static/cp/tutorials/getting-started/wandsound-toolbox.gif)
-
-```filterblocks
+```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+    light.showRing(
+        `blue blue blue blue blue blue blue blue blue blue`
+    )
+    light.showRing(
+        `red red red red red red red red red red`
+    )
 })
-input.onGesture(Gesture.Shake, () => {
-    music.playSound(music.sounds(Sounds.PowerUp))
-    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
-})
+loops.forever(() => {
+});
 ```
 
-### Step 4 @nohint
+### Step 4
 
-Change the sound effect to ``Magic Wand``. Do this by selecting the list of sounds, then pick the one you want, ``Magic Wand``.
+From the `Music` drawer, drag out a ``||play sound until done||`` block and place it inside the newly added ``||forever||`` block.
 
-```filterblocks
+```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+    light.showRing(
+        `blue blue blue blue blue blue blue blue blue blue`
+    )
+    light.showRing(
+        `red red red red red red red red red red`
+    )
 })
-input.onGesture(Gesture.Shake, () => {
-    music.playSound(music.sounds(Sounds.MagicWand))
-    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
-})
+loops.forever(() => {
+    music.playSoundUntilDone(music.sounds(Sounds.Siren))
+});
 ```
 
 ### Step 5
 
-Click ``|Download|`` to transfer your code to the @boardname@.
-
-To load your code on the real device, we'll have to first put it in "Programming mode".
-Do this by clicking the reset button once, and wait for the all green lights.
-
-![programming mode](/static/cp/tutorials/getting-started/programming-mode.gif)
-
-Now click Download and follow the rest of the download instructions.
+Click on the part of the ``||play sound||`` block that shows the name of the sound. Change it to the ``Siren`` sound.
 
 ### Step 6
 
-Awesome! Congratulations on completing your first challenge on the @boardname@.
+Click ``|Download|`` to transfer your code to the @boardname@.
 
-![shake image](/static/cp/tutorials/getting-started/shake.gif)
+### Step 7
+
+Awesome! Congratulations on completing your first challenge on the @boardname@.

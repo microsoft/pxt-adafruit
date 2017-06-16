@@ -17,6 +17,7 @@
         "libs/light",
         "libs/touch",
         "libs/switch",
+        "libs/infrared",
         "libs/circuit-playground"
     ],
     "serial": {

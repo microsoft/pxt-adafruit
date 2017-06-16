@@ -45,15 +45,13 @@ class DevPins {
     DigitalPin D8;
     //%
     DigitalPin D13;
-    //%
-    DigitalPin IR_IN;
-    //%
-    PwmPin IR_OUT;
 #undef DigitalPin
 #undef AnalogPin
 #undef PwmPin
 
     // not surface in user code
+    DevicePin IR_IN;
+    DevicePin IR_OUT;
     DevicePin MIC_DATA;
     DevicePin MIC_CLOCK;
     DevicePin SPEAKER_AMP;

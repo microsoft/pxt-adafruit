@@ -3,6 +3,9 @@
 
 #include "pins.h"
 
+#define PIN_IR_IN PA12
+#define PIN_IR_OUT PA23
+
 class DevPins {
   public:
     DevicePin pins[0];
@@ -47,6 +50,8 @@ class DevPins {
 #undef PwmPin
 
     // not surface in user code
+    DevicePin IR_IN;
+    DevicePin IR_OUT;
     DevicePin MIC_DATA;
     DevicePin MIC_CLOCK;
     DevicePin SPEAKER_AMP;

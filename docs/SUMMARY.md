@@ -6,10 +6,10 @@
     * [Magic Wand](/projects/magic-wand)
     * [Dandelion](/projects/dandelion)
     * [Fidget Spinner](/projects/fidget-spinner)
-    * [Watch Timer](/projects/watchtimer)
+    * [Watch Timer](/projects/watch-timer)
     * [Lucky Wheel](/projects/lucky-wheel)
     * [Headlamp](/projects/headlamp)
-    * [Hot Potato](/projects/hotpotato)
+    * [Hot Potato](/projects/hot-potato)
 
 ## Examples #examples
 

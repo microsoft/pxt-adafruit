@@ -158,6 +158,7 @@
         "variablesBlocks": true,
         "textBlocks": true,
         "listsBlocks": true,
+        "functionBlocks": true,
         "onStartNamespace": "loops",
         "onStartColor": "#40bf4a"
 
@@ -256,6 +257,7 @@
             "variables": "#FF6680",
             "text": "#ffab19",
             "advanced": "#00272B",
+            "functions": "#00b295",
             "arrays": "#8A1C7C"
         }
     }

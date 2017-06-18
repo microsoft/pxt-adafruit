@@ -157,7 +157,7 @@
         "logicBlocks": true,
         "variablesBlocks": true,
         "textBlocks": true,
-        "listBlocks": true,
+        "listsBlocks": true,
         "onStartNamespace": "loops",
         "onStartColor": "#40bf4a"
 
@@ -255,7 +255,8 @@
             "math": "#9966ff",
             "variables": "#FF6680",
             "text": "#ffab19",
-            "advanced": "#00272B"
+            "advanced": "#00272B",
+            "arrays": "#8A1C7C"
         }
     }
 }

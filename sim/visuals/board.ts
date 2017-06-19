@@ -183,7 +183,7 @@ namespace pxsim.visuals {
         }
     `;
 
-    const pinNames: {'name': string, 'touch': number, 'text': any, 'id'?: number, tooltip?: string}[] = [
+    const pinNames: { 'name': string, 'touch': number, 'text': any, 'id'?: number, tooltip?: string }[] = [
         { 'name': "PIN_A0", 'touch': 0, 'text': null, 'id': pxsim.CPlayPinName.A0, tooltip: "A0 - Speaker" },
         { 'name': "PIN_A1", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A1, tooltip: "~A1" },
         { 'name': "PIN_A2", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "~A2" },
@@ -268,8 +268,10 @@ namespace pxsim.visuals {
         private buttonsOuter: SVGElement[];
         private buttonABText: SVGTextElement;
         private pins: SVGElement[];
-        private pinControls: {[index: number]: AnalogPinControl};
+        private pinControls: { [index: number]: AnalogPinControl };
         private systemLed: SVGCircleElement;
+        private irReceiver: SVGElement;
+        private irTransmitter: SVGElement;
         private redLED: SVGRectElement;
         private slideSwitch: SVGGElement;
         private lightLevelButton: SVGCircleElement;
@@ -379,6 +381,7 @@ namespace pxsim.visuals {
             this.updateButtonAB();
             this.updateGestures();
             this.updateTemperature();
+            this.updateInfrared();
 
             if (!runtime || runtime.dead) svg.addClass(this.element, "grayscale");
             else svg.removeClass(this.element, "grayscale");
@@ -392,6 +395,38 @@ namespace pxsim.visuals {
             if (now - this.lastFlashTime > 150) {
                 this.lastFlashTime = now;
                 svg.animate(this.systemLed, "sim-flash")
+            }
+        }
+
+        private lastIrReceiverFlash: number = 0;
+        public flashIrReceiver() {
+            if (!this.irReceiver)
+                this.irReceiver = this.element.getElementById("path2054") as SVGElement;
+            let now = Date.now();
+            if (now - this.lastIrReceiverFlash > 200) {
+                this.lastIrReceiverFlash = now;
+                svg.animate(this.irReceiver, 'sim-flash-stroke')
+            }
+        }
+
+        private lastIrTransmitterFlash: number = 0;
+        public flashIrTransmitter() {
+            if (!this.irTransmitter)
+                this.irTransmitter = this.element.getElementById("path2062") as SVGElement;
+            let now = Date.now();
+            if (now - this.lastIrTransmitterFlash > 200) {
+                this.lastIrTransmitterFlash = now;
+                svg.animate(this.irTransmitter, 'sim-flash-stroke')
+            }
+        }
+
+        private updateInfrared() {
+            const state = this.board;
+            if (!state) return;
+
+            if (state.irState.packetReceived) {
+                state.irState.packetReceived = false;
+                this.flashIrReceiver();
             }
         }
 
@@ -490,7 +525,7 @@ namespace pxsim.visuals {
 
             if ((pin as pins.CommonPin).used) {
                 if (this.pinControls[pin.id] === undefined) {
-                    const pinName =  pinNames.filter((a) => a.id === pin.id)[0];
+                    const pinName = pinNames.filter((a) => a.id === pin.id)[0];
                     if (pinName) {
                         this.pinControls[pin.id] = new AnalogPinControl(this, this.defs, pin.id, pinName.name);
                     }
@@ -785,6 +820,7 @@ namespace pxsim.visuals {
             Runtime.messagePosted = (msg) => {
                 switch (msg.type || "") {
                     case "serial": this.flashSystemLed(); break;
+                    case "irpacket": this.flashIrTransmitter(); break;
                 }
             }
 

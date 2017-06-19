@@ -23,8 +23,16 @@ namespace pxsim {
     }
 
     export class DalBoard extends CoreBoard implements
-    AccelerometerBoard, CommonBoard, LightBoard, LightSensorBoard, MicrophoneBoard, MusicBoard, SlideSwitchBoard, TemperatureBoard, CapTouchBoard
-    {
+        AccelerometerBoard,
+        CommonBoard,
+        LightBoard,
+        LightSensorBoard,
+        MicrophoneBoard,
+        MusicBoard,
+        SlideSwitchBoard,
+        TemperatureBoard,
+        InfraredBoard,
+        CapTouchBoard {
         // state & update logic for component services
         neopixelState: CommonNeoPixelState;
         buttonState: CommonButtonState;
@@ -38,6 +46,7 @@ namespace pxsim {
         accelerometerState: AccelerometerState;
         audioState: AudioState;
         touchButtonState: TouchButtonState;
+        irState: InfraredState;
 
         view: SVGSVGElement;
 
@@ -100,20 +109,29 @@ namespace pxsim {
                 pxsim.CPlayPinName.A6,
                 pxsim.CPlayPinName.A7
             ]);
+
+            this.builtinParts["ir"] = this.irState = new InfraredState();
         }
 
         receiveMessage(msg: SimulatorMessage) {
             if (!runtime || runtime.dead) return;
 
             switch (msg.type || "") {
-                case "eventbus":
+                case "eventbus": {
                     let ev = <SimulatorEventBusMessage>msg;
                     this.bus.queue(ev.id, ev.eventid, ev.value);
                     break;
-                case "serial":
+                }
+                case "serial": {
                     let data = (<SimulatorSerialMessage>msg).data || "";
                     // TODO
                     break;
+                }
+                case "irpacket": {
+                    let ev = <SimulatorInfraredPacketMessage>msg;
+                    this.irState.receive(new RefBuffer(ev.packet));
+                    break;
+                }
             }
         }
 

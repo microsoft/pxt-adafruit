@@ -1,0 +1,6 @@
+{
+  "infrared.onPacketReceived|block": "on infrared received",
+  "infrared.sendNumber|block": "infrared send number %value",
+  "infrared|block": "infrared",
+  "{id:category}Infrared": "Infrared"
+}

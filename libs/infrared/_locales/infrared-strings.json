@@ -1,6 +1,6 @@
 {
-  "infrared.onPacketReceived|block": "on infrared received",
-  "infrared.sendNumber|block": "infrared send number %value",
-  "infrared|block": "infrared",
-  "{id:category}Infrared": "Infrared"
+  "network.infraredSendNumber|block": "infrared send number %value",
+  "network.onInfraredPacketReceived|block": "on infrared received",
+  "network|block": "network",
+  "{id:category}Network": "Network"
 }

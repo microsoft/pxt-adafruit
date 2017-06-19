@@ -1,29 +1,29 @@
 // Auto-generated. Do not edit.
-declare namespace infrared {
+declare namespace network {
 
     /**
      * Send data over IR.
      */
-    //% parts="ir" shim=infrared::sendBuffer
-    function sendBuffer(buf: Buffer): void;
+    //% parts="ir" shim=network::infraredSendPacket
+    function infraredSendPacket(buf: Buffer): void;
 
     /**
      * Get most recent packet received over IR.
      */
-    //% parts="ir" shim=infrared::currentPacket
-    function currentPacket(): Buffer;
+    //% parts="ir" shim=network::infraredPacket
+    function infraredPacket(): Buffer;
 
     /**
      * Run action after a packet is recieved over IR.
      */
-    //% parts="ir" shim=infrared::onPacket
-    function onPacket(body: () => void): void;
+    //% parts="ir" shim=network::onInfraredPacket
+    function onInfraredPacket(body: () => void): void;
 
     /**
      * Run action after there's an error reciving packet over IR.
      */
-    //% shim=infrared::onError
-    function onError(body: () => void): void;
+    //% shim=network::onInfraredError
+    function onInfraredError(body: () => void): void;
 }
 
 // Auto-generated. Do not edit. Really.

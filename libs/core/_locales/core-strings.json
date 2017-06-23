@@ -9,6 +9,7 @@
   "EventCreationMode.CreateOnly": "Event is initialised, and no further processing takes place.",
   "Math.constrain|block": "constrain %value|between %low|and %high",
   "Math.map|block": "map %value|from low %fromLow|from high %fromHigh|to low %toLow|to high %toHigh",
+  "Math.randomRange|block": "pick random %min|to %limit",
   "Math|block": "Math",
   "PinPullMode.PullDown|block": "down",
   "PinPullMode.PullNone|block": "none",

@@ -164,9 +164,9 @@
 
     },
     "compileService": {
-        "yottaTarget": "adafruit-cp-g18a",
-        "yottaBinary": "pxt-samd.hex",
-        "yottaCorePackage": "codal",
+        "buildEngine": "codal",
+        "codalTarget": "SAMD21G18A_CIRCUIT_PLAYGROUND_MBED_CLASSIC",
+        "codalBinary": "CIRCUIT_PLAYGROUND",
         "yottaConfig": {
             "pxt": {
                 "board": {
@@ -175,8 +175,8 @@
             }
         },        
         "githubCorePackage": "lancaster-university/codal",
-        "gittag": "v0.1.5",
-        "serviceId": "codalcp"
+        "gittag": "master",
+        "serviceId": "codal2cp"
     },
     "appTheme": {
         "accentColor": "#0089BF",

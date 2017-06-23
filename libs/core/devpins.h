@@ -56,7 +56,7 @@ class DevPins {
     DevicePin MIC_CLOCK;
     DevicePin SPEAKER_AMP;
 
-    I2C i2c;
+    codal::mbed::I2C i2c;
 
     DevPins();
 };

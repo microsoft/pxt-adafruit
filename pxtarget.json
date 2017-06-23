@@ -152,7 +152,7 @@
             {
                 "type": "api",
                 "map": {
-                    "math\\s*\\.random\\s*\\(\\s*([\\s]*+)\\s*\\)": "math.randomRange(0, $1)"
+                    "Math\\s*\\.random\\s*\\(\\s*([^\\s]+)\\s*\\)": "Math.randomRange(0, $1)"
                 }
             }
         ]

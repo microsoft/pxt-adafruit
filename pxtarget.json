@@ -148,6 +148,12 @@
                     "neopixel": "light",
                     "adafruit": "circuit-playground"
                 }
+            },
+            {
+                "type": "api",
+                "map": {
+                    "Math\\s*\\.random\\s*\\(\\s*([^\\s]+)\\s*\\)": "Math.randomRange(0, $1)"
+                }
             }
         ]
     },
@@ -161,7 +167,6 @@
         "functionBlocks": true,
         "onStartNamespace": "loops",
         "onStartColor": "#40bf4a"
-
     },
     "compileService": {
         "buildEngine": "codal",
@@ -173,7 +178,7 @@
                     "id": "BOARD_ID_CPLAY"
                 }
             }
-        },        
+        },
         "githubCorePackage": "lancaster-university/codal",
         "gittag": "master",
         "serviceId": "codal2cp"
@@ -227,9 +232,9 @@
             }
         ],
         "galleries": {
-            "Make": "projects",            
+            "Make": "projects",
             "Examples": "examples"
-        },        
+        },
         "sideDoc": "tutorials/getting-started",
         "invertedMenu": true,
         "invertedToolbox": true,

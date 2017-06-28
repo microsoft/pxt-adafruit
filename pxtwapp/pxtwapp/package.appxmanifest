@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" IgnorableNamespaces="uap uap3 mp">
+  <Identity Name="63494GuillaumeJenkins.MKCDCP" Version="0.1.0.0" Publisher="CN=6BEE5F0B-3041-4F21-935C-CFB7E652331C" />
+  <mp:PhoneIdentity PhoneProductId="61b23ad5-003e-4cb0-828d-14eb8cbd67a3" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Properties>
+    <DisplayName>MKCD CP</DisplayName>
+    <PublisherDisplayName>Guillaume Jenkins</PublisherDisplayName>
+    <Logo>images\storelogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
+  </Dependencies>
+  <Resources>
+    <Resource Language="x-generate" />
+  </Resources>
+  <Applications>
+    <!--<Application Id="App" StartPage="https://makecode.adafruit.com">-->
+    <Application Id="App" StartPage="http://localhost:3232/index.html?dbg=1&amp;nolocalhost=1">
+    <!--<Application Id="App" StartPage="https://makecode.adafruit.com/app/e424b5dee655c244543aeaff756df60412f766fe-afb612602c">-->
+      <uap:ApplicationContentUriRules>
+        <uap:Rule Match="http://localhost:3232/index.html?dbg=1&amp;nolocalhost=1" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="http://localhost:3232/index.html?nolocalhost=1" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://makecode.adafruit.com/app/e424b5dee655c244543aeaff756df60412f766fe-afb612602c" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://makecode.adafruit.com" Type="include" WindowsRuntimeAccess="all" />
+      </uap:ApplicationContentUriRules>
+      <uap:VisualElements DisplayName="MKCD Adafruit" Description="MKCD Editor for Circuit Playground" BackgroundColor="transparent" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" Square71x71Logo="images\SmallTile.png">
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="images\SplashScreen.png" />
+      </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.fileTypeAssociation">
+          <uap:FileTypeAssociation Name="makecode">
+            <uap:DisplayName>MakeCode binary file</uap:DisplayName>
+            <uap:SupportedFileTypes>
+              <uap:FileType ContentType="application/x-microbit-hex">.hex</uap:FileType>
+              <uap:FileType ContentType="application/x-makecode-uf2">.uf2</uap:FileType>
+              <uap:FileType ContentType="application/x-makecode-pxt">.pxt</uap:FileType>
+              <uap:FileType ContentType="application/x-makecode-mkcd">.mkcd</uap:FileType>
+            </uap:SupportedFileTypes>
+          </uap:FileTypeAssociation>
+        </uap:Extension>
+        <uap3:Extension Category="windows.appUriHandler">
+          <uap3:AppUriHandler>
+            <uap3:Host Name="makecode.adafruit.com" />
+          </uap3:AppUriHandler>
+        </uap3:Extension>
+      </Extensions>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <Capability Name="internetClient" />
+    <DeviceCapability Name="serialcommunication">
+      <Device Id="any">
+        <Function Type="name:serialPort" />
+      </Device>
+    </DeviceCapability>
+    <DeviceCapability Name="humaninterfacedevice">
+      <Device Id="vidpid:239A 0018">
+        <Function Type="usage:FF97 *" />
+      </Device>
+      <Device Id="vidpid:03EB 2402">
+        <Function Type="usage:FF97 *" />
+      </Device>
+    </DeviceCapability>
+  </Capabilities>
+</Package>

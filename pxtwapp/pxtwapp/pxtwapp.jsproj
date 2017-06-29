@@ -52,7 +52,11 @@
     <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>$(VersionNumberMajor).$(VersionNumberMinor)</MinimumVisualStudioVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <PackageCertificateKeyFile>pxtwapp_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>pxtwapp_StoreKey.pfx</PackageCertificateKeyFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>EF78E9A97C854529C910B5392DCA6EADC16267C7</PackageCertificateThumbprint>
   </PropertyGroup>
   <ItemGroup>
     <AppxManifest Include="package.appxmanifest">
@@ -69,6 +73,8 @@
     <Content Include="msapp-error.js" />
     <Content Include="msapp-error.css" />
     <Content Include="msapp-error.html" />
+    <None Include="pxtwapp_StoreKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
     <None Include="pxtwapp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>

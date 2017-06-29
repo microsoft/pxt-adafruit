@@ -1,0 +1,4 @@
+
+input.onGesture(Gesture.Shake, () => {
+
+})

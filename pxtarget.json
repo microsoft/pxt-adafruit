@@ -7,6 +7,7 @@
     "description": "A Blocks / JavaScript code editor for the Adafruit Circuit Playground Express.",
     "corepkg": "circuit-playground",
     "bundleddirs": [
+        "libs/base",
         "libs/core",
         "libs/buttons",
         "libs/accelerometer",

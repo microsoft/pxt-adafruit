@@ -1,4 +1,0 @@
-
-input.onGesture(Gesture.Shake, () => {
-
-})

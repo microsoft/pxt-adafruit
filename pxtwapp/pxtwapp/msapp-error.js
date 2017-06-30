@@ -1,7 +1,5 @@
 ﻿(function () {
     var validParameterNames = ["httpStatus", "failureName", "failureUrl"];
-    //var startUrl = "https://makecode.adafruit.com/app/0d3abd96cb0441f42443cfef5e961dd06220f2ec-a7804babf6";
-    var startUrl = "https://makecode.adafruit.com";
 
     function parseQueryParameters() {
         var query = location.search.slice(1);
@@ -13,10 +11,18 @@
     }
 
     function initialize() {
-        document.getElementById("retryButton").addEventListener("click", (e) => {
-            window.location.href = startUrl;
-        });
         var queryParameters = parseQueryParameters();
+        var url = queryParameters["failureUrl"];
+        var retryButton = document.getElementById("retryButton");
+
+        if (url) {
+            retryButton.addEventListener("click", (e) => {
+                window.location.href = url;
+            });
+        } else {
+            retryButton.style.display = none;
+        }
+
         validParameterNames.forEach(function (parameterName) {
             var parameterValue = queryParameters[parameterName] || "N/A";
             document.getElementById(parameterName + "Value").textContent = parameterValue;
@@ -24,9 +30,10 @@
     }
 
     function updateOnlineStatus(e) {
-        history.back();
-        if (history.length == 1) {
-            window.location.href = startUrl;
+        var queryParameters = parseQueryParameters();
+        var url = queryParameters["failureUrl"];
+        if (url) {
+            window.location.href = url;
         }
     }
 

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" IgnorableNamespaces="uap uap3 mp">
-  <Identity Name="63494GuillaumeJenkins.MKCDCP" Version="0.1.5.0" Publisher="CN=6BEE5F0B-3041-4F21-935C-CFB7E652331C" />
+  <Identity Name="63494GuillaumeJenkins.MKCDCP" Version="0.1.6.0" Publisher="CN=6BEE5F0B-3041-4F21-935C-CFB7E652331C" />
   <mp:PhoneIdentity PhoneProductId="61b23ad5-003e-4cb0-828d-14eb8cbd67a3" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>MKCD CP</DisplayName>
@@ -18,9 +18,11 @@
     <Application Id="App" StartPage="https://makecode.adafruit.com/beta">
       <!--<Application Id="App" StartPage="http://localhost:3232/index.html?dbg=1&amp;nolocalhost=1">-->
       <uap:ApplicationContentUriRules>
-        <uap:Rule Match="http://localhost:3232/index.html?dbg=1&amp;nolocalhost=1" Type="include" WindowsRuntimeAccess="all" />
-        <uap:Rule Match="https://makecode.adafruit.com/beta" Type="include" WindowsRuntimeAccess="all" />
         <uap:Rule Match="https://makecode.adafruit.com" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://trg-adafruit.userpxt.io/---simulator" Type="include" WindowsRuntimeAccess="none" />
+        <uap:Rule Match="https://makecode.adafruit.com/beta" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://trg-adafruit.userpxt.io/beta---simulator" Type="include" WindowsRuntimeAccess="none" />
+        <uap:Rule Match="http://localhost:3232/index.html?dbg=1&amp;nolocalhost=1" Type="include" WindowsRuntimeAccess="all" />
       </uap:ApplicationContentUriRules>
       <uap:VisualElements DisplayName="MKCD Adafruit" Description="MKCD Editor for Circuit Playground" BackgroundColor="transparent" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
         <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" Square71x71Logo="images\SmallTile.png">

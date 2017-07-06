@@ -7,6 +7,8 @@ Let's build the Light Monster for your @boardname@!
 
 ### ~
 
+## Duration: ~1 hour 
+
 ## Step 1: Callibrating the servo motor (position)
 
 Depending on the starting position, you'll want to set up the servo horn so that it lies parallel to where the wires connect to the motor. 

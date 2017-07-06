@@ -94,6 +94,7 @@ loops.forever(() => {
         255
     ))
 })
+```
 
 **Build the block** 
     * Change the value of to low to **50** 
@@ -126,7 +127,7 @@ loops.forever(() => {
     ))
     loops.pause(400)
 })
-```blocks
+```
 
 **Build the block** 
     * Change the value of pause to **400**. 
@@ -135,4 +136,10 @@ Download the code to @boardname@ and try shining a light on and off of it.
 
 ## Good work!  
 
+In the next page, you'll learn how to create the light monster to go along with the code you've written. Happy building! 
 
+### ~button /projects/light-monster/make
+
+NEXT: Make 
+
+### ~ 

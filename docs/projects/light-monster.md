@@ -10,7 +10,7 @@ Make a monster that opens its mouth based on light!
 
 ## Materials 
 
-**Recycled** 
+### Recycled
 * 3 small milk cartons (washed out and dried)
 * 1 pipe cleaner; cut to approximately 8 inches 
 * 2 coffee stirring sticks 
@@ -19,14 +19,14 @@ Make a monster that opens its mouth based on light!
 
 ![Recycled: milk cartons, pipe cleaner, stirring sticks, binder clips](/static/cp/projects/light-monster/recycle.png)
 
-**Electronics** 
+### Electronics
 * 1 circuit playground, a battery holder with an on/off switch, and 3 AAA batteries 
-* 3 Crocodile clips to male jumper wires 
-* 1 micro servo 9g SG90 
+* 3 crocodile clips to male jumper wires 
+* 1 9g SG90 micro servo
 
-![Electronics: circuit playground, battery holder, crocodile clips, micro servo](/static/cp/projects/light-monster/eletronic.png)
+![Electronics: circuit playground, battery holder, crocodile clips, micro servo](/static/cp/projects/light-monster/electronic.png)
 
-**Tools** 
+### Tools
 * Scissors 
 * Duct tape 
 * Ruler 
@@ -36,10 +36,10 @@ Make a monster that opens its mouth based on light!
 ![Tools: scissors, duct tape, ruler, tape, hot glue gun](/static/cp/projects/light-monster/tool.png)
 
 ## Activities 
-* [Make] (/projects/light-monster/make)
-* [Code] (/projects/light-monster/code)
+* [Make](/projects/light-monster/make)
+* [Code](/projects/light-monster/code)
 
-### ~button /projects/light-monster/code
+### ~button /projects/light-monster/make
 
 Let's get started! 
 

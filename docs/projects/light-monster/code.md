@@ -1,93 +1,88 @@
-# Coding the Light Monster 
+# Coding the light monster 
 
 ### ~avatar avatar 
 Using the sensitivity of the light sensor and code, let's make the light monster's jaw move!
 ### ~ 
 
-**Concepts:** 
-    * Sensors (Light)
-
 ## Duration: ~15 minutes 
 
-## Blocks 
+## Concepts
+* Sensors (light)
+* Pixels
+* Pin functions (servo)
+
+## Blocks
 
 ```cards 
-light.pixels.graph(input.lightLevel())
-pins.A2.servoWrite()
-Math.map(input.lightLevel())
-loops.pause()
+light.pixels.graph(input.lightLevel(),0)
+pins.A2.servoWrite(180)
+Math.map(input.lightLevel(),0,0,0,0)
+loops.pause(0)
 ``` 
 
 ## Step 1: Coding the servo pin connection
-Open @homeurl@ in your web browser. 
+
+1. Open @homeurl@ in your web browser. 
+2. From **LIGHT**, drag a **graph of** block, and place it inside a **forever** loop. 
 
 ```blocks 
 loops.forever(() => {
-    light.pixels.graph()
+    light.pixels.graph(0, 0)
 })
 ```
 
-From **LIGHT**, drag a **graph of** block, and place it inside a **forever** loop. 
+### Build the Block...
+
+From **INPUT** drag a **light level** into the **graph of** block.
 
 ```blocks 
 loops.forever(() => {
-    light.pixels.graph(
-    input.lightLevel(),
-    0
-    )
-})
-```
-
-**Build the Block** 
-    * From **INPUT** drag a **light level** into the **graph of** block 
-
-```blocks 
-loops.foever(() => {
-    light.pixels.graph(
-    input.lightLevel(), 
-    0
-    )
-    pins.servoWrite()
+    light.pixels.graph(input.lightLevel(), 0)
 })
 ```
 
 From **PINS**, drag a **servo write pin to** block and place it inside the forever loop. 
 
 ```blocks 
-loops.foever(() => {
-    light.pixels.graph(
-    input.lightLevel(), 
-    0
-    )
-    pins.servoWrite(Math.map(
+loops.forever(() => {
+    light.pixels.graph(input.lightLevel(), 0)
+    pins.A1.servoWrite(180)
+})
+```
+
+### Build the block...
+
+1. Change the value of the pin to ``A2``.
+2. From **MATH** drag out **map** and place it inside the value for the servo pin to write. 
+3. Change the value of `from high` to ``255``.
+4. Change the value of `to high` to ``255``.
+
+```blocks 
+loops.forever(() => {
+    light.pixels.graph(input.lightLevel(), 0)
+    pins.A2.servoWrite(Math.map(
         input.lightLevel(), 
         0,
-        255,
+        255, 
         0,
         255
     ))
 })
 ```
-
-**Build the block** 
-    * Change the value of the pin to A2 
-    * From **MATH** drag out **map** and place it inside the value for the servo pin to write. 
-    * Change the value of from high to **255** 
-    * Change the value of to high to **255** 
-
 ## Step 2: Calibrating the servo motor 
 
-If you were to run the code after downloading, you would notice the servo motor, after shining a light on the circuit playground, revolves around a large parameter. 
-Let's try changing the values of the position of the servo motor so that your monster's jaw will open and close to a reasonable size! 
+If you download the code now, and shine light on the circuit playground, you will see the servo moter turn in a large arc. 
+Let's try changing the values of the position of the servo motor so that your monster's jaw will open and close in a reasonable distance! 
+
+### Build the block...
+
+1. Change the value of to low to ``50``.
 
 ```blocks 
 loops.forever(() => {
-    light.pixels.graph(
-    input.lightLevel(), 
-    0
-    )
-    pins.servoWrite(Math.map(
-        input.lightLeve(), 
+    light.pixels.graph(input.lightLevel(), 0)
+    pins.A2.servoWrite(Math.map(
+        input.lightLevel(), 
         0,
         255, 
         50,
@@ -96,21 +91,21 @@ loops.forever(() => {
 })
 ```
 
-**Build the block** 
-    * Change the value of to low to **50** 
-
-This change limits the value the motor can move to, so that whenever a light is shined on the circuit playground, the monster's mouth will open and close to a smaller size. 
+This limits the distance the motor will move. So, whenever light shines on the circuit playground, the monster's mouth will open and close by a smaller amount. 
 
 ## Step 3: Adding a pause loop to the function 
 
-The **pause loop** allows the program, although in a forever loop, to create a small stop in the code. This allows less time for a twitch in the code to occur. 
-Let's try using one! 
+The **pause loop** placed in the forever loop causes the code to wait for a short time. This keeps the monster's mouth from twitching too much. Let's try using a pause! 
 
-```blocks 
-loops.pause()
+From **LOOPS** drag a **pause (ms)** block into the bottom of the forever loop. 
+
+```block
+loops.pause(100)
 ```
 
-From **LOOPS** drag a **pause (ms)** block into the forever loop. 
+### Build the block...
+
+1. Change the value of pause to ``400``.
 
 ```blocks
 loops.forever(() => {
@@ -129,17 +124,9 @@ loops.forever(() => {
 })
 ```
 
-**Build the block** 
-    * Change the value of pause to **400**. 
+## Step 4: Give it a try!
 
-Download the code to @boardname@ and try shining a light on and off of it. 
+Download the code to @boardname@ and try shining a light on it. Take the light away and see what happens too.
 
-## Good work!  
-
-In the next page, you'll learn how to create the light monster to go along with the code you've written. Happy building! 
-
-### ~button /projects/light-monster/make
-
-NEXT: Make 
-
-### ~ 
+**Good work! Now your project is complete and ready to show off. Have fun playing with your new monster!** 
+ 

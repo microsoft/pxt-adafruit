@@ -4,6 +4,8 @@
 Make a monster that opens its mouth based on light! 
 ### ~ 
 
+![Light Monster](/static/cp/projects/light-monster.JPG)
+
 ## Duration 
 
 3 activites, approximately 1-2 hours total 

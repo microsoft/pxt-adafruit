@@ -4,7 +4,7 @@
 Make a monster that opens its mouth based on light! 
 ### ~ 
 
-![Light Monster](/static/cp/projects/light-monster.JPG)
+![Light Monster Image](/static/cp/projects/light-monster-.JPG)
 
 ## Duration 
 

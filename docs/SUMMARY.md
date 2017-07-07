@@ -9,8 +9,9 @@
     * [Watch Timer](/projects/watch-timer)
     * [Lucky Wheel](/projects/lucky-wheel)
     * [Headlamp](/projects/headlamp)
-    * [Hot Potato](/projects/hot-potato)
     * [Light Monster](/projects/light-monster)
+    * [Hot Potato](/projects/hot-potato)
+    
 
 ## Examples #examples
 

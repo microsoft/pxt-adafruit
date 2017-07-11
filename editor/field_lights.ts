@@ -185,11 +185,11 @@ namespace pxt.editor {
     };
 
     getValue() {
-      return this.getText() || '`red red red red red red red red red red`';
+      return '`' + this.getText() + '`';
     }
 
     getValueArray(): string {
-      return '`' + this.neopixels_.map(neo => neo.getAttribute("data-color")).join(' ') + '`';
+      return this.neopixels_.map(neo => neo.getAttribute("data-color")).join(' ');
     }
   }
 }

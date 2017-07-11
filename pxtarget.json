@@ -247,6 +247,11 @@
         "usbHelp": [],
         "extendEditor": true,
         "disableBlockIcons": true,
+        "socialOptions": {
+            "twitterHandle": "adafruit",
+            "orgTwitterHandle": "MSMakeCode",
+            "hashtags": "MakeCode"
+        },
         "blocklyOptions": {
             "grid": {
                 "spacing": 20,

@@ -58,10 +58,6 @@
     <AppxManifest Include="package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    <Content Include="images\icon.png" />
-    <Content Include="images\MakeCodeLogo.png" />
-    <Content Include="images\screenshot.PNG" />
-    <Content Include="images\simfullscreen.png" />
     <Content Include="images\SmallTile.scale-200.png" />
     <Content Include="images\Square44x44Logo.altform-unplated_targetsize-48.png" />
     <Content Include="images\Square44x44Logo.targetsize-48.png" />

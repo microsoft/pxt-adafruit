@@ -1,37 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
-<Package
-  xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
-  xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
-  xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
-  xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
-  IgnorableNamespaces="uap uap3 mp">
-
-  <Identity
-    Name="34e8cde2-3991-414e-bb19-bff4bd5e031a"
-    Version="1.0.0.0"
-    Publisher="CN=gujenkin" />
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" IgnorableNamespaces="uap uap3 mp">
+  <Identity Name="34e8cde2-3991-414e-bb19-bff4bd5e031a" Version="1.0.0.0" Publisher="CN=gujenkin" />
   <mp:PhoneIdentity PhoneProductId="34e8cde2-3991-414e-bb19-bff4bd5e031a" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
-
   <Properties>
     <DisplayName>pxtwapp</DisplayName>
     <PublisherDisplayName>gujenkin</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
-
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
-
   <Resources>
     <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
     <!--<Application Id="App" StartPage="https://makecode.adafruit.com">-->
-    <Application Id="App" StartPage="https://makecode.adafruit.com/beta">
+      <Application Id="App" StartPage="https://makecode.adafruit.com/beta">
       <!--<Application Id="App" StartPage="http://localhost:3232/index.html?dbg=1&amp;nolocalhost=1">-->
-
       <uap:ApplicationContentUriRules>
         <uap:Rule Match="https://makecode.adafruit.com" Type="include" WindowsRuntimeAccess="all" />
         <uap:Rule Match="https://trg-adafruit.userpxt.io/---simulator" Type="include" WindowsRuntimeAccess="none" />
@@ -39,18 +24,11 @@
         <uap:Rule Match="https://trg-adafruit.userpxt.io/beta---simulator" Type="include" WindowsRuntimeAccess="none" />
         <uap:Rule Match="http://localhost:3232/index.html?dbg=1&amp;nolocalhost=1" Type="include" WindowsRuntimeAccess="all" />
       </uap:ApplicationContentUriRules>
-
-      <uap:VisualElements
-        DisplayName="MakeCode for Circuit Playground Express"
-        Description="MakeCode editor for Adafruit Circuit Playground Express"
-        BackgroundColor="#aa278f"
-        Square150x150Logo="images\Square150x150Logo.png"
-        Square44x44Logo="images\Square44x44Logo.png">
-
-        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" Square71x71Logo="images\SmallTile.png" />
-        <uap:SplashScreen Image="images\SplashScreen.png" BackgroundColor="#aa278f" />
+      <uap:VisualElements DisplayName="MakeCode for Circuit Playground Express" Description="MakeCode editor for Adafruit Circuit Playground Express" BackgroundColor="#005b9f" Square150x150Logo="images\Square150x150Logo.png" Square44x44Logo="images\Square44x44Logo.png">
+        <uap:DefaultTile Wide310x150Logo="images\Wide310x150Logo.png" Square71x71Logo="images\SmallTile.png">
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="images\SplashScreen.png" BackgroundColor="#005b9f" />
       </uap:VisualElements>
-
       <Extensions>
         <uap:Extension Category="windows.fileTypeAssociation">
           <uap:FileTypeAssociation Name="makecode">
@@ -63,36 +41,28 @@
             </uap:SupportedFileTypes>
           </uap:FileTypeAssociation>
         </uap:Extension>
-
         <uap3:Extension Category="windows.appUriHandler">
           <uap3:AppUriHandler>
             <uap3:Host Name="makecode.adafruit.com" />
           </uap3:AppUriHandler>
         </uap3:Extension>
       </Extensions>
-
     </Application>
   </Applications>
-
   <Capabilities>
     <Capability Name="internetClient" />
-
     <DeviceCapability Name="serialcommunication">
       <Device Id="any">
         <Function Type="name:serialPort" />
       </Device>
     </DeviceCapability>
-    
     <DeviceCapability Name="humaninterfacedevice">
       <Device Id="vidpid:239A 0018">
         <Function Type="usage:FF97 *" />
       </Device>
-      
       <Device Id="vidpid:03EB 2402">
         <Function Type="usage:FF97 *" />
       </Device>
     </DeviceCapability>
-
   </Capabilities>
-
 </Package>

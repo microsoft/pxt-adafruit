@@ -109,8 +109,8 @@ namespace pxt.editor {
       for (let i = 0; i < FieldLights.NUM_PIXELS; i++) {
         let neopixel = this.boardElement.getElementById("LED" + i) as SVGGElement;
         if (this.isCurrentlyEditable() && !this.isInFlyout()) {
-            pxsim.svg.addClass(neopixel, 'neopixel');
-            pxsim.svg.onClick(neopixel, ev => this.onPixelClicked(ev, neopixel, i));
+          pxsim.svg.addClass(neopixel, 'neopixel');
+          pxsim.svg.onClick(neopixel, ev => this.onPixelClicked(ev, neopixel, i));
         }
         this.neopixels_.push(neopixel);
       }
@@ -119,13 +119,13 @@ namespace pxt.editor {
       ['paletteslice0', 'paletteslice1', 'paletteslice2', 'paletteslice3',
         'paletteslice4', 'paletteslice5', 'paletteslice6', 'paletteslice7', 'palettecenter']
         .forEach((id, i) => {
-            let btn = this.boardElement.getElementById(id) as SVGGElement;
-            pxsim.svg.addClass(btn, 'colorbutton');
-            if (this.isCurrentlyEditable() && !this.isInFlyout()) {
-                if (i == 4) pxsim.svg.addClass(btn, 'active');
-                pxsim.svg.onClick(btn, ev => this.onColorClicked(ev, btn));
-            }
-            this.paletteButtons.push(btn);
+          let btn = this.boardElement.getElementById(id) as SVGGElement;
+          pxsim.svg.addClass(btn, 'colorbutton');
+          if (this.isCurrentlyEditable() && !this.isInFlyout()) {
+            if (i == 4) pxsim.svg.addClass(btn, 'active');
+            pxsim.svg.onClick(btn, ev => this.onColorClicked(ev, btn));
+          }
+          this.paletteButtons.push(btn);
         })
 
       this.fieldGroup_.appendChild(this.boardElement);
@@ -135,7 +135,7 @@ namespace pxt.editor {
     }
 
     private isInFlyout() {
-        return (this.sourceBlock_.workspace.getParentSvg() as SVGElement).className.baseVal == "blocklyFlyout";
+      return (this.sourceBlock_.workspace.getParentSvg() as SVGElement).className.baseVal == "blocklyFlyout";
     }
 
     render_() {
@@ -185,7 +185,13 @@ namespace pxt.editor {
     };
 
     getValue() {
-      return '`' + this.getText() + '`';
+      let text = this.getText();
+      if (!/^(?:".*?")|(?:`.*?`)|(?:'.*?')$/.test(text)) {
+        // Text is not correctly surrounded by quotes; remove all quotes and surround with backticks
+        text.replace(/[`"']/g, "");
+        text = `\`${text}\``;
+      }
+      return text;
     }
 
     getValueArray(): string {

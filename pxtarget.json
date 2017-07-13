@@ -185,7 +185,7 @@
     },
     "appTheme": {
         "accentColor": "#0089BF",
-        "logoUrl": "https://adafruit.com/circuitplaygroundpxt",
+        "logoUrl": "https://www.adafruit.com/product/3333",
         "logo": "./static/logo.svg",
         "docsLogo": "./static/logo.square.svg",
         "portraitLogo": "./static/logo.square.svg",

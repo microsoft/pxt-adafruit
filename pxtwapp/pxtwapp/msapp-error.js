@@ -24,8 +24,13 @@
         }
 
         validParameterNames.forEach(function (parameterName) {
-            var parameterValue = queryParameters[parameterName] || "N/A";
-            document.getElementById(parameterName + "Value").textContent = parameterValue;
+            var parameterValue = queryParameters[parameterName];
+
+            if (parameterValue) {
+                document.getElementById(parameterName + "Value").textContent = parameterValue;
+            } else {
+                document.getElementById(parameterName).remove();
+            }
         });
     }
 

@@ -15,8 +15,8 @@
   </Resources>
   <Applications>
     <!--<Application Id="App" StartPage="https://makecode.adafruit.com">-->
-      <Application Id="App" StartPage="https://makecode.adafruit.com/beta">
-      <!--<Application Id="App" StartPage="http://localhost:3232/index.html?dbg=1&amp;nolocalhost=1">-->
+    <Application Id="App" StartPage="https://makecode.adafruit.com/beta">
+    <!--<Application Id="App" StartPage="http://localhost:3232/index.html?dbg=1&amp;nolocalhost=1">-->
       <uap:ApplicationContentUriRules>
         <uap:Rule Match="https://makecode.adafruit.com" Type="include" WindowsRuntimeAccess="all" />
         <uap:Rule Match="https://trg-adafruit.userpxt.io/---simulator" Type="include" WindowsRuntimeAccess="none" />
@@ -57,9 +57,15 @@
       </Device>
     </DeviceCapability>
     <DeviceCapability Name="humaninterfacedevice">
+      <!--UF2 Bootloader v1.23.0-->
       <Device Id="vidpid:239A 0018">
         <Function Type="usage:FF97 *" />
       </Device>
+      <!--UF2 Bootloader v1.22.0-->
+      <Device Id="vidpid:239A 0019">
+        <Function Type="usage:FF00 *" />
+      </Device>
+      <!--User Space-->
       <Device Id="vidpid:03EB 2402">
         <Function Type="usage:FF97 *" />
       </Device>

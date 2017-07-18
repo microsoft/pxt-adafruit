@@ -38,7 +38,8 @@ Basic projects to build with your @boardname@.
   "name": "Headlamp",
   "url":"/projects/headlamp",
   "imageUrl":"/static/cp/projects/headlamp.jpg"
-}]
+}
+]
 ```
 
 ## Games
@@ -50,5 +51,9 @@ Fun games to build with your @boardname@.
   "name": "Hot Potato",
   "url":"/projects/hot-potato",
   "imageUrl":"/static/cp/projects/hot-potato.jpg"
+}, 
+{
+  "name": "Reaction!", 
+  "url":"/projects/reaction"
 }]
 ```

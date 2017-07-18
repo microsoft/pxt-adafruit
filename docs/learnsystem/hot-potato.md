@@ -184,7 +184,7 @@ const noteDurations = [     // note durations
 ];
 
 input.leftButton.onEvent(ButtonEvent.Click, () => {
-    const numNotesToPlay = Math.random(numNotes);
+    const numNotesToPlay = Math.randomRange(0, numNotes);
     int noteToPlay = 0;
     for (let thisNote = 0; thisNote < numNotesToPlay; thisNote++) { // play notes of the melody
         // to calculate the note duration, take one second divided by the note type.
@@ -366,7 +366,7 @@ const noteDurations = [     // note durations
 ///////////////////////////////////////////////////////////////////////////////
 input.leftButton.onEvent(ButtonEvent.Click, () => {
     const numNotes = melody.length;
-    const numNotesToPlay = numNotes + Math.random(2 * numNotes);
+    const numNotesToPlay = numNotes + Math.randomRange(0, 2 * numNotes);
     let noteToPlay = 0;
     for (let thisNote = 0; thisNote < numNotesToPlay; thisNote++) { // play notes of the melody
         // to calculate the note duration, take one second divided by the note type.

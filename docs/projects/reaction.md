@@ -14,14 +14,20 @@ Create a fun game to play with a friend to determine who has the fastest reactio
 * 1 sheet of 11 x 17 white paper 
 * Small piece of cardboard (3 inches by 8 inches should be enough!)
 
+![Recycled: paper and cardboard](/static/cp/projects/reaction/Recycled.JPG)
+
 ### Electronics
 * 1 circuit playground, a battery holder with an on/off switch, and 3 AAA batteries 
+
+![Electronic: circuit playground, battery holder, AAA](/static/cp/projects/reaction/Electronic.jpg)
 
 ### Tools 
 * Scissors 
 * Hot glue gun 
 * Duct tape 
 * Velcro strip or velcro dots 
+
+![Tools: scissor, glue gun, duct tape, velcro strip](/static/cp/projects/reaction/Tools.jpg)
 
 ## Activities 
 * [Make](/projects/reaction/make)

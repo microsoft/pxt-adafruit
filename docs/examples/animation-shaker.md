@@ -5,7 +5,7 @@ Shake your @boardname@ to play a random animation.
 ```blocks
 let r = 0
 input.onGesture(Gesture.Shake, () => {
-    r = Math.random(4)
+    r = Math.randomRange(0, 4)
     if (r == 0) {
         light.pixels.showAnimation(light.animation(LightAnimation.RunningLights), 2000)
     } else if (r == 1) {

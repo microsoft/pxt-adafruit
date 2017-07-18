@@ -10,7 +10,7 @@ let item = 0
 input.onGesture(Gesture.Shake, () => {
     light.pixels.clear()
     light.pixels.setPhotonMode(PhotonMode.PenUp)
-    item = Math.random(10)
+    item = Math.randomRange(0, 10)
     light.pixels.photonForward(1)
     duration = 20
     tone = 262

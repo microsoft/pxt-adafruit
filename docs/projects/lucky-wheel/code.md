@@ -44,14 +44,14 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Step 4
 
-Use the ``||random||`` and ``||+||`` blocks to set `times` to a random number between `50` and `59`
+Use the ``||randomRange||`` and ``||+||`` blocks to set `times` to a random number between `50` and `59`
 
 ```blocks
 let delay = 0
 let times = 0
 input.onGesture(Gesture.Shake, () => {
     delay = 0
-    times = Math.random(10) + 50
+    times = Math.randomRange(0, 10) + 50
 })
 ```
 
@@ -64,7 +64,7 @@ let delay = 0
 let times = 0
 input.onGesture(Gesture.Shake, () => {
     delay = 0
-    times = Math.random(10) + 50
+    times = Math.randomRange(0, 10) + 50
     for (let i = 0; i < 5; i++) {
 
     }
@@ -82,7 +82,7 @@ let delay = 0
 let times = 0
 input.onGesture(Gesture.Shake, () => {
     delay = 0
-    times = Math.random(10) + 50
+    times = Math.randomRange(0, 10) + 50
     for (let i = 0; i < 5; i++) {
         light.pixels.photonForward(-1)
     }
@@ -91,17 +91,17 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Step 7
 
-Next, use the ``||play tone||`` and ``||random||`` blocks to play a random tone at each step.
+Next, use the ``||play tone||`` and ``||randomRange||`` blocks to play a random tone at each step.
 
 ```blocks
 let delay = 0
 let times = 0
 input.onGesture(Gesture.Shake, () => {
     delay = 0
-    times = Math.random(10) + 50
+    times = Math.randomRange(0, 10) + 50
     for (let i = 0; i < 5; i++) {
         light.pixels.photonForward(-1)
-        music.playTone(Math.random(501), music.beat(BeatFraction.Half))
+        music.playTone(Math.randomRange(0, 501), music.beat(BeatFraction.Half))
     }
 })
 ```
@@ -115,10 +115,10 @@ let delay = 0
 let times = 0
 input.onGesture(Gesture.Shake, () => {
     delay = 0
-    times = Math.random(10) + 50
+    times = Math.randomRange(0, 10) + 50
     for (let i = 0; i < 5; i++) {
         light.pixels.photonForward(-1)
-        music.playTone(Math.random(501), delay)
+        music.playTone(Math.randomRange(0, 501), delay)
     }
 })
 ```
@@ -131,11 +131,11 @@ To make the spinning animation slow down over time, use a ``||variable change||`
 let delay = 0
 let times = 0
 input.onGesture(Gesture.Shake, () => {
-    times = Math.random(10) + 50
+    times = Math.randomRange(0, 10) + 50
     delay = 0
     for (let i = 0; i < times; i++) {
         light.pixels.photonForward(-1)
-        music.playTone(Math.random(501), delay)
+        music.playTone(Math.randomRange(0, 501), delay)
         delay += 5
     }
 })

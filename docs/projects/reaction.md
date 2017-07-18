@@ -14,7 +14,7 @@ Create a fun game to play with a friend to determine who has the fastest reactio
 * 1 sheet of 11 x 17 white paper 
 * Small piece of cardboard (3 inches by 8 inches should be enough!)
 
-![Recycled: paper and cardboard](/static/cp/projects/reaction/Recycled.JPG)
+![Recycled: paper and cardboard](/static/cp/projects/reaction/recycled.jpg)
 
 ### Electronics
 * 1 circuit playground, a battery holder with an on/off switch, and 3 AAA batteries 

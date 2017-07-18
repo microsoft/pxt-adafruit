@@ -55,5 +55,6 @@ Fun games to build with your @boardname@.
 {
   "name": "Reaction!", 
   "url":"/projects/reaction"
+  "imageUrl":"/static/cp/projects/reaction.jpg"
 }]
 ```

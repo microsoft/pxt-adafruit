@@ -17,11 +17,11 @@ Let's make the wristband for @boardname@!
 
 2. Using duct tape, cover both sides of this strip with tape. Get creative and decorate the strip however you want! If you choose to put more stickers on or use glue, make sure that you leave space on the left side of the strip for velcros, as well as a rectangle in the middle about 3 inches wide so that you can still attach your battery pack. 
 
-![Decorated](/static/cp/projects/reaction/decoration!.jpg)
+![Decorated](/static/cp/projects/reaction/ GET NEW PIC .jpg)
 
 3. After decoration, paste on 2 velcro sqaures or circles to the top and the bottom of the LEFT side of the strip. 
 
-[!velcros on the left](/static/cp/projects/reaction/velcros on left.jpg)
+[!velcros on the left](/static/cp/projects/reaction/ GET NEW PIC .jpg)
 
 4. Flip the strip over on the long end. Place the other side of the velcro squares or circles on the RIGHT side of the flipped-over strip. 
 
@@ -31,7 +31,7 @@ Let's make the wristband for @boardname@!
 
 6. Cut a piece of cardboard 4.5 inches x 2 inches. Once again, this doesn't have to be exact :) 
 
-[!Small cardboard](/static/cp/projects/reaction/small cardboard.jpg)
+[!Small cardboard](/static/cp/projects/reaction/ GET NEW PIC .jpg)
 
 7. With the piece of cardboard, lay your battery pack in the center of the cardboard. Your setup should look like this! 
 
@@ -46,7 +46,7 @@ Let's make the wristband for @boardname@!
 11. Your wristband is now done! Let's get on to making the hand strap for your circuit player. 
     //insert video// 
 
-[!Finished battery pack](/static/cp/projects/reaction/finished cardboard.jpg)
+[!Finished battery pack](/static/cp/projects/reaction/ GET NEW PIC .jpg)
 
 ## Step 2: Creating the hand strap for @boardname@ 
 

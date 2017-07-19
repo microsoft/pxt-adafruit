@@ -33,8 +33,6 @@ https://youtu.be/neETFgLa8s4
 <br/>
 After cutting out the head you can start working on cutting the teeth for the monster's jaw! 
 
-![Correct Head](/static/cp/projects/light-monster/correct!.jpg)
-![Teeth cutting](/static/cp/projects/light-monster/teeth!.jpg)
 ![Head with teeth](/static/cp/projects/light-monster/head_teeth.JPG)
 
 ## Step 4: Preparing the jaw 
@@ -45,20 +43,16 @@ The second video shows how to cut the jaw to the correct shape.
 
 https://youtu.be/M3QPG6nUgoo
 <br/>
-Don't forget about the teeth in the jaw! Cut small triangles into the jaw and pull them out to create the same jagged pattern that you cut in the head. 
+Don't forget about the teeth in the jaw! 
 
 ![Jaw with Teeth](/static/cp/projects/light-monster/jaw_teeth.JPG)
 
 ## Step 5: Connecting the jaw and the head 
 
-With duct tape, attach the head (the piece with the cut out teeth) and newly cut jaw to finish off the head of the monster. The two pieces should fit together easily! 
-<br/>
 https://youtu.be/4lwirCaqjIY
 
 ## Step 6: Attaching the pipe cleaner to the servo motor 
 
-For this project, we used a pipe cleaner cut to approximately 8 inches. 
-<br/>
 https://youtu.be/IzZRiGgMDUY 
 
 ## Step 7: Connecting the servo motor to the head 
@@ -71,8 +65,6 @@ When attaching the pipe cleaner to the bottom of the jaw, make sure you shape it
 
 ## Step 8: Connecting the head to the body 
 
-Using the coffee stirring sticks, you'll be attaching the finished headpiece to the first carton that was cut in Step 2! Hot glue works best for securing these two pieces together. 
-</br>
 https://youtu.be/XyJjj-TpAs0
 
 ## Step 9: Connecting the servo motor to @boardname@ 

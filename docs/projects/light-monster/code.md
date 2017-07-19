@@ -15,16 +15,10 @@ Using the sensitivity of the light sensor and code, let's make the light monster
 
 ```cards 
 light.pixels.graph(input.lightLevel(),0)
+pins.A2.servoWrite(180)
 Math.map(input.lightLevel(),0,0,0,0)
 loops.pause(0)
 ``` 
-
-## Advanced Blocks 
-```cards 
-pins.A2.servoWrite(180)
-```
-
-With the pins block, you are able to code a specific instruction in MakeCode that will later be used to control the motor of the mouth of the monster. 
 
 ## Step 1: Coding the servo pin connection
 
@@ -39,15 +33,13 @@ loops.forever(() => {
 
 ### Build the Block...
 
-1. From **INPUT** drag a **light level** into the **graph of** block.
-2. Change the value of up to to `255`. 
+From **INPUT** drag a **light level** into the **graph of** block.
 
 ```blocks 
 loops.forever(() => {
-    light.pixels.graph(input.lightLevel(), 255)
+    light.pixels.graph(input.lightLevel(), 0)
 })
 ```
-The graph function allows the servo motor to map its path based on the light movement around it. By changing the value of the up to block, this limits the servo motor to move up to its largest position, 255. 
 
 From **PINS**, drag a **servo write pin to** block and place it inside the forever loop. 
 
@@ -58,13 +50,12 @@ loops.forever(() => {
 })
 ```
 
-### Build the Block...
+### Build the block...
 
 1. Change the value of the pin to ``A2``.
 2. From **MATH** drag out **map** and place it inside the value for the servo pin to write. 
-3. From **INPUT** drag a **light level** into the map value. 
-4. Change the value of `from high` to ``255``.
-5. Change the value of `to high` to ``255``.
+3. Change the value of `from high` to ``255``.
+4. Change the value of `to high` to ``255``.
 
 ```blocks 
 loops.forever(() => {
@@ -126,7 +117,7 @@ loops.forever(() => {
         input.lightLevel(), 
         0, 
         255, 
-        50, 
+        0, 
         255
     ))
     loops.pause(400)

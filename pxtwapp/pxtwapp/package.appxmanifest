@@ -14,9 +14,9 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="App" StartPage="http://makecode.adafruit.com/">
+    <Application Id="App" StartPage="https://makecode.adafruit.com/">
       <uap:ApplicationContentUriRules>
-        <uap:Rule Match="https://makecode.adafruit.com" Type="include" WindowsRuntimeAccess="all" />
+        <uap:Rule Match="https://makecode.adafruit.com/" Type="include" WindowsRuntimeAccess="all" />
         <uap:Rule Match="https://trg-adafruit.userpxt.io/---simulator" Type="include" WindowsRuntimeAccess="none" />
         <uap:Rule Match="https://makecode.adafruit.com/beta" Type="include" WindowsRuntimeAccess="all" />
         <uap:Rule Match="https://trg-adafruit.userpxt.io/beta---simulator" Type="include" WindowsRuntimeAccess="none" />

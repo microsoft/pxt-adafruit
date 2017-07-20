@@ -167,6 +167,12 @@
                 "usagePage": "0xFF00",
                 "usageId": "0x0001",
                 "vid": "0x239A",
+                "pid": "0x0018"
+            },
+            {
+                "usagePage": "0xFF00",
+                "usageId": "0x0001",
+                "vid": "0x239A",
                 "pid": "0x0019"
             },
             {

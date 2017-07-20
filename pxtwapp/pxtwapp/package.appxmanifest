@@ -14,7 +14,7 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="App" StartPage="https://makecode.adafruit.com">
+    <Application Id="App" StartPage="http://makecode.adafruit.com/">
       <uap:ApplicationContentUriRules>
         <uap:Rule Match="https://makecode.adafruit.com" Type="include" WindowsRuntimeAccess="all" />
         <uap:Rule Match="https://trg-adafruit.userpxt.io/---simulator" Type="include" WindowsRuntimeAccess="none" />
@@ -54,6 +54,10 @@
       <!--UF2 Bootloader v1.23.0-->
       <Device Id="vidpid:239A 0018">
         <Function Type="usage:FF97 *" />
+      </Device>
+      <!--UF2 Bootloader v1.22.0 with modified Usage Page / Usage ID-->
+      <Device Id="vidpid:239A 0018">
+        <Function Type="usage:FF00 *" />
       </Device>
       <!--UF2 Bootloader v1.22.0-->
       <Device Id="vidpid:239A 0019">

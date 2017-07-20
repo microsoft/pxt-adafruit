@@ -17,11 +17,11 @@ Let's make the wristband for @boardname@!
 
 2. Using duct tape, cover both sides of this strip with tape. Get creative and decorate the strip however you want! If you choose to put more stickers on or use glue, make sure that you leave space on the left side of the strip for velcros, as well as a rectangle in the middle about 3 inches wide so that you can still attach your battery pack. 
 
-![Decorated](/static/cp/projects/reaction/ GET NEW PIC .jpg)
+![Decorated](/static/cp/projects/reaction/decoration.jpg)
 
 3. After decoration, paste on 2 velcro sqaures or circles to the top and the bottom of the LEFT side of the strip. 
 
-[!velcros on the left](/static/cp/projects/reaction/ GET NEW PIC .jpg)
+[!velcros on the left](/static/cp/projects/reaction/front_velcro.jpg)
 
 4. Flip the strip over on the long end. Place the other side of the velcro squares or circles on the RIGHT side of the flipped-over strip. 
 
@@ -31,22 +31,23 @@ Let's make the wristband for @boardname@!
 
 6. Cut a piece of cardboard 4.5 inches x 2 inches. Once again, this doesn't have to be exact :) 
 
-[!Small cardboard](/static/cp/projects/reaction/ GET NEW PIC .jpg)
+[!Small cardboard](/static/cp/projects/reaction/small_cardboardjpg)
 
 7. With the piece of cardboard, lay your battery pack in the center of the cardboard. Your setup should look like this! 
 
-[!Cardboard on battery](/static/cp/projects/reaction/cardboard_on_battery.jpg)
+[!Cardboard on battery](/static/cp/projects/reaction/cardboard_in_middle.jpg)
 
 8. Use the shape of the battery pack to press the cardboard - your cardboard should turn into a "U" - shape around the battery pack. Here's a video demonstrating of how to do this! 
-    //insert video// 
+    https://youtu.be/4Mbe2yNU5X0
 9. Using the hot glue gun, attach the two flaps onto the wristband. Leave the battery pack in place- this will help you determine how far apart to glue the flaps so that the battery pack can fit snugly into the cardboard. 
-    //insert video// 
+    https://youtu.be/3YSteLHGrRY 
 10. If you have any scrap cardboard left, cut a small rectangle out so you can glue it to the bottom of your folded cardboard. Here's a video demonstrating what we did! 
-    //insert video//
+[!Bottom Cardboard](/static/cp/projects/reaction/bottom_cardboard.jpg)
+    https://youtu.be/Dt6P48pZvV8
 11. Your wristband is now done! Let's get on to making the hand strap for your circuit player. 
-    //insert video// 
+    https://youtu.be/0IrVOH1P-aE 
 
-[!Finished battery pack](/static/cp/projects/reaction/ GET NEW PIC .jpg)
+[!Finished battery pack](/static/cp/projects/reaction/fin_strap.jpg)
 
 ## Step 2: Creating the hand strap for @boardname@ 
 
@@ -57,13 +58,13 @@ Let's make the wristband for @boardname@!
 2. Fold 3 inches of the paper from the short side in.
 
 3. Using scissors, on the fold, cut a half circle to a half oval. This creates a hole for your thumb so that you can wear this hand strap! 
-    //insert video// 
+    https://youtu.be/CSulW-kwP8s    
 4. Unfold your paper. You should have a full circle now! If the circle looks too small for your thumb, refold your paper and cut a bigger half circle.
 
 [!Hole](/static/cp/projects/reaction/hole!.jpg)
 
 5. Using duct tape, cover the inside of the circle so that you won't have to worry about the paper cutting your thumb. 
-    //insert video// 
+   https://youtu.be/b2peR_Nc9ls 
 6. Now, use your duct tape and creative side to finish covering both sides of the strip with duct tape! Remember to leave the thumb hole uncovered from tape. 
 
 7. Taking two velcro squares or cicles, paste them on the right side of the thumb hole you've cut. 
@@ -76,6 +77,7 @@ Let's make the wristband for @boardname@!
 
 [!Finished hand strap](/static/cp/projects/reaction/finished_hand_strap.jpg)
 
+    https://youtu.be/Bxr2a7Ow2W4
 
 Now you're done creating your wrist and hand strap-- good work! 
 

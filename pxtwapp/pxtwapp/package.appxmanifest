@@ -55,7 +55,7 @@
       <Device Id="vidpid:239A 0018">
         <Function Type="usage:FF97 *" />
       </Device>
-      <!--UF2 Bootloader v1.22.0 with modified Usage Page / Usage ID-->
+      <!--UF2 Bootloader v1.22.0 with modified PID-->
       <Device Id="vidpid:239A 0018">
         <Function Type="usage:FF00 *" />
       </Device>

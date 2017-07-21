@@ -12,7 +12,7 @@ input.pinA1.onEvent(ButtonEvent.Click, () => {
     // start countdown
     running = 0
     music.ringTone(988)
-    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 2000 + Math.random(2001))
+    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 2000 + Math.randomRange(0, 2001))
     // check if the players haven't already touched a button
     // and finished the game
     if (running == 0) {

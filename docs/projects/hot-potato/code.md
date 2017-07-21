@@ -19,7 +19,7 @@ We need hot potato game to run for a random duration. Let's create a variable `d
 ```blocks
 let delay = 0
 input.buttonA.onEvent(ButtonEvent.Click, () => {
-        delay = 500 + Math.random(1501)
+        delay = 500 + Math.randomRange(0, 1501)
 })
 ```
 
@@ -32,7 +32,7 @@ Animation and music goes inside the [while](https://makecode.adafruit.com/blocks
 ```blocks
 let delay = 0
 input.buttonA.onEvent(ButtonEvent.Click, () => {
-    delay = 500 + Math.random(1501)
+    delay = 500 + Math.randomRange(0, 1501)
     while (delay > 0) { 
         delay += -50
     }
@@ -47,7 +47,7 @@ Let's add music and animation inside the `while` loop. Add music using [playTone
 ```blocks
 let delay = 0
 input.buttonA.onEvent(ButtonEvent.Click, () => {
-    delay = 500 + Math.random(1501)
+    delay = 500 + Math.randomRange(0, 1501)
     while (delay > 0) {
         music.playTone(262, music.beat(BeatFraction.Quarter))                
         light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), delay)
@@ -66,7 +66,7 @@ Now add a `theater chase` animation and `wawawawaa` playSound once the game ends
 ```blocks
 let delay = 0
 input.buttonA.onEvent(ButtonEvent.Click, () => {
-    delay = 500 + Math.random(1501)
+    delay = 500 + Math.randomRange(0, 1501)
     while (delay > 0) {
         music.playTone(262, music.beat(BeatFraction.Quarter))
         light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), delay)

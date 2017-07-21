@@ -82,7 +82,7 @@ Now that you've programmed your @boardname@ to send signals, we need to program 
 
 ```blocks 
 network.onInfraredPacketReceived( ({ receivedNumber }) => {
-    light.pixels.setAll(receivedNumber)
+    light.pixels.setAll(Colors.Red)
 })
 ```
 
@@ -90,7 +90,9 @@ network.onInfraredPacketReceived( ({ receivedNumber }) => {
 1. From **VARIABLES**, drag out a **receivedNumber** block and replace the **red** block inside the **set all pixels to** block. 
 
 ```blocks
-let notice = "I need code here!!!"
+network.onInfraredPacketReceived( ({ receivedNumber }) => {
+    light.pixels.setAll(receivedNumber)
+})
 ```
 
 And now you're done! Download the code to two @boardname@s and get ready to duel. Who has the fastest reaction time? Who will be able to change the other's colors? 

@@ -17,10 +17,12 @@ Here are some fun programs for your @boardname@!
   "cardType": "example"
 },{
   "name": "Juggle counter",
+  "description":"How high will the sound get with your shaking?", 
   "url":"/examples/juggle-counter",
   "cardType": "example"
 },{
   "name": "Power glove",
+  "description":"Create a @boardname@ that can be used to get enemies! A charge is included.", 
   "url":"/examples/power-glove",
   "cardType": "example"
 },{
@@ -39,11 +41,13 @@ Here are some fun programs for your @boardname@!
   "url":"/examples/egg-game",
   "cardType": "example"
 },{
-  "name": "Reaction",
+  "name": "Patience!",
+  "description":"Can you wait for the sound to be over? Code a game that involves your reaction time and response!", 
   "url":"/examples/reaction",
   "cardType": "example"
 },{
   "name": "Photon beatbox",
+  "description":"Change the ring color and direction of pixels!", 
   "url":"/examples/photon-beatbox",
   "cardType": "example"
 },{

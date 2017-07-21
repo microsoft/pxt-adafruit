@@ -6,10 +6,12 @@ Using the infrared signalling on the @boardname@, let's create a game to play wi
 
 ## Duration: ~10 minutes 
 
-## Concepts 
+## Concepts
+
 * Infrared connection 
 
-## Blocks 
+## Blocks
+
 ```cards
 network.onInfraredPacketReceived( ({ receivedNumber }) =>  {})
 network.infraredSendNumber(0)
@@ -18,8 +20,8 @@ network.infraredSendNumber(0)
 ## Step 1: Programming of initial colors for button pressing 
 
 1. Open @homeurl@ in your web browser. 
-2. From **LIGHT**, drag a **set all pixels to** block and place it inside an **on button A click** from **INPUT**
-3. From **NETWORK**, drag a **infrared send number** block and place it below the **set all pixels to** block inside the **on button A click** 
+2. From **LIGHT**, drag a **set all pixels to** block and place it inside an **on button A click** from **INPUT**.
+3. From **NETWORK**, drag a **infrared send number** block and place it below the **set all pixels to** block inside the **on button A click**.
 
 ```blocks 
 input.buttonA.onEvent(ButtonEvent.Click, () => {
@@ -28,13 +30,12 @@ input.buttonA.onEvent(ButtonEvent.Click, () => {
 })
 ```
 
-### Build the Block 
-1. Change **set all pixels** to ``green`` 
-2. From **LIGHT**, drag a **red** block and place it inside the **infrared send number** 
+### Build the Block
 
-The **infrared send number** block allows the circuit playground to communicate with another circuit playground via the infrared sensors that are attached on the playground. When it is programmed to send the color red, the signal will be transmitted via infrared to another waiting circuit playground. 
-
-4. Repeat steps 2 and 3 to create another identical block to the one above. However, we're going to change this one up a little bit! 
+1. Change **set all pixels** to ``green``.
+2. From **LIGHT**, drag a **red** block and place it inside the **infrared send number**.
+>The **infrared send number** block allows the circuit playground to communicate with another circuit playground via the infrared sensors that are attached on the playground. When it is programmed to send the color red, the signal will be transmitted via infrared to another waiting circuit playground. 
+3. Repeat steps 2 and 3 to create another identical block to the one above. However, this time we're going to change this one up a little bit! 
 
 ```blocks 
 input.buttonB.onEvent(ButtonEvent.Click, () => {
@@ -43,20 +44,21 @@ input.buttonB.onEvent(ButtonEvent.Click, () => {
 })
 ```
 
-### Build the Block 
-1. Change **set all pixels** to ``violet``
-2. From **LIGHT**, drag a **red** block and place it inside the **infrared send number**. Use the dropdown to select the color ``yellow``! 
+### Build the Block
 
-5. Repeat steps 2 and 3 to create yet another identical block to the two you have already. 
+1. Change **set all pixels** to ``violet``.
+2. From **LIGHT**, drag a **red** block and place it inside the **infrared send number**. Use the dropdown to select the color ``yellow``! 
+3. Repeat steps 2 and 3 to create yet another identical block to the two you have already. 
 
 ```blocks 
-input.buttonsAB.onEvent(ButtonEvent.Click () => {
+input.buttonsAB.onEvent(ButtonEvent.Click, () => {
     light.pixels.setAll(Colors.White)
     network.infraredSendNumber(Colors.Black)
 })
 ``` 
 
-### Build the Block 
+### Build the Block
+
 1. Change **set all pixels** to ``white`` 
 2. From **LIGHT**, drag a **red** block and place it inside the **infrared send number**. Use the dropdown to select the color ``black``! 
 
@@ -70,7 +72,6 @@ input.onGesture(Gesture.Shake, () => {
 
 ### Build the Block 
 1. Change **set all pixels** to ``blue`` 
-
 
 ## Step 2: Setting up the receiving signals for the infrared signals sent 
 
@@ -88,6 +89,9 @@ network.onInfraredPacketReceived( ({ receivedNumber }) => {
 ### Build the Block 
 1. From **VARIABLES**, drag out a **receivedNumber** block and replace the **red** block inside the **set all pixels to** block. 
 
+```blocks
+let notice = "I need code here!!!"
+```
 
 And now you're done! Download the code to two @boardname@s and get ready to duel. Who has the fastest reaction time? Who will be able to change the other's colors? 
 

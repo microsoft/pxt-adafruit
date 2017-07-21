@@ -25,8 +25,6 @@ After you're done decorating, paste 2 velcro sqaures or circles to the top and t
 
 Flip the strip over on the long end. Place the other side of the velcro squares or circles on the **RIGHT** side of the flipped-over strip. 
 
-![Backside velcro](/static/cp/projects/reaction/backside_velcro.jpg)
-
 Flip the strip back over. You should have a strip with 2 pieces of velcro on the **LEFT** side facing up at you. The velcro on the **RIGHT** side should NOT be seen unless you flip the strip back over. 
 
 Cut a rectangular piece of cardboard that is 4.5 inches long and 2 inches wide. Once again, this doesn't have to be exact :) 

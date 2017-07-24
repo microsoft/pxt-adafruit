@@ -84,7 +84,5 @@
      */
     CreateOnly = 0,  // CREATE_ONLY
     }
-declare namespace serial {
-}
 
 // Auto-generated. Do not edit. Really.

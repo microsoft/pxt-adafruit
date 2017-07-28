@@ -237,6 +237,11 @@
                 "path": "/about"
             },
             {
+                "name": "Getting started",
+                "tutorial": true,
+                "path": "/tutorials/getting-started"
+            },
+            {
                 "name": "Examples",
                 "path": "#projects:Examples"
             },

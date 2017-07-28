@@ -1,4 +1,5 @@
 {
+  "music": "Generation of music tones.",
   "music.beat": "Return the duration of a beat in milliseconds (the beat fraction).",
   "music.beat|param|fraction": "the fraction of the current whole note, eg: BeatFraction.Half",
   "music.changeTempoBy": "Change the tempo up or down by some amount of beats per minute (bpm).",

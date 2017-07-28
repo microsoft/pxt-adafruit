@@ -1,5 +1,8 @@
 {
   "input.ambientColor|block": "ambient color",
   "input|block": "input",
-  "{id:category}Input": "Input"
+  "light.showRing|block": "show ring |%colors",
+  "light|block": "light",
+  "{id:category}Input": "Input",
+  "{id:category}Light": "Light"
 }

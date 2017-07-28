@@ -58,7 +58,6 @@
   "Math.tan|param|x": "An angle in radians",
   "Math.trunc": "Returns the number with the decimal part truncated.",
   "Math.trunc|param|x": "A numeric expression.",
-  "String": "Functions to combine, split, and search text strings.",
   "String.charAt": "Returns the character at the specified index.",
   "String.charAt|param|index": "The zero-based index of the desired character.",
   "String.charCodeAt": "Returns the Unicode value of the character at the specified location.",

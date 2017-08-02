@@ -55,5 +55,10 @@ Fun games to build with your @boardname@.
   "name": "Hot Potato",
   "url":"/projects/hot-potato",
   "imageUrl":"/static/cp/projects/hot-potato.jpg"
+}, 
+{
+  "name": "Reaction!", 
+  "url":"/projects/reaction",
+  "imageUrl":"/static/cp/projects/reaction.jpg"
 }]
 ```

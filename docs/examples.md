@@ -7,12 +7,12 @@ Here are some fun programs for your @boardname@!
 ```codecard
 [{
   "name": "Blinky",
-  "description": "Create a blinking @boardname@ with an introduction to loops!",
+  "description": "Create a blinking board with an introduction to loops!",
   "url":"/examples/blinky",
   "cardType": "example"
 },{
   "name": "Animation shaker",
-  "description":"Use variables to make a randomized color set for shaking your @boardname@", 
+  "description":"Use variables to make a randomized color set for shaking your Circuit Playground", 
   "url":"/examples/animation-shaker",
   "cardType": "example"
 },{
@@ -22,22 +22,22 @@ Here are some fun programs for your @boardname@!
   "cardType": "example"
 },{
   "name": "Power glove",
-  "description":"Create a @boardname@ that can be used to get enemies! A charge is included.", 
+  "description":"Create a Circuit Playground that can be used to get enemies! A charge is included.", 
   "url":"/examples/power-glove",
   "cardType": "example"
 },{
   "name": "Dice",
-  "description":"Use @boardname@ to help you decide! Code a dice.",
+  "description":"Use Circuit Playground to help you decide! Code a dice.",
   "url":"/examples/dice",
   "cardType": "example"
 },{
   "name": "Level",
-  "description":"Test surfaces to determine if they're level with @boardname@.",
+  "description":"Test surfaces to determine if they're level with your board.",
   "url":"/examples/level",
   "cardType": "example"
 },{
   "name": "Egg game",
-  "description":"How still can you keep the @boardname@? Play a game that involves balance and concentration!",
+  "description":"How still can you keep the Circuit Playground? Play a game that involves balance and concentration!",
   "url":"/examples/egg-game",
   "cardType": "example"
 },{
@@ -57,7 +57,7 @@ Here are some fun programs for your @boardname@!
   "cardType": "example"
 },{
   "name": "Metronome",
-  "description":"Use @boardname@ to help keep you steady while practicing music!",
+  "description":"Use Circuit Playground to help keep you steady while practicing music!",
   "url":"/examples/metronome",
   "cardType": "example"
 },{
@@ -67,7 +67,7 @@ Here are some fun programs for your @boardname@!
   "cardType": "example"
 },{
   "name": "Fireflies",
-  "description":"Use light to control when your @boardname@ flashes! Can you make your board into a firefly?",
+  "description":"Use light to control when your board flashes! Can you make your board into a firefly?",
   "url":"/examples/fireflies",
   "cardType": "example"
 }]

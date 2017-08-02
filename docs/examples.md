@@ -9,7 +9,7 @@ Here are some fun programs for your @boardname@!
   "name": "Blinky",
   "description": "Create a blinking @boardname@ with an introduction to loops!",
   "url":"/examples/blinky",
-  "cardType": "example",
+  "cardType": "example"
 },{
   "name": "Animation shaker",
   "description":"Use variables to make a randomized color set for shaking your @boardname@", 
@@ -27,37 +27,37 @@ Here are some fun programs for your @boardname@!
   "cardType": "example"
 },{
   "name": "Dice",
-  "description":"Use @boardname@ to help you decide! Code a dice.", 
+  "description":"Use @boardname@ to help you decide! Code a dice.",
   "url":"/examples/dice",
   "cardType": "example"
 },{
   "name": "Level",
-  "description":"Test surfaces to determine if they're level with @boardname@.", 
+  "description":"Test surfaces to determine if they're level with @boardname@.",
   "url":"/examples/level",
   "cardType": "example"
 },{
   "name": "Egg game",
-  "description":"How still can you keep the @boardname@? Play a game that involves balance and concentration!, 
+  "description":"How still can you keep the @boardname@? Play a game that involves balance and concentration!",
   "url":"/examples/egg-game",
   "cardType": "example"
 },{
   "name": "Patience!",
-  "description":"Can you wait for the sound to be over? Code a game that involves your reaction time and response!", 
+  "description":"Can you wait for the sound to be over? Code a game that involves your reaction time and response!",
   "url":"/examples/reaction",
   "cardType": "example"
 },{
   "name": "Photon beatbox",
-  "description":"Change the ring color and direction of pixels!", 
+  "description":"Change the ring color and direction of pixels!",
   "url":"/examples/photon-beatbox",
   "cardType": "example"
 },{
   "name": "Spin it",
-  "description":"Move a ball around on the circuit playground board!", 
+  "description":"Move a ball around on the circuit playground board!",
   "url":"/examples/spin-it",
-  "cardType": "example",
+  "cardType": "example"
 },{
   "name": "Metronome",
-  "description":"Use @boardname@ to help keep you steady while practicing music!", 
+  "description":"Use @boardname@ to help keep you steady while practicing music!",
   "url":"/examples/metronome",
   "cardType": "example"
 },{
@@ -67,7 +67,7 @@ Here are some fun programs for your @boardname@!
   "cardType": "example"
 },{
   "name": "Fireflies",
-  "description":"Use light to control when your @boardname@ flashes! Can you make your board into a firefly?", 
+  "description":"Use light to control when your @boardname@ flashes! Can you make your board into a firefly?",
   "url":"/examples/fireflies",
   "cardType": "example"
 }]

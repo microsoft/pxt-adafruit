@@ -70,7 +70,7 @@ Place it around the middle of the stick so there's enough room for the cable to 
 
 ![Battery pack 4.4](/static/cp/projects/dandelion/step4.4.jpg)
 
-## Step 4: Connect the battery
+## Step 5: Connect the battery
 
 Connect the battery pack to your @boardname@ using the cable. 
 

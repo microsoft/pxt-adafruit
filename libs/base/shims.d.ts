@@ -43,6 +43,12 @@ declare interface Buffer {
     shift(offset: int32, start?: int32, length?: int32): void;
 
     /**
+     * Convert a buffer to its hexadecimal representation.
+     */
+    //% shim=BufferMethods::toHex
+    toHex(): string;
+
+    /**
      * Rotate buffer left in place.
      * @param offset number of bytes to shift; use negative value to shift right
      * @param start start offset in buffer. Default is 0.
@@ -131,11 +137,6 @@ declare namespace control {
     //% blockId="control_device_serial_number" block="device serial number" weight=9 shim=control::deviceSerialNumber
     function deviceSerialNumber(): int32;
 }
-
-
-
-    //% weight=2 color=#002050 icon="\uf287"
-    //% advanced=true
 declare namespace serial {
 
     /**

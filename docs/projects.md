@@ -35,6 +35,11 @@ Basic projects to build with your @boardname@.
   "imageUrl":"/static/cp/projects/lucky-wheel.jpg"
 },
 {
+  "name": "Light Monster", 
+  "url":"/projects/light-monster", 
+  "imageUrl":"/static/cp/projects/lightmonster.jpg"
+},
+{
   "name": "Headlamp",
   "url":"/projects/headlamp",
   "imageUrl":"/static/cp/projects/headlamp.jpg"
@@ -50,5 +55,10 @@ Fun games to build with your @boardname@.
   "name": "Hot Potato",
   "url":"/projects/hot-potato",
   "imageUrl":"/static/cp/projects/hot-potato.jpg"
+}, 
+{
+  "name": "Reaction!", 
+  "url":"/projects/reaction",
+  "imageUrl":"/static/cp/projects/reaction.jpg"
 }]
 ```

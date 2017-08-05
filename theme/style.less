@@ -43,10 +43,11 @@
 
 /* Specifying rounded toolbox borders. */
 div.blocklyTreeRow {
-    border-radius: 3px;
-    margin-bottom: 3px !important;
-    border: 1px solid #1e1e1e;
-    border-left-width: 1px !important;
+    border-radius: 4px;
+    padding-left: 4px !important;
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.4);
+    -moz-box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.4);
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.4);
 }
 div.blocklyTreeRoot div div div div div.blocklyTreeRow {
     border-left-width: 1px !important;
@@ -54,8 +55,9 @@ div.blocklyTreeRoot div div div div div.blocklyTreeRow {
 
 /* Highlight category item */
 div.blocklyTreeRow.blocklyTreeSelected, div.blocklyTreeRoot div div div div div.blocklyTreeRow.blocklyTreeSelected {
-    border: 2px solid #fc3;
-    border-left-width: 2px !important;
+    -webkit-box-shadow: inset 0px 0px 0px 2px #fc3;
+    -moz-box-shadow: inset 0px 0px 0px 2px #fc3;
+    box-shadow: inset 0px 0px 0px 2px #fc3;
 }
 
 /* This removes any padding at the top of the toolbox */
@@ -93,16 +95,17 @@ svg.blocklySvg {
 }
 
 /* Editor menu toggle */
-.ui.menu .item.editor-menuitem {
+.ui.menu .item.editor-menuitem .ui.grid {
     background: fade(@black, 20%) !important;
 }
 
 /* Search box */
 #blocklySearchArea {
     margin: 0.5rem;
+    margin-top: 0.1rem;
 }
 .blocklySearchInputField {
-    border-radius: 0.2rem !important;
+    border-radius: 2.5rem !important;
 }
 
 .sandboxfooter a:not(.thin) {
@@ -123,10 +126,13 @@ svg.blocklySvg {
         background: transparent;
     }
     div.blocklyTreeRow {
-        padding-bottom: 2rem !important;
+        padding-left: 0px !important;
     }
     #blocklyTrashIcon {
         margin: 0.2rem;
+    }   
+    .blocklyToolboxDiv, .monacoToolboxDiv {
+        padding: 0.2rem;
     }
 }
 

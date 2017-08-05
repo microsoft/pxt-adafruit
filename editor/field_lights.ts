@@ -109,8 +109,8 @@ namespace pxt.editor {
       for (let i = 0; i < FieldLights.NUM_PIXELS; i++) {
         let neopixel = this.boardElement.getElementById("LED" + i) as SVGGElement;
         if (this.isCurrentlyEditable() && !this.isInFlyout()) {
-            pxsim.svg.addClass(neopixel, 'neopixel');
-            pxsim.svg.onClick(neopixel, ev => this.onPixelClicked(ev, neopixel, i));
+          pxsim.svg.addClass(neopixel, 'neopixel');
+          pxsim.svg.onClick(neopixel, ev => this.onPixelClicked(ev, neopixel, i));
         }
         this.neopixels_.push(neopixel);
       }
@@ -119,13 +119,13 @@ namespace pxt.editor {
       ['paletteslice0', 'paletteslice1', 'paletteslice2', 'paletteslice3',
         'paletteslice4', 'paletteslice5', 'paletteslice6', 'paletteslice7', 'palettecenter']
         .forEach((id, i) => {
-            let btn = this.boardElement.getElementById(id) as SVGGElement;
-            pxsim.svg.addClass(btn, 'colorbutton');
-            if (this.isCurrentlyEditable() && !this.isInFlyout()) {
-                if (i == 4) pxsim.svg.addClass(btn, 'active');
-                pxsim.svg.onClick(btn, ev => this.onColorClicked(ev, btn));
-            }
-            this.paletteButtons.push(btn);
+          let btn = this.boardElement.getElementById(id) as SVGGElement;
+          pxsim.svg.addClass(btn, 'colorbutton');
+          if (this.isCurrentlyEditable() && !this.isInFlyout()) {
+            if (i == 4) pxsim.svg.addClass(btn, 'active');
+            pxsim.svg.onClick(btn, ev => this.onColorClicked(ev, btn));
+          }
+          this.paletteButtons.push(btn);
         })
 
       this.fieldGroup_.appendChild(this.boardElement);
@@ -135,7 +135,7 @@ namespace pxt.editor {
     }
 
     private isInFlyout() {
-        return (this.sourceBlock_.workspace.getParentSvg() as SVGElement).className.baseVal == "blocklyFlyout";
+      return (this.sourceBlock_.workspace.getParentSvg() as SVGElement).className.baseVal == "blocklyFlyout";
     }
 
     render_() {
@@ -166,7 +166,7 @@ namespace pxt.editor {
       if (previous) pxsim.svg.removeClass(previous, 'active');
 
       pxsim.svg.addClass(btn, 'active');
-      if (this.sourceBlock_ && this.sourceBlock_.workspace) this.sourceBlock_.workspace.playAudio('click');
+      if (this.sourceBlock_ && this.sourceBlock_.workspace) this.sourceBlock_.workspace.getAudioManager().play('click');
     }
 
     onPixelClicked(e: Event, neopixel: SVGElement, id: number) {
@@ -180,16 +180,22 @@ namespace pxt.editor {
         else
           neopixel.setAttribute("data-color", btncol);
         this.setValue(this.getValueArray())
-        if (this.sourceBlock_ && this.sourceBlock_.workspace) this.sourceBlock_.workspace.playAudio('click');
+        if (this.sourceBlock_ && this.sourceBlock_.workspace) this.sourceBlock_.workspace.getAudioManager().play('click');
       }
     };
 
     getValue() {
-      return this.getText() || '`red red red red red red red red red red`';
+      let text = this.getText();
+      if (!/^(?:".*?")|(?:`.*?`)|(?:'.*?')$/.test(text)) {
+        // Text is not correctly surrounded by quotes; remove all quotes and surround with backticks
+        text.replace(/[`"']/g, "");
+        text = `\`${text}\``;
+      }
+      return text;
     }
 
     getValueArray(): string {
-      return '`' + this.neopixels_.map(neo => neo.getAttribute("data-color")).join(' ') + '`';
+      return this.neopixels_.map(neo => neo.getAttribute("data-color")).join(' ');
     }
   }
 }

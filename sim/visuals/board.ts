@@ -181,6 +181,14 @@ namespace pxsim.visuals {
         .sim-wireframe .sim-board {
             stroke-width: 2px;
         }
+        .no-drag {
+            user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
     `;
 
     const pinNames: { 'name': string, 'touch': number, 'text': any, 'id'?: number, tooltip?: string }[] = [
@@ -552,7 +560,7 @@ namespace pxsim.visuals {
                 let r = 10;
                 this.lightLevelButton = svg.child(this.g, "circle", {
                     cx: `12px`, cy: `${cy}px`, r: `${r}px`,
-                    class: 'sim-light-level-button',
+                    class: 'sim-light-level-button no-drag',
                     fill: `url(#${gid})`
                 }) as SVGCircleElement;
                 let pt = this.element.createSVGPoint();
@@ -592,7 +600,7 @@ namespace pxsim.visuals {
                 let r = 10;
                 this.soundLevelButton = svg.child(this.g, "circle", {
                     cx: `12px`, cy: `${cy}px`, r: `${r}px`,
-                    class: 'sim-sound-level-button',
+                    class: 'sim-sound-level-button no-drag',
                     fill: `url(#${gid})`
                 }) as SVGCircleElement;
 
@@ -633,7 +641,7 @@ namespace pxsim.visuals {
                 let gid = "gradient-thermometer";
                 this.thermometerGradient = svg.linearGradient(this.defs, gid);
                 this.thermometer = <SVGRectElement>svg.child(this.g, "rect", {
-                    class: "sim-thermometer",
+                    class: "sim-thermometer no-drag",
                     x: 170,
                     y: 3,
                     width: 7,

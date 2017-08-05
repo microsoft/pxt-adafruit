@@ -1,6 +1,6 @@
 # Adafruit Circuit Playground Express target for PXT
 
-[![Build Status](https://ci2.dot.net/buildStatus/icon?job=Private/pxt_project_pink/master/pxt-adafruit_Push)](https://ci2.dot.net/job/Private/job/pxt_project_pink/job/master/job/pxt-adafruit_Push/)
+[![Build Status](https://travis-ci.org/Microsoft/pxt-adafruit.svg?branch=master)](https://travis-ci.org/Microsoft/pxt-adafruit)
 
 This repo contains the editor target hosted at https://makecode.adafruit.com .
 

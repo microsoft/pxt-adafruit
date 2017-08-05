@@ -5,7 +5,7 @@ Shake it or press the buttons for a lighted surprise.
 ```blocks
 let item = 0
 input.onGesture(Gesture.Shake, () => {
-    light.pixels.setPhotonColor(Math.random(256))
+    light.pixels.setPhotonColor(Math.randomRange(0, 256))
 })
 loops.forever(() => {
     light.pixels.photonForward(1)

@@ -33,7 +33,7 @@ namespace light {
 
     /**
      * Shows a pattern of colors on the pixel ring
-     * @param colors a string describing the colors
+     * @param colors a string describing the colors, eg: "red red red red red red red red red red"
      * @param interval the duration in milliseconds between frames, eg: 400
      */
     //% blockId="neopixel_show_ring_colors" block="show ring |%colors"

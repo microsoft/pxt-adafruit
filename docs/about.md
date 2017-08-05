@@ -41,7 +41,7 @@ program to a **.uf2** file, which you then copy to the **CPLAYBOOT** drive, whic
 
 ## Simulator: Test Your Code
 
-You can run your code using the micro:bit simulator, all within the confines of a web browser. 
+You can run your code using the **@boardname@** simulator, all within the confines of a web browser. 
 The simulator has support for the LED screen, buttons, as well as compass, accelerometer, and digital I/O pins.
 
 ```sim

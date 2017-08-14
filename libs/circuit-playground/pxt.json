@@ -16,6 +16,7 @@
         }
     },
     "dependencies": {
+        "base": "file:../base",
         "core": "file:../core",
         "buttons": "file:../buttons",
         "accelerometer": "file:../accelerometer",

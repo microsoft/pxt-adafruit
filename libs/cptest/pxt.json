@@ -1,0 +1,11 @@
+{
+    "name": "CPX Test",
+    "dependencies": {
+        "circuit-playground": "file:../circuit-playground"
+    },
+    "description": "",
+    "files": [
+        "main.ts",
+        "README.md"
+    ]
+}

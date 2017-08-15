@@ -7,7 +7,6 @@
 @fontName  : 'Open Sans';
 
 @emSize      : 14px;
-@fontSize    : 13px;
 
 @primaryColor: @blue;
 @secondaryColor: @pink;

@@ -15,6 +15,10 @@ namespace pxsim.visuals {
             svg.addClass(this.outerElement, "sim-pin-touch");
             this.addButtonEvents();
 
+            if ((this.pin as pins.CommonPin).used) {
+                accessibility.makeFocusable(this.outerElement);
+                accessibility.setAria(this.outerElement, "button", this.outerElement.firstChild.textContent);
+            }
 
             // Init the gradient controls
             // const gid = `gradient-${CPlayPinName[id]}-level`;
@@ -68,6 +72,20 @@ namespace pxsim.visuals {
 
                 (pxtcore.getTouchButton(this.id - 1) as CommonButton).setPressed(false);
             })
+            accessibility.enableKeyboardInteraction(this.outerElement, 
+                () => {
+                    this.pin.touched = true;
+                    svg.addClass(this.outerElement, "touched");
+
+                    (pxtcore.getTouchButton(this.id - 1) as CommonButton).setPressed(true);
+                },
+                () => {
+                    this.pin.touched = false;
+                    svg.removeClass(this.outerElement, "touched");
+
+                    (pxtcore.getTouchButton(this.id - 1) as CommonButton).setPressed(false);
+                }
+            );
         }
 
         private addLevelControlEvents() {

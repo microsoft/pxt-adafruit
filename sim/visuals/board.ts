@@ -493,7 +493,7 @@ namespace pxsim.visuals {
 
                 accessibility.enableKeyboardInteraction(this.slideSwitch, null, () => this.slideSwitchHandler());
                 accessibility.makeFocusable(this.slideSwitch);
-                this.updateSwitchAria();
+                this.renderSwitchAria();
 
                 this.element.getElementById(`SLIDE_HOUSING`).addEventListener(pointerEvents.up, ev => this.slideSwitchHandler())
                 this.element.getElementById(`SLIDE_INNER`).addEventListener(pointerEvents.up, ev => this.slideSwitchHandler())
@@ -515,10 +515,10 @@ namespace pxsim.visuals {
                 switchSlide.removeAttribute("transform");
             }
 
-            this.updateSwitchAria();
+            this.renderSwitchAria();
         }
 
-        private updateSwitchAria() {
+        private renderSwitchAria() {
             let status = this.board.slideSwitchState.isLeft() ? "On" : "Off";
             accessibility.setAria(this.slideSwitch, "button", "On/Off Switch. Current state : " + status);
             this.slideSwitch.setAttribute("aria-pressed", this.board.slideSwitchState.isLeft().toString());

@@ -50,6 +50,29 @@
     -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
 }
 
+/* High contrast */
+.hc {
+    #downloadArea {
+        background: transparent !important;
+    }
+
+    .ui.inverted.input input,
+    .ui.projectname-input.input input {
+        border: black 1px solid !important;
+        color: black !important;
+        background-color: white !important
+    }
+
+    #menubar .ui.menu.fixed .ui.item.editor-menuitem .item:not(.active) {
+        opacity: 1;
+    }
+
+    #menubar .ui.menu.inverted.fixed .ui.item.editor-menuitem .active.item,
+    #menubar .ui.menu.projectname-input.fixed .ui.item.editor-menuitem .active.item {
+        color: white !important;
+    }
+} 
+
 /* Mobile */
 @media only screen and (max-width: @largestMobileScreen) {
     #filelist {

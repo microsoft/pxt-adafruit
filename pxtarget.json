@@ -280,6 +280,7 @@
         "usbHelp": [],
         "extendEditor": true,
         "disableBlockIcons": true,
+        "highContrast": true,
         "socialOptions": {
             "twitterHandle": "adafruit",
             "orgTwitterHandle": "MSMakeCode",

@@ -18,7 +18,7 @@ Want to build a fun device to PRANK your friends? Make this box to easily douse 
 * 3 crocodile clips to male connector wires (alternatively simply connect crocodile clips to wires)
 * USB cable
 
-### New stuff
+### Supplies
 * 2 suction cups
 * Tissue paper/Confetti (or another material you’d like to dumb on your friends…we’ve found plastic spoons work rather nicely as well)
 * Markers/stickers (optional for decoration)

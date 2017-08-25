@@ -62,3 +62,15 @@ Fun games to build with your @boardname@.
   "imageUrl":"/static/cp/projects/reaction.jpg"
 }]
 ```
+
+## Prank boxes 
+
+Fun tricks to play on your friends. 
+
+```codecard 
+[{ 
+  "name": "Rube Goldberg",
+  "url":"/projects/rube-goldberg",
+  "imageUrl":"/static/cp/projects/rube-goldberg.jpg"
+}]
+```

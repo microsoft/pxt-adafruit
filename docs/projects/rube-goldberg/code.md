@@ -1,7 +1,7 @@
 # Coding the Rube Goldberg box
 
 ### ~avatar avatar 
-Use a force sensor to trigger a servo that drops a rolling weight. The weight hits a button which starts a fan to blow out confetti everywhere.
+Use a force sensor to trigger a servo that drops a rolling weight. The weight hits a button which starts a fan, blowing out confetti everywhere.
 ### ~ 
 
 ### Duration: ~25 minutes 
@@ -26,13 +26,13 @@ loops.pause(0)
 
 ### ``|Step 1|`` - Get the logic setup
 
-First, we'll setup some code to get us started.
+First, we'll set up some code to get us started.
 
 1. Open [MakeCode](@homeurl@) in your web browser.
 2. From **LOOPS** drag a ``||loops:forever||`` loop out.
-3. In **LOGIC** grab a ``||logic:if then else||`` block an put it in the ``||loops:forever||`` block.
+3. In **LOGIC** grab a ``||logic:if then else||`` block and put it in the ``||loops:forever||`` block.
 4. Again, from **LOGIC**, pull out the ``||logic:0 < 0||`` conditional and replace ``true`` in the condition for the ``||logic:if then else||`` block.
-5. change the condition from ``<`` to ``>``.
+5. Change the condition from ``<`` to ``>``.
 
 ```blocks
 loops.forever(function () {
@@ -106,7 +106,7 @@ So that you can keep running the prank over again, let's have the box reset itse
 1. Pull out a ``||loops.pause||`` block from **LOOPS** and place it under the last ``||pins:servo write pin||``.
 2. Change the time to ``3000`` milliseconds. This gives the weight some time to roll down before the holder comes back.
 
-3. In **LOOPS**, find ``||loops:on start||`` and pull it out onto the workspace somewhere. Goto **VARIABLES** and drag a ``||variables:set to||`` into ``||loops:on start||``. Rename the variable from ``item`` to ``reset``. Go into **LOGIC** and pick up a ``true``. Drag it over to the ``||variables:set to||`` and replace the ``0`` with it.
+3. In **LOOPS**, find ``||loops:on start||`` and pull it out onto the workspace somewhere. Go to **VARIABLES** and drag a ``||variables:set to||`` into ``||loops:on start||``. Rename the variable from ``item`` to ``reset``. Go into **LOGIC** and pick up a ``true``. Drag it over to the ``||variables:set to||`` and replace the ``0`` with it.
 4. Get an ``||logic:if then||`` block and put it in the ``||logic:if||`` part of the outer ``||logic:if then else||``.
 5. Get another ``||variables:set to||`` and put it in the new ``||logic:if then||``. Go to the dropdown and change the variable name to ``reset``. This time get a ``false`` from **LOGIC** and stick it in this ``||variables:set to||``.
 6. Finally, drag the ``||light:show ring||`` and ``||pins:servo write pin||`` into the inner  ``||logic:if then||``.

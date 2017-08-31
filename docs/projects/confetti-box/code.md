@@ -85,7 +85,7 @@ loops.forever(function () {
 
 For extra effect, you can play a tone when the loud sound is detected. In **MUSIC** the ``||music:play sound||`` block lets you to choose from a variety of premade tunes. Pick one and try it out! Place it in the ``||logic:if||`` part of the ``||logic:if then else||`` statement.
 
-Download the code again to the @boardname@ to add this extra effect.
+Download the code again to the @boardname@ to add some flare!
 
 ```blocks
 loops.forever(function () {
@@ -107,4 +107,4 @@ loops.forever(function () {
 
 ## Good work!
 
-You’ve finished! Fill your box with confetti, tissue paper, or some other very light material. Then, hang it on a door or window and wait for your unsuspecting victim to enter. When they do, clap loudly and watch as confetti spills down onto them. PRANKED!
+You’ve finished! Fill your box with confetti, tissue paper, or another light-weight material. Then, hang it on a door or window and wait for your unsuspecting victim to enter. When they do, clap loudly and watch as confetti spills down onto them. PRANKED!

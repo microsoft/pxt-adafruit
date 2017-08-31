@@ -27,7 +27,7 @@ Using the glue gun, stick these pieces together to form a box shape.
 ## Step 2: Add the box base
 
 Cut out a rectangular piece of cardboard measuring 6 inches by 6.5 inches.
-Then, cut out a 3.5 inch by 3.5 inch square in the center of your base piece. This allows the confetti to fall through onto your friends! Make sure to keep the small 3.5 by 3.5 piece you just cut out...we will be using that later.
+Then, cut out a 3.5 inch by 3.5 inch square in the center of your base piece. This allows the confetti to fall through onto your friends! Make sure to keep the small 3.5 by 3.5 piece you just cut out... We'll be using that later.
  
 ![Cut out the base of the box](/static/cp/projects/confetti-box/box-base.jpg)
 **Cut out the base of the box**
@@ -39,9 +39,9 @@ Now, glue the base to your box frame.
 
 ## Step 3: Mount the servo
 
-Take the the servo and twist it counterclockwise until it can't twist anymore. This will make sure that the servo is in the 180° position and will give the enough distance to turn when we want to rotate our cardboard piece clockwise.
+Take the the servo and twist it counterclockwise until there is resistence and you're unable to turn it any further. This will make sure that the servo is in the 180° position and will give the servo enough distance to turn when we want to rotate our cardboard piece clockwise.
 
-Glue the 3.5 inch by 3.5 inch square leftover piece onto the servo. Stick it to the servo  so that it will mostly cover the bottom of the box but will be able to spin so it can open the hole at the bottom of the box.
+Glue the 3.5 inch by 3.5 inch square leftover piece onto the servo. Stick it to the servo so that it will mostly cover the bottom of the box but will be able to spin so it can open the hole at the bottom of the box.
 
 ![Mount servo to the door](/static/cp/projects/confetti-box/servo-mount-1.jpg)
 **Mount the servo to the door piece**
@@ -109,7 +109,7 @@ Use stickers, markers, tissue paper, or anything else you have, to decorate the 
 ## Complete!
 
 Congratulations! You have completed the confetti box make challenge. 
-Ready to do some coding? OK, good...connect the @boardname@ to your computer to get started.
+Ready to do some coding? OK, good... Connect the @boardname@ to your computer to get started.
  
 ### ~button /projects/confetti-box/code
 

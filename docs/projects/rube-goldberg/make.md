@@ -14,8 +14,8 @@ Let's make a Rube Goldberg machine that blows a confetti surprise at the end!
 **Goal:** We need a chute to drop a weight down to turn on the fan.<br/>
 **Materials:** scrap cardboard, hot glue, scissors
 
-1. With your scrap cardboard, measure and cut 3 rectangles: 10 inches long by 1.5 inches wide.
-2. Hot glue the long edges together to form an open _chute_.
+1. With your scrap cardboard, measure and cut 3 rectangles that are all 10 inches long by 1.5 inches wide.
+2. Hot glue the long edges together to form an open _chute_, so that your chute mimics a box without its fourth side. 
 3. Cut one smaller square, about 1.5 inches by 1.5 inches, and glue it to the bottom of the chute.
 
 ![Parts for making the chute](/static/cp/projects/rube-goldberg/chute-parts.jpg)
@@ -25,7 +25,7 @@ Let's make a Rube Goldberg machine that blows a confetti surprise at the end!
 **Goal:** The servo needs to hold the weight up and release the weight down the chute.<br/>
 **Materials:** servo, popsicle sticks, hot glue, cylindrical weight
 
-First, start by opening your servo package. Inside you will probably find multiple extensions for the servo. Choose one that has only one arm.
+First, start by opening your servo package. Inside you will probably find multiple extensions for the servo. Choose the one that has only one arm.
 
 ![Glue the chute together](/static/cp/projects/rube-goldberg/glue-chute.jpg)
 **Glue the chute together**
@@ -72,7 +72,7 @@ Use scissors to pry off the clip on the back of your battery pack. Remove any re
 **Attach the battery pack**
 
 ## ``|Step 5|`` - Set up the fan
-**Goal:** Wire up the fan and connect it's batteries.<br/>
+**Goal:** Wire up the fan and connect its batteries.<br/>
 **Materials:** jumper wires, alligator clips, fan, batteries for fan
 
 **Note:** if the fan you’re using requires multiple batteries (if your fan needs more voltage to run than just one battery) you must connect them in series. To do so, use an alligator clip to connect the positive on one to the negative on the other (white alligator clip). Now one battery will be left with an open (+)(red) and the other with a (-)(green). These are the new power (positive) and ground (negative) terminals.
@@ -88,7 +88,7 @@ Use scissors to pry off the clip on the back of your battery pack. Remove any re
 **Goal:** Connect the force sensor so it will start the servo.<br/>
 **Materials:** ribbons, force sensor, alligator clips, hot glue
 
-1. First decorate the force sensor to disguise it. Be creative, have fun! Here we used ribbon bows.
+1. First decorate the force sensor to disguise it. Have fun- be creative! Here we used ribbon bows.
 2. Connect an alligator clip to each of the two connections
 
 ![force sensor parts](/static/cp/projects/rube-goldberg/force-sensor-parts.jpg)

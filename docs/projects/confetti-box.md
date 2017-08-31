@@ -20,7 +20,7 @@ Want to build a fun device to PRANK your friends? Make this box to easily douse 
 
 ### Supplies
 * 2 suction cups
-* Tissue paper/Confetti (or another material you’d like to dumb on your friends…we’ve found plastic spoons work rather nicely as well)
+* Tissue paper/Confetti (or another material you’d like to dump on your friends… We’ve found that plastic spoons work rather nicely as well)
 * Markers/stickers (optional for decoration)
 
 ### Recycled items

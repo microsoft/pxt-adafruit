@@ -49,7 +49,7 @@ Glue the 3.5 inch by 3.5 inch square leftover piece onto the servo. Stick it to 
 ![Mount servo to the door](/static/cp/projects/confetti-box/servo-mount-2.jpg)
 **The servo turns to open the drop hole**
 
-Cut **three** 1 inch by 1.5 inch pieces of cardboard. Stack and glue them together. Do the same thing again but with three 1 inch by 2 inch pieces of cardboard. Finally, bring the two stacks of cardboard together at a right angle and glue them together. This forms an angle bracket to mount your servo.
+Cut **three** 1 inch by 1.5 inch pieces of cardboard. Stack and glue them together. Do the same thing again but with **three** 1 inch by 2 inch pieces of cardboard. Finally, bring the two stacks of cardboard together at a right angle and glue them together. This forms an angle bracket to mount your servo.
 
 ![Angle bracket](/static/cp/projects/confetti-box/angle-bracket.jpg)
 **Angle bracket**
@@ -69,7 +69,7 @@ Make sure its position allows the cardboard to cover the hole and, as the servo 
 
 ## Step 4: Create a funnel
 
-Cut out **two** 6 inch by 6 inch pieces of cardboard and two 6 inch by 2.75 inch pieces of cardboard. Place them inside the box so they create a funnel leading to the bottom hole. This helps the confetti fall smoothly out of the box.
+Cut out **two** 6 inch by 6 inch pieces of cardboard and **two** 6 inch by 2.75 inch pieces of cardboard. Place them inside the box so they create a funnel leading to the bottom hole. This helps the confetti fall smoothly out of the box.
 
 ![The funnel pieces](/static/cp/projects/confetti-box/funnel-parts.jpg)
 **The funnel pieces**

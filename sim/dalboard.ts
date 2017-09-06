@@ -48,6 +48,8 @@ namespace pxsim {
         touchButtonState: TouchButtonState;
         irState: InfraredState;
 
+        invertAccelerometerYAxis = true;
+
         view: SVGSVGElement;
 
         constructor() {

@@ -851,7 +851,7 @@ namespace pxsim.visuals {
                 let z2 = 1023 * 1023 - x * x - y * y;
                 let z = Math.floor((z2 > 0 ? -1 : 1) * Math.sqrt(Math.abs(z2)));
 
-                state.accelerometerState.accelerometer.update(x, y, z);
+                state.accelerometerState.accelerometer.update(-x, y, z);
                 this.updateTilt();
             }, false);
             this.element.addEventListener(pointerEvents.leave, (ev: MouseEvent) => {
@@ -872,7 +872,7 @@ namespace pxsim.visuals {
                             accy = 0;
                             accz = -1023;
                         }
-                        state.accelerometerState.accelerometer.update(accx, accy, accz);
+                        state.accelerometerState.accelerometer.update(accx, -accy, accz);
                         this.updateTilt();
                     }, 50)
                 }

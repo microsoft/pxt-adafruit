@@ -74,11 +74,11 @@ namespace pxsim.visuals {
         }
 
         .sim-text {
-        font-family:"Lucida Console", Monaco, monospace;
-        font-size:8px;
-        fill:#fff;
-        pointer-events: none; user-select: none;
-    }
+            font-family:"Lucida Console", Monaco, monospace;
+            font-size:8px;
+            fill:#fff;
+            pointer-events: none; user-select: none;
+        }
         .sim-text.small {
             font-size:6px;
         }
@@ -87,10 +87,10 @@ namespace pxsim.visuals {
         }
 
         .sim-text-pin {
-        font-family:"Lucida Console", Monaco, monospace;
-        font-size:5px;
-        fill:#fff;
-        pointer-events: none;
+            font-family:"Lucida Console", Monaco, monospace;
+            font-size:5px;
+            fill:#fff;
+            pointer-events: none;
         }
 
         .sim-thermometer {
@@ -184,6 +184,19 @@ namespace pxsim.visuals {
         .sim-wireframe .sim-board {
             stroke-width: 2px;
         }
+        *:focus {
+            outline: none;
+        }
+        .sim-button-outer:focus,
+        .sim-slide-switch:focus,
+        .sim-pin:focus,
+        .sim-thermometer:focus,
+        .sim-button-group:focus .sim-button-outer,
+        .sim-light-level-button:focus,
+        .sim-sound-level-button:focus {
+            stroke: #4D90FE;
+            stroke-width: 2px !important;
+         }
         .no-drag {
             user-drag: none;
             user-select: none;
@@ -982,7 +995,7 @@ namespace pxsim.visuals {
                 let z2 = 1023 * 1023 - x * x - y * y;
                 let z = Math.floor((z2 > 0 ? -1 : 1) * Math.sqrt(Math.abs(z2)));
 
-                state.accelerometerState.accelerometer.update(x, y, z);
+                state.accelerometerState.accelerometer.update(-x, y, z);
                 this.updateTilt();
             }, false);
             this.element.addEventListener(pointerEvents.leave, (ev: MouseEvent) => {
@@ -1003,7 +1016,7 @@ namespace pxsim.visuals {
                             accy = 0;
                             accz = -1023;
                         }
-                        state.accelerometerState.accelerometer.update(accx, accy, accz);
+                        state.accelerometerState.accelerometer.update(accx, -accy, accz);
                         this.updateTilt();
                     }, 50)
                 }

@@ -22,6 +22,7 @@ In a common folder,
 ```
 npm install
 typings install
+jake
 ```
 
 * go to ``pxt-common-packages`` and run

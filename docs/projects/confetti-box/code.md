@@ -24,7 +24,7 @@ loops.pause(0)
 ``` 
 ## Let's code it!
 
-### Step 1: Testing the servo
+### ``|Step 1|`` - Testing the servo
 
 1. Open [MakeCode](@homeurl@) in your web browser.
 2. From **PINS**, drag out a ``||pins:servo write||`` block, and place it inside a ``||loops:forever||`` loop to change the position of the servo. Make sure you set the pin to ``A1``. The servo can only turn between 0° and 180°, so try playing around with values inside that range and watch the servo turn. To close the door, a value of about 180° should work. Also, to open the door, a value of about 90° should work well.
@@ -36,7 +36,7 @@ loops.forever(function () {
 })
 ```
 
-### Step 2: Sound sensing
+### ``|Step 2|`` - Sound sensing
 
 1. In **LOGIC**, find the ``||logic:if then else||`` block. Drag the block and place it inside a ``||loops:forever||`` loop. Also from **LOGIC** grab a comparison, ``||logic:0 < 0||``, block and set it to the greater than symbol. Finally, from **INPUT** take a ``||input:sound level||`` block and place it inside the comparison block. 
 
@@ -58,7 +58,7 @@ loops.forever(function () {
 })
 ```
 
-### Step 3: Putting it together
+### ``|Step 3|`` - Putting it together
 
 1. From **PINS** drag two ``||pins:servo write||`` blocks into the workspace. Place one ``||pins:servo write||`` block into the ``||logic:if||`` part and the other into the ``||logic:else||`` part of the ``||logic:if then else||`` statement.
 2. The door should open when a loud sound is heard, so set one ``||pins:servo write||`` block to turn the servo to 180° (closing the door) and the other to 90° (opening the door). 
@@ -81,7 +81,7 @@ loops.forever(function () {
     }
 })
 ```
-### Step 4: Play a tone
+### ``|Step 4|`` - Play a tone
 
 For extra effect, you can play a tone when the loud sound is detected. In **MUSIC** the ``||music:play sound||`` block lets you to choose from a variety of premade tunes. Pick one and try it out! Place it in the ``||logic:if||`` part of the ``||logic:if then else||`` statement.
 

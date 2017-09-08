@@ -10,7 +10,7 @@ Let's make a confetti drop box for your @boardname@!
 
 ### Duration: ~1 hour and 10 minutes 
 
-## Step 1: Cut the cardboard and glue the frame
+## ``|Step 1|`` - Cut the cardboard and glue the frame
 To make the sides of the box frame, cut **four** 6 inch by 6 inch pieces of cardboard.
 
 ![Cutting the cardboard sides](/static/cp/projects/confetti-box/cut-cardboard.jpg)
@@ -24,7 +24,7 @@ Using the glue gun, stick these pieces together to form a box shape.
 ![All four sides glued](/static/cp/projects/confetti-box/four-sides.jpg)
 **All four sides glued**
 
-## Step 2: Add the box base
+## ``|Step 2|`` - Add the box base
 
 Cut out a rectangular piece of cardboard measuring 6 inches by 6.5 inches.
 Then, cut out a 3.5 inch by 3.5 inch square in the center of your base piece. This allows the confetti to fall through onto your friends! Make sure to keep the small 3.5 by 3.5 piece you just cut out... We'll be using that later.
@@ -34,12 +34,22 @@ Then, cut out a 3.5 inch by 3.5 inch square in the center of your base piece. Th
 
 Now, glue the base to your box frame.
 
-![All four sides together](/static/cp/projects/confetti-box/base-to-box.jpg)
+![The base glued to the box](/static/cp/projects/confetti-box/base-to-box.jpg)
 **Glue the base to the box**
 
-## Step 3: Mount the servo
+## ``|Step 3|`` - Make an angle bracket
 
-Take the the servo and twist it counterclockwise until there is resistence and you're unable to turn it any further. This will make sure that the servo is in the 180° position and will give the servo enough distance to turn when we want to rotate our cardboard piece clockwise.
+Cut **three** 1 inch by 1.5 inch pieces of cardboard. Stack and glue them together. Do the same thing again but with **three** 1 inch by 2 inch pieces of cardboard. Finally, bring the two stacks of cardboard together at a right angle and glue them together. This forms an angle bracket to mount your servo.
+
+![Angle bracket](/static/cp/projects/confetti-box/angle-bracket.jpg)
+**Angle bracket**
+
+![Angle bracket side view](/static/cp/projects/confetti-box/angle-bracket-side.jpg)
+**Angle bracket side look**
+
+## ``|Step 4|`` - Mount the servo
+
+Take the the servo and twist it counterclockwise until there is resistance and you're unable to turn it any further. This will make sure that the servo is in the 180° position and will give the servo enough distance to turn when we want to rotate our cardboard piece clockwise.
 
 Glue the 3.5 inch by 3.5 inch square leftover piece onto the servo. Stick it to the servo so that it will mostly cover the bottom of the box but will be able to spin so it can open the hole at the bottom of the box.
 
@@ -48,11 +58,6 @@ Glue the 3.5 inch by 3.5 inch square leftover piece onto the servo. Stick it to 
 
 ![Mount servo to the door](/static/cp/projects/confetti-box/servo-mount-2.jpg)
 **The servo turns to open the drop hole**
-
-Cut **three** 1 inch by 1.5 inch pieces of cardboard. Stack and glue them together. Do the same thing again but with **three** 1 inch by 2 inch pieces of cardboard. Finally, bring the two stacks of cardboard together at a right angle and glue them together. This forms an angle bracket to mount your servo.
-
-![Angle bracket](/static/cp/projects/confetti-box/angle-bracket.jpg)
-**Angle bracket**
 
 Glue one end of your cardboard bracket to the edge of the box and the other end to the servo. 
 
@@ -64,10 +69,13 @@ Make sure its position allows the cardboard to cover the hole and, as the servo 
 ![Dropout hole in the closed position](/static/cp/projects/confetti-box/drop-hole-closed.jpg)
 **Dropout hole in the closed position**
 
+![Dropout hole in the closed position](/static/cp/projects/confetti-box/drop-hole-closed-2.jpg)
+**Dropout hole in the closed position other side**
+
 ![Check the that the hole will open](/static/cp/projects/confetti-box/drop-hole-open.jpg)
 **Check the that the hole will open**
 
-## Step 4: Create a funnel
+## ``|Step 5|`` - Create a funnel
 
 Cut out **two** 6 inch by 6 inch pieces of cardboard and **two** 6 inch by 2.75 inch pieces of cardboard. Place them inside the box so they create a funnel leading to the bottom hole. This helps the confetti fall smoothly out of the box.
 
@@ -79,14 +87,14 @@ Ok, now glue them into place.
 ![The funnel sides attached](/static/cp/projects/confetti-box/funnel-sides.jpg)
 **The funnel sides attached**
 
-## Step 5: Add suction cups
+## ``|Step 6|`` - Add suction cups
 
 Glue the two suction cups to the side of the box. These let you mount your box on windows, doors, etc.
 
 ![Stick on the suction cups](/static/cp/projects/confetti-box/suction-cups.jpg)
 **Stick on the suction cups**
 
-## Step 6: Add circuit playground and battery pack
+## ``|Step 7|`` - Add circuit playground and battery pack
 
 It's time to connect the box to our @boardname@:
 
@@ -102,7 +110,7 @@ Secure the circuit playground to the side of the box using a piece of tape. Atta
 ![Completed confetti box](/static/cp/projects/confetti-box/finished-box.jpg)
 **The completed Confetti Box**
 
-## Step 7: Decorate!
+## ``|Step 8|`` - Decorate!
 
 Use stickers, markers, tissue paper, or anything else you have, to decorate the box. This gives your box a bit of a personal touch.
 

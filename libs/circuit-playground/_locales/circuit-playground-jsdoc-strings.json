@@ -1,4 +1,5 @@
 {
+  "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
   "input.ambientColor": "Sense the ambient color using the LED pixel next to the LED sensor.",
   "light": "Functions to operate colored LEDs.\n\nFunctions to operate colored LEDs.",
   "light.showRing": "Shows a pattern of colors on the pixel ring",

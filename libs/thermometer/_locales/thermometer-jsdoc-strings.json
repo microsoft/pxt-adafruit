@@ -1,4 +1,5 @@
 {
+  "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
   "input.onTemperatureConditionChanged": "Run some code when the temperature changes from hot to cold, or from cold to hot.",
   "input.onTemperatureConditionChanged|param|condition": "the condition, hot or cold, the event triggers on",
   "input.onTemperatureConditionChanged|param|temperature": "the temperature at which this event happens, eg: 15",

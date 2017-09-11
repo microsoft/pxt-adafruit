@@ -1,6 +1,6 @@
 # Code
 
-### ~avatar avatar
+## ~avatar avatar
 
 Make your @boardname@ a hot potato
 

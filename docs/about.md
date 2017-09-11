@@ -2,7 +2,7 @@
 
 Welcome to the **Microsoft MakeCode** editor for the **@boardname@**!
 
-### ~ hint
+## ~ hint
 
 Heads up! This editor only works for the Circuit Playground **Express**, not the **Classic**.
 

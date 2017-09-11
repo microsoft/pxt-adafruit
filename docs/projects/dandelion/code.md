@@ -1,7 +1,7 @@
 # Coding the Dandelion
-### @description @boardname@ dandelion: coding challenge
+## @description @boardname@ dandelion: coding challenge
 
-### ~avatar avatar
+## ~avatar avatar
 Use the sound sensor to change the brightness of the pixels when you blow on it
 ### ~
 

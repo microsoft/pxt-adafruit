@@ -1,8 +1,8 @@
 # Make
 
-### @description Maker Project for Watch Timer
+## @description Maker Project for Watch Timer
 
-### ~avatar avatar
+## ~avatar avatar
 
 Make a watch timer with your @boardname@
 

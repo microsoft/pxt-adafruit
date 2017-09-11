@@ -1,6 +1,6 @@
 # Code
 
-### ~avatar avatar
+## ~avatar avatar
 
 Make a watch timer with your @boardname@
 

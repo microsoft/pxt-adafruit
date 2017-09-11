@@ -1,7 +1,7 @@
 # Making the Headlamp
-### @description Maker Project for the Headlamp
+## @description Maker Project for the Headlamp
 
-### ~avatar avatar
+## ~avatar avatar
 
 Make a headlamp out of your @boardname@
 

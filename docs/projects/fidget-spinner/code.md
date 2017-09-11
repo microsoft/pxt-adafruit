@@ -1,6 +1,6 @@
 # Code
 
-### ~avatar avatar
+## ~avatar avatar
 
 Light up your fidget spinner
 

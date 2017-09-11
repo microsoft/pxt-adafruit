@@ -1,8 +1,8 @@
 # Make
 
-### @description Maker Project for Hot Potato
+## @description Maker Project for Hot Potato
 
-### ~avatar avatar
+## ~avatar avatar
 
 Make your @boardname@ a hot potato
 

@@ -1,6 +1,6 @@
 # Coding for your reaction game 
 
-### ~avatar avatar 
+## ~avatar avatar 
 Using the infrared signalling on the @boardname@, let's create a game to play with a friend! 
 ### ~ 
 

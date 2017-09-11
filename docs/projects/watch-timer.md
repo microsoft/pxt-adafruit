@@ -1,8 +1,8 @@
 # Watch Timer
 
-### @description An advanced maker activity where you turn your @boardname@ into a simple countdown timer
+## @description An advanced maker activity where you turn your @boardname@ into a simple countdown timer
 
-### ~avatar avatar
+## ~avatar avatar
 
 Make a watch timer with your @boardname@
 

@@ -1,5 +1,5 @@
 # Coding the Lucky Wheel
-### ~avatar avatar
+## ~avatar avatar
 
 Make your @boardname@ into a tool for choosing a random number
 

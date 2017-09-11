@@ -1,7 +1,7 @@
 # Coding the Magic wand
-### @description @boardname@ magic wand: coding challenge
+## @description @boardname@ magic wand: coding challenge
 
-### ~avatar avatar
+## ~avatar avatar
 Use the on shake event to play a sound and animation when we shake the magic wand
 ### ~
 

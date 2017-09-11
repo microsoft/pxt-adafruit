@@ -1,7 +1,7 @@
 # Making the Magic Wand
-### @description Maker Project for creating a Magic Wand for @boardname@
+## @description Maker Project for creating a Magic Wand for @boardname@
 
-### ~avatar avatar
+## ~avatar avatar
 
 Make the Magic wand for your @boardname@
 

@@ -1,8 +1,8 @@
 # Make
 
-### @description Maker Project for Fidget Spinner
+## @description Maker Project for Fidget Spinner
 
-### ~avatar avatar
+## ~avatar avatar
 
 Trace and cut your Fidget Spinner from cardboard!
 

@@ -5,7 +5,7 @@
 
 Make a headlamp out of your @boardname@
 
-### ~
+## ~
 
 ## Duration: ~15 minutes
 

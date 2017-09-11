@@ -4,7 +4,7 @@
 
 Make your @boardname@ a hot potato
 
-### ~
+## ~
 
 Let's build code for animation and music in the @boardname@ which is our hot potato. When the animation stops the player holding the hot potato is out.
 

@@ -6,7 +6,7 @@
 
 Make a @boardname@ magic wand with this guided tutorial!
 
-### ~
+## ~
 
 https://youtu.be/Us-tH3SP8XE
 

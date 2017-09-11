@@ -3,7 +3,7 @@
 
 Make your @boardname@ into a tool for choosing a random number
 
-### ~
+## ~
 
 Feeling lucky? Let's create a spinning wheel that chooses a random number between 1 and 10!
 

@@ -5,7 +5,7 @@
 
 Make the Dandelion for your @boardname@
 
-### ~
+## ~
 
 ## Duration: ~20 minutes
 

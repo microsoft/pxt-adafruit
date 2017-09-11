@@ -4,7 +4,7 @@
 
 Do you want to build your own stroboscopic fidget spinner?
 
-### ~
+## ~
 
 https://youtu.be/oIiwwjQPurU
 

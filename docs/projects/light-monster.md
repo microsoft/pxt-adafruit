@@ -2,7 +2,7 @@
 
 ## ~ avatar avatar 
 Make a monster that opens its mouth based on light! 
-### ~ 
+## ~ 
 
 ![Light Monster](/static/cp/projects/light-monster.JPG)
 

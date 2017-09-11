@@ -6,7 +6,7 @@
 
 Trace and cut your Fidget Spinner from cardboard!
 
-### ~
+## ~
 
 Follow the video instructions below to build the fidget spinner.
 

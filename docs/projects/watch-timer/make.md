@@ -6,7 +6,7 @@
 
 Make a watch timer with your @boardname@
 
-### ~
+## ~
 
 ## Duration: ~15 minutes
 

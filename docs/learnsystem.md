@@ -6,7 +6,7 @@ Lessons and activites adapted from https://learn.adafruit.com/
 
 Work in progress. These lessons are adapted for testing purposes.
 
-### ~
+## ~
 
 * [Beep Beep](/learnsystem/beep-beep)
 * [Digital Input](/learnsystem/digital-input)

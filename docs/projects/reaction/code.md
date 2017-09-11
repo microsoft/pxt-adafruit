@@ -2,7 +2,7 @@
 
 ## ~avatar avatar 
 Using the infrared signalling on the @boardname@, let's create a game to play with a friend! 
-### ~ 
+## ~ 
 
 ## Duration: ~10 minutes 
 

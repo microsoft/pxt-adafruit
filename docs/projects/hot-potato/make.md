@@ -6,7 +6,7 @@
 
 Make your @boardname@ a hot potato
 
-### ~
+## ~
 
 ## Duration: ~15 minutes
 

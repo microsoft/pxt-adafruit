@@ -4,7 +4,7 @@
 
 Light up your fidget spinner
 
-### ~
+## ~
 
 ## Duration: ~45 minutes
 

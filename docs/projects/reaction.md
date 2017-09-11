@@ -2,7 +2,7 @@
 
 ## ~ avatar avatar 
 Create a fun game to play with a friend to determine who has the fastest reaction! Who will make the other's @boardname@ change colors?
-### ~ 
+## ~ 
 
 ## Duration 
 

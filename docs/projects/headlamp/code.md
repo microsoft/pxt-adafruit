@@ -3,7 +3,7 @@
 
 ## ~avatar avatar
 Use the light sensor to automatically turn the lamp on and off
-### ~
+## ~
 
 **Concepts:**
   * Sensors (Light)

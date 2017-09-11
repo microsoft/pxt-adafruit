@@ -5,7 +5,7 @@
 
 Make the Magic wand for your @boardname@
 
-### ~
+## ~
 
 ## Duration: ~30 minutes
 

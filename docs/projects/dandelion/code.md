@@ -3,7 +3,7 @@
 
 ## ~avatar avatar
 Use the sound sensor to change the brightness of the pixels when you blow on it
-### ~
+## ~
 
 **Concepts:**
   * Sensors (Sound)

@@ -6,7 +6,7 @@
 
 Make a @boardname@ dandelion with this guided tutorial!
 
-### ~
+## ~
 
 https://youtu.be/tC1LOeh2jzs
 

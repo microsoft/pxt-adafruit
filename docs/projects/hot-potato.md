@@ -6,7 +6,7 @@
 
 Make your @boardname@ a hot potato
 
-### ~
+## ~
 
 ## What is the hot potato game?
 

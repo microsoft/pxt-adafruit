@@ -5,7 +5,7 @@
 
 Make a Lucky Wheel with your @boardname@
 
-### ~
+## ~
 
 ## Duration: ~30 minutes
 

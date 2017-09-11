@@ -5,7 +5,7 @@
 
 Let's make the wristband for @boardname@! 
 
-### ~
+## ~
 
 ## Duration: ~ 1 hour 
 

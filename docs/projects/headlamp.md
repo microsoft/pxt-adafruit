@@ -6,7 +6,7 @@
 
 Make an automatic @boardname@ headlamp with this guided tutorial!
 
-### ~
+## ~
 
 ## Duration
 

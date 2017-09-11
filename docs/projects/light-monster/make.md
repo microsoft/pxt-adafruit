@@ -5,7 +5,7 @@
 
 Let's build the Light Monster for your @boardname@! 
 
-### ~
+## ~
 
 ## Duration: ~1 hour 
 

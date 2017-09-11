@@ -4,7 +4,7 @@
 
 Make a watch timer with your @boardname@
 
-### ~
+## ~
 
 Let's make the code to get your watch timer working.
 

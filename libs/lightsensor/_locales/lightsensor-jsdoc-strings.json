@@ -1,4 +1,5 @@
 {
+  "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
   "input.lightLevel": "Read the light level applied to the LED screen in a range from 0 (dark) to 255 (bright).",
   "input.onLightConditionChanged": "Register an event that runs when light conditions (darker or brighter) change.",
   "input.onLightConditionChanged|param|condition": "the condition that event triggers on",

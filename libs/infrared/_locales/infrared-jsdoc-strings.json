@@ -1,11 +1,11 @@
 {
   "network": "Infrared tranmission and reception",
   "network.infraredPacket": "Get most recent packet received over IR.",
-  "network.infraredSendNumber": "Sends a numbers over the infrared transmitter diode",
-  "network.infraredSendNumbers": "Sends an array of numbers of infrared. The combined size of the array should be less or equal to 32 bytes.",
+  "network.infraredSendNumber": "Send a number over the infrared transmitter.",
+  "network.infraredSendNumbers": "Send an array of numbers over infrared. The array size has to be 32 bytes or less.",
   "network.infraredSendNumber|param|value": "number to send",
   "network.infraredSendPacket": "Send data over IR.",
   "network.onInfraredError": "Run action after there's an error reciving packet over IR.",
   "network.onInfraredPacket": "Run action after a packet is recieved over IR.",
-  "network.onInfraredPacketReceived": "Registers code to run when the infrared receives a packet."
+  "network.onInfraredPacketReceived": "Run some code when the infrared receiver gets a packet."
 }

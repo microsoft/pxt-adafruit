@@ -1,4 +1,5 @@
 {
+  "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
   "input.acceleration": "Get the acceleration value in milli-gravitys (when the board is laying flat with the screen up,\nx=0, y=0 and z=-1023)",
   "input.acceleration|param|dimension": "TODO",
   "input.onGesture": "Do something when when a gesture is done (like shaking the board).",

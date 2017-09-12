@@ -128,10 +128,10 @@ namespace pxt.editor {
           this.paletteButtons.push(btn);
         })
 
-      this.fieldGroup_.appendChild(this.boardElement);
+      if (this.fieldGroup_) this.fieldGroup_.appendChild(this.boardElement);
 
       // Hide the borderRect since we're not using it.
-      (this.borderRect_ as HTMLElement).style.display = 'none';
+      //(this.borderRect_ as HTMLElement).style.display = 'none';
     }
 
     private isInFlyout() {

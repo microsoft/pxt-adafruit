@@ -63,14 +63,18 @@ Fun games to build with your @boardname@.
 }]
 ```
 
-## Prank boxes 
+## Pranks
 
-Fun tricks to play on your friends. 
+Fun tricks to play on your friends.
 
-```codecard 
+```codecard
 [{ 
   "name": "Rube Goldberg",
   "url":"/projects/rube-goldberg",
   "imageUrl":"/static/cp/projects/rube-goldberg.jpg"
+}, {
+  "name": "Confetti box", 
+  "url":"/projects/confetti-box",
+  "imageUrl":"/static/cp/projects/confetti-box.jpg"
 }]
 ```

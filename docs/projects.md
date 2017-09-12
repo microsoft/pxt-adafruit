@@ -62,3 +62,15 @@ Fun games to build with your @boardname@.
   "imageUrl":"/static/cp/projects/reaction.jpg"
 }]
 ```
+
+## Pranks
+
+Fun tricks to play on your friends.
+
+```codecard
+[{
+  "name": "Confetti box", 
+  "url":"/projects/confetti-box",
+  "imageUrl":"/static/cp/projects/confetti-box.jpg"
+}]
+```

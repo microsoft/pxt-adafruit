@@ -9,6 +9,7 @@ Use a force sensor to trigger a servo that drops a rolling weight. The weight hi
 ## What's in the code?
 
 ### Concepts
+
 * Force sensors (input)
 * Buttons (input)
 * Pin functions (servo)

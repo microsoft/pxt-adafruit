@@ -26,7 +26,7 @@
     * [Reaction](/examples/reaction)
     * [Photon beatbox](/examples/photon-beatbox)
     * [Spin it](/examples/spin-it)
-    * [Metronome](/examples/metrenome)
+    * [Metronome](/examples/metronome)
     * [Beat visualizer](/examples/beat-visualizer)
     * [Fireflies](/examples/fireflies)
 

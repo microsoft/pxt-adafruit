@@ -1,12 +1,12 @@
 # Dandelion
 
-### @description A beginner maker activity, building a dandelion with the @boardname@  
+## @description A beginner maker activity, building a dandelion with the @boardname@  
 
-### ~avatar avatar
+## ~avatar avatar
 
 Make a @boardname@ dandelion with this guided tutorial!
 
-### ~
+## ~
 
 https://youtu.be/tC1LOeh2jzs
 

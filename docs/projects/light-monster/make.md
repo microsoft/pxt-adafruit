@@ -1,11 +1,11 @@
 # Making the Light Monster 
-### @description Maker Project for Light Monster for @boardname@
+## @description Maker Project for Light Monster for @boardname@
 
-### ~avatar avatar
+## ~avatar avatar
 
 Let's build the Light Monster for your @boardname@! 
 
-### ~
+## ~
 
 ## Duration: ~1 hour 
 

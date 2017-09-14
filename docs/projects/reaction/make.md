@@ -1,11 +1,11 @@
 # Making the wristband
-### @description Maker Project for Reaction! for @boardname@
+## @description Maker Project for Reaction! for @boardname@
 
-### ~avatar avatar
+## ~avatar avatar
 
 Let's make the wristband for @boardname@! 
 
-### ~
+## ~
 
 ## Duration: ~ 1 hour 
 

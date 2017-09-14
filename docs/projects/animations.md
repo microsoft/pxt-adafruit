@@ -1,10 +1,10 @@
 # Animations
 
-### ~avatar avatar
+## ~avatar avatar
 
 Show different animations using the Neopixels on the @boardname@!
 
-### ~
+## ~
 
 ## Step 1
 

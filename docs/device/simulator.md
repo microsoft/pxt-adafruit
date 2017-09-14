@@ -1,6 +1,6 @@
 # @extends
 
-### #example
+## #example
 
 ```sim
 input.leftButton.onEvent(ButtonEvent.Click, () => {

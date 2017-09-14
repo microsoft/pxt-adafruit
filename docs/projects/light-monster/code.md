@@ -1,8 +1,8 @@
 # Coding the light monster 
 
-### ~avatar avatar 
+## ~avatar avatar 
 Using the sensitivity of the light sensor and code, let's make the light monster's jaw move!
-### ~ 
+## ~ 
 
 ## Duration: ~15 minutes 
 

@@ -1,11 +1,11 @@
 # Making the Lucky Wheel
-### @description Maker Project for creating a Lucky Wheel with @boardname@
+## @description Maker Project for creating a Lucky Wheel with @boardname@
 
-### ~avatar avatar
+## ~avatar avatar
 
 Make a Lucky Wheel with your @boardname@
 
-### ~
+## ~
 
 ## Duration: ~30 minutes
 

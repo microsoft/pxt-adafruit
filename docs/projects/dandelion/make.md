@@ -1,11 +1,11 @@
 # Making the Dandelion
-### @description Maker Project for Dandelion for @boardname@
+## @description Maker Project for Dandelion for @boardname@
 
-### ~avatar avatar
+## ~avatar avatar
 
 Make the Dandelion for your @boardname@
 
-### ~
+## ~
 
 ## Duration: ~20 minutes
 

@@ -45,6 +45,17 @@ Basic projects to build with your @boardname@.
   "imageUrl":"/static/cp/projects/headlamp.jpg"
 }]
 ```
+## Music
+
+Music projects for your @boardname@.
+
+```codecard
+[{
+  "name": "Guitar",
+  "url":"/projects/guitar",
+  "imageUrl":"/static/cp/projects/guitar.jpg"
+}]
+```
 
 ## Games
 

@@ -103,3 +103,5 @@ loops.forever(function () {
 ## Complete!
 
 Download you code to the @boardname@. Now, it's time to play your guitar!
+
+![Air guitar player](/static/cp/projects/guitar/guitar-in-action.jpg)

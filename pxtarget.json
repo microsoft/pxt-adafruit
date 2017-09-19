@@ -23,6 +23,7 @@
     ],
     "serial": {
         "useHF2": true,
+        "useEditor": true,
         "log": true
     },
     "simulator": {

@@ -9,6 +9,7 @@
     * [Watch Timer](/projects/watch-timer)
     * [Lucky Wheel](/projects/lucky-wheel)
     * [Headlamp](/projects/headlamp)
+    * [Guitar](/projects/guitar)
     * [Hot Potato](/projects/hot-potato)
     * [Light Monster](/projects/light-monster)
     * [Reaction!](/projects/reaction)

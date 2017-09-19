@@ -6,7 +6,7 @@ Make an air guitar theremin with your @boardname@!
 
 ### ~
 
-<!--- insert a video of final project here -->
+https://youtu.be/p28BYj_9SW8
 
 ## Duration
 

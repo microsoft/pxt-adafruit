@@ -1,6 +1,5 @@
 {
-  "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
-  "input.buttonA": "Left button.",
-  "input.buttonB": "Right button.",
-  "input.buttonsAB": "Left and Right button."
+  "input.buttonA": "Left button.\n\nLeft button.",
+  "input.buttonB": "Right button.\n\nRight button.",
+  "input.buttonsAB": "Left and Right button.\n\nLeft and Right button."
 }

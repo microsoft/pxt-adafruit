@@ -24,7 +24,10 @@
     "serial": {
         "useHF2": true,
         "useEditor": true,
-        "log": true
+        "log": true,
+        "editorTheme": {
+            "backgroundColor": "#676767"
+        }
     },
     "simulator": {
         "autoRun": true,

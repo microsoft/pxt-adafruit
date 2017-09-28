@@ -94,4 +94,5 @@
 --------------------*/
 
 @serialTextColor: white;
-@serialGraphBackground: #676767;
+@serialGraphBackground: #d9d9d9;
+@serialDark: #676767;

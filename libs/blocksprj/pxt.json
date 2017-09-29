@@ -7,7 +7,6 @@
     "files": [
         "main.blocks",
         "main.ts",
-        "serial.txt",
         "README.md"
     ]
 }

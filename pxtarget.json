@@ -302,6 +302,7 @@
             "advanced": "#00272B",
             "functions": "#005a9e",
             "arrays": "#8A1C7C"
-        }
+        },
+        "allowPackageExtensions": true        
     }
 }

@@ -193,7 +193,8 @@
         "listsBlocks": true,
         "functionBlocks": true,
         "onStartNamespace": "loops",
-        "onStartColor": "#40bf4a"
+        "onStartColor": "#40bf4a",
+        "onStartWeight": 100
     },
     "compileService": {
         "buildEngine": "codal",
@@ -268,6 +269,8 @@
             "Make": "projects",
             "Examples": "examples"
         },
+        "showHomeScreen": true,
+        "homeScreenHero": "./static/getting-started/getting-started.png",
         "sideDoc": "tutorials/getting-started",
         "invertedMenu": true,
         "invertedToolbox": true,

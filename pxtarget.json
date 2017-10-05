@@ -26,8 +26,8 @@
         "useEditor": true,
         "log": true,
         "editorTheme": {
-            "backgroundColor": "#d9d9d9",
-            "serialDark": "#676767"
+            "graphBackground": "#d9d9d9",
+            "lineColors": ["#CC2936", "#FFC914", "#2EB7ED", "#FB48C7", "#08415C", "#C200C0"]
         }
     },
     "simulator": {
@@ -311,6 +311,6 @@
             "functions": "#005a9e",
             "arrays": "#8A1C7C"
         },
-        "allowPackageExtensions": true        
+        "allowPackageExtensions": true
     }
 }

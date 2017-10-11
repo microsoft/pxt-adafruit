@@ -5,10 +5,10 @@
             "Adafruit"
         ],
         "approvedRepos": [
-        ],
-        "galleries": {
-            "Make": "projects",
-            "Examples": "examples"
-        }
+        ]
+    },
+    "galleries": {
+        "Make": "projects",
+        "Examples": "examples"
     }
 }

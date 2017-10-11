@@ -270,13 +270,8 @@
                 "path": "https://www.adafruit.com/products/3333"
             }
         ],
-        "galleries": {
-            "Make": "projects",
-            "Examples": "examples"
-        },
         "showHomeScreen": true,
         "homeScreenHero": "./static/getting-started/getting-started.png",
-        "sideDoc": "tutorials/getting-started",
         "invertedMenu": true,
         "invertedToolbox": true,
         "invertedMonaco": true,

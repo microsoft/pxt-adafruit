@@ -40,5 +40,6 @@
   "input.rotation|block": "rotation (°)|%NAME",
   "input.setAccelerometerRange|block": "set accelerometer|range %range",
   "input|block": "input",
-  "{id:category}Input": "Input"
+  "{id:category}Input": "Input",
+  "{id:group}More": "More"
 }

@@ -25,6 +25,7 @@
         "music": "file:../music",
         "light": "file:../light",
         "switch": "file:../switch",
+        "cable": "file:../cable",
         "infrared": "file:../infrared",
         "microphone": "file:../microphone",
         "touch": "file:../touch"

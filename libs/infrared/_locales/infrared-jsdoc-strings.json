@@ -1,5 +1,5 @@
 {
-  "network": "Infrared tranmission and reception",
+  "network": "Communication between devices",
   "network.infraredPacket": "Get most recent packet received over IR.",
   "network.infraredSendNumber": "Send a number over the infrared transmitter.",
   "network.infraredSendNumbers": "Send an array of numbers over infrared. The array size has to be 32 bytes or less.",

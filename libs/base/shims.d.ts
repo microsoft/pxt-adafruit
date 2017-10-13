@@ -70,7 +70,7 @@ declare namespace loops {
      * Repeats the code forever in the background. On each iteration, allows other codes to run.
      * @param body code to execute
      */
-    //% help=loops/forever weight=100 blockGap=8
+    //% help=loops/forever weight=100
     //% blockId=forever block="forever" blockAllowMultiple=1 shim=loops::forever
     function forever(a: () => void): void;
 
@@ -79,7 +79,7 @@ declare namespace loops {
      * @param ms how long to pause for, eg: 100, 200, 500, 1000, 2000
      */
     //% help=loops/pause weight=99
-    //% async block="pause (ms) %pause"
+    //% async block="pause %ms=timePicker|ms"
     //% blockId=device_pause shim=loops::pause
     function pause(ms: int32): void;
 }
@@ -151,7 +151,7 @@ declare namespace serial {
     /**
      * Send a buffer across the serial connection.
      */
-    //% help=serial/write-buffer advanced=true weight=6
+    //% help=serial/write-buffer weight=6
     //% blockId=serial_writebuffer block="serial|write buffer %buffer" shim=serial::writeBuffer
     function writeBuffer(buffer: Buffer): void;
 }

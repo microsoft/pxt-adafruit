@@ -29,6 +29,7 @@ namespace loops {
 }
 
 //% color="#4c97ff"
+//% groups='["other", "Photon"]'
 namespace light {
 
     /**

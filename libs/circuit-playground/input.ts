@@ -3,9 +3,10 @@ namespace input {
     /**
      * Sense the ambient color using the LED pixel next to the LED sensor.
      */
-    //% help=input/ambient-color weight=75
-    //% blockId=device_get_ambient_color block="ambient color" blockGap=8
-    //% parts="rgbsensor" advanced=true
+    //% help=input/ambient-color
+    //% blockId=device_get_ambient_color block="ambient color"
+    //% parts="rgbsensor"
+    //% weight=29 blockGap=8
     export function ambientColor() : number {
         const LIGHT_SETTLE_MS = 100;
         const PIXEL = 1;

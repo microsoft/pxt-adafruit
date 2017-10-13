@@ -5,5 +5,6 @@
   "input.setLoudSoundThreshold|block": "set loud sound threshold %value",
   "input.soundLevel|block": "sound level",
   "input|block": "input",
-  "{id:category}Input": "Input"
+  "{id:category}Input": "Input",
+  "{id:group}More": "More"
 }

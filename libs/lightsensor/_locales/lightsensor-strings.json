@@ -3,7 +3,8 @@
   "LightCondition.Dark|block": "dark",
   "input.lightLevel|block": "light level",
   "input.onLightConditionChanged|block": "on light %condition",
-  "input.setLightThreshold|block": "light set threshold %condition|to %value",
+  "input.setLightThreshold|block": "set %condition| light threshold to %value",
   "input|block": "input",
-  "{id:category}Input": "Input"
+  "{id:category}Input": "Input",
+  "{id:group}More": "More"
 }

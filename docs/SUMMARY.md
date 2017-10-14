@@ -9,6 +9,7 @@
     * [Watch Timer](/projects/watch-timer)
     * [Lucky Wheel](/projects/lucky-wheel)
     * [Headlamp](/projects/headlamp)
+    * [Guitar](/projects/guitar)
     * [Hot Potato](/projects/hot-potato)
     * [Light Monster](/projects/light-monster)
     * [Reaction!](/projects/reaction)
@@ -26,7 +27,7 @@
     * [Reaction](/examples/reaction)
     * [Photon beatbox](/examples/photon-beatbox)
     * [Spin it](/examples/spin-it)
-    * [Metronome](/examples/metrenome)
+    * [Metronome](/examples/metronome)
     * [Beat visualizer](/examples/beat-visualizer)
     * [Fireflies](/examples/fireflies)
 

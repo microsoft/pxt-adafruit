@@ -37,12 +37,23 @@ Basic projects to build with your @boardname@.
 {
   "name": "Light Monster", 
   "url":"/projects/light-monster", 
-  "imageUrl":"/static/cp/projects/lightmonster.jpg"
+  "imageUrl":"/static/cp/projects/light-monster.jpg"
 },
 {
   "name": "Headlamp",
   "url":"/projects/headlamp",
   "imageUrl":"/static/cp/projects/headlamp.jpg"
+}]
+```
+## Music
+
+Music projects for your @boardname@.
+
+```codecard
+[{
+  "name": "Guitar",
+  "url":"/projects/guitar",
+  "imageUrl":"/static/cp/projects/guitar.jpg"
 }]
 ```
 

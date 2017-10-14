@@ -87,3 +87,11 @@
 
 @blocklyRowWidthWide: 160px;
 @blocklyRowWidthComputer: 140px;
+
+
+/*-------------------
+   Serial
+--------------------*/
+
+@serialTextColor: white;
+@serialGraphBackground: #d9d9d9;

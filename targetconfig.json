@@ -6,5 +6,9 @@
         ],
         "approvedRepos": [
         ]
+    },
+    "galleries": {
+        "Make": "projects",
+        "Examples": "examples"
     }
 }

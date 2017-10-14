@@ -23,7 +23,12 @@
     ],
     "serial": {
         "useHF2": true,
-        "log": true
+        "useEditor": true,
+        "log": true,
+        "editorTheme": {
+            "graphBackground": "#d9d9d9",
+            "lineColors": ["#CC2936", "#FFC914", "#2EB7ED", "#FB48C7", "#08415C", "#C200C0"]
+        }
     },
     "simulator": {
         "autoRun": true,
@@ -193,7 +198,8 @@
         "listsBlocks": true,
         "functionBlocks": true,
         "onStartNamespace": "loops",
-        "onStartColor": "#40bf4a"
+        "onStartColor": "#40bf4a",
+        "onStartWeight": 100
     },
     "compileService": {
         "buildEngine": "codal",
@@ -207,7 +213,7 @@
             }
         },
         "githubCorePackage": "lancaster-university/codal",
-        "gittag": "master",
+        "gittag": "v0.2.1",
         "serviceId": "codal2cp"
     },
     "appTheme": {
@@ -264,11 +270,8 @@
                 "path": "https://www.adafruit.com/products/3333"
             }
         ],
-        "galleries": {
-            "Make": "projects",
-            "Examples": "examples"
-        },
-        "sideDoc": "tutorials/getting-started",
+        "showHomeScreen": true,
+        "homeScreenHero": "./static/getting-started/getting-started.png",
         "invertedMenu": true,
         "invertedToolbox": true,
         "invertedMonaco": true,
@@ -302,6 +305,7 @@
             "advanced": "#00272B",
             "functions": "#005a9e",
             "arrays": "#8A1C7C"
-        }
+        },
+        "allowPackageExtensions": true
     }
 }

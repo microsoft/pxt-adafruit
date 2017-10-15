@@ -16,12 +16,9 @@
   "control.raiseEvent|block": "raise event|from %src|with value %value",
   "control|block": "control",
   "msgpack|block": "msgpack",
-  "pins.i2cReadNumber|block": "i2c read number at address %address|of format %format=i2c_sizeof|repeated %repeat",
-  "pins.i2cWriteNumber|block": "i2c write number|at address %address|with value %value|of format %format=i2c_sizeof|repeated %repeat",
   "pins.pulseDuration|block": "pulse duration (µs)",
   "pins|block": "pins",
   "{id:category}Control": "Control",
   "{id:category}Msgpack": "Msgpack",
-  "{id:category}Pins": "Pins",
-  "{id:group}i2c": "i2c"
+  "{id:category}Pins": "Pins"
 }

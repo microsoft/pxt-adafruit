@@ -1,0 +1,18 @@
+{
+    "name": "i2c",
+    "description": "The i2c library",
+    "files": [
+        "README.md",
+        "i2c.cpp",
+        "i2c.ts",
+        "shims.d.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/i2c",
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
+}

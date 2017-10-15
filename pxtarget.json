@@ -19,7 +19,8 @@
         "libs/touch",
         "libs/switch",
         "libs/infrared",
-        "libs/circuit-playground"
+        "libs/circuit-playground",
+        "libs/advancedlight"
     ],
     "serial": {
         "useHF2": true,

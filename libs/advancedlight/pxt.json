@@ -1,0 +1,17 @@
+{
+    "name": "advancedlight",
+    "description": "More Light blocks",
+    "files": [
+        "README.md",
+        "neopixel.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/advancedlight",
+    "public": true,
+    "dependencies": {
+        "core": "file:../core",
+        "light": "file:../light"
+    }
+}

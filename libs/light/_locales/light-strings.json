@@ -33,5 +33,7 @@
   "light.hsv|block": "hue %hue|sat %sat|val %val",
   "light.rgb|block": "red %red|green %green|blue %blue",
   "light|block": "light",
-  "{id:category}Light": "Light"
+  "{id:category}Light": "Light",
+  "{id:group}Color": "Color",
+  "{id:group}More": "More"
 }

@@ -1,0 +1,7 @@
+{
+  "pins.servoSetPulse|block": "servo set pulse|pin %value|to (µs) %duration",
+  "pins.servoWrite|block": "servo write|pin %name|to %value",
+  "pins|block": "pins",
+  "{id:category}Pins": "Pins",
+  "{id:group}Servo": "Servo"
+}

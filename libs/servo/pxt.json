@@ -1,0 +1,17 @@
+{
+    "name": "servo",
+    "description": "The servo library",
+    "files": [
+        "README.md",
+        "servo.cpp",
+        "shims.d.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/servo",
+    "public": true,
+    "dependencies": {
+        "core": "file:../core"
+    }
+}

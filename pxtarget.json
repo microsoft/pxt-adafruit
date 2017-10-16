@@ -307,6 +307,9 @@
             "functions": "#005a9e",
             "arrays": "#8A1C7C"
         },
+        "monacoColors": {
+            "editor.background": "#424A51"
+        },
         "allowPackageExtensions": true
     }
 }

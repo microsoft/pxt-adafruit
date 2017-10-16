@@ -20,8 +20,6 @@
         "libs/switch",
         "libs/cable",
         "libs/infrared",
-        "libs/servo",
-        "libs/i2c",
         "libs/circuit-playground"
     ],
     "serial": {

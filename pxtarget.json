@@ -251,10 +251,6 @@
                 "path": "/tutorials/getting-started"
             },
             {
-                "name": "Examples",
-                "path": "#projects:Examples"
-            },
-            {
                 "name": "Blocks",
                 "path": "/blocks"
             },

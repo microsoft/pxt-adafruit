@@ -8,7 +8,9 @@
         ]
     },
     "galleries": {
-        "Make": "projects",
-        "Examples": "examples"
+        "Costumes": "costumes",
+        "Games": "games",
+        "Music": "music",
+        "Pranks": "pranks"
     }
 }

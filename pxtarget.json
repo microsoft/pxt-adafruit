@@ -18,6 +18,7 @@
         "libs/light",
         "libs/touch",
         "libs/switch",
+        "libs/cable",
         "libs/infrared",
         "libs/circuit-playground",
         "libs/advancedlight"
@@ -246,15 +247,6 @@
                 "path": "/about"
             },
             {
-                "name": "Getting started",
-                "tutorial": true,
-                "path": "/tutorials/getting-started"
-            },
-            {
-                "name": "Examples",
-                "path": "#projects:Examples"
-            },
-            {
                 "name": "Blocks",
                 "path": "/blocks"
             },
@@ -272,14 +264,13 @@
             }
         ],
         "showHomeScreen": true,
-        "homeScreenHero": "./static/getting-started/getting-started.png",
+        "homeScreenHero": "./static/getting-started/getting-started.jpg",
         "invertedMenu": true,
         "invertedToolbox": true,
         "invertedMonaco": true,
         "monacoToolbox": true,
         "simAnimationEnter": "roll in",
         "simAnimationExit": "roll out",
-        "exampleGallery": "examples",
         "hasAudio": true,
         "usbHelp": [],
         "extendEditor": true,

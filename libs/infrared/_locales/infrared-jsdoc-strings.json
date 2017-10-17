@@ -1,5 +1,8 @@
 {
-  "network": "Infrared tranmission and reception",
+  "InfraredPacket.receivedBuffer": "The raw buffer of data received",
+  "InfraredPacket.receivedNumber": "The first number in the payload.",
+  "InfraredPacket.receivedNumbers": "The array of numbers of received.",
+  "network": "Communication between devices",
   "network.infraredPacket": "Get most recent packet received over IR.",
   "network.infraredSendNumber": "Send a number over the infrared transmitter.",
   "network.infraredSendNumbers": "Send an array of numbers over infrared. The array size has to be 32 bytes or less.",

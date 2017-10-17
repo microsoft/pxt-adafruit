@@ -1,7 +1,11 @@
 {
+  "Button.isPressed|block": "%button|is pressed",
+  "Button.onEvent|block": "on %button|%event",
+  "Button.wasPressed|block": "%button|was pressed",
   "input.buttonA|block": "button A",
   "input.buttonB|block": "button B",
   "input.buttonsAB|block": "buttons A+B",
   "input|block": "input",
-  "{id:category}Input": "Input"
+  "{id:category}Input": "Input",
+  "{id:group}More": "More"
 }

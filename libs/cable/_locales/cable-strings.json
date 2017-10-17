@@ -2,5 +2,6 @@
   "network.cableSendNumber|block": "cable send number %value",
   "network.onCablePacketReceived|block": "on cable received",
   "network|block": "network",
+  "{id:category}CablePacket": "CablePacket",
   "{id:category}Network": "Network"
 }

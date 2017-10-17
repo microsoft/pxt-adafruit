@@ -1,4 +1,7 @@
 {
+  "InfraredPacket.receivedBuffer": "The raw buffer of data received",
+  "InfraredPacket.receivedNumber": "The first number in the payload.",
+  "InfraredPacket.receivedNumbers": "The array of numbers of received.",
   "network": "Communication between devices",
   "network.infraredPacket": "Get most recent packet received over IR.",
   "network.infraredSendNumber": "Send a number over the infrared transmitter.",

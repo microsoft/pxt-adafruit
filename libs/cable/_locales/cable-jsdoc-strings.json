@@ -1,4 +1,7 @@
 {
+  "CablePacket.receivedBuffer": "The raw buffer of data received",
+  "CablePacket.receivedNumber": "The first number in the payload.",
+  "CablePacket.receivedNumbers": "The array of numbers of received.",
   "network": "Communication between devices",
   "network.cablePacket": "Get most recent packet received over cable.",
   "network.cableSendNumber": "Send a number over the cable.",

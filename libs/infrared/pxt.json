@@ -1,16 +1,3 @@
 {
-    "name": "infrared",
-    "description": "Communication over Infra Red",
-    "files": [
-        "README.md",
-        "ir.cpp",
-        "ir.ts",
-        "shims.d.ts"
-    ],
-    "public": true,
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/infrared",
-    "dependencies": {
-        "core": "file:../core",
-        "cable": "file:../cable"
-    }
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/infrared"
 }

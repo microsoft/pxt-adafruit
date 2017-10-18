@@ -165,86 +165,17 @@ declare namespace pins {
     //% weight=19 shim=pins::pulseDuration
     function pulseDuration(): int32;
 }
-declare namespace pins {
-
-
-    //% indexedInstanceNS=pins indexedInstanceShim=pxt::getPin
-    //% fixedInstance shim=pxt::getPin(0)
-    const A0: AnalogPin;
-
-
-    //% fixedInstance shim=pxt::getPin(1)
-    const A1: PwmPin;
-
-
-    //% fixedInstance shim=pxt::getPin(2)
-    const A2: PwmPin;
-
-
-    //% fixedInstance shim=pxt::getPin(3)
-    const A3: PwmPin;
-
-
-    //% fixedInstance shim=pxt::getPin(4)
-    const A4: AnalogPin;
-
-
-    //% fixedInstance shim=pxt::getPin(5)
-    const A5: AnalogPin;
-
-
-    //% fixedInstance shim=pxt::getPin(6)
-    const A6: AnalogPin;
-
-
-    //% fixedInstance shim=pxt::getPin(7)
-    const A7: AnalogPin;
-
-
-    //% fixedInstance shim=pxt::getPin(8)
-    const A8: AnalogPin;
-
-
-    //% fixedInstance shim=pxt::getPin(9)
-    const A9: AnalogPin;
-
-
-    //% fixedInstance shim=pxt::getPin(10)
-    const D4: DigitalPin;
-
-
-    //% fixedInstance shim=pxt::getPin(11)
-    const D5: DigitalPin;
-
-
-    //% fixedInstance shim=pxt::getPin(12)
-    const D6: DigitalPin;
-
-
-    //% fixedInstance shim=pxt::getPin(13)
-    const D7: DigitalPin;
-
-
-    //% fixedInstance shim=pxt::getPin(14)
-    const D8: DigitalPin;
-
-
-    //% fixedInstance shim=pxt::getPin(15)
-    const D13: DigitalPin;
-}
 declare namespace control {
 
     /**
      * Announce that an event happened to registered handlers.
      * @param src ID of the MicroBit Component that generated the event
      * @param value Component specific code indicating the cause of the event.
-     * @param mode optional definition of how the event should be processed after construction.
      */
     //% weight=21 blockGap=12 blockId="control_raise_event"
     //% help=control/raise-event
-    //% block="raise event|from %src|with value %value" blockExternalInputs=1
-    //% mode.defl=1 shim=control::raiseEvent
-    function raiseEvent(src: int32, value: int32, mode?: EventCreationMode): void;
+    //% block="raise event|from %src|with value %value" blockExternalInputs=1 shim=control::raiseEvent
+    function raiseEvent(src: int32, value: int32): void;
 
     /**
      * Determine the version of system software currently running.

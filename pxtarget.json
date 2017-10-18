@@ -21,7 +21,7 @@
         "libs/cable",
         "libs/infrared",
         "libs/circuit-playground",
-        "libs/advancedlight"
+        "libs/externallights"
     ],
     "serial": {
         "useHF2": true,

@@ -1,6 +1,6 @@
 {
-    "name": "advancedlight",
-    "description": "More Light blocks",
+    "name": "externallights",
+    "description": "External programmable lights package",
     "files": [
         "README.md",
         "neopixel.ts"
@@ -8,7 +8,6 @@
     "testFiles": [
         "test.ts"
     ],
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/advancedlight",
     "public": true,
     "dependencies": {
         "core": "file:../core",

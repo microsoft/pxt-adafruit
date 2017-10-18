@@ -21,5 +21,7 @@
   "light.NeoPixelStrip.showAnimation": "Show an animation or queue an animation in the animation queue",
   "light.NeoPixelStrip.showAnimationFrame": "Show a single animation frame",
   "light.NeoPixelStrip.stopAllAnimations": "Stop the current animation and any other animations ready to show.",
-  "light.createNeoPixelStrip": "Create a new NeoPixel driver for `numleds` LEDs."
+  "light.createStrip": "Create a new NeoPixel driver for `numleds` LEDs.",
+  "light.createStrip|param|numleds": "number of leds in the strip, eg: 24,30,60,64",
+  "light.createStrip|param|pin": "the pin where the neopixel is connected."
 }

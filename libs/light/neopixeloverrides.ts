@@ -4,6 +4,9 @@ declare namespace light {
     interface NeoPixelStrip {
 
         //% subcategory="External" blockHidden=true
+        setAll(rgb: number): void;
+
+        //% subcategory="External" blockHidden=true
         graph(value: number, high: number): void;
 
         //% subcategory="External" blockHidden=true
@@ -60,14 +63,4 @@ declare namespace light {
         //% subcategory="External" blockHidden=true
         setBuffered(on: boolean): void;
     }
-}
-
-declare interface light {
-
-    //% subcategory="External" blockHidden=true
-    createNeoPixelStrip(
-        pin: DigitalPin,
-        numleds: number,
-        mode?: NeoPixelMode
-    ): light.NeoPixelStrip;
 }

@@ -64,13 +64,3 @@ declare namespace light {
         setBuffered(on: boolean): void;
     }
 }
-
-declare interface light {
-
-    //% subcategory="External" blockHidden=false
-    createNeoPixelStrip(
-        pin: DigitalPin,
-        numleds: number,
-        mode?: NeoPixelMode
-    ): NeoPixelStrip;
-}

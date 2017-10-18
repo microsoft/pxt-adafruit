@@ -5,9 +5,10 @@
         "README.md",
         "neopixel.cpp",
         "neopixel.ts",
+        "create.ts",
         "shims.d.ts",
         "enums.d.ts",
-        "neopixeloverride.ts",
+        "neopixeloverrides.ts",
         "ns.ts"
     ],
     "testFiles": [

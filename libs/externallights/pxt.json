@@ -3,7 +3,8 @@
     "description": "External programmable lights package",
     "files": [
         "README.md",
-        "neopixel.ts"
+        "neopixeloverrides.ts",
+        "create.ts"
     ],
     "testFiles": [
         "test.ts"

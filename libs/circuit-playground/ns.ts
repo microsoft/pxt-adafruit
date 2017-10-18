@@ -29,7 +29,7 @@ namespace loops {
 }
 
 //% color="#4c97ff"
-//% groups='["other", "Color", "Photon"]'
+//% groups='["other", "Color", "Photon", "More"]'
 namespace light {
 
     //%

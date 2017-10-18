@@ -12,8 +12,6 @@
   "DigitalPin.onPulsed|block": "on|pin %pin|pulsed %pulse",
   "DigitalPin.pulseIn|block": "pulse in (µs)|pin %name|pulsed %value",
   "DigitalPin.setPull|block": "set pull|pin %pin|to %pull",
-  "EventCreationMode.CreateAndFire": "Event is initialised, and its event handlers are immediately fired (not suitable for use in\ninterrupts!).",
-  "EventCreationMode.CreateOnly": "Event is initialised, and no further processing takes place.",
   "PinPullMode.PullDown|block": "down",
   "PinPullMode.PullNone|block": "none",
   "PinPullMode.PullUp|block": "up",

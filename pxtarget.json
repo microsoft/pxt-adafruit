@@ -20,7 +20,8 @@
         "libs/switch",
         "libs/cable",
         "libs/infrared",
-        "libs/circuit-playground"
+        "libs/circuit-playground",
+        "libs/externallights"
     ],
     "serial": {
         "useHF2": true,

@@ -1,8 +1,21 @@
 {
   "input.ambientColor|block": "ambient color",
   "input|block": "input",
+  "light.graph|block": "graph of %value |up to %high",
+  "light.photonFlip|block": "photon flip",
+  "light.photonForward|block": "photon forward by %steps",
+  "light.pixelColor|block": "pixel color at %pixeloffset",
+  "light.setAll|block": "set all pixels to %rgb=colorNumberPicker",
+  "light.setBrightness|block": "set brightness %brightness",
+  "light.setPhotonColor|block": "photon set pen color %color=colorWheelPicker",
+  "light.setPhotonMode|block": "photon %mode",
+  "light.setPixelColor|block": "set pixel color at %pixeloffset|to %rgb=colorNumberPicker",
+  "light.showAnimationFrame|block": "show animation frame %animation=light_animation",
+  "light.showAnimation|block": "show %animation=light_animation|animation for %duration=timePicker|ms",
   "light.showRing|block": "show ring |%colors",
   "light|block": "light",
   "{id:category}Input": "Input",
-  "{id:category}Light": "Light"
+  "{id:category}Light": "Light",
+  "{id:group}More": "More",
+  "{id:group}Photon": "Photon"
 }

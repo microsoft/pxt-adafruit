@@ -1,6 +1,13 @@
 {
   "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
   "input.ambientColor": "Sense the ambient color using the LED pixel next to the LED sensor.",
+  "input.pinA1": "Capacitive pin A1",
+  "input.pinA2": "Capacitive pin A2",
+  "input.pinA3": "Capacitive pin A3",
+  "input.pinA4": "Capacitive pin A4",
+  "input.pinA5": "Capacitive pin A5",
+  "input.pinA6": "Capacitive pin A6",
+  "input.pinA7": "Capacitive pin A7",
   "light": "Functions to operate colored LEDs.\n\nFunctions to operate colored LEDs.",
   "light.showRing": "Shows a pattern of colors on the pixel ring",
   "light.showRing|param|colors": "a string describing the colors, eg: \"red red red red red red red red red red\"",

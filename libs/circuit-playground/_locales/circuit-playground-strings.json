@@ -1,8 +1,17 @@
 {
   "input.ambientColor|block": "ambient color",
+  "input.pinA1|block": "pin A1",
+  "input.pinA2|block": "pin A2",
+  "input.pinA3|block": "pin A3",
+  "input.pinA4|block": "pin A4",
+  "input.pinA5|block": "pin A5",
+  "input.pinA6|block": "pin A6",
+  "input.pinA7|block": "pin A7",
   "input|block": "input",
   "light.showRing|block": "show ring |%colors",
   "light|block": "light",
+  "{id:category}Config": "Config",
   "{id:category}Input": "Input",
-  "{id:category}Light": "Light"
+  "{id:category}Light": "Light",
+  "{id:category}Pins": "Pins"
 }

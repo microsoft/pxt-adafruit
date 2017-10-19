@@ -34,7 +34,7 @@ namespace pxsim {
         InfraredBoard,
         CapTouchBoard {
         // state & update logic for component services
-        neopixelState: CommonNeoPixelState;
+        _neopixelState: pxt.Map<CommonNeoPixelState>;
         buttonState: CommonButtonState;
         slideSwitchState: SlideSwitchState;
         lightSensorState: AnalogSensorState;
@@ -55,10 +55,11 @@ namespace pxsim {
         constructor() {
             super()
 
+            this._neopixelState = {};
             this.bus.setNotify(DAL.DEVICE_ID_NOTIFY, DAL.DEVICE_ID_NOTIFY_ONE);
 
             //components
-            this.builtinParts["neopixel"] = this.neopixelState = new CommonNeoPixelState();
+            this.builtinParts["neopixel"] = this.neopixelState(CPlayPinName.D8);
             this.builtinParts["buttonpair"] = this.buttonState = new CommonButtonState();
 
             this.builtinParts["switch"] = this.slideSwitchState = new SlideSwitchState();
@@ -168,6 +169,16 @@ namespace pxsim {
 
         screenshot(): string {
             return svg.toDataUri(new XMLSerializer().serializeToString(this.view));
+        }
+
+        tryGetNeopixelState(pinId: number): CommonNeoPixelState {
+            return this._neopixelState[pinId];
+        }
+
+        neopixelState(pinId: number): CommonNeoPixelState {
+            let state = this._neopixelState[pinId];
+            if (!state) state = this._neopixelState[pinId] = new CommonNeoPixelState();
+            return state;
         }
 
         defaultNeopixelPin() {

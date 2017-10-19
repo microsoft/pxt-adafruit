@@ -466,11 +466,12 @@ namespace pxsim.visuals {
         }
 
         private updateNeoPixels() {
-            let state = this.board;
-            if (!state || !state.neopixelState) return;
-            let neopixels = state.neopixelState.getNeoPixels();
-            for (let i = 0; i < state.neopixelState.NUM_PIXELS; i++) {
-                let rgb = neopixels[i];
+            const state = this.board;
+            if (!state) return;
+            const neopixelState = state.tryGetNeopixelState(state.defaultNeopixelPin().id);            
+            if (!neopixelState) return;
+            for (let i = 0; i < neopixelState.length; i++) {
+                let rgb = neopixelState.pixelColor(i);
                 let p_inner = this.element.getElementById(`LED${i}`) as SVGPathElement;
 
                 if (!rgb || (rgb.length == 3 && rgb[0] == 0 && rgb[1] == 0 && rgb[2] == 0)) {
@@ -895,7 +896,7 @@ namespace pxsim.visuals {
 
             const neopixelState = (board() as LightBoard).neopixelState;
             if (neopixelState) {
-                for (let i = 0; i < neopixelState.NUM_PIXELS; i++) {
+                for (let i = 0; i < neopixelState.length; i++) {
                     // let p_outer = svg.title(this.element.getElementById(`LED${i}_OUTER`) as SVGPathElement, "NeoPixel " + i);
                     let p_inner = svg.title(this.element.getElementById(`LED${i}`) as SVGPathElement, "NeoPixel " + i);
                 }

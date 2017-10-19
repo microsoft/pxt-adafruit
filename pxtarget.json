@@ -159,7 +159,17 @@
             {
                 "type": "api",
                 "map": {
-                    "Math\\s*\\.random\\s*\\(\\s*([^\\s]+)\\s*\\)": "Math.randomRange(0, $1)"
+                    "Math\\s*\\.random\\s*\\(\\s*([^\\s]+)\\s*\\)": "Math.randomRange(0, $1)",
+                    "light\\.pixels\\.showAnimation": "light.showAnimation",
+                    "light\\.pixels\\.showAnimationFrame": "light.showAnimation",
+                    "light\\.pixels\\.photonFlip": "light.photonFlip",
+                    "light\\.pixels\\.photonForward": "light.photonForward",
+                    "light\\.pixels\\.setPhotonColor": "light.setPhotonColor",
+                    "light\\.pixels\\.setPhotonMode": "light.setPhotonMode",
+                    "light\\.pixels\\.setBrightness": "light.setBrightness",
+                    "light\\.pixels\\.graph": "light.graph",
+                    "light\\.pixels\\.setPixelColor": "light.setPixelColor",
+                    "light\\.pixels\\.setAll": "light.setAll"
                 }
             }
         ],
@@ -296,9 +306,6 @@
             "advanced": "#00272B",
             "functions": "#005a9e",
             "arrays": "#8A1C7C"
-        },
-        "monacoColors": {
-            "editor.background": "#424A51"
         },
         "allowPackageExtensions": true
     }

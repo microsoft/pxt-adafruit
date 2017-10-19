@@ -21,11 +21,12 @@ function switchMode() {
 function setButtonsLights() {
     let pins = [input.buttonB, input.buttonsAB,
     input.pinA1, input.pinA2, input.pinA3, input.pinA4, input.pinA5, input.pinA6, input.pinA7]
+    let leds = [7, 2, 6, 8, 9, 0, 1, 3, 4]
     for (let i = 0; i < pins.length; ++i) {
         let ii = i
         pins[i].onEvent(ButtonEvent.Click, () => {
             if (mode == 1)
-                blink(ii, Colors.Green)
+                blink(leds[ii], Colors.Green)
         })
     }
 }

@@ -1,5 +1,8 @@
 {
   "input.ambientColor|block": "ambient color",
+  "input.buttonA|block": "button A",
+  "input.buttonB|block": "button B",
+  "input.buttonsAB|block": "buttons A+B",
   "input.pinA1|block": "pin A1",
   "input.pinA2|block": "pin A2",
   "input.pinA3|block": "pin A3",

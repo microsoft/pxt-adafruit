@@ -5,8 +5,6 @@ namespace config {
     export const PIN_FLASH_CS = 54;
     export const PIN_MIC_DATA = 8;
     export const PIN_MIC_CLOCK = 10;
-    export const PIN_BTN_A = 28;
-    export const PIN_BTN_B = 14;
     export const PIN_BTN_SLIDE = 15;
     export const PIN_NEOPIXEL = 55;
     export const PIN_SPEAKER_AMP = 30;

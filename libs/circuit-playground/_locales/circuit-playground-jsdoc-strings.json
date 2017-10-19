@@ -1,6 +1,9 @@
 {
   "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
   "input.ambientColor": "Sense the ambient color using the LED pixel next to the LED sensor.",
+  "input.buttonA": "Left button.",
+  "input.buttonB": "Right button.",
+  "input.buttonsAB": "Left and Right button.",
   "input.pinA1": "Capacitive pin A1",
   "input.pinA2": "Capacitive pin A2",
   "input.pinA3": "Capacitive pin A3",

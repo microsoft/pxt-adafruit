@@ -90,3 +90,29 @@ declare namespace input {
     //% block="pin A7" fixedInstance shim=pxt::getTouchButton(PB08)
     const pinA7: TouchButton;
 }
+
+declare namespace input {
+        /**
+         * Left button.
+         */
+        //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
+        //% block="button A" weight=95 fixedInstance
+        //% shim=pxt::getButton(PA28,BUTTON_ACTIVE_HIGH_PULL_DOWN)
+        const buttonA: Button;
+    
+        /**
+         * Right button.
+         */
+        //% block="button B" weight=94 fixedInstance
+        //% shim=pxt::getButton(PA14,BUTTON_ACTIVE_HIGH_PULL_DOWN)
+        const buttonB: Button;
+    
+        /**
+         * Left and Right button.
+         */
+        //% block="buttons A+B" weight=93 fixedInstance
+        //% shim=pxt::getMultiButton(DEVICE_ID_BUTTON_AB,PA28,PA14,BUTTON_ACTIVE_HIGH_PULL_DOWN)
+        const buttonsAB: Button;
+    }
+    
+    

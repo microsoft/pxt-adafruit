@@ -8,8 +8,6 @@
   "light.photonFlip": "Switch the direction of the photon pulse.",
   "light.photonForward": "Move a photon effect along the pixel strip by a number of steps.",
   "light.photonForward|param|steps": "number of steps (lights) to move, eg: 1",
-  "light.pixelColor": "Gets the pixel color.",
-  "light.pixelColor|param|pixeloffset": "position of the NeoPixel in the strip",
   "light.setAll": "Set all of the pixels on the strip to one RGB color.",
   "light.setAll|param|rgb": "RGB color of the LED",
   "light.setBrightness": "Set the brightness of the strip. This flag only applies to future operation.",

@@ -4,7 +4,6 @@
   "light.graph|block": "graph of %value |up to %high",
   "light.photonFlip|block": "photon flip",
   "light.photonForward|block": "photon forward by %steps",
-  "light.pixelColor|block": "pixel color at %pixeloffset",
   "light.setAll|block": "set all pixels to %rgb=colorNumberPicker",
   "light.setBrightness|block": "set brightness %brightness",
   "light.setPhotonColor|block": "photon set pen color %color=colorWheelPicker",

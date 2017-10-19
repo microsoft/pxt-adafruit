@@ -93,17 +93,6 @@ namespace light {
     }
 
     /**
-     * Gets the pixel color.
-     * @param pixeloffset position of the NeoPixel in the strip
-     */
-    //% blockId="builtin_neopixel_get_pixel_color" block="pixel color at %pixeloffset"
-    //% help="light/pixel-color"
-    //% group="More" weight=9 blockGap=8
-    export function pixelColor(pixeloffset: number): number {
-        return light.pixels.pixelColor(pixeloffset);
-    }
-
-    /**
      * Set the brightness of the strip. This flag only applies to future operation.
      * @param brightness a measure of LED brightness in 0-255. eg: 20
      */

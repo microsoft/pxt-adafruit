@@ -3,64 +3,70 @@ declare namespace light {
 
     interface NeoPixelStrip {
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         setAll(rgb: number): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         graph(value: number, high: number): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         setPixelColor(pixeloffset: number, color: number): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         pixelColor(pixeloffset: number): number;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         setPixelWhiteLED(pixeloffset: number, white: number): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         show(): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         clear(): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         length(): number;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         setBrightness(brightness: number): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         brightness(): number;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         range(start: number, length: number): NeoPixelStrip;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         move(kind: LightMove, offset: number): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         photonForward(steps: number): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         photonFlip(): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         setPhotonColor(color: number): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         setPhotonMode(mode: PhotonMode): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         showAnimation(animation: NeoPixelAnimation, duration: number): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         showAnimationFrame(animation: NeoPixelAnimation): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         stopAllAnimations(): void;
 
-        //% subcategory="External" blockHidden=false
+        //% subcategory="External"
         setBuffered(on: boolean): void;
+
+        //% subcategory="External"
+        buffered(): boolean;
+
+        //% subcategory="External"
+        setMode(mode: NeoPixelMode): void;
     }
 }

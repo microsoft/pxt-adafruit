@@ -46,7 +46,7 @@ declare namespace light {
         photonFlip(): void;
 
         //% subcategory="External"
-        setPhotonColor(color: number): void;
+        setPhotonPenColor(color: number): void;
 
         //% subcategory="External"
         setPhotonMode(mode: PhotonMode): void;

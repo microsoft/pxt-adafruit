@@ -124,15 +124,16 @@ namespace light {
     export function photonFlip() {
         light.pixels.photonFlip();
     }
+    
     /**
      * Set the photon color.
      * @param color the color of the photon
      */
-    //% blockId=builtin_neophoton_set_color block="photon set pen color %color=colorWheelPicker"
-    //% help="light/set-photon-color"
+    //% blockId=builtin_neophoton_set_pen_color block="photon set pen color %color=colorWheelPicker"
+    //% help="light/set-photon-pen-color"
     //% group="Photon" weight=39 blockGap=8
-    export function setPhotonColor(color: number) {
-        light.pixels.setPhotonColor(color);
+    export function setPhotonPenColor(color: number) {
+        light.pixels.setPhotonPenColor(color);
     }
 
     /**

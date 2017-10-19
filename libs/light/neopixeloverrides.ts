@@ -64,6 +64,9 @@ declare namespace light {
         setBuffered(on: boolean): void;
 
         //% subcategory="External"
+        buffered(): boolean;
+
+        //% subcategory="External"
         setMode(mode: NeoPixelMode): void;
     }
 }

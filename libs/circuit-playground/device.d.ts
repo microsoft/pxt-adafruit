@@ -31,6 +31,10 @@ declare namespace pins {
 
     // Aliases for built-in components
 
+    //% fixedInstance shim=pxt::getPin(PA11)
+    const A8: PwmPin; // light
+    //% fixedInstance shim=pxt::getPin(PA09)
+    const A9: PwmPin;
     //% fixedInstance shim=pxt::getPin(PA28)
     const D4: DigitalPin; // A
     //% fixedInstance shim=pxt::getPin(PA14)
@@ -39,12 +43,14 @@ declare namespace pins {
     const D7: DigitalPin; // Slide
     //% fixedInstance shim=pxt::getPin(PB23)
     const D8: DigitalPin; // Neopixel
+
+    //% fixedInstance shim=pxt::getPin(PA17)
+    const D13: DigitalPin;
+    //% fixedInstance shim=pxt::getPin(PA17)
+    const LED: DigitalPin;
+
     //% fixedInstance shim=pxt::getPin(PA08)
     const A10: PwmPin; // mic
-    //% fixedInstance shim=pxt::getPin(PA11)
-    const A8: PwmPin; // light
-    //% fixedInstance shim=pxt::getPin(PA09)
-    const A9: PwmPin;
 }
 
 declare namespace input {

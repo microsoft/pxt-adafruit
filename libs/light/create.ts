@@ -31,4 +31,23 @@ namespace light {
         strip.setBrightness(20)
         return strip;
     }
+
+    /**
+     * Create a new NeoPixel driver for `numleds` LEDs.
+     * @param pin the pin where the neopixel is connected.
+     * @param numleds number of leds in the strip, eg: 24,30,60,64
+     * @param mode the light encoding mode for different LED strips, eg: NeoPixelMode.RGB
+     */
+    //% blockId="neopixel_create_strip" block="create strip|on %pin|with %numleds|pixels using %mode"
+    //% help="light/create-neo-pixel-strip"
+    //% trackArgs=0,2
+    //% parts="neopixel"
+    //% subcategory="External" weight=100
+    export function createStrip(
+        pin: DigitalPin = null,
+        numleds: number = 10,
+        mode: NeoPixelMode = NeoPixelMode.RGB
+    ): NeoPixelStrip {
+        return light.createNeoPixelStrip(pin, numleds, mode);
+    }
 }

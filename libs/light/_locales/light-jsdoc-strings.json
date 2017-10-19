@@ -21,7 +21,7 @@
   "light.NeoPixelStrip.setBrightness": "Set the brightness of the strip. This flag only applies to future operation.",
   "light.NeoPixelStrip.setBuffered": "Enables or disables automatically calling show when a change is made",
   "light.NeoPixelStrip.setMode": "Sets the color mode and clears the colors.",
-  "light.NeoPixelStrip.setPhotonColor": "This function is deprected.",
+  "light.NeoPixelStrip.setPhotonColor": "This function is deprecated.",
   "light.NeoPixelStrip.setPhotonMode": "Set the photon mode to pen up, pen down, or eraser.",
   "light.NeoPixelStrip.setPhotonPenColor": "Set the photon color.",
   "light.NeoPixelStrip.setPixelColor": "Set the pixel to a given color.\nYou need to call ``show`` to make the changes visible.",

@@ -1,0 +1,7 @@
+{
+  "network": "Communication between devices",
+  "network.cablePacket": "Get most recent packet received over cable.",
+  "network.cableSendPacket": "Send data over cable.",
+  "network.onCableError": "Run action after there's an error reciving packet over cable.",
+  "network.onCablePacket": "Run action after a packet is recieved over cable."
+}

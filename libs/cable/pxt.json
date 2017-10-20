@@ -3,18 +3,14 @@
     "description": "Communication over Cable",
     "files": [
         "README.md",
-        "pulse.cpp",
-        "pulse.h",
         "cable.cpp",
         "cable.ts",
-        "bitvector.h",
-        "samd21.cpp",
-        "shims.d.ts",
-        "ns.ts"
+        "shims.d.ts"
     ],
     "public": true,
     "additionalFilePath": "../../node_modules/pxt-common-packages/libs/cable",
     "dependencies": {
-        "core": "file:../core"
+        "core": "file:../core",
+        "pulse": "file:../pulse"
     }
 }

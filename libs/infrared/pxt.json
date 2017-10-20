@@ -11,6 +11,6 @@
     "additionalFilePath": "../../node_modules/pxt-common-packages/libs/infrared",
     "dependencies": {
         "core": "file:../core",
-        "cable": "file:../cable"
+        "pulse": "file:../pulse"
     }
 }

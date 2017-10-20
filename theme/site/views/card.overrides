@@ -8,11 +8,6 @@
         margin-right: 10px !important;
         padding: 0.5rem;
     }
-    .ui.card:not(.file) {
-        .ui.image {
-            overflow: hidden;
-        }
-    }
 }
 
 /* File card */

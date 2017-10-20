@@ -208,14 +208,14 @@ namespace pxsim.visuals {
     `;
 
     const pinNames: { 'name': string, 'touch': number, 'text': any, 'id'?: number, tooltip?: string }[] = [
-        { 'name': "PIN_A0", 'touch': 0, 'text': null, 'id': pxsim.CPlayPinName.A0, tooltip: "A0 - Speaker" },
-        { 'name': "PIN_A1", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A1, tooltip: "~A1" },
-        { 'name': "PIN_A2", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A2, tooltip: "~A2" },
-        { 'name': "PIN_A3", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A3, tooltip: "~A3" },
-        { 'name': "PIN_A4", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A4, tooltip: "A4 - SCL" },
-        { 'name': "PIN_A5", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A5, tooltip: "A5 - SDA" },
-        { 'name': "PIN_A6", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A6, tooltip: "A6 - RX" },
-        { 'name': "PIN_A7", 'touch': 1, 'text': null, 'id': pxsim.CPlayPinName.A7, tooltip: "A7 - TX" },
+        { 'name': "PIN_A0", 'touch': 0, 'text': null, tooltip: "A0 - Speaker" },
+        { 'name': "PIN_A1", 'touch': 1, 'text': null, tooltip: "~A1" },
+        { 'name': "PIN_A2", 'touch': 1, 'text': null, tooltip: "~A2" },
+        { 'name': "PIN_A3", 'touch': 1, 'text': null, tooltip: "~A3" },
+        { 'name': "PIN_A4", 'touch': 1, 'text': null, tooltip: "A4 - SCL" },
+        { 'name': "PIN_A5", 'touch': 1, 'text': null, tooltip: "A5 - SDA" },
+        { 'name': "PIN_A6", 'touch': 1, 'text': null, tooltip: "A6 - RX" },
+        { 'name': "PIN_A7", 'touch': 1, 'text': null, tooltip: "A7 - TX" },
         { 'name': "GND_0", 'touch': 0, 'text': null, tooltip: "Ground" },
         { 'name': "GND_1", 'touch': 0, 'text': null, tooltip: "Ground" },
         { 'name': "GND_2", 'touch': 0, 'text': null, tooltip: "Ground" },
@@ -315,6 +315,7 @@ namespace pxsim.visuals {
         };
 
         constructor(public props: IBoardProps) {
+            this.fixPinIds();
             this.buildDom();
             if (props && props.wireframe)
                 svg.addClass(this.element, "sim-wireframe");
@@ -327,6 +328,14 @@ namespace pxsim.visuals {
                 this.board.updateSubscribers.push(() => this.updateState());
                 this.updateState();
                 this.attachEvents();
+            }
+        }
+
+        private fixPinIds() {
+            for (let pn of pinNames) {
+                let key = getConfigKey(pn.name);
+                if (key != null)
+                    pn.id = getConfig(key);
             }
         }
 

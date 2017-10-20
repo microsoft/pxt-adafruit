@@ -103,21 +103,21 @@ declare namespace input {
      */
     //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
     //% block="button A" weight=95 fixedInstance
-    //% shim=pxt::getButton(PIN_BTN_A,BUTTON_ACTIVE_HIGH_PULL_DOWN)
+    //% shim=pxt::getButton(0,BUTTON_ACTIVE_HIGH_PULL_DOWN)
     const buttonA: Button;
 
     /**
      * Right button.
      */
     //% block="button B" weight=94 fixedInstance
-    //% shim=pxt::getButton(PIN_BTN_B,BUTTON_ACTIVE_HIGH_PULL_DOWN)
+    //% shim=pxt::getButton(1,BUTTON_ACTIVE_HIGH_PULL_DOWN)
     const buttonB: Button;
 
     /**
      * Left and Right button.
      */
     //% block="buttons A+B" weight=93 fixedInstance
-    //% shim=pxt::getMultiButton(DEVICE_ID_BUTTON_AB,PIN_BTN_A,PIN_BTN_B,BUTTON_ACTIVE_HIGH_PULL_DOWN)
+    //% shim=pxt::getButton(2,BUTTON_ACTIVE_HIGH_PULL_DOWN)
     const buttonsAB: Button;
 }
 

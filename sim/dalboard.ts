@@ -3,23 +3,33 @@
 /// <reference path="../built/common-sim.d.ts"/>
 
 namespace pxsim {
-    export enum CPlayPinName {
-        A0,
-        A1,
-        A2,
-        A3,
-        A4,
-        A5,
-        A6,
-        A7,
-        A8,
-        A9,
-        D4,
-        D5,
-        D6,
-        D7,
-        D8,
-        D13
+    export module CPlayPinName {
+        export let A0 = -1;
+        export let A1 = -1;
+        export let A2 = -1;
+        export let A3 = -1;
+        export let A4 = -1;
+        export let A5 = -1;
+        export let A6 = -1;
+        export let A7 = -1;
+        export let A8 = -1;
+        export let A9 = -1;
+        export let D4 = -1;
+        export let D5 = -1;
+        export let D6 = -1;
+        export let D7 = -1;
+        export let D8 = -1;
+        export let D13 = -1;
+
+        export function init() {
+            let v = CPlayPinName as any
+            for (let k of Object.keys(v)) {
+                let key = getConfigKey("PIN_" + k)
+                if (key != null) {
+                    v[k] = getConfig(key)
+                }
+            }
+        }
     }
 
     export class DalBoard extends CoreBoard implements
@@ -54,6 +64,8 @@ namespace pxsim {
 
         constructor() {
             super()
+
+            CPlayPinName.init()
 
             this.bus.setNotify(DAL.DEVICE_ID_NOTIFY, DAL.DEVICE_ID_NOTIFY_ONE);
 

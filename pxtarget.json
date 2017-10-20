@@ -292,6 +292,7 @@
         "monacoToolbox": true,
         "simAnimationEnter": "roll in",
         "simAnimationExit": "roll out",
+        "highContrast": true,
         "hasAudio": true,
         "usbHelp": [],
         "extendEditor": true,

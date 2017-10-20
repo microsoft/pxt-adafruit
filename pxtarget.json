@@ -160,7 +160,28 @@
             {
                 "type": "api",
                 "map": {
-                    "Math\\s*\\.random\\s*\\(\\s*([^\\s]+)\\s*\\)": "Math.randomRange(0, $1)"
+                    "Math\\s*\\.random\\s*\\(\\s*([^\\s]+)\\s*\\)": "Math.randomRange(0, $1)",
+                    "light\\.pixels\\.(__)?setAll": "light.setAll",
+                    "light\\.pixels\\.(__)?graph": "light.graph",
+                    "light\\.pixels\\.(__)?setPixelColor": "light.setPixelColor",
+                    "light\\.pixels\\.(__)?pixelColor": "light.pixelColor",
+                    "light\\.pixels\\.(__)?setBrightness": "light.setBrightness",
+                    "light\\.pixels\\.(__)?photonForward": "light.photonForward",
+                    "light\\.pixels\\.(__)?photonFlip": "light.photonFlip",
+                    "light\\.pixels\\.(__)?setPhotonColor": "light.setPhotonPenHue",
+                    "light\\.pixels\\.(__)?setPhotonMode": "light.setPhotonMode",
+                    "light\\.pixels\\.(__)?showAnimation": "light.showAnimation",
+                    "light\\.pixels\\.(__)?showAnimationFrame": "light.showAnimation",
+                    "light\\.pixels\\.__stopAllAnimations": "light.pixels.stopAllAnimations",
+                    "light\\.pixels\\.__setPixelWhiteLED": "light.pixels.setPixelWhiteLED",
+                    "light\\.pixels\\.__show": "light.pixels.show",
+                    "light\\.pixels\\.__clear": "light.pixels.clear",
+                    "light\\.pixels\\.__length": "light.pixels.length",
+                    "light\\.pixels\\.__brightness": "light.pixels.brightness",
+                    "light\\.pixels\\.__range": "light.pixels.range",
+                    "light\\.pixels\\.__move": "light.pixels.move",
+                    "light\\.pixels\\.__setBuffered": "light.pixels.setBuffered",
+                    "light\\.pixels\\.__setMode": "light.pixels.setMode"
                 }
             }
         ],
@@ -297,9 +318,6 @@
             "advanced": "#00272B",
             "functions": "#005a9e",
             "arrays": "#8A1C7C"
-        },
-        "monacoColors": {
-            "editor.background": "#424A51"
         },
         "allowPackageExtensions": true
     }

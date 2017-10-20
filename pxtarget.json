@@ -328,5 +328,9 @@
             "arrays": "#8A1C7C"
         },
         "allowPackageExtensions": true
+    },
+    "windowsStoreInfo": {
+        "link": "https://www.microsoft.com/store/apps/9PGZHWSK0PGD",
+        "thumbnail": "https://store-images.s-microsoft.com/image/apps.52290.14241704312124595.193f6bfb-79f7-4587-9861-2b3c1f09e231.6d4ecc63-4cc4-492f-92e7-a7c21ac3d9af?w=180&h=180&q=60"
     }
 }

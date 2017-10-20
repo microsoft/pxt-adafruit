@@ -56,5 +56,6 @@
   "light.rgb|param|red": "value of the red channel between 0 and 255. eg: 255",
   "light.sendBuffer": "Sends a neopixel buffer to the specified digital pin",
   "light.sendBuffer|param|buf": "The buffer to send to the pin",
+  "light.sendBuffer|param|mode": "the color encoding mode",
   "light.sendBuffer|param|pin": "The pin that the neopixels are connected to"
 }

@@ -483,7 +483,7 @@ namespace pxsim.visuals {
                     continue;
                 }
 
-                let hsl = visuals.rgbToHsl(rgb[0], rgb[1], rgb[2]);
+                let hsl = visuals.rgbToHsl([rgb[0], rgb[1], rgb[2]]);
                 let [h, s, l] = hsl;
                 let lx = Math.max(l * 1.3, 85);
                 // at least 10% luminosity

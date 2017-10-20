@@ -33,6 +33,10 @@
     &:extend(.ui.blue.button all);
 }
 
+.simtoolbar .ui.button, .collapse-button.ui.button {
+    &:extend(.ui.grey.button all);
+}
+
 /* Editor menu toggle */
 .ui.menu .item.editor-menuitem .ui.grid {
     background: fade(@black, 20%) !important;
@@ -40,6 +44,27 @@
 
 .sandboxfooter a:not(.thin) {
     color:white !important;
+}
+
+/* Home screen */
+.ui.modal.home.projectsdialog {
+    .tabsegment  {
+        padding-top: 0 !important;
+    }
+    .ui.inverted.menu {
+        background: linear-gradient(to bottom, @darkGrey, rgba(255,255,255,0));
+    }
+    .getting-started-segment {
+        margin-top: 0 !important;
+        background-position: 50% 75%;
+    }
+}
+
+/* PXT Json */
+#pxtJsonEditor {
+    .ui.header {
+        color: @invertedTextColor;
+    }
 }
 
 /* Mobile */

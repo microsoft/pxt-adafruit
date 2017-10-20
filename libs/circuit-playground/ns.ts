@@ -81,15 +81,25 @@ namespace light {
 
     /**
      * Set the pixel to a given color.
-     * You need to call ``show`` to make the changes visible.
      * @param pixeloffset position of the NeoPixel in the strip
      * @param color RGB color of the LED
      */
     //% blockId="builtin_neopixel_set_pixel_color" block="set pixel color at %pixeloffset|to %rgb=colorNumberPicker"
     //% help="light/set-pixel-color"
-    //% group="More" weight=89
+    //% group="More" weight=89 blockGap=8
     export function setPixelColor(pixeloffset: number, color: number): void {
         light.pixels.setPixelColor(pixeloffset, color);
+    }
+
+    /**
+     * Gets the pixel color at a given offset.
+     * @param pixeloffset position of the NeoPixel in the strip
+     */
+    //% blockId="builtin_neopixel_pixel_color" block="pixel color at %pixeloffset"
+    //% help="light/pixel-color"
+    //% group="More" weight=88    
+    export function pixelColor(pixeloffset: number): number {
+        return light.pixels.pixelColor(pixeloffset);
     }
 
     /**

@@ -71,8 +71,5 @@ declare namespace light {
 
         //% subcategory="External"
         setMode(mode: NeoPixelMode): void;
-
-        //% subcategory="External"
-        power(): number;
     }
 }

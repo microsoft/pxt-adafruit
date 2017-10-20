@@ -470,7 +470,8 @@ namespace pxsim.visuals {
             if (!state) return;
             const neopixelState = state.tryGetNeopixelState(state.defaultNeopixelPin().id);            
             if (!neopixelState) return;
-            for (let i = 0; i < neopixelState.length; i++) {
+            const n = neopixelState.length;
+            for (let i = 0; i < n; i++) {
                 let rgb = neopixelState.pixelColor(i);
                 let p_inner = this.element.getElementById(`LED${i}`) as SVGPathElement;
 
@@ -482,7 +483,7 @@ namespace pxsim.visuals {
                     continue;
                 }
 
-                let hsl = visuals.rgbToHsl(rgb);
+                let hsl = visuals.rgbToHsl(rgb[0], rgb[1], rgb[2]);
                 let [h, s, l] = hsl;
                 let lx = Math.max(l * 1.3, 85);
                 // at least 10% luminosity

@@ -4,11 +4,6 @@
 
 ```codecard
 [{
-  "name": "Magic Wand",
-  "url":"/projects/magic-wand",
-  "imageUrl":"/static/cp/projects/magic-wand.jpg"
-},
-{
   "name": "Dandelion",
   "url":"/projects/dandelion",
   "imageUrl":"/static/cp/projects/dandelion.jpg"
@@ -18,6 +13,11 @@
   "url":"/projects/watch-timer",
 
   "imageUrl":"/static/cp/projects/watch-timer.jpg"
+},
+{
+  "name": "Magic Wand",
+  "url":"/projects/magic-wand",
+  "imageUrl":"/static/cp/projects/magic-wand.jpg"
 },
 {
   "name": "Headlamp",

@@ -316,6 +316,7 @@ declare const enum DAL {
     CFG_PIN_D15 = 165,
     CFG_NUM_NEOPIXELS = 200,
     CFG_NUM_DOTSTARS = 201,
+    CFG_DEFAULT_BUTTON_MODE = 202,
     BUTTON_ACTIVE_HIGH_PULL_DOWN = 17,
     BUTTON_ACTIVE_HIGH_PULL_UP = 33,
     BUTTON_ACTIVE_HIGH_PULL_NONE = 49,
@@ -399,9 +400,6 @@ declare const enum DAL {
     PB29 = 61,
     PB30 = 62,
     PB31 = 63,
-    PULL_DOWN = -1,
-    PULL_UP = 1,
-    PULL_NONE = 0,
     // built/codal/pxtapp/pxtbase.h
     Int8LE = 1,
     UInt8LE = 2,

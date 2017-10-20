@@ -24,7 +24,7 @@
   "light.NeoPixelStrip.setMode": "Sets the color mode and clears the colors.",
   "light.NeoPixelStrip.setPhotonMode": "Set the photon mode to pen up, pen down, or eraser.",
   "light.NeoPixelStrip.setPhotonPenColor": "Set the photon color.",
-  "light.NeoPixelStrip.setPhotonPenHue": "This function is deprecated.",
+  "light.NeoPixelStrip.setPhotonPenHue": "Sets the photon hue.",
   "light.NeoPixelStrip.setPixelColor": "Set the pixel to a given color.\nYou need to call ``show`` to make the changes visible.",
   "light.NeoPixelStrip.setPixelWhiteLED": "Set the white brightness of a pixel in a NeoPixel strip of RGB+W LEDs.\nThis only works for RGB+W NeoPixels.",
   "light.NeoPixelStrip.show": "Make the strip show all the new changes for the pixels.",
@@ -38,7 +38,6 @@
   "light.colorNumberPicker|param|color": "color, eg: 0xFF0000",
   "light.colorWheelPicker": "Get the color wheel field editor",
   "light.colors": "Get the RGB value of a known color",
-  "light.createNeoPixelStrip": "This block is deprecated, use ``light.createStrip`` instead.",
   "light.createStrip": "Create a new programmable light strip.",
   "light.createStrip|param|mode": "the light encoding mode for different LED strips, eg: NeoPixelMode.RGB_GRB",
   "light.createStrip|param|numleds": "number of leds in the strip, eg: 24,30,60,64",
@@ -57,5 +56,6 @@
   "light.rgb|param|red": "value of the red channel between 0 and 255. eg: 255",
   "light.sendBuffer": "Sends a neopixel buffer to the specified digital pin",
   "light.sendBuffer|param|buf": "The buffer to send to the pin",
+  "light.sendBuffer|param|mode": "the color encoding mode",
   "light.sendBuffer|param|pin": "The pin that the neopixels are connected to"
 }

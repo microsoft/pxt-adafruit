@@ -13,6 +13,7 @@
   "light.showAnimationFrame|block": "show animation frame %animation=light_animation",
   "light.showAnimation|block": "show %animation=light_animation|animation for %duration=timePicker|ms",
   "light.showRing|block": "show ring |%colors",
+  "light.stopAllAnimations|block": "stop all animations",
   "light|block": "light",
   "{id:category}Input": "Input",
   "{id:category}Light": "Light",

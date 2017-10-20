@@ -81,15 +81,25 @@ namespace light {
 
     /**
      * Set the pixel to a given color.
-     * You need to call ``show`` to make the changes visible.
      * @param pixeloffset position of the NeoPixel in the strip
      * @param color RGB color of the LED
      */
     //% blockId="builtin_neopixel_set_pixel_color" block="set pixel color at %pixeloffset|to %rgb=colorNumberPicker"
     //% help="light/set-pixel-color"
-    //% group="More" weight=89
+    //% group="More" weight=89 blockGap=8
     export function setPixelColor(pixeloffset: number, color: number): void {
         light.pixels.setPixelColor(pixeloffset, color);
+    }
+
+    /**
+     * Gets the pixel color at a given offset.
+     * @param pixeloffset position of the NeoPixel in the strip
+     */
+    //% blockId="builtin_neopixel_pixel_color" block="pixel color at %pixeloffset"
+    //% help="light/pixel-color"
+    //% group="More" weight=88    
+    export function pixelColor(pixeloffset: number): number {
+        return light.pixels.pixelColor(pixeloffset);
     }
 
     /**
@@ -124,15 +134,16 @@ namespace light {
     export function photonFlip() {
         light.pixels.photonFlip();
     }
+
     /**
-     * Set the photon color.
-     * @param color the color of the photon
+     * Set the photon color hue.
+     * @param hue the color hue of the photon
      */
-    //% blockId=builtin_neophoton_set_color block="photon set pen color %color=colorWheelPicker"
-    //% help="light/set-photon-color"
+    //% blockId=builtin_neophoton_set_pen_hue block="photon set pen hue %hue=colorWheelPicker"
+    //% help="light/set-photon-pen-hue"
     //% group="Photon" weight=39 blockGap=8
-    export function setPhotonColor(color: number) {
-        light.pixels.setPhotonColor(color);
+    export function setPhotonPenHue(hue: number) {
+        light.pixels.setPhotonPenHue(hue);
     }
 
     /**
@@ -164,8 +175,18 @@ namespace light {
      */
     //% blockId=builtin_neopixel_show_animation_frame block="show animation frame %animation=light_animation"
     //% help="light/show-animation-frame"
-    //% group="More" weight=24
+    //% group="More" weight=24 blockGap=8
     export function showAnimationFrame(animation: NeoPixelAnimation) {
         light.pixels.showAnimationFrame(animation);
+    }
+
+    /**
+     * Stop the current animation and any other animations ready to show.
+     */
+    //% blockId=builtin_neopixel_stop_all_animations block="stop all animations"
+    //% help="light/stop-all-animations"
+    //% group="More" weight=23
+    export function stopAllAnimations() {
+        light.pixels.stopAllAnimations();
     }
 }

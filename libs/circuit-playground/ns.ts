@@ -175,8 +175,18 @@ namespace light {
      */
     //% blockId=builtin_neopixel_show_animation_frame block="show animation frame %animation=light_animation"
     //% help="light/show-animation-frame"
-    //% group="More" weight=24
+    //% group="More" weight=24 blockGap=8
     export function showAnimationFrame(animation: NeoPixelAnimation) {
         light.pixels.showAnimationFrame(animation);
+    }
+
+    /**
+     * Stop the current animation and any other animations ready to show.
+     */
+    //% blockId=builtin_neopixel_stop_all_animations block="stop all animations"
+    //% help="light/stop-all-animations"
+    //% group="More" weight=23
+    export function stopAllAnimations() {
+        light.pixels.stopAllAnimations();
     }
 }

@@ -11,7 +11,7 @@ namespace light {
     //% help="light/create-strip"
     //% trackArgs=0,2
     //% parts="neopixel"
-    //% weight=100
+    //% weight=100 blockGap=8
     //% subcategory="External"
     export function createStrip(
         pin: DigitalPin = null,

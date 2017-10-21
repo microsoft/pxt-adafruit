@@ -36,6 +36,17 @@ namespace light {
     export const pixels = light.createNeoPixelStrip();
 
     /**
+     * Gets the 10 NeoPixel strip built in the Circuit Playground Express.
+     */
+    //% help=light/onboard-strip
+    //% blockId="neopixel_onboard_strip" block="onboard strip"
+    //% weight=101 blockGap=8
+    //% subcategory="External"
+    export function onboardStrip(): NeoPixelStrip {
+        return pixels;
+    }
+
+    /**
      * Shows a pattern of colors on the pixel ring
      * @param colors a string describing the colors, eg: "red red red red red red red red red red"
      * @param interval the duration in milliseconds between frames, eg: 400

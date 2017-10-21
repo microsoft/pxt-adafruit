@@ -2,6 +2,7 @@
   "input.ambientColor|block": "ambient color",
   "input|block": "input",
   "light.graph|block": "graph of %value |up to %high",
+  "light.onboardStrip|block": "onboard strip",
   "light.photonFlip|block": "photon flip",
   "light.photonForward|block": "photon forward by %steps",
   "light.pixelColor|block": "pixel color at %pixeloffset",

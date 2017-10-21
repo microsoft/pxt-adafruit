@@ -70,7 +70,7 @@ declare namespace loops {
      * Repeats the code forever in the background. On each iteration, allows other codes to run.
      * @param body code to execute
      */
-    //% help=loops/forever weight=100
+    //% help=loops/forever weight=100 afterOnStart=true
     //% blockId=forever block="forever" blockAllowMultiple=1 shim=loops::forever
     function forever(a: () => void): void;
 
@@ -120,7 +120,7 @@ declare namespace control {
     /**
      * Run other code in the background.
      */
-    //% help=control/run-in-background blockAllowMultiple=1
+    //% help=control/run-in-background blockAllowMultiple=1 afterOnStart=true
     //% blockId="control_run_in_background" block="run in background" blockGap=8 shim=control::runInBackground
     function runInBackground(a: () => void): void;
 

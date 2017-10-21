@@ -10,5 +10,6 @@ DevPins::DevPins()
       PIN_D(IR_IN), PIN_AD(IR_OUT),
       PIN_D(MIC_DATA), PIN_D(MIC_CLOCK),
       PIN_D(SPEAKER_AMP),
-      i2c((PinName)PIN_SDA, (PinName)PIN_SCL)
+      PIN_D(SDA), PIN_D(SCL),
+      i2c(SDA, SCL)
       {}

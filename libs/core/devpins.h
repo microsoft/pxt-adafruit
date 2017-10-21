@@ -54,6 +54,8 @@ class DevPins {
     DevicePin IR_OUT;
     DevicePin MIC_DATA;
     DevicePin MIC_CLOCK;
+    DevicePin SDA;
+    DevicePin SCL;
     DevicePin SPEAKER_AMP;
 
     codal::mbed::I2C i2c;

@@ -1,3 +1,33 @@
 /*******************************
          Site Overrides
 *******************************/
+
+
+@background: lighten(@grey, 10%);
+@borderColor: #202428;
+
+@headerBackground: @background;
+@headerFontSize: @large;
+@contentBackground: @background;
+
+@actionBackground: @background;
+
+@headerColor: white;
+@contentColor: white;
+
+@closeColor: @white;
+
+@headerBorder: none;
+@actionBorder: none;
+
+/* Dark menu theme */
+@textColor                   : @invertedTextColor;
+@darkTextColor               : @invertedTextColor;
+@mutedTextColor              : @invertedMutedTextColor;
+@lightTextColor              : @invertedLightTextColor;
+
+@unselectedTextColor         : @invertedUnselectedTextColor;
+@hoveredTextColor            : @invertedHoveredTextColor;
+@pressedTextColor            : @invertedPressedTextColor;
+@selectedTextColor           : @invertedSelectedTextColor;
+@disabledTextColor           : @invertedDisabledTextColor;

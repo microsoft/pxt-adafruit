@@ -16,17 +16,38 @@
 @teal:#08415C;
 @violet:#C200C0;
 @brown:#2E282A;
-@grey:#999;
+@grey:#4d5055;
+
+@grey: #3C444A; /*#4c4b4d;*/ /*#1e1e1e;*/
+@darkGrey: #292F36; /*#2F2F2F;*/ /*#313638;*/
 
 /* Adafruit colors */
-@blue:#2EB7ED;
+@blue: #009DDC; /*#2EB7ED;*/
 @pink:#FB48C7;
 
 @green: #40bf4a; /*#00922B;*/
 @purple:#8073E5;
-@orange:#FFA702;
+@orange:#d25b33; /*#FFA702;*/
 
-@pageBackground: #ecf0f1;
+@darkBlue: #1c1f2b;
+@darkGreen: #092C3A;
+
+@pageBackground: @darkBlue; /*#ecf0f1;*/
+
+
+/*--------------
+   Form Input
+---------------*/
+
+/* This adjusts the default form input across all elements */
+@inputBackground        : #333940;
+
+/* Input Text Color */
+@inputColor: white;
+@highlightColor: @grey;
+@inputHighlightColor: @inputColor;
+
+@linkColor: #3eb1d0;
 
 /*******************************
          PXT Overrides
@@ -55,9 +76,9 @@
    Background
 --------------------*/
 
-@simulatorBackground: #292F36; /*#2F2F2F;*/ /*#313638;*/
-@editorToolsBackground: @simulatorBackground; /*#2F2F2F;*/ /*#1e1e1e;*/
-@blocklySvgColor: #424A51; /*#4c4b4d;*/ /*#1e1e1e;*/
+@simulatorBackground: @darkGrey;
+@editorToolsBackground: @simulatorBackground;
+@blocklySvgColor: @grey;
 
 /*-------------------
    Full screen
@@ -88,7 +109,7 @@
 @blocklyRowWidthWide: 160px;
 @blocklyRowWidthComputer: 140px;
 
-@blocklyScrollbarColor: #292f35;
+@blocklyScrollbarColor: @darkGrey;
 @blocklyScrollbarOpacity: 0.5;
 
 
@@ -105,7 +126,34 @@
 
 @serialTextColor: white;
 @serialGraphBackground: #d9d9d9;
+@serialBackgroundColor: @grey;
 
+/*-------------------
+   Home screen
+--------------------*/
+
+@homeScreenBackground: @darkBlue;
+@homeCardBackgroundColor: @darkGreen;
+@homeHeaderColor: white;
+@homeCardColor: #bdcadb;
+@homeCardBorderRadius: 5px;
+@homeCardBorderSize: 2px;
+@homeCardBorderColor: lighten(@darkGreen, 10%);
+@homeCardHoverBorderColor: white;
+@homeCardImageBorderRadius: 5px;
+
+/*-------------------
+   Docs
+--------------------*/
+
+@docsAvatarUrl: data-uri("../docs/static/avatar-inverted.svg");
+
+/*-------------------
+   Tutorial
+--------------------*/
+
+@tutorialSegmentBackground: @darkGrey;
+@tutorialSegmentColor: @inputColor;
 
 /*-------------------
    Flyout

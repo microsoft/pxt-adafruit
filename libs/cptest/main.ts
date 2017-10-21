@@ -1,9 +1,9 @@
 let mode = -1
 
 function blink(idx: number, color: number) {
-    light.pixels.setPixelColor(idx, color)
+    light.setPixelColor(idx, color)
     loops.pause(20)
-    light.pixels.setPixelColor(idx, 0)
+    light.setPixelColor(idx, 0)
     loops.pause(10)
 }
 
@@ -45,7 +45,7 @@ function main() {
 
     input.onGesture(Gesture.Shake, () => {
         if (mode == 0)
-            light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 2000)
+            light.showAnimation(light.animation(LightAnimation.Rainbow), 2000)
     })
 
     switchMode()

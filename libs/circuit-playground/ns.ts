@@ -36,7 +36,7 @@ namespace light {
     export const pixels = light.createNeoPixelStrip();
 
     /**
-     * Gets the 10 NeoPixel strip built in the Circuit Playground Express.
+     * Get the 10 NeoPixel strip built into the Circuit Playground Express.
      */
     //% help=light/onboard-strip
     //% blockId="neopixel_onboard_strip" block="onboard strip"

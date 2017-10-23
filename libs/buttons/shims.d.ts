@@ -1,6 +1,15 @@
 // Auto-generated. Do not edit.
 
 
+declare interface DigitalPin {
+    /**
+     * Get the push button (connected to GND) for given pin
+     */
+    //% shim=DigitalPinMethods::pushButton
+    pushButton(): Button;
+}
+
+
 
     //% noRefCounting fixedInstances
 declare interface Button {

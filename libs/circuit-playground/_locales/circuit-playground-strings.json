@@ -29,5 +29,7 @@
   "{id:category}Config": "Config",
   "{id:category}Input": "Input",
   "{id:category}Light": "Light",
-  "{id:category}Pins": "Pins"
+  "{id:category}Pins": "Pins",
+  "{id:group}More": "More",
+  "{id:group}Photon": "Photon"
 }

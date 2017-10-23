@@ -124,6 +124,7 @@
    Serial
 --------------------*/
 @editorCloseColor: white;
+@serialTextColor: @invertedTextColor;
 
 /*-------------------
    Home screen

@@ -123,7 +123,7 @@
 /*-------------------
    Serial
 --------------------*/
-@closeColor: white;
+@editorCloseColor: white;
 
 /*-------------------
    Home screen

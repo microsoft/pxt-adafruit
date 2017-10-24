@@ -15,7 +15,6 @@ Step by step guide to coding your @boardname@.
 }, {
   "name": "Siren", 
   "cardType": "tutorial",
-  "url":"/tutorials/siren",hid
-  "imageUrl":"/static/cp/projects/siren.jpg"
+  "url":"/tutorials/siren"
 }]
 ```

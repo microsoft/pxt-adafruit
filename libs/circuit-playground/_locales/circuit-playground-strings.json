@@ -1,5 +1,15 @@
 {
   "input.ambientColor|block": "ambient color",
+  "input.buttonA|block": "button A",
+  "input.buttonB|block": "button B",
+  "input.buttonsAB|block": "buttons A+B",
+  "input.pinA1|block": "pin A1",
+  "input.pinA2|block": "pin A2",
+  "input.pinA3|block": "pin A3",
+  "input.pinA4|block": "pin A4",
+  "input.pinA5|block": "pin A5",
+  "input.pinA6|block": "pin A6",
+  "input.pinA7|block": "pin A7",
   "input|block": "input",
   "light.graph|block": "graph of %value |up to %high",
   "light.onboardStrip|block": "onboard strip",
@@ -16,8 +26,10 @@
   "light.showRing|block": "show ring |%colors",
   "light.stopAllAnimations|block": "stop all animations",
   "light|block": "light",
+  "{id:category}Config": "Config",
   "{id:category}Input": "Input",
   "{id:category}Light": "Light",
+  "{id:category}Pins": "Pins",
   "{id:group}More": "More",
   "{id:group}Photon": "Photon"
 }

@@ -1,17 +1,3 @@
 {
-    "name": "cable",
-    "description": "Communication over Cable",
-    "files": [
-        "README.md",
-        "cable.cpp",
-        "cable.ts",
-        "shims.d.ts"
-    ],
-    "public": true,
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/cable",
-    "dependencies": {
-        "core": "file:../core",
-        "pulse": "file:../pulse"
-    },
-    "icon": "./static/packages/cable/icon.png"
-}
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/cable"
+ }

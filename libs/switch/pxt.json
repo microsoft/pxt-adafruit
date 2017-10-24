@@ -1,16 +1,3 @@
 {
-    "name": "switch",
-    "description": "A slide switch",
-    "files": [
-        "README.md",
-        "switch.cpp",
-        "ns.ts",
-        "shims.d.ts",
-        "enums.d.ts"
-    ],
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/switch",
-    "dependencies": {
-        "core": "file:../core"
-    },
-    "public": true
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/switch"
 }

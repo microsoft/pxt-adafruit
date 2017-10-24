@@ -4,6 +4,7 @@
     "files": [
         "README.md",
         "input.ts",
+        "icons.ts",
         "ns.ts",
         "shims.d.ts",
         "enums.d.ts"

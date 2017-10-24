@@ -4,3 +4,16 @@
 
 @invertedItemTextColor: @primaryColor;
 @transparentInvertedColor: @primaryColor;
+
+
+/* Dark menu theme */
+@textColor                   : @invertedTextColor;
+@darkTextColor               : @invertedTextColor;
+@mutedTextColor              : @invertedMutedTextColor;
+@lightTextColor              : @invertedLightTextColor;
+
+@unselectedTextColor         : @invertedUnselectedTextColor;
+@hoveredTextColor            : @invertedHoveredTextColor;
+@pressedTextColor            : @invertedPressedTextColor;
+@selectedTextColor           : @invertedSelectedTextColor;
+@disabledTextColor           : @invertedDisabledTextColor;

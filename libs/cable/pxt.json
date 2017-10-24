@@ -12,5 +12,6 @@
     "dependencies": {
         "core": "file:../core",
         "pulse": "file:../pulse"
-    }
+    },
+    "icon": "./static/packages/cable/icon.png"
 }

@@ -4,5 +4,5 @@
 
 /* Fix semantic ui issue with hover over scriptsearch search box */
 .ui.search .action:hover {
-    background: @darkGrey !important;
+    background: @background !important;
 }

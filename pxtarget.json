@@ -29,7 +29,7 @@
         "log": true,
         "editorTheme": {
             "graphBackground": "#d9d9d9",
-            "lineColors": ["#CC2936", "#FFC914", "#2EB7ED", "#FB48C7", "#08415C", "#C200C0"]
+            "lineColors": ["#009DDC", "#FB48C7", "#40bf4a", "#8073E5", "#d25b33"]
         }
     },
     "simulator": {

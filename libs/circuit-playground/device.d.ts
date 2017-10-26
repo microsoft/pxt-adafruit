@@ -53,6 +53,31 @@ declare namespace pins {
     const A10: PwmPin; // mic
 }
 
+
+declare namespace input {
+    /**
+     * Left button.
+     */
+    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
+    //% block="button A" weight=95 fixedInstance
+    //% shim=pxt::getButton(0)
+    const buttonA: Button;
+
+    /**
+     * Right button.
+     */
+    //% block="button B" weight=94 fixedInstance
+    //% shim=pxt::getButton(1)
+    const buttonB: Button;
+
+    /**
+     * Left and Right button.
+     */
+    //% block="buttons A+B" weight=93 fixedInstance
+    //% shim=pxt::getButton(2)
+    const buttonsAB: Button;
+}
+
 declare namespace input {
     /**
      * Capacitive pin A1
@@ -96,28 +121,3 @@ declare namespace input {
     //% block="pin A7" fixedInstance shim=pxt::getTouchButton(PIN_A7)
     const pinA7: TouchButton;
 }
-
-declare namespace input {
-    /**
-     * Left button.
-     */
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
-    //% block="button A" weight=95 fixedInstance
-    //% shim=pxt::getButton(0)
-    const buttonA: Button;
-
-    /**
-     * Right button.
-     */
-    //% block="button B" weight=94 fixedInstance
-    //% shim=pxt::getButton(1)
-    const buttonB: Button;
-
-    /**
-     * Left and Right button.
-     */
-    //% block="buttons A+B" weight=93 fixedInstance
-    //% shim=pxt::getButton(2)
-    const buttonsAB: Button;
-}
-

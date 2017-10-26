@@ -1,6 +1,6 @@
 # @extends
 
-### #example
+## #example
 
 ```sim
 let temp = input.temperature(TemperatureUnit.Celsius);

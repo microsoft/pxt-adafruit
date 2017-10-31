@@ -83,7 +83,7 @@ namespace light {
      * @param high maximum value, 0 to autoscale
      */
     //% blockId=builtin_neopixel_show_bar_graph block="graph of %value |up to %high" icon="\uf080"
-    //% help=light/graph
+    //% help=light/graph blockGap=8
     //% weight=79
     export function graph(value: number, high: number): void {
         light.pixels.graph(value, high);
@@ -174,21 +174,10 @@ namespace light {
      * @param duration the duration to run in milliseconds, eg: 500
      */
     //% blockId=builtin_neopixel_show_animation block="show %animation=light_animation|animation for %duration=timePicker|ms"
-    //% help="light/show-animation"
+    //% help="light/show-animation" blockGap=8
     //% weight=80
     export function showAnimation(animation: NeoPixelAnimation, duration: number) {
         light.pixels.showAnimation(animation, duration);
-    }
-
-    /**
-     * Show a single animation frame
-     * @param animation the animation to run, eg: light.animation(LightAnimation.Rainbow)
-     */
-    //% blockId=builtin_neopixel_show_animation_frame block="show animation frame %animation=light_animation"
-    //% help="light/show-animation-frame"
-    //% group="More" weight=24 blockGap=8
-    export function showAnimationFrame(animation: NeoPixelAnimation) {
-        light.pixels.showAnimationFrame(animation);
     }
 
     /**

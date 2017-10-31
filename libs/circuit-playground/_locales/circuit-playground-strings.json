@@ -11,7 +11,7 @@
   "input.pinA6|block": "pin A6",
   "input.pinA7|block": "pin A7",
   "input|block": "input",
-  "light.graph|block": "graph of %value |up to %high",
+  "light.graph|block": "graph %value |up to %high",
   "light.onboardStrip|block": "onboard strip",
   "light.photonFlip|block": "photon flip",
   "light.photonForward|block": "photon forward by %steps",

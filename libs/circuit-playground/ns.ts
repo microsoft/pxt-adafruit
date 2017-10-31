@@ -180,6 +180,17 @@ namespace light {
         light.pixels.showAnimation(animation, duration);
     }
 
+   /**
+     * Show a single animation frame		
+     * @param animation the animation to run, eg: light.animation(LightAnimation.Rainbow)		
+     */		
+    //% blockId=builtin_neopixel_show_animation_frame block="show animation frame %animation=light_animation"		
+    //% help="light/show-animation-frame"		
+    //% group="More" weight=24 blockGap=8		
+    export function showAnimationFrame(animation: NeoPixelAnimation) {		
+        light.pixels.showAnimationFrame(animation);		
+    }		
+    
     /**
      * Stop the current animation and any other animations ready to show.
      */

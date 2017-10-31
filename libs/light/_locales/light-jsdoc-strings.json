@@ -29,6 +29,7 @@
   "light.NeoPixelStrip.setPixelWhiteLED": "Set the white brightness of a pixel in a NeoPixel strip of RGB+W LEDs.\nThis only works for RGB+W NeoPixels.",
   "light.NeoPixelStrip.show": "Make the strip show all the new changes for the pixels.",
   "light.NeoPixelStrip.showAnimation": "Show an animation or queue an animation in the animation queue",
+  "light.NeoPixelStrip.showAnimationFrame": "Show a single animation frame.",
   "light.NeoPixelStrip.showColors": "Renders a pattern of colors on the strip",
   "light.NeoPixelStrip.stopAllAnimations": "Stop the current animation and any other animations ready to show.",
   "light.colorNumberPicker": "Get the color picker field editor",

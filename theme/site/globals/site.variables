@@ -78,7 +78,7 @@
 
 @simulatorBackground: @darkGrey;
 @editorToolsBackground: @simulatorBackground;
-@blocklySvgColor: @grey;
+@blocklySvgColor: #424a51;
 
 /*-------------------
    Full screen

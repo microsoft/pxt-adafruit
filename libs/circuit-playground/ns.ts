@@ -176,7 +176,7 @@ namespace light {
     //% blockId=builtin_neopixel_show_animation block="show %animation|animation"
     //% help="light/show-animation" blockGap=8
     //% weight=80
-    //% animation.fieldEditor="gridpicker"
+    //% animation.fieldEditor="imagedropdown"
     export function showAnimation(animation: NeoPixelAnimation, duration: number = 0) {
         light.pixels.showAnimation(animation, duration);
     }
@@ -188,7 +188,7 @@ namespace light {
     //% blockId=builtin_neopixel_show_animation_frame block="show frame of %animation|animation "		
     //% help="light/show-animation-frame"		
     //% group="More" weight=24 blockGap=8		
-    //% animation.fieldEditor="gridpicker"
+    //% animation.fieldEditor="imagedropdown"
     export function showAnimationFrame(animation: NeoPixelAnimation) {		
         light.pixels.showAnimationFrame(animation);		
     }		

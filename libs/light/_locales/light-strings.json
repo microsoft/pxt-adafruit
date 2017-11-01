@@ -65,7 +65,7 @@
   "light.hsv|block": "hue %hue|sat %sat|val %val",
   "light.rainbowAnimation|block": "rainbow",
   "light.rgb|block": "red %red|green %green|blue %blue",
-  "light.runningLightAnimation|block": "running lights",
+  "light.runningLightsAnimation|block": "running lights",
   "light.sparkleAnimation|block": "sparkle",
   "light.theaterChaseAnimation|block": "theater chase",
   "light|block": "light",

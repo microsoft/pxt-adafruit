@@ -28,6 +28,28 @@ namespace loops {
 
 }
 
+
+enum LightAnimation {
+    //% blockImage=1
+    //% block="rainbow"
+    Rainbow,
+    //% blockImage=1
+    //% block="running lights"
+    RunningLights,
+    //% blockImage=1
+    //% block="comet"
+    Comet,
+    //% blockImage=1
+    //% block="sparkle"
+    Sparkle,
+    //% blockImage=1
+    //% block="theater chase"
+    TheaterChase,
+    //% blockImage=1
+    //% block="color wipe"
+    ColorWipe
+}
+
 //% color="#4c97ff"
 //% groups='["other", "Color", "Photon", "More"]'
 namespace light {
@@ -181,18 +203,18 @@ namespace light {
         light.pixels.showAnimation(animation, duration);
     }
 
-   /**
-     * Show a single animation frame		
-     * @param animation the animation to run, eg: light.animation(LightAnimation.Rainbow)		
-     */		
+    /**
+      * Show a single animation frame		
+      * @param animation the animation to run, eg: light.animation(LightAnimation.Rainbow)		
+      */
     //% blockId=builtin_neopixel_show_animation_frame block="show frame of %animation|animation "		
     //% help="light/show-animation-frame"		
     //% group="More" weight=24 blockGap=8		
     //% animation.fieldEditor="imagedropdown"
-    export function showAnimationFrame(animation: NeoPixelAnimation) {		
-        light.pixels.showAnimationFrame(animation);		
-    }		
-    
+    export function showAnimationFrame(animation: NeoPixelAnimation) {
+        light.pixels.showAnimationFrame(animation);
+    }
+
     /**
      * Stop the current animation and any other animations ready to show.
      */
@@ -201,5 +223,25 @@ namespace light {
     //% group="More" weight=23
     export function stopAllAnimations() {
         light.pixels.stopAllAnimations();
+    }
+
+    /**
+     * Creates a builtin animation
+     * @param kind the type of animation
+     */
+    //% kind.fieldEditor="imagedropdown"
+    //% kind.fieldOptions.columns=3 blockGap=8
+    //% blockId=light_animation block="%kind"
+    //% group="More" weight=25
+    //% help="light/animation" blockHidden=true deprecated=1
+    export function animation(kind: LightAnimation): NeoPixelAnimation {
+        switch (kind) {
+            case LightAnimation.RunningLights: return runningLightsAnimation;
+            case LightAnimation.Comet: return cometAnimation;
+            case LightAnimation.ColorWipe: return colorWipeAnimation;
+            case LightAnimation.TheaterChase: return theaterChaseAnimation;
+            case LightAnimation.Sparkle: return sparkleAnimation;
+            default: return rainbowAnimation;
+        }
     }
 }

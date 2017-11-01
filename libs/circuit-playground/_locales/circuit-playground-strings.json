@@ -1,4 +1,10 @@
 {
+  "LightAnimation.ColorWipe|block": "color wipe",
+  "LightAnimation.Comet|block": "comet",
+  "LightAnimation.Rainbow|block": "rainbow",
+  "LightAnimation.RunningLights|block": "running lights",
+  "LightAnimation.Sparkle|block": "sparkle",
+  "LightAnimation.TheaterChase|block": "theater chase",
   "input.ambientColor|block": "ambient color",
   "input.buttonA|block": "button A",
   "input.buttonB|block": "button B",

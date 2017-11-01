@@ -173,7 +173,7 @@ namespace light {
      * @param animation the animation to run, eg: light.animation(LightAnimation.Rainbow)
      * @param duration the duration to run in milliseconds, eg: 500
      */
-    //% blockId=builtin_neopixel_show_animation block="show %animation=light_animation|animation"
+    //% blockId=builtin_neopixel_show_animation block="show %animation|animation"
     //% help="light/show-animation" blockGap=8
     //% weight=80
     //% animation.fieldEditor="gridpicker"
@@ -185,7 +185,7 @@ namespace light {
      * Show a single animation frame		
      * @param animation the animation to run, eg: light.animation(LightAnimation.Rainbow)		
      */		
-    //% blockId=builtin_neopixel_show_animation_frame block="show animation frame %animation=light_animation"		
+    //% blockId=builtin_neopixel_show_animation_frame block="show frame of %animation|animation "		
     //% help="light/show-animation-frame"		
     //% group="More" weight=24 blockGap=8		
     //% animation.fieldEditor="gridpicker"

@@ -39,7 +39,7 @@
   "light.createStrip": "Create a new programmable light strip.",
   "light.createStrip|param|mode": "the light encoding mode for different LED strips, eg: NeoPixelMode.RGB_GRB",
   "light.createStrip|param|numleds": "number of leds in the strip, eg: 24,30,60,64",
-  "light.createStrip|param|pin": "the pin where the neopixel is connected.",
+  "light.createStrip|param|pin": "the pin where the neopixel is connected, eg: pins.A1",
   "light.defaultPin": "Gets the default pin for built in neopixels",
   "light.fade": "Fade the color by the brightness",
   "light.fade|param|brightness": "the amount of brightness to apply to the color, eg: 128",

@@ -293,6 +293,7 @@
         "invertedToolbox": true,
         "invertedMonaco": true,
         "monacoToolbox": true,
+        "selectLanguage": true,
         "simAnimationEnter": "roll in",
         "simAnimationExit": "roll out",
         "highContrast": true,

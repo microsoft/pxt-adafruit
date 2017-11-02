@@ -180,7 +180,13 @@
                     "light\\.pixels\\.__range": "light.pixels.range",
                     "light\\.pixels\\.__move": "light.pixels.move",
                     "light\\.pixels\\.__setBuffered": "light.pixels.setBuffered",
-                    "light\\.pixels\\.__setMode": "light.pixels.setMode"
+                    "light\\.pixels\\.__setMode": "light.pixels.setMode",
+                    "light\\.animation\\(LightAnimation\\.Rainbow\\)": "light.rainbowAnimation",
+                    "light\\.animation\\(LightAnimation\\.RunningLights\\)": "light.runningLightsAnimation",
+                    "light\\.animation\\(LightAnimation\\.Comet\\)": "light.cometAnimation",
+                    "light\\.animation\\(LightAnimation\\.Sparkle\\)": "light.sparkleAnimation",
+                    "light\\.animation\\(LightAnimation\\.TheaterChase\\)": "light.theaterChaseAnimation",
+                    "light\\.animation\\(LightAnimation\\.ColorWipe\\)": "light.colorWipeAnimation"
                 }
             }
         ],

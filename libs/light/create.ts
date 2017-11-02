@@ -3,7 +3,7 @@
 namespace light {
     /**
      * Create a new programmable light strip.
-     * @param pin the pin where the neopixel is connected.
+     * @param pin the pin where the neopixel is connected, eg: pins.A1
      * @param numleds number of leds in the strip, eg: 24,30,60,64
      * @param mode the light encoding mode for different LED strips, eg: NeoPixelMode.RGB_GRB
      */

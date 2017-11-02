@@ -7,13 +7,13 @@ namespace input {
     //% blockId=device_get_ambient_color block="ambient color"
     //% parts="rgbsensor"
     //% weight=29 blockGap=8
-    export function ambientColor() : number {
+    export function ambientColor(): number {
         const LIGHT_SETTLE_MS = 100;
         const PIXEL = 1;
         // Save the current pixel color so it can later be restored.  Then bump
         // the brightness to max to make sure the LED is as bright as possible for
         // the color readings.
-        const strip : light.NeoPixelStrip = light.pixels;
+        const strip: light.NeoPixelStrip = light.pixels;
         const oldBrightness = strip.brightness();
         const oldColor = strip.pixelColor(PIXEL);
         const oldBuffered = strip.buffered();
@@ -38,10 +38,33 @@ namespace input {
         loops.pause(LIGHT_SETTLE_MS);
         const blue = input.lightLevel();
 
-        // Turn off the pixel and restore brightness, we're done with readings.
-        strip.setPixelColor(PIXEL, oldColor);
+        // Turn off the pixel and restore brightness, we're done with readings.        
         strip.setBrightness(oldBrightness);
+        strip.setPixelColor(PIXEL, oldColor);
+        strip.show();
         strip.setBuffered(oldBuffered);
-        return light.rgb(red, green, blue);
+
+        // find the closest known color to make it easier to handle the scanned color
+        let c = 0;
+        let mind = -1;
+        const colors = [
+            Colors.Red,
+            Colors.Green,
+            Colors.Blue,
+            Colors.Yellow,
+            Colors.White
+        ];
+        for(let i =0; i < colors.length; ++i) {
+            const kc = colors[i];
+            const dr = red - ((kc >> 16) & 0xFF);
+            const dg = green - ((kc >> 8) & 0xFF);
+            const db = blue - (kc & 0xff);
+            let d = (dr*dr) + (dg*dg) + (db*db);
+            if(mind < 0 || d < mind) {
+                mind = d;
+                c = kc;
+            }
+        }
+        return c;
     }
 }

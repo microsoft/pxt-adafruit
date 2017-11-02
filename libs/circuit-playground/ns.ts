@@ -202,25 +202,27 @@ namespace light {
 
     /**
      * Show an animation or queue an animation in the animation queue
-     * @param animation the animation to run, eg: light.animation(LightAnimation.Rainbow)
+     * @param animation the animation to run, eg: light.rainbowAnimation
      * @param duration the duration to run in milliseconds, eg: 500
      */
-    //% blockId=builtin_neopixel_show_animation block="show %animation|animation"
+    //% blockId=builtin_neopixel_show_animation block="show %animation=builtin_animation|animation"
+    //% animation.fieldEditor="imagedropdown"
+    //% animation.fieldOptions.columns=3
     //% help="light/show-animation" blockGap=8
     //% weight=80
-    //% animation.fieldEditor="imagedropdown"
     export function showAnimation(animation: NeoPixelAnimation, duration: number = 0) {
         light.pixels.showAnimation(animation, duration);
     }
 
     /**
       * Show a single animation frame		
-      * @param animation the animation to run, eg: light.animation(LightAnimation.Rainbow)		
+      * @param animation the animation to run, eg: light.rainbowAnimation
       */
-    //% blockId=builtin_neopixel_show_animation_frame block="show frame of %animation|animation "		
-    //% help="light/show-animation-frame"		
-    //% group="More" weight=24 blockGap=8		
+    //% blockId=builtin_neopixel_show_animation_frame block="show frame of %animation=builtin_animation|animation "
     //% animation.fieldEditor="imagedropdown"
+    //% animation.fieldOptions.columns=3	
+    //% help="light/show-animation-frame"		
+    //% group="More" weight=24 blockGap=8
     export function showAnimationFrame(animation: NeoPixelAnimation) {
         light.pixels.showAnimationFrame(animation);
     }

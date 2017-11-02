@@ -38,7 +38,7 @@
     "semantic-ui-less": "^2.2.11"
   },
   "dependencies": {
-    "pxt-common-packages": "0.12.5",
+    "pxt-common-packages": "0.12.6",
     "pxt-core": "2.3.8"
   },
   "scripts": {

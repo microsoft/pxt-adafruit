@@ -28,6 +28,28 @@ namespace loops {
 
 }
 
+
+enum LightAnimation {
+    //% blockImage=1
+    //% block="rainbow"
+    Rainbow,
+    //% blockImage=1
+    //% block="running lights"
+    RunningLights,
+    //% blockImage=1
+    //% block="comet"
+    Comet,
+    //% blockImage=1
+    //% block="sparkle"
+    Sparkle,
+    //% blockImage=1
+    //% block="theater chase"
+    TheaterChase,
+    //% blockImage=1
+    //% block="color wipe"
+    ColorWipe
+}
+
 //% color="#4c97ff"
 //% groups='["other", "Color", "Photon", "More"]'
 namespace light {
@@ -82,8 +104,8 @@ namespace light {
      * @param value current value to plot
      * @param high maximum value, 0 to autoscale
      */
-    //% blockId=builtin_neopixel_show_bar_graph block="graph of %value |up to %high" icon="\uf080"
-    //% help=light/graph
+    //% blockId=builtin_neopixel_show_bar_graph block="graph %value |up to %high" icon="\uf080"
+    //% help=light/graph blockGap=8
     //% weight=79
     export function graph(value: number, high: number): void {
         light.pixels.graph(value, high);
@@ -173,20 +195,22 @@ namespace light {
      * @param animation the animation to run, eg: light.animation(LightAnimation.Rainbow)
      * @param duration the duration to run in milliseconds, eg: 500
      */
-    //% blockId=builtin_neopixel_show_animation block="show %animation=light_animation|animation for %duration=timePicker|ms"
-    //% help="light/show-animation"
+    //% blockId=builtin_neopixel_show_animation block="show %animation|animation"
+    //% help="light/show-animation" blockGap=8
     //% weight=80
-    export function showAnimation(animation: NeoPixelAnimation, duration: number) {
+    //% animation.fieldEditor="imagedropdown"
+    export function showAnimation(animation: NeoPixelAnimation, duration: number = 0) {
         light.pixels.showAnimation(animation, duration);
     }
 
     /**
-     * Show a single animation frame
-     * @param animation the animation to run, eg: light.animation(LightAnimation.Rainbow)
-     */
-    //% blockId=builtin_neopixel_show_animation_frame block="show animation frame %animation=light_animation"
-    //% help="light/show-animation-frame"
-    //% group="More" weight=24 blockGap=8
+      * Show a single animation frame		
+      * @param animation the animation to run, eg: light.animation(LightAnimation.Rainbow)		
+      */
+    //% blockId=builtin_neopixel_show_animation_frame block="show frame of %animation|animation "		
+    //% help="light/show-animation-frame"		
+    //% group="More" weight=24 blockGap=8		
+    //% animation.fieldEditor="imagedropdown"
     export function showAnimationFrame(animation: NeoPixelAnimation) {
         light.pixels.showAnimationFrame(animation);
     }
@@ -199,5 +223,25 @@ namespace light {
     //% group="More" weight=23
     export function stopAllAnimations() {
         light.pixels.stopAllAnimations();
+    }
+
+    /**
+     * Creates a builtin animation
+     * @param kind the type of animation
+     */
+    //% kind.fieldEditor="imagedropdown"
+    //% kind.fieldOptions.columns=3 blockGap=8
+    //% blockId=light_animation block="%kind"
+    //% group="More" weight=25
+    //% help="light/animation" blockHidden=true deprecated=1
+    export function animation(kind: LightAnimation): NeoPixelAnimation {
+        switch (kind) {
+            case LightAnimation.RunningLights: return runningLightsAnimation;
+            case LightAnimation.Comet: return cometAnimation;
+            case LightAnimation.ColorWipe: return colorWipeAnimation;
+            case LightAnimation.TheaterChase: return theaterChaseAnimation;
+            case LightAnimation.Sparkle: return sparkleAnimation;
+            default: return rainbowAnimation;
+        }
     }
 }

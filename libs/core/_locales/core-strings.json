@@ -1,10 +1,6 @@
 {
   "AnalogPin.analogRead|block": "analog read|pin %name",
   "AnalogPin.analogWrite|block": "analog write|pin %name|to %value",
-  "ButtonEvent.Click|block": "click",
-  "ButtonEvent.Down|block": "down",
-  "ButtonEvent.LongClick|block": "long click",
-  "ButtonEvent.Up|block": "up",
   "DigitalPin.digitalRead|block": "digital read|pin %name",
   "DigitalPin.digitalWrite|block": "digital write|pin %name|to %value",
   "DigitalPin.onPulsed|block": "on|pin %pin|pulsed %pulse",

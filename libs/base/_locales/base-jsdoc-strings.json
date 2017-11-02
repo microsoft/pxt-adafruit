@@ -151,6 +151,6 @@
   "serial.writeNumber": "Write a number to the serial port.",
   "serial.writeString": "Write some text to the serial port.",
   "serial.writeValue": "Write a name:value pair as a line of text to the serial port.",
-  "serial.writeValue|param|name": "name of the value stream, eg: x",
+  "serial.writeValue|param|name": "name of the value stream, eg: \"x\"",
   "serial.writeValue|param|value": "to write"
 }

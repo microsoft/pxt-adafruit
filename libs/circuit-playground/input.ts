@@ -38,9 +38,10 @@ namespace input {
         loops.pause(LIGHT_SETTLE_MS);
         const blue = input.lightLevel();
 
-        // Turn off the pixel and restore brightness, we're done with readings.
-        strip.setPixelColor(PIXEL, oldColor);
+        // Turn off the pixel and restore brightness, we're done with readings.        
         strip.setBrightness(oldBrightness);
+        strip.setPixelColor(PIXEL, oldColor);
+        strip.show();
         strip.setBuffered(oldBuffered);
 
         // find the closest known color to make it easier to handle the scanned color
@@ -48,14 +49,9 @@ namespace input {
         let mind = -1;
         const colors = [
             Colors.Red,
-            Colors.Orange,
-            Colors.Yellow,
             Colors.Green,
             Colors.Blue,
-            Colors.Indigo,
-            Colors.Violet,
-            Colors.Purple,
-            Colors.Pink,
+            Colors.Yellow,
             Colors.White
         ];
         for(let i =0; i < colors.length; ++i) {
@@ -63,7 +59,7 @@ namespace input {
             const dr = red - ((kc >> 16) & 0xFF);
             const dg = green - ((kc >> 8) & 0xFF);
             const db = blue - (kc & 0xff);
-            let d = (dr*dr*0.09) + (dg*dg * 0.3481) + (db*db*0.0121);
+            let d = (dr*dr) + (dg*dg) + (db*db);
             if(mind < 0 || d < mind) {
                 mind = d;
                 c = kc;

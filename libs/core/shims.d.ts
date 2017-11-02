@@ -1,4 +1,50 @@
 // Auto-generated. Do not edit.
+declare namespace pins {
+
+    /**
+     * Create a new zero-initialized buffer.
+     * @param size number of bytes in the buffer
+     */
+    //% shim=pins::createBuffer
+    function createBuffer(size: int32): Buffer;
+
+    /**
+     * Get the duration of the last pulse in microseconds. This function should be called from a
+     * ``onPulsed`` handler.
+     */
+    //% help=pins/pulse-duration blockGap=8
+    //% blockId=pins_pulse_duration block="pulse duration (µs)"
+    //% weight=19 shim=pins::pulseDuration
+    function pulseDuration(): int32;
+}
+
+
+declare interface AnalogPin {
+    /**
+     * Read the connector value as analog, that is, as a value comprised between 0 and 1023.
+     * @param name pin to write to
+     */
+    //% help=pins/analog-read weight=53
+    //% blockId=device_get_analog_pin block="analog read|pin %name" blockGap="8"
+    //% blockNamespace=pins
+    //% name.fieldEditor="gridpicker"
+    //% name.fieldOptions.width=220
+    //% name.fieldOptions.columns=4 shim=AnalogPinMethods::analogRead
+    analogRead(): int32;
+
+    /**
+     * Set the connector value as analog. Value must be comprised between 0 and 1023.
+     * @param name pin name to write to
+     * @param value value to write to the pin between ``0`` and ``1023``. eg:1023,0
+     */
+    //% help=pins/analog-write weight=52
+    //% blockId=device_set_analog_pin block="analog write|pin %name|to %value" blockGap=8
+    //% blockNamespace=pins
+    //% name.fieldEditor="gridpicker"
+    //% name.fieldOptions.width=220
+    //% name.fieldOptions.columns=4 shim=AnalogPinMethods::analogWrite
+    analogWrite(value: int32): void;
+}
 
 
 declare interface DigitalPin {
@@ -25,7 +71,7 @@ declare interface DigitalPin {
     //% parts="led" trackArgs=0
     //% blockNamespace=pins
     //% name.fieldEditor="gridpicker"
-    //% name.fieldOptions.width=220 
+    //% name.fieldOptions.width=220
     //% name.fieldOptions.columns=4 shim=DigitalPinMethods::digitalWrite
     digitalWrite(value: boolean): void;
 
@@ -68,34 +114,6 @@ declare interface DigitalPin {
     //% name.fieldOptions.width=220
     //% name.fieldOptions.columns=4 shim=DigitalPinMethods::setPull
     setPull(pull: PinPullMode): void;
-}
-
-
-declare interface AnalogPin {
-    /**
-     * Read the connector value as analog, that is, as a value comprised between 0 and 1023.
-     * @param name pin to write to
-     */
-    //% help=pins/analog-read weight=53
-    //% blockId=device_get_analog_pin block="analog read|pin %name" blockGap="8"
-    //% blockNamespace=pins
-    //% name.fieldEditor="gridpicker"
-    //% name.fieldOptions.width=220
-    //% name.fieldOptions.columns=4 shim=AnalogPinMethods::analogRead
-    analogRead(): int32;
-
-    /**
-     * Set the connector value as analog. Value must be comprised between 0 and 1023.
-     * @param name pin name to write to
-     * @param value value to write to the pin between ``0`` and ``1023``. eg:1023,0
-     */
-    //% help=pins/analog-write weight=52
-    //% blockId=device_set_analog_pin block="analog write|pin %name|to %value" blockGap=8
-    //% blockNamespace=pins
-    //% name.fieldEditor="gridpicker"
-    //% name.fieldOptions.width=220
-    //% name.fieldOptions.columns=4 shim=AnalogPinMethods::analogWrite
-    analogWrite(value: int32): void;
 }
 
 
@@ -146,24 +164,6 @@ declare interface PwmPin {
     //% name.fieldOptions.width=220
     //% name.fieldOptions.columns=4 shim=PwmPinMethods::servoSetPulse
     servoSetPulse(duration: int32): void;
-}
-declare namespace pins {
-
-    /**
-     * Create a new zero-initialized buffer.
-     * @param size number of bytes in the buffer
-     */
-    //% shim=pins::createBuffer
-    function createBuffer(size: int32): Buffer;
-
-    /**
-     * Get the duration of the last pulse in microseconds. This function should be called from a
-     * ``onPulsed`` handler.
-     */
-    //% help=pins/pulse-duration blockGap=8
-    //% blockId=pins_pulse_duration block="pulse duration (µs)"
-    //% weight=19 shim=pins::pulseDuration
-    function pulseDuration(): int32;
 }
 declare namespace control {
 

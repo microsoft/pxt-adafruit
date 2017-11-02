@@ -97,6 +97,16 @@ namespace light {
         light.pixels.setAll(rgb);
     }
 
+    /**
+     * Turn off all pixel LEDs on the onboard strip.
+     */
+    //% blockId="builtin_neopixel_clear" block="clear"
+    //% parts="neopixel"
+    //% help="light/clear"
+    //% group="More" weight=9 blockGap=8
+    export function clear() {
+        light.pixels.clear();
+    }
 
     /**
      * Display a vertical bar graph based on the `value` and `high` value.

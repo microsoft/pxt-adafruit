@@ -30,7 +30,7 @@
   "control.waitMicros|block": "wait (µs)%micros",
   "control|block": "control",
   "loops.forever|block": "forever",
-  "loops.pause|block": "pause %ms=timePicker|ms",
+  "loops.pause|block": "pause %pause=timePicker|ms",
   "loops.timePicker|block": "%ms",
   "loops|block": "loops",
   "parseInt|block": "parse to integer %text",

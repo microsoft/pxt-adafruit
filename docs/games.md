@@ -8,23 +8,28 @@ Fun games to build with your @boardname@.
 [{
   "name": "Lucky Wheel",
   "url":"/projects/lucky-wheel",
-  "imageUrl":"/static/cp/projects/lucky-wheel.jpg"
+  "imageUrl":"/static/cp/projects/lucky-wheel.jpg",
+  "description": "Spin the wheel to win the lucky number!"
 },
 {
   "name": "Hot Potato",
   "url":"/projects/hot-potato",
-  "imageUrl":"/static/cp/projects/hot-potato.jpg"
+  "imageUrl":"/static/cp/projects/hot-potato.jpg",
+  "description": "Pass on the potatoe before it burns off!"
 }, 
 {
   "name": "Reaction!", 
   "url":"/projects/reaction",
-  "imageUrl":"/static/cp/projects/reaction.jpg"
-}, {
+  "imageUrl":"/static/cp/projects/reaction.jpg",
+  "description": "A game of skill and patience that will test your reaction skills."
+}, 
+{
   "name": "Dice",
   "description":"Use Circuit Playground to help you decide! Code a dice.",
   "url":"/examples/dice",
   "cardType": "example"
-}, {
+}, 
+{
   "name": "Egg game",
   "description":"How still can you keep the Circuit Playground? Play a game that involves balance and concentration!",
   "url":"/examples/egg-game",

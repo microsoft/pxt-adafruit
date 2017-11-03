@@ -205,12 +205,12 @@ namespace light {
      * @param animation the animation to run, eg: light.rainbowAnimation
      * @param duration the duration to run in milliseconds, eg: 500
      */
-    //% blockId=builtin_neopixel_show_animation block="show %animation=builtin_animation|animation"
+    //% blockId=builtin_neopixel_show_animation block="show animation %animation=builtin_animation|for %duration=timePicker|ms"
     //% animation.fieldEditor="imagedropdown"
     //% animation.fieldOptions.columns=3
     //% help="light/show-animation" blockGap=8
     //% weight=80
-    export function showAnimation(animation: NeoPixelAnimation, duration: number = 0) {
+    export function showAnimation(animation: NeoPixelAnimation, duration: number) {
         light.pixels.showAnimation(animation, duration);
     }
 

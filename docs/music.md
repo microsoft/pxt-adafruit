@@ -12,7 +12,7 @@ Music projects for your @boardname@.
   "imageUrl":"/static/cp/projects/guitar.jpg"
 }, {
   "name": "Metronome",
-  "description":"Tic, toc, tic, toc, the metronome will keep you steady while practicing music!",
+  "description":"Tic, toc, tic, toc, the metronome will keep you in time while practicing music!",
   "url":"/examples/metronome",
   "cardType": "example"
 }, {

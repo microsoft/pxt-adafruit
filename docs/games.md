@@ -15,13 +15,13 @@ Fun games to build with your @boardname@.
   "name": "Hot Potato",
   "url":"/projects/hot-potato",
   "imageUrl":"/static/cp/projects/hot-potato.jpg",
-  "description": "Pass on the potatoe before it burns off!"
+  "description": "Pass on the potato before it burns off!"
 }, 
 {
   "name": "Reaction!", 
   "url":"/projects/reaction",
   "imageUrl":"/static/cp/projects/reaction.jpg",
-  "description": "A game of skill and patience that will test your reaction skills."
+  "description": "A game that tests your reaction skills and patience."
 }, 
 {
   "name": "Dice",

@@ -13,7 +13,7 @@
   "name": "Watch Timer",
   "url":"/projects/watch-timer",
   "imageUrl":"/static/cp/projects/watch-timer.jpg",
-  "description": "Turn the Circuit Playground in a stopwatch"
+  "description": "Turn the Circuit Playground into a stopwatch"
 },
 {
   "name": "Magic Wand",

@@ -1,4 +1,4 @@
-// Overriding the createStrip function here to place it into the "External" subcategory
+// Overriding the createStrip function here to place it into the "NeoPixel" subcategory
 
 namespace light {
     /**
@@ -12,7 +12,7 @@ namespace light {
     //% trackArgs=0,2
     //% parts="neopixel"
     //% weight=100 blockGap=8
-    //% subcategory="External"
+    //% subcategory="NeoPixel"
     export function createStrip(
         pin: DigitalPin = null,
         numleds: number = 10,

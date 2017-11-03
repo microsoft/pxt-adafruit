@@ -63,7 +63,7 @@ namespace light {
     //% help=light/onboard-strip
     //% blockId="neopixel_onboard_strip" block="onboard strip"
     //% weight=101 blockGap=8
-    //% subcategory="External"
+    //% subcategory="NeoPixel"
     export function onboardStrip(): NeoPixelStrip {
         return pixels;
     }

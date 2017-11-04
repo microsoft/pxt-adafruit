@@ -7,11 +7,12 @@ Music projects for your @boardname@.
 ```codecard
 [{
   "name": "Guitar",
+  "description": "Build an electric guitar and be a rock star!",
   "url":"/projects/guitar",
   "imageUrl":"/static/cp/projects/guitar.jpg"
 }, {
   "name": "Metronome",
-  "description":"Use Circuit Playground to help keep you steady while practicing music!",
+  "description":"Tic, toc, tic, toc, the metronome will keep you in time while practicing music!",
   "url":"/examples/metronome",
   "cardType": "example"
 }, {

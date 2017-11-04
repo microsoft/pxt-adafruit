@@ -140,7 +140,7 @@ namespace light {
      */
     //% blockId="builtin_neopixel_pixel_color" block="pixel color at %pixeloffset"
     //% help="light/pixel-color"
-    //% group="More" weight=88    
+    //% group="More" weight=88
     export function pixelColor(pixeloffset: number): number {
         return light.pixels.pixelColor(pixeloffset);
     }
@@ -205,9 +205,7 @@ namespace light {
      * @param animation the animation to run, eg: light.rainbowAnimation
      * @param duration the duration to run in milliseconds, eg: 500
      */
-    //% blockId=builtin_neopixel_show_animation block="show animation %animation=builtin_animation|for %duration=timePicker|ms"
-    //% animation.fieldEditor="imagedropdown"
-    //% animation.fieldOptions.columns=3
+    //% blockId=builtin_neopixel_show_animation block="show animation %animation=light_animation_picker|for %duration=timePicker|ms"
     //% help="light/show-animation" blockGap=8
     //% weight=80
     export function showAnimation(animation: NeoPixelAnimation, duration: number) {
@@ -215,13 +213,11 @@ namespace light {
     }
 
     /**
-      * Show a single animation frame		
+      * Show a single animation frame
       * @param animation the animation to run, eg: light.rainbowAnimation
       */
-    //% blockId=builtin_neopixel_show_animation_frame block="show frame of %animation=builtin_animation|animation "
-    //% animation.fieldEditor="imagedropdown"
-    //% animation.fieldOptions.columns=3	
-    //% help="light/show-animation-frame"		
+    //% blockId=builtin_neopixel_show_animation_frame block="show frame of %animation=light_animation_picker|animation"
+    //% help="light/show-animation-frame"
     //% group="More" weight=24 blockGap=8
     export function showAnimationFrame(animation: NeoPixelAnimation) {
         light.pixels.showAnimationFrame(animation);

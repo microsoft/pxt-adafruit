@@ -272,10 +272,7 @@
         "crowdinProject": "kindscript",
         "boardName": "Adafruit Circuit Playground Express",
         "driveDisplayName": "CPLAYBOOT",
-        "docMenu": [{
-                "name": "About",
-                "path": "/about"
-            },
+        "docMenu": [
             {
                 "name": "Blocks",
                 "path": "/blocks"

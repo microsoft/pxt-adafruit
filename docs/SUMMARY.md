@@ -37,6 +37,7 @@
     * [input](/reference/input)
     * [light](/reference/light)
     * [music](/reference/music)
+    * [network](/reference/network)
     * [pins](/reference/pins)
     * [control](/reference/control)
     * [serial](/reference/serial)

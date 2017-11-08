@@ -24,6 +24,11 @@ Step by step guide to coding your @boardname@.
   "cardType": "tutorial",
   "url":"/tutorials/clap-lights"
 }, {
+  "name": "Loudness necklace",
+  "description": "A necklace that reacts to the loudness around you",
+  "cardType": "tutorial",
+  "url":"/tutorials/loudness-necklace"
+}, {
   "name": "Button flipper",
   "description": "Press a button to win or loose",
   "cardType": "tutorial",

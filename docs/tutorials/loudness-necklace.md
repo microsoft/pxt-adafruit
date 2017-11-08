@@ -2,7 +2,7 @@
 
 ## Step 1
 
-Drag a ``||light:graph||`` block in the ``||loops:forever||`` block.
+Drag a ``||light:graph||`` block into the ``||loops:forever||`` block.
 
 The ``||light:graph||`` block turns on the lights based on the first number.
 
@@ -14,7 +14,7 @@ loops.forever(function () {
 
 ## Step 2
 
-Drag a ``||input:sound level||`` block in the ``||light:graph||`` block to turn on lights based on the sound level.
+Pull out a ``||input:sound level||`` block and put it in the first hole of ``||light:graph||`` to show lights based on the sound level.
 
 ```blocks
 loops.forever(function () {
@@ -26,8 +26,7 @@ loops.forever(function () {
 
 The maximum sound level is ``255`` so set this number in the second hole of ``||light:graph||``.
 
-``||light:graph||`` automatically adapts how many lights are on based on the value in the first hole. 
-However, you can provide a second number so that it knows the maximum value and does a better job.
+``||light:graph||`` automatically sets how many lights turn on based on the value in the first hole. If you provide a second number though, it knows the maximum value and does a better job graphing.
 
 ```blocks
 loops.forever(function () {
@@ -41,4 +40,4 @@ Click ``|Download|`` to transfer your code to the @boardname@. Try singing and s
 
 ## Step 4
 
-Awesome! Pick a necklace and attach the @boardname@ to it, you'll be showing lights whenever you talk!
+Awesome! Find a necklace and attach the @boardname@ to it. You'll be showing lights whenever you talk!

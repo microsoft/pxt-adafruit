@@ -1,9 +1,8 @@
-# Clap Lights
+# Clap lights
 
 ## Step 1 @fullscreen
 
-Drag a ``||input:on loud sound||`` block in the workspace. It will run the nested code when
-a clap is detected by the microphone.
+Drag a ``||input:on loud sound||`` block into the workspace. It will run some code inside when a clap is detected by the microphone.
 
 ```blocks
 input.onLoudSound(function () {
@@ -12,10 +11,11 @@ input.onLoudSound(function () {
 
 ## Step 2
 
-Drag a ``||light:set all||`` block to turn the lights ON.
+Drag the ``||light:set brightnesss||`` and ``||light:set all||`` blocks into ``||input:on loud sound||`` to turn the lights **ON** really bright. Make the pixel color `white`.
 
 ```blocks
 input.onLoudSound(function () {
+    light.setBrightness(255)
     light.setAll(0xffffff)
 })
 ```
@@ -26,7 +26,7 @@ Click ``|Download|`` to transfer your code to the @boardname@. Try clapping to s
 
 ## Step 4
 
-Drag a ``||loops:pause||`` block to wait 2 seconds, and a ``||light:set all||`` block to turn OFF the lights after that.
+Drag a ``||loops:pause||`` block to wait 2 seconds, and another ``||light:set all||`` block to turn **OFF** the lights after that. Make the pixel color `black` for the second ``||light:set all||``.
 
 ```blocks
 input.onLoudSound(function () {
@@ -39,8 +39,7 @@ input.onLoudSound(function () {
 
 ## Step 3
 
-Click ``|Download|`` to transfer your code to the @boardname@. Try clapping to see if the lights turn on
-and turn off after a while.
+Click ``|Download|`` again to transfer your code to the @boardname@. Try clapping to see if the lights turn on and then off after a while.
 
 ## Step 4
 

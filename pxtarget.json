@@ -159,7 +159,7 @@
             {
                 "type": "api",
                 "map": {
-                    "Math\\s*\\.random\\s*\\(\\s*([^\\s]+)\\s*\\)": "Math.randomRange(0, $1)",
+                    "Math\\s*\\.random\\s*\\(\\s*(\\d+)\\s*\\)": "Math.randomRange(0, $1)",
                     "light\\.pixels\\.(__)?setAll": "light.setAll",
                     "light\\.pixels\\.(__)?graph": "light.graph",
                     "light\\.pixels\\.(__)?setPixelColor": "light.setPixelColor",

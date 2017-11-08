@@ -2,11 +2,7 @@
      User Global Variables
 *******************************/
 
-@importGoogleFonts: true;
-
 @fontName  : 'Open Sans';
-
-@emSize      : 14px;
 
 @primaryColor: @blue;
 @secondaryColor: @pink;
@@ -22,7 +18,7 @@
 @darkGrey: #292F36; /*#2F2F2F;*/ /*#313638;*/
 
 /* Adafruit colors */
-@blue: #009DDC; /*#2EB7ED;*/
+@blue: #0083B7; /*#2EB7ED;*/
 @pink:#FB48C7;
 
 @green: #40bf4a; /*#00922B;*/
@@ -33,7 +29,6 @@
 @darkGreen: #092C3A;
 
 @pageBackground: @darkBlue; /*#ecf0f1;*/
-
 
 /*--------------
    Form Input
@@ -109,7 +104,7 @@
 @blocklyRowWidthWide: 160px;
 @blocklyRowWidthComputer: 140px;
 
-@blocklyScrollbarColor: @darkGrey;
+@blocklyScrollbarColor: lighten(@grey, 20%);
 @blocklyScrollbarOpacity: 0.5;
 
 
@@ -144,8 +139,8 @@
    Docs
 --------------------*/
 
-@avatarUrlPath: "../docs/static/avatar.png";
-@docsAvatarUrl: data-uri("../docs/static/avatar-inverted.svg");
+@avatarImageUrl: "../docs/static/avatar.png";
+@docsAvatarImageUrl: "../docs/static/avatar-inverted.svg";
 
 /*-------------------
    Tutorial

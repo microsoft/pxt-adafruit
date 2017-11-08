@@ -5,12 +5,12 @@
   "network": "Communication between devices",
   "network.cablePacket": "Get most recent packet received over cable.\n\nGet most recent packet received over cable.",
   "network.cableSendNumber": "Send a number over the cable.",
-  "network.cableSendNumbers": "Send an array of numbers over infrared. The array size has to be 32 bytes or less.",
+  "network.cableSendNumbers": "Send an array of numbers over the cable. The array size has to be 32 bytes or less.",
   "network.cableSendNumber|param|value": "number to send",
   "network.cableSendPacket": "Send data over cable.\n\nSend data over cable.",
   "network.onCableError": "Run action after there's an error reciving packet over cable.\n\nRun action after there's an error reciving packet over cable.",
   "network.onCablePacket": "Run action after a packet is recieved over cable.\n\nRun action after a packet is recieved over cable.",
   "network.onCableReceivedBuffer": "Run some code when the cable receives data a buffer.",
-  "network.onCableReceivedNumber": "Run some code when the cable receives a number.",
+  "network.onCableReceivedNumber": "Run some code when a number value comes across the cable.",
   "network.onCableReceivedNumbers": "Run some code when the cable receives a list of numbers."
 }

@@ -12,8 +12,7 @@ input.onLoudSound(function () {
 
 ## Step 2
 
-Drag a ``||light:set all||`` block to set all the light to white.
-
+Drag a ``||light:set all||`` block to turn the lights ON.
 
 ```blocks
 input.onLoudSound(function () {
@@ -27,14 +26,14 @@ Click ``|Download|`` to transfer your code to the @boardname@. Try clapping to s
 
 ## Step 4
 
-Drag a ``||loops:pause||`` block to wait 2 seconds, and a ``||light:clear||`` block to turn of the lights after that.
+Drag a ``||loops:pause||`` block to wait 2 seconds, and a ``||light:set all||`` block to turn OFF the lights after that.
 
 ```blocks
 input.onLoudSound(function () {
     light.setBrightness(255)
     light.setAll(0xffffff)
     loops.pause(2000)
-    light.clear()
+    light.setAll(0x000000)
 })
 ```
 

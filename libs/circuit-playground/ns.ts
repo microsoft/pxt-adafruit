@@ -97,7 +97,7 @@ namespace light {
      */
     //% blockId="builtin_neopixel_set_strip_color" block="set all pixels to %rgb=colorNumberPicker"
     //% help="light/set-all"
-    //% group="More" weight=90 blockGap=8
+    //% weight=79 blockGap=8
     export function setAll(rgb: number) {
         light.pixels.setAll(rgb);
     }
@@ -121,7 +121,7 @@ namespace light {
      */
     //% blockId=builtin_neopixel_show_bar_graph block="graph %value |up to %high" icon="\uf080"
     //% help=light/graph blockGap=8
-    //% weight=79
+    //% weight=10
     export function graph(value: number, high: number): void {
         light.pixels.graph(value, high);
     }
@@ -212,7 +212,7 @@ namespace light {
      */
     //% blockId=builtin_neopixel_show_animation block="show animation %animation=light_animation_picker|for %duration=timePicker|ms"
     //% help="light/show-animation" blockGap=8
-    //% weight=80
+    //% weight=81
     export function showAnimation(animation: NeoPixelAnimation, duration: number = 0) {
         light.pixels.showAnimation(animation, duration);
     }

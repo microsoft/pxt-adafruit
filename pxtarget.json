@@ -317,6 +317,10 @@
                 "snap": true
             }
         },
+        "blocklyColors": {
+            "insertionMarker": "#FFFFFF",
+            "insertionMarkerOpacity": 0.5
+        },
         "blockColors": {
             "loops": "#40bf4a",
             "logic": "#4cbfe6",

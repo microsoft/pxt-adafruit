@@ -10,6 +10,11 @@ Step by step guide to coding your @boardname@.
   "description": "Recreate your favorite firefighter siren in this project!",
   "cardType": "tutorial",
   "url":"/tutorials/siren"
+}, {
+  "name": "Clap lights",
+  "description": "Clap to turn the lights on and off",
+  "cardType": "tutorial",
+  "url":"/tutorials/clap-lights"
 }, { 
   "name": "Magic Wand",
   "description": "Build a magic wand to cast spells on your friends.",

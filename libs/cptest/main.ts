@@ -1,9 +1,9 @@
 let mode = -1
 
 function blink(idx: number, color: number) {
-    light.pixels.setPixelColor(idx, color)
+    light.setPixelColor(idx, color)
     loops.pause(20)
-    light.pixels.setPixelColor(idx, 0)
+    light.setPixelColor(idx, 0)
     loops.pause(10)
 }
 
@@ -21,11 +21,12 @@ function switchMode() {
 function setButtonsLights() {
     let pins = [input.buttonB, input.buttonsAB,
     input.pinA1, input.pinA2, input.pinA3, input.pinA4, input.pinA5, input.pinA6, input.pinA7]
+    let leds = [7, 2, 6, 8, 9, 0, 1, 3, 4]
     for (let i = 0; i < pins.length; ++i) {
         let ii = i
         pins[i].onEvent(ButtonEvent.Click, () => {
             if (mode == 1)
-                blink(ii, Colors.Green)
+                blink(leds[ii], Colors.Green)
         })
     }
 }
@@ -44,7 +45,7 @@ function main() {
 
     input.onGesture(Gesture.Shake, () => {
         if (mode == 0)
-            light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 2000)
+            light.showAnimation(light.animation(LightAnimation.Rainbow), 2000)
     })
 
     switchMode()

@@ -8,7 +8,7 @@ Welcome, let's get started by making something magical! Start by placing a ``||s
 
 ```filterblocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+    light.showAnimation(light.rainbowAnimation)
 })
 ```
 
@@ -21,7 +21,7 @@ Click the **Hint** button if you need help!
 
 ```filterblocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+    light.showAnimation(light.rainbowAnimation)
 })
 input.onGesture(Gesture.Shake, () => {
 
@@ -38,10 +38,10 @@ Now, every time you shake the @boardname@, a sparkle animation will play. Pretty
 
 ```filterblocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+    light.showAnimation(light.rainbowAnimation)
 })
 input.onGesture(Gesture.Shake, () => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
+    light.showAnimation(light.sparkleAnimation)
 })
 ```
 
@@ -53,11 +53,12 @@ Hey, let's make it play a wand sound whenever we shake the board. From the ``Mus
 
 ```filterblocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+    light.showAnimation(light.rainbowAnimation)
 })
 input.onGesture(Gesture.Shake, () => {
+    light.stopAllAnimations()
     music.playSound(music.sounds(Sounds.PowerUp))
-    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
+    light.showAnimation(light.sparkleAnimation)
 })
 ```
 
@@ -67,11 +68,12 @@ Change the sound effect to ``Magic Wand``. Do this by selecting the list of soun
 
 ```filterblocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+    light.showAnimation(light.rainbowAnimation)
 })
 input.onGesture(Gesture.Shake, () => {
-    music.playSound(music.sounds(Sounds.MagicWand))
-    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
+    light.stopAllAnimations()
+    music.playSound(music.sounds(Sounds.PowerUp))
+    light.showAnimation(light.sparkleAnimation)
 })
 ```
 

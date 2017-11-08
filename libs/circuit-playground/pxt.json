@@ -3,18 +3,11 @@
     "description": "The Adafruit Circuit Playground Express library",
     "files": [
         "README.md",
+        "device.d.ts",
+        "config.ts",
         "input.ts",
-        "ns.ts",
-        "shims.d.ts",
-        "enums.d.ts"
+        "ns.ts"
     ],
-    "yotta": {
-        "config": {
-            "codal": {
-                "component_count": 64
-            }
-        }
-    },
     "dependencies": {
         "base": "file:../base",
         "core": "file:../core",

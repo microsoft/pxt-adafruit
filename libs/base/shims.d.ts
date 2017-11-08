@@ -79,7 +79,7 @@ declare namespace loops {
      * @param ms how long to pause for, eg: 100, 200, 500, 1000, 2000
      */
     //% help=loops/pause weight=99
-    //% async block="pause %ms=timePicker|ms"
+    //% async block="pause %pause=timePicker|ms"
     //% blockId=device_pause shim=loops::pause
     function pause(ms: int32): void;
 }

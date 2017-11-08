@@ -3,15 +3,18 @@
 *******************************/
 
 @solidBorderColor: darken(@darkGrey, 10%);
-@hoverBorderColor: @solidBorderColor;
+@hoverBorderColor: @white;
 
 @borderWidth: 1px;
 @border: @borderWidth solid @solidBorderColor;
 @linkHoverBorder: @borderWidth solid @hoverBorderColor;
 
 @boxShadow: none;
+@borderShadow: none;
 @linkHoverBoxShadow: @boxShadow;
 @linkHoverTransform: none;
+
+@coloredShadowDistance: 0px;
 
 @contentDivider: 0rem;
 @descriptionColor: white;

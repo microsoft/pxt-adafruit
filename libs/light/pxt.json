@@ -1,22 +1,3 @@
 {
-    "name": "light",
-    "description": "The Adafruit NeoPixel driver",
-    "files": [
-        "README.md",
-        "neopixel.cpp",
-        "neopixel.ts",
-        "create.ts",
-        "shims.d.ts",
-        "enums.d.ts",
-        "neopixeloverrides.ts",
-        "ns.ts"
-    ],
-    "testFiles": [
-        "test.ts"
-    ],
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/light",
-    "public": true,
-    "dependencies": {
-        "core": "file:../core"
-    }
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/light"
 }

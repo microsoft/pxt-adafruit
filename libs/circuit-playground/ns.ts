@@ -28,6 +28,28 @@ namespace loops {
 
 }
 
+
+enum LightAnimation {
+    //% blockImage=1
+    //% block="rainbow"
+    Rainbow,
+    //% blockImage=1
+    //% block="running lights"
+    RunningLights,
+    //% blockImage=1
+    //% block="comet"
+    Comet,
+    //% blockImage=1
+    //% block="sparkle"
+    Sparkle,
+    //% blockImage=1
+    //% block="theater chase"
+    TheaterChase,
+    //% blockImage=1
+    //% block="color wipe"
+    ColorWipe
+}
+
 //% color="#4c97ff"
 //% groups='["other", "Color", "Photon", "More"]'
 namespace light {
@@ -41,7 +63,7 @@ namespace light {
     //% help=light/onboard-strip
     //% blockId="neopixel_onboard_strip" block="onboard strip"
     //% weight=101 blockGap=8
-    //% subcategory="External"
+    //% subcategory="NeoPixel"
     export function onboardStrip(): NeoPixelStrip {
         return pixels;
     }
@@ -75,6 +97,16 @@ namespace light {
         light.pixels.setAll(rgb);
     }
 
+    /**
+     * Turn off all pixel LEDs on the onboard strip.
+     */
+    //% blockId="builtin_neopixel_clear" block="clear"
+    //% parts="neopixel"
+    //% help="light/clear"
+    //% group="More" weight=9 blockGap=8
+    export function clear() {
+        light.pixels.clear();
+    }
 
     /**
      * Display a vertical bar graph based on the `value` and `high` value.
@@ -82,8 +114,8 @@ namespace light {
      * @param value current value to plot
      * @param high maximum value, 0 to autoscale
      */
-    //% blockId=builtin_neopixel_show_bar_graph block="graph of %value |up to %high" icon="\uf080"
-    //% help=light/graph
+    //% blockId=builtin_neopixel_show_bar_graph block="graph %value |up to %high" icon="\uf080"
+    //% help=light/graph blockGap=8
     //% weight=79
     export function graph(value: number, high: number): void {
         light.pixels.graph(value, high);
@@ -108,7 +140,7 @@ namespace light {
      */
     //% blockId="builtin_neopixel_pixel_color" block="pixel color at %pixeloffset"
     //% help="light/pixel-color"
-    //% group="More" weight=88    
+    //% group="More" weight=88
     export function pixelColor(pixeloffset: number): number {
         return light.pixels.pixelColor(pixeloffset);
     }
@@ -170,21 +202,21 @@ namespace light {
 
     /**
      * Show an animation or queue an animation in the animation queue
-     * @param animation the animation to run, eg: light.animation(LightAnimation.Rainbow)
+     * @param animation the animation to run, eg: light.rainbowAnimation
      * @param duration the duration to run in milliseconds, eg: 500
      */
-    //% blockId=builtin_neopixel_show_animation block="show %animation=light_animation|animation for %duration=timePicker|ms"
-    //% help="light/show-animation"
+    //% blockId=builtin_neopixel_show_animation block="show animation %animation=light_animation_picker|for %duration=timePicker|ms"
+    //% help="light/show-animation" blockGap=8
     //% weight=80
-    export function showAnimation(animation: NeoPixelAnimation, duration: number) {
+    export function showAnimation(animation: NeoPixelAnimation, duration: number = 0) {
         light.pixels.showAnimation(animation, duration);
     }
 
     /**
-     * Show a single animation frame
-     * @param animation the animation to run, eg: light.animation(LightAnimation.Rainbow)
-     */
-    //% blockId=builtin_neopixel_show_animation_frame block="show animation frame %animation=light_animation"
+      * Show a single animation frame
+      * @param animation the animation to run, eg: light.rainbowAnimation
+      */
+    //% blockId=builtin_neopixel_show_animation_frame block="show frame of %animation=light_animation_picker|animation"
     //% help="light/show-animation-frame"
     //% group="More" weight=24 blockGap=8
     export function showAnimationFrame(animation: NeoPixelAnimation) {
@@ -199,5 +231,25 @@ namespace light {
     //% group="More" weight=23
     export function stopAllAnimations() {
         light.pixels.stopAllAnimations();
+    }
+
+    /**
+     * Creates a builtin animation
+     * @param kind the type of animation
+     */
+    //% kind.fieldEditor="imagedropdown"
+    //% kind.fieldOptions.columns=3 blockGap=8
+    //% blockId=light_animation block="%kind"
+    //% group="More" weight=25
+    //% help="light/animation" blockHidden=true deprecated=1
+    export function animation(kind: LightAnimation): NeoPixelAnimation {
+        switch (kind) {
+            case LightAnimation.RunningLights: return runningLightsAnimation;
+            case LightAnimation.Comet: return cometAnimation;
+            case LightAnimation.ColorWipe: return colorWipeAnimation;
+            case LightAnimation.TheaterChase: return theaterChaseAnimation;
+            case LightAnimation.Sparkle: return sparkleAnimation;
+            default: return rainbowAnimation;
+        }
     }
 }

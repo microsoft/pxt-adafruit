@@ -2,7 +2,6 @@
   "AnalogPin.analogRead": "Read the connector value as analog, that is, as a value comprised between 0 and 1023.",
   "AnalogPin.analogWrite": "Set the connector value as analog. Value must be comprised between 0 and 1023.",
   "AnalogPin.analogWrite|param|value": "value to write to the pin between ``0`` and ``1023``. eg:1023,0",
-  "ButtonEvent": "User interaction on buttons",
   "DigitalPin.digitalRead": "Read a pin or connector as either 0 or 1",
   "DigitalPin.digitalWrite": "Set a pin or connector value to either 0 or 1.",
   "DigitalPin.digitalWrite|param|value": "value to set on the pin",

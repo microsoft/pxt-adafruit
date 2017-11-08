@@ -11,7 +11,7 @@ declare namespace input {
     function onLoudSound(handler: () => void): void;
 
     /**
-     * Reads the loudness through the microphone from 0 (silent) to 100 (very loud)
+     * Reads the loudness through the microphone from 0 (silent) to 255 (loud)
      */
     //% help=input/sound-level
     //% blockId=device_get_sound_level block="sound level"

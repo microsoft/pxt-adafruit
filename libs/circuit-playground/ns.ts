@@ -23,6 +23,11 @@ namespace serial {
 
 }
 
+//% color="#006E90"
+namespace console {
+
+}
+
 //% color="#40bf4a"
 namespace loops {
 

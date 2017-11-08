@@ -1,8 +1,8 @@
-# Button Flipper
+# Button flipper
 
 ## Step 1
 
-Drag a ``||input:on button A click||`` block to add code that runs when button ``A`` is pressed.
+Drag out a ``||input:on button A click||`` block to add code that runs when button ``A`` is pressed.
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
@@ -11,7 +11,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 
 ## Step 2
 
-Drag a ``||logic:if then else||`` block to run different code based on a random value.
+Grab a ``||logic:if then else||`` block and put it inside the ``||input:on button A click||``. We'll use this to run some code based on a random value.
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
@@ -23,9 +23,9 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 
 ## Step 3
 
-Drag a ``||logic:<||`` math operate and a ``||Math:pick random||`` block into the ``||logic:if||``.
+Drag both a ``||logic:<||`` logic operator and a ``||Math:pick random||`` block and place them into the ``||logic:if||``.
 
-``||Math:pick random 0 to 10||`` will return a random number between 0 and 10. If it is less than 5, you win otherwise you loose.
+The ``||Math:pick random 0 to 10||`` returns a random number between 0 and 10. If it is less than 5, you win. Otherwise, you loose, sorry.
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
@@ -37,7 +37,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 
 ## Step 4
 
-Drag ``||music:play sound||`` and ``||light:show animation||`` blocks to create the win/loose animations. Be creative!
+Drag the ``||music:play sound||`` and ``||light:show animation||`` blocks out to create the win and loose effects. You can pick the sounds, colors, and animations. Be creative!
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {

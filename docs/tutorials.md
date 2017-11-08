@@ -10,11 +10,6 @@ Step by step guide to coding your @boardname@.
   "description": "Recreate your favorite firefighter siren in this project!",
   "cardType": "tutorial",
   "url":"/tutorials/siren"
-}, {
-  "name": "Clap lights",
-  "description": "Clap to turn the lights on and off",
-  "cardType": "tutorial",
-  "url":"/tutorials/clap-lights"
 }, { 
   "name": "Magic Wand",
   "description": "Build a magic wand to cast spells on your friends.",
@@ -23,5 +18,15 @@ Step by step guide to coding your @boardname@.
   "label": "New? Start Here!",
   "labelClass": "pink ribbon huge",
   "imageUrl":"/static/cp/projects/magic-wand.jpg"
+}, {
+  "name": "Clap lights",
+  "description": "Clap to turn the lights on and off",
+  "cardType": "tutorial",
+  "url":"/tutorials/clap-lights"
+}, {
+  "name": "Button flipper",
+  "description": "Press a button to win or loose",
+  "cardType": "tutorial",
+  "url":"/tutorials/button-flipper"
 }]
 ```

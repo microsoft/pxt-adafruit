@@ -42,6 +42,6 @@ input.onLoudSound(function () {
 Click ``|Download|`` to transfer your code to the @boardname@. Try clapping to see if the lights turn on
 and turn off after a while.
 
-## Step 8
+## Step 4
 
 Awesome! Congratulations on completing this challenge on the @boardname@.

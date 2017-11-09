@@ -99,8 +99,8 @@ declare namespace control {
      */
     //% weight=20 blockGap=8 blockId="control_on_event" block="on event|from %src|with value %value"
     //% blockExternalInputs=1
-    //% help="control/on-event" shim=control::onEvent
-    function onEvent(src: int32, value: int32, handler: () => void): void;
+    //% help="control/on-event" flags.defl=16 shim=control::onEvent
+    function onEvent(src: int32, value: int32, handler: () => void, flags?: int32): void;
 
     /**
      * Reset the device.
@@ -144,14 +144,14 @@ declare namespace serial {
      * Write some text to the serial port.
      */
     //% help=serial/write-string
-    //% weight=87
+    //% weight=87 blockHidden=true
     //% blockId=serial_writestring block="serial|write string %text" shim=serial::writeString
     function writeString(text: string): void;
 
     /**
      * Send a buffer across the serial connection.
      */
-    //% help=serial/write-buffer weight=6
+    //% help=serial/write-buffer weight=6 blockHidden=true
     //% blockId=serial_writebuffer block="serial|write buffer %buffer" shim=serial::writeBuffer
     function writeBuffer(buffer: Buffer): void;
 }

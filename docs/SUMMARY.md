@@ -46,3 +46,7 @@
 * [Hardware](/device)
     * [Simulator](/device/simulator)
     * [USB](/device/usb)
+
+## Performance 
+* [CODAL](/perf)
+

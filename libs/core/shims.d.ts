@@ -189,6 +189,12 @@ declare namespace control {
      */
     //% help=control/allocate-notify-event shim=control::allocateNotifyEvent
     function allocateNotifyEvent(): int32;
+
+    /**
+     * print out info about state of CODAL heap
+     */
+    //% block shim=control::deviceHeapPrint
+    function deviceHeapPrint(): void;
 }
 declare namespace pins {
 

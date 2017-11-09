@@ -15,6 +15,7 @@
   "PwmPin.servoSetPulse|block": "servo set pulse|pin %value|to (µs) %duration",
   "PwmPin.servoWrite|block": "servo write|pin %name|to %value",
   "control.deviceDalVersion|block": "device dal version",
+  "control.deviceHeapPrint|block": "device heap print",
   "control.raiseEvent|block": "raise event|from %src|with value %value",
   "control|block": "control",
   "msgpack|block": "msgpack",

@@ -242,7 +242,8 @@
                 "board": {
                     "id": "BOARD_ID_CPLAY"
                 }
-            }
+            },
+            "CODAL_DEBUG": 3
         },
         "githubCorePackage": "lancaster-university/codal",
         "gittag": "v0.2.2",

@@ -1,30 +1,66 @@
-# @extends
-## NeoPixels on the board #onboard
+# Light
+
+Light up pixels on the NeoPixel ring. Show light effects and animations.
+
+## The NeoPixel ring
 
 ```cards
 light.showRing('')
+light.showAnimation(null)
+light.showAnimationFrame(null)
+light.stopAllAnimations()
+light.animation(0)
+light.graph(0, 0)
+light.setAll(0)
+light.setBrightness(0)
+light.setPixelColor(0,0)
+light.clear()
+light.pixelColor(0)
 light.onboardStrip()
 light.defaultPin()
 ```
-## See also #seealso
+
+## Photons
+
+```cards
+light.photonForward(0)
+light.photonFlip()
+light.setPhotonPenHue(0)
+//light.setPhotonPenColor(0)
+light.setPhotonMode(PhotonMode.PenUp)
+```
+
+## Colors
+
+```cards
+light.rgb(255, 255, 255)
+light.hsv(255, 255, 255)
+light.colors(Colors.Red)
+light.fade(0, 0)
+```
+
+## External NeoPixel strips
+
+```cards
+light.createStrip(null,0,0)
+```
+
+## See also
 
 [show ring](/reference/light/show-ring), [onboard strip](/reference/light/onboard-strip),
 [default pin](/reference/light/default-pin),
-[showAnimation](/reference/light/neopixelstrip/show-animation), [showAnimationFrame](/reference/light/neopixelstrip/show-animation-frame),
-[stopAllAnimations](/reference/light/neopixelstrip/stop-all-animations), [animation](/reference/light/animation),
-[graph](/reference/light/neopixelstrip/graph), [setAll](/reference/light/neopixelstrip/set-all),
-[show](/reference/light/neopixelstrip/show), [setBuffered](/reference/light/neopixelstrip/set-buffered), 
-[setBrightness](/reference/light/neopixelstrip/set-brightness),
-[setPixelColor](/reference/light/neopixelstrip/set-pixel-color), [clear](/reference/light/neopixelstrip/clear),
-[brightness](/reference/light/neopixelstrip/brightness), [pixelColor](/reference/light/neopixelstrip/pixel-color),
-[createStrip](/reference/light/create-strip), [setPixelWhiteLED](/reference/light/neopixelstrip/set-pixel-white-led),
-[range](/reference/light/neopixelstrip/range), [length](/reference/light/neopixelstrip/length),
-[move](/reference/light/neopixelstrip/move), [photonForward](/reference/light/neopixelstrip/photon-forward),
-[photonFlip](/reference/light/neopixelstrip/photon-flip), [setPhotonPenColor](/reference/light/neopixelstrip/set-photon-pen-color),
-[setPhotonPenHue](/reference/light/neopixelstrip/set-photon-pen-hue),
-[setPhotonMode](/reference/light/neopixelstrip/set-photon-mode), [rgb](/reference/light/rgb),
+[showAnimation](/reference/light/show-animation), [showAnimationFrame](/reference/light/show-animation-frame),
+[stopAllAnimations](/reference/light/stop-all-animations), [animation](/reference/light/animation),
+[graph](/reference/light/graph), [setAll](/reference/light/set-all),
+[setBrightness](/reference/light/set-brightness),
+[setPixelColor](/reference/light/set-pixel-color), [clear](/reference/light/clear),
+[pixelColor](/reference/light/pixel-color),
+[photonForward](/reference/light/photon-forward),
+[photonFlip](/reference/light/photon-flip),
+[setPhotonPenHue](/reference/light/set-photon-pen-hue),
+[setPhotonMode](/reference/light/set-photon-mode), [rgb](/reference/light/rgb),
 [hsv](/reference/light/hsv), [colors](/reference/light/colors),
-[fade](/reference/light/fade)
+[fade](/reference/light/fade), [create strip](/reference/light/create-strip)
 
 ```package
 circuit-playground

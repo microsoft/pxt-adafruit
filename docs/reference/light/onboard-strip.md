@@ -1,4 +1,4 @@
-# Onboard Strip
+# onboard Strip
 
 A NeoPixel strip instance mounted on the 10 onboard LEDs on the @boardname@.
 
@@ -15,5 +15,5 @@ light.onboardStrip()
 [create strip](/reference/light/create-strip)
 
 ```package
-light
+circuit-playground
 ```

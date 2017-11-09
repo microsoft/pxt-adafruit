@@ -18,7 +18,7 @@ The ring will have the colors assigned to each pixel like you see here:
 light.showRing("blue blue blue blue blue yellow yellow yellow yellow yellow")
 ```
 
-When you put two or more ``||show ring||`` blocks together, your program will pause before showing the next one.
+When you put two or more ``||light:show ring||`` blocks together, your program will pause before showing the next one.
 This gives you time to see each ring change.
 
 ## Parameters
@@ -48,8 +48,8 @@ loops.forever(() => {
 
 ## See Also
 
-[``||show animation||``](/reference/light/neopixelstrip/show-animation)
+[``||show animation||``](/reference/light/show-animation)
 
 ```package
-light
+circuit-playground
 ```

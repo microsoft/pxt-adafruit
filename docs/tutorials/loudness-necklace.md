@@ -34,10 +34,10 @@ loops.forever(function () {
 })
 ```
 
-## Step 3
+## Step 4
 
 Click ``|Download|`` to transfer your code to the @boardname@. Try singing and see the lights changing.
 
-## Step 4
+## Step 5
 
 Awesome! Find a necklace and attach the @boardname@ to it. You'll be showing lights whenever you talk!

@@ -10,14 +10,15 @@ Step by step guide to coding your @boardname@.
   "description": "Recreate a siren in this project!",
   "cardType": "tutorial",
   "label": "New? Start Here!",
-  "labelClass": "pink ribbon huge",
-  "url":"/tutorials/siren"
+  "labelClass": "pink ribbon large",
+  "url":"/tutorials/siren",
+  "imageUrl":"/static/cp/projects/thumb/siren.jpg"
 }, { 
   "name": "Magic Wand",
   "description": "Build a magic wand to cast spells on your friends.",
   "url":"/tutorials/magic-wand",
   "cardType": "tutorial",
-  "imageUrl":"/static/cp/projects/magic-wand.jpg"
+  "imageUrl":"/static/cp/projects/thumb/magic-wand.jpg"
 }, {
   "name": "Clap lights",
   "description": "Clap to turn the lights on and off",

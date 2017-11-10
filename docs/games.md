@@ -8,19 +8,19 @@ Fun games to build with your @boardname@.
 [{
   "name": "Lucky Wheel",
   "url":"/projects/lucky-wheel",
-  "imageUrl":"/static/cp/projects/lucky-wheel.jpg",
+  "imageUrl":"/static/cp/projects/thumb/lucky-wheel.jpg",
   "description": "Spin the wheel to win the lucky number!"
 },
 {
   "name": "Hot Potato",
   "url":"/projects/hot-potato",
-  "imageUrl":"/static/cp/projects/hot-potato.jpg",
+  "imageUrl":"/static/cp/projects/thumb/hot-potato.jpg",
   "description": "Pass on the potato before it burns off!"
 }, 
 {
   "name": "Reaction!", 
   "url":"/projects/reaction",
-  "imageUrl":"/static/cp/projects/reaction.jpg",
+  "imageUrl":"/static/cp/projects/thumb/reaction.jpg",
   "description": "A game that tests your reaction skills and patience."
 }, 
 {

@@ -56,6 +56,7 @@
   "light.colors|block": "%color",
   "light.cometAnimation|block": "comet",
   "light.createStrip|block": "create strip|on %pin|with %numleds|pixels",
+  "light.defaultPin|block": "default pixel pin",
   "light.fade|block": "fade %color=neopixel_colors|by %brightness",
   "light.hsv|block": "hue %hue|sat %sat|val %val",
   "light.rainbowAnimation|block": "rainbow",

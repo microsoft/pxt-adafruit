@@ -8,7 +8,7 @@ Welcome, let's get started by making something magical! Start by placing a ``||s
 
 ```filterblocks
 loops.forever(() => {
-    light.showAnimation(light.rainbowAnimation)
+    light.showAnimation(light.rainbowAnimation, 500)
 })
 ```
 
@@ -21,7 +21,7 @@ Click the **Hint** button if you need help!
 
 ```filterblocks
 loops.forever(() => {
-    light.showAnimation(light.rainbowAnimation)
+    light.showAnimation(light.rainbowAnimation, 500)
 })
 input.onGesture(Gesture.Shake, () => {
 
@@ -38,10 +38,10 @@ Now, every time you shake the @boardname@, a sparkle animation will play. Pretty
 
 ```filterblocks
 loops.forever(() => {
-    light.showAnimation(light.rainbowAnimation)
+    light.showAnimation(light.rainbowAnimation, 500)
 })
 input.onGesture(Gesture.Shake, () => {
-    light.showAnimation(light.sparkleAnimation)
+    light.showAnimation(light.sparkleAnimation, 500)
 })
 ```
 
@@ -53,12 +53,12 @@ Hey, let's make it play a wand sound whenever we shake the board. From the ``Mus
 
 ```filterblocks
 loops.forever(() => {
-    light.showAnimation(light.rainbowAnimation)
+    light.showAnimation(light.rainbowAnimation, 500)
 })
 input.onGesture(Gesture.Shake, () => {
     light.stopAllAnimations()
     music.playSound(music.sounds(Sounds.PowerUp))
-    light.showAnimation(light.sparkleAnimation)
+    light.showAnimation(light.sparkleAnimation, 500)
 })
 ```
 
@@ -68,12 +68,12 @@ Change the sound effect to ``Magic Wand``. Do this by selecting the list of soun
 
 ```filterblocks
 loops.forever(() => {
-    light.showAnimation(light.rainbowAnimation)
+    light.showAnimation(light.rainbowAnimation, 500)
 })
 input.onGesture(Gesture.Shake, () => {
     light.stopAllAnimations()
     music.playSound(music.sounds(Sounds.PowerUp))
-    light.showAnimation(light.sparkleAnimation)
+    light.showAnimation(light.sparkleAnimation, 500)
 })
 ```
 

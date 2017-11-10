@@ -8,7 +8,9 @@
     "adafruit",
     "pxt",
     "MakeCode",
-    "Microsoft"
+    "Microsoft",
+    "Adafruit",
+    "Adafruit Circuit Playground"
   ],
   "repository": {
     "type": "git",

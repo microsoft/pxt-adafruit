@@ -213,7 +213,7 @@ namespace light {
     //% blockId=builtin_neopixel_show_animation block="show animation %animation=light_animation_picker|for %duration=timePicker|ms"
     //% help="light/show-animation" blockGap=8
     //% weight=81
-    export function showAnimation(animation: NeoPixelAnimation, duration: number = 0) {
+    export function showAnimation(animation: NeoPixelAnimation, duration: number) {
         light.pixels.showAnimation(animation, duration);
     }
 

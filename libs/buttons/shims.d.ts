@@ -26,7 +26,7 @@ declare interface Button {
     //% button.fieldEditor="gridpicker"
     //% button.fieldOptions.width=220
     //% button.fieldOptions.columns=3
-    //% weight=96 blockGap=8
+    //% weight=96 blockGap=12
     //% trackArgs=0 shim=ButtonMethods::onEvent
     onEvent(ev: ButtonEvent, body: () => void): void;
 

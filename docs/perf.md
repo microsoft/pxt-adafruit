@@ -140,3 +140,10 @@ serial.writeLine("OUT LAST")
 
 while (true) { }
 ```
+
+### for fun
+```blocks
+light.showRing(
+`red yellow red yellow red red yellow red yellow red`
+)
+```

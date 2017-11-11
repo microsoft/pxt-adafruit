@@ -7,7 +7,7 @@ declare namespace input {
     //% help=input/on-loud-sound
     //% blockId=input_on_loud_sound block="on loud sound"
     //% parts="microphone"
-    //% weight=88 blockGap=8 shim=input::onLoudSound
+    //% weight=88 blockGap=12 shim=input::onLoudSound
     function onLoudSound(handler: () => void): void;
 
     /**

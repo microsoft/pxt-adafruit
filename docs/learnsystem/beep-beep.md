@@ -6,21 +6,21 @@ Source: https://learn.adafruit.com/circuit-playground-beep-beep
 
 ```blocks
 input.leftButton.onEvent(ButtonEvent.Down, () => {
-    light.pixels.showColor(16737792)
+    light.onboardStrip().showColor(16737792)
     pins.A8.playTone(700, 750)
-    light.pixels.clear()
-    light.pixels.show()
+    light.clear()
+    light.onboardStrip().show()
 })
 input.rightButton.onEvent(ButtonEvent.Down, () => {
-    light.pixels.showColor(16737792)
+    light.onboardStrip().showColor(16737792)
     pins.A8.playTone(700, 750)
-    light.pixels.clear()
-    light.pixels.show()
+    light.clear()
+    light.onboardStrip().show()
     loops.pause(250)
-    light.pixels.showColor(16737792)
+    light.onboardStrip().showColor(16737792)
     pins.A8.playTone(700, 750)
-    light.pixels.clear()
-    light.pixels.show()
+    light.clear()
+    light.onboardStrip().show()
 })
 ```
 
@@ -39,10 +39,10 @@ const PIXEL_COLOR = 0xFF6600;
 ///////////////////////////////////////////////////////////////////////////////
 function lightsBeeps(repeats: number, note: number, duration: number, color: number) {
     for (let n = 0; n < repeats; n++) {
-        light.pixels.showColor(color)
+        light.onboardStrip().showColor(color)
         pins.A8.playTone(note, duration);
-        light.pixels.clear();
-        light.pixels.show();
+        light.clear();
+        light.onboardStrip().show();
         if (repeats > 1) loops.pause(duration / 2);
     }
 }

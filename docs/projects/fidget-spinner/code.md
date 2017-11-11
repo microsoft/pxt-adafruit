@@ -18,7 +18,7 @@ Try to create programs that use the built-in animations and spin them on the fid
 
 ```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+    light.showAnimation(light.rainbowAnimation, 500)
 })
 ```
 
@@ -31,9 +31,9 @@ Use the light photon to create small animation and test them out while strobing.
 Are you able to create cool effects?
 
 ```blocks
-light.pixels.setPhotonMode(PhotonMode.PenUp)
+light.setPhotonMode(PhotonMode.PenUp)
 loops.forever(() => {
-    light.pixels.photonForward(1)
+    light.photonForward(1)
 })
 ```
 
@@ -46,14 +46,14 @@ At the core, photon is just turning on and off LEDs on the board. Let's get down
 We start by defining a subset of the pixels (0 through 4) so that only 1 column of pixels is turned on.
 
 ```blocks
-let left = light.pixels.range(0, 5)
+let left = light.onboardStrip().range(0, 5)
 ```
 
 Then we add a [while loop](/blocks/loops/while) to repeat the animation step.
 A single step clears all the LEDs, turns on 1 location and increment the position counter.
 
 ```blocks
-let left = light.pixels.range(0, 5)
+let left = light.onboardStrip().range(0, 5)
 let c = 0
 while (true) {
     left.clear()

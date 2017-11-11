@@ -8,10 +8,10 @@ Show different animations using the Neopixels on the @boardname@!
 
 ## Step 1
 
-Use ``[light.pixels.showAnimationFrame(light.rainbowCycleAnimation())]`` and make your code look like this:
+Use ``[light.showAnimationFrame(light.rainbowCycleAnimation())]`` and make your code look like this:
 
 ```blocks
-light.pixels.showAnimationFrame(light.rainbowCycleAnimation())
+light.showAnimationFrame(light.rainbowCycleAnimation())
 ```
 
 ## Step 2
@@ -20,13 +20,13 @@ Put a [while loop](/blocks/loops/while) around it, so it runs indefinitely.
 
 ```blocks
 control.forever(() => {
-    light.pixels.showAnimationFrame(light.rainbowCycleAnimation())
+    light.showAnimationFrame(light.rainbowCycleAnimation())
 })
 ```
 
 ```sim
 control.forever(() => {
-    light.pixels.showAnimationFrame(light.rainbowCycleAnimation())
+    light.showAnimationFrame(light.rainbowCycleAnimation())
 })
 ```
 
@@ -36,7 +36,7 @@ Try some of the other animations:
 
 ```blocks
 control.forever(() => {
-    light.pixels.showAnimationFrame(light.sparkleAnimation())
+    light.showAnimationFrame(light.sparkleAnimation())
 })
 ```
 
@@ -44,7 +44,7 @@ control.forever(() => {
 
 ```blocks
 control.forever(() => {
-    light.pixels.showAnimationFrame(light.colorWipeAnimation(light.colors(Colors.Red)))
+    light.showAnimationFrame(light.colorWipeAnimation(light.colors(Colors.Red)))
 })
 ```
 
@@ -52,6 +52,6 @@ control.forever(() => {
 
 ```blocks
 control.forever(() => {
-    light.pixels.showAnimationFrame(light.theatreChaseAnimation())
+    light.showAnimationFrame(light.theatreChaseAnimation())
 })
 ```

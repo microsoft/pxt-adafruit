@@ -46,7 +46,7 @@ Click the **Hint** button if you need help!
 
 ```blocks
 loops.forever(() => {
-    light.showAnimation(), 500)
+    light.showAnimation(light.rainbowAnimation, 500)
 })
 input.onGesture(Gesture.Shake, () => {
     light.showAnimation(light.sparkleAnimation, 1500)

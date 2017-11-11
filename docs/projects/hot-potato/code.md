@@ -50,7 +50,7 @@ input.buttonA.onEvent(ButtonEvent.Click, () => {
     delay = 500 + Math.randomRange(0, 1501)
     while (delay > 0) {
         music.playTone(262, music.beat(BeatFraction.Quarter))                
-        light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), delay)
+        light.showAnimation(light.rainbowAnimation, delay)
         delay += -50
     }
 })
@@ -69,11 +69,11 @@ input.buttonA.onEvent(ButtonEvent.Click, () => {
     delay = 500 + Math.randomRange(0, 1501)
     while (delay > 0) {
         music.playTone(262, music.beat(BeatFraction.Quarter))
-        light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), delay)
+        light.showAnimation(light.rainbowAnimation, delay)
         delay += -50
     }
     music.playSound(music.sounds(Sounds.Wawawawaa))    
-    light.pixels.showAnimation(light.animation(LightAnimation.TheaterChase), 2500)
+    light.showAnimation(light.theaterChaseAnimation, 2500)
 })
 
 ```

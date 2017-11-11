@@ -9,7 +9,7 @@ Source: https://learn.adafruit.com/circuit-playground-digital-input/hello-digita
 ```blocks
 control.forever(() => {
     serial.writeLine("D3: " + pins.D3.digitalRead());
-    light.pixels.showBarGraph(pins.D3.digitalRead(), 1);
+    light.onboardStrip().showBarGraph(pins.D3.digitalRead(), 1);
 })
 ```
 
@@ -22,9 +22,9 @@ let initialValue = 0
 control.forever(() => {
     serial.writeLine("D3: " + pins.D3.digitalRead());
     if (initialValue != pins.D3.digitalRead()) {
-        light.pixels.showColor(Colors.Blue)
+        light.onboardStrip().showColor(Colors.Blue)
     }
 })
 initialValue = pins.D3.digitalRead()
-light.pixels.showColor(Colors.Red)
+light.onboardStrip().showColor(Colors.Red)
 ```

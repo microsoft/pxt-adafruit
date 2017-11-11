@@ -15,7 +15,7 @@ Use the on shake event to play a sound and animation when we shake the magic wan
 ## Blocks
 
 ```cards
-light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+light.showAnimation(light.rainbowAnimation, 500)
 music.playSound(music.sounds(Sounds.MagicWand))
 input.onGesture(Gesture.Shake, () => {
 })
@@ -28,7 +28,7 @@ From **LIGHT**, drag a **show animation** block, and place it inside a **forever
 
 ```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+    light.showAnimation(light.rainbowAnimation, 500)
 })
 ```
 
@@ -46,10 +46,10 @@ Click the **Hint** button if you need help!
 
 ```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+    light.showAnimation(), 500)
 })
 input.onGesture(Gesture.Shake, () => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
+    light.showAnimation(light.sparkleAnimation, 1500)
 })
 ```
 **Build the blocks**
@@ -71,11 +71,11 @@ From the ``Music`` drawer, drag a ``||play sound||`` block and place it inside t
 
 ```blocks
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500)
+    light.showAnimation(light.rainbowAnimation, 500)
 })
 input.onGesture(Gesture.Shake, () => {
     music.playSound(music.sounds(Sounds.MagicWand))
-    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 1500)
+    light.showAnimation(light.sparkleAnimation, 1500)
 })
 ```
 

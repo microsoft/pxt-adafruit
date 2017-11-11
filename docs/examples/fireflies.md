@@ -6,9 +6,9 @@ loops.forever(() => {
     // if clock hits noon, flash the screen
     if (clock >= 8) {
         // notify neighbors
-        light.pixels.setAll(Colors.White)
+        light.setAll(Colors.White)
         loops.pause(200)
-        light.pixels.clear()
+        light.clear()
         // reset the clock
         clock = 0
     } else {
@@ -28,5 +28,5 @@ input.onLightConditionChanged(LightCondition.Bright, () => {
 })
 // setup flash detection
 input.setLightThreshold(LightCondition.Bright, 40)
-light.pixels.setBrightness(255)
+light.setBrightness(255)
 ```

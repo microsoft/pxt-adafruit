@@ -14,7 +14,7 @@ Using the sensitivity of the light sensor and code, let's make the light monster
 ## Blocks
 
 ```cards 
-light.pixels.graph(input.lightLevel(),0)
+light.graph(input.lightLevel(),0)
 pins.A2.servoWrite(180)
 Math.map(input.lightLevel(),0,0,0,0)
 loops.pause(0)
@@ -27,7 +27,7 @@ loops.pause(0)
 
 ```blocks 
 loops.forever(() => {
-    light.pixels.graph(0, 0)
+    light.graph(0, 0)
 })
 ```
 
@@ -37,7 +37,7 @@ From **INPUT** drag a **light level** into the **graph of** block.
 
 ```blocks 
 loops.forever(() => {
-    light.pixels.graph(input.lightLevel(), 0)
+    light.graph(input.lightLevel(), 0)
 })
 ```
 
@@ -45,7 +45,7 @@ From **PINS**, drag a **servo write pin to** block and place it inside the forev
 
 ```blocks 
 loops.forever(() => {
-    light.pixels.graph(input.lightLevel(), 0)
+    light.graph(input.lightLevel(), 0)
     pins.A1.servoWrite(180)
 })
 ```
@@ -59,7 +59,7 @@ loops.forever(() => {
 
 ```blocks 
 loops.forever(() => {
-    light.pixels.graph(input.lightLevel(), 0)
+    light.graph(input.lightLevel(), 0)
     pins.A2.servoWrite(Math.map(
         input.lightLevel(), 
         0,
@@ -80,7 +80,7 @@ Let's try changing the values of the position of the servo motor so that your mo
 
 ```blocks 
 loops.forever(() => {
-    light.pixels.graph(input.lightLevel(), 0)
+    light.graph(input.lightLevel(), 0)
     pins.A2.servoWrite(Math.map(
         input.lightLevel(), 
         0,
@@ -109,7 +109,7 @@ loops.pause(100)
 
 ```blocks
 loops.forever(() => {
-    light.pixels.graph(
+    light.graph(
     input.lightLevel(), 
     0
     )

@@ -6,7 +6,7 @@ Light up pixels on the NeoPixel ring. Show light effects and animations.
 
 ```cards
 light.showRing('')
-light.showAnimation(null)
+light.showAnimation(null, 500)
 light.showAnimationFrame(null)
 light.stopAllAnimations()
 light.animation(0)
@@ -17,7 +17,6 @@ light.setPixelColor(0,0)
 light.clear()
 light.pixelColor(0)
 light.onboardStrip()
-light.defaultPin()
 ```
 
 ## Photons
@@ -26,7 +25,6 @@ light.defaultPin()
 light.photonForward(0)
 light.photonFlip()
 light.setPhotonPenHue(0)
-//light.setPhotonPenColor(0)
 light.setPhotonMode(PhotonMode.PenUp)
 ```
 

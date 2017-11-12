@@ -11,7 +11,6 @@ declare namespace light {
      * Get the default pin for the built-in neopixels
      */
     //% parts="neopixel"
-    //% blockId="light_default_pin" block="default pixel pin"
     //% help=light/default-pin shim=light::defaultPin
     function defaultPin(): DigitalPin;
 

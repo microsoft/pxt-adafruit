@@ -17,7 +17,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function() {
     light.stopAllAnimations();
 })
 
-light.showAnimation(light.rainbowAnimation);
+light.showAnimation(light.rainbowAnimation, 500);
 ```
 
 ## See Also

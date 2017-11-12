@@ -1,14 +1,26 @@
-# Learn System
+# Learn.Adafruit.Com
 
-Lessons and activites adapted from https://learn.adafruit.com/ 
+## Guides
 
-## ~ hint
-
-Work in progress. These lessons are adapted for testing purposes.
-
-## ~
-
-* [Beep Beep](/learnsystem/beep-beep)
-* [Digital Input](/learnsystem/digital-input)
-* [Hot Potato](/learnsystem/hot-potato)
-* [Light Paintbrush](/learnsystem/light-paintbrush)
+```codecard
+[
+    {
+        "name": "MakeCode 101",
+        "description": "An overview of the MakeCode editor.",
+        "imageUrl": "/static/cp/learn/makecode101.png",
+        "url": "https://learn.adafruit.com/makecode/"
+    },
+    {
+        "name": "NeoPixels",
+        "description": "Learn how to use NeoPixels, those super shiny lights on the board or on external strips.",
+        "imageUrl": "/static/cp/learn/neopixels.jpg",
+        "url": "https://learn.adafruit.com/neopixels-with-makecode"
+    },
+    {
+        "name": "Sensors",
+        "description": "A guide through the various sensors included with the Circuit Playground Express.",
+        "imageUrl": "/static/cp/learn/sensors.jpg",
+        "url": "https://learn.adafruit.com/sensors-in-makecode"
+    }
+]
+```

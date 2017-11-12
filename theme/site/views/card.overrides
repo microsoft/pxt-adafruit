@@ -1,3 +1,16 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+/* Home screen cards */
+.projectsdialog {
+    .ui.card {
+        margin-right: 10px !important;
+        padding: 0.5rem;
+    }
+}
+
+/* File card */
+.ui.card.file .fileimage {
+    opacity: 0.8;
+}

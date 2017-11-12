@@ -6,5 +6,16 @@
         ],
         "approvedRepos": [
         ]
+    },
+    "languages": [
+        "en"
+    ],
+    "galleries": {
+        "Tutorials": "tutorials",
+        "Costumes": "costumes",
+        "Games": "games",
+        "Music": "music",
+        "Pranks": "pranks",
+        "learn.adafruit.com": "learnsystem"
     }
 }

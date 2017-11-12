@@ -21,7 +21,7 @@ We want to use the [photon](https://makecode.adafruit.com/reference/light/photon
 ```blocks
 let time = 0
 time = 1
-light.pixels.photonForward(0)
+light.photonForward(0)
 ```
 
 ## Step 2
@@ -39,12 +39,12 @@ than 10 (`time < 10`). If time is still at 10, we won't increase it if the butto
 let time = 0
 input.buttonA.onEvent(ButtonEvent.Click, () => {
     if (time < 10) {
-        light.pixels.photonForward(1)
+        light.photonForward(1)
         time += 1
     }
 })
 time = 1
-light.pixels.photonForward(0)
+light.photonForward(0)
 ```
 
 ## Step 3
@@ -58,17 +58,17 @@ For that, we need to `flip` the photon, and set it to `eraser` mode. Go ahead an
 ```blocks
 let time = 0
 input.onLoudSound(() => {
-    light.pixels.photonFlip()
-    light.pixels.setPhotonMode(PhotonMode.Eraser)
+    light.photonFlip()
+    light.setPhotonMode(PhotonMode.Eraser)
 })
 input.buttonA.onEvent(ButtonEvent.Click, () => {
     if (time < 10) {
-        light.pixels.photonForward(1)
+        light.photonForward(1)
         time += 1
     }
 })
 time = 1
-light.pixels.photonForward(0)
+light.photonForward(0)
 ```
 
 ## Step 4
@@ -83,20 +83,20 @@ Use the `time` variable as the repeat count. Once that is done, make the photon 
 ```blocks
 let time = 0
 input.onLoudSound(() => {
-    light.pixels.photonFlip()
-    light.pixels.setPhotonMode(PhotonMode.Eraser)
+    light.photonFlip()
+    light.setPhotonMode(PhotonMode.Eraser)
     for (let i = 0; i < time; i++) {
-        light.pixels.photonForward(1)
+        light.photonForward(1)
     }
 })
 input.buttonA.onEvent(ButtonEvent.Click, () => {
     if (time < 10) {
-        light.pixels.photonForward(1)
+        light.photonForward(1)
         time += 1
     }
 })
 time = 1
-light.pixels.photonForward(0)
+light.photonForward(0)
 ```
 
 ## Step 5
@@ -112,22 +112,22 @@ This time combined with our **pause** time will cause a pixel to disappear in ex
 ```blocks
 let time = 0
 input.onLoudSound(() => {
-    light.pixels.photonFlip()
-    light.pixels.setPhotonMode(PhotonMode.Eraser)
+    light.photonFlip()
+    light.setPhotonMode(PhotonMode.Eraser)
     for (let i = 0; i < time; i++) {
         music.playTone(262, 300)
         loops.pause(700)
-        light.pixels.photonForward(1)
+        light.photonForward(1)
     }
 })
 input.buttonA.onEvent(ButtonEvent.Click, () => {
     if (time < 10) {
-        light.pixels.photonForward(1)
+        light.photonForward(1)
         time += 1
     }
 })
 time = 1
-light.pixels.photonForward(0)
+light.photonForward(0)
 ```
 
 ## Step 6
@@ -146,28 +146,28 @@ Choose your favorite animation (`sparkle` works great), and set the duration to 
 ```blocks
 let time = 0
 input.onLoudSound(() => {
-    light.pixels.photonFlip()
-    light.pixels.setPhotonMode(PhotonMode.Eraser)
+    light.photonFlip()
+    light.setPhotonMode(PhotonMode.Eraser)
     for (let i = 0; i < time; i++) {
         music.playTone(262, 300)
         loops.pause(700)
-        light.pixels.photonForward(1)
+        light.photonForward(1)
     }
     for (let i = 0; i < 3; i++) {
         music.playTone(523, 100)
         loops.pause(100)
         music.playTone(523, 100)
-        light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 700)
+        light.showAnimation(light.sparkleAnimation, 700)
     }
 })
 input.buttonA.onEvent(ButtonEvent.Click, () => {
     if (time < 10) {
-        light.pixels.photonForward(1)
+        light.photonForward(1)
         time += 1
     }
 })
 time = 1
-light.pixels.photonForward(0)
+light.photonForward(0)
 ```
 
 Your watch timer is ready! Download this code to your wristband-mounted @boardname@ and use the **A** button to increase the time.

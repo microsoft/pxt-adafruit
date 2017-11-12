@@ -9,6 +9,7 @@
     * [Watch Timer](/projects/watch-timer)
     * [Lucky Wheel](/projects/lucky-wheel)
     * [Headlamp](/projects/headlamp)
+    * [Guitar](/projects/guitar)
     * [Hot Potato](/projects/hot-potato)
     * [Light Monster](/projects/light-monster)
     * [Reaction!](/projects/reaction)
@@ -39,3 +40,9 @@
     * [pins](/reference/pins)
     * [control](/reference/control)
     * [serial](/reference/serial)
+
+## Hardware #hardware
+
+* [Hardware](/device)
+    * [Simulator](/device/simulator)
+    * [USB](/device/usb)

@@ -7,7 +7,7 @@ namespace pxsim.visuals {
         private currentValue: number;
         private pin: Pin;
 
-        constructor(private parent: CircuitPlaygroundBoardSvg, private defs: SVGDefsElement, private id: CPlayPinName, name: string) {
+        constructor(private parent: CircuitPlaygroundBoardSvg, private defs: SVGDefsElement, private id: number, name: string) {
             this.pin = board().edgeConnectorState.getPin(this.id);
 
             // Init the button events
@@ -15,6 +15,10 @@ namespace pxsim.visuals {
             svg.addClass(this.outerElement, "sim-pin-touch");
             this.addButtonEvents();
 
+            if ((this.pin as pins.CommonPin).used) {
+                accessibility.makeFocusable(this.outerElement);
+                accessibility.setAria(this.outerElement, "button", this.outerElement.firstChild.textContent);
+            }
 
             // Init the gradient controls
             // const gid = `gradient-${CPlayPinName[id]}-level`;
@@ -54,20 +58,34 @@ namespace pxsim.visuals {
                 this.pin.touched = true;
                 svg.addClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id - 1) as CommonButton).setPressed(true);
+                (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(true);
             })
             this.outerElement.addEventListener(pointerEvents.leave, ev => {
                 this.pin.touched = false;
                 svg.removeClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id - 1) as CommonButton).setPressed(false);
+                (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(false);
             })
             this.outerElement.addEventListener(pointerEvents.up, ev => {
                 this.pin.touched = false;
                 svg.removeClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id - 1) as CommonButton).setPressed(false);
+                (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(false);
             })
+            accessibility.enableKeyboardInteraction(this.outerElement, 
+                () => {
+                    this.pin.touched = true;
+                    svg.addClass(this.outerElement, "touched");
+
+                    (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(true);
+                },
+                () => {
+                    this.pin.touched = false;
+                    svg.removeClass(this.outerElement, "touched");
+
+                    (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(false);
+                }
+            );
         }
 
         private addLevelControlEvents() {

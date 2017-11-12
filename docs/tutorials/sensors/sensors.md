@@ -12,7 +12,7 @@ Open the **Light** Toolbox drawer, and click on **More** subcategory.  Drag the 
 
 ```blocks
 loops.forever(() => {
-    light.pixels.graph(
+    light.graph(
     0,
     0
     )
@@ -26,7 +26,7 @@ Open the **Input** Toolbox drawer, drag the ``||acceleration||`` block into the 
 
 ```blocks
 loops.forever(() => {
-    light.pixels.graph(
+    light.graph(
     input.acceleration(Dimension.X),
     0
     )
@@ -40,7 +40,7 @@ Set the maximum value to ``1023`` by typing this number into the second slot of 
 
 ```blocks
 loops.forever(() => {
-    light.pixels.graph(
+    light.graph(
     input.acceleration(Dimension.X),
     1023
     )
@@ -74,7 +74,7 @@ Open the **Input** Toolbox drawer, drag the ``||light level||`` block into the f
 
 ```blocks
 loops.forever(() => {
-    light.pixels.graph(
+    light.graph(
     input.lightLevel(),
     1023
     )
@@ -88,7 +88,7 @@ Set the maximum value to ``255`` by typing this number into the second slot of t
 
 ```blocks
 loops.forever(() => {
-    light.pixels.graph(
+    light.graph(
     input.lightLevel(),
     255
     )

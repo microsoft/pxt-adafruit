@@ -37,12 +37,23 @@ Basic projects to build with your @boardname@.
 {
   "name": "Light Monster", 
   "url":"/projects/light-monster", 
-  "imageUrl":"/static/cp/projects/lightmonster.jpg"
+  "imageUrl":"/static/cp/projects/light-monster.jpg"
 },
 {
   "name": "Headlamp",
   "url":"/projects/headlamp",
   "imageUrl":"/static/cp/projects/headlamp.jpg"
+}]
+```
+## Music
+
+Music projects for your @boardname@.
+
+```codecard
+[{
+  "name": "Guitar",
+  "url":"/projects/guitar",
+  "imageUrl":"/static/cp/projects/guitar.jpg"
 }]
 ```
 
@@ -68,7 +79,11 @@ Fun games to build with your @boardname@.
 Fun tricks to play on your friends.
 
 ```codecard
-[{
+[{ 
+  "name": "Rube Goldberg",
+  "url":"/projects/rube-goldberg",
+  "imageUrl":"/static/cp/projects/rube-goldberg.jpg"
+}, {
   "name": "Confetti box", 
   "url":"/projects/confetti-box",
   "imageUrl":"/static/cp/projects/confetti-box.jpg"

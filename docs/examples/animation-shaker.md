@@ -7,13 +7,13 @@ let r = 0
 input.onGesture(Gesture.Shake, () => {
     r = Math.randomRange(0, 4)
     if (r == 0) {
-        light.pixels.showAnimation(light.animation(LightAnimation.RunningLights), 2000)
+        light.showAnimation(light.runningLightsAnimation, 2000)
     } else if (r == 1) {
-        light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 2000)
+        light.showAnimation(light.rainbowAnimation, 2000)
     } else if (r == 2) {
-        light.pixels.showAnimation(light.animation(LightAnimation.Comet), 2000)
+        light.showAnimation(light.cometAnimation, 2000)
     } else {
-        light.pixels.showAnimation(light.animation(LightAnimation.TheaterChase), 2000)
+        light.showAnimation(light.theaterChaseAnimation, 2000)
     }
 })
 ```

@@ -1,5 +1,8 @@
 {
-  "network": "Infrared tranmission and reception",
+  "InfraredPacket.receivedBuffer": "The raw buffer of data received",
+  "InfraredPacket.receivedNumber": "The first number in the payload.",
+  "InfraredPacket.receivedNumbers": "The array of numbers of received.",
+  "network": "Communication between devices",
   "network.infraredPacket": "Get most recent packet received over IR.",
   "network.infraredSendNumber": "Send a number over the infrared transmitter.",
   "network.infraredSendNumbers": "Send an array of numbers over infrared. The array size has to be 32 bytes or less.",
@@ -7,5 +10,7 @@
   "network.infraredSendPacket": "Send data over IR.",
   "network.onInfraredError": "Run action after there's an error reciving packet over IR.",
   "network.onInfraredPacket": "Run action after a packet is recieved over IR.",
-  "network.onInfraredPacketReceived": "Run some code when the infrared receiver gets a packet."
+  "network.onInfraredReceivedBuffer": "Run some code when the infrared receiver gets a buffer.",
+  "network.onInfraredReceivedNumber": "Run some code when the infrared receiver gets a number.",
+  "network.onInfraredReceivedNumbers": "Run some code when the infrared receiver gets a list of numbers."
 }

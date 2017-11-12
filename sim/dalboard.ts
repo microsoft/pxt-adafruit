@@ -3,23 +3,33 @@
 /// <reference path="../built/common-sim.d.ts"/>
 
 namespace pxsim {
-    export enum CPlayPinName {
-        A0,
-        A1,
-        A2,
-        A3,
-        A4,
-        A5,
-        A6,
-        A7,
-        A8,
-        A9,
-        D4,
-        D5,
-        D6,
-        D7,
-        D8,
-        D13
+    export module CPlayPinName {
+        export let A0 = -1;
+        export let A1 = -1;
+        export let A2 = -1;
+        export let A3 = -1;
+        export let A4 = -1;
+        export let A5 = -1;
+        export let A6 = -1;
+        export let A7 = -1;
+        export let A8 = -1;
+        export let A9 = -1;
+        export let D4 = -1;
+        export let D5 = -1;
+        export let D6 = -1;
+        export let D7 = -1;
+        export let D8 = -1;
+        export let D13 = -1;
+
+        export function init() {
+            let v = CPlayPinName as any
+            for (let k of Object.keys(v)) {
+                let key = getConfigKey("PIN_" + k)
+                if (key != null) {
+                    v[k] = getConfig(key)
+                }
+            }
+        }
     }
 
     export class DalBoard extends CoreBoard implements
@@ -34,7 +44,7 @@ namespace pxsim {
         InfraredBoard,
         CapTouchBoard {
         // state & update logic for component services
-        neopixelState: CommonNeoPixelState;
+        _neopixelState: pxt.Map<CommonNeoPixelState>;
         buttonState: CommonButtonState;
         slideSwitchState: SlideSwitchState;
         lightSensorState: AnalogSensorState;
@@ -55,10 +65,13 @@ namespace pxsim {
         constructor() {
             super()
 
+            CPlayPinName.init()
+
+            this._neopixelState = {};
             this.bus.setNotify(DAL.DEVICE_ID_NOTIFY, DAL.DEVICE_ID_NOTIFY_ONE);
 
             //components
-            this.builtinParts["neopixel"] = this.neopixelState = new CommonNeoPixelState();
+            this.builtinParts["neopixel"] = this.neopixelState(CPlayPinName.D8);
             this.builtinParts["buttonpair"] = this.buttonState = new CommonButtonState();
 
             this.builtinParts["switch"] = this.slideSwitchState = new SlideSwitchState();
@@ -168,6 +181,16 @@ namespace pxsim {
 
         screenshot(): string {
             return svg.toDataUri(new XMLSerializer().serializeToString(this.view));
+        }
+
+        tryGetNeopixelState(pinId: number): CommonNeoPixelState {
+            return this._neopixelState[pinId];
+        }
+
+        neopixelState(pinId: number): CommonNeoPixelState {
+            let state = this._neopixelState[pinId];
+            if (!state) state = this._neopixelState[pinId] = new CommonNeoPixelState();
+            return state;
         }
 
         defaultNeopixelPin() {

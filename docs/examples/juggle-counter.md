@@ -10,7 +10,7 @@ input.buttonA.onEvent(ButtonEvent.Click, () => {
 input.onGesture(Gesture.Shake, () => {
     music.playTone(item, music.beat(BeatFraction.Quarter))
     item += 50;
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 500);
+    light.showAnimation(light.rainbowAnimation, 500);
 })
 ```
 

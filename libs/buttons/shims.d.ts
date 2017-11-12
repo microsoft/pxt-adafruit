@@ -1,24 +1,12 @@
 // Auto-generated. Do not edit.
-declare namespace input {
 
-    /**
-     * Left button.
-     */
-    //% indexedInstanceNS=input indexedInstanceShim=pxt::getButton
-    //% block="button A" weight=95 fixedInstance shim=pxt::getButton(0)
-    const buttonA: Button;
 
+declare interface DigitalPin {
     /**
-     * Right button.
+     * Get the push button (connected to GND) for given pin
      */
-    //% block="button B" weight=94 fixedInstance shim=pxt::getButton(1)
-    const buttonB: Button;
-
-    /**
-     * Left and Right button.
-     */
-    //% block="buttons A+B" weight=93 fixedInstance shim=pxt::getButton(2)
-    const buttonsAB: Button;
+    //% shim=DigitalPinMethods::pushButton
+    pushButton(): Button;
 }
 
 
@@ -31,42 +19,47 @@ declare interface Button {
      * @param event the kind of button gesture that needs to be detected
      * @param body code to run when the event is raised
      */
-    //% help=input/button/on-event weight=99 blockGap=8
+    //% help=input/button/on-event
     //% blockId=buttonEvent block="on %button|%event"
-    //% parts="buttonpair"
+    //% parts="buttons"
     //% blockNamespace=input
     //% button.fieldEditor="gridpicker"
     //% button.fieldOptions.width=220
-    //% button.fieldOptions.columns=3 shim=ButtonMethods::onEvent
+    //% button.fieldOptions.columns=3
+    //% weight=96 blockGap=12
+    //% trackArgs=0 shim=ButtonMethods::onEvent
     onEvent(ev: ButtonEvent, body: () => void): void;
 
     /**
      * Check if a button is pressed or not.
      * @param button the button to query the request
      */
-    //% help=input/button/is-pressed weight=79
+    //% help=input/button/is-pressed
     //% block="%button|is pressed"
     //% blockId=buttonIsPressed
-    //% blockGap=8
-    //% parts="buttonpair"
+    //% parts="buttons"
     //% blockNamespace=input
     //% button.fieldEditor="gridpicker"
     //% button.fieldOptions.width=220
-    //% button.fieldOptions.columns=3 shim=ButtonMethods::isPressed
+    //% button.fieldOptions.columns=3
+    //% weight=50 blockGap=8
+    //% trackArgs=0 shim=ButtonMethods::isPressed
     isPressed(): boolean;
 
     /**
      * See if the button was pressed again since the last time you checked.
      * @param button the button to query the request
      */
-    //% help=input/button/was-pressed weight=78
+    //% help=input/button/was-pressed
     //% block="%button|was pressed"
     //% blockId=buttonWasPressed
-    //% parts="buttonpair" blockGap=8
-    //% blockNamespace=input advanced=true
+    //% parts="buttons"
+    //% blockNamespace=input
     //% button.fieldEditor="gridpicker"
     //% button.fieldOptions.width=220
-    //% button.fieldOptions.columns=3 shim=ButtonMethods::wasPressed
+    //% button.fieldOptions.columns=3
+    //% group="More" weight=46 blockGap=8
+    //% trackArgs=0 shim=ButtonMethods::wasPressed
     wasPressed(): boolean;
 }
 

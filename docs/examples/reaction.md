@@ -12,7 +12,7 @@ input.pinA1.onEvent(ButtonEvent.Click, () => {
     // start countdown
     running = 0
     music.ringTone(988)
-    light.pixels.showAnimation(light.animation(LightAnimation.Sparkle), 2000 + Math.randomRange(0, 2001))
+    light.showAnimation(light.sparkleAnimation, 2000 + Math.randomRange(0, 2001))
     // check if the players haven't already touched a button
     // and finished the game
     if (running == 0) {
@@ -20,7 +20,7 @@ input.pinA1.onEvent(ButtonEvent.Click, () => {
         // wait for players input
         running = 1
         music.stopAllSounds()
-        light.pixels.clear()
+        light.clear()
     }
 })
 
@@ -30,13 +30,13 @@ input.pinA2.onEvent(ButtonEvent.Down, () => {
         // tapped too early, blue wins
         running = 2
         // stop animations and show blue
-        light.pixels.stopAllAnimations()
-        light.pixels.setAll(Colors.Blue)
+        light.stopAllAnimations()
+        light.setAll(Colors.Blue)
         music.playSound(music.sounds(Sounds.PowerDown))
     } else if (running == 1) {
         // red wins
         running = 2
-        light.pixels.setAll(Colors.Red)
+        light.setAll(Colors.Red)
         music.playSound(music.sounds(Sounds.PowerUp))
     }
 })
@@ -44,13 +44,13 @@ input.pinA3.onEvent(ButtonEvent.Down, () => {
     if (running == 0) {
         // too early, red wins
         running = 2
-        light.pixels.stopAllAnimations()
-        light.pixels.setAll(Colors.Red)
+        light.stopAllAnimations()
+        light.setAll(Colors.Red)
         music.playSound(music.sounds(Sounds.JumpDown))
     } else if (running == 1) {
         // blue wins
         running = 2
-        light.pixels.setAll(Colors.Blue)
+        light.setAll(Colors.Blue)
         music.playSound(music.sounds(Sounds.JumpUp))
     }
 })

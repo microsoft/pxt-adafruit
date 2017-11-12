@@ -2,11 +2,7 @@
      User Global Variables
 *******************************/
 
-@importGoogleFonts: true;
-
 @fontName  : 'Open Sans';
-
-@emSize      : 14px;
 
 @primaryColor: @blue;
 @secondaryColor: @pink;
@@ -16,17 +12,37 @@
 @teal:#08415C;
 @violet:#C200C0;
 @brown:#2E282A;
-@grey:#999;
+@grey:#4d5055;
+
+@grey: #3C444A; /*#4c4b4d;*/ /*#1e1e1e;*/
+@darkGrey: #292F36; /*#2F2F2F;*/ /*#313638;*/
 
 /* Adafruit colors */
-@blue:#2EB7ED;
+@blue: #0083B7; /*#2EB7ED;*/
 @pink:#FB48C7;
 
 @green: #40bf4a; /*#00922B;*/
 @purple:#8073E5;
-@orange:#FFA702;
+@orange:#d25b33; /*#FFA702;*/
 
-@pageBackground: #ecf0f1;
+@darkBlue: #1c1f2b;
+@darkGreen: #092C3A;
+
+@pageBackground: @darkBlue; /*#ecf0f1;*/
+
+/*--------------
+   Form Input
+---------------*/
+
+/* This adjusts the default form input across all elements */
+@inputBackground        : #333940;
+
+/* Input Text Color */
+@inputColor: white;
+@highlightColor: @grey;
+@inputHighlightColor: @inputColor;
+
+@linkColor: #3eb1d0;
 
 /*******************************
          PXT Overrides
@@ -55,9 +71,9 @@
    Background
 --------------------*/
 
-@simulatorBackground: #2F2F2F; /*#313638;*/
-@editorToolsBackground: #2F2F2F; /*#1e1e1e;*/
-@blocklySvgColor: #4c4b4d; /*#1e1e1e;*/
+@simulatorBackground: @darkGrey;
+@editorToolsBackground: @simulatorBackground;
+@blocklySvgColor: #424a51;
 
 /*-------------------
    Full screen
@@ -77,7 +93,7 @@
    Editor
 --------------------*/
 
-@blocklyToolboxColor: transparent;
+@blocklyToolboxColor: #424A51;
 @trashIconColor: @primaryColor;
 
 
@@ -87,3 +103,57 @@
 
 @blocklyRowWidthWide: 160px;
 @blocklyRowWidthComputer: 140px;
+
+@blocklyScrollbarColor: lighten(@grey, 20%);
+@blocklyScrollbarOpacity: 0.5;
+
+
+/*-------------------
+   Scrollbars
+--------------------*/
+
+@thumbBackground: fade(@blocklyScrollbarColor, 50%);
+@thumbInvertedBackground: fade(@blocklyScrollbarColor, 50%);
+
+/*-------------------
+   Serial
+--------------------*/
+@editorCloseColor: white;
+@serialTextColor: @invertedTextColor;
+
+/*-------------------
+   Home screen
+--------------------*/
+
+@homeScreenBackground: @darkBlue;
+@homeCardBackgroundColor: @darkGreen;
+@homeHeaderColor: white;
+@homeCardColor: #bdcadb;
+@homeCardBorderRadius: 5px;
+@homeCardBorderSize: 2px;
+@homeCardBorderColor: lighten(@darkGreen, 10%);
+@homeCardHoverBorderColor: white;
+@homeCardImageBorderRadius: 5px;
+
+/*-------------------
+   Docs
+--------------------*/
+
+@avatarImageUrl: "../docs/static/avatar.png";
+@docsAvatarImageUrl: "../docs/static/avatar-inverted.svg";
+
+/*-------------------
+   Tutorial
+--------------------*/
+
+@tutorialSegmentBackground: @darkGrey;
+@tutorialSegmentColor: @inputColor;
+
+/*-------------------
+   Flyout
+--------------------*/
+
+@flyoutLabelColor: white;
+@blocklyFlyoutColor: #292F36;
+@blocklyFlyoutColorOpacity: 0.9;
+@monacoFlyoutColor: fade(@blocklyFlyoutColor, 90%);

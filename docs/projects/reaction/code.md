@@ -26,7 +26,7 @@ network.infraredSendNumber(0)
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
-    light.pixels.setAll(Colors.Red)
+    light.setAll(Colors.Red)
     network.infraredSendNumber(0)
 })
 ```
@@ -39,7 +39,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 
 ```blocks 
 input.buttonA.onEvent(ButtonEvent.Click, () => {
-    light.pixels.setAll(Colors.Green)
+    light.setAll(Colors.Green)
     network.infraredSendNumber(Colors.Red)
 })
 ```
@@ -50,11 +50,11 @@ Now, let's repeat the previous steps to make two more button click blocks. Howev
 
 ```blocks
 input.buttonB.onEvent(ButtonEvent.Click, function () {
-    light.pixels.setAll(Colors.Red)
+    light.setAll(Colors.Red)
     network.infraredSendNumber(0)
 })
 input.buttonsAB.onEvent(ButtonEvent.Click, function () {
-    light.pixels.setAll(Colors.Red)
+    light.setAll(Colors.Red)
     network.infraredSendNumber(0)
 })
 input.onGesture(Gesture.Shake, function () {
@@ -69,7 +69,7 @@ input.onGesture(Gesture.Shake, function () {
 
 ```blocks 
 input.buttonB.onEvent(ButtonEvent.Click, () => {
-    light.pixels.setAll(Colors.Violet)
+    light.setAll(Colors.Violet)
     network.infraredSendNumber(Colors.Yellow)
 })
 ```
@@ -83,7 +83,7 @@ input.buttonB.onEvent(ButtonEvent.Click, () => {
 
 ```blocks 
 input.buttonsAB.onEvent(ButtonEvent.Click, () => {
-    light.pixels.setAll(Colors.White)
+    light.setAll(Colors.White)
     network.infraredSendNumber(Colors.Black)
 })
 ```
@@ -95,7 +95,7 @@ input.buttonsAB.onEvent(ButtonEvent.Click, () => {
 
 ```blocks 
 input.onGesture(Gesture.Shake, () => {
-    light.pixels.setAll(Colors.Blue)
+    light.setAll(Colors.Blue)
 })
 ```
 
@@ -108,7 +108,7 @@ Now that you've programmed your @boardname@ to send signals, we need to program 
 
 ```blocks 
 network.onInfraredPacketReceived( ({ receivedNumber }) => {
-    light.pixels.setAll(Colors.Red)
+    light.setAll(Colors.Red)
 })
 ```
 
@@ -118,7 +118,7 @@ network.onInfraredPacketReceived( ({ receivedNumber }) => {
 
 ```blocks
 network.onInfraredPacketReceived( ({ receivedNumber }) => {
-    light.pixels.setAll(receivedNumber)
+    light.setAll(receivedNumber)
 })
 ```
 

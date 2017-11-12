@@ -12,7 +12,7 @@ function switchMode() {
     if (mode > 3) mode = 0
     if (mode == 1) setButtonsLights()
     if (mode == 2) setButtonsSound()
-    light.pixels.clear()
+    light.clear()
     for (let i = 0; i < 5; ++i) {
         blink(mode, Colors.Blue)
     }
@@ -45,7 +45,7 @@ function main() {
 
     input.onGesture(Gesture.Shake, () => {
         if (mode == 0)
-            light.showAnimation(light.animation(LightAnimation.Rainbow), 2000)
+            light.showAnimation(light.rainbowAnimation, 2000)
     })
 
     switchMode()

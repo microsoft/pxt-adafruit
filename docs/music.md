@@ -9,7 +9,7 @@ Music projects for your @boardname@.
   "name": "Guitar",
   "description": "Build an electric guitar and be a rock star!",
   "url":"/projects/guitar",
-  "imageUrl":"/static/cp/projects/guitar.jpg"
+  "imageUrl":"/static/cp/projects/thumb/guitar.jpg"
 }, {
   "name": "Metronome",
   "description":"Tic, toc, tic, toc, the metronome will keep you in time while practicing music!",

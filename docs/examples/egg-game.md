@@ -4,24 +4,24 @@ Try to move the longest distance and keep the @boardname@ level!
 
 ```blocks
 let score = 0
-input.buttonB.onEvent(ButtonEvent.Click, () => {
+input.buttonB.onEvent(ButtonEvent.Click, function () {
     music.playTone(262 + score, music.beat(BeatFraction.Whole))
 })
-input.buttonA.onEvent(ButtonEvent.Click, () => {
+input.buttonA.onEvent(ButtonEvent.Click, function () {
     score = 0
-    light.pixels.clear()
+    light.setAll(0x000000)
     for (let i = 0; i < 3; i++) {
-        light.pixels.photonForward(1)
+        light.photonForward(1)
         music.playTone(240, music.beat(BeatFraction.Whole))
         loops.pause(500)
     }
-    light.pixels.photonForward(1)
+    light.photonForward(1)
     music.playTone(988, music.beat(BeatFraction.Whole) * 3)
-    light.pixels.clear()
-    light.pixels.setPhotonMode(PhotonMode.Eraser)
+    light.setAll(0x000000)
+    light.setPhotonMode(PhotonMode.Eraser)
     while (Math.abs(input.acceleration(Dimension.X)) + Math.abs(input.acceleration(Dimension.Y)) < 256) {
         score += 2
-        light.pixels.photonForward(1)
+        light.photonForward(1)
         music.playTone(262 + score, music.beat(BeatFraction.Sixteenth))
     }
     music.playSound(music.sounds(Sounds.PowerDown))

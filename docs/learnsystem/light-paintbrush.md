@@ -53,7 +53,7 @@ control.forever(() => {
     else if ((X < 1023) && (Y >= 1023)) {  //-x, +y = YELLOW
         c = Colors.Yellow;
     }
-    light.pixels.setBrightness(brightVal);
-    light.pixels.showColor(c);
+    light.setBrightness(brightVal);
+    light.onboardStrip().showColor(c);
 })
 ```

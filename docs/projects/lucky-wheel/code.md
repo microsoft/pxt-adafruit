@@ -84,7 +84,7 @@ input.onGesture(Gesture.Shake, () => {
     delay = 0
     times = Math.randomRange(0, 10) + 50
     for (let i = 0; i < 5; i++) {
-        light.pixels.photonForward(-1)
+        light.photonForward(-1)
     }
 })
 ```
@@ -100,7 +100,7 @@ input.onGesture(Gesture.Shake, () => {
     delay = 0
     times = Math.randomRange(0, 10) + 50
     for (let i = 0; i < 5; i++) {
-        light.pixels.photonForward(-1)
+        light.photonForward(-1)
         music.playTone(Math.randomRange(0, 501), music.beat(BeatFraction.Half))
     }
 })
@@ -117,7 +117,7 @@ input.onGesture(Gesture.Shake, () => {
     delay = 0
     times = Math.randomRange(0, 10) + 50
     for (let i = 0; i < 5; i++) {
-        light.pixels.photonForward(-1)
+        light.photonForward(-1)
         music.playTone(Math.randomRange(0, 501), delay)
     }
 })
@@ -134,7 +134,7 @@ input.onGesture(Gesture.Shake, () => {
     times = Math.randomRange(0, 10) + 50
     delay = 0
     for (let i = 0; i < times; i++) {
-        light.pixels.photonForward(-1)
+        light.photonForward(-1)
         music.playTone(Math.randomRange(0, 501), delay)
         delay += 5
     }

@@ -20,7 +20,7 @@ Go into the **Light** toolbox drawer, and click on the **More** subcategory.  Dr
 
 ```blocks
 loops.forever(() => {
-    light.pixels.graph(
+    light.graph(
     0,
     0
     )
@@ -32,7 +32,7 @@ Now, in the **Input** toolbox drawer, drag the ``||input:acceleration||`` block 
 
 ```blocks
 loops.forever(() => {
-    light.pixels.graph(
+    light.graph(
     input.acceleration(Dimension.X),
     0
     )
@@ -45,7 +45,7 @@ Using the drop-down menu on the ``||input:acceleration||`` block, change to the 
 
 ```blocks
 loops.forever(() => {
-    light.pixels.graph(
+    light.graph(
     input.acceleration(Dimension.Y),
     1023
     )
@@ -90,7 +90,7 @@ Open the **Input** toolbox drawer, drag the ``||input:acceleration||`` block int
 
 ```blocks
 loops.forever(function () {
-    light.pixels.graph(
+    light.graph(
     input.acceleration(Dimension.Y),
     1023
     )

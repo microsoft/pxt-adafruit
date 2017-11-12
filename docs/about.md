@@ -46,7 +46,7 @@ The simulator has support for the LED screen, buttons, as well as compass, accel
 
 ```sim
 loops.forever(() => {
-    light.pixels.showAnimation(light.animation(LightAnimation.Rainbow), 1000)
+    light.showAnimation(light.rainbowAnimation, 1000)
 })
 ```
 

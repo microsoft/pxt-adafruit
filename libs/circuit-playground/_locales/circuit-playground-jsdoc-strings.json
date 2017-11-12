@@ -16,7 +16,7 @@
   "light.graph": "Display a vertical bar graph based on the `value` and `high` value.\nIf `high` is 0, the chart gets adjusted automatically.",
   "light.graph|param|high": "maximum value, 0 to autoscale",
   "light.graph|param|value": "current value to plot",
-  "light.onboardStrip": "Gets the 10 NeoPixel strip built in the Circuit Playground Express.",
+  "light.onboardStrip": "Get the 10 NeoPixel strip built into the Circuit Playground Express.",
   "light.photonFlip": "Switch the direction of the photon pulse.",
   "light.photonForward": "Move a photon effect along the pixel strip by a number of steps.",
   "light.photonForward|param|steps": "number of steps (lights) to move, eg: 1",

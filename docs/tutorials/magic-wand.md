@@ -88,7 +88,7 @@ Do this by clicking the reset button once, and wait for the all green lights.
 
 Now click ``|Download|`` and follow the rest of the download instructions.
 
-### Step 7
+## Step 7
 
 Awesome! Congratulations on completing your first challenge on the @boardname@.
 

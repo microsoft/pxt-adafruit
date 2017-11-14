@@ -2,7 +2,7 @@
 
 ## Step 1
 
-Welcome, let's get started by making something everyone will notice! Place the ``||show ring||`` block inside a ``||forever||`` block to show a ring of pixels on the board.
+Welcome, let's get started by making something everyone will notice! Place the ``||light:show ring||`` block inside a ``||loops:forever||`` block to show a ring of pixels on the board.
 
 ```blocks
 loops.forever(() => {
@@ -26,7 +26,7 @@ loops.forever(() => {
 
 ## Step 3
 
-Ok, we'll add another ring to make an animation. Drag another ``||show ring||`` block and place it right under the first one.
+Ok, we'll add another ring to make an animation. Drag another ``||light:show ring||`` block and place it right under the first one.
 
 ```blocks
 loops.forever(() => {
@@ -39,9 +39,9 @@ loops.forever(() => {
 })
 ```
 
-## Step 3
+## Step 4
 
-Now, let's make a police siren from our animation! From the `Loops` drawer, place a ``||forever||`` block anywhere in the workspace.
+Now, let's make a police siren from our animation! From the `Loops` drawer, place a ``||loops:forever||`` block anywhere in the workspace.
 
 ```blocks
 loops.forever(() => {
@@ -56,9 +56,9 @@ loops.forever(() => {
 });
 ```
 
-## Step 4
+## Step 5
 
-From the `Music` drawer, drag out a ``||play sound until done||`` block and place it inside the newly added ``||forever||`` block.
+From the `Music` drawer, drag out a ``||music:play sound until done||`` block and place it inside the newly added ``||loops:forever||`` block.
 
 ```blocks
 loops.forever(() => {
@@ -74,14 +74,14 @@ loops.forever(() => {
 });
 ```
 
-## Step 5
-
-Click on the part of the ``||play sound||`` block that shows the name of the sound. Change it to the ``Siren`` sound.
-
 ## Step 6
+
+Click on the part of the ``||music:play sound||`` block that shows the name of the sound. Change it to the ``Siren`` sound.
+
+## Step 7
 
 Click ``|Download|`` to transfer your code to the @boardname@.
 
-## Step 7
+## Step 8
 
 Awesome! Congratulations on completing your first challenge on the @boardname@.

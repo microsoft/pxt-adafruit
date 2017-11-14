@@ -26,10 +26,10 @@ loops.forever(function () {
 
 ## Step 3
 
-Drag a ``||light:set brightness||`` block and place the ``||index||`` block from the Variables drawer
+Drag a ``||light:set brightness||`` block and place the ``||variables:index||`` block from the Variables drawer
 into the slot.
 
-Index is a variable that changes on every ``||for||`` iteration. It starts at ``0`` and goes to ``255``.
+Index is a variable that changes on every ``||loops:for||`` iteration. It starts at ``0`` and goes to ``255``.
 
 ```blocks
 loops.forever(function () {

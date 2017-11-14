@@ -1,6 +1,6 @@
 # Documentation
 
-### @description Links to the documentation, reference and projects.
+## @description Links to the documentation, reference and projects.
 
 Welcome to the documentation of the Microsoft MakeCode editor
 for the [Adafruit Circuit Playground Express](https://www.adafruit.com/product/3333).

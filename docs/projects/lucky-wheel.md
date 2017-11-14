@@ -1,12 +1,12 @@
 # Lucky Wheel
 
-### @description A beginner maker activity, building a wheel for picking random numbers with the @boardname@
+## @description A beginner maker activity, building a wheel for picking random numbers with the @boardname@
 
-### ~avatar avatar
+## ~avatar avatar
 
 Make a @boardname@ number wheel with this guided tutorial!
 
-### ~
+## ~
 
 https://youtu.be/SItmAn_AtdY
 

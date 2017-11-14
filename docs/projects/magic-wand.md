@@ -1,12 +1,12 @@
 # Magic Wand
 
-### @description A beginner maker activity, building a magic wand with the @boardname@  
+## @description A beginner maker activity, building a magic wand with the @boardname@  
 
-### ~avatar avatar
+## ~avatar avatar
 
 Make a @boardname@ magic wand with this guided tutorial!
 
-### ~
+## ~
 
 https://youtu.be/Us-tH3SP8XE
 

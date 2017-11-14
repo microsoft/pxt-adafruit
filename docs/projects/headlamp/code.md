@@ -1,9 +1,9 @@
 # Coding the Headlamp
-### @description Coding challenge for the Headlamp
+## @description Coding challenge for the Headlamp
 
-### ~avatar avatar
+## ~avatar avatar
 Use the light sensor to automatically turn the lamp on and off
-### ~
+## ~
 
 **Concepts:**
   * Sensors (Light)

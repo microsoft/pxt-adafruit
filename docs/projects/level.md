@@ -1,10 +1,10 @@
 # Level
 
-### ~avatar avatar
+## ~avatar avatar
 
 Use the motion sensor to detect if the @boardname@ is lying flat
 
-### ~
+## ~
 
 
 ```blocks

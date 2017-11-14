@@ -1,12 +1,12 @@
 # Headlamp
 
-### @description A beginner maker activity, turning your @boardname@ into lamp you can wear on your head
+## @description A beginner maker activity, turning your @boardname@ into lamp you can wear on your head
 
-### ~avatar avatar
+## ~avatar avatar
 
 Make an automatic @boardname@ headlamp with this guided tutorial!
 
-### ~
+## ~
 
 ## Duration
 

@@ -23,17 +23,22 @@ Step by step guide to coding your @boardname@.
   "name": "Clap lights",
   "description": "Clap to turn the lights on and off",
   "cardType": "tutorial",
-  "url":"/tutorials/clap-lights"
+  "url":"/tutorials/clap-lights",
+  "imageUrl":"/static/cp/projects/thumb/clap-lights.jpg"
 }, {
   "name": "Loudness necklace",
   "description": "A necklace that reacts to the loudness around you",
   "cardType": "tutorial",
-  "url":"/tutorials/loudness-necklace"
+  "url":"/tutorials/loudness-necklace",
+  "imageUrl":"/static/cp/projects/thumb/loudness-necklace.jpg"
+
 }, {
   "name": "Night light",
   "description": "A glowing night light",
   "cardType": "tutorial",
-  "url":"/tutorials/night-light"
+  "url":"/tutorials/night-light",
+  "imageUrl":"/static/cp/projects/thumb/night-light.jpg"
+
 }, {
   "name": "Button flipper",
   "description": "Press a button to win or loose",

@@ -11,7 +11,7 @@ input.onLoudSound(function () {
 
 ## Step 2
 
-Drag the ``||light:set brightnesss||`` and ``||light:set all||`` blocks into ``||input:on loud sound||`` to turn the lights **ON** really bright. Make the pixel color `white`.
+Drag the ``||light:set brightnesss||`` and ``||light:set all pixels||`` blocks into ``||input:on loud sound||`` to turn the lights **ON** really bright. Make the pixel color `white` an set the brightness to `255`.
 
 ```blocks
 input.onLoudSound(function () {
@@ -26,7 +26,7 @@ Click ``|Download|`` to transfer your code to the @boardname@. Try clapping to s
 
 ## Step 4
 
-Drag a ``||loops:pause||`` block to wait 2 seconds, and another ``||light:set all||`` block to turn **OFF** the lights after that. Make the pixel color `black` for the second ``||light:set all||``.
+Drag a ``||loops:pause||`` block to wait 2 seconds, and another ``||light:set all pixels||`` block to turn **OFF** the lights after that. Make the pixel color `black` for the second ``||light:set all pixels||``.
 
 ```blocks
 input.onLoudSound(function () {
@@ -44,3 +44,5 @@ Click ``|Download|`` again to transfer your code to the @boardname@. Try clappin
 ## Step 6
 
 Awesome! Congratulations on completing this challenge on the @boardname@.
+
+![clap lights on](/static/cp/tutorials/clap-lights/clap-on-off.gif)

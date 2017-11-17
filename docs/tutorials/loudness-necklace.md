@@ -41,3 +41,5 @@ Click ``|Download|`` to transfer your code to the @boardname@. Try singing and s
 ## Step 5
 
 Awesome! Find a necklace and attach the @boardname@ to it. You'll be showing lights whenever you talk!
+
+![light when loud](/static/cp/tutorials/loudness-necklace/loud-lights.gif)

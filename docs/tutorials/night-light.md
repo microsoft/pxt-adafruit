@@ -2,7 +2,7 @@
 
 ## Step 1 @fullscreen
 
-Drag the ``||light:set all||`` block in the forever loop to set a new color on the LEDs.
+Drag the ``||light:set all pixels||`` block in the forever loop to set a new color on the LEDs.
 
 ```blocks
 loops.forever(function () {
@@ -104,3 +104,5 @@ Click ``|Download|`` to transfer your code to the @boardname@. It should glow ba
 
 Find materials in your house that diffuse light, like styrofoam and wrap the @boardname@ in it. Plug it near your bed 
 and enjoy the light show!
+
+![night light glow](/static/cp/tutorials/night-light/night-glow.gif)

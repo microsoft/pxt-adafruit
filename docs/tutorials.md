@@ -29,7 +29,9 @@ Step by step guide to coding your @boardname@.
   "name": "Loudness necklace",
   "description": "A necklace that reacts to the loudness around you",
   "cardType": "tutorial",
-  "url":"/tutorials/loudness-necklace"
+  "url":"/tutorials/loudness-necklace",
+  "imageUrl":"/static/cp/projects/thumb/loudness-necklace.jpg"
+
 }, {
   "name": "Night light",
   "description": "A glowing night light",

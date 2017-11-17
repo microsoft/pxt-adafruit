@@ -24,7 +24,7 @@ Step by step guide to coding your @boardname@.
   "description": "Clap to turn the lights on and off",
   "cardType": "tutorial",
   "url":"/tutorials/clap-lights",
-    "imageUrl":"/static/cp/projects/thumb/clap-lights.jpg"
+  "imageUrl":"/static/cp/projects/thumb/clap-lights.jpg"
 }, {
   "name": "Loudness necklace",
   "description": "A necklace that reacts to the loudness around you",

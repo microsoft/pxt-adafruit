@@ -31,6 +31,7 @@
   "name": "Power glove",
   "description":"Create a Circuit Playground that can be used to get enemies! A charge is included.", 
   "url":"/examples/power-glove",
+  "imageUrl":"/static/cp/projects/thumb/power-glove.jpg",
   "cardType": "example",
   "description": "Add power effects to your gloves with this project!"
 }]

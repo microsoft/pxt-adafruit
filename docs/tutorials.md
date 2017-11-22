@@ -43,6 +43,7 @@ Step by step guide to coding your @boardname@.
   "name": "Button flipper",
   "description": "Press a button to win or loose",
   "cardType": "tutorial",
-  "url":"/tutorials/button-flipper"
+  "url":"/tutorials/button-flipper",
+  "imageUrl":"/static/cp/projects/thumb/button-flipper.jpg"
 }]
 ```

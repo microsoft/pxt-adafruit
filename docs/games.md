@@ -27,12 +27,14 @@ Fun games to build with your @boardname@.
   "name": "Dice",
   "description":"Use Circuit Playground to help you decide! Code a dice.",
   "url":"/examples/dice",
+  "imageUrl":"/static/cp/projects/thumb/dice.jpg",
   "cardType": "example"
 }, 
 {
   "name": "Egg game",
   "description":"How still can you keep the Circuit Playground? Play a game that involves balance and concentration!",
   "url":"/examples/egg-game",
+  "imageUrl":"/static/cp/projects/thumb/egg-game.jpg",
   "cardType": "example"
 },{
   "name": "Patience!",

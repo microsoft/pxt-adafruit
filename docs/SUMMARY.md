@@ -18,7 +18,7 @@
 
 * [Examples](/examples)
     * [Blinky](/examples/blinky)
-    * [Animation Shacker](/examples/animation-shaker)
+    * [Animation Shaker](/examples/animation-shaker)
     * [Juggle Counter](/examples/juggle-counter)
     * [Power Glove](/examples/power-glove)
     * [Dice](/examples/dice)

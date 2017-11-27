@@ -292,7 +292,7 @@
             }
         ],
         "showHomeScreen": true,
-        "homeScreenHero": "./static/getting-started/getting-started.jpg",
+        "homeScreenHero": "./static/getting-started/getting-started.png",
         "invertedMenu": true,
         "invertedToolbox": true,
         "invertedMonaco": true,

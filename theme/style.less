@@ -61,11 +61,14 @@
         padding-top: 0 !important;
     }
     .ui.inverted.menu {
-        background: linear-gradient(to bottom, @darkGrey, rgba(255,255,255,0));
+        background: #104D66;
+        background: linear-gradient(to bottom, #104D66, #D3FFFB);
     }
     .getting-started-segment {
-        margin-top: 0 !important;
+        margin-top: 3rem !important;
         background-position: 50% 75%;
+        background-color: #D3FFFB; /*#7DFFF8;*/
+        background-size: contain;
     }
 }
 
@@ -121,6 +124,11 @@
 @media only screen and (max-width: @largestMobileScreen) {
     #filelist {
         background: transparent;
+    }
+    .ui.home.projectsdialog {
+        .getting-started-segment {
+            background-size: cover;
+        }
     }
 }
 

@@ -32,14 +32,12 @@ namespace pxt.editor {
                     <div class="column">
                         <div class="ui">
                             <div class="image">
-                                <img class="ui medium rounded image" src="./static/download/connect.png" style="height:272px;width:300px">
+                                <img class="ui medium rounded image" src="./static/download/connect.png" style="height:182px;width:300px">
                             </div>
                             <div class="content">
                                 <div class="description">
                                     <span class="ui blue circular label">1</span>
-                                    ${lf("Take the USB cable you connected to your computer.")}
-                                    <br />
-                                    ${lf("Plug it into your Circuit Playground Express.")}
+                                    ${lf("Take the USB cable you connected to your computer. Plug it into your Circuit Playground Express.")}
                                 </div>
                             </div>
                         </div>
@@ -47,14 +45,12 @@ namespace pxt.editor {
                     <div class="column">
                         <div class="ui">
                             <div class="image">
-                                <img class="ui medium rounded image" src="./static/download/reset.png" style="height:272px;width:300px">
+                                <img class="ui medium rounded image" src="./static/download/reset.png" style="height:182px;width:300px">
                             </div>
                             <div class="content">
                                 <div class="description">
                                     <span class="ui blue circular label">2</span>
-                                    ${lf("Press the RESET button to go into programming mode.")}
-                                    <br />
-                                    ${lf("When the lights turn green, you're ready to go.")}
+                                    ${lf("Press the RESET button to go into programming mode. When the lights turn green, you're ready to go.")}
                                 </div>
                             </div>
                         </div>
@@ -62,7 +58,7 @@ namespace pxt.editor {
                     <div class="column">
                         <div class="ui">
                             <div class="image">
-                                <img class="ui medium rounded image" src="./static/download/transfer.png" style="height:272px;width:300px">
+                                <img class="ui medium rounded image" src="./static/download/transfer.png" style="height:182px;width:300px">
                             </div>
                             <div class="content">
                                 <div class="description">

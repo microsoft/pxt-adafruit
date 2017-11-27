@@ -2,7 +2,7 @@
 
 ## Step 1
 
-Drag out a ``||input:on button A click||`` block to add code that runs when button ``A`` is pressed.
+Drag out a ``||input:on button A click||`` block to add code that runs when button **A** is pressed.
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
@@ -11,11 +11,11 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 
 ## Step 2
 
-Grab a ``||logic:if then else||`` block and put it inside the ``||input:on button A click||``. We'll use this to run some code based on a random value.
+Grab an ``||logic:if then else||`` block and put it inside the ``||input:on button A click||``. We'll use this, along with a random number, to decide if you're going to win or lose.
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
-    if (false) {
+    if (true) {
     } else {
     }
 });
@@ -23,9 +23,21 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 
 ## Step 3
 
-Drag both a ``||logic:<||`` logic operator and a ``||Math:pick random||`` block and place them into the ``||logic:if||``.
+Go over to **LOGIC** again and get a ``||logic:0 < 0||`` comparison block. Use it to replace the `true` condition in the ``||logic:if then else||`` block.
 
-The ``||Math:pick random 0 to 10||`` returns a random number between 0 and 10. If it is less than 5, you win. Otherwise, you loose, sorry.
+```blocks
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    if (0 < 0) {
+    } else {
+    }
+})
+```
+
+## Step 4
+
+In the **MATH** toolbox drawer, pull out a ``||math:pick random||`` block and place it into the first slot of the ``||logic:0 < 0||`` block. In the second slot, type `5`.
+
+This picks a random number between 0 and 10. If the number is less than 5 it will run the code in the ``||logic:if||`` part of our ``||logic:if then else||`` block. But, if it's 5 or greater, it will run the code in the ``||logic:else||`` part of our ``||logic:if then else||`` block.
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
@@ -35,9 +47,9 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-## Step 4
+## Step 5
 
-Drag the ``||music:play sound||`` and ``||light:show animation||`` blocks out to create the win and loose effects. You can pick the sounds, colors, and animations. Be creative!
+Drag the ``||music:play sound||`` and ``||light:show animation||`` blocks out to create the win and lose effects. You can pick the sounds and animations. Be creative!
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
@@ -46,15 +58,15 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
         light.showAnimation(light.sparkleAnimation, 2000)
     } else {
         music.playSound(music.sounds(Sounds.Wawawawaa))
-        light.setAll(Colors.Red)
+        light.showAnimation(light.runningLightsAnimation, 2000)
     }
 })
 ```
 
-## Step 5
-
-Click ``|Download|`` to transfer your code to the @boardname@. Press ``A`` to try your luck...
-
 ## Step 6
+
+Click ``|Download|`` to transfer your code to the @boardname@. Press button **A** to try your luck...
+
+## Step 7
 
 Awesome! Congratulations on completing this challenge on the @boardname@.

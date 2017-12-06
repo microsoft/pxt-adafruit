@@ -21,9 +21,9 @@ Here are some fun programs for your @boardname@!
   "url":"/examples/juggle-counter",
   "cardType": "example"
 },{
-  "name": "Power glove",
+  "name": "Energy glove",
   "description":"Create a Circuit Playground that can be used to get enemies! A charge is included.", 
-  "url":"/examples/power-glove",
+  "url":"/examples/energy-glove",
   "cardType": "example"
 },{
   "name": "Dice",

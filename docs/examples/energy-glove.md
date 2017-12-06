@@ -1,4 +1,4 @@
-# Power glove
+# Energy glove
 
 Track you hand motions with the @boardname@.
 

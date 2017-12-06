@@ -28,10 +28,10 @@
   "description": "Light up your night and find your way around with this head lamp project."  
 }, 
 {
-  "name": "Power glove",
-  "url":"/examples/power-glove",
+  "name": "Energy glove",
+  "url":"/examples/energy-glove",
   "imageUrl":"/static/cp/projects/thumb/power-glove.jpg",
   "cardType": "example",
-  "description": "Zap your enemies with your own power glove! Add power effects and recharge your glove with this project."
+  "description": "Zap your enemies with your own energy glove! Add power effects and recharge your glove with this project."
 }]
 ```

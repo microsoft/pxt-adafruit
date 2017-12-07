@@ -25,6 +25,7 @@
   "light.NeoPixelStrip.setPhotonMode": "Set the photon mode to pen up, pen down, or eraser.",
   "light.NeoPixelStrip.setPhotonPenColor": "Set the photon color.",
   "light.NeoPixelStrip.setPhotonPenHue": "Sets the photon hue.",
+  "light.NeoPixelStrip.setPhotonPosition": "Sets the photon position to a given light index",
   "light.NeoPixelStrip.setPixelColor": "Set the pixel to a given color.\nYou need to call ``show`` to make the changes visible.",
   "light.NeoPixelStrip.setPixelWhiteLED": "Set the white brightness of a pixel in a NeoPixel strip of RGB+W LEDs.\nThis only works for RGB+W NeoPixels.",
   "light.NeoPixelStrip.show": "Make the strip show all the new changes for the pixels.",

@@ -27,6 +27,7 @@
   "light.setBrightness|block": "set brightness %brightness",
   "light.setPhotonMode|block": "photon %mode",
   "light.setPhotonPenHue|block": "photon set pen hue %hue=colorWheelPicker",
+  "light.setPhotonPosition|block": "photon set position %index",
   "light.setPixelColor|block": "set pixel color at %pixeloffset|to %rgb=colorNumberPicker",
   "light.showAnimationFrame|block": "show frame of %animation=light_animation_picker|animation",
   "light.showAnimation|block": "show animation %animation=light_animation_picker|for %duration=timePicker|ms",

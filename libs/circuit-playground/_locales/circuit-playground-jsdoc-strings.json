@@ -30,6 +30,8 @@
   "light.setPhotonMode|param|mode": "the desired mode",
   "light.setPhotonPenHue": "Set the photon color hue.",
   "light.setPhotonPenHue|param|hue": "the color hue of the photon",
+  "light.setPhotonPosition": "Sets the photon position to a given light index",
+  "light.setPhotonPosition|param|index": "index of the light, if out of bound, the index is wrapped",
   "light.setPixelColor": "Set the pixel to a given color.",
   "light.setPixelColor|param|color": "RGB color of the LED",
   "light.setPixelColor|param|pixeloffset": "position of the NeoPixel in the strip",

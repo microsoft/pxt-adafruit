@@ -24,6 +24,7 @@ light.onboardStrip()
 ```cards
 light.photonForward(0)
 light.photonFlip()
+light.setPhotonPosition(0)
 light.setPhotonPenHue(0)
 light.setPhotonMode(PhotonMode.PenUp)
 ```

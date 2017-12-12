@@ -183,6 +183,19 @@ namespace light {
         light.pixels.photonFlip();
     }
 
+
+    /**
+     * Sets the photon position to a given light index
+     * @param index index of the light, if out of bound, the index is wrapped
+     */
+    //% blockId=builtin_light_photon_set_position block="photon set position %index"
+    //% help="light/set-photon-position"
+    //% parts="neopixel"
+    //% group="Photon" weight=39 blockGap=8
+    export function setPhotonPosition(index: number) {
+        light.pixels.setPhotonPosition(index);
+    }
+
     /**
      * Set the photon color hue.
      * @param hue the color hue of the photon

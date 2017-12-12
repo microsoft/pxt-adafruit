@@ -40,6 +40,9 @@ declare namespace light {
         move(kind: LightMove, offset: number): void;
 
         //% subcategory="NeoPixel"
+        setPhotonPosition(index: number): void;
+        
+        //% subcategory="NeoPixel"
         photonForward(steps: number): void;
 
         //% subcategory="NeoPixel"

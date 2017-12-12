@@ -20,7 +20,7 @@
     * [Blinky](/examples/blinky)
     * [Animation Shaker](/examples/animation-shaker)
     * [Juggle Counter](/examples/juggle-counter)
-    * [Power Glove](/examples/power-glove)
+    * [Energy Glove](/examples/energy-glove)
     * [Dice](/examples/dice)
     * [Level](/examples/level)
     * [Egg game](/examples/egg-game)

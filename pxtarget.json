@@ -21,6 +21,7 @@
         "libs/pulse",
         "libs/cable",
         "libs/infrared",
+        "libs/storage",
         "libs/circuit-playground"
     ],
     "serial": {

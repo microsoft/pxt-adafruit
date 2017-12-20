@@ -235,7 +235,7 @@
         "codalTarget": {
             "name": "codal-circuit-playground",
             "url": "https://github.com/lancaster-university/codal-circuit-playground",
-            "branch": "v1.3.0-msc.1",
+            "branch": "v1.3.0-msc.2",
             "type": "git"
         },
         "codalBinary": "CIRCUIT_PLAYGROUND",

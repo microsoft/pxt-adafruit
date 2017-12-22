@@ -1,26 +1,30 @@
 # Hot Potato
 
-Source: https://learn.adafruit.com/circuit-playground-hot-potato
+Add your @boardname@ to update an older but popular game!
 
-## Play Melody
+**Source:** https://learn.adafruit.com/circuit-playground-hot-potato
 
-Source: https://learn.adafruit.com/circuit-playground-hot-potato/playing-a-melody
+Use these MakeCode blocks and JavaScript in this learn project.
+
+## Code for: Play Melody
+
+**Source:** https://learn.adafruit.com/circuit-playground-hot-potato/playing-a-melody
 
 ```blocks
-input.leftButton.onEvent(ButtonEvent.Click, () => {
+input.buttonA.onEvent(ButtonEvent.Click, function () {
     music.setTempo(40)
-    pins.A8.playTone(262, music.beat(BeatFraction.Quarter))
-    pins.A8.playTone(196, music.beat(BeatFraction.Eighth))
-    pins.A8.playTone(196, music.beat(BeatFraction.Eighth))
-    pins.A8.playTone(220, music.beat(BeatFraction.Quarter))
-    pins.A8.playTone(196, music.beat(BeatFraction.Quarter))
-    pins.A8.rest(music.beat(BeatFraction.Quarter))
-    pins.A8.playTone(247, music.beat(BeatFraction.Quarter))
-    pins.A8.playTone(262, music.beat(BeatFraction.Quarter))
+    music.playTone(262, music.beat(BeatFraction.Quarter))
+    music.playTone(196, music.beat(BeatFraction.Eighth))
+    music.playTone(196, music.beat(BeatFraction.Eighth))
+    music.playTone(220, music.beat(BeatFraction.Quarter))
+    music.playTone(196, music.beat(BeatFraction.Quarter))
+    music.rest(music.beat(BeatFraction.Quarter))
+    music.playTone(247, music.beat(BeatFraction.Quarter))
+    music.playTone(262, music.beat(BeatFraction.Quarter))
 })
 ```
 
-## Stop Melody 1
+## Code for: Stop Melody 1
 
 Source: https://learn.adafruit.com/circuit-playground-hot-potato/stopping-a-melody
 
@@ -183,13 +187,13 @@ const noteDurations = [     // note durations
     12, 12, 12, 12,
 ];
 
-input.leftButton.onEvent(ButtonEvent.Click, () => {
+input.buttonA.onEvent(ButtonEvent.Click, function () {
     const numNotesToPlay = Math.randomRange(0, numNotes);
     int noteToPlay = 0;
     for (let thisNote = 0; thisNote < numNotesToPlay; thisNote++) { // play notes of the melody
         // to calculate the note duration, take one second divided by the note type.
         const noteDuration = 1000 / noteDurations[thisNote];
-        pins.A8.playTone(melody[thisNote], noteDuration);
+        music.playTone(melody[thisNote], noteDuration);
 
         // to distinguish the notes, set a minimum time between them.
         //   the note's duration + 30% seems to work well:
@@ -203,7 +207,7 @@ input.leftButton.onEvent(ButtonEvent.Click, () => {
 });
 ```
 
-## Stop Melody 2
+## Code for: Stop Melody 2
 
 ```typescript
 /********************************************************************
@@ -364,14 +368,14 @@ const noteDurations = [     // note durations
 // Adafruit Circuit Playground - Theme Song    Support Open Source, buy at Adafruit
 //   2016-08-12 Version 1  by Mike Barela for Adafruit Industries
 ///////////////////////////////////////////////////////////////////////////////
-input.leftButton.onEvent(ButtonEvent.Click, () => {
+input.buttonA.onEvent(ButtonEvent.Click, function () {
     const numNotes = melody.length;
     const numNotesToPlay = numNotes + Math.randomRange(0, 2 * numNotes);
     let noteToPlay = 0;
     for (let thisNote = 0; thisNote < numNotesToPlay; thisNote++) { // play notes of the melody
         // to calculate the note duration, take one second divided by the note type.
         const noteDuration = 1000 / noteDurations[thisNote];
-        pins.A8.playTone(melody[thisNote], noteDuration);
+        music.playTone(melody[thisNote], noteDuration);
 
         // to distinguish the notes, set a minimum time between them.
         //   the note's duration + 30% seems to work well:
@@ -385,7 +389,6 @@ input.leftButton.onEvent(ButtonEvent.Click, () => {
 });
 ```
 
-## Hot potato
+## Hot potato full source
 
-Source: https://learn.adafruit.com/circuit-playground-hot-potato/hot-potato-code
-
+**Source:** https://learn.adafruit.com/circuit-playground-hot-potato/hot-potato-code

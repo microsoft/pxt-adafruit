@@ -47,3 +47,7 @@
 * [Hardware](/device)
     * [Simulator](/device/simulator)
     * [USB](/device/usb)
+
+## About #about
+
+* [About](/about)

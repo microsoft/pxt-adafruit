@@ -1,6 +1,6 @@
 {
   "name": "pxt-adafruit",
-  "version": "0.20.26",
+  "version": "1.0.0",
   "description": "Adafruit Circuit Playground Express for Microsoft MakeCode",
   "keywords": [
     "JavaScript",
@@ -33,15 +33,19 @@
   "main": "built/pxtrequire.js",
   "typings": "built/pxtrequire.d.ts",
   "devDependencies": {
-    "typescript": "^1.8.7",
+    "typescript": "2.6.1",
     "less": "^2.6.0",
     "rtlcss": "^2.1.2",
     "autoprefixer": "^6.7.6",
-    "semantic-ui-less": "^2.2.11"
+    "semantic-ui-less": "^2.2.11",
+    "@types/bluebird": "2.0.33",
+    "@types/jquery": "3.2.16",
+    "@types/marked": "0.3.0",
+    "@types/node": "8.0.53"
   },
   "dependencies": {
-    "pxt-common-packages": "0.14.8",
-    "pxt-core": "2.3.38"
+    "pxt-common-packages": "0.15.4",
+    "pxt-core": "3.0.8"
   },
   "scripts": {
     "test": "node node_modules/pxt-core/built/pxt.js travis"

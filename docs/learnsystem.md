@@ -24,3 +24,34 @@
     }
 ]
 ```
+
+## Adafruit learn projects in MakeCode
+
+```codecard
+[
+    {
+        "name": "Beep Beep",
+        "description": "Blink a 'yes' or 'no' answer with a beep beep device.",
+        "url": "/learnsystem/beep-beep",
+        "imageUrl": "/static/cp/learn/yes_no_buttons.jpg"
+    },
+    {
+        "name": "Digital Input",
+        "description": "Explore digital inputs and values.",
+        "url": "/learnsystem/digital-input",
+        "imageUrl": "/static/cp/learn/digital-input-signal.png"
+    },
+    {
+        "name": "Hot Potato",
+        "description": "A new wat to play the fun and popular Hot Potato game.",
+        "url": "/learnsystem/hot-potato",
+        "imageUrl": "/static/cp/learn/potato.jpg"
+    },
+    {
+        "name": "Light Paintbrush",
+        "description": "Paint with light in midair!",
+        "url": "/learnsystem/light-paintbrush",
+        "imageUrl": "/static/cp/learn/led-paint.jpg"
+    }
+]
+```

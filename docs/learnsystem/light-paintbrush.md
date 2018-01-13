@@ -1,6 +1,12 @@
 # Light Paintbrush
 
+Paint with light in midair!
+
 Source: https://learn.adafruit.com/lightpaint-cplay/
+
+Use these code blocks in this learn project.
+
+## Code for: Code the Light Paintbrush
 
 ```blocks
 // ---------------------------------------------------------------------------
@@ -34,7 +40,7 @@ let Y = 0;
 
 let c = Colors.Green;
 
-control.forever(() => {
+loops.forever(() => {
     sensorValue = pins.A10.analogRead();
     brightVal = Math.map(sensorValue, 0, 1023, 0, 225);
 
@@ -54,6 +60,12 @@ control.forever(() => {
         c = Colors.Yellow;
     }
     light.setBrightness(brightVal);
-    light.onboardStrip().showColor(c);
+    light.setAll(c);
 })
 ```
+
+## Continuing with MakeCode
+
+This learn project continues but now uses MakeCode:
+
+https://learn.adafruit.com/lightpaint-cplay/makecode-for-circuit-playground-express

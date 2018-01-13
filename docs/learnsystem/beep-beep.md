@@ -1,28 +1,35 @@
 # Beep Beep
 
-Source: https://learn.adafruit.com/circuit-playground-beep-beep
+Speak your answer to a question with a _beep beep_ device.
 
-## Starting point
+**Source:** https://learn.adafruit.com/circuit-playground-beep-beep
+
+Use these MakeCode blocks and JavaScript in this learn project.
+
+## Code for: Starting point
+
+**Source:** https://learn.adafruit.com/circuit-playground-beep-beep/starting-point
 
 ```blocks
-input.leftButton.onEvent(ButtonEvent.Down, () => {
-    light.onboardStrip().showColor(16737792)
-    pins.A8.playTone(700, 750)
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    light.setAll(0xFF6600)
+    music.playTone(700, music.beat(BeatFraction.Half))
     light.clear()
-    light.onboardStrip().show()
 })
-input.rightButton.onEvent(ButtonEvent.Down, () => {
-    light.onboardStrip().showColor(16737792)
-    pins.A8.playTone(700, 750)
+input.buttonB.onEvent(ButtonEvent.Click, function () {
+    light.setAll(0xFF6600)
+    music.playTone(700, music.beat(BeatFraction.Half))
     light.clear()
-    light.onboardStrip().show()
     loops.pause(250)
-    light.onboardStrip().showColor(16737792)
-    pins.A8.playTone(700, 750)
+    light.setAll(0xFF6600)
+    music.playTone(700, music.beat(BeatFraction.Half))
     light.clear()
-    light.onboardStrip().show()
 })
 ```
+
+## Code for: Refactoring 4
+
+**Source:** https://learn.adafruit.com/circuit-playground-beep-beep/refactor-4
 
 ```typescript
 ///////////////////////////////////////////////////////////////////////////////
@@ -39,10 +46,9 @@ const PIXEL_COLOR = 0xFF6600;
 ///////////////////////////////////////////////////////////////////////////////
 function lightsBeeps(repeats: number, note: number, duration: number, color: number) {
     for (let n = 0; n < repeats; n++) {
-        light.onboardStrip().showColor(color)
-        pins.A8.playTone(note, duration);
+        light.setAll(0xFF6600)
+        music.playTone(700, music.beat(BeatFraction.Half))
         light.clear();
-        light.onboardStrip().show();
         if (repeats > 1) loops.pause(duration / 2);
     }
 }
@@ -58,6 +64,6 @@ function indicateNo() {
 }
 
 ///////////////////////////////////////////////////////////////////////////////
-input.leftButton.onEvent(ButtonEvent.Down, indicateYes);
-input.rightButton.onEvent(ButtonEvent.Down, indicateNo);
+input.buttonA.onEvent(ButtonEvent.Click, indicateYes);
+input.buttonB.onEvent(ButtonEvent.Click, indicateNo);
 ```

@@ -1,30 +1,40 @@
-# Hello Digital
+# Digital input
+
+Using the @boardname@ and some alligator clips with a resistor, we can explore how to read digital inputs.
 
 Source: https://learn.adafruit.com/circuit-playground-digital-input
 
-## Hello Digital
+Use these MakeCode blocks in this learn project.
+
+## Code for: Hello Digital
 
 Source: https://learn.adafruit.com/circuit-playground-digital-input/hello-digital
 
 ```blocks
-control.forever(() => {
-    serial.writeLine("D3: " + pins.D3.digitalRead());
-    light.onboardStrip().showBarGraph(pins.D3.digitalRead(), 1);
+let digitalValue = 0;
+loops.forever(() => {
+    if (pins.A3.digitalRead()) {
+        digitalValue = 1;
+    } else {
+        digitalValue = 0;
+    }
+    serial.writeLine("A3: " + digitalValue);
+    light.graph(digitalValue, 1);
 })
 ```
 
-### Floating inputs
+## Code for: Floating inputs
 
 Source: https://learn.adafruit.com/circuit-playground-digital-input/floating-inputs
 
 ```blocks
-let initialValue = 0
-control.forever(() => {
-    serial.writeLine("D3: " + pins.D3.digitalRead());
-    if (initialValue != pins.D3.digitalRead()) {
-        light.onboardStrip().showColor(Colors.Blue)
+let initialValue = false
+initialValue = pins.A3.digitalRead()
+light.setAll(Colors.Red)
+loops.forever(function () {
+    serial.writeLine("A3: " + pins.A3.digitalRead())
+    if (initialValue != pins.A3.digitalRead()) {
+        light.setAll(Colors.Blue)
     }
 })
-initialValue = pins.D3.digitalRead()
-light.onboardStrip().showColor(Colors.Red)
 ```

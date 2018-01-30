@@ -21,7 +21,10 @@
         "libs/pulse",
         "libs/cable",
         "libs/infrared",
-        "libs/circuit-playground"
+        "libs/circuit-playground",
+        "libs/mouse",
+        "libs/keyboard",
+        "libs/gamepad"
     ],
     "serial": {
         "useHF2": true,
@@ -234,7 +237,7 @@
         "codalTarget": {
             "name": "codal-circuit-playground",
             "url": "https://github.com/lancaster-university/codal-circuit-playground",
-            "branch": "v1.2.8",
+            "branch": "v1.3.5",
             "type": "git"
         },
         "codalBinary": "CIRCUIT_PLAYGROUND",

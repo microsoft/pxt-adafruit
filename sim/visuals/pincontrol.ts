@@ -54,12 +54,12 @@ namespace pxsim.visuals {
         }
 
         private addButtonEvents() {
-            this.outerElement.addEventListener(pointerEvents.down, ev => {
+            pointerEvents.down.forEach(evid => this.outerElement.addEventListener(evid, ev => {
                 this.pin.touched = true;
                 svg.addClass(this.outerElement, "touched");
 
                 (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(true);
-            })
+            }))
             this.outerElement.addEventListener(pointerEvents.leave, ev => {
                 this.pin.touched = false;
                 svg.removeClass(this.outerElement, "touched");
@@ -72,7 +72,7 @@ namespace pxsim.visuals {
 
                 (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(false);
             })
-            accessibility.enableKeyboardInteraction(this.outerElement, 
+            accessibility.enableKeyboardInteraction(this.outerElement,
                 () => {
                     this.pin.touched = true;
                     svg.addClass(this.outerElement, "touched");

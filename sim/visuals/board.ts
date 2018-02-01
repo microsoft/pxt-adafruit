@@ -834,11 +834,11 @@ namespace pxsim.visuals {
 
                 svg.child(btng, "rect", { class: "sim-button-outer", x: 79, y: 25, rx: btnr, ry: btnr, width, height });
                 svg.fill(btng, this.props.theme.gestureButtonOff);
-                this.shakeButtonGroup.addEventListener(pointerEvents.down, ev => {
+                pointerEvents.down.forEach(evid => this.shakeButtonGroup.addEventListener(evid, ev => {
                     let state = this.board;
                     svg.fill(btng, this.props.theme.gestureButtonOn);
                     svg.addClass(this.shakeText, "inverted");
-                })
+                }));
                 this.shakeButtonGroup.addEventListener(pointerEvents.leave, ev => {
                     let state = this.board;
                     svg.fill(btng, this.props.theme.gestureButtonOff);
@@ -1039,10 +1039,10 @@ namespace pxsim.visuals {
             this.buttonsOuter.forEach((btn, index) => {
                 let button = stateButtons[index];
 
-                btn.addEventListener(pointerEvents.down, ev => {
+                pointerEvents.down.forEach(evid => btn.addEventListener(evid, ev => {
                     button.setPressed(true);
                     svg.fill(this.buttons[index], this.props.theme.buttonDown);
-                })
+                }))
                 btn.addEventListener(pointerEvents.leave, ev => {
                     button.setPressed(false);
                     svg.fill(this.buttons[index], this.props.theme.buttonUps[index]);

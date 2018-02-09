@@ -52,6 +52,12 @@
         "description": "Paint with light in midair!",
         "url": "/learnsystem/light-paintbrush",
         "imageUrl": "/static/cp/learn/led-paint.jpg"
+    },
+    {
+        "name": "More guides!",
+        "imageUrl": "/static/cp/learn/others.jpg",
+        "description": "Find out all the projects and guides on learn.adafruit.com",
+        "url": "https://learn.adafruit.com/category/makecode"
     }
 ]
 ```

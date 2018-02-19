@@ -1,4 +1,5 @@
 /// <reference path="../node_modules/pxt-core/built/pxteditor.d.ts" />
+/// <reference path="../node_modules/pxt-core/built/pxtwinrt.d.ts"/>
 
 import lf = pxt.Util.lf;
 
@@ -21,7 +22,7 @@ namespace pxt.editor {
                 const boardDriveName = pxt.appTarget.appTheme.driveDisplayName || pxt.appTarget.compile.driveName || "???";
 
                 // https://msdn.microsoft.com/en-us/library/cc848897.aspx
-                // "For security reasons, data URIs are restricted to downloaded resources. 
+                // "For security reasons, data URIs are restricted to downloaded resources.
                 // Data URIs cannot be used for navigation, for scripting, or to populate frame or iframe elements"
                 const downloadAgain = !pxt.BrowserUtils.isIE() && !pxt.BrowserUtils.isEdge();
                 const docUrl = pxt.appTarget.appTheme.usbDocs;
@@ -91,6 +92,39 @@ namespace pxt.editor {
                     } : undefined]
                     //timeout: 20000
                 }).then(() => { });
+            },
+            winrtHandleDeviceNotFoundAsync: (io: pxt.winrt.WindowsRuntimeIO) => {
+                // Devices not found while deploying by the app. The devices might be in non-bootloader with a
+                // non-MakeCode program running. Attempt to open serial COM at 1200 baud to force the devices into
+                // bootloader mode, disconnect serial, and try connecting again over HID.
+                if (pxt.appTarget && pxt.appTarget.compile && pxt.appTarget.compile.hidSelectors) {
+                    let allSerialDevices: Windows.Devices.SerialCommunication.SerialDevice[];
+                    return pxt.winrt.connectSerialDevicesAsync(pxt.appTarget.compile.hidSelectors)
+                        .then((serialDevices) => {
+                            if (!serialDevices || serialDevices.length === 0) {
+                                // No device found, bail out
+                                return Promise.reject(new Error("no serial devices to switch into bootloader"));
+                            }
+
+                            // Serial devices found and connected to; attempt to switch them to bootloader using the
+                            // baud trick
+                            allSerialDevices = serialDevices;
+                            allSerialDevices.forEach((dev) => {
+                                dev.baudRate = 1200;
+                            });
+                            return Promise.delay(100);
+                        })
+                        .then(() => {
+                            // Devices should be switched to bootloader by now; disconnect serial and reconnect HID
+                            allSerialDevices.forEach((dev) => {
+                                dev.close();
+                            })
+                            return io.initAsync(/* isRetry */ true);
+                        });
+                } else {
+                    // Unknown state, apptarget should always contain HID selectors
+                    return Promise.reject(new Error("no hid selectors"));
+                }
             }
         };
         return Promise.resolve<pxt.editor.ExtensionResult>(res);

@@ -4,6 +4,9 @@
 import lf = pxt.Util.lf;
 
 namespace pxt.editor {
+    const cpxDefaultVid = 0x0000; // TODO determine this value
+    const cpxDefaultPid = 0x0000; // TODO determine this value
+
     initExtensionsAsync = function (opts: pxt.editor.ExtensionOptions): Promise<pxt.editor.ExtensionResult> {
         pxt.debug('loading pxt-adafruit target extensions...')
         const res: pxt.editor.ExtensionResult = {
@@ -94,37 +97,37 @@ namespace pxt.editor {
                 }).then(() => { });
             },
             winrtHandleDeviceNotFoundAsync: (io: pxt.winrt.WindowsRuntimeIO) => {
-                // Devices not found while deploying by the app. The devices might be in non-bootloader with a
-                // non-MakeCode program running. Attempt to open serial COM at 1200 baud to force the devices into
-                // bootloader mode, disconnect serial, and try connecting again over HID.
-                if (pxt.appTarget && pxt.appTarget.compile && pxt.appTarget.compile.hidSelectors) {
-                    let allSerialDevices: Windows.Devices.SerialCommunication.SerialDevice[];
-                    return pxt.winrt.connectSerialDevicesAsync(pxt.appTarget.compile.hidSelectors)
-                        .then((serialDevices) => {
-                            if (!serialDevices || serialDevices.length === 0) {
-                                // No device found, bail out
-                                return Promise.reject(new Error("no serial devices to switch into bootloader"));
-                            }
+                // Device not found while deploying. It could be because it's a fresh device (no MakeCode program
+                // running) that is in non-bootloader mode. Try to connect to that device via serial and set baud to
+                // 1200, which sets the device into bootloader.
+                let allSerialDevices: Windows.Devices.SerialCommunication.SerialDevice[];
+                const defaultCpxHid: pxtc.HidSelector = {
+                    vid: cpxDefaultVid.toString(),
+                    pid: cpxDefaultPid.toString(),
+                    usageId: undefined,
+                    usagePage: undefined
+                };
+                return pxt.winrt.connectSerialDevicesAsync([defaultCpxHid])
+                    .then((serialDevices) => {
+                        if (!serialDevices || serialDevices.length === 0) {
+                            // No device found, it really looks like no device is plugged in. Bail out.
+                            return Promise.reject(new Error("no serial devices to switch into bootloader"));
+                        }
 
-                            // Serial devices found and connected to; attempt to switch them to bootloader using the
-                            // baud trick
-                            allSerialDevices = serialDevices;
-                            allSerialDevices.forEach((dev) => {
-                                dev.baudRate = 1200;
-                            });
-                            return Promise.delay(100);
-                        })
-                        .then(() => {
-                            // Devices should be switched to bootloader by now; disconnect serial and reconnect HID
-                            allSerialDevices.forEach((dev) => {
-                                dev.close();
-                            })
-                            return io.initAsync(/* isRetry */ true);
+                        // CPX with default program connected to; attempt to switch to bootloader using the baud trick
+                        allSerialDevices = serialDevices;
+                        allSerialDevices.forEach((dev) => {
+                            dev.baudRate = 1200;
                         });
-                } else {
-                    // Unknown state, apptarget should always contain HID selectors
-                    return Promise.reject(new Error("no hid selectors"));
-                }
+                        return Promise.delay(100);
+                    })
+                    .then(() => {
+                        // Devices should be switched to bootloader by now; disconnect serial and reconnect HID
+                        allSerialDevices.forEach((dev) => {
+                            dev.close();
+                        })
+                        return io.initAsync(/* isRetry */ true);
+                    });
             }
         };
         return Promise.resolve<pxt.editor.ExtensionResult>(res);

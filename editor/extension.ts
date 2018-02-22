@@ -4,8 +4,9 @@
 import lf = pxt.Util.lf;
 
 namespace pxt.editor {
-    const cpxDefaultVid = 0x0000; // TODO determine this value
-    const cpxDefaultPid = 0x0000; // TODO determine this value
+    // These are the VID and PID of the default program that ships on brand new CPX devices
+    const cpxDefaultVid = 0x239A;
+    const cpxDefaultPid = 0x8018;
 
     initExtensionsAsync = function (opts: pxt.editor.ExtensionOptions): Promise<pxt.editor.ExtensionResult> {
         pxt.debug('loading pxt-adafruit target extensions...')
@@ -118,16 +119,19 @@ namespace pxt.editor {
                         allSerialDevices = serialDevices;
                         allSerialDevices.forEach((dev) => {
                             dev.baudRate = 1200;
+                            dev.close();
                         });
-                        return Promise.delay(100);
+                        // A long delay is needed before attempting to connect to the bootloader device, enough for the
+                        // OS to recognize the device has been plugged in. Note that without drivers, connection to the
+                        // device might still fail the first time, but drivers should be installed by the time the user
+                        // clicks Download again, at which point flashing will work (without ever needing to press the
+                        // reset button)
+                        return Promise.delay(1500);
                     })
                     .then(() => {
-                        // Devices should be switched to bootloader by now; disconnect serial and reconnect HID
-                        allSerialDevices.forEach((dev) => {
-                            dev.close();
-                        })
+                        // Try to connect to the HID device again
                         return io.initAsync(/* isRetry */ true);
-                    });
+                    })
             }
         };
         return Promise.resolve<pxt.editor.ExtensionResult>(res);

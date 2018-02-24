@@ -29,7 +29,9 @@
     "sim/public",
     "docs/*.md",
     "docs/*/*.md",
-    "docs/*/*/*.md"
+    "docs/*/*/*.md",
+    "docs/static/*.svg",
+    "docs/static/*.png"    
   ],
   "main": "built/pxtrequire.js",
   "typings": "built/pxtrequire.d.ts",

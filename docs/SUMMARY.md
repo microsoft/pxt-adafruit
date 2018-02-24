@@ -23,6 +23,7 @@
     * [Energy Glove](/examples/energy-glove)
     * [Dice](/examples/dice)
     * [Level](/examples/level)
+    * [Counter](/examples/counter)
     * [Egg game](/examples/egg-game)
     * [Reaction](/examples/reaction)
     * [Photon beatbox](/examples/photon-beatbox)

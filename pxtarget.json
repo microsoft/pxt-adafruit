@@ -129,7 +129,11 @@
                 0,
                 80,
                 0
-            ]
+            ],
+            "uf2BootloaderBaudSwitch": {
+                "vid": "0x239A",
+                "pid": "0x8018"
+            }
         }
     },
     "cloud": {

@@ -130,7 +130,7 @@
                 80,
                 0
             ],
-            "uf2BootloaderBaudSwitch": {
+            "bootloaderBaudSwitchInfo": {
                 "vid": "0x239A",
                 "pid": "0x8018"
             }

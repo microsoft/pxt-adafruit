@@ -5,7 +5,9 @@
       "paths": [
         "*"
       ],
-      "excludePaths": []
+      "excludePaths": [
+        "/docs/*"
+      ]
     }
   ]
 }

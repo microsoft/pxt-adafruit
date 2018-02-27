@@ -1,13 +1,12 @@
 {
   "json": [
     {
-      "packageFamilyName": "Your app's package family name, e.g MyApp_9jmtgj1pbbz6e",
+      "packageFamilyName": "AdafruitIndustries.MakeCodeforAdafruit_0a763976t74x8",
       "paths": [
         "*"
       ],
       "excludePaths": [
-        "/news/*",
-        "/blog/*"
+        "/docs/*"
       ]
     }
   ]

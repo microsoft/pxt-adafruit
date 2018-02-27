@@ -3,11 +3,10 @@
     {
       "packageFamilyName": "AdafruitIndustries.MakeCodeforAdafruit_0a763976t74x8",
       "paths": [
-        "*"
+        "/",
+        "/?????-?????-?????-?????"
       ],
-      "excludePaths": [
-        "/docs/*"
-      ]
+      "excludePaths": []
     }
   ]
 }

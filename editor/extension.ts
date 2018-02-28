@@ -21,7 +21,7 @@ namespace pxt.editor {
                 const boardDriveName = pxt.appTarget.appTheme.driveDisplayName || pxt.appTarget.compile.driveName || "???";
 
                 // https://msdn.microsoft.com/en-us/library/cc848897.aspx
-                // "For security reasons, data URIs are restricted to downloaded resources. 
+                // "For security reasons, data URIs are restricted to downloaded resources.
                 // Data URIs cannot be used for navigation, for scripting, or to populate frame or iframe elements"
                 const downloadAgain = !pxt.BrowserUtils.isIE() && !pxt.BrowserUtils.isEdge();
                 const docUrl = pxt.appTarget.appTheme.usbDocs;

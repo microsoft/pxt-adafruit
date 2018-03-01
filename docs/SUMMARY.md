@@ -35,13 +35,53 @@
 ## Reference #reference
 
 * [Reference](/reference)
-    * [input](/reference/input)
-    * [light](/reference/light)
-    * [music](/reference/music)
-    * [network](/reference/network)
-    * [pins](/reference/pins)
-    * [control](/reference/control)
-    * [serial](/reference/serial)
+    * [Essentials](/blocks)
+        * [On Start](/blocks/on-start)
+        * [Loops](/blocks/loops)
+            * [repeat](/blocks/loops/repeat)
+            * [for](/blocks/loops/for)
+            * [while](/blocks/loops/while)
+        * [Logic](/blocks/logic)
+            * [if](/blocks/logic/if)
+            * [Boolean](/blocks/logic/boolean)
+        * [Variables](/blocks/variables)
+            * [assign](/blocks/variables/assign)
+            * [change var](/blocks/variables/change)
+            * [var](/blocks/variables/var)
+        * [Math](/blocks/math)
+        * [JavaScript blocks](/blocks/javascript-blocks)
+        * [Custom blocks](/blocks/custom)
+    * [Types](/types)
+        * [Number](/types/number)
+        * [String](/types/string)
+        * [Boolean](/types/boolean)
+        * [Array](/types/array)
+        * [Function](/types/function)
+    * [Components](/components)
+        * [input](/reference/input)
+        * [light](/reference/light)
+        * [music](/reference/music)
+        * [network](/reference/network)
+        * [pins](/reference/pins)
+        * [control](/reference/control)
+        * [serial](/reference/serial)
+    * [JavaScript](/javascript)
+        * [Calling](/javascript/call)
+        * [Sequencing](/javascript/sequence)
+        * [Variables](/javascript/variables)
+        * [Operators](/javascript/operators)
+        * [Statements](/javascript/statements)
+        * [Functions](/javascript/functions)
+        * [Types](/javascript/types)
+        * [Classes](/javascript/classes)
+        * [Interfaces](/javascript/interfaces)
+        * [Generics](/javascript/generics)
+
+## #blocks
+
+## #javaScript
+
+## #types
 
 ## Hardware #hardware
 

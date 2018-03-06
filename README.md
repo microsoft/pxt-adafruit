@@ -1,6 +1,4 @@
-# Adafruit Circuit Playground Express target for PXT
-
-[![Build Status](https://travis-ci.org/Microsoft/pxt-adafruit.svg?branch=master)](https://travis-ci.org/Microsoft/pxt-adafruit)
+# MakeCode for Adafruit Circuit Playground Express [![Build Status](https://travis-ci.org/Microsoft/pxt-adafruit.svg?branch=master)](https://travis-ci.org/Microsoft/pxt-adafruit)
 
 This repo contains the editor hosted at https://makecode.adafruit.com .
 
@@ -8,7 +6,7 @@ This repo contains the editor hosted at https://makecode.adafruit.com .
 
 These instructions assume familiarity with dev tools and languages.
 
-* install Node.js 6+
+* install [Node.js 8+](https://nodejs.org/en/download/)
 * (optional) install [Visual Studio Code](https://code.visualstudio.com/)
 
 In a common folder,
@@ -20,8 +18,7 @@ In a common folder,
 
 ```
 npm install
-typings install
-jake
+npm run build
 ```
 
 * go to ``pxt-common-packages`` and run

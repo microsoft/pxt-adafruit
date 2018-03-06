@@ -35,7 +35,12 @@ Here are some fun programs for your @boardname@!
   "description":"Test surfaces to determine if they're level with your board.",
   "url":"/examples/level",
   "cardType": "example"
-},{
+}, {
+  "name": "Counter",
+  "description": "A counter that uses the lights",
+  "url": "/examples/counter",
+  "cardType": "example"
+}, {
   "name": "Egg game",
   "description":"How still can you keep the Circuit Playground? Play a game that involves balance and concentration!",
   "url":"/examples/egg-game",

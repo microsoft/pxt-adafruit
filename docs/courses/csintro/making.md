@@ -4,7 +4,7 @@ This Lesson introduces the @boardname@ as a piece of hardware that has a specifi
 generally must be supported and incorporated as an essential component of a tangible artifact. Focus
 on incorporating the physical @boardname@ into a basic making activity.
 
-![@boardname@ board](/static/courses/csintro/making/microbit-board.png)
+![@boardname@ image](https://cdn-shop.adafruit.com/970x728/3333-04.jpg)
 
 ## Lesson objectives 
 Students will...
@@ -20,7 +20,7 @@ Students will...
 * [**Introduction**: The @boardname@ is for making](/courses/csintro/making/introduction)
 * [**Unplugged**: Design Thinking](/courses/csintro/making/unplugged)
 * [**Activity**: MakeCode download](/courses/csintro/making/activity)
-* [**Project**: micro:pet (including mods and rubric)](/courses/csintro/making/project)
+* [**Project**: AdaPet (including mods and rubric)](/courses/csintro/making/project)
 
 ## Related standards
 

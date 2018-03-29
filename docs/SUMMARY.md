@@ -41,7 +41,7 @@
     * [network](/reference/network)
     * [pins](/reference/pins)
     * [control](/reference/control)
-    * [serial](/reference/serial)
+    * [console](/reference/console)
 
 ## Hardware #hardware
 

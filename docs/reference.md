@@ -7,13 +7,13 @@ music.playTone(0, 0)
 network.infraredSendNumber(0)
 pins.pulseDuration()
 control.runInBackground(() => {})
-serial.writeLine("");
+console.log("");
 ```
 
 ## See Also
 
 [blocks](/blocks), [JavaScript](/javascript), [input](/reference/input), [light](/reference/light), [music](/reference/music), [network](/reference/network),
-[control](/reference/control), [pins](/reference/pins), [serial](/reference/serial)
+[control](/reference/control), [pins](/reference/pins), [console](/reference/console)
 
 ```package
 circuit-playground

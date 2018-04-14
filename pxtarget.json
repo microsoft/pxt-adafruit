@@ -310,6 +310,7 @@
         "hasAudio": true,
         "usbHelp": [],
         "extendEditor": true,
+        "extendFieldEditors": true,
         "disableBlockIcons": true,
         "socialOptions": {
             "twitterHandle": "adafruit",

@@ -1,15 +1,9 @@
 /// <reference path="../node_modules/pxt-core/built/pxteditor.d.ts" />
 
-import lf = pxt.Util.lf;
-
 namespace pxt.editor {
     initExtensionsAsync = function (opts: pxt.editor.ExtensionOptions): Promise<pxt.editor.ExtensionResult> {
         pxt.debug('loading pxt-adafruit target extensions...')
         const res: pxt.editor.ExtensionResult = {
-            fieldEditors: [{
-                selector: "lights",
-                editor: FieldLights
-            }],
             showUploadInstructionsAsync: (fn: string, url: string, confirmAsync?: (options: any) => Promise<number>) => {
                 let resolve: (thenableOrResult?: void | PromiseLike<void>) => void;
                 let reject: (error: any) => void;

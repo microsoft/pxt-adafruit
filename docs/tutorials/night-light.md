@@ -5,7 +5,7 @@
 Drag the ``||light:set all pixels||`` block in the forever loop to set a new color on the LEDs.
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     light.setAll(0x0000ff);
 })
 ```
@@ -17,7 +17,7 @@ Drag a ``||loops:for||`` loop to repeat code **256** times!
 Since we start counting at ``0``, we put ``255`` as the number of loops.
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     light.setAll(0x0000ff);
     for (let index = 0; index <= 255; index++) {
     }
@@ -32,7 +32,7 @@ into the slot.
 Index is a variable that changes on every ``||loops:for||`` iteration. It starts at ``0`` and goes to ``255``.
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     light.setAll(0x0000ff);
     for (let index = 0; index <= 255; index++) {
         light.setBrightness(index)
@@ -47,11 +47,11 @@ Drag a ``||loops:pause 20 ms||`` in the ``||loops:for||`` to slow down the anima
 Change that value in pause to slow down or speed up the glowing effect!
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     light.setAll(0x0000ff);
     for (let index = 0; index <= 255; index++) {
         light.setBrightness(index)
-        loops.pause(20)
+        pause(20)
     }
 })
 ```
@@ -65,15 +65,15 @@ Click ``|Download|`` to transfer your code to the @boardname@. It should glow on
 Duplicate the ``||loops:for||`` loop under the original for loop.
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     light.setAll(0x0000ff);
     for (let index = 0; index <= 255; index++) {
         light.setBrightness(index)
-        loops.pause(20)
+        pause(20)
     }
     for (let index = 0; index <= 255; index++) {
         light.setBrightness(index)
-        loops.pause(20)
+        pause(20)
     }
 })
 ```
@@ -83,15 +83,15 @@ loops.forever(function () {
 Change ``index`` to ``255 - index`` in the ``||light:set brightness||`` block.
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     light.setAll(0x0000ff);
     for (let index = 0; index <= 255; index++) {
         light.setBrightness(index)
-        loops.pause(20)
+        pause(20)
     }
     for (let index = 0; index <= 255; index++) {
         light.setBrightness(255 - index)
-        loops.pause(20)
+        pause(20)
     }
 })
 ```

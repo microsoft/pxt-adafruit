@@ -10,7 +10,7 @@ input.buttonA.onEvent(ButtonEvent.Click, () => {
 input.buttonB.onEvent(ButtonEvent.Click, () => {
     music.changeTempoBy(10)
 })
-loops.forever(() => {
+forever(() => {
     music.playTone(262, music.beat(BeatFraction.Quarter))
     music.rest(music.beat(BeatFraction.Half))
     music.rest(music.beat(BeatFraction.Quarter))

@@ -3,12 +3,12 @@
 Try to keep the @boardname@ level. If it tilts, it will let you know.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     if (Math.abs(input.acceleration(Dimension.X)) + Math.abs(input.acceleration(Dimension.X)) < 64) {
         light.showRing(
         `green green green green green green green green green green`
         )
-        loops.pause(100)
+        pause(100)
     } else {
         light.showRing(
         `black blue black blue black black blue black blue black`

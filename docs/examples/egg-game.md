@@ -13,7 +13,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
     for (let i = 0; i < 3; i++) {
         light.photonForward(1)
         music.playTone(240, music.beat(BeatFraction.Whole))
-        loops.pause(500)
+        pause(500)
     }
     light.photonForward(1)
     music.playTone(988, music.beat(BeatFraction.Whole) * 3)

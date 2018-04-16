@@ -30,7 +30,7 @@ input.onGesture(Gesture.TiltUp, () => {
         music.playTone(item, music.beat(BeatFraction.Sixteenth))
         item += 15
     }
-    loops.pause(500)
+    pause(500)
     ready = true
     music.playTone(item, music.beat(BeatFraction.Whole))
 })

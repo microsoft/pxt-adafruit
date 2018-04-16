@@ -22,7 +22,7 @@ When you press button `A` on the @boardname@, this
 program plays a tone with a pitch that matches the current ambient color.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     if (input.ambientColor() == Colors.Green)
         music.playTone(440, 500)
     else if (input.ambientColor() == Colors.Blue)

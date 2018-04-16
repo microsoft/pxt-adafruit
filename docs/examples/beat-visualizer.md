@@ -11,8 +11,8 @@ input.buttonA.onEvent(ButtonEvent.Click, () => {
     )
     item = 0
 })
-loops.forever(() => {
+forever(() => {
     item += 1
-    loops.pause(37)
+    pause(37)
 })
 ```

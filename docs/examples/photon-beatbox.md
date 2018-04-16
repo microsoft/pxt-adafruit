@@ -7,9 +7,9 @@ let item = 0
 input.onGesture(Gesture.Shake, () => {
     light.setPhotonPenHue(Math.randomRange(0, 256))
 })
-loops.forever(() => {
+forever(() => {
     light.photonForward(1)
-    loops.pause(50)
+    pause(50)
 })
 input.buttonA.onEvent(ButtonEvent.Click, () => {
     light.photonFlip()

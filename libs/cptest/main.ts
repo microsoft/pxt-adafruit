@@ -2,9 +2,9 @@ let mode = -1
 
 function blink(idx: number, color: number) {
     light.setPixelColor(idx, color)
-    loops.pause(20)
+    pause(20)
     light.setPixelColor(idx, 0)
-    loops.pause(10)
+    pause(10)
 }
 
 function switchMode() {

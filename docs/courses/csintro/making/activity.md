@@ -15,7 +15,7 @@ From the top left corner of the screen, select the **Projects** Menu, and click 
 The program should look like the following in MakeCode. It shows different colors and plays sounds:
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     light.showRing(
     `red red red red red black black black black black`
     )

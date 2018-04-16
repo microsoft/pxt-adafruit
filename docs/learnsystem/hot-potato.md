@@ -198,7 +198,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
         // to distinguish the notes, set a minimum time between them.
         //   the note's duration + 30% seems to work well:
         const pauseBetweenNotes = noteDuration / 3;
-        loops.pause(pauseBetweenNotes);
+        pause(pauseBetweenNotes);
 
       // increment and check note counter
       noteToPlay++;
@@ -380,7 +380,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
         // to distinguish the notes, set a minimum time between them.
         //   the note's duration + 30% seems to work well:
         const pauseBetweenNotes = noteDuration / 3;
-        loops.pause(pauseBetweenNotes);
+        pause(pauseBetweenNotes);
 
         noteToPlay++;
         if (noteToPlay >= numNotes)

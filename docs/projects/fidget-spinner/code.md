@@ -17,7 +17,7 @@ with the fidget spinner!
 Try to create programs that use the built-in animations and spin them on the fidget.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.showAnimation(light.rainbowAnimation, 500)
 })
 ```
@@ -32,7 +32,7 @@ Are you able to create cool effects?
 
 ```blocks
 light.setPhotonMode(PhotonMode.PenUp)
-loops.forever(() => {
+forever(() => {
     light.photonForward(1)
 })
 ```
@@ -60,7 +60,7 @@ while (true) {
     left.setPixelColor(c, Colors.Red)
     left.show()
     c = (c + 1) % left.length()
-    loops.pause(5)
+    pause(5)
 }
 ```
 

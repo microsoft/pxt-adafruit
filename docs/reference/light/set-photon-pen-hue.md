@@ -35,11 +35,11 @@ Pulse an rainbow photon forward and backward across the pixel ring.
 ```blocks
 let hue = 0;
 
-loops.forever(function() {
+forever(function() {
     light.setPhotonPenHue(hue)
     for (let i = 0; i < light.onboardStrip().length(); i++) {
         light.photonForward(1);
-        loops.pause(100);
+        pause(100);
     }
     light.photonFlip();
     hue = hue + 1;

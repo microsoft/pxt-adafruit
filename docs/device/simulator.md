@@ -12,7 +12,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
         while (j < 11) {
             if (j < 10) {
                 light.setPixelColor(j, Colors.Yellow);
-                loops.pause(30);
+                pause(30);
             }
             if (j > 0) {
                 light.setPixelColor(j - 1, Colors.Black);
@@ -24,9 +24,9 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 input.buttonB.onEvent(ButtonEvent.Click, function () {
     for (let k = 0; k < 2; k++) {
         light.setAll(Colors.Green);
-        loops.pause(200);
+        pause(200);
         light.setAll(Colors.Black);
-        loops.pause(200);
+        pause(200);
     }
 })
 ```

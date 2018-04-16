@@ -40,7 +40,7 @@ light.showRing("red blue green blue red red blue green blue red")
 Make two pixel rings that switch colors repeatedly.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.showRing("red blue red blue red blue red blue red blue")
     light.showRing("blue red blue red blue red blue red blue red")
 })

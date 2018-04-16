@@ -32,7 +32,7 @@ Drag a ``||loops:pause||`` block to wait 2 seconds, and another ``||light:set al
 input.onLoudSound(function () {
     light.setBrightness(255)
     light.setAll(0xffffff)
-    loops.pause(2000)
+    pause(2000)
     light.setAll(0x000000)
 })
 ```

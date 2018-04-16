@@ -116,7 +116,7 @@ input.onLoudSound(() => {
     light.setPhotonMode(PhotonMode.Eraser)
     for (let i = 0; i < time; i++) {
         music.playTone(262, 300)
-        loops.pause(700)
+        pause(700)
         light.photonForward(1)
     }
 })
@@ -150,12 +150,12 @@ input.onLoudSound(() => {
     light.setPhotonMode(PhotonMode.Eraser)
     for (let i = 0; i < time; i++) {
         music.playTone(262, 300)
-        loops.pause(700)
+        pause(700)
         light.photonForward(1)
     }
     for (let i = 0; i < 3; i++) {
         music.playTone(523, 100)
-        loops.pause(100)
+        pause(100)
         music.playTone(523, 100)
         light.showAnimation(light.sparkleAnimation, 700)
     }

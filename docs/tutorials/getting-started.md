@@ -5,7 +5,7 @@
 Welcome, let's get started by making something everyone will notice! Place the ``||light:show ring||`` block inside a ``||loops:forever||`` block to show a ring of pixels on the board.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.showRing(
     `red red red red red red red red red red`
     )
@@ -17,7 +17,7 @@ loops.forever(() => {
 Use the color palette to select a color. You pick one of the colors from the middle of the ring. Go around the ring and touch each pixel to change them to this color. Let's use `blue` for now.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.showRing(
     `blue blue blue blue blue blue blue blue blue blue`
     )
@@ -29,7 +29,7 @@ loops.forever(() => {
 Ok, we'll add another ring to make an animation. Drag another ``||light:show ring||`` block and place it right under the first one.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.showRing(
         `blue blue blue blue blue blue blue blue blue blue`
     )
@@ -44,7 +44,7 @@ loops.forever(() => {
 Now, let's make a police siren from our animation! From the `Loops` drawer, place a ``||loops:forever||`` block anywhere in the workspace.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.showRing(
         `blue blue blue blue blue blue blue blue blue blue`
     )
@@ -52,7 +52,7 @@ loops.forever(() => {
         `red red red red red red red red red red`
     )
 })
-loops.forever(() => {
+forever(() => {
 });
 ```
 
@@ -61,7 +61,7 @@ loops.forever(() => {
 From the `Music` drawer, drag out a ``||music:play sound until done||`` block and place it inside the newly added ``||loops:forever||`` block.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.showRing(
         `blue blue blue blue blue blue blue blue blue blue`
     )
@@ -69,7 +69,7 @@ loops.forever(() => {
         `red red red red red red red red red red`
     )
 })
-loops.forever(() => {
+forever(() => {
     music.playSoundUntilDone(music.sounds(Sounds.Siren))
 });
 ```

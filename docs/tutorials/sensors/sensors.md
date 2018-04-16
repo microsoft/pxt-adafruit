@@ -11,7 +11,7 @@ It uses values from -1023 to +1023.  When the @boardname@ is laying flat: X = 0,
 Open the **Light** Toolbox drawer, and click on **More** subcategory.  Drag the ``||graph||`` block onto your programming Workspace, and put it in the ``||forever||`` loop.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.graph(
     0,
     0
@@ -25,7 +25,7 @@ loops.forever(() => {
 Open the **Input** Toolbox drawer, drag the ``||acceleration||`` block into the first slot of the ``||graph||`` block. 
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.graph(
     input.acceleration(Dimension.X),
     0
@@ -39,7 +39,7 @@ loops.forever(() => {
 Set the maximum value to ``1023`` by typing this number into the second slot of the ``||graph||`` block.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.graph(
     input.acceleration(Dimension.X),
     1023
@@ -73,7 +73,7 @@ From your existing Motion Sensor program, delete the ``||acceleration||`` block 
 Open the **Input** Toolbox drawer, drag the ``||light level||`` block into the first slot of the ``||graph||`` block. 
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.graph(
     input.lightLevel(),
     1023
@@ -87,7 +87,7 @@ loops.forever(() => {
 Set the maximum value to ``255`` by typing this number into the second slot of the ``||graph||`` block.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.graph(
     input.lightLevel(),
     255

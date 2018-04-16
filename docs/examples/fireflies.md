@@ -2,18 +2,18 @@
 
 ```blocks
 let clock = 0
-loops.forever(() => {
+forever(() => {
     // if clock hits noon, flash the screen
     if (clock >= 8) {
         // notify neighbors
         light.setAll(Colors.White)
-        loops.pause(200)
+        pause(200)
         light.clear()
         // reset the clock
         clock = 0
     } else {
         // just wait a bit
-        loops.pause(100)
+        pause(100)
         // increment the clock
         clock += 1
     }

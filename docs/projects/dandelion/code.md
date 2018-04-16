@@ -23,7 +23,7 @@ light.setBrightness(input.soundLevel())
 Open @homeurl@ in your web browser.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.setAll(Colors.Yellow)
 })
 ```
@@ -67,7 +67,7 @@ The **set brightness block** sets the brightness of pixels, and takes as a input
 Let's try and set the brightness of the pixels to the current sound level.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.setBrightness(input.soundLevel())
     light.setAll(Colors.Yellow)
 })

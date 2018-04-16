@@ -3,8 +3,8 @@
 ## #specific
 
 ```cards
-loops.forever(() => {});
-loops.pause(0)
+forever(() => {});
+pause(0)
 ```
 
 ## See also

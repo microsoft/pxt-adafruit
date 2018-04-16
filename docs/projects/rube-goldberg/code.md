@@ -21,7 +21,7 @@ Use a force sensor to trigger a servo that drops a rolling weight. The weight hi
 pins.A1.analogRead()
 light.showRing("red red red red red red red red red red")
 pins.A2.servoWrite(180)
-loops.pause(0)
+pause(0)
 ``` 
 ## Let's code it!
 
@@ -36,7 +36,7 @@ First, we'll set up some code to get us started.
 5. Change the condition from ``<`` to ``>``.
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     if (0 > 0) {
 
     } else {
@@ -52,7 +52,7 @@ Ok, let's do something when the force sensor is pressed. How about lighting the 
 3. Change the ``A0`` to ``A1`` in the ``||pins:analog read pin||`` block.
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     if (pins.A1.analogRead() > 100) {
     	
     } else {
@@ -68,7 +68,7 @@ Now, we'll add two different pixel patterns to show when the force sensor is pre
 3. Make each ``||light: show ring||`` display a different pattern of colors.
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     if (pins.A1.analogRead() > 100) {
         light.showRing("yellow white blue green blue pink red green yellow pink")
     } else {
@@ -89,7 +89,7 @@ Right, time to make the servo turn so the rolling weight will drop.
 4. Change the ``0`` in the first ``||pins:servo write pin||`` to say ``180``.
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     if (pins.A1.analogRead() > 100) {
         light.showRing("yellow white blue green blue pink red green yellow pink")
         pins.A3.servoWrite(180)
@@ -115,7 +115,7 @@ So that you can keep running the prank over again, let's have the box reset itse
 
 ```blocks
 let reset = true;
-loops.forever(function () {
+forever(function () {
     if (pins.A1.analogRead() > 100) {
         if (reset) {
             light.showRing("yellow white blue green blue pink red green yellow pink")
@@ -125,7 +125,7 @@ loops.forever(function () {
     } else {
         light.showRing("red red red red red red red red red red")
         pins.A3.servoWrite(0)	
-        loops.pause(3000)
+        pause(3000)
         reset = true;
     }
 })

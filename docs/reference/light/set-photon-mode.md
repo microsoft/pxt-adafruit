@@ -27,7 +27,7 @@ so it erases when it moves backward.
 ```blocks
 let forward = true
 light.setPhotonPenHue(191)
-loops.forever(() => {
+forever(() => {
     if (forward) {
         light.setPhotonMode(PhotonMode.PenDown)
     } else {
@@ -35,7 +35,7 @@ loops.forever(() => {
     }
     for (let i = 0; i < light.onboardStrip().length(); i++) {
         light.photonForward(1)
-        loops.pause(100)
+        pause(100)
     }
     forward = !forward
     light.photonFlip()
@@ -53,14 +53,14 @@ light.setPhotonPenHue(191);
 light.setPhotonMode(PhotonMode.PenDown);
 for (let i = 1; i < light.onboardStrip().length(); i++) {
     light.photonForward(1);
-    loops.pause(500);
+    pause(500);
 }
 
 light.setPhotonPenHue(86);
 light.setPhotonMode(PhotonMode.PenUp)
 for (let i = 1; i < light.onboardStrip().length(); i++) {
     light.photonForward(1);
-    loops.pause(500);
+    pause(500);
 }
 ```
 

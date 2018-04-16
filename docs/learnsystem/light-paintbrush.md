@@ -40,7 +40,7 @@ let Y = 0;
 
 let c = Colors.Green;
 
-loops.forever(() => {
+forever(() => {
     sensorValue = pins.A10.analogRead();
     brightVal = Math.map(sensorValue, 0, 1023, 0, 225);
 

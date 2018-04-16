@@ -17,7 +17,7 @@ Using the sensitivity of the light sensor and code, let's make the light monster
 light.graph(input.lightLevel(),0)
 pins.A2.servoWrite(180)
 Math.map(input.lightLevel(),0,0,0,0)
-loops.pause(0)
+pause(0)
 ``` 
 
 ## Step 1: Coding the servo pin connection
@@ -26,7 +26,7 @@ loops.pause(0)
 2. From **LIGHT**, drag a **graph of** block, and place it inside a **forever** loop. 
 
 ```blocks 
-loops.forever(() => {
+forever(() => {
     light.graph(0, 0)
 })
 ```
@@ -36,7 +36,7 @@ loops.forever(() => {
 From **INPUT** drag a **light level** into the **graph of** block.
 
 ```blocks 
-loops.forever(() => {
+forever(() => {
     light.graph(input.lightLevel(), 0)
 })
 ```
@@ -44,7 +44,7 @@ loops.forever(() => {
 From **PINS**, drag a **servo write pin to** block and place it inside the forever loop. 
 
 ```blocks 
-loops.forever(() => {
+forever(() => {
     light.graph(input.lightLevel(), 0)
     pins.A1.servoWrite(180)
 })
@@ -58,7 +58,7 @@ loops.forever(() => {
 4. Change the value of `to high` to ``255``.
 
 ```blocks 
-loops.forever(() => {
+forever(() => {
     light.graph(input.lightLevel(), 0)
     pins.A2.servoWrite(Math.map(
         input.lightLevel(), 
@@ -79,7 +79,7 @@ Let's try changing the values of the position of the servo motor so that your mo
 1. Change the value of to low to ``50``.
 
 ```blocks 
-loops.forever(() => {
+forever(() => {
     light.graph(input.lightLevel(), 0)
     pins.A2.servoWrite(Math.map(
         input.lightLevel(), 
@@ -100,7 +100,7 @@ The **pause loop** placed in the forever loop causes the code to wait for a shor
 From **LOOPS** drag a **pause (ms)** block into the bottom of the forever loop. 
 
 ```block
-loops.pause(100)
+pause(100)
 ```
 
 ### Build the block...
@@ -108,7 +108,7 @@ loops.pause(100)
 1. Change the value of pause to ``400``.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.graph(
     input.lightLevel(), 
     0
@@ -120,7 +120,7 @@ loops.forever(() => {
         0, 
         255
     ))
-    loops.pause(400)
+    pause(400)
 })
 ```
 

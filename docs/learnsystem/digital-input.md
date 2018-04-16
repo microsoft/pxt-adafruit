@@ -12,7 +12,7 @@ Source: https://learn.adafruit.com/circuit-playground-digital-input/hello-digita
 
 ```blocks
 let digitalValue = 0;
-loops.forever(() => {
+forever(() => {
     if (pins.A3.digitalRead()) {
         digitalValue = 1;
     } else {
@@ -31,7 +31,7 @@ Source: https://learn.adafruit.com/circuit-playground-digital-input/floating-inp
 let initialValue = false
 initialValue = pins.A3.digitalRead()
 light.setAll(Colors.Red)
-loops.forever(function () {
+forever(function () {
     serial.writeLine("A3: " + pins.A3.digitalRead())
     if (initialValue != pins.A3.digitalRead()) {
         light.setAll(Colors.Blue)

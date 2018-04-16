@@ -20,7 +20,7 @@ input.buttonB.onEvent(ButtonEvent.Click, function () {
     light.setAll(0xFF6600)
     music.playTone(700, music.beat(BeatFraction.Half))
     light.clear()
-    loops.pause(250)
+    pause(250)
     light.setAll(0xFF6600)
     music.playTone(700, music.beat(BeatFraction.Half))
     light.clear()
@@ -49,7 +49,7 @@ function lightsBeeps(repeats: number, note: number, duration: number, color: num
         light.setAll(0xFF6600)
         music.playTone(700, music.beat(BeatFraction.Half))
         light.clear();
-        if (repeats > 1) loops.pause(duration / 2);
+        if (repeats > 1) pause(duration / 2);
     }
 }
 

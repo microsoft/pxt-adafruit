@@ -19,7 +19,7 @@ Open **[MakeCode](@homeurl@)** in your web browser.
 Go into the **Light** toolbox drawer, and click on the **More** subcategory.  Drag the ``||light:graph||`` block onto your programming workspace, and put it in the ``||loops:forever||`` loop.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.graph(
     0,
     0
@@ -31,7 +31,7 @@ loops.forever(() => {
 Now, in the **Input** toolbox drawer, drag the ``||input:acceleration||`` block into the first slot of the ``||light:graph||`` block. 
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.graph(
     input.acceleration(Dimension.X),
     0
@@ -44,7 +44,7 @@ loops.forever(() => {
 Using the drop-down menu on the ``||input:acceleration||`` block, change to the `y` axis. Set the maximum value to ``1023`` by typing this number into the second slot of the ``||light:graph||`` block.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.graph(
     input.acceleration(Dimension.Y),
     1023
@@ -59,7 +59,7 @@ Open the **Loops** toolbox drawer, drag a ``||loops:forever||`` block onto the p
 In the **Music** toolbox drawer, drag the ``||music:play tone||`` block into the ``||loops:forever||`` loop.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     music.playTone(262, music.beat(BeatFraction.Half))
 })
 ```
@@ -75,7 +75,7 @@ Open the **Math** toolbox drawer, drag the ``||math:addition||`` block into the 
 Then Open the **Input** toolbox drawer, drag the ``||light level||`` block into the the first value of our ``||math:addition||`` block, and type the value ``300`` into the second value.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     music.playTone(input.lightLevel() + 300, music.beat(BeatFraction.Half))
 })
 ```
@@ -89,13 +89,13 @@ Go to the **Math** toolbox drawer, drag ``||math:absolute||`` value block into t
 Open the **Input** toolbox drawer, drag the ``||input:acceleration||`` block into the ``||math:absolute||`` value block.
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     light.graph(
     input.acceleration(Dimension.Y),
     1023
     )
 })
-loops.forever(function () {
+forever(function () {
     music.playTone(input.lightLevel() + 300, Math.abs(input.acceleration(Dimension.Y)))
 })
 ```

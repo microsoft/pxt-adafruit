@@ -45,7 +45,7 @@ You can run your code using the **@boardname@** simulator, all within the confin
 The simulator has support for the LED screen, buttons, as well as compass, accelerometer, and digital I/O pins.
 
 ```sim
-loops.forever(() => {
+forever(() => {
     light.showAnimation(light.rainbowAnimation, 1000)
 })
 ```

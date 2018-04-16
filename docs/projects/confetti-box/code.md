@@ -20,7 +20,7 @@ surprise on your friend!
 music.playSound(music.sounds(Sounds.PowerUp))
 light.showRing("red red red red red red red red red red")
 pins.A2.servoWrite(180)
-loops.pause(0)
+pause(0)
 ``` 
 ## Let's code it!
 
@@ -31,7 +31,7 @@ loops.pause(0)
 3. Connect the @boardname@ to your computer with the USB cable and click **Download**. Follow the instructions to move the code to your @boardname@.
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     pins.A1.servoWrite(90)
 })
 ```
@@ -45,7 +45,7 @@ loops.forever(function () {
 3. Input a value in the comparison block to compare the sound value to. Then move your code to the @boardname@. Try making some noise and see if you observe the lights changing. Experiment by comparing different sound level values.
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     if (input.soundLevel() > 18) {
         light.showRing(
         "red red red red red red red red red red"
@@ -66,13 +66,13 @@ loops.forever(function () {
 4. Download the code to your @boardname@ and try clapping. You should see the lights changing colors and your door opening and closing.
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     if (input.soundLevel() > 18) {
         light.showRing(
         "red red red red red red red red red red"
         )
         pins.A1.servoWrite(90)
-        loops.pause(1000)
+        pause(1000)
     } else {
         pins.A2.servoWrite(180)
         light.showRing(
@@ -88,14 +88,14 @@ For extra effect, you can play a tone when the loud sound is detected. In **MUSI
 Download the code again to the @boardname@ to add some flare!
 
 ```blocks
-loops.forever(function () {
+forever(function () {
     if (input.soundLevel() > 18) {
         light.showRing(
         "red red red red red red red red red red"
         )
         pins.A1.servoWrite(90)
         music.playSoundUntilDone(music.sounds(Sounds.PowerDown))
-        loops.pause(1000)
+        pause(1000)
     } else {
         pins.A2.servoWrite(180)
         light.showRing(

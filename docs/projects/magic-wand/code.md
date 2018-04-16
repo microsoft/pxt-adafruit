@@ -27,7 +27,7 @@ Open @homeurl@ in your web browser.
 From **LIGHT**, drag a **show animation** block, and place it inside a **forever** loop to show a rainbow animation on the board.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.showAnimation(light.rainbowAnimation, 500)
 })
 ```
@@ -45,7 +45,7 @@ Next, in the ``Input`` drawer, find the ``||on shake||`` block. Drag one of thos
 Click the **Hint** button if you need help!
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.showAnimation(light.rainbowAnimation, 500)
 })
 input.onGesture(Gesture.Shake, () => {
@@ -70,7 +70,7 @@ The **play sound** plays a pre-defined melody. There are a few interesting melod
 From the ``Music`` drawer, drag a ``||play sound||`` block and place it inside the ``||on shake||`` block, just before the ``||show animation||`` block.
 
 ```blocks
-loops.forever(() => {
+forever(() => {
     light.showAnimation(light.rainbowAnimation, 500)
 })
 input.onGesture(Gesture.Shake, () => {

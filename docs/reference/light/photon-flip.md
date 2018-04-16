@@ -19,7 +19,7 @@ Move a photon forward and backward across the pixel ring for `5` bursts.
 for (let i = 0; i <= 5; i++) {
     for (let j = 0; j < light.onboardStrip().length(); j++) {
         light.photonForward(1)
-        loops.pause(50)
+        pause(50)
     }
     light.photonFlip()
 }

@@ -197,6 +197,14 @@ declare namespace control {
      */
     //% help=control/allocate-notify-event shim=control::allocateNotifyEvent
     function allocateNotifyEvent(): int32;
+
+    /** Write a message to DMESG debugging buffer. */
+    //% shim=control::dmesg
+    function dmesg(s: string): void;
+
+    /** Write a message and value (pointer) to DMESG debugging buffer. */
+    //% shim=control::dmesgPtr
+    function dmesgPtr(str: string, ptr: Object): void;
 }
 declare namespace pins {
 

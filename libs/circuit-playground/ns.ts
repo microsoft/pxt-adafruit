@@ -119,10 +119,10 @@ namespace light {
      * @param value current value to plot
      * @param high maximum value, 0 to autoscale
      */
-    //% blockId=builtin_neopixel_show_bar_graph block="graph %value |up to %high" icon="\uf080"
+    //% blockId=builtin_neopixel_show_bar_graph block="graph %value||up to %high" icon="\uf080"
     //% help=light/graph blockGap=8
     //% weight=10
-    export function graph(value: number, high: number): void {
+    export function graph(value: number, high?: number): void {
         light.pixels.graph(value, high);
     }
 

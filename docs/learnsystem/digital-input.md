@@ -30,11 +30,11 @@ Source: https://learn.adafruit.com/circuit-playground-digital-input/floating-inp
 ```blocks
 let initialValue = false
 initialValue = pins.A3.digitalRead()
-light.setAll(Colors.Red)
+light.setAll(0xff0000)
 forever(function () {
     serial.writeLine("A3: " + pins.A3.digitalRead())
     if (initialValue != pins.A3.digitalRead()) {
-        light.setAll(Colors.Blue)
+        light.setAll(0x0000ff)
     }
 })
 ```

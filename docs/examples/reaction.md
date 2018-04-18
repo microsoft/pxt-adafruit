@@ -31,12 +31,12 @@ input.pinA2.onEvent(ButtonEvent.Down, () => {
         running = 2
         // stop animations and show blue
         light.stopAllAnimations()
-        light.setAll(Colors.Blue)
+        light.setAll(0x0000ff)
         music.playSound(music.sounds(Sounds.PowerDown))
     } else if (running == 1) {
         // red wins
         running = 2
-        light.setAll(Colors.Red)
+        light.setAll(0xff0000)
         music.playSound(music.sounds(Sounds.PowerUp))
     }
 })
@@ -45,12 +45,12 @@ input.pinA3.onEvent(ButtonEvent.Down, () => {
         // too early, red wins
         running = 2
         light.stopAllAnimations()
-        light.setAll(Colors.Red)
+        light.setAll(0xff0000)
         music.playSound(music.sounds(Sounds.JumpDown))
     } else if (running == 1) {
         // blue wins
         running = 2
-        light.setAll(Colors.Blue)
+        light.setAll(0x0000ff)
         music.playSound(music.sounds(Sounds.JumpUp))
     }
 })

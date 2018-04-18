@@ -17,7 +17,7 @@ brighten the pixels when button `B` is pressed.
 
 ```blocks
 let bright = 128;
-light.setAll(Colors.White);
+light.setAll(0xffffff);
 
 input.buttonA.onEvent(ButtonEvent.Click, function() {
     if (bright > 0) {

@@ -15,7 +15,7 @@ Use the sound sensor to change the brightness of the pixels when you blow on it
 ## Blocks
 
 ```cards
-light.setAll(Colors.Yellow)
+light.setAll(0xffff00)
 light.setBrightness(input.soundLevel())
 ```
 
@@ -24,7 +24,7 @@ Open @homeurl@ in your web browser.
 
 ```blocks
 forever(() => {
-    light.setAll(Colors.Yellow)
+    light.setAll(0xffff00)
 })
 ```
 
@@ -41,11 +41,11 @@ Follow the instructions to move the code to your @boardname@.
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, () => {
     light.setBrightness(100)
-    light.setAll(Colors.Yellow)
+    light.setAll(0xffff00)
 })
 input.buttonB.onEvent(ButtonEvent.Click, () => {
     light.setBrightness(255)
-    light.setAll(Colors.Yellow)
+    light.setAll(0xffff00)
 })
 ```
 **Build the blocks**
@@ -69,7 +69,7 @@ Let's try and set the brightness of the pixels to the current sound level.
 ```blocks
 forever(() => {
     light.setBrightness(input.soundLevel())
-    light.setAll(Colors.Yellow)
+    light.setAll(0xffff00)
 })
 ```
 

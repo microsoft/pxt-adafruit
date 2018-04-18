@@ -19,7 +19,7 @@ Set all the pixels to red when the switched is moved to the left.
 
 ```blocks
 input.onSwitchMoved(SwitchDirection.Left, () => {
-    light.setAll(Colors.Red);
+    light.setAll(0xff0000);
 });
 ```
 

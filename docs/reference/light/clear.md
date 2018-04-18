@@ -12,7 +12,7 @@ light.clear()
 Turn off all the pixels when button `A` is pressed.
 
 ```blocks
-light.setAll(Colors.Green)
+light.setAll(0x00ff00)
 input.buttonA.onEvent(ButtonEvent.Click, () => {
     light.clear()
 })

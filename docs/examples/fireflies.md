@@ -6,7 +6,7 @@ forever(() => {
     // if clock hits noon, flash the screen
     if (clock >= 8) {
         // notify neighbors
-        light.setAll(Colors.White)
+        light.setAll(0xffffff)
         pause(200)
         light.clear()
         // reset the clock

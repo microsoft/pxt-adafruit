@@ -17,11 +17,11 @@ function render() {
         isDigit = i == digits
         isTen = i + 1 == tens
         if (isTen && isDigit) {
-            light.setPixelColor(i, Colors.Purple)
+            light.setPixelColor(i, 0xa033e5)
         } else if (isTen) {
-            light.setPixelColor(i, Colors.Blue)
+            light.setPixelColor(i, 0x0000ff)
         } else if (isDigit) {
-            light.setPixelColor(i, Colors.Red)
+            light.setPixelColor(i, 0xff0000)
         }
     }
 }

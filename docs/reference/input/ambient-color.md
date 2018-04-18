@@ -23,13 +23,13 @@ program plays a tone with a pitch that matches the current ambient color.
 
 ```blocks
 forever(() => {
-    if (input.ambientColor() == Colors.Green)
+    if (input.ambientColor() == 0x00ff00)
         music.playTone(440, 500)
-    else if (input.ambientColor() == Colors.Blue)
+    else if (input.ambientColor() == 0x0000ff)
         music.playTone(800, 500)
-    else if (input.ambientColor() == Colors.Red)
+    else if (input.ambientColor() == 0xff0000)
         music.playTone(1000, 500)
-    else if (input.ambientColor() == Colors.Yellow)
+    else if (input.ambientColor() == 0xffff00)
         music.playTone(1200, 500)
 })
 ```

@@ -34,7 +34,7 @@ light.setPhotonMode(PhotonMode.PenUp)
 ```cards
 light.rgb(255, 255, 255)
 light.hsv(255, 255, 255)
-light.colors(Colors.Red)
+light.colors(0xff0000)
 light.fade(0, 0)
 ```
 

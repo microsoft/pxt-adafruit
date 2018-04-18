@@ -57,7 +57,7 @@ let left = light.onboardStrip().range(0, 5)
 let c = 0
 while (true) {
     left.clear()
-    left.setPixelColor(c, Colors.Red)
+    left.setPixelColor(c, 0xff0000)
     left.show()
     c = (c + 1) % left.length()
     pause(5)

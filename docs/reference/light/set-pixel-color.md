@@ -19,7 +19,7 @@ When button ``B`` is clicked, show the ``pink`` color at pixel ``0`` on the ring
 
 ```blocks
 input.buttonB.onEvent(ButtonEvent.Click, () => {
-    light.setPixelColor(0, Colors.Pink)
+    light.setPixelColor(0, 0xff007f)
 })
 ```
 

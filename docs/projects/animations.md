@@ -44,7 +44,7 @@ control.forever(() => {
 
 ```blocks
 control.forever(() => {
-    light.showAnimationFrame(light.colorWipeAnimation(light.colors(Colors.Red)))
+    light.showAnimationFrame(light.colorWipeAnimation(light.colors(0xff0000)))
 })
 ```
 

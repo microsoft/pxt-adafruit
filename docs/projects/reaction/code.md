@@ -26,7 +26,7 @@ network.infraredSendNumber(0)
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
-    light.setAll(Colors.Red)
+    light.setAll(0xff0000)
     network.infraredSendNumber(0)
 })
 ```
@@ -39,8 +39,8 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 
 ```blocks 
 input.buttonA.onEvent(ButtonEvent.Click, () => {
-    light.setAll(Colors.Green)
-    network.infraredSendNumber(Colors.Red)
+    light.setAll(0x00ff00)
+    network.infraredSendNumber(0xff0000)
 })
 ```
 
@@ -50,11 +50,11 @@ Now, let's repeat the previous steps to make two more button click blocks. Howev
 
 ```blocks
 input.buttonB.onEvent(ButtonEvent.Click, function () {
-    light.setAll(Colors.Red)
+    light.setAll(0xff0000)
     network.infraredSendNumber(0)
 })
 input.buttonsAB.onEvent(ButtonEvent.Click, function () {
-    light.setAll(Colors.Red)
+    light.setAll(0xff0000)
     network.infraredSendNumber(0)
 })
 input.onGesture(Gesture.Shake, function () {
@@ -69,8 +69,8 @@ input.onGesture(Gesture.Shake, function () {
 
 ```blocks 
 input.buttonB.onEvent(ButtonEvent.Click, () => {
-    light.setAll(Colors.Violet)
-    network.infraredSendNumber(Colors.Yellow)
+    light.setAll(0x8a2be2)
+    network.infraredSendNumber(0xffff00)
 })
 ```
 
@@ -83,8 +83,8 @@ input.buttonB.onEvent(ButtonEvent.Click, () => {
 
 ```blocks 
 input.buttonsAB.onEvent(ButtonEvent.Click, () => {
-    light.setAll(Colors.White)
-    network.infraredSendNumber(Colors.Black)
+    light.setAll(0xffffff)
+    network.infraredSendNumber(0x000000)
 })
 ```
 
@@ -95,7 +95,7 @@ input.buttonsAB.onEvent(ButtonEvent.Click, () => {
 
 ```blocks 
 input.onGesture(Gesture.Shake, () => {
-    light.setAll(Colors.Blue)
+    light.setAll(0x0000ff)
 })
 ```
 
@@ -108,7 +108,7 @@ Now that you've programmed your @boardname@ to send signals, we need to program 
 
 ```blocks 
 network.onInfraredPacketReceived( ({ receivedNumber }) => {
-    light.setAll(Colors.Red)
+    light.setAll(0xff0000)
 })
 ```
 

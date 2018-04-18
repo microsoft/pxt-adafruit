@@ -38,7 +38,7 @@ let brightVal = 20;
 let X = 0;
 let Y = 0;
 
-let c = Colors.Green;
+let c = 0x00ff00;
 
 forever(() => {
     sensorValue = pins.A10.analogRead();
@@ -48,16 +48,16 @@ forever(() => {
     Y = input.acceleration(Dimension.Y);
 
     if ((X >= 1023) && (Y < 1023)) {      //+x, -y = GREEN
-        c = Colors.Green;
+        c = 0x00ff00;
     }
     else if ((X < 1023) && (Y < 1023)) { //-x, -y = BLUE
-        c = Colors.Blue;
+        c = 0x0000ff;
     }
     else if ((X >= 1023) && (Y >= 1023)) { //+x, +y = RED
-        c = Colors.Red;
+        c = 0xff0000;
     }
     else if ((X < 1023) && (Y >= 1023)) {  //-x, +y = YELLOW
-        c = Colors.Yellow;
+        c = 0xffff00;
     }
     light.setBrightness(brightVal);
     light.setAll(c);

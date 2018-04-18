@@ -3,7 +3,7 @@
 Make all of the pixels on the strip show one color.
 
 ```sig
-light.setAll(Colors.Red);
+light.setAll(0xff0000);
 ```
 
 ## Parameters
@@ -15,7 +15,7 @@ light.setAll(Colors.Red);
 Set all of the pixels to `pink`.
 
 ```blocks
-light.setAll(Colors.Pink)
+light.setAll(0xff007f)
 ```
 
 [``||rgb||``](/reference/light/rgb)

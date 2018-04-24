@@ -1,6 +1,6 @@
 {
-  "AnalogPin.analogRead|block": "analog read|pin %name",
-  "AnalogPin.analogWrite|block": "analog write|pin %name|to %value",
+  "AnalogInPin.analogRead|block": "analog read|pin %name",
+  "AnalogOutPin.analogWrite|block": "analog write|pin %name|to %value",
   "DigitalPin.digitalRead|block": "digital read|pin %name",
   "DigitalPin.digitalWrite|block": "digital write|pin %name|to %value=toggleHighLow",
   "DigitalPin.onPulsed|block": "on|pin %pin|pulsed %pulse",

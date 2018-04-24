@@ -18,7 +18,7 @@
   "input.pinA7|block": "pin A7",
   "input|block": "input",
   "light.clear|block": "clear",
-  "light.graph|block": "graph %value |up to %high",
+  "light.graph|block": "graph %value||up to %high",
   "light.onboardStrip|block": "onboard strip",
   "light.photonFlip|block": "photon flip",
   "light.photonForward|block": "photon forward by %steps",

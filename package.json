@@ -45,8 +45,8 @@
     "@types/node": "8.0.53"
   },
   "dependencies": {
-    "pxt-common-packages": "0.21.9",
-    "pxt-core": "3.12.1"
+    "pxt-common-packages": "0.21.10",
+    "pxt-core": "3.12.3"
   },
   "scripts": {
     "test": "node node_modules/pxt-core/built/pxt.js travis"

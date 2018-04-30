@@ -85,33 +85,7 @@
     border-radius: 0px;
     .header, .content, .actions {
         background: transparent;
-        padding-left: 120px;
     }
-    .segment {
-        background: transparent;
-    }
-}
-.ui.modal.hintdialog:before {
-    content: " ";
-    position: absolute;
-    z-index: -1;
-    top: -6px;
-    left: -6px;
-    right: -6px;
-    bottom: -6px;
-    border: 2px solid #7A512E;
-}
-.ui.modal.hintdialog:after {
-    content: " ";
-    position: absolute;
-    z-index: 1;
-    top: -6px;
-    left: -20px;
-    right: -6px;
-    bottom: -6px;
-    width: 130px;
-    background-image: data-uri("../docs/static/tutorial-avatar.png");
-    background-repeat: no-repeat;
 }
 
 /* PXT Json */
@@ -148,5 +122,38 @@
 @media only screen and (max-width: @largestTabletScreen) and (max-height: @thinEditorBreakpoint) {
     .sandboxfooter a:not(.thin) {
         color: @black !important;
+    }
+}
+
+/* >= Small Monitor (Small Monitor + Large Monitor + Wide Monitor) */
+@media only screen and (min-width: @computerBreakpoint) {
+
+    /* Tutorial hint dialog */
+    .ui.modal.hintdialog {
+        .header, .content, .actions {
+            padding-left: 120px;
+        }
+    }
+    .ui.modal.hintdialog:before {
+        content: " ";
+        position: absolute;
+        z-index: -1;
+        top: -6px;
+        left: -6px;
+        right: -6px;
+        bottom: -6px;
+        border: 2px solid #7A512E;
+    }
+    .ui.modal.hintdialog:after {
+        content: " ";
+        position: absolute;
+        z-index: 1;
+        top: -6px;
+        left: -20px;
+        right: -6px;
+        bottom: -6px;
+        width: 130px;
+        background-image: data-uri("../docs/static/tutorial-avatar.png");
+        background-repeat: no-repeat;
     }
 }

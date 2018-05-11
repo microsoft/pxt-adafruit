@@ -32,7 +32,13 @@
         "log": true,
         "editorTheme": {
             "graphBackground": "#d9d9d9",
-            "lineColors": ["#009DDC", "#FB48C7", "#40bf4a", "#8073E5", "#d25b33"]
+            "lineColors": [
+                "#009DDC",
+                "#FB48C7",
+                "#40bf4a",
+                "#8073E5",
+                "#d25b33"
+            ]
         }
     },
     "simulator": {
@@ -157,49 +163,53 @@
         "flashCodeAlign": 256,
         "floatingPoint": true,
         "taggedInts": true,
-        "upgrades": [{
-                "type": "package",
-                "map": {
-                    "neopixel": "light",
-                    "adafruit": "circuit-playground"
+        "patches": {
+            "0.0.0 - 1.1.15": [
+                {
+                    "type": "package",
+                    "map": {
+                        "neopixel": "light",
+                        "adafruit": "circuit-playground"
+                    }
+                },
+                {
+                    "type": "api",
+                    "map": {
+                        "Math\\s*\\.random\\s*\\(\\s*(\\d+)\\s*\\)": "Math.randomRange(0, $1)",
+                        "light\\.pixels\\.(__)?setAll": "light.setAll",
+                        "light\\.pixels\\.(__)?graph": "light.graph",
+                        "light\\.pixels\\.(__)?setPixelColor": "light.setPixelColor",
+                        "light\\.pixels\\.(__)?pixelColor": "light.pixelColor",
+                        "light\\.pixels\\.(__)?setBrightness": "light.setBrightness",
+                        "light\\.pixels\\.(__)?photonForward": "light.photonForward",
+                        "light\\.pixels\\.(__)?photonFlip": "light.photonFlip",
+                        "light\\.pixels\\.(__)?setPhotonColor": "light.setPhotonPenHue",
+                        "light\\.pixels\\.(__)?setPhotonMode": "light.setPhotonMode",
+                        "light\\.pixels\\.(__)?showAnimation": "light.showAnimation",
+                        "light\\.pixels\\.(__)?showAnimationFrame": "light.showAnimation",
+                        "light\\.pixels\\.(__)?clear": "light.clear",
+                        "light\\.pixels\\.(__)?stopAllAnimations": "light.stopAllAnimations",
+                        "light\\.createNeoPixelStrip": "light.createStrip",
+                        "light\\.pixels\\.__setPixelWhiteLED": "light.pixels.setPixelWhiteLED",
+                        "light\\.pixels\\.__show": "light.pixels.show",
+                        "light\\.pixels\\.__length": "light.pixels.length",
+                        "light\\.pixels\\.__brightness": "light.pixels.brightness",
+                        "light\\.pixels\\.__range": "light.pixels.range",
+                        "light\\.pixels\\.__move": "light.pixels.move",
+                        "light\\.pixels\\.__setBuffered": "light.pixels.setBuffered",
+                        "light\\.pixels\\.__setMode": "light.pixels.setMode",
+                        "light\\.animation\\(LightAnimation\\.Rainbow\\)": "light.rainbowAnimation",
+                        "light\\.animation\\(LightAnimation\\.RunningLights\\)": "light.runningLightsAnimation",
+                        "light\\.animation\\(LightAnimation\\.Comet\\)": "light.cometAnimation",
+                        "light\\.animation\\(LightAnimation\\.Sparkle\\)": "light.sparkleAnimation",
+                        "light\\.animation\\(LightAnimation\\.TheaterChase\\)": "light.theaterChaseAnimation",
+                        "light\\.animation\\(LightAnimation\\.ColorWipe\\)": "light.colorWipeAnimation"
+                    }
                 }
-            },
+            ]
+        },
+        "hidSelectors": [
             {
-                "type": "api",
-                "map": {
-                    "Math\\s*\\.random\\s*\\(\\s*(\\d+)\\s*\\)": "Math.randomRange(0, $1)",
-                    "light\\.pixels\\.(__)?setAll": "light.setAll",
-                    "light\\.pixels\\.(__)?graph": "light.graph",
-                    "light\\.pixels\\.(__)?setPixelColor": "light.setPixelColor",
-                    "light\\.pixels\\.(__)?pixelColor": "light.pixelColor",
-                    "light\\.pixels\\.(__)?setBrightness": "light.setBrightness",
-                    "light\\.pixels\\.(__)?photonForward": "light.photonForward",
-                    "light\\.pixels\\.(__)?photonFlip": "light.photonFlip",
-                    "light\\.pixels\\.(__)?setPhotonColor": "light.setPhotonPenHue",
-                    "light\\.pixels\\.(__)?setPhotonMode": "light.setPhotonMode",
-                    "light\\.pixels\\.(__)?showAnimation": "light.showAnimation",
-                    "light\\.pixels\\.(__)?showAnimationFrame": "light.showAnimation",
-                    "light\\.pixels\\.(__)?clear": "light.clear",
-                    "light\\.pixels\\.(__)?stopAllAnimations": "light.stopAllAnimations",
-                    "light\\.createNeoPixelStrip": "light.createStrip",
-                    "light\\.pixels\\.__setPixelWhiteLED": "light.pixels.setPixelWhiteLED",
-                    "light\\.pixels\\.__show": "light.pixels.show",
-                    "light\\.pixels\\.__length": "light.pixels.length",
-                    "light\\.pixels\\.__brightness": "light.pixels.brightness",
-                    "light\\.pixels\\.__range": "light.pixels.range",
-                    "light\\.pixels\\.__move": "light.pixels.move",
-                    "light\\.pixels\\.__setBuffered": "light.pixels.setBuffered",
-                    "light\\.pixels\\.__setMode": "light.pixels.setMode",
-                    "light\\.animation\\(LightAnimation\\.Rainbow\\)": "light.rainbowAnimation",
-                    "light\\.animation\\(LightAnimation\\.RunningLights\\)": "light.runningLightsAnimation",
-                    "light\\.animation\\(LightAnimation\\.Comet\\)": "light.cometAnimation",
-                    "light\\.animation\\(LightAnimation\\.Sparkle\\)": "light.sparkleAnimation",
-                    "light\\.animation\\(LightAnimation\\.TheaterChase\\)": "light.theaterChaseAnimation",
-                    "light\\.animation\\(LightAnimation\\.ColorWipe\\)": "light.colorWipeAnimation"
-                }
-            }
-        ],
-        "hidSelectors": [{
                 "usagePage": "0xFF97",
                 "usageId": "0x0001",
                 "vid": "0x239A",

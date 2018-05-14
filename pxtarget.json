@@ -317,6 +317,7 @@
         "simAnimationEnter": "roll in",
         "simAnimationExit": "roll out",
         "highContrast": true,
+        "greenScreen": true,
         "hasAudio": true,
         "usbHelp": [],
         "extendEditor": true,

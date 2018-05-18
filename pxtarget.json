@@ -189,7 +189,6 @@
                         "light\\.pixels\\.(__)?showAnimationFrame": "light.showAnimation",
                         "light\\.pixels\\.(__)?clear": "light.clear",
                         "light\\.pixels\\.(__)?stopAllAnimations": "light.stopAllAnimations",
-                        "light\\.createNeoPixelStrip": "light.createStrip",
                         "light\\.pixels\\.__setPixelWhiteLED": "light.pixels.setPixelWhiteLED",
                         "light\\.pixels\\.__show": "light.pixels.show",
                         "light\\.pixels\\.__length": "light.pixels.length",

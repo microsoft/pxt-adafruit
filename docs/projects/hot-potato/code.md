@@ -81,4 +81,4 @@ If you need to raise the volume of the speaker, add this extra block to your pro
 music.setVolume(100);
 ```
 
-OK, the hot potato game is ready to play. Download this code to your hot potato built from @boardname@ (we made the potato in [Make](../make)). Gather your friends in a circle and try it out!
+OK, the hot potato game is ready to play. Download this code to your hot potato built from @boardname@ (we made the potato in [Make](make)). Gather your friends in a circle and try it out!

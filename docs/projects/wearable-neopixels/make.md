@@ -4,7 +4,7 @@
 
 ## ~avatar avatar
 
-Make some clothing with NeoPixels and your @boardname@
+Make some clothing to light up with NeoPixels and your @boardname@
 
 ## ~
 ## Duration
@@ -28,9 +28,9 @@ The time required will vary greatly depending upon the scope of the project, the
 
 ## Plan it!
 
-Sketch your proposed wiring on paper. Remember that none of the lines of conductive thread can touch each other. The GND pins can service multiple NeoPixels, as can the 3.3V and VOUT for power. The Flora NeoPixels have arrows on them, and these should point away from the @boardname@. Connect 3.3V to the positive side of the NeoPixel on the right, a pin from A0-A7 in the center, and GND to the negative on the left. 
+Sketch your proposed wiring on paper. Remember that none of the lines of conductive thread can touch each other. The **GND** pins can service multiple NeoPixels, as can the **3.3V** and **VOUT** for power. The Flora NeoPixels have arrows on them, and these should point away from the @boardname@. Connect **3.3V** to the positive side of the NeoPixel on the right, a pin from **A0** - **A7** in the center, and **GND** to the negative on the left. 
 
-If you are planning a number of NeoPixels in a chain, the GND and 3.3V / VOUT lines should connect all the way from the originating power or GND pin to every positive or negative loop on the NeoPixels. If you have to start a new piece of conductive thread on the needle, try to make this transition at the eyelet of the NeoPixel so you can loop it through a number of times and get a good contact between old and new thread. The middle signal thread will stop and start on either side of the NeoPixel (see below). 
+If you are planning a number of NeoPixels in a chain, the **GND** and **3.3V** / **VOUT** lines should connect all the way from the originating power or **GND** pin to every positive or negative loop on the NeoPixels. If you have to start a new piece of conductive thread on the needle, try to make this transition at the eyelet of the NeoPixel so you can loop it through a number of times and get a good contact between old and new thread. The middle signal thread will stop and start on either side of the NeoPixel (see below). 
 
 ![Signal thread stops and stars at NeoPixel connections](/static/cp/projects/wearable-neopixels/middle-signal-thread.jpg)
 
@@ -38,7 +38,7 @@ Be sure the arrows on the NeoPixels point away from the @boardname@.
 
 ![The arrow point away from the CPX](/static/cp/projects/wearable-neopixels/point-arrows-away.jpg)
 
-**Important:** This view shows how the yellow signal thread that runs from a pin like A0, A1, etc. stops at one side of the NeoPixel and resumes on the other. This allows the signal to pass through the NeoPixel and give directions. 
+**Important:** This view shows how the **yellow** signal thread that runs from a pin like **A0**, **A1**, etc. stops at one side of the NeoPixel and resumes on the other. This allows the signal to pass through the NeoPixel and give directions. 
 
 ![Signal thread breaks between NeoPixels](/static/cp/projects/wearable-neopixels/signal-thread-chain.jpg)
 
@@ -62,7 +62,7 @@ Run the needle back through the resulting loop, repeat this process several time
 
 ## Stitch on the NeoPixels
 
-Now that you have the @boardname@ securely fastened to the fabric, it’s time to use conductive thread to make the electrical connections. Using the wiring diagram you drew earlier as a guide, sew connections between the power, GND, and signal pin tabs. A simple running stitch works well. Take care that none of the lines of conductive thread touch each other. Also remember to end a line of stitching at the middle of a NeoPixel and resume with new thread on the other side. 
+Now that you have the @boardname@ securely fastened to the fabric, it’s time to use conductive thread to make the electrical connections. Using the wiring diagram you drew earlier as a guide, sew connections between the power (**3.3V**), ground (**GND**), and signal pin tabs. A simple running stitch works well. Take care that none of the lines of conductive thread touch each other. Also remember to end a line of stitching at the middle of a NeoPixel and resume with new thread on the other side. 
 
 ![Stitch the NeoPixel with signal thread](/static/cp/projects/wearable-neopixels/stitch-neopixel-signal.jpg)
 
@@ -74,7 +74,7 @@ You can also use a double line of stitches. This is more work but makes a more r
 
 ![Making a double stitch line](/static/cp/projects/wearable-neopixels/double-stitch-line.jpg)
 
-Sew to one piece of hardware, then back to the other. At the eyelets, loop around the hole about three times, then run a stitch in through the loops, then go through the eyelet one more time. It’s vital that there be a solid connection at the eyelets.
+Sew to one piece of hardware, then back to the other. At the eyelets, loop around the hole about three times, then run a stitch in through the loops, then go through the eyelet one more time. It’s vital that there's solid connection at the eyelets.
 
 ![Sew three loops around the eyelets](/static/cp/projects/wearable-neopixels/three-loop-eyelet.jpg)
 
@@ -92,7 +92,7 @@ Sewing a simple pocket can be a good way to tuck away your battery pack. Lithium
 
 ![Sew up a battery pocket](/static/cp/projects/wearable-neopixels/battery-pocket.jpg)
 
-Here you can see conductive thread running from the 3.3V pin to the positive eyelet on the NeoPixel, another line running from pin A4 to the center of the NeoPixel (arrows pointing away from the @boardname@), and a line running from a GND pin to the negative eyelet on the NeoPixel. 
+Here you can see conductive thread running from the **3.3V** pin to the positive eyelet on the NeoPixel, another line running from pin **A4** to the center of the NeoPixel (arrows pointing away from the @boardname@), and a line running from a **GND** pin to the negative eyelet on the NeoPixel. 
 
 ![Stitch connections to the CPX](/static/cp/projects/wearable-neopixels/cpx-stitch-neopixel.jpg)
 

@@ -60,7 +60,7 @@ enum LightAnimation {
 namespace light {
 
     //%
-    export const pixels = light.createNeoPixelStrip();
+    export const pixels = light.createStrip(defaultPin(), 10);
 
     /**
      * Get the 10 NeoPixel strip built into the Circuit Playground Express.

@@ -24,7 +24,8 @@
         "libs/circuit-playground",
         "libs/mouse",
         "libs/keyboard",
-        "libs/gamepad"
+        "libs/gamepad",
+        "libs/servo"
     ],
     "serial": {
         "useHF2": true,

@@ -21,7 +21,8 @@
         "pulse": "file:../pulse",
         "infrared": "file:../infrared",
         "microphone": "file:../microphone",
-        "touch": "file:../touch"
+        "touch": "file:../touch",
+        "servo": "file:../servo"
     },
     "public": true
 }

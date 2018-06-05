@@ -9,8 +9,10 @@ Create a new friend by sewing up a fabric figure and attach the @boardname@ to i
 ## ~
 
 https://www.youtube.com/watch?v=-sgF1Fzbc9E 
+<br/>
 
 https://www.youtube.com/watch?v=L_21ZX2b9UE 
+<br/>
 
 Creating a stuffed critter of some kind is a great fabric arts project that is suitable for beginners (who have patience!) on up. Once you have sewn the Fabric Friend, you can find a variety of fun and challenging ways to code it to respond to the world. 
 

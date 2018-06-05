@@ -196,7 +196,7 @@ To hide the tail, run the needle and thread through the body of the Fabric Frien
 
 ![Hide the tail of the thread](/static/cp/projects/fabric-friend/hide-the-tail.jpg)
 
-## ~button /projects/wearable-neopixels/code
+## ~button /projects/fabric-friend/code
 
 NEXT: Start coding!
 

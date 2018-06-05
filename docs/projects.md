@@ -74,7 +74,7 @@ Fun games to build with your @boardname@.
 }]
 ```
 
-## Fashion
+## Wearables
 
 Add amazing lighted effects to clothing for the ultimate fashion experience!
 

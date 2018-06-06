@@ -1,10 +1,10 @@
 # Fabric friend
 
-## @description An advanced maker activity, sewing your @boardname@ together with a fabric figure
+## @description An intermediate maker activity, sewing your @boardname@ together with a fabric figure
 
 ## ~avatar avatar
 
-Create a new friend by sewing up a fabric figure and attach the @boardname@ to it.
+Create a new friend by sewing up a fabric figure and attaching NeoPixels.
 
 ## ~
 

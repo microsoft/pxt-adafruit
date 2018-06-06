@@ -14,6 +14,8 @@
     * [Light Monster](/projects/light-monster)
     * [Reaction!](/projects/reaction)
     * [Wearable NeoPixels](/projects/wearable-neopixels)
+    * [Fabric Friend](/projects/fabric-friend)
+
 
 ## Examples #examples
 

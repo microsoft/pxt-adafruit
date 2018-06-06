@@ -1,11 +1,11 @@
 
 # Wearable NeoPixels
 
-## @description An advanced maker activity, sewing clothes with NeoPixels and controlling them with the @boardname@  
+## @description An intermediate maker activity, sewing clothes with NeoPixels and controlling them with the @boardname@  
 
 ## ~avatar avatar
 
-Get into fashion with wearable NeoPixels on your clothes and with your @boardname@!
+Get into fashion with wearable NeoPixels on your clothes using your @boardname@!
 
 ## ~
 

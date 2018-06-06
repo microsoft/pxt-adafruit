@@ -84,7 +84,7 @@ Add amazing lighted effects to clothing and fabric for the ultimate fashion expe
   "url":"/projects/wearable-neopixels",
   "imageUrl":"/static/cp/projects/wearable-neopixels.jpg"
 }, {
-  "name": "Fabric Frined",
+  "name": "Fabric Friend",
   "url":"/projects/fabric-friend",
   "imageUrl":"/static/cp/projects/fabric-friend.jpg"
 }]

@@ -19,6 +19,7 @@ Music projects for your @boardname@.
   "name": "Beat visualizer",
   "description":"Create a fun way to view sound in a visual format.",
   "url":"/examples/beat-visualizer",
+  "imageUrl":"/static/cp/projects/beat-visualizer.jpg",
   "cardType": "example"
 }]
 ```

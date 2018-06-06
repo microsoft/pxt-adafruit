@@ -13,6 +13,7 @@
     * [Hot Potato](/projects/hot-potato)
     * [Light Monster](/projects/light-monster)
     * [Reaction!](/projects/reaction)
+    * [Wearable NeoPixels](/projects/wearable-neopixels)
 
 ## Examples #examples
 

@@ -76,7 +76,7 @@ Fun games to build with your @boardname@.
 
 ## Wearables
 
-Add amazing lighted effects to clothing for the ultimate fashion experience!
+Add amazing lighted effects to clothing and fabric for the ultimate fashion experience!
 
 ```codecard
 [{

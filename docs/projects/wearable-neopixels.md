@@ -44,6 +44,10 @@ Sewing, wiring, various coding opportunities
 * [Make](/projects/wearable-neopixels/make)  
 * [Code](/projects/wearable-neopixels/code)  
 
+## Acknowledgements
+
+Project contributed by [Rob Morrill](http://www.robmorrill.com).
+
 ### ~button /projects/wearable-neopixels/make
 
 Let's get started!

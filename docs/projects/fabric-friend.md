@@ -54,6 +54,10 @@ Sewing, coding with variables, conditionals and logic
 * [Make](/projects/fabric-friend/make)  
 * [Code](/projects/fabric-friendmd /code)  
 
+## Acknowledgements
+
+Project contributed by [Rob Morrill](http://www.robmorrill.com).
+
 ### ~button /projects/fabric-friend/make
 
 Let's get started!

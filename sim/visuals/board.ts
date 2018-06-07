@@ -477,12 +477,13 @@ namespace pxsim.visuals {
         private updateNeoPixels() {
             const state = this.board;
             if (!state) return;
-            const neopixelState = state.tryGetNeopixelState(state.defaultNeopixelPin().id);            
+            const neopixelState = state.tryGetNeopixelState(state.defaultNeopixelPin().id);
             if (!neopixelState) return;
-            const n = neopixelState.length;
+            const n = Math.min(10, neopixelState.length);
             for (let i = 0; i < n; i++) {
                 let rgb = neopixelState.pixelColor(i);
                 let p_inner = this.element.getElementById(`LED${i}`) as SVGPathElement;
+                if (!p_inner) continue;
 
                 if (!rgb || (rgb.length == 3 && rgb[0] == 0 && rgb[1] == 0 && rgb[2] == 0)) {
                     // Clear the pixel
@@ -497,12 +498,10 @@ namespace pxsim.visuals {
                 let lx = Math.max(l * 1.3, 85);
                 // at least 10% luminosity
                 l = l * 90 / 100 + 10;
-                if (p_inner) {
-                    p_inner.style.stroke = `hsl(${h}, ${s}%, ${Math.min(l * 3, 75)}%)`
-                    p_inner.style.strokeWidth = "1.5";
-                    svg.fill(p_inner, `hsl(${h}, ${s}%, ${lx}%)`)
-                }
-                if (p_inner) svg.filter(p_inner, `url(#neopixelglow)`);
+                p_inner.style.stroke = `hsl(${h}, ${s}%, ${Math.min(l * 3, 75)}%)`
+                p_inner.style.strokeWidth = "1.5";
+                svg.fill(p_inner, `hsl(${h}, ${s}%, ${lx}%)`)
+                svg.filter(p_inner, `url(#neopixelglow)`);
             }
         }
 

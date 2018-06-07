@@ -291,6 +291,10 @@
         "driveDisplayName": "CPLAYBOOT",
         "docMenu": [
             {
+                "name": "Support",
+                "path": "https://aka.ms/makecodeadafruitforums"
+            },
+            {
                 "name": "Blocks",
                 "path": "/blocks"
             },

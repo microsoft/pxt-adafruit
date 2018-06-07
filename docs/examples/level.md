@@ -4,7 +4,7 @@ Try to keep the @boardname@ level. If it tilts, it will let you know.
 
 ```blocks
 forever(() => {
-    if (Math.abs(input.acceleration(Dimension.X)) + Math.abs(input.acceleration(Dimension.X)) < 64) {
+    if (Math.abs(input.acceleration(Dimension.X)) + Math.abs(input.acceleration(Dimension.Y)) < 64) {
         light.showRing(
         `green green green green green green green green green green`
         )

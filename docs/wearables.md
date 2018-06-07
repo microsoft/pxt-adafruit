@@ -9,7 +9,7 @@ Add amazing lighted effects to clothing and fabric for the ultimate fashion expe
   "name": "Wearable NeoPixels",
   "url":"/projects/wearable-neopixels",
   "imageUrl":"/static/cp/projects/wearable-neopixels.jpg",
-  "description": "Get into fashion with wearable NeoPixels on your clothes using your @boardname@!"
+  "description": "Get into fashion with wearable NeoPixels on your clothes using your Circuit Playground!"
 }, {
   "name": "Fabric Friend",
   "url":"/projects/fabric-friend",

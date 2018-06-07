@@ -36,6 +36,7 @@ Fun games to build with your @boardname@.
   "name": "Patience!",
   "description": "Can you wait for the exact moment when a sound stops? Code a game that tests your reaction time and response!",
   "url": "/examples/reaction",
+  "imageUrl":"/static/cp/projects/patience.jpg",
   "cardType": "example"
 }]
 ```

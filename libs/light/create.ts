@@ -15,7 +15,7 @@ namespace light {
     //% subcategory="NeoPixel"
     export function createStrip(
         pin: DigitalPin = null,
-        numleds: number = 30,
+        numleds: number = 10,
         mode: NeoPixelMode = NeoPixelMode.RGB
     ): NeoPixelStrip {
         return light.createNeoPixelStrip(pin, numleds, mode);

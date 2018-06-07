@@ -25,6 +25,7 @@
   "NeoPixelMode.RGB_RGB|block": "RGB (RGB format)",
   "NeoPixelMode.RGB|block": "RGB (GRB format)",
   "PhotonMode.Eraser|block": "eraser",
+  "PhotonMode.Off|block": "off",
   "PhotonMode.PenDown|block": "pen down",
   "PhotonMode.PenUp|block": "pen up",
   "light.NeoPixelStrip.brightness|block": "%strip|brightness",

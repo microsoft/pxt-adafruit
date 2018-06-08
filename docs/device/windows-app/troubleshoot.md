@@ -63,7 +63,7 @@ Once you've updated the bootloader, Windows will detect the updated device and i
 
 You may have to disconnect and reconnect your @boardname@ after the update to ensure that the app recognizes the device correctly.<br/>
 
-If the app is still unable to flash your program onto the device, try to [manually copy your program onto the device](https://learn.adafruit.com/adafruit-circuit-playground-express?view=all#step-2-compile-and-download). Try this program if you don't have in the editor already.
+If the app is still unable to flash your program onto the device, try to [manually copy your program onto the device](https://learn.adafruit.com/adafruit-circuit-playground-express?view=all#step-2-compile-and-download). Try this program if you don't have one in the editor already.
 
 ```blocks
 forever(function () {

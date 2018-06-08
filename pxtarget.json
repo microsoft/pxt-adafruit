@@ -354,6 +354,7 @@
             "functions": "#005a9e",
             "arrays": "#8A1C7C"
         },
-        "allowPackageExtensions": true
+        "allowPackageExtensions": true,
+        "appFlashingTroubleshoot": "/device/windows-app/troubleshoot"
     }
 }

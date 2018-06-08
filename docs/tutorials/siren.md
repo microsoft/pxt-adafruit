@@ -41,7 +41,7 @@ forever(() => {
 
 ## Step 4
 
-Now, let's make a police siren from our animation! From the `Loops` drawer, place a ``||loops:forever||`` block anywhere in the workspace.
+Now, let's make a police siren from our animation! From the ``||loops:LOOPS||`` drawer, place a ``||loops:forever||`` block anywhere in the workspace.
 
 ```blocks
 forever(() => {
@@ -58,7 +58,7 @@ forever(() => {
 
 ## Step 5
 
-From the `Music` drawer, drag out a ``||music:play sound until done||`` block and place it inside the newly added ``||loops:forever||`` block.
+From the ``||music:MUSIC||`` drawer, drag out a ``||music:play sound until done||`` block and place it inside the newly added ``||loops:forever||`` block.
 
 ```blocks
 forever(() => {
@@ -70,13 +70,13 @@ forever(() => {
     )
 })
 forever(() => {
-    music.playSoundUntilDone(music.sounds(Sounds.Siren))
+    music.playSoundUntilDone(music.sounds(Sounds.PowerUp))
 });
 ```
 
 ## Step 6
 
-Click on the part of the ``||light:play sound||`` block that shows the name of the sound. Change it to the ``Siren`` sound.
+Click on the part of the ``||music:play sound until done||`` block that shows the name of the sound. Change it to the ``siren`` sound.
 
 ## Step 7
 

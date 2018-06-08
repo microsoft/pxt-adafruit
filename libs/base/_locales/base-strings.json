@@ -33,7 +33,6 @@
   "control.waitForEvent|block": "wait for event|from %src|with value %value",
   "control.waitMicros|block": "wait (µs)%micros",
   "control|block": "control",
-  "fieldeditors|block": "fieldeditors",
   "forever|block": "forever",
   "loops|block": "loops",
   "parseInt|block": "parse to integer %text",

@@ -1,6 +1,6 @@
-namespace motors {
+namespace servos {
     //% block="servo A1" fixedInstance
-    export const servoA1 = new motors.PinServo(pins.A1);
-    //% block="servo A1" fixedInstance
-    export const servoA2 = new motors.PinServo(pins.A2);
+    export const A1 = new servos.PinServo(pins.A1);
+    //% block="servo A2" fixedInstance
+    export const A2 = new servos.PinServo(pins.A2);
 }

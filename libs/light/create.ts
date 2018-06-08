@@ -13,6 +13,7 @@ namespace light {
     //% parts="neopixel"
     //% weight=100 blockGap=8
     //% subcategory="NeoPixel"
+    //% blockSetVariable=strip
     export function createStrip(
         pin: DigitalPin = null,
         numleds: number = 10,

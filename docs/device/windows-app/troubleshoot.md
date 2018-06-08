@@ -39,7 +39,6 @@ If the version is **v1.23.0**, **v2.0.0** or higher, **you have the right bootlo
 ## Step 3: Upgrade the firmware
 
 1. Put your @boardname@ into **bootloader Mode**. To do this, follow the directions in [Step 1: Bootloader mode](https://learn.adafruit.com/adafruit-circuit-playground-express?view=all#step-1-bootloader-mode) on the Adafruit website.
-![MAINTENANCE gesture](/static/mb/device/maintenance.gif)
 2. **[Download the latest bootloader .uf2 file](https://learn.adafruit.com/adafruit-circuit-playground-express?view=all#updating-the-bootloader)** by clicking the button that says **Circuit Playground Express v\.\.\.**
 ![](/static/cp/device/latest-bootloader-download.png)<br/>
 3. Drag and drop the file you just downloaded onto the **@driveDisplayName@** drive.

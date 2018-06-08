@@ -45,14 +45,6 @@ Now, let's make a police siren from our animation! From the `Loops` drawer, plac
 
 ```blocks
 forever(() => {
-    light.showRing(
-        `blue blue blue blue blue blue blue blue blue blue`
-    )
-    light.showRing(
-        `red red red red red red red red red red`
-    )
-})
-forever(() => {
 });
 ```
 
@@ -62,14 +54,6 @@ From the `Music` drawer, drag out a ``||music:play sound until done||`` block an
 Click on the part of the ``||light:play sound||`` block that shows the name of the sound. Change it to the ``Siren`` sound.
 
 ```blocks
-forever(() => {
-    light.showRing(
-        `blue blue blue blue blue blue blue blue blue blue`
-    )
-    light.showRing(
-        `red red red red red red red red red red`
-    )
-})
 forever(() => {
     music.playSoundUntilDone(music.sounds(Sounds.Siren))
 });

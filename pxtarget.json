@@ -25,7 +25,8 @@
         "libs/mouse",
         "libs/keyboard",
         "libs/gamepad",
-        "libs/servo"
+        "libs/servo",
+        "libs/storage"
     ],
     "serial": {
         "useHF2": true,

@@ -5,6 +5,9 @@
             "Adafruit"
         ],
         "approvedRepos": [
+        ],
+        "preferredRepos": [
+            "Adafruit/pxt-crickit"
         ]
     },
     "languages": [

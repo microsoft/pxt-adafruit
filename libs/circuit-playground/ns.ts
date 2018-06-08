@@ -200,7 +200,7 @@ namespace light {
      * Set the photon color hue.
      * @param hue the color hue of the photon
      */
-    //% blockId=builtin_neophoton_set_pen_hue block="photon set pen hue %hue=colorWheelPicker"
+    //% blockId=builtin_neophoton_set_pen_hue block="photon set pen hue %hue=colorWheelHsvPicker"
     //% help="light/set-photon-pen-hue"
     //% group="Photon" weight=39 blockGap=8
     export function setPhotonPenHue(hue: number) {

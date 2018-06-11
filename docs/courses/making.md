@@ -1,5 +1,7 @@
 # Making
 
+![Maker theme image](/static/courses/making/making.jpg)
+
 This is a project based course on Making with the @boardname@. Adapted from the book e-book created by [Rob Morrill](http://www.robmorrill.com), it introduces the Making process and has guided maker projects which combine creative activities with coding.
 
 ## This course

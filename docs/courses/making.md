@@ -13,7 +13,7 @@ This is a project based course on Making with the @boardname@. Adapted from the 
 ### Making basics with @boardname@
 
 * [Maker tools and techniques](/courses/making/maker-tools-techniques)
-* [Load and Managing your programs](/courses/making/load-manage-programs)
+* [Loading and Managing your programs](/courses/making/load-manage-programs)
 
 ### Projects
 

@@ -19,5 +19,5 @@ This is a project based course on Making with the @boardname@. Adapted from the 
 
 ### Projects
 
-* [Wearables](/projects/wearables)
+* [Wearables](/projects/wearable-neopixels)
 * [Fabric Friend](/projects/fabric-friend)

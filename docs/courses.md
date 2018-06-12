@@ -8,17 +8,13 @@ Structured courses for teaching science and technology in the classroom.
 
 ```codecard
 [{
-  "name": "Intro to CS",
-  "description": "14 week computer science course for middle school grades 6-8",
-  "url":"/courses/csintro"
-}, {
   "name": "Making",
   "description": "A course in Making combining creative project makes with coding.",
-  "url":"/courses/making"
+  "url":"/courses/making",
+  "imageUrl":"/static/courses/making/making.jpg"
 }]
 ```
 
 ## See Also
 
-[Intro to CS](/courses/csintro),
 [Making](/courses/making)

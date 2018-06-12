@@ -17,6 +17,11 @@ This is a project based course on Making with the @boardname@. Adapted from the 
 * [Maker tools and techniques](/courses/making/maker-tools-techniques)
 * [Loading and Managing your programs](/courses/making/load-manage-programs)
 
+### Coding
+
+* [Coding in MakeCode](/courses/making/coding)
+* [Basics of the MakeCode environment](/courses/making/coding/basics)
+
 ### Projects
 
 * [Wearables](/projects/wearable-neopixels)

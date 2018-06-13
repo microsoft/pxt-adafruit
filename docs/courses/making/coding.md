@@ -10,13 +10,36 @@ This chapter will first discuss and give practice exercises for the Toolbox draw
 
 ## Coding with blocks
 
+### Input, Light, and Music
+
 * [Inputs](/courses/making/coding/inputs)
 * [Light](/courses/making/coding/light)
-* Music
-* Loops
+* [Music](/courses/making/coding/music)
+* [Activities](/courses/making/coding/activities-1)
+
+### Loops
+
+* [Loops](/courses/making/coding/loops)
+* [Activities](/courses/making/coding/activities-2)
+
+### Logic
+
 * Logic
+* Activites
+
+### Variables and network
+
 * Variables
 * Network
+
+### Servos
+
 * Servos
+
+### NeoPixels
+
 * NeoPixels
-* In JavaScript
+
+### JavaScript
+
+* Blocks to JavaScript

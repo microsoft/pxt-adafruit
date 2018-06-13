@@ -1,0 +1,10 @@
+{
+  "serial.attachToConsole|block": "serial attach to console",
+  "serial.redirectToUSB|block": "serial|redirect to USB",
+  "serial.redirect|block": "serial|redirect to|TX %tx|RX %rx|at baud rate %rate",
+  "serial.setBaudRate|block": "serial set baud rate to %rate",
+  "serial.writeBuffer|block": "serial|write buffer %buffer",
+  "serial.writeString|block": "serial|write string %text",
+  "serial|block": "serial",
+  "{id:category}Serial": "Serial"
+}

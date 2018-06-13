@@ -1,0 +1,9 @@
+{
+  "serial": "Reading and writing data over a serial connection.",
+  "serial.attachToConsole": "Sends the console message through the TX, RX pins",
+  "serial.redirect": "Set the serial input and output to use pins instead of the USB connection.",
+  "serial.redirectToUSB": "Direct the serial input and output to use the USB connection.",
+  "serial.setBaudRate": "Set the baud rate of the serial port",
+  "serial.writeBuffer": "Send a buffer across the serial connection.",
+  "serial.writeString": "Write some text to the serial port."
+}

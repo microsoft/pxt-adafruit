@@ -10,8 +10,8 @@ This chapter will first discuss and give practice exercises for the Toolbox draw
 
 ## Coding with blocks
 
-* Inputs
-* Light
+* [Inputs](/courses/making/coding/inputs)
+* [Light](/courses/making/coding/light)
 * Music
 * Loops
 * Logic

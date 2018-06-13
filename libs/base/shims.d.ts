@@ -198,7 +198,7 @@ declare namespace serial {
     //% tx.fieldOptions.tooltips="false"
     //% rx.fieldEditor="gridpicker" rx.fieldOptions.columns=3
     //% rx.fieldOptions.tooltips="false"
-    //% blockGap=8
+    //% blockGap=8 inlineInputMode=inline
     //% blockHidden=1 shim=serial::redirect
     function redirect(tx: DigitalPin, rx: DigitalPin, rate: BaudRate): void;
 

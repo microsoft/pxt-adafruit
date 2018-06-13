@@ -368,7 +368,6 @@ namespace pxsim.visuals {
                 const r = p.getBoundingClientRect();
                 this.pinNmToCoord[nm] = [r.left + r.width / 2, r.top + r.height / 2];
             });
-            console.log(JSON.stringify(this.pinNmToCoord, null, 2))
         }
 
         private updateTheme() {

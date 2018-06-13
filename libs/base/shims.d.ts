@@ -159,6 +159,18 @@ declare namespace serial {
     //% help=serial/write-buffer weight=6 blockHidden=true
     //% blockId=serial_writebuffer block="serial|write buffer %buffer" shim=serial::writeBuffer
     function writeBuffer(buffer: Buffer): void;
+
+    /**
+    Sends the console message through the TX, RX pins
+     **/
+    //% shim=serial::sendConsoleToSerial
+    function sendConsoleToSerial(): void;
+
+    /**
+    Set the baud rate of the serial port
+     */
+    //% shim=serial::setBaud
+    function setBaud(rate: int32): void;
 }
 
 // Auto-generated. Do not edit. Really.

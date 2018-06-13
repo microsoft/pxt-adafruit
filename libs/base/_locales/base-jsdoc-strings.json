@@ -170,6 +170,8 @@
   "pauseUntil|param|timeOut": "if positive, maximum duration to wait for in milliseconds",
   "pause|param|ms": "how long to pause for, eg: 100, 200, 500, 1000, 2000",
   "serial": "Reading and writing data over a serial connection.",
+  "serial.sendConsoleToSerial": "Sends the console message through the TX, RX pins",
+  "serial.setBaud": "Set the baud rate of the serial port",
   "serial.writeBuffer": "Send a buffer across the serial connection.",
   "serial.writeLine": "Write a line of text to the serial port.",
   "serial.writeNumber": "Write a number to the serial port.",

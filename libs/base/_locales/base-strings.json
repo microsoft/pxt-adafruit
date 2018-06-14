@@ -37,12 +37,6 @@
   "loops|block": "loops",
   "parseInt|block": "parse to integer %text",
   "pause|block": "pause %pause=timePicker|ms",
-  "serial.writeBuffer|block": "serial|write buffer %buffer",
-  "serial.writeLine|block": "serial|write line %text",
-  "serial.writeNumber|block": "serial|write number %value",
-  "serial.writeString|block": "serial|write string %text",
-  "serial.writeValue|block": "serial|write value %name|= %value",
-  "serial|block": "serial",
   "{id:category}Array": "Array",
   "{id:category}Arrays": "Arrays",
   "{id:category}Basic": "Basic",
@@ -54,7 +48,6 @@
   "{id:category}Loops": "Loops",
   "{id:category}Math": "Math",
   "{id:category}Number": "Number",
-  "{id:category}Serial": "Serial",
   "{id:category}String": "String",
   "{id:category}Text": "Text"
 }

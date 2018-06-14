@@ -142,73 +142,12 @@ declare namespace control {
     //% blockId="control_device_serial_number" block="device serial number" weight=9
     //% help=control/device-serial-number shim=control::deviceSerialNumber
     function deviceSerialNumber(): int32;
-}
-declare namespace console {
 
     /**
      *
      */
-    //% shim=console::__defaultLog
-    function __defaultLog(text: string): void;
-}
-declare namespace serial {
-
-    /**
-     * Write some text to the serial port.
-     */
-    //% help=serial/write-string
-    //% weight=87 blockHidden=true
-    //% blockId=serial_writestring block="serial|write string %text"
-    //% blockHidden=1 shim=serial::writeString
-    function writeString(text: string): void;
-
-    /**
-     * Send a buffer across the serial connection.
-     */
-    //% help=serial/write-buffer weight=6 blockHidden=true
-    //% blockId=serial_writebuffer block="serial|write buffer %buffer"
-    //% blockHidden=1 shim=serial::writeBuffer
-    function writeBuffer(buffer: Buffer): void;
-
-    /**
-    Sends the console message through the TX, RX pins
-     **/
-    //% blockId=serialsendtoconsole block="serial attach to console"
-    //% blockHidden=1 shim=serial::attachToConsole
-    function attachToConsole(): void;
-
-    /**
-    Set the baud rate of the serial port
-     */
-    //% blockId=serialsetbaudrate block="serial set baud rate to %rate"
-    //% blockHidden=1 shim=serial::setBaudRate
-    function setBaudRate(rate: BaudRate): void;
-
-    /**
-     * Set the serial input and output to use pins instead of the USB connection.
-     * @param tx the new transmission pin, eg: SerialPin.P0
-     * @param rx the new reception pin, eg: SerialPin.P1
-     * @param rate the new baud rate. eg: 115200
-     */
-    //% weight=10
-    //% help=serial/redirect
-    //% blockId=serial_redirect block="serial|redirect to|TX %tx|RX %rx|at baud rate %rate"
-    //% blockExternalInputs=1
-    //% tx.fieldEditor="gridpicker" tx.fieldOptions.columns=3
-    //% tx.fieldOptions.tooltips="false"
-    //% rx.fieldEditor="gridpicker" rx.fieldOptions.columns=3
-    //% rx.fieldOptions.tooltips="false"
-    //% blockGap=8 inlineInputMode=inline
-    //% blockHidden=1 shim=serial::redirect
-    function redirect(tx: DigitalPin, rx: DigitalPin, rate: BaudRate): void;
-
-    /**
-     * Direct the serial input and output to use the USB connection.
-     */
-    //% weight=9 help=serial/redirect-to-usb
-    //% blockId=serial_redirect_to_usb block="serial|redirect to USB"    
-    //% blockHidden=1 shim=serial::redirectToUSB
-    function redirectToUSB(): void;
+    //% shim=control::__log
+    function __log(text: string): void;
 }
 
 // Auto-generated. Do not edit. Really.

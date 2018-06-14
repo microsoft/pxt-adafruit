@@ -24,8 +24,8 @@ This chapter will first discuss and give practice exercises for the Toolbox draw
 
 ### Logic
 
-* Logic
-* Activites
+* [Logic](/courses/making/coding/logic)
+* [Activities](/courses/making/coding/activities-3)
 
 ### Variables and network
 

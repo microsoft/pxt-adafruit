@@ -52,6 +52,10 @@ This setup is needed if you plan to make changes in PXT itself. In most cases, i
 if you are building a package for the Adafruit editor.
 
 * install [Node.js 8+](https://nodejs.org/en/download/)
+* install the PXT command line
+```
+npm install -g pxt
+```
 
 In a common folder,
 

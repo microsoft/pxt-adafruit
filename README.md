@@ -84,16 +84,16 @@ npm link ../pxt
 npm link ../pxt-common-packages
 ```
 
-## to run the local server
+### to run the local server
 
 From root github folder,
 
 ```
 cd pxt-adafruit
-npm serve
+pxt serve
 ```
 
-## to build and deploy a single package via command line
+### to build and deploy a single package via command line
 
 ```
 cd libs/core

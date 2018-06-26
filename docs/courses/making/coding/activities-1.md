@@ -1,4 +1,4 @@
-## Activities: Inputs, Light, and Music
+# Activities: Inputs, Light, and Music
 
 Let’s start with a simple input and output example. From the ``||input:INPUT||`` Toolbox drawer, drag an ``||input:on button A click||`` block into the Workspace. Then, from the ``||light:LIGHT||`` Toolbox drawer, drag two ``|light:show ring||`` blocks inside the ``||input:on button A click||`` block on the Workspace. The Simulator will go gray for a second while MakeCode processes these changes, and then it will show your program running. In the second ``||light:show ring||`` block, click on the green color wedge selector in the middle of the block, then click all of the circles to turn the lights green.
 

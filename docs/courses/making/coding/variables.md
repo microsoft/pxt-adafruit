@@ -57,19 +57,25 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-Now, press button **A** in the Simulator. The NeoPixels will be told their color is red, then they will be set at whatever number is in the “intensity” variable (which initially is zero). Next, the “intensity” variable will grow by one. Then, after a 50 ms pause, the process will repeat for a total of 100 times, with the “intensity” variable growing by one each time. The empty pencil bin will have one pencil dropped in every 50 ms until it contains 100 pencils.
+Now, press button **A** in the Simulator. The NeoPixels will be told their color is red, then they will be set at whatever number is in the ``intensity`` variable (which initially is zero). Next, the ``intensity`` variable will grow by one. Then, after a 50 ms pause, the process will repeat for a total of `100` times, with the ``intensity`` variable growing by one each time. The empty pencil bin will have one pencil dropped in every 50 ms until it contains 100 pencils.
+
+Finally, let’s fade the NeoPixels back off. Right click / alt click / control click / two finger tap on the ``||loops:repeat||`` block. This will call up a menu that lets you duplicate whatever is in the loop.
+
+![Duplicate the repeat loop](/static/courses/making/coding/copy-repeat-loop.gif)
+
+Place that second ``||loops:repeat 100 times||`` loop and the three blocks it contains below the first loop. To fade the lights back off, we’ll want to ``||variables:change intensity by -1||`` this time. To mark the point when the NeoPixels begin their fade, go to the ``||music:MUSIC||`` drawer in the Toolbox and drag a ``||music:play sound power up||`` block in-between the two loops.
 
 ```blocks
 let intensity = 0
 input.buttonA.onEvent(ButtonEvent.Click, function () {
     light.setAll(0xff0000)
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 100; i++) {
         light.setBrightness(intensity)
         intensity += 1
         pause(50)
     }
     music.playSound(music.sounds(Sounds.PowerUp))
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 100; i++) {
         light.setBrightness(intensity)
         intensity += -1
         pause(50)
@@ -77,13 +83,4 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-Finally, let’s fade the NeoPixels back off. Right click / alt click / control click / two finger tap on the Repeat block. This will call up a menu that lets you duplicate whatever is in the loop.
-
-![Duplicate the repeat loop](/static/courses/making/coding/copy-repeat-loop.gif)
-
-Place that second Repeat 100 Times loop and the three blocks it contains below the first loop. To fade the lights back off, we’ll want to Change “intensity” by -1 this time. To mark the point when the NeoPixels begin their fade, go to the Music drawer in the Toolbox and drag a Play Sound Power Up block in-between the two loops.
-
-
 Building this program gives some insight into how variables work. They are like the storage bins that let you collect, disburse, and control data.
-
-

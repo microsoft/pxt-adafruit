@@ -1,4 +1,4 @@
-## Activities: Logic and Comparison
+# Activities: Logic and Comparison
 
 We will begin practicing with Logic and Comparison blocks by utilizing the @boardname@ light sensor input. You may need to adjust the light sensor number depending on the conditions where you’re working. Remember that the sensor’s scale is 0-255. In a classroom, the @boardname@s of students on one side of the room light be reading around `35` while on the other side nearer the windows, the reading might be closer to `50`.
 

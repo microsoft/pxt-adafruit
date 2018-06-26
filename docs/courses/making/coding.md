@@ -29,8 +29,9 @@ This chapter will first discuss and give practice exercises for the Toolbox draw
 
 ### Variables and network
 
-* Variables
-* Network
+* [Variables](/courses/making/coding/variables)
+* [Network](/courses/making/coding/network)
+* [Activities](/courses/making/coding/activities-4)
 
 ### Servos
 

@@ -35,7 +35,7 @@ This chapter will first discuss and give practice exercises for the Toolbox draw
 
 ### Servos
 
-* Servos
+* [Servos](/courses/making/coding/servos)
 
 ### NeoPixels
 

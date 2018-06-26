@@ -6,7 +6,7 @@ We can think of a variable as being like a plastic bin in a classroom that can h
 
 The variable bin goes from ten down to zero after 20 seconds, then it pauses for 45 minutes, and then it goes from zero up to ten in 20 seconds. You could label the “glue sticks” bin with “pencils,” and while it would serve the same functional purpose of holding glue sticks, it would be confusing. The best practice is to label the variable with what it actually contains rather than with a label that is humorous or vague.
 
-Let us take the example of controlling the intensity of the NeoPixels displayed on the Circuit Playground Express with a variable.  Our goal is to fade the NeoPixels on and off by using a variable. Click on the Variables drawers and then Make a Variable. We will create a variable called “intensity.” It’s like making a plastic bin and labeled it “intensity.”
+Let us take the example of controlling the intensity of the NeoPixels displayed on the Circuit Playground Express with a variable.  Our goal is to fade the NeoPixels on and off by using a variable. Click on the Variables drawers and then Make a Variable. We will create a variable called ``intensity``. It’s like making a plastic bin and labeled it “intensity”.
 
 ![Make a variable button](/static/courses/making/coding/make-a-variable.jpg)
 

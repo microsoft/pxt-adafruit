@@ -39,8 +39,8 @@ This chapter will first discuss and give practice exercises for the Toolbox draw
 
 ### NeoPixels
 
-* NeoPixels
+* [NeoPixels](/courses/making/coding/neopixels)
 
 ### JavaScript
 
-* Blocks to JavaScript
+* [Blocks to JavaScript](/courses/making/coding/javascript)

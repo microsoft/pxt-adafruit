@@ -16,7 +16,6 @@
     * [Wearable NeoPixels](/projects/wearable-neopixels)
     * [Fabric Friend](/projects/fabric-friend)
 
-
 ## Examples #examples
 
 * [Examples](/examples)
@@ -51,7 +50,3 @@
 * [Hardware](/device)
     * [Simulator](/device/simulator)
     * [USB](/device/usb)
-
-## About #about
-
-* [About](/about)

@@ -20,7 +20,6 @@ Basic projects to build with your @boardname@.
 {
   "name": "Fidget Spinner",
   "url":"/projects/fidget-spinner",
-
   "imageUrl":"/static/cp/projects/fidget-spinner.jpg"
 },
 {
@@ -43,8 +42,14 @@ Basic projects to build with your @boardname@.
   "name": "Headlamp",
   "url":"/projects/headlamp",
   "imageUrl":"/static/cp/projects/headlamp.jpg"
+},
+{
+  "name": "Coffee Cup Lamp",
+  "url":"/projects/coffee-cup-lamp",
+  "imageUrl":"/static/cp/projects/coffee-cup-lamp.jpg"
 }]
 ```
+
 ## Music
 
 Music projects for your @boardname@.

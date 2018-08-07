@@ -8,6 +8,8 @@ Make this musical cloud with your @boardname@!
 
 ## ~
 
+**Important**: make sure the [Code](/projects/cloud/code) portion of this project is done before making the cloud! Otherwise, it will be hard to download your code once the cloud make is done.
+
 ## Duration ~ 30 minutes 
 
 **Important**: make sure the [code](/projects/musical-cloud/code) portion of this project is done before making the cloud!
@@ -40,6 +42,6 @@ Finally, draw 2 lightning bolts and color them yellow. Cut them out the lighting
 
 ## Complete
 
-Congrats! You have finished creating your cloud. Hang it from the ceiling and turn the battery pack on!
+Congrats! You have finished creating your cloud. Hang it from the ceiling and turn the battery pack on and let the music begin!
 
 ![done](/static/cp/projects/musical-cloud/done.jpg)

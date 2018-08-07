@@ -109,7 +109,7 @@ Here are all the notes and beats for the song:
 | `f4:1 f4:1` | | `e4:1 e4:1` | | `d4:1 d4:1` | | `c4:1` |
 | **UP ABOVE** | | **THE WORLD** | | **SO** | | **HIGH** |
 | `g4:1 g4:1 f4:1` | | `f4:1 e4:1` | | `e4:1` | | `d4:1` |
-| **LIKE A** | | **DIAMOD** | | **IN THE** | | **SKY** |
+| **LIKE A** | | **DIAMOND** | | **IN THE** | | **SKY** |
 | `g4:1 g4:1` | | `f4:1 f4:1` | | `e4:1 e4:1` | | `d4:1` |
 | **TWINKLE** | | **TWINKLE** | | **LITTLE** | | **STAR** |
 | `c4:1 c4:1` | | `g4:1 g4:1` | | `a4:1 a4:1` | | `g4:1` |

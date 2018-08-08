@@ -14,13 +14,16 @@ Music projects for your @boardname@.
   "name": "Metronome",
   "description":"Tic, toc, tic, toc, the metronome will keep you in time while practicing music!",
   "url":"/examples/metronome",
-  "imageUrl":"/static/cp/projects/metronome.jpg",
-  "cardType": "example"
+  "imageUrl":"/static/cp/projects/metronome.jpg"
 }, {
   "name": "Beat visualizer",
   "description":"Create a fun way to view sound in a visual format.",
   "url":"/examples/beat-visualizer",
-  "imageUrl":"/static/cp/projects/beat-visualizer.jpg",
-  "cardType": "example"
+  "imageUrl":"/static/cp/projects/beat-visualizer.jpg"
+}, {
+  "name": "Musical Cloud",
+  "description":"Make a glowing cloud that hangs above you and plays a song.",
+  "url":"/projects/musical-cloud",
+  "imageUrl":"/static/cp/projects/musical-cloud.jpg"
 }]
 ```

@@ -8,7 +8,7 @@ Make a cloud that glows blue and plays Twinkle Twinkle Little Star!
 
 ## Duration
 
- 2 activities, approximately 1 hour total
+2 activities, approximately 1 hour total
 
 ![done](/static/cp/projects/musical-cloud/done.jpg)
 

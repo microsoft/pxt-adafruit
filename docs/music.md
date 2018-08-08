@@ -22,5 +22,11 @@ Music projects for your @boardname@.
   "url":"/examples/beat-visualizer",
   "imageUrl":"/static/cp/projects/beat-visualizer.jpg",
   "cardType": "example"
+}, {
+  "name": "Musical Cloud",
+  "description":"Make a glowing cloud that hangs above you and plays a song.",
+  "url":"/projects/musical-cloud",
+  "imageUrl":"/static/cp/projects/musical-cloud.jpg",
+  "cardType": "example"
 }]
 ```

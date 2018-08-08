@@ -59,6 +59,11 @@ Music projects for your @boardname@.
   "name": "Guitar",
   "url":"/projects/guitar",
   "imageUrl":"/static/cp/projects/guitar.jpg"
+},
+{
+  "name": "Musical Cloud",
+  "url":"/projects/musical-cloud",
+  "imageUrl":"/static/cp/projects/musical-cloud.jpg"
 }]
 ```
 

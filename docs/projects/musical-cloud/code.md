@@ -78,7 +78,7 @@ music.playSound(twinkle)
 
 In the blank string  `""` for ``||variables:twinkle||``, type in the notes, rests, and beats of the _Twinkle Twinkle Little Star_ song. 
 
-The way to do this is to type in the note first, then the octave (in this case, itll always be 4), then a `:` symbol followed by how many beats you want it to play for. Here is an example:
+The way to do this is to type in the note first, then the octave (in this case, it will always be 4), then a `:` symbol followed by how many beats you want it to play for. Here is an example:
 
 ```block
 let twinkle = "c4:2"
@@ -104,17 +104,17 @@ Here are all the notes and beats for the song:
 | | | | | | | |
 |-|-|-|-|-|-|-|
 | **TWINKLE** | | **TWINKLE** | | **LITTLE** | | **STAR** |
-| `c4:1 c4:1` | | `g4:1 g4:1` | | `a4:1 a4:1` | | `g4:1` |
+| `c4:1 c4:1` | | `g4:1 g4:1` | | `a4:1 a4:1` | | `g4:2` |
 | **HOW I** | | **WONDER** | | **WHAT YOU** | | **ARE** |
-| `f4:1 f4:1` | | `e4:1 e4:1` | | `d4:1 d4:1` | | `c4:1` |
+| `f4:1 f4:1` | | `e4:1 e4:1` | | `d4:1 d4:1` | | `c4:2` |
 | **UP ABOVE** | | **THE WORLD** | | **SO** | | **HIGH** |
-| `g4:1 g4:1 f4:1` | | `f4:1 e4:1` | | `e4:1` | | `d4:1` |
+| `g4:1 g4:1 f4:1` | | `f4:1 e4:1` | | `e4:1` | | `d4:2` |
 | **LIKE A** | | **DIAMOND** | | **IN THE** | | **SKY** |
-| `g4:1 g4:1` | | `f4:1 f4:1` | | `e4:1 e4:1` | | `d4:1` |
+| `g4:1 g4:1` | | `f4:1 f4:1` | | `e4:1 e4:1` | | `d4:2` |
 | **TWINKLE** | | **TWINKLE** | | **LITTLE** | | **STAR** |
-| `c4:1 c4:1` | | `g4:1 g4:1` | | `a4:1 a4:1` | | `g4:1` |
+| `c4:1 c4:1` | | `g4:1 g4:1` | | `a4:1 a4:1` | | `g4:2` |
 | **HOW I** | | **WONDER** | | **WHAT YOU** | | **ARE** |
-| `f4:1 f4:1` | | `e4:1 e4:1` | | `d4:1 d4:1` | | `c4:1` |
+| `f4:1 f4:1` | | `e4:1 e4:1` | | `d4:1 d4:1` | | `c4:2` |
 
 ## Complete
 

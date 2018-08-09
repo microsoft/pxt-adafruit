@@ -12,8 +12,6 @@ Make this musical cloud with your @boardname@!
 
 ## Duration ~ 30 minutes 
 
-**Important**: make sure the [code](/projects/musical-cloud/code) portion of this project is done before making the cloud!
-
 ## Step 1: Setting Up the Lantern
 
 Open your paper lantern from the package and expand it. Tape your @boardname@ at the bottom of the inside of your lantern. Tape your NeoPixels strip to the side of the inside of your lantern in a circular pattern.
@@ -36,7 +34,7 @@ Cut a piece of string to let the cloud hang down to a length you like. Tie both 
 
 ![string](/static/cp/projects/musical-cloud/string.jpg)
 
-Finally, draw 2 lightning bolts and color them yellow. Cut them out the lighting bolts and tape each one on either side of the battery pack. This helps to hide the battery pack.
+Finally, draw 2 lightning bolts and color them yellow. Cut out the lighting bolts and tape each one on either side of the battery pack. This helps to hide the battery pack.
 
 ![battery](/static/cp/projects/musical-cloud/battery.jpg)
 

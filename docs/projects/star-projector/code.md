@@ -9,9 +9,11 @@ Program light patterns on the @boardname@ and make it spin with a servo.
 ## ~
 
 **Concepts:**
-  * Light
-  * Brightness
-  * Servos
+
+* Light
+* Brightness
+* Servos
+* Loops
 
 ## Duration: ~20 minutes
 

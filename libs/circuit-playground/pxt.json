@@ -15,7 +15,7 @@
         "accelerometer": "file:../accelerometer",
         "lightsensor": "file:../lightsensor",
         "thermometer": "file:../thermometer",
-        "music": "file:../music",
+        "mixer": "file:../mixer",
         "light": "file:../light",
         "switch": "file:../switch",
         "pulse": "file:../pulse",

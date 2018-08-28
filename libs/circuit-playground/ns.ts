@@ -59,7 +59,7 @@ enum LightAnimation {
 //% groups='["other", "Color", "Photon", "More"]'
 namespace light {
 
-    //%
+    //% whenUsed
     export const pixels = light.createStrip(defaultPin(), 10);
 
     /**

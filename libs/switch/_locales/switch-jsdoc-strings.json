@@ -1,4 +1,5 @@
 {
   "input": "Respond to and read data from buttons and sensors.\n\nEvents and data from sensors.",
-  "input.onSwitchMoved": "Do something when the slide switch is moved left or right.\n* @param direction the direction the switch must be moved to trigget the event"
+  "input.onSwitchMoved": "Do something when the slide switch is moved left or right.\n* @param direction the direction the switch must be moved to trigget the event",
+  "input.switchRight": "Gets a value indicating if the switch is positioned to the right"
 }

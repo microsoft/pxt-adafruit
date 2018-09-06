@@ -10,6 +10,7 @@
   "network.cableSendPacket": "Send data over cable.\n\nSend data over cable.",
   "network.onCableError": "Run action after there's an error reciving packet over cable.\n\nRun action after there's an error reciving packet over cable.",
   "network.onCablePacket": "Run action after a packet is recieved over cable.\n\nRun action after a packet is recieved over cable.",
+  "network.onCablePacketReceived": "Run some code when the cable receiver gets a packet.",
   "network.onCableReceivedBuffer": "Run some code when the cable receives data a buffer.",
   "network.onCableReceivedNumber": "Run some code when a number value comes across the cable.",
   "network.onCableReceivedNumbers": "Run some code when the cable receives a list of numbers."

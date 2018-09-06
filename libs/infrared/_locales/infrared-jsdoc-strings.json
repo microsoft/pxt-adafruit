@@ -10,6 +10,7 @@
   "network.infraredSendPacket": "Send data over IR.",
   "network.onInfraredError": "Run action after there's an error recieving packet over IR.",
   "network.onInfraredPacket": "Run action after a packet is recieved over IR.",
+  "network.onInfraredPacketReceived": "Run some code when the infrared receiver gets a packet.",
   "network.onInfraredReceivedBuffer": "Run some code when the infrared receiver gets a buffer.",
   "network.onInfraredReceivedNumber": "Run some code when the infrared receiver gets a number.",
   "network.onInfraredReceivedNumbers": "Run some code when the infrared receiver gets a list of numbers."

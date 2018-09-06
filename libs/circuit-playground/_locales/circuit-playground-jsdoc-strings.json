@@ -12,6 +12,8 @@
   "input.pinA6": "Capacitive pin A6",
   "input.pinA7": "Capacitive pin A7",
   "light": "Functions to operate colored LEDs.\n\nFunctions to operate colored LEDs.",
+  "light.animation": "Creates a builtin animation",
+  "light.animation|param|kind": "the type of animation",
   "light.clear": "Turn off all pixel LEDs on the onboard strip.",
   "light.graph": "Display a vertical bar graph based on the `value` and `high` value.\nIf `high` is 0, the chart gets adjusted automatically.",
   "light.graph|param|high": "maximum value, 0 to autoscale",

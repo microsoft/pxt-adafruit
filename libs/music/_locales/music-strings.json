@@ -37,10 +37,12 @@
   "music.rest|block": "rest|for %duration=device_beat",
   "music.ringTone|block": "ring tone|at %note=device_note",
   "music.setTempo|block": "set tempo to %value|(bpm)",
+  "music.setTone|block": "set tone %buffer",
   "music.setVolume|block": "set volume %volume",
   "music.sounds|block": "%name",
   "music.stopAllSounds|block": "stop all sounds",
   "music.tempo|block": "tempo (bpm)",
   "music|block": "music",
-  "{id:category}Music": "Music"
+  "{id:category}Music": "Music",
+  "{id:group}Tones": "Tones"
 }

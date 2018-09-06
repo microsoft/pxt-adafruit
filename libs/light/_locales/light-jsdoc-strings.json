@@ -38,6 +38,7 @@
   "light._animationPicker": "An animation that can be shown on a light strip",
   "light._animationPicker|param|animation": "The animation type",
   "light.colors": "Get the RGB value of a known color",
+  "light.createNeoPixelStrip": "This block is deprecated, use ``light.createStrip`` instead.",
   "light.createStrip": "Create a new programmable light strip.",
   "light.createStrip|param|mode": "the light encoding mode for different LED strips, eg: NeoPixelMode.RGB_GRB",
   "light.createStrip|param|numleds": "number of leds in the strip, eg: 30",

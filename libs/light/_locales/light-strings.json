@@ -55,6 +55,7 @@
   "light.colorWipeAnimation|block": "color wipe",
   "light.colors|block": "%color",
   "light.cometAnimation|block": "comet",
+  "light.createNeoPixelStrip|block": "create strip|pin %pin|pixels %numleds|mode %mode",
   "light.createStrip|block": "create strip||on %pin with %numleds pixels",
   "light.fade|block": "fade %color=neopixel_colors|by %brightness",
   "light.hsv|block": "hue %hue|sat %sat|val %val",
@@ -67,5 +68,6 @@
   "{id:category}Light": "Light",
   "{id:group}Color": "Color",
   "{id:group}More": "More",
-  "{id:group}Photon": "Photon"
+  "{id:group}Photon": "Photon",
+  "{id:subcategory}NeoPixel": "NeoPixel"
 }

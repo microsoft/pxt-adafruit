@@ -1,5 +1,6 @@
 {
   "network.cableSendNumber|block": "cable send number %value",
+  "network.onCablePacketReceived|block": "on cable received",
   "network.onCableReceivedNumber|block": "on cable received",
   "network|block": "network",
   "{id:category}CablePacket": "CablePacket",

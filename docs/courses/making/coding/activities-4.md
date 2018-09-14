@@ -2,7 +2,7 @@
 
 ## Twenty Questions
 
-In the traditional game of Twenty Questions, one player thinks of a noun like parrot, watermellon, Thailand, or banjo. The second player gets to ask up to twenty yes or no questions in trying to guess the noun. You can limit the range of nouns to categories like musicians, things found in Hawaii, plants, or even topics relating to a school subject. For this @boardname@ version, instead of answering the questions yes or no, the first player presses button **A** or **B** to send the second player a color and music note combination indicating yes or no. The right answer earns ``||input:on buttons A+B click||``, which is a celebratory light animation and sound sequence. 
+In the traditional game of Twenty Questions, one player thinks of a noun like parrot, watermellon, Thailand, or banjo. The second player gets to ask up to twenty yes or no questions in trying to guess the noun. You can limit the range of nouns to categories like musicians, things found in Hawaii, plants, or even topics relating to a school subject. For this @boardname@ version, instead of answering the questions yes or no, the first player presses button **A** or **B** to send the second player a color and music note combination indicating yes or no. The right answer earns ``||input:on buttons A+B click||``, which is a celebratory light animation and sound sequence.
 
 ```blocks
 network.onInfraredReceivedNumber(function (num) {
@@ -89,7 +89,7 @@ Here is the code that Blue Team members might use.
 
 ![Simulator with blue team's board](/static/courses/making/coding/blue-team-sim.jpg)
 
-Red Team will have all the same code, except they will send a `2` instead of a `1`. 
+Red Team will have all the same code, except they will send a `2` instead of a `1`.
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
@@ -98,6 +98,6 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-Looped tape can help keep the device secure to a battery pack. Specifying how players may hold the @boardname@ is a good idea so that the IR send and receive units don’t get blocked. 
+Looped tape can help keep the device secure to a battery pack. Specifying how players may hold the @boardname@ is a good idea so that the IR send and receive units don’t get blocked.
 
-Can you apply the counting variable used above in [Twenty Questions and A Variable](#twenty-questions-and-a-variable) to this game of tag? 
+Can you apply the counting variable used above in [Twenty Questions and a Variable](#twenty-questions-and-a-variable) to this game of tag?

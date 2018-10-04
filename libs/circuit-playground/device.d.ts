@@ -22,16 +22,16 @@ declare namespace pins {
     // Define aliases, as Digital Pins
 
     //% fixedInstance shim=pxt::getPin(PIN_A4)
-    const SCL: DigitalInOutPin;
+    const SCL: DigitalPin;
     //% fixedInstance shim=pxt::getPin(PIN_A5)
-    const SDA: DigitalInOutPin;
+    const SDA: DigitalPin;
     //% fixedInstance shim=pxt::getPin(PIN_A6)
-    const RX: DigitalInOutPin;
+    const RX: DigitalPin;
     //% fixedInstance shim=pxt::getPin(PIN_A7)
-    const TX: DigitalInOutPin;
+    const TX: DigitalPin;
 
     //% fixedInstance shim=pxt::getPin(PIN_D13)
-    const LED: DigitalInOutPin;
+    const LED: DigitalPin;
 }
 
 

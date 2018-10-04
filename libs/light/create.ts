@@ -15,7 +15,7 @@ namespace light {
     //% subcategory="NeoPixel"
     //% blockSetVariable=strip
     export function createStrip(
-        pin: DigitalInOutPin = null,
+        pin: DigitalPin = null,
         numleds: number = 10,
         mode: NeoPixelMode = NeoPixelMode.RGB
     ): NeoPixelStrip {

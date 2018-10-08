@@ -49,7 +49,6 @@
         "streams": false,
         "aspectRatio": 1.0,
         "parts": false,
-        "enableTrace": true,
         "boardDefinition": {
             "id": "adafruit-circuit-playground-express",
             "visual": "circuitplayground",
@@ -255,7 +254,7 @@
         "codalTarget": {
             "name": "codal-circuit-playground",
             "url": "https://github.com/lancaster-university/codal-circuit-playground",
-            "branch": "v1.5.0",
+            "branch": "v1.5.3",
             "type": "git"
         },
         "codalBinary": "CIRCUIT_PLAYGROUND",
@@ -267,7 +266,7 @@
             }
         },
         "githubCorePackage": "lancaster-university/codal",
-        "gittag": "v0.4.0",
+        "gittag": "v0.5.0",
         "serviceId": "codal2cp",
         "dockerImage": "pext/yotta:latest"
     },
@@ -325,6 +324,8 @@
         "simAnimationExit": "roll out",
         "highContrast": true,
         "greenScreen": true,
+        "enableTrace": true,
+        "print": true,
         "hasAudio": true,
         "usbHelp": [],
         "extendEditor": true,

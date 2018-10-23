@@ -13,7 +13,7 @@ Fun tricks to play on your friends.
 }, {
   "name": "Confetti box", 
   "url":"/projects/confetti-box",
-  "description": "Drop contetti or bits of paper on your friends with a clap of your hands!",
+  "description": "Drop confetti or bits of paper on your friends with a clap of your hands!",
   "imageUrl":"/static/cp/projects/thumb/confetti-box.jpg"
 }]
 ```

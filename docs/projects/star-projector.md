@@ -15,7 +15,7 @@ Make a star projector out of poster board that projects constellations in a dark
 * [Dodecahedron Template](/static//cp/projects/star-projector/star-projector-template.jpg)
 
 ### Electronics
-* 1 Adafruit Circuit Clayground Express, a battery holder with an on/off switch, and 3 AAA batteries
+* 1 Adafruit Circuit Playground Express, a battery holder with an on/off switch, and 3 AAA batteries
 * Servo
 * Alligator clips
 

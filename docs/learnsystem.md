@@ -43,7 +43,7 @@
     },
     {
         "name": "Hot Potato",
-        "description": "A new wat to play the fun and popular Hot Potato game.",
+        "description": "A new way to play the fun and popular Hot Potato game.",
         "url": "/learnsystem/hot-potato",
         "imageUrl": "/static/cp/learn/potato.jpg"
     },

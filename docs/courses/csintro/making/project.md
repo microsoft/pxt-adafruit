@@ -58,7 +58,7 @@ Pink Piggy
 ![A ladybug AdaPet](/static/courses/csintro/making/micropet-ladybug.jpg)
 Ladybug
 
-![A caterpiller AdaPet](/static/courses/csintro/making/micropet-caterpillar.jpg)
+![A caterpillar AdaPet](/static/courses/csintro/making/micropet-caterpillar.jpg)
 Caterpillar
 
 ![A fox AdaPet](/static/courses/csintro/making/micropet-fox.jpg)

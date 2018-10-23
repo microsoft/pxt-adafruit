@@ -11,7 +11,7 @@ input.onLoudSound(function () {
 
 ## Step 2
 
-Drag the ``||light:set brightnesss||`` and ``||light:set all pixels||`` blocks into ``||input:on loud sound||`` to turn the lights **ON** really bright. Make the pixel color `white` an set the brightness to `255`.
+Drag the ``||light:set brightness||`` and ``||light:set all pixels||`` blocks into ``||input:on loud sound||`` to turn the lights **ON** really bright. Make the pixel color `white` an set the brightness to `255`.
 
 ```blocks
 input.onLoudSound(function () {

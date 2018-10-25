@@ -3,13 +3,13 @@
 ## Introduction
 
 * Table of Contents
-* [About the Course](/courses/maker/introduction/about)
-* [About the Author](/courses/maker/introduction/author)
-* [Student Evaluation](/courses/maker/introduction/evaluation)
+* [About the Course](/courses/maker/intro/about)
+* [About the Author](/courses/maker/intro/author)
+* [Student Evaluation](/courses/maker/intro/evaluation)
 
 ## General Reference
 
-* Maker Tools and Techniques
+* [Maker Tools and Techniques](/courses/maker/general/maker-tools-techniques)
 * Coding the Circuit Playground Express
 * Loading and Managing your Programs
 

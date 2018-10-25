@@ -19,7 +19,7 @@ This course is currently under development. More maker topics and projects are c
   "url":"/courses/maker/general"
 }, {
   "name": "Projects",
-  "description": "Introduction to the author of the course.",
+  "description": "Guided maker projects which combine a creative activity with coding.",
   "url":"/courses/maker/projects"
 }]
 ```

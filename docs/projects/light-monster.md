@@ -8,7 +8,7 @@ Make a monster that opens its mouth based on light!
 
 ## Duration
 
-3 activites, approximately 1-2 hours total
+3 activities, approximately 1-2 hours total
 
 ## Materials
 

@@ -2,6 +2,12 @@
 
 General reference topics on making and coding with the @boardname@.
 
+## ~ hint
+
+This course is currently under development. More general maker topics are coming soon!
+
+## ~
+
 ```codecard
 [{
   "name": "Tools and Techniques",
@@ -18,6 +24,4 @@ General reference topics on making and coding with the @boardname@.
 
 ## See Also
 
-[Tools and Techniques](/courses/maker/general/maker-tools-techniques),
-[Coding with MakeCode](/courses/maker/general/about),
-[Loading and managing programs](/courses/maker/general/load-manage-programs)
+[Tools and Techniques](/courses/maker/general/maker-tools-techniques)

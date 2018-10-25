@@ -4,19 +4,13 @@ Here is a look at the tools and some of the techniques that will be useful in co
 
 ## Tools and Materials
 
-**Electronic Components**: Adafruit and other electronics suppliers carry items handy for projects like battery packs, conductive thread, servo motors, NeoPixels, and more. Here is Adafruit’s curated list of products that are compatible with the Circuit Playground Express: https://learn.adafruit.com/adafruit-circuit-playground-express/accessories, and some examples of electronic components you may need:
+### Electronic Components
 
-* Batteries and Battery packs – https://www.adafruit.com/category/889
->More information about Lithium Ion batteries can be found here: https://learn.adafruit.com/li-ion-and-lipoly-batteries
-* Cables
->Micro USB cables – https://www.amazon.com/gp/product/B019C0BB9C/
->Alligator or Croc clip cables – https://www.adafruit.com/product/3447
->Male jumper wire to Alligator clips – https://www.adafruit.com/product/3448
-* NeoPixel strip – https://www.adafruit.com/product/3811
-* Copper tape – https://www.amazon.com/Bullet-Face-Double-Sided-Conductive-Electrical/dp/B01MR5DSCM) 
-* Servo motors –
->180-degree motors – https://www.amazon.com/Micro-Helicopter-Airplane-Remote-Control/dp/B072V529YD
->Continuous motors – https://www.adafruit.com/product/2442, or https://www.amazon.com/Feetech-RCmall-Degree-Continuous-Rotation/dp/B077HZ6ZP8
+Adafruit and other electronics suppliers carry items handy for projects like battery packs, conductive thread, servo motors, NeoPixels, and more. Here is Adafruit’s curated list of products that are compatible with the @boardname@: https://learn.adafruit.com/adafruit-circuit-playground-express/accessories, and some examples of electronic components you may need:
+
+#### Batteries and Battery packs
+
+* An example – https://www.adafruit.com/category/889
 
 A variety of battery packs with [JST connectors](https://en.wikipedia.org/wiki/JST_connector) work well.
 
@@ -26,12 +20,41 @@ _Various sizes and types of battery options_
 ![JST Connector](/static/courses/maker/general/maker-tools-techniques/jst-connector.png)
 _JST Connector_
 
-**Hot Glue Guns**: These come in mini and standard sizes. The minis are easier to store and are better for smaller hands. They do require more frequent insertion of new glue sticks though. Be sure to order the correct size glue sticks for the glue gun you choose. Burns from the nozzle tips or the glue itself will happen, but they are rarely serious and serve as a reminder to be more careful in the future. Look for glue guns that come with protective plastic nozzle covers that help prevent burns. For example – https://www.amazon.com/Glue-Gun-TopElek-Temperature-Projects/dp/B0776MFZ2W
+More information about Lithium Ion batteries can be found at: https://learn.adafruit.com/li-ion-and-lipoly-batteries
+
+#### Cables
+
+* Micro USB cables – https://www.amazon.com/gp/product/B019C0BB9C/
+* Alligator or Croc clip cables – https://www.adafruit.com/product/3447
+* Male jumper wire to Alligator clips – https://www.adafruit.com/product/3448
+
+#### NeoPixel strip
+
+* An example – https://www.adafruit.com/product/3811
+
+#### Copper tape
+
+* An example – https://www.amazon.com/Bullet-Face-Double-Sided-Conductive-Electrical/dp/B01MR5DSCM)
+
+#### Servo motors
+
+Some examples:
+
+* 180-degree motors – https://www.amazon.com/Micro-Helicopter-Airplane-Remote-Control/dp/B072V529YD
+* Continuous motors – https://www.adafruit.com/product/2442, or https://www.amazon.com/Feetech-RCmall-Degree-Continuous-Rotation/dp/B077HZ6ZP8
+
+### Hot Glue Guns
+
+These come in mini and standard sizes. The minis are easier to store and are better for smaller hands. They do require more frequent insertion of new glue sticks though. Be sure to order the correct size glue sticks for the glue gun you choose. Burns from the nozzle tips or the glue itself will happen, but they are rarely serious and serve as a reminder to be more careful in the future. Look for glue guns that come with protective plastic nozzle covers that help prevent burns.
+
+* An example – https://www.amazon.com/Glue-Gun-TopElek-Temperature-Projects/dp/B0776MFZ2W
 
 ![Hot glue guns](/static/courses/maker/general/maker-tools-techniques/gluegun.jpg)
 _Hot Glue Guns_
 
-**Cardboard shears, craft knife, box cutter, or saw**: Normal scissors are not designed to cut cardboard and will often start to loosen at the hinge if used repetitively to cut cardboard. Shears, a saw, or a knife are a better bet. Deciding whether to let students use knives will depend on their age and temperament. It’s a good idea to emphasize that the hand that isn’t holding the knife should never be in the path of the blade. Teachers can also have a couple of cutting stations near each other where supervision is centralized. Another idea is to have students qualify to be able to use knives by passing a skills and safety test.
+### Cardboard shears, craft knife, box cutter, or saw
+
+Normal scissors are not designed to cut cardboard and will often start to loosen at the hinge if used repetitively to cut cardboard. Shears, a saw, or a knife are a better bet. Deciding whether to let students use knives will depend on their age and temperament. It’s a good idea to emphasize that the hand that isn’t holding the knife should never be in the path of the blade. Teachers can also have a couple of cutting stations near each other where supervision is centralized. Another idea is to have students qualify to be able to use knives by passing a skills and safety test.
 
 Some examples:
 
@@ -42,7 +65,9 @@ Some examples:
 ![Cutting shears and box cutters](/static/courses/maker/general/maker-tools-techniques/shears-cutters.jpg)
 _Cardboard cutting shears and box cutters_
 
-**Masking tape, duct tape, or clear packing tape**: It’s very handy to have different types of tape on hand. You should not apply hot glue to the Circuit Playground Express, but a loop of tape on the back is often all you need to secure the device. Masking tape is also great for wrapping around servo motors because you can then hot glue them and have an easier time getting them free of the glue.
+### Masking tape, duct tape, or clear packing tape
+
+It’s very handy to have different types of tape on hand. You should not apply hot glue to the @boardname@, but a loop of tape on the back is often all you need to secure the device. Masking tape is also great for wrapping around servo motors because you can then hot glue them and have an easier time getting them free of the glue.
 
 Some of my favorites include:
 
@@ -55,24 +80,38 @@ Some of my favorites include:
 _Different types of tape come in handy_
 
 ![Using a tape loop](/static/courses/maker/general/maker-tools-techniques/tape-loop.jpg)
-_Loop tape on the back of the @boardname@ Playground Express_
+_Loop tape on the back of the @boardname@_
 
 ![Glue servo and use tape](/static/courses/maker/general/maker-tools-techniques/servo-glue.jpg)
 _Tape around Servo Motor before gluing_
 
-**Cutting surface**: Self-healing cutting mats are really useful. They protect your table from damage, and the measuring lines can be helpful. They usually come in a distinct blue or green color, so they are also effective at designating cutting stations in the classroom for supervision. Sheets of cardboard are another alternative. For example – https://www.amazon.com/Alvin-Professional-Self-Healing-Cutting-GBM1218/dp/B0015AOIYI 
+### Cutting surface
 
-**Popsicle sticks**: Popsicle or craft sticks are a great way to quickly extend the servo motor arm or “horn.” Hot glue the popsicle stick to the horn, but avoid getting glue in the hole that attaches to the servo motor. With a little work, the servo horn will come back off at the end of the project for reuse. For example – https://www.amazon.com/gp/product/B0784C7WQ9
+Self-healing cutting mats are really useful. They protect your table from damage, and the measuring lines can be helpful. They usually come in a distinct blue or green color, so they are also effective at designating cutting stations in the classroom for supervision. Sheets of cardboard are another alternative.
+
+* An example – https://www.amazon.com/Alvin-Professional-Self-Healing-Cutting-GBM1218/dp/B0015AOIYI 
+
+### Popsicle sticks
+
+Popsicle or craft sticks are a great way to quickly extend the servo motor arm or “horn.” Hot glue the popsicle stick to the horn, but avoid getting glue in the hole that attaches to the servo motor. With a little work, the servo horn will come back off at the end of the project for reuse.
+
+* An example – https://www.amazon.com/gp/product/B0784C7WQ9
 
 ![Popsicle sticks glued with servo arms](/static/courses/maker/general/maker-tools-techniques/popsicle-sticks.jpg)
 _Hot glue servo horn to the end of a popsicle stick_
 
-**Drill**: A drill can be used on cardboard or, with gentle pressure, on popsicle sticks. Almost any pressure at all will split the popsicle stick, so plan to lose a few to splits before you master the technique.
+### Drill
+
+A drill can be used on cardboard or, with gentle pressure, on popsicle sticks. Almost any pressure at all will split the popsicle stick, so plan to lose a few to splits before you master the technique.
 
 ![Holes drilled into popsicle sticks](/static/courses/maker/general/maker-tools-techniques/drill.jpg)
 _Gently drill holes in popsicle sticks_
 
-**Zip ties**: Zip ties are one of those pieces of equipment that doesn’t get used every day, but when they come in handy, they come in VERY handy. You can find them in various sizes and colors, and some can unzip while most will need to be cut apart to undo. Connect a Circuit Playground Express to something, hold down a servo motor, join two drilled popsicle sticks, and find other uses for this versatile item. For example – https://www.amazon.com/Nylon-Cable-Ties-Yellow-Fuschia/dp/B009OLZJ4I.
+### Zip ties
+
+Zip ties are one of those pieces of equipment that doesn’t get used every day, but when they come in handy, they come in VERY handy. You can find them in various sizes and colors, and some can unzip while most will need to be cut apart to undo. Connect a @boardname@ to something, hold down a servo motor, join two drilled popsicle sticks, and find other uses for this versatile item.
+
+* An example – https://www.amazon.com/Nylon-Cable-Ties-Yellow-Fuschia/dp/B009OLZJ4I
 
 ![Bundle of zip ties](/static/courses/maker/general/maker-tools-techniques/zip-ties.jpg)
 _Different size zip ties are available_
@@ -105,7 +144,7 @@ Cutting through one of the liner sheets lets you remove it and expose the corrug
 A gusset brace can prop something up vertically or can lend support to a structure. Cut the corners off a piece of cardboard to easily make 90-degree gusset braces, or make one at a different angle if needed, then trace it to make exact copies. For larger braces, it can be handy to draw lines alongside the brace to indicate where your hot glue will go. Apply the glue next to or on the lines, then attach the gusset brace.
 
 Sewing techniques 
-You can use conductive thread to attach NeoPixels to the Circuit Playground Express and control their light patterns. See below for some general sewing tips, and see the Fabric Friend and Wearable NeoPixels projects for further details on working with NeoPixels. 
+You can use conductive thread to attach NeoPixels to the @boardname@ and control their light patterns. See below for some general sewing tips, and see the Fabric Friend and Wearable NeoPixels projects for further details on working with NeoPixels. 
 
 https://www.youtube.com/watch?v=hbYOFt85KjQ 
 
@@ -158,7 +197,7 @@ _Two lines of thread sewn for each connection_
 
 ## Copper tape techniques
 
-Conductive copper tape lets you extend the capacitive touch capabilities of the Circuit Playground Express. Connect tape to any pin A1-7, select the “on pin click” input, and now your code will respond when you touch the tape.
+Conductive copper tape lets you extend the capacitive touch capabilities of the @boardname@. Connect tape to any pin A1-7, select the “on pin click” input, and now your code will respond when you touch the tape.
 
 Move a servo motor when you touch copper tape connected to pin **A1** on the @boardname@.
 
@@ -197,6 +236,11 @@ Hot glue applied to the parts of the servo horns that are outside the connection
 ![Glue the horns to the popsicle sticks](/static/courses/maker/general/maker-tools-techniques/servo-motor3.jpg)
 
 Continuous rotation servo motors can spin a servo horn with a stick or other material attached, or you can buy wheels to screw onto the motors to make vehicles. See the Light Bot project for more information on how to do this. 
-The Circuit Playground Express can power and control up to two micro servo motors. Ideally, a servo motor would be attached to the VOUT pin for sufficient power. The two 3.3V pins also work, but they under-power the servo a bit.
+The @boardname@ can power and control up to two micro servo motors. Ideally, a servo motor would be attached to the **VOUT** pin for sufficient power. The two **3.3V** pins also work, but they under-power the servo a bit.
 
 ![Power pins on the CPX](/static/courses/maker/general/maker-tools-techniques/cpx-power-ports.png)
+_VOUT and 3.3V connectors on the @boardname@_
+
+For a complete look and using and coding servo motors, see this video. Note that servos can only be attached to pins **A1** or **A2**.
+
+https://www.youtube.com/watch?v=cofElsolYk4&t=3s

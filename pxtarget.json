@@ -154,6 +154,7 @@
         "githubPackages": true
     },
     "compile": {
+        "webUSB": true,
         "isNative": true,
         "useUF2": true,
         "hasHex": true,

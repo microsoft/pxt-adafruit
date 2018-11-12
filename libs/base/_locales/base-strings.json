@@ -38,9 +38,11 @@
   "loops.forever|block": "forever",
   "loops.pause|block": "pause %pause=timePicker|ms",
   "loops|block": "loops",
+  "msgpack|block": "msgpack",
   "parseFloat|block": "parse to number %text",
   "parseInt|block": "parse to integer %text",
   "pause|block": "pause %pause=timePicker|ms",
+  "pins|block": "pins",
   "{id:category}Array": "Array",
   "{id:category}Arrays": "Arrays",
   "{id:category}Basic": "Basic",
@@ -51,7 +53,9 @@
   "{id:category}Helpers": "Helpers",
   "{id:category}Loops": "Loops",
   "{id:category}Math": "Math",
+  "{id:category}Msgpack": "Msgpack",
   "{id:category}Number": "Number",
+  "{id:category}Pins": "Pins",
   "{id:category}String": "String",
   "{id:category}Text": "Text"
 }

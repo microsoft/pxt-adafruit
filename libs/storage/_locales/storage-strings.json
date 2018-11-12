@@ -1,4 +1,11 @@
 {
+  "storage.appendLine|block": "append file $filename with line $data",
+  "storage.append|block": "append file $filename with $data",
+  "storage.exists|block": "file $filename exists",
+  "storage.overwrite|block": "overwrite file $filename with $data",
+  "storage.read|block": "read file $filename",
+  "storage.remove|block": "remove file $filename",
+  "storage.size|block": "size of file $filename",
   "storage|block": "storage",
   "{id:category}Storage": "Storage"
 }

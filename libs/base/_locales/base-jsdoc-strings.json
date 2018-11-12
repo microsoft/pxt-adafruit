@@ -173,11 +173,17 @@
   "loops.forever": "Repeats the code forever in the background. On each iteration, allows other codes to run.",
   "loops.pause": "Pause for the specified time in milliseconds",
   "loops.pause|param|ms": "how long to pause for, eg: 100, 200, 500, 1000, 2000",
+  "msgpack.packNumberArray": "Pack a number array into a buffer.",
+  "msgpack.packNumberArray|param|nums": "the numbers to be packed",
+  "msgpack.unpackNumberArray": "Unpacks a buffer into a number array.",
   "parseFloat": "Convert a string to a number.",
   "parseInt": "Convert a string to an integer.",
   "pause": "Pause for the specified time in milliseconds",
   "pauseUntil": "Busy wait for a condition to be true",
   "pauseUntil|param|condition": "condition to test for",
   "pauseUntil|param|timeOut": "if positive, maximum duration to wait for in milliseconds",
-  "pause|param|ms": "how long to pause for, eg: 100, 200, 500, 1000, 2000"
+  "pause|param|ms": "how long to pause for, eg: 100, 200, 500, 1000, 2000",
+  "pins.createBufferFromArray": "Create a new buffer initalized to bytes from given array.",
+  "pins.createBufferFromArray|param|bytes": "data to initalize with",
+  "pins.sizeOf": "Get the size in bytes of specified number format."
 }

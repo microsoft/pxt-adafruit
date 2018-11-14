@@ -1,0 +1,23 @@
+{
+  "datalogger": "A tiny data logging framework",
+  "datalogger.FileStorage": "A storage for datalog data",
+  "datalogger.FileStorage.appendHeaders": "Appends the headers in datalog",
+  "datalogger.FileStorage.appendRow": "Appends a row of data",
+  "datalogger.FileStorage.flush": "Flushes any buffered data",
+  "datalogger.FileStorage.init": "Initializes the storage",
+  "datalogger.Storage": "A storage for log data",
+  "datalogger.Storage.appendHeaders": "Appends the headers in log",
+  "datalogger.Storage.appendRow": "Appends a row of data",
+  "datalogger.Storage.flush": "Flushes any buffered data",
+  "datalogger.Storage.init": "Initializes the storage",
+  "datalogger.addRow": "Starts a new row of data",
+  "datalogger.addValue": "Adds a cell to the row of data",
+  "datalogger.addValue|param|name": "name of the cell, eg: \"x\"",
+  "datalogger.addValue|param|value": "value of the cell, eg: 0",
+  "datalogger.flush": "Commits any buffered row to disk",
+  "datalogger.sendToConsole": "Send the data logger output to the console",
+  "datalogger.setEnabled": "Turns on or off datalogging",
+  "datalogger.setSampleInterval": "Sets the minimum number of milli seconds between rows",
+  "datalogger.setSampleInterval|param|millis": "milliseconds between each sample, eg: 50",
+  "datalogger.setStorage": "* @param storage custom storage solution"
+}

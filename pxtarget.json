@@ -27,6 +27,7 @@
         "libs/gamepad",
         "libs/servo",
         "libs/storage",
+        "libs/datalogger",
         "libs/serial"
     ],
     "serial": {

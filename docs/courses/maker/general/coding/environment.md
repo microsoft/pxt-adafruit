@@ -8,7 +8,7 @@ The MakeCode environment is divided into three basic sections:
 
 ![Tour of the MakeCode editor](/static/courses/maker/general/coding/ide.jpg)
 
-### Simulator
+## Simulator
 
 On the left is the Simulator, which will simulate what your program will look like running on the actual hardware. It is interactive and can simulate inputs you might like to use in your program – like button presses, shakes, tilts, light exposure, temperature level, and sound volume. Note that the indicators for shake, light, sound, etc. will only appear if you’re using blocks for those inputs in your program. The Simulator can then simulate outputs like changing the lights and playing sounds. The buttons in the toolbar below the Simulator let you stop/start the Simulator, refresh, slow down, control volume, and make full screen.
 
@@ -18,7 +18,7 @@ To make the Simulator appear and disappear, press the arrow in the far bottom le
 
 ![Simulator hide button](/static/courses/maker/general/coding/sim-hide-button.png)
 
-### Toolbox
+## Toolbox
 
 In the middle is the blocks Toolbox. Clicking on a category or "drawer" reveals the blocks available within that drawer. You can then click and drag individual blocks to the Workspace area on the right. Sometimes the Toolbox drawer contains more blocks than can be seen in your screen, so you can scroll down in an open drawer to reveal more blocks. If you know what block you want, but can’t remember the category, you can use the Search field at the top of the Toolbox to look for certain blocks.
 
@@ -32,7 +32,7 @@ Another service the blocks Toolbox performs is as a trash can. Drag unwanted blo
 
 ![Drag blocks to trash](/static/courses/maker/general/coding/trash.png)
 
-### Workspace
+## Workspace
 
 On the right is the coding Workspace. This is where you will drag and drop blocks from the Toolbox to create your program. Many blocks may initially appear grayed-out. This indicates that the block won’t run because it needs to be inside an input or loop.
 

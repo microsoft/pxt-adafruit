@@ -15,7 +15,9 @@ This course is currently under development. More general maker topics are coming
   "url":"/courses/maker/general/maker-tools-techniques"
 }, {
   "name": "Coding with MakeCode",
-  "description": "Introdution to coding in the MakeCode environment."
+  "description": "Introdution to coding in the MakeCode environment.",
+  "url":"/courses/maker/general/coding"
+
 }, {
   "name": "Managing Programs",
   "description": "How to manage the programs you create in MakeCode."

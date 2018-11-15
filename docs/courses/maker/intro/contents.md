@@ -10,7 +10,7 @@
 ## General Reference
 
 * [Maker Tools and Techniques](/courses/maker/general/maker-tools-techniques)
-* Coding the Circuit Playground Express
+* [Coding the Circuit Playground Express](/courses/maker/general/coding)
 * Loading and Managing your Programs
 
 ## Projects

@@ -19,27 +19,27 @@ This chapter will first discuss and give practice exercises for the Toolbox draw
 
 ### Loops
 
-* Loops
-* Activities
+* [Loops](/courses/maker/general/coding/loops)
+* [Activities](/courses/maker/general/coding/activities-2)
 
 ### Logic
 
-* Logic
-* Activities
+* [Logic](/courses/maker/general/coding/logic)
+* [Activities](/courses/maker/general/coding/activities-3)
 
 ### Variables and network
 
-* Variables
-* Network
-* Activities
+* [Variables](/courses/maker/general/coding/variables)
+* [Network](/courses/maker/general/coding/network)
+* [Activities](/courses/maker/general/coding/activities-4)
 
 ### Servos
 
-* Servos
+* [Servos](/courses/maker/general/coding/servos)
 
 ### NeoPixels
 
-* NeoPixels
+* [NeoPixels](/courses/maker/general/coding/neopixels)
 
 ### JavaScript
 

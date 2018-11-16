@@ -31,7 +31,8 @@ _See the [Maker Tools and Techniques](/courses/maker/general/maker-tools-techniq
 
 * Use piece of string, a piece of paper, or anything similar to find the circumference of your head at hat level. 
 * Transfer that length to your piece of cardboard or poster board, and use a straightedge to draw the main band of the crown 1-3 inches wide. 
-* Be sure to leave a couple of extra inches in circumference so that you can eventually tape the overlap to secure the crown. * Either free-hand or using objects to trace, add to the profile of the crown. You can look online to find a [silhouette](https://www.bing.com/images/search?q=crown+silhouette) you like. 
+* Be sure to leave a couple of extra inches in circumference so that you can eventually tape the overlap to secure the crown.
+* Either free-hand or using objects to trace, add to the profile of the crown. You can look online to find a [silhouette](https://www.bing.com/images/search?q=crown+silhouette) you like. 
 * Make sure to leave a space for mounting the Circuit Playground Express board.
 
 ![Crown silloute trace on cardboard](/static/courses/maker/projects/crown/crown-making1.jpg)

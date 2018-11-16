@@ -43,4 +43,4 @@ This chapter will first discuss and give practice exercises for the Toolbox draw
 
 ### JavaScript
 
-* Blocks to JavaScript
+* [Blocks to JavaScript](/courses/maker/general/coding/javascript)

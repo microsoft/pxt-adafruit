@@ -8,13 +8,13 @@ Structured courses for teaching science and technology in the classroom.
 
 ```codecard
 [{
-  "name": "Making",
+  "name": "Maker",
   "description": "A course in Making combining creative project makes with coding.",
-  "url":"/courses/making",
-  "imageUrl":"/static/courses/making/making.jpg"
+  "url":"/courses/maker",
+  "imageUrl":"/static/courses/maker/maker.png"
 }]
 ```
 
 ## See Also
 
-[Making](/courses/making)
+[Maker](/courses/maker)

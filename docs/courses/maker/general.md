@@ -2,12 +2,6 @@
 
 General reference topics on making and coding with the @boardname@.
 
-## ~ hint
-
-This course is currently under development. More general maker topics are coming soon!
-
-## ~
-
 ```codecard
 [{
   "name": "Tools and Techniques",

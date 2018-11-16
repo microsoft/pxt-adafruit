@@ -34,6 +34,14 @@
     * [Beat visualizer](/examples/beat-visualizer)
     * [Fireflies](/examples/fireflies)
 
+## Courses #courses
+
+* [Courses](/courses)
+    * [Maker](/courses/maker)
+        * [Introduction](/courses/maker/intro)
+        * [General](/courses/maker/general)
+        * [Projects](/courses/maker/projects)
+
 ## Reference #reference
 
 * [Reference](/reference)

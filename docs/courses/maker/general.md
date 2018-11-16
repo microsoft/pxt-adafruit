@@ -20,10 +20,15 @@ This course is currently under development. More general maker topics are coming
 
 }, {
   "name": "Managing Programs",
-  "description": "How to manage the programs you create in MakeCode."
+  "description": "How to manage the programs you create in MakeCode.",
+  "url":"/courses/maker/general/load-manage-programs"
+
 }]
 ```
 
 ## See Also
 
-[Tools and Techniques](/courses/maker/general/maker-tools-techniques)
+[Tools and Techniques](/courses/maker/general/maker-tools-techniques),
+[Coding with MakeCode](/courses/maker/general/coding),
+[Managing Programs](/courses/maker/general/load-manage-programs)
+

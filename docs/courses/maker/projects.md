@@ -17,7 +17,8 @@ This course is currently under development. More Maker projects are coming soon!
 }, {
   "name": "Light Box",
   "description": "Show off art-infused objects with a multi-color light box.",
-  "imageUrl": "/static/courses/maker/projects/common/coming-soon.png"
+  "url": "/courses/maker/projects/light-box",
+  "imageUrl": "/static/courses/maker/projects/light-box.png"
 }, {
   "name": "Music Maker",
   "description": "Play musical notes and entire songs.",

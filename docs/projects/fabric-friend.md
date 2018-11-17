@@ -52,7 +52,7 @@ Sewing, coding with variables, conditionals and logic
 ## Activities
 
 * [Make](/projects/fabric-friend/make)  
-* [Code](/projects/fabric-friendmd /code)  
+* [Code](/projects/fabric-friend/code)  
 
 ## Acknowledgements
 

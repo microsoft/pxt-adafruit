@@ -7,9 +7,12 @@ Making an interactive crown is a fun way to celebrate a birthday, Halloween, a c
 https://www.youtube.com/watch?v=KvW-YwoTUVk
 
 ## Time Required
+
 | Hours |
 |-|
 | ![1.5 hour time scale](/static/courses/maker/projects/common/1-5-hours.png) |
+<br/>
+1.5 hours
 
 ## Academic tie-in ideas
 

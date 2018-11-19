@@ -12,6 +12,8 @@ https://www.youtube.com/watch?v=S7xUFisT7wk
 | Hours |
 |-|
 | ![2.0 hour time scale](/static/courses/maker/projects/common/2-0-hours.png) |
+<br/>
+Approximately 2 hours
 
 ## Academic tie-in ideas
 

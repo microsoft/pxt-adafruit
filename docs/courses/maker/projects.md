@@ -22,7 +22,8 @@ This course is currently under development. More Maker projects are coming soon!
 }, {
   "name": "Music Maker",
   "description": "Play musical notes and entire songs.",
-  "imageUrl": "/static/courses/maker/projects/common/coming-soon.png"
+   "url": "/courses/maker/projects/music-maker",
+  "imageUrl": "/static/courses/maker/projects/music-maker.png"
 }, {
   "name": "Board Games",
   "description": "Create your own board game or make a new version of a favorite one.",

@@ -3,6 +3,7 @@
     "description": "The Adafruit Circuit Playground Express library",
     "files": [
         "README.md",
+        "panic.cpp",
         "device.d.ts",
         "config.ts",
         "input.ts",

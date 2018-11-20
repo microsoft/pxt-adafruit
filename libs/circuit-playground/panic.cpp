@@ -15,11 +15,12 @@ static void showCode(int statusCode) {
 
     for (int i = 0; i < 10; ++i) {
         if (i < numNeopixels)
-            memcpy(&neobuf[i * 3], (statusCode & (1 << (9 - i))) ? "\x00\x04\x00" : "\x00\x00\x01", 3);
+            memcpy(&neobuf[i * 3], (statusCode & (1 << i)) ? "\x00\x04\x00" : "\x00\x00\x01",
+                   3);
     }
 
     neoPin->setDigitalValue(0);
-    target_wait_us(1000);
+    target_wait(1);
 
     neopixel_send_buffer(*neoPin, neobuf, size);
     target_disable_irq();
@@ -31,7 +32,14 @@ __attribute__((weak)) void target_panic(int statusCode) {
     showCode(statusCode);
 
 #if DEVICE_DMESG_BUFFER_SIZE > 0
+    auto ledPin = LOOKUP_PIN(LED);
     while (1) {
+        if (ledPin) {
+            ledPin->setDigitalValue(1);
+            target_wait(50);
+            ledPin->setDigitalValue(0);
+            target_wait(300);
+        }
     }
 #else
     Serial pc(USBTX, USBRX);

@@ -157,6 +157,7 @@
   "console.logValue|param|name": "name of the value stream, eg: \"x\"",
   "console.logValue|param|value": "to write",
   "console.minPriority": "Minimum priority to send messages to listeners",
+  "console.removeListener": "Removes a listener",
   "control": "Program controls and events.",
   "control.AnimationQueue.cancel": "Cancels the current running animation and clears the queue",
   "control.AnimationQueue.runUntilDone": "Runs 'render' in a loop until it returns false or the 'stop' function is called",

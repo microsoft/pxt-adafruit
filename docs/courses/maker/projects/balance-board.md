@@ -16,6 +16,10 @@ Please be sure to follow common-sense safety procedures when operating the balan
 
 ## Time Required
 
+| Minutes |
+|-|
+| ![2.0 hour time scale](/static/courses/maker/projects/common/45-90-mins.png) |
+<br/>
 Approximately 45-90 minutes 
 
 ## Academic Tie-in Ideas

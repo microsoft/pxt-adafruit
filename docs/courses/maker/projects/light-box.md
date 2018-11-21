@@ -17,12 +17,12 @@ Approximately 2 hours
 
 ## Academic tie-in ideas
 
-* Literature: represent a character’s evolution, depict key settings or show important symbols from a novel’s plot.
-* History: show important scenes around an event, depict disparate views of the same historical event, or convey a representative story.
-* Science: illustrate how a process develops, show evolutionary adaptations, convey data from a study, or illustrate geological events.
-* Language study: depict different tenses of the same verb, tell a character’s story.
-* Music: Associate tones or short pieces of music with each image or with the project as a whole.
-* Physical Education: Illustrate the key components of a pitch / kick / shot / play.
+* **Literature**: represent a character’s evolution, depict key settings or show important symbols from a novel’s plot.
+* **History**: show important scenes around an event, depict disparate views of the same historical event, or convey a representative story.
+* **Science**: illustrate how a process develops, show evolutionary adaptations, convey data from a study, or illustrate geological events.
+* **Language study**: depict different tenses of the same verb, tell a character’s story.
+* **Music**: Associate tones or short pieces of music with each image or with the project as a whole.
+* **Physical Education**: Illustrate the key components of a pitch / kick / shot / play.
 
 ## Materials
 

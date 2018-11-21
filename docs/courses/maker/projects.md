@@ -32,7 +32,8 @@ This course is currently under development. More Maker projects are coming soon!
 }, {
   "name": "Balance Board",
   "description": "Put the 'physical' into physical computing with this balance board.",
-  "imageUrl": "/static/courses/maker/projects/common/coming-soon.png"
+  "url": "/courses/maker/projects/balance-board",
+  "imageUrl": "/static/courses/maker/projects/balance-board.png"
 }, {
   "name": "Helmet",
   "description": "Bike helmet that makes motion activated signals.",

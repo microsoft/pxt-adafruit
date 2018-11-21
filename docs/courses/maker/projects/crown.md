@@ -16,9 +16,9 @@ https://www.youtube.com/watch?v=KvW-YwoTUVk
 
 ## Academic tie-in ideas
 
-* History: celebrate your individual family history and background by creating a culture crown.
-* Literature: represent a theme from a novel, like identity in society, or the hero’s journey in a symbolic crown.
-* Music: collaborate with several friends to perform a piece of music that is triggered by your synchronized head movements.
+* **History**: celebrate your individual family history and background by creating a culture crown.
+* **Literature**: represent a theme from a novel, like identity in society, or the hero’s journey in a symbolic crown.
+* **Music**: collaborate with several friends to perform a piece of music that is triggered by your synchronized head movements.
 
 ## Materials
 

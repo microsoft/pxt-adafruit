@@ -54,8 +54,7 @@ Fourth, use clear tape to attach the NeoPixel strip to the base of the helmet pr
 
 ![NeoPixel strip attacthed to the base of the helmet](/static/courses/maker/projects/helmet/helmet-making4.jpg)
 
-Fifth, use a piece of tape to attach a battery pack to the top of the helmet, and a piece of double-sided or looped tape to attach the Circuit Playground Express to the front of the helmet. Be sure to orient the 
-A1 pin on the Circuit Playground Express toward the alligator clips of the NeoPixel strip, and orient the JST battery connector upward. Pictured is a LiPo battery, but any battery pack works well.
+Fifth, use a piece of tape to attach a battery pack to the top of the helmet, and a piece of double-sided or looped tape to attach the Circuit Playground Express to the front of the helmet. Be sure to orient the **A1** pin on the Circuit Playground Express toward the alligator clips of the NeoPixel strip, and orient the JST battery connector upward. Pictured is a LiPo battery, but any battery pack works well.
 
 ![Board attacthed to the helmet with battery located on top, view 1](/static/courses/maker/projects/helmet/helmet-making5.jpg)
 
@@ -65,8 +64,8 @@ A1 pin on the Circuit Playground Express toward the alligator clips of the NeoPi
 
 See [Coding the Circuit Playground Express](/courses/maker/general/coding) chapter for more information.
 
-1. Open the Loops Toolbox drawer and drag out an On Start block to the workspace.
-2. Now, under the NeoPixel drawer, find the Set Strip block, and place it inside the On Start block. This will create a NeoPixel strip in our program.
+1. Open the ``||loops:LOOPS||`` Toolbox drawer and drag out an ``||loops:on start||`` block to the workspace.
+2. Now, under the ``||light:NEOPIXEL||`` drawer, find the ``||light:set strip||`` block, and place it inside the ``||loops:on start||`` block. This will create a NeoPixel strip in our program.
 
 ![Neopixel strip blocks in the toolbox](/static/courses/maker/projects/helmet/neopixel-drawer.png)
 
@@ -82,13 +81,15 @@ let strip: light.NeoPixelStrip = null
 strip = light.createStrip(pins.A1, 30)
 ```
 
-With this code, we are telling the Circuit Playground Express that it has a strip of 30 lights connected on pin A1.
-4. Then, go to the Variables drawer and make two variables: “right” and “left.” The automatically created variable “strip” will control the behavior of the entire strip, and “left” and “right” will help you control the left and right halves of the strip.
+With this code, we are telling the Circuit Playground Express that it has a strip of 30 lights connected on pin **A1**.
+
+4. Then, go to the Variables drawer and make two variables: ``right`` and ``left``. The automatically created variable ``strip`` will control the behavior of the entire strip, and ``left`` and ``right`` will help you control the left and right halves of the strip.
 
 ![Blocks in the VARIABLES drawer](/static/courses/maker/projects/helmet/variables-drawer.png)
 
 Now, let’s define the lights you’ll use for the left and right turns.
-5. From the Variables Toolbox drawer, pull out two Set variable blocks into the On Start block, and change them to the “right” and “left” variables.
+
+5. From the ``||variables:VARIABLES||`` Toolbox drawer, pull out two Set variable blocks into the``||loops:on start||`` block, and change them to the ``right`` and ``left`` variables.
 
 ```blocks
 let strip: light.NeoPixelStrip = null
@@ -97,10 +98,10 @@ let left = 0
 let right = 0
 ```
 
-6. From the NeoPixel drawer, drag 2 of the Strip Range lozenges inside each of the Set right and Set left blocks. These blocks will represent a range of lights from our NeoPixel strip.
-In our example there are 30 total pixels, so the two sides will each have 15 pixels. The Set Right block has a range that starts at zero (remember that the strips are zero-indexed, so the first 15 pixels will be from 0-14), and the Set Left block has a range that starts at 15.
-7. In the right range block, type 0 into the first slot and 15 into the second slot.
-8. In the left range block, type 15 into the first slot and 15 into the second slot.
+6. From the NeoPixel drawer, drag 2 of the ``||light:strip range||`` lozenges inside each of the ``||variables:set right||`` and ``||variables:set left||`` blocks. These blocks will represent a range of lights from our NeoPixel strip.
+In our example there are 30 total pixels, so the two sides will each have 15 pixels. The ``||variables:set right||`` block has a range that starts at zero (remember that the strips are zero-indexed, so the first 15 pixels will be from 0-14), and the ``||variables:set right||`` block has a range that starts at `15`.
+7. In the right ``||light:range||`` block, type `0` into the first slot and `15` into the second slot.
+8. In the left ``||light:range||`` block, type `15` into the first slot and `15` into the second slot.
 
 ```blocks
 let left: light.NeoPixelStrip = null
@@ -112,8 +113,8 @@ left = strip.range(15, 15)
 ```
 
 Now let’s set all the lights on the Circuit Playground Express to yellow, and turn the NeoPixel strip lights to blue to serve as running lights.
-9. From the Light Toolbox drawer, drag a Set all Pixels block into the On Start block, and from the drop-down menu select the yellow color.
-10. From the NeoPixel Toolbox drawer, drag a Strip Set all Pixels block to the end of our program, and from the drop-down menu select the light blue color.
+9. From the ``||light:LIGHT||`` Toolbox drawer, drag a Set all Pixels block into the ``||loops:on start||`` block, and from the drop-down menu select the yellow color.
+10. From the NeoPixel Toolbox drawer, drag a ``||light:strip set all pixels||`` block to the end of our program, and from the drop-down menu select the light blue color.
 
 ```blocks
 let left: light.NeoPixelStrip = null
@@ -127,7 +128,8 @@ strip.setAll(0x00ffff)
 ```
 
 It’s time to code the motion-activated light responses. When we tilt our head to the left, we want the left side of the strip to flash indicator lights, and when we tilt our head to the right, we want the right side of the strip to flash.
-11. From the Input Toolbox drawer, drag out 2 On Shake blocks onto the Workspace.
+
+11. From the ``||input:INPUT||`` Toolbox drawer, drag out 2 ``||input:on shake||`` Shake blocks onto the Workspace.
 12. Using the drop-down menus in the On Shake block, change one to Tilt Right, and the other to Tilt Left.
 
 ![On Tilt gesture input selections](/static/courses/maker/projects/helmet/on-tilt-inputs.png)

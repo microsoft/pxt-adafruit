@@ -37,7 +37,8 @@ This course is currently under development. More Maker projects are coming soon!
 }, {
   "name": "Helmet",
   "description": "Bike helmet that makes motion activated signals.",
-  "imageUrl": "/static/courses/maker/projects/common/coming-soon.png"
+  "url": "/courses/maker/projects/helmet",
+  "imageUrl": "/static/courses/maker/projects/helmet.png"
 }, {
   "name": "Fabric Friend",
   "description": "Sew up this fabric critter and make a new friend.",

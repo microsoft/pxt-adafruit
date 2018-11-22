@@ -32,9 +32,9 @@ https://www.youtube.com/watch?v=vtQgtvtHRhA
 
 ## Academic Tie-in Ideas
 
-* Music: add a maker component to your music study by coding a music maker.
-* Literature: create an instrument that plays a composition for a character or scene.
-* History: play a piece of music from a certain time period that you are studying.
+* **Music**: add a maker component to your music study by coding a music maker.
+* **Literature**: create an instrument that plays a composition for a character or scene.
+* **History**: play a piece of music from a certain time period that you are studying.
 
 ## Materials
 

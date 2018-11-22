@@ -10,6 +10,10 @@ https://www.youtube.com/watch?v=sVPu5b6MszM
 
 ## Time required
 
+| Hours |
+|-|
+| ![1.5 hours on a 4 hour time scale](/static/courses/maker/projects/common/1-5-hours.png) |
+<br/>
 About 1.5 hours 
 
 ## Academic Tie-ins
@@ -74,7 +78,7 @@ let strip: light.NeoPixelStrip = null
 strip = light.createStrip(pins.A1, 0)
 ```
 
-3. Next, in the space where it says, With 0 Pixels, enter the number of pixels your LED strip has. In the example, the NeoPixel strip has 30 lights.
+3. Next, in the space where it says, ``||light:with 0 pixels||``, enter the number of pixels your LED strip has. In the example, the NeoPixel strip has 30 lights.
 
 ```blocks
 let strip: light.NeoPixelStrip = null
@@ -83,13 +87,13 @@ strip = light.createStrip(pins.A1, 30)
 
 With this code, we are telling the Circuit Playground Express that it has a strip of 30 lights connected on pin **A1**.
 
-4. Then, go to the Variables drawer and make two variables: ``right`` and ``left``. The automatically created variable ``strip`` will control the behavior of the entire strip, and ``left`` and ``right`` will help you control the left and right halves of the strip.
+4. Then, go to the ``||variables:VARIABLES||`` drawer and make two variables: ``right`` and ``left``. The automatically created variable ``strip`` will control the behavior of the entire strip, and ``left`` and ``right`` will help you control the left and right halves of the strip.
 
 ![Blocks in the VARIABLES drawer](/static/courses/maker/projects/helmet/variables-drawer.png)
 
 Now, let’s define the lights you’ll use for the left and right turns.
 
-5. From the ``||variables:VARIABLES||`` Toolbox drawer, pull out two Set variable blocks into the``||loops:on start||`` block, and change them to the ``right`` and ``left`` variables.
+5. From the ``||variables:VARIABLES||`` Toolbox drawer, pull out two ``||variables:set||`` variable blocks into the ``||loops:on start||`` block, and change them to the ``right`` and ``left`` variables.
 
 ```blocks
 let strip: light.NeoPixelStrip = null
@@ -113,7 +117,8 @@ left = strip.range(15, 15)
 ```
 
 Now let’s set all the lights on the Circuit Playground Express to yellow, and turn the NeoPixel strip lights to blue to serve as running lights.
-9. From the ``||light:LIGHT||`` Toolbox drawer, drag a Set all Pixels block into the ``||loops:on start||`` block, and from the drop-down menu select the yellow color.
+
+9. From the ``||light:LIGHT||`` Toolbox drawer, drag a ``||light:set all pixels||`` block into the ``||loops:on start||`` block, and from the drop-down menu select the yellow color.
 10. From the NeoPixel Toolbox drawer, drag a ``||light:strip set all pixels||`` block to the end of our program, and from the drop-down menu select the light blue color.
 
 ```blocks
@@ -129,13 +134,13 @@ strip.setAll(0x00ffff)
 
 It’s time to code the motion-activated light responses. When we tilt our head to the left, we want the left side of the strip to flash indicator lights, and when we tilt our head to the right, we want the right side of the strip to flash.
 
-11. From the ``||input:INPUT||`` Toolbox drawer, drag out 2 ``||input:on shake||`` Shake blocks onto the Workspace.
-12. Using the drop-down menus in the On Shake block, change one to Tilt Right, and the other to Tilt Left.
+11. From the ``||input:INPUT||`` Toolbox drawer, drag out 2 ``||input:on shake||`` blocks onto the Workspace.
+12. Using the drop-down menus in the ``||input:on shake||`` block, change one to ``tilt right``, and the other to ``tilt left``.
 
 ![On Tilt gesture input selections](/static/courses/maker/projects/helmet/on-tilt-inputs.png)
 
-13. From the Loops Toolbox drawer, drag out a Repeat loop and drop into the On Tilt Right block. Change the default number of times to repeat from 4 to 15.
-14. From the NeoPixel Toolbox drawer, drag out a Strip Set all Pixels block and drop into the repeat loop. In the Set all Pixels block, use the drop-down menu to select the right variable.
+13. From the ``||loops:LOOPS||`` Toolbox drawer, drag out a ``||loops:repeat||`` loop and drop into the ``||input:on tilt right||`` block. Change the default number of times to repeat from` 4` to `15`.
+14. From the NeoPixel Toolbox drawer, drag out a ``||light:strip set all pixels||`` block and drop into the ``||loops:repeat||`` loop. In the ``||light:set all pixels||`` block, use the drop-down menu to select the ``right`` variable.
 
 ```block
 let right: light.NeoPixelStrip = null
@@ -146,12 +151,12 @@ input.onGesture(Gesture.TiltRight, function () {
 })
 ```
 
-15. Right click on the Set all pixels block, and select Duplicate to make a copy of this block.
+15. Right click on the ``||light:set all pixels||`` block, and select **Duplicate** to make a copy of this block.
 
 ![Duplicate block context menu selection](/static/courses/maker/projects/helmet/duplicate-block.png)
 
 16. Drag the copied block underneath, and change the color to dark blue.
-17. From the Loops Toolbox drawer, drag out 2 Pause blocks and drop them in between the Set all Pixels blocks – this will give the lights enough time to flash.
+17. From the ``||loops:LOOPS||`` Toolbox drawer, drag out 2 ``||loops:pause||`` blocks and drop them in between the ``||light:set all pixels||`` blocks – this will give the lights enough time to flash.
 
 ```block
 let right: light.NeoPixelStrip = null
@@ -165,9 +170,10 @@ input.onGesture(Gesture.TiltRight, function () {
 })
 ```
 
-After we’re done flashing, we want to set all the lights back to light blue. 
-18. So right-click on one of the Set all Pixels blocks and select Duplicate again to make another copy. 
-19. This time, drag the copied block after the Repeat loop, and click on the color picker to select light blue. 
+After we’re done flashing, we want to set all the lights back to light blue.
+
+18. So right-click on one of the ``||light:set all pixels||`` blocks and select **Duplicate** again to make another copy.
+19. This time, drag the copied block after the ``||loops:repeat||`` loop, and click on the color picker to select light blue.
 
 ```block
 let right: light.NeoPixelStrip = null
@@ -182,7 +188,7 @@ input.onGesture(Gesture.TiltRight, function () {
 })
 ```
 
-We’ll do the same thing for the Left Tilt. Copy the blocks from the ``||input:on tilt right||`` block over to the ``||input:on tilt left||`` block. Use the variable drop-down menu to select the ``left`` variable this time.
+We’ll do the same thing for the ``tilt left``. Copy the blocks from the ``||input:on tilt right||`` block over to the ``||input:on tilt left||`` block. Use the variable drop-down menu to select the ``left`` variable this time.
 
 ```block
 let left: light.NeoPixelStrip = null

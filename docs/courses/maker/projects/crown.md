@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=KvW-YwoTUVk
 
 | Hours |
 |-|
-| ![1.5 hour time scale](/static/courses/maker/projects/common/1-5-hours.png) |
+| ![1.5 hours on a 4 hour time scale](/static/courses/maker/projects/common/1-5-hours.png) |
 <br/>
 1.5 hours
 

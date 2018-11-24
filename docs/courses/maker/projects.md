@@ -42,7 +42,8 @@ This course is currently under development. More Maker projects are coming soon!
 }, {
   "name": "Fabric Friend",
   "description": "Sew up this fabric critter and make a new friend.",
-  "imageUrl": "/static/courses/maker/projects/common/coming-soon.png"
+  "url": "/courses/maker/projects/fabric-friend",
+  "imageUrl": "/static/courses/maker/projects/fabric-friend.png"
 }, {
   "name": "Marble Run",
   "description": "Servo driven marble runner, let it roll!",

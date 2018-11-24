@@ -22,7 +22,7 @@ https://www.youtube.com/watch?v=KvW-YwoTUVk
 
 ## Materials
 
-_See the [Maker Tools and Techniques](/courses/maker/general/maker-tools-techniques) chapter for more details on materials._
+See the [Maker Tools and Techniques](/courses/maker/general/maker-tools-techniques) chapter for more details on materials.
 
 * Cardboard or Poster Board 
 * Cardboard cutters or scissors 

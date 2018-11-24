@@ -235,43 +235,192 @@ There are several different ideas you use to program you Fabric Friend. We’ll 
 
 ### Fortune-Telling Quadropus
 
-First, let’s code a Fabric Friend with predictive powers, kind of like a Magic Eight Ball. We’ll use a randomly chosen variable to select what face the Fabric Friend will make upon the input of On Shake. The responses might be positive, negative, or confused. See this video demo:
+First, let’s code a Fabric Friend with predictive powers, kind of like a Magic Eight Ball. We’ll use a randomly chosen variable to select what face the Fabric Friend will make upon the input of ``||input:on shake||``. The responses might be positive, negative, or confused. See this video demo:
 
 https://www.youtube.com/watch?v=-sgF1Fzbc9E
 
+
+1. From the ``||variables:VARIABLES||`` Toolbox drawer, click on the **Make a Variable** button to make 3 variables.
+2. Name them as follows: ``Left Eye``, ``Right Eye``, and ``Magic 8``. 
+3. From the ``loops:LOOPS||`` Toolbox drawer, drag an ``||loops:on start||`` block onto the Workspace.
+4. From the ``||variables:VARIABLES||`` Toolbox drawer, drag out two ``||variables:set||`` blocks, and place them into the ``||loops:on start||`` block.
+5. Using the drop-down menu in one of the ``||variables:set||`` blocks, change the variable to ``Right Eye``.
+
 ```blocks
+let Right_Eye = 0
+let Left_Eye = 0
+```
+6. From the ``||light:NEOPIXEL||`` Toolbox drawer, drag out two ``||light:create strip||`` blocks onto the Workspace and place one each into the ``Left Eye`` and ``Right Eye`` ``||variables:set||`` variable blocks replacing the `0`. 
+7. Using the drop-down menus in the two ``||light:create strip||`` blocks, set them to the Pins that you will be using to connect to your Flora NeoPixels (for example **A1** and **A3**).
+8. In the two ``||light:create strip||`` blocks, change the value of the ``pixels`` to `1` (there is only 1 light on each of your Flora NeoPixels.
+
+```blocks
+let Right_Eye: light.NeoPixelStrip = null
+let Left_Eye: light.NeoPixelStrip = null
+Left_Eye = light.createStrip(pins.A1, 1)
+Right_Eye = light.createStrip(pins.A3, 1)
+```
+
+Next, we want to set our lights to a default setting.
+
+9. From the ``||light:LIGHT||`` Toolbox drawer, drag a ``||light:set all pixels||`` block onto the Workspace and place in the ``||loops:on start||`` block.
+10. Using the color menu on the ``||light:set all pixels||`` block, set a light blue color.
+11. From the ``||light:NEOPIXEL||`` Toolbox drawer, drag out two ``||light:strip show animation||`` blocks onto the Workspace and place in the ``||loops:on start||`` block after the ``||light:set all pixels||`` block.
+12. Using the variable drop-down menu in the ``||light:strip show animation||`` blocks, select the ``Left Eye`` and ``Right Eye`` variables.
+13. Using the animation drop-down menu in the ``||light:strip show animation||`` blocks, select the Sparkle animation 
+14. Using the duration drop-down menu in the ``||light:strip show animation||`` blocks, select 2 seconds (or `2000` milliseconds).
+
+```blocks
+let Right_Eye: light.NeoPixelStrip = null
+let Left_Eye: light.NeoPixelStrip = null
+Left_Eye = light.createStrip(pins.A1, 1)
+Right_Eye = light.createStrip(pins.A3, 1)
+light.setAll(0x00ffff)
+Left_Eye.showAnimation(light.sparkleAnimation, 2000) 
+Right_Eye.showAnimation(light.sparkleAnimation, 2000)
+```
+Next, let’s activate our Creature Prediction by shaking our creature.
+
+15. From the ``||input:INPUT||`` Toolbox drawer, drag an ``||input:on shake||`` block onto the Workspace.
+16. From the ``||variables:VARIABLES||`` Toolbox drawer drag a ``||variables:set||`` block onto the Workspace and drop into the ``||input:on shake||`` block.
+17. Using the drop-down menu in the ``||variables:set||`` block, select the ``Magic 8`` variable.
+18. From the ``||math:MATH||`` Toolbox drawer drag a ``||math:pick random||`` block onto the Workspace and drop into the ``||variables:set||`` block replacing `0`.
+19. In the ``||math:pick random||`` block, change the values to `1` and `3`, giving you 3 prediction choices.
+
+```block
+let Magic_8 = 0
+input.onGesture(Gesture.Shake, function () {
+    Magic_8 = Math.randomRange(1, 3)
+})
+```
+
+20. From the ``||logic:LOGIC||`` Toolbox drawer drag an ``||logic:if then else||`` block onto the Workspace and drop into the ``||input:on shake||`` block after the ``||variables:set||`` block. 
+21. In the ``||logic:if then else||``  block, click the plus **(+)** icon to add an ``||logic:else if||`` clause.
+
+```block
+let Magic_8 = 0
+input.onGesture(Gesture.Shake, function () {
+    Magic_8 = Math.randomRange(1, 3)
+    if (true) {
+
+    } else if (false) {
+
+    } else {
+
+    }
+})
+```
+
+22. From the ``||logic:LOGIC||`` Toolbox drawer drag 2 Comparison ``||logic:0 = 0||`` blocks onto the Workspace and place one into the ``||logic:if||`` clause replacing true, and place the other into the ``||logic:else if||`` clause.
+
+```block
+let Magic_8 = 0
+input.onGesture(Gesture.Shake, function () {
+    Magic_8 = Math.randomRange(1, 3)
+    if (0 == 0) {
+
+    } else if (0 == 0) {
+
+    } else {
+
+    }
+})
+```
+
+23. From the Variables Toolbox drawer drag out two ‘Magic 8’ variable blocks onto the Workspace 
+24. Place one in the first slot of the If clause comparison block 
+25. Place the other one in the first slot of the Else If clause comparison block 
+Note: line up the left edge of the block in the slot where you want to place it 
+26. In the If clause comparison block, change the value of the second slot to 1 
+27. In the Else If clause comparison block, change the value of the second slot to 2
+
+```block
+let Magic_8 = 0
+input.onGesture(Gesture.Shake, function () {
+    Magic_8 = Math.randomRange(1, 3)
+    if (Magic_8 == 1) {
+
+    } else if (Magic_8 == 2) {
+
+    } else {
+
+    }
+})
+```
+
+The basic Magic Eight ball responses are ‘Yes’, ‘No’, and ‘Maybe’ so try to design your lights to mean one of these three responses.
+
+28. From the Light Toolbox drawer drag a Show Ring block onto the Workspace and drop under the If clause 
+29. Create a meaningful ‘Yes’ design for your Show Ring block (for example a Green Smile) 
+30. From the NeoPixel Toolbox drawer, drag out two Strip Set all Pixels blocks onto the Workspace and place after the Show Ring block 
+31. Using the variable drop-down menus on the Strip Set all Pixels blocks, change the variables to Left Eye and Right Eye 
+32. Using the color picker menu, select a meaningful color for your creature’s eyes that corresponds to your Show Ring design (green color for example) 
+33. From the Music Toolbox drawer drag a Play Sound block onto the Workspace and place after the Right Eye Set all Pixels block 
+34. Using the drop-down menu in the Play Sound block, select a meaningful sound that corresponds to the prediction you are making 
+35. From the Loops Toolbox drawer, drag a Pause block onto the Workspace and place after the Play Sound block 
+36. Using the drop-down menu in the Pause block, select 2 seconds (or 2000 milliseconds)
+
+```block
 let Right_Eye: light.NeoPixelStrip = null 
-let Magic_8 = 0 
 let Left_Eye: light.NeoPixelStrip = null 
-input.onGesture(Gesture.Shake, function () { 
-    Magic_8 = Math.randomRange(1, 3) 
-    if (Magic_8 == 1) { 
+let Magic_8 = 0
+input.onGesture(Gesture.Shake, function () {
+    Magic_8 = Math.randomRange(1, 3)
+    if (Magic_8 == 1) {
         light.showRing(`black black black black black green green green green green`) 
         Left_Eye.setAll(0x00ff00) 
         Right_Eye.setAll(0x00ff00) 
         music.playSound(music.sounds(Sounds.MagicWand)) 
-        pause(2000) 
-    } else if (Magic_8 == 2) { 
-        light.showRing(`purple purple purple purple purple black black black black black`) 
-        Left_Eye.setAll(0x7f00ff) 
-        Right_Eye.setAll(0x7f00ff) 
-        music.playSound(music.sounds(Sounds.PowerDown)) 
-        pause(2000) 
-    } else { 
-        light.showRing(`blue black black black blue orange blue orange orange orange`) 
-        Left_Eye.setAll(0x0000ff) 
-        Right_Eye.setAll(0xff8000) 
-        music.playSound(music.sounds(Sounds.Wawawawaa)) 
-        pause(2000) 
-    } 
-    light.setAll(0x00ffff) 
-    Left_Eye.showAnimation(light.sparkleAnimation, 2000) 
-    Right_Eye.showAnimation(light.sparkleAnimation, 2000) 
-}) 
-Left_Eye = light.createStrip(pins.A1, 1) 
-Right_Eye = light.createStrip(pins.A3, 1) 
-light.setAll(0x00ffff) 
-Left_Eye.showAnimation(light.sparkleAnimation, 2000) 
+        pause(2000)
+    } else if (Magic_8 == 2) {
+
+    } else {
+
+    }
+})
+```
+
+Now, put the same blocks in the Else If, and Else clauses – but change your light design and sounds to mean “No”, and “Maybe”.
+
+Finally, at the end of our On Shake block, let’s reset our creature to the default light settings.
+
+* You can do this by right-clicking and selecting Duplicate on the Set all Pixels block and the two Show Animation blocks in the On Start block to copy those blocks, and place them at the very end of our On Shake block.
+
+Your final program may look like this:
+
+```blocks
+let Right_Eye: light.NeoPixelStrip = null
+let Left_Eye: light.NeoPixelStrip = null
+let Magic_8 = 0
+input.onGesture(Gesture.Shake, function () {
+    Magic_8 = Math.randomRange(1, 3)
+    if (Magic_8 == 1) {
+        light.showRing(`black black black black black green green green green green`)
+        Left_Eye.setAll(0x00ff00)
+        Right_Eye.setAll(0x00ff00)
+        music.playSound(music.sounds(Sounds.MagicWand))
+        pause(2000)
+    } else if (Magic_8 == 2) {
+        light.showRing(`purple purple purple purple purple black black black black black`)
+        Left_Eye.setAll(0x7f00ff)
+        Right_Eye.setAll(0x7f00ff)
+        music.playSound(music.sounds(Sounds.PowerDown))
+        pause(2000)
+    } else {
+        light.showRing(`blue black black black blue orange blue orange orange orange`)
+        Left_Eye.setAll(0x0000ff)
+        Right_Eye.setAll(0xff8000)
+        music.playSound(music.sounds(Sounds.Wawawawaa))
+        pause(2000)
+    }
+    light.setAll(0x00ffff)
+    Left_Eye.showAnimation(light.sparkleAnimation, 2000)
+    Right_Eye.showAnimation(light.sparkleAnimation, 2000)
+})
+Left_Eye = light.createStrip(pins.A1, 1)
+Right_Eye = light.createStrip(pins.A3, 1)
+light.setAll(0x00ffff)
+Left_Eye.showAnimation(light.sparkleAnimation, 2000)
 Right_Eye.showAnimation(light.sparkleAnimation, 2000)
 ```
 
@@ -304,7 +453,7 @@ Hunger = 0
 
 Now that we have our Variables set up, let’s make sure we can reset our Quadropus’ hunger value. 
 9. From the Input Toolbox drawer, drag an On Button A Click block onto the Workspace 
-10. From the Variables Toolbox drawer, drag a Set variable block onto the Workspace and drop into the On Button Click block 
+10. From the Variables Toolbox drawer, drag a Set variable block onto the Workspace and drop into the ``||input:on button click||`` block 
 11. In the Set variable block, use the drop-down menu to select the ‘Hunger’ variable
 
 ```blocks
@@ -319,13 +468,15 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-Next, let’s set the value for Hunger – when we feed the Quadropus the Hunger value should go down. And we can use the Light sensor on the Circuit Playground Express to tell if we bring food up to the Quadropus’ mouth – the light will get dark. 
-12. From the Loops Toolbox drawer, drag a Forever loop onto the Workspace 
-13. From the Logic Toolbox drawer, drag three If blocks onto the Workspace and place them in the Forever loop 
+Next, let’s set the value for Hunger – when we feed the Quadropus the Hunger value should go down. And we can use the Light sensor on the Circuit Playground Express to tell if we bring food up to the Quadropus’ mouth – the light will get dark.
+
+12. From the ``||loops:LOOPS||`` Toolbox drawer, drag a Forever loop onto the Workspace 
+13. From the ``||logic:LOGIC||`` Toolbox drawer, drag three If blocks onto the Workspace and place them in the Forever loop 
 14. From the Logic Toolbox drawer, drag three Comparison blocks into the If blocks 
 Build your program to look like the following:
 
 ```block
+let Hunger = 0
 forever(function () {
     if (input.lightLevel() < 25) {
         Hunger += -3
@@ -362,71 +513,71 @@ Finally, it’s time to make facial expressions for each of the Fabric Friend’
 Your final program may look like this:
 
 ```blocks
-let Right_Eye: light.NeoPixelStrip = null 
-let Hunger = 0 
-let Left_Eye: light.NeoPixelStrip = null 
-input.buttonA.onEvent(ButtonEvent.Click, function () { 
-    Hunger = 0 
-}) 
-Left_Eye = light.createStrip(pins.A4, 1) 
-Right_Eye = light.createStrip(pins.A7, 1) 
-Hunger = 0 
-forever(function () { 
-    if (Hunger < 14) { 
-        light.showRing(`black black black black black orange orange orange orange orange`) 
-        Left_Eye.setAll(0xff8000) 
-        Right_Eye.setAll(0xff8000) 
-    } else if (Hunger >= 14 && Hunger < 18) { 
-        light.showRing(`black black black black black black orange orange orange black`) 
-        Left_Eye.setAll(0xff8000) 
-        Right_Eye.setAll(0xff8000) 
-        pause(100) 
-        Left_Eye.setAll(0xff0000) 
-        Right_Eye.setAll(0xff0000) 
-        pause(100) 
-        Left_Eye.setAll(0xff8000) 
-        Right_Eye.setAll(0xff8000) 
-    } else if (Hunger >= 18 && Hunger < 22) { 
-        light.showRing(`black black black black black blue blue blue blue blue`) 
-        Left_Eye.setAll(0xff0000) 
-        Right_Eye.setAll(0xff0000) 
-        pause(100) 
-        light.showRing(`blue blue blue blue blue black black black black black`) 
-        pause(100) 
-    } else { 
-        music.playSound(music.sounds(Sounds.Siren)) 
-        light.showRing(`blue blue blue blue blue black black black black black`) 
-        Left_Eye.setAll(0x00ff00) 
-        Right_Eye.setAll(0x7f00ff) 
-        pause(Math.randomRange(100, 200)) 
-        Left_Eye.setAll(0xff0000) 
-        pause(100) 
-        Right_Eye.setAll(0x007fff) 
-        Left_Eye.setAll(0xffffff) 
-        pause(Math.randomRange(100, 200)) 
-        Right_Eye.setAll(0xff00ff) 
-        pause(100) 
-    } 
-    pause(1000) 
-    Hunger += 1 
-}) 
-forever(function () { 
-    if (input.lightLevel() < 25) { 
-        Hunger += -3 
-    } 
-    if (Hunger < 0) { 
-        Hunger = 0 
-    } 
-    if (Hunger > 30) { 
-    Hunger = 22 
-    } 
-}) 
+let Right_Eye: light.NeoPixelStrip = null
+let Left_Eye: light.NeoPixelStrip = null
+let Hunger: number = 0
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    Hunger = 0
+})
+Left_Eye = light.createStrip(pins.A4, 1)
+Right_Eye = light.createStrip(pins.A7, 1)
+Hunger = 0
+forever(function () {
+    if (Hunger < 14) {
+        light.showRing(`black black black black black orange orange orange orange orange`)
+        Left_Eye.setAll(0xff8000)
+        Right_Eye.setAll(0xff8000)
+    } else if (Hunger >= 14 && Hunger < 18) {
+        light.showRing(`black black black black black black orange orange orange black`)
+        Left_Eye.setAll(0xff8000)
+        Right_Eye.setAll(0xff8000)
+        pause(100)
+        Left_Eye.setAll(0xff0000)
+        Right_Eye.setAll(0xff0000)
+        pause(100)
+        Left_Eye.setAll(0xff8000)
+        Right_Eye.setAll(0xff8000)
+    } else if (Hunger >= 18 && Hunger < 22) {
+        light.showRing(`black black black black black blue blue blue blue blue`)
+        Left_Eye.setAll(0xff0000)
+        Right_Eye.setAll(0xff0000)
+        pause(100)
+        light.showRing(`blue blue blue blue blue black black black black black`)
+        pause(100)
+    } else {
+        music.playSound(music.sounds(Sounds.Siren))
+        light.showRing(`blue blue blue blue blue black black black black black`)
+        Left_Eye.setAll(0x00ff00)
+        Right_Eye.setAll(0x7f00ff)
+        pause(Math.randomRange(100, 200))
+        Left_Eye.setAll(0xff0000)
+        pause(100)
+        Right_Eye.setAll(0x007fff)
+        Left_Eye.setAll(0xffffff)
+        pause(Math.randomRange(100, 200))
+        Right_Eye.setAll(0xff00ff)
+        pause(100)
+    }
+    pause(1000)
+    Hunger += 1
+})
+forever(function () {
+    if (input.lightLevel() < 25) {
+        Hunger += -3
+    }
+    if (Hunger < 0) {
+        Hunger = 0
+    }
+    if (Hunger > 30) {
+        Hunger = 22
+    }
+})
 ```
-https://makecode.com/_LKK44DbMTLy6 
 
 ## Variations and Challenges
 
-There is a lot of freedom with this project to create your own interactions, light designs, and sound effects. Some ideas might be: 
-* Instead of hungry, how about making a fabric friend who gets sleepy when it gets dark? 
-* How about making the fabric friend randomly express an emotion periodically and require soothing of some kind? Use the accelerometer or motion sensor to detect when it gets petted. 
-* What about a fabric friend who needs you to applaud it? Use the sound sensor to design an audio interaction
+There is a lot of freedom with this project to create your own interactions, light designs, and sound effects. Some ideas might be:
+
+* Instead of hungry, how about making a fabric friend who gets sleepy when it gets dark?
+* How about making the fabric friend randomly express an emotion periodically and require soothing of some kind? Use the accelerometer or motion sensor to detect when it gets petted.
+* What about a fabric friend who needs you to applaud it? Use the sound sensor to design an audio interaction.

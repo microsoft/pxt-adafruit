@@ -47,11 +47,13 @@ This course is currently under development. More Maker projects are coming soon!
 }, {
   "name": "Marble Run",
   "description": "Servo driven marble runner, let it roll!",
-  "imageUrl": "/static/courses/maker/projects/common/coming-soon.png"
+  "url": "/courses/maker/projects/marble-run",
+  "imageUrl": "/static/courses/maker/projects/marble-run.png"
 }, {
   "name": "Servo Box",
   "description": "Make and animated scene using servos to move the figures, dramatic!",
-  "imageUrl": "/static/courses/maker/projects/common/coming-soon.png"
+  "url": "/courses/maker/projects/servo-box",
+  "imageUrl": "/static/courses/maker/projects/servo-box.png"
 }, {
   "name": "Question Box",
   "description": "Quiz your friends with questions from the box.",

@@ -57,7 +57,8 @@ This course is currently under development. More Maker projects are coming soon!
 }, {
   "name": "Question Box",
   "description": "Quiz your friends with questions from the box.",
-  "imageUrl": "/static/courses/maker/projects/common/coming-soon.png"
+  "url": "/courses/maker/projects/question-box",
+  "imageUrl": "/static/courses/maker/projects/question-box.png"
 }, {
   "name": "Gondola",
   "description": "Program a servo to take a suspended gondola to the other side.",

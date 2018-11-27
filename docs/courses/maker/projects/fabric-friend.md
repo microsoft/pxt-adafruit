@@ -14,7 +14,7 @@ Making and using a Fabric Friend is great fun for older kids but be sure to keep
 
 | Hours |
 |-|
-| ![2 to  hours on a 4 hour time scale](/static/courses/maker/projects/common/2-to-4-hours.png) |
+| ![2 to 4 hours on a 4 hour time scale](/static/courses/maker/projects/common/2-to-4-hours.png) |
 <br/>
 2-4 hours – time will vary depending upon the complexity of the creation and the skill level of the creators.
 

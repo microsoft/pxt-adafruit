@@ -62,7 +62,8 @@ This course is currently under development. More Maker projects are coming soon!
 }, {
   "name": "Gondola",
   "description": "Program a servo to take a suspended gondola to the other side.",
-  "imageUrl": "/static/courses/maker/projects/common/coming-soon.png"
+  "url": "/courses/maker/projects/gondola",
+  "imageUrl": "/static/courses/maker/projects/gondola.png"
 }, {
   "name": "Light Bot",
   "description": "This light sensing bot will move around and avoid obstacles.",

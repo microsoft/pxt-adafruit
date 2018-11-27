@@ -18,7 +18,7 @@ Please be sure to follow common-sense safety procedures when operating the balan
 
 | Minutes |
 |-|
-| ![2.0 hour time scale](/static/courses/maker/projects/common/45-90-mins.png) |
+| ![45 to 90 minutes on a 120 minute time scale](/static/courses/maker/projects/common/45-90-mins.png) |
 <br/>
 Approximately 45-90 minutes 
 

@@ -2,12 +2,6 @@
 
 Guided maker projects which combine a creative activity with coding.
 
-## ~ hint
-
-This course is currently under development. More Maker projects are coming soon!
-
-## ~
-
 ```codecard
 [{
   "name": "Crown",
@@ -67,6 +61,7 @@ This course is currently under development. More Maker projects are coming soon!
 }, {
   "name": "Light Bot",
   "description": "This light sensing bot will move around and avoid obstacles.",
-  "imageUrl": "/static/courses/maker/projects/common/coming-soon.png"
+  "url": "/courses/maker/projects/light-bot",
+  "imageUrl": "/static/courses/maker/projects/light-bot.png"
 }]
 ```

@@ -10,9 +10,9 @@ https://youtu.be/eZxoYGV4wBw
 
 | Hours |
 |-|
-| ![1.5 hours on a 4 hour time scale](/static/courses/maker/projects/common/1-5-hours.png) |
+| ![1.5 to 2.0 hours on a 4 hour time scale](/static/courses/maker/projects/common/1-5-to-2-0-hours.png) |
 <br/>
-About 1.5 hours 
+About 1.5 - 2 hours.
 
 ## Academic tie-in ideas
 

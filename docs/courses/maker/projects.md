@@ -65,3 +65,18 @@ Guided maker projects which combine a creative activity with coding.
   "imageUrl": "/static/courses/maker/projects/light-bot.png"
 }]
 ```
+
+## See Also
+
+[Crown](/courses/maker/projects/crown),
+[Light Box](/courses/maker/projects/light-box),
+[Music Maker](/courses/maker/projects/music-maker),
+[Board Games](/courses/maker/projects/board-games),
+[Balance Board](/courses/maker/projects/balance-board),
+[Helmet](/courses/maker/projects/helmet),
+[Fabric Friend](/courses/maker/projects/fabric-friend),
+[Marble Run](/courses/maker/projects/marble-run),
+[Servo Box](/courses/maker/projects/servo-box),
+[Question Box](/courses/maker/projects/question-box),
+[Gondola](/courses/maker/projects/gondola),
+[Light Bot](/courses/maker/projects/light-bot)

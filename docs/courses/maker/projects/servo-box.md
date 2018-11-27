@@ -22,7 +22,7 @@ Approximately 3 hours to complete.
 
 ## Materials
 
-See the Maker Tools and Techniques Chapter for more details on materials.
+See the [Maker Tools and Techniques](/courses/maker/general/maker-tools-techniques) chapter for more details on materials.
 
 * Cardboard box – a shoe box works well
 * Popsicle sticks

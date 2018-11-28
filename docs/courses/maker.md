@@ -25,6 +25,6 @@ This is a project based course on Making with the @boardname@. This course intro
 
 ## See Also
 
-[Introduction](/courses/maker/introduction),
+[Introduction](/courses/maker/intro),
 [General Reference](/courses/maker/general),
 [Projects](/courses/maker/projects)

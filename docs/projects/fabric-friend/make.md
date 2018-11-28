@@ -39,6 +39,14 @@ Plan your friend. Sketch your plan, and be sure that the narrowest parts of the 
 
 It’s important to also plan for where the battery pack will go. In your hand? Clipped to a loop? Lithium ion polymer (lipo) batteries can often be tucked inside a small pocket that you create in the project.
 
+#### ~ hint
+
+LiPo batteries are a great power source for projects but they require care during use and charging. **LiPo batteries can be a fire hazard if not handled properly**.
+
+[Read this guidelines](https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion)!
+
+#### ~
+
 ![LiPo battery connected to board](/static/cp/projects/fabric-friend/lipo-battery.jpg)
 
 Cut out the paper plan, trace it onto the material, and cut out two versions. A fabric pen will fade away after an hour or so (or with rubbing). You can use a marking pen as well, but just be sure to cut inside the markings.

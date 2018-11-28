@@ -90,6 +90,14 @@ The end result of either the single line of stitches or a double one should be l
 
 Sewing a simple pocket can be a good way to tuck away your battery pack. Lithium polymer (LiPo) batteries are often great for wearable projects since they come in various compact sizes and are rechargeable. 
 
+#### ~ hint
+
+LiPo batteries are a great power source for projects but they require care during use and charging. **LiPo batteries can be a fire hazard if not handled properly**.
+
+[Read this guidelines](https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion)!
+
+#### ~
+
 ![Sew up a battery pocket](/static/cp/projects/wearable-neopixels/battery-pocket.jpg)
 
 Here you can see conductive thread running from the **3.3V** pin to the positive eyelet on the NeoPixel, another line running from pin **A4** to the center of the NeoPixel (arrows pointing away from the @boardname@), and a line running from a **GND** pin to the negative eyelet on the NeoPixel. 

@@ -94,7 +94,7 @@ Sewing a simple pocket can be a good way to tuck away your battery pack. Lithium
 
 LiPo batteries are a great power source for projects but they require care during use and charging. **LiPo batteries can be a fire hazard if not handled properly**.
 
-[Read this guidelines](https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion)!
+[Read these guidelines](https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion)!
 
 #### ~
 

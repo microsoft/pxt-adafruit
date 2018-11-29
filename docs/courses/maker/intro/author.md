@@ -6,4 +6,4 @@
 
 In his own words, "Academic technology and maker-style projects and challenges have the potential to help students see themselves as creators more than consumers, and as problem-seekers and solvers. This mindset development is the most exciting aspect of technology and maker work for me. The wealth of tools and resources available gives teachers and students many choices, and I work to create, curate, and publicize those opportunities."
 
-Reach out to him on Twitter at [@rob_morrill](https://twitter.com/morrill_rob).
+Reach out to him on Twitter at [@morrill_rob](https://twitter.com/morrill_rob).

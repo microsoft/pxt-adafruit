@@ -2,6 +2,12 @@
 
 Guided maker projects which combine a creative activity with coding.
 
+## ~ hint
+
+Go to the [Project Tour](/courses/maker/projects/project-tour) page to see some videos of activites from the projects. Also, to find out which projects relate to a particular academic subject area, see the [Academic Categories](/courses/maker/projects/academic-categories) page.
+
+## ~
+
 ```codecard
 [{
   "name": "Crown",

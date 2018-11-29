@@ -16,7 +16,7 @@ We strongly recommend using the 3xAAA battery pack provided with the @boardname@
 
 Lithium Ion and Lithium Ion Polymer batteries are a great power source for projects but they require care during use and charging. **Lithium Ion and Lithium Ion Polymer batteries can be a fire hazard if not handled properly**.
 
-[Read this guidelines](https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion)!
+Please read these **[guidelines](https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion)** on battery handling before you use them!
 
 #### ~
 

@@ -43,9 +43,11 @@ See the [Maker Tools and Techniques](/courses/maker/general/maker-tools-techniqu
 ### Plan your box
 
 * Use a pre-made box if you can, for example https://www.amazon.com/dp/B01N8YTJ70.
-* Otherwise, you can cut a box out from a flat piece of cardboard.
+* Otherwise, you can cut a box out from a flat piece of cardboard (just like in the picture here).
 * The height needs to be at least 2.5 inches to accommodate the alligator clips.
 * You can also use a rectangular shoebox with an attached lid.
+
+![Plan the sides of the box on one piece of cardboard](/static/courses/maker/projects/question-box/qb-making0.jpg)
 
 ### Position the box
 

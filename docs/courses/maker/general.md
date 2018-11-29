@@ -13,7 +13,6 @@ General reference topics on making and coding with the @boardname@.
   "description": "Introdution to coding in the MakeCode environment.",
   "imageUrl": "/static/courses/maker/general/coding.png",
   "url":"/courses/maker/general/coding"
-
 }, {
   "name": "Managing Programs",
   "description": "How to manage the programs you create in MakeCode.",

@@ -62,7 +62,7 @@ See the [Maker Tools and Techniques](/courses/maker/general/maker-tools-techniqu
 
 LiPo batteries are a great power source for projects but they require care during use and charging. **LiPo batteries can be a fire hazard if not handled properly**.
 
-[Read this guidelines](https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion)!
+Please read these **[guidelines](https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion)** on battery handling before you use them!
 
 #### ~
 

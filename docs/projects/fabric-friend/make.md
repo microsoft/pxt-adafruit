@@ -43,7 +43,7 @@ It’s important to also plan for where the battery pack will go. In your hand? 
 
 LiPo batteries are a great power source for projects but they require care during use and charging. **LiPo batteries can be a fire hazard if not handled properly**.
 
-[Read this guidelines](https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion)!
+[Read these guidelines](https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion)!
 
 #### ~
 

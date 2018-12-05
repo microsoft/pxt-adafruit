@@ -25,18 +25,18 @@ The ``||music:MUSIC||`` blocks also have various ways to play specific tones and
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
-    music.ringTone(494)
+    music.playTone(494, music.beat(BeatFraction.Whole))
     music.rest(music.beat(BeatFraction.Eighth))
-    music.ringTone(440)
+    music.playTone(440, music.beat(BeatFraction.Whole))
     music.rest(music.beat(BeatFraction.Eighth))
-    music.ringTone(392)
+    music.playTone(392, music.beat(BeatFraction.Whole))
     music.rest(music.beat(BeatFraction.Eighth))
-    music.ringTone(440)
+    music.playTone(440, music.beat(BeatFraction.Whole))
     music.rest(music.beat(BeatFraction.Eighth))
-    music.ringTone(494)
+    music.playTone(494, music.beat(BeatFraction.Whole))
     music.rest(music.beat(BeatFraction.Eighth))
-    music.ringTone(494)
+    music.playTone(494, music.beat(BeatFraction.Whole))
     music.rest(music.beat(BeatFraction.Eighth))
-    music.ringTone(494)
+    music.playTone(494, music.beat(BeatFraction.Double))
 })
 ```

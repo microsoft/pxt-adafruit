@@ -21,22 +21,16 @@ music.playSound(music.sounds(Sounds.JumpUp))
 light.setAll(0x00ff00)
 ```
 
-The ``||music:MUSIC||`` blocks also have various ways to play specific tones and control beat and tempo. You can compose entire songs or just have individual notes play in response to inputs you choose. The following is "Mary Had a Little Lamb" using the ``||music:play tone||`` and ``||music:rest||`` blocks:
+The ``||music:MUSIC||`` blocks also have various ways to play specific tones and control beat and tempo. You can compose entire songs or just have individual notes play in response to inputs you choose. The following is "Mary Had a Little Lamb" using the ``||music:play tone||`` blocks:
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
     music.playTone(494, music.beat(BeatFraction.Whole))
-    music.rest(music.beat(BeatFraction.Eighth))
     music.playTone(440, music.beat(BeatFraction.Whole))
-    music.rest(music.beat(BeatFraction.Eighth))
     music.playTone(392, music.beat(BeatFraction.Whole))
-    music.rest(music.beat(BeatFraction.Eighth))
     music.playTone(440, music.beat(BeatFraction.Whole))
-    music.rest(music.beat(BeatFraction.Eighth))
     music.playTone(494, music.beat(BeatFraction.Whole))
-    music.rest(music.beat(BeatFraction.Eighth))
     music.playTone(494, music.beat(BeatFraction.Whole))
-    music.rest(music.beat(BeatFraction.Eighth))
     music.playTone(494, music.beat(BeatFraction.Double))
 })
 ```

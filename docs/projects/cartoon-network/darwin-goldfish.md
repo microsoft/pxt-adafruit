@@ -52,17 +52,17 @@ Using crayons, colored markers or paint, color in Darwin’s body using orange, 
 
 ![Make4.jpg](/static/cp/projects/cartoon-network/darwin-goldfish/make4.jpg)
 
-### Step 5: Attach the Circuit Playground Express
+### Step 5: Attach the @boardname@
 
 Use a small piece of tape and roll it inside out to form a loop so that the sticky side is on the outside.
 
 ![Make5.jpg](/static/cp/projects/cartoon-network/darwin-goldfish/make5.jpg)
 
-Place the tape over Darwin’s mouth, and use it to stick the Adafruit Circuit Playground Express onto the wooden craft stick.
+Place the tape over Darwin’s mouth, and use it to stick the @boardname@ onto the wooden craft stick.
 
 ![Make6.jpg](/static/cp/projects/cartoon-network/darwin-goldfish/make6.jpg)
 
-Make sure the Circuit Playground Express is placed so that the battery connector is at the bottom, to make it easier to connect the battery pack. 
+Make sure the @boardname@ is placed so that the battery connector is at the bottom, to make it easier to connect the battery pack. 
 
 ![Make7.jpg](/static/cp/projects/cartoon-network/darwin-goldfish/make7.jpg)
 
@@ -72,7 +72,7 @@ Insert the batteries into the battery pack.
 
 ![Make8.jpg](/static/cp/projects/cartoon-network/darwin-goldfish/make8.jpg)
 
-Using the wire, connect the battery pack to the Adafruit Circuit Playground Express. 
+Using the wire, connect the battery pack to the @boardname@. 
 
 ![Make9.jpg](/static/cp/projects/cartoon-network/darwin-goldfish/make9.jpg)
 
@@ -182,10 +182,10 @@ Test your program in the Simulator by clicking the **Shake** button.
 
 ![Simulator.gif](/static/cp/projects/cartoon-network/darwin-goldfish/simulator.gif)
 
-Once you’re happy with your program, click the **Download** button and follow the instructions to download the code to your Adafruit Circuit Playground Express. 
+Once you’re happy with your program, click the **Download** button and follow the instructions to download the code to your @boardname@. 
 
 ![Download.png](/static/cp/projects/cartoon-network/darwin-goldfish/download.png)
 
-Disconnect the Circuit Playground Express from the USB cable, turn on the batteries, and try shaking Darwin.
+Disconnect the @boardname@ from the USB cable, turn on the batteries, and try shaking Darwin.
 
 Great work!

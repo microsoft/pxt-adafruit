@@ -1,6 +1,6 @@
 # Cartoon Network
 
-![Cartoon Network logo](/static/cp/projects/cartoon-network/cn-checkerboard-logo.png)
+![Cartoon Network logo](/static/cp/projects/cartoon-network/cartoon-network-logo.png)
 
 A set of projects with characters and activities from your favorite [Cartoon Network](https://www.cartoonnetwork.com/index.html) shows!
 

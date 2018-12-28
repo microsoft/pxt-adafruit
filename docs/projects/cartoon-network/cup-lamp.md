@@ -16,7 +16,8 @@ Finn the Human is a fiery little kid with strong morals who lives in the Land of
 ![Project materials](/static/cp/projects/cartoon-network/cup-lamp/materials.jpg)
 
 * [Adafruit Circuit Playground Express Base Kit](https://www.adafruit.com/product/3517)
-* A paper coffee cup and top (12 oz size) * Thin copper tape (similar to https://www.amazon.com/Bullet-Face-Double-Sided-Conductive-Electrical/dp/B01MR5DSCM)
+* A paper coffee cup and top (12 oz size)
+* Thin copper tape (similar to https://www.amazon.com/Bullet-Face-Double-Sided-Conductive-Electrical/dp/B01MR5DSCM)
 * Printer and plain white paper
 * Tape (masking, duct tape, or packing tape)
 * Scissors

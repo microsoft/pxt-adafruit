@@ -27,5 +27,10 @@ A set of projects with characters and activities from your favorite [Cartoon Net
   "description": "Make your own Finn lamp out of a paper cup that will light up different colors.",
   "url":"/projects/cartoon-network/cup-lamp",
   "imageUrl":"/static/cp/projects/cartoon-network/cup-lamp.png"
+}, {
+  "name": "Jake the Hotdog",
+  "description": "Make your own Jake, and code a 'hot potato', or let's say, a 'hotdog' game with him!",
+  "url":"/projects/cartoon-network/jake-hotdog",
+  "imageUrl":"/static/cp/projects/cartoon-network/jake-hotdog.png"
 }]
 ```

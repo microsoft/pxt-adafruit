@@ -169,7 +169,7 @@ input.pinA5.onEvent(ButtonEvent.Click, function () { })
 input.pinA6.onEvent(ButtonEvent.Click, function () { })
 ```
 
-* From the ``||light:LIGHT`` Toolbox drawer, drag out a ``||light:set all pixels||`` block to the Workspace, and drop it into the ``||input:on pin click||`` block.
+* From the ``||light:LIGHT||`` Toolbox drawer, drag out a ``||light:set all pixels||`` block to the Workspace, and drop it into the ``||input:on pin click||`` block.
 
 !['set all pixels' placed into 'on pin click' block](/static/cp/projects/cartoon-network/cup-lamp/code5.png)
 
@@ -184,7 +184,7 @@ input.pinA6.onEvent(ButtonEvent.Click, function () { })
 
 ![The 'on start' block pulled out](/static/cp/projects/cartoon-network/cup-lamp/code7.png)
 
-* From the ``||loght:LIGHT||`` Toolbox drawer, drag out a ``||light:set brightness||`` block onto the Workspace and drop into the ``||loops:on start||`` block. Set the brightness value to `200`.
+* From the ``||light:LIGHT||`` Toolbox drawer, drag out a ``||light:set brightness||`` block onto the Workspace and drop into the ``||loops:on start||`` block. Set the brightness value to `200`.
 
 ![Brightness slider for 'set brightness' block](/static/cp/projects/cartoon-network/cup-lamp/code8.png)
 

@@ -8,3 +8,4 @@
 * [Crown](/projects/cartoon-network/crown)
 * [Room Sign](/projects/cartoon-network/room-sign)
 * [Cup Lamp](/projects/cartoon-network/cup-lamp)
+* [Jake the Hotdog](/projects/cartoon-network/jake-hotdog)

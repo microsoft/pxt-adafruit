@@ -32,5 +32,10 @@ A set of projects with characters and activities from your favorite [Cartoon Net
   "description": "Make your own Jake, and code a 'hot potato', or let's say, a 'hotdog' game with him!",
   "url":"/projects/cartoon-network/jake-hotdog",
   "imageUrl":"/static/cp/projects/cartoon-network/jake-hotdog.png"
+}, {
+  "name": "BMO Music Box",
+  "description": "Create a BMO Music box that will play different sounds and tempos when you move it around.",
+  "url":"/projects/cartoon-network/bmo-music-box",
+  "imageUrl":"/static/cp/projects/cartoon-network/bmo-music-box.png"
 }]
 ```

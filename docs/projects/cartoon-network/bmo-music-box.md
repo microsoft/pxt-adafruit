@@ -121,7 +121,7 @@ The accelerometer is right in the middle of the @boardname@, under the **RESET**
 
 We will use the lights on our @boardname@ to show the values of the accelerometer when it's tilted left and right (along the X axis).
 
-* Open [MakeCode](@homerul@) in your web browser
+* Open [MakeCode](@homeurl@) in your web browser
 * Click on **New Project**
 
 ![New Project button](/static/cp/projects/cartoon-network/bmo-music-box/new-project.png)

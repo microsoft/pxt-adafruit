@@ -37,5 +37,10 @@ A set of projects with characters and activities from your favorite [Cartoon Net
   "description": "Create a BMO Music box that will play different sounds and tempos when you move it around.",
   "url":"/projects/cartoon-network/bmo-music-box",
   "imageUrl":"/static/cp/projects/cartoon-network/bmo-music-box.png"
+}, {
+  "name": "Enchiridion",
+  "description": " Create your own Enchiridion and try to collect all the gems!",
+  "url":"/projects/cartoon-network/enchiridion",
+  "imageUrl":"/static/cp/projects/cartoon-network/enchiridion.png"
 }]
 ```

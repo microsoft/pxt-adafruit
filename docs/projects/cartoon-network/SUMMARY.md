@@ -7,3 +7,4 @@
     * [Cup Lamp](/projects/cartoon-network/cup-lamp)
     * [Jake the Hotdog](/projects/cartoon-network/jake-hotdog)
     * [BMO Music Box](/projects/cartoon-network/bmo-music-box)
+    * [Enchiridion](/projects/cartoon-network/enchiridion)

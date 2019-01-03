@@ -53,7 +53,7 @@ Place the tape on the back of the @boardname@ and press the @boardname@ in the c
 
 ### Step 3: Draw the book cover details
 
-Draw a bigger circle around the Circuit Playground Express (you may want to use a cup or a roll of duct tape to trace the outline of the circle). Inside the circle, draw the 6 royal gems and color them in.
+Draw a bigger circle around the @boardname@ (you may want to use a cup or a roll of duct tape to trace the outline of the circle). Inside the circle, draw the 6 royal gems and color them in.
 
 ![Draw gems around the board](/static/cp/projects/cartoon-network/enchiridion/make7.jpg)
 
@@ -69,7 +69,7 @@ Insert the batteries into the battery pack
 
 ![3 batteries inserted into the battery pack](/static/cp/projects/cartoon-network/enchiridion/make10.jpg)
 
-Attach the wire from the battery pack to the Circuit Playground Express.
+Attach the wire from the battery pack to the @boardname@.
 
 ![Wire from the battery pack connected to the board](/static/cp/projects/cartoon-network/enchiridion/make11.jpg)
 
@@ -133,7 +133,7 @@ From the ``||logic:LOGIC||`` Toolbox drawer, under the **Boolean** subcategory, 
 
 ### Step 2: Create color patterns
 
-To play the game, we’ll flash different color patterns onto the Circuit Playground Express. One of these color patterns will match the magic gem colors on the Enchiridion.
+To play the game, we’ll flash different color patterns onto the @boardname@. One of these color patterns will match the magic gem colors on the Enchiridion.
 
 The first thing we need to do is check that we are still playing the game.
 
@@ -274,7 +274,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 
 ![Input button selections](/static/cp/projects/cartoon-network/enchiridion/code15.png)
 
-* In the ``||loops:on start||`` block on the coding Workspace, right-click on the Set variable block and select **Duplicate** to make a copy of this block. 
+* In the ``||loops:on start||`` block on the coding Workspace, right-click on the ``||variables:set||`` variable block and select **Duplicate** to make a copy of this block. 
 * Drag this new copy of the ``||variables:set||`` variable block into the ``||input:on button B click||`` block.
 
 ```block
@@ -332,6 +332,6 @@ Once you’re happy with your program, click the **Download** button and follow 
 
 ![Download dialog](/static/cp/projects/cartoon-network/enchiridion/download.png)
 
-Disconnect the Circuit Playground Express from the USB cable, turn on the batteries, and try to collect all the gems and unleash the magical powers of the Enchiridion! 
+Disconnect the @boardname@ from the USB cable, turn on the batteries, and try to collect all the gems and unleash the magical powers of the Enchiridion! 
 
 Great work!

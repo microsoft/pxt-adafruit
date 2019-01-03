@@ -145,7 +145,7 @@ From the ``||variables:VARIABLES||`` Toolbox drawer, drag out a ``||variables:pl
 
 !['play' variable placed into 'if then'](/static/cp/projects/cartoon-network/enchiridion/code5.png)
 
-* From the ``||light:LIGHT||`` Toolbox drawer, drag out 3 ``||light:show ring||`` blocks and place them inside the ``||if then||`` block.
+* From the ``||light:LIGHT||`` Toolbox drawer, drag out 3 ``||light:show ring||`` blocks and place them inside the ``||logic:if then||`` block.
 
 !['play' variable placed into 'if then'](/static/cp/projects/cartoon-network/enchiridion/code6.png)
 
@@ -202,7 +202,7 @@ There are six gems on the Enchiridion, so we’ll need to check the colors in si
 
 Now, we need to do the same thing to check the colors on the other five locations.
 
-* Right-click (or long-press) on the If Then block to see the context menu appear. Click on Duplicate to make a copy of this block.
+* Right-click (or long-press) on the ``||logic:if then||`` block to see the context menu appear. Click on **Duplicate** to make a copy of this block.
 
 ![Duplicate selection on block menu](/static/cp/projects/cartoon-network/enchiridion/code11.png)
 
@@ -262,7 +262,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-* From the ``||music:MUSIC||`` Toolbox drawer, drag out a ``||music:play sound||`` block onto the Workspace and drop inside the ``||loigic:if then||`` blocks after the ``||variables:set||`` variable block.
+* From the ``||music:MUSIC||`` Toolbox drawer, drag out a ``||music:play sound||`` block onto the Workspace and drop inside the ``||logic:if then||`` blocks after the ``||variables:set||`` variable block.
 * In the ``||music:play sound||`` block, use the drop-down menu to select the ``magic wand`` sound effect.
 
 ![Sound effect selections](/static/cp/projects/cartoon-network/enchiridion/code14.png)

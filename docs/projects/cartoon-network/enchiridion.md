@@ -37,7 +37,7 @@ Use the brown bag or brown butcher paper to cover the outside cover of the book.
 
 ![Top and bottom edges folded](/static/cp/projects/cartoon-network/enchiridion/make3.jpg)
 
-Wrap the paper around the book and fold and tape the ends around the front and back cover flaps. Depending on the size of your book, you may need to trim the ends if they are to* Long.
+Wrap the paper around the book and fold and tape the ends around the front and back cover flaps. Depending on the size of your book, you may need to trim the ends if they are too long.
 
 ![Ends of the cover taped to top and bottom edge](/static/cp/projects/cartoon-network/enchiridion/make4.jpg)
 
@@ -65,7 +65,7 @@ Draw a rectangle with curved corners around the whole thing. Then draw the sword
 
 ### Step 4: Insert the batteries and attach battery pack
 
-Insert the batteries into the battery pack
+Insert the batteries into the battery pack.
 
 ![3 batteries inserted into the battery pack](/static/cp/projects/cartoon-network/enchiridion/make10.jpg)
 
@@ -107,7 +107,7 @@ music.playSound("")
 
 ### Step 1: Create a Play variable
 
-The first thing we’ll want to do is to create a variable t* Let us know if we are playing the game or not. This variable will only have two values – True or False.
+The first thing we’ll want to do is to create a variable to let us know if we are playing the game or not. This variable will only have two values – True or False.
 
 * Open [MakeCode](@homeurl@) in your web browser 
 * Click on **New Project**
@@ -145,7 +145,7 @@ From the ``||variables:VARIABLES||`` Toolbox drawer, drag out a ``||variables:pl
 
 !['play' variable placed into 'if then'](/static/cp/projects/cartoon-network/enchiridion/code5.png)
 
-* From the Light Toolbox drawer, drag out 3 Show Ring blocks and place them inside the If Then block.
+* From the ``||light:LIGHT||`` Toolbox drawer, drag out 3 ``||light:show ring||`` blocks and place them inside the ``||if then||`` block.
 
 !['play' variable placed into 'if then'](/static/cp/projects/cartoon-network/enchiridion/code6.png)
 
@@ -186,7 +186,7 @@ There are six gems on the Enchiridion, so we’ll need to check the colors in si
 ![Pixel locations on the board](/static/cp/projects/cartoon-network/enchiridion/cpx-pixels.png)
 
 * From the ``||input:INPUT||`` Toolbox drawer, drag out a ``||input:on button click||`` block onto the Workspace.
-* From the ``||logic:LOGIC||`` Toolbox drawer, drag out an ``||logic:if then||`` block and drop into the ``||input:on button click||`` block 
+* From the ``||logic:LOGIC||`` Toolbox drawer, drag out an ``||logic:if then||`` block and drop into the ``||input:on button click||`` block .
 * From the ``||logic:LOGIC||`` Toolbox drawer, drag out an equals ``||logic:0 = 0||`` comparison block, and drop into the ``||logic:if then||`` block replacing the default `true`.
 
 ![Comparison block placed into 'if then' block](/static/cp/projects/cartoon-network/enchiridion/code8.png)
@@ -207,7 +207,7 @@ Now, we need to do the same thing to check the colors on the other five location
 ![Duplicate selection on block menu](/static/cp/projects/cartoon-network/enchiridion/code11.png)
 
 * Drag this duplicated block inside the original ``||logic:if then||`` block.
-* Do this 4 more times, so there are 6 total nested ``||logic:if then||`` blocks
+* Do this 4 more times, so there are 6 total nested ``||logic:if then||`` blocks.
 
 ```block
 input.buttonA.onEvent(ButtonEvent.Click, function () {

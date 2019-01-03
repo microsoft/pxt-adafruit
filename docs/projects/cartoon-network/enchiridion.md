@@ -186,7 +186,7 @@ There are six gems on the Enchiridion, so we’ll need to check the colors in si
 ![Pixel locations on the board](/static/cp/projects/cartoon-network/enchiridion/cpx-pixels.png)
 
 * From the ``||input:INPUT||`` Toolbox drawer, drag out a ``||input:on button click||`` block onto the Workspace.
-* From the ``||logic:LOGIC||`` Toolbox drawer, drag out an ``||logic:if then||`` block and drop into the ``||input:on button click||`` block .
+* From the ``||logic:LOGIC||`` Toolbox drawer, drag out an ``||logic:if then||`` block and drop into the ``||input:on button click||`` block.
 * From the ``||logic:LOGIC||`` Toolbox drawer, drag out an equals ``||logic:0 = 0||`` comparison block, and drop into the ``||logic:if then||`` block replacing the default `true`.
 
 ![Comparison block placed into 'if then' block](/static/cp/projects/cartoon-network/enchiridion/code8.png)

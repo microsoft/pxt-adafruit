@@ -1,17 +1,23 @@
 # Darwin the Goldfish
 
-**From [The Amazing World of Gumball](https://www.cartoonnetwork.com/video/gumball/index.html)!**
+![Gumball and Darwin](/static/cp/projects/cartoon-network/darwin-goldfish/awg-banner.jpg)
 
-![Gumball and Darwin](/static/cp/projects/cartoon-network/darwin-goldfish/gumball-header.png)
+**From [The Amazing World of Gumball](https://www.cartoonnetwork.com/video/gumball/index.html)!**
 
 Darwin used to be the family pet until he sprouted legs and became one of the Wattersons. He's innocent, naive and Gumball's best friend. Make your own Darwin that will light up and make sounds when you shake him! 
 
 ![Completed Darwin make](/static/cp/projects/cartoon-network/darwin-goldfish/darwin-project.gif)
 
+## Prepare
+
+### This project
+
 **Level**: Easy<br/>
 **Duration**: 30 minutes
 
-## Materials
+### Materials
+
+Collect the materials in the list before starting your project Make.
 
 ![Materials.jpg](/static/cp/projects/cartoon-network/darwin-goldfish/materials.jpg)
 

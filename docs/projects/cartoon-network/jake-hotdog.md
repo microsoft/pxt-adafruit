@@ -1,5 +1,7 @@
 # Jake the Hot Dog
 
+![Jake the Dog with a fiddle](/static/cp/projects/cartoon-network/jake-hotdog/at-banner.jpg)
+
 **From [Adventure Time](https://www.cartoonnetwork.com/video/adventure-time/)**
 
 Jake is a shape-shifting dog who is Finn's best friend and adoptive brother in Adventure Time. Make your own Jake, and code a ‘hot potato’ or in this case Hot Dog game with him! In this game, players gather in a circle and pass Jake the Hot Dog around to each other while music plays. The player who is holding the Hot Dog is out when the music stops. They move out of the circle and the game continues. The game keeps going until only one player is left. Hot Dog is a fast-paced, high-pressure game. Are you Ready? Let’s toss Jake!
@@ -9,10 +11,16 @@ Jake is a shape-shifting dog who is Finn's best friend and adoptive brother in A
 https://youtu.be/s9QNnYTeSVI
 <br/>
 
+## Prepare
+
+### This project
+
 **Level**: Medium<br/>
 **Duration**: 60 minutes
 
-## Materials
+### Materials
+
+Collect the materials in the list before starting your project Make.
 
 ![Make materials](/static/cp/projects/cartoon-network/jake-hotdog/materials.jpg)
 

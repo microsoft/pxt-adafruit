@@ -1,19 +1,25 @@
 # Cup Lamp
 
-**A Finn Cup Lamp from [Adventure Time](https://www.cartoonnetwork.com/video/adventure-time/)!**
+![Finn and Jake at campfire](/static/cp/projects/cartoon-network/cup-lamp/at-banner.jpg)
 
-![Adventure Time banner](/static/cp/projects/cartoon-network/cup-lamp/adventure-time.png)
+**A Finn Cup Lamp from [Adventure Time](https://www.cartoonnetwork.com/video/adventure-time/)!**
 
 Finn the Human is a fiery little kid with strong morals who lives in the Land of Ooo. Make your own Finn lamp out of a paper cup that will light up different colors.
 
 ![Completed Cup Lamp project](/static/cp/projects/cartoon-network/cup-lamp/cup-lamp-project.gif)
 
+## Prepare
+
+### This project
+
 **Level**: Medium<br/>
 **Duration**: 60 minutes
 
-## Materials
+### Materials
 
 ![Project materials](/static/cp/projects/cartoon-network/cup-lamp/materials.jpg)
+
+Collect the materials in the list before starting your project Make.
 
 * [Adafruit Circuit Playground Express Base Kit](https://www.adafruit.com/product/3517)
 * A paper coffee cup and top (12 oz size)

@@ -2,6 +2,8 @@
 
 **The BMO Music Box from [Adventure Time](https://www.cartoonnetwork.com/video/adventure-time/)!**
 
+![Gumball, Darwin, and BMO](/static/cp/projects/cartoon-network/bmo-music-box/at-banner.jpg)
+
 BMO is Finn and Jake's loyal, protective and helpful friend, who also happens to be a living video game console, portable electrical outlet, music player, and more! Create your own BMO Music box that will play different sounds and tempos when you move it around, or when the light changes around it.
 
 ![BMO cartoon character](/static/cp/projects/cartoon-network/bmo-music-box/bmo.jpg)
@@ -9,10 +11,16 @@ BMO is Finn and Jake's loyal, protective and helpful friend, who also happens to
 https://youtu.be/M1RwRYzcDYQ 
 <br/>
 
+## Prepare
+
+### This project
+
 **Level**: Medium<br/>
 **Duration**: 60 minutes
 
-## Materials
+### Materials
+
+Collect the materials in the list before starting your project Make.
 
 ![Materials](/static/cp/projects/cartoon-network/bmo-music-box/materials.jpg)
 

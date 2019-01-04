@@ -1,17 +1,23 @@
 # Gumball Room Sign
 
-**From [The Amazing World of Gumball](https://www.cartoonnetwork.com/video/gumball/index.html)!**
+![Amazing World of Gumball banner](/static/cp/projects/cartoon-network/room-sign/awg-banner.jpg)
 
-![Gumball and Darwin](/static/cp/projects/cartoon-network/room-sign/gumball-header.png)
+**From [The Amazing World of Gumball](https://www.cartoonnetwork.com/video/gumball/index.html)!**
 
 Make sure everyone knows whose room it is, even at night with this Amazing World of Gumball glow-in-the-dark Room Sign that alerts you when it hears a noise outside your door.
 
 ![Completed Room Sign project](/static/cp/projects/cartoon-network/room-sign/room-sign-project.gif)
 
+## Prepare
+
+### This project
+
 **Level**: Easy<br/>
 **Duration**: 30 minutes
 
-## Materials
+### Materials
+
+Collect the materials in the list before starting your project Make.
 
 ![Project materials](/static/cp/projects/cartoon-network/room-sign/materials.jpg)
 

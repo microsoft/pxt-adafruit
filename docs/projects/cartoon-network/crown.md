@@ -1,8 +1,8 @@
 # Ice King or Princess Bubblegum Crown
 
-From **[Adventure Time](https://www.cartoonnetwork.com/video/adventure-time/)**!
+![Princesss Bubblegum on a Unicorn](/static/cp/projects/cartoon-network/crown/at-banner.jpg)
 
-![Adventure Time banner](/static/cp/projects/cartoon-network/crown/adventure-time.png)
+From **[Adventure Time](https://www.cartoonnetwork.com/video/adventure-time/)**!
 
 Ice King is a menacing but largely misunderstood ice wizard whose crown is the source of his ice powers. Princess Bubblegum is the sovereign of the Candy Kingdom and a sentient piece of gum. Make your own Ice King or Princess Bubblegum crown that will light up and make sounds when you tilt your head!
 
@@ -10,11 +10,16 @@ Ice King is a menacing but largely misunderstood ice wizard whose crown is the s
 
 ![Completed crown project](/static/cp/projects/cartoon-network/crown/crown-project.gif)
 
+## Prepare
+
+### This project
 
 **Level**: Easy<br/>
 **Duration**: 30 minutes
 
-## Materials
+### Materials
+
+Collect the materials in the list before starting your project Make.
 
 ![Materials for Bubblegum crown make](/static/cp/projects/cartoon-network/crown/materials.jpg)
 

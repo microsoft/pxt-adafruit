@@ -1,5 +1,7 @@
 # Enchiridion
 
+![Adventure Time bannner](/static/cp/projects/cartoon-network/enchiridion/at-banner.jpg)
+
 **The Enchiridion from [Adventure Time](https://www.cartoonnetwork.com/video/adventure-time/)!**
 
 The Enchiridion (which translates to "The Handbook" or "The Manual") is an ancient book with codes of conduct, guidelines, and other helpful information for heroes. The book also has magical powers that are unlocked by inserting the royal gems into their appropriate slots on the front cover of the book. Create your own Enchiridion and try to collect all the gems!
@@ -9,10 +11,16 @@ The Enchiridion (which translates to "The Handbook" or "The Manual") is an ancie
 https://youtu.be/PezmgdB1kOE 
 <br/>
 
+## Prepare
+
+### This project
+
 **Level**: Medium<br/>
 **Duration**: 60 minutes
 
-## Materials
+### Materials
+
+Collect the materials in the list before starting your project Make.
 
 ![Materials](/static/cp/projects/cartoon-network/enchiridion/materials.jpg)
 

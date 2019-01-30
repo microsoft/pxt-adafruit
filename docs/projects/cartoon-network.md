@@ -42,5 +42,15 @@ A set of projects with characters and activities from your favorite [Cartoon Net
   "description": " Create your own Enchiridion and try to collect all the gems!",
   "url":"/projects/cartoon-network/enchiridion",
   "imageUrl":"/static/cp/projects/cartoon-network/enchiridion.png"
+}, {
+  "name": "Coffee Cup Lamp Too",
+  "description": "Build a Touch Sense Lamp from a Coffee Cup!",
+  "url":"https://learn.adafruit.com/adventure-time-coffee-cup-lamp",
+  "imageUrl":"/static/cp/referred/coffee-cup-lamp-too.jpg"
+}, {
+  "name": "Garnet's Palm Gems from Steven Universe",
+  "description": "Learn how to create Garnet's fusion from Ruby and Sapphire!",
+  "url":"https://learn.adafruit.com/cartoon-network-makecode-garnet-s-palm-gems-from-steven-universe",
+  "imageUrl":"/static/cp/referred/garnet-palm-gems.jpg"
 }]
 ```

@@ -18,9 +18,8 @@
         "Cartoon Network": "projects/cartoon-network",
         "Costumes": "costumes",
         "Games": "games",
-        "Music": "music",
-        "Wearables": "wearables",
-        "Pranks": "pranks",
+        "Create and Have Fun": "creative-fun",
+        "Courses": "courses",
         "learn.adafruit.com": "learnsystem"
     },
     "firmwareUrls": {

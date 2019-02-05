@@ -24,5 +24,10 @@
         "microphone": "file:../microphone",
         "touch": "file:../touch"
     },
-    "public": true
+    "public": true,
+    "yotta": {
+        "config": {
+            "NEOPIXEL_SPI": 0
+        }
+    }
 }

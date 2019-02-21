@@ -26,6 +26,32 @@ Some of these pins are configurable for use in both digital or analog I/O. This 
 * I2C connections
 * SPI connections
 
+## Tutorials
+
+```codecard
+[{
+  "name": "Digital Input",
+  "description": "Learn about digital inputs.",
+  "url":"/learnsystem/pins-tutorial/digital-input",
+  "imageUrl":"/static/cp/learn/pins-tutorial/pin-event-high.jpg"
+}, {
+  "name": "Digital Output",
+  "description": "Learn about digital output.",
+  "url":"/learnsystem/using-pins/digital-output",
+  "imageUrl":"/static/cp/learn/pins-tutorial/pin-event-high.jpg"
+}, {
+  "name": "Analog Input",
+  "description": "Learn about analog input.",
+  "url":"/learnsystem/using-pins/analog-input",
+  "imageUrl":"/static/cp/learn/pins-tutorial/pin-event-high.jpg"
+}, {
+  "name": "Servos",
+  "description": "Learn about analog servos.",
+  "url":"/learnsystem/using-pins/servos",
+  "imageUrl":"/static/cp/learn/pins-tutorial/pin-event-high.jpg"
+}]
+```
+
 ## Related topics
 
 [Digital input](https://learn.adafruit.com/circuit-playground-digital-input),

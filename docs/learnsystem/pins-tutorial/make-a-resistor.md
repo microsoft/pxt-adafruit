@@ -2,7 +2,7 @@
 
 To test out the pins on the @boardname@ we'll make our own carbon graphite resistor.
 
-![Graphite and paper resistor](/static/cp/learn/pins-tutorial/graphite-resistor.jpg)
+![Graphite and paper resistor](/static/cp/learn/pins-tutorial/make-a-resistor/graphite-resistor.jpg)
 
 ## Resistors
 
@@ -27,30 +27,30 @@ With the @boardname@, we'll often use it's supply voltage for our projects and e
 
 To make a resistor, we just simply draw it on paper! Get your piece of paper (or notecard) and mark out a **4.0 cm x 0.5 cm** rectangle near the edge of the paper with the #2 pencil.
 
-![Size of the resistor on the paper](/static/cp/learn/pins-tutorial/resistor-size.jpg)
+![Size of the resistor on the paper](/static/cp/learn/pins-tutorial/make-a-resistor/resistor-size.jpg)
 
 Also, make some marks to measure the distance along the rectangle.
 
-![Shape of the resistor on the paper](/static/cp/learn/pins-tutorial/resistor-rectangle.jpg)
+![Shape of the resistor on the paper](/static/cp/learn/pins-tutorial/make-a-resistor/resistor-rectangle.jpg)
 
 Now, fill in the rectangle with the pencil. Make sure the entire rectangle is completely filled with none of the paper underneath is showing. When entire rectangle is completely dark and shiny yoy'll have a good and consistant coverage of graphite for conductivity.
 
-![Fill in the resistor rectangle](/static/cp/learn/pins-tutorial/resistor-fill.jpg)
+![Fill in the resistor rectangle](/static/cp/learn/pins-tutorial/make-a-resistor/resistor-fill.jpg)
 
 Get two alligator clip leads and attach them to either end of the resistor rectangle. Make sure the clips have a good "bite" over the graphite at each end. Our resistor is now ready to use!
 
-![Attach alligator clips to the resistor](/static/cp/learn/pins-tutorial/clip-to-resistor.jpg)
+![Attach alligator clips to the resistor](/static/cp/learn/pins-tutorial/make-a-resistor/clip-to-resistor.jpg)
 
 ## How Much Resistance?
 
 The graphite from a #2 pencil lead will give you somewhere between **5k ohms** and **40k ohms** of resistance per centimenter. If you have a multimeter available, test your resistor and see how much resistance it has. A multimeter isn't necessary but we're curious to see how much resistance the graphite resistor gives. In our example, we have about **29k ohms** across 4.0 centimeters which means there's a good coverage of graphite. This is good value for resistance since it keeps the current draw from the @boardname@ to a safe and small amount.
 
-![Measure the resistance with a multimeter](/static/cp/learn/pins-tutorial/multimeter-test.jpg)
+![Measure the resistance with a multimeter](/static/cp/learn/pins-tutorial/make-a-resistor/multimeter-test.jpg)
 
 ## Variable Resistance
 
 You might guess that if one of the clips is moved into the rectangle then resistance will change. That's right, it will decrease. We'll use that fact to help with some of our experiments.
 
-![Measure the variable resistance](/static/cp/learn/pins-tutorial/variable-resistance.jpg)
+![Measure the variable resistance](/static/cp/learn/pins-tutorial/make-a-resistor/variable-resistance.jpg)
 
 

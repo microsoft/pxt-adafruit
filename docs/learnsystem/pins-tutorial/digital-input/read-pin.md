@@ -6,6 +6,8 @@ A digital read operation just returns a `true` if the input voltage on the pin i
 let inputValue = pins.A1.digitalRead()
 ```
 
+## Pin input
+
 A pin has a small range of voltage where it detects the input level as high. The diagram below shows that the **A1** pin is at the high level when its input voltage is in the range where the graph shows red.
 
 ![Pin input is high](/static/cp/learn/pins-tutorial/digital-input/pin-level-high.jpg)
@@ -14,10 +16,7 @@ The second diagram is for the opposite condtion when the input level is low. At 
 
 ![Pin input is low](/static/cp/learn/pins-tutorial/digital-input/pin-level-low.jpg)
 
-### ~ hint
-
-**Mini-experiment: Connect high and low**
-
+### Experiment: Touch high and low #experiment-01
 ---
 
 **Setup**:
@@ -44,7 +43,13 @@ forever(function () {
 
 **Result**: The pixels show a different color for each input level, high and low.
 
-### ~
+#### ~ hint
+
+Did you notice that sometimes the pixels changed color when your alligator clip wasn't touching either **3.3V** or **GND**. This is because the **A1** pin has a _floating_ input state. The reason for this is discussed in the [Input states](/learnsystem/pins-tutorial/digital-input/input-states) section.
+
+#### ~
+
+---
 
 ## Switches and Buttons
 
@@ -62,12 +67,13 @@ In both circuits is light is the load for the power supply in the battery. Curre
 
 Digital input electronics are designed to use an exrtremely small amount current when connected to a voltage source, like with the switch shown. The purpose is only to detect the voltage level present at the pin.
 
-**Note**: Not all digital electronics will let you connect an input pin directly to a voltage source. Doing so can cause too much current to flow through the pin circuit possibly damaging it. Often a resistor is need between the in and the voltage supply to protect the input circuit. Fortunately, the @boardname@ has it's own protection for this allowing you to safely connect the pins to a voltage of 3.3V or less.
-
 ### ~ hint
 
-**Mini-experiment: Switch pin input to high**
+**Note**: Not all digital electronics will let you connect an input pin directly to a voltage source. Doing so can cause too much current to flow through the pin circuit possibly damaging it. Often a resistor is need between the in and the voltage supply to protect the input circuit. Fortunately, the @boardname@ has it's own protection for this allowing you to safely connect the pins to a voltage of 3.3V or less.
 
+### ~
+
+### Experiment: Switch pin input to high #experiment-02
 ---
 
 **Setup**: Connect an alligator clip lead to the the **A1** pin. Clip another lead to the **3.3V** pin. Connect the other ends of the each lead to a terminal on a light switch.
@@ -93,4 +99,4 @@ forever(function () {
 
 **Optional test**: If you have a pushbutton to use, connect it to the @boardname@ like you did with the light switch. The LEDs should show yellow when you press the button down.
 
-### ~ 
+---

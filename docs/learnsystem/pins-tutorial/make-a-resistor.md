@@ -33,7 +33,7 @@ Also, make some marks to measure the distance along the rectangle.
 
 ![Shape of the resistor on the paper](/static/cp/learn/pins-tutorial/make-a-resistor/resistor-rectangle.jpg)
 
-Now, fill in the rectangle with the pencil. Make sure the entire rectangle is completely filled with none of the paper underneath is showing. When entire rectangle is completely dark and shiny yoy'll have a good and consistant coverage of graphite for conductivity.
+Now, fill in the rectangle with the pencil. Make sure the entire rectangle is completely filled with none of the paper underneath is showing. When entire rectangle is completely dark and shiny you'll have a good and consistant coverage of graphite for conductivity.
 
 ![Fill in the resistor rectangle](/static/cp/learn/pins-tutorial/make-a-resistor/resistor-fill.jpg)
 

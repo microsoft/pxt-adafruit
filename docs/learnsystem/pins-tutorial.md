@@ -13,28 +13,24 @@ Some of these pins are configurable for use in both digital or analog I/O. This 
 ```codecard
 [{
   "name": "Digital Input",
-  "description": "Learn about digital inputs.",
+  "description": "Learn how to recieve and read digital input.",
   "url":"/learnsystem/pins-tutorial/digital-input",
   "imageUrl":"/static/cp/learn/pins-tutorial/pin-event-high.jpg"
 }, {
   "name": "Digital Output",
-  "description": "Learn about digital output.",
-  "url":"/learnsystem/using-pins/digital-output",
+  "description": "Create output signals on the pins.",
   "imageUrl":"/static/cp/learn/pins-tutorial/pin-event-high.jpg"
 }, {
   "name": "Analog Input",
-  "description": "Learn about analog input.",
-  "url":"/learnsystem/using-pins/analog-input",
+  "description": "Read and use analog signal values.",
   "imageUrl":"/static/cp/learn/pins-tutorial/pin-event-high.jpg"
 }, {
   "name": "Servos",
-  "description": "Learn about analog servos.",
-  "url":"/learnsystem/using-pins/servos",
+  "description": "Learn how to connect and run servos.",
   "imageUrl":"/static/cp/learn/pins-tutorial/pin-event-high.jpg"
 }, {
   "name": "Advanced Pins",
   "description": "Use the I2C and SPI pins.",
-  "url":"/learnsystem/using-pins/advanced",
   "imageUrl":"/static/cp/learn/pins-tutorial/pin-event-high.jpg"
 }]
 ```

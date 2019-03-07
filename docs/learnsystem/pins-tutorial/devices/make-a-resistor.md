@@ -16,7 +16,9 @@ Resistance is measured in units of _ohms_. Perhaps you've heard of Ohm's Law:
 
 With the @boardname@, we'll often use it's supply voltage for our projects and experiments. This is **3.3V** and there are [some pins](https://learn.adafruit.com/adafruit-circuit-playground-express/pinouts#power-pads-4-3) that give us this voltage. If we were using a 10k ohm resistor with this supply voltage, then we'd draw a current of **I** = 3.3V / 10,000 ohms = 0.33 milliamps from the board.
 
-## Low current resistor
+## Input resistor
+
+A low current resistior has a high amount of resistance. High resistance is needed when connecting pins for input. We can create a low current resistor by making a thin layer of graphite on a piece of paper.
 
 ### Materials
 
@@ -55,10 +57,60 @@ You might guess that if one of the clips is moved into the rectangle then resist
 
 ![Measure the variable resistance](/static/cp/learn/pins-tutorial/make-a-resistor/variable-resistance.jpg)
 
-## High current resistor
+## Output resistor
+
+A high current resistor has a low amount of resistance. A resistor with a low amount of resistance is used with a pin output circuit. We can use graphite again but this time we need more of it to allow a larger amount of current to flow. Fortunately, we can again use a #2 pencil for this.
 
 ### Materials
 
 * (4) #2 pencils
 * (3) Alligator clip leads
 * Pencil sharpener
+* Wire cutter or scissors
+* Tape or rubber band
+
+### Pencil resistor
+
+A common experiment for pin output is powering an LED. With a **3.3V** output voltage for the board, a safe amount of resistance to control current through an LED is about 80 ohms. Due to the thickness and length of the graphite, the resistance of the lead in a #2 pencil from one end to the other is about 20 - 30 ohms. If we connect 4 pencils together in series we can make a resistor that will keep the output current for an LED at to a safe amount.
+
+### Sharpen the pencil ends
+
+Find 4 full length #2 pencils. If they have and eraser on one end, cut off the eraser part with a wire cutter or scissors.
+
+![Cut off pencil eraser end](/static/cp/learn/pins-tutorial/devices/cutoff-eraser.jpg)
+
+Sharpen both ends of each pencil so that a nice amount of lead is showing.
+
+![Sharpen pencil](/static/cp/learn/pins-tutorial/devices/sharpen-pencil.jpg)
+
+### Connect the pencils
+
+Now, connect the pencils in a series using 3 alligator clip leads. Use one alligator clip lead to connect each pencil end with the end of another.
+
+![Pencils connected with alligator clips](/static/cp/learn/pins-tutorial/devices/connect-pencils.jpg)
+
+### Test the resistance
+
+If you have a multimeter available, turn it on and set it to the lowest range for measuring ohms. Connect the test leads to each end of the pencil resistor. What do you see for a resistance value?
+
+![Multimeter test for resistance](/static/cp/learn/pins-tutorial/devices/test-resistance.jpg)
+
+If your measurement less 80 ohms, then add another pencil to the series. If the ohms measured is more than 130 ohms, you can remove one of the pencils in the resistor series.
+
+### Bundle the resistor
+
+Use some tape or a rubber band to bundle the resistor like you see in the picture below. Make sure you stagger the ends a little to keep the alligator clips from touching each other.
+
+![Pencil resistor bundle](/static/cp/learn/pins-tutorial/devices/resistor-bundle.jpg)
+
+You can quickly try out the resistor with an [LED](https://www.adafruit.com/category/90
+) by [connecting](/learnsystem/pins-tutorial/devices/led-connections) them in series between the **3.3V** and **GND** pins on the board.
+
+![Test the resistor with an LED](/static/cp/learn/pins-tutorial/devices/led-resistor-test.jpg)
+
+### ~ hint
+
+If your're using your resistor for a classroom project or with a group of friends, make just one pencil resistor and share it with others.
+
+### ~
+

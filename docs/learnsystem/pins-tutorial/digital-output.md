@@ -28,12 +28,12 @@ There are several experiments to let you test out the concepts you learn in the 
 [{
   "name": "On and off signalling",
   "description": "Send out an on and off signal from a pin.",
-  "url":"/learnsystem/pins-tutorial/digital-input/on-off-signal",
+  "url":"/learnsystem/pins-tutorial/digital-output/on-off-signal",
   "imageUrl":"/static/cp/learn/pins-tutorial/digital-input/read-pin-thumb.jpg"
 }, {
-  "name": "Input states",
+  "name": "Pulses and triggers",
   "description": "Understand what the default input levels are.",
-  "url":"/learnsystem/pins-tutorial/digital-input/input-states",
+  "url":"/learnsystem/pins-tutorial/digital-output/pulses-triggers",
   "imageUrl":"/static/cp/learn/pins-tutorial//digital-input/input-states-thumb.jpg"
 }, {
   "name": "Pin events",

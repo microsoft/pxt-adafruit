@@ -62,6 +62,7 @@ namespace pxsim {
 
         invertAccelerometerYAxis = true;
 
+        viewHost: visuals.BoardHost;
         view: SVGSVGElement;
 
         constructor() {
@@ -145,11 +146,10 @@ namespace pxsim {
                     // TODO
                     break;
                 }
-                case "irpacket": {
-                    let ev = <SimulatorInfraredPacketMessage>msg;
-                    this.irState.receive(new RefBuffer(ev.packet));
+                case "irpacket":
+                    let irpacket = <SimulatorInfraredPacketMessage>msg;
+                    this.irState.receive(irpacket.packet);
                     break;
-                }
             }
         }
 
@@ -172,18 +172,19 @@ namespace pxsim {
                 maxWidth: "100%",
                 maxHeight: "100%",
             };
-            const viewHost = new visuals.BoardHost(pxsim.visuals.mkBoardView({
-                visual: boardDef.visual
+            this.viewHost = new visuals.BoardHost(pxsim.visuals.mkBoardView({
+                visual: boardDef.visual,
+                boardDef
             }), opts);
 
             document.body.innerHTML = ""; // clear children
-            document.body.appendChild(this.view = viewHost.getView() as SVGSVGElement);
+            document.body.appendChild(this.view = this.viewHost.getView() as SVGSVGElement);
 
             return Promise.resolve();
         }
 
-        screenshot(): string {
-            return svg.toDataUri(new XMLSerializer().serializeToString(this.view));
+        screenshotAsync(width?: number): Promise<ImageData> {
+            return this.viewHost.screenshotAsync(width);
         }
 
         tryGetNeopixelState(pinId: number): CommonNeoPixelState {

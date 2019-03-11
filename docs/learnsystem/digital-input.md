@@ -38,3 +38,7 @@ forever(function () {
     }
 })
 ```
+
+```package
+serial
+```

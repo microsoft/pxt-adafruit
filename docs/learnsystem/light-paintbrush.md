@@ -41,7 +41,7 @@ let Y = 0;
 let c = 0x00ff00;
 
 forever(() => {
-    sensorValue = pins.A10.analogRead();
+    sensorValue = pins.A1.analogRead();
     brightVal = Math.map(sensorValue, 0, 1023, 0, 225);
 
     X = input.acceleration(Dimension.X);

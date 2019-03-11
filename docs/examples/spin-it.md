@@ -21,8 +21,3 @@ input.onGesture(Gesture.Shake, () => {
     music.playSound(music.sounds(Sounds.PowerUp));
 })
 ```
-
-```package
-light
-music
-```

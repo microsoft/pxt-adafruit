@@ -27,8 +27,3 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
     music.playSound(music.sounds(Sounds.PowerDown))
 })
 ```
-
-```package
-light
-music
-```

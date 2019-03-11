@@ -1,30 +1,9 @@
 
 declare namespace light {
 
-    //% blockHidden=1
-    function range(start: number, length: number): NeoPixelStrip;
-
-    //% blockHidden=1
-    function setLength(numleds: number): void;
-
-    //% blockHidden=1
-    function setMode(mode: NeoPixelMode): void;
-
     //% advanced=false
     //% subcategory="NeoPixel"
     function onboardStrip(): NeoPixelStrip;
-
-    //% advanced=false
-    //% blockHidden=1
-    function defaultStrip(): NeoPixelStrip;
-
-    //% advanced=false
-    //% subcategory="NeoPixel"
-    export function createAPA102Strip(
-        dataPin: DigitalInOutPin,
-        clkPin: DigitalInOutPin,
-        numleds: number): NeoPixelStrip;
-
 
     interface NeoPixelStrip {
 

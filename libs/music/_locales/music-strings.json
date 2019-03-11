@@ -28,6 +28,7 @@
   "Sounds.PowerUp|block": "power up",
   "Sounds.Siren|block": "siren",
   "Sounds.Wawawawaa|block": "wawawawaa",
+  "jacdac.musicService|block": "music service",
   "music.beat|block": "%fraction|beat",
   "music.changeTempoBy|block": "change tempo by %value|(bpm)",
   "music.noteFrequency|block": "%note",
@@ -43,6 +44,10 @@
   "music.stopAllSounds|block": "stop all sounds",
   "music.tempo|block": "tempo (bpm)",
   "music|block": "music",
+  "{id:category}Jacdac": "Jacdac",
   "{id:category}Music": "Music",
-  "{id:group}Tones": "Tones"
+  "{id:group}Tempo": "Tempo",
+  "{id:group}Tone": "Tone",
+  "{id:group}Tones": "Tones",
+  "{id:group}Volume": "Volume"
 }

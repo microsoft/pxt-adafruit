@@ -11,8 +11,5 @@
         "ns.ts"
     ],
     "public": true,
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/pulse",
-    "dependencies": {
-        "core": "file:../core"
-    }
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/pulse"
 }

@@ -28,7 +28,8 @@
         "libs/servo",
         "libs/storage",
         "libs/datalogger",
-        "libs/serial"
+        "libs/serial",
+        "libs/jacdac"
     ],
     "serial": {
         "useHF2": true,
@@ -251,7 +252,10 @@
         "functionBlocks": true,
         "onStartNamespace": "loops",
         "onStartColor": "#40bf4a",
-        "onStartWeight": 100
+        "onStartWeight": 100,
+        "bannedCategories": [
+            "jacdac"
+        ]        
     },
     "compileService": {
         "buildEngine": "codal",

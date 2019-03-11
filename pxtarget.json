@@ -340,6 +340,7 @@
         "extendEditor": true,
         "extendFieldEditors": true,
         "disableBlockIcons": true,
+        "scriptManager": true,
         "experiments": [
             "debugger",
             "simScreenshot",

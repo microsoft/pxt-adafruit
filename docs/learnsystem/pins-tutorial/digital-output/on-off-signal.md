@@ -1,8 +1,17 @@
-# On and off signalling
+# On and off signals
 
 ```block
 pins.A1.digitalWrite(true)
 ```
+
+![Pin A1 at high level](/static/cp/learn/pins-tutorial/digital-output/pin-high-level.jpg)
+
+
+```block
+pins.A1.digitalWrite(false)
+```
+
+![Pin A1 at low level](/static/cp/learn/pins-tutorial/digital-output/pin-low-level.jpg)
 
 ```blocks
 pins.A1.digitalWrite(false)

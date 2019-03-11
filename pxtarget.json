@@ -340,6 +340,11 @@
         "extendEditor": true,
         "extendFieldEditors": true,
         "disableBlockIcons": true,
+        "experiments": [
+            "debugger",
+            "simScreenshot",
+            "simGif"
+        ],
         "socialOptions": {
             "twitterHandle": "adafruit",
             "orgTwitterHandle": "MSMakeCode",

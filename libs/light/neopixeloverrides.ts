@@ -1,6 +1,15 @@
 
 declare namespace light {
 
+    //% blockHidden=1
+    function range(start: number, length: number): NeoPixelStrip;
+
+    //% blockHidden=1
+    function setLength(numleds: number): void;
+
+    //% blockHidden=1
+    function setMode(mode: NeoPixelMode): void;
+
     interface NeoPixelStrip {
 
         //% subcategory="NeoPixel"

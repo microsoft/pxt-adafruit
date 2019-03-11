@@ -11,7 +11,7 @@
     ],
     "dependencies": {
         "base": "file:../base",
-        "core": "file:../core",
+        "core---samd": "file:../core---samd",
         "buttons": "file:../buttons",
         "accelerometer": "file:../accelerometer",
         "lightsensor": "file:../lightsensor",

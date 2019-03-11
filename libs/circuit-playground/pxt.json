@@ -16,7 +16,7 @@
         "accelerometer": "file:../accelerometer",
         "lightsensor": "file:../lightsensor",
         "thermometer": "file:../thermometer",
-        "music": "file:../music",
+        "mixer---samd": "file:../mixer---samd",
         "light": "file:../light",
         "switch": "file:../switch",
         "pulse": "file:../pulse",
@@ -24,10 +24,5 @@
         "microphone": "file:../microphone",
         "touch": "file:../touch"
     },
-    "public": true,
-    "yotta": {
-        "config": {
-            "NEOPIXEL_SPI": 0
-        }
-    }
+    "public": true
 }

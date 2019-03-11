@@ -13,6 +13,8 @@
         "libs/buttons",
         "libs/accelerometer",
         "libs/music",
+        "libs/mixer",
+        "libs/mixer---samd",
         "libs/microphone",
         "libs/lightsensor",
         "libs/thermometer",

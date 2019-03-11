@@ -1,10 +1,5 @@
 
 declare namespace light {
-
-    //% advanced=false
-    //% subcategory="NeoPixel"
-    function onboardStrip(): NeoPixelStrip;
-
     interface NeoPixelStrip {
 
         //% advanced=false

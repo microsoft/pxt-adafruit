@@ -52,6 +52,8 @@
   "{id:category}Buffer": "Buffer",
   "{id:category}Console": "Console",
   "{id:category}Control": "Control",
+  "{id:category}Fx": "Fx",
+  "{id:category}Fx8": "Fx8",
   "{id:category}Helpers": "Helpers",
   "{id:category}JSON": "JSON",
   "{id:category}Loops": "Loops",
@@ -61,5 +63,6 @@
   "{id:category}Object": "Object",
   "{id:category}Pins": "Pins",
   "{id:category}String": "String",
-  "{id:category}Text": "Text"
+  "{id:category}Text": "Text",
+  "{id:category}UTF8Decoder": "UTF8Decoder"
 }

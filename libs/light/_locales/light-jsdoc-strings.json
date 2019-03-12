@@ -67,6 +67,8 @@
   "light.pixelColor|param|pixeloffset": "position of the NeoPixel in the strip",
   "light.pixels": "Gets the default external light strip",
   "light.range": "Create a range of pixels.",
+  "light.range|param|length": "number of pixels in the range, eg: 4",
+  "light.range|param|start": "offset in the NeoPixel strip to start the range",
   "light.rgb": "Converts red, green, blue channels into a RGB color",
   "light.rgb|param|blue": "value of the blue channel between 0 and 255. eg: 255",
   "light.rgb|param|green": "value of the green channel between 0 and 255. eg: 255",

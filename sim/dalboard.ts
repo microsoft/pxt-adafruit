@@ -20,6 +20,11 @@ namespace pxsim {
         export let D7 = -1;
         export let D8 = -1;
         export let D13 = -1;
+        export let IR_IN = -1;
+        export let IR_OUT = -1;
+        export let LED = -1;
+        export let TX = -1;
+        export let RX = -1;
 
         export function init() {
             let v = CPlayPinName as any
@@ -112,7 +117,9 @@ namespace pxsim {
                     pxsim.CPlayPinName.D6,
                     pxsim.CPlayPinName.D7,
                     pxsim.CPlayPinName.D8,
-                    pxsim.CPlayPinName.D13
+                    pxsim.CPlayPinName.D13,
+                    pxsim.CPlayPinName.IR_IN,
+                    pxsim.CPlayPinName.IR_OUT
                 ]
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;

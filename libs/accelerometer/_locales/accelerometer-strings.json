@@ -40,6 +40,8 @@
   "input.rotation|block": "rotation (°)|%NAME",
   "input.setAccelerometerRange|block": "set accelerometer|range %range",
   "input|block": "input",
+  "jacdac.accelerometerService|block": "accelerometer service",
   "{id:category}Input": "Input",
+  "{id:category}Jacdac": "Jacdac",
   "{id:group}More": "More"
 }

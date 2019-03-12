@@ -28,8 +28,3 @@ input.onGesture(Gesture.Shake, function () {
     music.playTone(1400, 500)
 })
 ```
-
-```package
-light
-music
-```

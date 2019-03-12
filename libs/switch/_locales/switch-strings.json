@@ -4,6 +4,8 @@
   "input.onSwitchMoved|block": "on switch moved %direction",
   "input.switchRight|block": "switch right",
   "input|block": "input",
+  "jacdac.switchService|block": "switch service",
   "{id:category}Input": "Input",
+  "{id:category}Jacdac": "Jacdac",
   "{id:group}Switch": "Switch"
 }

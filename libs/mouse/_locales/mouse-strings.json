@@ -2,9 +2,11 @@
   "MouseButton.Left|block": "left",
   "MouseButton.Middle|block": "middle",
   "MouseButton.Right|block": "right",
+  "jacdac.mouseService|block": "mouse service",
   "mouse.move|block": "mouse move x %x|y %y",
-  "mouse.setButton|block": "mouse button %index=joystickStandardButton|%down=toggleDownUp",
+  "mouse.setButton|block": "mouse button %index|%down=toggleDownUp",
   "mouse.turnWheel|block": "turn wheel %w",
   "mouse|block": "mouse",
+  "{id:category}Jacdac": "Jacdac",
   "{id:category}Mouse": "Mouse"
 }

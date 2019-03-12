@@ -20,6 +20,11 @@ namespace pxsim {
         export let D7 = -1;
         export let D8 = -1;
         export let D13 = -1;
+        export let IR_IN = -1;
+        export let IR_OUT = -1;
+        export let LED = -1;
+        export let TX = -1;
+        export let RX = -1;
 
         export function init() {
             let v = CPlayPinName as any
@@ -62,6 +67,7 @@ namespace pxsim {
 
         invertAccelerometerYAxis = true;
 
+        viewHost: visuals.BoardHost;
         view: SVGSVGElement;
 
         constructor() {
@@ -111,7 +117,9 @@ namespace pxsim {
                     pxsim.CPlayPinName.D6,
                     pxsim.CPlayPinName.D7,
                     pxsim.CPlayPinName.D8,
-                    pxsim.CPlayPinName.D13
+                    pxsim.CPlayPinName.D13,
+                    pxsim.CPlayPinName.IR_IN,
+                    pxsim.CPlayPinName.IR_OUT
                 ]
             });
             this.builtinParts["microservo"] = this.edgeConnectorState;
@@ -145,11 +153,10 @@ namespace pxsim {
                     // TODO
                     break;
                 }
-                case "irpacket": {
-                    let ev = <SimulatorInfraredPacketMessage>msg;
-                    this.irState.receive(new RefBuffer(ev.packet));
+                case "irpacket":
+                    let irpacket = <SimulatorInfraredPacketMessage>msg;
+                    this.irState.receive(irpacket.packet);
                     break;
-                }
             }
         }
 
@@ -172,18 +179,19 @@ namespace pxsim {
                 maxWidth: "100%",
                 maxHeight: "100%",
             };
-            const viewHost = new visuals.BoardHost(pxsim.visuals.mkBoardView({
-                visual: boardDef.visual
+            this.viewHost = new visuals.BoardHost(pxsim.visuals.mkBoardView({
+                visual: boardDef.visual,
+                boardDef
             }), opts);
 
             document.body.innerHTML = ""; // clear children
-            document.body.appendChild(this.view = viewHost.getView() as SVGSVGElement);
+            document.body.appendChild(this.view = this.viewHost.getView() as SVGSVGElement);
 
             return Promise.resolve();
         }
 
-        screenshot(): string {
-            return svg.toDataUri(new XMLSerializer().serializeToString(this.view));
+        screenshotAsync(width?: number): Promise<ImageData> {
+            return this.viewHost.screenshotAsync(width);
         }
 
         tryGetNeopixelState(pinId: number): CommonNeoPixelState {

@@ -9,9 +9,12 @@
     "bundleddirs": [
         "libs/base",
         "libs/core",
+        "libs/core---samd",
         "libs/buttons",
         "libs/accelerometer",
         "libs/music",
+        "libs/mixer",
+        "libs/mixer---samd",
         "libs/microphone",
         "libs/lightsensor",
         "libs/thermometer",
@@ -28,7 +31,8 @@
         "libs/servo",
         "libs/storage",
         "libs/datalogger",
-        "libs/serial"
+        "libs/serial",
+        "libs/jacdac"
     ],
     "serial": {
         "useHF2": true,
@@ -167,7 +171,7 @@
         "flashChecksumAddr": 8372,
         "flashCodeAlign": 256,
         "floatingPoint": true,
-        "taggedInts": true,
+        "uf2Family": "0x68ed2b88",
         "gc": true,
         "patches": {
             "0.0.0 - 1.1.15": [
@@ -249,20 +253,23 @@
         "textBlocks": true,
         "listsBlocks": true,
         "functionBlocks": true,
+        "functionsOptions": {
+            "useNewFunctions": true
+        },
         "onStartNamespace": "loops",
         "onStartColor": "#40bf4a",
-        "onStartWeight": 100
+        "onStartWeight": 100,
+        "bannedCategories": [
+            "jacdac"
+        ]        
     },
     "compileService": {
         "buildEngine": "codal",
         "codalTarget": {
             "name": "codal-circuit-playground",
             "url": "https://github.com/lancaster-university/codal-circuit-playground",
-            "branch": "v1.5.6",
-            "type": "git",
-            "branches": {
-                "https://github.com/lancaster-university/codal-core": "9d644e64331972ddec22c30971dcbcb5816f1b36"
-            }
+            "branch": "v1.5.4-samd-peripherals.10",
+            "type": "git"
         },
         "codalBinary": "CIRCUIT_PLAYGROUND",
         "yottaConfig": {
@@ -273,7 +280,7 @@
             }
         },
         "githubCorePackage": "lancaster-university/codal",
-        "gittag": "v0.6.0",
+        "gittag": "v0.6.1",
         "serviceId": "codal2cp",
         "dockerImage": "pext/yotta:latest"
     },
@@ -338,6 +345,12 @@
         "extendEditor": true,
         "extendFieldEditors": true,
         "disableBlockIcons": true,
+        "scriptManager": true,
+        "experiments": [
+            "debugger",
+            "simScreenshot",
+            "simGif"
+        ],
         "socialOptions": {
             "twitterHandle": "adafruit",
             "orgTwitterHandle": "MSMakeCode",

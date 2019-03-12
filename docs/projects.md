@@ -1,117 +1,58 @@
 # Projects
 
-Here are some cool projects that you can build with your @boardname@!
-
-## Basic
-
-Basic projects to build with your @boardname@.
-
 ```codecard
-[{
-  "name": "Magic Wand",
-  "url":"/projects/magic-wand",
-  "imageUrl":"/static/cp/projects/magic-wand.jpg"
-},
-{
-  "name": "Dandelion",
-  "url":"/projects/dandelion",
-  "imageUrl":"/static/cp/projects/dandelion.jpg"
-},
-{
-  "name": "Fidget Spinner",
-  "url":"/projects/fidget-spinner",
-  "imageUrl":"/static/cp/projects/fidget-spinner.jpg"
-},
-{
-  "name": "Watch Timer",
-  "url":"/projects/watch-timer",
-
-  "imageUrl":"/static/cp/projects/watch-timer.jpg"
-},
-{
-  "name": "Lucky Wheel",
-  "url":"/projects/lucky-wheel",
-  "imageUrl":"/static/cp/projects/lucky-wheel.jpg"
-},
-{
-  "name": "Light Monster", 
-  "url":"/projects/light-monster", 
-  "imageUrl":"/static/cp/projects/light-monster.jpg"
-},
-{
-  "name": "Headlamp",
-  "url":"/projects/headlamp",
-  "imageUrl":"/static/cp/projects/headlamp.jpg"
-},
-{
-  "name": "Coffee Cup Lamp",
-  "url":"/projects/coffee-cup-lamp",
-  "imageUrl":"/static/cp/projects/coffee-cup-lamp.jpg"
-}]
+[
+    {
+        "name": "Tutorials",
+        "url": "/tutorials",
+        "imageUrl": "/static/cp/projects/thumb/siren.jpg"
+    },
+    {
+        "name": "Cartoon Network",
+        "url": "/projects/cartoon-network",
+        "imageUrl": "/static/cp/projects/cartoon-network/darwin-goldfish.png"
+    },
+    {
+        "name": "Costumes",
+        "url": "/costumes",
+        "imageUrl": "/static/cp/projects/thumb/dandelion.jpg"
+    },
+    {
+        "name": "Games",
+        "url": "/games",
+        "imageUrl": "/static/cp/projects/thumb/lucky-wheel.jpg"
+    },
+    {
+        "name": "Music",
+        "url": "/music",
+        "imageUrl": "/static/cp/projects/thumb/guitar.jpg"
+    },
+    {
+        "name": "Wearables",
+        "url": "/wearables",
+        "imageUrl": "/static/cp/projects/wearable-neopixels.jpg"
+    },
+    {
+        "name": "Pranks",
+        "url": "/pranks",
+        "imageUrl": "/static/cp/projects/thumb/rube-goldberg.jpg"
+    },
+    {
+        "name": "learn.adafruit.com",
+        "url": "/learnsystem",
+        "imageUrl": "/static/cp/learn/makecode101.png"
+    }
+]
 ```
 
-## Music
+## See Also
 
-Music projects for your @boardname@.
+[Tutorials](/tutorials),
+[Cartoon Network](/projects/cartoon-network),
+[Costumes](/costumes),
+[Games](/games),
+[Music](/music),
+[Wearables](/wearables),
+[Pranks](/pranks),
+[learn.adafruit.com](/learnsystem)
 
-```codecard
-[{
-  "name": "Guitar",
-  "url":"/projects/guitar",
-  "imageUrl":"/static/cp/projects/guitar.jpg"
-},
-{
-  "name": "Musical Cloud",
-  "url":"/projects/musical-cloud",
-  "imageUrl":"/static/cp/projects/musical-cloud.jpg"
-}]
-```
-
-## Games
-
-Fun games to build with your @boardname@.
-
-```codecard
-[{
-  "name": "Hot Potato",
-  "url":"/projects/hot-potato",
-  "imageUrl":"/static/cp/projects/hot-potato.jpg"
-}, 
-{
-  "name": "Reaction!", 
-  "url":"/projects/reaction",
-  "imageUrl":"/static/cp/projects/reaction.jpg"
-}]
-```
-
-## Wearables
-
-Add amazing lighted effects to clothing and fabric for the ultimate fashion experience!
-
-```codecard
-[{
-  "name": "Wearable NeoPixels",
-  "url":"/projects/wearable-neopixels",
-  "imageUrl":"/static/cp/projects/wearable-neopixels.jpg"
-}, {
-  "name": "Fabric Friend",
-  "url":"/projects/fabric-friend",
-  "imageUrl":"/static/cp/projects/fabric-friend.jpg"
-}]
-```
-
-## Pranks
-
-Fun tricks to play on your friends.
-
-```codecard
-[{ 
-  "name": "Rube Goldberg",
-  "url":"/projects/rube-goldberg",
-  "imageUrl":"/static/cp/projects/rube-goldberg.jpg"
-}, {
-  "name": "Confetti box", 
-  "url":"/projects/confetti-box",
-  "imageUrl":"/static/cp/projects/confetti-box.jpg"
-}]
-```

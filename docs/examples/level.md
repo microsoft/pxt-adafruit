@@ -18,7 +18,3 @@ forever(() => {
 })
 ```
 
-```package
-light
-music
-```

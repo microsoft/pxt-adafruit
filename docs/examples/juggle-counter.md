@@ -13,9 +13,3 @@ input.onGesture(Gesture.Shake, () => {
     light.showAnimation(light.rainbowAnimation, 500);
 })
 ```
-
-```package
-light
-music
-accelerometer
-```

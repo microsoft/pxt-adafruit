@@ -16,5 +16,7 @@
   "gamepad.setButton|block": "gamepad button %index=joystickStandardButton|%down=toggleDownUp",
   "gamepad.setThrottle|block": "gamepad set throttle %index|to %value",
   "gamepad|block": "gamepad",
-  "{id:category}Gamepad": "Gamepad"
+  "jacdac.gamepadService|block": "gamepad service",
+  "{id:category}Gamepad": "Gamepad",
+  "{id:category}Jacdac": "Jacdac"
 }

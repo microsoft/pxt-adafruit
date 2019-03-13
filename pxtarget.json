@@ -352,7 +352,8 @@
         "simGif": true,
         "simGifTransparent": "rgba(0,0,0,0)",
         "experiments": [
-            "debugger"
+            "debugger",
+            "autoWebUSBDownload"
         ],
         "socialOptions": {
             "twitterHandle": "adafruit",

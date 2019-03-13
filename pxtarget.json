@@ -346,6 +346,7 @@
         "extendFieldEditors": true,
         "disableBlockIcons": true,
         "scriptManager": true,
+        "baseTheme": "dark",
         "experiments": [
             "debugger",
             "simScreenshot",

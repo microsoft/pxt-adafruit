@@ -29,7 +29,7 @@
   "serial.readLine|block": "serial|read line",
   "serial.readString|block": "serial|read string",
   "serial.readUntil|block": "serial|read until %delimiter=serial_delimiter_conv",
-  "serial.redirect|block": "serial|redirect to|TX %tx|RX %rx",
+  "serial.redirect|block": "serial|redirect to|TX %tx|RX %rx at rate %rate",
   "serial.setBaudRate|block": "serial|set baud rate %rate",
   "serial.setRxBufferSize|block": "serial set rx buffer size to $size",
   "serial.setTxBufferSize|block": "serial set tx buffer size to $size",

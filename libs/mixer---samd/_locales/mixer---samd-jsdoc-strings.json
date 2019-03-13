@@ -24,7 +24,7 @@
   "music.setTempo": "Set the tempo a number of beats per minute (bpm).",
   "music.setTempo|param|bpm": "The new tempo in beats per minute, eg: 120",
   "music.setVolume": "Set the default output volume of the sound synthesizer.",
-  "music.setVolume|param|volume": "the volume 0...256, eg: 128",
+  "music.setVolume|param|volume": "the volume 0...255",
   "music.sounds": "Get the melody string for a built-in melody.",
   "music.sounds|param|name": "the note name, eg: Note.C",
   "music.stopAllSounds": "Stop all sounds from playing.",

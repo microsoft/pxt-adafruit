@@ -8,9 +8,19 @@ Here is a look at the tools and some of the techniques that will be useful in co
 
 Adafruit and other electronics suppliers carry items handy for projects like battery packs, conductive thread, servo motors, NeoPixels, and more. Here is Adafruit’s curated list of products that are compatible with the @boardname@: https://learn.adafruit.com/adafruit-circuit-playground-express/accessories, and some examples of electronic components you may need:
 
-#### Batteries and Battery packs
+#### Batteries and Battery packs #batteries
 
-* An example – https://www.adafruit.com/category/889
+#### ~ hint
+
+We strongly recommend using the 3xAAA battery pack provided with the @boardname@ kit.
+
+Lithium Ion and Lithium Ion Polymer batteries are a great power source for projects but they require care during use and charging. **Lithium Ion and Lithium Ion Polymer batteries can be a fire hazard if not handled properly**.
+
+Please read these **[guidelines](https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion)** on battery handling before you use them!
+
+#### ~
+
+Adafruit features many connectors and batteries, see the [battery category](https://www.adafruit.com/category/889).
 
 A variety of battery packs with [JST connectors](https://en.wikipedia.org/wiki/JST_connector) work well.
 

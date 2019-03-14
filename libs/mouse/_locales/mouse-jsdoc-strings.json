@@ -1,6 +1,6 @@
 {
   "mouse": "Mouse emulation",
-  "mouse.move": "Moves the mouse",
-  "mouse.setButton": "Sets the mouse button state to down",
-  "mouse.turnWheel": "Moves the mouse"
+  "mouse.move": "Move the mouse in the X and Y direction",
+  "mouse.setButton": "Set the mouse button state to up or down",
+  "mouse.turnWheel": "Turn the mouse wheel"
 }

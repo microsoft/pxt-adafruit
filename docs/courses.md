@@ -11,7 +11,7 @@ Structured courses for teaching science and technology in the classroom.
   "name": "Maker",
   "description": "A course in Making combining creative project makes with coding.",
   "url":"/courses/maker",
-  "imageUrl":"/static/courses/maker/maker.png"
+  "imageUrl":"/static/courses/maker.png"
 }]
 ```
 

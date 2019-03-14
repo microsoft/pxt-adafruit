@@ -22,7 +22,7 @@ Approximately 3 hours to complete.
 
 ## Materials
 
-See the Maker Tools and Techniques Chapter for more details on materials.
+See the [Maker Tools and Techniques](/courses/maker/general/maker-tools-techniques) chapter for more details on materials.
 
 * Cardboard box – a shoe box works well
 * Popsicle sticks
@@ -185,7 +185,7 @@ input.onLoudSound(function () {
 
 ### Continuous rotation code
 
-This sample code uses the ``||servos:continuous servo||`` block. When button **A** is pressed, it moves at 25% speed in one direction. When button **B** is pressed, it moves 25% speed in the other direction. And when buttons **A** and **B** are pressed together, it stops moving. 
+This sample code uses the ``||servos:continuous servo||`` block. When button **A** is pressed, it moves at `25` percent (%) speed in one direction. When button **B** is pressed, it moves `25` percent (%) speed in the other direction. And when buttons **A** and **B** are pressed together, it stops moving. 
 
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {

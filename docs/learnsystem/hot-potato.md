@@ -189,7 +189,7 @@ const noteDurations = [     // note durations
 
 input.buttonA.onEvent(ButtonEvent.Click, function () {
     const numNotesToPlay = Math.randomRange(0, numNotes);
-    int noteToPlay = 0;
+    let noteToPlay = 0;
     for (let thisNote = 0; thisNote < numNotesToPlay; thisNote++) { // play notes of the melody
         // to calculate the note duration, take one second divided by the note type.
         const noteDuration = 1000 / noteDurations[thisNote];

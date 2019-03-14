@@ -15,6 +15,7 @@
     ],
     "galleries": {
         "Tutorials": "tutorials",
+        "Cartoon Network": "projects/cartoon-network",
         "Costumes": "costumes",
         "Games": "games",
         "Music": "music",

@@ -14,7 +14,7 @@ Making and using a Fabric Friend is great fun for older kids but be sure to keep
 
 | Hours |
 |-|
-| ![2 to  hours on a 4 hour time scale](/static/courses/maker/projects/common/2-to-4-hours.png) |
+| ![2 to 4 hours on a 4 hour time scale](/static/courses/maker/projects/common/2-to-4-hours.png) |
 <br/>
 2-4 hours – time will vary depending upon the complexity of the creation and the skill level of the creators.
 
@@ -56,7 +56,15 @@ See the [Maker Tools and Techniques](/courses/maker/general/maker-tools-techniqu
 ![Draw the design for your creature on paper first](/static/courses/maker/projects/fabric-friend/friend-making1.jpg)
 
 * It’s important to also plan for where the battery pack will go. In your hand? Clipped to a loop?
-* Lithium ion polymer (Lipo) batteries can often be tucked inside a small pocket that you create in the project. See the [Maker Tools and Techniques](/courses/maker/general/maker-tools-techniques) chapter to learn more about Lipo batteries.
+* Lithium ion polymer (Lipo) batteries can often be tucked inside a small pocket that you create in the project.
+
+#### ~ hint
+
+LiPo batteries are a great power source for projects but they require care during use and charging. **LiPo batteries can be a fire hazard if not handled properly**.
+
+Please read these **[guidelines](https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion)** on battery handling before you use them!
+
+#### ~
 
 ![Lipo batteries are smaller and more portable than alkaline battery packs](/static/courses/maker/projects/fabric-friend/friend-making2.jpg)
 

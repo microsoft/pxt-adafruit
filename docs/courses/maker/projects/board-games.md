@@ -10,7 +10,7 @@ https://www.youtube.com/watch?v=s7dtwDFV5yI
 
 | Hours |
 |-|
-| ![2 to 3 hour time scale](/static/courses/maker/projects/common/2-to-3-hours.png) |
+| ![2 to 3 hours on a 4 houre time scale](/static/courses/maker/projects/common/2-to-3-hours.png) |
 <br/>
 The time required can vary greatly depending on the scope of the project. Students could draw a simple board game layout on paper, create some simple game rules, do some coding, and play their game, all in an hour or so. At the other end of the range, individuals or groups of students could make game elements with cardboard construction, found objects, and art. The construction plus coding could take 2-3 hours, with additional time for game play.
 

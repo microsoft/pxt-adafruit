@@ -4,7 +4,7 @@ Guided maker projects which combine a creative activity with coding.
 
 ## ~ hint
 
-This course is currently under development. More Maker projects are coming soon!
+Go to the [Project Tour](/courses/maker/projects/project-tour) page to see some videos of activites from the projects. Also, to find out which projects relate to a particular academic subject area, see the [Academic Categories](/courses/maker/projects/academic-categories) page.
 
 ## ~
 
@@ -57,14 +57,32 @@ This course is currently under development. More Maker projects are coming soon!
 }, {
   "name": "Question Box",
   "description": "Quiz your friends with questions from the box.",
-  "imageUrl": "/static/courses/maker/projects/common/coming-soon.png"
+  "url": "/courses/maker/projects/question-box",
+  "imageUrl": "/static/courses/maker/projects/question-box.png"
 }, {
   "name": "Gondola",
   "description": "Program a servo to take a suspended gondola to the other side.",
-  "imageUrl": "/static/courses/maker/projects/common/coming-soon.png"
+  "url": "/courses/maker/projects/gondola",
+  "imageUrl": "/static/courses/maker/projects/gondola.png"
 }, {
   "name": "Light Bot",
   "description": "This light sensing bot will move around and avoid obstacles.",
-  "imageUrl": "/static/courses/maker/projects/common/coming-soon.png"
+  "url": "/courses/maker/projects/light-bot",
+  "imageUrl": "/static/courses/maker/projects/light-bot.png"
 }]
 ```
+
+## See Also
+
+[Crown](/courses/maker/projects/crown),
+[Light Box](/courses/maker/projects/light-box),
+[Music Maker](/courses/maker/projects/music-maker),
+[Board Games](/courses/maker/projects/board-games),
+[Balance Board](/courses/maker/projects/balance-board),
+[Helmet](/courses/maker/projects/helmet),
+[Fabric Friend](/courses/maker/projects/fabric-friend),
+[Marble Run](/courses/maker/projects/marble-run),
+[Servo Box](/courses/maker/projects/servo-box),
+[Question Box](/courses/maker/projects/question-box),
+[Gondola](/courses/maker/projects/gondola),
+[Light Bot](/courses/maker/projects/light-bot)

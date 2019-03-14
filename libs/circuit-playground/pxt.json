@@ -11,18 +11,19 @@
     ],
     "dependencies": {
         "base": "file:../base",
-        "core": "file:../core",
+        "core---samd": "file:../core---samd",
         "buttons": "file:../buttons",
         "accelerometer": "file:../accelerometer",
         "lightsensor": "file:../lightsensor",
         "thermometer": "file:../thermometer",
-        "music": "file:../music",
+        "mixer---samd": "file:../mixer---samd",
         "light": "file:../light",
         "switch": "file:../switch",
         "pulse": "file:../pulse",
         "infrared": "file:../infrared",
         "microphone": "file:../microphone",
-        "touch": "file:../touch"
+        "touch": "file:../touch",
+        "serial": "file:../serial"
     },
     "public": true
 }

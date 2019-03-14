@@ -12,13 +12,13 @@ https://www.youtube.com/watch?v=J1ajRktxMVs
 
 Please be sure to follow common-sense safety procedures when operating the balance board. While this activity is fairly safe, and the 3-foot length of board limits how much one can fall, younger riders should be carefully supervised while using the board.
 * As students stand on the balance board, make sure they are standing with their feet separated in a wide stance – wider than their shoulder width.
-* Conduct the balance board game on a surface with some traction – like a wood deck or gravel area. Polished stone, tile or other slick surface may make the PVC pipe slip out from below the board.
+* Conduct the balance board game on a surface with some traction – like a wood deck or a carpeted area. Polished stone, tile or other slick surface may make the PVC pipe slip out from below the board.
 
 ## Time Required
 
 | Minutes |
 |-|
-| ![2.0 hour time scale](/static/courses/maker/projects/common/45-90-mins.png) |
+| ![45 to 90 minutes on a 120 minute time scale](/static/courses/maker/projects/common/45-90-mins.png) |
 <br/>
 Approximately 45-90 minutes 
 
@@ -143,8 +143,10 @@ forever(function () {
 
 10. In the first comparison block in the ``||logic:if||`` statement, type the value `7` in the second slot.
 11. In the second comparison block in the ``||logic:else if||`` statement, type the value `-7` in the second slot.
-These two conditions will catch when the rotation is greater than `7` degrees, or the rotation is less than `-7` degrees. 
+These two conditions will happen if the rotation is greater than `7` degrees or the rotation is less than `-7` degrees. This gives the board a total wobble distance of `14` degrees ( ``7 - (-7) = 14`` degrees) which is it's "balanced" range.
+
 Now, let’s add some lights and sounds!
+
 12. From the ``||light:LIGHT||`` Toolbox drawer, drag and drop two ``||light:set all pixels||`` blocks onto the Workspace.
 13. Drop one ``||light:set all pixels||`` block under the ``||logic:if||`` clause.
 14. Drop the other ``||light:set all pixels||`` block under the ``||logic:else if||`` clause.
@@ -152,9 +154,9 @@ Now, let’s add some lights and sounds!
 
 ```block
 forever(function () {
-    if (input.rotation(Rotation.Pitch) > 0) {
+    if (input.rotation(Rotation.Pitch) > 7) {
         light.setAll(0xff0000)
-    } else if (input.rotation(Rotation.Pitch) < 0) {
+    } else if (input.rotation(Rotation.Pitch) < -7) {
         light.setAll(0x00ff00)
     } else {
     	
@@ -169,10 +171,10 @@ forever(function () {
 
 ```block
 forever(function () {
-    if (input.rotation(Rotation.Pitch) > 0) {
+    if (input.rotation(Rotation.Pitch) > 7) {
         light.setAll(0xff0000)
         music.playSound(music.sounds(Sounds.Wawawawaa))
-    } else if (input.rotation(Rotation.Pitch) < 0) {
+    } else if (input.rotation(Rotation.Pitch) < -7) {
         light.setAll(0x00ff00)
         music.playSound(music.sounds(Sounds.Siren))
     } else {
@@ -188,11 +190,11 @@ forever(function () {
 
 ```block
 forever(function () {
-    if (input.rotation(Rotation.Pitch) > 0) {
+    if (input.rotation(Rotation.Pitch) > 7) {
         light.setAll(0xff0000)
         music.playSound(music.sounds(Sounds.Wawawawaa))
         pause(700)
-    } else if (input.rotation(Rotation.Pitch) < 0) {
+    } else if (input.rotation(Rotation.Pitch) < -7) {
         light.setAll(0x00ff00)
         music.playSound(music.sounds(Sounds.Siren))
         pause(700)

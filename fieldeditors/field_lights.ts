@@ -135,7 +135,7 @@ namespace pxt.editor {
     }
 
     private isInFlyout() {
-      return (this.sourceBlock_.workspace.getParentSvg() as SVGElement).className.baseVal == "blocklyFlyout";
+      return ((<Blockly.WorkspaceSvg>this.sourceBlock_.workspace).getParentSvg() as SVGElement).className.baseVal == "blocklyFlyout";
     }
 
     render_() {
@@ -166,7 +166,7 @@ namespace pxt.editor {
       if (previous) pxsim.svg.removeClass(previous, 'active');
 
       pxsim.svg.addClass(btn, 'active');
-      if (this.sourceBlock_ && this.sourceBlock_.workspace) this.sourceBlock_.workspace.getAudioManager().play('click');
+      if (this.sourceBlock_ && this.sourceBlock_.workspace) (<Blockly.WorkspaceSvg>this.sourceBlock_.workspace).getAudioManager().play('click');
     }
 
     onPixelClicked(e: Event, neopixel: SVGElement, id: number) {
@@ -180,7 +180,7 @@ namespace pxt.editor {
         else
           neopixel.setAttribute("data-color", btncol);
         this.setValue(this.getValueArray())
-        if (this.sourceBlock_ && this.sourceBlock_.workspace) this.sourceBlock_.workspace.getAudioManager().play('click');
+        if (this.sourceBlock_ && this.sourceBlock_.workspace) (<Blockly.WorkspaceSvg>this.sourceBlock_.workspace).getAudioManager().play('click');
       }
     };
 

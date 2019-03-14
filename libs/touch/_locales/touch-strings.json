@@ -1,5 +1,7 @@
 {
+  "TouchButton.calibrate|block": "button %button calibrate",
   "TouchButton.setThreshold|block": "button %button|set threshold %threshold",
+  "TouchButton.threshold|block": "button %button|threshold",
   "TouchButton.value|block": "button %button|value",
   "{id:category}AnalogInOutPin": "AnalogInOutPin",
   "{id:category}Input": "Input",

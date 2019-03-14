@@ -60,6 +60,15 @@ Fourth, use clear tape to attach the NeoPixel strip to the base of the helmet pr
 
 Fifth, use a piece of tape to attach a battery pack to the top of the helmet, and a piece of double-sided or looped tape to attach the Circuit Playground Express to the front of the helmet. Be sure to orient the **A1** pin on the Circuit Playground Express toward the alligator clips of the NeoPixel strip, and orient the JST battery connector upward. Pictured is a LiPo battery, but any battery pack works well.
 
+#### ~ hint
+
+LiPo batteries are a great power source for projects but they require care during use and charging. **LiPo batteries can be a fire hazard if not handled properly**.
+
+Please read these **[guidelines](https://learn.adafruit.com/li-ion-and-lipoly-batteries/conclusion)** on battery handling before you use them!
+
+#### ~
+
+
 ![Board attacthed to the helmet with battery located on top, view 1](/static/courses/maker/projects/helmet/helmet-making5.jpg)
 
 ![Board attacthed to the helmet with battery located on top, view 2](/static/courses/maker/projects/helmet/helmet-making6.jpg)

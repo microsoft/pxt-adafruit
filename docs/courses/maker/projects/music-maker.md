@@ -26,7 +26,7 @@ https://www.youtube.com/watch?v=vtQgtvtHRhA
 
 | Hours |
 |-|
-| ![2.0 hour time scale](/static/courses/maker/projects/common/1-to-2-hours.png) |
+| ![1 to 2 hours on a 4 hour time scale](/static/courses/maker/projects/common/1-to-2-hours.png) |
 <br/>
 1-2 hours (more if the musical instrument is complex)
 

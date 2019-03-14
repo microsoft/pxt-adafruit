@@ -222,7 +222,7 @@
                 {
                     "type": "api",
                     "map": {
-                        "pins.pinA[1-7]": "pins.touchA$1"
+                        "pins\\.pinA[1-7]\\.": "pins.touchA$1."
                     }
                 }
             ]

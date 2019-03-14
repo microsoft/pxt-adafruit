@@ -23,19 +23,14 @@
         "imageUrl": "/static/cp/projects/thumb/lucky-wheel.jpg"
     },
     {
-        "name": "Music",
-        "url": "/music",
+        "name": "Create and Have Fun",
+        "url": "/creative-fun",
         "imageUrl": "/static/cp/projects/thumb/guitar.jpg"
     },
     {
-        "name": "Wearables",
-        "url": "/wearables",
-        "imageUrl": "/static/cp/projects/wearable-neopixels.jpg"
-    },
-    {
-        "name": "Pranks",
-        "url": "/pranks",
-        "imageUrl": "/static/cp/projects/thumb/rube-goldberg.jpg"
+        "name": "Courses",
+        "url": "/courses",
+        "imageUrl": "/static/courses/maker.png"
     },
     {
         "name": "learn.adafruit.com",
@@ -51,8 +46,7 @@
 [Cartoon Network](/projects/cartoon-network),
 [Costumes](/costumes),
 [Games](/games),
-[Music](/music),
-[Wearables](/wearables),
-[Pranks](/pranks),
+[Create and Have Fun](/creative-fun),
+[Courses](/courses),
 [learn.adafruit.com](/learnsystem)
 

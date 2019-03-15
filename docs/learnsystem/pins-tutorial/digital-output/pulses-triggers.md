@@ -31,6 +31,38 @@ forever(function () {
 })
 ```
 
+### Experiment: Simulate a clock signal
+
+---
+
+Two ``||loops:forever||`` loops simulate the actions of two pins. One loop simulates switching the pin output level from `0` to `3.3` every second. The other loop reads the current pin level every `100` milliseconds to simulate a pin read, and then logs the value.
+
+**Setup**: Copy the following code into the editor.
+
+```blocks
+let pinValue = 0
+forever(function () {
+    console.logValue("clock", pinValue)
+    pause(100)
+})
+forever(function () {
+    if (pinValue > 0) {
+        pinValue = 0
+    } else {
+        pinValue = 3.3
+    }
+    pause(1000)
+})
+```
+
+**Test**: Run the code and switch to the data view to see the console output ij the chart.
+
+![Clock signal simulation](/static/cp/learn/pins-tutorial/digital-output/clock-sim.jpg)
+
+**Result**: The graph in the chart shows the **clock** value switching from `0` to `3.3` and back again at a regular interval. 
+
+---
+
 ```blocks
 let clockCount = 0
 pins.A6.onEvent(PinEvent.Fall, function () {
@@ -79,6 +111,11 @@ pins.A6.onEvent(PinEvent.Rise, function () {
     light.setPixelColor(pixelNum, 0xff0000)
 })
 ```
+**Test**:
+
+**Result**:
+
+---
 
 ## Some Example
 

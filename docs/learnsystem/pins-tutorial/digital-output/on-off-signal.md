@@ -1,11 +1,22 @@
 # On and off signals
 
+The simplist function for a digital output pin is to write a steady high or low signal. This might tell a device connected to the pin to turn something on or off. 
+
+## On signal
+
+To send an on signal you write a `true` value in ``||pins:digital write pin||`` to make the pin output go to the high level.
+
 ```block
 pins.A1.digitalWrite(true)
 ```
 
+The voltage output at the pin to the high level, near 3.3 v.
+
 ![Pin A1 at high level](/static/cp/learn/pins-tutorial/digital-output/pin-high-level.jpg)
 
+## Off signal
+
+To set an output pin to low you write a `true` value in ``||pins:digital write pin||``.
 
 ```block
 pins.A1.digitalWrite(false)

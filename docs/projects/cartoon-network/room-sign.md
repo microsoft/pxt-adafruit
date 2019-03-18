@@ -73,13 +73,13 @@ Use a piece of tape to attach the battery pack to the back of the chalkboard. No
 
 ![Battery pack taped onto the back of chalkboard piece](/static/cp/projects/cartoon-network/room-sign/make7.jpg)
 
-### Step 5: Write your name and decorate Chalkboard
+### Step 6: Write your name and decorate Chalkboard
 
 Using the chalk markers, write your name on your Room Sign.
 
 ![Name written with a chalk marker on the chalkboard](/static/cp/projects/cartoon-network/room-sign/make8.jpg)
 
-### Step 6: Decorate with jewels, stickers or your favorite Gumball characters! 
+### Step 7: Decorate with jewels, stickers or your favorite Gumball characters! 
 
 ![More decorations on the chalkboard piece](/static/cp/projects/cartoon-network/room-sign/make9.jpg)
 

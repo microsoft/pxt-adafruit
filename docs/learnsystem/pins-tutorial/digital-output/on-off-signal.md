@@ -1,6 +1,6 @@
 # On and off signals
 
-The simplist use of a digital output pin is to write a steady high or low signal. This might tell a device connected to the pin to turn something on or off. 
+A simpe use of a digital output pin is to write a steady high or low signal. This might be used to turn something connected to the pin either on or off. 
 
 ## On signal
 
@@ -16,7 +16,7 @@ The voltage output at the pin is set to the high level, near 3.3 v.
 
 ## Off signal
 
-To set an output pin to low you write a `false` value in ``||pins:digital write pin||``.
+To set an output pin to low you write out a `false` value in ``||pins:digital write pin||``.
 
 ```block
 pins.A1.digitalWrite(false)

@@ -1,12 +1,12 @@
 # Digital output
 
-Digital input is where a pin will detect the presence of a voltage level that is either "high" or "low". When you read a digital pin in your program, these voltage levels are given to you as the [boolean](/types/boolean) values of ``true`` for high and ``false`` for low.
+Digital output happens on a pin when the an output voltage is set on it that is either at "high" or "low" level. When you write to a digital pin in your program, these voltage levels written by setting [boolean](/types/boolean) values of ``true`` for high and ``false`` for low.
 
-![Pins on edge of board](/static/cp/learn/pins-tutorial/digital-input/digital-input-header.jpg)
+![Pins on edge of board](/static/cp/learn/pins-tutorial/digital-output/digital-output-header.jpg)
 
 ## Logic levels
 
-When a pin input level is high or low is depends on where the microcontroller on the @boardname@ has set the voltage _threshold_ for each. This is somewhere near the supply voltage for high (the voltage at the **3.3V** pin) and near ground voltage for low (the voltage at **GND** pin, or **0V**). Also, when a digital input is for reading data, the input level is interpreted as a binary value of `1` for high and `0` for low. Multiple digital inputs are often combined in digital electronics to read larger values of binary numbers. Here's the relationship between input voltage, logic value, and binary value:
+When a pin output level is high or low is depends on how the microcontroller on the @boardname@ sets the voltage level for each. This is somewhere near the supply voltage for high (the voltage at the **3.3V** pin) and near ground voltage for low (the voltage at **GND** pin, or **0V**). Also, when a digital output is for writing data, the output level means that a binary value of `1` is high and `0` is low. Multiple digital outputs are often combined in digital electronics to write larger values of binary numbers. Here's the relationship between output voltage, logic value, and binary value:
 
 Voltage | Logic | Binary
 -|-|-
@@ -15,12 +15,11 @@ Voltage | Logic | Binary
 
 ## Experiments
 
-There are several experiments to let you test out the concepts you learn in the digital input sections. You'll need a few things to in order to perform some of the experiments. 
+There are several experiments to let you test out the concepts you learn in the digital output sections. You'll need a few things to in order to perform some of the experiments. 
 
-* (3) [Alligator clip leads](https://www.adafruit.com/product/1008)
-* [ON/OFF switch](https://www.adafruit.com/product/3221) or a standard household light switch - (optional)
-* [Pushbutton switch](https://www.adafruit.com/product/3101) or a doorbell pushbutton - (optional)
-* [Variable resistor](https://www.adafruit.com/product/562) - use you own [graphite resistor](/learnsystem/pins-tutorial/make-a-resistor)
+* (4) [Alligator clip leads](https://www.adafruit.com/product/1008)
+* [Red LED](https://www.adafruit.com/product/297)
+* [Output resistor](https://www.adafruit.com/product/2892) - use you own [graphite resistor](/learnsystem/pins-tutorial/make-a-resistor)
 
 ## Sections
 
@@ -29,16 +28,16 @@ There are several experiments to let you test out the concepts you learn in the 
   "name": "On and off signalling",
   "description": "Send out an on and off signal from a pin.",
   "url":"/learnsystem/pins-tutorial/digital-output/on-off-signal",
-  "imageUrl":"/static/cp/learn/pins-tutorial/digital-input/read-pin-thumb.jpg"
+  "imageUrl":"/static/cp/learn/pins-tutorial/digital-output/on-off-thumb.jpg"
 }, {
   "name": "Pulses and triggers",
-  "description": "Understand what the default input levels are.",
+  "description": "Make notification signals and trigger pin events.",
   "url":"/learnsystem/pins-tutorial/digital-output/pulses-triggers",
-  "imageUrl":"/static/cp/learn/pins-tutorial//digital-input/input-states-thumb.jpg"
+  "imageUrl":"/static/cp/learn/pins-tutorial//digital-output/pulses-triggers-thumb.jpg"
 }, {
-  "name": "Pin events",
-  "description": "Programs are notified when something happens at a pin.",
-  "url":"/learnsystem/pins-tutorial/digital-input/pin-events",
-  "imageUrl":"/static/cp/learn/pins-tutorial/digital-input/pin-events-thumb.jpg"
+  "name": "Digital data",
+  "description": "Send and receive binary numbers on the pins.",
+  "url":"/learnsystem/pins-tutorial/digital-output/digital-data",
+  "imageUrl":"/static/cp/learn/pins-tutorial/digital-output/digital-data-thumb.jpg"
 }]
 ```

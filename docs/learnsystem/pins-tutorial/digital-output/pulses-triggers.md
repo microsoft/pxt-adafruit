@@ -1,12 +1,14 @@
 # Pulses and triggers
 
-Digital pin outputs are often used as _control_ outputs. This is when an output signal is for setting a condition at the recieving device input. A control signal says the some condition should happen for a period of time or it triggers an action on the receiving device.
+Digital pin outputs are often used as _control_ outputs. This is when an output signal will set a condition at the receiving device input. A control signal says the some condition should happen for a period of time or it triggers an action on the receiving device.
 
 ## Pulsed output
 
-An ouput pulse causes the pin to change to a new ouput level, stay at that level for some time, and then switch to the level it was before. This level changes can be occasional in order to set condition at the input of another device. Also, pulses can happen over and over again with the same duration in output levels. These repeating, identical pulses create a signal to set timing which is called a _clock_ signal.
+An ouput pulse causes the pin to change to a new ouput level, stay at that level for some time, and then switch to the level it was before. These level changes can be occasional in order to set condition at the input of another device. Also, pulses can happen over and over again with the same duration in output level. These repeating, identical pulses create a signal to set timing which is called a _clock_ signal.
 
 ### On and off pulse
+
+A output is pulsed when it changes to another level for a period of time and then goes back to its original level. This can be either low-high-low or high-low-high.
 
 ![Single output pulse](/static/cp/learn/pins-tutorial/digital-output/pulse-output.jpg)
 
@@ -70,7 +72,7 @@ forever(function () {
 
 ---
 
-A clock signal can establish a _time base_ for a digital system. This if the frequency of the time base signal is fast, then a longer durations for other intervals are calculated by adding some amount of clock ticks. This example adds `100` ticks of the the clock signal an then resets the tick count. It makes an interval of `2` seconds by counting the fall of the clock signal every `20` milliseconds.
+A clock signal can establish a _time base_ for a digital system. If the frequency of the time base signal is fast, then longer durations for other intervals are calculated by adding some amount of clock ticks. This example adds `100` ticks of the the clock signal an then resets the tick count. It makes an interval of `2` seconds by counting the fall of the clock signal every `20` milliseconds.
 
 ```blocks
 let clockCount = 0
@@ -138,7 +140,7 @@ forever(function () {
 
 ### Pulse width
 
-As mentioned in the [Pin events](/learnsystem/pins-tutorial/digital-input/pin-events) section, the pulse width is the time between when a pin input detects a change in logic level and when it changes back to the previous level again. Of course, when output the pulse width is set by the delay between writing one logic level and then writing the other. In the following example, a 20 millisecond pulse is written at pin **A3** after a setting the output to low for 1 second.
+As mentioned in the [pin events](/learnsystem/pins-tutorial/digital-input/pin-events) section, the pulse width is the time between when a pin input detects a change in logic level and when it changes back to the previous level again. Of course, when writing out a pulse, the pulse width is set by the delay between writing one logic level and then writing the other. In the following example, a 20 millisecond pulse is written at pin **A3** after a setting the output to low for 1 second.
 
 ![20 millisecond pulse high](/static/cp/learn/pins-tutorial/digital-output/pulse-width.jpg)
 
@@ -172,7 +174,7 @@ input.buttonA.onEvent(ButtonEvent.Up, function () {
 pins.A1.digitalWrite(false)
 ```
 
-To capture a pulse without using a pin event block like ``||pins:on pin pulse||``, you can chose to wait for a pulse on a pin with the ``||pins:pulse in||``. When your program a ``||pins:pulse in||``, it will wait until a pulse with the duration (width) you specify occurs before continuing.
+To capture a pulse without using a pin event block like ``||pins:on pin pulse||``, you can chose to wait for a pulse on a pin with the ``||pins:pulse in||`` block. When your program comes to a ``||pins:pulse in||``, it will wait until a pulse with the duration (width) you asked for occurs before it continues on.
 
 ```block
 let pulseWidth = pins.A5.pulseIn(PulseValue.High)
@@ -180,21 +182,21 @@ let pulseWidth = pins.A5.pulseIn(PulseValue.High)
 
 ## Triggers
 
-Often pin output changes are used to tell a device connected to that pin to take some action. This type of output signal is a trigger.
+Often changes in pin output are used to tell a device connected to that pin to take some action. This type of output signal is a _trigger_.
 
-### One shot trigger
+### One-shot trigger
 
-A trigger signal written on an output pin can occur as either a pulse of simply as a level change. This depends on how the device connected wants the notification. A single change in output level to send a trigger is sometimes called a _one shot_ event. A one shot trigger could be just a short duration pulse. The connected device is usually waiting for an input level rise or fall before it takes an action. 
+A trigger signal written on an output pin can occur as either a pulse of simply as a level change. This depends on how the device connected to it wants the notification. A single change in output level to send a trigger is sometimes called a _one-shot_ event. A one-shot trigger could be just a short duration pulse. The connected device is usually waiting for an input level rise or fall before it takes an action. 
 
 ![One shot pulse signal](/static/cp/learn/pins-tutorial/digital-output/one-shot-pulse.jpg)
 
-Another one shot trigger is just a level change that remains at that level. This is used when just one trigger is needed for a long period of time.
+Another one-shot trigger is just a level change that remains at the new level. This is used when just one trigger is needed for a long period of time.
 
 ![One shot level signal](/static/cp/learn/pins-tutorial/digital-output/one-shot-level.jpg)
 
 ### Pulse train
 
-Sometimes a device is triggered to do something on a regular basis. You could send it a clock type signal but using equal high and low pulse isn't needed to accomplish this. Instead, a sequence of short pulses that happen at regular intervals is used. This is called a _pulse train_. This lets the device connected to your output pin detect the a level change at the front of the interval but only a very short pulse is used.
+Sometimes a device is triggered to do something on a regular basis. You could send it a clock type signal but using equal high and low pulses aren't needed to accomplish this. Instead, a sequence of short pulses that happen at regular intervals is used. This is called a _pulse train_. This lets the device connected to your output pin detect the a level change at the front of the interval but only a very short pulse is used.
 
 ![Pulse train triggers](/static/cp/learn/pins-tutorial/digital-output/pulse-train.jpg)
 

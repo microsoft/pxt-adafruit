@@ -1,6 +1,6 @@
 # On and off signals
 
-The simplist function for a digital output pin is to write a steady high or low signal. This might tell a device connected to the pin to turn something on or off. 
+The simplist use of a digital output pin is to write a steady high or low signal. This might tell a device connected to the pin to turn something on or off. 
 
 ## On signal
 
@@ -10,19 +10,21 @@ To send an on signal you write a `true` value in ``||pins:digital write pin||`` 
 pins.A1.digitalWrite(true)
 ```
 
-The voltage output at the pin to the high level, near 3.3 v.
+The voltage output at the pin is set to the high level, near 3.3 v.
 
 ![Pin A1 at high level](/static/cp/learn/pins-tutorial/digital-output/pin-high-level.jpg)
 
 ## Off signal
 
-To set an output pin to low you write a `true` value in ``||pins:digital write pin||``.
+To set an output pin to low you write a `false` value in ``||pins:digital write pin||``.
 
 ```block
 pins.A1.digitalWrite(false)
 ```
 
 ![Pin A1 at low level](/static/cp/learn/pins-tutorial/digital-output/pin-low-level.jpg)
+
+In this example, the output level on pin **A1** is switched to high when button **A** is pressed and it's switched to low when button **B** is pressed:
 
 ```blocks
 pins.A1.digitalWrite(false)
@@ -42,7 +44,7 @@ input.buttonB.onEvent(ButtonEvent.Click, function () {
 1. Connect an alligator clip lead to the **A1** pin.
 2. Connect the other end of the lead to the **A2** pin.
 
-![Connect lead to pin A1](/static/cp/learn/pins-tutorial/digital-input/connect-a1.jpg)
+![Connect pin A1 to A2](/static/cp/learn/pins-tutorial/digital-output/connect-a1-a2.jpg)
 
 3.  Download the following code to the board:
 
@@ -63,35 +65,38 @@ forever(function () {
 })
 ```
 
-**Test**: Briefly touch the unclipped end of the alligator lead to both the **3.3V** pin and the **GND** pin.
+**Test**: Press button **A** to output an "on" signal at pin **A1**  and press button **B** to output an "off" signal.
 
-![Touch clip to high and low voltage](/static/cp/learn/pins-tutorial/digital-input/touch-high-low.gif)
+![Send and on/off signal to yourself](/static/cp/learn/pins-tutorial/digital-output/on-off-self.gif)
 
-**Result**: The pixels show a different color for each input level, high and low.
+**Result**: The pixels show red when button **A** is pressed and then will go off when button **B** is pressed.
 
-### Experiment: Turn on and off an LED
+### Experiment: Turn on and off an your own LED
+
 ---
 
 **Setup**:
 
-1. Connect an alligator clip lead to the **A1** pin.
-2. Connect the other end of the lead to the **A2** pin.
+1. connect the [anode lead](/learnsystem/pins-tutorial/devices/led-connections) (+) of the LED to on end of an [output resistor](/learnsystem/pins-tutorial/devices/make-a-resistor#output-resistor) with alligator clip lead.
+2. Connect the other end of the output resistor to the **A2** pin.
+3. Connect the cathode (-) lead of the LED to the **GND** pin with another alligator lead.
 
-![Connect lead to pin A1](/static/cp/learn/pins-tutorial/digital-input/connect-a1.jpg)
+![Connect lead to pin A1](/static/cp/learn/pins-tutorial/digital-output/led-connection.jpg)
 
-3.  Download the following code to the board:
+4.  Download the following code to the board:
 
 ```blocks
+pins.A2.digitalWrite(false)
 input.buttonA.onEvent(ButtonEvent.Click, function () {
-    pins.A1.digitalWrite(true)
+    pins.A2.digitalWrite(true)
 })
 input.buttonB.onEvent(ButtonEvent.Click, function () {
-    pins.A1.digitalWrite(false)
+    pins.A2.digitalWrite(false)
 })
 ```
 
-**Test**: Briefly touch the unclipped end of the alligator lead to both the **3.3V** pin and the **GND** pin.
+**Test**: Press button **A** to output an "on" signal at pin **A2**  and press button **B** to output an "off" signal.
 
-![Touch clip to high and low voltage](/static/cp/learn/pins-tutorial/digital-input/touch-high-low.gif)
+![Turn LED on and off with buttons](/static/cp/learn/pins-tutorial/digital-output/press-on-off-led.gif)
 
-**Result**: The pixels show a different color fo
+**Result**: The LED lights when button **A** is press and turns off when button **B** is pressed.

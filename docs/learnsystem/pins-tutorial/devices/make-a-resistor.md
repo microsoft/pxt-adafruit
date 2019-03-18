@@ -57,7 +57,7 @@ You might guess that if one of the clips is moved into the rectangle then resist
 
 ![Measure the variable resistance](/static/cp/learn/pins-tutorial/make-a-resistor/variable-resistance.jpg)
 
-## Output resistor
+## Output resistor #output-resistor
 
 A high current resistor has a low amount of resistance. A resistor with a low amount of resistance is used with a pin output circuit. We can use graphite again but this time we need more of it to allow a larger amount of current to flow. Fortunately, we can again use a #2 pencil for this.
 
@@ -110,7 +110,7 @@ You can quickly try out the resistor with an [LED](https://www.adafruit.com/cate
 
 ### ~ hint
 
-If your're using your resistor for a classroom project or with a group of friends, make just one pencil resistor and share it with others.
+If you're using your resistor for a classroom project or with a group of friends, make just one pencil resistor and share it with others.
 
 ### ~
 

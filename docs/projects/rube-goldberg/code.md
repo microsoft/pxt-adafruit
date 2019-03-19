@@ -85,7 +85,7 @@ Right, time to make the servo turn so the rolling weight will drop.
 
 1. Get a ``||pins:servo write pin||`` from **PINS** and put it below your first ``||light:show ring||`` inside the ``||logic:if||``.
 2. Get another ``||pins:servo write pin||`` and put it under the second ``||light:show ring||`` inside the ``||logic:else||``.
-3. Change the ``A0`` in both ``||pins:servo write pin||`` blocks to ``A3``.
+3. Change the ``A0`` in both ``||pins:servo write pin||`` blocks to ``A2``.
 4. Change the ``0`` in the first ``||pins:servo write pin||`` to say ``180``.
 
 ```blocks

@@ -388,7 +388,8 @@ namespace pxsim.visuals {
             svg.setGradientColors(this.soundLevelGradient, theme.soundLevelOn, theme.soundLevelOff);
 
             for (const id in this.pinControls) {
-                this.pinControls[id].updateTheme();
+                if (this.pinControls[id])
+                    this.pinControls[id].updateTheme();
             }
         }
 

@@ -85,17 +85,17 @@ Right, time to make the servo turn so the rolling weight will drop.
 
 1. Get a ``||pins:servo write pin||`` from **PINS** and put it below your first ``||light:show ring||`` inside the ``||logic:if||``.
 2. Get another ``||pins:servo write pin||`` and put it under the second ``||light:show ring||`` inside the ``||logic:else||``.
-3. Change the ``A0`` in both ``||pins:servo write pin||`` blocks to ``A3``.
+3. Change the ``A0`` in both ``||pins:servo write pin||`` blocks to ``A2``.
 4. Change the ``0`` in the first ``||pins:servo write pin||`` to say ``180``.
 
 ```blocks
 forever(function () {
     if (pins.A1.analogRead() > 100) {
         light.showRing("yellow white blue green blue pink red green yellow pink")
-        pins.A3.servoWrite(180)
+        pins.A2.servoWrite(180)
     } else {
         light.showRing("red red red red red red red red red red")
-        pins.A3.servoWrite(0)	
+        pins.A2.servoWrite(0)	
     }
 })
 ```
@@ -119,12 +119,12 @@ forever(function () {
     if (pins.A1.analogRead() > 100) {
         if (reset) {
             light.showRing("yellow white blue green blue pink red green yellow pink")
-            pins.A3.servoWrite(180)
+            pins.A2.servoWrite(180)
             reset = false;
         }
     } else {
         light.showRing("red red red red red red red red red red")
-        pins.A3.servoWrite(0)	
+        pins.A2.servoWrite(0)	
         pause(3000)
         reset = true;
     }

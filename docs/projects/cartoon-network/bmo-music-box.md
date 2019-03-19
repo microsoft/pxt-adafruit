@@ -215,7 +215,7 @@ forever(function () {
 })
 ```
 
-### Step 7: Download
+### Step 5: Download
 
 Once you’re happy with your program, click the **Download** button and follow the instructions to download the code to your @boardname@.
 

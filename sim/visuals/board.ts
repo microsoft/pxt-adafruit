@@ -386,7 +386,7 @@ namespace pxsim.visuals {
 
             svg.setGradientColors(this.thermometerGradient, theme.ledOff, theme.ledOn);
             svg.setGradientColors(this.soundLevelGradient, theme.soundLevelOn, theme.soundLevelOff);
-            
+
             for (const id in this.pinControls) {
                 if (this.pinControls[id])
                     this.pinControls[id].updateTheme();

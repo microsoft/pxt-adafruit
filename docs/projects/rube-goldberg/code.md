@@ -92,10 +92,10 @@ Right, time to make the servo turn so the rolling weight will drop.
 forever(function () {
     if (pins.A1.analogRead() > 100) {
         light.showRing("yellow white blue green blue pink red green yellow pink")
-        pins.A3.servoWrite(180)
+        pins.A2.servoWrite(180)
     } else {
         light.showRing("red red red red red red red red red red")
-        pins.A3.servoWrite(0)	
+        pins.A2.servoWrite(0)	
     }
 })
 ```
@@ -119,12 +119,12 @@ forever(function () {
     if (pins.A1.analogRead() > 100) {
         if (reset) {
             light.showRing("yellow white blue green blue pink red green yellow pink")
-            pins.A3.servoWrite(180)
+            pins.A2.servoWrite(180)
             reset = false;
         }
     } else {
         light.showRing("red red red red red red red red red red")
-        pins.A3.servoWrite(0)	
+        pins.A2.servoWrite(0)	
         pause(3000)
         reset = true;
     }

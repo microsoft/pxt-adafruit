@@ -348,7 +348,6 @@
         "highContrast": true,
         "greenScreen": true,
         "enableTrace": false,
-        "debugger": true,
         "print": true,
         "hasAudio": true,
         "usbHelp": [],

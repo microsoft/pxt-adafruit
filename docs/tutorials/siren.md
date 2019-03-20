@@ -6,25 +6,27 @@ Place the ``||light:show ring||`` block inside a ``||loops:forever||`` block to 
 
 ```blocks
 forever(() => {
+    // @highlight
     light.showRing(
     `red red red red red red red red red red`
     )
 })
 ```
 
-## Step 2
+## Step 2 @fullscreen
 
 Use the color palette to select a color. You pick one of the colors from the middle of the ring. Go around the ring and touch each pixel to change them to this color. Let's use `blue` for now.
 
 ```blocks
 forever(() => {
+    // @highlight
     light.showRing(
     `blue blue blue blue blue blue blue blue blue blue`
     )
 })
 ```
 
-## Step 3
+## Step 3 @fullscreen
 
 Ok, we'll add another ring to make an animation. Drag another ``||light:show ring||`` block and place it right under the first one.
 
@@ -33,55 +35,42 @@ forever(() => {
     light.showRing(
         `blue blue blue blue blue blue blue blue blue blue`
     )
+    // @highlight
     light.showRing(
         `red red red red red red red red red red`
     )
 })
 ```
 
-## Step 4
+## Step 4 @fullscreen
 
 Now, let's make a police siren from our animation! From the ``||loops:LOOPS||`` drawer, place a ``||loops:forever||`` block anywhere in the workspace.
 
 ```blocks
-forever(() => {
-    light.showRing(
-        `blue blue blue blue blue blue blue blue blue blue`
-    )
-    light.showRing(
-        `red red red red red red red red red red`
-    )
-})
+// @highlight
 forever(() => {
 });
 ```
 
-## Step 5
+## Step 5 @fullscreen
 
 From the ``||music:MUSIC||`` drawer, drag out a ``||music:play sound until done||`` block and place it inside the newly added ``||loops:forever||`` block.
 
 ```blocks
 forever(() => {
-    light.showRing(
-        `blue blue blue blue blue blue blue blue blue blue`
-    )
-    light.showRing(
-        `red red red red red red red red red red`
-    )
-})
-forever(() => {
+    // @highlight
     music.playSoundUntilDone(music.sounds(Sounds.PowerUp))
 });
 ```
 
-## Step 6
+## Step 6 @fullscreen
 
 Click on the part of the ``||music:play sound until done||`` block that shows the name of the sound. Change it to the ``siren`` sound.
 
-## Step 7
+## Step 7 @fullscreen
 
 Click ``|Download|`` to transfer your code to the @boardname@.
 
-## Step 8
+## Step 8 @unplugged
 
 Awesome! Congratulations on completing this challenge on the @boardname@.

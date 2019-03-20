@@ -222,7 +222,15 @@
                 {
                     "type": "api",
                     "map": {
-                        "input\\.pinA([1-7])\\.": "input.touchA$1."
+                        "input\\.pinA([1-7])\\.": "input.touchA$1.",
+                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.JumpUp\\)\\)": "music.jumpUp.play$1()",
+                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.JumpDown\\)\\)": "music.jumpDown.play$1()",
+                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.PowerUp\\)\\)": "music.powerUp.play$1()",
+                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.PowerDown\\)\\)": "music.powerDown.play$1()",
+                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.BaDing\\)\\)": "music.baDing.play$1()",
+                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.MagicWand\\)\\)": "music.magicWand.play$1()",
+                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.Siren\\)\\)": "music.siren.play$1()",
+                        "music\\.playSound(UntilDone)?\\(music\\.sounds\\(Sounds\\.Wawawawaa\\)\\)": "music.wawawawaa.play$1()"
                     }
                 }
             ]
@@ -270,7 +278,7 @@
         "onStartWeight": 100,
         "bannedCategories": [
             "jacdac"
-        ]        
+        ]
     },
     "compileService": {
         "buildEngine": "codal",

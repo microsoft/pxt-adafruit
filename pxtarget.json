@@ -350,7 +350,7 @@
         "simAnimationExit": "roll out",
         "highContrast": true,
         "greenScreen": true,
-        "enableTrace": false,
+        "enableTrace": true,
         "print": true,
         "hasAudio": true,
         "usbHelp": [],

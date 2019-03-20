@@ -6,7 +6,6 @@ Place the ``||light:show ring||`` block inside a ``||loops:forever||`` block to 
 
 ```blocks
 forever(() => {
-    // @highlight
     light.showRing(
     `red red red red red red red red red red`
     )
@@ -19,7 +18,6 @@ Use the color palette to select a color. You pick one of the colors from the mid
 
 ```blocks
 forever(() => {
-    // @highlight
     light.showRing(
     `blue blue blue blue blue blue blue blue blue blue`
     )
@@ -35,7 +33,6 @@ forever(() => {
     light.showRing(
         `blue blue blue blue blue blue blue blue blue blue`
     )
-    // @highlight
     light.showRing(
         `red red red red red red red red red red`
     )
@@ -47,7 +44,6 @@ forever(() => {
 Now, let's make a police siren from our animation! From the ``||loops:LOOPS||`` drawer, place a ``||loops:forever||`` block anywhere in the workspace.
 
 ```blocks
-// @highlight
 forever(() => {
 });
 ```
@@ -58,7 +54,6 @@ From the ``||music:MUSIC||`` drawer, drag out a ``||music:play sound until done|
 
 ```blocks
 forever(() => {
-    // @highlight
     music.playSoundUntilDone(music.sounds(Sounds.PowerUp))
 });
 ```

@@ -49,7 +49,7 @@ forever(function () {
 })
 ```
 
-## Step 3: Music
+## Step 4: Music
 
 From ``||music:MUSIC||``, get a ``||music:set volume||`` and place at the bottom of ``||loops: on start||``. Type in ``155`` for the volume level.
 

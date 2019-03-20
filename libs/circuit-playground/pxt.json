@@ -9,6 +9,9 @@
         "input.ts",
         "ns.ts"
     ],
+    "dalDTS": {
+        "corePackage": "../core---samd"
+    },
     "dependencies": {
         "base": "file:../base",
         "core---samd": "file:../core---samd",

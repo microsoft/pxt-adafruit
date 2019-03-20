@@ -22,6 +22,7 @@
   "Delimiters.Space|block": "space",
   "Delimiters.Tab|block": "tab",
   "SerialEvent.DataReceived|block": "data received",
+  "SerialEvent.RxBufferFull|block": "rx buffer full",
   "serial.attachToConsole|block": "serial attach to console",
   "serial.onDelimiterReceived|block": "serial on delimiter $delimiter received",
   "serial.onEvent|block": "serial on %event",

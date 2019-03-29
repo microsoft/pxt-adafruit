@@ -41,7 +41,7 @@
   * [Meeting Time Keeper Stick](https://learn.adafruit.com/meeting-time-keeper-stick-with-cpx)
   * [Ping Pong Ball Launcher](https://learn.adafruit.com/ping-pong-ball-launcher-with-cpx)
   * [Illuminated City Skyline](https://learn.adafruit.com/city-skyline-with-makecode-for-cpx)
-  * [Cardboard Inchwork Robot](https://learn.adafruit.com/Cardboard-Robot-Inchworm)
+  * [Cardboard Inchworm Robot](https://learn.adafruit.com/Cardboard-Robot-Inchworm)
   * [Rube Goldberg](/projects/rube-goldberg)
   * [Confetti box](/projects/confetti-box)
 * [Courses](/courses)

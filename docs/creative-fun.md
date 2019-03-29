@@ -52,7 +52,7 @@ A collection of projects for making music, pulling pranks, and lots of other fun
   "url":"https://learn.adafruit.com/city-skyline-with-makecode-for-cpx",
   "imageUrl":"/static/cp/referred/city-skyline.jpg"
 }, {
-  "name": "Cardboard Inchwork Robot",
+  "name": "Cardboard Inchworm Robot",
   "description":"So simple, everyone can build this cute crawling bot and make it move with MakeCode!",
   "url":"https://learn.adafruit.com/Cardboard-Robot-Inchworm",
   "imageUrl":"/static/cp/referred/cardboard-robot-inchworm.jpg"

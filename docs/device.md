@@ -30,6 +30,10 @@ The bootloader is the "system software" for your @boardname@. If you need to upd
 
 ### ~
 
+## Device errors
+
+Your @boardname@ may encounter a situation that prevents it from running your code. The system software that runs the programs on your board may notify you that an error occurred. These errors are called _panic_ codes and are numbers displayed in the pixels on the board. See the [Error codes](/device/error-codes) page for the types of errors that could happen on the @boardname@.
+
 ## Learn more
 
 Take a look at the complete [overview](https://learn.adafruit.com/adafruit-circuit-playground-express/overview) of the @boardname@.

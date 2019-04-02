@@ -21,7 +21,8 @@ Some of these pins are configurable for use in both digital or analog I/O. This 
    "url":"/learnsystem/pins-tutorial/digital-output"
 }, {
   "name": "Analog Input",
-  "description": "Read and use analog signal values."
+  "description": "Read and use analog signal values.",
+  "url":"/learnsystem/pins-tutorial/analog-input"
 }, {
   "name": "Servos",
   "description": "Learn how to connect and run servos."

@@ -16,7 +16,7 @@ Resistance is measured in units of _ohms_. Perhaps you've heard of Ohm's Law:
 
 With the @boardname@, we'll often use it's supply voltage for our projects and experiments. This is **3.3V** and there are [some pins](https://learn.adafruit.com/adafruit-circuit-playground-express/pinouts#power-pads-4-3) that give us this voltage. If we were using a 10k ohm resistor with this supply voltage, then we'd draw a current of **I** = 3.3V / 10,000 ohms = 0.33 milliamps from the board.
 
-## Input resistor
+## Input resistor #input-resistor
 
 A low current resistior has a high amount of resistance. High resistance is needed when connecting pins for input. We can create a low current resistor by making a thin layer of graphite on a piece of paper.
 

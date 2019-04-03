@@ -77,7 +77,7 @@ forever(function () {
 
 **Setup**:
 
-1. connect the [anode lead](/learnsystem/pins-tutorial/devices/led-connections) (+) of the LED to on end of an [output resistor](/learnsystem/pins-tutorial/devices/make-a-resistor#output-resistor) with alligator clip lead.
+1. Connect the [anode lead](/learnsystem/pins-tutorial/devices/led-connections) (+) of the LED to on end of an [output resistor](/learnsystem/pins-tutorial/devices/make-a-resistor#output-resistor) with alligator clip lead.
 2. Connect the other end of the output resistor to the **A2** pin.
 3. Connect the cathode (-) lead of the LED to the **GND** pin with another alligator lead.
 

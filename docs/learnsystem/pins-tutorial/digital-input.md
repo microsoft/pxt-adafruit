@@ -34,7 +34,7 @@ There are several experiments to let you test out the concepts you learn in the 
   "name": "Input states",
   "description": "Understand what the default input levels are.",
   "url":"/learnsystem/pins-tutorial/digital-input/input-states",
-  "imageUrl":"/static/cp/learn/pins-tutorial//digital-input/input-states-thumb.jpg"
+  "imageUrl":"/static/cp/learn/pins-tutorial/digital-input/input-states-thumb.jpg"
 }, {
   "name": "Pin events",
   "description": "Programs are notified when something happens at a pin.",

@@ -15,6 +15,19 @@ Structured courses for teaching science and technology in the classroom.
 }]
 ```
 
+## Experimenting
+
+Courses on coding the @boardname@ with hand-on experiments.
+
+```codecard
+[{
+  "name": "Using the Pins",
+  "description": "A series of tutorials about using the pin inputs and outputs, includes experiments.",
+  "url":"/learnsystem/pins-tutorial",
+  "imageUrl":"/static/cp/learn/pins-tutorial/pins-tutorial.png"
+}]
+```
+
 ## See Also
 
-[Maker](/courses/maker)
+[Maker](/courses/maker), [Using the Pins](/learnsystem/pins-tutorial)

@@ -46,6 +46,7 @@
   * [Confetti box](/projects/confetti-box)
 * [Courses](/courses)
   * [Maker](/courses/maker)
+  * [Using the Pins](/learnsystem/pins-tutorial)
 * [learn.adafruit.com](/learnsystem)
   * [MakeCode 101](https://learn.adafruit.com/makecode/)
   * [NeoPixels](https://learn.adafruit.com/neopixels-with-makecode)

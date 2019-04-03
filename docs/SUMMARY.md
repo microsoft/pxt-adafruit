@@ -38,9 +38,7 @@
 
 * [Courses](/courses)
     * [Maker](/courses/maker)
-        * [Introduction](/courses/maker/intro)
-        * [General](/courses/maker/general)
-        * [Projects](/courses/maker/projects)
+    * [Using the Pins](/learnsystem/pins-tutorial)
 
 ## Reference #reference
 

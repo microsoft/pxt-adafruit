@@ -19,7 +19,7 @@ There are several experiments to let you test out the concepts you learn in the 
 
 * (4) [Alligator clip leads](https://www.adafruit.com/product/1008)
 * [Red LED](https://www.adafruit.com/product/297)
-* [Output resistor](https://www.adafruit.com/product/2892) - use you own [graphite resistor](/learnsystem/pins-tutorial/make-a-resistor)
+* [Output resistor](https://www.adafruit.com/product/2892) - use you own [graphite resistor](/learnsystem/pins-tutorial/devices/make-a-resistor)
 
 ## Sections
 

@@ -20,7 +20,7 @@ There are several experiments to let you test out the concepts you learn in the 
 * (3) [Alligator clip leads](https://www.adafruit.com/product/1008)
 * [ON/OFF switch](https://www.adafruit.com/product/3221) or a standard household light switch - (optional)
 * [Pushbutton switch](https://www.adafruit.com/product/3101) or a doorbell pushbutton - (optional)
-* [Variable resistor](https://www.adafruit.com/product/562) - use you own [graphite resistor](/learnsystem/pins-tutorial/make-a-resistor)
+* [Variable resistor](https://www.adafruit.com/product/562) - use you own [graphite resistor](/learnsystem/pins-tutorial/devices/make-a-resistor)
 
 ## Sections
 

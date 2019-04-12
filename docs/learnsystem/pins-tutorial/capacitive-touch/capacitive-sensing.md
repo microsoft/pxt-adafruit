@@ -8,9 +8,13 @@ Your body has some ability to accept an electric charge. In the past you may hav
 
 ![](/static/cp/learn/pins-tutorial/capacitive-touch/body-static-charge.jpg)
 
-The surface of your body acts like one of the charge plates in a capacitor. A capacitor stores electric charge on two conductive surfaces when a voltage source is appled across it. The diagram below shows a capacitor with two plates that are oppositely charged by a force of the voltage applied to them.
+The surface of your body acts like one of the charge plates in a capacitor. A capacitor stores electric charge on two conductive surfaces when a voltage source is appled across it. 
 
-![](/static/cp/learn/pins-tutorial/capacitive-touch/capacitor-diagram.jpg)
+## Capacitors
+
+Before we find out how you board use capacitance to detect a pin touch, it's helpful to first understand how a capacitor works. The diagram below shows a capacitor with two plates that are oppositely charged by a force of the voltage applied to them.
+
+![](/static/cp/learn/pins-tutorial/capacitive-touch/capacitor-charging.gif)
 
 The charges can't pass to the other plate due to the gap between them that insulates the plates from each other. The gap could be air or some other non-conductive material. Inside the gap, however, is an electric field (*E*) which directs the force from the battery to push the electric charge to the plates. The charge that builds is shown by the *Q* symbol by each plate.
 
@@ -42,6 +46,7 @@ for (let i = 0; i < 100; i++) {
     pause(100)
 }
 t = 0
+Vin = Vc
 for (let i = 0; i < 100; i++) {
     Vc = Vin * (e ** (t / (R * C)))
     t += -0.00001

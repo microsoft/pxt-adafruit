@@ -34,6 +34,8 @@ Your body has some ability to accept an electric charge. In the past you may hav
 
 The surface of your body acts like one of the charge plates in a capacitor. A capacitor stores electric charge on two conductive surfaces when a voltage source is appled across it.
 
+![](/static/cp/learn/pins-tutorial/capacitive-touch/pin-touch.gif)
+
 ## How a touch is detected
 
 When you begin to touch the surface of a pin or a conductor connected to a pin you change its capacitance. At the moment you come very near the pin (almost just touching it), the capacitance of the pin changes because your body has just provided and additional charge surface making a capacitor between you and the pin's conductive surface. The microcontroller can detect and measure this added capacitance. When you actuually touch the pin, the charge goes away and won't happen until you begin a new touch to the pin.

@@ -7,35 +7,35 @@
         "duration": 1000
     }, {
         "frame": 1,
-        "image": "body-static1.jpg",
+        "image": "electric-field1.jpg",
         "duration": 750
     },  {
         "frame": 2,
-        "image": "body-static2.jpg",
+        "image": "electric-field2.jpg",
         "duration": 1000
     },  {
         "frame": 3,
-        "image": "body-static2.jpg",
+        "image": "electric-field2.jpg",
         "duration": 66
     },  {
         "frame": 4,
-        "image": "body-static2.jpg",
+        "image": "electric-field2.jpg",
         "duration": 66
     },  {
         "frame": 5,
-        "image": "body-static2.jpg",
+        "image": "electric-field2.jpg",
         "duration": 66
     },  {
         "frame": 6,
-        "image": "body-static2.jpg",
+        "image": "electric-field2.jpg",
         "duration": 66
     },  {
         "frame": 7,
-        "image": "body-static2.jpg",
+        "image": "electric-field2.jpg",
         "duration": 1000
     },  {
         "frame": 8,
-        "image": "body-static3.jpg",
+        "image": "electric-field3.jpg",
         "duration": 1000
     }, {
         "frame": 9,
@@ -43,11 +43,11 @@
         "duration": 750
     }, {
         "frame": 10,
-        "image": "body-static3.jpg",
+        "image": "electric-field3.jpg",
         "duration": 750
     }, {
         "frame": 11,
-        "image": "body-static4.jpg",
+        "image": "electric-field4.jpg",
         "duration": 250
     }, {
         "frame": 12,

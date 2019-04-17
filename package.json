@@ -35,6 +35,7 @@
   ],
   "devDependencies": {
     "typescript": "2.6.1",
+    "react": "16.3.1",
     "semantic-ui-less": "2.2.14",
     "@types/bluebird": "2.0.33",
     "@types/jquery": "3.2.16",

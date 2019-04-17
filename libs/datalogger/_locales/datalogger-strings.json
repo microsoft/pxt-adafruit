@@ -1,9 +1,13 @@
 {
+  "LogSeparator.Comma|block": "comma",
+  "LogSeparator.Semicolon|block": "semicolon",
+  "LogSeparator.Tab|block": "tab",
   "datalogger.addRow|block": "data logger add row",
   "datalogger.addValue|block": "data logger add %name|=%value",
   "datalogger.sendToConsole|block": "data logger to console $enabled",
   "datalogger.setEnabled|block": "data logger $enabled",
   "datalogger.setSampleInterval|block": "set data logger sampling interval to $millis|(ms)",
+  "datalogger.setSeparator|block": "data logger set separator $separator",
   "datalogger|block": "datalogger",
   "{id:category}Datalogger": "Datalogger",
   "{id:group}Configuration": "Configuration",

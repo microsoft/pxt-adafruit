@@ -36,6 +36,7 @@
   "control.waitForEvent|block": "wait for event|from %src|with value %value",
   "control.waitMicros|block": "wait (µs)%micros",
   "control|block": "control",
+  "convertToText|block": "convert $value=math_number to text",
   "forever|block": "forever",
   "loops.forever|block": "forever",
   "loops.pause|block": "pause %pause=timePicker|ms",

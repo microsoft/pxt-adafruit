@@ -8,7 +8,7 @@
   "SerialDevice.setTxBufferSize": "Sets the size of the TX buffer in bytes",
   "SerialDevice.writeBuffer": "Send a buffer across the serial connection.",
   "serial": "Reading and writing data over a serial connection.",
-  "serial.attachToConsole": "Sends the console message through the TX, RX pins",
+  "serial.attachToConsole": "Send console messages through the TX, RX pins",
   "serial.createSerial": "Creates a serial comm device",
   "serial.createSerial|param|tx": "@param rx ",
   "serial.internalCreateSerialDevice": "Opens a Serial communication driver",

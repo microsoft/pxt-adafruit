@@ -30,7 +30,7 @@ function showUploadInstructionsAsync(fn: string, url: string, confirmAsync?: (op
                 <div className="content">
                     <div className="description">
                         <span className="ui blue circular label">1</span>
-                        ${lf("Take the USB cable you connected to your computer. Plug it into your Circuit Playground Express.")}
+                        {lf("Take the USB cable you connected to your computer. Plug it into your Circuit Playground Express.")}
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@ function showUploadInstructionsAsync(fn: string, url: string, confirmAsync?: (op
                 <div className="content">
                     <div className="description">
                         <span className="ui blue circular label">2</span>
-                        ${lf("Press the RESET button to go into programming mode. When the lights turn green, you're ready to go.")}
+                        {lf("Press the RESET button to go into programming mode. When the lights turn green, you're ready to go.")}
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@ function showUploadInstructionsAsync(fn: string, url: string, confirmAsync?: (op
                 <div className="content">
                     <div className="description">
                         <span className="ui blue circular label">3</span>
-                        ${lf("Click and drag the file you downloaded onto {0}.", boardDriveName)}
+                        {lf("Click and drag the file you downloaded onto {0}.", boardDriveName)}
                     </div>
                 </div>
             </div>

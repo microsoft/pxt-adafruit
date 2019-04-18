@@ -21,7 +21,15 @@ function showUploadInstructionsAsync(fn: string, url: string, confirmAsync?: (op
     const downloadAgain = !pxt.BrowserUtils.isIE() && !pxt.BrowserUtils.isEdge();
     const docUrl = pxt.appTarget.appTheme.usbDocs;
 
-    const jsx = <div className="ui three column grid stackable">
+    const upgradeBootloader = pxt.BrowserUtils.isMac();
+
+    const jsx = <div className={`ui ${upgradeBootloader ? "four" : "three"} column grid stackable`}>
+        {upgradeBootloader ? <div className="column">
+            <div className="ui header">${lf("CPLAYBOOT drive not appearing?")}</div>
+            <strong>${lf("You might have to upgrade your board.")}</strong>
+            <a href="/device/mac/troubleshoot" target="_blank">${lf("Check your bootloader version here and update if needed")}</a>
+        </div>
+            : undefined}
         <div className="column">
             <div className="ui">
                 <div className="image">

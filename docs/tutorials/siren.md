@@ -2,10 +2,10 @@
 
 ## Step 1 @fullscreen
 
-Place the ``||light:show ring||`` block inside a ``||loops:forever||`` block to show a ring of pixels on the board.
+Go over to ``||input:INPUT||``, get the ``||input:on shake||`` block, and put it on the Workspace. Find a ``||light:show ring||`` block and place it inside ``||input:on shake||``.
 
 ```blocks
-forever(() => {
+input.onGesture(Gesture.Shake, function () {
     light.showRing(
     `red red red red red red red red red red`
     )
@@ -17,7 +17,7 @@ forever(() => {
 Use the color palette to select a color. You pick one of the colors from the middle of the ring. Go around the ring and touch each pixel to change them to this color. Let's use `blue` for now.
 
 ```blocks
-forever(() => {
+input.onGesture(Gesture.Shake, function () {
     light.showRing(
     `blue blue blue blue blue blue blue blue blue blue`
     )
@@ -29,7 +29,7 @@ forever(() => {
 Ok, we'll add another ring to make an animation. Drag another ``||light:show ring||`` block and place it right under the first one.
 
 ```blocks
-forever(() => {
+input.onGesture(Gesture.Shake, function () {
     light.showRing(
         `blue blue blue blue blue blue blue blue blue blue`
     )
@@ -41,26 +41,57 @@ forever(() => {
 
 ## Step 4 @fullscreen
 
-Now, let's make a police siren from our animation! From the ``||loops:LOOPS||`` drawer, place a ``||loops:forever||`` block anywhere in the workspace.
+Now, let's make the lights flash! Go to ``||loops:LOOPS||`` and grab the ``||loops:repeat||`` block. Drag it over your two ``||light:show ring||`` blocks until it surrounds them inside the ``||input:on shake||``.
 
 ```blocks
-forever(() => {
-});
+input.onGesture(Gesture.Shake, function () {
+    for (let i = 0; i < 4; i++) {
+        light.showRing(
+        `blue blue blue blue blue blue blue blue blue blue`
+        )
+        light.showRing(
+        "red red red red red red red red red red"
+        )
+    }
+})
 ```
 
 ## Step 5 @fullscreen
 
-From the ``||music:MUSIC||`` drawer, drag out a ``||music:play sound until done||`` block and place it inside the newly added ``||loops:forever||`` block.
+Hey, let's add some sound! From the ``||music:MUSIC||`` drawer, drag out a ``||music:play sound||`` block and place it just before the ``||loops:repeat||`` loop block. 
 
 ```blocks
-forever(() => {
-    music.playSoundUntilDone(music.sounds(Sounds.PowerUp))
-});
+input.onGesture(Gesture.Shake, function () {
+    music.playSound(music.sounds(Sounds.PowerUp))
+    for (let i = 0; i < 4; i++) {
+        light.showRing(
+        `blue blue blue blue blue blue blue blue blue blue`
+        )
+        light.showRing(
+        "red red red red red red red red red red"
+        )
+    }
+})
 ```
 
 ## Step 6 @fullscreen
 
-Click on the part of the ``||music:play sound until done||`` block that shows the name of the sound. Change it to the ``siren`` sound.
+Click on the part of the ``||music:play sound||`` block that shows the name of the sound. Change it to the ``siren`` sound. Oh, and finally, put a ``||light:clear||`` at the end of ``||input:on shake||``.
+
+```blocks
+input.onGesture(Gesture.Shake, function () {
+    music.playSound(music.sounds(Sounds.Siren))
+    for (let i = 0; i < 4; i++) {
+        light.showRing(
+        `blue blue blue blue blue blue blue blue blue blue`
+        )
+        light.showRing(
+        "red red red red red red red red red red"
+        )
+    }
+    light.clear()
+})
+```
 
 ## Step 7 @fullscreen
 

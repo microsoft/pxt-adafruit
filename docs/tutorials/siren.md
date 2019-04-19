@@ -41,7 +41,7 @@ input.onGesture(Gesture.Shake, function () {
 
 ## Step 4 @fullscreen
 
-Now, let's make a the lights flash! Go to ``||loops:LOOPS||`` and grab the ``||loops:repeat||`` block. Drag it over your two ``||light:show ring||`` blocks until it surrounds them inside the ``||input:on shake||``.
+Now, let's make the lights flash! Go to ``||loops:LOOPS||`` and grab the ``||loops:repeat||`` block. Drag it over your two ``||light:show ring||`` blocks until it surrounds them inside the ``||input:on shake||``.
 
 ```blocks
 input.onGesture(Gesture.Shake, function () {

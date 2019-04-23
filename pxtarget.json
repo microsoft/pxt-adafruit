@@ -367,11 +367,13 @@
         "disableBlockIcons": true,
         "scriptManager": true,
         "baseTheme": "dark",
-        "simScreenshot": true,
-        "simGif": true,
         "simGifTransparent": "rgba(0,0,0,0)",
         "experiments": [
-            "autoWebUSBDownload"
+            "autoWebUSBDownload",
+            "debugger",
+            "qrCode",
+            "simScreenshot",
+            "simGif"
         ],
         "socialOptions": {
             "twitterHandle": "adafruit",

@@ -29,6 +29,7 @@
     },
     "yotta": {
         "config": {
+            "HF2_HID": 1,
             "PXT_SUPPORT_LIS3DH": 1
         }
     },

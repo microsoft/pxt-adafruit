@@ -7,7 +7,7 @@ Welcome, let's get started by making something magical! Start by placing a ``||l
 ![rainbow toolbox](/static/cp/tutorials/getting-started/rainbow-toolbox.gif)
 
 ```filterblocks
-forever(() => {
+forever(function() {
     light.showAnimation(light.rainbowAnimation, 500)
 })
 ```
@@ -20,10 +20,10 @@ Click the **Hint** button if you need help!
 ![onshake toolbox](/static/cp/tutorials/getting-started/onshake-toolbox.gif)
 
 ```filterblocks
-forever(() => {
+forever(function() {
     light.showAnimation(light.rainbowAnimation, 500)
 })
-input.onGesture(Gesture.Shake, () => {
+input.onGesture(Gesture.Shake, function() {
 
 })
 ```
@@ -37,10 +37,10 @@ Now, every time you shake the @boardname@, a sparkle animation will play. Pretty
 ![sparkle toolbox](/static/cp/tutorials/getting-started/sparkle-toolbox.gif)
 
 ```filterblocks
-forever(() => {
+forever(function() {
     light.showAnimation(light.rainbowAnimation, 500)
 })
-input.onGesture(Gesture.Shake, () => {
+input.onGesture(Gesture.Shake, function() {
     light.showAnimation(light.sparkleAnimation, 1000)
 })
 ```
@@ -52,27 +52,27 @@ Hey, let's make it play a wand sound whenever we shake the board. From the ``Mus
 ![magic-wand toolbox](/static/cp/tutorials/getting-started/wandsound-toolbox.gif)
 
 ```filterblocks
-forever(() => {
+forever(function() {
     light.showAnimation(light.rainbowAnimation, 500)
 })
-input.onGesture(Gesture.Shake, () => {
+input.onGesture(Gesture.Shake, function() {
     light.stopAllAnimations()
-    music.playSound(music.sounds(Sounds.PowerUp))
+    music.baDing.play()
     light.showAnimation(light.sparkleAnimation, 1000)
 })
 ```
 
 ## Step 5 @nohint
 
-Change the sound effect to ``Magic Wand``. Do this by selecting the list of sounds, then pick the one you want, ``Magic Wand``.
+Change the sound effect to ``Magic Wand``. Do this by selecting the list of sounds, then pick the one you want, ``magic wand``.
 
 ```filterblocks
-forever(() => {
+forever(function() {
     light.showAnimation(light.rainbowAnimation, 500)
 })
-input.onGesture(Gesture.Shake, () => {
+input.onGesture(Gesture.Shake, function() {
     light.stopAllAnimations()
-    music.playSound(music.sounds(Sounds.PowerUp))
+    music.magicWand.play()
     light.showAnimation(light.sparkleAnimation, 1000)
 })
 ```

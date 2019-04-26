@@ -16,7 +16,7 @@ Use the on shake event to play a sound and animation when we shake the magic wan
 
 ```cards
 light.showAnimation(light.rainbowAnimation, 500)
-music.playSound(music.sounds(Sounds.MagicWand))
+music.magicWand.play()
 input.onGesture(Gesture.Shake, () => {
 })
 ```
@@ -74,7 +74,7 @@ forever(() => {
     light.showAnimation(light.rainbowAnimation, 500)
 })
 input.onGesture(Gesture.Shake, () => {
-    music.playSound(music.sounds(Sounds.MagicWand))
+    music.magicWand.play()
     light.showAnimation(light.sparkleAnimation, 1500)
 })
 ```

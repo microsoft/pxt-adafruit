@@ -62,7 +62,7 @@ Hey, let's add some sound! From the ``||music:MUSIC||`` drawer, drag out a ``||m
 
 ```blocks
 input.onGesture(Gesture.Shake, function () {
-    music.playSound(music.sounds(Sounds.PowerUp))
+    music.baDing.play()
     for (let i = 0; i < 4; i++) {
         light.showRing(
         `blue blue blue blue blue blue blue blue blue blue`
@@ -80,7 +80,7 @@ Click on the part of the ``||music:play sound||`` block that shows the name of t
 
 ```blocks
 input.onGesture(Gesture.Shake, function () {
-    music.playSound(music.sounds(Sounds.Siren))
+    music.siren.play()
     for (let i = 0; i < 4; i++) {
         light.showRing(
         `blue blue blue blue blue blue blue blue blue blue`

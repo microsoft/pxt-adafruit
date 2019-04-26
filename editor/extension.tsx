@@ -27,8 +27,9 @@ function showUploadInstructionsAsync(fn: string, url: string, confirmAsync?: (op
         {upgradeBootloader ? <div className="column">
             <div className="ui">
                 <div className="image">
-                    <div className="ui header">{lf("CPLAYBOOT drive not appearing?")}</div>
+                    <img className="ui medium rounded image download-step" src="./static/download/bootloader.png" />
                 </div>
+                <div className="ui header">{lf("CPLAYBOOT drive not appearing?")}</div>
                 <div className="content">
                     <div className="description">
                         <a href="/device/mac/troubleshoot" target="_blank">{lf("Check your bootloader version here and update if needed")}</a>

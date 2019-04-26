@@ -57,23 +57,23 @@ Pretend that you've created a 3 bit analog-to-digital converter (ADC). This mean
 
 ```blocks
 let e = 2.71828
-let R = 1500
-let C = 0.0000001
+let R = 20000
+let C = 2e-8
 let Vc = 0
 let Vin = 3.3
 let t = 0
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 75; i++) {
     Vc = Vin * (1 - e ** (t / (R * C)))
-    t += -0.00001
+    t += -0.00005
     console.logValue("Vc", Vc)
     pause(100)
 }
 t = 0
 Vin = Vc
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 75; i++) {
     Vc = Vin * (e ** (t / (R * C)))
-    t += -0.00001
+    t += -0.00005
     console.logValue("Vc", Vc)
     pause(100)
-}
+} 
 ```

@@ -25,9 +25,16 @@ function showUploadInstructionsAsync(fn: string, url: string, confirmAsync?: (op
 
     const jsx = <div className={`ui ${upgradeBootloader ? "four" : "three"} column grid stackable`}>
         {upgradeBootloader ? <div className="column">
-            <div className="ui header">${lf("CPLAYBOOT drive not appearing?")}</div>
-            <strong>${lf("You might have to upgrade your board.")}</strong>
-            <a href="/device/mac/troubleshoot" target="_blank">${lf("Check your bootloader version here and update if needed")}</a>
+            <div className="ui">
+                <div className="image">
+                    <div className="ui header">{lf("CPLAYBOOT drive not appearing?")}</div>
+                </div>
+                <div className="content">
+                    <div className="description">
+                        <a href="/device/mac/troubleshoot" target="_blank">{lf("Check your bootloader version here and update if needed")}</a>
+                    </div>
+                </div>
+            </div>
         </div>
             : undefined}
         <div className="column">

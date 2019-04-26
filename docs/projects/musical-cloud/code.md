@@ -114,7 +114,7 @@ Here are all the notes and beats for the song:
 
 Now, to play the song, you have to create a new melody. To do this, you have to switch from **Blocks** to **JavaScript**. So, click on the **JavaScript** tab to go to the JavaScript editor.
 
-Below the last line of code, type ``let song = new music.Melody(twinkle)``. This makes a new ``||music:Melody||`` _object_ which we'll play the song from. So, add on more line of code at the end that says ``song.play()``.
+Below the last line of code, type ``let song = new music.Melody(twinkle)``. This makes a new ``||music:Melody||`` _object_ which we'll play the song from. So, add one more line of code at the end that says ``song.play()``.
 
 ```typescript
 forever(function () {

@@ -49,7 +49,7 @@ forever(function () {
 })
 ```
 
-## Step 4: Music
+## Step 4: Create the song
 
 From ``||music:MUSIC||``, get a ``||music:set volume||`` and place at the bottom of ``||loops: on start||``. Type in ``155`` for the volume level.
 
@@ -63,8 +63,6 @@ music.setVolume(155)
 
 Go to ``||variables:VARIABLES||`` and click ``Make a Variable...``. Name your new variable ``twinkle``. Pull out the ``||variables:set twinkle to||`` and place it at the bottom of ``||loops:on start||``. Click **ADVANCED** and in ``||text:TEXT||``, get the ``""`` string block and place it in the ``||variables:set twinkle to||``.
 
-In ``||music:MUSIC||``, drag out ``||music:play sound power up||`` and put it after ``||variables:set twinkle to||``. Now, drag a ``||variables:twinkle||`` variable from ``||variables:VARIABLES||`` into the ``||music:play sound||`` where it says ``power up``. 
-
 ```blocks
 let strip: light.NeoPixelStrip = null
 let twinkle = ""
@@ -73,7 +71,6 @@ strip.setAll(0x007fff)
 strip.setBrightness(200)
 music.setVolume(155)
 twinkle = ""
-music.playSound(twinkle)
 ```
 
 In the blank string  `""` for ``||variables:twinkle||``, type in the notes, rests, and beats of the _Twinkle Twinkle Little Star_ song. 
@@ -82,21 +79,18 @@ The way to do this is to type in the note first, then the octave (in this case, 
 
 ```block
 let twinkle = "c4:2"
-music.playSound(twinkle)
 ```
 
 After you type in one note, you can add a rest before another note plays. Type in `r:2` after your first note if you want a rest for 2 beats before the next note, like this:
 
 ```block
 let twinkle = "c4:2 r:2 c4:2"
-music.playSound(twinkle)
 ```
 
 Keep typing in the notes one by one, with the rests. Experiment with the rests and beats until you get the perfect song! You don't have to use rests but they might make your song sound better. The first line of the song without any rests is this:
 
 ```block
-let twinkle = "c4:1 c4:1 g4:1 g4:1 a4:1 a4:1 g4:1"
-music.playSound(twinkle)
+let twinkle = "c4:1 c4:1 g4:1 g4:1 a4:1 a4:1 g4:2"
 ```
 
 Here are all the notes and beats for the song: 
@@ -115,6 +109,30 @@ Here are all the notes and beats for the song:
 | `c4:1 c4:1` | | `g4:1 g4:1` | | `a4:1 a4:1` | | `g4:2` |
 | **HOW I** | | **WONDER** | | **WHAT YOU** | | **ARE** |
 | `f4:1 f4:1` | | `e4:1 e4:1` | | `d4:1 d4:1` | | `c4:2` |
+
+## Step 5: Play Music
+
+Now, to play the song, you have to create a new melody. To do this, you have to switch from **Blocks** to **JavaScript**. So, click on the **JavaScript** tab to go to the JavaScript editor.
+
+Below the last line of code, type ``let song = new music.Melody(twinkle)``. This makes a new ``||music:Melody||`` _object_ which we'll play the song from. So, add on more line of code at the end that says ``song.play()``.
+
+```typescript
+forever(function () {
+    light.showRing(
+    `blue blue blue blue blue blue blue blue blue blue`
+    )
+    light.setBrightness(200)
+})
+let strip: light.NeoPixelStrip = null
+let twinkle = ""
+strip = light.createStrip(pins.A1, 30)
+strip.setAll(0x007fff)
+strip.setBrightness(200)
+music.setVolume(155)
+twinkle = "c4:1 c4:1 g4:1 g4:1 a4:1 a4:1 g4:2"
+let song = new music.Melody(twinkle)
+song.play()
+```
 
 ## Complete
 

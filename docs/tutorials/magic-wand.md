@@ -30,7 +30,7 @@ input.onGesture(Gesture.Shake, () => {
 
 ## Step 3
 
-Drag out another ``||light:show animation||`` block but this time place it inside the ``||input:on shake||`` block. Change the animation to ``sparkle`` and the duration to ``1500`` ms.
+Drag out another ``||light:show animation||`` block but this time place it inside the ``||input:on shake||`` block. Change the animation to ``sparkle`` and the duration to `1` second.
 
 Now, every time you shake the @boardname@, a sparkle animation will play. Pretty cool!
 
@@ -41,7 +41,7 @@ forever(() => {
     light.showAnimation(light.rainbowAnimation, 500)
 })
 input.onGesture(Gesture.Shake, () => {
-    light.showAnimation(light.sparkleAnimation, 500)
+    light.showAnimation(light.sparkleAnimation, 1000)
 })
 ```
 
@@ -58,7 +58,7 @@ forever(() => {
 input.onGesture(Gesture.Shake, () => {
     light.stopAllAnimations()
     music.playSound(music.sounds(Sounds.PowerUp))
-    light.showAnimation(light.sparkleAnimation, 500)
+    light.showAnimation(light.sparkleAnimation, 1000)
 })
 ```
 
@@ -73,7 +73,7 @@ forever(() => {
 input.onGesture(Gesture.Shake, () => {
     light.stopAllAnimations()
     music.playSound(music.sounds(Sounds.PowerUp))
-    light.showAnimation(light.sparkleAnimation, 500)
+    light.showAnimation(light.sparkleAnimation, 1000)
 })
 ```
 

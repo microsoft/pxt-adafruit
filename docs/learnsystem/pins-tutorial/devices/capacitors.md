@@ -4,9 +4,9 @@
 
 A capacitor is a device that uses two conductive surfaces to store an electric charge. However, it has a gap between the two surfaces that insulates them from each other. The distance of the gap and the material in the gap (air, glass, mineral, liquid, etc.) isn't too much though to prevent a strong enough electric field to push on electric charges to make them collect on the surfaces.
 
-### What makes a capacitor?
+## What makes a capacitor?
 
-A simple capacitor uses two parallel plates of conductive material separated by an insulator. The insulator is called the _dielectric_ and is some material that will prevent electric current from passing through it. The ability for of an electric field to pass through the dielectric material is a given a meaurement value known as _**ε**_, called the _permittivity_. This along with the dimensions of the capacitor plates determine how much charge it can store. What matters is the area of the plates (_**A**_) and the distance between them (_**d**_). Here's an illustration of how the parts of a capacitor go together along with their important properties:
+A simple capacitor uses two parallel plates of conductive material separated by an insulator. The insulator is called the _dielectric_ and is some material that will prevent electric current from passing through it. The ability for of an electric field to pass through the dielectric material is a given a measurement value known as _**ε**_, called the _permittivity_. This along with the dimensions of the capacitor plates determine how much charge it can store. What matters is the area of the plates (_**A**_) and the distance between them (_**d**_). Here's an illustration of how the parts of a capacitor go together along with their important properties:
 
 ![Parts of a capacitor animation](/static/cp/learn/pins-tutorial/devices/capacitors/capacitor-device.gif)
 
@@ -38,7 +38,7 @@ A special value for a capacitor charging circuit is found by multiplying the amo
 
 ``20000 ohms * 2e-10 farads`` = ``4 microseconds``
 
-Using the properties of charge time, we can determine that a capacitor will have more than 99% of its charge after 5 time constants, or `5 * RC` seconds. In this diagram, the first circuit shows the moment the circuit is closed. Current just starts flowing with 0 volts across the capacitor and it has a balanced charge. The second diagram shows a full charge and no current flowing after a period of 5 RC time contants.
+Using the properties of charge time, we can determine that a capacitor will have more than 99% of its charge after 5 time constants, or `5 * RC` seconds. In this diagram, the first circuit shows the moment the circuit is closed. Current just starts flowing with 0 volts across the capacitor and it has a balanced charge. The second diagram shows a full charge and no current flowing after a period of 5 RC time constants.
 
 ![RC circuit diagram charging](/static/cp/learn/pins-tutorial/devices/capacitors/rc-circuit-charging.jpg)
 
@@ -91,7 +91,7 @@ for (let i = 0; i < 75; i++) {
 
 **Test**: Run the code and switch to the data view to see the console output in the chart.
 
-![Analog to digial simulation](/static/cp/learn/pins-tutorial/devices/capacitors/charge-discharge-sim.jpg)
+![Charge and discharge simulation](/static/cp/learn/pins-tutorial/devices/capacitors/charge-discharge-sim.jpg)
 
 **Result**: The chart shows the charge and discharge patterns over `37.5` microseconds each. The graph shape shows how the "natural" charge and discharge rate works.
 
@@ -105,14 +105,14 @@ The charge level on a capacitor can be tracked by checking what voltage is curre
 
 This experiment requires a capacitor that will charge to 100 microfarads (100uF). The best type capacitor to use is an [electrolytic capacitor](https://www.adafruit.com/product/2193). Since it's difficult to make your own capacitor that will hold that much charge, there are no instructions here on how to make one. You'll need to get one that's already made.
 
-If a 20k ohm resisitor is used with the 100 uF capacitor, the RC time constant is 2 seconds. The entire charge time then is 10 seconds over 5 time constants. Choosing a resistance value between 10k ohms and 40k ohms will give you plenty of time to watch how the capacitor charges and discharges.
+If a 20k ohm resistor is used with the 100 uF capacitor, the RC time constant is 2 seconds. The entire charge time then is 10 seconds over 5 time constants. Choosing a resistance value between 10k ohms and 40k ohms will give you plenty of time to watch how the capacitor charges and discharges.
 
 ### ~
 
 **Materials**:
 
 * (4) [Alligator clip leads](https://www.adafruit.com/product/4100)
-* A [resistor](https://www.adafruit.com/product/2892) with a resitance value between 10k ohms and 40k ohms - use you own [graphite resistor](/learnsystem/pins-tutorial/devices/make-a-resistor#input-resistor)
+* A [resistor](https://www.adafruit.com/product/2892) with a resistance value between 10k ohms and 40k ohms - use you own [graphite resistor](/learnsystem/pins-tutorial/devices/make-a-resistor#input-resistor)
 * A [100uF capacitor](https://www.adafruit.com/product/2193)
 
 **Setup**:
@@ -142,8 +142,8 @@ forever(function () {
 
 **Test**: Press button **A** to charge the capacitor and watch the pixels light up to show charge level. Press button **B** to discharge the capacitor and watch the pixels turn off as the charge goes away.
 
-**Optional Test**: Change the resistance value and repeat the test. Observe how the charge and discharge times are differen from the first test.
+**Optional Test**: Change the resistance value and repeat the test. Observe how the charge and discharge times are different from the first test.
 
 ![Charge percentage is shown on the pixels](/static/cp/learn/pins-tutorial/devices/capacitors/charging.gif)
 
-**Result**: Pixels on the board will light up showing the level of charge on the capacitor. Each pixel represents another 10% of charge. Each pixel take longer to light (or turn off when discharging) than the previous one as the charge rate slows down. The last pixel takes a much longer time to light up than the other pixels. This will relate to the time to charge the final 10% as seen in the flatten part of the graph from the previous experiment.
+**Result**: Pixels on the board will light up showing the level of charge on the capacitor. Each pixel represents another 10% of charge. Each pixel will take longer to light (or turn off when discharging) than the previous one as the charge rate slows down. The last pixel takes a much longer time to light up than the other pixels. This will relate to the time to charge the final 10% as seen in the flatten part of the graph from the previous experiment.

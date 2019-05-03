@@ -1,5 +1,7 @@
 # Capacitors
 
+![CPX with capacitors](/static/cp/learn/pins-tutorial/devices/capacitors/header.jpg)
+
 A capacitor is a device that uses two conductive surfaces to store an electric charge. However, it has a gap between the two surfaces that insulates them from each other. The distance of the gap and the material in the gap (air, glass, mineral, etc.) isn't too much though to prevent the presence of an electric field that is strong enough to push on the charges in the surfaces.
 
 ### What makes a capacitor?
@@ -32,9 +34,9 @@ In reality, a capacitor doesn't charge immediately. It takes time to charge due 
 
 ![RC circuit diagram](/static/cp/learn/pins-tutorial/devices/capacitors/rc-circuit.jpg)
 
-A special value for a capacitor charging circuit is found by multiplying the amount of resistance to it by the capacitance. The result is a time value called the _RC time constant_. As an example, if the resistor is 20k Ohms and the capacitor is 20 pF (picofarads), the RC time constant is:
+A special value for a capacitor charging circuit is found by multiplying the amount of resistance to it by the capacitance. The result is a time value called the _RC time constant_. As an example, if the resistor is 20k Ohms and the capacitor is 200 pF (picofarads), the RC time constant is:
 
-``20000 ohms * 2e-8 farads`` = ``4 microseconds``
+``20000 ohms * 2e-10 farads`` = ``4 microseconds``
 
 Using the properties of charge time, we can determine that a capacitor will have more than 99% of its charge after 5 time constants, or `5 * RC` seconds. In this illustration, the first circuit diagram shows the moment the circuit is closed and current is flowing with 0 volts and a balanced charge on the capacitor. The second diagram shows a full charge and no current flowing after 5 RC time contants.
 
@@ -56,33 +58,77 @@ A special number called _**e**_ is used to calculate the capacitor voltage at an
 * Charging: ``Vc`` = ``Vin * (1 - e ** (t / (R * C)))``, where ``Vin`` is the voltage used to charge with
 * Discharging: ``Vc`` = ``Vstart * (e ** (t / (R * C)))``, where ``Vstart`` is the voltage before discharge
 
-## Experiment: Simulate capacitor charging and discharging
+## Experiment: Model a capacitor charging and dischaging
 
 ---
 
-Pretend that you've created a 3 bit analog-to-digital converter (ADC). This means that you can measure input values from `0` to `7` relative to the voltage reference (_Vref_) which is 3.3 v on your board. Generate a _sawtooth_ signal and read it as input to your 3 bit ADC. The sawtooth signal increases in voltage by `0.1` volts every `100` milliseconds until it reaches `3.3` volts. The signal then drops back to `0` and repeats.
+Using values for _**R**_ and _**C**_, along with Euler's number, you can chart the charge and discharge of a capacitor to see how it behaves over time. Also, multiples of the RC time constant can be matched to the voltage level to see when the capacitor is almost fully charged. For the model simulation, a value of ``20k ohms`` is used for _**R**_ and ``200pF`` is used for _**C**_. The charge and starting voltage is `3.3v`.
 
 **Setup**: Copy the following code into the editor.
 
 ```blocks
 let e = 2.71828
-let R = 1500
-let C = 0.0000001
+let R = 20000
+let C = 2e-10
 let Vc = 0
 let Vin = 3.3
 let t = 0
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 75; i++) {
     Vc = Vin * (1 - e ** (t / (R * C)))
-    t += -0.00001
+    t += -0.0000005
     console.logValue("Vc", Vc)
     pause(100)
 }
 t = 0
 Vin = Vc
-for (let i = 0; i < 100; i++) {
+for (let i = 0; i < 75; i++) {
     Vc = Vin * (e ** (t / (R * C)))
-    t += -0.00001
+    t += -0.0000005
     console.logValue("Vc", Vc)
     pause(100)
-}
+} 
 ```
+
+**Test**: Run the code and switch to the data view to see the console output in the chart.
+
+![Analog to digial simulation](/static/cp/learn/pins-tutorial/devices/capacitors/charge-discharge-sim.jpg)
+
+**Result**: The chart shows the charge and discharge patterns over `37.5` microseconds each. The graph shape shows how the "natural" charge and discharge rate works.
+
+## Experiment: Charge meter
+
+---
+
+Different voltage levels can be input to a pin using a connection to a variable resistor. The supply voltage **3.3V** pin is connected to one end of the [resistor](/learnsystem/pins-tutorial/devices/make-a-resistor#input-resistor) and the **GND** pin is connected to the other end. A third lead is set as the _tap_ to the variable resistance so when connected to a pin, some voltage between 3.3 v and 0 v is at the input.
+
+**Setup**:
+
+1. Connect one end of an alligator clip lead to the one side of the variable resistor.
+2. Connect the other clip of that lead to the **3.3V** pin.
+3. Connect one end of a second alligator clip lead to the other side of the variable resistor.
+4. Connect the other clip of that lead to the **GND** pin.
+5. Get a third alligator clip lead and connect one end to the **A3** pin. This is the tap lead.
+
+![Connections for the experiment](/static/cp/learn/pins-tutorial/devices/capacitors/connections.jpg)
+
+6. Download the following code to the board:
+
+```blocks
+pins.A4.digitalWrite(false)
+input.buttonB.onEvent(ButtonEvent.Click, function () {
+    pins.A4.digitalWrite(false)
+})
+input.buttonA.onEvent(ButtonEvent.Click, function () {
+    pins.A4.digitalWrite(true)
+})
+forever(function () {
+    light.graph(pins.A5.analogRead(), 1010)
+    pause(200)
+})
+```
+
+**Test**: Slide the free end of the alligator clip lead that is connected to the **A3** pin across the surface of the resistor several times (if you're using a mechanical variable resistor, connect the tap lead to the center pin on that resistor).
+
+![Graph the voltage on the pixels](/static/cp/learn/pins-tutorial/analog-input/voltage-meter.gif)
+
+**Result**: The pixels on the board will show the voltage level as tap lead is moved from a low voltage position to a high voltage position.

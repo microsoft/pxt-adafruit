@@ -288,7 +288,7 @@
             "branch": "v1.5.4-samd-peripherals.11",
             "type": "git",
             "branches": {
-                "https://github.com/lancaster-university/codal-core": "e16a98d9f74d588874aedbcd25d83ef0fe203b6a",
+                "https://github.com/lancaster-university/codal-core": "dbf2121bdde4131f2aedd23e93811858c6f05b23",
                 "https://github.com/lancaster-university/codal-samd": "99e2686377da59bec6bc486c62d7096909dd967f"
             }
         },

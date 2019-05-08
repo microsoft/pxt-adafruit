@@ -54,5 +54,3 @@ namespace light {
     }
 }
 
-// Temporary fix for i2c https://github.com/lancaster-university/codal-samd/issues/13
-pins.A0.digitalWrite(false);

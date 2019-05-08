@@ -368,11 +368,11 @@
         "scriptManager": true,
         "baseTheme": "dark",
         "simGifTransparent": "rgba(0,0,0,0)",
+        "qrCode": true,
         "experiments": [
             "autoWebUSBDownload",
             "debugger",
             "debugExtensionCode",
-            "qrCode",
             "simScreenshot",
             "simGif"
         ],

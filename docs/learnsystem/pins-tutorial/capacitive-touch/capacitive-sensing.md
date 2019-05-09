@@ -1,7 +1,8 @@
 # Capacitive touch sensing
 
-Capacitance is the ability of some material to receive an amount of electrical charge. The pins on some of the pins on your @boardname@ are designed to detect a change in capacitance of any conducting material connected to them. The contact area on board itself serves as conductive area for capacitive sensing.
+Capacitance is the ability of some material to receive an amount of electrical charge. Some of the pins on your @boardname@ are designed to detect a change in capacitance of any conducting material connected to them. The contact area on board itself serves as conductive area for capacitive sensing.
 
+![](/static/cp/learn/pins-tutorial/capacitive-touch/touch-press.jpg)
 
 
 ## Capacitors
@@ -12,19 +13,7 @@ Before we find out how your board uses capacitance to detect a pin touch, it's h
 
 A simple capacitor uses two parallel plates of conductive material separated by an insulator. The insulator is called the _dielectric_ and is some material that will prevent electric current from passing through it. The ability for of an electric field to pass through the dielectric material is a given a meaurement value known as *ε*, called the _permittivity_. This along with the dimensions of the capacitor plates determine how much charge it can store. What matters is the area of the plates (*A*) and the distance between them (*d*). Here's an illustration of how the parts of a capacitor go together along with it's important measurments:
 
-![](/static/cp/learn/pins-tutorial/capacitive-touch/capacitor-device.gif)
-
 At first, a capacitor has an equal amount of both positive and negative charge on each plate and the The presence of an electric field (*E*) between these surfaces forces  diagram below shows a capacitor with two plates that are oppositely charged by a force of the voltage applied to them.
-
-### Electric field
-
-![](/static/cp/learn/pins-tutorial/capacitive-touch/electric-field.gif)
-
-### Charging
-
-![](/static/cp/learn/pins-tutorial/capacitive-touch/capacitor-charging.gif)
-
-The charges can't pass to the other plate due to the gap between them that insulates the plates from each other. The gap could be air or some other non-conductive material. Inside the gap, however, is an electric field (*E*) which directs the force from the battery to push the electric charge to the plates. The charge that builds is shown by the *Q* symbol by each plate.
 
 ## Human capacitor
 
@@ -34,15 +23,18 @@ Your body has some ability to accept an electric charge. In the past you may hav
 
 The surface of your body acts like one of the charge plates in a capacitor. A capacitor stores electric charge on two conductive surfaces when a voltage source is appled across it.
 
-![](/static/cp/learn/pins-tutorial/capacitive-touch/pin-touch.gif)
 
 ## How a touch is detected
 
 When you begin to touch the surface of a pin or a conductor connected to a pin you change its capacitance. At the moment you come very near the pin (almost just touching it), the capacitance of the pin changes because your body has just provided and additional charge surface making a capacitor between you and the pin's conductive surface. The microcontroller can detect and measure this added capacitance. When you actuually touch the pin, the charge goes away and won't happen until you begin a new touch to the pin.
 
-![](/static/cp/learn/pins-tutorial/capacitive-touch/touch-press.jpg)
+![](/static/cp/learn/pins-tutorial/capacitive-touch/pin-capacitance.jpg)
 
-## Experiment: Simulate a touch press on a pin
+![](/static/cp/learn/pins-tutorial/capacitive-touch/touch-capacitance.jpg)
+
+![](/static/cp/learn/pins-tutorial/capacitive-touch/pin-touch.gif)
+
+## Experiment: Touch a pin
 
 ---
 
@@ -51,24 +43,8 @@ Pretend that you've created a 3 bit analog-to-digital converter (ADC). This mean
 **Setup**: Copy the following code into the editor.
 
 ```blocks
-let e = 2.71828
-let R = 1500
-let C = 0.0000001
-let Vc = 0
-let Vin = 3.3
-let t = 0
-for (let i = 0; i < 100; i++) {
-    Vc = Vin * (1 - e ** (t / (R * C)))
-    t += -0.00001
-    console.logValue("Vc", Vc)
-    pause(100)
-}
-t = 0
-Vin = Vc
-for (let i = 0; i < 100; i++) {
-    Vc = Vin * (e ** (t / (R * C)))
-    t += -0.00001
-    console.logValue("Vc", Vc)
-    pause(100)
-}
+input.touchA1.onEvent(ButtonEvent.Click, function () {
+    light.showAnimation(light.rainbowAnimation, 500)
+    light.clear()
+})
 ```

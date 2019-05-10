@@ -18,9 +18,9 @@ network.onInfraredReceivedNumber(function (num) {
         light.setAll(0x007fff)
     } else {
         light.showAnimation(light.rainbowAnimation, 500)
-        music.playSoundUntilDone(music.sounds(Sounds.BaDing))
-        music.playSoundUntilDone(music.sounds(Sounds.JumpUp))
-        music.playSoundUntilDone(music.sounds(Sounds.JumpUp))
+        music.baDing.playUntilDone()
+        music.jumpUp.playUntilDone()
+        music.jumpUp.playUntilDone()
     }
 })
 input.buttonA.onEvent(ButtonEvent.Click, function () {
@@ -58,9 +58,9 @@ network.onInfraredReceivedNumber(function (num) {
         Question_Count += 1
     } else {
         light.showAnimation(light.rainbowAnimation, 500)
-        music.playSoundUntilDone(music.sounds(Sounds.BaDing))
-        music.playSoundUntilDone(music.sounds(Sounds.JumpUp))
-        music.playSoundUntilDone(music.sounds(Sounds.JumpUp))
+        music.baDing.playUntilDone()
+        music.jumpUp.playUntilDone()
+        music.jumpUp.playUntilDone()
     }
 })
 input.buttonB.onEvent(ButtonEvent.Click, function () {
@@ -73,7 +73,7 @@ Question_Count = 0
 light.setAll(0x00ff00)
 forever(function () {
     if (Question_Count == 21) {
-        music.playSound(music.sounds(Sounds.Wawawawaa))
+        music.wawawawaa.play()
         light.setAll(0xff0000)
         pause(2000)
         Question_Count = 0

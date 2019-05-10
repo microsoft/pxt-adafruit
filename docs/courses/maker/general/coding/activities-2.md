@@ -11,7 +11,7 @@ Let’s use a ``||loops:repeat||`` loop to make a siren.
 
 ```blocks
 input.onGesture(Gesture.Shake, function () {
-    music.playSound(music.sounds(Sounds.Siren))
+    music.siren.play()
     for (let i = 0; i < 4; i++) {
         light.showRing(
         "red red red red red red red red red red"

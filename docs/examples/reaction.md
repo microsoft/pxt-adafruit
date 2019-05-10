@@ -32,12 +32,12 @@ input.pinA2.onEvent(ButtonEvent.Down, () => {
         // stop animations and show blue
         light.stopAllAnimations()
         light.setAll(0x0000ff)
-        music.playSound(music.sounds(Sounds.PowerDown))
+        music.powerDown.play()
     } else if (running == 1) {
         // red wins
         running = 2
         light.setAll(0xff0000)
-        music.playSound(music.sounds(Sounds.PowerUp))
+        music.powerUp.play()
     }
 })
 input.pinA3.onEvent(ButtonEvent.Down, () => {
@@ -46,12 +46,12 @@ input.pinA3.onEvent(ButtonEvent.Down, () => {
         running = 2
         light.stopAllAnimations()
         light.setAll(0xff0000)
-        music.playSound(music.sounds(Sounds.JumpDown))
+        music.jumpDown.play()
     } else if (running == 1) {
         // blue wins
         running = 2
         light.setAll(0x0000ff)
-        music.playSound(music.sounds(Sounds.JumpUp))
+        music.jumpUp.play()
     }
 })
 ```

@@ -70,7 +70,7 @@ input.buttonA.onEvent(ButtonEvent.Click, () => {
         light.showAnimation(light.rainbowAnimation, delay)
         delay += -50
     }
-    music.playSound(music.sounds(Sounds.Wawawawaa))    
+    music.wawawawaa.play()
     light.showAnimation(light.theaterChaseAnimation, 2500)
 })
 ```

@@ -88,7 +88,7 @@ forever(function () {
         )
         LeftEye.setAll(0x00ff00)
         RightEye.setAll(0x00ff00)
-        music.playSound(music.sounds(Sounds.MagicWand))
+        music.magicWand.play()
         pause(3000)
         Magic8 = 0
     } else if (Magic8 == 2) {
@@ -97,7 +97,7 @@ forever(function () {
         )
         LeftEye.setAll(0x7f00ff)
         RightEye.setAll(0x7f00ff)
-        music.playSound(music.sounds(Sounds.PowerDown))
+        music.powerDown.play()
         pause(3000)
         Magic8 = 0
     } else if (Magic8 == 3) {
@@ -106,7 +106,7 @@ forever(function () {
         )
         LeftEye.setAll(0x0000ff)
         RightEye.setAll(0xff8000)
-        music.playSound(music.sounds(Sounds.Wawawawaa))
+        music.wawawawaa.play()
         pause(3000)
         Magic8 = 0
     } else {
@@ -222,7 +222,7 @@ forever(function () {
         )
         pause(100)
     } else {
-        music.playSound(music.sounds(Sounds.Siren))
+        music.siren.play()
         LeftEye.setAll(0x00ff00)
         RightEye.setAll(0x7f00ff)
         pause(Math.randomRange(100, 200))

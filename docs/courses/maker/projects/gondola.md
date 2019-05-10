@@ -127,8 +127,8 @@ This sample code first uses an ``||loops:on start||`` block and establishes what
 ```blocks
 input.onLoudSound(function () {
     light.showAnimation(light.theaterChaseAnimation,500)
-    music.playSound(music.sounds(Sounds.MagicWand))
-    music.playSound(music.sounds(Sounds.MagicWand))
+    music.magicWand.play()
+    music.magicWand.play()
     light.setAll(0x00ff00)
     servos.A1.run(50)
     pause(10000)

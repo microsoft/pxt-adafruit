@@ -83,7 +83,7 @@ Here is a sample program with 2 servo motors – one at the beginning of the run
 ```blocks
 input.onLightConditionChanged(LightCondition.Dark, function () {
     light.showAnimation(light.rainbowAnimation, 500)
-    music.playSound(music.sounds(Sounds.PowerUp)) 
+    music.powerUp.play()
     servos.A1.setAngle(0) 
     pause(2500)
     servos.A2.setAngle(90)

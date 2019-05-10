@@ -10,10 +10,10 @@ In this example, the program is saying, “If button A is being pressed, then sh
 forever(function () {
     if (input.buttonA.isPressed()) {
         light.showAnimation(light.rainbowAnimation, 500)
-        music.playSoundUntilDone(music.sounds(Sounds.PowerUp))
+        music.powerUp.playUntilDone()
     } else {
         light.showAnimation(light.cometAnimation, 500)
-        music.playSoundUntilDone(music.sounds(Sounds.PowerDown))
+        music.powerDown.playUntilDone()
     }
 })
 ```
@@ -24,10 +24,10 @@ This code is only slightly different in that the input diamond says “was press
 forever(function () {
     if (input.buttonA.wasPressed()) {
         light.showAnimation(light.rainbowAnimation, 500)
-        music.playSoundUntilDone(music.sounds(Sounds.PowerUp))
+        music.powerUp.playUntilDone()
     } else {
         light.showAnimation(light.cometAnimation, 500)
-        music.playSoundUntilDone(music.sounds(Sounds.PowerDown))
+        music.powerDown.playUntilDone()
     }
 })
 ```

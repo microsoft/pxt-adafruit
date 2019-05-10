@@ -166,7 +166,7 @@ As an example, you could have a micro switch next to a doorway that breaks a clo
 ```blocks
 pins.A1.onEvent(PinEvent.Fall, function () {
     light.showAnimation(light.rainbowAnimation, 500)
-    music.playSoundUntilDone(music.sounds(Sounds.Wawawawaa))
+    music.wawawawaa.play()
 })
 pins.A1.setPull(PinPullMode.PullDown)
 ```

@@ -77,7 +77,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
         intensity += 1
         pause(50)
     }
-    music.playSound(music.sounds(Sounds.PowerUp))
+    music.powerUp.play()
     for (let i = 0; i < 100; i++) {
         light.setBrightness(intensity)
         intensity += -1

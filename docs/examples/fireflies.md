@@ -21,7 +21,7 @@ forever(() => {
 input.onLightConditionChanged(LightCondition.Bright, () => {
     // don't play sound while flashing
     if (clock < 8) {
-        music.playSound('g5:1 g5:1')
+        music.jumpUp.play()
         // advance clock to catch up neighbors
         clock += 1
     }

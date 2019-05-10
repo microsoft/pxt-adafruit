@@ -129,11 +129,11 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
     )
 })
 input.onGesture(Gesture.TiltLeft, function () {
-    music.playSound(music.sounds(Sounds.PowerUp))
+    music.powerUp.play()
     light.showAnimation(light.rainbowAnimation, 500)
 })
 input.onGesture(Gesture.TiltRight, function () {
-    music.playSound(music.sounds(Sounds.PowerDown))
+    music.powerDown.play()
     light.showAnimation(light.theaterChaseAnimation, 500)
 })
 light.showRing(
@@ -150,10 +150,10 @@ Different head tilts can send a friend’s crown different IR messages to trigge
 ```blocks
 network.onInfraredReceivedNumber(function (num) {
     if (num == 1) {
-        music.playSound(music.sounds(Sounds.Siren))
+        music.siren.play()
         light.showAnimation(light.sparkleAnimation, 2000)
     } else {
-        music.playSound(music.sounds(Sounds.MagicWand))
+        music.magicWand.play()
         light.showAnimation(light.rainbowAnimation, 2000)
     }
 })
@@ -164,12 +164,12 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
 })
 input.onGesture(Gesture.TiltRight, function () {
     network.infraredSendNumber(1)
-    music.playSound(music.sounds(Sounds.PowerDown))
+    music.powerDown.play()
     light.showAnimation(light.theaterChaseAnimation, 500)
 })
 input.onGesture(Gesture.TiltLeft, function () {
     network.infraredSendNumber(2)
-    music.playSound(music.sounds(Sounds.PowerUp))
+    music.powerUp.play()
     light.showAnimation(light.colorWipeAnimation, 500)
 })
 music.setVolume(256)

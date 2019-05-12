@@ -24,7 +24,7 @@ A low current resistior has a high amount of resistance. High resistance is need
 
 * Piece of paper (a note card works really well)
 * Sharpened #2 pencil
-* (3) Alligator clip leads
+* (3) [Alligator clip leads](https://www.adafruit.com/product/4100)
 * Measuring ruler
 
 ### Draw the Resistor
@@ -64,7 +64,7 @@ A high current resistor has a low amount of resistance. A resistor with a low am
 ### Materials
 
 * (4) #2 pencils
-* (3) Alligator clip leads
+* (5) [Alligator clip leads](https://www.adafruit.com/product/4100)
 * Pencil sharpener
 * Wire cutter or scissors
 * Tape or rubber band

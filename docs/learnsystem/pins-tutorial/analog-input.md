@@ -9,7 +9,7 @@ An analog input pin can read a voltage level that ranges from the supply voltage
 There are several experiments to let you test out the concepts you learn in the analog input sections. You'll need a few things to in order to perform some of the experiments. 
 
 * (3) [Alligator clip leads](https://www.adafruit.com/product/1008)
-* [Variable resistor](https://www.adafruit.com/product/562) - use you own [graphite resistor](/learnsystem/pins-tutorial/devices/make-a-resistor)
+* [Variable resistor](https://www.adafruit.com/product/562) - use you own [graphite resistor](/learnsystem/pins-tutorial/devices/make-a-resistor#input-resistor)
 
 ## Sections
 

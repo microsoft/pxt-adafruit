@@ -288,7 +288,7 @@
             "branch": "v1.5.4-i2c_and_dac.0",
             "type": "git",
             "branches": {
-                "https://github.com/lancaster-university/codal-core": "dbf2121bdde4131f2aedd23e93811858c6f05b23"
+                "https://github.com/lancaster-university/codal-core": "06e319138cf8884e03f5991a7d14879d0acb0ff8"
             }
         },
         "codalBinary": "CIRCUIT_PLAYGROUND",

@@ -36,6 +36,8 @@
   "JDGesture.TiltRight|block": "tilt right",
   "JDGesture.TiltUp": "Raised when the device tilts up",
   "JDGesture.TiltUp|block": "tilt up",
+  "JDGesture.TwoG": "Raised when a 2g move (or step) is detected",
+  "JDGesture.TwoG|block": "2g (step)",
   "JDLightAnimation.ColorWipe|block": "color wipe",
   "JDLightAnimation.Comet|block": "comet",
   "JDLightAnimation.Rainbow|block": "rainbow",

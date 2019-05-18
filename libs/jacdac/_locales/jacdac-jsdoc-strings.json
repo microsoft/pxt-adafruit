@@ -7,6 +7,7 @@
   "JDGesture.TiltLeft": "Raised when the screen is pointing left",
   "JDGesture.TiltRight": "Raised when the screen is pointing right",
   "JDGesture.TiltUp": "Raised when the device tilts up",
+  "JDGesture.TwoG": "Raised when a 2g move (or step) is detected",
   "JacDacDriverStatus.device": "Returns the JDDevice instance",
   "JacDacDriverStatus.id": "Get device id for events.",
   "JacDacDriverStatus.isConnected": "Check if driver is connected.",

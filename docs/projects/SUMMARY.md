@@ -56,3 +56,6 @@
   * [Hot Potato](/learnsystem/hot-potato)
   * [Light Paintbrush](/learnsystem/light-paintbrush)
   * [More guides!](https://learn.adafruit.com/category/makecode)
+* [Behind the MakeCode Hardware](/behind-the-makecode-hardware)
+  * [NeoPixels](https://youtu.be/Bo0cM2qmuAE)
+  * [Speaker](https://youtu.be/JjJ-KGwKh_4)

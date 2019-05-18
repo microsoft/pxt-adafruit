@@ -33,6 +33,8 @@
   "Gesture.TiltRight|block": "tilt right",
   "Gesture.TiltUp": "Raised when the device tilts up",
   "Gesture.TiltUp|block": "tilt up",
+  "Gesture.TwoG": "Raised when a 2G shock is detected",
+  "Gesture.TwoG|block": "2g (step)",
   "Rotation.Pitch|block": "pitch",
   "Rotation.Roll|block": "roll",
   "input.acceleration|block": "acceleration (mg)|%NAME",

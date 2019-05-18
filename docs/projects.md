@@ -36,6 +36,11 @@
         "name": "learn.adafruit.com",
         "url": "/learnsystem",
         "imageUrl": "/static/cp/learn/makecode101.png"
+    },
+    {
+        "name": "Behind the MakeCode Hardware",
+        "url": "/behind-the-makecode-hardware",
+        "imageUrl": "/static/cp/behindhardware/neopixels.jpg"
     }
 ]
 ```
@@ -48,5 +53,6 @@
 [Games](/games),
 [Create and Have Fun](/creative-fun),
 [Courses](/courses),
-[learn.adafruit.com](/learnsystem)
+[learn.adafruit.com](/learnsystem),
+[Behind the MakeCode Hardware](/behind-the-makecode-hardware)
 

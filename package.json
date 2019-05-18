@@ -1,6 +1,6 @@
 {
   "name": "pxt-adafruit",
-  "version": "1.4.21",
+  "version": "1.4.22",
   "description": "Adafruit Circuit Playground Express for Microsoft MakeCode",
   "keywords": [
     "JavaScript",

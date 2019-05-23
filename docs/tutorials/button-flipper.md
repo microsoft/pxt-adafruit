@@ -54,10 +54,10 @@ Drag the ``||music:play sound||`` and ``||light:show animation||`` blocks out to
 ```blocks
 input.buttonA.onEvent(ButtonEvent.Click, function () {
     if (Math.randomRange(0, 10) < 5) {
-        music.playSound(music.sounds(Sounds.PowerUp))
+        music.powerUp.play()
         light.showAnimation(light.sparkleAnimation, 2000)
     } else {
-        music.playSound(music.sounds(Sounds.Wawawawaa))
+        music.wawawawaa.play()
         light.showAnimation(light.runningLightsAnimation, 2000)
     }
 })

@@ -127,7 +127,7 @@ input.onSwitchMoved(SwitchDirection.Left, function () {
         servos.A2.run(-50)
         pause(1000)
         light.showAnimation(light.runningLightsAnimation, 500)
-        music.siren.play()
+        music.siren.playUntilDone()
         servos.A1.run(50)
         servos.A2.run(10)
         pause(500)

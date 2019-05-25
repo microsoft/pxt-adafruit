@@ -17,7 +17,7 @@ surprise on your friend!
 ### Blocks
 
 ```cards
-music.playSound(music.sounds(Sounds.PowerUp))
+music.powerUp.play()
 light.showRing("red red red red red red red red red red")
 pins.A2.servoWrite(180)
 pause(0)
@@ -94,7 +94,7 @@ forever(function () {
         "red red red red red red red red red red"
         )
         pins.A1.servoWrite(90)
-        music.playSoundUntilDone(music.sounds(Sounds.PowerDown))
+        music.powerDown.playUntilDone()
         pause(1000)
     } else {
         pins.A2.servoWrite(180)

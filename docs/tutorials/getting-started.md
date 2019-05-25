@@ -70,13 +70,27 @@ forever(() => {
     )
 })
 forever(() => {
-    music.playSoundUntilDone(music.sounds(Sounds.Siren))
+    music.baDing.playUntilDone()
 });
 ```
 
 ## Step 6
 
 Click on the part of the ``||music:play sound||`` block that shows the name of the sound. Change it to the ``Siren`` sound.
+
+```blocks
+forever(() => {
+    light.showRing(
+        `blue blue blue blue blue blue blue blue blue blue`
+    )
+    light.showRing(
+        `red red red red red red red red red red`
+    )
+})
+forever(() => {
+    music.siren.playUntilDone()
+});
+```
 
 ## Step 7
 

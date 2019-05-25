@@ -103,7 +103,7 @@ Code your Room Sign to play a sound and show an animation when you clap, snap or
 
 ```cards
 input.onLoudSound(function () {})
-music.playSound(music.sounds(Sounds.MagicWand))
+music.magicWand.play()
 light.showAnimation(light.rainbowAnimation, 500)
 input.buttonA.onEvent(ButtonEvent.Click, function () {})
 light.clear()
@@ -156,7 +156,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
     light.clear()
 })
 input.onLoudSound(function () {
-    music.playSound(music.sounds(Sounds.MagicWand))
+    music.magicWand.play()
     light.showAnimation(light.rainbowAnimation, 500)
 })
 ```

@@ -109,7 +109,7 @@ Code your Crown to play a sound and show an animation when you tilt your head to
 ```cards
 light.setAll(0xff8000)
 light.showAnimation(light.theaterChaseAnimation, 2000)
-music.playSound(music.sounds(Sounds.Wawawawaa))
+music.wawawawaa.play()
 input.onGesture(Gesture.Shake, function () {}) 
 ```
 
@@ -164,11 +164,11 @@ Your final program may look something like this:
 ```blocks
 light.setAll(0x00ffff)
 input.onGesture(Gesture.TiltLeft, function () {
-    music.playSound(music.sounds(Sounds.JumpUp))
+    music.jumpUp.play()
     light.showAnimation(light.rainbowAnimation, 2000)
 })
 input.onGesture(Gesture.TiltRight, function () {
-    music.playSound(music.sounds(Sounds.JumpDown))
+    music.jumpDown.play()
     light.showAnimation(light.cometAnimation, 2000)
 })
 ```

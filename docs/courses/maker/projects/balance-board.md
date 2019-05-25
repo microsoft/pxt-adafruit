@@ -173,10 +173,10 @@ forever(function () {
 forever(function () {
     if (input.rotation(Rotation.Pitch) > 7) {
         light.setAll(0xff0000)
-        music.playSound(music.sounds(Sounds.Wawawawaa))
+        music.wawawawaa.play()
     } else if (input.rotation(Rotation.Pitch) < -7) {
         light.setAll(0x00ff00)
-        music.playSound(music.sounds(Sounds.Siren))
+        music.siren.play()
     } else {
     	
     }
@@ -192,11 +192,11 @@ forever(function () {
 forever(function () {
     if (input.rotation(Rotation.Pitch) > 7) {
         light.setAll(0xff0000)
-        music.playSound(music.sounds(Sounds.Wawawawaa))
+        music.wawawawaa.play()
         pause(700)
     } else if (input.rotation(Rotation.Pitch) < -7) {
         light.setAll(0x00ff00)
-        music.playSound(music.sounds(Sounds.Siren))
+        music.siren.play()
         pause(700)
     } else {
     	
@@ -215,11 +215,11 @@ Now in the case that the board is balanced (between `-7` and `7` degrees), we wi
 forever(function () {
     if (input.rotation(Rotation.Pitch) > 7) {
         light.setAll(0xff0000)
-        music.playSound(music.sounds(Sounds.Wawawawaa))
+        music.wawawawaa.play()
         pause(700)
     } else if (input.rotation(Rotation.Pitch) < -7) {
         light.setAll(0x00ff00)
-        music.playSound(music.sounds(Sounds.Siren))
+        music.siren.play()
         pause(700)
     } else {
         music.stopAllSounds()
@@ -343,7 +343,7 @@ forever(function () {
     if (upTime == 10) {
         for (let i = 0; i < 4; i++) {
             light.showAnimation(light.runningLightsAnimation, 500)
-            music.playSoundUntilDone(music.sounds(Sounds.PowerUp))
+            music.powerUp.playUntilDone()
         }
     }
 })
@@ -373,7 +373,7 @@ forever(function () {
     if (upTime == 10) {
         for (let i = 0; i < 4; i++) {
             light.showAnimation(light.runningLightsAnimation, 500)
-            music.playSoundUntilDone(music.sounds(Sounds.PowerUp))
+            music.powerUp.playUntilDone()
         }
     }
 })

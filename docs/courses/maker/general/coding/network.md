@@ -83,13 +83,13 @@ Finally, it can be nice to have confirmation that you’ve sent the IR signal fr
 network.onInfraredReceivedNumber(function (num) {
     if (num == 0) {
         light.setAll(0xff0000)
-        music.playSound(music.sounds(Sounds.PowerUp))
+        music.powerUp.play()
     } else if (num == 1) {
         light.setAll(0x007fff)
-        music.playSound(music.sounds(Sounds.PowerDown))
+        music.powerDown.play()
     } else {
         light.setAll(0x00ff00)
-        music.playSound(music.sounds(Sounds.JumpUp))
+        music.jumpUp.play()
     }
 })
 input.buttonA.onEvent(ButtonEvent.Click, function () {

@@ -110,7 +110,7 @@ if (true) {}
 let x = 0
 light.showRing("")
 light.pixelColor(0)
-music.playSound("")
+music.magicWand.play()
 ```
 
 ### Step 1: Create a Play variable
@@ -307,7 +307,7 @@ input.buttonA.onEvent(ButtonEvent.Click, function () {
                     if (light.pixelColor(8) == Colors.Green) {
                         if (light.pixelColor(9) == Colors.Blue) {
                             play = false
-                            music.playSound(music.sounds(Sounds.MagicWand))
+                            music.magicWand.play()
                         }
                     }
                 }

@@ -3,8 +3,8 @@
 The first two music blocks offer a variety of preset sound effects. The ``||music:play sound||`` block will play its sound but then simultaneously move on to activate the next block. For example, if you want to play the "jump down" sound effect and have the ten NeoPixels turn green at the same time, use the ``||music:play sound||`` block. But if you want the NeoPixels to turn green only after the sound effect has ended, use the ``||music:play sound until done||`` block.
 
 ```cards
-music.playSound(music.sounds(Sounds.PowerUp))
-music.playSoundUntilDone(music.sounds(Sounds.PowerUp))
+music.powerUp.play()
+music.powerUp.playUntilDone()
 ```
 <br/>
 
@@ -15,9 +15,9 @@ The ``||music:stop all sounds||`` block stops sounds currently running. This can
 ```blocks
 input.onGesture(Gesture.TiltRight, function () {
     music.stopAllSounds()
-    music.playSound(music.sounds(Sounds.JumpUp))
+    music.jumpUp.play()
 })
-music.playSound(music.sounds(Sounds.JumpUp))
+music.jumpUp.play()
 light.setAll(0x00ff00)
 ```
 

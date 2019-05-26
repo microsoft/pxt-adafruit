@@ -112,7 +112,7 @@ input.onGesture(Gesture.Shake, function () {
     light.showAnimation(light.cometAnimation, 500) 
     value = Math.randomRange(1, 6) 
     light.graph(value, 10) 
-    music.playSound(music.sounds(Sounds.BaDing)) 
+    music.baDing.play()
     pause(3000) 
     light.clear() 
 })
@@ -281,13 +281,13 @@ input.onGesture(Gesture.Shake, function () {
     RPS = Math.randomRange(0, 2) 
     if (RPS == 0) { 
         light.showRing(`black black black blue blue blue blue black black black`) 
-        music.playSound(music.sounds(Sounds.JumpUp)) 
+        music.jumpUp.play()
     } else if (RPS == 1) { 
         light.showRing(`white white black white white white white black white white`) 
-        music.playSound(music.sounds(Sounds.JumpDown)) 
+        music.jumpDown.play()
     } else { 
         light.showRing(`black red black red black red black black black red`) 
-        music.playSound(music.sounds(Sounds.BaDing)) 
+        music.baDing.play()
     } 
 }) 
 input.buttonA.onEvent(ButtonEvent.Click, function () { 

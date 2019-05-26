@@ -112,7 +112,7 @@ Code Darwin to play a sound and show an animation when you shake him.
 light.setAll(0xff8000)
 light.showAnimation(light.theaterChaseAnimation, 2000)
 music.setVolume(200)
-music.playSound(music.sounds(Sounds.Wawawawaa))
+music.wawawawaa.play()
 input.onGesture(Gesture.Shake, function () {})
 ```
 
@@ -175,7 +175,7 @@ Your final program may look something like this:
 
 ```blocks
 input.onGesture(Gesture.Shake, function () {
-    music.playSound(music.sounds(Sounds.Wawawawaa))
+    music.wawawawaa.play()
     light.showAnimation(light.theaterChaseAnimation, 2000)
 })
 light.setAll(0xff8000)

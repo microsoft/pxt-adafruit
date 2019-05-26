@@ -47,7 +47,7 @@ forever(function () {
     if (input.lightLevel() > 10) {
         light.setAll(0x7f00ff)
     } else {
-        music.playSoundUntilDone(music.sounds(Sounds.JumpUp))
+        music.jumpUp.playUntilDone()
         light.showAnimation(light.rainbowAnimation, 500)
     }
 })
@@ -60,7 +60,7 @@ forever(function () {
     if (input.lightLevel() > 10) {
         light.setAll(0x7f00ff)
     } else {
-        music.playSoundUntilDone(music.sounds(Sounds.JumpUp))
+        music.jumpUp.playUntilDone()
         light.showAnimation(light.rainbowAnimation, 500)
     }
 })
@@ -69,11 +69,11 @@ forever(function () {
 A second aspect to note is that we used the ``||music:play sound until done||`` block rather than just the ``||music:play sound||`` block.
 
 ```block
-music.playSound(music.sounds(Sounds.PowerUp))
+music.powerUp.play()
 ```
 
 ```block
-music.playSoundUntilDone(music.sounds(Sounds.PowerUp))
+music.powerUp.playUntilDone()
 ```
 
 The reason is that if we just use ``||music:play sound||`` block, the low light triggers the sound to play, but then the program immediately checks what the light level is again, finds it low, and triggers another ``||music:play sound||`` before the first one has time to finish. This interruption keeps happening as long the light is low. When teaching students, a great problem-solving activity is having them start with the ``||music:play sound||`` block and challenge them to describe the problem and 
@@ -84,7 +84,7 @@ forever(function () {
     if (input.lightLevel() > 10) {
         light.setAll(0x7f00ff)
     } else {
-        music.playSoundUntilDone(music.sounds(Sounds.JumpUp))
+        music.jumpUp.playUntilDone()
         pause(1000)
         light.showAnimation(light.rainbowAnimation, 500)
     }

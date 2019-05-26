@@ -18,6 +18,6 @@ input.onGesture(Gesture.Shake, () => {
         if (Math.randomRange(0, 100) < 10)
             light.photonFlip();
     }
-    music.playSound(music.sounds(Sounds.PowerUp));
+    music.powerUp.play()
 })
 ```

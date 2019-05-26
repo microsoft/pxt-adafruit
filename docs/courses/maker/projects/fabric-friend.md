@@ -386,7 +386,7 @@ input.onGesture(Gesture.Shake, function () {
         light.showRing(`black black black black black green green green green green`) 
         Left_Eye.setAll(0x00ff00) 
         Right_Eye.setAll(0x00ff00) 
-        music.playSound(music.sounds(Sounds.MagicWand)) 
+        music.magicWand.play() 
         pause(2000)
     } else if (Magic_8 == 2) {
 
@@ -414,19 +414,19 @@ input.onGesture(Gesture.Shake, function () {
         light.showRing(`black black black black black green green green green green`)
         Left_Eye.setAll(0x00ff00)
         Right_Eye.setAll(0x00ff00)
-        music.playSound(music.sounds(Sounds.MagicWand))
+        music.magicWand.play()
         pause(2000)
     } else if (Magic_8 == 2) {
         light.showRing(`purple purple purple purple purple black black black black black`)
         Left_Eye.setAll(0x7f00ff)
         Right_Eye.setAll(0x7f00ff)
-        music.playSound(music.sounds(Sounds.PowerDown))
+        music.powerDown.play()
         pause(2000)
     } else {
         light.showRing(`blue black black black blue orange blue orange orange orange`)
         Left_Eye.setAll(0x0000ff)
         Right_Eye.setAll(0xff8000)
-        music.playSound(music.sounds(Sounds.Wawawawaa))
+        music.wawawawaa.play()
         pause(2000)
     }
     light.setAll(0x00ffff)
@@ -563,7 +563,7 @@ forever(function () {
         light.showRing(`blue blue blue blue blue black black black black black`)
         pause(100)
     } else {
-        music.playSound(music.sounds(Sounds.Siren))
+        music.siren.play()
         light.showRing(`blue blue blue blue blue black black black black black`)
         Left_Eye.setAll(0x00ff00)
         Right_Eye.setAll(0x7f00ff)

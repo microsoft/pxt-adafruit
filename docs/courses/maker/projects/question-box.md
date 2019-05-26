@@ -165,11 +165,11 @@ Code for wrong answers:
 
 ```blocks
 input.pinA4.onEvent(ButtonEvent.Click, function () {
-    music.playSound(music.sounds(Sounds.Wawawawaa))
+    music.wawawawaa.play()
     light.setAll(0xff0000)
 })
 input.pinA5.onEvent(ButtonEvent.Click, function () {
-    music.playSound(music.sounds(Sounds.Wawawawaa))
+    music.wawawawaa.play()
     light.setAll(0xff0000)
 })
 // This is the correct answer
@@ -177,7 +177,7 @@ input.pinA6.onEvent(ButtonEvent.Click, function () {
 
 })
 input.pinA7.onEvent(ButtonEvent.Click, function () {
-    music.playSound(music.sounds(Sounds.Wawawawaa))
+    music.wawawawaa.play()
     light.setAll(0xff0000)
 })
 ```
@@ -207,23 +207,23 @@ To activate the servo motor, we’ll use some special servo motor blocks in our 
 
 ```blocks
 input.pinA4.onEvent(ButtonEvent.Click, function () {
-    music.playSound(music.sounds(Sounds.Wawawawaa))
+    music.wawawawaa.play()
     light.setAll(0xff0000)
 })
 input.pinA5.onEvent(ButtonEvent.Click, function () {
-    music.playSound(music.sounds(Sounds.Wawawawaa))
+    music.wawawawaa.play()
     light.setAll(0xff0000)
 })
 // This is the correct answer
 input.pinA6.onEvent(ButtonEvent.Click, function () {
-    music.playSound(music.sounds(Sounds.MagicWand))
+    music.magicWand.play()
     light.showAnimation(light.sparkleAnimation,2000)
-    music.playSound(music.sounds(Sounds.PowerUp))
+    music.powerUp.play()
     light.showAnimation(light.rainbowAnimation,2000)
     servos.A1.setAngle(90)
 })
 input.pinA7.onEvent(ButtonEvent.Click, function () {
-    music.playSound(music.sounds(Sounds.Wawawawaa))
+    music.wawawawaa.play()
     light.setAll(0xff0000)
 })
 ```
@@ -241,23 +241,23 @@ Final Program:
 
 ```blocks
 input.pinA4.onEvent(ButtonEvent.Click, function () {
-    music.playSound(music.sounds(Sounds.Wawawawaa))
+    music.wawawawaa.play()
     light.setAll(0xff0000)
 })
 input.pinA5.onEvent(ButtonEvent.Click, function () {
-    music.playSound(music.sounds(Sounds.Wawawawaa))
+    music.wawawawaa.play()
     light.setAll(0xff0000)
 })
 // This is the correct answer
 input.pinA6.onEvent(ButtonEvent.Click, function () {
-    music.playSound(music.sounds(Sounds.MagicWand))
+    music.magicWand.play()
     light.showAnimation(light.sparkleAnimation,2000)
-    music.playSound(music.sounds(Sounds.PowerUp))
+    music.powerUp.play()
     light.showAnimation(light.rainbowAnimation,2000)
     servos.A1.setAngle(90)
 })
 input.pinA7.onEvent(ButtonEvent.Click, function () {
-    music.playSound(music.sounds(Sounds.Wawawawaa))
+    music.wawawawaa.play()
     light.setAll(0xff0000)
 })
 input.onLoudSound(function () {

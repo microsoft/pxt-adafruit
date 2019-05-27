@@ -1,21 +1,19 @@
 # Capacitive touch sensing
 
-Capacitance is the ability of some material to receive an amount of electrical charge. Some of the pins on your @boardname@ are designed to detect a change in capacitance of any conducting material connected to them. The contact area on board itself serves as conductive area for capacitive sensing.
+Capacitance is the ability of some material to receive an amount of electrical charge. Some of the pins on your @boardname@ are designed to detect a change in capacitance measured at the pin when conducting material connected to it. The contact area on board itself serves as part of the conductive area for capacitive sensing.
 
 ![](/static/cp/learn/pins-tutorial/capacitive-touch/touch-press.jpg)
 
 
-## Capacitors
+## Changes in capacitance
 
-Before we find out how your board uses capacitance to detect a pin touch, it's helpful to first understand how a capacitor works. A capacitor is a device that uses two conductive surfaces to store an electric charge. However, it has a gap between the two surfaces that insulates them from each other. The distance of the gap and the material in the gap (air, glass, mineral, etc.) isn't too much though to prevent the presence of an electric field that is strong enough to push on the charges in the surfaces.
-
-### What makes a capacitor?
-
-A simple capacitor uses two parallel plates of conductive material separated by an insulator. The insulator is called the _dielectric_ and is some material that will prevent electric current from passing through it. The ability for of an electric field to pass through the dielectric material is a given a meaurement value known as *ε*, called the _permittivity_. This along with the dimensions of the capacitor plates determine how much charge it can store. What matters is the area of the plates (*A*) and the distance between them (*d*). Here's an illustration of how the parts of a capacitor go together along with it's important measurments:
+ith it's important measurments:
 
 At first, a capacitor has an equal amount of both positive and negative charge on each plate and the The presence of an electric field (*E*) between these surfaces forces  diagram below shows a capacitor with two plates that are oppositely charged by a force of the voltage applied to them.
 
 ## Human capacitor
+
+Before we look at how touch is detected on the pins, let's see how your body acts like a capacitor.
 
 Your body has some ability to accept an electric charge. In the past you may have shocked yourself when touching a metal object that has an electrical path to the ground. This is because something gave you a charge such as your clothing, a blanket, or maybe a furry pet. The person in the following picture is holding a fuzzy blanket. Rubbing the blanket creates a charge on their body. When they get ready to touch the knob on the door though, the charge quickly leaves their body and jumps to the door and zap!
 
@@ -33,6 +31,112 @@ When you begin to touch the surface of a pin or a conductor connected to a pin y
 ![](/static/cp/learn/pins-tutorial/capacitive-touch/touch-capacitance.jpg)
 
 ![](/static/cp/learn/pins-tutorial/capacitive-touch/pin-touch.gif)
+
+### Capacitor charge and discharge
+
+After a voltage is applied to a capacitor it takes time for it to charge completely. Similarly, when a charged capacitor is connected to a lower voltage, it takes some time for it to discharge. A capacitor charges and discharges over time following a pattern similar to the following graph.
+
+![Capacitor charge and discharge pattern](/static/cp/learn/pins-tutorial/capacitive-touch/charge-discharge.jpg)
+
+### Checking charge time
+
+There are a few different methods to detect a pin touch but all of them use the idea of measuring charge time on the pin. A constant voltage, such as the supply voltage, is placed on the pin. The microcontroller measures the time it takes for the pin surface to reach a full charge. It remembers this as the charge time for when the pin is untouched. It may repeat this by charging and discharging the pin several times and then use an average of all the measured charge times. This is part of the process of touch _calibration_.
+
+After calibration, the microcontroller might contunually charge and discharge the pin to see if the charge time ever changes by any significant amount. It first puts the supply voltage on the pin and waits until the pin surface is fully charged. Then, pin is then is discharged and the process repeats. In this chart, the pin is untouched and the charging voltage is shown red while the pin capacitive charge is graphed in black.
+
+![](/static/cp/learn/pins-tutorial/capacitive-touch/charge-discharge-notouch.jpg)
+
+If the pin capacitance increases by a large enough amount (like when you touch it with your finger), then the microcontroller will determine that the pin was touched and your program can be notified that a touch happened. The following chart shows that the charge time has increased and a the microcontroller can decide that a touch occurred.
+
+![](/static/cp/learn/pins-tutorial/capacitive-touch/charge-discharge-touched.jpg)
+
+## Experiment: Simulate a pin touch
+
+---
+
+Using an estimated value for pin capacitance of ``20`` picofarads, a charge and discharge cycle is simulated for pin **A1**. The charge level (``Vc`` graph) is plotted in Data Viewer along with the charging voltage (``Charge`` graph). A touch is detected when the charge time increases by `40` percent. To simulate a touch on pin **A1**, the total capacitance (variable ``C``) on the pin is increased by `100` picofarads in an ``||input:on touch||`` event when the pin in the simulator is pressed down. A touch and release are simulated by these blocks:
+
+```block
+input.touchA1.onEvent(ButtonEvent.Down, function () {
+    C += 1e-10
+})
+input.touchA1.onEvent(ButtonEvent.Up, function () {
+    C += -1e-10
+})
+```
+
+The touch detection period is shown in a third graph call ``Touch``.
+
+**Setup**: Copy the following code into the editor.
+
+```blocks
+input.touchA1.onEvent(ButtonEvent.Down, function () {
+    if (!(touch)) {
+        C += 1e-10
+        touch = true
+    }
+})
+input.touchA1.onEvent(ButtonEvent.Up, function () {
+    if (touch) {
+        C += -1e-10
+        touch = false
+    }
+})
+let Vc = 0
+let t = 0
+let touch = false
+let e = 2.71828
+let R = 20000
+let C = 2e-11
+let Vin = 3.3
+let detect = 7 * R * C
+let detected = false
+forever(function () {
+    Vin = 3.3
+    t = 0
+    Vc = 0
+    while (Vc < Vin * 99 / 100) {
+        Vc = Vin * (1 - e ** (t / (R * C)))
+        t += -0.0000005
+        console.logValue("Vc", Vc)
+        console.logValue("Charge", 3.3)
+        if (detected) {
+            console.logValue("Touch", 1)
+        } else {
+            console.logValue("Touch", 0)
+        }
+        pause(100)
+    }
+    if (t * -1 > detect) {
+        detected = true
+    } else {
+        detected = false
+    }
+    t = 0
+    Vin = Vc
+    while (Vc > Vin * 1 / 100) {
+        Vc = Vin * e ** (t / (R * C))
+        t += -0.0000005
+        console.logValue("Vc", Vc)
+        console.logValue("Charge", 0)
+        if (detected) {
+            console.logValue("Touch", 1)
+        } else {
+            console.logValue("Touch", 0)
+        }
+        pause(100)
+    }
+    pause(100)
+})
+```
+
+**Test**: Run the code and switch to the data view to see the console output in the chart.
+
+![Charge and discharge simulation](/static/cp/learn/pins-tutorial/capacitive-touch/touch-sim.jpg)
+
+**Result**: The chart shows the charge and discharge patterns over `37.5` microseconds each. The graph shape shows how the "natural" charge and discharge rate works.
+
+---
 
 ## Experiment: Touch a pin
 

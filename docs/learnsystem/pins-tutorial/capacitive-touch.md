@@ -15,9 +15,9 @@ There are several experiments to let you test out the concepts you learn in the 
 
 ```codecard
 [{
-  "name": "Capacitance",
+  "name": "Capacitive sensing",
   "description": "Learn about capacitance and storing electrical charge.",
-  "url":"/learnsystem/pins-tutorial/analog-input/analog-to-digital",
+  "url":"/learnsystem/pins-tutorial/capacitive-touch/capacitive-sensing",
   "imageUrl":"/static/cp/learn/pins-tutorial/analog-input/analog-digital-thumb.jpg"
 }, {
   "name": "Read analog",

@@ -15,14 +15,14 @@ There are several experiments to let you test out the concepts you learn in the 
 
 ```codecard
 [{
-  "name": "Capacitive sensing",
+  "name": "Capacitive touch sensing",
   "description": "Learn about capacitance and storing electrical charge.",
-  "url":"/learnsystem/pins-tutorial/capacitive-touch/capacitive-sensing",
-  "imageUrl":"/static/cp/learn/pins-tutorial/analog-input/analog-digital-thumb.jpg"
+  "url":"/learnsystem/pins-tutorial/touch-input/touch-sensing"
 }, {
-  "name": "Read analog",
-  "description": "Read various voltages on a pin.",
-  "url":"/learnsystem/pins-tutorial/analog-input/read-analog",
-  "imageUrl":"/static/cp/learn/pins-tutorial/analog-input/read-analog-thumb.jpg"
+  "name": "Touch sensors",
+  "description": "Use pins and objects as touch sensors."
+}, {
+  "name": "Calibration & sensitivity",
+  "description": "Learn how to calibrate and set the sensitivity of a touch sensor."
 }]
 ```

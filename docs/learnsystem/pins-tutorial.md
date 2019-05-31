@@ -25,7 +25,7 @@ Some of these pins are configurable for use in both digital or analog I/O. This 
   "url":"/learnsystem/pins-tutorial/analog-input"
 }, {
   "name": "Capacitive Touch",
-  "description": "Read and use analog signal values.",
+  "description": "Use pins and other objects as touch inputs.",
   "url":"/learnsystem/pins-tutorial/capacitive-touch"
 }, {
   "name": "Servos",

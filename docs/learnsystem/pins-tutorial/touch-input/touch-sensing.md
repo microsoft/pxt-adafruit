@@ -69,6 +69,7 @@ If the pin capacitance increases by a large enough amount (like when you touch i
 Using an estimated value for pin capacitance of ``20`` picofarads, a charge and discharge cycle is simulated for pin **A1**. The charge level (``Vc`` graph) is plotted in the Data Viewer along with the charging voltage (``Charge`` graph). A touch is detected when the charge time increases by `40` percent. To simulate a touch on pin **A1**, the total capacitance (variable ``C``) on the pin is increased by `100` picofarads in an ``||input:on touch||`` event when the pin in the simulator is pressed down. A touch and release are simulated by these blocks:
 
 ```block
+let C = 0
 input.touchA1.onEvent(ButtonEvent.Down, function () {
     C += 1e-10
 })
@@ -82,12 +83,6 @@ The touch detection period is shown in a third graph call ``Touch``.
 **Setup**: Copy the following code into the editor.
 
 ```blocks
-input.touchA1.onEvent(ButtonEvent.Down, function () {
-    C += 1e-10
-})
-input.touchA1.onEvent(ButtonEvent.Up, function () {
-    C += -1e-10
-})
 let Vc = 0
 let t = 0
 let e = 2.71828
@@ -96,6 +91,14 @@ let C = 2e-11
 let Vin = 3.3
 let detect = 7 * R * C
 let detected = false
+
+input.touchA1.onEvent(ButtonEvent.Down, function () {
+    C += 1e-10
+})
+input.touchA1.onEvent(ButtonEvent.Up, function () {
+    C += -1e-10
+})
+
 forever(function () {
     Vin = 3.3
     t = 0

@@ -1,28 +1,28 @@
-# Capacitive touch
+# Touch input
 
-An analog input pin can read a voltage level that ranges from the supply voltage of your board 3.3 v (**3.3V**) down to 0 v (**GND**). The value returned to your program from reading the pin is not the actual voltage value but a binary digital number that represents the input signal level.
+Touch input lets your board sense your touch and makes it possible to use other objects as simple input sensors.
 
-![Pins on edge of board](/static/cp/learn/pins-tutorial/analog-input/analog-input-header.jpg)
+![Pins on edge of board](/static/cp/learn/pins-tutorial/touch-input/touch-input-header.jpg)
 
 ## Experiments
 
-There are several experiments to let you test out the concepts you learn in the analog input sections. You'll need a few things to in order to perform some of the experiments. 
-
-* (3) [Alligator clip leads](https://www.adafruit.com/product/1008)
-* [Variable resistor](https://www.adafruit.com/product/562) - use you own [graphite resistor](/learnsystem/pins-tutorial/devices/make-a-resistor)
+There are several experiments to let you test out the concepts you learn in the touch input sections.
 
 ## Sections
 
 ```codecard
 [{
-  "name": "Capacitive touch sensing",
-  "description": "Learn about capacitance and storing electrical charge.",
-  "url":"/learnsystem/pins-tutorial/touch-input/touch-sensing"
+  "name": "Touch sensing",
+  "description": "Learn how the pins detect a touch input.",
+  "url":"/learnsystem/pins-tutorial/touch-input/touch-sensing",
+  "imageUrl":"/static/cp/learn/pins-tutorial/touch-input/touch-sensing-thumb.jpg"
 }, {
-  "name": "Touch sensors",
-  "description": "Use pins and objects as touch sensors."
+  "name": "Touch sensor objects",
+  "description": "Use pins and objects as touch sensors.",
+  "imageUrl":"/static/cp/learn/pins-tutorial/touch-input/touch-sensor-objects-thumb.jpg"
 }, {
   "name": "Calibration & sensitivity",
-  "description": "Learn how to calibrate and set the sensitivity of a touch sensor."
+  "description": "Learn how to calibrate and set the sensitivity of a touch sensor.",
+  "imageUrl":"/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity-thumb.jpg"
 }]
 ```

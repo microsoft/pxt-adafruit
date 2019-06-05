@@ -218,7 +218,7 @@ input.pinA6.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-### Step 6: Download
+### Step 3: Download
 
 Test your program in the Simulator by clicking on each of the Pins **A1** – **A6** to see the colors change.
 

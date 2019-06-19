@@ -12,6 +12,8 @@
     * [Analog Input](/learnsystem/pins-tutorial/analog-input)
         * [Analog to Digital](/learnsystem/pins-tutorial/analog-input/analog-to-digital)
         * [Read Analog](/learnsystem/pins-tutorial/analog-input/read-analog)
+    * [Touch Input](/learnsystem/pins-tutorial/touch-input)
+        * [Touch Sensing](/learnsystem/pins-tutorial/touch-input/touch-sensing)
     * [Devices](/learnsystem/pins-tutorial/devices)
         * [Resistors](/learnsystem/pins-tutorial/devices/make-a-resistor)
         * [LEDs](/learnsystem/pins-tutorial/devices/led-connections)

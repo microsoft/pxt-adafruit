@@ -19,6 +19,7 @@ There are several experiments to let you test out the concepts you learn in the 
 }, {
   "name": "Touch sensor objects",
   "description": "Use pins and objects as touch sensors.",
+  "url":"/learnsystem/pins-tutorial/touch-input/sensor-objects",
   "imageUrl":"/static/cp/learn/pins-tutorial/touch-input/touch-sensor-objects-thumb.jpg"
 }, {
   "name": "Calibration & sensitivity",

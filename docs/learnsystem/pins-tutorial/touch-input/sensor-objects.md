@@ -1,4 +1,4 @@
-# Touch sensors
+# Touch sensor objects
 
 ![Finger touch on pin A1](/static/cp/learn/pins-tutorial/touch-input/touch-sensors-header.jpg)
 

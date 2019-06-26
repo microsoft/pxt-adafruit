@@ -15,6 +15,7 @@
     * [Touch Input](/learnsystem/pins-tutorial/touch-input)
         * [Touch Sensing](/learnsystem/pins-tutorial/touch-input/touch-sensing)
         * [Touch Sensor Objects](/learnsystem/pins-tutorial/touch-input/sensor-objects)
+        * [Calibration and Sensitivity](/learnsystem/pins-tutorial/touch-input/calibrate-sensitivity)
     * [Devices](/learnsystem/pins-tutorial/devices)
         * [Resistors](/learnsystem/pins-tutorial/devices/make-a-resistor)
         * [LEDs](/learnsystem/pins-tutorial/devices/led-connections)

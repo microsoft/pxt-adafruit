@@ -24,6 +24,7 @@ There are several experiments to let you test out the concepts you learn in the 
 }, {
   "name": "Calibration & sensitivity",
   "description": "Learn how to calibrate and set the sensitivity of a touch sensor.",
+  "url":"/learnsystem/pins-tutorial/touch-input/calibrate-sensitivity",
   "imageUrl":"/static/cp/learn/pins-tutorial/touch-input/calibrate-sensitivity-thumb.jpg"
 }]
 ```

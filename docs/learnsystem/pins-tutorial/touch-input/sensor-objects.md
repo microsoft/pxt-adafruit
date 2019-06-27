@@ -85,7 +85,7 @@ Connecting an object to a touch pin can make it touch sensor. The pin can adjust
 
 ### Experiment: Coin sensor
 
-A coin makes a good sensor because it's relatively small and very conductive. It allows the pin to be almost as sensitive as when nothing is connected and only the pin surface is used. A coin though, is a more convenient target for your finger.
+A coin makes a good sensor because it's relatively small and very conductive. It allows the touch input to be almost as sensitive as when nothing is connected to the pin where only the pin surface is used. A coin though, is a more convenient target for your finger.
 
 **Setup**:
 

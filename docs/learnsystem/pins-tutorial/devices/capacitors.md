@@ -16,7 +16,7 @@ The amount of capacitance (_**C**_) a capacitor has depends on the ability of th
 
 Capacitance is measured in units of _Farads (F)_. Most of the capacitors used in small, modern electronic circuits are in the **microfarad (uF)** or **picofarad (pF)** range. A picofarad is really small, it's ``1 / 1000000000000`` of a Farad.
 
-## Electric field
+## Electric field #electric-field
 
 At first, a capacitor has an equal amount of both positive and negative charge on each plate. The charges can't pass to the other plate due to the gap between them that insulates the plates from each other. The gap could be air or some other non-conductive material. Inside the gap, however, is an electric field (_**E**_) which directs the force from the battery to push an opposite electric charge to the plates.
 

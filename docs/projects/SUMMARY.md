@@ -7,6 +7,7 @@
   * [Loudness necklace](/tutorials/loudness-necklace)
   * [Night light](/tutorials/night-light)
   * [Button flipper](/tutorials/button-flipper)
+  * [Remote LED](/tutorials/remote-led)
 * [Cartoon Network](/projects/cartoon-network)
   * [Darwin the Goldfish](/projects/cartoon-network/darwin-goldfish)
   * [Crown](/projects/cartoon-network/crown)

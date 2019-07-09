@@ -44,5 +44,11 @@ Step by step guide to coding your @boardname@.
   "cardType": "tutorial",
   "url":"/tutorials/button-flipper",
   "imageUrl":"/static/cp/projects/thumb/button-flipper.jpg"
+}, {
+  "name": "Remote LED",
+  "description": "Remotely control LED animations on a second Circuit Playground Express.",
+  "cardType": "tutorial",
+  "url":"/tutorials/remote-led",
+  "imageUrl":"/static/cp/projects/thumb/remote-led.jpg"
 }]
 ```

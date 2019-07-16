@@ -125,7 +125,7 @@ T | F | T
 F | T | T
 T | T | F
 
-## Experiment: Logic explorer
+## Logic explorer
 
 Make an array of two values as logical inputs. Add a variable ``||variables:Q||`` to receive the resulting value of a logical expression.
 
@@ -154,14 +154,30 @@ for (let A of inputs) {
 }
 ```
 
+### Identity test
+
+```block
+let A = false
+let Q = A
+```
+A | Q = A
+-|-
+**false** | ``[light.setAll(0xff8000)]``
+**true** | ``[light.setAll(0x0000ff)]``
+
 ### NOT test
 
-Replace the ``||logic:false||`` in the ``||variables:Q||`` equation with a ``||logic:not||`` operator. Pull the ``||variables:A`` variable down from the ``||loops:for element||`` loop and drop it inside the ``||logic:not||`` operator.
+Replace the ``||logic:false||`` in the ``||variables:Q||`` equation with a ``||logic:not||`` operator. Pull the ``||variables:A||`` variable down from the ``||loops:for element||`` loop and drop it inside the ``||logic:not||`` operator.
 
 ```block
 let A = false
 let Q = !A
 ```
+A | ~A
+-|-
+**false** | ``[light.setAll(0x0000ff)]``
+**true** | ``[light.setAll(0xff8000)]``
+
 ### Two input loop
 
 Go get another ``||loops:for element||`` loop and put it in so that it surrounds all the inside the first loop. Rename the ``||variables:index||`` variable to ``||variables:B||`` and switch the ``||variables:list||`` variable to ``||variables:inputs||``.
@@ -194,7 +210,7 @@ let Q = A || B
 ```
 #### Truth table
 
-A | B | A · B
+A | B | A + B
 -|-|-
 **false** | **false** |  ``[light.setAll(0xff8000)]``
 **false** | **true** |  ``[light.setAll(0x0000ff)]``
@@ -213,12 +229,12 @@ let Q = A && B
 
 #### Truth table
 
-Q = A · B | Pixels
--|-
-``[let Q = false && false]`` |  ``[light.setAll(0xff8000)]``
-``[let Q = false && true]`` |  ``[light.setAll(0xff8000)]``
-``[let Q = true && false]`` |  ``[light.setAll(0xff8000)]``
-``[let Q = true && true]`` |  ``[light.setAll(0x0000ff)]``
+A | B | A · B
+-|-|-
+**false** | **false** |  ``[light.setAll(0xff8000)]``
+**false** | **true** |  ``[light.setAll(0xff8000)]``
+**true** | **false** |  ``[light.setAll(0xff8000)]``
+**true** | **true** |  ``[light.setAll(0x0000ff)]``
 
 ### XOR test
 
@@ -229,3 +245,10 @@ let A = false
 let B = false
 let Q = (A || B) && !(A && B)
 ```
+
+A | B | A ⊕ B
+-|-|-
+**false** | **false** |  ``[light.setAll(0xff8000)]``
+**false** | **true** |  ``[light.setAll(0x0000ff)]``
+**true** | **false** |  ``[light.setAll(0x0000ff)]``
+**true** | **true** |  ``[light.setAll(0xff8000)]``

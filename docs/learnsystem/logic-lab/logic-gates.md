@@ -35,7 +35,7 @@ let Q = (A || B) && !(A && B)
 ```
 And, expressed in Boolean arithmetic it is:
 
-``A⊕B`` = ``(A+B) · ~(A·B)``
+``A ⊕ B`` = ``(A + B) · ~(A · B)``
 
 Doing the same thing with gates and replacing the XOR symbol gives us:
 

@@ -1,8 +1,8 @@
-# Logic Explorer
+# Logic explorer
 
 As a way to see how the basic logical operators work, we'll make a program to test them with all their possible input values.
 
-## Inputs and Output
+## Inputs and output
 
 Make an array called ``||variables:inputs||`` with two values, ``false`` and ``true``, as logical inputs. Add another variable ``||variables:Q||`` to receive the resulting value of a logical expression as output.
 
@@ -76,7 +76,7 @@ A | ~A
 **false** | ``[light.setAll(0x0000ff)]``
 **true** | ``[light.setAll(0xff8000)]``
 
-### Two input loop
+## Two input loop
 
 For the rest of the operator tests, we need to have another input variable. This variable comes from a second ``||loops:for element||`` loop. With one input variable there was just two possible input values. Adding a second input variable increases the number of possible input combinations by two times. Now there will be 4 different input possibilities. This will result in the truth tables having 4 rows for the operator tests.
 
@@ -143,7 +143,7 @@ A | B | A · B
 
 ## XOR test
 
-To test XOR, we'll use the XOR expression from [Logical Expressions](/learnsystem/logic-lab/expressions#xor). Drag and place the ``||logic:LOGIC||`` blocks to make the ``||variables:Q||`` equation to look like this:
+To test XOR, we'll use the XOR expression from [Boolean elements](/learnsystem/logic-lab/elements#xor). Drag and place the ``||logic:LOGIC||`` blocks to make the ``||variables:Q||`` equation to look like this:
 
 ```block
 let A = false

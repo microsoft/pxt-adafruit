@@ -48,6 +48,7 @@
 * [Courses](/courses)
   * [Maker](/courses/maker)
   * [Using the Pins](/learnsystem/pins-tutorial)
+  * [Logic Lab](/learnsystem/logic-lab)
 * [learn.adafruit.com](/learnsystem)
   * [MakeCode 101](https://learn.adafruit.com/makecode/)
   * [NeoPixels](https://learn.adafruit.com/neopixels-with-makecode)

@@ -4,7 +4,7 @@ Pins let your @boardname@ interact with the outside world. They let you run serv
 
 ![CPX pinouts](/static/cp/learn/pins-tutorial/pinouts.jpg)
 
-The @boardname@ has several pins located around its edge. Some of these are deditcated to providing a supply voltage our a place for grounding a circuit. The other pins are available to use for digital I/O, analog I/O, servos, or communication with sensors and other boards.
+The @boardname@ has several pins located around its edge. Some of these are dedicated to providing a supply voltage or a place for grounding a circuit. The other pins are available to use for digital I/O, analog I/O, servos, or communication with sensors and other boards.
 
 Some of these pins are configurable for use in both digital or analog I/O. This means they can have different input and output modes. When you use the blocks for these in a program, they are configured for the proper mode before any input is read or output sent.
 

@@ -39,6 +39,7 @@
 * [Courses](/courses)
     * [Maker](/courses/maker)
     * [Using the Pins](/learnsystem/pins-tutorial)
+    * [Logic Lab](/learnsystem/logic-lab)
 
 ## Reference #reference
 

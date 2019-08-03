@@ -67,7 +67,7 @@ The NOT operator is called negation or the inverse. It takes a single logical va
 
 ```block
 let A = false
-let Q = !A
+let Q = !(A)
 ```
 
 #### Example - Blink pixels on not pressed
@@ -76,7 +76,7 @@ let Q = !A
 let A = false
 forever(function () {
     A = input.buttonA.isPressed()
-    if (!(A) {
+    if (!(A)) {
         light.setAll(0xff0000)
     } else {
         light.clear()

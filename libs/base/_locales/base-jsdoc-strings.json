@@ -158,7 +158,7 @@
   "String.slice|param|end": "one-past-last character index",
   "String.slice|param|start": "first character index; can be negative from counting from the end, eg:0",
   "String.split": "Splits the string according to the separators",
-  "String.split|param|separator": "@param limit ",
+  "String.split|param|separator": "@param limit",
   "String.substr": "Return a substring of the current string.",
   "String.substr|param|length": "number of characters to extract",
   "String.substr|param|start": "first character index; can be negative from counting from the end, eg:0",

@@ -18,6 +18,7 @@
         "libs/microphone",
         "libs/lightsensor",
         "libs/thermometer",
+        "libs/color",
         "libs/light",
         "libs/touch",
         "libs/switch",

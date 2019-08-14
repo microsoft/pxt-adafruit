@@ -20,6 +20,7 @@
         "lightsensor": "file:../lightsensor",
         "thermometer": "file:../thermometer",
         "mixer---samd": "file:../mixer---samd",
+        "color": "file:../color",
         "light": "file:../light",
         "switch": "file:../switch",
         "pulse": "file:../pulse",

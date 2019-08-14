@@ -318,7 +318,7 @@ namespace pxsim.visuals {
             this.fixPinIds();
             this.buildDom();
             if (props && props.wireframe)
-                svg.addClass(this.element, "sim-wireframe");
+                pxsim.U.addClass(this.element, "sim-wireframe");
 
             if (props && props.theme)
                 this.updateTheme();
@@ -416,8 +416,8 @@ namespace pxsim.visuals {
             this.updateTemperature();
             this.updateInfrared();
 
-            if (!runtime || runtime.dead) svg.addClass(this.element, "grayscale");
-            else svg.removeClass(this.element, "grayscale");
+            if (!runtime || runtime.dead) pxsim.U.addClass(this.element, "grayscale");
+            else pxsim.U.removeClass(this.element, "grayscale");
         }
 
         private lastFlashTime: number = 0;
@@ -511,7 +511,7 @@ namespace pxsim.visuals {
             let slideSwitchState = state.slideSwitchState;
             if (!this.slideSwitch) {
                 this.slideSwitch = this.element.getElementById(`SLIDE`) as SVGGElement;
-                svg.addClass(this.slideSwitch, "sim-slide-switch")
+                pxsim.U.addClass(this.slideSwitch, "sim-slide-switch")
                 this.slideSwitch.addEventListener(pointerEvents.up, ev => this.slideSwitchHandler())
 
                 accessibility.enableKeyboardInteraction(this.slideSwitch, null, () => this.slideSwitchHandler());
@@ -529,12 +529,12 @@ namespace pxsim.visuals {
 
             slideSwitchState.setState(!slideSwitchState.isLeft());
             let switchSlide = this.element.getElementById(`SLIDE_INNER`) as SVGGElement;
-            svg.addClass(switchSlide, "sim-slide-switch-inner")
+            pxsim.U.addClass(switchSlide, "sim-slide-switch-inner")
             if (slideSwitchState.isLeft()) {
-                svg.addClass(switchSlide, "on");
+                pxsim.U.addClass(switchSlide, "on");
                 switchSlide.setAttribute("transform", "translate(-5,0)");
             } else {
-                svg.removeClass(switchSlide, "on");
+                pxsim.U.removeClass(switchSlide, "on");
                 switchSlide.removeAttribute("transform");
             }
 
@@ -836,18 +836,18 @@ namespace pxsim.visuals {
                 pointerEvents.down.forEach(evid => this.shakeButtonGroup.addEventListener(evid, ev => {
                     let state = this.board;
                     svg.fill(btng, this.props.theme.gestureButtonOn);
-                    svg.addClass(this.shakeText, "inverted");
+                    pxsim.U.addClass(this.shakeText, "inverted");
                 }));
                 this.shakeButtonGroup.addEventListener(pointerEvents.leave, ev => {
                     let state = this.board;
                     svg.fill(btng, this.props.theme.gestureButtonOff);
-                    svg.removeClass(this.shakeText, "inverted");
+                    pxsim.U.removeClass(this.shakeText, "inverted");
                 })
                 this.shakeButtonGroup.addEventListener(pointerEvents.up, ev => {
                     let state = this.board;
                     svg.fill(btng, this.props.theme.gestureButtonOff);
                     this.board.bus.queue(DAL.DEVICE_ID_GESTURE, 11); // GESTURE_SHAKE
-                    svg.removeClass(this.shakeText, "inverted");
+                    pxsim.U.removeClass(this.shakeText, "inverted");
                 })
                 accessibility.makeFocusable(this.shakeButtonGroup);
                 accessibility.enableKeyboardInteraction(this.shakeButtonGroup, () => {
@@ -924,15 +924,15 @@ namespace pxsim.visuals {
                 accessibility.setAria(btn, "button", label);
                 return btn;
             });
-            this.buttonsOuter.forEach(b => svg.addClass(b, "sim-button-outer"));
+            this.buttonsOuter.forEach(b => pxsim.U.addClass(b, "sim-button-outer"));
             this.buttons = btnids.map(n => this.element.getElementById(n + "_INNER") as SVGElement);
-            this.buttons.forEach(b => svg.addClass(b, "sim-button"));
+            this.buttons.forEach(b => pxsim.U.addClass(b, "sim-button"));
 
             this.pins = pinNames.map((pin, i) => {
                 const n = pin.name;
                 let p = this.element.getElementById(n) as SVGElement;
                 if (p) {
-                    svg.addClass(p, "sim-pin");
+                    pxsim.U.addClass(p, "sim-pin");
                     if (pin.tooltip)
                         svg.hydrate(p, { title: pin.tooltip })
                 }
@@ -998,7 +998,7 @@ namespace pxsim.visuals {
                 }
 
                 let bbox = this.element.getBoundingClientRect();
-                
+
                 // ev.clientX and ev.clientY are not defined on mobile iOS
                 const xPos = ev.clientX != null ? ev.clientX : ev.pageX;
                 const yPos = ev.clientY != null ? ev.clientY : ev.pageY;

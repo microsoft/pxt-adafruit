@@ -169,6 +169,13 @@ declare namespace control {
     function deviceSerialNumber(): int32;
 
     /**
+     * Derive a unique, consistent 64-bit serial number of this device from internal data.
+     */
+    //% blockId="control_device_long_serial_number" block="device long serial number" weight=9
+    //% help=control/device-long-serial-number shim=control::deviceLongSerialNumber
+    function deviceLongSerialNumber(): Buffer;
+
+    /**
      *
      */
     //% shim=control::__log
@@ -191,6 +198,12 @@ declare namespace control {
      */
     //% shim=control::heapDump
     function heapDump(): void;
+
+    /**
+     * Set flags used when connecting an external debugger.
+     */
+    //% shim=control::setDebugFlags
+    function setDebugFlags(flags: int32): void;
 
     /**
      * Return true if profiling is enabled in the current build.

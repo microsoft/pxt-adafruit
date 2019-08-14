@@ -6,7 +6,7 @@
   "Button.wasPressed": "See if the button was pressed again since the last time you checked.",
   "ButtonEvent": "User interaction on buttons",
   "DigitalInOutPin.pushButton": "Get the push button (connected to GND) for given pin",
-  "jacdac": "A Joint Asynchronous Communications, Device Agnostic Control.\n\nJACDAC protocol support",
+  "jacdac": "A Joint Asynchronous Communications, Device Agnostic Control.",
   "jacdac.attachButtonToController": "Connects the events of the button to the controller button",
   "jacdac.attachButtonToController|param|controllerButton": "@param button "
 }

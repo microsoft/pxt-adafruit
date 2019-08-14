@@ -18,6 +18,7 @@
         "libs/microphone",
         "libs/lightsensor",
         "libs/thermometer",
+        "libs/color",
         "libs/light",
         "libs/touch",
         "libs/switch",
@@ -285,11 +286,8 @@
         "codalTarget": {
             "name": "codal-circuit-playground",
             "url": "https://github.com/lancaster-university/codal-circuit-playground",
-            "branch": "v1.5.4-i2c_and_dac.0",
-            "type": "git",
-            "branches": {
-                "https://github.com/lancaster-university/codal-core": "06e319138cf8884e03f5991a7d14879d0acb0ff8"
-            }
+            "branch": "v2.0.0",
+            "type": "git"
         },
         "codalBinary": "CIRCUIT_PLAYGROUND",
         "yottaConfig": {

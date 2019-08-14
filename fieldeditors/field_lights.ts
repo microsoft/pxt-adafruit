@@ -109,7 +109,7 @@ namespace pxt.editor {
       for (let i = 0; i < FieldLights.NUM_PIXELS; i++) {
         let neopixel = this.boardElement.getElementById("LED" + i) as SVGGElement;
         if (this.isCurrentlyEditable() && !this.isInFlyout()) {
-          pxsim.svg.addClass(neopixel, 'neopixel');
+          pxt.BrowserUtils.addClass(neopixel, 'neopixel');
           pxsim.svg.onClick(neopixel, ev => this.onPixelClicked(ev, neopixel, i));
         }
         this.neopixels_.push(neopixel);
@@ -120,9 +120,9 @@ namespace pxt.editor {
         'paletteslice4', 'paletteslice5', 'paletteslice6', 'paletteslice7', 'palettecenter']
         .forEach((id, i) => {
           let btn = this.boardElement.getElementById(id) as SVGGElement;
-          pxsim.svg.addClass(btn, 'colorbutton');
+          pxt.BrowserUtils.addClass(btn, 'colorbutton');
           if (this.isCurrentlyEditable() && !this.isInFlyout()) {
-            if (i == 4) pxsim.svg.addClass(btn, 'active');
+            if (i == 4) pxt.BrowserUtils.addClass(btn, 'active');
             pxsim.svg.onClick(btn, ev => this.onColorClicked(ev, btn));
           }
           this.paletteButtons.push(btn);
@@ -162,16 +162,16 @@ namespace pxt.editor {
 
     onColorClicked(e: Event, btn: SVGElement) {
       if (Blockly.utils.isRightButton(e)) return;
-      let previous = this.paletteButtons.filter(btn => pxsim.svg.hasClass(btn, 'active'))[0];
-      if (previous) pxsim.svg.removeClass(previous, 'active');
+      let previous = this.paletteButtons.filter(btn => pxt.BrowserUtils.containsClass(btn, 'active'))[0];
+      if (previous) pxt.BrowserUtils.removeClass(previous, 'active');
 
-      pxsim.svg.addClass(btn, 'active');
+      pxt.BrowserUtils.addClass(btn, 'active');
       if (this.sourceBlock_ && this.sourceBlock_.workspace) (<Blockly.WorkspaceSvg>this.sourceBlock_.workspace).getAudioManager().play('click');
     }
 
     onPixelClicked(e: Event, neopixel: SVGElement, id: number) {
       if (Blockly.utils.isRightButton(e)) return;
-      let btn = this.paletteButtons.filter(btn => pxsim.svg.hasClass(btn, 'active'))[0];
+      let btn = this.paletteButtons.filter(btn => pxt.BrowserUtils.containsClass(btn, 'active'))[0];
       if (btn) {
         const current = neopixel.getAttribute("data-color");
         const btncol = btn.getAttribute("data-color");

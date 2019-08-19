@@ -8,6 +8,10 @@ declare namespace light {
 
         //% advanced=false
         //% subcategory="NeoPixel"
+        setGradient(startColor: number, endColor: number): void;
+
+        //% advanced=false
+        //% subcategory="NeoPixel"
         graph(value: number, high: number): void;
 
         //% advanced=false

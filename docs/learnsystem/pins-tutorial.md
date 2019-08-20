@@ -27,12 +27,6 @@ Some of these pins are configurable for use in both digital or analog I/O. This 
   "name": "Touch Input",
   "description": "Use pins and other objects as touch inputs.",
   "url":"/learnsystem/pins-tutorial/touch-input"
-}, {
-  "name": "Servos",
-  "description": "Learn how to connect and run servos."
-}, {
-  "name": "Advanced Pins",
-  "description": "Use the I2C and SPI pins."
 }]
 ```
 

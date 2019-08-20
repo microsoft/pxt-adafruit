@@ -2,7 +2,7 @@
 
 ## Step 1
 
-Drag a ``||light:graph||`` block into the ``||loops:forever||`` block.
+Drag a ``||light:graph||`` block from the ``||light:LIGHT||`` toolbox category into the ``||loops:forever||`` block.
 
 The ``||light:graph||`` block turns on the lights based on the first number.
 
@@ -24,9 +24,9 @@ forever(function () {
 
 ## Step 3
 
-The maximum sound level is ``255`` so set this number in the second hole of ``||light:graph||``.
+Click on the **(+)** symbol in ``||light:graph||`` and set the new value you see to the maximum sound level, which is ``255``.
 
-``||light:graph||`` automatically sets how many lights turn on based on the value in the first hole. If you provide a second number though, it knows the maximum value and does a better job graphing.
+The ``||light:graph||`` block automatically sets how many lights turn on based on the first value which is ``||input:sound level||``. If you provide a second number though, it knows the maximum possible value and does a better job graphing.
 
 ```blocks
 forever(function () {

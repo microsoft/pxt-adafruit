@@ -1,5 +1,7 @@
 # GDB debugging
 
+**DEPRECATED:** Please refer to: [hw-debugging](https://github.com/microsoft/pxt/blob/master/docs/develop/hw-debugging.md) instead.
+
 You can run GDB on PXT target boards that support OpenOCD. This can be either with an on-board
 interface chip (Arduino Zero or the micro:bit), or with an external programmer like the IBDAP.
 
@@ -20,6 +22,7 @@ which can be connected to the 20-pin connector.
 Also, solder (or attach using crocs) similar cables to GND and 3.3V. These two are not strictly
 necessary, if you connect USB to both programmer and the board - they will share ground through
 the computer and the board will take power from the computer.
+  - **Correction:** It doesn't always work to have common GND through the USB. Ask Michal for more info, or refer to the alternative doc linked above.
 
 Connect the small `TGT_DBG` Cortex Debug controller on the IBDAP to the 10-to-20-pin converter (included with IBDAP).
 Then connect pins you soldered to VCC (1), SWDIO (7), SWDCLK (9), and GND (eg to 20).

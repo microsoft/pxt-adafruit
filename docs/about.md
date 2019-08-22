@@ -12,7 +12,7 @@ Heads up! This editor only works for the Circuit Playground **Express**, not the
 
 Check out the awesome hardware spec at **[Adafruit.com](https://www.adafruit.com/product/3333)**.
 
-![@boardname@ image](https://cdn-shop.adafruit.com/970x728/3333-04.jpg)
+![@boardname@ image](/static/cp/cpx-about.jpg)
 
 ## Programming: [Blocks](/blocks) or [JavaScript](/javascript)
 

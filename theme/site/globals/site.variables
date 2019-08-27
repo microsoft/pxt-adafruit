@@ -29,6 +29,7 @@
 @darkGreen: #092C3A;
 
 @pageBackground: @darkBlue; /*#ecf0f1;*/
+@lightTextColor: rgba(255, 255, 255, 0.68);
 
 /*--------------
    Form Input

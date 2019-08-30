@@ -1,6 +1,6 @@
 # Clap lights
 
-## Step 1 @fullscreen
+## Step 1
 
 Drag a ``||input:on loud sound||`` block into the workspace. It will run some code inside when a clap is detected by the microphone.
 

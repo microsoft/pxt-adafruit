@@ -1,6 +1,6 @@
 # Getting started
 
-## Step 1 @fullscreen
+## Step 1
 
 Welcome, let's get started by making something magical! Start by placing a ``||light:show animation||`` block in a ``||loops:forever||`` slot to show a rainbow animation on the board.
 

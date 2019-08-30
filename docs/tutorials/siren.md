@@ -1,6 +1,6 @@
 # Siren
 
-## Step 1 @fullscreen
+## Step 1
 
 Go over to ``||input:INPUT||``, get the ``||input:on shake||`` block, and put it on the Workspace. Find a ``||light:show ring||`` block and place it inside ``||input:on shake||``.
 
@@ -12,7 +12,7 @@ input.onGesture(Gesture.Shake, function () {
 })
 ```
 
-## Step 2 @fullscreen
+## Step 2
 
 Use the color palette to select a color. You pick one of the colors from the middle of the ring. Go around the ring and touch each pixel to change them to this color. Let's use `blue` for now.
 
@@ -24,7 +24,7 @@ input.onGesture(Gesture.Shake, function () {
 })
 ```
 
-## Step 3 @fullscreen
+## Step 3
 
 Ok, we'll add another ring to make an animation. Drag another ``||light:show ring||`` block and place it right under the first one.
 
@@ -39,7 +39,7 @@ input.onGesture(Gesture.Shake, function () {
 })
 ```
 
-## Step 4 @fullscreen
+## Step 4
 
 Now, let's make the lights flash! Go to ``||loops:LOOPS||`` and grab the ``||loops:repeat||`` block. Drag it over your two ``||light:show ring||`` blocks until it surrounds them inside the ``||input:on shake||``.
 
@@ -56,7 +56,7 @@ input.onGesture(Gesture.Shake, function () {
 })
 ```
 
-## Step 5 @fullscreen
+## Step 5
 
 Hey, let's add some sound! From the ``||music:MUSIC||`` drawer, drag out a ``||music:play sound||`` block and place it just before the ``||loops:repeat||`` loop block. 
 
@@ -74,7 +74,7 @@ input.onGesture(Gesture.Shake, function () {
 })
 ```
 
-## Step 6 @fullscreen
+## Step 6
 
 Click on the part of the ``||music:play sound||`` block that shows the name of the sound. Change it to the ``siren`` sound. Oh, and finally, put a ``||light:clear||`` at the end of ``||input:on shake||``.
 
@@ -93,7 +93,7 @@ input.onGesture(Gesture.Shake, function () {
 })
 ```
 
-## Step 7 @fullscreen
+## Step 7
 
 Click ``|Download|`` to transfer your code to the @boardname@.
 

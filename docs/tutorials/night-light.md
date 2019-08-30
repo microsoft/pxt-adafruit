@@ -1,6 +1,6 @@
 # Night light
 
-## Step 1 @fullscreen
+## Step 1
 
 Drag the ``||light:set all pixels||`` block in the forever loop to set a new color on the LEDs.
 

@@ -403,5 +403,8 @@
         },
         "allowPackageExtensions": true,
         "appFlashingTroubleshoot": "/device/windows-app/troubleshoot"
-    }
+    },
+    "unsupportedBrowsers": [
+        { "id" : "ie" }
+    ]
 }

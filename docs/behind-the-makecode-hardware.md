@@ -19,6 +19,30 @@ The @boardname@ comes with amazing hardware components on it. It can connect to 
         "description": "Find out how a speaker makes sound and use it to hear the music you create with your board.",
         "youTubeId": "JjJ-KGwKh_4",
         "imageUrl": "/static/cp/behindhardware/speaker.jpg"
+    },
+    {
+        "name": "Accelerometer",
+        "description": "Feel the gravity, see how the accelerometer can sense the force of motion.",
+        "youTubeId": "2HzNKz-QlV0",
+        "imageUrl": "/static/cp/behindhardware/accelerometer.jpg"
+    },
+    {
+        "name": "Light Sensor",
+        "description": "How does your board see the light? Watch this and find out.",
+        "youTubeId": "9LrWQ68lO20",
+        "imageUrl": "/static/cp/behindhardware/light-sensor.jpg"
+    },
+    {
+        "name": "Infrared",
+        "description": "Send data with light, how does it do that? Watch and see how infrared communication works.",
+        "youTubeId": "0EMuaMClfos",
+        "imageUrl": "/static/cp/behindhardware/infrared.jpg"
+    },
+    {
+        "name": "Microphone",
+        "description": "Can your hear that? Learn how a microphone detects and captures sound.",
+        "youTubeId": "g5894PVYOF4",
+        "imageUrl": "/static/cp/behindhardware/microphone.jpg"
     }
 ]
 ```

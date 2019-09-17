@@ -2,7 +2,9 @@
 
 The [MakeCode](https://makecode.com) programming environment works on a wide variety of browsers across different devices. You can use it on a PC, a Chromebook, and on Mac computers. In addition to the browser-based version, there is also a [MakeCode Windows 10 App](http://aka.ms/adafruitapp) which you can use on computers running Windows 10.
 
-Home Page The [MakeCode Adafruit](@homeurl@) home page lists your recent work in the first row under My Projects. In this section, you can also click New Project to open a blank project. MakeCode automatically saves your work-in-progress in the browser’s cache, under the name of your project so it is a good idea to name each project something unique and descriptive. The home page also includes various tutorials and sample projects, as well as learning resources from Adafruit.
+## Home Page
+
+The [MakeCode Adafruit](@homeurl@) home page lists your recent work in the first row under My Projects. In this section, you can also click New Project to open a blank project. MakeCode automatically saves your work-in-progress in the browser’s cache, under the name of your project so it is a good idea to name each project something unique and descriptive. The home page also includes various tutorials and sample projects, as well as learning resources from Adafruit.
 
 ![Home page with galleries shown](/static/courses/maker/general/load-manage-programs/home-page.png)
 

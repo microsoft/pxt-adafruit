@@ -22,8 +22,6 @@
   "light.NeoPixelStrip.setBrightness": "Set the brightness of the strip. This flag only applies to future operation.",
   "light.NeoPixelStrip.setBuffered": "Enables or disables automatically calling show when a change is made",
   "light.NeoPixelStrip.setGradient": "Sets a gradient between two colors",
-  "light.NeoPixelStrip.setGradient|param|endColor": "the end color",
-  "light.NeoPixelStrip.setGradient|param|startColor": "the start color",
   "light.NeoPixelStrip.setLength": "Sets the number of LEDs on a strip",
   "light.NeoPixelStrip.setMode": "Sets the color mode and clears the colors.",
   "light.NeoPixelStrip.setPhotonMode": "Set the photon mode to pen up, pen down, or eraser.",

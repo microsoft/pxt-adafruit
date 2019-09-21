@@ -372,7 +372,9 @@
             "debugger",
             "debugExtensionCode",
             "simScreenshot",
-            "simGif"
+            "simGif",
+            "python",
+            "githubBlocksDiff"
         ],
         "socialOptions": {
             "twitterHandle": "adafruit",
@@ -402,7 +404,8 @@
             "arrays": "#8A1C7C"
         },
         "allowPackageExtensions": true,
-        "appFlashingTroubleshoot": "/device/windows-app/troubleshoot"
+        "appFlashingTroubleshoot": "/device/windows-app/troubleshoot",
+        "alwaysGithubItem": true
     },
     "unsupportedBrowsers": [
         { "id" : "ie" }

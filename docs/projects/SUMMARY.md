@@ -63,5 +63,5 @@
   * [Speaker](https://youtu.be/JjJ-KGwKh_4)
   * [Accelerometer](https://youtu.be/2HzNKz-QlV0)
   * [Light Sensor](https://youtu.be/9LrWQ68lO20)
-  * [Infrared Sensor](https://youtu.be/0EMuaMClfos)
+  * [Infrared](https://youtu.be/0EMuaMClfos)
   * [Microphone](https://youtu.be/g5894PVYOF4)

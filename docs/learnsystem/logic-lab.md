@@ -12,4 +12,4 @@ These topic sections teach you about applying logic to conditions and using Bool
 * [Boolean Elements](/learnsystem/logic-lab/elements)
 * [Logic Explorer](/learnsystem/logic-lab/explorer)
 * [Logic Gates](/learnsystem/logic-lab/logic-gates)
-* Programmable Logic
+* [Programmable Logic](/learnsystem/logic-lab/programmable)

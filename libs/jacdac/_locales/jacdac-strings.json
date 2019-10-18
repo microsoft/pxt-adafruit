@@ -62,6 +62,7 @@
   "jacdac.onReceivedMessage|block": "on jacdac $msg received",
   "jacdac.raiseEvent|block": "raise event|from %src|with value %value",
   "jacdac.sendMessage|block": "jacdac send $msg",
+  "jacdac.setDeviceName|block": "jacdac set device name to $name",
   "jacdac|block": "jacdac",
   "{id:category}Jacdac": "Jacdac",
   "{id:group}Broadcast": "Broadcast",

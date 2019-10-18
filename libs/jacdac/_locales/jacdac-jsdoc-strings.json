@@ -35,5 +35,7 @@
   "jacdac.onReceivedMessage": "Registers code to run for a particular message",
   "jacdac.onReceivedMessage|param|msg": "@param handler ",
   "jacdac.raiseEvent": "Sends an event over JacDac",
-  "jacdac.sendMessage": "Broadcasts a message over JacDac"
+  "jacdac.sendMessage": "Broadcasts a message over JacDac",
+  "jacdac.setDeviceName": "Sets the name of the current device on the JACDAC bus",
+  "jacdac.setDeviceName|param|name": "name of the device"
 }

@@ -1,5 +1,6 @@
 {
   "keyboard": "Keyboard emulation",
+  "keyboard.clearAllKeys": "Send up commands for any remaning down keys",
   "keyboard.functionKey": "Send a function key command",
   "keyboard.key": "Send a key command",
   "keyboard.mediaKey": "Send a media key command",

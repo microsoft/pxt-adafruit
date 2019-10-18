@@ -58,32 +58,42 @@ namespace pxsim.visuals {
                 this.pin.touched = true;
                 pxsim.U.addClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(true);
+                const b = pxtcore.getTouchButton(this.id) as CommonButton;
+                if (b)
+                    b.setPressed(true);
             }))
             this.outerElement.addEventListener(pointerEvents.leave, ev => {
                 this.pin.touched = false;
                 pxsim.U.removeClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(false);
+                const b = pxtcore.getTouchButton(this.id) as CommonButton
+                if (b)
+                    b.setPressed(false);
             })
             this.outerElement.addEventListener(pointerEvents.up, ev => {
                 this.pin.touched = false;
                 pxsim.U.removeClass(this.outerElement, "touched");
 
-                (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(false);
+                const b = pxtcore.getTouchButton(this.id) as CommonButton
+                if (b)
+                    b.setPressed(false);
             })
             accessibility.enableKeyboardInteraction(this.outerElement,
                 () => {
                     this.pin.touched = true;
                     pxsim.U.addClass(this.outerElement, "touched");
 
-                    (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(true);
+                    const b = pxtcore.getTouchButton(this.id) as CommonButton;
+                    if (b)
+                        b.setPressed(true);
                 },
                 () => {
                     this.pin.touched = false;
                     pxsim.U.removeClass(this.outerElement, "touched");
 
-                    (pxtcore.getTouchButton(this.id) as CommonButton).setPressed(false);
+                    const b = pxtcore.getTouchButton(this.id) as CommonButton;
+                    if (b)
+                        b.setPressed(false);
                 }
             );
         }

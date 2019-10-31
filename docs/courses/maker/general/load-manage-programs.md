@@ -65,7 +65,7 @@ In your **Files** window, click on Recent to easily find the MakeCode .uf2 file 
 
 Click the pink **Download** button, then go to your Finder and find the .uf2 file you just created. Drag and drop it onto the **CPLAYBOOT** drive, and your program will load.
 
-![Drag file to CPLAYBOOT from Downloads on Mac](/static/courses/maker/general/load-manage-programs/mac-finder.png)
+![Drag file to CPLAYBOOT from Downloads on Mac](/static/courses/maker/general/load-manage-programs/mac-finder.jpg)
 
 ### Windows 10 app
 

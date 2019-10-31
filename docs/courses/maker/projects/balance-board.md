@@ -67,7 +67,7 @@ See [Coding the Circuit Playground Express](/courses/maker/general/coding) chapt
 
 This project will primarily use the motion sensor, or the accelerometer of the Circuit Playground Express.
 
-![Accelerometer on the circuit playground](/static/courses/maker/projects/balance-board/accelerometer.png)
+![Accelerometer on the circuit playground](/static/courses/maker/projects/balance-board/accelerometer.jpg)
 
 The Circuit Playground Express’ accelerometer measures motion along 3 dimensions:
 

@@ -32,9 +32,9 @@ Collect the materials in the list before starting your project Make.
 
 ### Step 1: Print or draw Darwin
 
-You can either print out the image below or draw your own on a piece of paper (click on the Darwin below to view the [full-size image](/static/cp/projects/cartoon-network/darwin-goldfish/darwin.png) and then print the page).
+You can either print out the image below or draw your own on a piece of paper (click on the Darwin below to view the [full-size image](/static/cp/projects/cartoon-network/darwin-goldfish/darwin.jpg) and then print the page).
 
-[![darwin thumbnail image](/static/cp/projects/cartoon-network/darwin-goldfish/darwin-thumb.png)](/static/cp/projects/cartoon-network/darwin-goldfish/darwin.png)
+[![darwin thumbnail image](/static/cp/projects/cartoon-network/darwin-goldfish/darwin-thumb.png)](/static/cp/projects/cartoon-network/darwin-goldfish/darwin.jpg)
 
 ### Step 2: Cut out Darwin’s head and shoes
 

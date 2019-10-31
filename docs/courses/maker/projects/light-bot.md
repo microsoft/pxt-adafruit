@@ -100,7 +100,7 @@ We’ll be using some ``||servos:Servos||`` motor blocks to code our Light Bot.
 
 In our program, we’ll also use the Switch on the Circuit Playground Express to turn off the servo motors.
 
-![Switch on the Circuit Playground Express moves right and left](/static/courses/maker/projects/light-bot/cp-express-switch.png)
+![Switch on the Circuit Playground Express moves right and left](/static/courses/maker/projects/light-bot/cp-express-switch.jpg)
 
 The ``||input:on switch moved left||`` block says:
 

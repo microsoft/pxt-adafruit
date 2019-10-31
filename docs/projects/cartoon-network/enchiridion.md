@@ -155,7 +155,7 @@ From the ``||variables:VARIABLES||`` Toolbox drawer, drag out a ``||variables:pl
 
 * From the ``||light:LIGHT||`` Toolbox drawer, drag out 3 ``||light:show ring||`` blocks and place them inside the ``||logic:if then||`` block.
 
-!['play' variable placed into 'if then'](/static/cp/projects/cartoon-network/enchiridion/code6.png)
+!['play' variable placed into 'if then'](/static/cp/projects/cartoon-network/enchiridion/code6.jpg)
 
 * In the ``||light:show ring||`` blocks, click on the color wheel to select different colors and then click on the outside ring lights to change the lights to different colors. The middle grey color in the wheel turns the lights off. 
 

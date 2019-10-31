@@ -67,7 +67,7 @@ Now we want to change the pitch, or the note that's being played, based on the l
 
 The @boardname@ can play notes that are represented as frequency values (in [Hertz](https://en.wikipedia.org/wiki/Hertz)). Also, the @boardname@ measures how light or dark it is through a light level sensor ( `0` = completely dark and `255` = bright light.).
 
-![Circuit Playground Light Sensor](/static/cp/projects/guitar/light-sensor.png)
+![Circuit Playground Light Sensor](/static/cp/projects/guitar/light-sensor.jpg)
 
 We want to map the light level values (`0` - `255`) to frequency values. 300 MHz is about the frequency for the **Middle D** note, so let's add `300` to our light level values. 
 

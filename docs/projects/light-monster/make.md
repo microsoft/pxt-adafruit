@@ -13,7 +13,7 @@ Let's build the Light Monster for your @boardname@!
 
 Depending on the starting position, you'll want to set up the servo horn so that it lies parallel to where the wires connect to the motor.
 
-![Incorrect examples](/static/cp/projects/light-monster/incorrect.png)
+![Incorrect examples](/static/cp/projects/light-monster/incorrect.jpg)
 
 Ok, here's the correct position:
 

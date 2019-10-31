@@ -248,7 +248,7 @@ Hot glue applied to the parts of the servo horns that are outside the connection
 Continuous rotation servo motors can spin a servo horn with a stick or other material attached, or you can buy wheels to screw onto the motors to make vehicles. See the Light Bot project for more information on how to do this. 
 The @boardname@ can power and control up to two micro servo motors. Ideally, a servo motor would be attached to the **VOUT** pin for sufficient power. The two **3.3V** pins also work, but they under-power the servo a bit.
 
-![Power pins on the CPX](/static/courses/maker/general/maker-tools-techniques/cpx-power-ports.png)
+![Power pins on the CPX](/static/courses/maker/general/maker-tools-techniques/cpx-power-ports.jpg)
 _VOUT and 3.3V connectors on the @boardname@_
 
 For a complete look and using and coding servo motors, see this video. Note that servos can only be attached to pins **A1** or **A2**.

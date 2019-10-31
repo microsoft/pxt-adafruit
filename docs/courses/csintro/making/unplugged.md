@@ -1,6 +1,6 @@
 # Unplugged: Design Thinking
 
-![Design thinking](/static/courses/csintro/making/design-thinking.png)
+![Design thinking](/static/courses/csintro/making/design-thinking.jpg)
 
 **Objective:** To introduce a process of design that starts with talking to one another. Whatever you build with code should serve a purpose or fill a need. Sometimes what you build will make the world more beautiful, or help somebody else. Our design process, based on a process called **design thinking**, can give students a specific framework for thinking purposefully about design. 
 

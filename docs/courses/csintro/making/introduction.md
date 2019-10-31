@@ -21,4 +21,4 @@ Some common making supplies to gather:
 * string
 * markers
 
-![Maker materials](/static/courses/csintro/making/maker-materials.png)
+![Maker materials](/static/courses/csintro/making/maker-materials.jpg)

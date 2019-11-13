@@ -352,6 +352,10 @@
         "invertedMonaco": true,
         "monacoToolbox": true,
         "selectLanguage": true,
+        "availableLocales": [
+            "en",
+            "de"
+        ],
         "simAnimationEnter": "roll in",
         "simAnimationExit": "roll out",
         "highContrast": true,

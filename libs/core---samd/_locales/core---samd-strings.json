@@ -5,7 +5,7 @@
   "DigitalInOutPin.digitalWrite|block": "digital write|pin %name|to %value=toggleHighLow",
   "DigitalInOutPin.onEvent|block": "on|pin %pin|%event",
   "DigitalInOutPin.onPulsed|block": "on|pin %pin|pulsed %pulse",
-  "DigitalInOutPin.pulseIn|block": "pulse in (µs)|pin %name|pulsed %high||timeout %maxDuration (us)",
+  "DigitalInOutPin.pulseIn|block": "pulse in (µs)|pin %name|pulsed %high||timeout %maxDuration (µs)",
   "DigitalInOutPin.setPull|block": "set pull|pin %pin|to %pull",
   "PinEvent.Fall|block": "fall",
   "PinEvent.PulseHigh|block": "pulse high",

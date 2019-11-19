@@ -8,7 +8,7 @@ Make this musical cloud with your @boardname@!
 
 ## ~
 
-**Important**: make sure the [Code](/projects/cloud/code) portion of this project is done before making the cloud! Otherwise, it will be hard to download your code once the cloud make is done.
+**Important**: make sure the [Code](/projects/musical-cloud/code) portion of this project is done before making the cloud! Otherwise, it will be hard to download your code once the cloud make is done.
 
 ## Duration ~ 30 minutes 
 

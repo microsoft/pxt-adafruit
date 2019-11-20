@@ -2,7 +2,7 @@
 
 Make a beautiful beaded necklace with the Circuit Playground Express.
 
-<PinkNecklace.png>
+![Pink Necklace](/static/cp/projects/beaded-necklace/pink-necklace.jpg)
 
 Duration: 2 hours
 

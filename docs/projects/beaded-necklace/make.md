@@ -1,12 +1,16 @@
-# Beaded Necklace
+# Make
 
-Make a beautiful beaded necklace with the Circuit Playground Express.
+Here's the beautiful necklace you're going to make!
 
-<PinkNecklace.png>
+![Finished Necklace](/static/cp/projects/beaded-necklace/make-splash.jpg)
 
-Duration: 2 hours
+Use the materials listed and follow the construction steps to create this fashion wonder.
 
-Materials:
+## Materials
+
+![Materials needed](/static/cp/projects/beaded-necklace/materials.jpg)
+
+### Materials List
 
 * 1 Adafruit Circuit Playground Express (https://www.adafruit.com/product/3333)
 * 1 micro USB cable (not pictured, i.e. https://www.amazon.com/gp/product/B019C0BB9C)
@@ -19,23 +23,27 @@ Materials:
 * Ribbon – to tie the ends of the necklace 
 * Double-sided tape – to tape on the battery pack
 
-Note – I also use a piece of fabric on top of my working surface so my beads don’t roll around too much 
+Note: I also use a piece of fabric on top of my working surface so that my beads don’t roll around too much.
 
-## Make
+## Make your wires
 
-* With the wire cutters, cut the following pieces of copper wire: 
-o 6 7-inch pieces – these will be used for Power and Ground, and for the end loop of our necklace 
-o 4 3-inch pieces – these will be used for the signal or the data
+* With the wire cutters, cut the following pieces of copper wire:
 
-<CopperWire.jpg>
+>* (6) pieces of 7 inch (18 cm) wire - these will be used for Power (**3.3V**) and Ground (**GND**), and for the end loop of our necklace 
+>* (4) pieces of 3 inch (7.5 cm) wire – these will be used for the signal or the data
 
-* Loop the ends of 4 of the long pieces of wire around the following pins on the Circuit Playground Express. When looking at the board with the battery port at the top: 
-    * GND on the top right (1 o’clock) 
-    * 3.3V on the right (3 o’clock) 
-    * VOUT on the top left (11 o’clock) 
-    * GND on the left (9 o’clock)
+![Roll and pieces of wire](/static/cp/projects/beaded-necklace/copper-wire.jpg)
 
-<CPXpins.jpg>
+## Loop the wires through the pins
+
+* Loop the ends of 4 of the long pieces of wire around the following pins on the Circuit Playground Express. When looking at the board with the battery port at the top:
+
+>* **GND** on the top right (1 o’clock) 
+>* **3.3V** on the right (3 o’clock) 
+>* **VOUT** on the top left (11 o’clock)
+>* **GND** on the left (9 o’clock)
+
+![Pins used for the necklace](/static/cp/projects/beaded-necklace/cpx-pins.jpg)
 
 * When you’re looping the ends around the pins, wrap them around securely at least twice to form a good connection. Use the pliers to pull the ends tight and twist any extra length around the wire.
 
@@ -176,6 +184,6 @@ RightLights.setBrightness(100)
 * Click the Download button to download the program to your Circuit Playground Express. 
 * All 4 Flora NeoPixel lights should be lighting up pink!
 
-<NecklaceFront.jpg>
+![Front view of necklace](/static/cp/projects/beaded-necklace/necklace-front.jpg)
 
 * If you don’t see all 4 NeoPixels lighting up, check the connections to make sure the wires are securely looped around the pin holes, and that the correct pins are connected

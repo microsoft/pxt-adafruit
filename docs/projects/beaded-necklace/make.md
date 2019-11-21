@@ -178,7 +178,7 @@ Necklace Back:
 
 ![Back view of the necklace](/static/cp/projects/beaded-necklace/necklace-back.jpg)
 
-## Test all of the lights
+## Test all lights
 
 * To test that all 4 Flora NeoPixels are working correctly, connect your @boardname@ to your computer via the micro USB cable.
 * Open back up the same NecklaceTest program you were using before in MakeCode.

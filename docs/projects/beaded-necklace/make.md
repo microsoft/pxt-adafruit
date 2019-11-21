@@ -198,3 +198,9 @@ RightLights.setAll(0xff0000)
 ![Front view of necklace](/static/cp/projects/beaded-necklace/necklace-front.jpg)
 
 * If you don’t see all 4 NeoPixels lighting up, check the connections to make sure the wires are securely looped around the pin holes, and that the correct pins are connected.
+
+## ~button /projects/beaded-necklace/code
+
+NEXT: Start coding!
+
+## ~

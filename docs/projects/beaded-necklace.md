@@ -1,23 +1,28 @@
 # Beaded Necklace
 
-Make a beautiful beaded necklace with the Circuit Playground Express.
+## ~ avatar avatar
+
+Make a beautiful beaded necklace with the @boardname@.
+
+## ~
 
 ![Pink Necklace](/static/cp/projects/beaded-necklace/pink-necklace.jpg)
 
-Duration: 2 hours
+## Duration
 
-Materials:
+2 Activities, approx 60 min each
 
-* 1 Adafruit Circuit Playground Express (https://www.adafruit.com/product/3333)
-* 1 micro USB cable (not pictured, i.e. https://www.amazon.com/gp/product/B019C0BB9C)
-* 1 small lipo battery (https://www.adafruit.com/product/1578) – note, these are rechargeable, so you may also want to invest in a charger for your battery too (https://www.adafruit.com/product/259)
-* 4 Flora NeoPixels (https://www.adafruit.com/product/1260)
-* Thin copper wire (I used 26 gauge https://www.amazon.com/gp/product/B000IJYRKW)
-* Wire cutters (i.e. https://www.amazon.com/Hakko-CHP-170-Micro-Cutter/dp/B00FZPDG1K)
-* Tweezers or needle nose pliers (i.e. https://www.amazon.com/SE-LF01-Professional-Quality-Needle/dp/B001BQF1AQ) 
-* 3 strands (40 beads each) of beads – I used 6mm glass beads 
-* Ribbon – to tie the ends of the necklace 
-* Double-sided tape – to tape on the battery pack
+## Materials
 
-Note – I also use a piece of fabric on top of my working surface so my beads don’t roll around too much 
+See the **[materials](/projects/beaded-necklace/make#materials-list)** list in the [Make](/projects/beaded-necklace/make) section.
 
+## Activities
+
+* [Make](/projects/beaded-necklace/make)
+* [Code](/projects/beaded-necklace/code)
+
+### ~button /projects/beaded-necklace/make
+
+Let's get started!
+
+### ~

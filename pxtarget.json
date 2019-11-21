@@ -411,6 +411,7 @@
         "appFlashingTroubleshoot": "/device/windows-app/troubleshoot",
         "alwaysGithubItem": true
     },
+    "uploadDocs": true,
     "unsupportedBrowsers": [
         { "id" : "ie" }
     ]

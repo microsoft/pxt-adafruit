@@ -42,6 +42,11 @@ Add amazing lighted effects to clothing and fabric for the ultimate fashion expe
 
 ```codecard
 [{
+  "name": "Beaded Necklace",
+  "url":"/projects/beaded-necklace",
+  "imageUrl":"/static/cp/projects/beaded-necklace.jpg",
+  "description": "Make a beautiful beaded necklace with your board and Flora NeoPixels."
+}, {
   "name": "Wearable NeoPixels",
   "url":"/projects/wearable-neopixels",
   "imageUrl":"/static/cp/projects/wearable-neopixels.jpg",

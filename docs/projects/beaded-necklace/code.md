@@ -17,7 +17,7 @@ First, we need to set up our 4 Flora NeoPixel lights as 2 strips of lights – c
 
 ![on start block](/static/cp/projects/beaded-necklace/on-start.png)
 
-* Click on the ``||light:LIGHT||`` Toolbox drawer, then click on the ``||light:NeoPixel||`` drawer underneath it. 
+* Click on the ``||light:LIGHT||`` Toolbox drawer, then click on the ``||light:NEOPIXEL||`` drawer underneath it. 
 * Drag out the first ``||light:set strip||`` block onto the Workspace and drop into the ``||loops:on start||`` block.
 
 ![set strip block](/static/cp/projects/beaded-necklace/set-strip.png)
@@ -84,7 +84,7 @@ input.buttonsAB.onEvent(ButtonEvent.Click, function () {
 })
 ```
 
-* From the ``||light:LIGHT||`` Toolbox drawer, scroll all the way down to the bottom and drag 3 animation value blocks (the block looks like a round rainbow circle) onto the Workspace and drop one each into the ``||variables:set Anim||`` blocks, replacing the ``0``. 
+* From the ``||light:LIGHT||`` Toolbox drawer, scroll all the way down to the bottom and drag (3) animation value blocks (the block looks like a round rainbow circle) onto the Workspace and drop one each into the ``||variables:set Anim||`` blocks, replacing the ``0``. 
 * For two of the animation value blocks, click on the drop-down menu to select a different animation.
 
 ![Set the animations](/static/cp/projects/beaded-necklace/set-animations.png)
@@ -149,7 +149,7 @@ forever(function () {
 })
 ```
 
-* From the ``||light"LIGHT||`` Toolbox drawer, scroll to the bottom and drag a ``||light:clear||`` block onto the Workspace. Drop into the ``||logic:else||`` slot.
+* From the ``||light:LIGHT||`` Toolbox drawer, scroll to the bottom and drag a ``||light:clear||`` block onto the Workspace. Drop into the ``||logic:else||`` slot.
 * Click on the ``||light:LIGHT||`` Toolbox drawer, then click on the ``||light:NEOPIXEL||`` drawer underneath it.
 * Drag out (2) ``||light:strip clear||`` blocks onto the Workspace and drop into the ``||logic:else||`` slot underneath the previous ``||light:clear||`` block.
 * In each of the ``||light:strip clear||`` blocks, click on the strip variable drop-down menu and select the ``||variables:LeftLights||`` and ``||variables:RightLights||`` variable.

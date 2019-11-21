@@ -26,6 +26,7 @@
   * [Energy glove](/examples/energy-glove)
   * [Wearable NeoPixels](/projects/wearable-neopixels)
   * [Fabric Friend](/projects/fabric-friend)
+  * [Beaded Necklace](/tutorials/beaded-necklace)
 * [Games](/games)
   * [Lucky Wheel](/projects/lucky-wheel)
   * [Hot Potato](/projects/hot-potato)

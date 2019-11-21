@@ -29,8 +29,8 @@ Use the materials listed and follow the construction steps to create this fashio
 
 * With the wire cutters, cut the following pieces of copper wire:
 
->* (6) pieces of 7 inch (18 cm) wire - these will be used for Power (**3.3V**) and Ground (**GND**), and for the end loop of our necklace 
->* (4) pieces of 3 inch (7.5 cm) wire – these will be used for the signal or the data
+>* (6) pieces of 7 inch (18 cm) wire - these will be used for Power (**3.3V**) and Ground (**GND**), and for the end loop of our necklace.
+>* (4) pieces of 3 inch (7.5 cm) wire – these will be used for the signal or the data.
 
 ![Roll and pieces of wire](/static/cp/projects/beaded-necklace/copper-wire.jpg)
 
@@ -55,8 +55,8 @@ Use the materials listed and follow the construction steps to create this fashio
 
 * Now loop the ends of 2 of the short pieces of wire around the following pings on the Circuit Playgrounds Express:
 
->* A1
->* A6 
+>* **A1**
+>* **A6** 
 
 ![Location of pins A1 and A6](/static/cp/projects/beaded-necklace/cpx-pins-a1-a6.jpg)
 
@@ -64,10 +64,12 @@ Use the materials listed and follow the construction steps to create this fashio
 
 ![Wires added to pins A1 and A6](/static/cp/projects/beaded-necklace/6-wires.jpg)
 
-* Thread 3 beads on the **A1** and **A6** wires.
-* Thread 6 beads on the Ground (**GND**) and Power (**3.3V**) wires.
+## Add beads
 
-**Note**: Bend the wires so your beads don’t fall off while you’re working
+* Thread (3) beads on the **A1** and **A6** wires.
+* Thread (6) beads on the Ground (**GND**) and Power (**3.3V**) wires.
+
+**Note**: Bend the wires so your beads don’t fall off while you’re working.
 
 ![Beads on the wires](/static/cp/projects/beaded-necklace/6-wire-beads.jpg)
 
@@ -101,13 +103,13 @@ Now, attach the wires to the Flora NeoPixels.
 Now is a good time to test that your lights are connected correctly and working. 
 
 * Connect your @boardname@ to your computer by inserting one end of the micro USB cable into the silver port on the board, and the other end of the USB cable into your computer. 
-Note – Be careful not to touch the wires while the @boardname@ is plugged in, and make sure your wires aren’t crossed over each other. 
+**Note** – Be careful not to touch the wires while the @boardname@ is plugged in, and make sure your wires aren’t crossed over each other. 
 * If the lights don’t immediately all turn green, press and release the **RESET** button in the middle of the board to turn all the lights green.
 
 ![Green lights after a reset](/static/cp/projects/beaded-necklace/green-lights.jpg)
 
 * Open this program (https://makecode.com/_MtgXgUKHhX1o) in your browser, and click **Edit**. 
-* Then click on the **Download** button to download the code to your @boardname@ 
+* Then click on the **Download** button to download the code to your @boardname@.
 * Copy the ``circuitplayground-NecklaceTest.uf2`` file from your **Downloads** folder to the **@drivename@** drive on your computer.
 
 ![@drivename@ drive on your computer](/static/cp/projects/beaded-necklace/download.jpg)
@@ -118,7 +120,7 @@ You should see all your lights turn pink. If you don’t, check the connections 
 
 ## Second Floras
 
-* Disconnect your @boardname@ from the computer 
+* Disconnect your @boardname@ from the computer.
 * Add 1 more Flora NeoPixel to each side of your necklace following the previous pattern: 3 beads for the Signal wire, and 6 beads for Ground and Power wires. 
 * You will need to use the last 2 short pieces of wire to connect the 2 Flora NeoPixels together via the **Signal Out -->** and **Signal In -->** pins.
 

@@ -10,7 +10,7 @@ Make a beautiful beaded necklace with the @boardname@.
 
 ## Duration
 
-2 Activities, approx 60 min each
+2 Activities, approx 100 minutes for Making, 20 minutes for Coding.
 
 ## Materials
 

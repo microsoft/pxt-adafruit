@@ -158,7 +158,10 @@
         "importing": true,
         "thumbnails": true,
         "preferredPackages": [],
-        "githubPackages": true
+        "githubPackages": true,
+        "cloudProviders": {
+            "github": {}
+        }
     },
     "compile": {
         "webUSB": true,

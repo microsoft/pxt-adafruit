@@ -57,7 +57,3 @@
 * [Hardware](/device)
     * [Simulator](/device/simulator)
     * [USB](/device/usb)
-    
-## Newsletters #newsletters
-
-* [Adafruit Daily Newsletter](http://makecode.adafruitdaily.com)

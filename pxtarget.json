@@ -412,7 +412,7 @@
         },
         "allowPackageExtensions": true,
         "appFlashingTroubleshoot": "/device/windows-app/troubleshoot",
-        "alwaysGithubItem": true
+        "githubEditor": true
     },
     "uploadDocs": true,
     "unsupportedBrowsers": [

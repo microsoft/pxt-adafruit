@@ -4,7 +4,7 @@
   "color": "Color manipulation",
   "color.ColorBuffer": "A buffer of colors",
   "color.ColorBuffer.write": "Writes the content of the src color buffer starting at the start dstOffset in the current buffer",
-  "color.ColorBuffer.write|param|dstOffset": "@param src ",
+  "color.ColorBuffer.write|param|dstOffset": "@param src",
   "color.ColorBufferLayout.ARGB": "32bit RGB color with alpha",
   "color.ColorBufferLayout.RGB": "24bit RGB color",
   "color.createBuffer": "Converts an array of colors into a color buffer",

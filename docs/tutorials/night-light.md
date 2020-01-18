@@ -80,7 +80,7 @@ forever(function () {
 
 ## Step 7
 
-Change ``index`` to ``255 - index`` in the ``||light:set brightness||`` block.
+Using a Math block change ``index`` to ``255 - index`` in the ``||light:set brightness||`` block.
 
 ```blocks
 forever(function () {

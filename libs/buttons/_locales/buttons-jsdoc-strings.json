@@ -3,7 +3,6 @@
   "Button.isPressed": "Check if a button is pressed or not.",
   "Button.onEvent": "Do something when a button (`A`, `B` or both `A` + `B`) is clicked, double clicked, etc...",
   "Button.onEvent|param|body": "code to run when the event is raised",
-  "Button.pressureLevel": "Gets the pressure level on the button 0 to 512.",
   "Button.wasPressed": "See if the button was pressed again since the last time you checked.",
   "ButtonEvent": "User interaction on buttons",
   "DigitalInOutPin.pushButton": "Get the push button (connected to GND) for given pin",

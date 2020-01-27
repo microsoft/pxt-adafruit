@@ -322,6 +322,7 @@
         "organizationLogo": "./static/Microsoft-logo_rgb_c-gray-square.png",
         "organizationWideLogo": "./static/Microsoft-logo_rgb_c-white.png",
         "homeUrl": "https://makecode.adafruit.com/",
+        "betaUrl": "https://makecode.adafruit.com/beta",
         "embedUrl": "https://makecode.adafruit.com/",
         "privacyUrl": "https://go.microsoft.com/fwlink/?LinkId=521839",
         "termsOfUseUrl": "https://go.microsoft.com/fwlink/?LinkID=206977",
@@ -378,6 +379,7 @@
         "simGifTransparent": "rgba(0,0,0,0)",
         "qrCode": true,
         "pythonToolbox": true,
+        "importExtensionFiles": true,
         "experiments": [
             "autoWebUSBDownload",
             "debugger",

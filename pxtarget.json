@@ -378,16 +378,13 @@
         "baseTheme": "dark",
         "simGifTransparent": "rgba(0,0,0,0)",
         "qrCode": true,
-        "pythonToolbox": true,
         "importExtensionFiles": true,
         "experiments": [
             "autoWebUSBDownload",
             "debugger",
             "debugExtensionCode",
             "simScreenshot",
-            "simGif",
-            "python",
-            "pythonToolbox"
+            "simGif"
         ],
         "socialOptions": {
             "twitterHandle": "adafruit",
@@ -418,7 +415,11 @@
         },
         "allowPackageExtensions": true,
         "appFlashingTroubleshoot": "/device/windows-app/troubleshoot",
-        "githubEditor": true
+        "githubEditor": true,
+        "chooseLanguageRestrictionOnNewProject": true,
+        "tutorialBlocksDiff": true,
+        "python": true,
+        "pythonToolbox": true
     },
     "uploadDocs": true,
     "unsupportedBrowsers": [

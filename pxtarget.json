@@ -357,6 +357,7 @@
         "invertedMenu": true,
         "invertedToolbox": true,
         "invertedMonaco": true,
+        "invertedGitHub": true,
         "monacoToolbox": true,
         "selectLanguage": true,
         "availableLocales": [

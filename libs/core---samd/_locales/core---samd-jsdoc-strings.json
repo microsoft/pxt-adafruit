@@ -81,7 +81,7 @@
   "pins.spiFrequency|param|frequency": "the clock frequency, eg: 1000000",
   "pins.spiMode": "Set the SPI signal mode",
   "pins.spiMode|param|mode": "the mode, eg: 3",
-  "pins.spiTransfer": "Write a given command to SPI bus, and afterwards read the response.",
+  "pins.spiTransfer": "Write a given command to SPI bus, and at the same time read the response.",
   "pins.spiWrite": "Write to the SPI slave and return the response",
   "pins.spiWrite|param|value": "Data to be sent to the SPI slave"
 }

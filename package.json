@@ -45,8 +45,8 @@
     "@types/web-bluetooth": "0.0.4"
   },
   "dependencies": {
-    "pxt-common-packages": "6.18.4",
-    "pxt-core": "5.33.4"
+    "pxt-common-packages": "6.20.1",
+    "pxt-core": "5.34.3"
   },
   "scripts": {
     "serve": "node node_modules/pxt-core/built/pxt.js serve",

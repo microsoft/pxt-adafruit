@@ -14,6 +14,7 @@
   "I2C.readBuffer": "Read `size` bytes from a 7-bit I2C `address`.",
   "I2C.writeBuffer": "Write bytes to a 7-bit I2C `address`.",
   "PwmOnlyPin.analogSetPeriod": "Set the Pulse-width modulation (PWM) period of the analog output. The period is in\n**microseconds** or `1/1000` milliseconds.\nIf this pin is not configured as an analog output (using `analog write pin`), the operation has\nno effect.",
+  "PwmOnlyPin.servoSetContinuous": "Indicates if the servo is running continuously",
   "PwmOnlyPin.servoSetPulse": "Set the pin for PWM analog output, make the period be 20 ms, and set the pulse width.\nThe pulse width is based on the value it is given **microseconds** or `1/1000` milliseconds.",
   "PwmOnlyPin.servoSetPulse|param|duration": "pulse duration in micro seconds, eg:1500",
   "PwmOnlyPin.servoWrite": "Write a value to the servo to control the rotation of the shaft. On a standard servo, this will\nset the angle of the shaft (in degrees), moving the shaft to that orientation. On a continuous\nrotation servo, this will set the speed of the servo (with ``0`` being full-speed in one\ndirection, ``180`` being full speed in the other, and a value near ``90`` being no movement).",

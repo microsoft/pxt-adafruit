@@ -1,55 +1,55 @@
 {
-  "name": "pxt-adafruit",
-  "version": "1.5.30",
-  "description": "Adafruit Circuit Playground Express for Microsoft MakeCode",
-  "keywords": [
-    "JavaScript",
-    "education",
-    "adafruit",
-    "pxt",
-    "MakeCode",
-    "Microsoft",
-    "Adafruit",
-    "Adafruit Circuit Playground"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Microsoft/pxt-adafruit.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "homepage": "https://github.com/Microsoft/pxt-adafruit#readme",
-  "files": [
-    "README.md",
-    "pxtarget.json",
-    "targetconfig.json",
-    "built/*.js",
-    "built/*.json",
-    "built/*.d.ts",
-    "sim/public",
-    "docs/*.md",
-    "docs/*/*.md",
-    "docs/*/*/*.md",
-    "docs/static/*.svg",
-    "docs/static/*.png"
-  ],
-  "devDependencies": {
-    "typescript": "3.7.5",
-    "react": "16.8.3",
-    "semantic-ui-less": "2.2.14",
-    "@types/bluebird": "2.0.33",
-    "@types/marked": "0.3.0",
-    "@types/node": "8.0.53",
-    "@types/react": "16.0.25",
-    "@types/react-dom": "16.0.3",
-    "@types/web-bluetooth": "0.0.4"
-  },
-  "dependencies": {
-    "pxt-common-packages": "6.21.1",
-    "pxt-core": "5.34.8"
-  },
-  "scripts": {
-    "serve": "node node_modules/pxt-core/built/pxt.js serve",
-    "test": "node node_modules/pxt-core/built/pxt.js travis"
-  }
+    "name": "pxt-adafruit",
+    "version": "1.5.30",
+    "description": "Adafruit Circuit Playground Express for Microsoft MakeCode",
+    "keywords": [
+        "JavaScript",
+        "education",
+        "adafruit",
+        "pxt",
+        "MakeCode",
+        "Microsoft",
+        "Adafruit",
+        "Adafruit Circuit Playground"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Microsoft/pxt-adafruit.git"
+    },
+    "author": "",
+    "license": "MIT",
+    "homepage": "https://github.com/Microsoft/pxt-adafruit#readme",
+    "files": [
+        "README.md",
+        "pxtarget.json",
+        "targetconfig.json",
+        "built/*.js",
+        "built/*.json",
+        "built/*.d.ts",
+        "sim/public",
+        "docs/*.md",
+        "docs/*/*.md",
+        "docs/*/*/*.md",
+        "docs/static/*.svg",
+        "docs/static/*.png"
+    ],
+    "devDependencies": {
+        "typescript": "3.7.5",
+        "react": "16.8.3",
+        "semantic-ui-less": "2.2.14",
+        "@types/bluebird": "2.0.33",
+        "@types/marked": "0.3.0",
+        "@types/node": "8.0.53",
+        "@types/react": "16.0.25",
+        "@types/react-dom": "16.0.3",
+        "@types/web-bluetooth": "0.0.4"
+    },
+    "dependencies": {
+        "pxt-common-packages": "6.21.8",
+        "pxt-core": "5.35.1"
+    },
+    "scripts": {
+        "serve": "node node_modules/pxt-core/built/pxt.js serve",
+        "test": "node node_modules/pxt-core/built/pxt.js travis"
+    }
 }

@@ -39,7 +39,7 @@ Once the lights are green, the Circuit Playground Express will show up as a USB 
 
 ### Windows PC
 
-Click the pink Download button. Depending on what browser you’re using, the downloaded file may automatically show up in your Downloads folder (Chrome, Firefox), or the browser may prompt you for what to do with this file (Edge, Internet Explorer). You will want to save the project file onto the Circuit Playground Express (**CPLAYBOOT**) drive. You can do this directly from the browser in Edge or IE, or if you’re using Chrome or Firefox, go to your Downloads folder in your File Explorer, find the .uf2 file you just created, and drag and drop it onto the **CPLAYBOOT** drive, and your program will load onto the board.
+Click the pink Download button. Depending on what browser you’re using, the downloaded file may automatically show up in your Downloads folder (Chrome, Firefox), or the browser may prompt you for what to do with this file (Microsoft Edge, Internet Explorer). You will want to save the project file onto the Circuit Playground Express (**CPLAYBOOT**) drive. You can do this directly from the browser in Microsoft Edge or IE, or if you’re using Chrome or Firefox, go to your Downloads folder in your File Explorer, find the .uf2 file you just created, and drag and drop it onto the **CPLAYBOOT** drive, and your program will load onto the board.
 
 ![Windows File Explorer with programs to copy](/static/courses/maker/general/load-manage-programs/windows-file-explorer.png)
 

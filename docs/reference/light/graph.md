@@ -6,22 +6,24 @@ Graph a number using the pixels on the pixel ring.
 light.graph(0, 0);
 ```
 
-The ``||light:graph||`` block turns the pixel ring into a lighted graph to display number values. When you graph values less than `10` the number of pixels that are turned on is the same as your value:
+The ``||light:graph||`` block turns the pixel ring into a lighted graph to display number values.
 
 ```blocks
-light.graph(7, 10)
+light.graph(6, 10)
 ```
 
-In this case, the _range_ of values you want to graph is `10` which match the total number of pixels on the board. If you wanted to graph values between `0` and `20`, each pixel now means a difference in value of `2` instead of `1`. To show a value of `10` when the range is `20`, 5 pixels will light up. This graph block shows the value of `10` when the range limit is `20`:
+In this case, the _range_ of values you want to graph is `10`. This matches the total number of pixels on the board, so 6 pixels would light up.
+
+If you wanted to graph values between `0` and `20`, each pixel now means a difference in value of `2` instead of `1`. That means if you show a value of `6` when the range is `20`, 3 pixels will light up. This graph block shows the value of `6` when the range limit is `20`:
 
 ```block
-light.graph(10, 20)
+light.graph(6, 20)
 ```
 
-The pixel ring will have 5 pixels turned on since each pixel represents a change of `2` in value:
+The pixel ring will have 3 pixels turned on since each pixel represents a change of `2` in value:
 
 ```sim
-light.graph(10, 20)
+light.graph(6, 20)
 ```
 
 ## Auto scale

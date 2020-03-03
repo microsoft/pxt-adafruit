@@ -51,6 +51,7 @@
   "{id:category}I2C": "I2C",
   "{id:category}Light": "Light",
   "{id:category}Pins": "Pins",
+  "{id:category}PwmOnlyPin": "PwmOnlyPin",
   "{id:category}SPI": "SPI",
   "{id:group}Servo": "Servo",
   "{id:group}i2c": "i2c"

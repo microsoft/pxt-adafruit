@@ -8,22 +8,13 @@ Make sure everyone knows whose room it is, even at night with this Amazing World
 
 ![Completed Room Sign project](/static/cp/projects/cartoon-network/room-sign/room-sign-project.gif)
 
-### ~ hint
-
-#### Flipgrid topic
-
-This project is also a Flipgrid topic:
-
-https://flipgrid.com/bf121bf3
-
-### ~
-
 ## Prepare
 
 ### This project
 
 **Level**: Easy<br/>
-**Duration**: 30 minutes
+**Duration**: 30 minutes<br/>
+**Flipgrid**: https://flipgrid.com/bf121bf3
 
 ### Materials
 

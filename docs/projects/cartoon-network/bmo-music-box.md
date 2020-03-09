@@ -11,22 +11,13 @@ BMO is Finn and Jake's loyal, protective and helpful friend, who also happens to
 https://youtu.be/M1RwRYzcDYQ 
 <br/>
 
-### ~ hint
-
-#### Flipgrid topic
-
-This project is also a Flipgrid topic:
-
-https://flipgrid.com/bde07799
-
-### ~
-
 ## Prepare
 
 ### This project
 
 **Level**: Medium<br/>
-**Duration**: 60 minutes
+**Duration**: 60 minutes<br/>
+**Flipgrid**: https://flipgrid.com/bde07799
 
 ### Materials
 

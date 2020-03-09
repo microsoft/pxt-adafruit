@@ -8,22 +8,13 @@ Finn the Human is a fiery little kid with strong morals who lives in the Land of
 
 ![Completed Cup Lamp project](/static/cp/projects/cartoon-network/cup-lamp/cup-lamp-project.gif)
 
-### ~ hint
-
-#### Flipgrid topic
-
-This project is also a Flipgrid topic:
-
-https://flipgrid.com/51b13636
-
-### ~
-
 ## Prepare
 
 ### This project
 
 **Level**: Medium<br/>
-**Duration**: 60 minutes
+**Duration**: 60 minutes<br/>
+**Flipgrid**: https://flipgrid.com/51b13636
 
 ### Materials
 

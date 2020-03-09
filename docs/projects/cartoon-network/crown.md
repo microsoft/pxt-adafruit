@@ -10,6 +10,16 @@ Ice King is a menacing but largely misunderstood ice wizard whose crown is the s
 
 ![Completed crown project](/static/cp/projects/cartoon-network/crown/crown-project.gif)
 
+### ~ hint
+
+#### Flipgrid topic
+
+This project is also a Flipgrid topic:
+
+https://flipgrid.com/3c1dffc8
+
+### ~
+
 ## Prepare
 
 ### This project

@@ -11,6 +11,16 @@ Jake is a shape-shifting dog who is Finn's best friend and adoptive brother in A
 https://youtu.be/s9QNnYTeSVI
 <br/>
 
+### ~ hint
+
+#### Flipgrid topic
+
+This project is also a Flipgrid topic:
+
+https://flipgrid.com/665fd293
+
+### ~
+
 ## Prepare
 
 ### This project

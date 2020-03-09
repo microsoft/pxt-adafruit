@@ -11,6 +11,16 @@ The Enchiridion (which translates to "The Handbook" or "The Manual") is an ancie
 https://youtu.be/PezmgdB1kOE 
 <br/>
 
+### ~ hint
+
+#### Flipgrid topic
+
+This project is also a Flipgrid topic:
+
+https://flipgrid.com/3a051ac5
+
+### ~
+
 ## Prepare
 
 ### This project

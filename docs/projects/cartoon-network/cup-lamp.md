@@ -13,7 +13,8 @@ Finn the Human is a fiery little kid with strong morals who lives in the Land of
 ### This project
 
 **Level**: Medium<br/>
-**Duration**: 60 minutes
+**Duration**: 60 minutes<br/>
+**Flipgrid**: https://flipgrid.com/51b13636
 
 ### Materials
 

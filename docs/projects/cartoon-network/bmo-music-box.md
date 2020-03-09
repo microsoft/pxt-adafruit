@@ -16,7 +16,8 @@ https://youtu.be/M1RwRYzcDYQ
 ### This project
 
 **Level**: Medium<br/>
-**Duration**: 60 minutes
+**Duration**: 60 minutes<br/>
+**Flipgrid**: https://flipgrid.com/bde07799
 
 ### Materials
 

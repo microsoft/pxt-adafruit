@@ -15,7 +15,8 @@ Ice King is a menacing but largely misunderstood ice wizard whose crown is the s
 ### This project
 
 **Level**: Easy<br/>
-**Duration**: 30 minutes
+**Duration**: 30 minutes<br/>
+**Flipgrid**: https://flipgrid.com/3c1dffc8
 
 ### Materials
 

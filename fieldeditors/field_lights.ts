@@ -128,7 +128,9 @@ namespace pxt.editor {
           this.paletteButtons.push(btn);
         })
 
-      if (this.fieldGroup_) this.fieldGroup_.appendChild(this.boardElement);
+      if (this.fieldGroup_) {
+        this.fieldGroup_.replaceChild(this.boardElement, this.fieldGroup_.firstChild);
+      }
 
       // Hide the borderRect since we're not using it.
       //(this.borderRect_ as HTMLElement).style.display = 'none';
@@ -185,13 +187,13 @@ namespace pxt.editor {
     };
 
     getValue() {
-      let text = this.getText();
-      if (!/^(?:".*?")|(?:`.*?`)|(?:'.*?')$/.test(text)) {
+      let value = this.value_ || "";
+      if (!/^(?:".*?")|(?:`.*?`)|(?:'.*?')$/.test(value)) {
         // Text is not correctly surrounded by quotes; remove all quotes and surround with backticks
-        text.replace(/[`"']/g, "");
-        text = `\`${text}\``;
+        value.replace(/[`"']/g, "");
+        value = `\`${value}\``;
       }
-      return text;
+      return value;
     }
 
     getValueArray(): string {

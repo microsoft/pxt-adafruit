@@ -4,14 +4,15 @@
             "Microsoft",
             "Adafruit"
         ],
-        "approvedRepos": [
-        ],
+        "approvedRepos": [],
         "preferredRepos": [
             "Adafruit/pxt-crickit"
         ]
     },
     "languages": [
-        "en"
+        "en",
+        "de",
+        "ja"
     ],
     "galleries": {
         "Tutorials": "tutorials",

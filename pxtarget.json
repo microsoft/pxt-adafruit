@@ -362,7 +362,8 @@
         "selectLanguage": true,
         "availableLocales": [
             "en",
-            "de"
+            "de",
+            "ja"
         ],
         "simAnimationEnter": "roll in",
         "simAnimationExit": "roll out",

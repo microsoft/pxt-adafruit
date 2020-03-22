@@ -11,7 +11,9 @@
         ]
     },
     "languages": [
-        "en"
+        "en",
+        "de",
+        "ja"        
     ],
     "galleries": {
         "Tutorials": "tutorials",

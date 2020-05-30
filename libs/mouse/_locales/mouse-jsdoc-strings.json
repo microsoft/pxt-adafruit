@@ -1,5 +1,7 @@
 {
   "mouse": "Mouse emulation",
+  "mouse.click": "Generates a mouse click",
+  "mouse.click|param|button": "the button to click",
   "mouse.move": "Move the mouse in the X and Y direction",
   "mouse.setButton": "Set the mouse button state to up or down",
   "mouse.turnWheel": "Turn the mouse wheel"

@@ -903,7 +903,7 @@ namespace pxsim.visuals {
             svg.child(neopixelmerge, "feMergeNode", { in: "coloredBlur" })
             svg.child(neopixelmerge, "feMergeNode", { in: "SourceGraphic" })
 
-            const neopixelState = (board() as LightBoard).neopixelState;
+            const neopixelState = (board() as any as LightBoard).neopixelState;
             if (neopixelState) {
                 for (let i = 0; i < neopixelState.length; i++) {
                     // let p_outer = svg.title(this.element.getElementById(`LED${i}_OUTER`) as SVGPathElement, "NeoPixel " + i);

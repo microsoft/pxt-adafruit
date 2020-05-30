@@ -3,9 +3,10 @@
   "MouseButton.Middle|block": "middle",
   "MouseButton.Right|block": "right",
   "jacdac.mouseService|block": "mouse service",
+  "mouse.click|block": "mouse click button $button",
   "mouse.move|block": "mouse move x %x|y %y",
   "mouse.setButton|block": "mouse button %index|%down=toggleDownUp",
-  "mouse.turnWheel|block": "turn wheel %w",
+  "mouse.turnWheel|block": "mouse turn wheel %w",
   "mouse|block": "mouse",
   "{id:category}Jacdac": "Jacdac",
   "{id:category}Mouse": "Mouse"

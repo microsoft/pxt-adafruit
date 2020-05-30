@@ -11,6 +11,7 @@
   "serial.attachToConsole": "Send console messages through the TX, RX pins",
   "serial.createSerial": "Creates a serial comm device",
   "serial.createSerial|param|tx": "@param rx ",
+  "serial.delimiters": "Return the corresponding delimiter string",
   "serial.internalCreateSerialDevice": "Opens a Serial communication driver",
   "serial.onDelimiterReceived": "Registers code when a delimiter is received",
   "serial.onEvent": "Registers code when serial events happen",

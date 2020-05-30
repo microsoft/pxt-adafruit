@@ -1,10 +1,14 @@
 {
+  "Array._popStatement|block": "remove last value from %list",
+  "Array._removeAtStatement|block": "%list| remove value at %index",
+  "Array._shiftStatement|block": "remove first value from %list",
+  "Array._unshiftStatement|block": "%list| insert %value| at beginning",
   "Array.indexOf|block": "%list| find index of %value",
   "Array.insertAt|block": "%list| insert at %index| value %value",
   "Array.length|block": "length of %VALUE",
   "Array.pop|block": "get and remove last value from %list",
   "Array.push|block": "%list| add value %value| to end",
-  "Array.removeAt|block": "%list| remove value at %index",
+  "Array.removeAt|block": "%list| get and remove value at %index",
   "Array.reverse|block": "reverse %list",
   "Array.shift|block": "get and remove first value from %list",
   "Array.unshift|block": "%list| insert %value| at beginning",
@@ -51,6 +55,7 @@
   "parseFloat|block": "parse to number %text",
   "parseInt|block": "parse to integer %text",
   "pause|block": "pause %pause=timePicker|ms",
+  "randint|block": "pick random %min|to %limit",
   "{id:category}Array": "Array",
   "{id:category}Arrays": "Arrays",
   "{id:category}Basic": "Basic",
@@ -70,5 +75,8 @@
   "{id:category}Pins": "Pins",
   "{id:category}String": "String",
   "{id:category}Text": "Text",
-  "{id:category}UTF8Decoder": "UTF8Decoder"
+  "{id:category}UTF8Decoder": "UTF8Decoder",
+  "{id:group}Modify": "Modify",
+  "{id:group}Operations": "Operations",
+  "{id:group}Read": "Read"
 }

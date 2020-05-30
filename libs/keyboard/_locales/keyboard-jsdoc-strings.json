@@ -4,5 +4,6 @@
   "keyboard.functionKey": "Send a function key command",
   "keyboard.key": "Send a key command",
   "keyboard.mediaKey": "Send a media key command",
+  "keyboard.modifierKey": "Send a modifier key command",
   "keyboard.type": "Send a sequence of keystrokes to the keyboard"
 }

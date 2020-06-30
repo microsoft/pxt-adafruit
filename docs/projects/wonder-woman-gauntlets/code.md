@@ -67,59 +67,75 @@ light.setBrightness(255)
 
 ![CPX simulator](/static/cp/projects/wonder-woman-gauntlets/simulator.png)
 
-* From the ``||light:LIGHT||`` Toolbox drawer, drag out a Show Animation block and drop into the ``||input:on tilt down||`` block.
+* From the ``||light:LIGHT||`` Toolbox drawer, drag out a ``||light:show animation||`` block and drop into the ``||input:on tilt down||`` block.
 
-* From the ``||light:LIGHT||`` Toolbox drawer, drag out a Show Animation block and drop into the On Tilt Down block.
+![Pull out show animation block](/static/cp/projects/wonder-woman-gauntlets/show-animation.png)
 
-<Show Animation.png>
+* In the ``||light:show animation||`` block, click on the animation design drop-down and select an animation to play. 
+* In the ``||light:show animation||`` block, click on the ``500 ms`` drop-down menu and select 2 seconds (or 2000 milliseconds) as the duration to play the animation.
 
-· In the Show Animation block, click on the animation design drop-down and select an animation to play 
-· In the Show Animation block, click on the 500 ms drop-down menu and select 2 seconds (or 2000 milliseconds) as the duration to play the animation 
+![Select time for show animation block](/static/cp/projects/wonder-woman-gauntlets/show-animation-menu.png)
 
-<Show Animation Menu.png>
+## Turn off gauntlets
 
-5. Turn off gauntlets
+* From the ``||input:INPUT||`` Toolbox drawer, drag another ``||input:on shake||`` block onto the Workspace.
 
-* From the Input Toolbox drawer, drag another On Shake block onto the workspace 
+![Pull out on shake block](/static/cp/projects/wonder-woman-gauntlets/on-shake.png)
 
-<On Shake.png>
+* In the ``||input:on shake||`` block, click on the ``||input:shake||`` drop down menu and select ``||input:tilt up||``.
 
-· In the On Shake block, click on the Shake drop down menu and select Tilt Up 
+![Selecting tilt up](/static/cp/projects/wonder-woman-gauntlets/tilt-down.png)
 
-<Tilt Up.png>
+* From the ``||light:LIGHT||`` Toolbox drawer, scroll down, drag out a ``||light:clear||`` block and drop into the ``||input:on tilt up||`` block.
 
-· From the Light Toolbox drawer, scroll down, drag out a Clear block and drop into the On Tilt Up block 
+```blocks
+input.onGesture(Gesture.TiltUp, function () {
+    light.clear()
+})
+```
 
-<Clear.png>
-
-· From the Music Toolbox drawer, drag out a Play Sound block and drop into the On Tilt Up block 
-· In the Play Sound block, click on the drop-down menu to select a sound effect you want to play when your gauntlets turn off 
-
-<Play Sound 2.png>
+* From the ``||music:MUSIC||`` Toolbox drawer, drag out a ``||music:play sound||`` block and drop into the ``||input:on tilt up||`` block.
+* In the ``||music:play sound||`` block, click on the drop-down menu to select a sound effect you want to play when your gauntlets turn off.
 
 ![Selecting jump down sound](/static/cp/projects/wonder-woman-gauntlets/play-sound2.png)
 
 Your complete program should look similar to this: 
 
-<Bracers Code.png> https://makecode.com/_JyL3A7f0T46F 
+```blocks
+music.setVolume(255)
+light.setBrightness(255)
+input.onGesture(Gesture.TiltDown, function () {
+    music.magicWand.play()
+    light.showAnimation(light.cometAnimation, 2000)
+})
+input.onGesture(Gesture.TiltUp, function () {
+    light.clear()
+    music.jumpDown.play()
+})
+```
 
+## Test
 
-6. Test 
-In the Circuit Playground Express Simulator window, test your project by moving your mouse up and down on the Circuit Playground Express. You should see the lights turn on and off and the sounds play. 
+In the @boardname@ Simulator window, test your project by moving your mouse up and down on the @boardname@. You should see the lights turn on and off and the sounds play. 
 
-<Simulator.gif> 
-7. Download 
-Click the big pink Download button. 
+![Program in simulator](/static/cp/projects/wonder-woman-gauntlets/simulator.gif)
 
-<Download.png> 
-This will save your program as a file in the Downloads folder on your computer. Using your computer’s file explorer, open the Downloads folder, you should see a file there called circuitplayground-Untitled.uf2. This is your program. 
+## Download
 
-<Downloads folder.png> 
-Now, check the Circuit Playground Express board that is plugged into your computer via the USB cable, and make sure that all the lights are green. If they are not green, press and release the Reset button in the middle of the board until all the lights turn green. 
+Click the big pink **Download** button.
 
-<CPX reset.png> 
-Using your computer’s file explorer, you should see the Circuit Playground Express show up as a USB drive called CPLAYBOOT. Drag and drop (or copy and paste) your circuitplayground-Untitled.uf2 program file from the Downloads folder into the CPLAYBOOT drive. 
+![Download button](/static/cp/projects/wonder-woman-gauntlets/download.png)
 
-<CPLAYBOOT.png> 
+This will save your program as a file in the **Downloads** folder on your computer. Using your computer’s file explorer, open the **Downloads** folder, you should see a file there called `circuitplayground-Untitled.uf2`. This is your program. 
 
-That’s it! Congratulations on Making and Coding your very own Wonder Woman indestructible Gauntlets
+![Downloads folder](/static/cp/projects/wonder-woman-gauntlets/downloads-folder.png)
+
+Now, check the @boardname@ board that is plugged into your computer via the USB cable, and make sure that all the lights are green. If they are not green, press and release the **RESET** button in the middle of the board until all the lights turn green. 
+
+![Reset button on CPX](/static/cp/projects/wonder-woman-gauntlets/cpx-reset.png)
+
+Using your computer’s file explorer, you should see the @boardname@ show up as a USB drive called **CPLAYBOOT**. Drag and drop (or copy and paste) your `circuitplayground-Untitled.uf2` program file from the **Downloads** folder into the **CPLAYBOOT** drive. 
+
+![CPLAYBOOT drive](/static/cp/projects/wonder-woman-gauntlets/cplayboot.png)
+
+That’s it! Congratulations on Making and Coding your very own Wonder Woman indestructible Gauntlets.

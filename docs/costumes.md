@@ -22,6 +22,12 @@
   "description": "Shake your wand and cast some spells on your friends. Ala kazam!"
 },
 {
+  "name": "Wonder Woman Gauntlets",
+  "url":"/projects/wonder-woman-gauntlets",
+  "imageUrl":"/static/cp/projects/wonder-woman-gauntlets.jpg",
+  "description": "Make the indestructible gauntlets that Wonder Woman wears to repel attacks."
+},
+{
   "name": "Headlamp",
   "url":"/projects/headlamp",
   "imageUrl":"/static/cp/projects/thumb/headlamp.jpg",

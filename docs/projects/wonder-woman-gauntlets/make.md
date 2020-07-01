@@ -1,5 +1,11 @@
 # Make
 
+## ~avatar avatar
+
+Make your Gauntlets and power them with the @boardname@.
+
+## ~
+
 ## Cut out gauntlets 
 
 * Cut the long side of each piece of cardstock paper to form a point in the middle. This will be the bottom of the gauntlet.
@@ -22,13 +28,13 @@
 
 ## Stick on Velcro Tabs
 
-* Attach the Velcro tabs along the length of each gauntlet – space 3 tabs evenly for each gauntlet.
+* Attach the Velcro tabs along the length of each gauntlet – space 3 tabs evenly on each gauntlet.
 
 ![Attach the velcro tabs](/static/cp/projects/wonder-woman-gauntlets/velcro.jpg)
 
 ## Mount the Circuit Playground Express
 
-* Loop around the ends of a piece of tape to create a piece of double-sided sticky tape, and stick onto the back of the Circuit Playground Express board.
+* Loop the ends of a piece of tape around to create a piece of double-sided sticky tape, and stick onto the back of the @boardname@ board.
 
 ![Tape the back of CPX](/static/cp/projects/wonder-woman-gauntlets/tape-back.png)
 
@@ -46,7 +52,7 @@
 
 ![Remove clip on battery holder](/static/cp/projects/wonder-woman-gauntlets/remove-clip.jpg)
 
-* Insert the battery cable into the battery port on the top of the Circuit Playground Express.
+* Insert the battery cable into the battery port on the top of the @boardname@.
 
 ![Insert the battery cable](/static/cp/projects/wonder-woman-gauntlets/battery-cable.jpg)
 
@@ -56,3 +62,9 @@
 ![Tape on the battery pack](/static/cp/projects/wonder-woman-gauntlets/tape-battery-pack.jpg)
 
 Congratulations! You’ve successfully constructed your very own indestructible gauntlets! Now you’re ready to move to programming your gauntlets...
+
+### ~button /projects/wonder-woman-gauntlets/code
+
+Code
+
+### ~

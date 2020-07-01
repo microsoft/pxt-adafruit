@@ -1,6 +1,10 @@
 # Code
 
-We will write a program that will power up our gauntlets to deflect attacks when we raise our arms, and then turn off when we lower our arms.
+## ~avatar avatar
+
+Write a program that will power up our gauntlets to deflect attacks when we raise our arms, and then turn off when we lower our arms.
+
+## ~
 
 ## Attach USB cable
 
@@ -41,7 +45,7 @@ music.setVolume(255)
 * Click on the ``||light:LIGHT||`` Toolbox drawer, drag out a ``||light:set brightness||`` block and drop into the ``||loops:on start||`` block.
 * In the ``||light:set brightness||`` block, set the maximum brightness of `255`.
 
-<Set Brightness.png>
+![Pull out set brightness block](/static/cp/projects/wonder-woman-gauntlets/set-brightness.png)
 
 ```blocks
 music.setVolume(255)
@@ -116,7 +120,7 @@ input.onGesture(Gesture.TiltUp, function () {
 
 ## Test
 
-In the @boardname@ Simulator window, test your project by moving your mouse up and down on the @boardname@. You should see the lights turn on and off and the sounds play. 
+In the @boardname@ Simulator window, test your project by moving your mouse up and down on the @boardname@. You should see the lights turn on and off and hear sounds play. 
 
 ![Program in simulator](/static/cp/projects/wonder-woman-gauntlets/simulator.gif)
 
@@ -138,4 +142,4 @@ Using your computer’s file explorer, you should see the @boardname@ show up as
 
 ![CPLAYBOOT drive](/static/cp/projects/wonder-woman-gauntlets/cplayboot.png)
 
-That’s it! Congratulations on Making and Coding your very own Wonder Woman indestructible Gauntlets.
+That’s it! Congratulations on [Making](/projects/wonder-woman-gauntlets/make) and [Coding](#) your very own Wonder Woman indestructible Gauntlets.

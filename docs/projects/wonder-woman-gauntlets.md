@@ -2,13 +2,17 @@
 
 ![Wonder Woman Gauntlets](/static/cp/projects/wonder-woman-gauntlets/ww-bracers.png)
 
-The indestructible gauntlets that Wonder Woman wears to deflect bullets and other attacks are symbols of empowerment and strength. Make and code your own Wonder Woman gauntlets that light up and have sound – activated with the iconic arm cross. 
+### ~ avatar avatar
+
+The indestructible gauntlets that Wonder Woman wears to deflect bullets and other attacks are symbols of empowerment and strength. Make and code your own Wonder Woman gauntlets that light up and have sound – activated with the iconic arm cross.
+
+### ~
 
 ![Completed Wonder Woman Gauntlets project](/static/cp/projects/wonder-woman-gauntlets/final-project.jpg)
 
 ## Duration
 
-Approximately 45 minutes.
+Approximately 45 minutes: 25 minutes to make and 20 minutes to code.
 
 ## Materials 
 

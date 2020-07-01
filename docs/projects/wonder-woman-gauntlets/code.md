@@ -143,3 +143,5 @@ Using your computer’s file explorer, you should see the @boardname@ show up as
 ![CPLAYBOOT drive](/static/cp/projects/wonder-woman-gauntlets/cplayboot.png)
 
 That’s it! Congratulations on [Making](/projects/wonder-woman-gauntlets/make) and [Coding](#) your very own Wonder Woman indestructible Gauntlets.
+
+![Wonder Woman Gauntlets demonstration](/static/cp/projects/wonder-woman-gauntlets/bracers-demo.gif)

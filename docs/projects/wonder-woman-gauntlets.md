@@ -4,7 +4,7 @@
 
 ### ~ avatar avatar
 
-The indestructible gauntlets that Wonder Woman wears to deflect bullets and other attacks are symbols of empowerment and strength. Make and code your own Wonder Woman gauntlets that light up and have sound – activated with the iconic arm cross.
+The indestructible gauntlets that Wonder Woman wears to protect herself and others are symbols of empowerment and strength. Drawing inspiration from WONDER WOMAN 1984, coming to theaters, learn how to make and code your own gauntlets that light up and are sound activated with the iconic arm cross. This activity requires the purchase of certain items and is suitable for new learners of all ages.
 
 ### ~
 

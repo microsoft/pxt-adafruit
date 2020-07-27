@@ -1,6 +1,6 @@
 # Wonder Woman Gauntlets 
 
-![Wonder Woman Gauntlets](/static/cp/projects/wonder-woman-gauntlets/ww-bracers.png)
+![Wonder Woman Gauntlets](/static/cp/projects/wonder-woman-gauntlets/ww-bracers.jpg)
 
 ### ~ avatar avatar
 

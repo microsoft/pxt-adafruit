@@ -5,8 +5,6 @@
   "input.setLoudSoundThreshold|block": "set loud sound threshold %value",
   "input.soundLevel|block": "sound level",
   "input|block": "input",
-  "jacdac.microphoneService|block": "microphone service",
   "{id:category}Input": "Input",
-  "{id:category}Jacdac": "Jacdac",
   "{id:group}More": "More"
 }

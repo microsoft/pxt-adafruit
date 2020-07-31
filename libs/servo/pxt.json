@@ -1,3 +1,6 @@
 {
-    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/servo"
+    "additionalFilePath": "../../node_modules/pxt-common-packages/libs/servo",
+    "dependencies": {
+        "circuit-playground": "file:../circuit-playground"
+    }
 }

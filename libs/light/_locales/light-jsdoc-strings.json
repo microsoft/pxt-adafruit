@@ -1,7 +1,7 @@
 {
   "NeoPixelMode": "Different modes for RGB or RGB+W NeoPixel strips",
   "PhotonMode": "A determines the mode of the photon",
-  "light": "Functions to operate colored LEDs.\n\nFunctions to operate colored LEDs.",
+  "light": "Functions to operate colored LEDs.",
   "light.NeoPixelAnimation": "An animation of a NeoPixel",
   "light.NeoPixelAnimation.createRenderer": "Creates an animator instance",
   "light.NeoPixelAnimation.createRenderer|param|strip": "the strip to execute on",

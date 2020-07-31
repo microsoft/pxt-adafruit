@@ -7,7 +7,6 @@
   "servos.Servo.setRange|block": "set %servo range from %minAngle to %maxAngle",
   "servos.Servo.setStopOnNeutral|block": "set %servo stop on neutral %enabled",
   "servos.Servo.stop|block": "stop %servo",
-  "{id:category}Jacdac": "Jacdac",
   "{id:category}Servos": "Servos",
   "{id:group}Configuration": "Configuration",
   "{id:group}Continuous": "Continuous",

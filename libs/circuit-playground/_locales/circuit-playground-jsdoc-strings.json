@@ -18,7 +18,7 @@
   "input.touchA5": "Capacitive pin A5",
   "input.touchA6": "Capacitive pin A6",
   "input.touchA7": "Capacitive pin A7",
-  "light": "Functions to operate colored LEDs.\n\nFunctions to operate colored LEDs.",
+  "light": "Functions to operate colored LEDs.",
   "light.showRing": "Shows a pattern of colors on the pixel ring",
   "light.showRing|param|colors": "a string describing the colors, eg: \"red red red red red red red red red red\"",
   "light.showRing|param|interval": "the duration in milliseconds between frames, eg: 400"

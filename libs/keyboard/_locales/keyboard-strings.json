@@ -71,7 +71,6 @@
   "KeyboardModifierKey.ShiftAlt|block": "Shift+Alt",
   "KeyboardModifierKey.ShiftCommand|block": "Ctrl+Cmd",
   "KeyboardModifierKey.Shift|block": "Shift",
-  "jacdac.keyboardService|block": "keyboard service",
   "keyboard.clearAllKeys|block": "keyboard clear all",
   "keyboard.functionKey|block": "keyboard function %key|%event",
   "keyboard.key|block": "keyboard key %key|%event",
@@ -79,6 +78,5 @@
   "keyboard.modifierKey|block": "keyboard modifier %key|%event",
   "keyboard.type|block": "keyboard type $text||with $modifiers",
   "keyboard|block": "keyboard",
-  "{id:category}Jacdac": "Jacdac",
   "{id:category}Keyboard": "Keyboard"
 }

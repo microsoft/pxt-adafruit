@@ -41,6 +41,16 @@
         "name": "Behind the MakeCode Hardware",
         "url": "/behind-the-makecode-hardware",
         "imageUrl": "/static/cp/behindhardware/neopixels.jpg"
+    },
+    {
+        "name": "MakeCode in the Kitchen",
+        "url": "/kitchen",
+        "imageUrl": "/static/kitchen/Q_wt7VoApFY.jpg"
+    },
+    {
+        "name": "MAKE'ayla",
+        "url": "/make-ayla",
+        "imageUrl": "/static/make-ayla/sGXVRB1l2BA.jpg"
     }
 ]
 ```
@@ -54,5 +64,7 @@
 [Create and Have Fun](/creative-fun),
 [Courses](/courses),
 [learn.adafruit.com](/learnsystem),
-[Behind the MakeCode Hardware](/behind-the-makecode-hardware)
+[Behind the MakeCode Hardware](/behind-the-makecode-hardware),
+[MakeCode in the Kitchen](/kitchen),
+[MAKE'ayla](/make-ayla)
 

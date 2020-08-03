@@ -22,7 +22,9 @@
         "Create and Have Fun": "creative-fun",
         "Courses": "courses",
         "learn.adafruit.com": "learnsystem",
-        "Behind the MakeCode Hardware": "behind-the-makecode-hardware"
+        "Behind the MakeCode Hardware": "behind-the-makecode-hardware",
+        "MakeCode in the Kitchen": "kitchen",
+        "MAKE'ayla": "make-ayla"
     },
     "firmwareUrls": {
         "adafruit-circuit-playground-express": "https://learn.adafruit.com/adafruit-circuit-playground-express/adafruit2-uf2-bootloader-details#updating-the-bootloader"

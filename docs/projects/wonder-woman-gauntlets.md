@@ -18,9 +18,9 @@ Approximately 45 minutes: 25 minutes to make and 20 minutes to code.
 
 ![Project materials](/static/cp/projects/wonder-woman-gauntlets/materials.jpg)
 
-* Circuit Playground Express Base Kit – https://www.adafruit.com/product/3517
-* 2 sheets of gold metallic cardstock paper – i.e. https://www.amazon.com/Cardstock-Stationary-Printable-Scrapbook-Invitations/dp/B07WCQS1NT
-* 6 sets of velcro tabs (3 pairs for each gauntlet) – i.e. https://www.amazon.com/VELCRO-Brand-Sticky-Fasteners-Perfect/dp/B000TGUOCO
+* Circuit Playground Express Base Kit - https://www.adafruit.com/product/3517
+* 2 sheets of gold metallic cardstock paper - i.e. https://www.amazon.com/Cardstock-Stationary-Printable-Scrapbook-Invitations/dp/B07WCQS1NT
+* 6 sets of velcro tabs (3 pairs for each gauntlet) - i.e. https://www.amazon.com/VELCRO-Brand-Sticky-Fasteners-Perfect/dp/B000TGUOCO
 * Scissors
 * Tape
 * Pen/Pencil

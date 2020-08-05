@@ -22,7 +22,7 @@ Make your Gauntlets and power them with the @boardname@.
 
 ## Fit the Gauntlets
 
-* You may need help with this part – wrap the gauntlets around your forearms to fit to your size. Use a pen or pencil to mark where you should place the Velcro tabs. You may also want to cut down the length of the gauntlets to size.
+* You may need help with this part - wrap the gauntlets around your forearms to fit to your size. Use a pen or pencil to mark where you should place the Velcro tabs. You may also want to cut down the length of the gauntlets to size.
 
 ![Fit gauntlet to your size](/static/cp/projects/wonder-woman-gauntlets/fit.jpg)
 
@@ -61,7 +61,7 @@ Make your Gauntlets and power them with the @boardname@.
 
 ![Tape on the battery pack](/static/cp/projects/wonder-woman-gauntlets/tape-battery-pack.jpg)
 
-Congratulations! You’ve successfully constructed your very own indestructible gauntlets! Now you’re ready to move to programming your gauntlets...
+Congratulations! You've successfully constructed your very own indestructible gauntlets! Now you're ready to move to programming your gauntlets...
 
 ### ~button /projects/wonder-woman-gauntlets/code
 

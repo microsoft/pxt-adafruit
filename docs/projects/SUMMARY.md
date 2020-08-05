@@ -22,7 +22,7 @@
   * [Dandelion](/projects/dandelion)
   * [Watch Timer](/projects/watch-timer)
   * [Magic Wand](/projects/magic-wand)
-  * [Wonder Woman Gauntlets](/projects/wonder-woman-gauntlets)
+  * [Legendary Gauntlets](/projects/wonder-woman-gauntlets)
   * [Headlamp](/projects/headlamp)
   * [Energy glove](/examples/energy-glove)
   * [Beaded Necklace](/projects/beaded-necklace)

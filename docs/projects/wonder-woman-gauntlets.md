@@ -1,4 +1,4 @@
-# Wonder Woman Gauntlets 
+# Legendary Gauntlets inspired by WONDER WOMAN 1984
 
 ![Wonder Woman Gauntlets](/static/cp/projects/wonder-woman-gauntlets/ww-bracers.jpg)
 
@@ -35,3 +35,6 @@ Approximately 45 minutes: 25 minutes to make and 20 minutes to code.
 Let's get started!
 
 ### ~
+
+<br/>
+WONDER WOMAN 1984 TM & © DC and WBEI. RATED PG-13

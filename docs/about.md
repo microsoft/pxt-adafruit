@@ -10,9 +10,9 @@ Check out the awesome hardware spec at **[Adafruit.com](https://www.adafruit.com
 
 ### ~ alert
 
-#### There are two Circuit Playground boards
+#### There are three Circuit Playground boards
 
-Heads up! This editor only works for the Circuit Playground **Express**, not the **Classic**.
+Heads up! This editor only works for the Circuit Playground **Express**, not the **Classic** or **Bluefruit**.
 
 ### ~
 

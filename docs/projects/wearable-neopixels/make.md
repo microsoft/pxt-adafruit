@@ -48,7 +48,7 @@ When you have drawn a plan that seems promising, test it with alligator clip wir
 
 ## Sew on @boardname@
 
-Using traditional thread, secure the @boardname@ to your material. Use some of the pin tabs that you won’t need for the conductive thread. Be sure to orient your @boardname@ so that the JST battery connection port is oriented toward where you plan to keep the battery. Also be sure to leave access to the micro USB port so that you can change your code if needed. This port can sometimes catch finer material like tulle, but a small piece of masking or packing tape solves the problem. 
+Using traditional thread, secure the @boardname@ to your material. Use some of the pin tabs that you won’t need for the conductive thread. Be sure to align your @boardname@ so that the JST battery connection port is oriented toward where you plan to keep the battery. Also be sure to leave access to the micro USB port so that you can change your code if needed. This port can sometimes catch finer material like tulle, but a small piece of masking or packing tape solves the problem. 
 
 ![Sew on Circuit Playground through pin the port holes](/static/cp/projects/wearable-neopixels/cpx-sewn-on.jpg)
 

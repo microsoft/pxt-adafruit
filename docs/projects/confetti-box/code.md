@@ -107,4 +107,4 @@ forever(function () {
 
 ## Good work!
 
-You’ve finished! Fill your box with confetti, tissue paper, or another light-weight material. Then, hang it on a door or window and wait for your unsuspecting victim to enter. When they do, clap loudly and watch as confetti spills down onto them. PRANKED!
+You’ve finished! Fill your box with confetti, tissue paper, or another light-weight material. Then, place it above a door or window and wait for your unsuspecting victim to enter. When they do, clap loudly and watch as confetti spills down onto them. PRANKED!

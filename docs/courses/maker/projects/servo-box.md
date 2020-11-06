@@ -54,7 +54,7 @@ There are three kinds of motion you can choose from here:
 
 1. Hot glue a servo horn to the end of a popsicle stick, taking care to not get glue in the large hole that mounts to the servo itself.
 2. Attach the servo horn with popsicle stick to the servo motor.
-3. Orient the servo motor so that that the long, flat sides are parallel to the floor. Then, find the two extremes of the range of motion.Detach the popsicle stick and servo horn when they are at one extreme, then reattach so that the popsicle stick is also parallel to the floor. Getting it oriented this way will make coding the motion of the stick much easier later.
+3. Place the servo motor so that that the long, flat sides are parallel to the floor. Then, find the two extremes of the range of motion.Detach the popsicle stick and servo horn when they are at one extreme, then reattach so that the popsicle stick is also parallel to the floor. Getting it oriented this way will make coding the motion of the stick much easier later.
 4. Cover the servo motor body in masking tape.
 5. Cut a slot in the top of the box for the popsicle stick to travel through that is at least 2” long and ¼” wide. If the slot is too short, the popsicle stick will always stick out of the box; if the slot is the entire length of the popsicle stick (plus whatever you plan to mount on it), then the stick will disappear at 0 and 180 degrees. This slot can be anywhere you want on the box.
 
@@ -75,7 +75,7 @@ There are three kinds of motion you can choose from here:
 ![Two vertical rocker arms](/static/courses/maker/projects/servo-box/servo-box-making3.jpg)
 
 5. Hot glue a servo horn to the middle of the center popsicle stick rocker arm (the stick with two holes). Be sure to avoid getting glue in the center hole of the servo horn.
-6. Attach the center arm popsicle stick to a servo motor. Take your 180-degree servo motor and orient the popsicle stick so that that the long, flat sides are parallel to the floor. Then, find the two extremes of the range of motion. Detach the popsicle stick and servo horn when they are at one extreme, then reattach so that the popsicle stick is perpendicular to the floor. Getting it oriented this way will make coding the motion of the stick much easier later because you know that 90 degrees is about parallel to the floor. Here’s a helpful video on how to do this:
+6. Attach the center arm popsicle stick to a servo motor. Take your 180-degree servo motor and set the popsicle stick so that that the long, flat sides are parallel to the floor. Then, find the two extremes of the range of motion. Detach the popsicle stick and servo horn when they are at one extreme, then reattach so that the popsicle stick is perpendicular to the floor. Getting it oriented this way will make coding the motion of the stick much easier later because you know that 90 degrees is about parallel to the floor. Here’s a helpful video on how to do this:
 <br/><br/>
 https://youtu.be/H-YO3BVmEWI
 <br/>

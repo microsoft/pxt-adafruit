@@ -63,7 +63,7 @@ Cut a strip of paper that is approximately 2.5 x 9.5 inches.
 
 Fold 3 inches of the paper from the short side in.
 
-Using scissors, on the fold, cut a half circle to a half oval. This creates a hole for your thumb so that you can wear this as a hand strap!
+Using scissors, on the fold, cut a half circle to a half oval. This creates an opening for your thumb so that you can wear this as a hand strap!
 
 https://youtu.be/CSulW-kwP8s    
 <br/>

@@ -112,7 +112,7 @@ pins.A1.onEvent(PinEvent.PulseHigh, function () {
 
 A pulse can also be used to encode a value. If a pin is expecting a pulse input to happen at a regular interval, the width of the pulse can change to be a fraction of the interval time. This fraction, or ratio, represents a percentage of the total interval time. If the an interval is 100 milliseconds, a pulse width of 40 milliseconds is 40% of the interval. If the pulse width changes, different ratios are input and can represent different values. This type of signalling is used for _pulse width modulation (pwm)_.
 
-## Edge events
+## Signal edge events
 
 A pulse event has a duration which my last too long to properly signal a new level change if data inputs are happening rapidly. Instead of waiting for a full pulse to occur before the pin event happens, you can have an event for _edge detection_. An edge event happens when there is just a change the in input level. This type of signal was shown in the diagram for [Triggers](/learnsystem/pins-tutorial/digital-input/pin-events#triggers). If the pin input is changing from low to high, the input is _rising_. When the input level is going from high to low then the input is _falling_. The events for these are called edge events because they happen at the edge of the signal pattern when shown on a diagram.
 

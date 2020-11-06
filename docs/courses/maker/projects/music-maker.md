@@ -56,7 +56,7 @@ The making of this project can range from the fairly simple to the very complex.
 
 Be sure to plan for power and USB connectivity of your Circuit Playground Express. In this example, just below the cork, a small hole will accommodate the JST battery pack connector.
 
-![A hole cut for the battery cable below the cork](/static/courses/maker/projects/music-maker/music-making2.jpg)
+![Hole cut for the battery cable below the cork](/static/courses/maker/projects/music-maker/music-making2.jpg)
 
 Copper tape is a bit tricky to work with. Only unpeel a few inches at a time to prevent it from sticking to itself. When you want to make a turn, first fold it back in the opposite direction of where you want to go. See the [Maker Tools and Techniques](/courses/maker/general/maker-tools-techniques) chapter for more tips and tricks.
 

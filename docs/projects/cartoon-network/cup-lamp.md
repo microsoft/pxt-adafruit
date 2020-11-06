@@ -59,7 +59,7 @@ Tape the sides of the paper so they will stay together.
 
 ![Sides of layers taped together](/static/cp/projects/cartoon-network/cup-lamp/make4.jpg)
 
-### Step 4: Cut out a hole in the paper cup
+### Step 4: Cut out hole in the paper cup
 
 Cut a rectangular opening in the side of the coffee cup approximately 3 inches wide.
 

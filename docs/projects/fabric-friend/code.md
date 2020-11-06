@@ -182,7 +182,7 @@ forever(function () {
 
 ### Make some facial expressions
 
-Finally, it’s time to make facial expressions for each of the Fabric Friend’s states of mind. Be sure to pay attention to where the mini USB port and the JST battery connector are on the simulator so you can orient your smiles, frowns, etc. correctly. 
+Finally, it’s time to make facial expressions for each of the Fabric Friend’s states of mind. Be sure to pay attention to where the mini USB port and the JST battery connector are on the simulator so you can align your smiles, frowns, etc. correctly. 
 
 ```blocks
 let Hunger = 0

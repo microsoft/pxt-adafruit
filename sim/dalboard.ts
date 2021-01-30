@@ -49,7 +49,8 @@ namespace pxsim {
         TemperatureBoard,
         InfraredBoard,
         CapTouchBoard,
-        StorageBoard {
+        StorageBoard,
+        ControlMessageBoard {
         // state & update logic for component services
         _neopixelState: pxt.Map<CommonNeoPixelState>;
         buttonState: CommonButtonState;
@@ -65,6 +66,7 @@ namespace pxsim {
         touchButtonState: TouchButtonState;
         irState: InfraredState;
         storageState: StorageState;
+        controlMessageState: ControlMessageState;
 
         invertAccelerometerYAxis = true;
 
@@ -81,6 +83,7 @@ namespace pxsim {
 
             //components
             this.storageState = new StorageState();
+            this.controlMessageState = new ControlMessageState(this);
             this.builtinParts["neopixel"] = this.neopixelState(CPlayPinName.D8);
             this.builtinParts["buttonpair"] = this.buttonState = new CommonButtonState();
 

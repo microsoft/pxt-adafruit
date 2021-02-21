@@ -137,7 +137,7 @@ namespace pxsim {
                 pxsim.CPlayPinName.A7
             ]);
 
-            this.builtinParts["ir"] = this.irState = new InfraredState();
+            this.builtinParts["ir"] = this.irState = new InfraredState(this);
         }
 
         receiveMessage(msg: SimulatorMessage) {

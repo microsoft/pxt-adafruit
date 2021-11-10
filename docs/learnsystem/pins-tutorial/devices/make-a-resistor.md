@@ -6,7 +6,7 @@ To test out the pins on the @boardname@ we'll make our own carbon graphite resis
 
 ## Resistors
 
-A resistor is an electical component that controls the "flow" of current in a circuit. Think of it like a faucet that controls the flow of water so that just the right amount comes out. Many resistors are made from carbon because it has a moderate amount of conductivity. Resistors are manufactured with different amounts of resistance. Some have a fixed amount of resistance and others have a variable amount. A variable resister is also called a _potentiometer_.
+A resistor is an electrical component that controls the "flow" of current in a circuit. Think of it like a faucet that controls the flow of water so that just the right amount comes out. Many resistors are made from carbon because it has a moderate amount of conductivity. Resistors are manufactured with different amounts of resistance. Some have a fixed amount of resistance and others have a variable amount. A variable resistor is also called a _potentiometer_.
 
 Resistance is measured in units of _ohms_. Perhaps you've heard of Ohm's Law:
 

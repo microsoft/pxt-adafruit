@@ -4,7 +4,7 @@
 
 ## ~ avatar avatar 
 
-Program the @boardname@ to make is show a nice blue glow and play Twinkle Twinkle Little Star!
+Program the @boardname@ to make it show a nice blue glow and play Twinkle Twinkle Little Star!
 
 ## ~
 

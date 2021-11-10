@@ -1,6 +1,6 @@
 # Energy glove
 
-Track you hand motions with the @boardname@.
+Track your hand motions with the @boardname@.
 
 ```blocks
 let item = 0

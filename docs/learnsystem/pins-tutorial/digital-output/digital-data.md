@@ -181,7 +181,7 @@ forever(function () {
 
 It's not necessary to use a separate pin to transfer each bit of a digital number. Each bit of a number can be written out on one pin in a sequence. Once all of the bits of one number are written, the bits of the next number are written in a sequence too. The receiving device needs to properly assemble the bits to form a value. It also needs to know how many bits each number will have so it can start to assemble the next number. This method of sending and receiving data is call _serial data_ transfer.
 
-In the following diagram several 3 bit numbers are written in series on the **A2** pin. The red numbers show what the binary digital numbers are in dedimal.
+In the following diagram several 3 bit numbers are written in series on the **A2** pin. The red numbers show what the binary digital numbers are in decimal.
 
 ![Three bit serial data](/static/cp/learn/pins-tutorial/digital-output/three-bit-serial.jpg)
 

@@ -6,7 +6,7 @@
 
 In order for a ``||input:on touch||`` event to detect a touch properly, the untouched pin's [sense value](#sense-value) is set as the touch [threshold](#threshold) for the sensor connected to it. A _threshold_ is a value, that when reached, will cause something to happen. Depending on what is connected to the pin, either nothing or some larger object, the pin will read sense value based on the amount of [capacitance](/learnsystem/pins-tutorial/devices/capacitors) measured at the pin. This is, of course, a different value when the pin or sensor object is touched and untouched.
 
-To properly detect a touch, the sense level the untouched case must be known. A sense level for a touch will be somewhat greater than the untouched level. When a program is started, the pins set for touch events are calibrated for the untouched sense levels. This is brief process where the pin input is read several times to find a reasonable value of sense level for when the pin, or something connected to it is untouched.
+To properly detect a touch, the sense level measurement of the sensor when it's not touched must be known first. A sense level for a touch will be somewhat greater than the untouched level. When a program is started, the pins set for touch events are calibrated for the untouched sense levels. This is brief process where the pin input is read several times to find a reasonable value of sense level for when the pin, or something connected to it is untouched.
 
 Calibration automatically sets a threshold (the minimum sense value) for what is considered as a touch. You may need to recalibrate your touch input if there is a change of sensor or in the environment. If you connect a different sensor object to a pin without restarting your program, your touch event may indicate a touch when there isn't one or it may never detect a touch at all. Also, if the temperature or humidity changes significantly, the electrical characteristics of a sensor might change. You may observe over time that it might detect a touch before your finger reaches it, being too sensitive, or that you have to press on the object more firmly, for a longer time before the touch is detected.
 
@@ -178,7 +178,7 @@ forever(function () {
 
 ---
 
-Sometimes multiple sensors or are used to generate one input action. This is case when detecting the direction of motion with a hand or finger swipe.
+Sometimes multiple sensors are used to generate one input action. This is case when detecting the direction of motion with a hand or finger swipe.
 
 **Setup**:
 

@@ -6,7 +6,7 @@ Make your @boardname@ a hot potato
 
 ## ~
 
-Let's build some code for animation and music in the @boardname@ which is, of course, our hot potato. We'll make it work so that when the animation the player holding the hot potato is **out!!!**.
+Let's build some code for animation and music in the @boardname@ which is, of course, our hot potato. We'll make it work so that when the animation stops the player holding the hot potato is **out!!!**.
 
 ## Duration: ~45 minutes
 

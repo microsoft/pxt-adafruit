@@ -43,7 +43,7 @@ Using the hot glue gun, attach the two flaps onto the wristband. Leave the batte
 
 https://youtu.be/3YSteLHGrRY
 <br/>
-If you have any scrap cardboard left, cut a small rectangle out so you can glue it to the bottom of your folded cardboard. Here's a video demonstrating what we did that!
+If you have any scrap cardboard left, cut a small rectangle out so you can glue it to the bottom of your folded cardboard. Here's a video demonstrating how we did that!
 
 ![Bottom Cardboard](/static/cp/projects/reaction/bottom-cardboard.jpg)
 

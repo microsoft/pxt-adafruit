@@ -24,7 +24,7 @@ jobs:
           npm install
       - name: pxt ci
         run: |
-          pxt ci
+          node node_modules/pxt-core/built/pxt.js travis
         env:
           CHROME_BIN: chromium-browser
           DISPLAY: :99.0

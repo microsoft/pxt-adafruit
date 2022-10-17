@@ -46,7 +46,7 @@ Note any items that are damaged, not working, or missing (including consumables)
 
 #### Get Help #get-help
 
-For any questions contact [Kristie Morris](v-kmorris@microsoft.com)
+For any questions contact [dc-stem@microsoft.com](mailto:dc-stem@microsoft.com).
 
 ## Appendix #appendix
 

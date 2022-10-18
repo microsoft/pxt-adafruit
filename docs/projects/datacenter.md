@@ -6,5 +6,14 @@ Experiments and activities in datacenter operations and control using the @board
 
 ## Lessons
 
-* [CPX On/Off](/projects/datacenter/cpx-circuit-on-off)
-* [CPX Redundcancy](/projects/datacenter/cpx-redundancy)
+```codecard
+[{
+  "name": "CPX On/Off",
+  "description": "Power the CPX on and off",
+  "url":"/projects/datacenter/cpx-circuit-on-off"
+}, {
+  "name": "CPX Redundcancy",
+  "description": "Experiment with datacenter redundancy using the CPX",
+   "url":"/projects/datacenter/cpx-redundancy"
+}]
+```

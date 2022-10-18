@@ -24,7 +24,7 @@ Read through [Source 1](#source-1) below. When you are ready, move the image (So
 
 ### Get Ready
 
-* Prep the CPX: Connect the USB-A/MicroUSB cable to the computer USB port.  Connect the MicroUSB end to the CPX.  Press the reset button twice, like a double-click. A CPLAYBOOT drive should appear.  Use the information in Program 1 to add the bootloader to the CPX as in Source 2.
+* Prep the CPX: Connect the USB-A/MicroUSB cable to the computer USB port.  Connect the MicroUSB end to the CPX.  Press the reset button twice, like a double-click. A CPLAYBOOT drive should appear.  Use the information in Program 1 to add the bootloader to the CPX as in [Source 2](#source-2).
 * Power the CPX: Insert the batteries into the battery pack. Connect the battery pack to the CPX. Power on the battery pack.
 
 ### Go
@@ -66,7 +66,7 @@ Note: RX = Receive, TX = Transmit, GND = Ground.
 ![Connect the circuits](/static/cp/projects/datacenter/cpx-redundancy/cpx-connect-circuits.jpg)
 
 Once the 'customer' sends the data to the Datacenters A and B
-(The customer receives the intensity of the light source and transmits that signal to be displayed on each of the other two datacenters.)  Here the light signal is brightest showing all 10 LEDs lit.  However, this is not an indication of the strength of the connection to the data center.  Redundancy is a more important concept to deliver.  The signal is duplicated (redundant) between the two datacenters.
+(The customer receives the intensity of the light source and transmits that signal to be displayed on each of the other two datacenters.)  Here the light signal is brightest showing all 10 LEDs lit.  However, this is not an indication of the strength of the connection to the data center. Redundancy is a more important concept to deliver.  The signal is duplicated (redundant) between the two datacenters.
 
 ![Redundant connection](/static/cp/projects/datacenter/cpx-redundancy/cpx-redundant.jpg)
 
@@ -88,7 +88,7 @@ This lab demonstrates light signals as a method demonstrate redundancy between d
 
 ### Details:
 
-The term redundancy may need to be explained.  A good start may be to ask the audience to define redundancy.  Note that Microsoft Datacenters have triple redundancy.
+The term redundancy may need to be explained. A good start may be to ask the audience to define redundancy.  Note that Microsoft Datacenters have triple redundancy.
 
 ### ~ hint
 
@@ -110,7 +110,7 @@ It is easier to explain if using the same color cables to go out from the Custom
 
 ### Source 1 #source-1
 
-The Adafruit Circuit Playground Express (CPX) is a microcontroller with more power, storage space, and RAM than a 386 Intel Computer.  It includes temperature, light, sound, and accelerometer sensors, 10 built in LEDS, speaker, two push buttons, one slide switch, IR receiver and transmitter, 8 analog inputs, power output, 7 capacitive touch inputs, green "ON" LED, reset button, ATSAMD21 ARM Cortex M0 Processor, 2 MB of SPI Flash storage, and a Micro USB port for programming and debugging.
+The Adafruit Circuit Playground Express (CPX) is a microcontroller with more power, storage space, and RAM than a 386 Intel Computer. It includes temperature, light, sound, and accelerometer sensors, 10 built in LEDS, speaker, two push buttons, one slide switch, IR receiver and transmitter, 8 analog inputs, power output, 7 capacitive touch inputs, green "ON" LED, reset button, ATSAMD21 ARM Cortex M0 Processor, 2 MB of SPI Flash storage, and a Micro USB port for programming and debugging.
 
 Source:
 
@@ -123,15 +123,19 @@ There are three ways to program the CPX:
 2. CircuitPython
 3. Arduino
 
-This program was created with makecode.adafruit.com.  Makecode is a Microsoft product that allows for block style coding. The program written for this STEM activity is located below in Program 1.
+This program was created with makecode.adafruit.com. Makecode is a Microsoft product that allows for block style coding. The program written for this STEM activity is located below in [Program 1](#program-1).
 
-When the CPX is first connected to a computer with the USB cable, it will run the program that is stored on the device. This may not be the program that you desire to run. Follow the procedure in Source 3 to reset the CPX to the factory settings. The CPX will hold the program and not reset to factory settings upon power off.
+When the CPX is first connected to a computer with the USB cable, it will run the program that is stored on the device. This may not be the program that you desire to run. Follow the procedure in [Source 3](#source-3) to reset the CPX to the factory settings. The CPX will hold the program and not reset to factory settings upon power off.
 
 ### Source 2 #source-2
 
-To create this program, open https://learn.adafruit.com/uart-communication-between-two-circuitpython-boards/code. Scroll down on the page and select **Download Project Bundle**.
+To create this program, open the [Code](https://learn.adafruit.com/uart-communication-between-two-circuitpython-boards/code) page for the project. Scroll down the page to find the **Download Project Bundle** button.
 
-![*Download project bundle](/static/cp/projects/datacenter/cpx-redundancy/project-bundle.jpg)
+![Download button](/static/cp/projects/datacenter/cpx-redundancy/project-bundle-button.jpg)
+
+Click the button to start the download.
+
+![Download project bundle](/static/cp/projects/datacenter/cpx-redundancy/project-bundle.jpg)
 
 To move the program to the CPX:
 
@@ -147,45 +151,48 @@ To move the program to the CPX:
 * The CPX lights will flash, then reset and the CPLAYBOOT drive will disappear from the drive list.
 * The CPX will now appear as a folder called **CPYTHON**
 
-Rename the code.py file in CPYTHON to oldcode.py
-Copy the code.py file from UART-Between-Boards/CircuitPython 7.x  (This will be part of the downloaded project bundle form the top of the page.)
-Paste the code.py file into the CPYTHON directory on the CPX
+Move the files:
 
-Open the UART-Between-BOARDS/CircuitPython 7.x/lib
-Copy the two py files (adafruit_pixelbuf.mpy and neopixel.mpy)
-Paste the files in the CPYTHON/lib folder
+* Rename the code.py file in CPYTHON to oldcode.py
+* Copy the code.py file from UART-Between-Boards/CircuitPython 7.x  (This will be part of the downloaded project bundle form the top of the page.)
+* Paste the code.py file into the CPYTHON directory on the CPX
+* Open the UART-Between-BOARDS/CircuitPython 7.x/lib
+* Copy the two py files (adafruit_pixelbuf.mpy and neopixel.mpy)
+* Paste the files into the CPYTHON/lib folder
 
-Press the reset button on the CPX.
-If there is 1-2 green solid lit LEDs on the CPX, the CPX is now ready with the installed program.
+To test the program:
+
+* Press the reset button on the CPX
+* If there is 1-2 green solid lit LEDs on the CPX, the CPX is now ready with the installed program
 
 To troubleshoot the CPX device and program:
 
 1. Check the batteries
-2. Press reset button 1 time.  This will reset the device, like a computer reboot/restart.
+2. Press reset button 1 time. This will reset the device, like a computer reboot/restart.
 3. Follow steps in Source 1 to download the program to the CPX device.
-4. Try another device and see if the problem repeats.  If it repeats check program in Source 1 and 2 to install the program again.
-5. Follow the procedure in Source 3 below to reset to factory settings.  Then repeat the procedure to install the Redundancy program.
+4. Try another device and see if the problem repeats. If it repeats check program in Source 1 and 2 to install the program again.
+5. Follow the procedure in Source 3 below to reset to factory settings. Then repeat the procedure to install the Redundancy program.
 
 ### Source 3 #source-3
 
 Download the original CPX bootloader, navigate to UF2 Bootloader Details | Adafruit Feather M0 Express | Adafruit Learning System (https://learn.adafruit.com/adafruit-feather-m0-express-designed-for-circuit-python-circuitpython/uf2-bootloader-details). Scroll to the bottom of the page and click on the green rectangle, with Circuit Playground Express V#.#.# update-bootloader.uf2. 
-Click on the link (make sure it is for the Circuit Playground Express).  The file will download.
+Click on the link (make sure it is for the Circuit Playground Express). The file will download.
 
 To move the bootloader to the CPX:
 
 * Plug in the CPX via the USB/Micro USB cable
-* Press the reset button twice on the CPX.
+* Press the reset button twice on the CPX
 * All Pixel LED lights will turn on / solid green
 * The on small LED will turn on / solid green
 * D13 small LED will slowly blink red
 * A folder will appear as CPLAYBOOT (This will be very similar to a USB thumb drive in function)
-* Copy the saved UF2 file (from the above procedure) and paste it on the CPLAYBOOT root drive.
-* The CPX lights will flash, then reset and the CPLAYBOOT drive will disappear from the drive list.
-* The CPX is now ready with the original bootloader.
+* Copy the saved UF2 file (from the above procedure) and paste it on the CPLAYBOOT root drive
+* The CPX lights will flash, then reset and the CPLAYBOOT drive will disappear from the drive list
+* The CPX is now ready with the original bootloader
 
 ### Program 1 #program-1
 
-To create this program, open Code | UART Communication Between Two CircuitPython Boards | Adafruit Learning System.  Follow the instructions located at the link here.  Program the CPX as listed in Source 1.
+To create this program, open Code | UART Communication Between Two CircuitPython Boards | Adafruit Learning System. Follow the instructions located at the link here. Program the CPX as listed in [Source 1](#source-1).
 
-Continue with the procedure in Source 1 to program the CPX with Circuit Python.
+Continue with the procedure in [Source 1](#source-1) to program the CPX with Circuit Python.
 

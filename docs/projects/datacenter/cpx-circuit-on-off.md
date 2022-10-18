@@ -12,21 +12,23 @@ Statement of Work Template intended for Datacenter Volunteer Lead Community Enga
 * 2 MiniGrabber cables
 * Data/Sync USB Cable
 
-## Before
+## Action Plan
+
+### Before
 
 Test the equipment Start Procedure below and note any failures or missing items as described in After Procedure below. For help, use the Get Help information below.  Internet access will be required to download the CPX program.
 
-## Start 
+### Start 
 
 Read through [Source 1](#source-1) below. When you are ready, move the image ([Source 2](#source-2)) to the CPX.  Use instructions located here: [Source 2](#source-2). Test the program.
 
-## Get Ready
+### Get Ready
 
 **Prep the CPX:** Connect the USB-A/MicroUSB cable to the computer USB port. Connect the MicroUSB end to the CPX.  Press the reset button twice, like a double-click. A **CPLAYBOOT** drive should appear.  Use the information in [Program 1](#program-1) to add the bootloader to the CPX as in [Source 2](#source-2).
 
 **Power the CPX:** Insert the batteries into the battery pack.  Connect the battery pack to the CPX. Power on the battery pack.
 
-## Go
+### Go
 
 This program contains three elements:
 
@@ -36,11 +38,11 @@ This program contains three elements:
 
 See [Appendix](#appendix) for Details. Use the [Lesson](#lesson) information to explain the lab to relatable concepts at the Datacenter.
 
-## After
+### After
 
 Note any items that are damaged, not working, or missing (including consumables) as noted in [Get Help](#get-help) below.
 
-## Source
+### Source
 
 1. The program utilizes a simple code in MakeCode. See [Program 1](#program-1) below for programming details.
 
@@ -104,19 +106,21 @@ To **create this program**, open makecode.adafruit.com. Select New Project. Add 
 	
 To **move the program** to the CPX:
 
-Plug in the CPX via the USB/Micro USB cable.
-Press the reset button twice on the CPX.
-All Pixel LED lights will turn on / solid green
-The on small LED will turn on / solid green
-D13 small LED will slowly blink red
-A folder will appear as **CPLAYBOOT**.
-This will be very similar to a USB thumb drive in function.
-Copy the saved UF2 file from the Intrusion folder and paste it on the CPLAYBOOT root drive.
-The CPX lights will flash, then reset and the CPLAYBOOT drive will disappear from the drive list.
-The program is now installed
+* Plug in the CPX via the USB/Micro USB cable
+* Press the reset button twice on the CPX
+* All Pixel LED lights will turn on / solid green
+* The on small LED will turn on / solid green
+* D13 small LED will slowly blink red
+* A folder will appear as **CPLAYBOOT**
+* This will be very similar to a USB thumb drive in function.
+* Copy the saved UF2 file from the Intrusion folder and paste it on the CPLAYBOOT root drive
+* The CPX lights will flash, then reset and the CPLAYBOOT drive will disappear from the drive list
+* The program is now installed
 
-Press the reset button on the CPX.
-Once the Circuit Playground Express (CPX) is connected, without MiniGrabbers attached, all LEDs will display blue. 
+To test the program:
+
+* Press the reset button on the CPX
+* Once the Circuit Playground Express (CPX) is connected, without MiniGrabbers attached, all LEDs will display blue
 
 To **troubleshoot** the CPX device and program:
 
@@ -139,7 +143,7 @@ To **move the bootloader** to the CPX:
 5. D13 small LED will slowly blink red
 6. A folder will appear as CPLAYBOOT (This will be very similar to a USB thumb drive in function).
 7. Copy the saved UF2 file (from the above procedure) and paste it on the CPLAYBOOT root drive.
-8. The CPX lights will flash, then reset and the CPLAYBOOT drive will disappear from the drive list.
+8. The CPX lights will flash, then reset and the CPLAYBOOT drive will disappear from the drive list
 
 The CPX is now ready with the original bootloader.
 

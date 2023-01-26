@@ -10,7 +10,7 @@ Information is often communicated between digital circuits using _pulses_. A pul
 
 Data is transmitted between digital circuits using changes between high and low voltage levels. A change to high can mean a signal for the value of `1`. The change down to low can mean a signal for the value of `0`. One of these signals, a pulse, can represent a binary digit, or _bit_. Combining several digital signals will form a binary number which can represent some type of data, such as a [number](/types/number) or [text character](/types/string).
 
-In the diagram below, a pulse is created every 4 microseconds to signal a binary digit. If the value of the **A1** pin is read repeatedly at the proper time, a binary number can be assembled. Here, the first digit is a `1`, the second a `0`, and then `1` and another `1`. Together they form the binary number `1101` when each bit received is the next greater digit of the number. This is a 4 bit number is which equals `13` in decimal. 
+In the diagram below, a pulse is created every 4 microseconds to signal a binary digit. If the value of the **A1** pin is read repeatedly at the proper time, a binary number can be assembled. Here, the first digit is a `1`, the second a `0`, and then `1` and another `1`. Together they form the binary number `1101` when each bit received is the next greater digit of the number. This is a 4 bit number is which is equivalent to `13` in decimal. 
 
 ![Pulsed data signal](/static/cp/learn/pins-tutorial/digital-input/pulsed-signal.jpg)
 
@@ -60,7 +60,7 @@ The ``||pins:on pin pulse high||`` event occurs when the pin input changes to th
 ![Pin pulse high event diagram](/static/cp/learn/pins-tutorial/digital-input/pin-event-high.jpg)
 
 
-Let's say that our @boardname@ is connected to an anemometer, a device to that measures wind speed. The anenometer signals one pulse every time that its cup wheel spins for one rotation. The diameter of the anemometer cup wheel is `10` centmeters. We can calculate the current revolutions per minute (RPM) of the anemometer by counting the number of rotations for some amount of time.
+Let's say that our @boardname@ is connected to an anemometer, a device to that measures wind speed. The anenometer signals one pulse every time that its cup wheel spins for one rotation. The diameter of the anemometer cup wheel is `10` centimeters. We can calculate the current revolutions per minute (RPM) of the anemometer by counting the number of rotations for some amount of time.
 
 ```blocks
 let windSpeed = 0

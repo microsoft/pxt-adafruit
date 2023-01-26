@@ -96,7 +96,7 @@ light.showRing(
 10. Drop one in each of the ``||input:on tilt||`` blocks.
 11. In the ``||music:play sound||`` blocks, use the drop-down menu to select different sounds to play.
 
-![Play sound selectons](/static/courses/maker/projects/crown/crown-code3.png)
+![Play sound selections](/static/courses/maker/projects/crown/crown-code3.png)
 
 12. Test in the Simulator by moving your mouse left and right over the board to simulate tilting left and right.
 

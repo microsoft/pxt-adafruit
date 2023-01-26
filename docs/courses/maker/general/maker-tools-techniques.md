@@ -224,7 +224,7 @@ The only catch is that copper tape is a little tricky to work with, especially f
 ![Roll out the copper tape slowly](/static/courses/maker/general/maker-tools-techniques/copper-tape1.jpg)
 _Unravel copper tape a few inches at a time_
 
-![Folding copper tape over to make a turen](/static/courses/maker/general/maker-tools-techniques/copper-tape2.jpg)
+![Folding copper tape over to make a turn](/static/courses/maker/general/maker-tools-techniques/copper-tape2.jpg)
 _Fold copper tape back on itself – try not to break or tear_
 
 ## Servo motors

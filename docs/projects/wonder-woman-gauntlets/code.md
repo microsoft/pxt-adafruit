@@ -62,8 +62,8 @@ light.setBrightness(255)
 
 ![Selecting tilt down](/static/cp/projects/wonder-woman-gauntlets/tilt-down.png)
 
-* From the ``||music:MUSIC||`` Toolbox drawer, drag out a ``||music:play sound block||`` and drop into the ``||input:on tilt down||`` block.
-* In the ``||music:play sound block||`` block, click on the drop-down menu to select a sound effect you want to play.
+* From the ``||music:MUSIC||`` Toolbox drawer, drag out a ``||music:play sound||`` block and drop into the ``||input:on tilt down||`` block.
+* In the ``||music:play sound||`` block, click on the drop-down menu to select a sound effect you want to play.
 
 ![Selecting magic wand sound](/static/cp/projects/wonder-woman-gauntlets/play-sound1.png)
 

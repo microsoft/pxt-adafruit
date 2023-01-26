@@ -56,7 +56,7 @@ The cardboard strips should overlap each other to form the shell. Have your stud
 
 Fourth, use clear tape to attach the NeoPixel strip to the base of the helmet prototype. Three pieces of tape are sufficient. Take care to center the strip on the back of the base.
 
-![NeoPixel strip attacthed to the base of the helmet](/static/courses/maker/projects/helmet/helmet-making4.jpg)
+![NeoPixel strip attached to the base of the helmet](/static/courses/maker/projects/helmet/helmet-making4.jpg)
 
 Fifth, use a piece of tape to attach a battery pack to the top of the helmet, and a piece of double-sided or looped tape to attach the Circuit Playground Express to the front of the helmet. Be sure to orient the **A1** pin on the Circuit Playground Express toward the alligator clips of the NeoPixel strip, and orient the JST battery connector upward. Pictured is a LiPo battery, but any battery pack works well.
 

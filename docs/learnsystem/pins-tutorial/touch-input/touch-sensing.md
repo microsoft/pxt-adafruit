@@ -12,7 +12,7 @@ Your body has some ability to accept an electric charge. In the past you may hav
 
 ![Static charge on a human body](/static/cp/learn/pins-tutorial/touch-input/body-static.gif)
 
-The surface of your body acts like one of the charge plates in a capacitor. A capacitor stores electric charge on two conductive surfaces when a voltage source is appled across it. To estimate it's effect in electronics, the human body is given a value of about `100` picofarads (pF) of capacitance.
+The surface of your body acts like one of the charge plates in a capacitor. A capacitor stores electric charge on two conductive surfaces when a voltage source is applied across it. To estimate it's effect in electronics, the human body is given a value of about `100` picofarads (pF) of capacitance.
 
 ### ~ hint
 
@@ -24,7 +24,7 @@ Capacitors and the concept of capacitance are fundamental to the operation of to
 
 ## How a touch is detected
 
-When you begin to touch the surface of a pin, or a conductor connected to a pin, you change its capacitance. At the moment you come very near the pin (almost just touching it), the capacitance at the pin changes because your body has just provided and additional charge surface making more capacitance at the the pin. The microcontroller can detect and measure this added capacitance. When move away from the pin, the charge decreases to where it was before you touched.
+When you begin to touch the surface of a pin, or a conductor connected to a pin, you change its capacitance. At the moment you come very near the pin (almost just touching it), the capacitance at the pin changes because your body has just provided an additional charge surface making more capacitance at the the pin. The microcontroller can detect and measure this added capacitance. When move away from the pin, the charge decreases to where it was before you touched.
 
 ### Pin capacitance
 
